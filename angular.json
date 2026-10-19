@@ -34,7 +34,9 @@
           "defaultConfiguration": "production",
           "options": {
             "assets": [
-              "src/assets"
+              "src/assets",
+              "src/sitemap.xml",
+              "src/robots.txt"
             ],
             "index": "src/index.html",
             "outputPath": {

@@ -91,6 +91,7 @@ export class HomeComponent implements OnDestroy {
     { icon: 'shield-check', label: 'home.badgePrivacy' },
     { icon: 'database', label: 'home.badgeNoDatabase' },
     { icon: 'server-off', label: 'home.badgeNoServer' },
+    { icon: 'heart-pulse', label: 'home.badgeNoTension' },
   ];
 
   readonly steps: LabelItem[] = [
