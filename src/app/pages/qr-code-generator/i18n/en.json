@@ -166,6 +166,7 @@
       "wifiSsidPh": "MyWiFi"
     },
     "workedExample": "Paste https://jaurtools.com, choose 512 px with level M, and press Generate — the code appears instantly, and any phone camera opens the site when scanned. In With Logo mode the same code is redrawn with your image centered on a white rounded badge, ready to download.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "labels": {}
   }
 }

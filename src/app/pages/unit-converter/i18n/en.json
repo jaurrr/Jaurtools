@@ -153,6 +153,7 @@
         "t": "Tonne"
       }
     },
-    "workedExample": "Length example: 1 mile → kilometers. A mile is exactly 1,609.344 meters and a kilometer is 1,000 meters, so 1 × 1,609.344 ÷ 1,000 = 1.609344 km. Temperature example: 100 °C → °F = 100 × 9/5 + 32 = 212 °F."
+    "workedExample": "Length example: 1 mile → kilometers. A mile is exactly 1,609.344 meters and a kilometer is 1,000 meters, so 1 × 1,609.344 ÷ 1,000 = 1.609344 km. Temperature example: 100 °C → °F = 100 × 9/5 + 32 = 212 °F.",
+    "labels": {}
   }
 }

@@ -103,6 +103,7 @@
       "upperLabel": "Uppercase (A–Z)"
     },
     "workedExample": "Length 14, all sets on, pool of 87 characters: entropy = 14 x log2(87) = about 90 bits — rated Strong, with an estimated offline crack time in the billions of years. Raise the length to 20 and the estimate passes beyond the age of the universe.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "labels": {}
   }
 }

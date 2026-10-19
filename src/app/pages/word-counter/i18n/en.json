@@ -88,6 +88,7 @@
       "downloadTxt": "Download .txt",
       "copied": "Copied!"
     },
-    "workedExample": "Example: “The quick brown fox jumps.” contains 5 words, 26 characters with spaces and 22 without, 1 sentence and 1 paragraph. At 200 words per minute, the reading time is well under a minute — so the tool shows “Under 1 min”."
+    "workedExample": "Example: “The quick brown fox jumps.” contains 5 words, 26 characters with spaces and 22 without, 1 sentence and 1 paragraph. At 200 words per minute, the reading time is well under a minute — so the tool shows “Under 1 min”.",
+    "labels": {}
   }
 }
