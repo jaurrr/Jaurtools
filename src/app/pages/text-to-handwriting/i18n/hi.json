@@ -92,6 +92,14 @@
     "resultsHeading": "हैंडराइटिंग जनरेटर",
     "tagline": "पाठ टाइप करें, नोटबुक कागज़ पर हस्तलिखित नोट पाएं — PNG के रूप में डाउनलोड करें।",
     "workedExample": "इनपुट: \"Hello World\"\nस्टाइल: क्लासिक, स्याही: नीली (#1e3a8a), आकार: 48px, रूल्ड कागज़ चालू।\nचरण 1: पंक्ति ऊंचाई = 48 x 1.7 = 81.6 -> 82px\nचरण 2: \"Hello World\" एक लपेटी पंक्ति में फिट होता है\nचरण 3: पेज ऊंचाई = 120 + 1 x 82 + 20 = 222px (1240px चौड़ा)\nचरण 4: क्रीम पृष्ठभूमि, नीली रूल्ड लाइनें और लाल मार्जिन खींचे जाते हैं, फिर नीले स्क्रिप्ट फ़ॉन्ट में पाठ\nडाउनलोड -> handwriting.png हस्तलिखित नोट दिखाता है।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "ये उम्मीद कि कोई धोखा खा जाएगा — strokes पूरी तरह uniform हैं, तो ये font लगेगा, असली handwriting नहीं।",
+      "Print के लिए PNG download करना — screen resolution कागज़ पर blurry दिखेगी; ये screens के लिए है।",
+      "एक image पर लंबा letter लिखना — huge canvas पर छोटा text unreadable है; notes छोटे रखो।",
+      "Casual note के लिए elegant style चुनना — mismatched tone fake लगता है; style को message से match करो।",
+      "भूल जाना कि ruled paper readability बदलता है — ruled lines पर dense text cramped लगता है; paragraphs के लिए इसे ऑफ करो।"
+    ]
   }
 }

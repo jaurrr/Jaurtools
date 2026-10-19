@@ -79,6 +79,14 @@
       "siTitle": "Decimal (SI) - powers of 1,000",
       "binaryTitle": "Binary (IEC) - powers of 1,024",
       "note": "Storage makers use decimal; operating systems usually display binary. That is why capacities look \"smaller\" than advertised."
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "KB and KiB are not the same: 1 KB = 1,000 bytes but 1 KiB = 1,024 bytes. Read the column heading before quoting a number.",
+      "Your 'missing' drive space isn't missing — a 1 TB drive shows ~931 GiB because makers use decimal and your OS uses binary.",
+      "This tool takes bytes as input only. Typing '500 MB' into the bytes field gives nonsense — convert the value to bytes first.",
+      "Expecting the binary column to match the decimal one — 1,048,576 bytes reads 1.048576 MB but exactly 1 MiB. The gap is the point, not an error.",
+      "RAM is measured in binary (GiB) but storage is sold in decimal (GB). Comparing a 16 GB phone with 16 GiB of RAM mixes two rulers."
+    ]
   }
 }

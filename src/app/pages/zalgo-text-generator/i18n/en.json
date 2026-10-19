@@ -95,6 +95,14 @@
     "resultsHeading": "Zalgo text results",
     "tagline": "Add combining Unicode marks for cursed, glitchy text.",
     "workedExample": "Input: \"hi\" | Chaos level: 2 | All directions on\n\nStep 1: input has 2 letters (h, i), no spaces.\nStep 2: marks per letter = 2 above + 2 through + 2 below = 6.\nStep 3: total marks = 2 letters x 6 = 12 combining marks.\nStep 4: output length = 2 base letters + 12 marks = 14 code units.\n\nSo \"hi\" becomes h + 6 marks + i + 6 marks — the exact marks are picked by the seeded generator, so the same settings always reproduce the same glitch.\n\nAt level 10 with all directions on, one letter collects 30 marks: 10 above + 10 through + 10 below.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Cranking chaos to 10 for a username — extreme zalgo breaks line heights, overlaps other text, and gets rejected by apps.",
+      "Assuming it works everywhere — many platforms strip combining marks, so your glitch text arrives as plain text.",
+      "Using it where screen readers matter — assistive tech reads each mark aloud as gibberish, which is hostile to blind users.",
+      "Pasting into a document you will edit later — the marks make the text nearly impossible to select and edit.",
+      "Thinking it is a font — it is stacked Unicode marks, so it renders differently (or not at all) on old devices."
+    ]
   }
 }

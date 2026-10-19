@@ -87,6 +87,14 @@
     "resultsHeading": "HTML टैग हटाने वाला",
     "tagline": "HTML पेस्ट करें, साफ़ सादा पाठ पाएं — पैराग्राफ़ बरकरार, एंटिटी डिकोड।",
     "workedExample": "इनपुट: <h1>Hello</h1><p>World<br>Again</p>\nKeep line breaks चालू के साथ:\nचरण 1: <br> नई पंक्ति बनता है, और हर हेडिंग व पैराग्राफ़ के बाद नई पंक्ति जुड़ती है।\nचरण 2: textContent = \"Hello\\nWorld\\nAgain\\n\"\nचरण 3: ट्रिम -> \"Hello\\nWorld\\nAgain\"\nआउटपुट:\nHello\nWorld\nAgain",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Links बचे रहेंगे, ये उम्मीद — anchor text रहता है पर URLs गायब, तो references बेकार हो जाते हैं।",
+      "Table strip करना — structure के बिना cells शब्दों की unreadable धारा में collapse हो जाते हैं।",
+      "ये मानना कि images साथ आएंगी — सिर्फ alt text (अगर हो तो) बचता है; तस्वीरें खत्म।",
+      "Script और style content भूल जाना — inline JavaScript और CSS तुम्हारे 'clean' टेक्स्ट में कचरे की तरह leak कर सकते हैं।",
+      "Result को वापस HTML में पेस्ट करना — entities decode हो चुकी हैं, तो < और & जैसे characters page बिगाड़ सकते हैं।"
+    ]
   }
 }

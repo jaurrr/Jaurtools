@@ -93,6 +93,14 @@
     "resultsHeading": "Your emergency card",
     "tagline": "Create a printable wallet-size emergency (ICE) card. Print, cut, carry.",
     "workedExample": "Aarav makes his card:\n1. Name: Aarav Sharma. Blood group: O+. Allergies: Peanuts. Conditions: Asthma. Medications: Inhaler.\n2. Contact 1: Rajesh Sharma (Father), +91 98765 43210.\n3. Contact 2: Sunita Sharma (Mother), +91 91234 56780.\n4. Doctor: Dr. Mehta, +91 99887 76655.\n5. He clicks Print card, cuts along the border, and keeps it behind his driving licence.\nA responder now sees his peanut allergy and asthma in seconds.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Never updating it — an outdated card with an old number is worse than no card. Review it every six months.",
+      "A typo in a phone number — the entire point of the card is that someone can call for you. Check every digit twice.",
+      "Leaving out serious allergies or medications — that's the information paramedics need most, and it's the part people forget.",
+      "Treating the blood group as gospel — hospitals re-test before transfusion anyway. Never delay urgent care waiting to 'confirm' the card.",
+      "Keeping it only in a locked phone — paramedics can't open a locked screen. A printed card in the wallet works when the phone doesn't."
+    ]
   }
 }

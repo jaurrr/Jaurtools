@@ -91,6 +91,14 @@
     "resultsHeading": "Sort list tool",
     "tagline": "Alphabetical line sorting — A–Z or Z–A, numeric-aware, one click.",
     "workedExample": "Input (3 lines):\ncherry\nbanana\nApple\n\nA–Z, case-insensitive:\nApple\nbanana\ncherry\n\nZ–A of the same list:\ncherry\nbanana\nApple\n\nNumeric-aware example:\nInput: Item 10, Item 2 -> Output: Item 2, Item 10",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sorting 'Item 1, Item 2, Item 10' as plain text — you get 1, 10, 2; turn on numeric-aware sorting for the sane order.",
+      "Forgetting leading spaces — ' apple' sorts before 'Zebra' because spaces come first; trim your list.",
+      "Assuming it removes duplicates — sorting only reorders; identical lines stay, so dedupe separately.",
+      "Using case-sensitive sort by accident — all capitals clump at the top and the order surprises you.",
+      "Sorting mixed scripts (English + Arabic) — Unicode ordering is not dictionary ordering, so check the result."
+    ]
   }
 }

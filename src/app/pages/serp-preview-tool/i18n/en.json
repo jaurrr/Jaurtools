@@ -93,6 +93,14 @@
     "resultsHeading": "Meta Title/Description Length Checker results",
     "tagline": "Preview Google snippets — pixel-accurate title & description check.",
     "workedExample": "Title: 'Best Coffee Shops in Mumbai | JaurTools'\n\nStep by step:\n1. Characters: count them -> 39.\n   ('Best'=4, +' '=5, 'Coffee'=11, +' '=12, 'Shops'=17, +' '=18, 'in'=20, +' '=21, 'Mumbai'=27, +' '=28, '|'=29, +' '=30, 'JaurTools'=39)\n2. Estimated pixels: 39 x 8 = 312 px.\n3. Status: 39 <= 60 -> GOOD (green).\n\nDescription: 'Find the best coffee shops in Mumbai with ratings, prices and opening hours. Updated weekly for coffee lovers.'\n\n1. Characters: 110.\n2. Estimated pixels: 110 x 7 = 770 px.\n3. Status: 110 <= 155 -> GOOD (green).\n\nBoth fit comfortably inside Google's display limits.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Obsessing over exactly 60 characters — Google truncates by pixels, not characters, so wide letters like 'W' cost more.",
+      "Writing the title for Google instead of humans — a keyword-stuffed title gets fewer clicks than a clear, inviting one.",
+      "Using the same title on every page — duplicate titles confuse Google and waste your chance to target different queries.",
+      "Ignoring the mobile preview — most searches happen on phones, where truncation hits much earlier.",
+      "Treating the preview as a ranking guarantee — a green badge means it displays well, not that it will rank."
+    ]
   }
 }

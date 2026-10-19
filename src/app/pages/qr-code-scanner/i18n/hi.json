@@ -93,6 +93,14 @@
     "resultsHeading": "QR कोड स्कैन करें",
     "tagline": "इमेज या कैमरे से QR कोड डिकोड करें। पूरी तरह ब्राउज़र में, कुछ भी अपलोड नहीं।",
     "workedExample": "एक दुकानदार को पेमेंट वेरिफ़िकेशन के लिए QR कोड फ़ोटो मिलती है:\n1. वह PNG स्क्रीनशॉट टूल में अपलोड करता है।\n2. स्कैनर कोड पकड़कर डिकोड करता है: upi://pay?pa=shop@upi&pn=CornerStore&am=250।\n3. वह टेक्स्ट कॉपी करता है और पुष्टि करता है कि पाने वाले का नाम उसकी दुकान से मेल खाता है।\n4. पूरी जांच सेकंडों में होती है, और इमेज उसके फ़ोन से बाहर नहीं जाती।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Safari या Firefox में ट्राई करना — on-device decoding सिर्फ़ Chrome और Edge में काम करता है। दूसरे browsers अभी decode कर ही नहीं सकते।",
+      "धुंधली या कटी हुई फ़ोटो upload करना — अगर तीनों finder squares पूरे न दिखें तो decode करने को कुछ नहीं है। साफ़ और पूरी image इस्तेमाल कीजिए।",
+      "Decoded link को बिना देखे खोलना — QR code कहीं भी ले जा सकता है। Tap करने से पहले URL पढ़िए।",
+      "सादे HTTP पर camera चलने की उम्मीद — camera access के लिए browsers को HTTPS चाहिए। Secure site address इस्तेमाल कीजिए।",
+      "Code को बहुत टाइट crop करना — code के आसपास का quiet zone कट जाए तो decode नहीं होगा। आसपास सफ़ेद जगह रखिए।"
+    ]
   }
 }

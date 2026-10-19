@@ -96,6 +96,14 @@
     "resultsHeading": "आपके .htaccess परिणाम",
     "tagline": "साधारण फॉर्म से अपाचे के लिए सही 301 और 302 रीडायरेक्ट नियम बनाएं। कोई सिंटैक्स याद रखने की ज़रूरत नहीं।",
     "workedExample": "आपने /summer-sale का नाम बदलकर https://example.com/sale किया और हर जगह HTTPS चाहते हैं:\n1. पुराना पाथ: /summer-sale। नया URL: https://example.com/sale। प्रकार: 301।\n2. Force HTTPS टिक करें।\n3. टूल यह बनाता है:\n   RewriteEngine On\n   RewriteCond %{HTTPS} off\n   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]\n   Redirect 301 /summer-sale https://example.com/sale\n4. साइट रूट में अपलोड करें और दोनों URL टेस्ट करें। पुराना पेज अब स्थायी रूप से रीडायरेक्ट होता है।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "पुरानी फ़ाइल का backup लिए बिना upload करना — एक typo और 500 error के साथ पूरी site down। पहले working .htaccess की कॉपी ज़रूर रखिए।",
+      "Permanent move के लिए 302 इस्तेमाल करना — 302 Google को बताता है कि move temporary है, इसलिए ranking पुराने page पर ही रहती है। Permanent move के लिए 301 चाहिए।",
+      "Upload के बाद टेस्ट न करना — chains और loops ख़ामोश क़ातिल हैं। हर पुराना URL खुद खोलिए और देखिए कि सही जगह पहुँचता है या नहीं।",
+      "Nginx hosting पर इसे इस्तेमाल करना — .htaccess Apache की फ़ाइल है। Nginx पर ये पूरी तरह ignore होती है और कुछ भी redirect नहीं होगा।",
+      "पुराने paths में leading slash छोड़ देना — Apache के लिए /old-page और old-page अलग हैं। Slash के बिना rule कभी match ही नहीं होगा।"
+    ]
   }
 }

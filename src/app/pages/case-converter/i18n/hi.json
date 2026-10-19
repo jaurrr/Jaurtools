@@ -95,6 +95,14 @@
     "resultsHeading": "केस कनवर्टर परिणाम",
     "tagline": "टेक्स्ट को अपरकेस, लोअरकेस, टाइटल केस और सेंटेंस केस में बदलें।",
     "workedExample": "इनपुट: 'hello world. how are you?'\n\n1. Title Case: हर शब्द का पहला अक्षर बड़ा, बाकी छोटे\n   'hello world. how are you?' -> 'Hello World. How Are You?'\n2. Sentence case: पूरा टेक्स्ट छोटा, फिर हर वाक्य का पहला अक्षर बड़ा\n   'hello world. how are you?' -> 'Hello world. How are you?'\n3. UPPER: 'HELLO WORLD. HOW ARE YOU?'\n4. Alternating (सिर्फ अक्षर): 'HeLlO wOrLd. HoW aRe YoU?'\n   (स्पेस और विराम चिह्न पलटने का पैटर्न नहीं तोड़ते)",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Title Case 'of' और 'the' जैसे छोटे words को भी capital कर देता है — असली title style में ये lowercase रहते हैं, हाथ से ठीक करो।",
+      "Code या passwords का case बदलना उनका मतलब बदल देता है — case-sensitive language में 'myVar', 'MYVAR' नहीं है; code कभी convert मत करो।",
+      "Sentence case proper nouns ठीक कर देगा, ये मत समझो — ये पहले अक्षर के बाद सब lowercase कर देता है, नाम और brands हाथ से capital करने पड़ते हैं।",
+      "PDF से ALL-CAPS टेक्स्ट पेस्ट करके बिना देखे Title Case दबा दिया — NASA जैसे acronyms 'Nasa' बन जाएंगे।",
+      "ज़ोर देने के लिए पूरे paragraphs UPPER CASE में लिखना — ये चिल्लाने जैसा लगता है और readability खराब करता है; bold इस्तेमाल करो।"
+    ]
   }
 }

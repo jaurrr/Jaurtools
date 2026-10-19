@@ -89,6 +89,14 @@
     "resultsHeading": "साइटमैप परिणाम",
     "tagline": "URL की पेस्ट की गई सूची से sitemap.xml फ़ाइल बनाएं।",
     "workedExample": "इनपुट (2 URL):\nhttps://example.com/\nhttps://example.com/about\nसेटिंग: changefreq = weekly, priority = 0.5, lastmod चालू।\nचरण 1: दोनों पंक्तियां मान्य https URL के रूप में पार्स होती हैं, इसलिए मान्य = 2, अमान्य = 0, डुप्लिकेट = 0। चरण 2: हर URL अपने <loc>, आज के <lastmod>, चुने गए <changefreq> और <priority> के साथ <url> ब्लॉक बन जाता है।\nआउटपुट (अंश):\n<url>\n  <loc>https://example.com/</loc>\n  <lastmod>2026-10-18</lastmod>\n  <changefreq>weekly</changefreq>\n  <priority>0.5</priority>\n</url>\nदूसरा ब्लॉक एक जैसा है, केवल <loc>https://example.com/about</loc> अलग है। पूरा आउटपुट sitemap.xml के रूप में सहेजें और अपनी साइट रूट पर अपलोड करें।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "ये उम्मीद करना कि Google सब कुछ index कर देगा — sitemap pages को discovery के लिए suggest करता है; indexing की guarantee कभी नहीं देता।",
+      "404s, login pages और duplicates list करना — बेकार URLs आपका crawl budget बर्बाद करते हैं। सिर्फ़ असली, canonical pages शामिल कीजिए।",
+      "Search Console में submit करना भूल जाना — server पर पड़ी फ़ाइल तब तक कुछ नहीं करती जब तक Google को उसके बारे में पता न चले।",
+      "Relative URLs इस्तेमाल करना — sitemap protocol को पूरे absolute https:// URLs चाहिए। Relative paths reject हो जाते हैं।",
+      "Priority और changefreq को command समझना — ये hints हैं जिन्हें crawlers ignore कर सकते हैं। क्या crawl होगा ये आपका content तय करता है, ये नंबर नहीं।"
+    ]
   }
 }

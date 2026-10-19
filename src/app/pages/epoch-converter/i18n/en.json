@@ -89,6 +89,14 @@
       "dateInput": "Date and time",
       "epochSeconds": "Epoch (seconds)",
       "epochMs": "Epoch (milliseconds)"
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Feeding milliseconds into the seconds field (or vice versa) is the #1 timestamp bug — a 13-digit number in the seconds box lands you ~54,000 years in the future.",
+      "Reading the UTC result as your local time (or the reverse) shifts the answer by hours. Pick the row that matches your intent.",
+      "Your device timezone drives the 'local' row. If results look off by a few hours, check the device clock and timezone first.",
+      "Seeing January 1970 means the unit toggle is wrong, not the tool — you gave seconds where milliseconds were expected, or the reverse.",
+      "Assuming epoch counts leap seconds — it doesn't. Unix time ignores them, so don't use it for astronomy-grade precision."
+    ]
   }
 }

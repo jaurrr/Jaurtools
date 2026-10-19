@@ -87,6 +87,14 @@
     "resultsHeading": "Your randomized list",
     "tagline": "Shuffle any list or pick random names fairly. Fisher-Yates, no repeats.",
     "workedExample": "A teacher picks 2 students from 6 for a quiz:\n1. She pastes 6 names: Aarav, Diya, Kabir, Meera, Rohan, Sara.\n2. Mode: Pick names. Count: 2.\n3. Result: Meera, Kabir.\n4. Why fair? After shuffling, every pair is equally likely: there are C(6,2) = 15 possible pairs, so P(any specific pair) = 1/15, about 6.7 percent.\n5. She copies the result into her attendance sheet.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Leaving duplicate names in the list — 'Ahmed' written twice gets double the chance. Clean the list before drawing.",
+      "Using it for a prize draw with real money — the fairness is only as verifiable as your screen. Public draws need witnesses, not a webpage.",
+      "Refreshing before copying the result — one accidental reload wipes the draw. Copy or screenshot it immediately.",
+      "Re-shuffling until you 'like' the order — that's not random anymore, it's cherry-picking. Shuffle once and accept the result.",
+      "Pasting messy lists with blank lines and double commas — skipped lines shift your count, and nobody can tell what the input really was."
+    ]
   }
 }

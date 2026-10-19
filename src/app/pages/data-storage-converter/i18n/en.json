@@ -93,6 +93,14 @@
         "GiB": "Gibibyte (GiB)",
         "TiB": "Tebibyte (TiB)"
       }
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Converting Mbps to MB/s without dividing by 8 is the #1 mistake — bits vs bytes. 100 Mbps = 12.5 MB/s, not 100.",
+      "GB and GiB differ by ~7.4%. Picking the wrong one when comparing an ISP plan with your OS reading makes the numbers fight.",
+      "Each step up the ladder isn't ×1,000 in binary land: 1 GiB = 1,024 MiB. Mixing the two ladders mid-conversion corrupts the math.",
+      "Reading the result backwards — converting GB→MB then treating the answer as MB→GB — gives a wildly wrong number. Check the From/To labels.",
+      "Quoting '500 GB' for a download that your OS calls '465 GiB' confuses everyone. Match the unit to whoever reads the number."
+    ]
   }
 }

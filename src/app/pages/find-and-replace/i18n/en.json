@@ -94,6 +94,14 @@
     "resultsHeading": "Find and Replace results",
     "tagline": "Replace words and phrases across your whole text in one click.",
     "workedExample": "Input text: 'cat sat on the cat'\nFind: 'cat'   Replace with: 'dog'\nOptions: replace all ON, case-insensitive, whole-word OFF\n\nStep by step:\n1. Search for 'cat' (case-insensitive): matches at position 0 and position 15.\n2. Matches found: 2.\n3. Replace each match with 'dog'.\n\nResult: 'dog sat on the dog'\nReplacements made: 2\n\nWith whole-word ON and text 'a cat concatenates':\n  'cat' matches only the standalone word -> 'a dog concatenates' (1 match).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Replacing 'cat' without whole-word matching — 'concatenate' gets mangled and your text is ruined.",
+      "Hitting replace-all without checking the match count — one typo in the Find box can wreck the whole document.",
+      "Typing regex characters like '.' or '(' with regex mode on — they match patterns, not literal text, so escape them.",
+      "Doing a case-sensitive replace on mixed-case text — 'Apple', 'apple' and 'APPLE' are three different matches.",
+      "Replacing inside code or URLs — changing 'http' to 'https' across a file can break links that only exist as http."
+    ]
   }
 }

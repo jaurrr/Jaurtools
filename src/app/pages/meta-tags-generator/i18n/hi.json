@@ -109,6 +109,14 @@
     "resultsHeading": "आपके meta tag",
     "tagline": "लाइव कैरेक्टर काउंटर के साथ SEO meta tag के साथ Open Graph और Twitter Card।",
     "workedExample": "एक ब्लॉगर अपनी नई पोस्ट को टैग करती है:\n1. Title: How to Brew Filter Coffee at Home (34 कैरेक्टर, 60 से कम)।\n2. Description: Step-by-step filter coffee recipe with grind sizes and ratios. (68 कैरेक्टर, 160 से कम)।\n3. OG image: https://example.com/images/filter-coffee.jpg (1200 x 630)।\n4. Twitter card: summary_large_image। Site: @herblog।\n5. वह टैग <head> में पेस्ट करती है और Facebook का Sharing Debugger जांचती है।\nअब उसका लिंक WhatsApp और X पर सही title, description और फ़ोटो के साथ शेयर होता है।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "60 characters से लंबे title लिखना — Google उन्हें ... के साथ काट देता है, तो आपके सबसे अच्छे शब्द results में दिखते ही नहीं।",
+      "Share image (og:image) भूल जाना — WhatsApp और Facebook आपके page की जगह खाली grey box दिखाते हैं। Image हमेशा सेट कीजिए।",
+      "Tags बदलने के बाद social cache clear न करना — apps पुराना preview दिनों तक दिखाते रहते हैं। Edit के बाद हर platform के debugger में दोबारा scrape कीजिए।",
+      "Relative image URL इस्तेमाल करना — og:image को पूरा absolute https:// URL चाहिए। Relative path पर हर share preview टूट जाता है।",
+      "Title में keywords ठूँसना — keyword stuffing से ranking नहीं बढ़ती; शुरुआत में एक natural keyword ज़्यादा असर करता है।"
+    ]
   }
 }

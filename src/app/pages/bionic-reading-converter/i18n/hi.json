@@ -90,6 +90,14 @@
     "resultsHeading": "बायोनिक रीडिंग कनवर्टर परिणाम",
     "tagline": "टेक्स्ट को शब्दों की शुरुआत बोल्ड करके दोबारा लिखें ताकि तेज़ स्किम कर सकें।",
     "workedExample": "इनपुट: 'The quick fox'\nस्ट्रेंथ: Medium (हर शब्द का 40% बोल्ड)\n\nचरण दर चरण:\n1. शब्द 'The' (3 अक्षर): बोल्ड = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>T</strong>he'\n2. शब्द 'quick' (5 अक्षर): बोल्ड = max(1, round(5 x 0.4)) = max(1, 2) = 2 -> '<strong>qu</strong>ick'\n3. शब्द 'fox' (3 अक्षर): बोल्ड = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>f</strong>ox'\n\nरेंडर प्रीव्यू दिखाता है: T(he) qu(ick) f(ox), ब्रैकेट वाली शुरुआत बोल्ड में।\nमूल टेक्स्ट छुआ नहीं गया - सिर्फ बोल्ड मार्कअप जुड़ा है।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "लंबे article के लिए strength Strong पर कर दी — भारी bolding जल्दी थका देती है; ज़्यादातर reading के लिए Medium सही है।",
+      "ये मत मानो कि reading speed दोगुनी होना proven है — science कमज़ोर है; इसे skimming की मदद समझो, superpower नहीं।",
+      "Preview को plain text में कॉपी करके bolding बचेगी, ये उम्मीद मत रखो — formatting सिर्फ HTML copy में साथ जाती है।",
+      "Poetry या legal text पर चलाना — bolding उनकी लय और precision से लड़ती है।",
+      "ये समझने की दिक्कत ठीक कर देगा, ये उम्मीद मत रखो — ये आंखों को guide करता है, पर कठिन material फिर भी धीरे पढ़ना पड़ता है।"
+    ]
   }
 }

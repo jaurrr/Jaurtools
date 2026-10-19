@@ -125,6 +125,14 @@
         "name": "Mile",
         "symbol": "mi"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Dividing where you should multiply (or the reverse) — converting 5 km to miles by multiplying by 1.609 gives 8 miles of fiction. Check the direction.",
+      "Typing '5 ft 7 in' as one value doesn't work — convert the feet and the inches separately, then add.",
+      "Mixing metric and imperial mid-project — a 10 mm bolt is not a 3/8\" bolt (9.525 mm). Convert before you buy parts.",
+      "Reading miles as kilometres on road signs abroad: 60 mph is not 60 km/h, it's ~97 km/h. Convert the limit, don't guess it.",
+      "Trusting the rounded display as exact — results show 6 decimals. Copying a rounded intermediate into the next calculation drifts the final answer."
     ]
   }
 }

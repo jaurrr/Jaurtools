@@ -125,6 +125,14 @@
         "name": "Year (avg)",
         "symbol": "yr"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "A 'month' here is the 30.44-day average, not your calendar month — converting 1 month to days won't give you February's 28.",
+      "Same for years: 365.25 days averages in leap years. Don't use this for exact date arithmetic across a leap day.",
+      "Milliseconds vs seconds is a 1,000× cliff — typing 5000 into the seconds box when you meant ms turns 5 seconds into 83 minutes.",
+      "Weeks don't divide months evenly — '4 weeks = 1 month' is folk math. A month averages 4.345 weeks here.",
+      "Chaining conversions through rounded results drifts — convert straight from the original value instead of converting the converted."
     ]
   }
 }

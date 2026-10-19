@@ -94,6 +94,14 @@
     "resultsHeading": "फाइंड एंड रिप्लेस परिणाम",
     "tagline": "पूरे टेक्स्ट में शब्द और वाक्यांश एक क्लिक में बदलें।",
     "workedExample": "इनपुट टेक्स्ट: 'cat sat on the cat'\nखोजें: 'cat'   इससे बदलें: 'dog'\nविकल्प: replace all चालू, केस-इनसेंसिटिव, whole-word बंद\n\nचरण दर चरण:\n1. 'cat' खोजें (केस-इनसेंसिटिव): पोज़िशन 0 और पोज़िशन 15 पर मैच।\n2. मिले मैच: 2।\n3. हर मैच को 'dog' से बदलें।\n\nपरिणाम: 'dog sat on the dog'\nकिए गए बदलाव: 2\n\nWhole-word चालू और टेक्स्ट 'a cat concatenates' के साथ:\n  'cat' सिर्फ अकेले शब्द को मैच करता है -> 'a dog concatenates' (1 मैच)।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Whole-word matching के बिना 'cat' replace करना — 'concatenate' बर्बाद हो जाएगा और टेक्स्ट खराब।",
+      "Match count देखे बिना replace-all दबा देना — Find box में एक typo पूरे document को बर्बाद कर सकता है।",
+      "Regex mode ऑन करके '.' या '(' जैसे characters लिखना — ये pattern match करते हैं, literal text नहीं; इन्हें escape करो।",
+      "Mixed-case text पर case-sensitive replace — 'Apple', 'apple' और 'APPLE' तीन अलग matches हैं।",
+      "Code या URLs में replace करना — पूरी file में 'http' को 'https' बदलने से वो links टूट सकते हैं जो सिर्फ http पर हैं।"
+    ]
   }
 }

@@ -90,6 +90,14 @@
     "resultsHeading": "Duplicate line remover",
     "tagline": "Paste a list, get back only the unique lines — order kept, one click.",
     "workedExample": "Input (4 lines):\napple\nBanana\napple\n  Banana  \n\nWith trim ON, ignore case OFF:\n- Line 1 \"apple\" kept\n- Line 2 \"Banana\" kept\n- Line 3 \"apple\" is a duplicate -> removed\n- Line 4 trims to \"Banana\" -> duplicate -> removed\nResult: 4 total, 2 unique, 2 removed\nOutput:\napple\nBanana",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Forgetting 'Ignore case' — 'Apple' and 'apple' survive as two lines even though they are the same word to you.",
+      "Ignoring trailing spaces — 'item ' and 'item' look identical but count as different lines until you trim whitespace.",
+      "Assuming it sorts the list — it only removes duplicates and keeps the original order; sorting is a separate tool.",
+      "Expecting it to dedupe within a line — 'apple, apple' on one line stays untouched; it works line by line only.",
+      "Running it on data where duplicates are meaningful — repeated log lines or votes carry information; deduping destroys it."
+    ]
   }
 }

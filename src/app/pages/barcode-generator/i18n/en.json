@@ -87,6 +87,14 @@
     "resultsHeading": "Your barcode",
     "tagline": "Create real, scannable Code 39 and Interleaved 2 of 5 barcodes. Download as crisp SVG.",
     "workedExample": "Code 39 for the text A1:\n1. Wrap with start/stop: * A 1 * (4 characters).\n2. Each character is 9 elements. * = 13 narrow units, A = 15, 1 = 13.\n3. Add 3 inter-character gaps: 13 + 1 + 15 + 1 + 13 + 1 + 13 = 57 units.\n4. Add the quiet zones (10 units each side): 77 units wide in total.\nInterleaved 2 of 5 for 1234:\n1. Check digit: 4x3 + 3x1 + 2x3 + 1x1 = 22; (10 - 2) mod 10 = 8, giving 12348.\n2. Odd length, so pad: 012348, encoded as pairs (0,1) (2,3) (4,8).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Printing below 100 percent scale — shrunk bars break the quiet zone and scanners fail. Print at full size, every time.",
+      "Trying to make retail EAN or UPC barcodes — this tool doesn't do those. Retail checkout barcodes need a different generator.",
+      "Encoding long text in Code 39 — it gets enormously wide. Keep text short, or switch to digits-only Interleaved 2 of 5.",
+      "Using lowercase letters — Code 39 can't encode them. Type in UPPERCASE or the character simply won't exist.",
+      "Printing a whole batch before testing one — scan a single test label with your actual scanner first, then commit to the run."
+    ]
   }
 }

@@ -92,6 +92,14 @@
     "resultsHeading": "Add Text to Each Line results",
     "tagline": "Add a prefix or suffix to every line of your text in one click.",
     "workedExample": "Input text:\napple\nbanana\ncherry\n\nPrefix: '- '   Suffix: '!'\n\nStep by step:\n1. Line 1: '- ' + 'apple' + '!' = '- apple!'\n2. Line 2: '- ' + 'banana' + '!' = '- banana!'\n3. Line 3: '- ' + 'cherry' + '!' = '- cherry!'\n\nFinal output:\n- apple!\n- banana!\n- cherry!",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Leaving 'Skip empty lines' off means blank lines get a stray prefix or suffix — your list suddenly has junk entries in the middle.",
+      "Adding a comma before each line does not make valid CSV — fields that already contain commas still need quoting.",
+      "Expecting the tool to number your lines (1., 2., 3.) — it only repeats the same text, so do the numbering in your spreadsheet first.",
+      "Typing a suffix with a trailing space adds invisible whitespace to every line, which breaks exact-match lookups later.",
+      "Pasting from a spreadsheet copies hidden tabs and extra spaces — clean the source first or the affix lands in the wrong place."
+    ]
   }
 }

@@ -96,6 +96,14 @@
     "resultsHeading": "WhatsApp formatter results",
     "tagline": "Format WhatsApp text — bold, italic, strikethrough, live preview.",
     "workedExample": "Input:  *Hello* _world_ ~oops~ `code`\n\nStep 1: escape HTML (no change here)\nStep 2: no ```blocks``` to extract\nStep 3: `code` -> <code class=\"wa-inline\">code</code>\nStep 4: *Hello* -> <strong>Hello</strong>\nStep 5: _world_ -> <em>world</em>\nStep 6: ~oops~ -> <del>oops</del>\n\nPreview renders: Hello (bold) world (italic) oops (struck through) code (monospace).\n\nStrip markup mode deletes every * _ ~ ` and returns: \"Hello world oops code\".",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting it to read your chats directly — it cannot access WhatsApp; you paste the text yourself, nothing is uploaded.",
+      "Copying the HTML preview into WhatsApp — WhatsApp needs the *markup*, not rendered HTML; use the markup copy.",
+      "Stripping markup and expecting emphasis to survive — plain text has no bold or italic, so meaning carried by formatting is lost.",
+      "Assuming formatting works everywhere — strikethrough and monospace render in WhatsApp but vanish in SMS and email.",
+      "Pasting formatted text into a plain-text field — bios and usernames often strip the asterisks and show them literally."
+    ]
   }
 }

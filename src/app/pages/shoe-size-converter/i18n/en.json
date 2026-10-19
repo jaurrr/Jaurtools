@@ -105,6 +105,14 @@
         "id": "jp",
         "name": "JP (cm)"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "US men and US women differ by ~1.5 sizes — ordering 'US 9' without checking the gender column lands you a size and a half off.",
+      "Assuming your size transfers between brands — a UK 8 in Nike can fit like a 7.5 in Adidas. Always check the brand's own chart.",
+      "Reading the EU number as UK — EU 42 is UK 8, a whole 34 numbers apart. The scales don't overlap at all.",
+      "Forgetting half sizes — if you're between sizes, the chart's whole numbers won't save you; measure your foot in cm and use the JP column.",
+      "Using this for kids' shoes — children's sizes follow different charts and aren't included here. Don't extrapolate the adult table down."
     ]
   }
 }

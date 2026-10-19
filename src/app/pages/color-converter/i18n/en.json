@@ -87,6 +87,14 @@
       "rgbOut": "RGB",
       "hslOut": "HSL",
       "invalidHex": "Not a valid HEX code. Use 3 or 6 hex digits, e.g. #F0A or #4F46E5."
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "#F0A is not a broken code — it's 3-digit shorthand for #FF00AA. Each digit doubles; don't pad it with zeros.",
+      "RGB channels only go 0–255. Typing rgb(300, 70, 229) is invalid — 300 doesn't exist in a channel.",
+      "HSL lightness is not brightness: L=100% is pure white no matter the hue, so raising L washes the color out entirely.",
+      "The same HEX looks different on different screens. Don't finalize brand colors from one uncalibrated laptop display.",
+      "Forgetting transparency: HEX here has no alpha channel — #4F46E5 can't carry opacity, use RGBA or 8-digit HEX in your code."
+    ]
   }
 }

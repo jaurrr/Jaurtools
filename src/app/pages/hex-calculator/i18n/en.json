@@ -81,6 +81,14 @@
       "hexResult": "Result (HEX)",
       "decResult": "Result (decimal)",
       "invalidHex": "Invalid hexadecimal. Use only digits 0-9 and letters A-F."
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Typing G, Z or any letter beyond F is invalid hex — the calculator errors instead of guessing, so check your digits first.",
+      "Division truncates: 7 ÷ 2 = 3, not 3.5. If you expected a fraction, this integer-only tool isn't the right one.",
+      "Adding without carrying at 16 — F + 1 = 10 in hex, not 'G'. Each digit rolls over at 16, exactly like decimal rolls at 10.",
+      "Typing the 0x prefix hoping to fix an 'invalid' error — the error is about digits (G–Z), not the prefix. Strip letters beyond F instead.",
+      "Negative results show a plain minus sign (like -1A), not two's complement. Don't read it as a wrapped-around unsigned value."
+    ]
   }
 }

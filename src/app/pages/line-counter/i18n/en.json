@@ -90,6 +90,14 @@
     "resultsHeading": "Count Lines results",
     "tagline": "Count lines, words and characters as you type — live.",
     "workedExample": "Input text:\nHello world\n\nThis is a test\n\nStep by step:\n1. Lines: split on line breaks -> 'Hello world', '', 'This is a test' = 3 lines.\n2. Non-empty lines: the middle line is empty -> 2.\n3. Paragraphs: split on the blank line -> 'Hello world' and 'This is a test' = 2.\n4. Words: 'Hello world' = 2, 'This is a test' = 4 -> 6 total.\n5. Characters: 11 + 0 + 14 = 25, plus 2 line breaks = 27.\n6. Characters without spaces: 25 - 4 spaces = 21.\n7. Sentences: no sentence-ending punctuation -> 0.\n8. Average words per line: 6 / 3 = 2.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Counting a trailing blank line as content — most editors add a final newline, which inflates the line count by one.",
+      "Assuming hyphenated words count as one — most counters split on spaces, so spacing around hyphens changes the result.",
+      "Pasting from a PDF — its artificial line breaks turn one paragraph into dozens of 'lines' and wreck every stat.",
+      "Treating word count as a token count — AI models tokenize differently, so a 500-word prompt is not 500 tokens.",
+      "Forgetting that a paragraph needs a blank line between blocks — single newlines may count as one paragraph, not two."
+    ]
   }
 }

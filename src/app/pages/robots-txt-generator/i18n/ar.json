@@ -94,6 +94,14 @@
     "resultsHeading": "ملف robots.txt الخاص بك",
     "tagline": "أنشئ قواعد زحف بالسماح والحظر من نموذج، وأضف خريطة موقعك ونزّل robots.txt.",
     "workedExample": "تحمي صاحبة متجر المناطق الخاصة:\n1. القاعدة 1: User-agent *، حظر، /admin.\n2. القاعدة 2: User-agent *، حظر، /cart.\n3. القاعدة 3: User-agent *، سماح، /.\n4. خريطة الموقع: https://example.com/sitemap.xml.\n5. تولّد الأداة:\n   User-agent: *\n   Disallow: /admin\n   Disallow: /cart\n   Allow: /\n   Sitemap: https://example.com/sitemap.xml\n6. ترفعه إلى https://example.com/robots.txt وتختبر في Search Console.\nتتجاوز الزواحف الآن صفحتَي الإدارة والسلة وتفهرس المتجر.",
-    "workedExampleHeading": "مثال محلول"
+    "workedExampleHeading": "مثال محلول",
+    "mistakesHeading": "أخطاء شائعة يجب تجنبها",
+    "mistakes": [
+      "تكتب 'Disallow: /' بالغلط — هالسطر الواحد يقول لجوجل يتجاهل موقعك كله. دقق كل قاعدة قبل الرفع.",
+      "تظن إنه يحمي الصفحات الخاصة — robots.txt طلب، مو قفل. أي أحد يقدر يفتح الصفحة. للخصوصية الحقيقية استخدم كلمات مرور.",
+      "تغلط في حالة الأحرف — /Admin و/admin مسارين مختلفين. قاعدة لواحد ما تغطي الثاني.",
+      "ترفعه في غير جذر الدومين — يشتغل بس على example.com/robots.txt. نسخة في مجلد فرعي ما تسوي شي.",
+      "تنسى سطر خريطة الموقع — إضافة رابط خريطة موقعك تخلي الزواحف تلقى كل شي أسرع. لا تتخطاه."
+    ]
   }
 }

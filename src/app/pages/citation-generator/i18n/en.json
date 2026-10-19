@@ -102,6 +102,14 @@
     "resultsHeading": "Citation Generator results",
     "tagline": "Build formatted citation and bibliography entries from a simple form.",
     "workedExample": "Source: a book, APA style.\nAuthors: Sharma, Rahul\nYear: 2023\nTitle: Modern Web Development\nPublisher: Tech Press\n\nStep by step:\n1. Author: 'Sharma, Rahul' -> last name + initial = 'Sharma, R.'\n2. Year in brackets: '(2023).'\n3. Title in sentence case: 'Modern Web Development' -> 'Modern web development.'\n4. Publisher: 'Tech Press.'\n\nResult:\nSharma, R. (2023). Modern web development. Tech Press.\n\nSame source in MLA:\nSharma, Rahul. Modern Web Development. Tech Press, 2023.\n\nSame source in Chicago:\nSharma, Rahul. 2023. Modern Web Development. Tech Press.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Picking a style at random — APA, MLA and Chicago are discipline-specific, and the wrong one can cost marks.",
+      "Typing authors as 'First Last' when the tool expects 'Last, First' — your whole reference list ends up mis-sorted.",
+      "Leaving the year blank or guessing it — 'n.d.' has strict rules; a wrong year is worse than admitting it is unknown.",
+      "Trusting the output without checking the latest edition rules — generators lag behind style updates, so verify against the manual.",
+      "Forgetting in-text citations — a perfect reference list does not help if the body of your paper cites nothing."
+    ]
   }
 }

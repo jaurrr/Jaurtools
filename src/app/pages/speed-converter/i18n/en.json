@@ -110,6 +110,14 @@
         "name": "Knots",
         "symbol": "kn"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Knots are not km/h — 20 knots is 37 km/h, not 20. Using knots as km/h on a boat nearly halves your real speed.",
+      "Pace (min/km) is the reciprocal of speed — you can't convert a runner's 5:00/km pace here. Invert it to km/h first.",
+      "mph→km/h means multiply by 1.609, not divide — dividing 60 mph by 1.609 gives 37 'km/h' of pure fiction.",
+      "Feet per second looks tiny next to km/h — 100 ft/s is 109 km/h. Don't dismiss a small ft/s number as slow.",
+      "Mach 1 isn't a fixed number — ~1,225 km/h at sea level but lower up high. This converter handles fixed units, not Mach."
     ]
   }
 }

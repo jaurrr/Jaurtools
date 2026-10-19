@@ -109,6 +109,14 @@
     "resultsHeading": "Your meta tags",
     "tagline": "SEO meta tags plus Open Graph and Twitter Cards, with live character counters.",
     "workedExample": "A blogger tags her new post:\n1. Title: How to Brew Filter Coffee at Home (34 characters, under 60).\n2. Description: Step-by-step filter coffee recipe with grind sizes and ratios. (68 characters, under 160).\n3. OG image: https://example.com/images/filter-coffee.jpg (1200 x 630).\n4. Twitter card: summary_large_image. Site: @herblog.\n5. She pastes the tags into <head> and checks Facebook's Sharing Debugger.\nHer link now shares with the right title, description, and photo on WhatsApp and X.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Writing titles over 60 characters — Google truncates them with an ellipsis, so your best words disappear from the results.",
+      "Forgetting the share image (og:image) — WhatsApp and Facebook show a blank grey box instead of your page. Always set the image.",
+      "Not clearing the social cache after changing tags — apps keep the old preview for days. Re-scrape in each platform's debugger after edits.",
+      "Using a relative image URL — og:image needs a full absolute https:// URL. Relative paths break every share preview.",
+      "Stuffing keywords into the title — keyword stuffing doesn't rank you higher; one natural keyword near the front works better."
+    ]
   }
 }

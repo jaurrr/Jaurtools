@@ -93,6 +93,14 @@
     "resultsHeading": "मेटा टाइटल/डिस्क्रिप्शन लेंथ चेकर परिणाम",
     "tagline": "Google स्निपेट प्रीव्यू — पिक्सल-सटीक टाइटल और डिस्क्रिप्शन जाँच।",
     "workedExample": "टाइटल: 'Best Coffee Shops in Mumbai | JaurTools'\n\nचरण दर चरण:\n1. अक्षर: गिनें -> 39।\n2. अनुमानित पिक्सल: 39 x 8 = 312 px।\n3. स्टेटस: 39 <= 60 -> GOOD (हरा)।\n\nडिस्क्रिप्शन: 'Find the best coffee shops in Mumbai with ratings, prices and opening hours. Updated weekly for coffee lovers.'\n\n1. अक्षर: 110।\n2. अनुमानित पिक्सल: 110 x 7 = 770 px।\n3. स्टेटस: 110 <= 155 -> GOOD (हरा)।\n\nदोनों Google की डिस्प्ले सीमा के अंदर आराम से फिट हैं।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Exactly 60 characters के पीछे पड़ना — Google characters नहीं pixels से truncate करता है, तो 'W' जैसे चौड़े अक्षर ज़्यादा जगह लेते हैं।",
+      "Title Google के लिए लिखना, इंसानों के लिए नहीं — keyword-stuffed title पर साफ-सुथरे title से कम clicks आते हैं।",
+      "हर page पर same title — duplicate titles Google को confuse करते हैं और अलग queries target करने का मौका waste होता है।",
+      "Mobile preview ignore करना — ज़्यादातर searches फोन पर होती हैं, जहां truncation बहुत पहले शुरू होता है।",
+      "Preview को ranking guarantee समझना — green badge का मतलब display अच्छा है, rank करेगा ये नहीं।"
+    ]
   }
 }

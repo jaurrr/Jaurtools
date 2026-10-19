@@ -94,6 +94,14 @@
     "resultsHeading": "ज़ीरो-विड्थ हटाने वाले के परिणाम",
     "tagline": "टेक्स्ट से अदृश्य ज़ीरो-विड्थ यूनिकोड अक्षर हटाएं।",
     "workedExample": "डेमो इनपुट (4 छिपे अक्षर): \"he\" + ZWNJ + \"l\" + ZWNJ + \"lo, wor\" + ZWJ + \"ld\" + BOM\n\nचरण 1: इनपुट स्कैन करें -> ZWSP (U+200B): 0, ZWNJ (U+200C): 2, ZWJ (U+200D): 1, BOM (U+FEFF): 1\nचरण 2: चारों टॉगल चालू हैं, इसलिए हर सक्षम वर्ग की हर उपस्थिति हटाएं\nचरण 3: इनपुट लंबाई 16 (12 दृश्य + 4 छिपे) - आउटपुट लंबाई 12 = 4 अक्षर हटाए गए\n\nआउटपुट: \"hello, world\"\n\nयदि ZWJ टॉगल बंद होता, तो ज़ीरो-विड्थ जॉइनर रह जाता और सिर्फ़ 3 अक्षर हटते।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "ये मानना कि हर invisible character हट जाएगा — ये चार specific ones target करता है; दूसरी oddities बच सकती हैं।",
+      "Emoji पर चलाना — zero-width joiners हटाने से family और profession emoji अलग-अलग लोगों में टूट जाते हैं।",
+      "Arabic, Hindi या Devanagari टेक्स्ट लापरवाही से साफ करना — zero-width joiners इन scripts को shape देते हैं, हटाने से words corrupt होते हैं।",
+      "उसी source से दोबारा पेस्ट करना — अगर source app characters inject करता है तो वो वापस आ जाएंगे; source ठीक करो।",
+      "ये मानना कि invisible characters ही bug थे — कभी-कभी असली problem encoding होती है, और cleaning से कुछ नहीं बदलता।"
+    ]
   }
 }

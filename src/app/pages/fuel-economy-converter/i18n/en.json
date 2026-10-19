@@ -86,6 +86,14 @@
         "l100km": "Litres per 100 km",
         "kml": "Kilometres per litre"
       }
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "US and UK gallons are different sizes — 30 MPG (UK) is only 25 MPG (US). Converting with the wrong gallon poisons every comparison.",
+      "MPG and L/100km run opposite: higher MPG is better, but lower L/100km is better. Reading them the same way flips your verdict.",
+      "km/L and L/100km are reciprocals, not siblings — 20 km/L = 5 L/100km via 100÷20. Adding or averaging them directly is nonsense.",
+      "Typing a km/L figure into the MPG box gives a fantasy number. Match the input unit to the figure on your dashboard first.",
+      "Treating the ARAI/lab figure as real mileage — traffic, AC and driving style cut 15–30%. Convert the claim, then discount it."
+    ]
   }
 }

@@ -105,6 +105,14 @@
         "name": "Megavolt",
         "symbol": "MV"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "mV vs MV is a billion-fold trap — 5 mV (millivolts) and 5 MV (megavolts) differ by 10⁹. One capital letter changes a sensor reading into a lightning strike.",
+      "Converting the number but forgetting AC/DC — 230 V AC and 230 V DC are different beasts. This tool converts magnitude only.",
+      "Assuming your mains are 230 V everywhere — North America runs 120 V. Convert the spec, don't assume the socket.",
+      "Dividing by 1,000 when you should multiply — 0.5 kV is 500 V, not 0.0005 V. Check the direction before wiring anything.",
+      "Treating this as a safety check — the tool does math, not safety. It won't warn you that 400 V can kill."
     ]
   }
 }

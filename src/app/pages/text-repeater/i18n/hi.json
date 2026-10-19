@@ -93,6 +93,14 @@
     "resultsHeading": "पाठ दोहराव टूल",
     "tagline": "कोई भी टेक्स्ट 100,000 बार तक दोहराएँ — सेपरेटर, लाइव गिनती।",
     "workedExample": "पाठ: \"ha\", गणना: 3, विभाजक: नई पंक्ति\nआउटपुट: \"ha\" + \"\\n\" + \"ha\" + \"\\n\" + \"ha\"\nपरिणाम:\nha\nha\nha\nकुल अक्षर: 3 x 2 + 2 x 1 = 8\nवास्तविक दोहराव: 3 (सीमा के अंदर, कुछ नहीं छंटा)",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "बिना separator के repeat करना — 1,000 copies एक unreadable blob में जुड़ जाएंगी; separator चुनो।",
+      "100,000 repeats पर max करना — output browser freeze करा सकता है या जिस app में पेस्ट करोगे उसे crash।",
+      "Spam के लिए इस्तेमाल — chats या comments flood करने पर account flag या ban हो जाता है।",
+      "Trailing separator भूल जाना — 'a,a,a' vs 'a,a,a,' में फर्क पड़ता है जब result code या data में जाता है।",
+      "ये मानना कि repetition से emphasis बढ़ता है — दस exclamation marks desperate लगते हैं, persuasive नहीं; एक काफी है।"
+    ]
   }
 }

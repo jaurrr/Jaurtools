@@ -84,6 +84,14 @@
     "resultsHeading": "Token estimate",
     "tagline": "Estimate LLM tokens for any prompt — instant and private.",
     "workedExample": "Text: \"The quick brown fox jumps over the lazy dog\"\nCharacters: 43\nWords: 9\nToken estimate: average(43 ÷ 4 = 10.75, 9 × 1.33 = 11.97) ≈ 11 tokens\nContext: 11 ÷ 128000 × 100 ≈ 0.01% of a 128k window",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Treating the count as exact — it is an estimate; the real model tokenizer can differ by 10% or more.",
+      "Assuming one word equals one token — common words are one token, rare ones split into several.",
+      "Forgetting the system prompt — your instructions consume context too, so the chat history is not the whole budget.",
+      "Reading the percentage as a cost meter — context usage and price are related but not the same thing.",
+      "Pasting the entire document instead of the relevant part — trimming the prompt beats counting a bloated one."
+    ]
   }
 }

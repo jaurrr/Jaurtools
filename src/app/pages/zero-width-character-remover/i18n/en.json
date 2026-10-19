@@ -94,6 +94,14 @@
     "resultsHeading": "Zero-width remover results",
     "tagline": "Strip invisible zero-width Unicode characters from text.",
     "workedExample": "Demo input (4 hidden characters): \"he\" + ZWNJ + \"l\" + ZWNJ + \"lo, wor\" + ZWJ + \"ld\" + BOM\n\nStep 1: scan input -> ZWSP (U+200B): 0, ZWNJ (U+200C): 2, ZWJ (U+200D): 1, BOM (U+FEFF): 1\nStep 2: all four toggles are on, so delete every occurrence of each enabled class\nStep 3: input length 16 (12 visible + 4 hidden) - output length 12 = 4 characters removed\n\nOutput: \"hello, world\"\n\nIf the ZWJ toggle were off, the zero-width joiner would stay and only 3 characters would be removed.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Assuming it removes every invisible character — it targets four specific ones; other oddities can survive.",
+      "Running it on emoji — removing zero-width joiners breaks family and profession emoji into separate people.",
+      "Cleaning Arabic, Hindi or Devanagari text carelessly — zero-width joiners shape these scripts, and stripping them corrupts words.",
+      "Re-pasting from the same source — if the source app injects the characters, they come right back; fix the source.",
+      "Assuming invisible characters were the bug — sometimes the real problem is encoding, and cleaning changes nothing."
+    ]
   }
 }

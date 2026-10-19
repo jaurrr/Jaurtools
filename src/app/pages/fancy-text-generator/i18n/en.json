@@ -90,6 +90,14 @@
     "resultsHeading": "Fancy text styles",
     "tagline": "8 Unicode text styles — type once, copy anywhere, no fonts needed.",
     "workedExample": "Input: \"Hi\"\nBold: 𝐇𝐢 (H -> U+1D407, i -> U+1D422)\nItalic: 𝐻𝑖 (H -> U+1D43B, i -> U+1D456)\nScript: ℋ𝒾 (H -> U+210B, i -> U+1D4F2)\nCharacters like \"!\" pass through unchanged: \"Hi!\" -> bold \"𝐇𝐢!\"",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using it for a resume or job application — applicant tracking systems cannot parse Unicode styling, and your name may vanish.",
+      "Assuming screen readers announce it properly — they often spell out each styled letter or skip it, so it harms accessibility.",
+      "Putting it in a password or username — many systems reject non-ASCII characters, locking you out of your own account.",
+      "Thinking it is a font you installed — it is Unicode characters, so it looks different (or breaks) on older devices.",
+      "Mixing five styles in one bio — it looks messy and unprofessional; pick one style and stick with it."
+    ]
   }
 }

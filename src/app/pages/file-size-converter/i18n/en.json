@@ -90,6 +90,14 @@
         "GB": "Gigabytes",
         "TB": "Terabytes"
       }
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Converting on the wrong tab — a '100 MB upload limit' is almost always decimal. Using binary math tells you 104.86 MB and you under-fill for nothing.",
+      "Converting MB→KB then reading the answer as KB→MB: direction errors give 1,000,000× wrong answers. Always glance at From/To.",
+      "Forgetting that 'MB' on the site and 'MiB' in your OS are different units — a 700 MB file can show as 667 MiB after download and nothing is lost.",
+      "Treating the number as the final file size — filesystems, zips and email encoding change the real byte count. Convert, then add headroom.",
+      "Rounding mid-chain: converting GB→MB→KB with rounded intermediates drifts. Convert directly from the original value instead."
+    ]
   }
 }

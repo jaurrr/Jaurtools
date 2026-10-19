@@ -102,6 +102,14 @@
     "resultsHeading": "वर्ड कंबाइनर परिणाम",
     "tagline": "किसी भी सेपरेटर से शब्द सूचियाँ जोड़ें — कीवर्ड, नाम और वेरिएंट सेकंडों में।",
     "workedExample": "सूची A:  red, blue\nसूची B:  apple, banana\nसेपरेटर: स्पेस\n\nचरण 1: सूचियाँ पार्स करें -> A = [red, blue] (2 शब्द), B = [apple, banana] (2 शब्द)\nचरण 2: कुल = 2 x 2 = 4 संयोजन\nचरण 3: A के हर शब्द को B के हर शब्द से जोड़ें:\n  red + apple  -> \"red apple\"\n  red + banana -> \"red banana\"\n  blue + apple -> \"blue apple\"\n  blue + banana -> \"blue banana\"\n\nपरिणाम: 4 लाइनें, कॉपी या डाउनलोड के लिए तैयार।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "दो 500-word lists combine करना — ये 250,000 combinations हैं, tab freeze हो जाएगा; lists छोटी रखो।",
+      "Duplicates भूल जाना — list A और B में overlapping words से identical combos बनेंगे; duplicate removal ऑन करो।",
+      "Brand names के लिए no separator — 'super'+'fast' ठीक है, पर ज़्यादातर pairs बिना separator के unreadable हैं।",
+      "ये मानना कि हर combo अच्छा domain है — ज़्यादातर nonsense हैं; टूल generate करता है, judge तुम्हें करना है।",
+      "बिना check किए comma-separated values पेस्ट करना — 'red, blue' एक item parse हो सकता है; one-per-line safe है।"
+    ]
   }
 }

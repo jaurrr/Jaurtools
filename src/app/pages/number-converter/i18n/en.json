@@ -100,6 +100,14 @@
         "id": 16,
         "name": "Hexadecimal (base 16)"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "'2' is not a binary digit and '8' is not an octal digit — the tool flags them, it doesn't auto-fix. Match the base to the number you pasted.",
+      "Fractions like 101.11 (binary) aren't supported — whole numbers only. The point gets rejected, not converted.",
+      "Negative numbers aren't supported either — a leading minus is invalid input here, not a sign the tool understands.",
+      "Reading the 'all bases' table row for the wrong base — double-check which column you're copying from before pasting into code.",
+      "Assuming hex output case matters — 'ff' and 'FF' are the same value. Don't 'fix' lowercase hex in your source."
     ]
   }
 }

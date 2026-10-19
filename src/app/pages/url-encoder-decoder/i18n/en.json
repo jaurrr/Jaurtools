@@ -85,6 +85,14 @@
       "copyLabel": "Copy result",
       "copiedLabel": "Copied!",
       "invalidLabel": "This text is not valid percent-encoded input. Check for incomplete % sequences."
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Encoding the entire URL — encodeURIComponent also encodes : and /, turning https:// into https%3A%2F%2F. Encode only the parameter values.",
+      "Double-encoding: encoding %20 again gives %2520. If your link shows %25 everywhere, you encoded an already-encoded string.",
+      "Decoding a URL that was never encoded just returns it unchanged — then people 'fix' it by encoding twice. Check before you act.",
+      "A lone % with no hex digits after it is malformed and fails decoding — truncated copy-pastes are the usual culprit.",
+      "+ means space only in query strings (form encoding), not in paths — decoding a path %2B as a space corrupts the URL."
+    ]
   }
 }

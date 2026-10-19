@@ -84,6 +84,14 @@
     "resultsHeading": "ULID results",
     "tagline": "Create time-sortable, URL-safe unique IDs for databases, APIs and distributed systems.",
     "workedExample": "The first 10 characters of a ULID encode the timestamp. Take \"01ARZ3NDEK\": in Crockford Base32, 0=0, 1=1, A=10, R=24, Z=31, 3=3, N=21, D=13, E=14, K=19. Multiply each value by the matching power of 32 and add them:\n1 x 32^8 + 10 x 32^7 + 24 x 32^6 + 31 x 32^5 + 3 x 32^4 + 21 x 32^3 + 13 x 32^2 + 14 x 32 + 19 = 1469922850259\nThat is 1,469,922,850,259 milliseconds since the Unix epoch (30 July 2016). The remaining 16 characters carry the 80 bits of random data.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using ULIDs where timing must stay secret — the timestamp is baked into the ID. Anyone can read when a record was created.",
+      "Treating a ULID as a secret token or password — it proves nothing and authenticates nothing. It's an identifier, not a credential.",
+      "Showing sequential ULIDs to competitors — because they sort by creation time, rivals can estimate your growth rate from your order numbers.",
+      "Generating IDs on machines with wrong clocks — if the system time is off, the sort order breaks. Clock skew defeats the whole point.",
+      "Skipping the database uniqueness check — collisions are astronomically unlikely, but your database constraint is still the real guarantee."
+    ]
   }
 }

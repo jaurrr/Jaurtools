@@ -101,6 +101,14 @@
     "resultsHeading": "बाइनरी कनवर्टर",
     "tagline": "टेक्स्ट को बाइनरी कोड में बदलें — लाइव, एक-क्लिक कॉपी के साथ।",
     "workedExample": "Encode \"Hi\":\nH = कोड 72 -> बाइनरी 01001000\n i = कोड 105 -> बाइनरी 01101001\nआउटपुट (स्पेस विभाजक): 01001000 01101001\nबिट: 2 बाइट x 8 = 16\n\nDecode \"01001000 01101001\":\nसमूह: [01001000, 01101001] -> बाइट [72, 105] -> UTF-8 पाठ \"Hi\"",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Binary को encryption समझना — ये encoding है जिसे कोई भी सेकंडों में reverse कर सकता है; passwords इसमें कभी मत छिपाओ।",
+      "Mixed group sizes वाली binary decode करना — एक ही string में 7-bit और 8-bit groups कचरा देंगे; uniform रखो।",
+      "ये मानना कि एक group एक character है — emoji और accented letters कई bytes लेते हैं, तो count धोखा देती है।",
+      "एक्स्ट्रा spaces या line breaks वाली binary कॉपी करना — stray whitespace decoding तोड़ देता है; पहले साफ करो।",
+      "URL या file में 'security through obscurity' के लिए encode करना — size दोगुना होता है और किसी को fool नहीं करता।"
+    ]
   }
 }

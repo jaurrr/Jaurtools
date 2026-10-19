@@ -83,6 +83,14 @@
       "invalidLabel": "Please enter a whole number (digits only, optional minus sign).",
       "rangeLabel": "Number out of range for this language. Try a smaller number.",
       "hintLabel": "Switch the site language (top navigation) to get the words in English, Hindi or Arabic."
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Decimals aren't spelled out — 12.5 is rejected, not rendered as 'twelve point five'. Round or split the number yourself first.",
+      "Expecting English grouping in Hindi — 1,00,000 is 'one lakh', not 'one hundred thousand'. The tool follows the Indian system; read it that way.",
+      "Forgetting to switch the site language before copying — the words come out in your browsing language, so set it first.",
+      "Currency names aren't added — you get 'twelve thousand', not 'twelve thousand rupees'. Add the currency word yourself on cheques.",
+      "Pasting formatted numbers with currency symbols or commas fails validation — strip symbols and commas, digits only."
+    ]
   }
 }

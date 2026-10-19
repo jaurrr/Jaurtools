@@ -92,6 +92,14 @@
     "resultsHeading": "Whitespace Remover results",
     "tagline": "Strip extra spaces, line breaks, and junk characters from text.",
     "workedExample": "Input (showing spaces as dots for clarity):\n..hello...world..\n\nfoo..\n\nOptions: trim lines ON, collapse spaces ON, remove empty lines ON.\n\nStep by step:\n1. Input length: 17 + 2 (line breaks) + 5 = 24 characters.\n2. Collapse multiple spaces: '..hello...world..' -> '.hello.world.'\n   Result: '.hello.world.\\n\\nfoo.' (19 chars).\n3. Trim each line: '.hello.world.' -> 'hello.world', 'foo.' -> 'foo'.\n   Result: 'hello world\\n\\nfoo' (16 chars).\n4. Remove empty lines: the blank line is dropped.\n   Result: 'hello world\\nfoo' (15 chars).\n\nCharacters removed: 24 - 15 = 9.\nFinal output:\nhello world\nfoo",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Removing every space to 'clean' a sentence — you get one unreadable mega-word; collapse, do not annihilate.",
+      "Stripping indentation from code — Python and YAML depend on it, and your code breaks silently.",
+      "Collapsing spaces inside quoted strings — 'hello   world' in code changes meaning when the spaces matter.",
+      "Running it on poetry or ASCII art — the spacing IS the formatting; removing it destroys the work.",
+      "Assuming it fixes alignment — it removes characters, it does not re-justify or re-indent anything."
+    ]
   }
 }

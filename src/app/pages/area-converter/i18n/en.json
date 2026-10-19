@@ -92,6 +92,14 @@
         "acre": "Acre",
         "hectare": "Hectare (ha)"
       }
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Converting km² to m² by multiplying by 1,000 is the classic error — area scales with the square, so 1 km² = 1,000,000 m².",
+      "Don't feed linear factors into area math: 1 ft = 0.3048 m, but 1 sq ft = 0.3048² = 0.09290304 m². Squaring matters.",
+      "Mixing up the swap direction — check whether you're converting acres→m² or m²→acres before quoting a land price.",
+      "Acre and hectare are not interchangeable: 1 hectare = 2.47105 acres. Using the wrong one nearly triples a land valuation.",
+      "Assuming 1 sq m = 10 sq ft: it's actually 10.7639 sq ft. That 7% error ruins flooring and tiling estimates."
+    ]
   }
 }

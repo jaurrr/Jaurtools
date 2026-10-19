@@ -83,6 +83,14 @@
       "result": "Converted value",
       "decimalValue": "Decimal value",
       "invalidNumber": "Invalid number for the selected base. Check the digits."
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using letters beyond your base — 'G' is invalid in hex, and 'Z' only exists in bases 27 and up. The tool errors instead of guessing, so check the from-base.",
+      "Forgetting what base a pasted number is in — '755' as octal (Unix permissions) is 493 in decimal, but 755 as decimal is just 755. Same digits, different value.",
+      "This tool handles whole numbers only. Don't feed it fractions like 101.11 or expect a decimal point in the answer.",
+      "Converting hex→decimal, then reading that decimal answer as hex again, is the classic double-conversion error — convert once, then read.",
+      "Numbers beyond about 9 × 10¹⁵ lose precision in conversion. Split huge values into chunks instead."
+    ]
   }
 }

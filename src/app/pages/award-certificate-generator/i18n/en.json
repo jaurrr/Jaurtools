@@ -92,6 +92,14 @@
     "resultsHeading": "Certificate results",
     "tagline": "Create professional award certificates with a live preview — print or download free.",
     "workedExample": "Example inputs: recipient \"Priya Nair\", award title \"Employee of the Month\", reason \"For exceptional customer service and mentoring new team members\", organization \"Sunrise Textiles\", presenter \"Rahul Verma, HR Manager\", date 18 October 2026.\nThe certificate reads: \"Certificate of Achievement — This certificate is proudly presented to Priya Nair — for outstanding achievement in Employee of the Month — For exceptional customer service and mentoring new team members — Date: 18 October 2026 — Presented by: Rahul Verma, HR Manager — Sunrise Textiles.\" Print it in landscape for the classic certificate look.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Skipping the name check before printing — a misspelled recipient name is the number one certificate embarrassment, and it happens constantly.",
+      "Printing in portrait mode — certificates are designed for landscape; print in portrait and the whole layout shrinks awkwardly.",
+      "Printing on plain thin paper — a certificate on office paper feels cheap. Card stock makes the same design look twice as valuable.",
+      "Leaving the browser's print margins on — headers, footers, and page numbers will print over your certificate. Turn them off in the print dialog.",
+      "Making certificates for credentials you didn't earn — the tool doesn't verify anything, and faking a qualification is fraud, not a design task."
+    ]
   }
 }

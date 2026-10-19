@@ -120,6 +120,14 @@
         "name": "BTU per hour",
         "symbol": "BTU/h"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "hp and PS are not the same horsepower — 100 hp = 74.57 kW but 100 PS = 73.55 kW. European brochures quote PS; convert with the right one.",
+      "Selecting kWh as a target for a motor rating — kWh is energy, not power, so a '5 kW motor' can never be '5 kWh'. Multiply by run-hours yourself first.",
+      "mW vs MW is a billion-fold trap — milliwatt vs megawatt differ by 10⁹. One wrong capital letter and your laser spec becomes a power station.",
+      "BTU/h is power, BTU alone is energy — converting plain BTU here gives nonsense. Divide by the time period first, or use the energy converter.",
+      "Adding wattages across units without converting — 2 kW + 500 W isn't 502 of anything. Convert to one unit, then add."
     ]
   }
 }

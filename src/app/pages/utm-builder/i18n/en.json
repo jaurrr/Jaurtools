@@ -91,6 +91,14 @@
     "resultsHeading": "UTM URL results",
     "tagline": "Build clean UTM campaign URLs — correctly encoded, every time.",
     "workedExample": "Website URL: https://example.com/summer-sale\nutm_source = newsletter, utm_medium = email, utm_campaign = july_promo\nStep 1: start with the base URL. Step 2: append \"?\" and the first tag: utm_source=newsletter. Step 3: join the rest with \"&\": utm_medium=email, then utm_campaign=july_promo.\nResult: https://example.com/summer-sale?utm_source=newsletter&utm_medium=email&utm_campaign=july_promo\nThat link is 94 characters long and tells analytics: traffic came from the newsletter, through email, for the July promo campaign.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Putting UTM tags on internal links — they overwrite the original traffic source in your reports. Internal links should stay clean.",
+      "Mixing cases in your names — 'Facebook' and 'facebook' become two different sources in analytics. Pick lowercase and stick to it.",
+      "Typos in campaign names — you can't fix them after the link is shared. A misspelled campaign pollutes your reports forever.",
+      "Confusing source and medium — source is who sent the visitor (newsletter), medium is the channel (email). Swapping them scrambles your reports.",
+      "Sharing the raw long URL on WhatsApp — five parameters look messy and spammy. Run it through a shortener for social shares."
+    ]
   }
 }

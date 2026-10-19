@@ -90,6 +90,14 @@
     "resultsHeading": "Reverse text tool",
     "tagline": "Flip text backwards — characters, word order, or each line — live.",
     "workedExample": "Input: \"hello world\"\nCharacter mode: \"dlrow olleh\"\nWord order mode: \"world hello\"\nLine mode (single line): \"dlrow olleh\"\n\nInput (two lines):\nabc\ndef\nLine mode output:\ncba\nfed",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Reversing twice to 'get the original back' with the wrong mode — Character and Word-order modes are not interchangeable.",
+      "Reversing RTL text like Arabic or Urdu — the characters are already stored logically, so reversing scrambles them.",
+      "Expecting emoji to survive — multi-codepoint emoji (flags, skin tones) break into pieces when reversed.",
+      "Using Character mode on a sentence — you get unreadable gibberish; Word-order mode is what keeps it readable-but-backwards.",
+      "Reversing code — brackets and quotes flip direction and the result is not valid syntax in any language."
+    ]
   }
 }

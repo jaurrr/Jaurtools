@@ -85,6 +85,14 @@
     "resultsHeading": "Your dice rolls",
     "tagline": "Roll d4 to d100 dice with animation. Totals, range, and history included.",
     "workedExample": "Rolling 2d6:\n1. Range: 2 to 12. Expected total: 2 x 3.5 = 7.\n2. You roll 4 and 5: total 9.\n3. How likely was that? Pairs totalling 9: (3,6), (4,5), (5,4), (6,3) = 4 out of 36, so P(9) = 4/36 = 1/9, about 11.1 percent.\n4. Compare: P(7) = 6/36 = 1/6 (16.7%), P(12) = 1/36 (2.8%). Middle totals are always more likely than extremes.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using it for gambling — the browser's pseudo-random generator is fine for games, but never for anything with real money at stake.",
+      "Expecting extreme totals often — with 2d6, a total of 7 is six times more likely than 12. The middle of the range is where results cluster.",
+      "Picking the wrong die for your game — rolling a d100 when the rules call for a d20 silently breaks the game's math.",
+      "Letting one player roll on their screen — other players can't verify it. For shared games, roll where everyone can see.",
+      "Reading patterns into the last-20 history — it's independent random noise. A streak of low rolls doesn't mean a high one is 'due'."
+    ]
   }
 }

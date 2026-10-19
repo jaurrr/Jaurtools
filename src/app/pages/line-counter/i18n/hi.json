@@ -90,6 +90,14 @@
     "resultsHeading": "पंक्तियां गिनें परिणाम",
     "tagline": "टाइप करते ही लाइनें, शब्द और अक्षर गिनें — लाइव।",
     "workedExample": "इनपुट टेक्स्ट:\nHello world\n\nThis is a test\n\nचरण दर चरण:\n1. पंक्तियां: लाइन ब्रेक पर बांटें -> 'Hello world', '', 'This is a test' = 3 पंक्तियां।\n2. गैर-खाली पंक्तियां: बीच वाली पंक्ति खाली है -> 2।\n3. पैराग्राफ: खाली पंक्ति पर बांटें -> 'Hello world' और 'This is a test' = 2।\n4. शब्द: 'Hello world' = 2, 'This is a test' = 4 -> कुल 6।\n5. अक्षर: 11 + 0 + 14 = 25, जमा 2 लाइन ब्रेक = 27।\n6. बिना स्पेस अक्षर: 25 - 4 स्पेस = 21।\n7. वाक्य: वाक्य-अंत वाला विराम चिह्न नहीं -> 0।\n8. प्रति पंक्ति औसत शब्द: 6 / 3 = 2।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "आखिरी blank line को content गिन लेना — ज़्यादातर editors आखिर में newline डालते हैं, जिससे line count एक बढ़ जाता है।",
+      "ये मानना कि hyphenated words एक गिने जाते हैं — ज़्यादातर counters spaces पर split करते हैं, तो hyphens के आसपास spacing result बदल देती है।",
+      "PDF से पेस्ट करना — उसके artificial line breaks एक paragraph को दर्जनों 'lines' बना देते हैं और सारे stats बिगड़ जाते हैं।",
+      "Word count को token count समझना — AI models अलग तरीके से tokenize करते हैं; 500-word prompt 500 tokens नहीं होता।",
+      "भूल जाना कि paragraph के लिए blank line चाहिए — single newlines एक ही paragraph गिने जा सकते हैं, दो नहीं।"
+    ]
   }
 }

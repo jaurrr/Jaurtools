@@ -99,6 +99,14 @@
     "resultsHeading": "URL स्लग परिणाम",
     "tagline": "शीर्षकों और स्ट्रिंग को साफ़, SEO-अनुकूल URL स्लग में बदलें।",
     "workedExample": "इनपुट:  The 10 Best Tea Brands in India — 2026 Guide!\n\nचरण 1: छोटे अक्षर -> \"the 10 best tea brands in india — 2026 guide!\"\nचरण 2: अक्षरों, अंकों, रिक्त स्थान, हाइफ़न के अलावा सब हटाएं -> \"the 10 best tea brands in india  2026 guide\"\nचरण 3: शब्दों में विभाजित करें -> [the, 10, best, tea, brands, in, india, 2026, guide]\nचरण 4: हाइफ़न से जोड़ें -> \"the-10-best-tea-brands-in-india-2026-guide\" (48 अक्षर, 60 की सीमा के अंदर)\n\nस्टॉप-वर्ड हटाना चालू होने पर (the, in हटे): \"10-best-tea-brands-india-2026-guide\"\n\nप्रीव्यू: https://example.com/blog/the-10-best-tea-brands-in-india-2026-guide",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Hyphens की जगह underscores — Google hyphens को word separators मानता है पर underscore_words को जोड़कर एक मानता है।",
+      "पूरा 120-character title slug बना देना — लंबे slugs search results में truncate होते हैं और spammy लगते हैं।",
+      "Publish के बाद slug बदलना — पुराने links टूटते हैं और page ने जो ranking बनाई थी वो चली जाती है।",
+      "Stop words छोड़ देना ('the', 'and', 'of') — ये बिना मतलब length बढ़ाते हैं; cleaner URLs के लिए हटाओ।",
+      "Dates या years डालना जो पुराने होंगे — 'best-phones-2024' अगले साल stale लगेगा; slugs timeless रखो।"
+    ]
   }
 }

@@ -91,6 +91,14 @@
     "resultsHeading": "सूची सॉर्ट टूल",
     "tagline": "वर्णमाला पंक्ति सॉर्टिंग — A–Z या Z–A, संख्यात्मक-जागरूक, एक क्लिक।",
     "workedExample": "इनपुट (3 पंक्तियां):\ncherry\nbanana\nApple\n\nA–Z, केस-असंवेदनशील:\nApple\nbanana\ncherry\n\nउसी सूची का Z–A:\ncherry\nbanana\nApple\n\nसंख्यात्मक-जागरूक उदाहरण:\nइनपुट: Item 10, Item 2 -> आउटपुट: Item 2, Item 10",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "'Item 1, Item 2, Item 10' को plain text sort करना — 1, 10, 2 मिलेगा; सही order के लिए numeric-aware sorting ऑन करो।",
+      "Leading spaces भूल जाना — ' apple', 'Zebra' से पहले sort होगा क्योंकि space सबसे पहले आता है; list trim करो।",
+      "ये मानना कि duplicates हट जाएंगे — sorting सिर्फ reorder करता है; identical lines रहती हैं, dedupe अलग करो।",
+      "गलती से case-sensitive sort — सारे capitals ऊपर जमा हो जाते हैं और order चौंका देता है।",
+      "Mixed scripts (English + Arabic) sort करना — Unicode ordering dictionary ordering नहीं है, result check करो।"
+    ]
   }
 }

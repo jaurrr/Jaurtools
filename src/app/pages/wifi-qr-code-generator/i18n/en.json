@@ -89,6 +89,14 @@
     "resultsHeading": "WiFi QR results",
     "tagline": "Create a scannable QR code for your WiFi network — guests join without typing.",
     "workedExample": "SSID \"HomeNet\", security WPA, password \"s3cr3t!\".\nStep 1: build the payload: WIFI: then T:WPA (security), S:HomeNet (network name), P:s3cr3t! (password). Step 2: none of these characters need escaping, so the payload is WIFI:T:WPA;S:HomeNet;P:s3cr3t!;; Step 3: the tool encodes this text as a QR code (error correction M, 512 px).\nA guest scans it with their phone camera and the phone offers to join HomeNet directly. If the SSID were \"Home;Net\", the semicolon would be escaped as Home\\;Net in the payload.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Misspelling the SSID — one wrong letter makes a perfect-looking QR that never connects. Test it on your phone before printing.",
+      "Printing it where strangers can scan it — the password is stored in plain text. Anyone with the image owns your WiFi.",
+      "Sharing your main network with guests — put guests on a separate guest network instead of handing out your private password.",
+      "Forgetting to update it after a password change — old printouts fail silently and guests blame their phones. Reprint when credentials change.",
+      "Assuming every phone can scan it — very old phones can't. Keep the password written down as a fallback for those guests."
+    ]
   }
 }

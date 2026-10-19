@@ -90,6 +90,14 @@
     "resultsHeading": "पाठ उलटने का टूल",
     "tagline": "पाठ पीछे की ओर पलटें — अक्षर, शब्द क्रम, या प्रत्येक पंक्ति — लाइव।",
     "workedExample": "इनपुट: \"hello world\"\nअक्षर मोड: \"dlrow olleh\"\nशब्द क्रम मोड: \"world hello\"\nपंक्ति मोड (एकल पंक्ति): \"dlrow olleh\"\n\nइनपुट (दो पंक्तियां):\nabc\ndef\nपंक्ति मोड आउटपुट:\ncba\nfed",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "गलत mode से दोबारा reverse करके 'original वापस' लाना — Character और Word-order modes आपस में interchangeable नहीं हैं।",
+      "Arabic या Urdu जैसे RTL टेक्स्ट को reverse करना — characters पहले से logically stored होते हैं, reverse करने से बिखर जाते हैं।",
+      "Emoji बचेगा, ये उम्मीद — multi-codepoint emoji (flags, skin tones) reverse होने पर टुकड़ों में टूट जाते हैं।",
+      "Sentence पर Character mode — unreadable gibberish मिलेगा; readable-but-backwards के लिए Word-order mode है।",
+      "Code reverse करना — brackets और quotes की direction flip हो जाती है और result किसी language में valid syntax नहीं रहता।"
+    ]
   }
 }

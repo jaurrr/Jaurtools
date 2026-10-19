@@ -97,6 +97,14 @@
     "resultsHeading": "Line Joiner results",
     "tagline": "Join lines into one line with any delimiter you choose.",
     "workedExample": "Input:\napple\nbanana\ncherry\n\nDelimiter: ', ' (comma preset), skip empty ON, quotes OFF\n\nStep by step:\n1. Split into lines: ['apple', 'banana', 'cherry'].\n2. No empty lines to skip.\n3. Join with ', ': 'apple' + ', ' + 'banana' + ', ' + 'cherry'.\n\nResult: apple, banana, cherry\n\nWith 'Wrap each line in quotes' ON:\n  Each line becomes '\"apple\"', '\"banana\"', '\"cherry\"'.\n  Joined: \"apple\", \"banana\", \"cherry\"\n  (Paste straight into JavaScript: ['apple', 'banana', 'cherry'] minus the brackets.)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Leaving blank lines in — they become empty items ('a,,b') and break the list you are building.",
+      "Joining with commas when your data already contains commas — the result is not valid CSV; use a pipe or quote each item.",
+      "Forgetting 'wrap in quotes' for code — unquoted strings pasted into JavaScript or SQL are syntax errors.",
+      "Joining paragraphs instead of list items — you destroy the paragraph structure and get one unreadable wall of text.",
+      "Using a space delimiter for values you will paste into Excel — Excel needs tabs or newlines to split cells, not spaces."
+    ]
   }
 }

@@ -92,6 +92,14 @@
     "resultsHeading": "व्हाइटस्पेस रिमूवर परिणाम",
     "tagline": "टेक्स्ट से एक्स्ट्रा स्पेस, लाइन ब्रेक और बेकार अक्षर हटाएं।",
     "workedExample": "इनपुट (स्पष्टता के लिए स्पेस बिंदु से दिखाए):\n..hello...world..\n\nfoo..\n\nविकल्प: पंक्ति ट्रिम चालू, स्पेस सिकोड़ना चालू, खाली पंक्ति हटाना चालू।\n\nचरण दर चरण:\n1. इनपुट लंबाई: 17 + 2 (लाइन ब्रेक) + 5 = 24 अक्षर।\n2. कई स्पेस सिकोड़ें: '..hello...world..' -> '.hello.world.'\n   परिणाम: '.hello.world.\\n\\nfoo.' (19 अक्षर)।\n3. हर पंक्ति ट्रिम करें: '.hello.world.' -> 'hello.world', 'foo.' -> 'foo'।\n   परिणाम: 'hello world\\n\\nfoo' (16 अक्षर)।\n4. खाली पंक्तियां हटाएं: खाली पंक्ति हटती है।\n   परिणाम: 'hello world\\nfoo' (15 अक्षर)।\n\nहटाए गए अक्षर: 24 - 15 = 9।\nअंतिम आउटपुट:\nhello world\nfoo",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "'साफ' करने के लिए हर space हटा देना — एक unreadable mega-word मिलेगा; collapse करो, annihilate नहीं।",
+      "Code से indentation strip करना — Python और YAML इस पर depend करते हैं, और code चुपचाप टूट जाता है।",
+      "Quoted strings के अंदर spaces collapse करना — code में 'hello   world' का मतलब बदल जाता है जब spaces matter करते हैं।",
+      "Poetry या ASCII art पर चलाना — spacing ही formatting है; हटाने से काम बर्बाद।",
+      "ये मानना कि ये alignment ठीक करता है — ये characters हटाता है, re-justify या re-indent नहीं करता।"
+    ]
   }
 }

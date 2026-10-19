@@ -88,6 +88,14 @@
     "resultsHeading": "Your coin flips",
     "tagline": "Flip a virtual coin — heads or tails, fair every time.",
     "workedExample": "You flip 10 times and get 7 heads and 3 tails:\n1. Expected heads = 10 / 2 = 5.\n2. Getting 7 is completely normal: the standard deviation of 10 flips is about 1.58, so 7 is just over one deviation above average.\n3. Heads share = 7 / 10 = 70%.\n4. Flip 100 times and the share drifts back toward 50%. That pull toward the average is the law of large numbers in action.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Betting real money on a screen flip — the other side can't verify the result, so any dispute has no fair resolution.",
+      "Falling for the gambler's fallacy — after five heads in a row, the next flip is still exactly 50/50. The coin has no memory.",
+      "Deciding something serious with it — it's a fun tool for trivial choices, not for legal, financial, or life decisions.",
+      "Assuming a long streak 'must' break soon — every flip is independent. Waiting for tails to be 'due' is the same fallacy in disguise.",
+      "Arguing with friends over the result — a flip on your screen can't be independently verified by anyone else in the room."
+    ]
   }
 }

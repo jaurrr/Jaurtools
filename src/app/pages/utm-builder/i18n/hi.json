@@ -91,6 +91,14 @@
     "resultsHeading": "UTM URL परिणाम",
     "tagline": "साफ UTM कैंपेन URL बनाएँ — हर बार सही-एनकोडेड।",
     "workedExample": "वेबसाइट URL: https://example.com/summer-sale\nutm_source = newsletter, utm_medium = email, utm_campaign = july_promo\nचरण 1: base URL से शुरू करें। चरण 2: \"?\" और पहला टैग जोड़ें: utm_source=newsletter। चरण 3: बाकी को \"&\" से जोड़ें: utm_medium=email, फिर utm_campaign=july_promo।\nपरिणाम: https://example.com/summer-sale?utm_source=newsletter&utm_medium=email&utm_campaign=july_promo\nयह लिंक 94 अक्षरों का है और एनालिटिक्स को बताता है: ट्रैफ़िक न्यूज़लेटर से, ईमेल के माध्यम से, July promo कैंपेन के लिए आया।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Internal links पर UTM tags लगाना — ये आपकी reports में असली traffic source को overwrite कर देते हैं। Internal links साफ़ रखिए।",
+      "नामों में case मिक्स करना — analytics में 'Facebook' और 'facebook' दो अलग sources बन जाते हैं। Lowercase चुनिए और उसी पर टिके रहिए।",
+      "Campaign names में typo — link share होने के बाद इन्हें ठीक नहीं किया जा सकता। ग़लत स्पेलिंग वाला campaign आपकी reports को हमेशा के लिए गंदा करता है।",
+      "Source और medium को confuse करना — source बताता है visitor किसने भेजा (newsletter), medium बताता है channel (email)। उल्टा करने से reports बिगड़ जाती हैं।",
+      "WhatsApp पर कच्चा लंबा URL share करना — पाँच parameters गंदे और spammy लगते हैं। Social share के लिए shortener से गुज़ारिए।"
+    ]
   }
 }

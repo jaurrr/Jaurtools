@@ -115,6 +115,14 @@
         "name": "Pound-force foot",
         "symbol": "lbf·ft"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "lbf·in and lbf·ft differ by 12× — torquing a bolt to '100' on the wrong unit either strips the threads or leaves it dangerously loose.",
+      "Setting the wrench to the unconverted number — a spec of 100 N·m is 73.76 lbf·ft, not 100. Convert first, then set the wrench.",
+      "kgf·m looks like N·m but isn't — it's 9.80665× bigger. A 10 kgf·m spec read as 10 N·m under-torques by nearly ten times.",
+      "Assuming lb·ft and ft·lb are different — for torque they're the same (pound-force × foot). Don't 'convert' between them.",
+      "Using a converted value past 6 decimals on a click wrench — the tool rounds for display, and your wrench can't feel 0.000001 N·m anyway."
     ]
   }
 }

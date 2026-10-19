@@ -89,6 +89,14 @@
     "resultsHeading": "Your email signature",
     "tagline": "Design a professional HTML email signature with live preview. Copy or download.",
     "workedExample": "Jauhar creates his signature:\n1. Name: Jauhar Ayyub. Title: Frontend Developer. Company: Digital Transformation Factory.\n2. Phone, email, and website filled in. Accent color: indigo #4f46e5.\n3. Preview shows his name in indigo, role and company below, and a contact line with clickable links.\n4. He clicks Copy, pastes into Gmail Settings > Signature, and sends a test email.\n5. The test arrives with clickable phone, email, and website links on both phone and desktop.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Pasting it into the plain-text signature box instead of the HTML one — Gmail and Outlook will strip all the styling. Use the rich-text/HTML option.",
+      "Adding a logo image — most clients block images by default, so your logo shows up as a broken box with a red X. Skip the image.",
+      "Never sending yourself a test email — what looks perfect in the preview can break on a phone. Test on mobile and desktop before using it.",
+      "Cramming in everything — quotes, disclaimers, and five phone numbers make a signature people hate. Keep it to the essentials.",
+      "Setting it on desktop but not on your phone — replies sent from mobile will carry the old signature. Update both."
+    ]
   }
 }

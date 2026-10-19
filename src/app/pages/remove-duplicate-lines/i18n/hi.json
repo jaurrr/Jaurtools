@@ -90,6 +90,14 @@
     "resultsHeading": "डुप्लिकेट पंक्ति हटाने वाला",
     "tagline": "सूची पेस्ट करें, केवल अनूठी पंक्तियां पाएं — क्रम बरकरार, एक क्लिक।",
     "workedExample": "इनपुट (4 पंक्तियां):\napple\nBanana\napple\n  Banana  \n\nट्रिम चालू, केस अनदेखा बंद:\n- पंक्ति 1 \"apple\" रखी गई\n- पंक्ति 2 \"Banana\" रखी गई\n- पंक्ति 3 \"apple\" डुप्लिकेट है -> हटाई गई\n- पंक्ति 4 ट्रिम होकर \"Banana\" -> डुप्लिकेट -> हटाई गई\nपरिणाम: 4 कुल, 2 अनूठी, 2 हटाई गईं\nआउटपुट:\napple\nBanana",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "'Ignore case' भूल जाना — 'Apple' और 'apple' दो lines बचेंगी, भले तुम्हारे लिए वो same word हों।",
+      "Trailing spaces ignore करना — 'item ' और 'item' एक जैसे दिखते हैं पर trim किए बिना अलग lines गिने जाते हैं।",
+      "ये मानना कि ये sort भी करता है — ये सिर्फ duplicates हटाकर original order रखता है; sorting अलग टूल है।",
+      "ये उम्मीद कि line के अंदर के duplicates हटेंगे — एक line पर 'apple, apple' untouched रहेगा; ये सिर्फ line-by-line काम करता है।",
+      "उस data पर चलाना जहां duplicates meaningful हैं — repeated log lines या votes में information होती है; dedupe उसे नष्ट कर देता है।"
+    ]
   }
 }

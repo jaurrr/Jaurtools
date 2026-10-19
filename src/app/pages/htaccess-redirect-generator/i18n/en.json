@@ -96,6 +96,14 @@
     "resultsHeading": "Your .htaccess results",
     "tagline": "Build correct 301 and 302 redirect rules for Apache with a simple form. No syntax to memorise.",
     "workedExample": "You renamed /summer-sale to https://example.com/sale and want HTTPS everywhere:\n1. Old path: /summer-sale. New URL: https://example.com/sale. Type: 301.\n2. Tick Force HTTPS.\n3. The tool generates:\n   RewriteEngine On\n   RewriteCond %{HTTPS} off\n   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]\n   Redirect 301 /summer-sale https://example.com/sale\n4. Upload to your site root and test both URLs. The old page now redirects permanently.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Uploading without backing up the old file — one typo gives you a 500 error and a dead site. Keep a copy of the working .htaccess first.",
+      "Using 302 for a permanent move — 302 tells Google the move is temporary, so the old page keeps the ranking. Permanent moves need 301.",
+      "Never testing after upload — chains and loops are silent killers. Open every old URL yourself and confirm it lands in the right place.",
+      "Using it on Nginx hosting — .htaccess is an Apache file. On Nginx it's completely ignored and nothing will redirect.",
+      "Dropping the leading slash in old paths — /old-page and old-page are different to Apache. Without the slash, the rule never matches."
+    ]
   }
 }

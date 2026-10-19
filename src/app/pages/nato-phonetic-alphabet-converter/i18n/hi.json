@@ -91,6 +91,14 @@
     "resultsHeading": "नाटो ध्वन्यात्मक कनवर्टर",
     "tagline": "किसी भी पाठ को स्पष्ट नाटो ध्वन्यात्मक स्पेलिंग में बदलें — Alpha, Bravo, Charlie — तुरंत आपके ब्राउज़र में।",
     "workedExample": "इनपुट: \"JX7\"\nचरण 1: J -> Juliett\nचरण 2: X -> X-ray\nचरण 3: 7 -> Seven\nआउटपुट (शब्द, स्पेस विभाजक): Juliett X-ray Seven\nआउटपुट (शब्द + अक्षर): Juliett (J) X-ray (X) Seven (7)",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "अपने words बना लेना ('A for Apple') — point ही standard set है, जो दुनियाभर में unmistakable रहने के लिए designed है।",
+      "'Niner' को 'Nine' बोलना — ये अजीब pronunciation जानबूझकर है ताकि German 'nein' से confusion न हो; ऐसे ही रखो।",
+      "बहुत तेज़ बोलना — words तभी मदद करते हैं जब बीच में pause दो; तेज़ रटने से फायदा खत्म।",
+      "ये मानना कि digits हर जगह same हैं — कुछ regions में number words अलग होते हैं, critical calls पर confirm करो।",
+      "जो words सुनने वाला पहले से जानता है उनके लिए भी spelling — पूरी company name letter-by-letter बोलना सबका टाइम waste है।"
+    ]
   }
 }

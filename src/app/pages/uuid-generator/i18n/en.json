@@ -87,6 +87,14 @@
     "resultsHeading": "UUID results",
     "tagline": "Create genuine RFC 4122 version 4 unique identifiers for databases and APIs.",
     "workedExample": "Take the UUID 6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b.\nStep 1: count the hex digits: 8 + 4 + 4 + 4 + 12 = 32 digits = 128 bits. Step 2: look at the 13th hex digit: the digits run 6,e,c,0,b,d,7,f (1-8), 1,1,c,0 (9-12), then 4 is the 13th digit, so the version is 4. Step 3: look at the 17th hex digit: digits 13-16 are 4,3,d,a, so the 17th is 9. Hex 9 = binary 1001, which starts with the variant bits 10, marking it RFC 4122. With 122 random bits, about 5.3 x 10^36 different v4 UUIDs exist.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using v4 UUIDs where order matters — they're random, so sorting them means nothing. Use ULID or UUID v7 if you need chronological IDs.",
+      "Treating a UUID as a password or secret — it's an identifier, not a credential. It authenticates nothing.",
+      "Pasting the braced format into a system that rejects it — some APIs accept only plain hex. Match the format to what the field expects.",
+      "Storing UUIDs in a column that's too short — 36 characters need room. A VARCHAR(32) silently truncates them and breaks everything.",
+      "Expecting to generate the same UUID twice — there's no seed and no pattern. Every batch is brand new, every time."
+    ]
   }
 }

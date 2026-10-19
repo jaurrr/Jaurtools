@@ -101,6 +101,14 @@
     "resultsHeading": "आपका टेक्स्ट एडिटर",
     "tagline": "ब्राउज़र में सरल रिच-टेक्स्ट एडिटिंग — फ़ॉर्मेट करें, गिनें, HTML के रूप में डाउनलोड करें।",
     "workedExample": "आप \"Quarterly Report\" टाइप करते हैं, उसे चुनकर H1 दबाते हैं, फिर पैराग्राफ़ \"Sales grew 12 percent this quarter.\" टाइप करते हैं।\nशब्द: 8 (Quarterly, Report, Sales, grew, 12, percent, this, quarter)\nअक्षर: स्पेस सहित दृश्य पाठ से गिने गए\nडाउनलोड -> document.html में <h1>Quarterly Report</h1> और उसके बाद आपका पैराग्राफ़ होगा।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "ये मान लेना कि autosave होता है — कोई backend नहीं है, download किए बिना tab बंद किया तो सब गया।",
+      "Word या Google Docs से पेस्ट करना — छिपी हुई styles साथ आ जाती हैं और HTML export bloated और गंदा हो जाता है।",
+      "पूरी तरह offline चलेगा, ये उम्मीद — ये एक web page है; connection नहीं तो editor नहीं।",
+      "ये सोचना कि eraser button टेक्स्ट delete करता है — ये सिर्फ selection की formatting हटाता है, words रहते हैं।",
+      "HTML source को email में कॉपी करना — ज़्यादातर email clients styles हटा देते हैं, result preview जैसा बिल्कुल नहीं दिखेगा।"
+    ]
   }
 }

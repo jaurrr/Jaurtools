@@ -85,6 +85,14 @@
     "resultsHeading": "वर्तनी जांचक",
     "tagline": "टाइपो तुरंत पकड़ें — बंडल शब्दकोश, एक-क्लिक सुधार, सब स्थानीय।",
     "workedExample": "इनपुट: \"Please beleive me and adress this package\"\nजांचे गए शब्द: 7\n- \"beleive\" शब्दकोश में नहीं -> फ़्लैग। सुझाव: believe, receive -> \"believe\" पर क्लिक करें।\n- \"adress\" शब्दकोश में नहीं -> फ़्लैग। सुझाव: address, dress, across, press, stress -> \"address\" पर क्लिक करें।\nसुझाव पर क्लिक करने से हर प्रति बदलती है और बड़े अक्षर बरकरार रहते हैं।\nपरिणाम: \"Please believe me and address this package\"\nत्रुटियां: 2 -> 0",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "हर suggestion आंख बंद करके accept करना — 'their' और 'there' दोनों valid words हैं, गलत fix नई गलती बना देता है।",
+      "ये मानना कि grammar भी check होता है — ये सिर्फ spelling flag करता है, टूटे sentences आराम से निकल जाते हैं।",
+      "Code पेस्ट करना — हर variable और keyword flag हो जाएगा और असली typos शोर में दब जाएंगे।",
+      "Dialect ignore करना — US vs UK spelling ('color' vs 'colour') गलत flag होगी, जबकि वो सिर्फ अलग है।",
+      "Proper nouns पर भरोसा — नाम और brand terms flag होते हैं; उन्हें 'सही' करके असली words मत बनाओ।"
+    ]
   }
 }

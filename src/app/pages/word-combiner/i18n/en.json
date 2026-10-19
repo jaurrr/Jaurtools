@@ -102,6 +102,14 @@
     "resultsHeading": "Word combiner results",
     "tagline": "Join word lists with any separator — keywords, names and variants in seconds.",
     "workedExample": "List A:  red, blue\nList B:  apple, banana\nSeparator: space\n\nStep 1: parse lists -> A = [red, blue] (2 words), B = [apple, banana] (2 words)\nStep 2: total = 2 x 2 = 4 combinations\nStep 3: pair every word of A with every word of B:\n  red + apple  -> \"red apple\"\n  red + banana -> \"red banana\"\n  blue + apple -> \"blue apple\"\n  blue + banana -> \"blue banana\"\n\nResult: 4 lines, ready to copy or download.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Combining two 500-word lists — that is 250,000 combinations, which will freeze the tab; keep lists small.",
+      "Forgetting duplicates — overlapping words in list A and B produce identical combos; turn on duplicate removal.",
+      "Using no separator for brand names — 'super'+'fast' is fine, but most pairs become unreadable without one.",
+      "Assuming every combo is a good domain — most are nonsense; the tool generates, you still have to judge.",
+      "Pasting comma-separated values without checking — 'red, blue' may parse as one item; one-per-line is safer."
+    ]
   }
 }

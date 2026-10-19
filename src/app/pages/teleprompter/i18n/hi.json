@@ -90,6 +90,14 @@
     "resultsHeading": "टेलीप्रॉम्प्टर",
     "tagline": "कैमरे पर प्रो की तरह स्क्रिप्ट पढ़ें — ऑटो-स्क्रॉल, गति और मिरर फ्लिप।",
     "workedExample": "स्क्रिप्ट: \"Welcome to my channel. Today we build a birdhouse.\"\nशब्द: 9\nStart दबाएं -> गति 3 पर Play दबाएं।\nस्टेज हर 50 ms में 3 पिक्सेल स्क्रॉल करता है = प्रति सेकंड 60 पिक्सेल।\nअंतिम पंक्ति पूरी दिखने तक स्क्रॉलिंग जारी रहती है, फिर स्वतः रुक जाती है।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "बिना rehearse किए full speed पर शुरू करना — पहले pace अपनी natural speaking rhythm पर set करो, फिर play दबाओ।",
+      "Zero eye contact से पढ़ना — पूरे टाइम scrolling text घूरना robotic लगता है; camera की तरफ देखो।",
+      "Screen पर ज़्यादा fit करने के लिए छोटा text — squint camera पर दिखता है; बड़ा text और धीमा scroll natural लगता है।",
+      "Normal monitor पर mirror flip ऑन छोड़ देना — mirrored text सिर्फ teleprompter glass के लिए है, वरना unreadable है।",
+      "बिना paragraph breaks के टेक्स्ट की दीवार पेस्ट करना — सांस खत्म हो जाएगी; जहां pause चाहिए वहां script तोड़ो।"
+    ]
   }
 }

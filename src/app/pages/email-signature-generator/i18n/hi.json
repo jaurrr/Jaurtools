@@ -89,6 +89,14 @@
     "resultsHeading": "आपका ईमेल सिग्नेचर",
     "tagline": "लाइव प्रीव्यू के साथ प्रोफेशनल HTML ईमेल सिग्नेचर डिज़ाइन करें। कॉपी या डाउनलोड करें।",
     "workedExample": "जौहर अपना सिग्नेचर बनाता है:\n1. नाम: जौहर अय्यूब। पद: Frontend Developer। कंपनी: Digital Transformation Factory।\n2. फ़ोन, ईमेल और वेबसाइट भरी। एक्सेंट रंग: इंडिगो #4f46e5।\n3. प्रीव्यू में इंडिगो में नाम, नीचे पद और कंपनी, और क्लिक करने योग्य लिंक वाली संपर्क लाइन दिखती है।\n4. वह Copy दबाता है, Gmail Settings > Signature में पेस्ट करता है, और टेस्ट ईमेल भेजता है।\n5. टेस्ट फ़ोन और डेस्कटॉप दोनों पर क्लिक करने योग्य फ़ोन, ईमेल और वेबसाइट लिंक के साथ आता है।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "इसे plain-text signature box में paste करना, HTML वाले में नहीं — Gmail और Outlook सारी styling हटा देंगे। Rich-text/HTML वाला ऑप्शन इस्तेमाल कीजिए।",
+      "Logo image लगाना — ज़्यादातर clients image block कर देते हैं, तो logo टूटी हुई image के निशान के साथ दिखेगा। Image रहने दीजिए।",
+      "खुद को test email कभी न भेजना — preview में परफ़ेक्ट दिखने वाला signature फ़ोन पर टूट सकता है। इस्तेमाल से पहले mobile और desktop दोनों पर टेस्ट कीजिए।",
+      "सब कुछ ठूँस देना — quotes, disclaimers और पाँच फ़ोन नंबर वाला signature लोग नापसंद करते हैं। ज़रूरी चीज़ों तक ही रखिए।",
+      "Desktop पर सेट करके फ़ोन पर भूल जाना — mobile से भेजे गए reply में पुराना signature जाएगा। दोनों जगह अपडेट कीजिए।"
+    ]
   }
 }

@@ -90,6 +90,14 @@
     "resultsHeading": "आपका रिज़्यूमे",
     "tagline": "पेशेवर ATS-फ्रेंडली रिज़्यूमे बनाएँ — मिनटों में PDF।",
     "workedExample": "जौहर अपना रिज़्यूमे बनाता है:\n1. हेडर: जौहर अय्यूब, Frontend Developer, ईमेल, फ़ोन, हैदराबाद, पोर्टफ़ोलियो लिंक।\n2. सारांश: 2 साल के Angular अनुभव पर 2 लाइनें।\n3. स्किल: Angular, TypeScript, RxJS, HTML, CSS, SCSS, REST APIs, Git।\n4. एक्सपीरियंस: Frontend Developer, Digital Transformation Factory (2024-वर्तमान) 3 नंबर वाले बुलेट सहित; 2 बुलेट सहित फ्रीलांस काम।\n5. शिक्षा: BCA, वीर बहादुर पूर्वांचल यूनिवर्सिटी (2024)।\n6. PDF डाउनलोड: साफ सेक्शन वाला एक पेज का रिज़्यूमे, आवेदनों के साथ लगाने के लिए तैयार।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "हर job को एक जैसा resume भेजना — हर posting के keywords को naturally mirror कीजिए। सबके लिए एक ही template generic लगता है।",
+      "Achievements की जगह duties लिखना — 'responsible for sales' कुछ नहीं बताता। 'grew sales 30 percent' जैसे नंबर interview दिलाते हैं।",
+      "पाँच साल से कम experience में दो page खींचना — recruiter skim करते हैं। एक tight page दो padded pages से बेहतर है।",
+      "Phone number या email में typo — जवाब न देने वाला परफ़ेक्ट resume बेकार है। Contact details सबसे पहले और सबसे आख़िर में चेक कीजिए।",
+      "ग़ैर-पेशेवर email address इस्तेमाल करना — cooldude99@gmail.com credibility ख़त्म कर देता है। अपना नाम सादगी से इस्तेमाल कीजिए।"
+    ]
   }
 }

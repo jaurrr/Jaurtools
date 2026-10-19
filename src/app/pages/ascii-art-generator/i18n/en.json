@@ -95,6 +95,14 @@
     "resultsHeading": "ASCII Art Generator results",
     "tagline": "Turn text into banners and photos into retro text art.",
     "workedExample": "Take a tiny 2x2 image with these pixel brightness values:\nRow 1: 0 (black), 85 (dark grey)\nRow 2: 170 (light grey), 255 (white)\n\nRamp (dark to light): @ % # * + = - : . (space)\nindex = floor(brightness / 255 x 10)\n\n1. Pixel 0: floor(0 / 255 x 10) = 0 -> '@'\n2. Pixel 85: floor(85 / 255 x 10) = floor(3.33) = 3 -> '*'\n3. Pixel 170: floor(170 / 255 x 10) = floor(6.67) = 6 -> '-'\n4. Pixel 255: floor(255 / 255 x 10) = floor(10) = 10 -> capped at 9 -> ' ' (space)\n\nResult:\n@*\n-  (dash followed by a space)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using a busy or low-contrast photo gives muddy art — high-contrast images with a clear subject convert far better.",
+      "Cranking the width too high makes the art wrap and break in chats and comments — keep it narrow for pasting anywhere.",
+      "Text-mode art looks squished because characters are taller than wide — that is normal, not a bug; design for it.",
+      "Pasting into an app with a proportional font (like WhatsApp) ruins the alignment — art only works in monospace contexts.",
+      "Expecting color or shading to survive — it is plain text, so any color information from the image is lost in conversion."
+    ]
   }
 }

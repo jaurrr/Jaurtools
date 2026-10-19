@@ -102,6 +102,14 @@
     "resultsHeading": "साइटेशन जनरेटर परिणाम",
     "tagline": "साधारण फॉर्म से फॉर्मेट की हुई साइटेशन और बिब्लियोग्राफी एंट्री बनाएं।",
     "workedExample": "स्रोत: किताब, APA स्टाइल।\nलेखक: Sharma, Rahul\nसाल: 2023\nटाइटल: Modern Web Development\nप्रकाशक: Tech Press\n\nचरण दर चरण:\n1. लेखक: 'Sharma, Rahul' -> उपनाम + इनिशियल = 'Sharma, R.'\n2. साल ब्रैकेट में: '(2023).'\n3. टाइटल सेंटेंस केस में: 'Modern Web Development' -> 'Modern web development.'\n4. प्रकाशक: 'Tech Press.'\n\nपरिणाम:\nSharma, R. (2023). Modern web development. Tech Press.\n\nवही स्रोत MLA में:\nSharma, Rahul. Modern Web Development. Tech Press, 2023.\n\nवही स्रोत Chicago में:\nSharma, Rahul. 2023. Modern Web Development. Tech Press.",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Style random चुन लेना — APA, MLA, Chicago subject के हिसाब से होते हैं, गलत style नंबर कटा सकता है।",
+      "Authors 'First Last' में लिख देना जबकि टूल 'Last, First' मांगता है — पूरी reference list गलत sort हो जाएगी।",
+      "Year खाली छोड़ना या अंदाज़े से भरना — 'n.d.' के सख्त rules हैं; गलत year, unknown मानने से ज़्यादा खराब है।",
+      "Output पर बिना check किए भरोसा — generators style updates से पीछे रहते हैं, manual से verify करो।",
+      "In-text citations भूल जाना — perfect reference list किसी काम की नहीं अगर paper की body में citation ही न हो।"
+    ]
   }
 }

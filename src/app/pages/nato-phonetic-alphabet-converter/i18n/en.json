@@ -91,6 +91,14 @@
     "resultsHeading": "NATO phonetic converter",
     "tagline": "Convert any text into clear NATO phonetic spelling — Alpha, Bravo, Charlie — instantly in your browser.",
     "workedExample": "Input: \"JX7\"\nStep 1: J -> Juliett\nStep 2: X -> X-ray\nStep 3: 7 -> Seven\nOutput (words, space separator): Juliett X-ray Seven\nOutput (word + letter): Juliett (J) X-ray (X) Seven (7)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Making up your own words ('A for Apple') — the whole point is the standard set, which is designed to be unmistakable worldwide.",
+      "Saying 'Niner' as 'Nine' — the odd pronunciation is deliberate to avoid confusion with the German 'nein'; keep it.",
+      "Spelling too fast — the words only help if you pause between them; rattling them off defeats the purpose.",
+      "Assuming digits work the same everywhere — some regions use different number words, so confirm on critical calls.",
+      "Using it for words the listener already knows — spelling your whole company name letter-by-letter wastes everyone's time."
+    ]
   }
 }

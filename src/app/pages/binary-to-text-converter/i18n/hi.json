@@ -90,6 +90,14 @@
     "resultsHeading": "बाइनरी से टेक्स्ट परिणाम",
     "tagline": "बाइनरी कोड को पढ़ने योग्य टेक्स्ट में बदलें — तुरंत, ब्राउज़र में।",
     "workedExample": "इनपुट (Binary to Text मोड):\n01001000 01101001\n\nचरण दर चरण:\n1. समूहों में बांटें: '01001000' और '01101001'।\n2. समूह 1: 0x128+1x64+0x32+0x16+1x8+0x4+0x2+0x1 = 64 + 8 = 72 -> 'H'।\n3. समूह 2: 0x128+1x64+1x32+0x16+1x8+0x4+0x2+1x1 = 64 + 32 + 8 + 1 = 105 -> 'i'।\n\nआउटपुट: Hi\n\nउल्टा (Text to Binary मोड):\n'H' -> 72 -> 01001000, 'i' -> 105 -> 01101001\nआउटपुट: 01001000 01101001",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "जो groups पूरे 8 bits के नहीं हैं (जैसे '101') उन्हें decode करने से fail होगा या कचरा मिलेगा — पहले उन्हें pad करो।",
+      "Binary को encryption समझना — ये सिर्फ encoding है, कोई भी इसे सेकंडों में decode कर सकता है; secrets इसमें कभी मत छिपाओ।",
+      "ये मत समझो कि हर 8-bit group एक character है — emoji और कई भाषाओं के अक्षर कई bytes लेते हैं, तो count धोखा देती है।",
+      "Line breaks या double spaces वाली binary पेस्ट कर दी तो decoding टूट जाएगी — convert से पहले formatting साफ करो।",
+      "Direction भूल जाना — पहले से encoded टेक्स्ट को दोबारा encode कर दोगे तो ऐसा nonsense बनेगा जिसे कोई पढ़ नहीं पाएगा।"
+    ]
   }
 }

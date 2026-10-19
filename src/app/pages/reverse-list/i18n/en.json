@@ -85,6 +85,14 @@
     "resultsHeading": "Reverse list tool",
     "tagline": "Flip any list's line order instantly — last line first, one click.",
     "workedExample": "Input (3 lines):\nMonday\nTuesday\nWednesday\n\nSplit into lines: [\"Monday\", \"Tuesday\", \"Wednesday\"]\nReverse the array: [\"Wednesday\", \"Tuesday\", \"Monday\"]\nOutput:\nWednesday\nTuesday\nMonday",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Reversing multi-column data — each line flips position but columns inside a line do not, so rows misalign.",
+      "Reversing a numbered list — the numbers stay attached to their items, so '1.' ends up at the bottom and the order looks wrong.",
+      "Assuming it is the same as sorting Z to A — reversing keeps your original sequence backwards, it does not alphabetize.",
+      "Copying the result over your only original — there is no undo after you close the tab, so keep a backup.",
+      "Reversing a paragraph line by line — sentence order flips but the sentences themselves stay intact, which reads oddly."
+    ]
   }
 }

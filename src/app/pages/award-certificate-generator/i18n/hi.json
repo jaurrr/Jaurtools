@@ -92,6 +92,14 @@
     "resultsHeading": "सर्टिफिकेट परिणाम",
     "tagline": "लाइव प्रीव्यू के साथ पेशेवर पुरस्कार सर्टिफिकेट बनाएं — मुफ्त प्रिंट या डाउनलोड करें।",
     "workedExample": "उदाहरण इनपुट: प्राप्तकर्ता \"Priya Nair\", पुरस्कार शीर्षक \"Employee of the Month\", कारण \"For exceptional customer service and mentoring new team members\", संगठन \"Sunrise Textiles\", प्रस्तुतकर्ता \"Rahul Verma, HR Manager\", तारीख 18 अक्टूबर 2026।\nसर्टिफिकेट पढ़ता है: \"उपलब्धि प्रमाणपत्र — यह प्रमाणपत्र गर्वपूर्वक प्रदान किया जाता है Priya Nair को — में उत्कृष्ट उपलब्धि के लिए Employee of the Month — For exceptional customer service and mentoring new team members — तारीख: 18 अक्टूबर 2026 — प्रस्तुतकर्ता: Rahul Verma, HR Manager — Sunrise Textiles।\" क्लासिक सर्टिफिकेट लुक के लिए लैंडस्केप में प्रिंट करें।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "प्रिंट से पहले नाम चेक न करना — ग़लत स्पेलिंग वाला नाम certificate की सबसे बड़ी शर्मिंदगी है, और ये बार-बार होती है।",
+      "Portrait mode में प्रिंट करना — certificate landscape के लिए डिज़ाइन होते हैं; portrait में पूरा layout अजीब सा छोटा दिखेगा।",
+      "पतले सादे काग़ज़ पर प्रिंट करना — आम काग़ज़ पर certificate सस्ता लगता है। Card stock पेपर पर वही डिज़ाइन दोगुना अच्छा लगता है।",
+      "Browser के print margins ऑन छोड़ देना — header, footer और page number आपके certificate पर छप जाएँगे। Print dialog में इन्हें बंद कर दीजिए।",
+      "ऐसे certificate बनाना जो आपने हासिल नहीं किए — टूल कुछ verify नहीं करता, और फ़र्ज़ी qualification दिखाना fraud है, डिज़ाइन नहीं।"
+    ]
   }
 }

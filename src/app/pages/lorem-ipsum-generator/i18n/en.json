@@ -90,6 +90,14 @@
     "resultsHeading": "Lorem Ipsum Generator results",
     "tagline": "Generate placeholder text with configurable length and style.",
     "workedExample": "Settings: 2 sentences, classic style, 'Start with Lorem ipsum' ON.\n\nStep by step:\n1. Need 2 sentences from the classic bank.\n2. Start-with-lorem forces sentence 1 to: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'\n3. Sentence 2 is the next in the bank: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'\n4. Joined with a space.\n\nResult:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nWord count check: 8 + 11 = 19 words.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Shipping a design with lorem ipsum still in it — it happens constantly; search the final build for 'lorem' before launch.",
+      "Assuming the same settings give the same text twice — output is randomized, so do not rely on regenerating an exact paragraph.",
+      "Using filler for SEO content — search engines index it as thin content and it can hurt the page.",
+      "Generating 50 paragraphs for a small card layout — the filler hides real overflow and spacing problems in your design.",
+      "Picking 'tech English' style for a client mockup — readable fake words invite clients to proofread filler instead of reviewing the design."
+    ]
   }
 }

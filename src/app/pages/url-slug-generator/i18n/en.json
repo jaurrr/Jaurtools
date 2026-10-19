@@ -99,6 +99,14 @@
     "resultsHeading": "URL slug results",
     "tagline": "Turn titles and strings into clean, SEO-friendly URL slugs.",
     "workedExample": "Input:  The 10 Best Tea Brands in India — 2026 Guide!\n\nStep 1: lowercase -> \"the 10 best tea brands in india — 2026 guide!\"\nStep 2: remove everything except letters, digits, spaces, hyphens -> \"the 10 best tea brands in india  2026 guide\"\nStep 3: split into words -> [the, 10, best, tea, brands, in, india, 2026, guide]\nStep 4: join with hyphens -> \"the-10-best-tea-brands-in-india-2026-guide\" (48 characters, under the 60 limit)\n\nWith stop-word removal on (the, in dropped): \"10-best-tea-brands-india-2026-guide\"\n\nPreview: https://example.com/blog/the-10-best-tea-brands-in-india-2026-guide",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using underscores instead of hyphens — Google treats hyphens as word separators but joins underscore_words together.",
+      "Keeping the full 120-character title as the slug — long slugs get truncated in search results and look spammy.",
+      "Changing a slug after publishing — old links break and you lose the ranking the page had built.",
+      "Leaving stop words in ('the', 'and', 'of') — they add length without meaning; strip them for cleaner URLs.",
+      "Including dates or years that will age — 'best-phones-2024' looks stale next year; keep slugs timeless."
+    ]
   }
 }

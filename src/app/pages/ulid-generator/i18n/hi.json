@@ -84,6 +84,14 @@
     "resultsHeading": "ULID परिणाम",
     "tagline": "डेटाबेस, API और डिस्ट्रिब्यूटेड सिस्टम के लिए समय-क्रमबद्ध, URL-सुरक्षित यूनिक ID बनाएं।",
     "workedExample": "ULID के पहले 10 अक्षर टाइमस्टैम्प को एनकोड करते हैं। \"01ARZ3NDEK\" लें: Crockford Base32 में 0=0, 1=1, A=10, R=24, Z=31, 3=3, N=21, D=13, E=14, K=19। हर मान को 32 की संबंधित घात से गुणा करके जोड़ें:\n1 x 32^8 + 10 x 32^7 + 24 x 32^6 + 31 x 32^5 + 3 x 32^4 + 21 x 32^3 + 13 x 32^2 + 14 x 32 + 19 = 1469922850259\nयह Unix epoch से 1,469,922,850,259 मिलीसेकंड है (30 जुलाई 2016)। शेष 16 अक्षरों में 80 बिट का रैंडम डेटा होता है।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "ULID वहाँ इस्तेमाल करना जहाँ timing छिपी रहनी चाहिए — timestamp ID में ही baked होता है। कोई भी पढ़ सकता है कि record कब बना था।",
+      "ULID को secret token या password समझना — ये कुछ prove नहीं करता, कुछ authenticate नहीं करता। ये identifier है, credential नहीं।",
+      "Competitors को sequential ULIDs दिखाना — क्योंकि ये creation time के हिसाब से sort होते हैं, rivals आपके order numbers से आपकी growth rate अंदाज़ लगा सकते हैं।",
+      "ग़लत घड़ी वाले machines पर IDs बनाना — system time ग़लत हो तो sort order टूट जाता है। Clock skew पूरे मक़सद को ख़त्म कर देता है।",
+      "Database uniqueness check skip करना — collision की संभावना न के बराबर है, फिर भी असली guarantee आपका database constraint ही है।"
+    ]
   }
 }

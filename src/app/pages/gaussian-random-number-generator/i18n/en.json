@@ -92,6 +92,14 @@
     "resultsHeading": "Your random numbers",
     "tagline": "Generate bell-curve random values with any mean and spread. Stats, histogram, CSV.",
     "workedExample": "Simulating exam scores with mean 100 and SD 15:\n1. Generate 1,000 values. Sample mean comes out near 100, sample SD near 15.\n2. Check the 68 percent rule: count values between 85 and 115. Expect about 680 of 1,000.\n3. Probability of scoring below 115: z = (115 - 100) / 15 = 1, so P = 84.1 percent.\n4. Top 2.5 percent threshold: mean + 2 SD = 130. About 25 of 1,000 values exceed it.\nThe histogram shows the classic bell shape, tallest at 100.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using it for passwords, keys, or lottery picks — it's pseudo-random, not cryptographic. Real security needs crypto.getRandomValues, not a bell curve.",
+      "Assuming your real data is normal — most real data is skewed. Look at the histogram first; if it doesn't look like a bell, the model is wrong.",
+      "Forgetting outliers exist — in a large set, values beyond 3 standard deviations will show up. They're normal, not bugs.",
+      "Expecting the same numbers on the next run — there's no seed, so results are never reproducible. For repeatable work, use Python with a fixed seed.",
+      "Using a normal distribution for yes/no data — the bell curve fits continuous measurements, not binary outcomes. Match the model to the data type."
+    ]
   }
 }

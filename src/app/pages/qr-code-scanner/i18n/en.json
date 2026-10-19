@@ -93,6 +93,14 @@
     "resultsHeading": "Scan a QR code",
     "tagline": "Decode QR codes from an image or your camera. Fully in-browser, nothing uploaded.",
     "workedExample": "A shopkeeper receives a QR code photo for payment verification:\n1. She uploads the PNG screenshot to the tool.\n2. The scanner detects the code and decodes: upi://pay?pa=shop@upi&pn=CornerStore&am=250.\n3. She copies the text and confirms the payee name matches her store.\n4. The whole check takes seconds, and the image never leaves her phone.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Trying it in Safari or Firefox — on-device decoding only works in Chrome and Edge. Other browsers simply can't decode yet.",
+      "Uploading a blurry or cropped photo — if the three finder squares aren't fully visible, there's nothing to decode. Use a sharp, complete image.",
+      "Opening the decoded link without checking it — QR codes can point anywhere. Read the URL before you tap through.",
+      "Expecting the camera to work over plain HTTP — browsers require HTTPS for camera access. Use the secure site address.",
+      "Cropping the code too tightly — cutting off the quiet zone around the code makes it undecodable. Keep white space around it."
+    ]
   }
 }

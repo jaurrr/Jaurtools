@@ -88,6 +88,14 @@
     "resultsHeading": "Your QR codes",
     "tagline": "Paste a list, get up to 50 QR codes at once. Each downloads as PNG.",
     "workedExample": "A cafe owner needs table QR codes:\n1. She pastes 3 lines: https://example.com/menu, https://example.com/menu?table=5, TABLE-12.\n2. Error correction M, size 512 px. Clicks Generate.\n3. Three QR codes appear: qr-1.png, qr-2.png, qr-3.png.\n4. She downloads each, prints them at 4 x 4 cm, and sticks one on every table.\nScanning any code opens the right menu link on the customer's phone.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Downloading all 50 before testing one — scan a single test code first. A typo in the source data ruins the whole batch.",
+      "Encoding long URLs or paragraphs per line — dense codes scan poorly on cheap phones. Short lines scan fast and reliably.",
+      "Mixing URL formats in one list — some lines with https:// and some without creates an inconsistent, unprofessional set of codes.",
+      "Using low error correction for printed labels — print wears and tears codes. Use Q or H correction for anything printed.",
+      "Forgetting each PNG downloads separately — the tool doesn't make a ZIP. Plan for 50 individual downloads on big batches."
+    ]
   }
 }

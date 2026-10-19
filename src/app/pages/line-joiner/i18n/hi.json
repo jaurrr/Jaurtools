@@ -97,6 +97,14 @@
     "resultsHeading": "लाइन जॉइनर परिणाम",
     "tagline": "पंक्तियों को अपनी पसंद के किसी भी डेलिमिटर से एक पंक्ति में जोड़ें।",
     "workedExample": "इनपुट:\nसेब\nकेला\nचेरी\n\nडेलिमिटर: ', ' (कॉमा प्रीसेट), खाली छोड़ना चालू, कोट्स बंद\n\nचरण दर चरण:\n1. पंक्तियों में बांटें: ['सेब', 'केला', 'चेरी']।\n2. छोड़ने लायक कोई खाली पंक्ति नहीं।\n3. ', ' से जोड़ें: 'सेब' + ', ' + 'केला' + ', ' + 'चेरी'।\n\nपरिणाम: सेब, केला, चेरी\n\n'हर पंक्ति को कोट्स में लपेटें' चालू होने पर:\n  हर पंक्ति बनती है '\"सेब\"', '\"केला\"', '\"चेरी\"'।\n  जुड़ा: \"सेब\", \"केला\", \"चेरी\"",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Blank lines छोड़ देना — वो empty items ('a,,b') बन जाती हैं और तुम्हारी list बिगाड़ देती हैं।",
+      "जिस data में पहले से कॉमा हैं उसे कॉमा से join करना — result valid CSV नहीं होगा; pipe इस्तेमाल करो या हर item को quote करो।",
+      "Code के लिए 'wrap in quotes' भूल जाना — बिना quotes के strings JavaScript या SQL में syntax error हैं।",
+      "List items की जगह paragraphs join करना — paragraph structure खत्म और एक unreadable दीवार बन जाती है।",
+      "Excel में पेस्ट करने वाले values के लिए space delimiter — Excel को cells split करने के लिए tabs या newlines चाहिए, spaces नहीं।"
+    ]
   }
 }

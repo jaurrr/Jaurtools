@@ -99,6 +99,14 @@
     "resultsHeading": "نتائج رابط URL",
     "tagline": "حوّل العناوين والنصوص إلى روابط URL نظيفة وصديقة للسيو.",
     "workedExample": "المدخل:  The 10 Best Tea Brands in India — 2026 Guide!\n\nالخطوة 1: التصغير -> \"the 10 best tea brands in india — 2026 guide!\"\nالخطوة 2: إزالة كل شيء عدا الحروف والأرقام والمسافات والشرطات -> \"the 10 best tea brands in india  2026 guide\"\nالخطوة 3: التقسيم إلى كلمات -> [the, 10, best, tea, brands, in, india, 2026, guide]\nالخطوة 4: الربط بالشرطات -> \"the-10-best-tea-brands-in-india-2026-guide\" (48 حرفًا، ضمن حد الـ 60)\n\nمع تفعيل إزالة كلمات التوقف (حُذفت the وin): \"10-best-tea-brands-india-2026-guide\"\n\nالمعاينة: https://example.com/blog/the-10-best-tea-brands-in-india-2026-guide",
-    "workedExampleHeading": "مثال محلول"
+    "workedExampleHeading": "مثال محلول",
+    "mistakesHeading": "أخطاء شائعة يجب تجنبها",
+    "mistakes": [
+      "استخدام الشرطات السفلية بدل الواصلة — جوجل يعتبر الواصلة فاصل كلمات بس يدمج underscore_words ككلمة واحدة.",
+      "الاحتفاظ بالعنوان الكامل 120 حرف كسلَغ — السلَغ الطويل يُقص في نتائج البحث ويبان سبامي.",
+      "تغيير السلَغ بعد النشر — الروابط القديمة تنكسر وتخسر الترتيب اللي بنته الصفحة.",
+      "ترك كلمات التوقف ('the'، 'and'، 'of') — تطول بدون معنى؛ اشطبها لروابط أنظف.",
+      "تضمين تواريخ أو سنوات بتتقادم — 'best-phones-2024' بيبان قديم السنة الجاية؛ خل السلَغ خالداً."
+    ]
   }
 }

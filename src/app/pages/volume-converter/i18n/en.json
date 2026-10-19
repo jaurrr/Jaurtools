@@ -135,6 +135,14 @@
         "name": "Cubic metre",
         "symbol": "m³"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "US and imperial gallons differ — 1 US gal = 3.785 L but 1 imperial gal = 4.546 L. A recipe or manual in the wrong gallon ruins the batch.",
+      "A US cup (236.588 ml) is not a metric cup (250 ml) — close enough to look right, wrong enough to break baking ratios.",
+      "Fluid ounces measure volume, ounces measure weight — 8 fl oz of honey weighs far more than 8 oz suggests. Don't swap them.",
+      "Tablespoons aren't universal — 1 US tbsp = 14.787 ml but an Australian tbsp = 20 ml. Check which spoon the recipe means.",
+      "Teaspoons stack up: 3 tsp = 1 tbsp exactly. Eyeballing 'about a tablespoon' as 2 teaspoons under-doses by a third."
     ]
   }
 }

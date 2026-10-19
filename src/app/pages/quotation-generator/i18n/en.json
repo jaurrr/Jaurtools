@@ -104,6 +104,14 @@
     "resultsHeading": "Your quotation",
     "tagline": "Build professional quotations with line items, discount, and tax. Download as PDF.",
     "workedExample": "Quoting a small business website:\n1. Items: Website design, 1 x 25,000 = 25,000. Logo design, 1 x 5,000 = 5,000.\n2. Subtotal = 25,000 + 5,000 = 30,000.\n3. Discount 10%: 30,000 x 10 / 100 = 3,000. Taxable = 27,000.\n4. Tax 18%: 27,000 x 18 / 100 = 4,860.\n5. Total = 27,000 + 4,860 = 31,860.\nThe PDF shows every line plus the discount and tax breakdown, valid for 15 days.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sending it without re-checking the numbers — one wrong digit in a rate or quantity is a real financial loss. Read every line before downloading.",
+      "Forgetting a validity period — without 'valid for 15 days', a client can accept the price a year later when your costs have risen.",
+      "Leaving out payment terms — no advance percentage and no due date means painful chasing later. State them on every quote.",
+      "Typing in Hindi or Arabic script — the PDF only renders Latin characters, so other scripts won't appear correctly in the file.",
+      "Using the same quotation number twice — duplicate numbers create accounting confusion. Track your last number and increment it."
+    ]
   }
 }

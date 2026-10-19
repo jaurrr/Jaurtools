@@ -120,6 +120,14 @@
         "name": "Stone",
         "symbol": "st"
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "A tonne is not a ton — 1 metric tonne = 1,000 kg but 1 US ton = 907.185 kg. Freight quotes in the wrong ton misprice the shipment.",
+      "Weighing in ounces while the courier bills per pound — 20 oz is 1.25 lb, and rounding down to '1 lb' underpays the label.",
+      "Stone is 14 lb, not 10 — reading '10 stone' as 10×10 lb under-reports body weight by 40 lb (18 kg).",
+      "kg→lb means multiply by 2.20462 — dividing instead turns 70 kg into 31.75 'lb' and your luggage looks featherweight.",
+      "Recipe grams are exact here but rounded on packaging — 8 oz shows as 227 g on the box but converts to 226.796 g. Don't chase the missing 0.2 g."
     ]
   }
 }

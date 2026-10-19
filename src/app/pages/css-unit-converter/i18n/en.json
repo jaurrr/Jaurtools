@@ -91,6 +91,14 @@
         "vw": "Viewport width (vw)",
         "vh": "Viewport height (vh)"
       }
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Assuming the base font is always 16 px — many projects set html to 62.5% (10 px). Enter your real base or every rem conversion is wrong.",
+      "Nested ems compound: 1.2 em inside 1.2 em = 1.44×, not 1.2×. That's exactly why rem exists — use it for predictable sizing.",
+      "Converting vw without setting your viewport width gives a meaningless number — 10 vw on a 1440 px screen is 144 px, on a 390 px phone it's 39 px.",
+      "% means different things in CSS: 100% font-size = parent's size, but 100% width = parent's width. This tool uses the font-size meaning only.",
+      "Typing px values 'for precision' on body text ignores users' font-size settings. Use rem for text so accessibility settings still work."
+    ]
   }
 }

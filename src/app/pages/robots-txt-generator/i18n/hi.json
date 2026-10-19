@@ -94,6 +94,14 @@
     "resultsHeading": "आपकी robots.txt",
     "tagline": "फॉर्म से allow/disallow क्रॉल नियम बनाएं। साइटमैप जोड़ें, robots.txt डाउनलोड करें।",
     "workedExample": "एक स्टोर मालिक निजी एरिया सुरक्षित करता है:\n1. नियम 1: User-agent *, Disallow, /admin।\n2. नियम 2: User-agent *, Disallow, /cart।\n3. नियम 3: User-agent *, Allow, /।\n4. साइटमैप: https://example.com/sitemap.xml।\n5. टूल यह बनाता है:\n   User-agent: *\n   Disallow: /admin\n   Disallow: /cart\n   Allow: /\n   Sitemap: https://example.com/sitemap.xml\n6. वह इसे https://example.com/robots.txt पर अपलोड करती है और Search Console में टेस्ट करती है।\nअब क्रॉलर एडमिन और कार्ट पेज छोड़ देते हैं पर दुकान इंडेक्स करते हैं।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "ग़लती से 'Disallow: /' लिख देना — ये एक लाइन Google से कहती है कि आपकी पूरी site ignore करे। Upload से पहले हर rule दोबारा देखिए।",
+      "ये सोचना कि ये private pages को बचाता है — robots.txt सिर्फ़ एक request है, ताला नहीं। Page कोई भी खोल सकता है। असली privacy के लिए password लगाइए।",
+      "Case ग़लत लिखना — /Admin और /admin अलग paths हैं। एक के लिए rule दूसरे पर लागू नहीं होता।",
+      "Domain root के अलावा कहीं और upload करना — ये सिर्फ़ example.com/robots.txt पर काम करता है। Subfolder में रखी कॉपी कुछ नहीं करती।",
+      "Sitemap वाली लाइन भूल जाना — अपनी sitemap URL जोड़ने से crawlers को सब कुछ तेज़ी से मिलता है। इसे skip मत कीजिए।"
+    ]
   }
 }

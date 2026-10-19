@@ -99,6 +99,14 @@
     "resultsHeading": "Your biodata",
     "tagline": "Fill a form, get a clean marriage biodata as PDF. Live preview, fully private.",
     "workedExample": "Aarav fills the form:\n1. Name: Aarav Sharma. Born: 1998-05-14. Height: 5 ft 9 in. Status: Single.\n2. Education: B.Com, Delhi University. Occupation: Accountant. Income: INR 6,00,000.\n3. Father: Rajesh Sharma. Mother: Sunita Sharma. Address: New Delhi, India.\n4. Phone and email added. About: one honest paragraph. Expectations: one clear paragraph.\n5. Download PDF: a one-page A4 biodata with three sections and both paragraphs, ready to share on WhatsApp.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Typing in Hindi or Arabic script — the PDF only renders Latin characters, so other scripts will come out broken or missing entirely.",
+      "Not double-checking your phone number — one wrong digit means the proposal can never reach you. Read it aloud digit by digit.",
+      "Writing it like a job resume — a biodata is about personal and family details, not your career. The matchmaker reads a different story.",
+      "Writing one lazy line for partner expectations — vague lines like 'good family' say nothing. A few honest sentences make real conversations happen.",
+      "Sharing a phone screenshot instead of the PDF — screenshots blur and crop badly when forwarded. Download the PDF; it's made for sharing."
+    ]
   }
 }

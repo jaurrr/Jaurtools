@@ -116,6 +116,14 @@
         "f": 212,
         "k": 373.15
       }
+    ],
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "You can't convert °C↔°F with a plain ratio — the 32° offset means 20 °C doubled isn't 40 °C in Fahrenheit. Always use the full formula.",
+      "Kelvin takes no degree sign — it's 298.15 K, not 298.15 °K. Writing °K marks you instantly.",
+      "A 1 °F change is only 5/9 of a 1 °C change — '10 degrees warmer' means very different things on the two scales.",
+      "Typing −300 °C gives you a clamp, not a conversion — nothing exists below absolute zero (−273.15 °C). Check for a typo.",
+      "−40 is the only point where °C and °F agree. Anywhere else, 'minus 40' in one scale is a different temperature in the other."
     ]
   }
 }

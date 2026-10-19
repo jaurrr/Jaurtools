@@ -89,6 +89,14 @@
     "resultsHeading": "Sitemap results",
     "tagline": "Generate a sitemap.xml file from a pasted list of URLs.",
     "workedExample": "Input (2 URLs):\nhttps://example.com/\nhttps://example.com/about\nSettings: changefreq = weekly, priority = 0.5, lastmod on.\nStep 1: both lines parse as valid https URLs, so valid = 2, invalid = 0, duplicates = 0. Step 2: each URL becomes a <url> block with its <loc>, today's <lastmod>, the chosen <changefreq> and <priority>.\nOutput (excerpt):\n<url>\n  <loc>https://example.com/</loc>\n  <lastmod>2026-10-18</lastmod>\n  <changefreq>weekly</changefreq>\n  <priority>0.5</priority>\n</url>\nThe second block is identical except <loc>https://example.com/about</loc>. Save the full output as sitemap.xml and upload it to your site root.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting Google to index everything — a sitemap suggests pages for discovery; it never guarantees indexing.",
+      "Listing 404s, login pages, and duplicates — junk URLs waste your crawl budget. Include only real, canonical pages.",
+      "Forgetting to submit it in Search Console — the file sitting on your server does nothing until Google knows it's there.",
+      "Using relative URLs — the sitemap protocol requires full absolute https:// URLs. Relative paths get rejected.",
+      "Treating priority and changefreq as commands — they're hints that crawlers may ignore. Your content decides what gets crawled, not the numbers."
+    ]
   }
 }

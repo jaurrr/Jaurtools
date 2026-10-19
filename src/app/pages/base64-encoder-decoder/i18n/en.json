@@ -82,6 +82,14 @@
       "output": "Output",
       "copy": "Copy result",
       "invalidInput": "That does not look like valid Base64. Check for typos or missing padding."
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Base64 is encoding, not encryption — anyone can decode it in a second. Never paste a password or secret here thinking it's hidden.",
+      "Pasting already-encoded text into the Encode tab double-encodes it. If the output looks like alphabet soup, check which tab you're on.",
+      "Stray spaces or line breaks in a Base64 string break decoding — clean the input before pasting.",
+      "Missing '=' padding at the end is the most common decode error. One or two '=' characters must close the string.",
+      "Base64 output is ~33% bigger than the input. Don't be surprised when a 3 MB payload becomes a 4 MB string."
+    ]
   }
 }

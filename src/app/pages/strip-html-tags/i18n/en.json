@@ -87,6 +87,14 @@
     "resultsHeading": "HTML tag stripper",
     "tagline": "Paste HTML, get clean plain text — paragraphs kept, entities decoded.",
     "workedExample": "Input: <h1>Hello</h1><p>World<br>Again</p>\nWith Keep line breaks ON:\nStep 1: <br> becomes a newline, and a newline is added after each heading and paragraph.\nStep 2: textContent = \"Hello\\nWorld\\nAgain\\n\"\nStep 3: trim -> \"Hello\\nWorld\\nAgain\"\nOutput:\nHello\nWorld\nAgain",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting links to survive — the anchor text stays but the URLs are gone, so references become useless.",
+      "Stripping a table — without structure the cells collapse into an unreadable stream of words.",
+      "Assuming images come along — only alt text (if any) remains; the pictures themselves are lost.",
+      "Forgetting script and style content — inline JavaScript and CSS can leak into your 'clean' text as junk.",
+      "Pasting the result back as HTML — entities were decoded, so characters like < and & can break your page."
+    ]
   }
 }

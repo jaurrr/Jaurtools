@@ -95,6 +95,14 @@
     "resultsHeading": "Case Converter results",
     "tagline": "Convert text between uppercase, lowercase, title case and sentence case.",
     "workedExample": "Input: 'hello world. how are you?'\n\n1. Title Case: first letter of each word upper, rest lower\n   'hello world. how are you?' -> 'Hello World. How Are You?'\n2. Sentence case: whole text lowered, then first letter of each sentence upper\n   'hello world. how are you?' -> 'Hello world. How are you?'\n3. UPPER: 'HELLO WORLD. HOW ARE YOU?'\n4. Alternating (letters only): 'HeLlO wOrLd. HoW aRe YoU?'\n   (the space and punctuation do not reset the flip pattern)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Title Case capitalizes small words like 'of' and 'the' — real title style leaves them lowercase, so fix those by hand.",
+      "Converting code or passwords changes their meaning — 'myVar' is not 'MYVAR' in a case-sensitive language, so never convert code.",
+      "Assuming Sentence case fixes proper nouns — it lowercases everything after the first letter, so names and brands still need manual caps.",
+      "Pasting ALL-CAPS text from a PDF and hitting Title Case without checking — acronyms like NASA come out as 'Nasa'.",
+      "Writing whole paragraphs in UPPER CASE for emphasis — it reads as shouting and hurts readability; use bold instead."
+    ]
   }
 }

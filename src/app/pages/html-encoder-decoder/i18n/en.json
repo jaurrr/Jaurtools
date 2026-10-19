@@ -81,6 +81,14 @@
       "input": "Input",
       "output": "Output",
       "copy": "Copy result"
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Encoding twice turns &lt; into &amp;lt; — visible garbage. If entities show up as literal text on your page, you encoded an already-encoded string.",
+      "Encoding the whole HTML page instead of just the text snippet breaks every tag — encode only the content that must display as text.",
+      "Decoding does not make text safe — it's just translation. Pasting decoded output into innerHTML re-arms any script it contained.",
+      "& must be escaped first; escaping it last double-encodes everything (&lt; becomes &amp;lt;). Order is the whole trick.",
+      "Encoding once and assuming XSS is solved — context matters. Attribute and JavaScript contexts need their own escaping on top of this."
+    ]
   }
 }

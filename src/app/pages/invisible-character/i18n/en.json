@@ -135,6 +135,14 @@
     "resultsHeading": "Invisible Character results",
     "tagline": "Copy invisible Unicode characters for blank names and empty text.",
     "workedExample": "Making a blank game nickname with Hangul Filler:\n1. Find the 'Hangul Filler' card (code point U+3164).\n2. In the builder, select Hangul Filler and set Repeat to 3.\n3. The bundle is 3 characters long: U+3164 U+3164 U+3164.\n4. Click 'Copy bundle' and paste into the game's name field.\n5. The name field shows blank, but it contains 3 real characters, so 'empty name' validation passes.\n\nIf the game strips it, try the Braille Blank (U+2800) card instead - different apps filter different characters.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Relying on a single character everywhere — apps filter these aggressively, so the one that works in chat may fail in a game name.",
+      "Assuming an invisible name is allowed — some games and platforms treat it as cheating or ban it outright.",
+      "Pasting dozens of them — stacked invisible characters can break layouts, push text around, or crash old apps.",
+      "Expecting them to survive SMS or plain-text email — some encodings strip them silently and your 'empty' message arrives truly empty.",
+      "Thinking they are undetectable — moderators and screen readers can see or announce them, so do not use them to dodge filters."
+    ]
   }
 }

@@ -96,6 +96,14 @@
     "resultsHeading": "WhatsApp फ़ॉर्मेटर परिणाम",
     "tagline": "WhatsApp टेक्स्ट फॉर्मेट करें — बोल्ड, इटैलिक, स्ट्राइकथ्रू, लाइव प्रीव्यू।",
     "workedExample": "इनपुट:  *Hello* _world_ ~oops~ `code`\n\nचरण 1: HTML एस्केप करें (यहाँ कोई बदलाव नहीं)\nचरण 2: निकालने के लिए कोई ```ब्लॉक``` नहीं\nचरण 3: `code` -> <code class=\"wa-inline\">code</code>\nचरण 4: *Hello* -> <strong>Hello</strong>\nचरण 5: _world_ -> <em>world</em>\nचरण 6: ~oops~ -> <del>oops</del>\n\nप्रीव्यू रेंडर करता है: Hello (बोल्ड) world (इटैलिक) oops (कटा हुआ) code (मोनोस्पेस)।\n\nमार्कअप हटाएं मोड हर * _ ~ ` हटाता है और देता है: \"Hello world oops code\"।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "ये उम्मीद कि ये तुम्हारे chats खुद पढ़ लेगा — ये WhatsApp access नहीं कर सकता; टेक्स्ट तुम खुद पेस्ट करते हो, कुछ upload नहीं होता।",
+      "HTML preview को WhatsApp में कॉपी करना — WhatsApp को *markup* चाहिए, rendered HTML नहीं; markup वाली copy इस्तेमाल करो।",
+      "Markup strip करके emphasis बचेगा, ये उम्मीद — plain text में bold/italic नहीं होता, तो formatting वाला मतलब खो जाता है।",
+      "ये मानना कि formatting हर जगह चलेगी — strikethrough और monospace WhatsApp में दिखते हैं पर SMS और email में गायब।",
+      "Formatted text को plain-text field में पेस्ट करना — bios और usernames अक्सर asterisks strip करके उन्हें literally दिखा देते हैं।"
+    ]
   }
 }

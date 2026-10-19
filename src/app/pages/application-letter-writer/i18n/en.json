@@ -107,6 +107,14 @@
     "resultsHeading": "Letter results",
     "tagline": "Write formal application letters with correct structure — job, leave, resignation, request.",
     "workedExample": "Type: leave application. Name \"Amit Kumar\", recipient role \"The Principal\", organization \"City Public School\", subject \"Application for two days' leave\", points: \"I need leave on 20 and 21 October 2026 for a family function.\" and \"I have completed my pending school work.\" Date 18 October 2026.\nThe letter opens with the sender block and date, then \"The Principal, City Public School\", then \"Subject: Application for two days' leave\", then \"Dear Sir/Madam,\", then the leave opening sentence, then the two points as separate paragraphs, then the closing sentence asking for approval, and finally \"Yours sincerely, Amit Kumar\". Copy it into your email or print it.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sending the letter without reading it first — the tool drafts placeholder wording, not your story. A wrong name, date, or detail tells the recipient you never bothered to check.",
+      "Using 'Dear Sir/Madam' when you actually know the person's name — it reads as lazy. If you have the name, use it.",
+      "Sending the exact same job application to every company — recruiters can spot a generic letter in seconds, and it goes straight to the reject pile.",
+      "Writing a vague subject line like 'Application' — the reader learns nothing from it. Say what the letter is for in the subject itself.",
+      "Leaving a typo in a name, date, or notice period — small mistakes are the first thing people notice, and they quietly sink the whole letter's credibility."
+    ]
   }
 }

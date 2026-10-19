@@ -90,6 +90,14 @@
     "resultsHeading": "फैंसी टेक्स्ट स्टाइल",
     "tagline": "8 यूनिकोड टेक्स्ट स्टाइल — एक बार टाइप करें, कहीं भी कॉपी करें, फ़ॉन्ट की जरूरत नहीं।",
     "workedExample": "इनपुट: \"Hi\"\nबोल्ड: 𝐇𝐢 (H -> U+1D407, i -> U+1D422)\nइटैलिक: 𝐻𝑖 (H -> U+1D43B, i -> U+1D456)\nस्क्रिप्ट: ℋ𝒾 (H -> U+210B, i -> U+1D4F2)\n\"!\" जैसे अक्षर अपरिवर्तित रहते हैं: \"Hi!\" -> बोल्ड \"𝐇𝐢!\"",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Resume या job application में इस्तेमाल — ATS systems Unicode styling पढ़ नहीं पाते, तुम्हारा नाम ही गायब हो सकता है।",
+      "ये मत समझो screen readers इसे सही पढ़ेंगे — वो अक्सर हर styled letter अलग-अलग बोलते हैं, accessibility खराब होती है।",
+      "Password या username में डालना — कई systems non-ASCII characters reject कर देते हैं, अपने ही account से lockout हो जाओगे।",
+      "ये सोचना कि कोई font install किया है — ये Unicode characters हैं, पुराने devices पर अलग दिखेंगे या टूट जाएंगे।",
+      "एक bio में पांच styles मिला देना — गंदा और unprofessional लगता है; एक style चुनो और उसी पर रहो।"
+    ]
   }
 }

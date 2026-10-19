@@ -102,6 +102,14 @@
     "resultsHeading": "نتائج مولد الاقتباسات",
     "tagline": "ابنِ مدخلات اقتباس وببليوغرافيا منسقة من نموذج بسيط.",
     "workedExample": "المصدر: كتاب بنمط APA.\nالمؤلفون: Sharma, Rahul\nالسنة: 2023\nالعنوان: Modern Web Development\nالناشر: Tech Press\n\nخطوة بخطوة:\n1. المؤلف: 'Sharma, Rahul' -> الاسم الأخير + الحرف الأول = 'Sharma, R.'\n2. السنة بين قوسين: '(2023).'\n3. العنوان بحالة الجملة: 'Modern Web Development' -> 'Modern web development.'\n4. الناشر: 'Tech Press.'\n\nالنتيجة:\nSharma, R. (2023). Modern web development. Tech Press.\n\nالمصدر نفسه بنمط MLA:\nSharma, Rahul. Modern Web Development. Tech Press, 2023.\n\nالمصدر نفسه بنمط Chicago:\nSharma, Rahul. 2023. Modern Web Development. Tech Press.",
-    "workedExampleHeading": "مثال محلول"
+    "workedExampleHeading": "مثال محلول",
+    "mistakesHeading": "أخطاء شائعة يجب تجنبها",
+    "mistakes": [
+      "اختيار النمط عشوائياً — APA وMLA وشيكاغو كل واحد لتخصص، والنمط الغلط ممكن يكلفك درجات.",
+      "كتابة المؤلفين 'الاسم الأول الأخير' والأداة تتوقع 'الأخير، الأول' — قائمة المراجع كلها بتترتب غلط.",
+      "ترك السنة فاضية أو تخمينها — لـ'n.d.' قواعد صارمة؛ سنة غلط أسوأ من الاعتراف إنها مجهولة.",
+      "الثقة بالمخرجات بدون مراجعة أحدث قواعد الإصدار — المولدات تتأخر عن تحديثات الأنماط، فتحقق من الدليل.",
+      "نسيان الاقتباسات داخل النص — قائمة مراجع مثالية ما تفيد إذا متن البحث ما فيه اقتباس."
+    ]
   }
 }

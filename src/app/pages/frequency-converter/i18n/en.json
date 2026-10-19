@@ -87,6 +87,14 @@
         "GHz": "Gigahertz (GHz)",
         "THz": "Terahertz (THz)"
       }
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "GHz and MHz are 1,000× apart, not 100× — 2.4 GHz Wi-Fi is 2,400 MHz, and writing 240 MHz kills the spec.",
+      "Period is the inverse of frequency, not the same thing: a 50 Hz mains cycle lasts 1÷50 = 20 ms. Don't type the period into a frequency field.",
+      "Mixing up angular frequency — ω = 2πf, so 50 Hz is ~314 rad/s. Pasting rad/s values here as Hz silently multiplies everything by 6.28.",
+      "Reading the '2.4G' on a Wi-Fi box as 2.4 MHz — the G means GHz. Always read the full unit, not just the number.",
+      "Human hearing tops at ~20 kHz, not 20 MHz — a million-fold slip. Double-check the prefix before quoting audio specs."
+    ]
   }
 }

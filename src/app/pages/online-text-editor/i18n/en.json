@@ -101,6 +101,14 @@
     "resultsHeading": "Your text editor",
     "tagline": "Simple rich-text editing in the browser — format, count, download as HTML.",
     "workedExample": "You type \"Quarterly Report\", select it and press H1, then type the paragraph \"Sales grew 12 percent this quarter.\"\nWords: 8 (Quarterly, Report, Sales, grew, 12, percent, this, quarter)\nCharacters: counted from the visible text, including spaces\nDownload -> document.html contains <h1>Quarterly Report</h1> followed by your paragraph.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Assuming it autosaves — there is no backend, so closing the tab without downloading loses everything.",
+      "Pasting from Word or Google Docs — hidden styles come along and the HTML export gets bloated and messy.",
+      "Expecting it to work fully offline — it is a web page; no connection means no editor.",
+      "Thinking the eraser button deletes text — it only removes formatting from the selection, the words stay.",
+      "Copying the HTML source into an email — most email clients strip the styles, so the result looks nothing like the preview."
+    ]
   }
 }

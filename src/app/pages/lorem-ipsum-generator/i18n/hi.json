@@ -90,6 +90,14 @@
     "resultsHeading": "Lorem Ipsum जनरेटर परिणाम",
     "tagline": "लंबाई और स्टाइल के हिसाब से प्लेसहोल्डर टेक्स्ट जनरेट करें।",
     "workedExample": "सेटिंग: 2 वाक्य, क्लासिक स्टाइल, 'Start with Lorem ipsum' चालू।\n\nचरण दर चरण:\n1. क्लासिक बैंक से 2 वाक्य चाहिए।\n2. start-with-lorem वाक्य 1 को बनाता है: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'\n3. वाक्य 2 बैंक में अगला है: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'\n4. स्पेस से जोड़े।\n\nपरिणाम:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nशब्द गिनती जांच: 8 + 11 = 19 शब्द।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Design में lorem ipsum छोड़कर ship कर देना — ये अक्सर होता है; launch से पहले final build में 'lorem' search करो।",
+      "ये मानना कि same settings से same text दोबारा मिलेगा — output random है, exact paragraph दोबारा बनाने पर भरोसा मत करो।",
+      "SEO content के लिए filler इस्तेमाल — search engines इसे thin content मानकर index करते हैं और page को नुकसान हो सकता है।",
+      "छोटे card layout के लिए 50 paragraphs generate करना — filler design की असली overflow और spacing problems छिपा देता है।",
+      "Client mockup के लिए 'tech English' style चुनना — पढ़ने लायक fake words देखकर client design की जगह filler proofread करने लगता है।"
+    ]
   }
 }

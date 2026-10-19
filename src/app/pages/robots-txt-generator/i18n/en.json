@@ -94,6 +94,14 @@
     "resultsHeading": "Your robots.txt",
     "tagline": "Build allow/disallow crawl rules from a form. Add your sitemap, download robots.txt.",
     "workedExample": "A store owner protects private areas:\n1. Rule 1: User-agent *, Disallow, /admin.\n2. Rule 2: User-agent *, Disallow, /cart.\n3. Rule 3: User-agent *, Allow, /.\n4. Sitemap: https://example.com/sitemap.xml.\n5. The tool generates:\n   User-agent: *\n   Disallow: /admin\n   Disallow: /cart\n   Allow: /\n   Sitemap: https://example.com/sitemap.xml\n6. She uploads it to https://example.com/robots.txt and tests in Search Console.\nCrawlers now skip the admin and cart pages but index the shop.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Writing 'Disallow: /' by mistake — that single line tells Google to ignore your entire site. Double-check every rule before uploading.",
+      "Believing it protects private pages — robots.txt is a request, not a lock. Anyone can still open the page. Use passwords for real privacy.",
+      "Getting the case wrong — /Admin and /admin are different paths. A rule for one doesn't cover the other.",
+      "Uploading it anywhere except the domain root — it only works at example.com/robots.txt. A copy in a subfolder does nothing.",
+      "Forgetting the sitemap line — adding your sitemap URL tells crawlers where to find everything faster. Don't skip it."
+    ]
   }
 }

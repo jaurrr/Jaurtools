@@ -85,6 +85,14 @@
     "resultsHeading": "Spell checker",
     "tagline": "Catch typos instantly — bundled dictionary, one-click fixes, all local.",
     "workedExample": "Input: \"Please beleive me and adress this package\"\nWords checked: 7\n- \"beleive\" not in dictionary -> flagged. Suggestions: believe, receive -> click \"believe\".\n- \"adress\" not in dictionary -> flagged. Suggestions: address, dress, across, press, stress -> click \"address\".\nClicking a suggestion replaces every occurrence and keeps capitalization.\nResult: \"Please believe me and address this package\"\nErrors: 2 -> 0",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Accepting every suggestion blindly — 'their' vs 'there' are both valid words, and the wrong fix creates a new error.",
+      "Assuming it checks grammar — it flags spelling only, so broken sentences sail through untouched.",
+      "Pasting code — every variable and keyword gets flagged, burying the real typos in noise.",
+      "Ignoring dialect — US vs UK spelling ('color' vs 'colour') gets flagged as wrong when it is just different.",
+      "Trusting it with proper nouns — names and brand terms get flagged; do not 'correct' them into real words."
+    ]
   }
 }

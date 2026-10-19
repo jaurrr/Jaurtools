@@ -93,6 +93,14 @@
     "resultsHeading": "Text repetition tool",
     "tagline": "Repeat any text up to 100,000 times — separators, live count.",
     "workedExample": "Text: \"ha\", count: 3, separator: new line\nOutput: \"ha\" + \"\\n\" + \"ha\" + \"\\n\" + \"ha\"\nResult:\nha\nha\nha\nTotal characters: 3 x 2 + 2 x 1 = 8\nActual repeats: 3 (under the cap, nothing truncated)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Repeating with no separator — 1,000 copies of a word fuse into one unreadable blob; pick a separator.",
+      "Maxing out at 100,000 repeats — the output can freeze your browser or crash the app you paste into.",
+      "Using it for spam — flooding chats or comments gets your account flagged or banned fast.",
+      "Forgetting the trailing separator — 'a,a,a' vs 'a,a,a,' matters when the result feeds code or data.",
+      "Assuming repetition adds emphasis — ten exclamation marks look desperate, not persuasive; one is enough."
+    ]
   }
 }

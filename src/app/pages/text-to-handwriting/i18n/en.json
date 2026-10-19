@@ -92,6 +92,14 @@
     "resultsHeading": "Handwriting generator",
     "tagline": "Type text, get a handwritten note on notebook paper — download as PNG.",
     "workedExample": "Input: \"Hello World\"\nStyle: Classic, ink: blue (#1e3a8a), size: 48px, ruled paper ON.\nStep 1: line height = 48 x 1.7 = 81.6 -> 82px\nStep 2: \"Hello World\" fits on one wrapped line\nStep 3: page height = 120 + 1 x 82 + 20 = 222px (1240px wide)\nStep 4: cream background, blue ruled lines and red margin are drawn, then the text in blue script font\nDownload -> handwriting.png shows the handwritten note.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting it to fool anyone — the strokes are perfectly uniform, so it reads as a font, not real handwriting.",
+      "Downloading the PNG for print — screen resolution looks blurry on paper; it is meant for screens.",
+      "Writing a long letter on one image — tiny text on a huge canvas is unreadable; keep notes short.",
+      "Choosing the elegant style for a casual note — mismatched tone feels fake; match the style to the message.",
+      "Forgetting ruled paper changes readability — dense text on ruled lines looks cramped; toggle it off for paragraphs."
+    ]
   }
 }

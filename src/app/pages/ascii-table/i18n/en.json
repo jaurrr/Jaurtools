@@ -86,6 +86,14 @@
       "colName": "Name",
       "copyChar": "Copy character",
       "copiedMessage": "Copied!"
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Codes 0–31 are control characters — they don't print. Copying code 9 (TAB) or 10 (line feed) into a document just moves the cursor.",
+      "ASCII stops at 127. Looking up accented letters or currency symbols here won't work — those need Unicode/UTF-8, not this table.",
+      "Uppercase A is 65 and lowercase a is 97 — a gap of exactly 32. That's why 'Z' (90) sorts before 'a' (97), so 'Apple' comes before 'apple' in code.",
+      "The digit '0' is code 48, not 0. Subtracting '0' (48) from a digit character gives its numeric value — '7' (55) minus 48 = 7.",
+      "Code 32 is a real space character, not 'nothing'. Trimming or ignoring it breaks fixed-width text parsing."
+    ]
   }
 }

@@ -90,6 +90,14 @@
     "resultsHeading": "Teleprompter",
     "tagline": "Read scripts on camera like a pro — auto-scroll, speed and mirror flip.",
     "workedExample": "Script: \"Welcome to my channel. Today we build a birdhouse.\"\nWords: 9\nPress Start -> press Play at speed 3.\nThe stage scrolls 3 pixels every 50 ms = 60 pixels per second.\nScrolling continues until the last line is fully visible, then pauses automatically.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Starting at full speed without rehearsing — set the pace to your natural speaking rhythm first, then press play.",
+      "Reading with zero eye contact — staring at scrolling text the whole time looks robotic; glance up at the camera.",
+      "Using tiny text to fit more on screen — squinting is visible on camera; bigger text and slower scroll looks natural.",
+      "Leaving mirror flip on for a normal monitor — mirrored text is only for teleprompter glass; it is unreadable otherwise.",
+      "Pasting a wall of text with no paragraph breaks — you will run out of breath; break the script where you need pauses."
+    ]
   }
 }

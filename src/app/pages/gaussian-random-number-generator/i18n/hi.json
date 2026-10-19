@@ -92,6 +92,14 @@
     "resultsHeading": "आपके रैंडम नंबर",
     "tagline": "किसी भी मीन और फैलाव के साथ बेल-कर्व रैंडम मान बनाएं। सांख्यिकी, हिस्टोग्राम, CSV।",
     "workedExample": "मीन 100 और SD 15 के साथ परीक्षा स्कोर सिम्युलेट करना:\n1. 1,000 मान बनाएं। सैंपल मीन 100 के पास, सैंपल SD 15 के पास आएगा।\n2. 68 प्रतिशत नियम जांचें: 85 से 115 के बीच मान गिनें। 1,000 में से लगभग 680 अपेक्षित हैं।\n3. 115 से कम स्कोर की प्रोबेबिलिटी: z = (115 - 100) / 15 = 1, यानी P = 84.1 प्रतिशत।\n4. टॉप 2.5 प्रतिशत थ्रेशहोल्ड: मीन + 2 SD = 130। 1,000 में से लगभग 25 मान इससे ऊपर।\nहिस्टोग्राम क्लासिक बेल शेप दिखाता है, 100 पर सबसे ऊंचा।",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "इसे password, keys या lottery के लिए इस्तेमाल करना — ये pseudo-random है, cryptographic नहीं। असली security के लिए crypto.getRandomValues चाहिए, bell curve नहीं।",
+      "ये मान लेना कि आपका असली data normal है — ज़्यादातर असली data skewed होता है। पहले histogram देखिए; अगर bell जैसा न दिखे तो model ग़लत है।",
+      "Outliers को भूल जाना — बड़े सेट में 3 standard deviation से बाहर की values आएँगी ही। ये normal है, bug नहीं।",
+      "अगले run में वही नंबर मिलने की उम्मीद — कोई seed नहीं है, इसलिए नतीजे कभी repeatable नहीं होंगे। दोहराने लायक काम के लिए Python में fixed seed इस्तेमाल कीजिए।",
+      "Yes/no वाले data पर normal distribution लगाना — bell curve continuous measurements के लिए है, binary नतीजों के लिए नहीं। Model को data type से match कीजिए।"
+    ]
   }
 }

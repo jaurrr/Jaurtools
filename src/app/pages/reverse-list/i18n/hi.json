@@ -85,6 +85,14 @@
     "resultsHeading": "सूची उलटने का टूल",
     "tagline": "किसी भी सूची का पंक्ति क्रम तुरंत पलटें — अंतिम पंक्ति पहले, एक क्लिक।",
     "workedExample": "इनपुट (3 पंक्तियां):\nMonday\nTuesday\nWednesday\n\nपंक्तियों में विभाजित: [\"Monday\", \"Tuesday\", \"Wednesday\"]\nसरणी उलटें: [\"Wednesday\", \"Tuesday\", \"Monday\"]\nआउटपुट:\nWednesday\nTuesday\nMonday",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Multi-column data reverse करना — हर line की position flip होती है पर line के अंदर columns नहीं, तो rows misalign हो जाती हैं।",
+      "Numbered list reverse करना — numbers अपने items से चिपके रहते हैं, तो '1.' सबसे नीचे पहुंचकर order गलत लगेगा।",
+      "ये मानना कि ये Z–A sorting जैसा है — reversing तुम्हारा original sequence उल्टा करता है, alphabetize नहीं।",
+      "Result को अपने इकलौते original पर कॉपी कर देना — tab बंद करने के बाद undo नहीं है, backup रखो।",
+      "Paragraph को line-by-line reverse करना — sentences का order flip होता है पर sentences खुद intact रहते हैं, जो अजीब पढ़ा जाता है।"
+    ]
   }
 }

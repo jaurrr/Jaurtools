@@ -84,6 +84,14 @@
     "resultsHeading": "टोकन अनुमान",
     "tagline": "किसी भी प्रॉम्प्ट के LLM टोकन अनुमानित करें — तुरंत और निजी।",
     "workedExample": "पाठ: \"The quick brown fox jumps over the lazy dog\"\nअक्षर: 43\nशब्द: 9\nटोकन अनुमान: औसत(43 ÷ 4 = 10.75, 9 × 1.33 = 11.97) ≈ 11 टोकन\nसंदर्भ: 11 ÷ 128000 × 100 ≈ 128k विंडो का 0.01%",
-    "workedExampleHeading": "हल सहित उदाहरण"
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "mistakesHeading": "इन आम गलतियों से बचें",
+    "mistakes": [
+      "Count को exact मानना — ये estimate है; असली model tokenizer 10% या ज़्यादा अलग हो सकता है।",
+      "ये मानना कि एक word एक token है — common words एक token होते हैं, rare वाले कई में split होते हैं।",
+      "System prompt भूल जाना — तुम्हारे instructions भी context खाते हैं, तो chat history पूरा budget नहीं है।",
+      "Percentage को cost meter समझना — context usage और price जुड़े हैं पर same चीज़ नहीं।",
+      "Relevant part की जगह पूरा document पेस्ट करना — bloated prompt गिनने से अच्छा है उसे trim करना।"
+    ]
   }
 }

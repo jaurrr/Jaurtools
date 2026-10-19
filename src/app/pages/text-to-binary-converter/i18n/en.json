@@ -101,6 +101,14 @@
     "resultsHeading": "Binary converter",
     "tagline": "Translate text into binary code — live, with one-click copy.",
     "workedExample": "Encode \"Hi\":\nH = code 72 -> binary 01001000\n i = code 105 -> binary 01101001\nOutput (space separator): 01001000 01101001\nBits: 2 bytes x 8 = 16\n\nDecode \"01001000 01101001\":\nGroups: [01001000, 01101001] -> bytes [72, 105] -> UTF-8 text \"Hi\"",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Thinking binary is encryption — it is an encoding anyone can reverse in seconds; never hide passwords in it.",
+      "Decoding binary with mixed group sizes — 7-bit and 8-bit groups in one string produce garbage; keep them uniform.",
+      "Assuming one group equals one character — emoji and accented letters span multiple bytes, so counts mislead.",
+      "Copying binary with extra spaces or line breaks — stray whitespace breaks decoding; clean it first.",
+      "Encoding for 'security through obscurity' in a URL or file — it doubles the size and fools nobody."
+    ]
   }
 }

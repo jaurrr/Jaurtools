@@ -90,6 +90,14 @@
     "resultsHeading": "Bionic Reading Converter results",
     "tagline": "Rewrite text with bolded word-starts so you can skim it faster.",
     "workedExample": "Input: 'The quick fox'\nStrength: Medium (40% of each word bolded)\n\nStep by step:\n1. Word 'The' (3 letters): bold = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>T</strong>he'\n2. Word 'quick' (5 letters): bold = max(1, round(5 x 0.4)) = max(1, 2) = 2 -> '<strong>qu</strong>ick'\n3. Word 'fox' (3 letters): bold = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>f</strong>ox'\n\nRendered preview shows: T(he) qu(ick) f(ox) with the bracketed starts in bold.\nOriginal text is untouched - only bold markup is added.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Cranking strength to Strong for a long article — the heavy bolding gets tiring fast; Medium is the sweet spot for most reading.",
+      "Assuming it is proven to double your reading speed — the science is thin, so treat it as a skimming aid, not a superpower.",
+      "Copying the preview as plain text and expecting the bolding to survive — formatting only carries over in the HTML copy.",
+      "Running it on poetry or legal text — the bolding fights the rhythm and precision those texts need.",
+      "Expecting it to fix comprehension problems — it guides the eyes, but dense material still needs slow reading."
+    ]
   }
 }

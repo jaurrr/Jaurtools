@@ -90,6 +90,14 @@
     "resultsHeading": "Binary to Text results",
     "tagline": "Decode binary code into readable text — instant, in your browser.",
     "workedExample": "Input (Binary to Text mode):\n01001000 01101001\n\nStep by step:\n1. Split into groups: '01001000' and '01101001'.\n2. Group 1: 0x128+1x64+0x32+0x16+1x8+0x4+0x2+0x1 = 64 + 8 = 72 -> 'H'.\n3. Group 2: 0x128+1x64+1x32+0x16+1x8+0x4+0x2+1x1 = 64 + 32 + 8 + 1 = 105 -> 'i'.\n\nOutput: Hi\n\nReverse (Text to Binary mode):\n'H' -> 72 -> 01001000, 'i' -> 105 -> 01101001\nOutput: 01001000 01101001",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Decoding groups that are not exactly 8 bits (like '101') fails or produces garbage — pad them first.",
+      "Treating binary as encryption — it is just an encoding, anyone can decode it in seconds, so never hide secrets in it.",
+      "Assuming every 8-bit group is one character — emoji and many non-English letters need multiple bytes, so counts mislead.",
+      "Pasting binary with line breaks or double spaces breaks decoding — strip the formatting before you convert.",
+      "Forgetting which direction you need — encoding text you already encoded doubles it into nonsense nobody can read."
+    ]
   }
 }

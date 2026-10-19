@@ -90,6 +90,14 @@
     "resultsHeading": "Your resume",
     "tagline": "Build a professional ATS-friendly resume — PDF in minutes.",
     "workedExample": "Jauhar builds his resume:\n1. Header: Jauhar Ayyub, Frontend Developer, email, phone, Hyderabad, portfolio link.\n2. Summary: 2 lines on 2 years of Angular experience.\n3. Skills: Angular, TypeScript, RxJS, HTML, CSS, SCSS, REST APIs, Git.\n4. Experience: Frontend Developer, Digital Transformation Factory (2024-Present) with 3 quantified bullets; freelance work with 2 bullets.\n5. Education: BCA, Veer Bahadur Purvanchal University (2024).\n6. Download PDF: a one-page resume with clear sections, ready to attach to applications.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sending the same resume to every job — mirror each posting's keywords naturally. The same template for all applications reads as generic.",
+      "Listing duties instead of achievements — 'responsible for sales' tells nothing. Numbers like 'grew sales 30 percent' get interviews.",
+      "Stretching to two pages with under five years of experience — recruiters skim. One tight page beats two padded ones.",
+      "A typo in your phone number or email — the perfect resume that can't be answered is worthless. Check contact details last and first.",
+      "Using an unprofessional email address — cooldude99@gmail.com kills credibility. Use your name, plainly."
+    ]
   }
 }

@@ -89,6 +89,14 @@
         "kWh": "Kilowatt-hour (kWh)",
         "BTU": "British Thermal Unit (BTU)"
       }
-    }
+    },
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "cal vs kcal is a 1,000× trap: food 'Calories' are kilocalories. A 500 Calorie snack is 500,000 small calories, not 500.",
+      "kW is power, kWh is energy — typing a wattage into the kWh box without a time period is meaningless. Power × hours = energy.",
+      "Wh and Ah are not the same battery unit — Ah needs voltage to become energy (Wh = Ah × V). A 5,000 mAh phone battery at 3.7 V is 18.5 Wh.",
+      "BTU has several historical definitions; this tool uses the International Table BTU. Comparing with a source using a different BTU definition shifts results slightly.",
+      "Adding energy values in different units without converting first — 2 kWh + 500 BTU isn't 502 anything. Convert to one unit, then add."
+    ]
   }
 }
