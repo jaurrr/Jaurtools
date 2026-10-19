@@ -1,0 +1,93 @@
+{
+  "spin-the-wheel": {
+    "benefits": [
+      "Ends 'I don't know, you decide' debates in four seconds.",
+      "Every option gets an exactly equal chance — no favourites, no arguments.",
+      "Great for classrooms, teams, giveaways, and picking what to eat tonight.",
+      "The win tally reveals which choices keep winning over time."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Games & Fun",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The winner is drawn first with Math.random(), giving every option an exactly equal 1/n chance. Only then is the wheel animation aimed so that slice lands under the pointer. The spin is theatre; the draw is unbiased.",
+        "q": "Is the wheel really fair?"
+      },
+      {
+        "a": "Minimum 2 options (one option needs no wheel), maximum 12 so every slice stays readable and tappable. With 12 options each slice is exactly 30 degrees.",
+        "q": "How many options can I add?"
+      },
+      {
+        "a": "Yes — the wheel treats them as separate slices. But identical labels make the tally confusing, so make each option unique if you can.",
+        "q": "Can two options have the same text?"
+      },
+      {
+        "a": "Yes, freely. Add or remove options between spins; the wheel redraws instantly. The win tally keeps counting until you press Reset Wins.",
+        "q": "Can I change the options between spins?"
+      },
+      {
+        "a": "Press Reset Wins. It zeroes every option's count and clears the current winner without removing your options.",
+        "q": "How do I reset the win counts?"
+      },
+      {
+        "a": "No. Type your options, spin, and decide — no account, no sign-up, nothing sent anywhere. Your options live only in your browser tab.",
+        "q": "Do I need an account?"
+      }
+    ],
+    "formula": "Each of the n options owns a slice of 360° ÷ n, starting at the top and going clockwise.\nWinner: index = floor(random() x n) — every option has exactly a 1/n chance.\nAnimation: 5 to 7 full turns plus the exact offset that parks the middle of the winner's slice under the pointer at the top.",
+    "formulaHeading": "How the wheel works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type each option and press Add (or hit Enter). Add 2 to 12 options.",
+      "Remove any option with the x on its chip — the wheel redraws itself.",
+      "Press Spin the Wheel and watch it whirl 5 to 7 full turns with a smooth slow-down.",
+      "The pointer lands on the winner, whose chip lights up and whose win count grows by one.",
+      "Press Reset Wins anytime to zero the counts without removing your options."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The Decision Wheel picks one option at random from 2 to 12 choices you type in.",
+      "Every option owns an equal slice of the wheel: 360° divided by the number of options.",
+      "The winner is drawn first with a random number; the animation then aims that slice at the pointer.",
+      "Each spin runs 5 to 7 full turns with an ease-out slow-down over about 4 seconds.",
+      "A win tally tracks how many times each option has won.",
+      "The pointer sits at the top of the wheel — the slice under it when the wheel stops is the winner."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "decision wheel, spin the wheel, random picker wheel, wheel of names, decision maker",
+    "labels": {
+      "addButton": "Add",
+      "addOptionLabel": "Add options (2 to 12)",
+      "canvasAria": "Decision wheel",
+      "minOptionsMsg": "Add at least 2 options to spin.",
+      "optionPlaceholder": "e.g. Pizza",
+      "readyMsg": "Press Spin when your options are ready.",
+      "removeAria": "Remove",
+      "resetWins": "Reset Wins",
+      "spinButton": "Spin the Wheel",
+      "spinningMsg": "Spinning…",
+      "winnerMsg": "Winner:"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The win tally lives only in this browser tab and resets on reload.",
+      "Maximum 12 options — longer lists need trimming or a second wheel.",
+      "The wheel animation needs JavaScript and a modern browser.",
+      "It picks fairly, but it cannot tell you whether the winning choice was wise — that is on you."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Can't decide? Type your options and spin the wheel — a fair random picker for choices, names and giveaways. Free, no signup.",
+    "metaTitle": "Spin the Wheel - Random Decision Picker Online Free | JaurTools",
+    "name": "Spin the Wheel",
+    "privacyNote": "This tool runs 100% in your browser. Your options never leave your device.",
+    "quickAnswer": "Type 2 to 12 options and press Spin. The wheel whirls for a few seconds and stops with the pointer on one option — chosen by a truly random, equal-chance draw. A win tally tracks how often each option wins.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Decision Wheel results",
+    "tagline": "Type your options, spin, and let randomness decide — fairly.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "8 options → each slice is 45°.\n1. random() returns 0.68 → index = floor(0.68 × 8) = 5 → the 6th option.\n2. Middle of slice 5 = 5 × 45° + 22.5° = 247.5° from the top. The wheel must rotate (360 − 247.5) = 112.5° (mod 360) to park it under the pointer.\n3. Current rotation 0°, 6 full spins → final = 0 + 6 × 360 + 112.5 = 2272.5°. Check: (360 − 112.5) mod 360 = 247.5° → index = floor(247.5 ÷ 45) = 5. The pointer lands on option 6."
+  }
+}

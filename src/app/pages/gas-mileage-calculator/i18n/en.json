@@ -1,0 +1,100 @@
+{
+  "gas-mileage-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Gas Mileage Calculator",
+    "tagline": "Log fuel fill-ups and track your real-world mileage in km/L, L/100 km or MPG.",
+    "metaTitle": "Gas Mileage Calculator - Track Fuel Economy (MPG) | JaurTools",
+    "metaDescription": "Log distance driven and fuel used to calculate real fuel economy in km/L, L/100 km or MPG. Keep a fill-up log with running averages. Free & private.",
+    "keywords": "gas mileage calculator, fuel economy calculator, mpg calculator, km per litre calculator, fuel consumption log",
+    "quickAnswer": "Enter the distance you drove and the fuel you used, and the tool computes your economy three ways: for example, 450 km on 32 litres is 14.1 km/L, or 7.1 L/100 km - about 33.1 MPG (US). Log every fill-up and the running average reveals your true long-term mileage.",
+    "keyFacts": [
+      "Fuel economy = distance driven divided by fuel used. Same trip, three common expressions: km/L, L/100 km, MPG.",
+      "L/100 km is 'lower is better' (fuel per distance); km/L and MPG are 'higher is better' (distance per fuel).",
+      "Convert: MPG (US) = km/L x 2.352; L/100 km = 100 / (km/L).",
+      "Single fill-ups are noisy - brim the tank the same way each time and average over several fill-ups.",
+      "City driving, AC use, tyre pressure and speed all move the number more than most people expect."
+    ],
+    "howTo": [
+      "Choose Metric (km / litres) or Imperial (miles / gallons).",
+      "Enter the distance driven since the last fill-up.",
+      "Enter the fuel used to refill the tank.",
+      "Press Add entry - the economy is computed and the entry joins your log.",
+      "Watch the running average across all entries for your true mileage."
+    ],
+    "formula": "Economy = distance / fuel.\nkm/L = kilometres / litres.\nL/100 km = 100 / (km/L).\nMPG (US) = miles / gallons = (km/L) x 2.352.\nExample: 450 km / 32 L = 14.06 km/L; 100 / 14.06 = 7.11 L/100 km; 14.06 x 2.352 = 33.1 MPG.",
+    "workedExample": "You drove 450 km and refilled 32 litres.\n1. km/L: 450 / 32 = 14.06 km/L.\n2. L/100 km: 100 / 14.06 = 7.11 L/100 km.\n3. MPG (US): 14.06 x 2.352 = 33.1 MPG.\n4. Add a second entry: 520 km on 38 litres = 13.68 km/L.\n5. Running average: (450 + 520) / (32 + 38) = 970 / 70 = 13.86 km/L.",
+    "benefits": [
+      "Reveals your true mileage instead of the brochure figure.",
+      "A falling average is an early warning for tyre, engine or driving-habit issues.",
+      "Helps compare fuel costs between cars or routes with real numbers.",
+      "Your log never leaves the browser - no account needed."
+    ],
+    "limitations": [
+      "Accuracy depends on consistent fill-ups; partial fills distort single entries (the average still converges).",
+      "Does not separate city vs highway driving unless you log them separately.",
+      "Fuel price and cost-per-km are not calculated - this is economy only.",
+      "MPG shown is US gallons; UK (imperial) gallons are larger - multiply by 1.201 for UK MPG."
+    ],
+    "faqs": [
+      {
+        "q": "Should I use km/L or L/100 km?",
+        "a": "Both describe the same thing. India commonly uses km/L (higher is better); L/100 km (lower is better) is standard in Europe. The tool shows both."
+      },
+      {
+        "q": "How do I get accurate numbers?",
+        "a": "Fill the tank to the same level each time, reset your trip meter, and average over at least 4-5 fill-ups. Single tanks are noisy."
+      },
+      {
+        "q": "What is the difference between US and UK MPG?",
+        "a": "A US gallon is 3.785 litres; a UK gallon is 4.546 litres. UK MPG is about 1.2x the US figure. This tool reports US MPG."
+      },
+      {
+        "q": "Why did my mileage suddenly drop?",
+        "a": "Common causes: low tyre pressure, clogged air filter, more city driving, AC use, or carrying extra weight. A persistent drop deserves a mechanic's look."
+      },
+      {
+        "q": "Can I log in miles and gallons?",
+        "a": "Yes - switch to Imperial. Entries are converted internally, so you can even mix systems across entries."
+      },
+      {
+        "q": "Where is my log stored?",
+        "a": "Only in the page's memory while it is open. Closing the tab clears it - note down important numbers yourself."
+      }
+    ],
+    "resultsHeading": "Mileage results",
+    "labels": {
+      "unitSystem": "Unit system",
+      "metricTab": "Metric (km / L)",
+      "imperialTab": "Imperial (mi / gal)",
+      "distance": "Distance driven",
+      "fuelUsed": "Fuel used",
+      "addEntry": "Add entry",
+      "average": "Average economy",
+      "totalDistance": "Total distance",
+      "totalFuel": "Total fuel",
+      "remove": "Remove entry",
+      "noEntries": "No entries yet - add your first fill-up above.",
+      "kmPerL": "km/L",
+      "per100km": "Fuel per 100 km",
+      "per100kmUnit": "L/100 km",
+      "mpg": "MPG (US)",
+      "kmUnit": "km",
+      "lUnit": "L",
+      "miUnit": "mi",
+      "galUnit": "gal"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "stock-average-calculator": {
+    "benefits": [
+      "Know your break-even price instantly, so every sell decision starts from facts.",
+      "See exactly how much a new buy would drag your average down (or push it up).",
+      "Handles up to three lots, which covers most retail investors' real positions.",
+      "Free, instant, and private - no brokerage login."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is the weighted average price you paid per share: total cost divided by total shares. If the stock trades above your average, your position is profitable (before fees and taxes). It is the single most important number for deciding when to sell.",
+        "q": "What is average share price?"
+      },
+      {
+        "a": "Yes, if the new purchase price is below your current average. That is called averaging down. It lowers your break-even point but also increases your exposure to a falling stock - it is not automatically smart, just arithmetic.",
+        "q": "Does buying more lower my average?"
+      },
+      {
+        "a": "Fees raise your true average cost. Add them to the total cost: if you paid $8,000 for shares plus $20 in fees, your average is $8,020 / shares. This calculator leaves fees out so you can see the clean number, then add them mentally.",
+        "q": "Do brokerage fees change the average?"
+      },
+      {
+        "a": "No. The average is about what you paid, not what the stock is worth. If the price falls to $25 while your average is $40, you are down $15 a share whether you like the number or not. The average just tells you the break-even point.",
+        "q": "If my average is $40, am I safe at $45?"
+      },
+      {
+        "a": "Stock splits do not change your average cost in economic terms. In a 2-for-1 split, your shares double and the price halves, so the average halves too: 100 shares at $40 become 200 shares at $20. Enter the split-adjusted numbers.",
+        "q": "What happens to my average in a stock split?"
+      },
+      {
+        "a": "Sell the shares with the highest cost basis first to minimize taxable gains (specific identification), or use the average-cost method your broker offers. Tax rules differ by country, so check your local rules before selling.",
+        "q": "Which shares should I sell for taxes?"
+      }
+    ],
+    "formula": "Average price = (shares1 x price1 + shares2 x price2 + shares3 x price3) / (shares1 + shares2 + shares3).\nTotal cost = sum of (shares x price) for each lot.\nBreak-even (before fees/tax) = average price.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the shares and price paid for your first purchase (lot 1).",
+      "Enter the shares and price for your second purchase (lot 2).",
+      "Tick the third lot box if you bought a third time, and enter it too.",
+      "Read your total shares, total cost, and average price per share instantly."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Average share cost = total amount paid / total shares owned.",
+      "It is a weighted average: a big purchase at $30 moves the average more than a small one at $50.",
+      "Your average is your break-even price before fees and taxes.",
+      "Buying below your average lowers it (averaging down); buying above raises it.",
+      "Fees and taxes are not included - add them to total cost for the true figure."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "stock average calculator, average share price calculator, stock cost basis calculator, average down calculator, break even stock calculator",
+    "labels": {
+      "averagePrice": "Average price per share",
+      "includeLot3": "Add a third purchase",
+      "lot1Price": "Lot 1: price per share ($)",
+      "lot1Shares": "Lot 1: shares bought",
+      "lot2Price": "Lot 2: price per share ($)",
+      "lot2Shares": "Lot 2: shares bought",
+      "lot3Price": "Lot 3: price per share ($)",
+      "lot3Shares": "Lot 3: shares bought",
+      "totalCost": "Total cost",
+      "totalShares": "Total shares"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Excludes brokerage fees, which raise your true average.",
+      "Excludes taxes on gains; break-even after tax is higher.",
+      "Covers up to three lots; very active traders need a spreadsheet.",
+      "For planning only - not investment advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free stock average calculator: find your average share cost across multiple purchases, plus total cost and break-even. Instant and private.",
+    "metaTitle": "Stock Average Calculator - Average Share Cost | JaurTools",
+    "name": "Stock Average Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Your average share cost is the total you paid divided by total shares: (shares1 x price1 + shares2 x price2) / (shares1 + shares2). For example, 100 shares at $50 plus 100 shares at $30 cost $8,000 for 200 shares, so your average is $40.00 - your break-even price before fees and taxes. Buying more below your average lowers it; buying above raises it.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your average cost",
+    "tagline": "Find your average share cost across multiple stock purchases.",
+    "workedExample": "Lot 1: 100 shares at $50. Lot 2: 100 shares at $30.\n1. Lot 1 cost = 100 x 50 = $5,000.\n2. Lot 2 cost = 100 x 30 = $3,000.\n3. Total cost = 5,000 + 3,000 = $8,000.\n4. Total shares = 100 + 100 = 200.\n5. Average = 8,000 / 200 = $40.00 per share.\nThe stock must trade above $40 for the position to be profitable.",
+    "workedExampleHeading": "Worked example"
+  }
+}

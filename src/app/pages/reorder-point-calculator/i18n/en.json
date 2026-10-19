@@ -1,0 +1,96 @@
+{
+  "reorder-point-calculator": {
+    "name": "Reorder Point Calculator",
+    "tagline": "Find the exact stock level that should trigger your next purchase order.",
+    "metaTitle": "Reorder Point Calculator – Free Inventory ROP Tool | JaurTools",
+    "metaDescription": "Free reorder point calculator. Enter daily demand, lead time and safety stock to get the exact inventory level for reordering — 100% in your browser.",
+    "keywords": "reorder point calculator, ROP calculator, inventory reorder level, safety stock calculator, reorder point formula",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Multiply your average daily demand by the supplier lead time in days, then add your safety stock. The result is your reorder point. When on-hand stock falls to this level, place your next order immediately to avoid a stockout while the new stock is in transit.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "The reorder point (ROP) is the inventory level at which a new order must be placed so fresh stock arrives before you run out.",
+      "ROP covers the demand you expect during the supplier lead time, plus a safety-stock buffer for surprises.",
+      "Safety stock protects against two uncertainties: demand being higher than average, and the supplier delivering late.",
+      "Reorder point and reorder quantity are different decisions: ROP answers when to order, quantity models like EOQ answer how much.",
+      "Review your ROP whenever demand patterns change, such as during festivals, seasonal peaks, or promotions."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Enter your average daily demand — the number of units you typically sell or consume per day.",
+      "Enter the supplier lead time in days — how long a new order takes to arrive after you place it.",
+      "Enter your safety stock — extra units kept as a buffer against demand spikes or late deliveries.",
+      "Enter your current stock on hand so the tool can also estimate how many days remain before you hit the reorder point.",
+      "Read the reorder point and the recommendation: order now if stock is at or below the point."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "ROP = (Average Daily Demand x Lead Time in Days) + Safety Stock",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A shop sells 50 units per day. The supplier takes 7 days to deliver. The shop keeps 100 units as safety stock.\nDemand during lead time = 50 x 7 = 350 units\nReorder point = 350 + 100 = 450 units\nCurrent stock is 500 units, so days until reorder = (500 - 450) / 50 = 1 day.\nThe shop should place its next order tomorrow at the latest.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Prevents stockouts that lose sales and disappoint customers.",
+      "Stops over-ordering and the working capital locked in excess stock.",
+      "Gives every team member one clear, objective number to act on.",
+      "Works for shops, warehouses, pharmacies, and small factories alike."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Assumes demand and lead time are steady — sudden spikes or long delays are only covered by the safety stock buffer.",
+      "An estimate based on your inputs: keep demand figures honest, because inaccurate inputs produce inaccurate results.",
+      "Does not tell you how much to order — pair it with an EOQ or lot-size decision.",
+      "Not professional supply-chain advice; perishable goods need additional expiry-based planning."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is the reorder point in simple terms?",
+        "a": "It is the stock level that acts as an alarm bell: when your inventory falls to this number, order more right away. It is sized so the new delivery arrives just as the old stock runs out."
+      },
+      {
+        "q": "How is the reorder point different from safety stock?",
+        "a": "Safety stock is the cushion inside the reorder point. The reorder point equals expected demand during lead time plus safety stock. Safety stock alone does not tell you when to order."
+      },
+      {
+        "q": "How do I decide my safety stock?",
+        "a": "A common starting point is 1 to 2 weeks of average demand. If demand is volatile or the supplier is unreliable, keep more. If demand is rock-steady, you can keep less."
+      },
+      {
+        "q": "Should I include goods already ordered but not received?",
+        "a": "No. Compare the reorder point against on-hand stock only, or track on-hand plus in-transit separately and subtract in-transit orders from what you plan to order."
+      },
+      {
+        "q": "How often should I recalculate the reorder point?",
+        "a": "Recalculate whenever average demand or lead time shifts noticeably — for example after a price change, a new sales channel, a festival season, or a supplier switch."
+      },
+      {
+        "q": "Does this tell me how many units to order?",
+        "a": "No. The reorder point answers when to order. How much to order is a separate economic order quantity (EOQ) decision based on ordering and holding costs."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your reorder point results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "demandLabel": "Average daily demand (units)",
+      "demandHint": "Typical units sold or used per day.",
+      "leadLabel": "Lead time (days)",
+      "leadHint": "Days from placing an order to receiving it.",
+      "safetyLabel": "Safety stock (units)",
+      "safetyHint": "Buffer stock for spikes or late delivery.",
+      "stockLabel": "Current stock on hand (units)",
+      "stockHint": "Used to estimate days until reorder.",
+      "demandDuringLeadLabel": "Demand during lead time",
+      "daysUntilLabel": "Days until reorder",
+      "ropLabel": "Reorder point",
+      "unitLabel": "units",
+      "daysLabel": "days",
+      "recommendNow": "Stock is at or below the reorder point — place an order now.",
+      "recommendSafe": "Stock is above the reorder point — no order needed yet."
+    }
+  }
+}

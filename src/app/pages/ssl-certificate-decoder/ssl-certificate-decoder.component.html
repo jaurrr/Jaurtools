@@ -1,0 +1,199 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="key-round" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="ssl-pem">{{ t('labels.pasteLabel') }}</label>
+        <textarea id="ssl-pem" class="dv-term-input code" spellcheck="false"
+          [ngModel]="pemInput()" (ngModelChange)="setPem($event)"
+          [attr.placeholder]="t('labels.pasteHint')" dir="ltr"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn ghost" (click)="clearInput()">
+          <app-icon name="x" /> {{ t('labels.clearButton') }}
+        </button>
+      </div>
+
+      @if (info() && !info()!.ok) {
+        <div class="error-box dv-status dv-status-bad" role="alert">
+          <app-icon name="triangle-alert" /> {{ t('labels.parseError') }}
+        </div>
+      }
+
+      @if (info(); as res) {
+        @if (res.ok) {
+          <div class="results">
+            <div class="result-row total">
+              <span><app-icon name="shield-check" /> {{ t('labels.subjectLabel') }}</span>
+              <strong class="mono">{{ res.cert.subject }}</strong>
+            </div>
+            <div class="result-row">
+              <span>{{ t('labels.issuerLabel') }}</span>
+              <strong class="mono">{{ res.cert.issuer }}</strong>
+            </div>
+            @if (res.cert.selfSigned) {
+              <div class="result-row">
+                <span>{{ t('labels.selfSignedLabel') }}</span>
+                <strong><span class="badge warn dv-pill warn">{{ t('labels.selfSignedYes') }}</span></strong>
+              </div>
+            }
+            <div class="result-row">
+              <span>{{ t('labels.serialLabel') }}</span>
+              <strong class="mono">{{ res.cert.serial }}</strong>
+            </div>
+            <div class="result-row">
+              <span>{{ t('labels.sigAlgLabel') }}</span>
+              <strong class="mono">{{ res.cert.sigAlg }}</strong>
+            </div>
+            <div class="result-row">
+              <span>{{ t('labels.validFromLabel') }}</span>
+              <strong class="mono">{{ res.cert.notBefore }}</strong>
+            </div>
+            <div class="result-row">
+              <span>{{ t('labels.validToLabel') }}</span>
+              <strong class="mono">{{ res.cert.notAfter }}</strong>
+            </div>
+            <div class="result-row">
+              <span>{{ t('labels.daysLeftLabel') }}</span>
+              <strong><span class="badge" [class.pass]="!res.cert.expired && res.cert.daysLeft > 30" [class.warn]="!res.cert.expired && res.cert.daysLeft <= 30" [class.fail]="res.cert.expired">{{ res.cert.expired ? t('labels.expiredLabel') : res.cert.daysLeft }}</span></strong>
+            </div>
+            <div class="result-row">
+              <span>{{ t('labels.pubkeyLabel') }}</span>
+              <strong class="mono">{{ res.cert.pubkeyAlg }}{{ res.cert.pubkeyDetail ? ' ' + res.cert.pubkeyDetail : '' }}</strong>
+            </div>
+            @if (fingerprint()) {
+              <div class="result-row">
+                <span>{{ t('labels.fingerprintLabel') }}</span>
+                <strong class="mono">{{ fingerprint() }}</strong>
+              </div>
+            }
+          </div>
+
+          @if (res.cert.san.length > 0) {
+            <h3 class="table-title">{{ t('labels.sanHeading') }}</h3>
+            <ul class="check-list">
+              @for (s of res.cert.san; track $index) {
+                <li class="check-item"><span class="mono">{{ s }}</span></li>
+              }
+            </ul>
+          }
+
+          @if (res.cert.extensions.length > 0) {
+            <h3 class="table-title">{{ t('labels.extHeading') }}</h3>
+            <div class="table-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr><th>{{ t('labels.thExt') }}</th><th>{{ t('labels.thCritical') }}</th><th>{{ t('labels.thDetail') }}</th></tr>
+                </thead>
+                <tbody>
+                  @for (e of res.cert.extensions; track $index) {
+                    <tr>
+                      <td><strong>{{ e.name }}</strong></td>
+                      <td>{{ e.critical ? t('labels.yesLabel') : t('labels.noLabel') }}</td>
+                      <td class="mono">{{ e.detail || '—' }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          }
+        }
+      } @else {
+        <p class="note">{{ t('labels.emptyState') }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

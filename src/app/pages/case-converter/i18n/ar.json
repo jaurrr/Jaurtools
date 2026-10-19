@@ -1,0 +1,100 @@
+{
+  "case-converter": {
+    "benefits": [
+      "يصلح النص الملصق بأحرف كبيرة من PDF أو النماذج بنقرة واحدة.",
+      "Title Case يمنح العناوين والأسماء مظهراً احترافياً فوراً.",
+      "Sentence case ينظّف الكتابة المهملة للمقالات والرسائل.",
+      "حالة InVeRsE مفيدة لإصلاح النص المكتوب وCaps Lock مفعّل.",
+      "عدّ الأحرف والكلمات والأسطر الحي يساعد في الحقول محدودة الطول."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات النص",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "Title Case يكبّر أول حرف من كل كلمة: 'hello world' تصبح 'Hello World'. أما Sentence case فيكبّر أول حرف من كل جملة فقط: 'hello world. how are you' تصبح 'Hello world. How are you'.",
+        "q": "ما الفرق بين Title Case وSentence case؟"
+      },
+      {
+        "a": "نعم. إذا كُتب نصك وCaps Lock عالق ('hELLO')، فخيار InVeRsE يقلب حالة كل حرف ويعطيك 'Hello'. ثم اختر الحالة التي تريدها فعلاً.",
+        "q": "كتبت كل شيء وCaps Lock مفعّل. هل يمكن إصلاحه؟"
+      },
+      {
+        "a": "تستخدم الأداة قواعد الحالة اليونيكود القياسية، فالأحرف اللاتينية المشكّلة مثل e إلى E تتحول صحيحاً. النصوص بلا حالة (العربية والهندية والصينية) تُترك كما هي، وهو السلوك الصحيح.",
+        "q": "هل تعمل مع الأحرف المشكّلة أو غير الإنجليزية؟"
+      },
+      {
+        "a": "الحالة المتناوبة تقلب كل حرف: 'hello' تصبح 'HeLlO'. وهي غالباً صيغة مرحة أو أنيقة لوسائل التواصل. تتخطى الأداة غير الأحرف عند العد فلا تكسر علامات الترقيم النمط.",
+        "q": "ما فائدة الحالة المتناوبة؟"
+      },
+      {
+        "a": "لا. تغيّر الأداة حالة الأحرف فقط. لا تصلح الإملاء أو القواعد أو الترقيم، وTitle Case سيكبّر الكلمات الصغيرة (مثل 'and' أو 'the') التي تُبقيها بعض أدلة الأسلوب صغيرة.",
+        "q": "هل سيتبع Title Case قواعد APA أو شيكاغو؟"
+      },
+      {
+        "a": "نعم. تعمل كاملة في متصفحك. لا يُرفع شيء مما تلصقه ولا يُخزَّن ولا يراه أحد آخر.",
+        "q": "هل نصي خاص؟"
+      }
+    ],
+    "formula": "upper: كل حرف -> كبير\nlower: كل حرف -> صغير\ntitle: أول حرف من كل كلمة كبير والباقي صغير\n  'hello world' -> 'Hello World'\nsentence: النص كله صغير ثم أول حرف بعد كل '.', '!', '?' (أو البداية) -> كبير\n  'hello. world' -> 'Hello. World'\nalternating: الأحرف تتناوب كبير/صغير/كبير... مع تخطي غير الأحرف\n  'hello' -> 'HeLlO'\ninverse: تُبدَّل حالة كل حرف\n  'hELLO' -> 'Hello'",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "الصق نصك أو اكتبه في مربع الإدخال.",
+      "انقر الحالة التي تريد: UPPER أو lower أو Title أو Sentence أو aLtErNaTiNg أو InVeRsE.",
+      "يظهر النص المحوَّل فوراً في مربع النتيجة.",
+      "تحقق من عدّ الأحرف والكلمات والأسطر الحي إذا كان لديك حد للطول.",
+      "انسخ النتيجة أو نزّلها كملف .txt."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "UPPERCASE تجعل كل حرف كبيراً: مفيدة للعناوين والتأكيد.",
+      "lowercase تجعل كل حرف صغيراً: مفيدة للروابط والأكواد.",
+      "Title Case تكبّر أول حرف من كل كلمة: 'hello world' تصبح 'Hello World'.",
+      "Sentence case تكبّر أول حرف من كل جملة فقط.",
+      "aLtErNaTiNg cAsE تقلب كل حرف لمظهر مرح وأنيق.",
+      "حالة InVeRsE تبدّل حالة كل حرف: مفيدة عندما كان Caps Lock عالقاً."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "محول الحالة، كبير إلى صغير، محول Title Case، حالة الجملة، مغير حالة النص، تغيير حالة النص أونلاين",
+    "labels": {
+      "alternatingBtn": "aLtErNaTiNg",
+      "caseLabel": "اختر الحالة",
+      "charsLabel": "الأحرف",
+      "clearButton": "مسح",
+      "copiedLabel": "تم النسخ",
+      "copyButton": "نسخ النتيجة",
+      "downloadButton": "تنزيل .txt",
+      "inputLabel": "نصك",
+      "inputPlaceholder": "اكتب نصك أو الصقه هنا...",
+      "inverseBtn": "InVeRsE",
+      "linesLabel": "الأسطر",
+      "lowerBtn": "lowercase",
+      "outputLabel": "النص المحوَّل",
+      "sentenceBtn": "Sentence case",
+      "titleBtn": "Title Case",
+      "upperBtn": "UPPERCASE",
+      "wordsLabel": "الكلمات"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "تغيّر حالة الأحرف فقط - لا تصلح الإملاء أو القواعد.",
+      "Title Case تكبّر كل كلمة بما فيها الكلمات الصغيرة التي تُبقيها بعض أدلة الأسلوب صغيرة.",
+      "Sentence case تقسّم على '.', '!' و'?' فقط؛ والاختصارات مثل 'e.g.' قد تربكها.",
+      "النصوص بلا حالة أحرف (العربية والهندية والصينية) لا تتأثر، وهو صحيح لكن لا يتغير شيء لها."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "محول حالة مجاني: غيّر النص بين UPPERCASE وlowercase وTitle Case وSentence case وaLtErNaTiNg وInVeRsE فوراً. خاص ويعمل في المتصفح.",
+    "metaTitle": "محول الحالة - كبير وصغير وعناوين وجمل | JaurTools",
+    "name": "محول الحالة",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "محول الحالة يغيّر تكبير نصك. الصق نصك واختر النمط: UPPERCASE ('hello' تصبح 'HELLO') أو lowercase أو Title Case ('hello world' تصبح 'Hello World') أو Sentence case (أول حرف من كل جملة فقط يُكبَّر) أو aLtErNaTiNg ('hello' تصبح 'HeLlO') أو InVeRsE (يبدّل حالة كل حرف، مثالي للنص المكتوب وCaps Lock مفعّل). تظهر النتيجة فوراً مع عدّ حي للأحرف والكلمات والأسطر.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "نتائج محول الحالة",
+    "tagline": "حوّل النص بين الأحرف الكبيرة والصغيرة وحالة العناوين والجمل.",
+    "workedExample": "المدخَل: 'hello world. how are you?'\n\n1. Title Case: أول حرف من كل كلمة كبير والباقي صغير\n   'hello world. how are you?' -> 'Hello World. How Are You?'\n2. Sentence case: النص كله صغير ثم أول حرف من كل جملة كبير\n   'hello world. how are you?' -> 'Hello world. How are you?'\n3. UPPER: 'HELLO WORLD. HOW ARE YOU?'\n4. المتناوبة (الأحرف فقط): 'HeLlO wOrLd. HoW aRe YoU?'\n   (المسافة وعلامات الترقيم لا تعيد ضبط نمط التناوب)",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "meta-tags-generator": {
+    "benefits": [
+      "One form covers SEO basics plus Open Graph and Twitter Cards. No tag memorising.",
+      "Live character counters keep titles under 60 and descriptions under 160 characters.",
+      "OG tags control exactly how your page looks when shared on WhatsApp, Facebook, and X.",
+      "The output pastes straight into any site's <head>, from WordPress to hand-coded HTML."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The title tag is the clickable headline in Google results, keep it under 60 characters. The meta description is the summary text below it, keep it under 160 characters. Together they decide whether searchers click your page. The keywords meta tag is ignored by Google but harmless to include.",
+        "q": "What are the title and meta description for?"
+      },
+      {
+        "a": "Open Graph tags (og:title, og:description, og:image) control the preview card when your link is shared on WhatsApp, Facebook, LinkedIn, and Telegram. Without them, apps guess, often picking the wrong image or text.",
+        "q": "What are Open Graph tags?"
+      },
+      {
+        "a": "Use an image at least 1200 x 630 px for the large summary card. Host it on your own domain over HTTPS. After adding tags, refresh the preview with Facebook's Sharing Debugger or X's Card Validator, because both cache old previews aggressively.",
+        "q": "Which image should I use for sharing? Why is my preview not updating?"
+      },
+      {
+        "a": "Use noindex on pages you never want in Google: thank-you pages, admin areas, staging sites, and thin duplicate pages. Keep index, follow on everything you want found. Note that noindex is a request Google honors, not a password; it does not hide the page from direct visitors.",
+        "q": "When should I use noindex?"
+      },
+      {
+        "a": "The canonical tag tells Google which URL is the master copy when similar pages exist, like product pages with filters or HTTP vs HTTPS versions. It prevents duplicate-content dilution of your ranking.",
+        "q": "What is the canonical tag for?"
+      },
+      {
+        "a": "Yes. Google's doorway-page policy punishes sites where many pages share identical titles and descriptions. Write a unique title and description for every page; this tool just makes the mechanics easy.",
+        "q": "Should every page have different meta tags?"
+      }
+    ],
+    "formula": "SEO core: <title> (<= 60 chars) + meta description (<= 160 chars) + robots + canonical.\nSocial: og:title + og:description + og:image (1200x630) + og:type + twitter:card.\nRule: unique title + description per page, no duplicates.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Fill the Basic SEO section: title, description, keywords, author, robots, canonical.",
+      "Watch the character counters: keep titles at 60 or under, descriptions at 160 or under.",
+      "Add Open Graph details: page URL, share image (1200 x 630), and site name.",
+      "Set the Twitter card type and your @username.",
+      "Copy the tags and paste them inside the <head> of your page."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "Meta tags live in the <head> of a page and describe it to search engines and social apps.",
+      "The title tag and meta description shape your Google search result and click-through rate.",
+      "Open Graph tags decide the preview card on WhatsApp, Facebook, LinkedIn, and Telegram.",
+      "Twitter card tags decide the preview on X. summary_large_image gives the big image card.",
+      "Every page needs unique tags. Duplicated titles across pages hurt SEO."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "meta tags generator, open graph generator, twitter card generator, og tags generator, seo meta tags",
+    "labels": {
+      "author": "Author",
+      "basicHeading": "Basic SEO",
+      "canonical": "Canonical URL",
+      "copied": "Copied!",
+      "copy": "Copy tags",
+      "description": "Meta description",
+      "title": "Page title",
+      "keywords": "Meta keywords",
+      "download": "Download .html",
+      "ogDescription": "OG description",
+      "ogHeading": "Open Graph",
+      "ogImage": "OG image URL",
+      "ogSiteName": "Site name",
+      "ogTitle": "OG title",
+      "ogType": "OG type",
+      "ogTypeArticle": "Article",
+      "ogTypeWebsite": "Website",
+      "ogUrl": "Page URL",
+      "outputHeading": "Generated meta tags",
+      "pasteNote": "Paste inside the <head> section of your HTML page.",
+      "robIF": "index, follow",
+      "robIN": "index, nofollow",
+      "robNF": "noindex, follow",
+      "robNN": "noindex, nofollow",
+      "robots": "Robots",
+      "sameAsDescription": "Leave empty to reuse the meta description",
+      "sameAsTitle": "Leave empty to reuse the page title",
+      "themeColor": "Theme color",
+      "twHeading": "Twitter Card",
+      "twLarge": "Summary with large image",
+      "twSummary": "Summary",
+      "twitterCard": "Card type",
+      "twitterSite": "Site @username"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Tags only suggest. Google may rewrite your title or description in results.",
+      "Social apps cache previews. Update the debugger tools after changing tags.",
+      "This tool cannot verify your image URL is reachable or the right size.",
+      "Tags do not rank a page by themselves; content quality decides rankings."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free meta tags generator: create SEO meta tags plus Open Graph and Twitter Card tags with live character counters. Copy or download. Private, no sign-up.",
+    "metaTitle": "Meta Tags Generator - SEO + Open Graph + Twitter | JaurTools",
+    "name": "Meta Tags Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Fill one form and get complete meta tags: SEO title and description with live character counters, robots and canonical tags, Open Graph tags for WhatsApp and Facebook previews, and Twitter Card tags for X. The output pastes directly into your page's <head> section.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your meta tags",
+    "tagline": "SEO meta tags plus Open Graph and Twitter Cards, with live character counters.",
+    "workedExample": "A blogger tags her new post:\n1. Title: How to Brew Filter Coffee at Home (34 characters, under 60).\n2. Description: Step-by-step filter coffee recipe with grind sizes and ratios. (68 characters, under 160).\n3. OG image: https://example.com/images/filter-coffee.jpg (1200 x 630).\n4. Twitter card: summary_large_image. Site: @herblog.\n5. She pastes the tags into <head> and checks Facebook's Sharing Debugger.\nHer link now shares with the right title, description, and photo on WhatsApp and X.",
+    "workedExampleHeading": "Worked example"
+  }
+}

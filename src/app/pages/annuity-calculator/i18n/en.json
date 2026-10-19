@@ -1,0 +1,88 @@
+{
+  "annuity-calculator": {
+    "assumptionNote": "Assumes monthly payments made at the end of each month, monthly compounding and a constant annual return.",
+    "benefits": [
+      "Shows how regular small payments grow into a large sum over time.",
+      "Separates your contributions from the interest they earned.",
+      "Helps you test how the payment size, rate and time horizon change the result.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An annuity is a series of equal payments made at regular intervals. In finance it usually means a contract, often with an insurer, that pays you a steady income later. This calculator handles the savings side: what regular payments grow into.",
+        "q": "What is an annuity?"
+      },
+      {
+        "a": "With an ordinary annuity the payment comes at the end of each period; with an annuity due it comes at the start, which earns one extra period of interest. The difference over long horizons is small, and this tool models end-of-period payments.",
+        "q": "What is the difference between an ordinary annuity and an annuity due?"
+      },
+      {
+        "a": "Time and consistency. A $500 monthly payment at 6% for 10 years grows to about $81,940; stretching it to 20 years grows it to about $231,000 on the same monthly payment. Starting early matters more than most people expect.",
+        "q": "How do I maximize annuity growth?"
+      },
+      {
+        "a": "Real annuity contracts often include fees, surrender charges and tax rules that this simple growth model does not include. Use this tool for the savings projection, then read the contract for the costs.",
+        "q": "Are there fees in real annuities?"
+      },
+      {
+        "a": "A growing annuity increases each payment by a fixed rate, useful for modeling payments that keep up with inflation. This calculator models level payments; you can approximate growth by entering a higher payment.",
+        "q": "What is a growing annuity?"
+      },
+      {
+        "a": "Yes, the math is identical: monthly SIP contributions at an assumed return are an ordinary annuity. Enter your monthly investment, expected annual return and years to project the future value.",
+        "q": "Can I use this for SIP projections?"
+      }
+    ],
+    "formula": "FV = PMT x (((1 + r)^n - 1) / r)\nwhere r = annual_rate / 12, n = years x 12\ninterest_earned = FV - (PMT x n)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the amount you will pay each month.",
+      "Enter the expected annual return as a percentage.",
+      "Enter the number of years you will keep contributing.",
+      "Read the projected future value, your total contributions and the interest earned.",
+      "Adjust any input to see instantly how the outcome changes."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "An ordinary annuity is a series of equal payments made at the end of each regular period.",
+      "The future value of an annuity grows with the payment size, the interest rate and the number of periods.",
+      "Compounding does the heavy lifting: interest earned in later years can exceed the payments themselves.",
+      "Monthly contributions at a fixed return behave exactly like an annuity, which is why this math also powers SIP projections.",
+      "The formula assumes payments arrive like clockwork at the same rate; irregular payments need a different calculation."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "annuity calculator, future value of annuity, annuity growth calculator, SIP future value",
+    "labels": {
+      "futureValue": "Future value",
+      "interestEarned": "Interest earned",
+      "payment": "Monthly payment",
+      "rate": "Annual return (%)",
+      "totalContributed": "Total contributed",
+      "years": "Years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Constant return assumed; real investments fluctuate.",
+      "Does not include fees, taxes or inflation.",
+      "End-of-month payments only; beginning-of-period payments are slightly higher.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free annuity calculator. Project the future value of regular monthly payments at any return. See contributions vs interest. Private, browser-only.",
+    "metaTitle": "Annuity Calculator — Future Value of Payments",
+    "name": "Annuity Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An annuity calculator finds the future value of regular payments. Paying $500 every month for 10 years at 6% annual return grows to about $81,940 — you contributed $60,000 and earned about $21,940 in interest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your annuity results",
+    "tagline": "See what regular payments grow into over time.",
+    "workedExample": "Monthly payment $500, annual return 6%, 10 years (120 payments).\n\nr = 0.06 / 12 = 0.005. (1.005)^120 = 1.819397. Factor = (1.819397 - 1) / 0.005 = 163.8794. FV = 500 x 163.8794 = $81,940.\n\nTotal contributed = 500 x 120 = $60,000. Interest earned = 81,940 - 60,000 = $21,940.",
+    "workedExampleHeading": "Worked example"
+  }
+}

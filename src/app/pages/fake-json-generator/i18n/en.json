@@ -1,0 +1,89 @@
+{
+  "fake-json-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Fake JSON Generator",
+    "tagline": "Generate realistic fake JSON data for testing.",
+    "metaTitle": "Fake JSON Generator - Realistic Test Data in Seconds | JaurTools",
+    "metaDescription": "Generate realistic fake JSON data for testing your apps. Names, emails, addresses and more — free, instant, in your browser.",
+    "keywords": "mock json generator, fake json data, dummy json api data, test data generator, json placeholder",
+    "resultsHeading": "Mock JSON data results",
+    "quickAnswer": "Testing an app needs data, but real user data is private and hand-writing fixtures is slow. This tool generates realistic fake JSON on the spot: pick a template (users, products, orders, or posts), choose how many records you need, and copy or download clean, valid JSON for your tests, prototypes, or demos.",
+    "keyFacts": [
+      "Mock data is fake but realistic: names, emails, prices, and statuses that look like production data.",
+      "Every record gets a unique id so you can use the output directly in lists and tables.",
+      "The generator uses a seeded random function, so each Regenerate click produces a fresh dataset.",
+      "All values are generated locally; no names or emails here belong to real people.",
+      "Output is valid JSON with 2-space indentation, ready to paste into code or a .json file."
+    ],
+    "howTo": [
+      "Choose a template: User, Product, Order, or Post.",
+      "Set the record count with the slider (1 to 50 records).",
+      "Click Regenerate for a fresh random dataset.",
+      "Copy the JSON or download it as mock-data.json.",
+      "Paste it into your app, test file, or API mock."
+    ],
+    "formula": "record = { id, <template fields> }\noutput = JSON.stringify(records, null, 2)\nExample user: { \"id\": 1, \"name\": \"Aarav Sharma\", \"email\": \"aarav.sharma42@example.com\", \"age\": 27, \"city\": \"Mumbai\", \"active\": true }",
+    "workedExample": "Choosing the User template with 2 records produces:\n[\n  { \"id\": 1, \"name\": \"Sana Khan\", \"email\": \"sana.khan18@example.com\", \"age\": 31, \"city\": \"Delhi\", \"active\": true },\n  { \"id\": 2, \"name\": \"Kabir Patel\", \"email\": \"kabir.patel77@example.com\", \"age\": 24, \"city\": \"Jaipur\", \"active\": false }\n]\n(Exact names vary per generation.) Paste this array into a frontend prototype to render a user list instantly.",
+    "benefits": [
+      "Realistic data makes UI testing far more convincing than lorem ipsum.",
+      "Zero setup: no backend or database needed for fixtures.",
+      "Instant regeneration gives fresh datasets for repeated tests.",
+      "Copy or download in one click."
+    ],
+    "limitations": [
+      "Data is random and meaningless: not suitable for analytics or training models.",
+      "Templates are fixed; custom field shapes are not supported.",
+      "Emails use the example.com domain and are not real addresses.",
+      "Maximum 50 records per generation to keep the page fast."
+    ],
+    "faqs": [
+      {
+        "q": "Is the generated data real?",
+        "a": "No. Names, emails, and numbers are randomly generated and any resemblance to real people is coincidence. Never treat mock data as real."
+      },
+      {
+        "q": "Can I use this data in production?",
+        "a": "No. It is for testing, prototyping, and demos only. Production needs real, validated data."
+      },
+      {
+        "q": "How do I get different data each time?",
+        "a": "Click Regenerate. The seed changes on every click, producing a completely fresh random dataset."
+      },
+      {
+        "q": "What format is the output?",
+        "a": "A JSON array of objects with 2-space indentation. It validates as strict JSON and parses with JSON.parse in any language."
+      },
+      {
+        "q": "Can I generate more than 50 records?",
+        "a": "The tool caps at 50 records per generation for performance. Generate twice and merge the arrays if you need more."
+      }
+    ],
+    "labels": {
+      "templateLabel": "Data template",
+      "tplUser": "Users",
+      "tplProduct": "Products",
+      "tplOrder": "Orders",
+      "tplPost": "Posts",
+      "countLabel": "Record count",
+      "regenerateLabel": "Regenerate",
+      "outputLabel": "Generated JSON",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied",
+      "downloadLabel": "Download .json",
+      "sizeLabel": "Output size (chars)"
+    }
+  }
+}

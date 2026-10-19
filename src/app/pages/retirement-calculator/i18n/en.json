@@ -1,0 +1,92 @@
+{
+  "retirement-calculator": {
+    "assumptionNote": "Assumes a constant annual return compounded monthly, with no taxes, fees, or inflation. Real results will differ.",
+    "benefits": [
+      "Shows exactly how much starting early is worth, which motivates younger savers.",
+      "Separates your contributions from growth so you see what compounding actually does.",
+      "Lets you test what-if scenarios: retire later, save more, or assume lower returns.",
+      "Takes seconds and costs nothing, unlike a financial planning session."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A common rule of thumb is 25 times your annual spending (the 4% rule), but the honest answer depends on your lifestyle, pension income, and life expectancy. Use this calculator to project your savings, then compare the total against 25 times what you expect to spend per year.",
+        "q": "How much do I need to retire?"
+      },
+      {
+        "a": "Long-term stock market returns have averaged roughly 7 to 10% per year before inflation in the US, but any single 35-year period can differ, and conservative portfolios earn less. Many planners use 6 to 7% after inflation as a realistic net figure. Try a lower return in the calculator to see a more cautious projection.",
+        "q": "Is 8% annual return realistic?"
+      },
+      {
+        "a": "This calculator does not subtract inflation, so the projected total is in future dollars. A quick mental adjustment: at 3% inflation, money loses roughly half its purchasing power every 24 years. To estimate in today's money, run the calculator with a return about 3 points lower than your expected nominal return.",
+        "q": "Should I include inflation?"
+      },
+      {
+        "a": "Small beats zero by a wide margin over decades. $100 a month at 8% for 35 years still grows to about $229,000. The habit matters more than the starting amount - you can increase contributions as your income grows.",
+        "q": "What if I can only save a small amount?"
+      },
+      {
+        "a": "No. This projects only the savings and contributions you enter. Add your expected pension or Social Security income separately when judging whether the total is enough for your spending plans.",
+        "q": "Does this include my pension or Social Security?"
+      },
+      {
+        "a": "Because of compounding, the last years of saving are the most powerful: your balance is largest, so each year's growth adds the biggest dollar amount. Working from 62 to 65 instead of retiring at 62 often adds more than the earlier decades combined.",
+        "q": "Why does retiring a few years later help so much?"
+      }
+    ],
+    "formula": "Monthly rate r = annual return / 12. Months n = years x 12.\nGrowth of current savings: FV = P x (1 + r)^n.\nGrowth of monthly contributions: FV = PMT x ((1 + r)^n - 1) / r.\nTotal = both parts added together.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current age and the age you want to retire at. The gap between them is your investment horizon.",
+      "Enter how much you have saved already and how much you can add every month.",
+      "Set an expected annual return. A common long-term assumption for stock-heavy portfolios is 7 to 8 percent before inflation.",
+      "Watch the projected total, your total contributions, and the interest earned update instantly.",
+      "Experiment: raise the monthly contribution or retire a few years later to see how sensitive the outcome is."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Compound growth means your returns earn their own returns, so money invested early grows the most.",
+      "The future value of monthly contributions uses: FV = PMT x ((1 + r)^n - 1) / r, where r is the monthly rate and n is the number of months.",
+      "Your existing savings grow separately: FV = P x (1 + r)^n.",
+      "This calculator assumes a constant annual return. Real markets rise and fall, so treat the result as a projection, not a promise.",
+      "Inflation quietly shrinks future purchasing power. $1 million in 35 years will buy less than $1 million today.",
+      "Increasing contributions even slightly - for example $600 instead of $500 a month - changes the final total dramatically over decades."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "retirement calculator, retirement savings calculator, retirement planning calculator, 401k growth calculator, nest egg calculator",
+    "labels": {
+      "annualReturn": "Expected annual return (%)",
+      "currentAge": "Current age",
+      "currentSavings": "Current savings ($)",
+      "interestEarned": "Growth from compounding",
+      "monthlyContrib": "Monthly contribution ($)",
+      "projectedTotal": "Projected total at retirement",
+      "retireAge": "Retirement age",
+      "totalContributed": "Total you contribute",
+      "yearsToGrow": "Years to grow"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a smooth, constant return. Real investments fluctuate and can lose money.",
+      "Ignores inflation, taxes, and fees, all of which reduce what you can actually spend.",
+      "Does not account for salary growth, career breaks, or changing contribution levels.",
+      "This is an estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free retirement calculator: project your retirement savings from current savings, monthly contributions, and expected returns. Instant, private, no sign-up.",
+    "metaTitle": "Retirement Calculator - Project Your Savings Growth | JaurTools",
+    "name": "Retirement Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Retirement savings grow through compound interest: every dollar you invest earns returns, and those returns earn returns of their own. For example, $500 a month at 8% annual return for 35 years grows to about $1,309,600, even though you only contributed $220,000. Starting early matters more than earning a high salary late, because time is what powers compounding.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your retirement projection",
+    "tagline": "Project how your retirement savings grow from contributions plus compound growth.",
+    "workedExample": "Age 30 to 65 (35 years), $10,000 saved, $500/month, 8% annual return:\n1. Monthly rate r = 0.08 / 12 = 0.006667. Months n = 35 x 12 = 420.\n2. Growth factor: (1.006667)^420 = about 16.289.\n3. Current savings grow to: 10,000 x 16.289 = about $162,900.\n4. Contributions grow to: 500 x (16.289 - 1) / 0.006667 = 500 x 2,293.35 = about $1,146,700.\n5. Projected total = 162,900 + 1,146,700 = about $1,309,600.\n6. You contributed 10,000 + (500 x 420) = $220,000, so about $1,089,600 is compound growth.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "stair-calculator": {
+    "name": "Stair Calculator",
+    "tagline": "Get step count, riser height, tread run, stringer length, and stair angle from total rise.",
+    "metaTitle": "Stair Calculator – Rise, Run & Step Planner | JaurTools",
+    "metaDescription": "Free stair calculator. Enter total rise to get number of steps, riser height, total run, stringer length and angle — 100% in your browser.",
+    "keywords": "stair calculator, stairs rise run calculator, step calculator, stair stringer calculator, stair angle calculator",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Divide your total rise by a comfortable riser height (about 17–18 cm) and round to whole steps; that is your step count. Actual riser equals total rise divided by steps. Total run equals steps times tread depth, and the stringer length is the hypotenuse of rise and run — 280 cm rise with 25 cm treads gives 16 steps at 35°.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "The riser is the vertical face of each step; the tread (going) is the horizontal part you step on.",
+      "Comfortable risers are 15–18 cm; building codes in many countries cap risers around 19–20 cm.",
+      "Blondel's rule for comfort: 2 × riser + tread should fall between 60 and 65 cm.",
+      "The stringer is the sloped board the steps sit on — its length is √(rise² + run²).",
+      "Typical indoor stair angles are 30–37°; steeper than 42° feels like a ladder.",
+      "Always round the step count to a whole number, then recompute the exact riser — never build fractional steps."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Measure the total rise: floor-to-floor vertical height in cm.",
+      "Enter your target riser height — 17.5 cm is a comfortable default.",
+      "Enter the tread depth — 25 cm suits most indoor stairs.",
+      "Read the step count, exact riser height, total run, stringer length, and angle.",
+      "Check the comfort rating: adjust riser or tread until Blondel's rule reads comfortable."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "Steps = round(total rise ÷ target riser)\nActual riser = total rise ÷ steps\nTotal run = steps × tread depth\nStringer = √(rise² + run²)\nAngle = arctan(rise ÷ run)\nComfort: 60 ≤ 2×riser + tread ≤ 65 cm",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Total rise 280 cm, target riser 17.5 cm, tread 25 cm.\nSteps = round(280 ÷ 17.5) = 16\nActual riser = 280 ÷ 16 = 17.5 cm\nTotal run = 16 × 25 = 400 cm\nStringer = √(280² + 400²) = √238,400 = 488.3 cm\nAngle = arctan(280 ÷ 400) = 35.0°\nBlondel: 2 × 17.5 + 25 = 60 cm → comfortable.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Eliminates the classic mistake of uneven first or last steps.",
+      "Gives the stringer cut length directly — take it to the saw.",
+      "Comfort check keeps stairs safe for children and older people.",
+      "Metric-first with honest rounding to whole steps."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "A planning aid, not a code compliance check: verify riser/tread limits and handrail rules with your local building code.",
+      "Assumes a straight flight — L-shaped or U-shaped stairs need landing calculations this tool does not do.",
+      "Does not account for nosing overhang or finish flooring thickness — add those to your measurements.",
+      "Structural design (stringer thickness, supports) needs a professional for real construction."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is a comfortable riser height?",
+        "a": "Most people find 16–18 cm comfortable. Below 15 cm feels like baby steps and wastes run length; above 19 cm gets tiring and is often against code."
+      },
+      {
+        "q": "What is Blondel's rule?",
+        "a": "An 18th-century rule of thumb: 2 × riser + tread should be 60–65 cm, roughly one natural stride split across the step. Stairs in this band feel natural to climb."
+      },
+      {
+        "q": "Why must steps be whole numbers?",
+        "a": "You cannot build 15.4 steps. Rounding to whole steps and recomputing the riser keeps every step identical — uneven steps are a major trip hazard."
+      },
+      {
+        "q": "How steep can stairs be?",
+        "a": "Indoor stairs usually sit at 30–37°. Past 42° they feel ladder-like and many codes restrict them to lofts or ships' ladders with special rules."
+      },
+      {
+        "q": "What is the stringer?",
+        "a": "The sloped structural board on each side that the treads and risers fix to. Its length is the hypotenuse of your total rise and total run."
+      },
+      {
+        "q": "Do I include flooring thickness?",
+        "a": "Measure rise from finished floor to finished floor — include the thickness of the flooring you will install, or your risers will be off by that amount."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your stair plan",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "riseLabel": "Total rise (cm)",
+      "riseHint": "Vertical floor-to-floor height.",
+      "riserLabel": "Target riser height (cm)",
+      "riserHint": "Comfortable: 16–18 cm.",
+      "treadLabel": "Tread depth (cm)",
+      "treadHint": "Horizontal depth of each step, usually 25 cm.",
+      "stepsLabel": "Number of steps",
+      "actualRiserLabel": "Actual riser height",
+      "totalRunLabel": "Total run",
+      "stringerLabel": "Stringer length",
+      "angleLabel": "Stair angle",
+      "comfortLabel": "Comfort",
+      "comfortGood": "Comfortable",
+      "comfortSteep": "Steep / tiring",
+      "comfortShallow": "Shallow / long",
+      "cmUnit": "cm",
+      "blondelNote": "Blondel check: 2 × riser + tread between 60–65 cm feels natural."
+    }
+  }
+}

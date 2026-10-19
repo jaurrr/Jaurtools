@@ -1,0 +1,106 @@
+{
+  "monitor-test": {
+    "benefits": [
+      "Catches dead and stuck pixels before a return window closes — a 2-minute check on any new screen.",
+      "Reveals backlight bleed, clouding, and uneven brightness that photos of the screen cannot show.",
+      "The gradient ramps expose color banding and panel calibration problems instantly.",
+      "Runs entirely offline in the browser — no app install, no account, works on any device with a screen."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "On a pure black slide, a dead pixel stays black (invisible), so check the white and colored slides: a dead pixel appears as a permanent tiny black dot on every slide, while a stuck pixel glows one color (red, green, or blue) constantly. Mark the spot and zoom in with your phone camera to confirm.",
+        "q": "How do I spot a dead pixel?"
+      },
+      {
+        "a": "Yes — run the refresh-rate measurement while plugged in and with nothing else running. Browsers cap rendering at the display's refresh rate, so the result reflects your panel. On 120 Hz phones the measurement should read near 120 Hz.",
+        "q": "Can I test my phone's 120 Hz screen?"
+      },
+      {
+        "a": "Slight bleed on IPS panels is common and usually harmless. Strong yellowish patches in the corners on the black slide, visible during normal dark scenes, are worth a warranty claim. Take a photo of the black slide as evidence.",
+        "q": "What is backlight bleed and should I worry?"
+      },
+      {
+        "a": "Banding — visible steps instead of a smooth blend — is often a panel or driver limitation (6-bit panels, aggressive power saving). First try a different cable, a different port, and full RGB range in your GPU settings; if it persists on every input, it is the panel.",
+        "q": "Why do I see stripes on the gradient slide?"
+      },
+      {
+        "a": "The measurement counts how many frames your browser can render per second, which is capped by the display refresh rate and vsync. A 60 Hz screen will report about 60 Hz even on a fast computer. It is a display measurement, not a GPU benchmark.",
+        "q": "Why does my gaming PC report only 60 Hz?"
+      },
+      {
+        "a": "The stuck pixel sometimes unsticks. Display a rapidly flashing red-green-blue pattern on that spot for 10–20 minutes (several free videos do this) or gently massage the area with a soft cloth. If it stays, check your warranty.",
+        "q": "Can a stuck pixel be fixed?"
+      }
+    ],
+    "formula": "Refresh rate (Hz) = frames rendered / seconds measured\nExample: 239 frames counted over 2.0 seconds = 239 / 2.0 = 119.5 Hz, reported as 120 Hz.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Read your screen's reported resolution, pixel ratio, and color depth on this page.",
+      "Optionally press Measure to run a 2-second frame count that estimates the real refresh rate.",
+      "Press Start test to go full-screen through 8 slides: black, white, red, green, blue, rainbow gradient, gray ramp, and checkerboard.",
+      "On each slide, look closely for stuck or dead pixels, uneven backlight, banding, or ghosting.",
+      "Use the arrow keys (or the on-screen buttons) to move between slides, and Esc to exit."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Eight full-screen slides: pure black, white, red, green, blue, rainbow gradient, gray ramp, and a checkerboard — the classic defect-hunting set.",
+      "The black slide exposes backlight bleed and clouding; the colored slides expose dead and stuck pixels.",
+      "The gray ramp and rainbow gradient reveal color banding and gamma problems at a glance.",
+      "The page reports your real resolution, device pixel ratio, color depth, and orientation from browser APIs.",
+      "A 2-second animation-frame counter estimates the panel's actual refresh rate in Hz.",
+      "Arrow keys switch slides, Esc exits; the test also requests full-screen automatically."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "monitor test online, screen test, dead pixel test, refresh rate test, display test, backlight bleed test",
+    "labels": {
+      "colorDepth": "Color depth",
+      "exit": "Exit",
+      "fpsNote": "The measurement renders animation frames for 2 seconds. Close other tabs and keep the page visible for the most accurate reading.",
+      "hint": "Arrow keys switch slides · Esc exits",
+      "measureFps": "Measure refresh rate",
+      "measuring": "Measuring…",
+      "next": "Next",
+      "orientation": "Orientation",
+      "pixelRatio": "Pixel ratio",
+      "prev": "Previous",
+      "refreshRate": "Refresh rate",
+      "resolution": "Resolution",
+      "slides": {
+        "black": "Black — backlight bleed check",
+        "blue": "Blue",
+        "checker": "Checkerboard — sharpness check",
+        "gradient": "Rainbow gradient — banding check",
+        "grayRamp": "Gray ramp — gamma check",
+        "green": "Green",
+        "red": "Red",
+        "white": "White — dead pixel check"
+      },
+      "startTest": "Start full-screen test",
+      "testAria": "Monitor test slides"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The refresh-rate reading measures what the browser can render, capped by vsync — it is not a GPU benchmark.",
+      "Very faint defects may be invisible in bright rooms; test in dim light for best results.",
+      "Some browsers or kiosk setups block full-screen; the slides still work in the normal page.",
+      "This checks the panel and signal chain, not color accuracy — that needs a hardware calibrator."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online monitor test: full-screen slides find dead pixels, backlight bleed, and banding, plus a real refresh-rate measurement. No install, works on any screen.",
+    "metaTitle": "Monitor Test Online — Dead Pixel & Screen Check (Free)",
+    "name": "Monitor Test",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Run a full-screen monitor test with 8 color slides to find dead pixels, backlight bleed, and color banding. The page also reports your resolution and measures the real refresh rate — free, no install, nothing leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your display report",
+    "tagline": "Full-screen color slides that expose dead pixels, bleed, and banding.",
+    "workedExample": "You press Measure on a 120 Hz phone.\nThe page counts 239 animation frames over 2.0 seconds.\n239 / 2.0 = 119.5, so it reports 120 Hz — your panel is running at its advertised refresh rate.\nYou then run the slides and spot one stuck green pixel on the red slide.",
+    "workedExampleHeading": "Worked example"
+  }
+}

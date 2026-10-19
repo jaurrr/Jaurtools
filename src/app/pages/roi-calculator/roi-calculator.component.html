@@ -1,0 +1,186 @@
+<div class="tool-page fin-type-quick">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <div class="fin-label-row"><label for="roi-initial">{{ t('labels.initialInvestment') }}</label><span class="fin-live-chip">{{ money2().format(initial()) }}</span></div>
+        <div class="input-row fin-slider">
+          <input id="roi-initial" type="number" inputmode="decimal" min="0" max="1000000000" step="100"
+            [ngModel]="initial()" (ngModelChange)="setInitial($event)" />
+          <input type="range" min="0" max="100000" step="500" [ngModel]="initial()"
+            (ngModelChange)="setInitial($event)" [attr.aria-label]="t('labels.initialInvestment')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row"><label for="roi-final">{{ t('labels.finalValue') }}</label><span class="fin-live-chip">{{ money2().format(finalValue()) }}</span></div>
+        <div class="input-row fin-slider">
+          <input id="roi-final" type="number" inputmode="decimal" min="0" max="1000000000" step="100"
+            [ngModel]="finalValue()" (ngModelChange)="setFinalValue($event)" />
+          <input type="range" min="0" max="100000" step="500" [ngModel]="finalValue()"
+            (ngModelChange)="setFinalValue($event)" [attr.aria-label]="t('labels.finalValue')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row"><label for="roi-years">{{ t('labels.yearsHeld') }}</label><span class="fin-live-chip">{{ years() }}</span></div>
+        <div class="input-row fin-slider">
+          <input id="roi-years" type="number" inputmode="decimal" min="0.01" max="100" step="0.5"
+            [ngModel]="years()" (ngModelChange)="setYears($event)" />
+          <input type="range" min="0.5" max="30" step="0.5" [ngModel]="years()"
+            (ngModelChange)="setYears($event)" [attr.aria-label]="t('labels.yearsHeld')" />
+        </div>
+      </div>
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="percent" /> {{ t('hero.roi') }}</span>
+          <strong>{{ twoDecimals().format(roiPct()) }}%</strong>
+          <small>{{ tp('hero.roiNote', { ann: twoDecimals().format(annualized()) }) }}</small>
+        </div>
+        <div class="fin-hero-sub">
+          <div>
+            <span>{{ t('hero.gain') }}</span>
+            <strong class="fin-gain">{{ money2().format(gain()) }}</strong>
+          </div>
+          <div>
+            <span>{{ t('hero.multiple') }}</span>
+            <strong>{{ twoDecimals().format(multiple()) }}x</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="fin-ref">
+        <h3>{{ t('duel.heading') }}</h3>
+        <div class="fin-duel">
+          <div class="fin-duel-card" [class.fin-winner]="roiPct() >= bench().roi">
+            <span><app-icon name="activity" /> {{ t('duel.yours') }}</span>
+            <strong>{{ twoDecimals().format(roiPct()) }}%</strong>
+            <small>{{ tp('duel.yoursSub', { final: money2().format(finalValue()) }) }}</small>
+            @if (roiPct() >= bench().roi) {
+              <em class="fin-duel-tag">{{ t('duel.winner') }}</em>
+            }
+          </div>
+          <div class="fin-duel-card" [class.fin-winner]="roiPct() < bench().roi">
+            <span><app-icon name="banknote" /> {{ t('duel.bench') }}</span>
+            <strong>{{ twoDecimals().format(bench().roi) }}%</strong>
+            <small>{{ tp('duel.benchSub', { final: money2().format(bench().final) }) }}</small>
+            @if (roiPct() < bench().roi) {
+              <em class="fin-duel-tag">{{ t('duel.winner') }}</em>
+            }
+          </div>
+        </div>
+      </div>
+
+      @if (roiPct() >= bench().roi) {
+        <div class="fin-verdict">
+          <app-icon name="check" />
+          <p><strong>{{ t('verdict.beat') }}</strong> {{ tp('meaning.l2', { diff: twoDecimals().format(roiPct() - bench().roi) }) }}</p>
+        </div>
+      } @else {
+        <div class="fin-verdict">
+          <app-icon name="info" />
+          <p><strong>{{ t('verdict.miss') }}</strong> {{ tp('meaning.l3', { diff: twoDecimals().format(bench().roi - roiPct()) }) }}</p>
+        </div>
+      }
+
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { initial: money2().format(initial()), final: money2().format(finalValue()), gain: money2().format(gain()), roi: twoDecimals().format(roiPct()) }) }}</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

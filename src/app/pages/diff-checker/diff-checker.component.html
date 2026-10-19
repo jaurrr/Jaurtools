@@ -1,0 +1,106 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="file-text" /> {{ t('resultsHeading') }}</h2>
+      <div class="diff-inputs">
+        <div class="field">
+          <label for="diff-a">{{ t('labels.textALabel') }}</label>
+          <textarea id="diff-a" rows="8" dir="auto" [ngModel]="textA()" (ngModelChange)="setTextA($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="diff-b">{{ t('labels.textBLabel') }}</label>
+          <textarea id="diff-b" rows="8" dir="auto" [ngModel]="textB()" (ngModelChange)="setTextB($event)"></textarea>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button (click)="swap()"><app-icon name="refresh-cw" /> {{ t('labels.swapLabel') }}</button>
+        <button (click)="loadSample()">{{ t('labels.sampleLabel') }}</button>
+        <button (click)="clear()"><app-icon name="x" /> {{ t('labels.clearLabel') }}</button>
+      </div>
+      <div class="calc-seg-tabs" role="tablist" [attr.aria-label]="t('labels.diffModeLabel')">
+        <button type="button" role="tab" [attr.aria-selected]="mode() === 'line'" [class.active]="mode() === 'line'" (click)="setMode('line')">
+          {{ t('labels.lineTab') }}
+        </button>
+        <button type="button" role="tab" [attr.aria-selected]="mode() === 'word'" [class.active]="mode() === 'word'" (click)="setMode('word')">
+          {{ t('labels.wordTab') }}
+        </button>
+      </div>
+      @if (tooLarge()) {
+        <p class="error" role="alert">{{ t('labels.tooLargeLabel') }}</p>
+      } @else {
+        <div class="results calc-results">
+          <div class="result-row">
+            <span><span class="dot add"></span>{{ t('labels.addedLabel') }}</span>
+            <strong>{{ addedCount() }}</strong>
+          </div>
+          <div class="result-row">
+            <span><span class="dot del"></span>{{ t('labels.removedLabel') }}</span>
+            <strong>{{ removedCount() }}</strong>
+          </div>
+          <div class="result-row">
+            <span><span class="dot same"></span>{{ t('labels.unchangedLabel') }}</span>
+            <strong>{{ sameCount() }}</strong>
+          </div>
+        </div>
+        @if (mode() === 'word') {
+          <div class="diff-words" dir="auto" aria-live="polite">
+            @for (r of wordRows(); track $index) {
+              @if (r.kind === 'same') {<span>{{ r.a }}</span>}
+              @else if (r.kind === 'del') {<del>{{ r.a }}</del>}
+              @else {<ins>{{ r.b }}</ins>}
+            }
+          </div>
+        } @else {
+        <div class="diff-table-wrap">
+          <table class="diff-table">
+            <thead>
+              <tr><th scope="col">{{ t('labels.colALabel') }}</th><th scope="col">{{ t('labels.colBLabel') }}</th></tr>
+            </thead>
+            <tbody>
+              @for (r of rows(); track $index) {
+                <tr [class]="'row-' + r.kind">
+                  <td>{{ r.a }}</td>
+                  <td>{{ r.b }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        }
+      }
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

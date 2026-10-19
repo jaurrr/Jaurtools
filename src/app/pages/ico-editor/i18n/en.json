@@ -1,0 +1,94 @@
+{
+  "ico-editor": {
+    "benefits": [
+      "See inside any .ico file: every embedded size listed with format, bit depth, and byte size.",
+      "Extracts individual layers as PNGs — rescue the 256 px artwork from an old icon.",
+      "Rebuilds a leaner .ico from just the layers you tick — drop sizes you never use.",
+      "Decodes both modern PNG entries and classic BMP/DIB entries with a hand-written parser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An .ico is a container: a 6-byte header, then a 16-byte directory entry per image describing its size and position, then the image data itself. Each entry can be a PNG or a classic Windows BMP (DIB) bitmap.",
+        "q": "How is an .ico file structured?"
+      },
+      {
+        "a": "Modern icons embed PNG images (the Vista+ format). Older icons store BMP/DIB bitmaps with a separate transparency mask. This editor decodes both: PNG entries display directly, and 24/32-bit BMP entries are decoded pixel by pixel.",
+        "q": "What is the difference between PNG and BMP entries?"
+      },
+      {
+        "a": "Yes — tick exactly the layers you want and press Rebuild. The selected layers are re-encoded as PNGs and packed into a fresh .ico with the same hand-written encoder the converter uses.",
+        "q": "Can I remove sizes from an .ico?"
+      },
+      {
+        "a": "Press the PNG button on any layer card to download that single size as a standalone PNG image.",
+        "q": "How do I extract one size as a PNG?"
+      },
+      {
+        "a": "Only 24-bit and 32-bit BMP entries are decoded. Rarer formats (1/4/8-bit paletted, JPEG-compressed entries) are listed honestly as unsupported and skipped.",
+        "q": "Which BMP formats are supported?"
+      },
+      {
+        "a": "The transparency (AND) mask is not applied — BMP layers show their raw color data. PNG layers keep full alpha. If a BMP layer looks like it has a black background, that is the missing mask, not a bug.",
+        "q": "Why does a BMP layer show a black background?"
+      }
+    ],
+    "formula": "ICO = 6-byte header + 16 bytes per entry + image data\nEntry bytes: width(1) height(1) colors(1) reserved(1) planes(2) bpp(2) size(4) offset(4)\nBMP inside ICO: BITMAPINFOHEADER, biHeight = 2 x image height (color + mask)\nExample: 2 layers (16, 32) -> header bytes 0-5, entries bytes 6-37, image data from byte 38.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a Windows .ico file from your device (up to 10 MB).",
+      "The editor lists every embedded layer: size, format (PNG/BMP), bit depth, and byte size.",
+      "Download any single layer as a PNG with the button on its card.",
+      "Tick the layers you want to keep and press Rebuild for a leaner .ico.",
+      "Press Download rebuilt to save the new icon file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Parses the ICO container with a hand-written decoder — header, directory entries, and image data.",
+      "Lists every layer with its size, PNG/BMP format, bit depth, and byte size.",
+      "Decodes 24-bit and 32-bit BMP/DIB entries pixel by pixel; PNG entries display natively.",
+      "Extracts any single layer as a standalone PNG download.",
+      "Rebuilds a new .ico from just your ticked layers with a hand-written encoder.",
+      "Everything runs in your browser — the file never leaves your device."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ico editor online, view ico file, extract icon layers, ico to png layers, edit ico file",
+    "labels": {
+      "downloadRebuilt": "Download rebuilt .ico",
+      "formatLabel": "Format",
+      "layerLabel": "Layer",
+      "layersHeading": "Icon layers",
+      "newFile": "New file",
+      "parseError": "That file could not be parsed as a Windows icon (.ico).",
+      "rebuildIco": "Rebuild .ico from selected",
+      "rebuilding": "Rebuilding…",
+      "selectLabel": "Include",
+      "sizeError": "That file is larger than 10 MB. Please choose a smaller file.",
+      "typeError": "That file could not be read. Please choose a .ico file.",
+      "uploadLabel": "Choose a .ico file"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only 24/32-bit BMP entries decode; paletted or JPEG-compressed entries are skipped honestly.",
+      "The BMP transparency (AND) mask is not applied — raw color data is shown.",
+      "Rebuilt icons use PNG compression; the original BMP encoding is not preserved.",
+      "You cannot paint or edit pixels — this is a viewer, extractor, and repacker, not a pixel editor."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Look inside any .ico file: extract layers, check sizes and bit depth, rebuild leaner files. Free, in your browser.",
+    "metaTitle": "ICO Editor - Inspect & Rebuild .ico Files | JaurTools",
+    "name": "ICO Editor",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a Windows .ico to see every embedded layer — size, format, bit depth, and byte size. Extract any layer as a PNG, or tick the layers you want and rebuild a leaner .ico. A hand-written parser decodes PNG and BMP entries, all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your icon layers",
+    "tagline": "Every layer of any .ico, revealed.",
+    "workedExample": "You open a 2-layer icon (16 and 32 px).\nHeader bytes 0–5, two 16-byte entries at bytes 6–37, image data from byte 38.\nLayer 1 is a 32-bit BMP entry: its BITMAPINFOHEADER reports biHeight = 64 (2 x 32 for color + mask).\nYou download the 32 px layer as PNG and rebuild a 1-layer .ico.",
+    "workedExampleHeading": "Worked example"
+  }
+}

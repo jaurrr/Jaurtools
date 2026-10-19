@@ -1,0 +1,97 @@
+{
+  "pace-calculator": {
+    "assumptionNote": "Assumes perfectly even pacing on flat ground. Hills, wind, and fatigue change real times.",
+    "benefits": [
+      "Sets race goals from real training data, not guesses.",
+      "Translates between metric and mile pacing instantly.",
+      "Shows whether a goal time is realistic before race day.",
+      "Helps interval training: convert target paces to exact splits."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Depends on distance and runner. A 5:30/km 10K is solid for a recreational runner; elites run under 3:00/km. Compare against your own history, not others.",
+        "q": "What is a good running pace?"
+      },
+      {
+        "a": "Divide 60 by the pace in minutes. 5:30/km = 5.5 min, so 60/5.5 = 10.9 km/h. This calculator does it live.",
+        "q": "How do I convert min/km to km/h?"
+      },
+      {
+        "a": "Treadmills measure belt speed; GPS measures position. Calibration, belt wear, and running form shift readings 2-5%. Trust one source per training block.",
+        "q": "Why is my treadmill pace different from outdoor?"
+      },
+      {
+        "a": "Roughly 15-25 seconds per km slower than your half-marathon pace, or 30-45 s/km slower than 10K pace. The time mode above turns any pace into a finish time.",
+        "q": "What pace should I run a marathon at?"
+      },
+      {
+        "a": "Run intervals at 5K-10K race pace (faster than easy pace by 30-60 s/km). Use the pace mode to convert a recent race into training paces.",
+        "q": "How do I pace intervals?"
+      },
+      {
+        "a": "Yes - about 80% of weekly running should be easy (1-2 min/km slower than 10K pace). Easy miles build the aerobic base that makes fast paces possible.",
+        "q": "Does running slower ever help?"
+      }
+    ],
+    "formula": "Pace (sec/km) = total seconds / distance (km)\nSpeed (km/h) = 3600 / pace (sec/km) = 60 / pace (min/km)\nFinish time = pace (sec/km) x distance (km)\n\nExample: 10 km in 55:00\nPace = 3300 / 10 = 330 sec/km = 5:30/km\nSpeed = 3600 / 330 = 10.9 km/h",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose 'Find pace' if you know distance and time, or 'Find time' for a target pace.",
+      "Enter the distance in kilometres and your time (or target pace).",
+      "Pace per km, per mile, and speed appear instantly.",
+      "Use the time mode to set realistic race goals from training paces.",
+      "Round training paces to the nearest 5-10 seconds - precision beyond that is noise."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Pace = time / distance (min/km). Speed = distance / time (km/h). They are reciprocals: km/h = 60 / pace-min-per-km.",
+      "1 mile = 1.60934 km. Multiply a per-km pace by 1.609 to get per-mile pace.",
+      "Race distances: 5K, 10K, half marathon 21.0975 km, marathon 42.195 km.",
+      "A 5:00/km pace = 12.0 km/h. A 4:00/km pace = 15.0 km/h.",
+      "GPS watches measure pace by distance; treadmills by belt speed - they often disagree by 2-5%.",
+      "Negative splits (second half faster) beat even pacing for most runners."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pace calculator, running pace calculator, min per km to kmh, finish time predictor, running speed calculator",
+    "labels": {
+      "distanceKm": "Distance (km)",
+      "finishTime": "Predicted finish time",
+      "hoursLabel": "Hours",
+      "minutesLabel": "Minutes",
+      "modeLabel": "Calculator mode",
+      "pacePerKm": "Pace per km",
+      "pacePerMile": "Pace per mile",
+      "paceTab": "Find pace",
+      "secondsLabel": "Seconds",
+      "speedKmh": "Speed",
+      "speedMph": "Speed (mph)",
+      "targetPace": "Target pace (min/km)",
+      "timeLabel": "Your time",
+      "timeTab": "Find time"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes even pacing - hills, heat, and fatigue slow real races.",
+      "GPS distance errors of 1-3% shift every pace number.",
+      "Does not account for altitude, wind, or trail surfaces.",
+      "Predictions from short runs overestimate marathon ability - treat long extrapolations as optimistic."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate running pace from distance and time, or predict finish time from target pace. Pace per km/mile and speed included. Free, no sign-up.",
+    "metaTitle": "Running Pace Calculator - min/km to km/h | JaurTools",
+    "name": "Pace Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pace is time divided by distance. Running 10 km in 55 minutes means 5:30 per km (55/10), which is 10.9 km/h. In miles that is 8:51 per mile. Flip it: at a 5:30/km pace, a marathon (42.2 km) takes about 3:52:04.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your pace results",
+    "tagline": "Convert running pace, speed, and finish time - any two give you the third.",
+    "workedExample": "You run 10 km in 55 minutes:\n1. Total seconds: 55 x 60 = 3300.\n2. Pace: 3300 / 10 = 330 sec/km = 5:30 per km.\n3. Speed: 3600 / 330 = 10.9 km/h.\n4. Per mile: 330 x 1.60934 = 531 sec = 8:51 per mile.\n\nTarget pace 5:30/km for a marathon (42.195 km):\n1. 330 sec/km x 42.195 = 13924 sec.\n2. 13924 / 3600 = 3.87 h = 3:52:04 finish.",
+    "workedExampleHeading": "Worked example"
+  }
+}

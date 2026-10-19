@@ -1,0 +1,169 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <h3 class="sub-heading">{{ t('labels.rulesHeading') }}</h3>
+      @for (rule of rules(); track $index) {
+        <fieldset class="rule-row">
+          <legend>{{ t('labels.ruleLabel') }} {{ $index + 1 }}</legend>
+          <div class="field">
+            <label [for]="'rb-agent-' + $index">{{ t('labels.agent') }}</label>
+            <input [id]="'rb-agent-' + $index" type="text" dir="ltr" placeholder="*"
+              [ngModel]="rule.agent" (ngModelChange)="updateRule($index, { agent: $event })" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label [for]="'rb-access-' + $index">{{ t('labels.access') }}</label>
+              <select [id]="'rb-access-' + $index"
+                [ngModel]="rule.access" (ngModelChange)="updateRule($index, { access: $event })">
+                <option value="allow">{{ t('labels.accessAllow') }}</option>
+                <option value="disallow">{{ t('labels.accessDisallow') }}</option>
+              </select>
+            </div>
+            <div class="field">
+              <label [for]="'rb-path-' + $index">{{ t('labels.path') }}</label>
+              <input [id]="'rb-path-' + $index" type="text" dir="ltr" placeholder="/admin"
+                [ngModel]="rule.path" (ngModelChange)="updateRule($index, { path: $event })" />
+            </div>
+            <button type="button" class="btn btn-danger" (click)="removeRule($index)"
+              [attr.aria-label]="t('labels.removeRule') + ' ' + ($index + 1)">
+              <app-icon name="x" />
+            </button>
+          </div>
+        </fieldset>
+      }
+      <button type="button" class="btn" (click)="addRule()">
+        <app-icon name="check" /> {{ t('labels.addRule') }}
+      </button>
+
+      <h3 class="sub-heading">{{ t('labels.optionsHeading') }}</h3>
+      <div class="field">
+        <label for="rb-sitemap">{{ t('labels.sitemapLabel') }}</label>
+        <input id="rb-sitemap" type="url" dir="ltr"
+          [ngModel]="sitemap()" (ngModelChange)="sitemap.set($event)" />
+      </div>
+      <div class="field">
+        <label for="rb-delay">{{ t('labels.crawlDelay') }}</label>
+        <div class="input-row">
+          <input id="rb-delay" type="number" inputmode="numeric" min="0" max="3600" step="1"
+            [ngModel]="crawlDelay()" (ngModelChange)="setCrawlDelay($event)" />
+        </div>
+        <p class="note">{{ t('labels.crawlDelayHint') }}</p>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.outputHeading') }}</h3>
+      <pre class="output" dir="ltr"><code>{{ output() }}</code></pre>
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="copyOutput()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copy') }}
+        </button>
+        <button type="button" class="btn" (click)="download()">
+          <app-icon name="download" /> {{ t('labels.download') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.uploadNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

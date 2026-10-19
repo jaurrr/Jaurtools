@@ -1,0 +1,177 @@
+<div class="tool-page persona-pipe">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" appPasteDrop aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="trace-file">{{ t('labels.upload') }}</label>
+        <input id="trace-file" type="file" accept="image/*" (change)="onFile($event)" />
+        @if (image()) {
+          <p class="note">{{ image()?.name }} — {{ image()?.width }} × {{ image()?.height }}</p>
+        }
+      </div>
+
+      <div class="field">
+        <label for="trace-colors">{{ t('labels.colors') }}</label>
+        <div class="input-row">
+          <input id="trace-colors" type="number" inputmode="numeric" min="2" max="6" step="1"
+            [ngModel]="colors()" (ngModelChange)="setColors($event)" />
+          <input type="range" min="2" max="6" step="1" [ngModel]="colors()"
+            (ngModelChange)="setColors($event)" [attr.aria-label]="t('labels.colors')" />
+        </div>
+      </div>
+
+      @if (colors() === 2) {
+        <div class="field">
+          <label for="trace-threshold">{{ t('labels.threshold') }}</label>
+          <div class="input-row">
+            <input id="trace-threshold" type="number" inputmode="numeric" min="1" max="254" step="1"
+              [ngModel]="threshold()" (ngModelChange)="setThreshold($event)" />
+            <input type="range" min="1" max="254" step="1" [ngModel]="threshold()"
+              (ngModelChange)="setThreshold($event)" [attr.aria-label]="t('labels.threshold')" />
+          </div>
+        </div>
+      }
+
+      <div class="field">
+        <label for="trace-detail">{{ t('labels.detail') }}</label>
+        <div class="input-row">
+          <input id="trace-detail" type="number" inputmode="numeric" min="200" max="600" step="50"
+            [ngModel]="detail()" (ngModelChange)="setDetail($event)" />
+          <input type="range" min="200" max="600" step="50" [ngModel]="detail()"
+            (ngModelChange)="setDetail($event)" [attr.aria-label]="t('labels.detail')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="trace-smooth">{{ t('labels.smoothing') }}</label>
+        <div class="input-row">
+          <input id="trace-smooth" type="number" inputmode="decimal" min="0" max="3" step="0.2"
+            [ngModel]="smoothing()" (ngModelChange)="setSmoothing($event)" />
+          <input type="range" min="0" max="3" step="0.2" [ngModel]="smoothing()"
+            (ngModelChange)="setSmoothing($event)" [attr.aria-label]="t('labels.smoothing')" />
+        </div>
+      </div>
+
+      @if (errorMsg()) {
+        <p class="error" role="alert">{{ errorMsg() }}</p>
+      }
+
+      @if (hasOutput()) {
+        <div>
+          <div class="preview-frame preview-frame--checker" [innerHTML]="svg()"></div>
+        </div>
+        <div class="results">
+          <div class="result-row">
+            <span><app-icon name="ruler" /> {{ t('labels.paths') }}</span>
+            <strong>{{ pathCount() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.svgSize') }}</span>
+            <strong>{{ svgBytes() }} B</strong>
+          </div>
+        </div>
+        <button type="button" class="btn" (click)="download()">
+          <app-icon name="download" /> {{ t('labels.download') }}
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="copySvg()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copySvg') }}
+        </button>
+      } @else if (!busy()) {
+        <p class="note">{{ t('labels.pickOne') }}</p>
+      }
+
+      <p class="note">{{ t('labels.qualityNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

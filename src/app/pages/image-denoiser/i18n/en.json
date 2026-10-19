@@ -1,0 +1,98 @@
+{
+  "image-denoiser": {
+    "benefits": [
+      "Clean up grainy low-light photos and scanned images in one click.",
+      "Median filtering removes salt-and-pepper specks while keeping edges sharp — unlike plain blur.",
+      "Multiple passes and two window sizes give you control over cleaning strength.",
+      "Everything runs locally; your photo never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the noisy photo, pick Median 3×3 for light grain or Median 5×5 for heavy specks (or Gaussian blur for smooth haze), optionally run extra passes, then Download the cleaned PNG or JPG.",
+        "q": "How do I remove noise from a photo?"
+      },
+      {
+        "a": "Median filtering replaces each pixel with the middle value of its neighborhood, which deletes isolated bright/dark specks. Gaussian blur averages the neighborhood, which softens everything including real detail.",
+        "q": "Median or Gaussian — which is better?"
+      },
+      {
+        "a": "No. Denoising always trades some fine detail for smoothness. Median filters preserve edges far better than blur, but very fine texture can still be lost.",
+        "q": "Will denoising keep my photo sharp?"
+      },
+      {
+        "a": "Yes, if it is just sensor grain or scan dust. It cannot recover detail that was never captured, and it cannot fix motion blur or bad focus.",
+        "q": "Can it fix a very grainy night photo?"
+      },
+      {
+        "a": "Images wider than 2048 px on the long side are processed at 2048 px to keep the filter fast. The note under the preview tells you when this happens.",
+        "q": "Why was my large image downscaled?"
+      },
+      {
+        "a": "No. All filtering is computed in your browser; the photo is never uploaded anywhere.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "median: out(x,y) = median of the (2r+1)² neighborhood values\nr = 1 → 3×3 (9 values),  r = 2 → 5×5 (25 values)\ngaussian: out = blur(image, σ) via canvas blur filter",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the noisy or grainy photo.",
+      "Choose Median 3×3 for light grain, Median 5×5 for heavy specks, or Gaussian for a smooth softening.",
+      "Set the number of passes (median) or the blur radius (gaussian).",
+      "Compare the preview with your expectations and adjust.",
+      "Download the cleaned image as PNG or JPG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A median filter replaces each pixel with the middle value of its window, deleting isolated noise spikes.",
+      "The 3×3 window examines 9 neighbors; the 5×5 window examines 25 for stronger cleaning.",
+      "Gaussian mode uses the browser's blur filter with your chosen radius (0.5–4 px).",
+      "Running 2–3 median passes cleans stubborn grain progressively.",
+      "Images over 2048 px on the long side are processed at 2048 px for speed."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "remove noise, denoise photo, reduce grain, clean noisy image, despeckle photo, smooth photo online",
+    "labels": {
+      "download": "Download cleaned image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "method": "Denoise method",
+      "passes": "Filter passes",
+      "pickOne": "Choose a noisy image above to clean it.",
+      "preview": "Denoised preview",
+      "scaledNote": "Note: this image was processed at 2048 px on the long side to keep the filter fast.",
+      "strength": "Blur radius (px)",
+      "upload": "Noisy image to clean"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Denoising cannot recover detail that was never captured — it only smooths.",
+      "Heavy filtering softens fine texture like hair, fabric weave, and distant foliage.",
+      "Large images are capped at 2048 px on the long side during processing.",
+      "Motion blur and out-of-focus shots cannot be fixed by noise filters."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Clean grain and specks from photos with median and Gaussian noise filters. Adjustable strength — free, private, in-browser.",
+    "metaTitle": "Image Denoiser - Clean Grainy Photos | JaurTools",
+    "methods": {
+      "gaussian": "Gaussian blur (smooth)",
+      "median3": "Median 3×3 (light grain)",
+      "median5": "Median 5×5 (heavy specks)"
+    },
+    "name": "Image Denoiser",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a grainy photo and pick a median filter to delete isolated noise specks while keeping edges, or a Gaussian blur for smooth softening. Tune passes or radius, preview live, and download the cleaned PNG or JPG — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Denoise results",
+    "tagline": "Grain gone, detail kept.",
+    "workedExample": "A 3×3 window around a noisy pixel holds values [12, 15, 18, 20, 22, 25, 30, 33, 200]:\nsorted → [12, 15, 18, 20, 22, 25, 30, 33, 200]\nmedian (5th of 9) = 22\nThe isolated bright spike of 200 (salt noise) is replaced by 22, while the true edge values around 20 stay intact.",
+    "workedExampleHeading": "Worked example"
+  }
+}

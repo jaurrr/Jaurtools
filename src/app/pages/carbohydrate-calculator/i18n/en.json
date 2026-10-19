@@ -1,0 +1,95 @@
+{
+  "carbohydrate-calculator": {
+    "assumptionNote": "Macro targets are starting points, not medical advice. People with diabetes or kidney disease should get personalised targets from a clinician or dietitian.",
+    "benefits": [
+      "Turns a vague 'eat fewer carbs' into an exact daily gram target.",
+      "Shows the healthy 45-65% range so you can see where any diet sits.",
+      "Helps athletes fuel training with enough carbohydrate.",
+      "Makes food labels meaningful: compare grams per serving against your target."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "diets": {
+      "balanced": "Balanced (50% of calories)",
+      "highcarb": "High-carb / endurance (60%)",
+      "lowcarb": "Low-carb (30%)",
+      "verylow": "Very low / keto-style (10%)"
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "They are the body's preferred fuel, especially for the brain and high-intensity exercise. Your body can also run on fat and protein, but carbs are the cheapest, fastest energy source.",
+        "q": "Are carbs essential?"
+      },
+      {
+        "a": "About 130 g per day is the minimum the brain needs from glucose, which is why very low-carb diets force the body to make ketones instead. Most guidelines suggest 45-65% of calories.",
+        "q": "How many carbs do I need minimum?"
+      },
+      {
+        "a": "Yes, very-low-carb and keto diets sit at 10% or less of calories. They work for some people but need planning for fibre, electrolytes and sustainability. Check with a clinician first.",
+        "q": "Can I go below 45% carbs?"
+      },
+      {
+        "a": "One cup of cooked rice is about 45 g of carbs, a medium roti about 15 g, a banana about 27 g, and a slice of bread about 14 g. Weighing food for a week teaches portions fast.",
+        "q": "How many carbs are in common foods?"
+      },
+      {
+        "a": "It usually takes 2-4 days of very low carb intake to enter ketosis, where the liver makes ketones from fat. It is not the goal of ordinary low-carb eating.",
+        "q": "What is ketosis?"
+      },
+      {
+        "a": "Whole carbs (oats, lentils, brown rice, fruit) come with fibre and nutrients that slow digestion. Refined carbs (sugar, white flour) spike blood sugar faster and satisfy less.",
+        "q": "Do whole carbs differ from refined carbs?"
+      }
+    ],
+    "formula": "Carb grams = daily calories x carb % / 100 / 4.\nCarbs provide 4 kcal per gram.\nAMDR healthy range: 45-65% of calories. Minimum for the brain: about 130 g/day.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your daily calorie target (use the TDEE calculator if you do not know it).",
+      "Pick a diet style: balanced, high-carb, low-carb or very low.",
+      "Read your daily carb target in grams, the healthy 45-65% range, and the 130 g minimum.",
+      "Compare food labels against your target when planning meals."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Carbohydrates provide 4 kcal per gram, the same as protein and less than fat's 9 kcal.",
+      "The accepted healthy range (AMDR) is 45-65% of daily calories from carbs.",
+      "The brain alone needs about 130 g of glucose per day.",
+      "Fibre is a carbohydrate that is not digested; it feeds gut bacteria and steadies blood sugar.",
+      "Whole carbs like lentils, oats and fruit come with fibre and micronutrients.",
+      "A 2,200 kcal balanced diet at 50% carbs means 275 g of carbs per day."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "carbohydrate calculator, daily carb intake calculator, how many carbs per day, carb macro calculator",
+    "labels": {
+      "caloriesLabel": "Daily calories",
+      "caloriesNote": "Your TDEE, or your lose/gain target from it.",
+      "dietLabel": "Diet style",
+      "gramsUnit": "g/day",
+      "minResult": "Minimum for the brain",
+      "rangeResult": "Healthy range (45-65%)",
+      "targetResult": "Your carb target"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A gram target cannot judge food quality; 275 g of sugar is not 275 g of lentils.",
+      "Individual needs vary with training, diabetes and gut health.",
+      "Very low-carb targets need medical supervision, not just a calculator.",
+      "Estimates, not a diet prescription."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free carbohydrate calculator: find your daily carb intake target in grams from your calories and diet style, with the healthy 45-65% range. Private, no sign-up.",
+    "metaTitle": "Carbohydrate Calculator - Daily Carb Intake Target | JaurTools",
+    "name": "Carbohydrate Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Daily carbs come from your calories times your carb share, divided by 4 kcal per gram. On a 2,200 kcal balanced diet at 50% carbs, the target is 275 g per day, inside the healthy range of 248-358 g. The brain needs a minimum of about 130 g per day.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your carbohydrate results",
+    "tagline": "Find your daily carb target in grams - balanced, high-carb, low-carb or very low.",
+    "workedExample": "2,200 kcal, balanced diet (50%):\n1. Calories from carbs = 2,200 x 50 / 100 = 1,100 kcal.\n2. Grams = 1,100 / 4 = 275 g/day.\n3. Healthy range: 2,200 x 45% / 4 = 248 g up to 2,200 x 65% / 4 = 358 g.\n4. 275 g sits inside the healthy range and well above the 130 g minimum.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

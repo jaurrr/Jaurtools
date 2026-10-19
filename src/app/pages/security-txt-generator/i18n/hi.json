@@ -1,0 +1,106 @@
+{
+  "security-txt-generator": {
+    "benefits": [
+      "सुरक्षा शोधकर्ताओं को आपसे संपर्क का मानक तरीका मिलता है — कौन-सा ईमेल इस्तेमाल करें, यह अंदाज़ा नहीं लगाना पड़ता।",
+      "RFC 9116 का पालन करता है, इसलिए ऑटोमेटेड स्कैनर और बग-बाउंटी प्लेटफॉर्म इसे तुरंत पहचानते हैं।",
+      "Expires तारीख फ़ाइल को ताज़ा रखती है: शोधकर्ता जानते हैं कि संपर्क जानकारी मौजूदा है।",
+      "Preferred-Languages बताता है कि आप असल में कौन-सी भाषाएं पढ़ते हैं।",
+      "स्थानीय रूप से बनता है; आपकी संपर्क जानकारी ब्राउज़र से बाहर नहीं जाती।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "https://yourdomain.com/.well-known/security.txt पर — RFC 9116 द्वारा परिभाषित well-known URI। इसे HTTPS पर सादे टेक्स्ट के रूप में सर्व करें। शोधकर्ता और स्कैनर सबसे पहले वहीं देखते हैं।",
+        "q": "security.txt कहां प्रकाशित करूं?"
+      },
+      {
+        "a": "RFC 9116 के हिसाब से कम से कम एक Contact पंक्ति ज़रूरी है — इसके बिना फ़ाइल बेकार है। Expires भी स्पेक के हिसाब से ज़रूरी है। बाकी सब (Encryption, Acknowledgments, Policy, Hiring, Canonical, Preferred-Languages) वैकल्पिक है।",
+        "q": "कौन-से फ़ील्ड ज़रूरी हैं?"
+      },
+      {
+        "a": "इसे ज़्यादा से ज़्यादा एक साल आगे तक सेट करें (RFC ज़्यादा से ज़्यादा एक साल की सिफारिश करता है)। समय बीतने पर शोधकर्ता फ़ाइल को पुरानी मानेंगे। हर साल नवीनीकृत करें — कैलेंडर में रिमाइंडर लगाएं।",
+        "q": "Expires कितने आगे तक होना चाहिए?"
+      },
+      {
+        "a": "नहीं। security.txt सिर्फ बताता है कि कमज़ोरियों के बारे में कैसे संपर्क करें। यह अपने आप कुछ स्कैन, ठीक या सुरक्षित नहीं करता। इसे असली वल्नरेबिलिटी डिस्क्लोज़र पॉलिसी पेज के साथ जोड़ें।",
+        "q": "क्या security.txt मेरी साइट ज़्यादा सुरक्षित बनाता है?"
+      },
+      {
+        "a": "Encryption फ़ील्ड आपकी PGP कुंजी की ओर इशारा करता है ताकि शोधकर्ता संवेदनशील रिपोर्ट एन्क्रिप्ट कर सकें। आप कुंजी फ़ाइल का https:// URL दे सकते हैं, या openpgp4fpr: फिंगरप्रिंट URI इस्तेमाल कर सकते हैं। इसके बिना रिपोर्ट सादे ईमेल में आएंगी।",
+        "q": "Encryption फ़ील्ड किस लिए है?"
+      },
+      {
+        "a": "अगर आप security.txt कई जगहों या CDN से सर्व करते हैं, तो Canonical आधिकारिक URL घोषित करता है। इससे भ्रम नहीं रहता कि कौन-सी कॉपी मौजूदा है। ज़्यादातर छोटी साइटें इसे छोड़ सकती हैं।",
+        "q": "Canonical फ़ील्ड किस लिए है?"
+      }
+    ],
+    "formula": "security.txt फ़ील्ड सिंटैक्स (RFC 9116):\nContact: mailto:security@example.com     <- ज़रूरी, कम से कम एक\nExpires: 2026-12-31T23:59:59Z            <- ज़रूरी, RFC 3339 टाइमस्टैंप\nEncryption: https://example.com/key.txt  <- वैकल्पिक\nAcknowledgments: https://...             <- वैकल्पिक\nPolicy: https://...                      <- वैकल्पिक\nHiring: https://...                      <- वैकल्पिक\nCanonical: https://.../.well-known/security.txt  <- वैकल्पिक\nPreferred-Languages: en, hi              <- वैकल्पिक",
+    "formulaHeading": "फ़ाइल फॉर्मेट",
+    "homeLabel": "होम",
+    "howTo": [
+      "कम से कम एक संपर्क डालें: ईमेल पता, https:// संपर्क URL या tel: लिंक — हर पंक्ति में एक।",
+      "अगले एक साल के अंदर की समाप्ति तारीख चुनें (मानक के हिसाब से ज़रूरी)।",
+      "चाहें तो PGP कुंजी URL, आभार पेज, डिस्क्लोज़र पॉलिसी, हायरिंग पेज और canonical URL जोड़ें।",
+      "वे भाषाएं लिखें जो आप पढ़ते हैं, कॉमा से अलग (जैसे: en, hi)।",
+      "security.txt कॉपी या डाउनलोड करें और https://yourdomain.com/.well-known/security.txt पर प्रकाशित करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "security.txt RFC 9116 द्वारा परिभाषित है: एक मानक फ़ाइल जो सुरक्षा शोधकर्ताओं को बताती है कि कमज़ोरियों की रिपोर्ट कैसे करें।",
+      "यह आपके डोमेन पर well-known URI /.well-known/security.txt पर रहती है, HTTPS पर सर्व होती है।",
+      "Contact और Expires दो ज़रूरी फ़ील्ड हैं; बाकी सब वैकल्पिक है।",
+      "Contact मान mailto: ईमेल, https:// URL या tel: लिंक हो सकते हैं — यह टूल ईमेल अपने आप फॉर्मेट करता है।",
+      "Expires RFC 3339 टाइमस्टैंप होना चाहिए और ज़्यादा से ज़्यादा एक साल आगे तक होना चाहिए।",
+      "फ़ाइल सिर्फ सलाहकारी है — यह संपर्क जानकारी देती है, अपने आप कुछ सुरक्षित नहीं करती।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "security.txt generator, security txt file, rfc 9116 generator, vulnerability disclosure file",
+    "labels": {
+      "ackLabel": "आभार पेज URL (वैकल्पिक)",
+      "canonicalLabel": "Canonical URL (वैकल्पिक)",
+      "contactsHint": "हर पंक्ति में एक: ईमेल, https:// URL या tel: लिंक…",
+      "contactsLabel": "संपर्क (ज़रूरी)",
+      "copiedMsg": "security.txt क्लिपबोर्ड पर कॉपी हो गया।",
+      "copyFile": "फ़ाइल कॉपी करें",
+      "downloadFile": "security.txt डाउनलोड करें",
+      "encryptionLabel": "एन्क्रिप्शन कुंजी URL (वैकल्पिक)",
+      "expiresHint": "ज़रूरी। RFC 3339 फॉर्मेट में दिन-अंत UTC के रूप में रेंडर होता है।",
+      "expiresLabel": "समाप्ति तारीख",
+      "generatedFile": "बनी security.txt",
+      "hiringLabel": "हायरिंग पेज URL (वैकल्पिक)",
+      "languagesHint": "कॉमा से अलग भाषा कोड, जैसे en, hi।",
+      "languagesLabel": "पसंदीदा भाषाएं (वैकल्पिक)",
+      "policyLabel": "डिस्क्लोज़र पॉलिसी URL (वैकल्पिक)",
+      "publishAt": "यहां प्रकाशित करें",
+      "publishNote": "इस फ़ाइल को अपने डोमेन पर /.well-known/security.txt पर HTTPS से सर्व करें।",
+      "warnExpiresInvalid": "समाप्ति तारीख सही कैलेंडर तारीख नहीं है।",
+      "warnExpiresPast": "समाप्ति तारीख बीत चुकी है — शोधकर्ता फ़ाइल को पुरानी मानेंगे।",
+      "warnInvalidContact": "कुछ संपर्क पंक्तियां छोड़ दी गईं क्योंकि वे सही ईमेल, URL या tel: लिंक नहीं हैं।",
+      "warnInvalidUrl": "एक या ज़्यादा वैकल्पिक URL गलत हैं (पूरे https:// URL इस्तेमाल करें) और छोड़ दिए गए।",
+      "warnNoContact": "कम से कम एक सही Contact ज़रूरी है — फ़ाइल अभी खाली है।",
+      "warningsHeading": "प्रकाशित करने से पहले जांचें"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "सिर्फ सलाहकारी — यह कमज़ोरियां स्कैन, ठीक या रोकता नहीं।",
+      "शोधकर्ता इसे नज़रअंदाज़ कर सकते हैं; फ़ाइल प्रकाशित करने से ज़िम्मेदार डिस्क्लोज़र की गारंटी नहीं।",
+      "Expires नवीनीकृत करना होगा (ज़्यादा से ज़्यादा सालाना) वरना फ़ाइल पुरानी मानी जाएगी।",
+      "यह टूल फ़ाइल बनाता है; उसे सही पाथ पर HTTPS से सर्व करना आपका काम है।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त security.txt जनरेटर: समाप्ति, एन्क्रिप्शन और पॉलिसी फ़ील्ड के साथ RFC 9116 security.txt संपर्क फ़ाइल बनाएं। कॉपी या डाउनलोड करें, 100% निजी।",
+    "metaTitle": "security.txt Generator - संपर्क फ़ाइल बनाएं | JaurTools",
+    "name": "security.txt जनरेटर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "security.txt फ़ाइल (RFC 9116) जो yourdomain.com/.well-known/security.txt पर प्रकाशित होती है, सुरक्षा शोधकर्ताओं को बताती है कि कमज़ोरियों की रिपोर्ट कैसे करें: किससे संपर्क करें, जानकारी कब तक सही है, और चाहें तो आपकी PGP कुंजी, डिस्क्लोज़र पॉलिसी व पसंदीदा भाषाएं। कम से कम Contact: mailto:security@example.com और Expires: टाइमस्टैंप चाहिए। यह जनरेटर आसान फॉर्म से फ़ाइल बनाता है और हर फ़ील्ड मान्य करता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "आपकी security.txt फ़ाइल",
+    "tagline": "वल्नरेबिलिटी रिपोर्ट के लिए RFC 9116 security.txt संपर्क फ़ाइल बनाएं।",
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "workedExample": "इनपुट: संपर्क security@example.com, समाप्ति 2026-12-31, एन्क्रिप्शन कुंजी https://example.com/pgp-key.txt, पॉलिसी https://example.com/security-policy, भाषाएं en, hi।\nबनी फ़ाइल:\nContact: mailto:security@example.com\nExpires: 2026-12-31T23:59:59Z\nEncryption: https://example.com/pgp-key.txt\nPolicy: https://example.com/security-policy\nPreferred-Languages: en, hi\nइसे https://example.com/.well-known/security.txt पर HTTPS से प्रकाशित करें। समाप्ति (2026 के अंत) एक साल की सुझाई अधिकतम सीमा के अंदर है।"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "image-to-text-converter": {
+    "benefits": [
+      "Reads text from screenshots, photos and scans with no app to install.",
+      "English, Hindi and Arabic recognition covers most everyday documents.",
+      "Progress bar shows exactly what the engine is doing.",
+      "Copy or download the text as a .txt file in one click.",
+      "Free and private: the image never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use clear, well-lit images with dark text on a light background and text at least 20 pixels tall. Blurry, tilted or low-contrast photos are the top cause of bad results.",
+        "q": "How do I get the best accuracy?"
+      },
+      {
+        "a": "Yes - the engine and the language data (about 10 to 15 MB) download the first time you use it, which needs an internet connection. After that, recognition itself runs fully in your browser.",
+        "q": "Does it need the internet?"
+      },
+      {
+        "a": "Handwriting is still unreliable for most OCR engines, including this one. It works best on printed or typed text. Neat, large handwriting sometimes works, but expect errors.",
+        "q": "Can it read handwriting?"
+      },
+      {
+        "a": "Pick the language before pressing Extract text. Mixed-language documents are harder: the engine does best when most of the text matches the chosen language.",
+        "q": "What if my document has two languages?"
+      },
+      {
+        "a": "Yes. Recognition happens in your browser after the engine downloads. No page is ever uploaded to a server.",
+        "q": "Is my document uploaded anywhere?"
+      }
+    ],
+    "formula": "OCR pipeline (Tesseract 5):\n1. Binarise: separate dark text pixels from the light background.\n2. Segment: group pixels into text lines, then words, then characters.\n3. Recognise: a trained neural network classifies each character shape.\n4. Correct: a language dictionary fixes likely misreads.\nExample: a 800 x 200 screenshot with the words HELLO WORLD ->\nthe engine segments 2 words, 10 letters, and returns \"HELLO WORLD\".",
+    "formulaHeading": "How OCR reads an image",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file up to 15 MB - a screenshot, photo or scan.",
+      "Pick the text language: English, Hindi or Arabic.",
+      "Press Extract text. The engine downloads once (needs internet), then reads.",
+      "Watch the progress bar while the text is recognised.",
+      "Copy the text or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "OCR (Optical Character Recognition) turns pictures of text into editable text.",
+      "This tool uses Tesseract 5, a mature open-source OCR engine, running in your browser.",
+      "Supported languages: English, Hindi and Arabic.",
+      "Best results come from sharp, high-contrast images with straight, printed text.",
+      "The engine and language data download once from a CDN; recognition then runs locally.",
+      "Layout is not preserved: the output is plain text, not a formatted document."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "image to text ocr, ocr online free, extract text from image, photo to text converter, screenshot to text",
+    "labels": {
+      "changeFile": "Change file",
+      "chooseFile": "Choose an image file",
+      "copied": "Copied",
+      "copyButton": "Copy text",
+      "downloadButton": "Download .txt",
+      "fileHint": "Screenshot, photo or scan - up to 15 MB. Never uploaded to a server.",
+      "fileTooBig": "That file is larger than 15 MB. Please choose a smaller image.",
+      "invalidFile": "That file is not an image. Please choose an image file.",
+      "langArabic": "Arabic",
+      "langEnglish": "English",
+      "langHindi": "Hindi",
+      "ocrFailed": "Text recognition failed. This can happen offline (the engine downloads once) or with very blurry images. Please try again.",
+      "outputLabel": "Recognised text",
+      "previewAlt": "Image to extract text from",
+      "recognizeButton": "Extract text",
+      "statusLoading": "Loading the OCR engine (one-time download)...",
+      "statusReading": "Reading text from the image...",
+      "statusWorking": "Working...",
+      "textLanguage": "Text language"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The OCR engine downloads from a CDN on first use - an internet connection is required at least once.",
+      "Accuracy drops on blurry, tilted, low-contrast or handwritten text.",
+      "Layout, tables and formatting are not preserved - output is plain text.",
+      "Complex scripts, decorative fonts and tiny text may misread."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Extract editable text from any image with free online OCR. Works on photos and screenshots — copy or download the result instantly.",
+    "metaTitle": "Image to Text Converter - Extract Text With OCR | JaurTools",
+    "name": "Image to Text Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a screenshot, photo or scan, pick English, Hindi or Arabic, and press Extract text. The Tesseract 5 OCR engine loads in your browser (a one-time download from a CDN, so the first run needs internet) and reads the text with a live progress bar. For example, a clean 800 by 200 screenshot reading HELLO WORLD is segmented into 2 words and 10 letters and returned as plain text you can copy or download.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "OCR results",
+    "tagline": "Text trapped in images, set free.",
+    "workedExample": "Recognise the words HELLO WORLD from an 800 x 200 screenshot.\n1. The engine binarises the image: dark letters on a light background.\n2. Segmentation finds 2 text lines collapsed into 1 line, 2 words, 10 characters.\n3. The neural network classifies each character: H-E-L-L-O (space) W-O-R-L-D.\n4. The English dictionary confirms both words are valid.\n5. Output: the plain text \"HELLO WORLD\", ready to copy or download as .txt.\nMessy photos add errors at each step, which is why clean screenshots work best.",
+    "workedExampleHeading": "Worked example"
+  }
+}

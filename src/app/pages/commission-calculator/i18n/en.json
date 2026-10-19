@@ -1,0 +1,86 @@
+{
+  "commission-calculator": {
+    "assumptionNote": "Assumes a flat commission rate on total sales, no tiered slabs, no deductions, and no tax.",
+    "benefits": [
+      "Settles pay disputes with one transparent number.",
+      "Helps you compare job offers with different base-plus-commission mixes.",
+      "Shows your true earnings before the payslip arrives.",
+      "Lets freelancers and agents quote their cut confidently."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A commission is a percentage of the sales you generate. This calculator multiplies your total sales by your rate and adds any base salary. It assumes one flat rate — if your plan has tiered slabs (for example 5% up to a target, 8% above it), calculate each slab separately.",
+        "q": "How is commission calculated?"
+      },
+      {
+        "a": "Base plus commission gives you income stability with upside; commission-only gives unlimited upside with zero safety net. Most people earn more total under base-plus-commission in their first year, then outgrow it as their sales pipeline matures.",
+        "q": "Base salary plus commission, or commission only?"
+      },
+      {
+        "a": "Ask for it in writing before you start, including the rate, what counts as a sale (booked vs paid), when it is paid, and what happens to pending deals if you leave. Verbal promises in sales jobs are worth exactly nothing.",
+        "q": "How do I negotiate a better commission rate?"
+      },
+      {
+        "a": "Usually not, until the customer pays. Most plans pay commission on collected revenue, not booked orders, and some include a clawback if the customer cancels within a window. Check whether your plan says booked, billed, or collected.",
+        "q": "Do I earn commission on a sale before the customer pays?"
+      },
+      {
+        "a": "Common sales roles pay 5–15% in retail and real estate services, 10–30% in insurance and financial products, and 20–50% in high-margin agency or freelance work. Anything far outside these bands deserves a careful look at the fine print.",
+        "q": "What is a typical commission rate?"
+      },
+      {
+        "a": "In most countries, including India, commission is treated as salary or professional income and taxed at your slab rate, with TDS often deducted. The calculator shows pre-tax earnings — your take-home will be lower.",
+        "q": "Is commission taxable?"
+      }
+    ],
+    "formula": "Commission = total sales x (rate / 100).\nTotal earnings = base salary + commission.\nExample: 500,000 x 7% = 35,000; plus 20,000 base = 55,000.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your total sales for the period.",
+      "Enter your commission rate as a percentage.",
+      "Add your base salary, if you have one (leave 0 for commission-only).",
+      "Read your commission and total earnings instantly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Commission is pay linked to results: a fixed percentage of the sales you close.",
+      "Base + commission is the most common structure — safety net plus upside.",
+      "Rates vary wildly: 5% in retail, up to 50% in high-margin agency work.",
+      "Most plans pay on collected revenue, not on booked orders.",
+      "Commission counts as taxable income in almost every country."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "commission calculator, sales commission calculator, commission earnings calculator",
+    "labels": {
+      "baseSalary": "Base salary (0 if none)",
+      "commissionEarned": "Commission earned",
+      "commissionRate": "Commission rate (%)",
+      "totalEarnings": "Total earnings",
+      "totalSales": "Total sales"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes one flat rate — real plans often have tiered slabs and caps.",
+      "Ignores tax, TDS, and deductions from your payout.",
+      "Does not handle clawbacks on cancelled or refunded sales.",
+      "Estimates only — your employer's plan document is the final word."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free commission calculator: enter your sales, commission rate and base salary to see your commission earned and total take-home pay instantly.",
+    "metaTitle": "Commission Calculator - Sales Commission Earnings | JaurTools",
+    "name": "Commission Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "On ₹500,000 of sales at a 7% commission rate with a ₹20,000 base salary, you earn ₹35,000 in commission and ₹55,000 in total. Commission is simply sales times your rate — the calculator adds your base on top so you see the full picture in one number.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your commission results",
+    "tagline": "Work out exactly what your sales earn you — commission, base salary, and total pay.",
+    "workedExample": "Sales ₹500,000, rate 7%, base salary ₹20,000:\n1. Commission = 500,000 x 7 / 100 = ₹35,000.\n2. Total earnings = 35,000 + 20,000 = ₹55,000.\n3. Effective rate on sales = 35,000 / 500,000 x 100 = 7%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

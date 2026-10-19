@@ -1,0 +1,171 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.unitSystem')">
+        <button type="button" [class.active]="sys() === 'ft'" (click)="setSys('ft')">
+          {{ t('labels.feetTab') }}
+        </button>
+        <button type="button" [class.active]="sys() === 'm'" (click)="setSys('m')">
+          {{ t('labels.metersTab') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="sq-name">{{ t('labels.roomName') }}</label>
+        <input id="sq-name" type="text" [ngModel]="newName()" (ngModelChange)="setNewName($event)" />
+      </div>
+
+      <div class="day-grid">
+        <div class="day-row">
+          <span class="day-name">{{ t('labels.length') }}</span>
+          <input type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="newLen()" (ngModelChange)="setNewLen($event)" [attr.aria-label]="t('labels.length')" />
+          <span class="day-name">{{ t('labels.width') }}</span>
+          <input type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="newWid()" (ngModelChange)="setNewWid($event)" [attr.aria-label]="t('labels.width')" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="addRoom()">
+          <app-icon name="check" /> {{ t('labels.addRoom') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="sq-waste">{{ t('labels.wastePercent') }}</label>
+        <div class="input-row">
+          <input id="sq-waste" type="number" inputmode="decimal" min="0" max="100" step="1"
+            [ngModel]="waste()" (ngModelChange)="setWaste($event)" />
+          <input type="range" min="0" max="30" step="1" [ngModel]="waste()"
+            (ngModelChange)="setWaste($event)" [attr.aria-label]="t('labels.wastePercent')" class="calc-range" />
+        </div>
+      </div>
+
+      @if (rooms().length) {
+        <div class="results calc-results">
+          <div class="result-row total">
+            <span><app-icon name="ruler" /> {{ t('labels.totalArea') }}</span>
+            <strong>{{ totalSqftText() }} {{ t('labels.sqft') }} / {{ totalSqmText() }} {{ t('labels.sqm') }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.materialNeeded') }}</span>
+            <strong>{{ materialText() }} {{ t('labels.sqft') }}</strong>
+          </div>
+        </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+        <ul class="log-list">
+          @for (r of rooms(); track $index) {
+            <li>
+              <span>{{ r.name }}: {{ roomAreaText(r) }} {{ unitLabel() }}</span>
+              <button type="button" class="btn small" (click)="removeRoom($index)"
+                [attr.aria-label]="t('labels.remove') + ' ' + r.name">
+                <app-icon name="x" />
+              </button>
+            </li>
+          }
+        </ul>
+      } @else {
+        <p class="note">{{ t('labels.noRooms') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

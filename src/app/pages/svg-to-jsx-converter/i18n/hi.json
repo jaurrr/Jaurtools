@@ -1,0 +1,104 @@
+{
+  "svg-to-jsx-converter": {
+    "benefits": [
+      "आइकन पेस्ट करें और एक सेकंड से भी कम में साफ, सही React कोड पाएं — एट्रिब्यूट का नाम हाथ से बदलने की ज़रूरत नहीं।",
+      "आउटपुट बिल्कुल React के नियमों पर होता है, इसलिए पहली बार में बिना वार्निंग कंपाइल होता है।",
+      "स्टाइल स्ट्रिंग असली स्टाइल ऑब्जेक्ट बन जाती हैं और props रूट पर फैल जाते हैं, इसलिए आइकन कस्टमाइज़ होते रहते हैं।",
+      ".tsx या .jsx के रूप में डाउनलोड करें और फ़ाइल सीधे किसी भी React या Next.js प्रोजेक्ट में डालें।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "JSX वह सिंटैक्स है जो React मार्कअप के लिए इस्तेमाल करता है। ब्राउज़र class और stroke-width जैसे SVG एट्रिब्यूट समझते हैं, लेकिन React को className और strokeWidth चाहिए। यह टूल हर नाम-बदलाव और रूपांतरण आपके लिए कर देता है।",
+        "q": "मैं SVG सीधे React में पेस्ट क्यों नहीं कर सकता?"
+      },
+      {
+        "a": "टूल जांचता है कि आपका कोड एक ही <svg> रूट के साथ सही XML के रूप में पार्स होता है। एरर के आम कारण: बंद न किए गए टैग, पाथ में बिना-एस्केप किया & , या SVG की जगह HTML पेस्ट करना।",
+        "q": "मुझे पार्स एरर क्यों मिलता है?"
+      },
+      {
+        "a": "हां। Wrap in a React component बंद कर दें तो आपको बिना रैपर वाला JSX मार्कअप मिलता है, जो किसी मौजूदा कंपोनेंट के return में पेस्ट करने को तैयार होता है।",
+        "q": "क्या मुझे कंपोनेंट रैपर के बिना सिर्फ JSX मिल सकता है?"
+      },
+      {
+        "a": "हां — TypeScript विकल्प props को React.SVGProps<SVGSVGElement> के रूप में टाइप करता है, इसलिए className, style, onClick और हर मानक SVG prop टाइप-चेक होता है। सादे JavaScript आउटपुट के लिए इसे बंद कर दें।",
+        "q": "क्या आउटपुट TypeScript के लिए टाइप किया गया है?"
+      },
+      {
+        "a": "हां, data-* और aria-* एट्रिब्यूट बिल्कुल वैसे ही रहते हैं, क्योंकि React उन्हें DOM तक वैसे ही पहुंचाता है।",
+        "q": "क्या data और aria एट्रिब्यूट सुरक्षित रहते हैं?"
+      },
+      {
+        "a": "नहीं। आपका SVG आपके ब्राउज़र के DOMParser से पार्स होता है और स्थानीय JavaScript से बदलता है। कोई भी सर्वर पर कुछ नहीं भेजा जाता।",
+        "q": "क्या मेरा SVG कहीं अपलोड होता है?"
+      }
+    ],
+    "formula": "एट्रिब्यूट नाम-बदलाव:\nclass → className, for → htmlFor\nstroke-width → strokeWidth (हाइफ़न वाले नाम camelCase बनते हैं)\ndata-* और aria-* वैसे ही रहते हैं\nxlink:href → xlinkHref\n\nस्टाइल स्ट्रिंग ऑब्जेक्ट बनती है:\nstyle=\"font-size:14px;fill:red\" → style={{ fontSize: '14px', fill: 'red' }}\n\nखाली एलिमेंट खुद बंद होते हैं: <circle … />\nस्प्रेड विकल्प चालू हो तो रूट को {...props} मिलता है।",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपना SVG कोड इनपुट बॉक्स में पेस्ट करें, या बिल्ट-इन उदाहरण के लिए Load sample SVG दबाएं।",
+      "कंपोनेंट का नाम लिखें — सिर्फ अक्षर, अंक और अंडरस्कोर। यही एक्सपोर्टेड फंक्शन का नाम बनेगा।",
+      "अपने विकल्प चुनें: कंपोनेंट रैपर, TypeScript टाइप, width/height हटाना, props फैलाना, और स्टाइल रूपांतरण।",
+      "नीचे लाइव आउटपुट पढ़ें। एक क्लिक में कॉपी करें या .tsx / .jsx फ़ाइल के रूप में डाउनलोड करें।",
+      "प्रीव्यू पैनल में जांचें कि आइकन बिल्कुल मूल जैसा दिख रहा है।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "JSX दिखने में HTML जैसा है पर JavaScript है: React को camelCase एट्रिब्यूट (stroke-width नहीं, strokeWidth) और class की जगह className चाहिए।",
+      "कन्वर्टर आपके SVG को ब्राउज़र के DOMParser से असली XML की तरह पार्स करता है — गलत मार्कअप की सूचना मिलती है, चुपचाप बिगाड़ा नहीं जाता।",
+      "हर एलिमेंट गिना जाता है और एक समान 2-स्पेस इंडेंटेशन के साथ दोबारा लिखा जाता है, इसलिए आउटपुट पढ़ने और तुलना करने लायक होता है।",
+      "SVG टेक्स्ट नोड में {ब्रेसेस} जैसा टेक्स्ट {'{'} रूप में एस्केप होता है ताकि वह अक्षरशः दिखे और कंपोनेंट न टूटे।",
+      "प्रीव्यू पैनल आपका मूल SVG दिखाता है, सुरक्षा के लिए स्क्रिप्ट और इवेंट हैंडलर हटाकर।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "svg to jsx converter, svg to react converter, convert svg to jsx online, svg to tsx, svg react component generator",
+    "labels": {
+      "clearButton": "साफ़ करें",
+      "copied": "कॉपी हो गया!",
+      "copyButton": "JSX कॉपी करें",
+      "downloadButton": "डाउनलोड करें",
+      "elementsLabel": "SVG एलिमेंट",
+      "emptyInput": "बदलने के लिए ऊपर अपना SVG कोड पेस्ट करें।",
+      "inputCharsLabel": "इनपुट अक्षर",
+      "inputLabel": "SVG कोड",
+      "inputPlaceholder": "<svg …>…</svg>",
+      "nameLabel": "कंपोनेंट का नाम",
+      "namePlaceholder": "Icon",
+      "notSvgError": "रूट एलिमेंट <svg> ही होना चाहिए।",
+      "optionsHeading": "विकल्प",
+      "outputCharsLabel": "आउटपुट अक्षर",
+      "outputLabel": "JSX आउटपुट",
+      "parseError": "SVG पार्स नहीं हो सका। जांचें कि कोड एक ही <svg> रूट वाला सही XML है।",
+      "previewHeading": "प्रीव्यू",
+      "propsLabel": "रूट <svg> पर props फैलाएं",
+      "sampleButton": "सैंपल SVG लोड करें",
+      "stripLabel": "width और height हटाएं",
+      "styleLabel": "स्टाइल स्ट्रिंग को ऑब्जेक्ट बनाएं",
+      "tsLabel": "TypeScript आउटपुट",
+      "wrapLabel": "React कंपोनेंट में लपेटें"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "टूल सिर्फ मार्कअप बदलता है — यह आपके कंपोनेंट का लॉजिक या CSS नहीं बदलता।",
+      "बाहरी रेफरेंस (दूसरी फ़ाइल का use href, बाहरी इमेज) को रनटाइम में वे फ़ाइलें अब भी चाहिए।",
+      "बहुत बड़े SVG (सैकड़ों एलिमेंट) ठीक बदलते हैं पर लंबी फ़ाइल बनती है; बड़ी इलस्ट्रेशन के लिए ऑप्टिमाइज़ेशन सोचें।",
+      "SMIL <animate> टैग वाली एनिमेशन जैसी हैं वैसी कॉपी होती हैं; React उन्हें नियंत्रित नहीं करता।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ़्त SVG to JSX कन्वर्टर। कोई भी SVG पेस्ट करें और साफ React कंपोनेंट कोड पाएं — className, camelCase props, स्टाइल ऑब्जेक्ट, TypeScript सपोर्ट। 100% निजी, कोई साइन-अप नहीं।",
+    "metaTitle": "SVG to JSX Converter — मुफ़्त ऑनलाइन React टूल | JaurTools",
+    "name": "SVG to JSX Converter",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "कोई भी SVG पेस्ट करें और यह टूल उसे React-तैयार JSX में बदल देता है: class बनता है className, stroke-width बनता है strokeWidth, स्टाइल स्ट्रिंग बनती हैं स्टाइल ऑब्जेक्ट, और खाली एलिमेंट खुद बंद होते हैं। नतीजे को टाइप्ड React कंपोनेंट में लपेट सकते हैं, रूट पर props फैला सकते हैं, और .tsx या .jsx के रूप में डाउनलोड कर सकते हैं। सब कुछ आपके ब्राउज़र में स्थानीय रूप से चलता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "SVG to JSX Converter परिणाम",
+    "tagline": "किसी भी SVG को साफ React JSX में बदलें — सही className, camelCase props और स्टाइल ऑब्जेक्ट, एक क्लिक में।",
+    "workedExample": "इनपुट:\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n  <circle class=\"dot\" cx=\"12\" cy=\"12\" r=\"10\" stroke-width=\"2\" fill=\"none\"/>\n  <text style=\"font-size:14px;fill:red\">Hi</text>\n</svg>\n\nआउटपुट (सादा JSX):\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n  <circle className=\"dot\" cx=\"12\" cy=\"12\" r=\"10\" strokeWidth=\"2\" fill=\"none\" />\n  <text style={{ fontSize: '14px', fill: 'red' }}>Hi</text>\n</svg>\n\nक्या बदला: class → className, stroke-width → strokeWidth, स्टाइल स्ट्रिंग स्टाइल ऑब्जेक्ट बनी, खाली सर्कल खुद बंद हुआ, और टेक्स्ट इनलाइन रहा।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

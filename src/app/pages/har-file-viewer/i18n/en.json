@@ -1,0 +1,106 @@
+{
+  "har-file-viewer": {
+    "benefits": [
+      "See exactly what a page load costs — every request, byte, and millisecond.",
+      "The waterfall shows which phase (DNS, connect, SSL, wait, receive) is slow for each request.",
+      "Spot failed requests and heavy assets instantly by status badge and size.",
+      "Open exported HAR files right on the page — no command line needed.",
+      "Your network data never leaves the browser; HAR files often contain private URLs and tokens."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Open DevTools (F12), go to the Network tab, reproduce the page load, then right-click any request and choose Save all as HAR with content (Chrome/Edge) or Save All As HAR (Firefox). Then open or paste the file here.",
+        "q": "How do I get a HAR file?"
+      },
+      {
+        "a": "HAR = HTTP Archive. It's a JSON format that records everything the browser did on the network: requests, responses, timings, sizes. Browsers can export it from their Network panels.",
+        "q": "What is a HAR file?"
+      },
+      {
+        "a": "Blocked = queuing/proxy time before the request starts. DNS = resolving the hostname. Connect = TCP handshake. SSL = TLS handshake. Send = uploading the request. Wait = server processing (TTFB). Receive = downloading the response. Gray/amber segments at the left usually mean connection overhead; long blue (wait) means a slow server.",
+        "q": "What do the waterfall phases mean?"
+      },
+      {
+        "a": "Open the file, paste it here, and look at the totals and the waterfall. Big total bytes means too much transferred; long total time with short waits means many sequential requests — consider bundling or preloading.",
+        "q": "How do I find why a page is slow?"
+      },
+      {
+        "a": "You can, but be careful: HAR files can contain cookies, auth tokens, and personal URLs. This viewer processes everything locally and never uploads, so it's the safest way to inspect one. Avoid sending HAR files to strangers or pasting them into random websites.",
+        "q": "Is it safe to share a HAR file?"
+      },
+      {
+        "a": "Chrome, Edge, Firefox, and Safari can all export HAR. The format version matters little here — the viewer reads the standard log.entries structure with request, response, and timings.",
+        "q": "Which browsers can export HAR?"
+      }
+    ],
+    "formula": "How the viewer computes things:\n- Requests: count of log.entries.\n- Size per entry: response.bodySize (or content.size when bodySize is -1).\n- Total bytes: sum of sizes ÷ 1024 = KB.\n- Total time: (max startedDateTime + time) − (min startedDateTime), in ms.\n- Waterfall position: each entry's bar starts at (started − min) ÷ span × 100% and is time ÷ span × 100% wide.\n- Phases (blocked, dns, connect, ssl, send, wait, receive) are stacked inside each bar; -1 or 0 values are hidden.",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Export a HAR file from your browser's Network panel (right-click → Save as HAR).",
+      "Open the .har file here, or paste its JSON into the box.",
+      "Read the totals: requests, transferred KB, and total time.",
+      "Study the waterfall: long bars and big blue wait segments are your suspects.",
+      "Click through phases in the legend to learn what each colored segment means."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "HAR (HTTP Archive) is the standard JSON format for recording browser network activity.",
+      "Every request carries per-phase timings: blocked, DNS, connect, SSL, send, wait, receive.",
+      "The waterfall turns raw timings into a visual timeline of what loaded when.",
+      "Status badges make failures (4xx/5xx) and redirects (3xx) visible at a glance.",
+      "HAR files may contain cookies and tokens — inspect them in a local viewer like this one.",
+      "Browsers can export HAR directly from the Network tab; no extensions needed."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "har file viewer, har viewer, open har file, waterfall chart, network timings analyzer",
+    "labels": {
+      "clearButton": "Clear",
+      "emptyState": "Open a .har file or paste HAR JSON above to see the waterfall.",
+      "fileLabel": "Or open a .har file",
+      "kbUnit": "KB",
+      "legendHeading": "Timing phases",
+      "msUnit": "ms",
+      "orLabel": "— or —",
+      "parseError": "That doesn't look like a valid HAR file. Make sure it contains a log.entries array.",
+      "parseErrorHeading": "Couldn't read the HAR file",
+      "pasteHint": "Paste HAR JSON here…",
+      "pasteLabel": "HAR JSON",
+      "phase_blocked": "Blocked",
+      "phase_connect": "Connect",
+      "phase_dns": "DNS",
+      "phase_receive": "Receive",
+      "phase_send": "Send",
+      "phase_ssl": "SSL",
+      "phase_wait": "Wait (TTFB)",
+      "slowestLabel": "Slowest request",
+      "tooManyNote": "Large file: showing the first 500 requests.",
+      "totalBytes": "Total transferred",
+      "totalRequests": "Total requests",
+      "totalTime": "Total time"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Shows the first 500 entries of very large HAR files.",
+      "Timings come from the file — the viewer can't re-measure the network.",
+      "Some exporters omit response bodies; sizes then fall back to content.size.",
+      "Doesn't replay requests or show headers in detail — use DevTools for that."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free HAR file viewer: open .har files to see request waterfalls, timing phases, sizes, and totals. 100% private — runs in your browser.",
+    "metaTitle": "HAR File Viewer - Waterfall & Timing Analyzer | JaurTools",
+    "name": "HAR File Viewer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Open a .har file (or paste HAR JSON) and this viewer breaks it into totals — requests, transferred KB, total time — plus a color-coded waterfall where each request's bar is split into blocked, DNS, connect, SSL, send, wait, and receive phases. Status badges flag failures and redirects at a glance.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "HAR analysis",
+    "tagline": "Visualize any HAR file as a timing waterfall — private, in your browser.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A 2-entry HAR: entry 1 GET https://example.com/ (200, text/html, bodySize 1500, timings blocked 5, dns 10, connect 15, ssl 20, send 2, wait 60, receive 8, time 120, started at T+0) and entry 2 GET https://example.com/style.css (200, text/css, bodySize 800, timings blocked 2, dns 0, connect 0, ssl 0, send 1, wait 50, receive 7, time 60, started at T+100).\nTraced by the tool:\n1. Requests: 2.\n2. Total bytes: 1500 + 800 = 2300 = 2.2 KB.\n3. Total time: min start T+0, max end T+100 + 60 = T+160 — 160 ms.\n4. Slowest: GET / at 120 ms.\n5. Waterfall: bar 1 spans 0%–75% of the track (120/160), bar 2 starts at 62.5% (100/160) and spans to 100%; inside each bar the phases stack left to right (5+10+15+20+2+60+8 = 120 for entry 1 — exactly its time)."
+  }
+}

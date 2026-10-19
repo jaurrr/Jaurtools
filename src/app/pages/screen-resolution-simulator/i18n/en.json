@@ -1,0 +1,110 @@
+{
+  "screen-resolution-simulator": {
+    "name": "Screen Resolution Simulator",
+    "tagline": "Preview any website at exact device viewports — phones, tablets, laptops, desktops.",
+    "metaTitle": "Screen Resolution Simulator – Viewport Tester | JaurTools",
+    "metaDescription": "Free screen resolution simulator. Load any URL in exact device viewports (390×844, 1366×768, 1920×1080) with zoom and rotate — 100% in your browser.",
+    "keywords": "screen resolution simulator, viewport tester, responsive tester, mobile viewport simulator, screen size tester",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Enter a website URL, pick a device preset (phone, tablet, laptop, desktop) or type a custom width and height, and the page renders at exactly those CSS pixels. Use zoom to fit large screens, rotate to flip portrait and landscape, and reload or open the page in a new tab any time.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "A viewport is the CSS-pixel area a web page lays out in — 390×844 for an iPhone 14, 1366×768 for a common laptop.",
+      "Device pixels and CSS pixels differ on high-DPI (Retina) screens, but responsive design is built on CSS pixels — which is what this tool simulates.",
+      "Presets cover the most-tested real devices, from small phones to 4K desktops.",
+      "Zoom scales the preview visually without changing the simulated resolution — 100% zoom is true size.",
+      "Rotate swaps width and height instantly to check landscape layouts."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Type a website URL and press Go (or Enter) to load it in the preview frame.",
+      "Pick a device preset, or enter any custom width and height in pixels.",
+      "Use the zoom dropdown to fit large viewports on your screen — the simulated resolution stays exact.",
+      "Press the rotate button to flip between portrait and landscape.",
+      "Use Reload if a page looks stale, or open it in a new tab to test on the real device later."
+    ],
+    "formulaHeading": "Viewport math",
+    "formula": "Aspect ratio = width : height (divided by their GCD)\nDiagonal = √(width² + height²) px\nCategory: <600 px = phone, <1024 px = tablet, else desktop",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "You enter https://example.com and pick the iPhone 14 preset: 390 × 844.\nGCD of 390 and 844 is 2 → aspect ratio 195 : 422.\nDiagonal = √(390² + 844²) = √(152,100 + 712,336) = √864,436 ≈ 930 px.\nWidth 390 < 600 → category: phone.\nThe page renders exactly as a 390 px-wide phone browser would lay it out.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Test responsive layouts without owning a shelf of devices.",
+      "Exact CSS-pixel viewports — the same numbers designers and media queries use.",
+      "Side-by-side honest preview: what you see is the page's real responsive behavior.",
+      "Free, instant, and private — URLs you test never leave your browser."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Many sites (Google, banks, social networks) block framing via X-Frame-Options — those pages will show blank or an error; this is the site's security policy, not a tool bug.",
+      "Touch gestures, device sensors, and exact font rendering of real phones cannot be fully simulated.",
+      "Sandboxed for your safety: downloads and popups inside the frame may be restricted.",
+      "A preview aid, not a certification lab — always do a final check on a real device."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "Why is the preview blank for some websites?",
+        "a": "Those sites send an X-Frame-Options or frame-ancestors header that forbids embedding. It is their security policy against clickjacking. Use the Open in new tab button to view them directly."
+      },
+      {
+        "q": "Does zoom change the simulated resolution?",
+        "a": "No. Zoom only scales the preview visually. A 1920×1080 viewport at 50% zoom still lays the page out at 1920×1080 CSS pixels."
+      },
+      {
+        "q": "What is the difference between CSS pixels and device pixels?",
+        "a": "CSS pixels are the logical units web layouts use. A phone with a 1170-pixel-wide screen may report 390 CSS pixels (3× pixel ratio). Responsive design responds to CSS pixels, which this tool simulates."
+      },
+      {
+        "q": "Can I test local files or localhost?",
+        "a": "Yes — enter http://localhost:port/path and it loads if your dev server allows framing. Some dev servers also send framing headers, so check your server config if it appears blank."
+      },
+      {
+        "q": "Is the URL I test sent anywhere?",
+        "a": "No. The URL is loaded directly by your browser into the frame. Nothing is proxied or logged by this tool."
+      },
+      {
+        "q": "Which viewport should I design for first?",
+        "a": "Start at 390×844 (common phone), then check 768–820 px (tablet) and 1366 px (laptop). If a layout works at those three, it usually works everywhere."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your viewport preview",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "urlLabel": "Website URL",
+      "urlPlaceholder": "https://example.com",
+      "goLabel": "Go",
+      "presetsLabel": "Device presets",
+      "customLabel": "Custom size",
+      "widthLabel": "Width",
+      "heightLabel": "Height",
+      "rotateLabel": "Rotate portrait/landscape",
+      "zoomLabel": "Preview zoom",
+      "reloadLabel": "Reload",
+      "openTabLabel": "Open in new tab",
+      "frameLabel": "Website preview frame",
+      "frameNote": "Some websites block embedding and will appear blank — their security policy, not a tool error. Use Open in new tab for those.",
+      "viewportLabel": "Viewport",
+      "aspectLabel": "Aspect ratio",
+      "diagonalLabel": "Diagonal",
+      "categoryLabel": "Device category",
+      "catPhone": "Phone",
+      "catTablet": "Tablet",
+      "catDesktop": "Desktop",
+      "pxUnit": "px",
+      "presets": [
+        "iPhone 14",
+        "Pixel 7",
+        "iPad Air",
+        "Laptop",
+        "Desktop",
+        "4K Display"
+      ]
+    }
+  }
+}

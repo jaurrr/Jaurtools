@@ -1,0 +1,91 @@
+{
+  "yaml-to-json": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "YAML to JSON",
+    "tagline": "Turn YAML configs into clean JSON.",
+    "metaTitle": "YAML to JSON - Convert YAML Configs to JSON | JaurTools",
+    "metaDescription": "Paste YAML and get clean formatted JSON instantly. Handles Kubernetes manifests, Docker Compose and CI configs — free, private.",
+    "keywords": "yaml to json, json to yaml, yaml json converter, convert yaml online",
+    "resultsHeading": "YAML JSON converter results",
+    "quickAnswer": "Convert configuration data both ways: YAML to JSON for APIs and code, or JSON to YAML for readable config files. The YAML side uses the same honest subset parser as the YAML Formatter (block maps and lists, no anchors or flow styles), and JSON parsing uses the strict built-in parser.",
+    "keyFacts": [
+      "YAML is a superset of JSON: every JSON document is valid YAML, but not the other way round.",
+      "APIs and JavaScript code usually want JSON; humans editing configs usually prefer YAML.",
+      "Numbers, booleans, and null survive the round trip with their types intact.",
+      "Comments exist only in YAML; they are dropped when converting to JSON.",
+      "The swap button converts the current output back, proving the round trip works."
+    ],
+    "howTo": [
+      "Choose a direction: YAML to JSON or JSON to YAML.",
+      "Paste your input.",
+      "Read the converted output below.",
+      "Use Swap to convert the result back and verify the round trip.",
+      "Copy the output or download it as a file."
+    ],
+    "formula": "YAML to JSON:\nname: JaurTools  ->  { \"name\": \"JaurTools\" }\nJSON to YAML:\n{ \"a\": 1 }  ->  a: 1",
+    "workedExample": "YAML input:\nname: JaurTools\nfree: true\ntools: 600\nfeatures:\n  - search\n  - voice\nJSON output:\n{\n  \"name\": \"JaurTools\",\n  \"free\": true,\n  \"tools\": 600,\n  \"features\": [\"search\", \"voice\"]\n}\nConverting that JSON back to YAML reproduces the original structure.",
+    "benefits": [
+      "Two-way conversion in one tool.",
+      "Round-trip safe for the supported subset.",
+      "Strict JSON parsing catches syntax errors.",
+      "No uploads; conversion is fully local."
+    ],
+    "limitations": [
+      "YAML side supports the common subset only: no anchors, aliases, or flow styles.",
+      "YAML comments are dropped in JSON output.",
+      "JSON must be strict: no trailing commas or comments.",
+      "Duplicate YAML keys keep the last value."
+    ],
+    "faqs": [
+      {
+        "q": "Is every JSON document valid YAML?",
+        "a": "Yes. YAML 1.2 was designed as a superset of JSON, so any strict JSON parses as YAML. The reverse is not true."
+      },
+      {
+        "q": "Why did my comment disappear?",
+        "a": "JSON has no comments, so they cannot survive conversion to JSON. Keep a YAML copy if comments matter."
+      },
+      {
+        "q": "Will numbers stay numbers?",
+        "a": "Yes, in both directions. 600 parses as a number in YAML and emits as 600 in JSON, not \"600\"."
+      },
+      {
+        "q": "My JSON has trailing commas. Will it convert?",
+        "a": "No. The JSON side uses the strict built-in parser, which rejects trailing commas. Remove them first."
+      },
+      {
+        "q": "Does the swap button lose data?",
+        "a": "For the supported subset, no: converting YAML to JSON and back reproduces the same structure (comments aside)."
+      }
+    ],
+    "assumptionNote": "YAML side: common subset (block maps/lists, scalars, quotes, comments). JSON side: strict parsing. Comments do not survive YAML to JSON.",
+    "labels": {
+      "directionLabel": "Conversion direction",
+      "dirYaml2Json": "YAML to JSON",
+      "dirJson2Yaml": "JSON to YAML",
+      "swapLabel": "Swap direction",
+      "inputLabel": "Input",
+      "sampleLabel": "Load sample",
+      "clearLabel": "Clear",
+      "outputLabel": "Converted output",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied",
+      "downloadLabel": "Download file",
+      "sizeLabel": "Output size (chars)",
+      "parseErrorLabel": "Could not parse the input. Check the syntax for the selected direction."
+    }
+  }
+}

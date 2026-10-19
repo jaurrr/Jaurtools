@@ -1,0 +1,102 @@
+{
+  "dmarc-xml-report-analyzer": {
+    "benefits": [
+      "Turns unreadable XML into a clear summary: volumes, pass rates, and problem senders at a glance.",
+      "Spot spoofing fast: any IP with failing DKIM and SPF that is not yours is likely abuse.",
+      "Track rollout progress: watch the pass rate climb as you fix senders before enforcing reject.",
+      "Sorts records by volume, so the senders that matter most appear first.",
+      "Runs entirely in your browser — sensitive mail-flow data is never uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Open the XML attachment from your rua= mailbox and copy its full contents, then paste them here. Most providers (Google, Microsoft, Yahoo) attach the report as a .xml or .zip file. If it is zipped, extract it first.",
+        "q": "How do I get the XML to paste?"
+      },
+      {
+        "a": "This is normal during rollout. Every legitimate sender (marketing platform, CRM, ticketing system) must authenticate with SPF or DKIM aligned to your domain. Add the failures to your SPF record or enable DKIM signing for that service, then watch the next report.",
+        "q": "A sender I use shows as failing — what do I do?"
+      },
+      {
+        "a": "Not exactly. Disposition none means the receiver took no action (usually because your policy is p=none). A message can have disposition none and still fail DMARC. The DKIM and SPF columns tell you whether authentication actually passed.",
+        "q": "Does disposition none mean the message passed?"
+      },
+      {
+        "a": "Aggregate reports are daily summaries: counts per IP with pass/fail results, but no message content. Forensic (ruf) reports are per-message samples with redacted headers. This tool reads aggregate reports, which is what most rua= mailboxes receive.",
+        "q": "What is the difference between aggregate and forensic reports?"
+      },
+      {
+        "a": "Reports cover roughly the previous 24 hours and arrive once a day per provider. Google and Microsoft are usually prompt; smaller providers may skip days. If you published your record less than 48 hours ago, wait a little longer.",
+        "q": "How fresh is the data in a report?"
+      },
+      {
+        "a": "First check whether the IP belongs to a service you use (search your SPF includes and DKIM selectors). If it is unknown and failing both checks, it is likely spoofing or spam — exactly what DMARC is meant to expose. Do not add unknown IPs to your SPF record.",
+        "q": "An unknown IP is sending as my domain — is it an attack?"
+      }
+    ],
+    "formula": "pass_rate = (messages with disposition=none AND dkim=pass AND spf=pass) / total_messages x 100\nacted_on = messages with disposition=quarantine OR disposition=reject\nunique_ips = distinct source_ip values across all records",
+    "formulaHeading": "How the summary is computed",
+    "homeLabel": "Home",
+    "howTo": [
+      "Copy the full XML from a DMARC aggregate report (the attachment in your rua= mailbox).",
+      "Paste it into the box above. The report parses instantly — nothing is uploaded.",
+      "Read the summary: total messages, pass rate, messages acted on, and unique sending IPs.",
+      "Scan the records table, sorted by volume. Focus on rows where DKIM or SPF failed.",
+      "For failing rows from services you use, fix authentication (SPF include or DKIM signing). For unknown failing IPs, investigate before trusting them."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "DMARC aggregate reports are XML files sent daily to your rua= address by mailbox providers (Google, Microsoft, Yahoo and others).",
+      "Each <record> in the report describes one sending IP: how many messages it sent and whether DKIM/SPF passed and what the receiver did.",
+      "<policy_evaluated> holds the verdict: disposition (none, quarantine, reject) plus the dkim and spf results.",
+      "<auth_results> shows the details: which DKIM domain and selector were checked, and which SPF domain was evaluated.",
+      "The report also carries <report_metadata> (who sent it, which day it covers) and <policy_published> (the DMARC policy the receiver saw).",
+      "A high pass rate with disposition none means your mail authenticates fine — you are ready to move from p=none toward enforcement."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "dmarc report analyzer, dmarc xml parser, dmarc aggregate report reader, dmarc rua report, parse dmarc xml",
+    "labels": {
+      "actedLabel": "Messages quarantined / rejected",
+      "clearButton": "Clear",
+      "dateRangeLabel": "Report period",
+      "emptyState": "Paste a DMARC aggregate XML report above to see the readable summary and per-IP table.",
+      "ipLabel": "Unique IPs",
+      "orgLabel": "Reported by",
+      "parseError": "This does not look like a valid DMARC aggregate XML report. Check that you pasted the complete file.",
+      "passRateLabel": "Fully authenticated",
+      "pasteHint": "Paste the complete DMARC aggregate XML here…",
+      "pasteLabel": "DMARC aggregate XML",
+      "policyLabel": "Published policy",
+      "recordsHeading": "Records by sending IP",
+      "thCount": "Messages",
+      "thDisposition": "Action",
+      "thDkim": "DKIM",
+      "thHeaderFrom": "Header From",
+      "thIp": "Source IP",
+      "thSpf": "SPF",
+      "totalLabel": "Total messages"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Reads aggregate reports only — forensic (ruf) samples and redacted content are not shown.",
+      "Shows what receivers reported; it cannot verify the data or fill gaps from providers that never report.",
+      "Dates are shown in UTC as carried in the report, not converted to your timezone.",
+      "Very large reports (tens of thousands of records) may render slowly on low-end devices."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free DMARC XML report analyzer: paste a DMARC aggregate report and get a readable summary with pass rates and a per-IP table. 100% private, runs in your browser.",
+    "metaTitle": "DMARC XML Report Analyzer - Read Aggregate Reports | JaurTools",
+    "name": "DMARC XML Report Analyzer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a DMARC aggregate XML report and this tool turns it into a readable summary: total messages, the share that fully authenticated, how many were quarantined or rejected, and a per-IP table of DKIM/SPF results. For example, a report with 47 messages where 42 fully pass shows an 89.4% pass rate — healthy enough to consider moving from p=none toward enforcement.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Report analysis",
+    "tagline": "Paste a DMARC aggregate XML report and get a readable summary with per-IP tables.",
+    "workedExample": "Sample report from google.com covering one 24-hour window, policy p=reject:\nRecord 1: IP 203.0.113.7, 42 messages, disposition none, DKIM pass, SPF pass.\nRecord 2: IP 198.51.100.23, 5 messages, disposition reject, DKIM fail, SPF fail.\nSummary computed by the tool:\n1. Total messages: 42 + 5 = 47.\n2. Fully authenticated: 42 (only record 1 has disposition none with both checks passing).\n3. Pass rate: 42 / 47 x 100 = 89.4%.\n4. Acted on: 5 messages rejected.\n5. Unique sending IPs: 2.\nReading: the 5 rejected messages from an unknown IP failed both checks — likely spoofing, correctly blocked.",
+    "workedExampleHeading": "Worked example"
+  }
+}

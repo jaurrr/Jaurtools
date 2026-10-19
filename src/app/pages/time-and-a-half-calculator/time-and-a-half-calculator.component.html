@@ -1,0 +1,199 @@
+<div class="tool-page fin-type-taxpay">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="th-rate">{{ t('labels.hourlyRate') }}</label>
+          <span class="fin-live-chip">{{ hourlyRate() }}%</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="th-rate" type="number" inputmode="decimal" min="0" max="10000" step="0.5"
+            [ngModel]="hourlyRate()" (ngModelChange)="setHourlyRate($event)" />
+            <input type="range" min="0" max="10000" step="0.5" [ngModel]="hourlyRate()" (ngModelChange)="setHourlyRate($event)" [attr.aria-label]="t('labels.hourlyRate')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="th-regular">{{ t('labels.regularHours') }}</label>
+          <span class="fin-live-chip">{{ regularHours() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="th-regular" type="number" inputmode="decimal" min="0" max="168" step="0.5"
+            [ngModel]="regularHours()" (ngModelChange)="setRegularHours($event)" />
+            <input type="range" min="0" max="168" step="0.5" [ngModel]="regularHours()" (ngModelChange)="setRegularHours($event)" [attr.aria-label]="t('labels.regularHours')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="th-overtime">{{ t('labels.overtimeHours') }}</label>
+          <span class="fin-live-chip">{{ overtimeHours() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="th-overtime" type="number" inputmode="decimal" min="0" max="120" step="0.5"
+            [ngModel]="overtimeHours()" (ngModelChange)="setOvertimeHours($event)" />
+            <input type="range" min="0" max="120" step="0.5" [ngModel]="overtimeHours()" (ngModelChange)="setOvertimeHours($event)" [attr.aria-label]="t('labels.overtimeHours')" />
+        </div>
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="clock" /> {{ t('labels.totalPay') }}</span>
+          <strong>{{ money().format(totalPay()) }}</strong>
+          <small>{{ t('hero.note') }}</small>
+        </div>
+        <div class="fin-hero-sub">
+          <div>
+            <span>{{ t('labels.overtimeRate') }}</span>
+            <strong>{{ money().format(overtimeRate()) }}</strong>
+          </div>
+          <div>
+            <span>{{ t('labels.regularPay') }}</span>
+            <strong>{{ money().format(regularPay()) }}</strong>
+          </div>
+        </div>
+      </div>
+      <ul class="fin-split">
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.overtimePay') }}</span>
+          <span class="fin-val">{{ money().format(overtimePay()) }}</span>
+        </li>
+      </ul>
+      @if (t('payslip.heading') !== '') {
+        <h3 class="fin-section-title">{{ t('payslip.heading') }}</h3>
+      }
+      <ul class="fin-payslip">
+        <li>
+          <span>{{ t('labels.overtimePay') }}</span>
+          <span class="fin-dots" aria-hidden="true"></span>
+          <strong>{{ money().format(overtimePay()) }}</strong>
+        </li>
+      </ul>
+
+        
+        
+        
+        
+      
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { t: money().format(totalPay()) }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ t('meaning.l2') }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.negotiate', { x: hourlyRate(), a: money().format(totalPay()) }) }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+    
+      </div>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

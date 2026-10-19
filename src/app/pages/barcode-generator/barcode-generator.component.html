@@ -1,0 +1,155 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="bc-text">{{ t('labels.textLabel') }}</label>
+        <input id="bc-text" type="text" dir="ltr" maxlength="40" autocomplete="off"
+          [ngModel]="text()" (ngModelChange)="setText($event)" />
+      </div>
+
+      <div class="field">
+        <label for="bc-sym">{{ t('labels.symbologyLabel') }}</label>
+        <select id="bc-sym" [ngModel]="symbology()" (ngModelChange)="setSymbology($event)">
+          <option value="code39">{{ t('labels.symCode39') }}</option>
+          <option value="itf">{{ t('labels.symItf') }}</option>
+        </select>
+      </div>
+
+      <label class="check-row">
+        <input type="checkbox" [ngModel]="showText()" (ngModelChange)="setShowText($event)" />
+        {{ t('labels.showText') }}
+      </label>
+
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      } @else {
+        <div class="barcode-wrap">
+          <svg class="barcode" [attr.viewBox]="'0 0 ' + bars().width + ' 80'" role="img"
+            [attr.aria-label]="t('labels.textLabel') + ': ' + encodedText()">
+            @for (b of bars().bars; track $index) {
+              <rect [attr.x]="b.x" y="0" [attr.width]="b.w" height="60" fill="currentColor" />
+            }
+            @if (showText()) {
+              <text [attr.x]="bars().width / 2" y="76" text-anchor="middle" class="barcode-text">{{ encodedText() }}</text>
+            }
+          </svg>
+        </div>
+        <div class="results">
+          <div class="result-row">
+            <span>{{ t('labels.encodedAs') }}</span>
+            <strong dir="ltr">{{ encodedText() }}</strong>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" (click)="downloadSvg()">
+            <app-icon name="download" /> {{ t('labels.download') }}
+          </button>
+        </div>
+      }
+      <p class="note">{{ t('labels.noteCheck') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

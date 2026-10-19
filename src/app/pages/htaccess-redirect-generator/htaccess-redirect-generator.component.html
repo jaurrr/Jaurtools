@@ -1,0 +1,171 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <h3 class="sub-heading">{{ t('labels.rulesHeading') }}</h3>
+      @for (rule of rules(); track $index) {
+        <fieldset class="rule-row">
+          <legend>{{ t('labels.ruleLabel') }} {{ $index + 1 }}</legend>
+          <div class="field">
+            <label [for]="'ht-from-' + $index">{{ t('labels.oldPath') }}</label>
+            <input [id]="'ht-from-' + $index" type="text" dir="ltr" placeholder="/old-page"
+              [ngModel]="rule.from" (ngModelChange)="updateRule($index, { from: $event })" />
+          </div>
+          <div class="field">
+            <label [for]="'ht-to-' + $index">{{ t('labels.newUrl') }}</label>
+            <input [id]="'ht-to-' + $index" type="text" dir="ltr" placeholder="https://example.com/new-page"
+              [ngModel]="rule.to" (ngModelChange)="updateRule($index, { to: $event })" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label [for]="'ht-code-' + $index">{{ t('labels.redirectType') }}</label>
+              <select [id]="'ht-code-' + $index"
+                [ngModel]="rule.code" (ngModelChange)="updateRule($index, { code: $event })">
+                <option value="301">{{ t('labels.type301') }}</option>
+                <option value="302">{{ t('labels.type302') }}</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-danger" (click)="removeRule($index)"
+              [attr.aria-label]="t('labels.removeRule') + ' ' + ($index + 1)">
+              <app-icon name="x" />
+            </button>
+          </div>
+        </fieldset>
+      }
+      <button type="button" class="btn" (click)="addRule()">
+        <app-icon name="check" /> {{ t('labels.addRule') }}
+      </button>
+
+      <h3 class="sub-heading">{{ t('labels.optionsHeading') }}</h3>
+      <label class="check-row">
+        <input type="checkbox" [ngModel]="forceHttps()" (ngModelChange)="setForceHttps($event)" />
+        {{ t('labels.forceHttps') }}
+      </label>
+      <div class="field">
+        <label for="ht-www">{{ t('labels.wwwMode') }}</label>
+        <select id="ht-www" [ngModel]="wwwMode()" (ngModelChange)="setWwwMode($event)">
+          <option value="none">{{ t('labels.wwwNone') }}</option>
+          <option value="to-www">{{ t('labels.wwwToWww') }}</option>
+          <option value="to-non-www">{{ t('labels.wwwToNonWww') }}</option>
+        </select>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.outputHeading') }}</h3>
+      @if (hasRules()) {
+        <pre class="output" dir="ltr"><code>{{ output() }}</code></pre>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" (click)="copyOutput()">
+            <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copy') }}
+          </button>
+          <button type="button" class="btn" (click)="download()">
+            <app-icon name="download" /> {{ t('labels.download') }}
+          </button>
+        </div>
+      } @else {
+        <p class="note">{{ t('labels.noRules') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

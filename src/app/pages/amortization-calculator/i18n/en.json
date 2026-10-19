@@ -1,0 +1,93 @@
+{
+  "amortization-calculator": {
+    "assumptionNote": "Assumes a fixed interest rate, monthly compounding and equal monthly payments with no extra payments, fees or taxes.",
+    "benefits": [
+      "Shows exactly how much of each payment goes to interest versus principal.",
+      "Reveals the true total cost of borrowing over the life of a loan.",
+      "The yearly schedule makes it easy to see how extra payments in early years cut interest.",
+      "Compares loan terms side by side in seconds, with no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Amortization is the process of paying off a loan in equal installments over time. Each payment covers the interest due, and the rest reduces the principal. Because interest is charged on the remaining balance, early payments are mostly interest.",
+        "q": "What is amortization?"
+      },
+      {
+        "a": "Two classic choices: a 30-year term gives a lower monthly payment but far more total interest; a 15-year term costs more each month but usually carries a lower rate and much less total interest. Run both through this calculator to compare.",
+        "q": "Should I choose a 15-year or 30-year mortgage?"
+      },
+      {
+        "a": "Yes. Extra payments in the early years save disproportionate interest because they directly cut the balance on which interest accrues. The schedule table shows why: interest is front-loaded.",
+        "q": "Do extra payments really save that much interest?"
+      },
+      {
+        "a": "The monthly mortgage payment itself is principal plus interest. Property tax and homeowner's insurance are usually added by your lender into an escrow payment, which this calculator does not include.",
+        "q": "Does the payment include taxes and insurance?"
+      },
+      {
+        "a": "For most fixed-rate loans it cannot, because the rate is locked in the contract. Adjustable-rate mortgages can change at reset dates, and refinancing into a new fixed loan can lower it.",
+        "q": "Can my monthly payment change?"
+      },
+      {
+        "a": "It means you pay interest only, or too little to reduce the balance, so the debt never shrinks. Avoid them for long-term borrowing; this calculator assumes standard fully-amortizing payments.",
+        "q": "What is negative amortization?"
+      }
+    ],
+    "formula": "monthly_payment = P x r x (1 + r)^n / ((1 + r)^n - 1)\nwhere r = annual_rate / 12, n = years x 12\ninterest_month = balance x r; principal_month = payment - interest_month",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the loan amount you want to borrow.",
+      "Enter the annual interest rate as a percentage.",
+      "Choose the loan term in years.",
+      "Read your monthly payment, total paid and total interest.",
+      "Scroll the yearly schedule to see how each payment splits between principal and interest."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Amortization spreads a loan into equal periodic payments that combine interest and principal repayment.",
+      "Each payment first covers the interest on the remaining balance; whatever is left reduces the principal.",
+      "Early payments are mostly interest, while later payments are mostly principal.",
+      "The total interest depends heavily on the rate and the term: doubling the term roughly doubles the interest.",
+      "Extra payments shorten the loan and cut total interest because they reduce the balance on which interest is charged."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "amortization calculator, loan amortization schedule, mortgage payment schedule, principal interest split",
+    "labels": {
+      "amount": "Loan amount",
+      "balance": "Remaining balance",
+      "interest": "Interest paid",
+      "payment": "Monthly payment",
+      "principal": "Principal paid",
+      "rate": "Annual interest rate (%)",
+      "scheduleTitle": "Year-by-year schedule",
+      "totalInterest": "Total interest",
+      "totalPaid": "Total paid",
+      "year": "Year",
+      "years": "Term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Fixed rate only; adjustable-rate mortgages are not modeled.",
+      "Excludes taxes, insurance, fees and prepayment penalties.",
+      "Assumes payments are made on time with no extra payments.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free amortization calculator with full payment schedule. See monthly payment, principal vs interest split and total loan cost. Private, browser-only.",
+    "metaTitle": "Amortization Calculator — Loan Schedule & Payments",
+    "name": "Amortization Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An amortization schedule breaks every loan payment into interest and principal. On a $200,000 loan at 6% for 30 years, the monthly payment is about $1,199 and total interest is about $231,676. Early payments go mostly to interest; later payments mostly reduce the principal.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your amortization results",
+    "tagline": "See your full loan payment schedule, principal vs interest.",
+    "workedExample": "Loan $200,000, annual rate 6%, term 30 years (360 months).\n\nr = 0.06 / 12 = 0.005. (1.005)^360 = 6.022575. payment = 200,000 x 0.005 x 6.022575 / (6.022575 - 1) = 6,022.575 / 5.022575 = $1,199.10 per month.\n\nTotal paid = 1,199.10 x 360 = $431,676. Total interest = 431,676 - 200,000 = $231,676. In year 1 you pay roughly $11,933 in interest and only $2,456 of principal; by the final year the split is reversed.",
+    "workedExampleHeading": "Worked example"
+  }
+}

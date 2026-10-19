@@ -1,0 +1,191 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label>{{ t('labels.rootLabel') }}</label>
+        <div class="chip-row">
+          @for (n of noteNames; track n) {
+            <button type="button" class="chip" [class.active]="root() === $index" (click)="setRoot($index)">
+              {{ n }}
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="scale-select">{{ t('labels.scaleLabel') }}</label>
+        <select id="scale-select" [ngModel]="scaleKey()" (ngModelChange)="setScale($event)">
+          @for (s of scaleDefs; track s.key) {
+            <option [value]="s.key">{{ t('labels.scales.' + s.key) }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="scale-pattern">{{ t('labels.patternLabel') }}</label>
+        <select id="scale-pattern" [ngModel]="pattern()" (ngModelChange)="setPattern($event)">
+          @for (p of patternOrder; track p) {
+            <option [value]="p">{{ t('labels.patterns.' + p) }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="scale-bpm">{{ t('labels.bpmLabel') }}</label>
+        <div class="input-row">
+          <input
+            id="scale-bpm"
+            type="number"
+            inputmode="numeric"
+            min="40"
+            max="208"
+            step="1"
+            [ngModel]="bpm()"
+            (ngModelChange)="setBpm($event)"
+          />
+          <input
+            type="range"
+            min="40"
+            max="208"
+            step="1"
+            [ngModel]="bpm()"
+            (ngModelChange)="setBpm($event)"
+            [attr.aria-label]="t('labels.bpmLabel')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="play-row">
+        @if (!playing()) {
+          <button type="button" class="play-btn" (click)="playScale()">
+            <app-icon name="scale" /> {{ t('labels.playLabel') }}
+          </button>
+        } @else {
+          <button type="button" class="play-btn stop" (click)="stopAudio()">
+            <app-icon name="x" /> {{ t('labels.stopLabel') }}
+          </button>
+        }
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.notesLabel') }}</label>
+        <div class="notes-row" aria-live="polite">
+          @for (n of notes(); track n.midi) {
+            <span class="note-chip">
+              <span class="deg">{{ n.degree }}</span>
+              <span class="nm">{{ n.name }}</span>
+            </span>
+          }
+        </div>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="scale" /> {{ t('labels.scaleResult') }}</span>
+          <strong>{{ scaleName() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.notesResult') }}</span>
+          <strong>{{ noteList() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.stepsResult') }}</span>
+          <strong>{{ steps() }}</strong>
+        </div>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+{
+  "online-text-editor": {
+    "assumptionNote": "Formatting commands use the browser's built-in editing engine, so results may vary slightly between browsers.",
+    "benefits": [
+      "Full rich-text formatting with zero install — bold, headings, lists, colors.",
+      "Download your work as a clean .html file you can open anywhere.",
+      "Copy the generated HTML straight into a website or CMS.",
+      "Live word and character counts for assignments and articles.",
+      "100% private — your document never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Select the text you want to format, then click a toolbar button — for example B for bold or H1 for a heading. Formatting applies to the selection, or to the next text you type.",
+        "q": "How do I format my text?"
+      },
+      {
+        "a": "Yes. The download button saves a complete, standalone HTML file with your content that opens in any browser.",
+        "q": "Can I save my document?"
+      },
+      {
+        "a": "Click the Copy button to copy the formatted HTML source, then paste it into your website editor, blog or email template.",
+        "q": "Can I use this text on my website?"
+      },
+      {
+        "a": "Rich text is only plain characters plus formatting — there is no way to upload or embed images. Use the Strip HTML Tags tool to convert rich text back to plain text.",
+        "q": "Can I add images to my document?"
+      },
+      {
+        "a": "The editor uses your browser's native editing engine. Minor differences in list styling or spacing between Chrome, Firefox and Safari are normal.",
+        "q": "Does it look the same in every browser?"
+      },
+      {
+        "a": "No. The editor does not auto-save. Download your document as HTML if you want to keep it.",
+        "q": "Is my work saved automatically?"
+      }
+    ],
+    "formula": "words = count of whitespace-separated tokens in visible text\nchars = total visible characters\nhtml = serialized DOM of the editing area",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click inside the editor and type, or paste existing text.",
+      "Select text and use the toolbar: B/I/U for style, H1/H2 for headings, bullets, alignment, size and color.",
+      "Use the X (eraser) button to remove formatting from a selection.",
+      "Watch live word and character counts under the editor.",
+      "Download your document as an HTML file, or copy the HTML source."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The editor is a word-processor-style page that runs entirely in your browser.",
+      "Formatting is applied with the browser's built-in content-editing commands.",
+      "The downloaded file is a self-contained HTML document — no external files needed.",
+      "Word counts are based on the visible text, ignoring the formatting markup.",
+      "It handles English, Hindi, Arabic and any other script your keyboard can type."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "online text editor, free rich text editor, online word editor, html editor online, wysiwyg editor free",
+    "labels": {
+      "alignCenter": "Align center",
+      "alignLeft": "Align left",
+      "alignRight": "Align right",
+      "bold": "Bold",
+      "bullets": "Bullet list",
+      "charsLabel": "Characters",
+      "clearFormatting": "Clear formatting",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy HTML",
+      "documentLabel": "Your document",
+      "downloadButton": "Download .html",
+      "fontSize": "Font size",
+      "h1": "Heading 1",
+      "h2": "Heading 2",
+      "italic": "Italic",
+      "numbered": "Numbered list",
+      "paragraph": "Paragraph",
+      "sizeLarge": "Large",
+      "sizeNormal": "Normal",
+      "strike": "Strikethrough",
+      "textColor": "Text color",
+      "toolbarLabel": "Formatting toolbar",
+      "underline": "Underline",
+      "wordsLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "No image upload or embedding — text formatting only.",
+      "Formatting relies on the browser's editing engine, so results can differ slightly between browsers.",
+      "The document is not auto-saved — download it to keep your work."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online rich-text editor. Bold, headings, lists, colors — download as HTML or copy the source. 100% browser-based, private.",
+    "metaTitle": "Online Text Editor — Free Rich-Text Editor with HTML Download",
+    "name": "Online Text Editor",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A simple rich-text editor that runs in your browser: type and format text with bold, italics, headings, bullet and numbered lists, alignment, sizes and colors. See live word and character counts, then download your document as a standalone HTML file or copy the HTML source for your website. No sign-up, nothing uploaded.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your text editor",
+    "tagline": "Simple rich-text editing in the browser — format, count, download as HTML.",
+    "workedExample": "You type \"Quarterly Report\", select it and press H1, then type the paragraph \"Sales grew 12 percent this quarter.\"\nWords: 8 (Quarterly, Report, Sales, grew, 12, percent, this, quarter)\nCharacters: counted from the visible text, including spaces\nDownload -> document.html contains <h1>Quarterly Report</h1> followed by your paragraph.",
+    "workedExampleHeading": "Worked example"
+  }
+}

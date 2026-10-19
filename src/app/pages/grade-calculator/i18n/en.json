@@ -1,0 +1,96 @@
+{
+  "grade-calculator": {
+    "assumptionNote": "Assumes your remaining work is graded the same way as the rest (percentages). Extra credit, curves, and dropped lowest scores can change the real outcome.",
+    "benefits": [
+      "Know exactly what score you need on the final instead of guessing.",
+      "Decide whether a target grade is still possible, and how hard you must push.",
+      "Plan study time: a small gap needs steady review, a big gap needs a focused sprint.",
+      "Reduce exam anxiety with a concrete number to aim for."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Find your current percentage (your school's grade portal usually shows it), the percentage of the total grade already graded, and your target. Enter all three.",
+        "q": "What numbers do I need to use this?"
+      },
+      {
+        "a": "Then it is already impossible mathematically. Either lower your target, or ask your teacher about extra credit. A final worth more than the whole remaining grade cannot fix the gap.",
+        "q": "What if the needed score is over 100%?"
+      },
+      {
+        "a": "Then you already have the grade locked in, even if you score zero on what is left. You can still study, but the pressure is off.",
+        "q": "What if the needed score is zero or negative?"
+      },
+      {
+        "a": "Sometimes. Some teachers drop the lowest quiz or curve the final. Enter your numbers as if no curve exists to get the honest baseline, then ask about the curve.",
+        "q": "Does this work if my teacher drops the lowest score?"
+      },
+      {
+        "a": "No. Those calculators are for GPA across courses. This one is for the grade inside a single course. Use both: this calculator for the course grade, then GPA for the overall picture.",
+        "q": "Is this the same as a GPA calculator?"
+      },
+      {
+        "a": "Weighted final = current grade x completed weight + final score x final weight, all as decimals. Rearranged: final needed = (target - current x completed weight) / final weight.",
+        "q": "What is the formula?"
+      }
+    ],
+    "formula": "Needed on remaining work = (Desired grade - Current grade x Weight completed) / Weight remaining\n\nAll values as decimals: 78% current = 0.78, 70% completed = 0.70, 30% remaining = 0.30.\n\nExample: (0.80 - 0.78 x 0.70) / 0.30 = (0.80 - 0.546) / 0.30 = 0.847 = 84.7%.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current grade percentage (check your school portal for the exact number).",
+      "Enter what percentage of the total course grade is already graded (for example 70).",
+      "Enter the final grade you want (for example 80).",
+      "Read the score you need on the remaining work, plus whether the target is possible."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Your final grade = current grade x weight completed + remaining scores x weight remaining.",
+      "Rearrange that to find what you need: (target - current x done) / remaining.",
+      "If the answer is above 100%, the target grade is mathematically impossible without extra credit.",
+      "If the answer is zero or negative, the grade is already secured.",
+      "The bigger the remaining weight, the more a great final can move your grade.",
+      "Partial scores count. A strong project before the final lowers the final you need.",
+      "Dropped lowest scores and curves change the math - this calculator gives the uncurved baseline.",
+      "Your school portal's 'current grade' may already drop lowest scores. Use that number, not your own average."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "grade calculator, final grade calculator, what do i need on my final, required grade calculator, final exam score calculator",
+    "labels": {
+      "currentGrade": "Current grade (%)",
+      "desiredGrade": "Desired final grade (%)",
+      "neededScore": "Score needed on remaining work",
+      "remainingWeight": "Remaining weight",
+      "verdict": "Verdict",
+      "weightCompleted": "Weight of graded work (%)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes remaining work is graded as a plain percentage. Curves and dropped scores change things.",
+      "Your 'current grade' must be accurate. A wrong input gives a wrong target.",
+      "It cannot account for extra credit, which can make an 'impossible' grade possible.",
+      "This is for one course, not your overall GPA."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free grade calculator: find out what score you need on your final exam or remaining work to reach your target grade. Instant, private, no sign-up.",
+    "metaTitle": "Grade Calculator - What Do I Need on My Final? | JaurTools",
+    "name": "Grade Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The score you need on the remaining work is (desired grade - current grade x weight completed) / weight remaining. With 78% current, 70% graded, and an 80% target, you need (80 - 78 x 0.70) / 0.30 = 84.7% on the final. If the answer is above 100%, the target is impossible without extra credit.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your grade results",
+    "tagline": "Enter your current grade and target to find the score you need on your final exam.",
+    "verdicts": {
+      "finished": "All work is graded",
+      "impossible": "Impossible - needs over 100%",
+      "possible": "Possible",
+      "secured": "Already secured"
+    },
+    "workedExample": "Current 78%, 70% of the grade done, target 80%.\n1. Completed part contributes: 78 x 0.70 = 54.6 points.\n2. Still needed: 80 - 54.6 = 25.4 points.\n3. Remaining weight: 30%, so 25.4 / 0.30 = 84.67.\n4. You need 84.7% on the remaining work. Verdict: Possible.",
+    "workedExampleHeading": "Worked example"
+  }
+}

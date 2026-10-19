@@ -1,0 +1,94 @@
+{
+  "refinance-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Refinance Calculator",
+    "tagline": "See your break-even point and lifetime savings before you refinance your loan.",
+    "metaTitle": "Refinance Calculator - Break-Even & Savings | JaurTools",
+    "metaDescription": "Free refinance calculator: compare your current loan with a new rate, find the break-even on closing costs, and estimate lifetime savings.",
+    "keywords": "refinance calculator, refinance break-even calculator, mortgage refinance savings, loan refinance calculator",
+    "resultsHeading": "Your refinance results",
+    "quickAnswer": "Refinancing pays when your monthly savings repay the closing costs before you sell or the loan ends. Break-even = closing costs / monthly payment saving. Example: a 300,000 loan dropping from 7.5% to 6.0% over 20 years saves about 267 per month; with 6,000 in closing costs you break even in about 22 months, and lifetime savings reach roughly 58,197. If you plan to move before break-even, refinancing loses money.",
+    "keyFacts": [
+      "Refinancing replaces your existing loan with a new one, usually at a lower interest rate or a different term.",
+      "Lenders charge closing costs, typically 2 to 5 percent of the loan amount, for the new loan.",
+      "The break-even point is the number of months it takes for monthly savings to cover the closing costs.",
+      "Extending the loan term lowers the monthly payment but usually increases total interest paid.",
+      "A lower rate is not automatically a good deal: costs, term, and how long you keep the loan decide that."
+    ],
+    "howTo": [
+      "Enter your current loan balance, interest rate, and remaining term in years.",
+      "Enter the new rate you were offered, the new loan term, and the total closing costs.",
+      "Compare the two monthly payments and your monthly saving instantly.",
+      "Check the break-even time. If you will keep the loan longer than that, refinancing saves money.",
+      "Also compare lifetime totals: a longer new term can erase the savings from a lower rate."
+    ],
+    "formula": "Monthly payment M = P x r / (1 - (1 + r)^-n), where P = loan balance, r = monthly rate (annual rate / 12), n = months.\nBreak-even months = Closing costs / (Current payment - New payment).\nLifetime savings = (Current payment x remaining months) - (New payment x new months) - Closing costs.",
+    "workedExample": "Loan balance 300,000, current rate 7.5%, 20 years remaining; new rate 6.0% over 20 years; closing costs 6,000:\n1. Current payment: 300,000 x 0.00625 / (1 - 1.00625^-240) = 2,416.78 per month.\n2. New payment: 300,000 x 0.005 / (1 - 1.005^-240) = 2,149.29 per month.\n3. Monthly saving: 2,416.78 - 2,149.29 = 267.49.\n4. Break-even: 6,000 / 267.49 = 22.4 months (under 2 years).\n5. Lifetime saving: 267.49 x 240 - 6,000 = 58,197.",
+    "benefits": [
+      "Shows the break-even month so you know exactly when the refinance starts paying off.",
+      "Compares total lifetime cost, not just the monthly payment, so a longer term cannot hide.",
+      "Helps you negotiate: if a lender's costs push break-even past your moving date, you can say no.",
+      "Works for any amortizing loan: mortgages, car loans, and personal loans."
+    ],
+    "limitations": [
+      "Estimates only. Your lender's actual quote decides the real costs and rate.",
+      "Ignores taxes, prepayment penalties, and the time value of money.",
+      "Assumes a fixed rate. Adjustable-rate loans need a different analysis.",
+      "Not financial advice: consider credit impact and total debt before refinancing."
+    ],
+    "faqs": [
+      {
+        "q": "When is refinancing worth it?",
+        "a": "When the break-even point falls well before you plan to sell the property or pay off the loan, and the lifetime savings clearly exceed the costs. A common rule of thumb is a rate drop of at least 0.75 to 1 percentage point, but this calculator gives you the exact numbers for your situation."
+      },
+      {
+        "q": "What counts as closing costs?",
+        "a": "Origination fees, appraisal fees, title insurance, credit report fees, and sometimes discount points you pay to buy the rate down. Ask the lender for the loan estimate: the total of all the itemized fees is the number to enter here."
+      },
+      {
+        "q": "Can the new term be longer than my remaining term?",
+        "a": "Yes, and this tool lets you enter it. A longer term lowers your payment but adds years of interest, which is why the lifetime-savings row matters more than the monthly payment row."
+      },
+      {
+        "q": "What if the new payment is higher than my current one?",
+        "a": "Then monthly savings are negative and the tool reports that you never break even. That can still make sense in rare cases, for example switching from an adjustable rate to a fixed rate for safety, but financially the refinance loses money."
+      },
+      {
+        "q": "Does refinancing affect my credit score?",
+        "a": "A hard credit inquiry usually dips your score slightly, and closing the old account changes your credit mix. Shopping for rates within a short window, usually 14 to 45 days, counts as a single inquiry on most scoring models."
+      },
+      {
+        "q": "How is this different from just comparing interest rates?",
+        "a": "Comparing rates alone ignores closing costs and term changes. Two offers with the same rate can differ by thousands in costs, and this calculator converts both offers into the numbers that matter: break-even time and total lifetime cost."
+      }
+    ],
+    "labels": {
+      "balance": "Loan balance",
+      "currentRate": "Current interest rate (%)",
+      "newRate": "New interest rate (%)",
+      "remainingYears": "Remaining term (years)",
+      "newTermYears": "New loan term (years)",
+      "closingCosts": "Closing costs",
+      "currentPayment": "Current monthly payment",
+      "newPayment": "New monthly payment",
+      "monthlySavings": "Monthly saving",
+      "breakEvenMonths": "Break-even point",
+      "monthsUnit": "months",
+      "lifetimeSavings": "Lifetime saving after costs",
+      "neverBreaksEven": "The new payment is higher, so this refinance never breaks even."
+    }
+  }
+}

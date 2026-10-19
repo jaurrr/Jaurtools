@@ -1,0 +1,153 @@
+<div class="tool-page fin-type-validator">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="gstin-input">{{ t('labels.gstin') }}</label>
+        <input id="gstin-input" type="text" class="code-input" maxlength="17" autocapitalize="characters"
+          spellcheck="false" autocomplete="off" [attr.placeholder]="t('labels.placeholder')"
+          [ngModel]="gstin()" (ngModelChange)="setGstin($event)" />
+        <div class="hint">{{ t('labels.hint') }}</div>
+      </div>
+
+      @if (analysis().status === 'empty') {
+        <div class="fin-empty">
+          <app-icon name="shield-check" />
+          <p><strong>{{ t('verify.emptyTitle') }}</strong></p>
+          <p>{{ t('labels.enterPrompt') }}</p>
+        </div>
+      } @else if (analysis().status === 'valid') {
+        <div class="fin-verify fin-ok">
+          <span class="fin-verify-badge"><app-icon name="shield-check" /> {{ t('verify.validBadge') }}</span>
+          <div class="fin-verify-id" dir="ltr">{{ cleaned() }}</div>
+          @if (breakdown(); as b) {
+            <ul class="fin-verify-parts">
+              <li><code dir="ltr">{{ b.state }}</code><span>{{ t('partsDesc.state') }}</span></li>
+              <li><code dir="ltr">{{ b.pan }}</code><span>{{ t('partsDesc.pan') }}</span></li>
+              <li><code dir="ltr">{{ b.entity }}</code><span>{{ t('partsDesc.entity') }}</span></li>
+              <li><code dir="ltr">{{ b.check }}</code><span>{{ t('partsDesc.check') }}</span></li>
+            </ul>
+          }
+        </div>
+      } @else {
+        <div class="fin-verify fin-bad">
+          <span class="fin-verify-badge"><app-icon name="x" /> {{ t('verify.invalidBadge') }}</span>
+          <div class="fin-verify-id" dir="ltr">{{ cleaned() }}</div>
+          <p>{{ t('reasons.' + analysis().reason) }}</p>
+        </div>
+      }
+
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ t('meaning.l1') }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ t('meaning.l2') }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ t('tip.real') }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

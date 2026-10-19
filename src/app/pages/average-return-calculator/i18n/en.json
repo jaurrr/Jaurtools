@@ -1,0 +1,91 @@
+{
+  "average-return-calculator": {
+    "assumptionNote": "Assumes each return is one full period (e.g. one year), gains are reinvested, and no deposits or withdrawals happen in between.",
+    "benefits": [
+      "Shows the true compounded return (geometric mean) that your money actually experienced.",
+      "The volatility drag figure quantifies exactly what ups and downs cost you.",
+      "Doubles as a fund check: compare a fund's advertised average with its real CAGR.",
+      "Runs on any return series: stocks, mutual funds, business revenue, or savings rates."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The arithmetic mean adds the yearly percentages and divides by the count. The geometric mean (CAGR) compounds them: it is the single constant rate that grows the start value to the end value. Money compounds geometrically, so the geometric mean is the honest one.",
+        "q": "Arithmetic vs geometric mean - which is right?"
+      },
+      {
+        "a": "Volatility drag = arithmetic mean minus geometric mean. Swings cost you: +50% then -50% averages to 0% arithmetically but leaves you at 75% of your money (a 25% loss). The bigger the swings, the bigger the drag.",
+        "q": "What is volatility drag?"
+      },
+      {
+        "a": "No. The geometric mean cannot be computed if any single-period return is -100% or worse, because the investment hit zero and compounding stops. The tool flags this instead of inventing a number.",
+        "q": "Can I include a year I lost everything?"
+      },
+      {
+        "a": "Yes - enter each year's return as a percentage, in order. The tool treats each entry as one full compounding period, so monthly figures give a monthly average, not an annualised one.",
+        "q": "Does it work for monthly returns?"
+      },
+      {
+        "a": "6.50% arithmetic, 6.31% geometric, 1,277.34 final value on 1,000 invested, and 0.19% volatility drag. The -4% year is what pulls the geometric mean below the simple average.",
+        "q": "What are the results for 8, 12, -4, 10?"
+      },
+      {
+        "a": "Roughly: annualised return = (end / start)^(1 / years) - 1. That is the geometric mean of the yearly returns, so this calculator gives the same answer when you enter each year's percentage.",
+        "q": "How do I annualise a multi-year total return?"
+      }
+    ],
+    "formula": "Arithmetic mean = (r1 + r2 + ... + rn) / n\nGeometric mean (CAGR) = ((1 + r1) x (1 + r2) x ... x (1 + rn))^(1/n) - 1\nVolatility drag = arithmetic mean - geometric mean\n(returns r entered as percentages, e.g. 8 for 8%)",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter each period's return as a percentage (8 for 8%, -4 for a 4% loss), separated by commas.",
+      "The geometric mean (CAGR) is the headline: your true compounded yearly return.",
+      "Compare it with the arithmetic mean - the gap is the volatility drag.",
+      "The final value shows what 1,000 invested would have grown to."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Arithmetic mean of 8, 12, -4, 10 = 26 / 4 = 6.50%.",
+      "Geometric mean (CAGR) = (1.08 x 1.12 x 0.96 x 1.10)^(1/4) - 1 = 6.31%.",
+      "The geometric mean is always less than or equal to the arithmetic mean.",
+      "Volatility drag here = 6.50 - 6.31 = 0.19 percentage points.",
+      "1,000 invested grows to 1,000 x 1.2773376 = 1,277.34.",
+      "A single -100% period makes the geometric mean undefined (money hit zero)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "average return calculator, CAGR calculator, geometric mean return, arithmetic vs geometric return, volatility drag calculator",
+    "labels": {
+      "arithmetic": "Arithmetic mean",
+      "clear": "Clear",
+      "drag": "Volatility drag",
+      "finalValue": "1,000 grows to",
+      "geometric": "Geometric mean (CAGR)",
+      "invalidReturn": "A return of -100% or worse means the investment hit zero; the geometric mean cannot be computed.",
+      "noReturns": "Enter at least one yearly return (as a percentage).",
+      "returnsHint": "8, 12, -4, 10",
+      "returnsInput": "Yearly returns (%)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes full reinvestment with no deposits or withdrawals between periods.",
+      "Ignores taxes, fees, and inflation - real take-home returns are lower.",
+      "Past returns never guarantee future returns; this is maths, not financial advice.",
+      "Needs one return per equal period; mixing monthly and yearly figures breaks it."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free average return calculator: enter yearly returns and get the true CAGR (geometric mean), arithmetic mean, volatility drag, and growth of 1,000. Private, no sign-up.",
+    "metaTitle": "Average Return Calculator - True CAGR | JaurTools",
+    "name": "Average Return Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Enter yearly returns as percentages and get the true compounded average. For 8, 12, -4, 10: the arithmetic mean is 6.50%, but the geometric mean (CAGR) - the rate your money actually compounded at - is 6.31%. The 0.19 point gap is volatility drag, the cost of the ups and downs. 1,000 invested would have grown to 1,277.34. Always judge investments by the geometric mean, never the simple average.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Average Return results",
+    "tagline": "The honest average of investment returns: geometric mean (CAGR) vs the simple average.",
+    "workedExample": "Yearly returns: 8, 12, -4, 10\n1. Arithmetic: (8 + 12 - 4 + 10) / 4 = 26 / 4 = 6.50%.\n2. Growth factors: 1.08 x 1.12 x 0.96 x 1.10 = 1.2773376.\n3. Geometric (CAGR): 1.2773376^(1/4) - 1 = 1.0631 - 1 = 6.31%.\n4. Volatility drag: 6.50 - 6.31 = 0.19%.\n5. 1,000 invested becomes 1,000 x 1.2773376 = 1,277.34.",
+    "workedExampleHeading": "Worked example"
+  }
+}

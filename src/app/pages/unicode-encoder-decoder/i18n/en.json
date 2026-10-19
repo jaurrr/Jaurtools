@@ -1,0 +1,93 @@
+{
+  "unicode-encoder-decoder": {
+    "benefits": [
+      "Debug invisible characters: escapes reveal exactly which code points are in the text.",
+      "Safe for JSON and code: \\u escapes never break string syntax.",
+      "Handles emoji and rare scripts via surrogate pairs automatically.",
+      "Instant two-way conversion with a swap button for round-trips."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Unicode assigns every character a number called a code point. The \\uXXXX escape writes that number in four hexadecimal digits, so A (code point 65, hex 41) becomes \\u0041.",
+        "q": "What is a \\uXXXX escape?"
+      },
+      {
+        "a": "Some tools, file formats and older systems only handle ASCII safely. Escaped text carries the same characters using only ASCII letters, digits and backslashes, so nothing gets corrupted in transit.",
+        "q": "Why encode text as escapes?"
+      },
+      {
+        "a": "Characters above U+FFFF (most emoji) do not fit in four hex digits, so they are stored as two UTF-16 surrogate halves, each written as its own \\uXXXX escape. The pair decodes back to one character.",
+        "q": "What are surrogate pairs?"
+      },
+      {
+        "a": "The decoder only replaces well-formed \\u followed by exactly four hex digits. Anything else — like \\u12 or \\uZZZZ — is left untouched in the output.",
+        "q": "What happens to invalid escapes?"
+      },
+      {
+        "a": "The swap button puts the current output into the input box and flips the mode, so you can verify that decoding an encoded string returns the original text.",
+        "q": "How do I verify a round-trip?"
+      },
+      {
+        "a": "No. All conversion happens with string functions in your browser.",
+        "q": "Is my text uploaded anywhere?"
+      }
+    ],
+    "formula": "encode: for each character, \\u + code point in 4-digit lowercase hex\ndecode: \\uXXXX → String.fromCharCode(parseInt('XXXX', 16))\n\nastral plane (code point > 0xFFFF):\n  high = 0xD800 + ((cp − 0x10000) >> 10)\n  low  = 0xDC00 + ((cp − 0x10000) & 0x3FF)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the Encode tab and type or paste your text.",
+      "Read the \\uXXXX escapes in the output box as you type.",
+      "Switch to the Decode tab to turn escapes back into readable text.",
+      "Use the swap button to round-trip and verify the result.",
+      "Copy the output for use in JSON, code or config files."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Unicode gives every character a unique code point number.",
+      "The \\uXXXX escape writes a code point as four hexadecimal digits.",
+      "A is code point 65, which is 0x41 in hex, so it encodes as \\u0041.",
+      "Characters above U+FFFF (like emoji) encode as two \\uXXXX surrogate halves.",
+      "Escaped text uses only ASCII characters, so it survives ASCII-only systems.",
+      "Decoding reverses the process: each valid escape becomes its character again."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "unicode encoder, unicode decoder, \\u escape converter, unicode escape online",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyButton": "Copy output",
+      "decodeTab": "Decode \\u → text",
+      "encodeTab": "Encode text → \\u",
+      "escapesLabel": "\\u escapes in output",
+      "inputCharsLabel": "Input characters",
+      "inputDecodeLabel": "Escaped text (\\uXXXX)",
+      "inputEncodeLabel": "Text to encode",
+      "modeLabel": "Direction",
+      "outputLabel": "Result",
+      "swapButton": "Swap input/output"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only \\uXXXX escapes are decoded; \\u{...} and \\U00...... forms are not handled.",
+      "Invalid escapes are passed through unchanged rather than flagged.",
+      "Encoding always escapes every character, including plain ASCII letters.",
+      "Very long texts make very long escape strings (6 characters per input character)."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Unicode encoder and decoder. Convert text to \\uXXXX escapes and back — with emoji surrogate-pair support — right in your browser.",
+    "metaTitle": "Unicode Encoder/Decoder — Text to \\uXXXX Escapes",
+    "name": "Unicode Encoder/Decoder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool converts text to Unicode \\uXXXX escapes and back. Encoding turns every character into its four-hex-digit escape (emoji become surrogate pairs); decoding reverses it. Useful for JSON, code and debugging invisible characters — all processed locally.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Unicode encoder/decoder results",
+    "tagline": "Encode text to \\uXXXX escapes and decode them back, instantly.",
+    "workedExample": "You type \"Hi€\" in encode mode.\n\n'H' = code point 72 = 0x48 → \\u0048\n'i' = code point 105 = 0x69 → \\u0069\n'€' = code point 8364 = 0x20AC → \\u20ac\n\nOutput: \\u0048\\u0069\\u20ac (3 escapes, 18 characters).\n\nPaste that into decode mode and the regex replaces each \\uXXXX with its character, returning \"Hi€\" exactly — a clean round-trip.",
+    "workedExampleHeading": "Worked example"
+  }
+}

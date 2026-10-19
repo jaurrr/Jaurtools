@@ -1,0 +1,1006 @@
+// JaurTools calculator design language — health · math · datetime · utility · device · music · games
+// Add `@use '../../../styles/cat-calc';` at the top of a tool component stylesheet,
+// then apply the .calc-* classes in that component's template. Logical properties
+// throughout (RTL-safe); light/dark via the global --* tokens. Mobile-first.
+
+.calc-hero {
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  margin-block: 1.25rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--surface)), var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+}
+
+.calc-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.calc-num {
+  font-size: clamp(2.75rem, 9vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+  background: linear-gradient(115deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #c026d3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.calc-num-empty {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+}
+
+.calc-hero-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-inline-size: 32rem;
+
+  strong {
+    color: var(--text);
+  }
+}
+
+// Category badge (BMI-style status pill)
+.calc-badge {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  padding: 0.4rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+
+.calc-badge.is-underweight {
+  background: color-mix(in srgb, #38bdf8 16%, transparent);
+  border-color: color-mix(in srgb, #38bdf8 45%, transparent);
+  color: #0369a1;
+}
+
+.calc-badge.is-healthy {
+  background: color-mix(in srgb, #22c55e 16%, transparent);
+  border-color: color-mix(in srgb, #22c55e 45%, transparent);
+  color: #15803d;
+}
+
+.calc-badge.is-overweight {
+  background: color-mix(in srgb, #f59e0b 16%, transparent);
+  border-color: color-mix(in srgb, #f59e0b 45%, transparent);
+  color: #b45309;
+}
+
+.calc-badge.is-obese {
+  background: color-mix(in srgb, #ef4444 16%, transparent);
+  border-color: color-mix(in srgb, #ef4444 45%, transparent);
+  color: #b91c1c;
+}
+
+[data-theme='dark'] .calc-badge.is-underweight { color: #7dd3fc; }
+[data-theme='dark'] .calc-badge.is-healthy { color: #86efac; }
+[data-theme='dark'] .calc-badge.is-overweight { color: #fcd34d; }
+[data-theme='dark'] .calc-badge.is-obese { color: #fca5a5; }
+
+// Gauge / meter (BMI-style). Marker position comes from an inline
+// `inset-inline-start` percentage set in the template.
+.calc-gauge {
+  position: relative;
+  display: flex;
+  inline-size: 100%;
+  max-inline-size: 26rem;
+  block-size: 0.9rem;
+  border-radius: 999px;
+  background: var(--border);
+  margin-block-start: 0.5rem;
+}
+
+.calc-seg {
+  block-size: 100%;
+
+  &:first-child {
+    border-start-start-radius: 999px;
+    border-end-start-radius: 999px;
+  }
+
+  &:last-child {
+    border-start-end-radius: 999px;
+    border-end-end-radius: 999px;
+  }
+
+  &:not(.on) {
+    opacity: 0.45;
+  }
+}
+
+.seg-uw { inline-size: 23.2%; background: #38bdf8; }
+.seg-hw { inline-size: 23.2%; background: #22c55e; }
+.seg-ow { inline-size: 17.9%; background: #f59e0b; }
+.seg-ob { inline-size: 35.7%; background: #ef4444; }
+
+.calc-marker {
+  position: absolute;
+  inset-block-start: 50%;
+  inline-size: 1.35rem;
+  block-size: 1.35rem;
+  margin-block-start: -0.675rem;
+  margin-inline-start: -0.675rem;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--text);
+  box-shadow: 0 1px 6px rgb(0 0 0 / 0.25);
+  transition: inset-inline-start 0.25s ease;
+}
+
+.calc-scale {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+  max-inline-size: 26rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+// Premium stat grid
+.calc-stats {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  margin-block: 1.25rem;
+}
+
+.calc-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.25rem;
+  align-content: start;
+}
+
+.calc-stat-k {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.calc-stat-v {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+// Upgrade layer for the legacy .stat blocks (higher specificity wins locally)
+.stat.calc-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1rem;
+}
+
+.stat.calc-stat .stat-value,
+.stat.calc-stat .v {
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat.calc-stat .stat-label,
+.stat.calc-stat .k {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+// Upgrade layer for legacy .results blocks: base row layout + big gradient numerals
+// on the total row (higher specificity wins over local .results styles)
+.calc-results.results {
+  margin-block-start: 1rem;
+  border-block-start: 1px solid var(--border);
+  padding-block-start: 1rem;
+}
+
+.calc-results.results .result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 0.5rem;
+  min-block-size: 44px;
+  border-block-end: 1px dashed var(--border);
+
+  &:last-child {
+    border-block-end: 0;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted);
+  }
+
+  strong {
+    text-align: end;
+  }
+}
+
+.calc-results.results .result-row.total {
+  flex-wrap: wrap;
+}
+
+.calc-results.results .result-row.total strong {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(115deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #c026d3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+// Segmented control (mode/unit tabs)
+.calc-seg-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  margin-block-end: 1.25rem;
+
+  button {
+    flex: 1;
+    min-block-size: 44px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+
+    &.active,
+    &[aria-selected='true'] {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.18);
+    }
+
+    &:not(.active):not([aria-selected='true']):hover {
+      color: var(--text);
+    }
+  }
+}
+
+// Legacy .unit-toggle blocks pick up the segmented look (higher specificity wins locally)
+.unit-toggle.calc-seg-tabs {
+  @extend .calc-seg-tabs;
+}
+
+// Styled range slider (live-update inputs)
+input.calc-range[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  inline-size: 100%;
+  block-size: 44px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+
+input.calc-range[type='range']::-webkit-slider-runnable-track {
+  block-size: 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+
+input.calc-range[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  inline-size: 28px;
+  block-size: 28px;
+  margin-block-start: -10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.25);
+}
+
+input.calc-range[type='range']::-moz-range-track {
+  block-size: 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+
+input.calc-range[type='range']::-moz-range-thumb {
+  inline-size: 22px;
+  block-size: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.25);
+}
+
+// Interactive device-test canvas frame
+.calc-testarea {
+  border: 2px solid color-mix(in srgb, var(--accent) 32%, var(--border));
+  border-radius: 1rem;
+  background: var(--bg);
+  box-shadow: inset 0 2px 14px rgb(0 0 0 / 0.05);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.calc-testarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// Instruction callout for test areas
+.calc-instr {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-block: 0 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+
+  app-icon {
+    flex: none;
+    color: var(--accent);
+    margin-block-start: 0.15rem;
+  }
+}
+
+// Live test score with progress bar
+.calc-score {
+  display: grid;
+  gap: 0.5rem;
+  margin-block: 0 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.calc-score-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.calc-score-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.calc-score-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.calc-score-den {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.calc-score-track {
+  block-size: 0.75rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.calc-score-fill {
+  block-size: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #c026d3));
+  transition: inline-size 0.2s ease;
+}
+
+// Big tactile button for test pads
+.calc-testbtn {
+  inline-size: 100%;
+  min-block-size: 88px;
+  border-radius: 1rem;
+  border: 2px dashed color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+  color: var(--text);
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  gap: 0.25rem;
+  padding: 1rem;
+  touch-action: manipulation;
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+@media (min-width: 640px) {
+  .calc-hero {
+    padding: 2rem 1.5rem;
+  }
+}
+
+// ── Level-2 design language (Round 2 Phase 2) ────────────────────────────
+// Distinctive, type-specific pieces. All mobile-first, logical properties,
+// light/dark via the global --* tokens. Apply in templates per tool type.
+
+// Terminal display — calculator / dev-flavoured tools. Dark slab in both
+// themes, mono type, soft glow in dark mode.
+.calc-term {
+  border-radius: 1rem;
+  padding: 1.25rem 1.15rem;
+  background: linear-gradient(160deg, #111827, #1e293b);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  color: #e2e8f0;
+  display: grid;
+  gap: 0.6rem;
+  margin-block: 1.25rem;
+  box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.55);
+
+  [data-theme='dark'] & {
+    box-shadow: 0 0 0 1px rgb(129 140 248 / 0.12), 0 18px 44px -24px rgb(0 0 0 / 0.8);
+  }
+}
+
+.calc-term-tape {
+  min-block-size: 3.4rem;
+  font-family: ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+  border-block-end: 1px dashed rgb(148 163 184 / 0.25);
+  padding-block-end: 0.6rem;
+}
+
+.calc-term-out {
+  font-family: ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+  font-size: clamp(1.9rem, 8vw, 2.9rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+  color: #a5b4fc;
+
+  [data-theme='dark'] & {
+    text-shadow: 0 0 22px rgb(129 140 248 / 0.45);
+  }
+}
+
+.calc-term-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.6;
+
+  strong {
+    color: #e2e8f0;
+  }
+}
+
+// "How to read the result" — interpretation zone list for test/measurement
+.calc-interp {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  padding: 1.1rem 1.2rem;
+  margin-block: 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.02rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    app-icon {
+      color: var(--accent);
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  li {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: var(--text);
+  }
+}
+
+.calc-interp-dot {
+  flex: none;
+  inline-size: 0.8rem;
+  block-size: 0.8rem;
+  border-radius: 50%;
+  margin-block-start: 0.32rem;
+}
+
+// "Choose it when" sibling comparison table
+.calc-compare {
+  inline-size: 100%;
+  border-collapse: collapse;
+  margin-block: 1rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+
+  caption {
+    text-align: start;
+    font-weight: 800;
+    font-size: 1.02rem;
+    padding-block-end: 0.6rem;
+    color: var(--text);
+  }
+
+  th,
+  td {
+    text-align: start;
+    padding: 0.7rem 0.75rem;
+    border-block-end: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  thead th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    border-block-end: 2px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-block-end: 0;
+  }
+
+  a {
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+// Quick-answer FAQ rows — direct Q → A snippets (SEO)
+.calc-quickrows {
+  display: grid;
+  gap: 0.6rem;
+  margin-block: 1rem;
+
+  h3 {
+    margin: 0 0 0.2rem;
+    font-size: 1.02rem;
+  }
+}
+
+.calc-quickrow {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  background: var(--surface);
+  font-size: 0.93rem;
+  line-height: 1.55;
+
+  strong {
+    display: block;
+    margin-block-end: 0.15rem;
+    color: var(--accent);
+  }
+
+  p {
+    margin: 0;
+    color: var(--text);
+  }
+}
+
+// Reference / conversion table
+.calc-ref-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  margin-block: 1rem;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+
+  caption {
+    text-align: start;
+    font-weight: 800;
+    font-size: 1.02rem;
+    padding-block-end: 0.6rem;
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--border);
+    text-align: start;
+  }
+
+  thead th {
+    background: color-mix(in srgb, var(--accent) 9%, var(--surface));
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  tbody tr:nth-child(even) td {
+    background: color-mix(in srgb, var(--accent) 3.5%, transparent);
+  }
+
+  @media (max-width: 520px) {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+// Goal presets — tappable target chips (wordcount pattern)
+.calc-goals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 0.9rem;
+
+  .calc-goal {
+    min-block-size: 44px;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: border-color 0.15s ease, transform 0.1s ease;
+
+    &:active {
+      transform: scale(0.96);
+    }
+
+    &.on {
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+      color: var(--accent);
+    }
+  }
+}
+
+// Keyboard shortcut list
+.calc-shortcuts {
+  display: grid;
+  gap: 0.5rem;
+  margin-block: 1rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.93rem;
+    color: var(--text);
+  }
+}
+
+kbd.calc-kbd {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.45rem;
+  border: 1px solid var(--border);
+  border-block-end-width: 3px;
+  background: var(--surface);
+  color: var(--text);
+  white-space: nowrap;
+}
+
+// OS / browser troubleshooting checklist
+.calc-trouble {
+  border: 1px solid color-mix(in srgb, #f59e0b 40%, var(--border));
+  border-radius: 1rem;
+  background: color-mix(in srgb, #f59e0b 6%, var(--surface));
+  padding: 1.1rem 1.2rem;
+  margin-block: 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.02rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: 0.92rem;
+    line-height: 1.55;
+
+    app-icon {
+      flex: none;
+      color: #b45309;
+      margin-block-start: 0.15rem;
+
+      [data-theme='dark'] & {
+        color: #fcd34d;
+      }
+    }
+  }
+}
+
+// Copy / export action row with checkmark micro-interaction
+.calc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-block: 0.9rem;
+}
+
+.calc-copy {
+  min-block-size: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.12s ease;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  app-icon {
+    transition: transform 0.18s ease;
+  }
+
+  &.copied {
+    background: color-mix(in srgb, #22c55e 14%, var(--surface));
+    border-color: color-mix(in srgb, #22c55e 55%, var(--border));
+    color: #15803d;
+
+    [data-theme='dark'] & {
+      color: #86efac;
+    }
+
+    app-icon {
+      transform: scale(1.25);
+    }
+  }
+}
+
+// Key takeaways box (guide top)
+.calc-takeaways {
+  border-radius: 1rem;
+  padding: 1.1rem 1.25rem;
+  margin-block: 0 1.25rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 8%, var(--surface)), var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  display: grid;
+  gap: 0.55rem;
+
+  h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+  }
+
+  ul {
+    margin: 0;
+    padding-inline-start: 1.1rem;
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+}
+
+// Live stat chips row (text-editor pattern)
+.calc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-block: 0.9rem;
+}
+
+.calc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-block-size: 44px;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--muted);
+
+  strong {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  app-icon {
+    color: var(--accent);
+  }
+}
+
+// Slider with live value bubble
+.calc-slider-wrap {
+  position: relative;
+  padding-block-start: 1.9rem;
+}
+
+.calc-bubble {
+  position: absolute;
+  inset-block-start: 0;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+
+  [dir='rtl'] & {
+    transform: translateX(50%);
+  }
+}
+
+// Night-gradient hero (sleep / evening tools)
+.calc-night {
+  border-radius: 1rem;
+  padding: 1.6rem 1.25rem;
+  text-align: center;
+  display: grid;
+  gap: 0.7rem;
+  justify-items: center;
+  margin-block: 1.25rem;
+  background: linear-gradient(150deg, #1e1b4b, #312e81 55%, #4c1d95);
+  border: 1px solid rgb(167 139 250 / 0.3);
+  color: #ede9fe;
+  box-shadow: 0 20px 44px -26px rgb(76 29 149 / 0.7);
+}
+
+.calc-night-num {
+  font-size: clamp(2.6rem, 9vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(115deg, #fde68a, #f0abfc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.calc-night-sub {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #c4b5fd;
+  max-inline-size: 30rem;
+
+  strong {
+    color: #fff;
+  }
+}
+
+// Fullscreen-capable stage for interactive tools
+.calc-stage {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-block: 1.25rem;
+
+  &:fullscreen {
+    border-radius: 0;
+    display: grid;
+    place-content: center;
+    background: var(--bg);
+  }
+}
+
+.calc-stage-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  border-block-end: 1px solid var(--border);
+}
+
+.calc-iconbtn {
+  min-inline-size: 44px;
+  min-block-size: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schema-markup-validator": {
+    "benefits": [
+      "Google से पहले गायब ज़रूरी फ़ील्ड पकड़ें — अमान्य मार्कअप को कोई रिच रिज़ल्ट नहीं मिलता।",
+      "20 आम schema.org टाइप को उनके असली ज़रूरी और सुझाए फ़ील्ड से जांचता है।",
+      "@graph, ऐरे और single ऑब्जेक्ट संभालता है, तो मार्कअप जैसा है वैसा पेस्ट करें।",
+      "सीधी भाषा में फैसले हर समस्या समझाते हैं — schema.org स्पेक पढ़ने की ज़रूरत नहीं।",
+      "पूरी तरह आपके ब्राउज़र में चलता है; आपका पेज मार्कअप कभी अपलोड नहीं होता।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "JSON-LD (JavaScript Object Notation for Linked Data) स्ट्रक्चर्ड डेटा के लिए Google का सुझाया फॉर्मेट है: आपके पेज में <script type=\"application/ld+json\"> ब्लॉक। विकल्प Microdata और RDFa हैं, लेकिन JSON-LD मार्कअप को दिख रहे HTML से अलग रखता है, जो साफ और कम गलती वाला है।",
+        "q": "JSON-LD क्या है?"
+      },
+      {
+        "a": "हां — सर्च में FAQ ड्रॉपडाउन, स्टार रेटिंग और रेसिपी कार्ड जैसे रिच रिज़ल्ट के लिए सही स्ट्रक्चर्ड डेटा ज़रूरी है। लेकिन सिर्फ सही होना गारंटी नहीं देता; Google रिच रिज़ल्ट कब दिखाए यह प्रासंगिकता और गुणवत्ता पर भी तय करता है।",
+        "q": "क्या सही स्कीमा मेरे सर्च नतीजे बेहतर करता है?"
+      },
+      {
+        "a": "अपने पेज सोर्स से <script type=\"application/ld+json\"> ब्लॉक कॉपी करें (रेंडर पेज नहीं, View Source), और स्क्रिप्ट टैग के अंदर का JSON पेस्ट करें — या पूरा स्क्रिप्ट ब्लॉक पेस्ट करें; पार्सर JSON सामग्री पढ़ लेता है।",
+        "q": "अपने पेज से JSON-LD कैसे निकालूं?"
+      },
+      {
+        "a": "Error का मतलब कोई ज़रूरी फ़ील्ड गायब है या संरचना टूटी है — इन्हें पहले ठीक करें, ये मार्कअप को अयोग्य कर सकते हैं। Warning का मतलब कोई सुझाया फ़ील्ड गायब है — मार्कअप फिर भी काम करता है, लेकिन उसे जोड़ने से रिच रिज़ल्ट की पात्रता बढ़ती है।",
+        "q": "Error और warning में क्या अंतर है?"
+      },
+      {
+        "a": "@graph तब इस्तेमाल करें जब एक पेज को कई टॉप-लेवल एंटिटी चाहिए (जैसे WebPage के साथ BreadcrumbList और FAQPage)। यह वैलिडेटर @graph ऐरे पढ़ता है और हर ब्लॉक अलग से जांचता है।",
+        "q": "@graph कब इस्तेमाल करूं?"
+      },
+      {
+        "a": "यह टूल schema.org आकृतियों के हिसाब से संरचना और ज़रूरी फ़ील्ड जांचता है। Google का Rich Results Test इसके अलावा Google-विशिष्ट नीतियां भी जांचता है (किस टाइप को कौन-सा रिच रिज़ल्ट मिलता है)। दोनों इस्तेमाल करें: तेज़ दोहराव के लिए यह, अंतिम पुष्टि के लिए Google वाला।",
+        "q": "क्या यह Google के Rich Results Test जैसा है?"
+      }
+    ],
+    "formula": "हर ब्लॉक के मान्यकरण नियम:\n1. @context मौजूद हो और schema.org का संदर्भ दे।\n2. @type मौजूद हो; अगर वह 20 ज्ञात टाइप में से है, तो उसके ज़रूरी फ़ील्ड जांचे जाते हैं।\n3. ज़रूरी फ़ील्ड गायब या खाली -> error।\n4. सुझाया फ़ील्ड गायब -> warning।\nजांचे गए टाइप: Article, BlogPosting, NewsArticle, Product, FAQPage, Recipe, Event, Organization, LocalBusiness, WebSite, WebPage, BreadcrumbList, Review, Person, JobPosting, SoftwareApplication, VideoObject, HowTo, ItemList।",
+    "formulaHeading": "मान्यकरण नियम",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपने पेज से JSON-LD कॉपी करें (<script type=\"application/ld+json\"> ब्लॉक की सामग्री)।",
+      "इसे ऊपर वाले बॉक्स में पेस्ट करें। @graph ऐरे और सादे ऐरे अपने आप संभल जाते हैं।",
+      "कुल पढ़ें: मिले ब्लॉक, error और warning।",
+      "हर error ठीक करें — गायब ज़रूरी फ़ील्ड मार्कअप को रिच रिज़ल्ट से अयोग्य कर सकते हैं।",
+      "warning वाले सुझाए फ़ील्ड जोड़ें, फिर साफ नतीजे की पुष्टि के लिए दोबारा पेस्ट करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "स्ट्रक्चर्ड डेटा (schema.org शब्दावली) सर्च इंजनों को आपके पेज की सामग्री समझने में मदद करता है और रिच रिज़ल्ट खोल सकता है।",
+      "JSON-LD Google का सुझाया फॉर्मेट है: दिख रहे HTML से अलग स्क्रिप्ट ब्लॉक।",
+      "हर ब्लॉक को @context (आमतौर पर https://schema.org) और @type (जैसे FAQPage या Product) चाहिए।",
+      "हर टाइप की ज़रूरी प्रॉपर्टी होती हैं — जैसे FAQPage को mainEntity, Product को name, Article को headline चाहिए।",
+      "सुझाई प्रॉपर्टी (author, image, datePublished) गायब हों तो मार्कअप नहीं टूटता, लेकिन रिच-रिज़ल्ट पात्रता कमज़ोर होती है।",
+      "अमान्य या अधूरा मार्कअप बस कोई रिच रिज़ल्ट नहीं देता — कोई दंड नहीं, सिर्फ छूटा अवसर।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "schema markup validator, json-ld validator, structured data checker, schema.org validator",
+    "labels": {
+      "badgeError": "Error",
+      "badgeWarning": "Warning",
+      "blockLabel": "ब्लॉक {n}",
+      "clearButton": "साफ़ करें",
+      "eMissingField": "ज़रूरी फ़ील्ड \"{v}\" गायब या खाली है।",
+      "eNoContext": "@context गायब है — \"@context\": \"https://schema.org\" जोड़ें।",
+      "eNoType": "@type गायब है — हर ब्लॉक को schema.org टाइप चाहिए।",
+      "emptyState": "schema.org आकृतियों पर मान्य करने के लिए ऊपर अपना JSON-LD पेस्ट करें।",
+      "noIssues": "कोई समस्या नहीं मिली — यह ब्लॉक सही लग रहा है।",
+      "parseError": "यह सही JSON नहीं है। आखिरी कॉमा, गायब उद्धरण या कटी सामग्री जांचें।",
+      "pasteHint": "अपना JSON-LD यहां पेस्ट करें…",
+      "pasteLabel": "JSON-LD मार्कअप",
+      "summaryBlocks": "मिले ब्लॉक",
+      "summaryErrors": "Error",
+      "summaryWarnings": "Warning",
+      "wContext": "@context \"{v}\" schema.org का संदर्भ नहीं देता।",
+      "wMissingRecommended": "सुझाया फ़ील्ड \"{v}\" गायब है।",
+      "wUnknownType": "\"{v}\" ज्ञात टाइप सूची में नहीं है — ज़रूरी फ़ील्ड जांचे नहीं गए।"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "संरचना और फ़ील्ड जांचता है, Google की रिच-रिज़ल्ट नीतियां नहीं — यहां पास होने से रिच रिज़ल्ट की गारंटी नहीं।",
+      "सिर्फ 20 आम टाइप के ज़रूरी-फ़ील्ड नियम हैं; अज्ञात टाइप को पूरी जांच के बजाय चेतावनी मिलती है।",
+      "सत्यापित नहीं कर सकता कि मार्कअप के अंदर URL, तारीखें या नेस्टेड एंटिटी सही हैं।",
+      "आपका लाइव पेज नहीं लाता — जो JSON आप पेस्ट करते हैं, सिर्फ वही मान्य होता है।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त स्कीमा मार्कअप वैलिडेटर: JSON-LD पेस्ट करें और ज़रूरी व सुझाए फ़ील्ड जांच के साथ schema.org आकृतियों पर मान्य करें। 100% निजी।",
+    "metaTitle": "Schema Markup Validator - JSON-LD स्ट्रक्चर्ड डेटा मान्य करें | JaurTools",
+    "name": "स्कीमा मार्कअप वैलिडेटर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "अपना JSON-LD पेस्ट करें और यह वैलिडेटर उसे schema.org आकृतियों पर जांचता है: @context को schema.org का संदर्भ देना चाहिए, @type मौजूद होना चाहिए, और 20 ज्ञात टाइप (FAQPage, Product, Article, Recipe, Event आदि) में से हर एक के ज़रूरी फ़ील्ड जैसे mainEntity, name या headline जांचे जाते हैं। गायब ज़रूरी फ़ील्ड error हैं; author या image जैसे गायब सुझाए फ़ील्ड warning हैं।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "मान्यकरण नतीजे",
+    "tagline": "पेस्ट किए JSON-LD को schema.org आकृतियों और ज़रूरी फ़ील्ड पर मान्य करें।",
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "workedExample": "नमूना इनपुट — एक FAQPage ब्लॉक:\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\"@type\": \"Question\", \"name\": \"What is X?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"X is…\"}},\n    {\"@type\": \"Question\", \"name\": \"How does Y work?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Y works by…\"}}\n  ]\n}\nटूल से ट्रेस की गई जांचें:\n1. मिले ब्लॉक: 1।\n2. @context schema.org का संदर्भ देता है: सही।\n3. @type FAQPage ज्ञात टाइप है: सही।\n4. ज़रूरी फ़ील्ड mainEntity मौजूद और खाली नहीं: सही।\n5. FAQPage के सुझाए फ़ील्ड: कोई परिभाषित नहीं — कोई चेतावनी नहीं।\nनतीजा: 1 ब्लॉक, 0 error, 0 warning — सही मार्कअप।"
+  }
+}

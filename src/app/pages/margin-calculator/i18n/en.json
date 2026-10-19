@@ -1,0 +1,80 @@
+{
+  "margin-calculator": {
+    "benefits": [
+      "The fastest possible margin check - two numbers, three answers.",
+      "Set prices with confidence instead of guessing.",
+      "Spot unprofitable products before they hurt the month.",
+      "Private - your numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on the industry: 5-10% is typical for retail, 15-20% is healthy for many small businesses, and software often exceeds 50%. Compare against your own industry, not a universal number.",
+        "q": "What is a good profit margin?"
+      },
+      {
+        "a": "Your cost is higher than your revenue - you lose money on every sale. Raise the price, cut the cost, or stop selling that item.",
+        "q": "Why is my margin negative?"
+      },
+      {
+        "a": "If you divide profit by the selling price, that is margin. If you divide by cost, that is markup. Most people mean margin when they say my margin is 30%.",
+        "q": "Margin vs markup - which one am I using?"
+      },
+      {
+        "a": "Margin = markup / (1 + markup). So 42.86% markup = 0.4286 / 1.4286 = 30% margin. The Margin and Markup Calculator on this site does it both ways.",
+        "q": "How do I convert markup to margin?"
+      },
+      {
+        "a": "No. The math runs entirely in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Profit = revenue - cost\nMargin % = profit / revenue x 100\nMarkup % = profit / cost x 100",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your total cost for the item, order, or project.",
+      "Enter the revenue (selling price).",
+      "Read your profit in dollars, margin %, and markup % instantly.",
+      "Try a higher price to see what margin you would need for your target."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Profit = revenue - cost. Margin = profit / revenue x 100. Markup = profit / cost x 100.",
+      "Margin answers how much of each sale do I keep; markup answers how much do I add to cost.",
+      "A 30% margin equals a 42.9% markup - same profit, different denominator.",
+      "Healthy margins vary wildly: groceries run 1-3%, software can exceed 70%.",
+      "This is gross margin (direct cost only). Rent, salaries, and taxes come out of it next."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "margin calculator, profit margin calculator, markup calculator, gross profit calculator, profit percentage",
+    "labels": {
+      "cost": "Total cost",
+      "marginPct": "Margin",
+      "markupPct": "Markup",
+      "profit": "Profit",
+      "revenue": "Revenue (selling price)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Gross margin only - overhead, taxes, and shipping are not included.",
+      "One snapshot in time; costs and prices move, so recheck regularly.",
+      "Not a full profitability analysis - see an accountant for the complete picture."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free margin calculator: enter cost and revenue to get profit, margin % and markup % instantly. Private, browser-based, no sign-up.",
+    "metaTitle": "Margin Calculator - Profit Margin and Markup | JaurTools",
+    "name": "Margin Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter what something costs you and what you sell it for. A $70 cost sold for $100 gives $30 profit - a 30% margin and a 42.9% markup. Two inputs, instant answer.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your margin results",
+    "tagline": "Quick profit margin and markup from cost and revenue - the simplest pricing check.",
+    "workedExample": "Cost $70, revenue $100:\n1. Profit = 100 - 70 = $30\n2. Margin = 30 / 100 x 100 = 30%\n3. Markup = 30 / 70 x 100 = 42.86%\nEvery $100 of sales keeps $30 before overhead.",
+    "workedExampleHeading": "Worked example"
+  }
+}

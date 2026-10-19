@@ -1,0 +1,211 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="bd-name">{{ t('labels.fullName') }}</label>
+        <input id="bd-name" type="text" [ngModel]="fullName()" (ngModelChange)="fullName.set($event)" />
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="bd-dob">{{ t('labels.dateOfBirth') }}</label>
+          <input id="bd-dob" type="date" [ngModel]="dateOfBirth()" (ngModelChange)="dateOfBirth.set($event)" />
+        </div>
+        <div class="field">
+          <label for="bd-height">{{ t('labels.height') }}</label>
+          <input id="bd-height" type="text" [ngModel]="height()" (ngModelChange)="height.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="bd-status">{{ t('labels.maritalStatus') }}</label>
+        <select id="bd-status" [ngModel]="maritalStatus()" (ngModelChange)="setMaritalStatus($event)">
+          <option value="single">{{ t('labels.statusSingle') }}</option>
+          <option value="married">{{ t('labels.statusMarried') }}</option>
+        </select>
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="bd-edu">{{ t('labels.education') }}</label>
+          <input id="bd-edu" type="text" [ngModel]="education()" (ngModelChange)="education.set($event)" />
+        </div>
+        <div class="field">
+          <label for="bd-occ">{{ t('labels.occupation') }}</label>
+          <input id="bd-occ" type="text" [ngModel]="occupation()" (ngModelChange)="occupation.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="bd-income">{{ t('labels.annualIncome') }}</label>
+        <input id="bd-income" type="text" [ngModel]="annualIncome()" (ngModelChange)="annualIncome.set($event)" />
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="bd-father">{{ t('labels.fatherName') }}</label>
+          <input id="bd-father" type="text" [ngModel]="fatherName()" (ngModelChange)="fatherName.set($event)" />
+        </div>
+        <div class="field">
+          <label for="bd-mother">{{ t('labels.motherName') }}</label>
+          <input id="bd-mother" type="text" [ngModel]="motherName()" (ngModelChange)="motherName.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="bd-address">{{ t('labels.address') }}</label>
+        <input id="bd-address" type="text" [ngModel]="address()" (ngModelChange)="address.set($event)" />
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="bd-phone">{{ t('labels.phone') }}</label>
+          <input id="bd-phone" type="tel" dir="ltr" [ngModel]="phone()" (ngModelChange)="phone.set($event)" />
+        </div>
+        <div class="field">
+          <label for="bd-email">{{ t('labels.email') }}</label>
+          <input id="bd-email" type="email" dir="ltr" [ngModel]="email()" (ngModelChange)="email.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="bd-about">{{ t('labels.aboutHeading') }}</label>
+        <textarea id="bd-about" rows="3" [ngModel]="about()" (ngModelChange)="about.set($event)"></textarea>
+      </div>
+      <div class="field">
+        <label for="bd-exp">{{ t('labels.expectationsHeading') }}</label>
+        <textarea id="bd-exp" rows="3" [ngModel]="expectations()" (ngModelChange)="expectations.set($event)"></textarea>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.previewHeading') }}</h3>
+      <div class="preview-card">
+        <h4>{{ fullName() }}</h4>
+        <dl>
+          @for (r of personalRows(); track $index) {
+            @if (r.v.trim()) {
+              <div class="preview-row"><dt>{{ r.k }}</dt><dd>{{ r.v }}</dd></div>
+            }
+          }
+          @for (r of familyRows(); track $index) {
+            @if (r.v.trim()) {
+              <div class="preview-row"><dt>{{ r.k }}</dt><dd>{{ r.v }}</dd></div>
+            }
+          }
+          @for (r of contactRows(); track $index) {
+            @if (r.v.trim()) {
+              <div class="preview-row"><dt>{{ r.k }}</dt><dd>{{ r.v }}</dd></div>
+            }
+          }
+        </dl>
+        @if (about().trim()) {
+          <p><strong>{{ t('labels.aboutHeading') }}:</strong> {{ about() }}</p>
+        }
+        @if (expectations().trim()) {
+          <p><strong>{{ t('labels.expectationsHeading') }}:</strong> {{ expectations() }}</p>
+        }
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="downloadPdf()" [disabled]="generating()">
+          <app-icon name="download" /> {{ t('labels.downloadPdf') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.pdfNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

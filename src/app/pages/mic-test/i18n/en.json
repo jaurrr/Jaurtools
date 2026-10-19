@@ -1,0 +1,102 @@
+{
+  "mic-test": {
+    "benefits": [
+      "Instantly confirm your mic works before a call, class, or recording.",
+      "Compare multiple microphones (built-in vs headset) and pick the best one.",
+      "See your real volume level so you can set gain before recording.",
+      "Verify the browser has mic permission without opening any app.",
+      "Works on phones, tablets, and desktops - no installation needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Click Start, then look at your browser's address bar. Click the camera/mic icon there and allow microphone access. If you previously chose Block, you must change the site setting - the page cannot override that choice.",
+        "q": "The browser says permission denied. How do I fix it?"
+      },
+      {
+        "a": "Your default mic is set to the wrong device. If you see a device selector on this page, pick your headset. Otherwise change the default input in your OS sound settings (Windows) or System Settings (Mac) and press Start again.",
+        "q": "The meter moves but people cannot hear me in calls. Why?"
+      },
+      {
+        "a": "The page reads raw audio levels from your mic. If the meter is flat, the mic is not sending sound - muted, disconnected, or broken. If it moves, the mic works and the problem is elsewhere (app settings, output device).",
+        "q": "Why does the meter stay flat even though my mic is plugged in?"
+      },
+      {
+        "a": "Yes. Audio is analysed with a local analyser node and the levels are drawn on screen only. No audio is recorded, stored, or uploaded - close the tab or press Stop and the stream is destroyed.",
+        "q": "Is my voice being recorded or uploaded?"
+      },
+      {
+        "a": "A few things: sit closer, remove the mute switch on your headset cable, close apps that might be holding the mic, and check your OS input volume slider (often set low). Peak readings under 30 percent usually mean a gain problem.",
+        "q": "The level is very low. How do I make it louder?"
+      },
+      {
+        "a": "On many phones you must choose the correct input first - the device selector lists what the phone exposes. Also check that no other app (like a voice recorder) is holding the mic, and that the phone is not in a call.",
+        "q": "It does not work on my phone. What should I check?"
+      }
+    ],
+    "formula": "Level = RMS of the audio samples (root mean square).\nRMS = square root of (sum of sample^2 / number of samples).\nDisplayed % = min(100, RMS x 350).\nPeak = the highest level seen since the test started.",
+    "formulaHeading": "How the meter works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Press Start and allow microphone access when the browser asks.",
+      "Speak, clap, or tap the microphone. The green bar should move with your voice.",
+      "Watch the peak marker - it remembers the loudest sound since you started.",
+      "If you have more than one mic, use the device selector to compare them.",
+      "Press Stop when done. Your mic is released immediately."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A working microphone makes the level bar move when you speak and stay near zero in silence.",
+      "The peak marker records the loudest level - aim for peaks between 50 and 90 percent for clear audio.",
+      "Browsers require HTTPS (or localhost) before they will hand a page microphone access.",
+      "Device labels are hidden until you grant permission - that is a privacy rule, not a bug.",
+      "Each browser tab holds the mic until you press Stop or close the tab, so other apps may report it as busy.",
+      "A flat meter with permission granted means the mic is muted, disconnected, or broken."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "microphone test, mic test online, test my microphone, mic level check, microphone not working",
+    "labels": {
+      "defaultDevice": "Default microphone",
+      "defaultMic": "Microphone",
+      "device": "Microphone",
+      "loud": "Loud",
+      "meterLabel": "Live microphone level meter",
+      "peak": "Peak level",
+      "permissionNote": "Your browser will ask for microphone access. Audio is analysed locally - nothing is recorded or sent anywhere.",
+      "resetPeak": "Reset peak",
+      "silent": "Silent",
+      "start": "Start microphone test",
+      "status": "Status",
+      "stop": "Stop"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This page measures input level only - it cannot judge voice quality or background noise.",
+      "It cannot distinguish between two broken mics; it only shows what each one sends.",
+      "Some phones expose only one microphone to the browser, so the selector may list a single option.",
+      "The test does not record, so you cannot play back what the mic captured."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Test your microphone online: see live volume levels, peaks and waveform, and record a sample. Everything runs in your browser.",
+    "metaTitle": "Mic Test - Check Your Microphone Online Free | JaurTools",
+    "name": "Mic Test",
+    "privacyNote": "This tool runs 100% in your browser. Your voice is never recorded, stored, or sent anywhere.",
+    "quickAnswer": "A microphone test opens your mic (with your permission) and shows a live level meter that moves when you speak. If the bar moves, your microphone works. The peak marker remembers your loudest sound, and a device selector lets you compare microphones. Nothing is recorded or uploaded - the audio is analysed inside your browser only.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Microphone test results",
+    "status": {
+      "denied": "Permission denied",
+      "error": "Error",
+      "idle": "Not started",
+      "live": "Listening",
+      "requesting": "Requesting access"
+    },
+    "tagline": "Speak — if the meter moves, your mic works.",
+    "workedExample": "You press Start and grant permission:\n1. The status changes to Listening and the level meter appears.\n2. You say hello: the bar jumps to about 60 percent and the peak marker stays at 72 percent.\n3. You whisper: the bar barely reaches 15 percent, so you move closer to the mic.\n4. Speaking normally again gives peaks around 80 percent - a healthy level.\n5. You press Stop and the browser releases the microphone immediately.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "number-sequence-calculator": {
+    "assumptionNote": "Needs at least 3 numbers. Detection covers arithmetic, geometric, Fibonacci, triangular, square and cube sequences.",
+    "benefits": [
+      "Names the pattern and shows the exact rule behind it.",
+      "Predicts the next 3 terms automatically.",
+      "The formula line lets you compute any term by hand.",
+      "Detail line shows the key number - common difference or ratio.",
+      "Honest when stumped: says no pattern instead of guessing."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An arithmetic sequence adds the same number each time. The difference is called the common difference. Example: 3, 7, 11, 15 with common difference 4. The nth term is a(n) = first + (n-1) x difference.",
+        "q": "What is an arithmetic sequence?"
+      },
+      {
+        "a": "A geometric sequence multiplies by the same number each time. The multiplier is called the common ratio. Example: 2, 6, 18, 54 with ratio 3. Growth is explosive: by term 10 you are past 39,000.",
+        "q": "What is a geometric sequence?"
+      },
+      {
+        "a": "Each term is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, ... It models rabbit populations, flower petals and pinecone spirals. The ratio of consecutive terms approaches the golden ratio 1.618.",
+        "q": "What is the Fibonacci sequence?"
+      },
+      {
+        "a": "Triangular numbers count dots in a triangle: 1, 3, 6, 10, 15, ... The nth is n(n+1)/2. Squares are 1, 4, 9, 16, 25, ... = n^2. Cubes are 1, 8, 27, 64, ... = n^3.",
+        "q": "What are triangular, square and cube numbers?"
+      },
+      {
+        "a": "No. Many sequences look patterned but are not: primes (2, 3, 5, 7, 11, ...), digits of pi, or random data. This tool says so honestly instead of inventing a rule that breaks on the next term.",
+        "q": "Can every sequence be predicted?"
+      },
+      {
+        "a": "Look at differences between consecutive terms. If they are all equal, it is arithmetic. If not, look at ratios. This tool checks differences first, then ratios, then Fibonacci, then triangular, square and cube patterns.",
+        "q": "How do I spot a pattern myself?"
+      }
+    ],
+    "formula": "Arithmetic: a(n) = first + (n-1) x d, where d is the common difference.\nGeometric: a(n) = first x r^(n-1), where r is the common ratio.\nFibonacci: a(n) = a(n-1) + a(n-2).\nTriangular: n(n+1)/2 | Squares: n^2 | Cubes: n^3.",
+    "formulaHeading": "Pattern formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type at least 3 terms of your sequence, separated by commas.",
+      "The detected pattern appears instantly: its type, key detail and formula.",
+      "Read the next 3 predicted terms underneath.",
+      "Check the formula line to compute any term yourself.",
+      "If no pattern is found, try more terms or a different starting point."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A sequence is an ordered list of numbers following a rule.",
+      "Arithmetic sequences add a constant difference; geometric ones multiply by a constant ratio.",
+      "In Fibonacci, each term is the sum of the two before it.",
+      "Triangular numbers are n(n+1)/2; squares are n^2; cubes are n^3.",
+      "Detection needs at least 3 terms - more terms mean more confidence.",
+      "Some sequences, like primes, have no simple next-term rule."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "number sequence calculator, find next number in sequence, sequence pattern finder, arithmetic sequence calculator, fibonacci sequence finder, geometric sequence calculator",
+    "labels": {
+      "detailCube": "Perfect cubes n^3",
+      "detailDiff": "Common difference",
+      "detailFib": "Each term = sum of previous two",
+      "detailLabel": "Key detail",
+      "detailRatio": "Common ratio",
+      "detailSq": "Perfect squares n^2",
+      "detailTri": "Triangular numbers n(n+1)/2",
+      "formulaLabel": "Formula",
+      "inputLabel": "Sequence terms",
+      "inputPlaceholder": "Example: 3, 7, 11, 15",
+      "nextLabel": "Next 3 terms",
+      "noPatternLabel": "No known pattern detected in these terms. Try adding more terms.",
+      "patternLabel": "Pattern found",
+      "tooShortLabel": "Enter at least 3 numbers to detect a pattern.",
+      "type_arithmetic": "Arithmetic progression",
+      "type_cubes": "Cube numbers",
+      "type_fibonacci": "Fibonacci sequence",
+      "type_geometric": "Geometric progression",
+      "type_squares": "Square numbers",
+      "type_triangular": "Triangular numbers"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Six pattern families only - exotic sequences are not detected.",
+      "Needs at least 3 terms; 4 or more give more reliable detection.",
+      "Predictions assume the pattern continues - the tool cannot prove it.",
+      "Floating-point tolerance is used, so near-miss patterns may match."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free number sequence calculator: detect arithmetic, geometric, Fibonacci, triangular, square and cube patterns. Get the rule, formula and next 3 terms.",
+    "metaTitle": "Number Sequence Calculator - Find the Pattern & Next Terms | JaurTools",
+    "name": "Number Sequence Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The sequence 3, 7, 11, 15 is arithmetic with common difference 4: each term adds 4 to the previous one. The next three terms are 19, 23 and 27, and the general formula is a(n) = 3 + (n-1) x 4. This calculator detects arithmetic, geometric, Fibonacci, triangular, square and cube patterns from just 3 terms.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sequence analysis results",
+    "tagline": "Detect the pattern in any number sequence - rule, formula and next terms.",
+    "workedExample": "Analyze 3, 7, 11, 15:\n1. Differences: 7-3 = 4, 11-7 = 4, 15-11 = 4. All equal, so arithmetic.\n2. Common difference d = 4.\n3. Formula: a(n) = 3 + (n-1) x 4.\n4. Next terms: 15 + 4 = 19, 19 + 4 = 23, 23 + 4 = 27.\n5. Check term 5 by formula: 3 + 4x4 = 19. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

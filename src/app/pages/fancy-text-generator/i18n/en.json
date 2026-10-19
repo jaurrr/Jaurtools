@@ -1,0 +1,95 @@
+{
+  "fancy-text-generator": {
+    "assumptionNote": "Styles use Unicode mathematical symbols, so they work as plain text anywhere. Old devices or fonts may show boxes for rare styles.",
+    "benefits": [
+      "8 Unicode styles: bold, italic, script, fraktur, monospace and more.",
+      "Copy-paste anywhere — Instagram, WhatsApp, X, Discord.",
+      "No fonts to install — styled text is plain Unicode characters.",
+      "Each style has its own one-click copy button.",
+      "Private — your text never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "They are Unicode mathematical alphanumeric symbols — real characters, not font formatting. That is why they paste into Instagram bios, WhatsApp messages and anywhere else text is accepted.",
+        "q": "How does fancy text work?"
+      },
+      {
+        "a": "Yes. The styled characters are plain Unicode text, so they work on Instagram, TikTok, WhatsApp, X, Discord and most other apps.",
+        "q": "Can I use this on Instagram and WhatsApp?"
+      },
+      {
+        "a": "Those are not fonts but Unicode symbols. Because the styling travels with the characters, it displays on any device with a modern font.",
+        "q": "Do I need to install fonts?"
+      },
+      {
+        "a": "Mostly. Letters A–Z and a–z are styled in all 8 styles; digits are styled in bold, monospace, double-struck and circled styles.",
+        "q": "Are numbers styled too?"
+      },
+      {
+        "a": "Very rarely. Some older phones or screen readers may read the symbols oddly, so avoid fancy text for critical information like passwords.",
+        "q": "Can everyone see the fancy text?"
+      },
+      {
+        "a": "Yes — everything is generated locally in your browser.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "styled(ch) = UNICODE_MAP[style][ch]\ncharacters outside A–Z, a–z, 0–9 pass through unchanged",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type your text into the input box.",
+      "Browse the 8 style previews — each updates live.",
+      "Click the copy button on any style you like.",
+      "Paste it into Instagram, WhatsApp, X or anywhere else.",
+      "Try several styles to find the look you want."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Fancy text is made of Unicode mathematical symbols, not font styling.",
+      "Because it is plain text, it pastes into almost any app.",
+      "Bold, italic, script, fraktur, monospace, double-struck and circled styles are included.",
+      "Styles are computed live as you type.",
+      "The tool works entirely offline once loaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "fancy text generator, unicode text styles, bold text generator, stylish text maker, cool fonts copy paste",
+    "labels": {
+      "copiedNote": "Copied!",
+      "copyButton": "Copy",
+      "emptyState": "Type something to preview...",
+      "styleBold": "Bold",
+      "styleBoldItalic": "Bold italic",
+      "styleCircled": "Circled",
+      "styleDoubleStruck": "Double-struck",
+      "styleFraktur": "Fraktur",
+      "styleItalic": "Italic",
+      "styleMonospace": "Monospace",
+      "styleScript": "Script",
+      "textLabel": "Your text",
+      "textPlaceholder": "Type here..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only Latin letters are styled; Hindi, Arabic and other scripts pass through unchanged.",
+      "Rare styles may show as boxes on very old devices.",
+      "Screen readers may read the symbols awkwardly — avoid for critical info."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free fancy text generator. 8 Unicode styles — bold, italic, script, fraktur, monospace — copy-paste for Instagram & WhatsApp.",
+    "metaTitle": "Fancy Text Generator — Unicode Stylish Text for Instagram",
+    "name": "Fancy Text Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Turns plain text into 8 stylish Unicode variants — bold, italic, bold italic, script, fraktur, monospace, double-struck and circled — that copy and paste anywhere as real text. Type once, preview all styles live, and copy your favorite with one click for Instagram bios, WhatsApp statuses and gaming names.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Fancy text styles",
+    "tagline": "8 Unicode text styles — type once, copy anywhere, no fonts needed.",
+    "workedExample": "Input: \"Hi\"\nBold: 𝐇𝐢 (H -> U+1D407, i -> U+1D422)\nItalic: 𝐻𝑖 (H -> U+1D43B, i -> U+1D456)\nScript: ℋ𝒾 (H -> U+210B, i -> U+1D4F2)\nCharacters like \"!\" pass through unchanged: \"Hi!\" -> bold \"𝐇𝐢!\"",
+    "workedExampleHeading": "Worked example"
+  }
+}

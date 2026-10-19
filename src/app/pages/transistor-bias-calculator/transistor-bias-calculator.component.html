@@ -1,0 +1,138 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="zap" /> {{ t('resultsHeading') }}</h2>
+      <div class="field">
+        <label for="tr-vcc">{{ t('labels.vccLabel') }}</label>
+        <div class="input-row">
+          <input id="tr-vcc" type="number" inputmode="decimal" min="1" max="100" step="0.5"
+            [ngModel]="vcc()" (ngModelChange)="setVcc($event)" />
+          <input type="range" min="3" max="30" step="0.5" [ngModel]="vcc()" (ngModelChange)="setVcc($event)"
+            [attr.aria-label]="t('labels.vccLabel')" class="calc-range" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="tr-r1">{{ t('labels.r1Label') }}</label>
+        <div class="input-row">
+          <input id="tr-r1" type="number" inputmode="decimal" min="0.1" max="10000" step="1"
+            [ngModel]="r1()" (ngModelChange)="setR1($event)" />
+          <input type="range" min="1" max="200" step="1" [ngModel]="r1()" (ngModelChange)="setR1($event)"
+            [attr.aria-label]="t('labels.r1Label')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.dividerHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="tr-r2">{{ t('labels.r2Label') }}</label>
+        <div class="input-row">
+          <input id="tr-r2" type="number" inputmode="decimal" min="0.1" max="10000" step="1"
+            [ngModel]="r2()" (ngModelChange)="setR2($event)" />
+          <input type="range" min="1" max="100" step="1" [ngModel]="r2()" (ngModelChange)="setR2($event)"
+            [attr.aria-label]="t('labels.r2Label')" class="calc-range" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="tr-rc">{{ t('labels.rcLabel') }}</label>
+        <div class="input-row">
+          <input id="tr-rc" type="number" inputmode="decimal" min="0.01" max="1000" step="0.1"
+            [ngModel]="rc()" (ngModelChange)="setRc($event)" />
+          <input type="range" min="0.1" max="20" step="0.1" [ngModel]="rc()" (ngModelChange)="setRc($event)"
+            [attr.aria-label]="t('labels.rcLabel')" class="calc-range" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="tr-re">{{ t('labels.reLabel') }}</label>
+        <div class="input-row">
+          <input id="tr-re" type="number" inputmode="decimal" min="0.01" max="1000" step="0.1"
+            [ngModel]="re()" (ngModelChange)="setRe($event)" />
+          <input type="range" min="0.1" max="10" step="0.1" [ngModel]="re()" (ngModelChange)="setRe($event)"
+            [attr.aria-label]="t('labels.reLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.reHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="tr-beta">{{ t('labels.betaLabel') }}</label>
+        <div class="input-row">
+          <input id="tr-beta" type="number" inputmode="numeric" min="10" max="1000" step="5"
+            [ngModel]="beta()" (ngModelChange)="setBeta($event)" />
+          <input type="range" min="20" max="400" step="5" [ngModel]="beta()" (ngModelChange)="setBeta($event)"
+            [attr.aria-label]="t('labels.betaLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.betaHint') }}</p>
+      </div>
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span>{{ t('labels.icLabel') }}</span>
+          <strong>{{ fmt3().format(ic()) }} {{ t('labels.maUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.vceLabel') }}</span>
+          <strong>{{ fmt2().format(vce()) }} {{ t('labels.vUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.vbLabel') }}</span>
+          <strong>{{ fmt2().format(vb()) }} {{ t('labels.vUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.veLabel') }}</span>
+          <strong>{{ fmt2().format(ve()) }} {{ t('labels.vUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.vcLabel') }}</span>
+          <strong>{{ fmt2().format(vc()) }} {{ t('labels.vUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.icsatLabel') }}</span>
+          <strong>{{ fmt2().format(icsat()) }} {{ t('labels.maUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.stateLabel') }}</span>
+          <strong>{{ state() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.stabilityLabel') }}</span>
+          <strong>{{ stable() ? t('labels.stableYes') : t('labels.stableNo') }}</strong>
+        </div>
+        <p class="note">{{ t('labels.assumptionNoteText') }}</p>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

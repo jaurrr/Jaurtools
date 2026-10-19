@@ -1,0 +1,86 @@
+{
+  "social-security-calculator": {
+    "assumptionNote": "Simplified US estimate using 2025 bend points ($1,226 / $7,391) and assuming full retirement age 67. Real benefits use your actual 35 highest-earning years and current-year bend points. Not an official SSA figure.",
+    "benefits": [
+      "Gives you a realistic monthly number to build your retirement budget around.",
+      "Shows the true cost of claiming early - a 30% haircut at 62 is hard to ignore.",
+      "Shows the reward for waiting: 24% more at 70 than at full retirement age.",
+      "Free, instant, and private - no SSA login needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "AIME = average indexed monthly earnings: roughly, your average monthly earnings over your 35 highest-earning years, adjusted for wage inflation. Your SSA statement shows your earnings history; this calculator asks for the monthly average so you do not have to do the indexing math.",
+        "q": "What is AIME?"
+      },
+      {
+        "a": "The bend points are where the replacement rate changes: 90% of the first slice, 32% of the middle slice, 15% above that. They make the system progressive - lower earners get a bigger share of their wages replaced. The dollar amounts are updated every year.",
+        "q": "What are bend points?"
+      },
+      {
+        "a": "For most people born in 1960 or later, full retirement age is 67. Claim at 62 and you get about 70% of your full benefit, permanently. Wait until 70 and you get about 124%. The break-even math usually favors waiting if you expect an average lifespan or longer.",
+        "q": "Should I claim at 62 or wait until 70?"
+      },
+      {
+        "a": "If you are married, the higher earner's benefit often becomes the survivor benefit - so the higher earner delaying to 70 can protect the surviving spouse for decades. Spousal benefits can be up to 50% of the worker's full benefit. This calculator covers only the worker's own benefit.",
+        "q": "How do spousal benefits work?"
+      },
+      {
+        "a": "Up to 85% of your Social Security can be taxable if your combined income is high enough. The thresholds are not indexed to inflation, so more retirees cross them every year. Keep this in mind when the calculator shows your gross benefit.",
+        "q": "Is Social Security taxed?"
+      },
+      {
+        "a": "Working before full retirement age while collecting triggers the earnings test: benefits are reduced $1 for every $2 earned above an annual limit (about $23,400 in 2025). After full retirement age, you can earn any amount with no reduction.",
+        "q": "Can I work and collect at the same time?"
+      }
+    ],
+    "formula": "PIA = 0.90 x first $1,226 of AIME + 0.32 x AIME between $1,226 and $7,391 + 0.15 x AIME above $7,391.\nMonthly benefit = PIA x claiming-age factor (0.70 at 62 ... 1.00 at 67 ... 1.24 at 70).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Find your average indexed monthly earnings (AIME). A rough shortcut: your average annual salary over your career divided by 12.",
+      "Enter it as your AIME.",
+      "Move the claiming-age slider from 62 to 70 and watch the monthly benefit change.",
+      "Use the full-retirement-age figure (67) as your planning baseline, then decide if early or late claiming fits your health and finances."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "US Social Security benefits are based on your 35 highest-earning years, indexed for wage growth.",
+      "AIME (average indexed monthly earnings) is run through bend points to get your PIA (primary insurance amount).",
+      "2025 bend points: 90% of the first $1,226, 32% up to $7,391, 15% above that.",
+      "Full retirement age is 67 for people born in 1960 or later.",
+      "Claiming at 62 cuts the benefit about 30%; waiting until 70 raises it about 24%."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "social security calculator, social security benefit estimator, ss benefit calculator, pia calculator, social security claiming age calculator",
+    "labels": {
+      "aime": "Average indexed monthly earnings ($)",
+      "annualBenefit": "Annual benefit",
+      "claimAge": "Age you start benefits",
+      "monthlyBenefit": "Estimated monthly benefit",
+      "pia": "Full benefit at age 67 (PIA)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "US system only - simplified with 2025 bend points, not your actual earnings record.",
+      "Ignores spousal, survivor, and disability benefits.",
+      "Does not account for taxes on benefits or the earnings test.",
+      "An estimate for planning, not an official SSA figure or advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Social Security calculator: estimate your monthly US Social Security benefit from your earnings and claiming age. Instant and private.",
+    "metaTitle": "Social Security Calculator - Benefit Estimate | JaurTools",
+    "name": "Social Security Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Your US Social Security benefit starts from your AIME (average indexed monthly earnings), which the SSA runs through bend points: 90% of the first $1,226, 32% up to $7,391, and 15% above that gives your PIA. For example, an AIME of $4,000 gives a PIA of about $1,991.08 a month at full retirement age (67). Claim at 62 and it drops to about $1,393.76; wait until 70 and it rises to about $2,468.94.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your benefit estimate",
+    "tagline": "Estimate your US Social Security benefit from earnings and claiming age.",
+    "workedExample": "AIME $4,000, claiming at 67:\n1. First slice: 0.90 x 1,226 = $1,103.40.\n2. Middle slice: 0.32 x (4,000 - 1,226) = 0.32 x 2,774 = $887.68.\n3. Top slice: none (4,000 < 7,391).\n4. PIA = 1,103.40 + 887.68 = $1,991.08/month.\n5. At 67 the factor is 1.00, so the benefit is $1,991.08/month ($23,892.96/year).\n6. At 62: 1,991.08 x 0.70 = $1,393.76. At 70: 1,991.08 x 1.24 = $2,468.94.",
+    "workedExampleHeading": "Worked example"
+  }
+}

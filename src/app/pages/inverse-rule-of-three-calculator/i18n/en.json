@@ -1,0 +1,84 @@
+{
+  "inverse-rule-of-three-calculator": {
+    "benefits": [
+      "Solves inverse proportion problems in one step.",
+      "The plain-language readout confirms the logic.",
+      "Handles workers, taps, printers and machines — any units.",
+      "Fractions and decimals supported.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The inverse rule of three solves inverse proportions: when one quantity grows, the other shrinks. If 4 workers need 6 hours, 3 workers need more time — 8 hours.",
+        "q": "What is the inverse rule of three?"
+      },
+      {
+        "a": "Direct: both rise or fall together — more apples cost more money. Inverse: one rises as the other falls — more workers finish faster.",
+        "q": "What is the difference between direct and inverse proportion?"
+      },
+      {
+        "a": "Multiply the two knowns and divide by the third: x = (A × B) / C. If A workers take B hours, C workers take (A × B) / C hours.",
+        "q": "How do I solve an inverse proportion by hand?"
+      },
+      {
+        "a": "It assumes every worker (or tap, or machine) contributes equally. In reality, coordination overhead can change the result — see the limitations.",
+        "q": "Does doubling the workers really halve the time?"
+      },
+      {
+        "a": "Not for inverse problems. The rule of three calculator for direct proportion covers those — here everything works in reverse.",
+        "q": "Can I use it for price calculations?"
+      }
+    ],
+    "formula": "Inverse rule of three: x = (A × B) / C\nIf A → B, then C → x\nMore of one means less of the other",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the first known quantity, A.",
+      "Enter the known result, B.",
+      "Enter the second quantity, C.",
+      "Read the inverse-proportional answer x.",
+      "Check the readout line to confirm the logic."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Inverse proportion: when one quantity grows, the other shrinks.",
+      "The product A × B stays constant — it is the total amount of work.",
+      "x = (A × B) / C for inverse problems.",
+      "Typical cases: workers and hours, taps and filling time, speed and travel time.",
+      "All inputs must be positive and non-zero."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "rule of three inverse, inverse proportion calculator, inverse rule of three, workers time calculator, inverse proportionality solver",
+    "labels": {
+      "invalidNote": "Enter positive values for all three quantities.",
+      "resultBLabel": "Known result (B)",
+      "resultLabel": "Answer (x)",
+      "valueALabel": "First quantity (A)",
+      "valueCLabel": "Second quantity (C)",
+      "verifyLabel": "Total work check (A×B = C×x)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes perfectly equal contribution from every unit — rarely exact in reality.",
+      "Only inverse proportions — direct problems need a different formula.",
+      "Tells you the math, not whether the plan is feasible.",
+      "Extremely small or large inputs can magnify rounding."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Solve inverse proportions step by step — workers and hours, speed and time, machines and output. Free with full working shown.",
+    "metaTitle": "Inverse Rule of Three Calculator - Solve Inverse Proportions | JaurTools",
+    "name": "Inverse Rule of Three Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The inverse rule of three solves problems where more of one thing means less of another. If 4 workers take 6 hours, 3 workers take longer. The formula is x = (A × B) / C: multiply the two known values and divide by the third.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Inverse proportion results",
+    "tagline": "More workers, fewer hours — solved with steps.",
+    "workedExample": "4 workers finish a job in 6 hours. How long do 3 workers take?\n\nThis is inverse: fewer workers means more time.\nx = (A × B) / C = (4 × 6) / 3 = 24 / 3 = 8.\n\nAnswer: 8 hours.\n\nThe product 24 is the total work (worker-hours) and stays constant: 4 × 6 = 3 × 8.",
+    "workedExampleHeading": "Worked example"
+  }
+}

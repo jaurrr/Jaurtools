@@ -1,0 +1,101 @@
+{
+  "gfr-calculator": {
+    "assumptionNote": "Uses the CKD-EPI 2021 equation without a race factor, for adults 18+. A single creatinine value cannot diagnose kidney disease; doctors confirm with repeat tests, urine tests and clinical context.",
+    "benefits": [
+      "Translates a lab creatinine number into the kidney-function estimate doctors actually use.",
+      "Shows your CKD stage instantly with plain-language context.",
+      "Helps you prepare informed questions before a doctor visit.",
+      "Private: sensitive health numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "GFR estimates how many millilitres of blood your kidneys filter per minute, standardised to a 1.73 m2 body surface. Higher is better; above 90 is normal.",
+        "q": "What does GFR actually measure?"
+      },
+      {
+        "a": "Because muscle mass, diet, hydration and medicines all shift creatinine, and GFR formulas carry their own error. A result under 60 should be rechecked after 3 months before any CKD label is used.",
+        "q": "Why do doctors repeat the test?"
+      },
+      {
+        "a": "In 2021 the race multiplier was removed because race is a social construct, not a biological variable. The refit equation works for everyone without it.",
+        "q": "Why was the race factor removed?"
+      },
+      {
+        "a": "Roughly 0.6 to 1.2 mg/dL for men and 0.5 to 1.1 mg/dL for women, but ranges vary by lab, muscle mass and age. Always use your lab's reference range.",
+        "q": "What is a normal creatinine?"
+      },
+      {
+        "a": "Stay hydrated, control blood pressure and blood sugar, avoid NSAID overuse, do not smoke, and get kidney checks if you have diabetes or hypertension. These protect GFR over decades.",
+        "q": "How can I protect my kidney function?"
+      },
+      {
+        "a": "eGFR is an estimate with real error, especially above 60 where it is capped in meaning. Cystatin C or a measured GFR gives a truer number when precision matters.",
+        "q": "Is eGFR exact?"
+      }
+    ],
+    "formula": "CKD-EPI 2021 (no race factor):\neGFR = 142 x min(Scr/k,1)^a x max(Scr/k,1)^-1.2 x 0.9938^age x 1.012 (if female).\nk = 0.7 (female) or 0.9 (male); a = -0.241 (F, Scr<=0.7), -0.302 (M, Scr<=0.9), else -1.2.\nStages: G1 >=90, G2 60-89, G3a 45-59, G3b 30-44, G4 15-29, G5 <15.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Male or Female.",
+      "Enter your age (18+).",
+      "Enter your serum creatinine in mg/dL from your lab report.",
+      "Read your estimated GFR and CKD stage.",
+      "Discuss the result with your doctor; a single value is never a diagnosis."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "GFR is the best overall measure of kidney function.",
+      "The CKD-EPI 2021 equation removed the race factor used in older versions.",
+      "GFR naturally declines with age, about 1 mL/min/1.73m2 per year after 40.",
+      "Results are reported per 1.73 m2 of body surface area.",
+      "A GFR below 60 for more than 3 months defines chronic kidney disease.",
+      "A 50-year-old man with creatinine 1.1 mg/dL has an eGFR of about 82."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gfr calculator, egfr calculator, ckd-epi calculator, kidney function calculator, creatinine clearance",
+    "labels": {
+      "ageLabel": "Age (years)",
+      "creatinineLabel": "Serum creatinine (mg/dL)",
+      "creatinineNote": "From your blood test report. Typical: 0.6-1.2 (men), 0.5-1.1 (women).",
+      "egfrResult": "Estimated GFR",
+      "egfrUnit": "mL/min/1.73m2",
+      "femaleOption": "Female",
+      "genderLabel": "Gender",
+      "maleOption": "Male",
+      "medicalWarning": "For education only. This cannot diagnose kidney disease - discuss your result with a doctor.",
+      "stageLabel": "CKD stage"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "An estimate with real error; not exact at high values.",
+      "Single creatinine values cannot diagnose disease; confirmation is required.",
+      "Muscle mass, diet and medicines shift creatinine independently of kidneys.",
+      "For education only, never a substitute for medical care."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free GFR calculator using the CKD-EPI 2021 equation. Estimate kidney function (eGFR) from creatinine, age and sex, with CKD stage. Educational only.",
+    "metaTitle": "GFR Calculator - Estimated Kidney Function (CKD-EPI) | JaurTools",
+    "name": "GFR Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your health data never leaves your device.",
+    "quickAnswer": "GFR estimates kidney filtering from your creatinine, age and sex. A 50-year-old man with serum creatinine of 1.1 mg/dL has an eGFR of about 82 mL/min/1.73m2, which is CKD stage G2 (mildly decreased). A single value cannot diagnose kidney disease; doctors confirm with repeat testing.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your GFR results",
+    "stages": {
+      "g1": "G1 - Normal",
+      "g2": "G2 - Mildly decreased",
+      "g3a": "G3a - Mild-moderate",
+      "g3b": "G3b - Moderate-severe",
+      "g4": "G4 - Severely decreased",
+      "g5": "G5 - Kidney failure"
+    },
+    "tagline": "Estimate your kidney function (eGFR) with the CKD-EPI 2021 formula - for education only.",
+    "workedExample": "Male, 50 years, creatinine 1.1 mg/dL:\n1. k = 0.9, Scr/k = 1.222 > 1, so a = -1.2.\n2. min(1.222,1)^-1.2 = 1; max(1.222,1)^-1.2 = 1.222^-1.2 = 0.786.\n3. 0.9938^50 = 0.7326.\n4. eGFR = 142 x 1 x 0.786 x 0.7326 = 81.8, about 82.\n5. 82 falls in 60-89, so CKD stage G2 (mildly decreased).",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

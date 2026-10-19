@@ -1,0 +1,95 @@
+{
+  "line-counter": {
+    "benefits": [
+      "Instant word and character counts for essays, tweets, and form fields with limits.",
+      "Line and paragraph counts help with poetry, code, and list formatting.",
+      "Characters-without-spaces is what many publishers and translators actually bill by.",
+      "Average words per line reveals whether your writing is too dense.",
+      "No word processor needed - works on any device with a browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Words are split on whitespace: any run of spaces, tabs, or line breaks separates two words. So 'hello, world' counts as two words, and multiple spaces between words do not create phantom words.",
+        "q": "How are words counted?"
+      },
+      {
+        "a": "A paragraph is a block of text separated by at least one blank line. Three lines with no blank lines between them count as one paragraph, even though they are three lines.",
+        "q": "What counts as a paragraph?"
+      },
+      {
+        "a": "Line breaks count as characters, because they are stored in the text. The 'characters without spaces' figure excludes all whitespace: spaces, tabs, and line breaks.",
+        "q": "Do line breaks count as characters?"
+      },
+      {
+        "a": "Yes. The counter splits sentences on '.', '!', '?', and the ellipsis character. Abbreviations like 'Dr.' can inflate the count slightly - that is normal for automatic counters.",
+        "q": "Are sentences counted too?"
+      },
+      {
+        "a": "Probably. Different tools define words and paragraphs slightly differently - for example, whether hyphenated words count as one or two. Small differences of a few percent are normal.",
+        "q": "Why does another counter give a slightly different number?"
+      },
+      {
+        "a": "Yes. It runs entirely in your browser. Nothing you paste is uploaded, stored, or seen by anyone else.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "lines = text split on '\\n' -> count\nnon-empty lines = lines where trim() is not empty -> count\nparagraphs = text split on blank lines (2+ newlines) -> non-empty chunks -> count\nwords = trim(text) split on whitespace -> count\ncharacters = text.length (includes line breaks)\ncharacters without spaces = text with all whitespace removed -> length\nsentences = text split on . ! ? ... -> non-empty chunks -> count\naverage words per line = words / lines\n\nExample: 'Hello world\\n\\nThis is a test'\n  lines: 3 ('Hello world', '', 'This is a test')\n  non-empty lines: 2\n  paragraphs: 2\n  words: 2 + 4 = 6\n  characters: 11 + 0 + 14 + 2 newlines = 27\n  characters without spaces: 25 - 4 spaces = 21",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your text into the input box.",
+      "All eight statistics update live: lines, non-empty lines, paragraphs, words, sentences, characters, characters without spaces, and average words per line.",
+      "Use the Copy button to copy the full statistics summary to your clipboard.",
+      "Clear the box to start over with new text."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A line is everything up to the next line break; an empty line still counts as a line.",
+      "Non-empty lines ignore lines that contain only spaces or tabs.",
+      "A paragraph is a block of text separated from the next by at least one blank line.",
+      "Words are separated by whitespace: spaces, tabs, and line breaks.",
+      "Character counts include line breaks; the without-spaces count strips all whitespace first.",
+      "Sentences are split on '.', '!', '?', and the ellipsis character."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "count lines, line counter, word counter, character counter, paragraph counter, text statistics",
+    "labels": {
+      "avgWordsLabel": "Average words per line",
+      "charsLabel": "Characters",
+      "charsNoSpacesLabel": "Characters (no spaces)",
+      "clearButton": "Clear",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy stats",
+      "inputLabel": "Your text",
+      "inputPlaceholder": "Paste your text here...",
+      "linesLabel": "Lines",
+      "nonEmptyLabel": "Non-empty lines",
+      "paragraphsLabel": "Paragraphs",
+      "sentencesLabel": "Sentences",
+      "wordsLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Word and sentence definitions are approximations; hyphenated words and abbreviations can shift counts.",
+      "It counts text structure, not quality - a high word count does not mean good writing.",
+      "Right-to-left and mixed-script text is counted the same way; some scripts have no word spaces at all.",
+      "Extremely large pastes (millions of characters) may briefly slow the page."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free line counter: count total lines, blank lines, words and characters as you type. Live stats, private, no sign-up needed.",
+    "metaTitle": "Line Counter - Count Lines in Text Instantly Free | JaurTools",
+    "name": "Line Counter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your text and get eight live statistics: total lines, non-empty lines, paragraphs, words, sentences, characters, characters without spaces, and average words per line. For example, the text 'Hello world' followed by a blank line and 'This is a test' gives 3 lines, 2 non-empty lines, 2 paragraphs, 6 words, 27 characters, and 21 characters without spaces. Everything is counted in your browser the moment you type.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Count Lines results",
+    "tagline": "Count lines, words and characters as you type — live.",
+    "workedExample": "Input text:\nHello world\n\nThis is a test\n\nStep by step:\n1. Lines: split on line breaks -> 'Hello world', '', 'This is a test' = 3 lines.\n2. Non-empty lines: the middle line is empty -> 2.\n3. Paragraphs: split on the blank line -> 'Hello world' and 'This is a test' = 2.\n4. Words: 'Hello world' = 2, 'This is a test' = 4 -> 6 total.\n5. Characters: 11 + 0 + 14 = 25, plus 2 line breaks = 27.\n6. Characters without spaces: 25 - 4 spaces = 21.\n7. Sentences: no sentence-ending punctuation -> 0.\n8. Average words per line: 6 / 3 = 2.",
+    "workedExampleHeading": "Worked example"
+  }
+}

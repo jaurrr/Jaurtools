@@ -1,0 +1,84 @@
+{
+  "mime-types": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "MIME Types",
+    "tagline": "Look up the MIME type for any file extension, instantly.",
+    "metaTitle": "MIME Types Lookup - Find Content Type by Extension Free",
+    "metaDescription": "Search 60+ common MIME types by file extension or category. Instant offline lookup for developers. Free, no signup, runs in your browser.",
+    "keywords": "mime types, mime type lookup, content type list, file extension mime, application/json mime type",
+    "resultsHeading": "MIME type results",
+    "quickAnswer": "A MIME type (like image/png or application/json) tells browsers and servers what kind of data a file contains. Type a file extension such as pdf, mp4, or woff2 into the search box and this tool instantly shows its official MIME type and category, ready to copy into your code or server config.",
+    "keyFacts": [
+      "MIME stands for Multipurpose Internet Mail Extensions; the standard now covers all web content types.",
+      "A MIME type has two parts: a top-level type (text, image, audio, video, application, font) and a subtype.",
+      "Web servers send a Content-Type header with the MIME type so browsers know how to handle the file.",
+      "Serving JavaScript with the wrong MIME type can break strict module loading in modern browsers.",
+      "The +xml and +json suffixes (like image/svg+xml) mark structured syntax formats."
+    ],
+    "howTo": [
+      "Type a file extension (for example, webp) or a keyword (for example, font) in the search box.",
+      "Browse the matching results showing extension, MIME type, and category.",
+      "Click the copy button on any row to copy the MIME type.",
+      "Paste it into your HTML, server config, or API headers.",
+      "Clear the search to browse the most common types."
+    ],
+    "formula": "Extension  ->  MIME type\n.pdf      ->  application/pdf\n.mp4      ->  video/mp4\n.woff2    ->  font/woff2\n.json     ->  application/json",
+    "workedExample": "Searching for \"pdf\" returns:\nExtension: .pdf\nMIME type: application/pdf\nCategory: Document\nClicking copy gives you \"application/pdf\", which you can use in an HTTP header like:\nContent-Type: application/pdf\nSearching \"font\" lists woff, woff2, ttf, and otf with their font/* types.",
+    "benefits": [
+      "Instant lookup across 60+ common types with no page reloads.",
+      "One-click copy of the exact MIME string.",
+      "Works fully offline after the page loads.",
+      "Covers web, document, media, font, and archive types."
+    ],
+    "limitations": [
+      "Covers common types only; rare vendor types may be missing.",
+      "This is a reference list, not the official IANA registry.",
+      "Some extensions map to multiple MIME types depending on context.",
+      "Always verify against your server docs for strict security policies."
+    ],
+    "faqs": [
+      {
+        "q": "What is a MIME type?",
+        "a": "A label like text/html or image/png that identifies the format of a file or HTTP response so software knows how to process it."
+      },
+      {
+        "q": "Why does my font fail to load with a MIME error?",
+        "a": "Browsers reject fonts served with the wrong Content-Type. Serve woff2 as font/woff2 and woff as font/woff to fix it."
+      },
+      {
+        "q": "What is application/octet-stream?",
+        "a": "The generic MIME type for unknown binary data. Browsers usually download such files instead of displaying them."
+      },
+      {
+        "q": "Is there a difference between .jpg and .jpeg MIME types?",
+        "a": "No. Both use image/jpeg. The two extensions are historical variants of the same format."
+      },
+      {
+        "q": "Where do I set the MIME type on my server?",
+        "a": "In your server config: the mime.types file for Nginx, the staticContent section for IIS, or the AddType directive for Apache."
+      }
+    ],
+    "labels": {
+      "searchLabel": "Search MIME types",
+      "searchPlaceholder": "Try: pdf, mp4, font, json...",
+      "hintLabel": "Search by extension, MIME type, or category. The 20 most common types are shown by default.",
+      "matchesLabel": "Matches",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied",
+      "noResultsLabel": "No MIME types match your search. Try a shorter keyword."
+    }
+  }
+}

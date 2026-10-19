@@ -1,0 +1,108 @@
+{
+  "resistor-color-code-calculator": {
+    "name": "Resistor Color-Code Calculator",
+    "tagline": "Decode resistor color bands into exact resistance, tolerance, and temperature coefficient.",
+    "metaTitle": "Resistor Color Code Calculator – 4/5/6 Band Decoder | JaurTools",
+    "metaDescription": "Free resistor color code calculator. Pick 4, 5 or 6 band colors to decode resistance, tolerance and ppm instantly — runs 100% in your browser.",
+    "keywords": "resistor color code calculator, resistor decoder, 4 band resistor, 5 band resistor, resistance calculator",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Read the colored bands on a resistor from the end with the most bands: the first bands are digits, the next is the multiplier, then tolerance. For example, yellow-violet-red-gold is 47 × 100 = 4,700 Ω (4.7 kΩ) with ±5% tolerance.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Resistor color codes are an IEC standard: each color represents a digit, a multiplier, a tolerance, or a temperature coefficient.",
+      "4-band resistors have 2 digits + multiplier + tolerance; 5-band have 3 digits; 6-band adds a temperature coefficient (ppm/K).",
+      "Gold and silver appear only as multipliers (×0.1, ×0.01) or tolerance bands (±5%, ±10%) — never as digit bands.",
+      "A missing tolerance band means ±20%. That is the loosest common tolerance.",
+      "The tolerance tells you the guaranteed range: a 4.7 kΩ ±5% resistor is guaranteed between 4,465 Ω and 4,935 Ω.",
+      "ppm/K (parts per million per kelvin) on the 6th band tells how much resistance drifts with temperature — important for precision circuits."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Choose 4, 5, or 6 bands to match the bands printed on your resistor.",
+      "Tap the colored swatches for each band, in order from left to right as printed on the resistor body.",
+      "Read the nominal resistance, tolerance, and guaranteed min–max range in the results.",
+      "For 6-band resistors, also note the temperature coefficient (ppm/K).",
+      "Compare the measured value with a multimeter: it should fall inside the tolerance range."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "R = (digit bands as a number) x multiplier\nMin = R x (1 - tolerance/100), Max = R x (1 + tolerance/100)",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A 4-band resistor shows yellow, violet, red, gold.\nDigits: yellow = 4, violet = 7 → 47\nMultiplier: red = x100 → 47 x 100 = 4,700 Ω = 4.7 kΩ\nTolerance: gold = ±5%\nRange: 4,700 x 0.95 = 4,465 Ω to 4,700 x 1.05 = 4,935 Ω\nSo the resistor is 4.7 kΩ ±5% (4,465–4,935 Ω).",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Decodes any standard 4, 5, or 6-band resistor in seconds — no chart memorization needed.",
+      "Shows the guaranteed min–max range, so you know what a multimeter should read.",
+      "Explains the 6th band (ppm/K) that confuses most beginners.",
+      "Works offline in your browser — handy on a workbench with no internet."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Covers standard IEC color codes only — not SMD numeric codes (like 472) or EIA-96 codes.",
+      "The colors you pick must match the resistor: faded or burnt bands can mislead, so verify with a multimeter for critical circuits.",
+      "Does not account for power rating (watts) — check the resistor's physical size or datasheet separately.",
+      "An educational decoder, not a substitute for measurement in precision work."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "Which end do I read a resistor from?",
+        "a": "Start from the end closest to the bands. The tolerance band (gold, silver, or others) is usually spaced slightly apart at the right end — start from the opposite end."
+      },
+      {
+        "q": "What do gold and silver bands mean?",
+        "a": "As a multiplier, gold means ×0.1 and silver means ×0.01. As a tolerance band, gold means ±5% and silver means ±10%. They never represent digits."
+      },
+      {
+        "q": "What is the difference between 4-band and 5-band resistors?",
+        "a": "4-band resistors use 2 digit bands and are typical for E12/E24 series values. 5-band resistors add a third digit for finer E48/E96/E192 series values, common in precision parts."
+      },
+      {
+        "q": "What does the 6th band mean?",
+        "a": "It is the temperature coefficient in ppm/K — how many parts per million the resistance changes per degree kelvin. Lower is more stable; 50 ppm/K or less is typical for precision resistors."
+      },
+      {
+        "q": "My resistor has no tolerance band. What then?",
+        "a": "A missing tolerance band means ±20% tolerance. Pick None for the tolerance band in this tool to get the correct range."
+      },
+      {
+        "q": "Can two bands have the same color?",
+        "a": "Yes. Digit bands can repeat freely — for example brown-black-black is 10 Ω. Only the role of each position matters."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your resistor decode results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "bandsLabel": "Number of bands",
+      "bandLabel": "Band",
+      "roleDigit": "Digit",
+      "roleMultiplier": "Multiplier",
+      "roleTolerance": "Tolerance",
+      "rolePpm": "Temperature coefficient",
+      "resistanceLabel": "Nominal resistance",
+      "toleranceLabel": "Tolerance",
+      "rangeLabel": "Guaranteed range",
+      "ppmLabel": "Temperature coefficient",
+      "ppmUnit": "ppm/K",
+      "colors": [
+        "Black",
+        "Brown",
+        "Red",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Blue",
+        "Violet",
+        "Gray",
+        "White",
+        "Gold",
+        "Silver",
+        "None"
+      ]
+    }
+  }
+}

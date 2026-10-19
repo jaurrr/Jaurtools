@@ -1,0 +1,108 @@
+{
+  "income-tax-calculator": {
+    "assumptionNote": "Uses the 2025 US federal single-filer brackets and the 2025 standard deduction ($15,750). State taxes, credits, and capital gains are not included. Brackets change yearly - verify the current table before filing.",
+    "benefits": [
+      "Get a quick federal tax estimate before you file - no tax software needed.",
+      "See your marginal vs effective rate: the number that matters for raises and bonuses.",
+      "Test how a bigger deduction or extra income changes your tax.",
+      "Free, instant, and private - no personal details leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. The US uses marginal brackets: only the income inside each bracket is taxed at that bracket's rate. So moving into the 22% bracket taxes only your dollars above $48,475 at 22% - everything below is still taxed at 10% and 12%.",
+        "q": "Does moving into a higher bracket tax all my income?"
+      },
+      {
+        "a": "The marginal rate is the tax on your next dollar of income (22% in the worked example). The effective rate is total tax divided by total income (13.45% here). The marginal rate drives decisions about raises and bonuses; the effective rate describes your overall burden.",
+        "q": "Marginal vs effective tax rate - what is the difference?"
+      },
+      {
+        "a": "For 2025 it is $15,750 for single filers. It is the amount subtracted from income before tax applies. If your itemized deductions (mortgage interest, charity, state taxes) exceed it, you itemize instead.",
+        "q": "What is the standard deduction?"
+      },
+      {
+        "a": "Long-term capital gains have their own lower rates (0%, 15%, 20%) and are not included here. Neither are Social Security or Medicare taxes, which add about 7.65% on wages for the employee.",
+        "q": "Does this include capital gains or payroll taxes?"
+      },
+      {
+        "a": "State income tax is completely separate and varies from 0% (Texas, Florida) to over 13% (California). This calculator covers federal tax only, so your real total is higher in most states.",
+        "q": "What about state income tax?"
+      },
+      {
+        "a": "Brackets are inflation-adjusted every year. This calculator uses the 2025 table. If you are filing for 2026 or later, check the IRS for the current year's brackets before relying on the result.",
+        "q": "Are these brackets current?"
+      }
+    ],
+    "formula": "Taxable income = gross income - deduction\nTax = sum over brackets of (income in bracket x bracket rate)\n2025 single brackets: 10% to $11,925; 12% to $48,475; 22% to $103,350;\n24% to $197,300; 32% to $250,525; 35% to $626,350; 37% above.\nEffective rate = total tax / gross income x 100.",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your gross annual income.",
+      "Enter your deduction - the 2025 single standard deduction of $15,750 is pre-filled.",
+      "Read your estimated federal tax, taxable income, marginal rate, and effective rate.",
+      "Adjust income or deduction to compare scenarios."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The US federal income tax is progressive: higher income is taxed at higher marginal rates.",
+      "Only income inside each bracket is taxed at that bracket's rate.",
+      "2025 single brackets run from 10% to 37%.",
+      "The 2025 standard deduction for single filers is $15,750.",
+      "State tax, credits, and capital gains are separate and not included here."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "income tax calculator, federal tax calculator, us tax calculator, marginal tax rate calculator, tax bracket calculator",
+    "labels": {
+      "deduction": "Deduction ($)",
+      "effectiveRate": "Effective tax rate",
+      "federalTax": "Estimated federal tax",
+      "income": "Gross annual income ($)",
+      "marginalRate": "Marginal tax rate",
+      "taxableIncome": "Taxable income"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Federal tax only - state taxes are not included.",
+      "Uses 2025 brackets; the table changes every year.",
+      "Ignores credits, capital gains, and payroll taxes.",
+      "Estimate only - not tax advice; use IRS tools or a professional for filing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free US federal income tax calculator: estimate tax from 2025 single-filer brackets, see marginal vs effective rates. Instant, private, no sign-up.",
+    "metaTitle": "Income Tax Calculator - US Federal Tax Estimate | JaurTools",
+    "name": "Income Tax Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "$100,000 of income with the $15,750 standard deduction leaves $84,250 taxable: 10% on the first $11,925 ($1,192.50), 12% on the next $36,550 ($4,386), and 22% on the remaining $35,775 ($7,870.50). Estimated federal tax is $13,449, a 13.45% effective rate with a 22% marginal rate.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your income tax results",
+    "tagline": "Estimate US federal income tax from the 2025 single-filer brackets.",
+    "workedExample": "$100,000 income, $15,750 deduction:\n1. Taxable income = $100,000 - $15,750 = $84,250.\n2. 10% x $11,925 = $1,192.50.\n3. 12% x ($48,475 - $11,925 = $36,550) = $4,386.00.\n4. 22% x ($84,250 - $48,475 = $35,775) = $7,870.50.\n5. Total tax = $1,192.50 + $4,386.00 + $7,870.50 = $13,449.00.\n6. Effective rate = $13,449 / $100,000 x 100 = 13.45%. Marginal rate = 22%.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "tax": "Estimated federal tax",
+      "taxable": "Taxable income",
+      "marginal": "Marginal rate",
+      "taxNote": "{rate}% effective rate on your income"
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "{income} income minus deductions leaves {taxable} taxable — the tax on it is {tax}.",
+      "l2": "Your marginal rate is {marginal}%: every extra dollar you earn is taxed at {marginal}%.",
+      "l3": "Your effective rate is {effective}%: that is what you actually pay overall."
+    },
+    "slabs": {
+      "heading": "Where your tax comes from",
+      "caption": "How much of your income falls in each federal bracket, and the tax from it."
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "Taxable income = gross income − deductions, then taxed bracket by bracket.",
+      "s2": "Only the slice of income inside each bracket is taxed at that bracket's rate."
+    }
+  }
+}

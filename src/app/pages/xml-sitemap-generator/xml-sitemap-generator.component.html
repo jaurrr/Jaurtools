@@ -1,0 +1,103 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="sitemap-urls">{{ t('labels.urlsLabel') }}</label>
+        <textarea id="sitemap-urls" rows="6" dir="ltr"
+          [ngModel]="urlsText()" (ngModelChange)="urlsText.set($event)"></textarea>
+        <p class="note">{{ t('labels.urlsHint') }}</p>
+      </div>
+
+      <div class="field">
+        <label for="sitemap-freq">{{ t('labels.changefreqLabel') }}</label>
+        <select id="sitemap-freq" [ngModel]="changefreq()" (ngModelChange)="changefreq.set($event)">
+          @for (f of frequencies; track f) {
+            <option [value]="f">{{ f }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="sitemap-priority">{{ t('labels.priorityLabel') }}</label>
+        <div class="input-row">
+          <input id="sitemap-priority" type="number" inputmode="decimal" min="0" max="1" step="0.1"
+            [ngModel]="priority()" (ngModelChange)="setPriority($event)" />
+          <input type="range" min="0" max="1" step="0.1" [ngModel]="priority()"
+            (ngModelChange)="setPriority($event)" [attr.aria-label]="t('labels.priorityLabel')" />
+        </div>
+      </div>
+
+      <label class="check-row">
+        <input type="checkbox" [ngModel]="includeLastmod()" (ngModelChange)="includeLastmod.set($event)" />
+        {{ t('labels.lastmodLabel') }}
+      </label>
+
+      <div class="results">
+        <div class="result-row">
+          <span><app-icon name="file-text" /> {{ t('labels.statsLabel') }}</span>
+          <strong>{{ result().valid }} / {{ result().total }}</strong>
+        </div>
+        @if (result().invalid > 0 || result().duplicates > 0) {
+          <p class="note">{{ t('labels.skippedLabel') }}: {{ result().invalid }} {{ t('labels.invalidLabel') }}, {{ result().duplicates }} {{ t('labels.duplicateLabel') }}</p>
+        }
+        <pre class="sitemap-output mono" dir="ltr" aria-live="polite">{{ result().xml }}</pre>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" (click)="copy()">
+            <app-icon name="{{ copied() ? 'check' : 'copy' }}" /> {{ t('labels.copyButton') }}
+          </button>
+          <button type="button" class="btn" (click)="download()">
+            <app-icon name="download" /> {{ t('labels.downloadButton') }}
+          </button>
+        </div>
+      </div>
+
+      <p class="note">{{ t('labels.noteText') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

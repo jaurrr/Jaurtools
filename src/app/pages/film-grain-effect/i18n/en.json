@@ -1,0 +1,93 @@
+{
+  "film-grain-effect": {
+    "name": "Film Grain Effect",
+    "tagline": "Real film grain, zero darkroom.",
+    "metaTitle": "Film Grain Effect - Authentic Film Grain Look | JaurTools",
+    "metaDescription": "Add realistic monochrome or color film grain to any photo with adjustable intensity. Free, in your browser.",
+    "keywords": "add noise to photo, film grain effect, photo grain filter, grain overlay online, noisy photo effect",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a photo and drag the intensity slider from 0 to 100. At intensity 40, each pixel shifts by up to plus or minus 102 brightness levels, creating visible grain. Choose monochrome grain for a classic film look or color grain for a digital-noise feel. Preview updates live and you download a PNG.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Film grain is random brightness variation added to every pixel.",
+      "Intensity 0 to 100 maps to a maximum shift of 0 to 255 brightness levels.",
+      "Monochrome noise shifts all three channels equally, like classic black-and-white film.",
+      "Color noise shifts red, green, and blue independently, like high-ISO digital photos.",
+      "Grain hides banding in smooth skies and gradients — a trick retouchers use daily.",
+      "The effect is destructive: save a copy if you want the clean original too."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload a photo (JPG, PNG, or WebP).",
+      "Drag the intensity slider until the grain looks right — start around 20 to 40.",
+      "Pick Monochrome for a film look or Color for digital-style noise.",
+      "Zoom your eyes, not the image: check the preview at full size before downloading.",
+      "Click Download to save the grainy photo as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "amount = intensity x 2.55   (max brightness shift)\nrandomShift = (random(0..1) - 0.5) x 2 x amount\nnewPixel = clamp(oldPixel + randomShift, 0, 255)\nMonochrome: the same randomShift is added to R, G, and B.\nColor: a fresh randomShift is drawn for each channel.",
+    "formulaHeading": "Formula",
+    "workedExample": "Pixel value 150, intensity 40, monochrome:\n1. amount = 40 x 2.55 = 102.\n2. Suppose the random draw gives randomShift = +63.\n3. New value: 150 + 63 = 213.\n4. All three channels move together, so the pixel stays neutral gray but brighter.\n5. Another pixel might draw -80 and drop from 150 to 70 — that scatter is the grain you see.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Instant vintage film mood without presets or paid filters.",
+      "Monochrome grain flatters portraits and street photography.",
+      "Masks compression banding in skies after heavy editing.",
+      "Fine, adjustable control — from a whisper of texture to heavy grain.",
+      "Local processing keeps private photos off the internet."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Noise is random and permanent in the download — keep your original.",
+      "Heavy grain softens fine detail; faces can look gritty above intensity 60.",
+      "PNG output of grainy photos is larger than the clean original.",
+      "This is simple uniform noise, not a true film-stock emulsion simulation."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "What is film grain?",
+        "a": "Film grain is the visible texture of random silver particles in analog film. Digitally, we imitate it by adding random brightness variation to pixels. It adds mood and hides digital smoothness."
+      },
+      {
+        "q": "Should I choose monochrome or color noise?",
+        "a": "Monochrome for the classic film look — it shifts brightness only, so colors stay clean. Color noise mimics a high-ISO digital camera and looks grittier. Try both on your photo and pick what suits the mood."
+      },
+      {
+        "q": "What intensity should I use?",
+        "a": "Subtle texture: 10 to 25. Obvious vintage grain: 30 to 50. Heavy artistic grain: 60 to 90. Above 90 the image starts to break apart, which is occasionally the point for poster-style art."
+      },
+      {
+        "q": "Will grain fix a blurry photo?",
+        "a": "No — grain adds texture but cannot restore lost detail. On slightly soft photos it can mask the softness a little, but it is not a sharpening tool."
+      },
+      {
+        "q": "Why is the downloaded file bigger?",
+        "a": "Random noise is the hardest thing for PNG compression to squeeze. A grainy photo can be 2 to 4 times larger than the clean version. Convert to JPG after downloading if size matters."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. The noise is generated pixel by pixel in your browser. Your photo never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Add Noise results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photo",
+      "intensity": "Grain intensity",
+      "noiseType": "Grain type",
+      "monoNoise": "Monochrome (film look)",
+      "colorNoise": "Color (digital look)",
+      "download": "Download image",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload a photo to see the live preview."
+    }
+  }
+}

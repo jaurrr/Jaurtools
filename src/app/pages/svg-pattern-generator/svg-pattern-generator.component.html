@@ -1,0 +1,158 @@
+<div class="tool-page persona-canvas">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="pattern-preview">
+        <div [innerHTML]="preview()"></div>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.shapeLabel') }}</label>
+        <div class="unit-toggle shape-grid" role="group" [attr.aria-label]="t('labels.shapeLabel')">
+          @for (s of shapes; track s) {
+            <button type="button" [class.active]="shape() === s" (click)="setShape(s)">
+              {{ t('labels.shape.' + s) }}
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pat-tile">{{ t('labels.tileLabel') }}: {{ tile() }} px</label>
+        <input id="pat-tile" type="range" min="40" max="200" step="4"
+          [ngModel]="tile()" (ngModelChange)="setTile($event)" />
+      </div>
+
+      <div class="field">
+        <label for="pat-size">{{ t('labels.shapeSizeLabel') }}: {{ shapeSize() }}%</label>
+        <input id="pat-size" type="range" min="10" max="100" step="1"
+          [ngModel]="shapeSize()" (ngModelChange)="setShapeSize($event)" />
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="pat-bg">{{ t('labels.bgLabel') }}</label>
+          <input id="pat-bg" type="color" [ngModel]="bgColor()" (ngModelChange)="setBgColor($event)" />
+        </div>
+        <div class="field">
+          <label for="pat-fg">{{ t('labels.shapeColorLabel') }}</label>
+          <input id="pat-fg" type="color" [ngModel]="shapeColor()" (ngModelChange)="setShapeColor($event)" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pat-rot">{{ t('labels.rotationLabel') }}: {{ rotation() }}°</label>
+        <input id="pat-rot" type="range" min="0" max="360" step="1"
+          [ngModel]="rotation()" (ngModelChange)="setRotation($event)" />
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="downloadFull()">
+          <app-icon name="download" /> {{ t('labels.downloadSvg') }}
+        </button>
+        <button type="button" class="btn" (click)="downloadTile()">
+          {{ t('labels.downloadTile') }}
+        </button>
+        <button type="button" class="btn" (click)="downloadPng()">
+          {{ t('labels.downloadPng') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="pat-code">{{ t('labels.codeLabel') }}</label>
+        <textarea id="pat-code" readonly rows="6">{{ fullSvg() }}</textarea>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

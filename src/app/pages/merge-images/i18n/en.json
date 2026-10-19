@@ -1,0 +1,100 @@
+{
+  "merge-images": {
+    "benefits": [
+      "Create before-and-after or comparison collages in seconds without photo-editing software.",
+      "Full control over layout, alignment, gap size, and background color.",
+      "Works offline once loaded; your photos never leave your device.",
+      "PNG keeps every pixel sharp; JPG keeps the file small for sharing."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Select both images in the file pickers, choose vertical or horizontal layout, adjust alignment and spacing, then press Download. The merged PNG or JPG is created instantly on your device.",
+        "q": "How do I merge two images into one?"
+      },
+      {
+        "a": "No. Images are placed at full resolution. PNG output is lossless; JPG output uses high quality (92%) so visible loss is negligible.",
+        "q": "Will merging reduce image quality?"
+      },
+      {
+        "a": "The output canvas uses the larger dimension along the stacking axis. The smaller image is positioned with your alignment choice, and the leftover space shows your background color.",
+        "q": "What if my two images are different sizes?"
+      },
+      {
+        "a": "Yes — the spacing control adds a 0–100 px gap between the images, filled with the background color you pick.",
+        "q": "Can I add a border or gap between the photos?"
+      },
+      {
+        "a": "No. Merging happens entirely in your browser with the HTML canvas. Your photos never leave your device.",
+        "q": "Are my photos uploaded to a server?"
+      },
+      {
+        "a": "Directly, no — this tool merges two at a time. You can merge pairs repeatedly: merge A and B, then merge the result with C.",
+        "q": "Can I merge more than two images?"
+      }
+    ],
+    "formula": "Vertical:   width = max(w1, w2),  height = h1 + spacing + h2\nHorizontal: width = w1 + spacing + w2,  height = max(h1, h2)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the first image with the top file picker, then the second image with the bottom one.",
+      "Pick Vertical to stack the photos, or Horizontal to place them side by side.",
+      "Set the alignment for the smaller image and adjust the spacing between them if you want a gap.",
+      "Choose a background color for the empty areas and the gap, then pick PNG or JPG output.",
+      "Press Download to save the merged image to your device."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Vertical mode stacks image B below image A; the output width is the wider of the two images.",
+      "Horizontal mode places image B to the right of image A; the output height is the taller of the two.",
+      "The smaller image is positioned with your chosen alignment: start, center, or end along the cross axis.",
+      "Spacing inserts a gap of 0 to 100 pixels between the images, filled with your background color.",
+      "The preview is re-rendered instantly every time you change a setting; nothing is uploaded anywhere."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "merge images, combine two photos, join images, merge photos online, combine pictures, stack images",
+    "labels": {
+      "alignCenter": "Center",
+      "alignEnd": "End",
+      "alignStart": "Start",
+      "alignment": "Alignment of the smaller image",
+      "background": "Background color",
+      "direction": "Layout direction",
+      "download": "Download merged image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "horizontal": "Horizontal",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "outputSize": "Output size",
+      "pickTwo": "Choose two images above to see the merged preview.",
+      "preview": "Merged image preview",
+      "spacing": "Spacing between images (px)",
+      "uploadA": "First image",
+      "uploadB": "Second image",
+      "vertical": "Vertical"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Merges exactly two images at a time; for larger collages, merge pairs repeatedly.",
+      "Images are placed at their original pixel size — the tool does not resize them to match.",
+      "Very large images (above about 8000 px per side) may be slow on older phones.",
+      "EXIF metadata from the originals is not carried into the merged file."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Merge two images online for free. Stack photos vertically or horizontally, set alignment and spacing, then download the combined PNG or JPG. No upload, no signup.",
+    "metaTitle": "Merge Images Online Free — Combine Two Photos | JaurTools",
+    "name": "Merge Images",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload two images and pick a vertical or horizontal layout. The tool places both photos on one canvas using your alignment, spacing, and background color, then lets you download the merged result as PNG or JPG — everything happens in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Merged image results",
+    "tagline": "Combine two photos into a single image, stacked vertically or placed side by side.",
+    "workedExample": "Two photos, each 800 × 600 px, merged vertically with 20 px spacing:\noutput width = max(800, 800) = 800 px\noutput height = 600 + 20 + 600 = 1220 px\nThe result is a single 800 × 1220 px image. Merged horizontally with the same spacing, it would be 800 + 20 + 800 = 1620 px wide and max(600, 600) = 600 px tall.",
+    "workedExampleHeading": "Worked example"
+  }
+}

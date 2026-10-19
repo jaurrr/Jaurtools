@@ -1,0 +1,95 @@
+{
+  "teleprompter": {
+    "benefits": [
+      "Read scripts smoothly on camera without looking away.",
+      "Adjustable scroll speed matches your natural speaking pace.",
+      "Large, high-contrast text readable from across the room.",
+      "Mirror-flip mode works with real teleprompter glass rigs.",
+      "Free forever — no app install, works on any device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Paste your script, press Start, then press Play. The text scrolls upward automatically — adjust the speed slider until it matches your speaking pace.",
+        "q": "How do I use the teleprompter?"
+      },
+      {
+        "a": "Drag the speed slider from 1 (slowest) to 10 (fastest). Start slower than you think — most beginners read faster on camera than they expect.",
+        "q": "How do I set the right scroll speed?"
+      },
+      {
+        "a": "Mirror flip horizontally mirrors the text so it reads correctly when reflected in teleprompter glass placed in front of your camera lens.",
+        "q": "What is mirror flip for?"
+      },
+      {
+        "a": "The A+ and A- buttons change the text size from 16px to 72px, so you can read from any distance.",
+        "q": "Can I change the text size?"
+      },
+      {
+        "a": "Yes — scrolling stops automatically at the end of the script.",
+        "q": "Does it stop at the end?"
+      },
+      {
+        "a": "Not currently. The script stays in the page while it is open; copy it elsewhere if you need to keep it.",
+        "q": "Is my script saved?"
+      }
+    ],
+    "formula": "scrollStep = speed pixels every 50 ms\nscroll speed (px/sec) = speed x 20\nscrolling stops when scrollTop + clientHeight >= scrollHeight",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your full script into the text box.",
+      "Check the word count, then press Start.",
+      "Press Play and read as the text scrolls.",
+      "Adjust the speed slider until it matches your speaking pace.",
+      "Use A+/A- for text size and mirror flip for teleprompter glass."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The prompter scrolls your script upward at a steady, adjustable speed.",
+      "Speed ranges from 1 (about 20 px/sec) to 10 (about 200 px/sec).",
+      "Scrolling stops automatically when the end of the script is reached.",
+      "Text size can be set from 16px to 72px for any reading distance.",
+      "Mirror flip reverses the text horizontally for glass rigs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "teleprompter online, free teleprompter, auto scrolling script reader, video script prompter, speech teleprompter",
+    "labels": {
+      "backButton": "Edit script",
+      "controlsLabel": "Prompter controls",
+      "decreaseFont": "Decrease text size",
+      "flipButton": "Mirror flip",
+      "increaseFont": "Increase text size",
+      "pauseButton": "Pause",
+      "playButton": "Play",
+      "scriptLabel": "Your script",
+      "scriptPlaceholder": "Paste your video script here...",
+      "speedHint": "Speed 1 is slowest, 10 is fastest. The prompter stops automatically at the end.",
+      "speedLabel": "Scroll speed",
+      "stageLabel": "Teleprompter display",
+      "startButton": "Start teleprompter",
+      "wordsLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The script is not saved — keep a copy elsewhere if you need it.",
+      "No voice control or auto-pacing from your speech.",
+      "Scrolling is time-based, so it cannot pause at natural speech pauses."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online teleprompter. Auto-scrolling script reader with adjustable speed, text size and mirror flip. 100% browser-based.",
+    "metaTitle": "Teleprompter — Free Auto-Scrolling Script Reader",
+    "name": "Teleprompter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An auto-scrolling script reader for videos, speeches and presentations: paste your script, press start, and read as the text scrolls upward at your pace. Adjustable scroll speed (1–10), resizable text (16–72px), high-contrast display, and a mirror-flip mode for real teleprompter glass rigs — all in the browser, no install.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Teleprompter",
+    "tagline": "Read scripts on camera like a pro — auto-scroll, speed and mirror flip.",
+    "workedExample": "Script: \"Welcome to my channel. Today we build a birdhouse.\"\nWords: 9\nPress Start -> press Play at speed 3.\nThe stage scrolls 3 pixels every 50 ms = 60 pixels per second.\nScrolling continues until the last line is fully visible, then pauses automatically.",
+    "workedExampleHeading": "Worked example"
+  }
+}

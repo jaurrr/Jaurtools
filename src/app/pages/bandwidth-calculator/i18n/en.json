@@ -1,0 +1,91 @@
+{
+  "bandwidth-calculator": {
+    "benefits": [
+      "Separates advertised speed from the speed you actually get after overhead.",
+      "Handles MB, GB, and TB against Mbps and Gbps without manual conversion.",
+      "Shows both ideal and realistic times so you can plan downloads.",
+      "Adjustable overhead reflects real networks (Wi-Fi, VPN, congestion).",
+      "Free, private, and instant in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "ISPs sell megabits per second, while files are measured in megabytes. One byte = 8 bits, so a 100 Mbps line moves at most 12.5 MB/s before overhead. This tool converts bits to bytes for you.",
+        "q": "Why is my 100 Mbps download slower than 100 MB/s?"
+      },
+      {
+        "a": "Usually 5-15% on wired Ethernet and 10-25% on Wi-Fi or VPNs. The default here is 10%; raise it if your connection is congested or tunneled.",
+        "q": "What is a realistic overhead percentage?"
+      },
+      {
+        "a": "Most ISPs use decimal gigabits (1 Gbps = 1,000 Mbps) while file sizes use binary gigabytes (1 GB = 1,024 MB). This tool uses the industry convention: decimal for speeds, binary for file sizes.",
+        "q": "Is 1 GB equal to 1000 or 1024 MB here?"
+      },
+      {
+        "a": "Divide the file size in megabits by the speed in Mbps. A 4.7 GB DVD image is 38,552 megabits; at 50 Mbps that is 771 seconds, or about 13 minutes, before overhead.",
+        "q": "How long does a 4.7 GB file take on 50 Mbps?"
+      },
+      {
+        "a": "Yes for the math, but real networks burst and stall. Treat the result as a best-case average; large transfers over Wi-Fi often take longer than calculated.",
+        "q": "Is this accurate for streaming?"
+      }
+    ],
+    "formula": "file bits = file size x 8\nideal time = file bits / advertised bits per second\nreal time = file bits / (advertised bps x (1 - overhead))",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the file size and choose MB, GB, or TB.",
+      "Enter your connection speed and choose Mbps or Gbps.",
+      "Set the overhead (10% is a fair default for home broadband).",
+      "Read the realistic transfer time, plus the ideal time without overhead.",
+      "Compare the effective speed against what your ISP advertises."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Internet speeds are sold in bits per second (Mbps); file sizes are measured in bytes (MB, GB).",
+      "8 bits = 1 byte, so divide Mbps by 8 to get the theoretical MB/s.",
+      "Protocol overhead (TCP/IP, Wi-Fi, VPN) eats 5-25% of raw speed.",
+      "1 Mbps = 1,000,000 bits per second; 1 GB = 1,024 x 1,024 x 1,024 bytes.",
+      "Upload speeds are often much lower than download speeds — check both.",
+      "Real throughput drops further when the network is congested or the server is slow."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bandwidth calculator, download time calculator, transfer time estimator, mbps to download time, file transfer calculator",
+    "labels": {
+      "effectiveSpeed": "Effective speed after overhead",
+      "hoursShort": "h",
+      "idealTime": "Ideal time (no overhead)",
+      "minutesShort": "min",
+      "overheadLabel": "Protocol overhead",
+      "overheadNote": "TCP/IP, Wi-Fi, and VPN headers consume part of your bandwidth.",
+      "realTime": "Realistic transfer time",
+      "secondsShort": "s",
+      "sizeLabel": "File size",
+      "sizeUnitLabel": "File size unit",
+      "speedLabel": "Connection speed",
+      "speedUnitLabel": "Speed unit"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Real networks vary; bursts, throttling, and server limits change actual times.",
+      "Assumes a constant speed, which Wi-Fi and mobile networks rarely deliver.",
+      "Does not model parallel connections or download accelerators.",
+      "ISP-advertised speeds are maximums, often not sustained."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free bandwidth calculator: estimate file download and transfer times from file size and connection speed, with realistic protocol overhead. MB/GB/TB vs Mbps/Gbps.",
+    "metaTitle": "Bandwidth Calculator: Download & Transfer Time (Free)",
+    "name": "Bandwidth Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter a file size and your connection speed, and this calculator estimates the transfer time in hours, minutes, and seconds. It distinguishes advertised speed from effective speed by applying protocol overhead, and converts cleanly between MB/GB/TB and Mbps/Gbps.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Transfer time results",
+    "tagline": "How long will that download actually take?",
+    "workedExample": "A 1 GB file on a 100 Mbps connection with 10% overhead:\n\n1. File bits = 1024^3 bytes x 8 = 8,589,934,592 bits.\n2. Ideal time = 8,589,934,592 / 100,000,000 = 85.9 seconds.\n3. Effective speed = 100 x (1 - 0.10) = 90 Mbps.\n4. Realistic time = 8,589,934,592 / 90,000,000 = 95.4 seconds, about 1 min 35 s.\n\nWithout overhead you would expect 1 min 26 s; overhead adds roughly 10 seconds.",
+    "workedExampleHeading": "Worked example"
+  }
+}

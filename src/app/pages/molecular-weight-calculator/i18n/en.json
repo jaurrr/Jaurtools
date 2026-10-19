@@ -1,0 +1,96 @@
+{
+  "molecular-weight-calculator": {
+    "assumptionNote": "Uses standard IUPAC atomic weights. Isotope-specific masses are not supported.",
+    "benefits": [
+      "No periodic-table lookup - 40+ elements built in.",
+      "Handles parentheses and grouped atoms correctly.",
+      "Grams-to-moles in the same step - one less calculation.",
+      "Instant checking for students doing stoichiometry homework."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Numerically nothing: both are the mass of one mole in grams. 'Molecular weight' is the older name; 'molar mass' (g/mol) is the modern SI term. This calculator shows both ideas as one number.",
+        "q": "What is the difference between molecular weight and molar mass?"
+      },
+      {
+        "a": "Atomic weights are periodically updated by IUPAC, and tables round differently. H2SO4 can read 98.07 or 98.08 depending on the table. Differences under 0.1 g/mol are normal.",
+        "q": "Why is my answer slightly different from my textbook?"
+      },
+      {
+        "a": "Exactly like that: Ca(OH)2. The number after the closing bracket multiplies everything inside - O x2 and H x2 here.",
+        "q": "How do I enter Ca(OH)2?"
+      },
+      {
+        "a": "Yes - type the grams and read the moles row. Moles = grams / molecular weight.",
+        "q": "Can it do grams to moles?"
+      },
+      {
+        "a": "No - charges do not change the mass for this purpose. Type the neutral formula (H2SO4 for the acid, or just SO4) instead.",
+        "q": "Does it handle charges like sulphate ions?"
+      },
+      {
+        "a": "The 40 most common elements in chemistry and biology, from hydrogen to uranium, with standard atomic weights. Rare synthetics are excluded.",
+        "q": "What elements are included?"
+      }
+    ],
+    "formula": "MW = sum over elements of (count x atomic weight)\nMoles = grams / MW\n\nExample H2SO4:\nH: 2 x 1.008 = 2.016\nS: 1 x 32.06 = 32.06\nO: 4 x 15.999 = 63.996\nTotal = 98.07 g/mol",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type a chemical formula like H2SO4, Ca(OH)2, or C6H12O6.",
+      "Use parentheses for groups, e.g. Mg(OH)2 - the number after multiplies the group.",
+      "Your breakdown table and total molar mass appear instantly.",
+      "Enter grams to convert to moles, or leave it for the mass alone.",
+      "Double-check the answer against a periodic table when it matters - e.g. before lab work."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Molecular weight (molar mass) = sum of atomic weights, in g/mol.",
+      "Atomic weights come from the standard periodic table - e.g. H 1.008, C 12.011, O 15.999.",
+      "Parentheses multiply everything inside: Ca(OH)2 = 40.078 + 2 x (15.999 + 1.008) = 74.09 g/mol.",
+      "Moles = grams / molecular weight. One mole = 6.022 x 10^23 particles.",
+      "Water (H2O) is 18.02 g/mol; table salt (NaCl) is 58.44 g/mol; glucose (C6H12O6) is 180.16 g/mol.",
+      "Case matters: 'Co' is cobalt, 'CO' is carbon monoxide. Type element symbols exactly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "molecular weight calculator, molar mass calculator, chemical formula weight, grams to moles, periodic table calculator",
+    "labels": {
+      "breakdownLabel": "Element breakdown",
+      "errorInvalid": "Could not parse that formula. Use element symbols and numbers only, e.g. H2SO4 or Ca(OH)2.",
+      "errorUnknown": "Unknown element: {el}. Check the spelling and capitalisation.",
+      "formulaInput": "Chemical formula",
+      "gPerMol": "g/mol",
+      "gramsInput": "Grams (optional)",
+      "molUnit": "mol",
+      "molecularWeight": "Molecular weight",
+      "molesResult": "Moles",
+      "tableAtomicWeight": "Atomic weight",
+      "tableCount": "Count",
+      "tableElement": "Element",
+      "tableSubtotal": "Subtotal"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Atomic weights are standard averages - isotopes can differ slightly.",
+      "Cannot parse hydrates written with dots (CuSO4.5H2O) - type them as one formula without the dot.",
+      "Does not know reaction chemistry - it only weighs the formula you type.",
+      "Rare or synthetic elements may be missing from the built-in table."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate molar mass from any chemical formula with a full element breakdown. Convert grams to moles instantly. Free, private, no sign-up.",
+    "metaTitle": "Molecular Weight Calculator | JaurTools",
+    "name": "Molecular Weight Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Molecular weight is the sum of each atom's weight in a formula. Sulphuric acid (H2SO4) has 2 hydrogen (2 x 1.008), 1 sulphur (32.06), and 4 oxygen (4 x 15.999) - a total of 98.07 g/mol. So 49.04 g of H2SO4 is 0.500 mol: moles = grams / molecular weight.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Molecular weight results",
+    "tagline": "Type any chemical formula - get molar mass, element breakdown, and moles from grams.",
+    "workedExample": "Sulphuric acid, H2SO4:\n1. List atoms: H x2, S x1, O x4.\n2. H: 2 x 1.008 = 2.016; S: 1 x 32.06 = 32.06; O: 4 x 15.999 = 63.996.\n3. Add: 2.016 + 32.06 + 63.996 = 98.072 g/mol.\n4. Moles in 49.04 g: 49.04 / 98.072 = 0.500 mol.\n\nCalcium hydroxide, Ca(OH)2:\n1. The 2 multiplies the whole (OH) group: O x2, H x2.\n2. Ca: 40.078; O: 2 x 15.999 = 31.998; H: 2 x 1.008 = 2.016.\n3. Total = 74.09 g/mol.",
+    "workedExampleHeading": "Worked example"
+  }
+}

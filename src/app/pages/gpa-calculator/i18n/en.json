@@ -1,0 +1,91 @@
+{
+  "gpa-calculator": {
+    "assumptionNote": "Uses the standard US 4.0 grading scale: A+ and A = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0. Your school may weight plus/minus grades differently.",
+    "benefits": [
+      "Plan your semester: see exactly what each grade does to your GPA before finals.",
+      "Track scholarships and honors cutoffs with a running total.",
+      "Figure out which course deserves your extra study hours - high-credit courses move the needle most.",
+      "Estimate cumulative GPA across semesters by entering all courses at once."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "GPA = total grade points divided by total credits. This calculator multiplies each course's grade points by its credits, adds them up, and divides by the credit total.",
+        "q": "How is GPA calculated?"
+      },
+      {
+        "a": "Yes. Enter courses from all semesters with their grades and credits, and the result is your cumulative GPA. That is exactly how most schools compute it.",
+        "q": "Can I calculate my cumulative GPA across semesters?"
+      },
+      {
+        "a": "Most US schools treat A+ and A as 4.0. Some schools count A+ as 4.3 or ignore it entirely. This calculator uses 4.0 for both, which is the most common convention.",
+        "q": "Is A+ worth more than A?"
+      },
+      {
+        "a": "Usually not. Most schools cap GPA at 4.0 for regular courses. Honors, AP, and IB classes may be weighted up to 5.0 at some schools. Check your school's grading policy.",
+        "q": "Can my GPA go above 4.0?"
+      },
+      {
+        "a": "Roughly: a 3.5 to 4.0 is honors territory, 3.0 to 3.4 is solid, and many programs ask for at least a 2.0 to 2.5 to stay enrolled. Requirements vary by school and major.",
+        "q": "What is a good GPA?"
+      },
+      {
+        "a": "It depends on the scale. On a 4.0 scale, 3.42 is a solid B+ average. On a 10-point Indian CGPA scale, that roughly maps to 8.1 using the common 9.5 multiplier, but conversions are approximate.",
+        "q": "What does a 3.42 GPA mean?"
+      }
+    ],
+    "formula": "GPA = sum of (grade points x credits) / total credits\n\nGrade points (4.0 scale): A+/A = 4.0, A- = 3.7, B+ = 3.3, B = 3.0, B- = 2.7, C+ = 2.3, C = 2.0, C- = 1.7, D+ = 1.3, D = 1.0, F = 0.0\n\nExample: A in a 3-credit course = 4.0 x 3 = 12 grade points.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "For each course, pick the grade from the dropdown and enter its credit hours.",
+      "Add more courses with the Add course button. Remove one with the X button.",
+      "Your GPA updates instantly as you type.",
+      "To get a cumulative GPA, add courses from every semester you have finished."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "GPA = total grade points divided by total credit hours. It is a weighted average, not a simple one.",
+      "Grade points on the 4.0 scale: A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0, with plus/minus steps in between.",
+      "A 4-credit course counts double compared to a 2-credit course.",
+      "GPA is semester-by-semester. Cumulative GPA pools all completed semesters.",
+      "Most schools cap regular-course GPA at 4.0. Weighted scales for honors classes can go to 5.0.",
+      "Failed courses (F = 0 points) still count their credits, which drags the average down hard.",
+      "Dropping a course before the deadline usually removes it from the calculation entirely.",
+      "GPA scales differ worldwide: the US uses 4.0, India often uses a 10-point CGPA, Germany uses 1.0 to 5.0 (reversed)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gpa calculator, grade point average calculator, calculate gpa, college gpa calculator, semester gpa",
+    "labels": {
+      "addCourse": "Add course",
+      "credits": "Credits",
+      "gpa": "Your GPA",
+      "grade": "Grade",
+      "removeCourse": "Remove course",
+      "totalCredits": "Total credits",
+      "totalPoints": "Total grade points"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses the US 4.0 scale. Your school may use different plus/minus values or weighted honors courses.",
+      "Not for non-US grading systems (10-point CGPA, percentage, UK classes) without conversion.",
+      "Official transcripts may treat retaken courses or withdrawals differently.",
+      "This is an estimate. Your registrar's official GPA is the final word."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free GPA calculator: enter your grades and credit hours to get your grade point average on the 4.0 scale. Works for one semester or cumulative GPA. Private, no sign-up.",
+    "metaTitle": "GPA Calculator - Grade Point Average Calculator | JaurTools",
+    "name": "GPA Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "GPA is a weighted average: multiply each grade's points by its credits, add them up, and divide by total credits. For example, an A (4.0) in a 3-credit course plus a B+ (3.3) in a 4-credit course plus a B (3.0) in a 3-credit course gives (12 + 13.2 + 9) / 10 = 3.42 GPA on the 4.0 scale.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your GPA results",
+    "tagline": "Enter grades and credit hours to get your GPA on the 4.0 scale - one semester or cumulative.",
+    "workedExample": "Courses: A (3 credits), B+ (4 credits), B (3 credits).\n1. Grade points: A = 4.0 x 3 = 12; B+ = 3.3 x 4 = 13.2; B = 3.0 x 3 = 9.\n2. Total points = 12 + 13.2 + 9 = 34.2.\n3. Total credits = 3 + 4 + 3 = 10.\n4. GPA = 34.2 / 10 = 3.42.",
+    "workedExampleHeading": "Worked example"
+  }
+}

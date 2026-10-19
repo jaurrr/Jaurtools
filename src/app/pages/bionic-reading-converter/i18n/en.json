@@ -1,0 +1,95 @@
+{
+  "bionic-reading-converter": {
+    "benefits": [
+      "May help you skim long articles faster by guiding your eyes to word beginnings.",
+      "Free alternative to paid speed-reading apps, with no account needed.",
+      "Strength control lets you tune the effect from subtle to strong.",
+      "The downloadable HTML page works offline and in any browser.",
+      "Pasted text stays on your device - nothing is sent to a server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It highlights the first part of each word (the 'fixation') so your eyes can jump from one bold segment to the next. Many readers find this faster for skimming. Scientific evidence is mixed, so treat it as a reading aid, not a proven speed boost.",
+        "q": "How does bionic reading work?"
+      },
+      {
+        "a": "No. The underlying text is unchanged; only the first letters of each word are wrapped in bold tags. Your original wording, spelling, and punctuation stay exactly as you typed them.",
+        "q": "Does it change my text?"
+      },
+      {
+        "a": "Light bolds 30% of each word, Medium 40%, and Strong 50% (minimum one letter). Short words like 'a' or 'is' get just their first letter bolded. Try Medium first and adjust to taste.",
+        "q": "What is the difference between Light, Medium, and Strong?"
+      },
+      {
+        "a": "Yes. The Copy HTML button puts the formatted version on your clipboard, and most editors (Word, Google Docs, email) keep the bold formatting when you paste. The Download button saves a standalone page you can open anywhere.",
+        "q": "Can I use the result in Word or Google Docs?"
+      },
+      {
+        "a": "Yes. Your text is escaped and processed entirely in your browser. It never leaves your device, so private documents stay private.",
+        "q": "Is my text sent anywhere?"
+      },
+      {
+        "a": "The evidence is mixed. Some readers report faster skimming, especially of familiar material; others notice no difference. It works best as a skimming aid for long articles, not as a replacement for careful reading.",
+        "q": "Does bionic reading actually make you read faster?"
+      }
+    ],
+    "formula": "For each word W with length L, at strength ratio R (Light 0.3, Medium 0.4, Strong 0.5):\n  bold letters = max(1, round(L x R))\n  output = <strong>W[0..bold]</strong> + W[bold..]\n\nWhitespace and punctuation are preserved exactly.\n\nExample at Medium (R = 0.4), word 'Reading' (L = 7):\n  bold = max(1, round(7 x 0.4)) = max(1, 3) = 3\n  output = <strong>Rea</strong>ding",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste the article or paragraph you want to read into the input box.",
+      "Pick a strength: Light (30%), Medium (40%), or Strong (50%) of each word bolded.",
+      "The preview updates instantly with word beginnings highlighted.",
+      "Skim the preview here, or copy the HTML to keep the formatting elsewhere.",
+      "Download the standalone HTML page if you want to read it later offline."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Bionic reading bolds the first letters of each word to guide your eyes while skimming.",
+      "Your brain recognises familiar words from their beginnings, so the bold part acts like a stepping stone.",
+      "This tool bolds a fixed share of each word: 30%, 40%, or 50% depending on strength.",
+      "Punctuation and spacing are preserved exactly - only bold tags are added.",
+      "The effect is a reading aid; it does not change the meaning or content of your text.",
+      "Everything runs locally in your browser, so private text never leaves your device."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bionic reading, bionic reading converter, speed reading tool, bold text reader, skim reading aid, fixation reading",
+    "labels": {
+      "clearButton": "Clear",
+      "copiedLabel": "Copied",
+      "copyHtmlButton": "Copy HTML",
+      "downloadHtmlButton": "Download .html",
+      "inputLabel": "Text to convert",
+      "inputPlaceholder": "Paste an article or paragraph here...",
+      "lightOpt": "Light",
+      "mediumOpt": "Medium",
+      "outputLabel": "Bionic preview",
+      "previewNote": "Your original text is unchanged - only the beginnings of words are bolded.",
+      "strengthLabel": "Bold strength",
+      "strongOpt": "Strong"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Speed benefits are anecdotal; studies have not proven bionic reading works for everyone.",
+      "It helps skimming, not deep comprehension - dense material still needs slow reading.",
+      "Very short words gain almost nothing, since only one letter can be bolded.",
+      "Copied HTML keeps bold tags only; font sizes and colours from other editors are not carried over."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free bionic reading converter: bold the beginnings of words to skim text faster. Adjustable strength, live preview, copy HTML or download. Private, browser-only.",
+    "metaTitle": "Bionic Reading Converter - Speed Read Text | JaurTools",
+    "name": "Bionic Reading Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Bionic reading bolds the first letters of each word so your eyes can hop from one bold segment to the next while skimming. Paste your text, choose Light (30%), Medium (40%), or Strong (50%) bolding, and the preview updates instantly. For example, at Medium strength the word 'Reading' becomes 'Rea' bold plus 'ding'. Your text itself is never changed, only bold tags are added, and everything happens in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Bionic Reading Converter results",
+    "tagline": "Rewrite text with bolded word-starts so you can skim it faster.",
+    "workedExample": "Input: 'The quick fox'\nStrength: Medium (40% of each word bolded)\n\nStep by step:\n1. Word 'The' (3 letters): bold = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>T</strong>he'\n2. Word 'quick' (5 letters): bold = max(1, round(5 x 0.4)) = max(1, 2) = 2 -> '<strong>qu</strong>ick'\n3. Word 'fox' (3 letters): bold = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>f</strong>ox'\n\nRendered preview shows: T(he) qu(ick) f(ox) with the bracketed starts in bold.\nOriginal text is untouched - only bold markup is added.",
+    "workedExampleHeading": "Worked example"
+  }
+}

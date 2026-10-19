@@ -1,0 +1,163 @@
+<div class="tool-page persona-canvas">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" appPasteDrop aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label class="file-label" for="collage-file">
+          <app-icon name="upload" />
+          {{ t('labels.uploadLabel') }}
+          <input id="collage-file" type="file" accept="image/*" multiple (change)="onFilesSelected($event)" />
+        </label>
+      </div>
+
+      @if (fileError()) {
+        <p class="error" role="alert">{{ fileError() }}</p>
+      }
+
+      <div class="field">
+        <label for="collage-layout">{{ t('labels.layout') }}</label>
+        <select id="collage-layout" [ngModel]="layout()" (ngModelChange)="setLayout($event)">
+          <option value="2side">{{ layoutLabel('2side') }}</option>
+          <option value="3grid">{{ layoutLabel('3grid') }}</option>
+          <option value="2x2">{{ layoutLabel('2x2') }}</option>
+          <option value="1plus2">{{ layoutLabel('1plus2') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="collage-gap">{{ t('labels.gap') }}</label>
+        <div class="input-row">
+          <input id="collage-gap" type="number" inputmode="numeric" min="0" max="60" step="1"
+            [ngModel]="gap()" (ngModelChange)="setGap($event)" />
+          <input type="range" min="0" max="60" step="1" [ngModel]="gap()"
+            (ngModelChange)="setGap($event)" [attr.aria-label]="t('labels.gap')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="collage-bg">{{ t('labels.bgColor') }}</label>
+        <div class="color-row">
+          <input id="collage-bg" type="color" [ngModel]="bgColor()"
+            (ngModelChange)="setBgColor($event)" />
+          <input type="text" maxlength="7" [ngModel]="bgColor()"
+            (ngModelChange)="setBgColor($event)" [attr.aria-label]="t('labels.bgColor')" />
+          @if (photoCount()) {
+            <button type="button" class="btn-secondary" (click)="clearPhotos()">
+              {{ t('labels.clearPhotos') }}
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="preview">
+        <canvas #previewCanvas></canvas>
+      </div>
+
+      <div class="results">
+        <div class="result-row total">
+          <span><app-icon name="users" /> {{ t('labels.photos') }}</span>
+          <strong>{{ photoCount() }}</strong>
+        </div>
+      </div>
+
+      <button type="button" class="btn" (click)="download()" [disabled]="photoCount() < 2">
+        <app-icon name="download" /> {{ t('labels.download') }}
+      </button>
+
+      @if (photoCount() < 2) {
+        <p class="hint">{{ t('labels.needPhotos') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

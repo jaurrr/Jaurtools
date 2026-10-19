@@ -1,0 +1,90 @@
+{
+  "sort-numbers": {
+    "benefits": [
+      "Sorts hundreds of numbers instantly — no spreadsheet needed.",
+      "Accepts commas, spaces, new lines and semicolons, so pasting from anywhere just works.",
+      "One-tap copy puts the sorted list straight onto your clipboard.",
+      "Shows count, smallest and largest alongside the sorted result.",
+      "Everything stays in your browser; your data is never uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Separate them with commas, spaces, line breaks or semicolons — any mix works. For example: 42, 7 19;3 all parse as four numbers.",
+        "q": "How should I separate my numbers?"
+      },
+      {
+        "a": "Anything that is not a number is skipped and the tool tells you how many entries were ignored, so a stray word will not break the sort.",
+        "q": "What happens if I paste text by accident?"
+      },
+      {
+        "a": "Duplicates are kept exactly as they appear in the input — sorting only reorders, never removes. Use the statistics calculator if you want a frequency breakdown.",
+        "q": "Are duplicate numbers removed?"
+      },
+      {
+        "a": "Yes — negative numbers and decimals sort correctly: −3, 0.5, 2.75, 10 becomes −3, 0.5, 2.75, 10 in ascending order.",
+        "q": "Does it handle negative numbers and decimals?"
+      },
+      {
+        "a": "Tap the descending button above the results. The same list instantly re-sorts from largest to smallest.",
+        "q": "How do I sort from largest to smallest?"
+      }
+    ],
+    "formula": "Ascending:  sort so that a1 ≤ a2 ≤ ... ≤ an\nDescending: sort so that a1 ≥ a2 ≥ ... ≥ an\n\nThe comparison is numeric (by value), not lexicographic:\n2 < 10 numerically, even though \"10\" < \"2\" as text.\nThis is why a proper numeric sort matters — text sorting would give 10, 2.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your numbers into the box — commas, spaces, new lines or semicolons all work.",
+      "Choose ascending (smallest first) or descending (largest first).",
+      "The sorted list appears instantly below, ready to read.",
+      "Tap Copy to put the sorted list on your clipboard.",
+      "Check the count, smallest and largest values shown underneath."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Numbers are compared by value, not as text — so 2 sorts before 10, unlike alphabetical sorting.",
+      "Separators can be mixed freely: commas, spaces, tabs, new lines and semicolons.",
+      "Anything that is not a number is ignored, and you are told how many entries were skipped.",
+      "Sorting is stable in effect and instant — even a few thousand numbers sort immediately.",
+      "The tool also reports the count, minimum and maximum of your list."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sort numbers, number sorter, sort list ascending descending, order numbers online",
+    "labels": {
+      "ascending": "Ascending",
+      "copied": "Copied!",
+      "copy": "Copy sorted list",
+      "count": "Count",
+      "descending": "Descending",
+      "emptyNote": "Enter at least one number to sort.",
+      "ignoredNote": "Non-numeric entries ignored",
+      "inputLabel": "Numbers to sort",
+      "inputPlaceholder": "Example: 42, 7, 19, 3, 88, 15",
+      "largest": "Largest",
+      "order": "Sort order",
+      "smallest": "Smallest"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only real numbers are sorted — fractions like 1/2 must be written as 0.5.",
+      "Extremely long inputs (tens of thousands of numbers) may slow older phones.",
+      "The tool reorders values; it does not remove duplicates or group them.",
+      "Display rounds very long decimals for readability — the sort itself uses full precision."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free number sorter: paste any list of numbers and sort ascending or descending instantly, with count, min and max. Copy results in one tap.",
+    "metaTitle": "Sort Numbers — Ascending & Descending Number Sorter",
+    "name": "Sort Numbers",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste any list — for example 42, 7, 19, 3, 88, 15 — and get it sorted instantly: 3, 7, 15, 19, 42, 88. Switch between ascending and descending with one tap, and copy the result to your clipboard.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sorted numbers",
+    "tagline": "Paste any list of numbers and sort it ascending or descending in one tap.",
+    "workedExample": "Input:  7, 3, 9, 1\n\nAscending:  1, 3, 7, 9\nDescending: 9, 7, 3, 1\n\nCount: 4, smallest: 1, largest: 9.\n\nMixed separators work too — \"7 3;9\\n1\" sorts exactly the same way.",
+    "workedExampleHeading": "Worked example"
+  }
+}

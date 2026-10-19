@@ -1,0 +1,102 @@
+{
+  "connection-test": {
+    "benefits": [
+      "See instantly whether your device thinks it is online.",
+      "Measure real latency with 5 timed requests.",
+      "Spot unstable connections through the jitter reading.",
+      "Read your connection type (4g, wifi estimate) and downlink speed.",
+      "Diagnose call and game lag with numbers, not guesses."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The page fetches the site's own address five times and times each round trip. The average is your latency to this server. It is a real measurement, but only to this server - a game server across the world will differ.",
+        "q": "What exactly does the ping test measure?"
+      },
+      {
+        "a": "Under 50 ms is excellent, 50 to 100 ms is good, 100 to 200 ms is workable, and above 200 ms feels laggy for calls and games. Mobile networks and long distances raise the number naturally.",
+        "q": "What is a good ping number?"
+      },
+      {
+        "a": "Jitter is how much the ping varies between samples. Low jitter (under 30 ms) means a stable connection. High jitter means the latency jumps around, which causes stuttering in calls even when the average looks fine.",
+        "q": "What is jitter and why does it matter?"
+      },
+      {
+        "a": "The browser only knows what the OS tells it. If the Wi-Fi icon is connected but the router has no internet, the browser may still say online. The ping test is the honest check - if pings fail, you have no working internet.",
+        "q": "The page says online but nothing loads. Why?"
+      },
+      {
+        "a": "The effective type (like 4g or 3g) and downlink speed come from the Network Information API. Not every browser supports it - Firefox and Safari often report Unknown. The ping test works everywhere regardless.",
+        "q": "Why are the connection type and downlink unknown?"
+      },
+      {
+        "a": "This test measures latency only, not throughput. A full speed test needs large downloads from dedicated servers, which does not fit a lightweight privacy-first tool page. Use your ISP's speed test for bandwidth.",
+        "q": "Can this test my download speed?"
+      }
+    ],
+    "formula": "Ping = time for one request to reach the server and come back, in ms.\nAverage = (sample1 + sample2 + sample3 + sample4 + sample5) / 5.\nJitter = average of |sample(n) - sample(n-1)| across samples.\nExample: samples 40, 44, 38, 42, 41 give average 41.0 and jitter 3.8.",
+    "formulaHeading": "How ping and jitter are computed",
+    "homeLabel": "Home",
+    "howTo": [
+      "Read the status pill. It shows Online or Offline from your browser's live signal.",
+      "Check the connection rows: type, estimated downlink, and round-trip time.",
+      "Press Start ping test. Five requests run, about 300 ms apart.",
+      "Read the average, min, max, and jitter. Low average plus low jitter is a healthy connection.",
+      "If pings fail, check your router and cables before blaming the device."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The status pill reflects the browser's live online/offline signal.",
+      "The ping test sends 5 real requests and times each round trip in milliseconds.",
+      "Average ping under 100 ms is good; jitter under 30 ms means the connection is stable.",
+      "Connection type and downlink are estimates from the Network Information API.",
+      "The test measures latency to this site's server, not your full internet speed.",
+      "If all 5 pings fail, the device has no working path to the internet."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "connection test, internet connection test, ping test online, check internet speed latency, online offline test, network latency test",
+    "labels": {
+      "avg": "Average ping",
+      "connectionType": "Connection type",
+      "downlink": "Downlink (estimate)",
+      "jitter": "Jitter",
+      "max": "Slowest ping",
+      "min": "Fastest ping",
+      "no": "No",
+      "offline": "Offline",
+      "online": "Online",
+      "pingFailed": "The ping requests failed. Check your connection and try again.",
+      "pingHint": "Five timed requests to this site's server, about 300 ms apart.",
+      "pingTest": "Latency (ping) test",
+      "rtt": "Round-trip time",
+      "sample": "Sample",
+      "saveData": "Data saver",
+      "startPing": "Start ping test",
+      "testing": "Testing",
+      "unknown": "Unknown",
+      "yes": "Yes"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Measures latency only - not download or upload speed.",
+      "Ping is measured to this site's server; other servers will differ.",
+      "The Network Information API is unsupported in some browsers (rows show Unknown).",
+      "A VPN or proxy changes the route, so the numbers reflect the tunnel, not your raw line."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online connection test: check online/offline status and measure ping latency with jitter. 100% private, no sign-up.",
+    "metaTitle": "Connection Test - Ping & Latency Check | JaurTools",
+    "name": "Connection Test",
+    "privacyNote": "This tool runs 100% in your browser. Your results never leave your device.",
+    "quickAnswer": "The Connection Test shows your browser's live online/offline status plus connection details (type, estimated downlink, round-trip time), then runs a 5-sample ping test against this site's server. Each sample times one request round trip in milliseconds. The average is your latency, and jitter (the average change between samples) shows stability. Under 100 ms average with under 30 ms jitter is a healthy connection.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Connection test results",
+    "tagline": "Check online status and measure real latency with a 5-sample ping test.",
+    "workedExample": "You run the ping test on hotel Wi-Fi:\n1. The status pill shows Online. Connection type reads 4g, downlink 8 Mb/s.\n2. Five samples come back: 120, 135, 118, 142, 125 ms.\n3. Average = (120 + 135 + 118 + 142 + 125) / 5 = 640 / 5 = 128.0 ms.\n4. Jitter = (|135-120| + |118-135| + |142-118| + |125-142|) / 4 = (15 + 17 + 24 + 17) / 4 = 73 / 4 = 18.3 ms.\nVerdict: usable for browsing, but the 128 ms average will feel laggy in fast games.",
+    "workedExampleHeading": "Worked example"
+  }
+}

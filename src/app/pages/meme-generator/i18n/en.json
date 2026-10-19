@@ -1,0 +1,92 @@
+{
+  "meme-generator": {
+    "benefits": [
+      "Makes a classic top-text/bottom-text meme in seconds - no editor needed.",
+      "Live preview shows exactly how the final PNG will look.",
+      "Auto-wrapping keeps long captions inside the image.",
+      "Bold white text with black outline stays readable on any photo.",
+      "Free, instant and fully private - the photo never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The classic meme style is uppercase, which is why the tool uppercases automatically. It is a stylistic choice of the format - your text is rendered in capitals by design.",
+        "q": "Why is my text uppercase?"
+      },
+      {
+        "a": "Keep the punchline short: under 10 words per line reads best. The tool wraps automatically, but short captions hit harder and stay big.",
+        "q": "How long should my meme text be?"
+      },
+      {
+        "a": "Impact is the classic meme font. If it is not installed, the tool falls back to Arial Black, then Arial Narrow Bold, then a bold system font - always heavy and readable.",
+        "q": "What font does it use?"
+      },
+      {
+        "a": "Drag the font size slider up to 120 pixels. If a line is still too long, the tool wraps it - but very long captions will always shrink in impact, so shorten them.",
+        "q": "My text is too long and wraps a lot. What now?"
+      },
+      {
+        "a": "No. There are no bundled templates - upload any image you have the right to use. Never use someone else's copyrighted photo without permission.",
+        "q": "Does it come with meme templates?"
+      }
+    ],
+    "formula": "font size on canvas = slider px x (image width / 600)\nline height = font size x 1.15\ntop text starts 16 px from the top, bottom text 16 px from the bottom.\nExample: 1200 px wide image, 48 px slider:\ncanvas font = 48 x (1200 / 600) = 96 px, line height = 110.4 px.",
+    "formulaHeading": "How the text is sized",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image up to 25 MB - JPG, PNG, WebP, GIF, BMP or SVG.",
+      "Type your top caption and bottom caption.",
+      "Drag the font size slider until the text looks right.",
+      "Keep the black outline on for readability, or switch it off.",
+      "Download the meme as a PNG and share it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Classic meme layout: bold white uppercase text, top and bottom.",
+      "Black outline around the text keeps it readable on busy photos.",
+      "Long captions wrap automatically to fit the image width.",
+      "Font size scales with the image so text proportions stay consistent.",
+      "Output is a PNG at up to 1200 pixels on the long edge.",
+      "Text is limited to 120 characters per line for readable memes."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "meme generator free, make meme online, meme maker with text, add text to meme image, funny meme creator",
+    "labels": {
+      "bottomText": "Bottom caption",
+      "changeFile": "Change file",
+      "chooseFile": "Choose an image",
+      "downloadButton": "Download meme",
+      "fileHint": "JPG, PNG, WebP, GIF, BMP or SVG - up to 25 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 25 MB. Please choose a smaller image.",
+      "fontSize": "Font size",
+      "invalidFile": "That file is not an image. Please choose an image file.",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "outlineHint": "Black outline keeps white text readable on bright photos.",
+      "outlineLabel": "Black text outline",
+      "previewLabel": "Meme preview",
+      "topText": "Top caption"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "No bundled meme templates - you supply the image.",
+      "Text is always uppercase, in the classic meme style.",
+      "The crop is fixed: text sits at the top and bottom only.",
+      "Output is PNG only - convert afterwards if you need JPEG."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free meme generator: add top and bottom captions to any photo with classic bold text, live preview and PNG download. No sign-up, private in your browser.",
+    "metaTitle": "Meme Generator - Make Memes Online Free | JaurTools",
+    "name": "Meme Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload any photo and add classic meme captions: bold white uppercase text with a black outline, top and bottom, with automatic word-wrapping. A live preview shows exactly what downloads. For example, on a 1200-pixel-wide image with the slider at 48, the canvas renders 96-pixel text with 110-pixel line height. Download the result as a PNG - no sign-up, no watermark.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Meme generator results",
+    "tagline": "Add classic top and bottom captions to any photo - then download and share.",
+    "workedExample": "Caption a 1200 x 800 photo with the font slider at 48.\n1. Canvas font = 48 x (1200 / 600) = 96 px bold Impact.\n2. Line height = 96 x 1.15 = 110.4 px.\n3. Top text WHEN YOU REALIZE is one line: drawn at y = 16 with a black stroke of 96 / 12 = 8 px.\n4. A long bottom caption wraps at the 1200 - 40 = 1160 px limit into two lines, drawn upward from y = 800 - 220.8 - 16.\n5. Download photo-meme.png - the classic look, pixel for pixel what the preview showed.",
+    "workedExampleHeading": "Worked example"
+  }
+}

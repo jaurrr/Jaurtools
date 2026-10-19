@@ -1,0 +1,97 @@
+{
+  "guitar-chord-transposer": {
+    "assumptionNote": "Transposition is purely mathematical: every chord root moves by the same number of semitones. It does not rewrite the progression for easier guitar fingerings, and tokens that are not chord names (such as N.C. or lyrics) are left unchanged.",
+    "benefits": [
+      "Move any song into your vocal range in seconds - no manual recalculation.",
+      "Keep every chord extension intact: Am7 becomes Bm7, never a plain Bm.",
+      "Handle slash chords correctly: both the chord and the bass note transpose.",
+      "Copy the result straight into your chord sheet or setlist."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Count semitones between the old key and the new key. From C to D is +2, from G down to E is -3 (or +9). A semitone is one fret on guitar or one key on piano, so +2 means every chord moves up two frets.",
+        "q": "How many semitones do I shift?"
+      },
+      {
+        "a": "In sound, nothing: C# and Db are the same pitch. In notation they differ: sharp keys (G, D, A) conventionally use sharps, flat keys (F, Bb, Eb) use flats. Pick whichever matches the key you are playing in so the chart reads naturally.",
+        "q": "Should I use sharps or flats?"
+      },
+      {
+        "a": "Yes. Write it as C/E and both parts transpose: shifting C/E up 2 semitones gives D/F#. The bass note after the slash moves by exactly the same interval as the chord root.",
+        "q": "Does it handle slash chords like C/E?"
+      },
+      {
+        "a": "No - and that is the point. Transposing Am up 2 semitones gives Bm, F#m7b5 gives G#m7b5. Only the root (and any bass note) moves; the chord quality stays exactly the same.",
+        "q": "Does transposing change minor chords to major?"
+      },
+      {
+        "a": "+12 or -12 semitones is one full octave, so every chord lands back on itself: C becomes C. That is why the control stops at 11 - anything larger just repeats the same results.",
+        "q": "What happens if I shift by 12 semitones?"
+      },
+      {
+        "a": "Any token that does not look like a chord (N.C., lyrics, bar lines typed as words) is passed through unchanged. Check the output once - if a chord came out wrong, it was probably written in a format the parser did not recognise, like a lowercase root.",
+        "q": "Why did one of my chords not transpose?"
+      }
+    ],
+    "formula": "New root = (old root + shift) mod 12\nSemitone map (sharps): C=0, C#=1, D=2, D#=3, E=4, F=5, F#=6, G=7, G#=8, A=9, A#=10, B=11\nExample: G (+7) shifted +2 = (7 + 2) mod 12 = 9 = A.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your chord progression, separated by spaces, commas, or line breaks.",
+      "Set the shift in semitones: positive moves up, negative moves down. Try +2 for a small lift.",
+      "Choose sharp or flat spelling to match the key you are playing in.",
+      "Read the transposed progression and check any unusual chords once.",
+      "Tap Copy and paste the result into your chord sheet."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Transposing moves every chord by the same interval, so the song's character never changes.",
+      "One semitone equals one fret on guitar and one key on piano.",
+      "Chord quality never changes: minor stays minor, sevenths stay sevenths.",
+      "Slash chords transpose both parts: C/E up 2 semitones becomes D/F#.",
+      "Shifting by +12 or -12 is a full octave and returns every chord to itself.",
+      "Enharmonic spellings (C# vs Db) sound identical; the choice is only about readable notation."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "chord transposer, transpose chords, transpose guitar chords, change song key, chord key changer",
+    "labels": {
+      "accidentalLabel": "Note spelling",
+      "chordsLabel": "Chords transposed",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy result",
+      "downLabel": "Shift down one semitone",
+      "emptyOutput": "Type some chords above to see the transposed result.",
+      "flatsOption": "Flats (Db, Eb)",
+      "inputLabel": "Your chord progression",
+      "inputPlaceholder": "Example: C G Am F",
+      "outputLabel": "Transposed progression",
+      "resetLabel": "Reset",
+      "semitonesLabel": "Shift (semitones, -11 to +11)",
+      "sharpsOption": "Sharps (C#, D#)",
+      "upLabel": "Shift up one semitone"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Mathematical transposition only - it will not suggest easier chord voicings for the new key.",
+      "Unrecognised tokens (lyrics, N.C., lowercase roots) are copied through unchanged.",
+      "It does not detect your song's key or warn about chords outside the new key.",
+      "Enharmonic choice is manual: pick sharps or flats to suit the destination key."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free chord transposer: shift any guitar chord progression up or down by semitones. Keeps minors, sevenths, and slash chords intact. Copy the result. No sign-up.",
+    "metaTitle": "Guitar Chord Transposer - Change Any Song's Key | JaurTools",
+    "name": "Guitar Chord Transposer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type your progression and set the shift: C G Am F moved up 2 semitones becomes D A Bm G - every root moves by the same interval while minors, sevenths, and extensions stay exactly as they are. Slash chords transpose both halves (C/E up 2 becomes D/F#). Choose sharp or flat spelling to match your destination key, then copy the result into your chord sheet.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Transposer results",
+    "tagline": "Shift any chord progression up or down by semitones - extensions and slash chords kept intact.",
+    "workedExample": "Transposing Am F C G up 3 semitones (sharp spelling):\n1. Am: A is index 9. (9 + 3) mod 12 = 0 = C. Suffix m stays: Cm.\n2. F: F is index 5. (5 + 3) mod 12 = 8 = G#: G#.\n3. C: C is index 0. (0 + 3) mod 12 = 3 = D#: D#.\n4. G: G is index 7. (7 + 3) mod 12 = 10 = A#: A#.\n5. Result: Cm G# D# A# - the same song, a minor third higher.",
+    "workedExampleHeading": "Worked example"
+  }
+}

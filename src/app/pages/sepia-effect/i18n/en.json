@@ -1,0 +1,86 @@
+{
+  "sepia-effect": {
+    "benefits": [
+      "Give modern digital photos an authentic vintage, old-paper look in one click.",
+      "The intensity slider blends from full color to full sepia for subtle or strong aging.",
+      "Works beautifully on portraits, weddings, and travel shots.",
+      "Runs fully offline; your photos never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the photo and drag the intensity slider. 100% gives the classic full sepia tone; 30–50% gives a gentle warm aging. Press Download to save the PNG or JPG.",
+        "q": "How do I add a sepia effect to a photo?"
+      },
+      {
+        "a": "It uses the standard sepia matrix that maps each pixel toward warm brown tones, then blends with the original according to your intensity setting.",
+        "q": "What formula does the sepia filter use?"
+      },
+      {
+        "a": "Yes — set the intensity to 100% for the strongest vintage effect. Very old-looking results also benefit from a slight posterize or noise afterward.",
+        "q": "Can I make a photo look really old?"
+      },
+      {
+        "a": "No. PNG is lossless and JPG uses high quality (92%). The warm tone is a style choice, not damage.",
+        "q": "Does sepia reduce image quality?"
+      },
+      {
+        "a": "No. The effect is computed pixel-by-pixel in your browser; the photo is never uploaded anywhere.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "R' = 0.393·R + 0.769·G + 0.189·B\nG' = 0.349·R + 0.686·G + 0.168·B\nB' = 0.272·R + 0.534·G + 0.131·B\nout = original + (sepia − original) × intensity",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the photo you want to age.",
+      "Drag the intensity slider and watch the warm vintage tone build up.",
+      "Pick the strength that matches the mood you want.",
+      "Choose PNG or JPG output format.",
+      "Press Download to save the sepia photo."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Sepia remaps every pixel toward warm brown tones using a fixed 3×3 color matrix.",
+      "The intensity slider blends between the original photo (0%) and full sepia (100%).",
+      "Values above 255 are clamped, which is why bright areas go creamy white.",
+      "The effect is applied per pixel, so the original resolution is fully preserved.",
+      "The preview updates live as you drag the slider."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sepia effect, sepia filter, vintage photo effect, old photo look, sepia tone online",
+    "labels": {
+      "download": "Download sepia image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "intensity": "Sepia intensity (%)",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "pickOne": "Choose an image above to apply the sepia effect.",
+      "preview": "Sepia preview",
+      "upload": "Image for sepia effect"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Sepia is a color style only — it cannot add real film grain or scratches.",
+      "The filter is fixed; you cannot tune the exact brown hue.",
+      "Very saturated originals may clip to flat warm areas at 100% intensity.",
+      "Animated GIFs are processed as a single still frame."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Add a sepia effect online for free. Give photos a vintage warm tone with an adjustable intensity slider, live preview, and PNG/JPG download. No signup.",
+    "metaTitle": "Sepia Effect Online Free — Vintage Photo Filter | JaurTools",
+    "name": "Sepia Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and drag the intensity slider to wash it in warm vintage sepia tones. Full strength gives the classic antique look; lower values add just a gentle warmth. Download as PNG or JPG — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sepia results",
+    "tagline": "Wash any photo in warm vintage sepia tones with adjustable intensity.",
+    "workedExample": "Pixel (100, 150, 200) at 100% intensity:\nR' = 0.393×100 + 0.769×150 + 0.189×200 = 39.3 + 115.35 + 37.8 = 192.45 → 192\nG' = 0.349×100 + 0.686×150 + 0.168×200 = 34.9 + 102.9 + 33.6 = 171.4 → 171\nB' = 0.272×100 + 0.534×150 + 0.131×200 = 27.2 + 80.1 + 26.2 = 133.5 → 134\nThe cool blue-gray pixel becomes the warm brown (192, 171, 134).",
+    "workedExampleHeading": "Worked example"
+  }
+}

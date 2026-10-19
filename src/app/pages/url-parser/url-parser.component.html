@@ -1,0 +1,160 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+      <p class="dv-example">
+        <button type="button" class="dv-example-btn" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ tc('tryExample') }}
+        </button>
+        @if (restored()) {
+          <span class="dv-autosave"><app-icon name="refresh-cw" /> {{ tc('restoredNote') }}</span>
+        }
+      </p>
+
+
+
+      <div class="field">
+        <label for="url-input">{{ t('labels.urlLabel') }}</label>
+        <input id="url-input" type="url" dir="ltr" [ngModel]="inputUrl()" (ngModelChange)="setInput($event)"
+          [attr.placeholder]="t('labels.urlPlaceholder')" maxlength="2000" />
+        <div class="actions">
+          <button type="button" class="btn" (click)="parse()"><app-icon name="search" /> {{ t('labels.parseLabel') }}</button>
+          <button type="button" class="btn-ghost" (click)="copyUrl()"><app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</button>
+        </div>
+      </div>
+
+      @if (error() === 'invalid') {
+        <div class="error-box dv-status dv-status-bad" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.invalidLabel') }}</div>
+      } @else if (error() === 'empty') {
+        <div class="error-box dv-status dv-status-bad" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.emptyLabel') }}</div>
+      } @else {
+        <div class="results">
+          <table class="kv-table">
+            <tbody>
+              <tr><th>{{ t('labels.protocolLabel') }}</th><td>{{ parts().protocol }}</td></tr>
+              <tr><th>{{ t('labels.hostLabel') }}</th><td>{{ parts().host }}</td></tr>
+              <tr><th>{{ t('labels.portLabel') }}</th><td>{{ parts().port }}</td></tr>
+              <tr><th>{{ t('labels.pathLabel') }}</th><td>{{ parts().pathname }}</td></tr>
+              <tr><th>{{ t('labels.hashLabel') }}</th><td>{{ parts().hash }}</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="field" style="margin-block-start: 1.25rem;">
+          <span class="field-label">{{ t('labels.paramsLabel') }} ({{ params().length }})</span>
+          @for (p of params(); track $index; let i = $index) {
+            <div class="input-row" style="margin-block-end: 0.5rem;">
+              <input type="text" dir="ltr" [ngModel]="p.key" (ngModelChange)="updateParam(i, 'key', $event)"
+                [attr.aria-label]="t('labels.keyLabel') + ' ' + (i + 1)" maxlength="500" />
+              <input type="text" dir="ltr" [ngModel]="p.value" (ngModelChange)="updateParam(i, 'value', $event)"
+                [attr.aria-label]="t('labels.valueLabel') + ' ' + (i + 1)" maxlength="500" />
+              <button type="button" class="btn-ghost" (click)="removeParam(i)" [attr.aria-label]="t('labels.removeLabel') + ' ' + (i + 1)">
+                <app-icon name="x" />
+              </button>
+            </div>
+          }
+          <div class="actions">
+            <button type="button" class="btn-ghost" (click)="addParam()"><app-icon name="check" /> {{ t('labels.addLabel') }}</button>
+            <button type="button" class="btn" (click)="rebuild()"><app-icon name="refresh-cw" /> {{ t('labels.rebuildLabel') }}</button>
+          </div>
+        </div>
+      }
+
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      @if (t('assumptionNote')) {
+        <p class="note">{{ t('assumptionNote') }}</p>
+      }
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

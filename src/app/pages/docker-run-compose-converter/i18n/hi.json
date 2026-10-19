@@ -1,0 +1,91 @@
+{
+  "docker-run-compose-converter": {
+    "assumptionNote": "सिर्फ आम run फ्लैग कन्वर्ट होते हैं; -d compose key के बजाय docker compose up -d बनता है।",
+    "benefits": [
+      "चल रहे docker run कमांड को सेकंडों में दोहराने योग्य compose फाइल में बदलता है।",
+      "असली कमांड पार्स करता है: कोटेड मान, --flag=value रूप, और संयुक्त शॉर्ट फ्लैग।",
+      "बार-बार आए -p, -e और -v फ्लैग सही YAML सूची एंट्री बनते हैं।",
+      "सर्विस नाम --name से आता है, या इमेज नाम से निकाला जाता है।",
+      "--env-file, --workdir, --user और --network भी अनुवादित होते हैं।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "कमांड इनपुट बॉक्स में पेस्ट करें। टूल इसे टोकनाइज़ करके फ्लैग निकालता है और services ब्लॉक बनाता है। YAML कॉपी करें या docker-compose.yml डाउनलोड करें, फिर docker compose up -d चलाएं।",
+        "q": "अपना docker run कमांड कैसे कन्वर्ट करूं?"
+      },
+      {
+        "a": "यह सर्विस नाम बनता है। --name न दें तो टूल इमेज से निकालता है — जैसे node:20-alpine से सर्विस node बनती है।",
+        "q": "--name क्या बनता है?"
+      },
+      {
+        "a": "-it, --rm, --privileged जैसे सिर्फ-रनटाइम फ्लैग छोड़ दिए जाते हैं क्योंकि compose में इनका समतुल्य नहीं। डिटैच्ड मोड (-d) फाइल चलाते समय docker compose up -d बनता है।",
+        "q": "-it और --rm का क्या होता है?"
+      },
+      {
+        "a": "हां। इमेज नाम के बाद की हर चीज़ कंटेनर कमांड मानी जाती है और command: key के रूप में लिखी जाती है, इसलिए docker run ubuntu bash से command: bash बनता है।",
+        "q": "क्या यह इमेज के बाद का कमांड संभालता है?"
+      },
+      {
+        "a": "टोकनाइज़र सिंगल कोट, डबल कोट और बैकस्लैश एस्केप का सम्मान करता है, इसलिए -e \"API_KEY=abc 123\" में स्पेस बना रहता है। बहुत असामान्य शेल सिंटैक्स फिर भी फेल हो सकता है।",
+        "q": "क्या यह स्पेस वाले कोटेड मान संभालता है?"
+      },
+      {
+        "a": "हर -e environment सूची एंट्री बनता है और हर --env-file env_file एंट्री बनता है। एक ही कमांड में दोनों साथ इस्तेमाल हो सकते हैं।",
+        "q": "-e और --env-file में क्या अंतर रखा गया है?"
+      }
+    ],
+    "formula": "docker run [flags] IMAGE [CMD]\n  --name N      ->  services: { N: }\n  -p H:C        ->  ports: [\"H:C\"]\n  -e K=V        ->  environment: [\"K=V\"]\n  -v H:C        ->  volumes: [\"H:C\"]\n  --restart R   ->  restart: R\n  इमेज के बाद CMD -> command: CMD",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपना docker run कमांड इनपुट बॉक्स में पेस्ट करें।",
+      "पार्स किया सारांश जांचें: सर्विस नाम, इमेज और फ्लैग गिनती।",
+      "जनरेट किया compose YAML देखें।",
+      "आउटपुट कॉपी करें या docker-compose.yml डाउनलोड करें।",
+      "फाइल के साथ docker compose up -d चलाएं।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "docker run फ्लैग लगभग एक-एक compose सर्विस key से जुड़ते हैं।",
+      "-p बनता है ports, -e बनता है environment, -v बनता है volumes।",
+      "इमेज नाम के बाद की हर चीज़ कंटेनर कमांड होती है।",
+      "--name compose सर्विस नाम सेट करता है; न हो तो इमेज नाम इस्तेमाल होता है।",
+      "बैकस्लैश कंटिन्यूएशन वाले मल्टी-लाइन कमांड अपने आप संभल जाते हैं।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "docker run से compose, docker run से docker-compose.yml, docker run कमांड कन्वर्ट करें, run से docker compose",
+    "labels": {
+      "copiedLabel": "कॉपी हुआ",
+      "copyLabel": "कॉपी",
+      "downloadLabel": ".yml डाउनलोड करें",
+      "errorInvalid": "docker run कमांड पार्स नहीं हो सका। कमांड जांचें और दोबारा कोशिश करें।",
+      "flagsLabel": "कन्वर्ट हुए फ्लैग",
+      "imageLabel": "इमेज",
+      "inputLabel": "docker run कमांड",
+      "serviceLabel": "सर्विस नाम"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "सिर्फ-रनटाइम फ्लैग (-it, --rm, --privileged) का कोई compose समतुल्य नहीं, छोड़ दिए जाते हैं।",
+      "--hostname, --ip और --mac-address फिलहाल अनदेखी की जाती हैं।",
+      "build-संबंधी फ्लैग run कमांड पर लागू नहीं होते।",
+      "$(...) जैसे असामान्य शेल एक्सपेंशन evaluate नहीं होते।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "docker run कमांड को ऑनलाइन docker-compose.yml में बदलें। कोई भी docker run कमांड पेस्ट करें और पोर्ट, env var और वॉल्यूम वाली वैध compose फाइल पाएं।",
+    "metaTitle": "Docker Run से Compose कन्वर्टर – मुफ्त ऑनलाइन टूल",
+    "name": "Docker Run से Compose कन्वर्टर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "डेवलपर लंबे docker run कमांड से प्रोटोटाइप बनाते हैं, फिर वही सेटअप टीम के लिए compose फाइल के रूप में चाहिए होता है। यह टूल run कमांड को पार्स करता है — नाम, पोर्ट, एनवायरनमेंट, वॉल्यूम, रिस्टार्ट पॉलिसी और आखिरी कमांड — और समतुल्य docker-compose.yml बनाता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "जनरेट की गई compose फाइल",
+    "tagline": "docker run कमांड पेस्ट करें, तैयार docker-compose.yml पाएं।",
+    "workedExample": "इनपुट:\ndocker run -d --name web -p 8080:80 -e NODE_ENV=production -v /data:/data --restart unless-stopped nginx:1.25\n\nपार्स हुआ: सर्विस web, इमेज nginx:1.25, 1 पोर्ट, 1 env var, 1 वॉल्यूम, रिस्टार्ट unless-stopped।\n\nआउटपुट (docker-compose.yml):\nservices:\n  web:\n    image: \"nginx:1.25\"\n    ports:\n      - \"8080:80\"\n    environment:\n      - \"NODE_ENV=production\"\n    volumes:\n      - \"/data:/data\"\n    restart: unless-stopped\n\nसेव करके docker compose up -d चलाएं — -d फ्लैग up कमांड का विकल्प बन जाता है।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

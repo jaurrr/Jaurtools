@@ -1,0 +1,89 @@
+{
+  "day-of-week-finder": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Day of Week Finder",
+    "tagline": "Find the weekday for any date, plus its ISO week number and day of the year.",
+    "metaTitle": "Day of Week Finder - What Day Was Any Date | JaurTools",
+    "metaDescription": "Enter any date to find its day of the week, ISO week number, day of the year and whether it falls on a weekend. Free, instant, private.",
+    "keywords": "day of week finder, what day of the week, weekday calculator, what day was, iso week number",
+    "quickAnswer": "Type any date and instantly learn its weekday - for example, 18 October 2026 is a Sunday, day 291 of the year, in ISO week 42. The tool also tells you whether it is a weekend and how many days away it is from today.",
+    "keyFacts": [
+      "The weekday comes from modular arithmetic: every date is a fixed number of days from a known reference, and the remainder mod 7 gives the weekday.",
+      "The Gregorian calendar repeats every 400 years, so weekday patterns cycle on a 400-year rhythm.",
+      "ISO weeks start on Monday; week 1 is the week containing the first Thursday of the year.",
+      "Day-of-year runs 1 to 365 (366 in leap years) and is handy for serial numbering and spreadsheets.",
+      "Weekend here means Saturday or Sunday - some countries observe Friday-Saturday weekends instead."
+    ],
+    "howTo": [
+      "Enter any date with the picker or by typing.",
+      "Read the weekday instantly.",
+      "Check the ISO week number for planning and payroll.",
+      "See the day-of-year number and weekend status.",
+      "Use days-from-today to place the date relative to now."
+    ],
+    "formula": "Weekday = (days since a known reference date) mod 7.\nISO week: week 1 = the week with the year's first Thursday; weeks start Monday.\nDay of year = sum of the days in all earlier months + day of month.\nExample: 2026-10-18 -> Sunday, day 291, ISO week 42.",
+    "workedExample": "Date: 18 October 2026.\n1. Day of year: Jan-Sep total 273 days + 18 = day 291.\n2. Weekday: 1 January 2026 was a Thursday; day 291 means 290 days later; 290 mod 7 = 3, so Thursday + 3 = Sunday.\n3. ISO week: the Thursday of that week is 15 October (day 288); (288 - 1) / 7 = 41, so week 42.\n4. Weekend: Sunday -> yes.\n5. Days from today: 0 (it is today).",
+    "benefits": [
+      "Settles 'what day was...' questions for birthdays, anniversaries and history.",
+      "ISO week numbers are essential for European payroll and project planning.",
+      "Instant and offline - faster than flipping a paper calendar.",
+      "Works for any date in the supported range, past or future."
+    ],
+    "limitations": [
+      "Weekend is defined as Saturday-Sunday; regions with Friday-Saturday weekends should interpret accordingly.",
+      "The Gregorian calendar is assumed; dates before its adoption (1582) follow the proleptic Gregorian calendar.",
+      "ISO week numbering has edge cases at year boundaries - 1 January can belong to week 52 of the previous year.",
+      "Very old dates may render inconsistently across browsers."
+    ],
+    "faqs": [
+      {
+        "q": "How can it know the weekday of a date in 1950?",
+        "a": "Calendars are pure math. Counting days from a known reference date and taking the remainder mod 7 gives the weekday for any date, past or future."
+      },
+      {
+        "q": "What is an ISO week number?",
+        "a": "The international week-numbering system: weeks start Monday, and week 1 contains the year's first Thursday. It is standard in Europe for planning and payroll."
+      },
+      {
+        "q": "Why is 1 January sometimes in week 52?",
+        "a": "If 1 January falls on Friday, Saturday or Sunday, it belongs to the last week of the previous ISO year. That is correct ISO behaviour, not a bug."
+      },
+      {
+        "q": "Does it account for different weekend conventions?",
+        "a": "It flags Saturday and Sunday as the weekend. If your country observes Friday-Saturday, treat Friday results accordingly."
+      },
+      {
+        "q": "What calendar does it use for old dates?",
+        "a": "The proleptic Gregorian calendar - the modern rules extended backwards. Dates before October 1582 did not historically use this calendar."
+      },
+      {
+        "q": "Can I find the weekday of my birthday?",
+        "a": "Yes - enter any birthdate. For a full birthday breakdown, try the Birthday Calculator."
+      }
+    ],
+    "resultsHeading": "Day of week results",
+    "labels": {
+      "date": "Date",
+      "weekday": "Day of the week",
+      "weekend": "Weekend",
+      "yes": "Yes",
+      "no": "No",
+      "dayOfYear": "Day of the year",
+      "isoWeek": "ISO week number",
+      "daysFromToday": "Days from today"
+    }
+  }
+}

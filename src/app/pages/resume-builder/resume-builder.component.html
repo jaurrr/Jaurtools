@@ -1,0 +1,190 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="two-fields">
+        <div class="field">
+          <label for="rc-name">{{ t('labels.fullName') }}</label>
+          <input id="rc-name" type="text" [ngModel]="fullName()" (ngModelChange)="fullName.set($event)" />
+        </div>
+        <div class="field">
+          <label for="rc-title">{{ t('labels.jobTitle') }}</label>
+          <input id="rc-title" type="text" [ngModel]="jobTitle()" (ngModelChange)="jobTitle.set($event)" />
+        </div>
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="rc-email">{{ t('labels.email') }}</label>
+          <input id="rc-email" type="email" dir="ltr" [ngModel]="email()" (ngModelChange)="email.set($event)" />
+        </div>
+        <div class="field">
+          <label for="rc-phone">{{ t('labels.phone') }}</label>
+          <input id="rc-phone" type="tel" dir="ltr" [ngModel]="phone()" (ngModelChange)="phone.set($event)" />
+        </div>
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="rc-location">{{ t('labels.location') }}</label>
+          <input id="rc-location" type="text" [ngModel]="location()" (ngModelChange)="location.set($event)" />
+        </div>
+        <div class="field">
+          <label for="rc-website">{{ t('labels.website') }}</label>
+          <input id="rc-website" type="url" dir="ltr" [ngModel]="website()" (ngModelChange)="website.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="rc-summary">{{ t('labels.summary') }}</label>
+        <textarea id="rc-summary" rows="3" [ngModel]="summary()" (ngModelChange)="summary.set($event)"></textarea>
+      </div>
+      <div class="field">
+        <label for="rc-skills">{{ t('labels.skills') }}</label>
+        <textarea id="rc-skills" rows="2" dir="ltr" [ngModel]="skills()" (ngModelChange)="skills.set($event)"></textarea>
+        <p class="note">{{ t('labels.skillsHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="rc-exp">{{ t('labels.experience') }}</label>
+        <textarea id="rc-exp" rows="4" [ngModel]="experience()" (ngModelChange)="experience.set($event)"></textarea>
+      </div>
+      <div class="field">
+        <label for="rc-edu">{{ t('labels.education') }}</label>
+        <textarea id="rc-edu" rows="2" [ngModel]="education()" (ngModelChange)="education.set($event)"></textarea>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.previewHeading') }}</h3>
+      <div class="preview-card">
+        <h4>{{ fullName() }}</h4>
+        <p class="preview-title">{{ jobTitle() }}</p>
+        <p class="preview-contact" dir="ltr">{{ contactLine() }}</p>
+        @if (summary().trim()) {
+          <h5>{{ t('labels.summary') }}</h5>
+          <p>{{ summary() }}</p>
+        }
+        @if (skillsList().length > 0) {
+          <h5>{{ t('labels.skills') }}</h5>
+          <div class="skill-chips">
+            @for (s of skillsList(); track $index) {
+              <span>{{ s }}</span>
+            }
+          </div>
+        }
+        @if (experience().trim()) {
+          <h5>{{ t('labels.experience') }}</h5>
+          <p class="pre">{{ experience() }}</p>
+        }
+        @if (education().trim()) {
+          <h5>{{ t('labels.education') }}</h5>
+          <p class="pre">{{ education() }}</p>
+        }
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="downloadPdf()" [disabled]="generating()">
+          <app-icon name="download" /> {{ t('labels.downloadPdf') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.pdfNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

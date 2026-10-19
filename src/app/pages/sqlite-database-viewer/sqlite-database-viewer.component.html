@@ -1,0 +1,277 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="database" /> {{ t('resultsHeading') }}</h2>
+
+      @if (!dbReady()) {
+        <div class="upload-zone">
+          <app-icon name="upload" />
+          <p>{{ t('labels.uploadHint') }}</p>
+          <div class="btn-row center">
+            <label class="btn" for="sqlite-file">{{ t('labels.browseButton') }}</label>
+            <button type="button" class="btn-ghost" (click)="loadSample()" [disabled]="loading()">
+              {{ t('labels.sampleButton') }}
+            </button>
+          </div>
+          <input id="sqlite-file" type="file" class="visually-hidden"
+            accept=".db,.sqlite,.sqlite3,.db3,.s3db" (change)="onFileSelected($event)" />
+          @if (loading()) {
+            <p class="note">{{ t('labels.statusLoading') }}</p>
+          }
+          @if (error()) {
+            <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+          }
+        </div>
+      } @else {
+        <div class="file-chip">
+          <app-icon name="database" />
+          <span class="file-name">{{ fileName() }}</span>
+          <button type="button" class="icon-btn" (click)="clearDatabase()"
+            [attr.aria-label]="t('labels.clearButton')" [title]="t('labels.clearButton')">
+            <app-icon name="x" />
+          </button>
+        </div>
+
+        @if (tables().length > 0) {
+          <div class="field">
+            <label for="sqlite-table">{{ t('labels.tablesHeading') }}</label>
+            <select id="sqlite-table" [ngModel]="selectedTable()" (ngModelChange)="selectTable($event)">
+              @for (tb of tables(); track tb.name) {
+                <option [value]="tb.name">{{ tb.name }} ({{ tb.rows }})</option>
+              }
+            </select>
+          </div>
+
+          <h3 class="sub-heading">{{ t('labels.schemaHeading') }}</h3>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">{{ t('labels.colName') }}</th>
+                  <th scope="col">{{ t('labels.colType') }}</th>
+                  <th scope="col">{{ t('labels.colNull') }}</th>
+                  <th scope="col">{{ t('labels.colPk') }}</th>
+                  <th scope="col">{{ t('labels.colDefault') }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (c of schema(); track c.name) {
+                  <tr>
+                    <td><strong>{{ c.name }}</strong></td>
+                    <td>{{ c.type || '—' }}</td>
+                    <td>{{ c.nullable ? t('labels.yesLabel') : t('labels.noLabel') }}</td>
+                    <td>{{ c.primaryKey ? t('labels.yesLabel') : t('labels.noLabel') }}</td>
+                    <td>{{ c.defaultValue || '—' }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="sub-heading">{{ t('labels.rowsHeading') }}
+            <span class="muted-count">({{ totalRows() }} {{ t('labels.rowsUnit') }})</span>
+          </h3>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  @for (col of columns(); track col) {
+                    <th scope="col">{{ col }}</th>
+                  }
+                </tr>
+              </thead>
+              <tbody>
+                @for (row of rows(); track $index) {
+                  <tr>
+                    @for (cell of row; track $index) {
+                      <td>
+                        @if (isNull(cell)) {
+                          <span class="null">NULL</span>
+                        } @else {
+                          {{ cellText(cell) }}
+                        }
+                      </td>
+                    }
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <button type="button" class="btn-ghost" (click)="prevPage()" [disabled]="page() <= 1">
+              {{ t('labels.prevPage') }}
+            </button>
+            <span class="page-info">{{ t('labels.pageLabel') }} {{ page() }} {{ t('labels.ofLabel') }} {{ totalPages() }}</span>
+            <button type="button" class="btn-ghost" (click)="nextPage()" [disabled]="page() >= totalPages()">
+              {{ t('labels.nextPage') }}
+            </button>
+            <label class="page-size" for="sqlite-pagesize">
+              {{ t('labels.pageSizeLabel') }}
+              <select id="sqlite-pagesize" [ngModel]="pageSize()" (ngModelChange)="setPageSize($event)">
+                @for (s of pageSizes; track s) {
+                  <option [value]="s">{{ s }}</option>
+                }
+              </select>
+            </label>
+          </div>
+        } @else {
+          <p class="note">{{ t('labels.noTables') }}</p>
+        }
+
+        <h3 class="sub-heading">{{ t('labels.sqlHeading') }}</h3>
+        <div class="field">
+          <label for="sqlite-sql" class="visually-hidden">{{ t('labels.sqlLabel') }}</label>
+          <textarea id="sqlite-sql" class="dv-term-input code" rows="5" spellcheck="false"
+            [ngModel]="sql()" (ngModelChange)="sql.set($event)"
+            [attr.placeholder]="t('labels.sqlPlaceholder')"></textarea>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="runQuery()">
+            <app-icon name="zap" /> {{ t('labels.runButton') }}
+          </button>
+          <button type="button" class="btn-ghost" (click)="sql.set('')">
+            {{ t('labels.clearSqlButton') }}
+          </button>
+        </div>
+
+        @if (queryError()) {
+          <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ queryError() }}</p>
+        }
+
+        @if (queryRan() && !queryError()) {
+          <h3 class="sub-heading">{{ t('labels.queryResultsHeading') }}</h3>
+          @if (queryNote()) {
+            <p class="note">{{ queryNote() }}</p>
+          } @else {
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    @for (col of queryColumns(); track col) {
+                      <th scope="col">{{ col }}</th>
+                    }
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (row of queryRows(); track $index) {
+                    <tr>
+                      @for (cell of row; track $index) {
+                        <td>
+                          @if (isNull(cell)) {
+                            <span class="null">NULL</span>
+                          } @else {
+                            {{ cellText(cell) }}
+                          }
+                        </td>
+                      }
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+            <div class="btn-row">
+              <button type="button" class="btn-ghost" (click)="downloadCsv()">
+                <app-icon name="download" /> {{ t('labels.downloadCsv') }}
+              </button>
+              <button type="button" class="btn-ghost" (click)="copyTsv()">
+                <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copyTsv') }}
+              </button>
+            </div>
+          }
+        }
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+{
+  "pwa-manifest-checker": {
+    "benefits": [
+      "छोटी गलतियां पकड़ता है (गायब 512px आइकन, display में टाइपो) जो चुपचाप इंस्टॉलेबिलिटी तोड़ देती हैं।",
+      "आइकन साइज़, रंग और enum को असली स्पेक से जांचता है — अंदाज़ा नहीं।",
+      "तुरंत आपके ब्राउज़र में चलता है; आपके ऐप का मैनिफेस्ट किसी सर्वर पर अपलोड नहीं होता।",
+      "साफ pass/warn/fail फैसले बताते हैं कि क्या ठीक करना है और क्या सिर्फ सिफारिश है।",
+      "Web App Manifest Generator के साथ जोड़ें — एक ही फ्लो में बनाएं, फिर सत्यापित करें।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "इंस्टॉलेबिलिटी की शर्तें: कम से कम name (या short_name), start_url, display standalone/fullscreen/minimal-ui पर सेट, और 192px व 512px PNG आइकन — HTTPS पर सर्विस वर्कर के साथ। यह चेकर उस सूची के मैनिफेस्ट वाले आधे हिस्से को सत्यापित करता है।",
+        "q": "PWA इंस्टॉलेबल क्या बनाता है?"
+      },
+      {
+        "a": "Android एडैप्टिव आइकन को आकृतियों (गोल, स्क्विर्कल) में ढालता है। maskable आइकन में सुरक्षित पैडिंग होती है ताकि कुछ अहम कटे नहीं। इसके बिना Android आपका आइकन अजीब तरह से काट सकता है — इसलिए चेतावनी है, फेल नहीं।",
+        "q": "चेकर maskable आइकन क्यों चाहता है?"
+      },
+      {
+        "a": "theme_color ब्राउज़र टूलबार और टास्क स्विचर को आपके ब्रांड से रंगता है; background_color ऐप लॉन्च होते समय दिखने वाली स्प्लैश स्क्रीन का बैकग्राउंड है। दोनों सही CSS रंग होने चाहिए।",
+        "q": "theme_color और background_color किस लिए हैं?"
+      },
+      {
+        "a": "पुराने मैनिफेस्ट में id छूटा हो सकता है; आधुनिक ब्राउज़र इसे start_url पर डिफ़ॉल्ट करते हैं। स्पष्ट id की सिफारिश इसलिए है क्योंकि बाद में start_url बदलने पर ब्राउज़र आपके ऐप को नया इंस्टॉल मान लेगा और पुराना खो जाएगा।",
+        "q": "क्या id फ़ील्ड ज़रूरी है?"
+      },
+      {
+        "a": "scope तय करता है कि कौन-से URL आपके ऐप के हैं — इसके बाहर के लिंक ब्राउज़र में खुलते हैं। छोड़ने पर यह मैनिफेस्ट की डायरेक्टरी पर डिफ़ॉल्ट होता है। इसे स्पष्ट सेट करें (आमतौर पर \"/\") ताकि नेविगेशन अनुमानित रहे।",
+        "q": "scope क्या करता है?"
+      },
+      {
+        "a": "यह चेकर मैनिफेस्ट दस्तावेज़ को ही मान्य करता है। पूरी तस्वीर के लिए यह भी पक्का करें कि मैनिफेस्ट आपके HTML से लिंक है (<link rel=\"manifest\">), सही MIME टाइप पर सर्व हो रहा है, HTTPS पर है, और सर्विस वर्कर रजिस्टर्ड है — ये डिज़ाइन से इस टूल की पहुंच से बाहर हैं।",
+        "q": "मेरा मैनिफेस्ट पास है — क्या PWA पक्का इंस्टॉलेबल है?"
+      }
+    ],
+    "formula": "यहां सत्यापित इंस्टॉलेबिलिटी चेकलिस्ट:\n1. name या short_name मौजूद\n2. start_url मौजूद\n3. display {fullscreen, standalone, minimal-ui, browser} में से\n4. icons[] खाली नहीं, 192x192 और 512x512 एंट्री के साथ\n5. theme_color और background_color सही CSS रंग\n6. सिफारिश: scope, id, description, maskable आइकन\nफैसला: pass = ज़रूरी और सही, warn = सिफारिश पर गायब, fail = ज़रूरी पर गायब/गलत।",
+    "formulaHeading": "क्या जांचा जाता है",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपनी मैनिफेस्ट फ़ाइल (आमतौर पर manifest.webmanifest या manifest.json) खोलें और पूरी सामग्री कॉपी करें।",
+      "JSON ऊपर वाले बॉक्स में पेस्ट करें। मान्यकरण तुरंत चलता है — कुछ भी अपलोड नहीं होता।",
+      "गिनती पढ़ें: पास, चेतावनियां और फेल।",
+      "पहले फेल ठीक करें — ये इंस्टॉलेबिलिटी रोकते हैं — फिर चेतावनियां।",
+      "मैनिफेस्ट में समस्याएं ठीक करें, दोबारा पेस्ट करें, और पक्का करें कि सब पास हो गया।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "Web App Manifest एक JSON फ़ाइल है जो ब्राउज़र को आपके ऐप का नाम, आइकन, रंग और लॉन्च का तरीका बताती है।",
+      "इंस्टॉल प्रॉम्प्ट देने से पहले ब्राउज़र खास फ़ील्ड मांगते हैं: name/short_name, start_url, सही display मोड, और 192px + 512px आइकन।",
+      "display फ़ील्ड ऐप विंडो नियंत्रित करता है: fullscreen, standalone (बिना ब्राउज़र UI, ऐप जैसा), minimal-ui या browser।",
+      "आइकन PNG होने चाहिए; maskable purpose वाला वेरिएंट सिफारिश है ताकि Android एडैप्टिव आइकन आपकी आर्टवर्क न काटें।",
+      "theme_color OS टास्क स्विचर और ब्राउज़र UI को रंगता है; background_color लॉन्च के दौरान स्प्लैश स्क्रीन भरता है।",
+      "प्रभावी होने के लिए मैनिफेस्ट आपके HTML से <link rel=\"manifest\" href=\"/manifest.webmanifest\"> द्वारा लिंक होना चाहिए।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "pwa manifest checker, web app manifest validator, manifest.json checker, pwa installability test",
+    "labels": {
+      "badge_fail": "फेल",
+      "badge_pass": "पास",
+      "badge_warn": "चेतावनी",
+      "checkBg": "background_color",
+      "checkDesc": "description",
+      "checkDisplay": "display",
+      "checkIcon192": "192px आइकन",
+      "checkIcon512": "512px आइकन",
+      "checkIcons": "icons ऐरे",
+      "checkId": "id",
+      "checkMaskable": "maskable आइकन",
+      "checkName": "name / short_name",
+      "checkOrientation": "orientation",
+      "checkScope": "scope",
+      "checkStartUrl": "start_url",
+      "checkTheme": "theme_color",
+      "clearButton": "साफ़ करें",
+      "dBgFail": "\"{v}\" सही CSS रंग नहीं है।",
+      "dBgMissing": "गायब — स्प्लैश स्क्रीन सफेद पर डिफ़ॉल्ट होगी।",
+      "dBgOk": "\"{v}\" सही CSS रंग है।",
+      "dDescOk": "विवरण मौजूद है।",
+      "dDescWarn": "गायब — इंस्टॉल डायलॉग और ऐप लिस्टिंग के लिए सिफारिश है।",
+      "dDisplayFail": "\"{v}\" सही display मोड नहीं है। fullscreen, standalone, minimal-ui या browser इस्तेमाल करें।",
+      "dDisplayMissing": "गायब — ब्राउज़र browser पर डिफ़ॉल्ट होगा, जो इंस्टॉलेबल नहीं है।",
+      "dDisplayOk": "\"{v}\" सही इंस्टॉलेबल display मोड है।",
+      "dIcon192Fail": "192x192 आइकन नहीं मिला — इंस्टॉलेबिलिटी के लिए ज़रूरी है।",
+      "dIcon192Ok": "192x192 आइकन मौजूद है।",
+      "dIcon512Fail": "512x512 आइकन नहीं मिला — इंस्टॉलेबिलिटी के लिए ज़रूरी है।",
+      "dIcon512Ok": "512x512 आइकन मौजूद है।",
+      "dIconsFail": "icons ऐरे गायब या खाली है।",
+      "dIconsOk": "{v} आइकन घोषित हैं।",
+      "dIdOk": "id \"{v}\" मौजूद है।",
+      "dIdWarn": "गायब — id start_url पर डिफ़ॉल्ट होगा; URL बदलने पर टिकने के लिए स्पष्ट सेट करें।",
+      "dMaskableOk": "maskable आइकन घोषित है।",
+      "dMaskableWarn": "maskable आइकन नहीं — सिफारिश है ताकि Android एडैप्टिव आइकन आपकी आर्टवर्क न काटें।",
+      "dNameFail": "name और short_name दोनों गायब हैं।",
+      "dNameOk": "\"{v}\" इस्तेमाल हो रहा है।",
+      "dOrientationFail": "\"{v}\" सही orientation मान नहीं है।",
+      "dOrientationOk": "\"{v}\" सही है।",
+      "dScopeOk": "Scope \"{v}\"।",
+      "dScopeWarn": "गायब — मैनिफेस्ट डायरेक्टरी पर डिफ़ॉल्ट होगा; स्पष्ट सेट करें (आमतौर पर \"/\")।",
+      "dStartUrlFail": "start_url गायब है।",
+      "dStartUrlOk": "start_url \"{v}\" है।",
+      "dThemeFail": "\"{v}\" सही CSS रंग नहीं है।",
+      "dThemeMissing": "गायब — ब्राउज़र UI डिफ़ॉल्ट रंगों पर होगा।",
+      "dThemeOk": "\"{v}\" सही CSS रंग है।",
+      "emptyState": "मान्य करने के लिए ऊपर अपना Web App Manifest JSON पेस्ट करें।",
+      "parseError": "यह सही JSON नहीं है। आखिरी कॉमा, गायब उद्धरण या कटी सामग्री जांचें।",
+      "pasteHint": "अपना manifest.webmanifest JSON यहां पेस्ट करें…",
+      "pasteLabel": "Web App Manifest JSON",
+      "summaryFail": "फेल",
+      "summaryPass": "पास",
+      "summaryWarn": "चेतावनियां"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "सिर्फ मैनिफेस्ट दस्तावेज़ मान्य करता है — <link rel=\"manifest\"> टैग, MIME टाइप, HTTPS या सर्विस वर्कर नहीं।",
+      "आपकी आइकन फ़ाइलें लाकर पक्का नहीं कर सकता कि साइज़ सच में घोषित साइज़ से मेल खाते हैं।",
+      "रंग मान्यकरण ब्राउज़र के CSS पार्सर से होता है, इसलिए नतीजे ब्राउज़र के हिसाब से थोड़े अलग हो सकते हैं।",
+      "बहुत असामान्य पर सही मैनिफेस्ट एक्सटेंशन इस चेकर से छूट सकते हैं।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त PWA मैनिफेस्ट चेकर: अपना Web App Manifest JSON पेस्ट करें और आइकन, display मोड, रंग व इंस्टॉलेबिलिटी शर्तें मान्य करें। 100% निजी।",
+    "metaTitle": "PWA Manifest Checker - Web App Manifest मान्य करें | JaurTools",
+    "name": "PWA मैनिफेस्ट चेकर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "अपना Web App Manifest JSON पेस्ट करें और यह चेकर उसे इंस्टॉलेबिलिटी शर्तों पर मान्य करता है: नाम, start_url, display मोड, 192px और 512px आइकन, थीम व बैकग्राउंड रंग, और scope, id व maskable आइकन जैसे सुझाए फ़ील्ड। हर जांच को pass, warn या fail फैसला मिलता है, साथ में सीधी भाषा में बताया जाता है कि क्या ठीक करना है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "मैनिफेस्ट मान्यकरण",
+    "tagline": "Web App Manifest को PWA इंस्टॉलेबिलिटी शर्तों पर मान्य करें।",
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "workedExample": "नमूना मैनिफेस्ट: name Example Tools, short_name ExTools, start_url /, display standalone, theme_color #4f46e5, background_color #ffffff, description मौजूद, दो आइकन (192x192 और 512x512 PNG, एक purpose any maskable के साथ)। scope नहीं, id नहीं।\nटूल से ट्रेस की गई जांचें:\n1. name/short_name: पास — Example Tools इस्तेमाल हो रहा है।\n2. start_url: पास — /।\n3. display: पास — standalone इंस्टॉलेबल है।\n4. icons: पास — 2 घोषित। 192px: पास। 512px: पास। maskable: पास।\n5. theme_color #4f46e5: पास — सही CSS रंग। background_color #ffffff: पास।\n6. scope: चेतावनी — गायब। id: चेतावनी — गायब। description: पास।\nकुल: 10 पास, 2 चेतावनियां, 0 फेल। मैनिफेस्ट इंस्टॉलेबल है; scope और id जोड़ने से चेतावनियां हट जाएंगी।"
+  }
+}

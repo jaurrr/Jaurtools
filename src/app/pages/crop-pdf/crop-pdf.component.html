@@ -1,0 +1,203 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <span class="field-label" id="cr-file-label">{{ t('labels.fileLabel') }}</span>
+        <div class="file-drop fl-drop" role="button" tabindex="0" (click)="fileInput.click()"
+          (keydown.enter)="fileInput.click()" [attr.aria-labelledby]="'cr-file-label'" [class.dragging]="fileDragging()" (dragover)="onDragOverFile($event)" (dragleave)="fileDragging.set(false)" (drop)="onDropFile($event, fileInput)">
+          <app-icon name="upload" />
+          <span>{{ t('labels.chooseFile') }}</span>
+          <small>{{ t('labels.dropHint') }}</small>
+        </div>
+        <input #fileInput id="cr-file" type="file" accept="application/pdf,.pdf" (change)="onFile($event)" hidden />
+        @if (fileName()) {
+          <p class="file-meta"><app-icon name="file-text" /> {{ fileName() }} — {{ t('labels.pagesFound') }}: {{ pageCount() }} — {{ firstW() }} × {{ firstH() }} pt</p>
+        }
+      </div>
+
+      <div class="field check-row">
+        <input id="cr-reset" type="checkbox" [checked]="resetCrop()" (change)="toggleReset()" />
+        <label for="cr-reset">{{ t('labels.resetCropLabel') }}</label>
+      </div>
+
+      @if (!resetCrop()) {
+        <div class="two-inputs">
+          <div class="field">
+            <label for="cr-top">{{ t('labels.topLabel') }}</label>
+            <input id="cr-top" type="number" inputmode="numeric" min="0" max="40" step="1"
+              [ngModel]="top()" (ngModelChange)="setSide('top', $event)" />
+          </div>
+          <div class="field">
+            <label for="cr-bottom">{{ t('labels.bottomLabel') }}</label>
+            <input id="cr-bottom" type="number" inputmode="numeric" min="0" max="40" step="1"
+              [ngModel]="bottom()" (ngModelChange)="setSide('bottom', $event)" />
+          </div>
+        </div>
+        <div class="two-inputs">
+          <div class="field">
+            <label for="cr-left">{{ t('labels.leftLabel') }}</label>
+            <input id="cr-left" type="number" inputmode="numeric" min="0" max="40" step="1"
+              [ngModel]="left()" (ngModelChange)="setSide('left', $event)" />
+          </div>
+          <div class="field">
+            <label for="cr-right">{{ t('labels.rightLabel') }}</label>
+            <input id="cr-right" type="number" inputmode="numeric" min="0" max="40" step="1"
+              [ngModel]="right()" (ngModelChange)="setSide('right', $event)" />
+          </div>
+        </div>
+      }
+
+      <div class="field">
+        <span class="field-label">{{ t('labels.scopeLabel') }}</span>
+        <div class="chip-row" role="group" [attr.aria-label]="t('labels.scopeLabel')">
+          <button type="button" class="chip" [class.active]="scope() === 'all'" (click)="setScope('all')">
+            {{ t('labels.scopeAll') }}
+          </button>
+          <button type="button" class="chip" [class.active]="scope() === 'range'" (click)="setScope('range')">
+            {{ t('labels.scopeRange') }}
+          </button>
+        </div>
+      </div>
+
+      @if (scope() === 'range') {
+        <div class="two-inputs">
+          <div class="field">
+            <label for="cr-from">{{ t('labels.fromLabel') }}</label>
+            <input id="cr-from" type="number" inputmode="numeric" min="1" [max]="pageCount()"
+              [ngModel]="fromPage()" (ngModelChange)="setFrom($event)" />
+          </div>
+          <div class="field">
+            <label for="cr-to">{{ t('labels.toLabel') }}</label>
+            <input id="cr-to" type="number" inputmode="numeric" min="1" [max]="pageCount()"
+              [ngModel]="toPage()" (ngModelChange)="setTo($event)" />
+          </div>
+        </div>
+      }
+
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="crop()" [disabled]="busy() || !fileName()">
+          <app-icon name="ruler" /> {{ busy() ? t('labels.processing') : t('labels.cropBtn') }}
+        </button>
+        <button type="button" class="btn" (click)="reset()">
+          <app-icon name="refresh-cw" /> {{ t('labels.resetBtn') }}
+        </button>
+      </div>
+
+      @if (done()) {
+        <div class="results">
+          <div class="result-row">
+            <span>{{ t('labels.beforeLabel') }}</span>
+            <strong>{{ firstW() }} × {{ firstH() }} pt</strong>
+          </div>
+          <div class="result-row total">
+            <span><app-icon name="ruler" /> {{ t('labels.afterLabel') }}</span>
+            <strong>{{ newW() }} × {{ newH() }} pt</strong>
+          </div>
+          <p class="success" role="status"><app-icon name="check" /> {{ t('labels.successMsg') }}</p>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadBtn') }}
+            </button>
+          </div>
+        </div>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

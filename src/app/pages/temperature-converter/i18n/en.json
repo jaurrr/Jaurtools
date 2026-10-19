@@ -1,0 +1,121 @@
+{
+  "temperature-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Temperature Converter",
+    "tagline": "Convert between Celsius, Fahrenheit and Kelvin with a live reference table.",
+    "metaTitle": "Temperature Converter — °C, °F, K Online",
+    "metaDescription": "Free temperature converter: Celsius, Fahrenheit, Kelvin. Type in any scale, all three update instantly, with a reference table, in your browser.",
+    "keywords": "temperature converter, celsius to fahrenheit, fahrenheit to celsius, celsius to kelvin, f to c",
+    "quickAnswer": "Type a temperature in any of the three scales and the other two update immediately. Temperature uses offset formulas rather than simple ratios, so each field stays in sync with exact conversions like °F = °C × 9/5 + 32.",
+    "keyFacts": [
+      "Celsius sets 0° at water freezing and 100° at water boiling (at sea level).",
+      "Fahrenheit sets 32° at water freezing and 212° at boiling; it is still standard in the US.",
+      "Kelvin starts at absolute zero (−273.15 °C) and is the SI unit for thermodynamics.",
+      "−40° is the point where Celsius and Fahrenheit read the same number.",
+      "A change of 1 kelvin equals a change of 1 degree Celsius; a change of 1 °F is 5/9 of that."
+    ],
+    "howTo": [
+      "Type a temperature into any one of the three fields.",
+      "The other two fields update automatically and instantly.",
+      "Values below absolute zero are not allowed and get clamped.",
+      "Use the reference table to sanity-check common points.",
+      "Copy any field value for use in recipes, weather or lab work."
+    ],
+    "formula": "°F = °C × 9/5 + 32\n°C = (°F − 32) × 5/9\nK = °C + 273.15",
+    "workedExample": "Convert 25 °C to Fahrenheit and Kelvin.\nStep 1: °F = 25 × 9/5 + 32 = 45 + 32 = 77 °F.\nStep 2: K = 25 + 273.15 = 298.15 K.\nAnswer: 25 °C = 77 °F = 298.15 K.",
+    "benefits": [
+      "All three scales live-synced — edit any field.",
+      "Reference table covers absolute zero, freezing, body and boiling points.",
+      "Exact formulas, no rounding until display.",
+      "Useful for cooking, weather, science homework and lab work.",
+      "Private and instant — runs fully in your browser."
+    ],
+    "limitations": [
+      "Display is rounded to 2 decimal places.",
+      "Inputs below absolute zero (−273.15 °C) are clamped, not converted.",
+      "Rankine and Réaumur scales are not included in this version.",
+      "Everyday weather accuracy does not need more than 1 decimal place."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert Celsius to Fahrenheit?",
+        "a": "Multiply by 9/5 and add 32. Example: 20 °C × 9/5 + 32 = 68 °F."
+      },
+      {
+        "q": "What is 0 °F in Celsius?",
+        "a": "(0 − 32) × 5/9 = −17.78 °C."
+      },
+      {
+        "q": "At what temperature are Celsius and Fahrenheit equal?",
+        "a": "At −40°. −40 °C = −40 °F. It is the only point where the two scales agree."
+      },
+      {
+        "q": "What is absolute zero?",
+        "a": "0 K = −273.15 °C = −459.67 °F. It is the lowest temperature physically possible; nothing can be colder."
+      },
+      {
+        "q": "When should I use Kelvin?",
+        "a": "Kelvin is used in science and engineering because it starts at absolute zero, which makes gas laws and thermodynamic formulas work without offsets."
+      },
+      {
+        "q": "Is my input sent anywhere?",
+        "a": "No. All conversion happens inside your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Temperature conversion results",
+    "labels": {
+      "celsiusLabel": "Celsius (°C)",
+      "fahrenheitLabel": "Fahrenheit (°F)",
+      "kelvinLabel": "Kelvin (K)",
+      "resultLabel": "All scales",
+      "hintLabel": "Type in any field — the other two update automatically.",
+      "referenceLabel": "Common reference points",
+      "pointLabel": "Point"
+    },
+    "referencePoints": [
+      {
+        "label": "Absolute zero",
+        "c": -273.15,
+        "f": -459.67,
+        "k": 0
+      },
+      {
+        "label": "Water freezes",
+        "c": 0,
+        "f": 32,
+        "k": 273.15
+      },
+      {
+        "label": "Room temperature",
+        "c": 20,
+        "f": 68,
+        "k": 293.15
+      },
+      {
+        "label": "Human body",
+        "c": 37,
+        "f": 98.6,
+        "k": 310.15
+      },
+      {
+        "label": "Water boils",
+        "c": 100,
+        "f": 212,
+        "k": 373.15
+      }
+    ]
+  }
+}

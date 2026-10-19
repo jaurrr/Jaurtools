@@ -1,0 +1,111 @@
+{
+  "pdf-metadata-editor": {
+    "name": "PDF Metadata Editor",
+    "tagline": "Read and rewrite a PDF's hidden document properties — title, author, keywords and more.",
+    "metaTitle": "PDF Metadata Editor — Edit Title, Author, Keywords Online Free | JaurTools",
+    "metaDescription": "View and edit PDF metadata online for free: title, author, subject, keywords, creator, producer. See current values live, then save a new PDF. Private in-browser tool.",
+    "keywords": "pdf metadata editor, edit pdf metadata, pdf properties editor, change pdf title author, pdf keywords editor",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Document properties",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Open a PDF to see its hidden document properties — title, author, subject, keywords, creator, producer, plus creation date and page count — edit any field, and save a new PDF with your updated metadata. Your original stays untouched.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "PDF metadata lives in the document's Info dictionary: title, author, subject, keywords, creator, producer.",
+      "The tool shows current values live before you change anything.",
+      "Keywords are stored as a list — separate them with commas.",
+      "The creation date is shown read-only and never changes; saving stamps a fresh modification date, like any editor would.",
+      "Saving produces a new PDF — your original file is never modified."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Upload your PDF (up to 50 MB).",
+      "Review the current metadata shown in the readout panel.",
+      "Edit the fields you want to change; a badge counts your edits.",
+      "Keep \"preserve original producer\" on if you do not want the producer field touched.",
+      "Click Save, then download the new PDF."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "keywords_out = split(keywords_in, ',') → trim → drop empties\n\nThere is no math here — metadata is a set of key/value text entries in the PDF's Info dictionary. The tool reads each entry with getTitle()/getAuthor()/…, and writes them back with the matching setters before saving.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A report exported as \"Microsoft Word - Document1\" with an empty author: open it, see Title = \"Microsoft Word - Document1\", Author = (empty). Type Title = \"Q3 Sales Report 2026\", Author = \"Jauhar Ayyub\", Keywords = \"sales, Q3, report\". Save — the new PDF carries clean, searchable properties in every PDF reader's document-properties dialog.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "See exactly what hidden data your PDF carries before sharing it.",
+      "Fix ugly auto-generated titles from Word and printers in seconds.",
+      "Add keywords that help desktop search and document managers find your file.",
+      "Scrub identifying metadata by clearing every field.",
+      "Fully local — metadata often contains sensitive names and stays on your device."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Only standard Info-dictionary fields are editable; XMP metadata streams are left as-is.",
+      "Creation/modification dates can't be edited — only displayed.",
+      "Some readers cache old metadata; reopen the new file to verify.",
+      "Password-protected PDFs must be unlocked first."
+    ],
+    "privacyNote": "Metadata can contain personal names — that is exactly why this tool runs 100% in your browser. Nothing is uploaded, and the original file is never altered.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is PDF metadata?",
+        "a": "Hidden document properties stored inside the PDF: title, author, subject, keywords, and the software that created it. PDF readers show them under File → Properties."
+      },
+      {
+        "q": "Why would I edit it?",
+        "a": "Exports often carry ugly titles like \"Microsoft Word - Document1\" or leak author names. Clean metadata looks professional and helps search tools index your document."
+      },
+      {
+        "q": "Does editing change my original file?",
+        "a": "No. The tool loads your PDF, writes the new values into a copy, and you download that copy. Your original stays exactly as it was."
+      },
+      {
+        "q": "What does \"preserve original producer\" do?",
+        "a": "Every PDF save stamps a Producer field. With the option on, the tool writes back the original producer value instead of replacing it, keeping the file's history intact."
+      },
+      {
+        "q": "Can I remove metadata completely?",
+        "a": "Yes — use \"Clear all\" to empty every field, then save. The creation date stays as-is (editors can't rewrite history) and a fresh modification date is stamped, which is standard behavior."
+      },
+      {
+        "q": "Will Google see the new metadata?",
+        "a": "Search engines can read PDF metadata, so accurate titles and keywords genuinely help your document get found — one more reason to set them properly."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "fileLabel": "PDF file",
+      "fileHint": "PDF up to 50 MB · original is never modified",
+      "pagesLabel": "pages",
+      "changedLabel": "changed",
+      "currentHeading": "Current metadata",
+      "emptyValue": "—",
+      "editHeading": "Edit metadata",
+      "fTitle": "Title",
+      "fAuthor": "Author",
+      "fSubject": "Subject",
+      "fKeywords": "Keywords",
+      "fCreator": "Creator",
+      "fProducer": "Producer",
+      "fCreated": "Created",
+      "fModified": "Modified",
+      "keywordsHint": "Separate multiple keywords with commas",
+      "preserveProducer": "Preserve original Producer value",
+      "saveButton": "Save metadata",
+      "resetButton": "Reset",
+      "clearButton": "Clear all",
+      "downloadButton": "Download PDF",
+      "busy": "Saving…",
+      "statusSaved": "Metadata saved — download your PDF.",
+      "statusReset": "Fields reset to current values.",
+      "statusCleared": "All fields cleared.",
+      "errType": "Please choose a valid PDF file.",
+      "errSize": "File is larger than 50 MB.",
+      "errRead": "Could not read this PDF.",
+      "errBuild": "Could not save the PDF."
+    }
+  }
+}

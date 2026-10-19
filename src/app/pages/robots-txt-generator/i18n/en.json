@@ -1,0 +1,99 @@
+{
+  "robots-txt-generator": {
+    "benefits": [
+      "Control which pages search engines crawl without learning robots.txt syntax.",
+      "Blocking admin, cart, and search-result pages keeps your index clean.",
+      "Declaring your sitemap helps Google discover new pages faster.",
+      "The file is generated instantly and uploads to your site root in seconds."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload it to the root of your domain, so it is reachable at https://example.com/robots.txt. The file name must be lowercase robots.txt exactly. Search engines only check that one location.",
+        "q": "Where do I put the robots.txt file?"
+      },
+      {
+        "a": "For all crawlers, use * as the User-agent. For Google only, use Googlebot; for Bing, use Bingbot. Rules are grouped per agent, and this tool groups your rules automatically by the agent name you enter.",
+        "q": "How do I target a specific search engine?"
+      },
+      {
+        "a": "No. robots.txt is a request, not a lock. Well-behaved crawlers obey it, but it does not hide anything from people or bad bots. Anyone can read your robots.txt, so never use it to hide sensitive URLs. Protect those with passwords instead.",
+        "q": "Does robots.txt hide pages from hackers?"
+      },
+      {
+        "a": "A blocked page can still appear in Google's index if other sites link to it; Google just shows the URL without a description. To truly remove a page from results, serve it with a noindex meta tag or an X-Robots-Tag header instead.",
+        "q": "I blocked a page but it still shows in Google. Why?"
+      },
+      {
+        "a": "Test it in Google Search Console under Settings > robots.txt. It shows exactly which URLs your rules block and flags syntax errors. Always test after uploading, because one wrong slash can block your whole site.",
+        "q": "How do I test my robots.txt?"
+      },
+      {
+        "a": "No. Crawl-delay is a non-standard hint that Google ignores. If Google crawls too aggressively, set the crawl rate in Search Console instead. Bing and some smaller crawlers do respect the directive.",
+        "q": "Does Google respect Crawl-delay?"
+      }
+    ],
+    "formula": "User-agent: [bot name or *]\nDisallow: /path-to-block\nAllow: /path-to-allow\nSitemap: https://example.com/sitemap.xml\nRule: most specific match wins; paths are case-sensitive.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Add one rule per path: the user agent (* for all bots), allow or disallow, and the path.",
+      "Block admin areas, carts, and internal search pages. Keep public content allowed.",
+      "Add your sitemap URL so crawlers find it immediately.",
+      "Optionally set a crawl delay for polite crawling.",
+      "Copy or download robots.txt and upload it to your domain root."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "robots.txt is a text file at your domain root that tells search-engine crawlers which pages they may visit.",
+      "User-agent: * targets all crawlers. Named agents like Googlebot target one crawler.",
+      "Disallow: /admin blocks the /admin path and everything under it for that agent.",
+      "Allow explicitly permits paths, useful as an exception inside a blocked area.",
+      "The Sitemap: line points crawlers to your XML sitemap for faster discovery."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "robots.txt generator, robots txt maker, create robots.txt, disallow generator, robots.txt file generator",
+    "labels": {
+      "access": "Access",
+      "accessAllow": "Allow",
+      "accessDisallow": "Disallow",
+      "addRule": "Add rule",
+      "agent": "User agent",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "crawlDelay": "Crawl delay (seconds)",
+      "crawlDelayHint": "0 = omit. A polite pause between crawler requests. Google ignores this directive.",
+      "download": "Download robots.txt",
+      "optionsHeading": "Options",
+      "outputHeading": "Generated robots.txt",
+      "path": "Path",
+      "removeRule": "Remove rule",
+      "ruleLabel": "Rule",
+      "rulesHeading": "Crawl rules",
+      "sitemapLabel": "Sitemap URL",
+      "uploadNote": "Upload as robots.txt to your domain root: https://example.com/robots.txt"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "robots.txt is advisory. It cannot hide pages from people or malicious bots.",
+      "A disallowed page can still be indexed if other sites link to it. Use noindex for removal.",
+      "Google ignores Crawl-delay. It only affects some smaller crawlers.",
+      "Paths are case-sensitive. /Admin and /admin are different paths."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free robots.txt generator: build allow/disallow crawl rules, add your sitemap, and download robots.txt. Copy or download. Private, no sign-up.",
+    "metaTitle": "Robots.txt Generator - Free Crawl Rules Builder | JaurTools",
+    "name": "Robots.txt Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Build a correct robots.txt from a simple form: add allow and disallow rules per user agent, declare your sitemap, and optionally set a crawl delay. Rules group automatically by user agent. Copy the output or download robots.txt and upload it to your domain root.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your robots.txt",
+    "tagline": "Build allow/disallow crawl rules from a form. Add your sitemap, download robots.txt.",
+    "workedExample": "A store owner protects private areas:\n1. Rule 1: User-agent *, Disallow, /admin.\n2. Rule 2: User-agent *, Disallow, /cart.\n3. Rule 3: User-agent *, Allow, /.\n4. Sitemap: https://example.com/sitemap.xml.\n5. The tool generates:\n   User-agent: *\n   Disallow: /admin\n   Disallow: /cart\n   Allow: /\n   Sitemap: https://example.com/sitemap.xml\n6. She uploads it to https://example.com/robots.txt and tests in Search Console.\nCrawlers now skip the admin and cart pages but index the shop.",
+    "workedExampleHeading": "Worked example"
+  }
+}

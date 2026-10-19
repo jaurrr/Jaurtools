@@ -1,0 +1,117 @@
+{
+  "qibla-direction-finder": {
+    "benefits": [
+      "Find your prayer direction anywhere on Earth in one tap.",
+      "Pure spherical math — no maps API, no account, no tracking.",
+      "The compass dial turns the bearing into a direction you can follow.",
+      "Manual coordinates work offline for travel planning."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The bearing is computed with the standard great-circle formula on a spherical Earth, the same math used by navigation software. For the few thousand kilometres most users are from Makkah, the spherical model is accurate to well under a degree — far more precise than a phone compass can display.",
+        "q": "Is this calculation accurate?"
+      },
+      {
+        "a": "The compass needle points along the computed bearing measured clockwise from true north. To face the Qibla, hold your phone flat, let its compass settle, and rotate your body until the needle points straight up (toward the N mark rotated by your bearing). In practice, align yourself with the needle direction on the dial.",
+        "q": "How do I use the compass dial?"
+      },
+      {
+        "a": "No. Your coordinates are used only inside your browser to compute the bearing, and the optional geolocation lookup happens between your browser and your device's location service. Nothing is sent to JaurTools servers — there are none.",
+        "q": "Is my location sent anywhere?"
+      },
+      {
+        "a": "For most purposes, no. Rhumb-line (constant compass heading) and great-circle (shortest path) bearings to Makkah differ by a few degrees at most, and Islamic scholarship overwhelmingly uses the great-circle bearing. This tool uses the great-circle bearing.",
+        "q": "Should I follow a great-circle or rhumb-line bearing?"
+      },
+      {
+        "a": "Near the antipode of Makkah (a point in the South Pacific near French Polynesia), every direction is almost equally toward Makkah and the bearing becomes unstable. If you are within a few hundred kilometres of the antipode, any direction is approximately correct.",
+        "q": "What if I am on the opposite side of the Earth from Makkah?"
+      },
+      {
+        "a": "The tool rounds to the nearest of the 16 compass points (N, NNE, NE, and so on) for a quick reading, but the exact bearing in degrees is always shown — use the degree value when precision matters.",
+        "q": "Why does it show both degrees and a compass point?"
+      }
+    ],
+    "formula": "Great-circle initial bearing to the Kaaba (21.4225°N, 39.8262°E):\nθ = atan2( sin(Δλ), cos(φ1)·tan(φ2) − sin(φ1)·cos(Δλ) )\nbearing = (θ in degrees + 360) mod 360\nφ1, λ1 = your latitude/longitude; φ2 = 21.4225°, Δλ = 39.8262° − λ1.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Tap Use my location, or type your latitude and longitude manually.",
+      "The compass dial rotates its needle to your Qibla bearing instantly.",
+      "Read the exact bearing in degrees and the nearest compass point.",
+      "Use the degree value with a physical compass for the most precise alignment."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The Qibla is the direction Muslims face during prayer: toward the Kaaba in Makkah.",
+      "The Kaaba sits at 21.4225° N, 39.8262° E.",
+      "The bearing is a great-circle (shortest-path) calculation on a spherical Earth.",
+      "From Hyderabad, India, the Qibla bearing is about 282.8° (WNW).",
+      "Bearings are measured clockwise from true north, from 0° to 360°.",
+      "Your location never leaves your browser — the math runs locally."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "qibla direction finder, qibla compass online, prayer direction calculator, kaaba bearing, find qibla",
+    "labels": {
+      "bearing": "Qibla bearing",
+      "cardE": "E",
+      "cardN": "N",
+      "cardS": "S",
+      "cardW": "W",
+      "compass": [
+        "N",
+        "NNE",
+        "NE",
+        "ENE",
+        "E",
+        "ESE",
+        "SE",
+        "SSE",
+        "S",
+        "SSW",
+        "SW",
+        "WSW",
+        "W",
+        "WNW",
+        "NW",
+        "NNW"
+      ],
+      "compassAria": "Compass dial showing the Qibla bearing",
+      "distance": "Distance to Makkah",
+      "geoDenied": "Location permission was denied. Please enter your coordinates manually.",
+      "geoTimeout": "Location lookup timed out. Please enter your coordinates manually.",
+      "geoUnavailable": "Geolocation is not available on this device. Please enter your coordinates manually.",
+      "kaaba": "Kaaba location",
+      "kaabaCoords": "21.4225° N, 39.8262° E",
+      "kmUnit": "km",
+      "latLabel": "Latitude (decimal degrees)",
+      "locating": "Locating...",
+      "lonLabel": "Longitude (decimal degrees)",
+      "manualHint": "Tip: decimal coordinates from any map app work — for example, Hyderabad is 17.385, 78.4867.",
+      "useLocation": "Use my location"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Phone compasses need calibration and are affected by nearby metal — verify with landmarks when it matters.",
+      "The spherical-Earth model ignores terrain; it gives direction, not a line of sight.",
+      "Near the antipode of Makkah the bearing is unstable (any direction is roughly correct).",
+      "Browser geolocation accuracy varies; in cities it is usually within tens of metres."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Qibla direction finder: get the exact great-circle bearing to the Kaaba from your location with a compass dial and distance. Private, no sign-up.",
+    "metaTitle": "Qibla Direction Finder - Prayer Direction Compass | JaurTools",
+    "name": "Qibla Direction Finder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The Qibla direction is the great-circle bearing from your location to the Kaaba in Makkah (21.4225° N, 39.8262° E). From Hyderabad, India (17.385, 78.4867), the bearing is 282.8° — west-northwest — and the distance is about 4,069 km. Tap Use my location or enter coordinates manually, and the compass dial shows your bearing instantly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your Qibla direction",
+    "tagline": "Exact great-circle bearing to the Kaaba from your location — with compass dial and distance.",
+    "workedExample": "From Hyderabad, India (17.385° N, 78.4867° E):\n1. Δλ = 39.8262 − 78.4867 = −38.6605°.\n2. y = sin(−38.6605°) = −0.6247.\n3. x = cos(17.385°)·tan(21.4225°) − sin(17.385°)·cos(−38.6605°) = 0.1413.\n4. θ = atan2(−0.6247, 0.1413) = −77.24° → bearing = 282.76° ≈ 282.8° (WNW).\n5. Haversine distance ≈ 4,069 km.",
+    "workedExampleHeading": "Worked example"
+  }
+}

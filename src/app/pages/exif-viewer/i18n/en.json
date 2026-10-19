@@ -1,0 +1,118 @@
+{
+  "exif-viewer": {
+    "benefits": [
+      "Reveals the hidden story of a photo: camera, lens settings, date, and sometimes GPS location.",
+      "Helps photographers learn — compare your settings against shots you admire.",
+      "Privacy check: see exactly what personal data your photos carry before you share them.",
+      "No EXIF library needed — the parser is hand-written, runs fully offline, and never uploads."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "EXIF (Exchangeable Image File Format) is metadata cameras embed in JPEG files: make, model, exposure settings, date, and sometimes GPS coordinates. It lives in the file's APP1 segment and is invisible in normal viewing.",
+        "q": "What is EXIF data?"
+      },
+      {
+        "a": "GPS tags are optional and most cameras and phones record them only if location services are enabled for the camera. Screenshots, downloads, and social-media uploads almost always have GPS stripped. Absent GPS here usually means it was never recorded or was removed.",
+        "q": "Why is there no GPS data in my photo?"
+      },
+      {
+        "a": "This viewer parses JPEG EXIF segments with a hand-written TIFF reader. It reads camera, exposure, and GPS tags. PNG, GIF, and WebP files show file information only, since they rarely carry EXIF.",
+        "q": "Which file types show EXIF?"
+      },
+      {
+        "a": "Yes — every photo you view is read in your browser's memory and parsed locally. Nothing is sent to any server, which matters because EXIF can contain your home's GPS coordinates.",
+        "q": "Is my photo uploaded anywhere?"
+      },
+      {
+        "a": "Use the Crop Image tool on this site: drawing to a canvas and re-exporting strips EXIF metadata. Alternatively, most phones have a 'remove location' option when sharing photos.",
+        "q": "How do I remove EXIF data before sharing?"
+      },
+      {
+        "a": "Orientation tells viewers how to rotate the photo for correct display (1 = normal, 6 = rotate 90° clockwise, and so on). Phones set this instead of rotating pixels when you hold the phone sideways.",
+        "q": "What does the orientation value mean?"
+      }
+    ],
+    "formula": "Exposure time = numerator / denominator seconds\nF-number = numerator / denominator\nFocal length = numerator / denominator mm\nGPS decimal = degrees + minutes/60 + seconds/3600 (negative for S/W)\nExample: 28° 36' 50\" N = 28 + 36/60 + 50/3600 = 28.613889°",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a photo from your device (up to 20 MB) — JPEG files carry the most metadata.",
+      "The file details (name, size, type, dimensions, megapixels) appear instantly.",
+      "If the photo contains EXIF data, the camera, exposure, and GPS rows appear below.",
+      "Check GPS coordinates carefully before sharing the photo anywhere.",
+      "Press New image to clear everything and inspect another file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Reads EXIF metadata from JPEG files with a hand-written TIFF/EXIF parser — no libraries, no uploads.",
+      "Extracts camera make and model, software, orientation, and capture dates.",
+      "Extracts exposure settings: shutter speed, aperture (f-number), ISO, and focal length.",
+      "Extracts GPS coordinates and converts them to decimal degrees when present.",
+      "Always shows file basics: name, size, MIME type, dimensions, and megapixels.",
+      "Files without EXIF (PNG, screenshots, stripped photos) show file info plus an honest notice."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "exif viewer online, photo metadata viewer, read exif data, image metadata reader, gps exif viewer",
+    "labels": {
+      "exifHeading": "EXIF metadata",
+      "fields": {
+        "dateTime": "Capture date",
+        "dateTimeOriginal": "Original date",
+        "dimensions": "Dimensions",
+        "exifVersion": "EXIF version",
+        "exposureTime": "Shutter speed",
+        "fNumber": "Aperture",
+        "fileName": "File name",
+        "fileSize": "File size",
+        "fileType": "File type",
+        "focalLength": "Focal length",
+        "gpsLatitude": "GPS latitude",
+        "gpsLongitude": "GPS longitude",
+        "iso": "ISO sensitivity",
+        "make": "Camera make",
+        "megapixels": "Megapixels",
+        "model": "Camera model",
+        "orientation": "Orientation",
+        "software": "Software"
+      },
+      "newImage": "New image",
+      "noExif": "No EXIF metadata found in this file. File details are shown above; camera and GPS data may have been stripped or never recorded.",
+      "orientations": {
+        "1": "Normal",
+        "2": "Flip horizontal",
+        "3": "Rotate 180°",
+        "4": "Flip vertical",
+        "5": "Transpose",
+        "6": "Rotate 90° clockwise",
+        "7": "Transverse",
+        "8": "Rotate 270° clockwise"
+      },
+      "sizeError": "That file is larger than 20 MB. Please choose a smaller image.",
+      "typeError": "That file could not be read as an image. Please choose an image file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "EXIF is parsed from JPEG files only; PNG, GIF, and WebP show file information without camera tags.",
+      "HEIC and RAW formats are not supported — browsers cannot decode their metadata here.",
+      "Only common tags are shown; maker notes and proprietary fields are skipped.",
+      "Values are read as stored — incorrect camera clocks produce incorrect dates."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Reveal the hidden story inside any photo: camera, settings, GPS and more. Free, private, in-browser.",
+    "metaTitle": "EXIF Viewer - See Hidden Photo Data | JaurTools",
+    "name": "EXIF Viewer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Choose a photo to reveal its hidden EXIF metadata: camera make and model, shutter speed, aperture, ISO, focal length, capture date, and GPS coordinates. A hand-written parser reads JPEG files locally — nothing is uploaded, ever.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your metadata report",
+    "tagline": "Camera, settings, GPS — revealed.",
+    "workedExample": "You inspect a JPEG from a phone camera.\nEXIF stores ExposureTime as the rational 1/250 and FNumber as 28/10.\nThe viewer shows shutter speed 1/250 s and aperture f/2.8.\nGPSLatitude stores 28° 36' 50\" N, shown as 28.613889° N — check this before sharing the photo.",
+    "workedExampleHeading": "Worked example"
+  }
+}

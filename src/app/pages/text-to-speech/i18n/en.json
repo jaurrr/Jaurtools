@@ -1,0 +1,105 @@
+{
+  "text-to-speech": {
+    "benefits": [
+      "Free forever with no sign-up, no limits, and no audio uploads.",
+      "Fully private: your text never leaves your device.",
+      "Works offline once voices are loaded, using your browser's built-in voices.",
+      "Handy for proofreading: hearing your text read aloud catches typos fast."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Video & Audio",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The tool uses the Web Speech API built into your browser, so no files are sent or stored anywhere. Your text stays on your device.",
+        "q": "Is my text uploaded anywhere?"
+      },
+      {
+        "a": "Voices come from your operating system and browser. Installing extra language packs or voices on your device adds more options here.",
+        "q": "How do I get more voices?"
+      },
+      {
+        "a": "Not directly - the browser plays the speech through your speakers. Use your device's screen recorder or an audio recorder app if you need a file.",
+        "q": "Can I download the speech as audio?"
+      },
+      {
+        "a": "Speech synthesis is designed for clear narration, not music. It reads the characters as spoken words, so a song's rhythm and melody are not reproduced.",
+        "q": "Can it sing or read song lyrics well?"
+      },
+      {
+        "a": "Yes, it works in Chrome, Edge, Safari and Firefox on desktop and mobile. Voice availability varies by device.",
+        "q": "Does it work on mobile?"
+      },
+      {
+        "a": "Yes. Hindi, Arabic and other languages work with the right voice installed. Pick a matching voice from the list for the best pronunciation.",
+        "q": "Does it support Hindi and Arabic?"
+      }
+    ],
+    "formula": "words = text split on whitespace\nestimated_seconds = (words / (150 x rate)) x 60\n(everything happens on-device via the Web Speech API)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste your text into the box (up to 5,000 characters).",
+      "Pick a voice from the list. If the list is empty, your browser will use its default voice.",
+      "Adjust speed (0.5x to 2x), pitch and volume with the sliders.",
+      "Press Speak to hear the text read aloud. Use Pause, Resume and Stop to control playback.",
+      "Try a different voice for another language - a matching voice gives the best pronunciation."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Text to Speech uses the Web Speech API built into every modern browser - no downloads needed.",
+      "Voices are provided by your operating system and browser, not by the website.",
+      "Speed is adjustable from 0.5x (half speed) to 2x (double speed).",
+      "The estimated duration assumes about 150 words per minute at normal speed.",
+      "Punctuation like commas and full stops creates natural pauses in the narration.",
+      "Some browsers need voices to finish loading - if the list is empty, wait a moment or refresh."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "text to speech, tts online free, read text aloud, voice reader, text to voice",
+    "labels": {
+      "charCountLabel": "Characters",
+      "defaultVoice": "Default voice",
+      "durationRow": "Estimated duration",
+      "errEmpty": "Please enter some text to speak.",
+      "errUnsupported": "Your browser does not support speech synthesis. Try Chrome, Edge, Safari or Firefox.",
+      "noVoices": "No voices listed yet. Your browser will use its default voice.",
+      "pauseBtn": "Pause",
+      "pitchLabel": "Pitch",
+      "rateLabel": "Speed",
+      "resumeBtn": "Resume",
+      "secUnit": "sec",
+      "speakBtn": "Speak",
+      "statusIdle": "Idle",
+      "statusPaused": "Paused",
+      "statusRow": "Status",
+      "statusSpeaking": "Speaking",
+      "stopBtn": "Stop",
+      "testNote": "Tip: plug in headphones to judge the voice quality without disturbing others.",
+      "textHint": "Type or paste text here, up to 5,000 characters.",
+      "textLabel": "Text to speak",
+      "voiceLabel": "Voice",
+      "volumeLabel": "Volume",
+      "wordsRow": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Voice quality and language coverage depend on your device and browser.",
+      "Long texts may be cut off by some browsers; keep passages reasonably short.",
+      "The tool cannot save speech as an MP3 file - it plays through your speakers only.",
+      "Emotions and emphasis are limited; narration sounds natural but not human."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online text to speech: type text and hear it read aloud in your browser. Choose voices, speed, pitch and volume. 100% private, no sign-up.",
+    "metaTitle": "Text to Speech Online - Free Voice Reader | JaurTools",
+    "name": "Text to Speech",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type or paste up to 5,000 characters, pick a voice, then press Speak. Your browser reads the text aloud using its built-in speech engine, with adjustable speed, pitch and volume. Pause, resume and stop controls are included, and an estimated reading time is shown.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Voice reader",
+    "tagline": "Type text and hear it read aloud instantly. Free, private, and right in your browser.",
+    "workedExample": "Type a 300-word paragraph and press Speak at 1.0x speed.\nEstimated time = (300 / (150 x 1.0)) x 60 = 120 seconds, or 2 minutes.\nAt 2.0x speed: (300 / (150 x 2.0)) x 60 = 60 seconds, exactly 1 minute.\nThe word counter and estimate update live as you type.",
+    "workedExampleHeading": "Worked example"
+  }
+}

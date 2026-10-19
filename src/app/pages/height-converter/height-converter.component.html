@@ -1,0 +1,227 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="chips" role="group" [attr.aria-label]="t('labels.modeLabel')">
+        <button type="button" [class.active]="mode() === 'convert'" (click)="setMode('convert')">
+          {{ t('labels.convertTab') }}
+        </button>
+        <button type="button" [class.active]="mode() === 'predict'" (click)="setMode('predict')">
+          {{ t('labels.predictTab') }}
+        </button>
+      </div>
+
+      @if (mode() === 'convert') {
+        <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.unitSystem')">
+          <button type="button" [class.active]="unit() === 'metric'" (click)="setUnit('metric')">
+            {{ t('labels.metricTab') }}
+          </button>
+          <button type="button" [class.active]="unit() === 'imperial'" (click)="setUnit('imperial')">
+            {{ t('labels.imperialTab') }}
+          </button>
+        </div>
+
+        @if (unit() === 'metric') {
+          <div class="field">
+            <label for="hpc-cm">{{ t('labels.heightCm') }}</label>
+            <div class="input-row">
+              <input id="hpc-cm" type="number" inputmode="decimal" min="100" max="230" step="0.5"
+                [ngModel]="cm()" (ngModelChange)="setCm($event)" />
+              <input type="range" min="100" max="230" step="0.5" [ngModel]="cm()"
+                (ngModelChange)="setCm($event)" [attr.aria-label]="t('labels.heightCm')" class="calc-range" />
+            </div>
+          </div>
+        } @else {
+          <div class="field">
+            <label>{{ t('labels.imperialTab') }}</label>
+            <div class="height-row">
+              <input type="number" inputmode="numeric" min="3" max="8" step="1"
+                [attr.aria-label]="t('labels.feetLabel')"
+                [ngModel]="feet()" (ngModelChange)="setFeet($event)" />
+              <input type="number" inputmode="decimal" min="0" max="11.9" step="0.1"
+                [attr.aria-label]="t('labels.inchesLabel')"
+                [ngModel]="inches()" (ngModelChange)="setInches($event)" />
+            </div>
+          </div>
+        }
+
+        <div class="results calc-results">
+          <div class="result-row total">
+            <span><app-icon name="ruler" /> {{ t('labels.convertedResult') }}</span>
+            <strong>{{ oneDecimal().format(converted().cm) }} {{ t('labels.heightUnit') }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.feetLabel') }} / {{ t('labels.inchesLabel') }}</span>
+            <strong>{{ converted().feet }}' {{ oneDecimal().format(converted().inches) }}"</strong>
+          </div>
+        </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+      } @else {
+        <div class="field">
+          <label for="hpc-father">{{ t('labels.fatherHeight') }}</label>
+          <input id="hpc-father" type="number" inputmode="decimal" min="120" max="230" step="0.5"
+            [ngModel]="fatherCm()" (ngModelChange)="setFatherCm($event)" />
+        </div>
+
+        <div class="field">
+          <label for="hpc-mother">{{ t('labels.motherHeight') }}</label>
+          <input id="hpc-mother" type="number" inputmode="decimal" min="120" max="230" step="0.5"
+            [ngModel]="motherCm()" (ngModelChange)="setMotherCm($event)" />
+        </div>
+
+        <div class="field">
+          <label>{{ t('labels.childSex') }}</label>
+          <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.childSex')">
+            <button type="button" [class.active]="childSex() === 'boy'" (click)="setChildSex('boy')">
+              {{ t('labels.boy') }}
+            </button>
+            <button type="button" [class.active]="childSex() === 'girl'" (click)="setChildSex('girl')">
+              {{ t('labels.girl') }}
+            </button>
+          </div>
+        </div>
+
+        <div class="results calc-results">
+          <div class="result-row total">
+            <span><app-icon name="ruler" /> {{ t('labels.predictedResult') }}</span>
+            <strong>{{ oneDecimal().format(predicted().base) }} {{ t('labels.heightUnit') }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.likelyRange') }}</span>
+            <strong>{{ oneDecimal().format(predicted().lo) }} - {{ oneDecimal().format(predicted().hi) }} {{ t('labels.heightUnit') }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.feetLabel') }} / {{ t('labels.inchesLabel') }}</span>
+            <strong>{{ ftIn(predicted().base) }}</strong>
+          </div>
+        </div>
+      }
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+
+      <div class="calc-quickrows">
+        <h3>{{ t('labels.quickAnswersTitle') }}</h3>
+        @for (q of quickRows(); track q.q) {
+          <div class="calc-quickrow">
+            <strong dir="ltr">{{ q.q }}</strong>
+            <p dir="ltr">{{ q.a }}</p>
+          </div>
+        }
+      </div>
+
+      <table class="calc-ref-table">
+        <caption>{{ t('labels.refTableTitle') }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ t('labels.cmCol') }}</th>
+            <th scope="col">{{ t('labels.ftInCol') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of refTable(); track r.cm) {
+            <tr>
+              <td dir="ltr">{{ r.cm }}</td>
+              <td dir="ltr"><strong>{{ r.ftin }}</strong></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

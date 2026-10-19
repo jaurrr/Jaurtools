@@ -1,0 +1,117 @@
+{
+  "gif-resizer": {
+    "benefits": [
+      "Private by design — the GIF is decoded, transformed and re-encoded in your browser, never uploaded.",
+      "True frame-level editing: crop, resize, speed and loop are applied to every frame, not just the first.",
+      "Fewer colors (128) plus smaller dimensions can shrink a GIF to a tenth of its size for chats and forums.",
+      "Animated preview of both original and result, with exact before/after sizes."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Video & Audio",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The GIF89a decoder, the frame transforms and the LZW encoder all run locally in your browser. The GIF never leaves your device.",
+        "q": "Is this GIF resizer really free and private?"
+      },
+      {
+        "a": "GIF stores at most 256 colors per frame. Reducing to 128 colors halves the palette data and usually compresses better, with banding visible only in smooth gradients.",
+        "q": "What does the 128 vs 256 colors option do?"
+      },
+      {
+        "a": "The tool multiplies every frame delay by 1 ÷ speed. At 2× a 100 ms delay becomes 50 ms, so the animation plays twice as fast. The GIF format stores delays in hundredths of a second.",
+        "q": "How does the speed change work?"
+      },
+      {
+        "a": "Because every pixel is compared against a new 256-color palette and re-compressed with LZW. A smaller image has fewer pixels to encode, and fewer colors compress better.",
+        "q": "Why does resizing make the file so much smaller?"
+      },
+      {
+        "a": "Transparent pixels are flattened during decoding, so the output has a solid background. If your GIF has transparency, set the crop to avoid transparent areas.",
+        "q": "Does it keep transparency?"
+      },
+      {
+        "a": "The decoder caps images at 4096 × 4096 and the tool caps input at 20 MB to protect your browser tab. For huge GIFs, resize on desktop software first.",
+        "q": "Is there a size limit?"
+      }
+    ],
+    "formula": "New delay = old delay ÷ speed\nOutput pixels = out width × out height\nRaw frame memory = width × height × 4 bytes\nExample: 480 × 270 × 4 = 518,400 bytes per frame",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose GIF and select an animated GIF (max 20 MB). The tool decodes it and shows dimensions, frame count and duration.",
+      "Set the output width in pixels — height follows automatically to keep the aspect ratio.",
+      "Optionally enable Crop and set the x, y, width and height of the region to keep.",
+      "Pick a playback speed (0.25×–4×), a color palette (256 or 128 colors) and looping (infinite or a fixed count).",
+      "Click Apply. Every frame is transformed and re-encoded; then preview the result and download it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Decodes real animated GIFs (GIF89a) in the browser: frames, per-frame delays, disposal methods and loop counts.",
+      "Resize keeps the aspect ratio automatically; crop selects an exact x/y/width/height region.",
+      "Speed multiplies every frame delay: 2× plays twice as fast, 0.5× plays half speed.",
+      "Re-encodes with median-cut color quantization (256 or 128 colors) and LZW compression.",
+      "Loop control: infinite looping or a fixed repeat count written into the NETSCAPE extension."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gif resizer, resize animated gif, crop gif online, compress gif size, change gif speed, gif optimizer free",
+    "labels": {
+      "againBtn": "Resize again",
+      "applyBtn": "Apply changes",
+      "cancelBtn": "Cancel",
+      "changeRow": "Size change",
+      "chooseFile": "Choose GIF",
+      "colors128": "128 colors (smaller)",
+      "colors256": "256 colors (better)",
+      "colorsLabel": "Color palette",
+      "cropH": "Height",
+      "cropLabel": "Enable crop",
+      "cropW": "Width",
+      "cropX": "Left (x)",
+      "cropY": "Top (y)",
+      "dimsRow": "Dimensions",
+      "downloadBtn": "Download",
+      "durationRow": "Duration",
+      "errApply": "Processing failed. Try a smaller GIF or fewer frames.",
+      "errDecode": "Could not decode that GIF. It may be corrupted or use an unsupported extension.",
+      "errNoGif": "Please choose a GIF file first.",
+      "errSize": "The GIF is larger than 20 MB, which is too big for in-browser processing.",
+      "errType": "Please choose a .gif file.",
+      "fileHint": "Animated GIF — max 20 MB. Files stay on your device.",
+      "framesRow": "Frames",
+      "inputSizeRow": "Original size",
+      "loopCount": "Repeat count",
+      "loopInfinite": "Infinite",
+      "loopLabel": "Looping",
+      "originalTitle": "Original GIF",
+      "outputSizeRow": "New size",
+      "progressLabel": "Processing progress",
+      "pxUnit": "px",
+      "readyNote": "GIF decoded. Adjust settings and apply.",
+      "resultTitle": "Resized GIF",
+      "speedLabel": "Playback speed",
+      "widthLabel": "Output width",
+      "workingBtn": "Processing frames"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "GIF supports at most 256 colors per frame — photos lose quality compared to the original.",
+      "Transparency is flattened during decoding; the output has a solid background.",
+      "Very large or long GIFs process slowly because every frame is re-encoded in software.",
+      "Speed is stored in whole hundredths of a second, so extreme slow-motion steps may round slightly."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Resize, crop, change speed and compress animated GIFs free in your browser. Frame-accurate, 256/128 colors, loop control. No uploads.",
+    "metaTitle": "GIF Resizer — Resize, Crop & Compress GIFs Online Free",
+    "name": "GIF Resizer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload an animated GIF and this tool decodes every frame in your browser, then applies your resize, crop, playback-speed and loop settings and re-encodes it with LZW compression. You get a genuine frame-accurate GIF back — smaller, faster or cropped exactly how you want — with nothing ever uploaded to a server.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "GIF Resizer results",
+    "tagline": "Resize, crop, speed up and shrink animated GIFs — frame-accurate, free, in your browser.",
+    "workedExample": "Take a 480 × 270 GIF with 20 frames at 100 ms per frame.\n\nRaw memory = 480 × 270 × 4 bytes = 518,400 bytes per frame\n20 frames = 10,368,000 bytes ≈ 9.9 MB uncompressed\nDuration = 20 × 0.1 s = 2.0 seconds\n\nResize to 240 × 135 (one quarter of the pixels) with 128 colors:\nraw per frame = 240 × 135 × 4 = 129,600 bytes — 4× less data before LZW even starts.\n\nAt 2× speed: new delay = 100 ÷ 2 = 50 ms per frame, duration = 1.0 s.\nTypical result: a file 60–80% smaller that still loops smoothly.",
+    "workedExampleHeading": "Worked example"
+  }
+}

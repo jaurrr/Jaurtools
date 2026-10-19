@@ -1,0 +1,95 @@
+{
+  "curl-fetch-axios-converter": {
+    "assumptionNote": "تُحوَّل أعلام curl الشائعة فقط؛ وتُدرج الأعلام غير المدعومة تحت الملخص بدل إسقاطها بصمت.",
+    "benefits": [
+      "يحوّل مكالمات API المختبرة في الطرفية إلى كود واجهة أمامية في ثوانٍ — دون إعادة كتابة يدوية.",
+      "يُحلّل curl الحقيقي: ترويسات مقتبسة، وأجسام JSON، وبيانات النماذج، والمصادقة الأساسية، والمهلات.",
+      "يُنتج مخرجات fetch وaxios معًا فيناسب أي بنية مشروع.",
+      "يُظهر الترويسات المحظورة في المتصفح (User-Agent وCookie) بتعليقات صادقة بدل كود معطوب.",
+      "مثالي لنقل تجارب Postman أو الطرفية إلى تطبيق ويب."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "يربط المحوّل كل علم بمكافئه: -X يضبط الطريقة، و-H يضيف ترويسات، و-d يضبط الجسم، و-u يصبح ترويسة Authorization أو مصادقة axios، و-m يصبح AbortSignal.timeout أو خيار مهلة axios.",
+        "q": "كيف تُربط أعلام curl بخيارات fetch؟"
+      },
+      {
+        "a": "نعم. يصبح -F name=value استدعاءات formData.append، ويُحوَّل -F file=@path.pdf مع تعليق يوضح أين تضع حقل الملف الخاص بك.",
+        "q": "هل يتعامل مع رفع النماذج متعددة الأجزاء (-F)؟"
+      },
+      {
+        "a": "يُنتج تبويب axios كائن إعداد axios({ method, url, headers, data }). ثبّت axios في مشروعك عبر npm install axios ثم الصق المقتطف داخل دالة async.",
+        "q": "كيف أستخدم مخرجات axios؟"
+      },
+      {
+        "a": "نعم. الصق الأوامر متعددة الأسطر المنسوخة من Chrome DevTools (نسخ كـ cURL) أو الطرفيات — تُعالَج استمرارات الأسطر بالشرطة المائلة تلقائيًا.",
+        "q": "هل يمكنني لصق أوامر curl متعددة الأسطر؟"
+      },
+      {
+        "a": "تُضاف ملاحظة إلى المخرجات بدلًا من ذلك، لأن المتصفحات تحظر ترويسة User-Agent. تعمل هذه الترويسة في Node.js فقط حيث يمكنك ضبطها يدويًا.",
+        "q": "لماذا يوجد تعليق بدل ترويسة وكيل المستخدم -A؟"
+      },
+      {
+        "a": "تُدرج الأعلام غير المدعومة تحت الملخص فلا يُفقد شيء بصمت. الفجوات الشائعة: إعدادات --proxy وشهادات العميل (--cert) ومعرفة --http2 المسبقة.",
+        "q": "ماذا يحدث مع الأعلام التي لا يدعمها المحوّل؟"
+      }
+    ],
+    "formula": "ربط fetch:\n  -X METHOD   -> method: 'METHOD'\n  -H \"N: V\"    -> headers: { 'N': 'V' }\n  -d BODY      -> body: JSON.stringify({...}) أو body: '...'\n  -u U:P       -> 'Authorization': 'Basic ' + btoa('U:P')\n  -m SEC       -> signal: AbortSignal.timeout(SEC * 1000)\n  -F N=V       -> استدعاءات FormData append",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "الصق أمر curl في مربع الإدخال — الأوامر متعددة الأسطر مدعومة.",
+      "تحقق من الملخص المُحلَّل: الطريقة وعنوان URL وعدد الترويسات.",
+      "بدّل بين تبويبي Fetch وAxios لمعاينة كل مخرج.",
+      "انسخ الكود المولّد بزر النسخ.",
+      "الصقه في مشروعك داخل دالة async وعدّله حسب الحاجة."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "تُرمَّز أوامر curl مع احترام علامات الاقتباس المفردة والمزدوجة وشرطات الهروب.",
+      "جسم -d يرقّي الطريقة تلقائيًا من GET إلى POST مطابِقًا سلوك curl.",
+      "تُكتشَف أجسام JSON وتُعاد كتابتها كاستدعاءات JSON.stringify منسقة.",
+      "ينقل -G معلمات البيانات إلى سلسلة استعلام URL بدل الجسم.",
+      "يُرمّز --data-urlencode القيم بالنسبة المئوية تمامًا مثل curl."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "محول curl إلى fetch, curl إلى axios, تحويل curl إلى جافاسكربت, curl إلى fetch أونلاين",
+    "labels": {
+      "axiosTab": "Axios",
+      "copiedLabel": "تم النسخ",
+      "copyLabel": "نسخ",
+      "errorNoUrl": "لم يُعثر على عنوان URL. الصق أمر curl كاملًا يتضمن عنوانه.",
+      "fetchTab": "Fetch",
+      "headersLabel": "الترويسات",
+      "inputLabel": "أمر curl",
+      "inputPlaceholder": "curl -X POST https://api.example.com/users -H \"Content-Type: application/json\" -d '{\"name\":\"Asha\"}'",
+      "methodLabel": "الطريقة",
+      "outputLabel": "صيغة المخرجات",
+      "unsupportedLabel": "أعلام لم تُحوَّل",
+      "urlLabel": "عنوان URL"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "تحظر المتصفحات ترويسات User-Agent وReferer وCookie — فتصبح تعليقات لا كودًا عاملًا.",
+      "لا يوجد مكافئ في المتصفح لـ curl --insecure؛ يتحقق fetch وaxios دائمًا من TLS.",
+      "لا يمكن ترجمة إعدادات الوكيل وشهادات العميل وحزم CA المخصصة.",
+      "الاقتباسات غير المعتادة جدًا أو صياغة الصدفة الخاصة قد لا تُرمَّز بشكل صحيح."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "حوّل أوامر curl إلى كود جافاسكربت fetch أو axios فورًا. الصق أي أمر curl، وعاين الطلب المُحلَّل، وانسخ كودًا نظيفًا عاملًا مجانًا.",
+    "metaTitle": "محول Curl إلى Fetch/Axios – أداة مجانية أونلاين",
+    "name": "محول Curl إلى Fetch/Axios",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "غالبًا ما يختبر المطورون واجهات API في الطرفية باستخدام curl، ثم يحتاجون الطلب نفسه في جافاسكربت. تُحلّل هذه الأداة أمر curl — الطريقة والترويسات والجسم والمصادقة والمهلات — وتُنتج كود fetch() أو axios المكافئ لتلصقه مباشرة في مشروعك.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "الكود المحوَّل",
+    "tagline": "الصق أمر curl واحصل على كود جافاسكربت fetch أو axios نظيف فورًا.",
+    "workedExample": "الإدخال:\ncurl -X POST https://api.example.com/users \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"name\":\"Asha\",\"age\":28}'\n\nالمُحلَّل: الطريقة POST، ترويسة واحدة، جسم JSON مكتشف.\n\nمخرجات Fetch:\nconst response = await fetch('https://api.example.com/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n    \"name\": \"Asha\",\n    \"age\": 28\n  }),\n});\n\nconst data = await response.json();\nconsole.log(data);\n\nمخرجات Axios:\nconst response = await axios({\n  method: 'post',\n  url: 'https://api.example.com/users',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  data: {\n    \"name\": \"Asha\",\n    \"age\": 28\n  },\n});\n\nconsole.log(response.data);",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "css-border-radius-generator": {
+    "benefits": [
+      "Visual sliders remove all guesswork — you see the exact corner shape before copying the CSS.",
+      "Per-corner control unlocks modern shapes like blob cards, asymmetric buttons, and pill badges.",
+      "px and % units cover both fixed components and fully responsive fluid layouts.",
+      "Copy-ready shorthand saves you from memorizing the four-value clockwise order.",
+      "Live preview means fewer round-trips between your editor and the browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The shorthand takes up to four values in clockwise order starting at the top-left: top-left, top-right, bottom-right, bottom-left. With two values, the first applies to top-left and bottom-right, the second to top-right and bottom-left. One value rounds all four corners equally.",
+        "q": "What order do the four border-radius values go in?"
+      },
+      {
+        "a": "Percentages are relative to the element's own dimensions: horizontal radius is a percentage of the width, vertical radius a percentage of the height. That is why border-radius: 50% on a square makes a perfect circle, but on a rectangle makes an ellipse.",
+        "q": "What does border-radius: 50% actually mean?"
+      },
+      {
+        "a": "Yes, with the slash syntax: border-radius: 30px 10px / 10px 30px sets different horizontal and vertical radii, creating elliptical corners. This generator focuses on the common uniform-corner case, which covers the vast majority of designs.",
+        "q": "Can corners be elliptical (different horizontal and vertical radii)?"
+      },
+      {
+        "a": "Absolutely — border-radius works on images, videos, iframes, and any block element. For images, also add display: block or overflow handling if the image has its own background, and remember the corner clips the content, not just the border.",
+        "q": "Does border-radius work on images?"
+      },
+      {
+        "a": "This usually happens when the radius is larger than half the element's smallest side — the browser scales all radii down proportionally so they do not overlap. Reduce the values or check that a percentage radius is not exceeding 50% of the box.",
+        "q": "Why do my corners look different from what I typed?"
+      },
+      {
+        "a": "Yes, overflow: hidden on the parent clips child content to the parent's rounded corners. This is the standard trick for cards with images that should follow the card's rounded shape.",
+        "q": "How do I clip child content to rounded corners?"
+      }
+    ],
+    "formula": "border-radius: <top-left> <top-right> <bottom-right> <bottom-left>;\n\nOrder: clockwise from top-left.\n2 values: 1st → top-left + bottom-right, 2nd → top-right + bottom-left.\nUnits: px for fixed corners, % for fluid corners (relative to element size).\nCircle: border-radius: 50% on a square element.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Drag the four corner sliders to shape each corner independently while watching the live preview.",
+      "Switch between px and % units depending on whether your design is fixed or fluid.",
+      "Fine-tune until the preview matches the shape you want for your card, button, or avatar.",
+      "Copy the generated border-radius shorthand and paste it into your stylesheet.",
+      "Test the result on real content, since corners interact with borders, shadows, and overflow."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The border-radius shorthand accepts one to four values, applied clockwise starting from the top-left corner.",
+      "Each corner can have an independent radius, which is how designers create blob shapes, leaf shapes, and asymmetric cards.",
+      "Pixel values give fixed corners that stay the same at any element size; percentage values scale with the element.",
+      "border-radius: 50% on a square element produces a perfect circle — the classic CSS avatar trick.",
+      "Corners also clip backgrounds, borders, and — with overflow: hidden — child content like images.",
+      "If the combined radii are larger than the element, the browser scales them down proportionally so corners never overlap."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "border radius generator, css border-radius, rounded corners css, per corner radius, css shape generator",
+    "labels": {
+      "bottomLeftLabel": "Bottom-left",
+      "bottomRightLabel": "Bottom-right",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy CSS",
+      "cssOutputLabel": "Your CSS",
+      "downloadButton": "Download .css",
+      "previewLabel": "Live corner preview",
+      "topLeftLabel": "Top-left",
+      "topRightLabel": "Top-right",
+      "unitLabel": "Units"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This generator covers uniform corners only; elliptical corners (separate horizontal/vertical radii with the slash syntax) are not included.",
+      "Percentage previews assume a square box — on a wide rectangle the same percentages render as ellipses.",
+      "Very large radii are scaled down by the browser when they exceed the element's dimensions; the preview shows the intended, not the clamped, shape.",
+      "Output is a single shorthand declaration; it does not generate fallbacks for ancient browsers."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Design per-corner border-radius visually with live preview. Sliders for each corner, px and % units, copy-ready CSS shorthand. Free online tool.",
+    "metaTitle": "CSS Border-Radius Generator — Free Online Tool",
+    "name": "CSS Border-Radius Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Shape each corner of an element independently with four sliders and a live preview, then copy the ready-made border-radius shorthand. Switch between px for fixed designs and % for fluid, responsive corners — no more guessing the clockwise value order.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Border-radius results",
+    "tagline": "Per-corner rounded corners, designed visually.",
+    "workedExample": "Corners: top-left 24px, top-right 4px, bottom-right 24px, bottom-left 4px.\nGenerated CSS:\nborder-radius: 24px 4px 24px 4px;\nValues run clockwise from the top-left, so the top-left and bottom-right corners get the large 24px curve while the other two stay nearly sharp at 4px — a classic asymmetric card look. Switching to % would make the same shape scale with the element's size.",
+    "workedExampleHeading": "Worked example"
+  }
+}

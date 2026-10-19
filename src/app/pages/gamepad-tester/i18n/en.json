@@ -1,0 +1,94 @@
+{
+  "gamepad-tester": {
+    "benefits": [
+      "Test every button and stick on your controller without installing anything.",
+      "Catch a drifting stick or dead button before it ruins a game.",
+      "Compare two controllers side by side with live readings.",
+      "Test the rumble motor if your controller supports it.",
+      "Works with Xbox, PlayStation, and generic USB/Bluetooth controllers."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Press any button on the controller first - browsers only list gamepads after you wake them with a button press. If it still does not appear, check the cable or Bluetooth pairing, and try another port. Some controllers need a driver or firmware update.",
+        "q": "My controller does not show up. What now?"
+      },
+      {
+        "a": "That is stick drift: the potentiometer inside the stick wears out and reports a non-zero rest position. If the axis sits beyond 0.15 at rest, the stick is drifting. Calibration can mask it, but replacement is the real fix.",
+        "q": "An axis shows 0.12 even when I am not touching the stick. Is that drift?"
+      },
+      {
+        "a": "Only if the browser exposes it. Chrome and Edge on desktop support vibrationActuator for many Xbox and PlayStation controllers. Safari and Firefox generally do not. If the rumble button is missing, your browser does not expose the motor.",
+        "q": "Why is there no rumble test button for my controller?"
+      },
+      {
+        "a": "The standard layout has 17 buttons: 1-4 are the face buttons, 5-8 are bumpers and triggers, 9-10 are start/select, 11-12 are stick clicks, 13-16 are the D-pad, and 17 is the home button. Non-standard controllers may map differently.",
+        "q": "What do the button numbers mean?"
+      },
+      {
+        "a": "On Android, Chrome supports gamepads, but the browser may sleep the controller to save power. Keep a button pressed periodically. Also, only wired or properly paired Bluetooth controllers appear - some cheap receivers are invisible to the browser.",
+        "q": "Does this work on my phone?"
+      },
+      {
+        "a": "Two controllers show up as two blocks on this page, each with its own index. Compare their axes at rest - if one stick sits at 0.00 and the other at 0.22, you have found your drifting controller.",
+        "q": "How do I compare two controllers?"
+      }
+    ],
+    "formula": "Buttons = pressed (true) or released (false), read live.\nAxes = stick or trigger position from -1.00 to +1.00.\nRest position should be near 0.00. Drift suspect beyond 0.15.\nFull press of a trigger reads close to 1.00.",
+    "formulaHeading": "What the readings mean",
+    "homeLabel": "Home",
+    "howTo": [
+      "Connect your controller with USB or Bluetooth.",
+      "Press any button on the controller to wake it up for the browser.",
+      "Watch the buttons light up as you press them, one by one.",
+      "Move each stick slowly in a full circle and watch the axes sweep from -1 to 1.",
+      "If your controller supports rumble, press the rumble test button."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Browsers only see a gamepad after you press a button on it - this is a privacy rule.",
+      "Buttons read as pressed or released; axes read as positions from -1.00 to +1.00.",
+      "A stick at rest should read near 0.00. Values beyond 0.15 at rest suggest drift.",
+      "Triggers are axes on most controllers: unpressed reads -1 or 0, fully pressed reads 1.",
+      "The standard mapping has 17 buttons, but non-standard controllers may differ.",
+      "Rumble testing needs the vibrationActuator API, which not every browser exposes."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gamepad tester, controller test online, test xbox controller, test ps5 controller, joystick test, stick drift test",
+    "labels": {
+      "axes": "Analog axes",
+      "axis": "Axis",
+      "button": "Button",
+      "buttons": "Buttons",
+      "gamepad": "Gamepad",
+      "noGamepad": "No gamepad detected",
+      "noGamepadHint": "Connect a controller via USB or Bluetooth, then press any button on it.",
+      "notSupported": "This browser does not support the Gamepad API.",
+      "rumbleOk": "Rumble played for about a second. Did you feel it?",
+      "rumbleTest": "Test rumble",
+      "rumbleUnsupported": "Rumble is not available for this controller in this browser."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The page can only test what the browser exposes; it cannot fix drift or dead buttons.",
+      "Button numbering follows the standard layout - exotic controllers may map differently.",
+      "Rumble support depends on both the browser and the controller driver.",
+      "Wireless latency is not measured here - only button and axis states."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online gamepad tester: check every controller button, analog stick axis, and rumble motor live in your browser. 100% private, no sign-up.",
+    "metaTitle": "Gamepad Tester - Test Controller Buttons & Sticks | JaurTools",
+    "name": "Gamepad Tester",
+    "privacyNote": "This tool runs 100% in your browser. Your controller input never leaves your device.",
+    "quickAnswer": "A gamepad tester reads your controller through the browser's Gamepad API and shows every button lighting up as you press it, plus live axis values for sticks and triggers from -1.00 to +1.00. Press any button first to wake the controller for the browser. A stick that sits beyond 0.15 at rest is drifting. If your controller and browser support it, a rumble test button plays the vibration motor.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Gamepad test results",
+    "tagline": "Test every button, stick, and trigger on your controller - plus rumble where supported.",
+    "workedExample": "You test a controller with a suspect left stick:\n1. You connect it and press A. The gamepad appears with 17 buttons and 4 axes.\n2. At rest, axis 0 reads 0.21 while axis 1 reads 0.02.\n3. Axis 0 is the left stick's horizontal axis, and 0.21 is beyond the 0.15 drift threshold.\n4. Moving the stick in circles sweeps both axes smoothly from -1 to 1, so the sensor works - it just does not centre.\nVerdict: the left stick is drifting and needs replacement or repair.",
+    "workedExampleHeading": "Worked example"
+  }
+}

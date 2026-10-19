@@ -1,0 +1,99 @@
+{
+  "online-timer": {
+    "name": "Online Timer",
+    "tagline": "Count down to zero — or count up from it.",
+    "metaTitle": "Online Timer - Free Countdown Timer & Stopwatch | JaurTools",
+    "metaDescription": "Free online timer: a beeping countdown timer and a precision stopwatch with laps, right in your browser. No signup needed.",
+    "keywords": "countdown timer, online timer, stopwatch, timer with alarm, pomodoro timer",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Date & Time",
+    "quickAnswer": "A countdown timer and a stopwatch in one: set any hours, minutes, and seconds for a beeping countdown, or count up with lap splits. Both are deadline-accurate, work in background tabs, and never send data anywhere.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "The countdown measures against an absolute deadline, so switching tabs or minimizing the browser cannot make it lose time.",
+      "Pause truly freezes time — the deadline shifts forward by exactly the paused duration on resume.",
+      "The stopwatch resolves hundredths of a second, enough for sports training and lab-style timing.",
+      "The finish beep is synthesized live with the Web Audio API — no audio file is downloaded.",
+      "All state lives in the page's memory; a refresh starts everything over."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Pick the Countdown tab, set hours, minutes, and seconds, then press Start.",
+      "Pause freezes the remaining time; Resume continues from the exact frozen value; Reset restores your set duration.",
+      "When it hits zero you get three beeps and a clear 'time's up' state.",
+      "Switch to the Stopwatch tab for count-up timing — Start, Pause, Reset, and Lap for split times.",
+      "Clear laps when you are done; closing the tab wipes everything."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Countdown:\ntotalMs = (h x 3600 + m x 60 + s) x 1000\ndeadline = startTime + totalMs\nremaining = deadline - now   (recomputed every 100 ms)\n\nStopwatch:\nelapsed = accumulated + (now - lastStart)\nLaps record the elapsed value at each tap.",
+    "formulaHeading": "Formula",
+    "workedExample": "Set 1 h 30 m 0 s:\ntotal = 1 x 3600 + 30 x 60 + 0 = 5,400 seconds = 5,400,000 ms\ndeadline = now + 5,400,000 ms\nThe display counts 1:30:00 → 00:00, then beeps three times.\nPause at 1:12:33 freezes remaining = 4,353,000 ms; resume sets a new deadline = now + 4,353,000 ms — not a millisecond lost.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Pomodoro sessions, cooking, workouts, and exams get a reliable countdown with zero setup.",
+      "The stopwatch's lap memory beats scribbling split times on paper.",
+      "Deadline-based math means background tabs cannot make the timer drift.",
+      "No account, no install — it is ready before a native app would finish launching."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "The finish beep needs the tab to be audible — a muted tab or silent device stays silent.",
+      "Very long countdowns (many hours) depend on the device staying awake; aggressive battery savers may pause the page.",
+      "Hundredths on the stopwatch are display resolution; the tab's refresh rate limits what you see, not what is measured.",
+      "Estimates only — not certified for competitions or legal timing."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "a": "Yes. The countdown is computed from an absolute deadline (Date.now()), not by counting ticks, so background throttling cannot make it drift. The display simply refreshes when you return.",
+        "q": "Will the timer keep running if I switch tabs?"
+      },
+      {
+        "a": "Yes — three short beeps through your device's audio, plus a clear on-screen 'time's up' state. Keep the tab unmuted and your volume up.",
+        "q": "Does it make a sound when finished?"
+      },
+      {
+        "a": "Yes: set 25 minutes for focus, then 5 minutes for the break. Pause and resume handle interruptions honestly — paused time never counts down.",
+        "q": "Can I use it as a Pomodoro timer?"
+      },
+      {
+        "a": "It measures with millisecond precision and displays hundredths of a second. The screen refreshes about every 50 ms, but the underlying elapsed value stays exact.",
+        "q": "How accurate is the stopwatch?"
+      },
+      {
+        "a": "No. Up to 50 laps are kept in memory; older ones drop off automatically so the list never grows forever.",
+        "q": "Do laps slow it down?"
+      },
+      {
+        "a": "Yes — once the page has loaded, everything runs locally in your browser with no network needed.",
+        "q": "Does it work offline?"
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Timer results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "clearLaps": "Clear laps",
+      "hours": "Hours",
+      "hoursShort": "h",
+      "lap": "Lap",
+      "laps": "Laps",
+      "minutes": "Minutes",
+      "minutesShort": "m",
+      "mode": "Timer mode",
+      "pause": "Pause",
+      "reset": "Reset",
+      "resume": "Resume",
+      "seconds": "Seconds",
+      "secondsShort": "s",
+      "setDuration": "Set duration",
+      "start": "Start",
+      "tabCountdown": "Countdown",
+      "tabStopwatch": "Stopwatch",
+      "timeUp": "Time's up!"
+    }
+  }
+}

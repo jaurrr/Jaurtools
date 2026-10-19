@@ -1,0 +1,86 @@
+/* Micro-rating widget: "Was this tool useful?" one-tap feedback.
+   Theme-aware, RTL-safe (logical properties), 44px targets. */
+.micro-rating {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-xl);
+  padding: 0.9rem 1rem;
+  margin-block: 1.25rem;
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  text-align: center;
+}
+
+.micro-rating-q {
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.micro-rating-btns {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.micro-rating-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-block-size: 44px;
+  min-inline-size: 44px;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease, transform 0.12s ease,
+    background-color 0.18s ease;
+}
+
+.micro-rating-btn svg {
+  inline-size: 1.1rem;
+  block-size: 1.1rem;
+}
+
+.micro-rating-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.micro-rating-btn:active {
+  transform: scale(0.97);
+}
+
+.micro-rating-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.micro-rating-thanks {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.micro-rating-thanks svg {
+  inline-size: 1.15rem;
+  block-size: 1.15rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .micro-rating-btn {
+    transition: none;
+  }
+  .micro-rating-btn:hover {
+    transform: none;
+  }
+}

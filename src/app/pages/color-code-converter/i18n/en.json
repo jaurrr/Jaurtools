@@ -1,0 +1,91 @@
+{
+  "color-code-converter": {
+    "benefits": [
+      "Paste any color code and get HEX, RGB, RGBA, HSL, HSV and CMYK instantly.",
+      "Understands 3-, 6- and 8-digit HEX, rgb(), rgba(), hsl() and hsla() input.",
+      "Each format has its own copy button for direct use in code.",
+      "A live preview swatch confirms you converted the right color.",
+      "Runs entirely in your browser — private, fast and offline."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An 8-digit HEX like #4f46e580 carries an alpha (opacity) channel in its last two digits. 80 in hex is 128 in decimal, and 128/255 = 0.50, so the color is 50% opaque.",
+        "q": "What is an 8-digit HEX code?"
+      },
+      {
+        "a": "For screens, HEX and RGB are identical in meaning — #ff0000 and rgb(255, 0, 0) are the same color. Use HEX for compactness in CSS, RGB when you need to read or compute channels, and RGBA when transparency is involved.",
+        "q": "Should I use HEX or RGB in my CSS?"
+      },
+      {
+        "a": "HSL (hue, saturation, lightness) matches how humans think about color: pick a hue, then adjust vividness and brightness. RGB matches how screens emit light. Converting between them is pure math with no information loss.",
+        "q": "What is the difference between RGB and HSL?"
+      },
+      {
+        "a": "CMYK is for print, where ink is subtracted from white paper instead of light added to a dark screen. The conversion here is the standard naive formula — real print shops use color profiles that may shift values slightly.",
+        "q": "Why does the CMYK value differ from my print shop's?"
+      },
+      {
+        "a": "Yes — type values like hsl(243, 75%, 59%) or hsla(243, 75%, 59%, 0.5). Hue accepts negative numbers and wraps around 360 degrees.",
+        "q": "Can I paste an HSL value as input?"
+      }
+    ],
+    "formula": "HEX to RGB: split the 6 digits into three pairs, each pair is one channel in base 16\nRGB to HSL: standard conversion via max/min channel and lightness\nHSL to RGB: chroma C = (1 - |2L - 1|) x S, then sector math on H/60\nRGB to CMYK: K = 1 - max(R,G,B); C = (max - R)/max, and so on",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type any color code: HEX, rgb(), rgba(), hsl() or hsla().",
+      "Read all six formats instantly in the results list.",
+      "Click the copy button next to the format you need.",
+      "Paste it into your CSS, Figma or print document.",
+      "Check the preview swatch to confirm the conversion looks right."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "One input can produce HEX, RGB, RGBA, HSL, HSV and CMYK output.",
+      "3-digit HEX (#fff) is shorthand for the 6-digit form (#ffffff).",
+      "8-digit HEX adds an alpha channel: the last two digits are opacity.",
+      "HSL hue wraps around 360 degrees, so -30 degrees equals 330 degrees.",
+      "All conversions are lossless except rounding to whole numbers."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "color code converter, hex to rgb, rgb to hex, hex to hsl, hsl to rgb, cmyk converter, color converter online",
+    "labels": {
+      "cmykOut": "CMYK",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyValue": "Copy this value",
+      "formatHint": "Accepted: #fff, #ffffff, #ffffffff, rgb(79, 70, 229), rgba(79, 70, 229, 0.5), hsl(243, 75%, 59%).",
+      "hexOut": "HEX",
+      "hslOut": "HSL",
+      "hsvOut": "HSV",
+      "inputLabel": "Color code",
+      "inputPlaceholder": "#4f46e5 or rgb(79, 70, 229)",
+      "invalidInput": "That does not look like a valid color code. Try #4f46e5 or rgb(79, 70, 229).",
+      "rgbOut": "RGB",
+      "rgbaOut": "RGBA"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Named colors (like 'red' or 'tomato') are not accepted — use a code format.",
+      "CMYK uses the standard naive formula; professional print profiles may differ slightly.",
+      "Alpha below 1 shows as 8-digit HEX and rgba(); some old tools only accept 6-digit HEX.",
+      "Rounding to whole channels can shift a value by at most 1."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free color code converter: HEX to RGB, RGBA, HSL, HSV and CMYK. Paste any color code, get every format instantly with one-click copy.",
+    "metaTitle": "Color Code Converter: HEX RGB HSL CMYK | JaurTools",
+    "name": "Color Code Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste any color code — 3-, 6- or 8-digit HEX, rgb(), rgba(), hsl() or hsla() — and instantly get it converted to all six formats: HEX, RGB, RGBA, HSL, HSV and CMYK. Each format has a copy button, and a live preview swatch confirms the conversion. Everything runs in your browser with no uploads.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your converted color codes",
+    "tagline": "Convert between HEX, RGB, RGBA, HSL, HSV and CMYK — paste one code, get them all.",
+    "workedExample": "Convert #4f46e5.\nHEX pairs: 4f = 79, 46 = 70, e5 = 229, so rgb(79, 70, 229) and rgba(79, 70, 229, 1).\nHSL: max channel 229, min 70, lightness = (229 + 70) / (2 x 255) = 58.6%, saturation = 75.4%, hue = 243.4 degrees -> hsl(243, 75%, 59%).\nHSV: value = 229/255 = 89.8%, saturation = (229 - 70)/229 = 69.4% -> hsv(243, 69%, 90%).\nCMYK: K = 1 - 0.898 = 10%, C = 66%, M = 69%, Y = 0%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

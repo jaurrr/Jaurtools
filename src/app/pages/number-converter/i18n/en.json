@@ -1,0 +1,105 @@
+{
+  "number-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Number Converter",
+    "tagline": "Convert numbers between binary, octal, decimal and hexadecimal.",
+    "metaTitle": "Number Converter - Binary, Octal, Decimal & Hex Free | JaurTools",
+    "metaDescription": "Free number converter: switch between binary, octal, decimal and hexadecimal with digit validation. Handles big integers, 100% in-browser.",
+    "keywords": "number base converter, binary to decimal, decimal to hex, hex to binary, octal converter",
+    "quickAnswer": "Type a number, tell the tool which base it is written in, and pick the base you want. You get the converted value plus the number shown in all four bases at once, with invalid digits flagged immediately.",
+    "keyFacts": [
+      "Binary (base 2) uses digits 0 and 1; it is the native language of digital circuits.",
+      "Octal (base 8) uses digits 0-7; hexadecimal (base 16) uses 0-9 and A-F.",
+      "One hexadecimal digit always represents exactly four binary digits (bits).",
+      "Decimal (base 10) is the everyday system, likely from counting on ten fingers.",
+      "This tool uses arbitrary-precision integers, so very long numbers convert without rounding."
+    ],
+    "howTo": [
+      "Type the number into the input field (letters A-F allowed for hexadecimal).",
+      "Select the base the number is written in under \"From\".",
+      "Select the target base under \"To\".",
+      "Read the converted result and the all-bases table below it.",
+      "If the input is invalid for the chosen base, a warning appears instead of a result."
+    ],
+    "formula": "Decimal value = sum of (digit × base^position), positions counted from 0 at the right.\nExample: 1F₁₆ = 1×16¹ + 15×16⁰ = 16 + 15 = 31₁₀",
+    "workedExample": "Convert hexadecimal FF to decimal and binary.\nStep 1: F = 15. FF₁₆ = 15×16 + 15 = 240 + 15 = 255₁₀.\nStep 2: 255₁₀ in binary: 255 = 128+64+32+16+8+4+2+1 → 11111111₂.\nStep 3: 255₁₀ in octal: 255 = 3×64 + 7×8 + 7 → 377₈.\nAnswer: FF₁₆ = 255₁₀ = 11111111₂ = 377₈.",
+    "benefits": [
+      "Converts between all four common bases in both directions.",
+      "Validates digits per base, so typos like \"2\" in binary are caught.",
+      "Shows the value in every base at once for quick comparison.",
+      "Arbitrary-precision integers: no rounding, even for huge numbers.",
+      "No sign-up, no server — everything runs locally in the browser."
+    ],
+    "limitations": [
+      "Whole numbers only; fractions like 101.11 binary are not supported.",
+      "Negative numbers are not supported in this version.",
+      "Extremely long inputs (thousands of digits) may be slow on old devices.",
+      "Hexadecimal output uses uppercase letters A-F by convention."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert binary to decimal by hand?",
+        "a": "Write the bits over powers of two from the right (1, 2, 4, 8...) and add the powers where the bit is 1. Example: 1011₂ = 8 + 2 + 1 = 11₁₀."
+      },
+      {
+        "q": "Why is hexadecimal used in programming?",
+        "a": "Because one hex digit maps exactly to four bits, it is a compact way to write binary data such as memory addresses and colour codes (for example, #FF0000 for red)."
+      },
+      {
+        "q": "What digits are valid in each base?",
+        "a": "Binary: 0-1. Octal: 0-7. Decimal: 0-9. Hexadecimal: 0-9 and A-F (case does not matter)."
+      },
+      {
+        "q": "Can it handle very large numbers?",
+        "a": "Yes. It uses arbitrary-precision integers, so numbers with hundreds of digits convert exactly without floating-point rounding."
+      },
+      {
+        "q": "Does it support fractions or negative numbers?",
+        "a": "Not in this version — whole non-negative integers only. A fraction/negative mode is planned."
+      },
+      {
+        "q": "Is my input sent anywhere?",
+        "a": "No. Conversion happens entirely in your browser; your input never leaves your device."
+      }
+    ],
+    "resultsHeading": "Number conversion results",
+    "labels": {
+      "inputLabel": "Number",
+      "fromLabel": "From base",
+      "toLabel": "To base",
+      "resultLabel": "Converted",
+      "invalidLabel": "The digits are not valid for the selected base. Check the number and try again."
+    },
+    "baseOptions": [
+      {
+        "id": 2,
+        "name": "Binary (base 2)"
+      },
+      {
+        "id": 8,
+        "name": "Octal (base 8)"
+      },
+      {
+        "id": 10,
+        "name": "Decimal (base 10)"
+      },
+      {
+        "id": 16,
+        "name": "Hexadecimal (base 16)"
+      }
+    ]
+  }
+}

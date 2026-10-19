@@ -1,0 +1,98 @@
+{
+  "xml-to-excel": {
+    "assumptionNote": "Assumes your XML has repeating sibling elements (records) with flat child elements (columns). Nested elements and attributes are skipped.",
+    "benefits": [
+      "Get a true .xls file — Excel opens it directly with correct number formatting.",
+      "Numeric cells stay numeric, so sorting, filtering, and formulas work immediately.",
+      "Faster than converting XML to CSV and re-importing it into Excel by hand.",
+      "No account, no upload, no watermark — the file is generated on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. It is written in SpreadsheetML, the XML-based spreadsheet format Excel has supported since 2003, saved with the .xls extension. Excel, LibreOffice, Google Sheets, and Numbers all open it natively.",
+        "q": "Is this a real Excel file?"
+      },
+      {
+        "a": "The .xlsx format is a ZIP package with many internal files — heavy to build by hand. SpreadsheetML .xls gives you a genuine spreadsheet with far less code, and every modern spreadsheet app opens it.",
+        "q": "Why not .xlsx?"
+      },
+      {
+        "a": "Yes. Values that look like numbers are stored as numeric cells, so SUM, sorting, and filters treat them as numbers, not text.",
+        "q": "Will my numbers work in formulas?"
+      },
+      {
+        "a": "Only direct leaf children of each record become columns. Nested elements and attributes are skipped — the same rule as the XML to CSV tool.",
+        "q": "What happens to nested XML?"
+      },
+      {
+        "a": "Yes, up to 5 MB, read locally in your browser. Nothing is uploaded.",
+        "q": "Can I upload an XML file?"
+      },
+      {
+        "a": "No — it is pure data. There is no macro support in SpreadsheetML output, so the file is safe to open.",
+        "q": "Does the file contain macros?"
+      }
+    ],
+    "formula": "records = elements with the most common repeating tag.\ncolumns = union of leaf child tag names, first-seen order.\ncell type = Number if the value matches -?[0-9]+(.[0-9]+)?, otherwise String.\nXML escaping: & -> &amp;, < -> &lt;, > -> &gt; inside cell text.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your XML, upload an .xml file, or load the sample to try it.",
+      "Check the detected record element and the record/column counts.",
+      "Preview the table, toggle the header row if you want it.",
+      "Click Download .xls and open the file in Excel or your spreadsheet app."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The download is a real spreadsheet in SpreadsheetML format with the .xls extension — not a renamed CSV.",
+      "Numbers are stored as numeric cells, so Excel can sort and calculate with them; text stays text.",
+      "Record detection is automatic: the most common repeating element becomes the rows, its leaf children the columns.",
+      "The file opens in Microsoft Excel, LibreOffice Calc, Google Sheets, and Apple Numbers.",
+      "Everything is generated locally — your XML never touches a server."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "xml to excel, xml to xls converter, convert xml to spreadsheet, xml to excel online free",
+    "labels": {
+      "clear": "Clear",
+      "columnsFound": "Columns",
+      "download": "Download .xls",
+      "errorInvalidXml": "The XML could not be parsed. Check for unclosed tags or special characters.",
+      "errorNoRecords": "No repeating record elements were found in this XML.",
+      "errorRead": "Could not read this file. Try pasting the XML instead.",
+      "errorTooLarge": "File is larger than 5 MB.",
+      "includeHeader": "Include header row",
+      "inputLabel": "Paste your XML",
+      "loadSample": "Load sample",
+      "noInput": "Paste XML or upload a file to see the .xls preview here.",
+      "placeholder": "Paste XML here…",
+      "previewHeading": "Preview (first 5 rows)",
+      "recordTag": "Record element",
+      "recordsFound": "Records",
+      "uploadLabel": "Or upload an XML file"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only flat, one-level record structures convert well — nested elements and attributes are skipped.",
+      "The .xls uses the SpreadsheetML format; very old Excel versions (before 2003) cannot open it.",
+      "No styling, formulas, or multiple sheets — you get one clean data table.",
+      "Files over 5 MB are not accepted, to keep the browser responsive."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free XML to Excel converter. Turn XML records into a genuine .xls spreadsheet that opens in Excel, LibreOffice, and Google Sheets. Private and browser-only.",
+    "metaTitle": "XML to Excel Converter - Free .xls Download | JaurTools",
+    "name": "XML to Excel",
+    "noteXls": "The download is a real Excel-compatible .xls file (SpreadsheetML) — it opens directly in Microsoft Excel, LibreOffice, and Google Sheets.",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your XML and the tool detects the repeating records (like <book> elements) and their child elements (<title>, <author>, <price>), then builds a genuine Excel .xls file using the SpreadsheetML format. Download it and open it directly in Microsoft Excel, LibreOffice Calc, or Google Sheets — no conversion step needed.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "XML to Excel results",
+    "tagline": "Convert XML data into a real Excel (.xls) file — paste XML or upload, download and open in Excel.",
+    "workedExample": "XML:\n<catalog>\n  <book><title>Atomic Habits</title><author>James Clear</author><price>499</price></book>\n  <book><title>Deep Work</title><author>Cal Newport</author><price>450</price></book>\n</catalog>\n\n1. Records: 2 <book> elements. Columns: title, author, price.\n2. Header row: three String cells — title, author, price.\n3. Row 1: \"Atomic Habits\" (String), \"James Clear\" (String), 499 (Number).\n4. Row 2: \"Deep Work\" (String), \"Cal Newport\" (String), 450 (Number).\n5. The .xls file opens in Excel with sortable numeric prices.",
+    "workedExampleHeading": "Worked example"
+  }
+}

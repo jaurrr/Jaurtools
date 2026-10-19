@@ -1,0 +1,96 @@
+{
+  "lean-body-mass-calculator": {
+    "assumptionNote": "Boer estimates assume an average build. Body-fat inputs are only as accurate as your measurement method.",
+    "benefits": [
+      "Shows the number that actually matters for protein and calorie targets.",
+      "Separates fat loss from muscle loss during a diet.",
+      "The Boer mode works with just a tape measure and a scale.",
+      "Explains why two people at 80 kg can look completely different."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on height and sex. As a rough guide, a lean fit man carries about 70-80% of his weight as lean mass; a fit woman about 65-75%. Athletes sit higher.",
+        "q": "What is a good lean body mass?"
+      },
+      {
+        "a": "No. Lean mass includes muscle plus bone, water, organs, and everything that is not fat. Skeletal muscle is only part of it.",
+        "q": "Is lean body mass the same as muscle mass?"
+      },
+      {
+        "a": "Progressive resistance training plus enough protein (about 1.6-2.2 g per kg of body weight) and a small calorie surplus. Beginners gain roughly 0.25-0.5 kg of muscle per month.",
+        "q": "How do I increase lean body mass?"
+      },
+      {
+        "a": "The Boer formula assumes an average build. If you carry more fat than average for your height and weight, your real lean mass is lower than the estimate.",
+        "q": "Why is my lean mass lower than the Boer estimate?"
+      },
+      {
+        "a": "Yes - it is the better base. Protein at about 2 g per kg of lean mass and lean-mass-based calorie formulas beat weight-based rules for muscular or overweight people.",
+        "q": "Should I use lean mass for calorie targets?"
+      },
+      {
+        "a": "Monthly, under the same conditions: morning, before food. Daily readings bounce with water and food.",
+        "q": "How often should I measure?"
+      }
+    ],
+    "formula": "From body fat:\nLBM = weight x (1 - bodyFat% / 100)\n\nBoer estimate:\nMen: LBM = 0.407 x W(kg) + 0.267 x H(cm) - 19.2\nWomen: LBM = 0.252 x W(kg) + 0.473 x H(cm) - 48.3\n\nExample: man, 80 kg, 175 cm\n= 0.407 x 80 + 0.267 x 175 - 19.2 = 32.56 + 46.73 - 19.2 = 60.1 kg.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "If you know your body-fat %, choose 'From body fat' and enter weight and the percentage.",
+      "If you do not, choose 'Estimate (Boer)' and enter sex, height, and weight.",
+      "Your lean mass, fat mass, and body-fat % appear instantly.",
+      "Track monthly: rising lean mass at a steady weight means your training works.",
+      "For calorie and protein targets, base them on lean mass, not total weight."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Lean body mass = weight minus fat mass. It includes muscle, bone, water, and organs.",
+      "From body fat %: LBM = weight x (1 - bodyFat / 100).",
+      "Boer formula (men): 0.407 x weight(kg) + 0.267 x height(cm) - 19.2.",
+      "Boer formula (women): 0.252 x weight(kg) + 0.473 x height(cm) - 48.3.",
+      "Healthy body-fat ranges: roughly 10-20% for men, 18-28% for women.",
+      "Two people at the same weight can have very different lean mass - that is why BMI alone misleads athletes."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "lean body mass calculator, lbm calculator, boer formula, fat free mass, body fat percentage calculator",
+    "labels": {
+      "bodyFatPct": "Body fat (%)",
+      "bodyFatResult": "Body fat",
+      "estimateTab": "Estimate (Boer)",
+      "fatMass": "Fat mass",
+      "female": "Female",
+      "fromFatTab": "From body fat",
+      "heightCm": "Height (cm)",
+      "kgUnit": "kg",
+      "leanMass": "Lean body mass",
+      "male": "Male",
+      "modeLabel": "Calculation mode",
+      "sexLabel": "Sex",
+      "weightKg": "Weight (kg)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The Boer formula is an estimate - DEXA scans are the accurate reference.",
+      "Body-fat inputs from smart scales can be off by 3-5%.",
+      "Less accurate for very muscular or very obese bodies.",
+      "Not a medical diagnosis - trends matter more than any single reading."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate lean body mass from weight and body-fat %, or estimate it with the Boer formula. See fat mass and body-fat % too. Free, private, no sign-up.",
+    "metaTitle": "Lean Body Mass Calculator - Boer Formula | JaurTools",
+    "name": "Lean Body Mass Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Lean body mass is everything except fat: weight x (1 - body-fat / 100). At 80 kg and 20% body fat, your lean mass is 64 kg and your fat mass is 16 kg. Without a body-fat reading, the Boer formula estimates lean mass from height, weight, and sex - about 60.1 kg for an 80 kg, 175 cm man.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your lean body mass results",
+    "tagline": "Find your lean mass from weight and body fat, or estimate it with the Boer formula.",
+    "workedExample": "You weigh 80 kg with 20% body fat:\n1. Convert % to a fraction: 20 / 100 = 0.20.\n2. Lean fraction: 1 - 0.20 = 0.80.\n3. LBM = 80 x 0.80 = 64 kg.\n4. Fat mass = 80 - 64 = 16 kg.\n\nBoer estimate for an 80 kg, 175 cm man:\n1. 0.407 x 80 = 32.56; 0.267 x 175 = 46.73.\n2. Sum minus 19.2: 79.29 - 19.2 = 60.1 kg lean mass.\n3. Implied body fat: (80 - 60.1) / 80 = 24.9%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "cbm-calculator": {
+    "benefits": [
+      "Computes freight volume exactly the way carriers quote it.",
+      "Shows volumetric and chargeable weight side by side.",
+      "Handles air (167 factor) and sea (1:1000) conventions.",
+      "Works in cm or meters, per piece or per shipment.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Cubic meters, the standard volume unit in freight. Carriers use it to price sea and air shipments, because cargo space is limited by volume as well as weight.",
+        "q": "What is CBM in shipping?"
+      },
+      {
+        "a": "Carriers convert volume to a weight equivalent and charge whichever is greater: actual or volumetric. For air freight the divisor is 6000 cm3/kg, which equals multiplying CBM by 167.",
+        "q": "Why do carriers charge by volumetric weight?"
+      },
+      {
+        "a": "Air: volumetric kg = CBM x 167. Sea: volumetric kg = CBM x 1000. Couriers (express) often use CBM x 200. Pick the mode matching your shipment in the tool.",
+        "q": "What is the difference between air and sea volumetric factors?"
+      },
+      {
+        "a": "Divide the dimensions in cm by 100 to get meters first: 50 x 40 x 30 cm = 0.5 x 0.4 x 0.3 m = 0.06 CBM per box. Or just use this calculator's cm mode.",
+        "q": "How do I calculate CBM from cm?"
+      },
+      {
+        "a": "Charges apply to the greater of actual and volumetric weight. A light but bulky item (pillows, for example) is billed on volume; a dense item (books) on actual weight.",
+        "q": "Do I pay on actual or volumetric weight?"
+      }
+    ],
+    "formula": "CBM per piece = length (m) x width (m) x height (m)\ntotal CBM = CBM per piece x quantity\nvolumetric weight (air) = total CBM x 167 kg\nvolumetric weight (sea) = total CBM x 1000 kg\nchargeable weight = max(actual weight, volumetric weight)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose cm or meters for your dimensions.",
+      "Enter the length, width, and height of one package.",
+      "Enter how many packages and the weight per package in kg.",
+      "Pick air or sea freight mode.",
+      "Read total CBM, volumetric weight, and the chargeable weight carriers bill on."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "CBM = length x width x height in meters.",
+      "Freight is billed on the greater of actual and volumetric weight.",
+      "Air freight volumetric factor: CBM x 167 kg.",
+      "Sea freight volumetric factor: CBM x 1000 kg.",
+      "Express couriers often use CBM x 200 kg.",
+      "Always measure the outer packaging, not just the product."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cbm calculator, cubic meter calculator, volumetric weight calculator, freight calculator, chargeable weight calculator, shipping cbm",
+    "labels": {
+      "actualWeight": "Actual weight (total)",
+      "airTab": "Air freight",
+      "cbmPerPiece": "CBM per package",
+      "chargeableWeight": "Chargeable weight",
+      "cmTab": "Centimeters",
+      "factorNote": "Factors: air CBM x 167, sea CBM x 1000, express couriers often CBM x 200. Confirm with your forwarder.",
+      "height": "Height",
+      "length": "Length",
+      "mTab": "Meters",
+      "quantity": "Quantity (packages)",
+      "shipMode": "Freight mode",
+      "seaTab": "Sea freight",
+      "totalCbm": "Total CBM",
+      "unitSystem": "Unit system",
+      "volumetricWeight": "Volumetric weight",
+      "weightPerPiece": "Weight per package",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Factors vary by carrier; some use 1:6000 for air or different sea ratios.",
+      "Stacking and pallet space can add volume beyond the box itself.",
+      "Fuel surcharges, duties, and handling fees are not included.",
+      "Always confirm the billable weight with your freight forwarder."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free CBM calculator: compute cubic meters for shipping, volumetric weight for air and sea freight, and chargeable weight. Works in cm or meters. No sign-up.",
+    "metaTitle": "CBM Calculator: Freight Volume & Chargeable Weight (Free)",
+    "name": "CBM Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter your package dimensions, quantity, and weight per piece, then choose air or sea mode. The calculator returns total cubic meters, volumetric weight using the standard carrier factors, and the chargeable weight — the higher of actual and volumetric — that freight is billed on.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "CBM results",
+    "tagline": "Cubic meters and chargeable weight for your shipment.",
+    "workedExample": "Two cartons of 50 x 40 x 30 cm, 10 kg each, air freight:\n\n1. Per piece = 0.50 x 0.40 x 0.30 = 0.060 CBM.\n2. Total CBM = 0.060 x 2 = 0.120 CBM.\n3. Volumetric weight (air) = 0.120 x 167 = 20.04 kg.\n4. Actual weight = 10 x 2 = 20 kg.\n5. Chargeable weight = max(20, 20.04) = 20.04 kg.\n\nThe forwarder bills about 20 kg even though the boxes weigh 20 kg — volume just edges out.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "debt-payoff-calculator": {
+    "assumptionNote": "Assumes fixed APRs, minimum payments stay the same, no new borrowing, and the extra amount is paid every month.",
+    "benefits": [
+      "Turns a pile of debts into one clear attack plan.",
+      "Shows the exact month each debt dies — motivation you can see.",
+      "Proves how much your extra payment is really worth.",
+      "Lets you pick the strategy that fits your personality, not just the math."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Snowball. The math favors avalanche, but the method you quit in month three saves nothing. Snowball's early wins — killing a whole debt in months — keep most people paying extra long enough to finish. If you are highly disciplined and numbers-driven, avalanche is cheaper.",
+        "q": "Snowball or avalanche — which should I choose?"
+      },
+      {
+        "a": "Take every spare rupee — side income, bonuses, tax refunds — and aim it at your current target debt while paying minimums on the rest. Each debt you kill frees its minimum, which joins the attack on the next one. That compounding payment is the whole engine.",
+        "q": "How do I speed up my debt payoff?"
+      },
+      {
+        "a": "Pay minimums on everything first — never miss those — then put 100% of the extra on the single target debt. Splitting the extra across debts feels fair but mathematically delays every payoff and costs more interest.",
+        "q": "Should I split extra payments across all debts?"
+      },
+      {
+        "a": "Keep paying minimums on the rest while you clear the target, and stop adding new balances. The simulator assumes no new borrowing — every new purchase pushes your debt-free date back and adds interest.",
+        "q": "What if I need to use a card while paying debts off?"
+      },
+      {
+        "a": "Usually the highest-APR debt, because it costs the most per month. But if two rates are close, snowball's smallest-balance-first can clear a whole payment sooner, freeing cash flow. Toggle both methods above and compare the months and interest for your exact debts.",
+        "q": "Which debt do I attack first?"
+      },
+      {
+        "a": "Yes — the simulation handles any mix: credit cards, personal loans, even a car loan. Just enter each balance with its APR and minimum. Mortgages work too, though their long terms and low rates rarely make them the first target.",
+        "q": "Can I include all types of debt?"
+      }
+    ],
+    "formula": "Each month: add interest (balance x APR/12) to every debt; pay each minimum; throw the extra plus freed minimums at the target debt.\nSnowball target = smallest balance. Avalanche target = highest APR.\nRepeat until every balance is zero. Total interest = sum of all interest charged.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter each debt's balance, APR, and minimum payment (up to 3 debts; leave unused ones at 0).",
+      "Enter the extra amount you can pay every month.",
+      "Pick snowball or avalanche to see that strategy's plan.",
+      "Compare both strategies' months and interest, then commit to one."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Snowball: attack the smallest balance first for quick psychological wins.",
+      "Avalanche: attack the highest APR first — mathematically the cheapest, always.",
+      "Both beat minimums-only dramatically: extra payments collapse the timeline.",
+      "Freed-up minimums roll into the next target — that is the snowball effect.",
+      "The best method is the one you will actually stick with for months."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "debt payoff calculator, debt snowball calculator, debt avalanche calculator, pay off debt calculator",
+    "labels": {
+      "apr": "APR (%)",
+      "avalanche": "Avalanche (highest rate first)",
+      "balance": "Balance owed",
+      "comparePrefix": "The other method would take",
+      "debt1": "Debt 1",
+      "debt2": "Debt 2",
+      "debt3": "Debt 3",
+      "extraPayment": "Extra payment every month",
+      "methodLabel": "Payoff method",
+      "minPayment": "Minimum payment",
+      "monthsUnit": "months",
+      "payoffOrder": "Payoff order",
+      "snowball": "Snowball (smallest first)",
+      "totalInterest": "Total interest",
+      "totalMonths": "Months to debt-free"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Handles up to 3 debts; more complex debt piles need a spreadsheet.",
+      "Ignores fees, penalty APRs, and variable rates.",
+      "Assumes minimums never change and no new borrowing.",
+      "Estimates only — your lenders' terms are the final word."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free debt payoff calculator: compare snowball vs avalanche strategies on your debts. See payoff order, months to freedom and interest saved.",
+    "metaTitle": "Debt Payoff Calculator - Snowball vs Avalanche | JaurTools",
+    "name": "Debt Payoff Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "With ₹20,000 at 12% (min ₹800), ₹60,000 at 24% (min ₹2,500), and ₹5,000 extra a month: the snowball method clears everything in 12 months with ₹9,645 interest (smallest debt first), while avalanche takes 11 months with ₹7,831 interest (highest rate first). Avalanche saves ₹1,814 here — but snowball's quick first win keeps more people going.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your debt payoff plan",
+    "tagline": "Snowball or avalanche? Simulate both payoff strategies and pick your fastest route out of debt.",
+    "workedExample": "Debt A: ₹20,000 at 12%, min ₹800. Debt B: ₹60,000 at 24%, min ₹2,500. Extra ₹5,000/month:\n1. Snowball targets A first: A is gone in month 4, then ₹8,300/month attacks B. All clear in 12 months; interest ₹9,644.82.\n2. Avalanche targets B first: B is gone in month 9, then everything hits A. All clear in 11 months; interest ₹7,830.74.\n3. Avalanche saves 1 month and ₹1,814.08 here.\n4. Minimums only (no extra): 33 months, interest ₹25,587.54 — the extra ₹5,000/month saves about ₹17,757 and 22 months.",
+    "workedExampleHeading": "Worked example"
+  }
+}

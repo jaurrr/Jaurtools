@@ -1,0 +1,92 @@
+{
+  "lease-calculator": {
+    "benefits": [
+      "Know your true monthly cost before you visit the dealer - including tax.",
+      "See exactly how much of each payment is depreciation vs financing.",
+      "Compare lease offers side by side by changing one number at a time.",
+      "Private by design - your deal numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Money factor = APR / 2400. So a 6% APR equals a money factor of 0.0025. Dealers quote money factor because it plugs directly into the lease formula; this calculator converts APR for you.",
+        "q": "What is a money factor?"
+      },
+      {
+        "a": "Depreciation is the biggest lever: a higher residual (say 60% vs 50% of price) directly shrinks the depreciation fee, which is usually the largest part of the payment.",
+        "q": "How do I lower my lease payment?"
+      },
+      {
+        "a": "Money down reduces the capitalized cost, which lowers both the depreciation and finance fees. But large down payments on leases are risky - if the car is totaled, you generally do not get that money back.",
+        "q": "Should I put money down on a lease?"
+      },
+      {
+        "a": "Leasing usually wins if you want a new car every 2-3 years with warranty coverage and lower monthly payments. Buying usually wins if you keep cars long-term, because you eventually own an asset.",
+        "q": "Is leasing better than buying?"
+      },
+      {
+        "a": "The dealer usually offers to sell you the car at the residual value stated in the contract. Compare that price with the car's market value first - sometimes it is a bargain, sometimes not.",
+        "q": "Can I buy the car at the end of the lease?"
+      },
+      {
+        "a": "No. The calculation is done in your browser and nothing is stored or transmitted.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Money factor = APR / 2400\nDepreciation fee = (net cap cost - residual) / term months\nFinance fee = (net cap cost + residual) x money factor\nMonthly payment = (depreciation fee + finance fee) x (1 + tax rate)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the vehicle's price (capitalized cost) and any down payment.",
+      "Enter the residual value - what the car is expected to be worth at lease end.",
+      "Enter the APR (the calculator converts it to a money factor) and the lease term in months.",
+      "Add your local sales tax rate.",
+      "Read your monthly payment, split into depreciation and finance fees, plus the total lease cost."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A lease payment has two parts: a depreciation fee (value you use up) and a finance fee (interest on the money tied up).",
+      "Money factor is just APR divided by 2400 - dealers use it because it plugs straight into the formula.",
+      "The residual value is set by the leasing company; a higher residual means a lower monthly payment.",
+      "You pay sales tax on the monthly payment in most US states, not on the full car price.",
+      "Typical car leases run 24 to 39 months; longer terms lower the payment but raise total cost.",
+      "Wear-and-tear and mileage-overage charges at lease end are not part of the monthly payment."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "lease calculator, car lease calculator, auto lease payment calculator, money factor calculator, lease vs buy",
+    "labels": {
+      "annualRate": "APR (%)",
+      "depreciationFee": "Depreciation fee",
+      "downPayment": "Down payment",
+      "financeFee": "Finance fee",
+      "monthlyPayment": "Monthly payment",
+      "residualValue": "Residual value",
+      "taxRate": "Sales tax (%)",
+      "termMonths": "Lease term (months)",
+      "totalLeaseCost": "Total lease cost",
+      "vehiclePrice": "Vehicle price"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - dealer fees, acquisition fees, and disposition fees vary and are not itemized here.",
+      "Residual values are set by the lessor; your contract's figure is what counts.",
+      "Mileage overage and excess-wear charges at lease end are not included.",
+      "Tax treatment of leases differs by state and country - confirm locally."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free lease calculator: estimate your monthly car or equipment lease payment from price, residual, APR and tax. Instant, private, browser-based.",
+    "metaTitle": "Lease Calculator - Monthly Lease Payment Estimator | JaurTools",
+    "name": "Lease Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A lease payment = depreciation fee + finance fee, plus tax. For example, a $30,000 car with $2,000 down, an $18,000 residual, 6% APR over 36 months at 7% tax costs about $420 per month. Enter your numbers to price any lease in seconds.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your lease estimate",
+    "tagline": "Estimate any car or equipment lease payment - depreciation, finance fee, and tax broken down.",
+    "workedExample": "$30,000 car, $2,000 down, $18,000 residual, 6% APR, 36 months, 7% tax:\n1. Net cap cost = 30,000 - 2,000 = $28,000\n2. Money factor = 6 / 2400 = 0.0025\n3. Depreciation = (28,000 - 18,000) / 36 = $277.78\n4. Finance = (28,000 + 18,000) x 0.0025 = $115.00\n5. Base = $392.78; tax = 392.78 x 7% = $27.49\n6. Monthly = $420.27; total cost = 420.27 x 36 + 2,000 = $17,129.72",
+    "workedExampleHeading": "Worked example"
+  }
+}

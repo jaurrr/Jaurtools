@@ -1,0 +1,110 @@
+{
+  "compress-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online compressors.",
+      "Real size reduction: embedded JPEG photos are downscaled and re-encoded, and the file structure is rebuilt with object streams.",
+      "Target-size mode with a 200 KB preset for upload forms with strict limits.",
+      "Free and unlimited — compress as many PDFs as you like.",
+      "Honest reporting: you see the exact before/after sizes and whether the target was met."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The tool downscales embedded JPEG photos and re-encodes them at a lower quality, then rebuilds the PDF structure with object streams. Text and vector graphics are untouched, so text-heavy documents shrink less than photo-heavy ones.",
+        "q": "How does the compression work?"
+      },
+      {
+        "a": "Sometimes. The tool tries six increasingly aggressive passes and reports honestly whether the target was reached. Image-heavy PDFs usually make it; text-only PDFs often cannot, because there is little to shrink.",
+        "q": "Will the 200 KB target always be reached?"
+      },
+      {
+        "a": "JPEG photos are downscaled (for example to 1600 px on the long edge in Recommended mode) and re-encoded. PNG and other image types are left as-is, which the tool tells you about.",
+        "q": "What happens to image quality?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Recommended keeps photos at 1600 px and 70% quality — good for screen and print. Strong drops to 900 px and 45% quality — visibly softer, best for email attachments.",
+        "q": "Recommended vs Strong — which should I pick?"
+      },
+      {
+        "a": "Split the PDF into smaller parts, or use Strong mode first and then Target-size mode on the result.",
+        "q": "My PDF is still too big. What now?"
+      }
+    ],
+    "formula": "saved % = (original KB − new KB) ÷ original KB × 100\ntarget met when new size ≤ target size",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the PDF you want to shrink.",
+      "Pick a mode: Recommended for everyday use, Strong for maximum shrink, or Target size for a strict limit like 200 KB.",
+      "If you chose Target size, enter the size in KB (200 is the common form-upload preset).",
+      "Click “Compress PDF” and wait for the passes to finish.",
+      "Compare the before/after sizes, then download the compressed PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Most PDF size comes from embedded photos: a single full-page JPEG can weigh several megabytes.",
+      "This tool finds JPEG images inside the PDF, downscales them and re-encodes them at a lower quality — the same technique desktop tools use.",
+      "The PDF structure is rebuilt with object streams (useObjectStreams), which packs the file's internal objects more tightly.",
+      "Target-size mode runs up to six passes with shrinking dimensions (1920 → 640 px) and quality (75% → 28%) until the target is met.",
+      "Only JPEG (DCTDecode) images are recompressed; PNG and other image types are left untouched."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "compress pdf, reduce pdf size, resize pdf to 200kb, pdf compressor online free, shrink pdf file size",
+    "labels": {
+      "chooseFile": "Choose PDF file",
+      "compressBtn": "Compress PDF",
+      "downloadBtn": "Download compressed PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "honestNote": "Honest note: only JPEG photos inside the PDF are recompressed. Text, vector graphics and PNG images are kept as-is, so text-heavy PDFs shrink less.",
+      "imagesLabel": "JPEG images recompressed",
+      "modeDesc_recommended": "Balanced: photos downscaled to 1600 px at 70% quality. Good for screen and print.",
+      "modeDesc_strong": "Aggressive: photos downscaled to 900 px at 45% quality. Visibly softer — best for email.",
+      "modeDesc_target": "Keeps trying smaller sizes and lower quality until your target size is reached (or the floor is hit).",
+      "modeLabel": "Compression mode",
+      "mode_recommended": "Recommended",
+      "mode_strong": "Strong",
+      "mode_target": "Target size",
+      "newLabel": "Compressed size",
+      "origLabel": "Original size",
+      "pagesFound": "pages",
+      "processing": "Working…",
+      "resetBtn": "Start over",
+      "savedLabel": "Size saved",
+      "successMsg": "Compression finished. Download your PDF below.",
+      "targetLabel": "Target size (KB)",
+      "targetMetMsg": "Target reached. Download your PDF below.",
+      "targetMissMsg": "The target could not be reached even at the lowest quality. The smallest result is ready below — try splitting the PDF into parts."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only JPEG images are recompressed; PNG and other image types are untouched.",
+      "Text-only PDFs shrink very little — there is no image data to reduce.",
+      "The 200 KB target is not always reachable; the tool reports the real result honestly.",
+      "Very large PDFs (50 MB+) are not accepted to protect browser memory."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Compress any PDF free in your browser — shrink photos, rebuild structure. Target-size mode with 200 KB preset. No upload, no signup.",
+    "metaTitle": "Compress PDF Free — Reduce PDF Size to 200KB Online",
+    "name": "Compress PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, pick Recommended, Strong, or Target-size mode (with a 200 KB preset for strict upload forms), and download the smaller file. JPEG photos are genuinely downscaled and re-encoded in your browser — you see the exact before/after sizes.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Compression results",
+    "tagline": "Shrink any PDF — including down to a 200 KB target — right in your browser.",
+    "workedExample": "An 8.4 MB scanned report (8,400 KB) compressed in Recommended mode comes out at 2.1 MB (2,100 KB):\nsaved % = (8,400 − 2,100) ÷ 8,400 × 100 = 75%\nThree quarters of the file size was photo data that the downscaling removed.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,187 @@
+<div class="tool-page queue-tool">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2><app-icon name="upload" /> {{ t('resultsHeading') }}</h2>
+
+      <label class="dropzone" for="pngs-file">
+        <app-icon name="upload" />
+        <span class="dz-title">{{ t('labels.fileLabel') }}</span>
+        <span class="dz-hint">{{ t('labels.fileHint') }}</span>
+        <input id="pngs-file" type="file" accept="image/png,.png" multiple
+          (change)="onFilesSelected($event)" [attr.aria-label]="t('labels.fileLabel')" />
+      </label>
+
+      @if (images().length) {
+        <p class="queue-count">
+          {{ t('labels.queueLabel') }}: <strong>{{ images().length }}</strong>
+          · {{ fmt(totalInput()) }}
+        </p>
+        <ol class="queue">
+          @for (img of images(); track img.id) {
+            <li class="queue-item">
+              <img [src]="img.url" [alt]="img.name" loading="lazy" />
+              <div class="q-info">
+                <span class="q-name">{{ img.name }}</span>
+                <span class="q-meta">{{ img.w }} × {{ img.h }} px · {{ fmt(img.bytes.length) }}</span>
+              </div>
+              <div class="q-actions">
+                <button type="button" class="icon-btn" (click)="moveUp(img.id)"
+                  [attr.aria-label]="t('labels.moveUp')" [disabled]="busy()">
+                  <app-icon name="chevron-up" />
+                </button>
+                <button type="button" class="icon-btn" (click)="moveDown(img.id)"
+                  [attr.aria-label]="t('labels.moveDown')" [disabled]="busy()">
+                  <app-icon name="chevron-down" />
+                </button>
+                <button type="button" class="icon-btn danger" (click)="remove(img.id)"
+                  [attr.aria-label]="t('labels.remove')" [disabled]="busy()">
+                  <app-icon name="x" />
+                </button>
+              </div>
+            </li>
+          }
+        </ol>
+        <button type="button" class="link-btn" (click)="clearAll()" [disabled]="busy()">
+          {{ t('labels.clearAll') }}
+        </button>
+
+        <div class="field">
+          <span class="field-label" id="pp-size-label">{{ t('labels.sizeLabel') }}</span>
+          <div class="segmented" role="group" aria-labelledby="pp-size-label">
+            <button type="button" [class.active]="pageSize() === 'fit'" (click)="setPageSize('fit')">
+              {{ t('labels.sizeFit') }}
+            </button>
+            <button type="button" [class.active]="pageSize() === 'a4'" (click)="setPageSize('a4')">
+              A4
+            </button>
+            <button type="button" [class.active]="pageSize() === 'letter'" (click)="setPageSize('letter')">
+              Letter
+            </button>
+          </div>
+        </div>
+
+        @if (pageSize() !== 'fit') {
+          <div class="field">
+            <span class="field-label" id="pp-orient-label">{{ t('labels.orientLabel') }}</span>
+            <div class="segmented" role="group" aria-labelledby="pp-orient-label">
+              <button type="button" [class.active]="orient() === 'portrait'" (click)="setOrient('portrait')">
+                {{ t('labels.orientPortrait') }}
+              </button>
+              <button type="button" [class.active]="orient() === 'landscape'" (click)="setOrient('landscape')">
+                {{ t('labels.orientLandscape') }}
+              </button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="pp-margin">{{ t('labels.marginLabel') }}: {{ marginMm() }} mm</label>
+            <input id="pp-margin" type="range" min="0" max="40" step="5"
+              [ngModel]="marginMm()" (ngModelChange)="setMargin($event)"
+              [attr.aria-label]="t('labels.marginLabel')" />
+          </div>
+        }
+
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="buildPdf()" [disabled]="busy()">
+            <app-icon name="file-text" /> {{ t('labels.buildButton') }}
+          </button>
+          @if (outSize() > 0) {
+            <button type="button" class="btn ghost" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadButton') }} ({{ fmt(outSize()) }})
+            </button>
+          }
+        </div>
+      }
+
+      @if (busy()) {
+        <p class="status" role="status"><app-icon name="refresh-cw" /> {{ t('labels.busy') }}</p>
+      }
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+      @if (status()) {
+        <p class="status" role="status"><app-icon name="check" /> {{ status() }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

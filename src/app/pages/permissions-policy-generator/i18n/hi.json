@@ -1,0 +1,127 @@
+{
+  "permissions-policy-generator": {
+    "benefits": [
+      "हमले का दायरा घटता है: थर्ड-पार्टी स्क्रिप्ट और iframe को गैर-ज़रूरी हार्डवेयर की पहुंच नहीं मिलती।",
+      "एम्बेडेड कंटेंट से होने वाले छिपे परमिशन प्रॉम्प्ट रुकते हैं।",
+      "एक हेडर हर directive कवर करता है — हर पेज पर JavaScript बदलने की ज़रूरत नहीं।",
+      "प्रीसेट एक क्लिक में सुरक्षित शुरुआत देते हैं, फिर हर directive अलग से ट्यून करें।",
+      "स्थानीय रूप से बनता है; आपकी सुरक्षा कॉन्फ़िगरेशन ब्राउज़र से बाहर नहीं जाती।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "इसे अपने वेब सर्वर या CDN से HTTP रिस्पॉन्स हेडर के रूप में सर्व करें (जैसे nginx में add_header Permissions-Policy \"...\")। <meta> टैग से Permissions-Policy काम नहीं करता — कुछ अन्य सुरक्षा हेडर के उलट, यह असली HTTP हेडर होना चाहिए।",
+        "q": "बना हेडर कैसे लागू करूं?"
+      },
+      {
+        "a": "हां। पुराने Feature-Policy के उलट, Permissions-Policy सभी आधुनिक ब्राउज़रों (Chrome, Edge, Firefox, Safari) में लागू होता है। पुराने ब्राउज़र हेडर को नज़रअंदाज़ कर देते हैं, इसलिए डिप्लॉय करना सुरक्षित है।",
+        "q": "क्या Permissions-Policy सभी ब्राउज़रों में समर्थित है?"
+      },
+      {
+        "a": "हां — इसी के लिए Custom स्थिति है। origins फ़ील्ड में भरोसेमंद origins एक बार डालें, फिर किसी भी directive को Custom पर सेट करें। origins हर Custom directive पर लागू होते हैं, (self \"https://a.com\" \"https://b.com\") के रूप में रेंडर होते हैं।",
+        "q": "क्या खास थर्ड-पार्टी origins की अनुमति दे सकता हूं?"
+      },
+      {
+        "a": "Balanced प्रीसेट से शुरू करें और साइट अच्छी तरह टेस्ट करें — खासकर वीडियो कॉल, मैप, पेमेंट और एम्बेडेड प्लेयर। फिर हर directive को अलग से Deny तक सख्त करें। ज़्यादा ब्लॉक करने से फीचर चुपचाप टूटते हैं, इसलिए हर बदलाव के बाद टेस्ट करें।",
+        "q": "साइट टूटने से कैसे बचूं?"
+      },
+      {
+        "a": "रिपोर्टिंग Reporting API से होती है, जिसके लिए अलग Report-To / Reporting-Endpoints हेडर चाहिए — यह जनरेटर उसे नहीं बनाता। पहली बार हेडर डिप्लॉय करें और ब्लॉक हुए फीचर के लिए ब्राउज़र DevTools कंसोल चेतावनियां देखें।",
+        "q": "क्या हेडर ब्लॉक करने के बजाय उल्लंघन रिपोर्ट कर सकता है?"
+      },
+      {
+        "a": "दोनों एक-दूसरे के पूरक हैं। Content-Security-Policy नियंत्रित करता है कि कौन-से रिसोर्स लोड हों; Permissions-Policy नियंत्रित करता है कि पेज और iframe कौन-से ब्राउज़र फीचर (कैमरा, लोकेशन आदि) इस्तेमाल कर सकते हैं। दोनों इस्तेमाल करें।",
+        "q": "यह Content-Security-Policy से कैसे अलग है?"
+      }
+    ],
+    "formula": "Permissions-Policy: directive=(allowlist), directive=(allowlist), ...\n\nAllowlist रूप:\n  ()                       <- कोई नहीं (deny)\n  (self)                   <- सिर्फ यह origin\n  (self \"https://a.com\")  <- यह origin और सूचीबद्ध origins\n  *                        <- हर origin (बचें)\n\nउदाहरण: camera=(), geolocation=(self), microphone=(self \"https://meet.example.com\")",
+    "formulaHeading": "हेडर सिंटैक्स",
+    "homeLabel": "होम",
+    "howTo": [
+      "प्रीसेट चुनें: Strict सब कुछ deny करता है, Balanced संवेदनशील फीचर deny करके बाकी को अपने origin पर अनुमति देता है।",
+      "हर directive को चिप से ट्यून करें: Unset (छोड़ें), Deny, Self या Custom।",
+      "Custom directive के लिए भरोसेमंद origins एक बार origins फ़ील्ड में डालें (स्पेस या कॉमा से अलग)।",
+      "हेडर वैल्यू कॉपी करें या टेक्स्ट फ़ाइल के रूप में डाउनलोड करें।",
+      "इसे सर्वर या CDN से असली HTTP रिस्पॉन्स हेडर के रूप में सर्व करें — <meta> टैग काम नहीं करेगा।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "Permissions-Policy एक HTTP रिस्पॉन्स हेडर है जो नियंत्रित करता है कि पेज और उसके iframe कौन-से ब्राउज़र फीचर (कैमरा, माइक्रोफोन, लोकेशन आदि) इस्तेमाल कर सकते हैं।",
+      "हर directive एक allowlist लेता है: () सबको deny करता है, (self) सिर्फ आपके origin को अनुमति देता है, और उद्धरण में लिखे origins भरोसेमंद थर्ड पार्टी जोड़ते हैं।",
+      "यह पुराने Feature-Policy हेडर की जगह लेता है; आधुनिक ब्राउज़र Permissions-Policy को नेटिव लागू करते हैं।",
+      "डिफ़ॉल्ट-इनकार सुरक्षित रवैया है: फीचर की अनुमति तभी दें जहां साइट को सच में ज़रूरत हो।",
+      "Content-Security-Policy के उलट इसे <meta> टैग से सेट नहीं किया जा सकता — यह HTTP हेडर के रूप में आना चाहिए।",
+      "ज़्यादा ब्लॉक करने से फीचर चुपचाप टूटते हैं (मैप, वीडियो कॉल, पेमेंट), इसलिए सख्त करने के बाद टेस्ट करें।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "permissions policy generator, permissions-policy header, feature policy generator, browser permissions header",
+    "labels": {
+      "configuredLabel": "कॉन्फ़िगर किए गए directive",
+      "copiedMsg": "हेडर क्लिपबोर्ड पर कॉपी हो गया।",
+      "copyHeader": "हेडर कॉपी करें",
+      "d_accelerometer": "डिवाइस एक्सेलेरोमीटर की पहुंच (अक्षों पर गति)।",
+      "d_autoplay": "आवाज़ वाले मीडिया का ऑटोप्ले।",
+      "d_camera": "कैमरे की पहुंच।",
+      "d_clipboard-read": "सिस्टम क्लिपबोर्ड से पढ़ना।",
+      "d_clipboard-write": "सिस्टम क्लिपबोर्ड में लिखना।",
+      "d_display-capture": "getDisplayMedia से स्क्रीन शेयरिंग।",
+      "d_encrypted-media": "DRM-सुरक्षित मीडिया (EME) का प्लेबैक।",
+      "d_fullscreen": "फुलस्क्रीन मोड का अनुरोध।",
+      "d_gamepad": "गेमपैड डिवाइस की पहुंच।",
+      "d_geolocation": "डिवाइस लोकेशन की पहुंच।",
+      "d_gyroscope": "डिवाइस जायरोस्कोप की पहुंच (घूर्णन)।",
+      "d_hid": "WebHID से Human Interface Devices की पहुंच।",
+      "d_idle-detection": "यूज़र के निष्क्रिय होने का पता लगाना।",
+      "d_local-fonts": "स्थानीय रूप से इंस्टॉल फॉन्ट की सूची।",
+      "d_magnetometer": "डिवाइस मैग्नेटोमीटर की पहुंच (कम्पास)।",
+      "d_microphone": "माइक्रोफोन की पहुंच।",
+      "d_midi": "MIDI डिवाइस की पहुंच (Web MIDI)।",
+      "d_payment": "Payment Request API का उपयोग।",
+      "d_picture-in-picture": "तैरती पिक्चर-इन-पिक्चर वीडियो विंडो।",
+      "d_publickey-credentials-get": "WebAuthn क्रेडेंशियल अनुरोध (सुरक्षा कुंजी, पासकी)।",
+      "d_screen-wake-lock": "स्क्रीन को धुंधला या लॉक होने से रोकना।",
+      "d_serial": "सीरियल पोर्ट की पहुंच (Web Serial)।",
+      "d_sync-xhr": "पेज में सिंक्रोनस XMLHttpRequest।",
+      "d_usb-devices": "USB डिवाइस की पहुंच (WebUSB)।",
+      "downloadHeader": ".txt डाउनलोड करें",
+      "generatedHeader": "बना Permissions-Policy हेडर",
+      "originsHint": "स्पेस या कॉमा से अलग करें। हर Custom directive पर लागू होता है।",
+      "originsLabel": "Custom के लिए भरोसेमंद origins",
+      "presetBalanced": "Balanced",
+      "presetReset": "सब रीसेट करें",
+      "presetStrict": "Strict (सब deny)",
+      "presetsLabel": "प्रीसेट",
+      "serveNote": "इसे सर्वर या CDN से HTTP रिस्पॉन्स हेडर के रूप में सर्व करें। <meta> टैग से काम नहीं करेगा।",
+      "stateCustom": "Custom",
+      "stateDeny": "Deny",
+      "stateSelf": "Self",
+      "stateUnset": "Unset",
+      "warnCustomNoOrigins": "एक directive Custom पर है लेकिन कोई भरोसेमंद origins नहीं डाले — यह सिर्फ Self जैसा व्यवहार करेगा।",
+      "warnInvalidOrigins": "कुछ origins सही serialized origins नहीं हैं (https://host या https://host:port रूप इस्तेमाल करें)।",
+      "warnNothingSet": "अभी कोई directive कॉन्फ़िगर नहीं — हेडर खाली है।",
+      "warningsHeading": "डिप्लॉय से पहले जांचें"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "<meta> टैग से नहीं दिया जा सकता — सर्वर या CDN हेडर कॉन्फ़िगरेशन ज़रूरी है।",
+      "पुराने ब्राउज़र हेडर को पूरी तरह नज़रअंदाज़ करते हैं, इसलिए यह पक्की गारंटी नहीं, defense-in-depth है।",
+      "कुछ directive के ब्राउज़र-विशिष्ट डिफ़ॉल्ट होते हैं; Unset का मतलब ब्राउज़र डिफ़ॉल्ट लागू होगा।",
+      "उल्लंघन रिपोर्टिंग (Reporting API) शामिल नहीं — सिर्फ ब्लॉकिंग।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त Permissions-Policy जनरेटर: आसान टॉगल और प्रीसेट से Permissions-Policy HTTP हेडर बनाएं। कॉपी या डाउनलोड करें, 100% निजी।",
+    "metaTitle": "Permissions Policy Generator - हेडर बनाएं | JaurTools",
+    "name": "Permissions Policy जनरेटर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "Permissions-Policy HTTP हेडर नियंत्रित करता है कि आपके पेज और एम्बेडेड iframe कौन-से ब्राउज़र फीचर इस्तेमाल कर सकते हैं। हर directive एक allowlist लेता है: camera=() कैमरा सबको deny करता है, geolocation=(self) लोकेशन सिर्फ आपके origin पर देता है, और microphone=(self \"https://meet.example.com\") भरोसेमंद थर्ड पार्टी जोड़ता है। यह जनरेटर Strict और Balanced प्रीसेट के साथ आसान प्रति-directive टॉगल से पूरा हेडर बनाता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "आपका Permissions-Policy हेडर",
+    "tagline": "आसान प्रति-फीचर टॉगल से Permissions-Policy HTTP हेडर बनाएं।",
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "workedExample": "सेटिंग: camera Deny पर, geolocation Self पर, microphone Custom पर भरोसेमंद origin https://meet.example.com के साथ, बाकी सब Unset।\nबना हेडर:\nPermissions-Policy: camera=(), geolocation=(self), microphone=(self \"https://meet.example.com\")\nअर्थ: कोई पेज या iframe कैमरा छू नहीं सकता; लोकेशन सिर्फ आपके origin पर चलेगी; माइक्रोफोन आपके origin और meet.example.com पर चलेगा (जैसे एम्बेडेड वीडियो-कॉल विजेट)। इसे HTTP रिस्पॉन्स हेडर के रूप में सर्व करें — <meta> टैग काम नहीं करेगा।"
+  }
+}

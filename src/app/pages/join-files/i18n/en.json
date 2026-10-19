@@ -1,0 +1,92 @@
+{
+  "join-files": {
+    "benefits": [
+      "Reassembles split downloads and chunked uploads without any command-line tools.",
+      "You control the exact order with simple up and down buttons.",
+      "Byte-exact concatenation: the joined file is bit-identical to the original.",
+      "Everything happens locally, so even private files stay on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Joining is pure byte concatenation, so any file type works: videos, archives, disk images, documents. The result is usable only if the chunks were split from one original file, in the right order.",
+        "q": "Can I join video or ZIP chunks?"
+      },
+      {
+        "a": "Use the up and down arrow buttons next to each file to arrange them. The numbered list shows the exact join order, top to bottom.",
+        "q": "How do I set the correct order of chunks?"
+      },
+      {
+        "a": "No. Joining concatenates raw bytes; it does not understand file structure. If chunks overlap or come from different files, the result will be corrupted. Always join chunks that were split from a single file.",
+        "q": "Does it verify that chunks belong together?"
+      },
+      {
+        "a": "Name the output with the original extension, for example movie.mp4 or backup.zip. The tool does not guess the type from the chunks.",
+        "q": "What file name should I give the joined file?"
+      },
+      {
+        "a": "The combined size of all parts is capped at 500 MB to keep the browser tab fast and stable.",
+        "q": "Is there a size limit?"
+      }
+    ],
+    "formula": "joined file = bytes(part1) + bytes(part2) + ... + bytes(partN), in the listed order",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose files and select the chunks in any order.",
+      "Arrange them top to bottom with the up and down buttons; the numbers show the join order.",
+      "Remove any wrong file with the X button.",
+      "Type the output file name, including the original extension like .mp4 or .zip.",
+      "Press Join files and download the reassembled file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Joins file parts by exact byte concatenation, in the order you arrange.",
+      "Up and down buttons let you fix the chunk order before joining.",
+      "The result is bit-identical to the original file when chunks are complete and ordered.",
+      "Works with any file type: videos, archives, documents, disk images.",
+      "A 500 MB total cap keeps the operation fast and memory-safe."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "join files online, merge file chunks, combine split files, reassemble file parts free",
+    "labels": {
+      "chooseFiles": "Choose files",
+      "clearAll": "Clear all",
+      "done": "Done! {n} parts joined into a {s} file. Your download has started.",
+      "emptyFiles": "No files selected yet.",
+      "errorJoin": "Something went wrong while joining. Please try again.",
+      "errorTooBig": "Adding these files would exceed the 500 MB limit.",
+      "filesHint": "Select all chunks. Combined size up to 500 MB.",
+      "joinButton": "Join files",
+      "moveDown": "Move down",
+      "moveUp": "Move up",
+      "orderHint": "Arrange the parts in join order, top to bottom.",
+      "outNameLabel": "Output file name",
+      "removeFile": "Remove file",
+      "resultParts": "Parts",
+      "resultTotal": "Combined size"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pure byte concatenation; it cannot repair overlapping or mismatched chunks.",
+      "You must know the correct chunk order yourself.",
+      "Total input is capped at 500 MB.",
+      "The output type is whatever you name it; the tool does not detect it."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Join split file chunks online free. Arrange parts in order and merge them into one byte-exact file. 100% browser-based, no upload.",
+    "metaTitle": "Join Files Online Free - Merge Split File Chunks | JaurTools",
+    "name": "Join Files",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Select your file chunks, arrange them in the correct order with the up and down buttons, name the output file, and press Join files. The parts are concatenated byte-for-byte in your browser and downloaded as one reassembled file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Join Files results",
+    "tagline": "Reassemble split file chunks into one file.",
+    "workedExample": "You have a video split into three parts:\nvideo.part1 = 10,000,000 bytes\nvideo.part2 = 10,000,000 bytes\nvideo.part3 = 4,250,000 bytes\n\nArranged 1-2-3 and named video.mp4, the tool concatenates:\n10,000,000 + 10,000,000 + 4,250,000 = 24,250,000 bytes\n\nThe downloaded video.mp4 is exactly 24,250,000 bytes and plays normally.",
+    "workedExampleHeading": "Worked example"
+  }
+}

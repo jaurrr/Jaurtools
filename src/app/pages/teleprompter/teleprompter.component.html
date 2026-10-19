@@ -1,0 +1,156 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      @if (mode() === 'edit') {
+        <div class="field">
+          <label for="teleprompter-input">{{ t('labels.scriptLabel') }}</label>
+          <textarea class="ed-textarea" id="teleprompter-input" [ngModel]="rawScript()" (ngModelChange)="setScript($event)"
+            [attr.placeholder]="t('labels.scriptPlaceholder')" rows="8"></textarea>
+        </div>
+
+        <div class="results ed-livebar">
+          <div class="result-row">
+            <span><app-icon name="mic" /> {{ t('labels.wordsLabel') }}</span>
+            <strong>{{ wordCount() }}</strong>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn primary" (click)="startPrompt()" [disabled]="!script().trim()">
+            <app-icon name="arrow-right" /> {{ t('labels.startButton') }}
+          </button>
+        </div>
+      } @else {
+        <div class="prompter-controls" role="toolbar" [attr.aria-label]="t('labels.controlsLabel')">
+          <button type="button" class="btn primary" (click)="togglePlay()">
+            {{ playing() ? t('labels.pauseButton') : t('labels.playButton') }}
+          </button>
+          <button type="button" class="btn" (click)="backToEdit()">
+            {{ t('labels.backButton') }}
+          </button>
+          <button type="button" class="btn" (click)="decreaseFont()" [attr.aria-label]="t('labels.decreaseFont')">A&minus;</button>
+          <button type="button" class="btn" (click)="increaseFont()" [attr.aria-label]="t('labels.increaseFont')">A+</button>
+          <button type="button" class="btn" [class.active]="flipped()" (click)="toggleFlip()">
+            {{ t('labels.flipButton') }}
+          </button>
+        </div>
+
+        <div class="field">
+          <label for="teleprompter-speed">{{ t('labels.speedLabel') }}: {{ speed() }}</label>
+          <input id="teleprompter-speed" type="range" min="1" max="10" step="1"
+            [ngModel]="speed()" (ngModelChange)="setSpeed($event)" />
+        </div>
+
+        <div #stage class="stage" [class.flipped]="flipped()" [style.font-size.px]="fontSize()"
+          tabindex="0" [attr.aria-label]="t('labels.stageLabel')">
+          <p class="script-text">{{ script() }}</p>
+        </div>
+
+        <p class="note">{{ t('labels.speedHint') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

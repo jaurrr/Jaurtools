@@ -1,0 +1,104 @@
+{
+  "open-graph-preview": {
+    "benefits": [
+      "رؤية كيف سيبدو رابطك عند مشاركته بالضبط — قبل النشر.",
+      "يكشف وسوم og:image المفقودة أو المعطوبة، وهي السبب الأكثر شيوعًا لفشل البطاقات.",
+      "اختبار تخطيطي X وFacebook جنبًا إلى جنب من لصقة واحدة.",
+      "الحقول اليدوية تتيح تجربة العناوين والأوصاف دون تعديل HTML.",
+      "يعمل بالكامل في متصفحك؛ فلا يُرفع ترميزك أبدًا."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "استخدم عنوان URL مطلقًا بصيغة https:// — فالمسارات النسبية هي السبب الأول لعدم ظهور الصورة. وأبقه أقل من 5 م.ب، والأمثل 1200×630 بكسل للبطاقات الكبيرة. ويجب أن يكون العنوان reachable للعامة: فالزواحف لا تستطيع تسجيل الدخول.",
+        "q": "لماذا لا تظهر صورة بطاقتي؟"
+      },
+      {
+        "a": "وسوم Open Graph ‏(og:)‎ معيار مفتوح تقرؤه Facebook وLinkedIn وWhatsApp وTelegram ومعظم المنصات. ووسوم Twitter Cards ‏(twitter:)‎ تحسّن العرض على X. اضبط الاثنتين: وسوم og: كأساس وtwitter:card وتجاوزات twitter: لـ X.",
+        "q": "ما الفرق بين Open Graph وTwitter Cards؟"
+      },
+      {
+        "a": "يخزّن X البطاقات مؤقتًا بشراسة (نحو 7 أيام). استخدم Card Validator الخاص بـ X لتحديث التخزين المؤقت لعنوان URL. وبالمثل يعيد Sharing Debugger الخاص بـ Facebook الكشط ويعرض ما يراه Facebook.",
+        "q": "أصلحت وسومي لكن البطاقة القديمة ما زالت تظهر — لماذا؟"
+      },
+      {
+        "a": "يعرض summary مصغرًا مربعًا صغيرًا بجانب النص — جيد للمقالات. ويعرض summary_large_image صورة بانر عريضة فوق النص — أفضل للمحتوى المرئي وعادة نسبة نقر أعلى. وتعاين هذه الأداة الاثنتين.",
+        "q": "‏summary أم summary_large_image — أيهما أستخدم؟"
+      },
+      {
+        "a": "يقرأ WhatsApp وTelegram وسوم og:. ويعرض WhatsApp صورة og:image مع العنوان والنطاق؛ وأبقِ الصور أقل من 300 ك.ب لعرض سريع. ويدعم Telegram صورًا أكبر أيضًا. ويستخدم iMessage استدلالاته الخاصة لكنه يقرأ وسوم og: أيضًا.",
+        "q": "ماذا عن معاينات WhatsApp وTelegram وiMessage؟"
+      },
+      {
+        "a": "نعم مع حدود: فيحلل الوسوم ويعرض بطاقات محاكاة دقيقة، لكنه لا يستطيع محاكاة خطوط كل منصة وقصّها وسلوك تخزينها المؤقت بدقة. وتأكد دائمًا بمصحح المنصة نفسها قبل إطلاق كبير.",
+        "q": "هل هذه المعاينة مطابقة للبكسل؟"
+      }
+    ],
+    "formula": "الوسوم التي تقرؤها هذه الأداة (أول تطابق يفوز لكل مجموعة):\nالعنوان: twitter:title -> ‏og:title -> الحقل اليدوي\nالوصف: twitter:description -> ‏og:description -> الحقل اليدوي\nالصورة: twitter:image -> ‏og:image -> الحقل اليدوي\nالرابط: og:url -> الحقل اليدوي\nنوع البطاقة: twitter:card = ‏summary_large_image -> كبيرة، وإلا ملخص\n(الحقول اليدوية تتجاوز الوسوم المحللة عند تعبئتها.)",
+    "formulaHeading": "كيف تُستنتج القيم",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "انسخ وسوم <meta> من <head> صفحتك (عرض المصدر) والصقها في المربع.",
+      "أو املأ الحقول اليدوية مباشرة للتجربة — فالقيم اليدوية تتجاوز الوسوم المحللة.",
+      "اختر نوع بطاقة X: ‏Auto (من twitter:card) أو Summary أو Large image.",
+      "راجع المعاينتين: بطاقة X وبطاقة Facebook/Open Graph.",
+      "أصلح أي تحذيرات (عنوان أو وصف أو صورة مفقودة)، وحدّث صفحتك ثم أعد اللصق."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "تبني منصات التواصل بطاقات الروابط من وسوم meta في <head> صفحتك — لا تخمّن من المحتوى المرئي.",
+      "وسوم Open Graph ‏(og:title وog:description وog:image وog:url)‎ هي المعيار المشترك الذي تقرؤه Facebook وLinkedIn وWhatsApp وTelegram.",
+      "وسوم Twitter Card ‏(twitter:card وtwitter:title وtwitter:image)‎ تحسّن مظهر البطاقة على X.",
+      "قيم twitter:card: ‏summary (مصغر صغير) أو summary_large_image (بانر عريض).",
+      "يجب أن يكون og:image عنوان URL مطلقًا بصيغة https://، والأمثل 1200×630 بكسل وأقل من 5 م.ب.",
+      "تخزّن المنصات البطاقات مؤقتًا لأيام — فبعد إصلاح الوسوم استخدم مصحح كل منصة لفرض إعادة الكشط."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "social card preview, open graph preview, twitter card preview, og tags checker, link preview tester",
+    "labels": {
+      "cardAuto": "تلقائي",
+      "cardLarge": "صورة كبيرة",
+      "cardSummary": "ملخص",
+      "checksHeading": "مشكلات البطاقة",
+      "clearButton": "مسح",
+      "emptyState": "الصق وسوم meta أو املأ الحقول أعلاه لمعاينة البطاقات.",
+      "fCard": "نوع بطاقة X",
+      "fDesc": "الوصف",
+      "fImage": "عنوان URL للصورة",
+      "fTitle": "العنوان",
+      "fUrl": "عنوان URL للصفحة",
+      "manualHeading": "أو أدخل القيم يدويًا",
+      "pasteHint": "الصق وسوم <meta> هنا…",
+      "pasteLabel": "وسوم meta",
+      "previewFb": "بطاقة Facebook / Open Graph",
+      "previewNote": "معاينات محاكاة معروضة في متصفحك — قريبة من البطاقات الحقيقية، لكن المنصات تطبق خطوطها وقصّها وتخزينها المؤقت.",
+      "previewX": "بطاقة X (تويتر)",
+      "warnImageHttp": "عنوان URL للصورة ليس بصيغة https:// — فالمنصات تشترط عناوين صور آمنة.",
+      "warnNoDesc": "لم يوجد وصف — فالبطاقات تبدو فارغة بدونه.",
+      "warnNoImage": "لم توجد صورة — فالبطاقات دون صور تحصل على نقرات أقل بكثير.",
+      "warnNoTitle": "لم يوجد عنوان — فالبطاقة تحتاج og:title أو twitter:title."
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "محاكاة فقط للمعاينات — ليست نسخًا مطابقة للبكسل من عارض كل منصة.",
+      "لا يستطيع التحقق مما إذا كان عنوان URL للصورة يُحمَّل فعلًا أو يفي بمتطلبات الحجم — بل فقط من وجود عنوان.",
+      "لا يحاكي التخزين المؤقت للمنصات؛ فقد تستغرق الوسوم المُصلحة أيامًا لتتحدث على المنصة الحية.",
+      "يقرأ الوسوم الملصقة فقط — ولا يستطيع جلب صفحتك الحية لاستخراجها."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "عاين كيف يظهر رابطك عند مشاركته على X وFacebook وLinkedIn. الصق الوسوم التعريفية وشاهد البطاقات فورًا — مجاني.",
+    "metaTitle": "معاينة Open Graph أونلاين - اختبر بطاقات روابطك الاجتماعية | JaurTools",
+    "name": "معاينة Open Graph",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "الصق وسوم <meta> الخاصة بصفحتك وستعرض هذه الأداة بطاقتي X وFacebook محاكاة من وسوم og: وtwitter:. وتستنتج العنوان (twitter:title ثم og:title) والوصف والصورة والرابط بالطريقة نفسها التي تستخدمها المنصات، وتنبه للوسوم المفقودة، وتتيح تجاوز أي قيمة يدويًا للتجربة. فمثلًا الوسوم التي فيها twitter:card بقيمة summary_large_image تعرض بطاقة X بالبانر العريض.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "معاينات البطاقات",
+    "tagline": "عاين بطاقات روابط X وFacebook.",
+    "workedExampleHeading": "مثال محلول",
+    "workedExample": "وسوم عينة ملصقة:\n<meta property=\"og:title\" content=\"Example — Free Browser Tools\">\n<meta property=\"og:description\" content=\"Free tools that run in your browser.\">\n<meta property=\"og:image\" content=\"https://example.com/og.png\">\n<meta property=\"og:url\" content=\"https://example.com/\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\nالقيم المستنتجة:\n1. العنوان: Example — Free Browser Tools (من og:title؛ لا twitter:title).\n2. الوصف: Free tools that run in your browser.\n3. الصورة: https://example.com/og.png (بصيغة https فلا تحذير).\n4. الرابط/النطاق: example.com.\n5. نوع البطاقة: كبيرة (twitter:card = ‏summary_large_image).\nالنتيجة: تعرض معاينة X تخطيط البانر العريض؛ وتعرض معاينة Facebook بطاقة OG القياسية. لا تحذيرات — فالوسوم الأساسية الأربعة موجودة."
+  }
+}

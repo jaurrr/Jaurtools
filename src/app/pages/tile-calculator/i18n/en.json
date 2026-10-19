@@ -1,0 +1,102 @@
+{
+  "tile-calculator": {
+    "name": "Tile Calculator",
+    "tagline": "Estimate floor tiles, boxes, and cost for any room — with cutting waste included.",
+    "metaTitle": "Tile Calculator – Floor Tile & Box Estimator | JaurTools",
+    "metaDescription": "Free tile calculator. Enter room size and tile size to estimate tiles needed, boxes to buy and total cost — 100% in your browser.",
+    "keywords": "tile calculator, floor tile calculator, how many tiles do I need, tile box calculator, tiles per square meter",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Divide the floor area by the area of one tile, add your waste percentage for cutting, and round up — that is the number of tiles to buy. Divide by tiles per box for the box count. A 4×5 m room with 60×60 cm tiles needs 62 tiles (16 boxes of 4) at 10% waste.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "One 60×60 cm tile covers 0.36 m², so a 20 m² room needs about 56 tiles before waste.",
+      "Cutting waste of 5–10% covers edge cuts; diagonal layouts and small rooms need 10–15%.",
+      "Tiles are sold by the box, and most shops do not sell single tiles — always round up to whole boxes.",
+      "Buy all boxes from the same batch (shade/lot number): dye lots vary visibly between batches.",
+      "Measure the room wall to wall; fixed fittings you tile around can be subtracted for large kitchens.",
+      "Large-format tiles (60×120 cm and up) need fewer grout lines but are harder to level — budget extra adhesive."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Enter the room's length and width in meters.",
+      "Enter your tile's length and width in centimeters.",
+      "Enter how many tiles come in one box (check the packaging).",
+      "Set the waste percentage — 10% is a safe default.",
+      "Read tiles to buy, boxes to order, and the estimated cost.",
+      "For diagonal layouts, raise waste to 15% before reading the box count."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "Floor area = L × W (m²)\nTile area = (tile L ÷ 100) × (tile W ÷ 100)\nTiles = ceil(floor area ÷ tile area × (1 + waste/100))\nBoxes = ceil(tiles ÷ tiles per box)\nCost = tiles × price per tile",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Room 4 m × 5 m, tiles 60 × 60 cm, 4 per box, waste 10%, price 2.5 per tile.\nFloor area = 20 m²\nTile area = 0.6 × 0.6 = 0.36 m²\nExact tiles = 20 ÷ 0.36 = 55.56\nTo buy = ceil(55.56 × 1.10) = ceil(61.11) = 62 tiles\nBoxes = ceil(62 ÷ 4) = ceil(15.5) = 16 boxes\nCost = 62 × 2.5 = 155",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Stops mid-project tile shortages that delay tilers and cost extra trips.",
+      "Box rounding matches how shops actually sell tiles.",
+      "Cost estimate helps you compare tile options before buying.",
+      "Handles any tile size, from mosaics to large-format slabs."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Assumes a rectangular room: L-shaped rooms should be split into rectangles and summed manually.",
+      "Does not subtract doors, fixtures, or feature areas — deduct large untiled zones yourself.",
+      "Price is a rough estimate: it excludes adhesive, grout, spacers, and labor.",
+      "Always confirm the box quantity and shade with the supplier before ordering."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "How much waste should I add?",
+        "a": "5–10% for straight layouts in normal rooms, 10–15% for diagonal patterns, small bathrooms, or rooms with many corners. It is cheaper than a second trip for two missing tiles."
+      },
+      {
+        "q": "Why round up to whole boxes?",
+        "a": "Shops sell sealed boxes, not loose tiles. Rounding 15.5 boxes to 16 guarantees you actually have the tiles — the spare covers future repairs too."
+      },
+      {
+        "q": "What is a shade or batch number?",
+        "a": "Tiles are fired in batches and colors vary slightly between them. Buying one batch (same shade number on the boxes) keeps your floor a uniform color."
+      },
+      {
+        "q": "Do I measure wall to wall?",
+        "a": "Yes. Measure the full wall-to-wall dimensions. For kitchens with large fixed islands, subtract the island's footprint for a tighter estimate."
+      },
+      {
+        "q": "Does this include grout and adhesive?",
+        "a": "No — it estimates tiles only. Adhesive and grout depend on trowel size and joint width; ask your tiler or supplier for those quantities."
+      },
+      {
+        "q": "Can I use it for wall tiles?",
+        "a": "Yes. Enter the wall's length and height as the two dimensions — the math is identical for floors and walls."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your tile estimate",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "floorLLabel": "Room length (m)",
+      "floorWLabel": "Room width (m)",
+      "floorHint": "Wall-to-wall room dimensions.",
+      "tileSizeLabel": "Tile size (cm)",
+      "lengthLabel": "Length",
+      "widthLabel": "Width",
+      "tileHint": "Check the tile packaging for exact size.",
+      "perBoxLabel": "Tiles per box",
+      "wasteLabel": "Cutting waste (%)",
+      "wasteHint": "10% is a safe default; 15% for diagonal layouts.",
+      "priceLabel": "Price per tile (optional)",
+      "priceHint": "In your currency; used only for the cost estimate.",
+      "areaLabel": "Floor area",
+      "areaUnit": "m²",
+      "tilesExactLabel": "Exact tiles (no waste)",
+      "tilesBuyLabel": "Tiles to buy",
+      "boxesLabel": "Boxes to order",
+      "costLabel": "Estimated cost",
+      "roundNote": "Tiles and boxes are rounded up; waste is included in tiles to buy."
+    }
+  }
+}

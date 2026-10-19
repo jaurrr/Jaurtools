@@ -1,0 +1,93 @@
+{
+  "salary-to-hourly-calculator": {
+    "assumptionNote": "Assumes the same hours every week and no overtime, bonuses, unpaid leave, or taxes. Gross pay only - take-home pay will be lower.",
+    "benefits": [
+      "Compare job offers instantly: an hourly rate vs a salary, apples to apples.",
+      "Negotiate better by knowing exactly what your time is worth per hour.",
+      "See weekly, biweekly, monthly, and annual pay in one view.",
+      "Adjust hours per week for part-time, overtime, or contract work."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Multiply by 2,080 (40 hours x 52 weeks). So $25/hour = $52,000/year. This calculator does it for any hours and weeks, not just full-time.",
+        "q": "How do I convert hourly to salary?"
+      },
+      {
+        "a": "Divide the salary by total annual hours (hours per week x weeks per year). A $52,000 salary at 40 hours x 52 weeks = $25/hour. If you work 50 hours a week, that same salary is only $20/hour.",
+        "q": "How do I convert salary to hourly?"
+      },
+      {
+        "a": "2,080 hours per year is the standard for full-time work: 40 hours per week times 52 weeks. It is the number most converters and employers use.",
+        "q": "What is 2080 in salary calculations?"
+      },
+      {
+        "a": "No - and that is exactly what this calculator shows. A $60,000 salary at 40 hours/week is $28.85/hour, but at 55 hours/week it is only $20.96/hour. Longer hours quietly cut your real hourly rate.",
+        "q": "Is a $60,000 salary always better than $25/hour?"
+      },
+      {
+        "a": "Overtime usually pays 1.5x the hourly rate and is not included here. As a quick estimate, add overtime hours x hourly rate x 1.5 to the annual figure, or ask your employer for the gross pay on a typical pay stub.",
+        "q": "Does this include overtime?"
+      },
+      {
+        "a": "No. This is gross pay before income tax, social security, and other deductions. Your take-home pay will be lower - use the income tax calculator for a rough estimate of the tax part.",
+        "q": "Is this take-home pay?"
+      }
+    ],
+    "formula": "Annual hours = hours per week x weeks per year\nAnnual salary = hourly rate x annual hours\nHourly rate = annual salary / annual hours\nWeekly = annual / 52, biweekly = annual / 26, monthly = annual / 12",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the direction: hourly to salary, or salary to hourly.",
+      "Enter the hourly rate or the annual salary.",
+      "Set your hours per week and weeks worked per year.",
+      "Read all five pay periods instantly."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Full-time = 2,080 hours per year (40 hours x 52 weeks).",
+      "Hourly to salary: multiply the rate by total annual hours.",
+      "Salary to hourly: divide the salary by total annual hours.",
+      "Weekly, biweekly, and monthly figures all come from the same annual total.",
+      "These are gross figures - taxes and deductions are not included."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "hourly to salary calculator, salary to hourly calculator, pay rate converter, hourly wage calculator, annual salary converter",
+    "labels": {
+      "annualSalary": "Annual salary",
+      "biweeklyPay": "Biweekly pay",
+      "direction": "Conversion direction",
+      "hourlyInput": "Hourly rate ($/hour)",
+      "hourlyRate": "Hourly rate",
+      "hourlyTab": "Hourly to salary",
+      "hoursPerWeek": "Hours per week",
+      "monthlyPay": "Monthly pay",
+      "salaryInput": "Annual salary ($)",
+      "salaryTab": "Salary to hourly",
+      "weeklyPay": "Weekly pay",
+      "weeksPerYear": "Weeks worked per year"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Gross pay only - taxes, benefits, and deductions are not included.",
+      "Assumes constant hours; overtime and bonuses are ignored.",
+      "Does not account for unpaid leave or holidays.",
+      "Estimates only, not payroll advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free salary to hourly calculator: convert between hourly wages and annual salary with weekly, biweekly, and monthly breakdowns. Instant, private, no sign-up.",
+    "metaTitle": "Salary to Hourly Calculator - Convert Pay Rates Both Ways | JaurTools",
+    "name": "Salary to Hourly Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "$25 per hour at 40 hours a week for 52 weeks = $52,000 per year: $1,000 weekly, $2,000 biweekly, and $4,333.33 monthly. Reverse it: a $52,000 salary at 40 hours a week is exactly $25 per hour - but at 50 hours a week it drops to $20 per hour.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your pay conversion results",
+    "tagline": "Convert between salary and hourly pay, with every pay period shown.",
+    "workedExample": "$25/hour, 40 hours/week, 52 weeks:\n1. Annual hours = 40 x 52 = 2,080.\n2. Annual salary = $25 x 2,080 = $52,000.\n3. Weekly = $52,000 / 52 = $1,000.\n4. Biweekly = $52,000 / 26 = $2,000.\n5. Monthly = $52,000 / 12 = $4,333.33.\nReverse check: $52,000 / 2,080 = $25/hour. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

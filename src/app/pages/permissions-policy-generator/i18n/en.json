@@ -1,0 +1,127 @@
+{
+  "permissions-policy-generator": {
+    "benefits": [
+      "Shrinks your attack surface: third-party scripts and iframes lose access to hardware they do not need.",
+      "Stops sneaky permission prompts triggered by embedded content.",
+      "One header covers every directive — no per-page JavaScript changes needed.",
+      "Presets give you a safe starting point in one click, then fine-tune per directive.",
+      "Generated locally; your security configuration never leaves the browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Serve it as an HTTP response header from your web server or CDN (for example add_header Permissions-Policy \"...\" in nginx). A <meta> tag does not work for Permissions-Policy — unlike some other security headers, it must be a real HTTP header.",
+        "q": "How do I apply the generated header?"
+      },
+      {
+        "a": "Yes. Unlike the older Feature-Policy, Permissions-Policy is enforced in all modern browsers (Chrome, Edge, Firefox, Safari). Older browsers simply ignore the header, so it is safe to deploy.",
+        "q": "Is Permissions-Policy supported in all browsers?"
+      },
+      {
+        "a": "Yes — that is what the Custom state is for. Enter the trusted origins once in the origins field, then set any directive to Custom. The origins apply to every directive you set to Custom, rendered as (self \"https://a.com\" \"https://b.com\").",
+        "q": "Can I allow specific third-party origins?"
+      },
+      {
+        "a": "Start with the Balanced preset and test your site thoroughly — especially video calls, maps, payments, and embedded players. Then tighten individual directives to Deny. Over-blocking breaks features silently, so test after every change.",
+        "q": "How do I avoid breaking my site?"
+      },
+      {
+        "a": "Reporting is done through the Reporting API with a separate Report-To / Reporting-Endpoints header, which this generator does not build. For a first version, deploy the header and check browser DevTools console warnings for blocked features.",
+        "q": "Can the header report violations instead of blocking?"
+      },
+      {
+        "a": "They are complementary. Content-Security-Policy controls which resources load; Permissions-Policy controls which browser features (camera, geolocation, etc.) pages and iframes may use. Use both.",
+        "q": "How is this different from Content-Security-Policy?"
+      }
+    ],
+    "formula": "Permissions-Policy: directive=(allowlist), directive=(allowlist), ...\n\nAllowlist forms:\n  ()                       <- no one (deny)\n  (self)                   <- this origin only\n  (self \"https://a.com\")  <- this origin plus listed origins\n  *                        <- every origin (avoid)\n\nExample: camera=(), geolocation=(self), microphone=(self \"https://meet.example.com\")",
+    "formulaHeading": "Header syntax",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a preset: Strict denies everything, Balanced denies sensitive features and allows the rest on your own origin.",
+      "Fine-tune per directive with the chips: Unset (omit), Deny, Self, or Custom.",
+      "For Custom directives, enter the trusted origins once in the origins field (space or comma separated).",
+      "Copy the header value or download it as a text file.",
+      "Serve it as a real HTTP response header from your server or CDN — a <meta> tag will not work."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Permissions-Policy is an HTTP response header that controls which browser features (camera, microphone, geolocation, and more) a page and its iframes may use.",
+      "Each directive takes an allowlist: () denies everyone, (self) allows only your own origin, and quoted origins add trusted third parties.",
+      "It replaces the older Feature-Policy header; modern browsers enforce Permissions-Policy natively.",
+      "Deny-by-default is the safe posture: allow a feature only where your site genuinely needs it.",
+      "Unlike Content-Security-Policy it cannot be set with a <meta> tag — it must arrive as an HTTP header.",
+      "Over-blocking breaks features silently (maps, video calls, payments), so test after tightening."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "permissions policy generator, permissions-policy header, feature policy generator, browser permissions header",
+    "labels": {
+      "configuredLabel": "Directives configured",
+      "copiedMsg": "Header copied to clipboard.",
+      "copyHeader": "Copy header",
+      "d_accelerometer": "Access to the device accelerometer (motion along axes).",
+      "d_autoplay": "Autoplay of media with sound.",
+      "d_camera": "Access to the camera.",
+      "d_clipboard-read": "Reading from the system clipboard.",
+      "d_clipboard-write": "Writing to the system clipboard.",
+      "d_display-capture": "Screen sharing via getDisplayMedia.",
+      "d_encrypted-media": "Playback of DRM-protected media (EME).",
+      "d_fullscreen": "Requesting fullscreen mode.",
+      "d_gamepad": "Access to gamepad devices.",
+      "d_geolocation": "Access to the device location.",
+      "d_gyroscope": "Access to the device gyroscope (rotation).",
+      "d_hid": "Access to Human Interface Devices via WebHID.",
+      "d_idle-detection": "Detecting when the user is idle.",
+      "d_local-fonts": "Enumerating locally installed fonts.",
+      "d_magnetometer": "Access to the device magnetometer (compass).",
+      "d_microphone": "Access to the microphone.",
+      "d_midi": "Access to MIDI devices (Web MIDI).",
+      "d_payment": "Use of the Payment Request API.",
+      "d_picture-in-picture": "Floating picture-in-picture video windows.",
+      "d_publickey-credentials-get": "WebAuthn credential requests (security keys, passkeys).",
+      "d_screen-wake-lock": "Preventing the screen from dimming or locking.",
+      "d_serial": "Access to serial ports (Web Serial).",
+      "d_sync-xhr": "Synchronous XMLHttpRequest in the page.",
+      "d_usb-devices": "Access to USB devices (WebUSB).",
+      "downloadHeader": "Download .txt",
+      "generatedHeader": "Generated Permissions-Policy header",
+      "originsHint": "Space or comma separated. Applies to every directive set to Custom.",
+      "originsLabel": "Trusted origins for Custom",
+      "presetBalanced": "Balanced",
+      "presetReset": "Reset all",
+      "presetStrict": "Strict (deny all)",
+      "presetsLabel": "Presets",
+      "serveNote": "Serve this as an HTTP response header from your server or CDN. It does not work as a <meta> tag.",
+      "stateCustom": "Custom",
+      "stateDeny": "Deny",
+      "stateSelf": "Self",
+      "stateUnset": "Unset",
+      "warnCustomNoOrigins": "A directive is set to Custom but no trusted origins are entered — it will behave like Self only.",
+      "warnInvalidOrigins": "Some origins are not valid serialized origins (use the form https://host or https://host:port).",
+      "warnNothingSet": "No directives configured yet — the header is empty.",
+      "warningsHeading": "Check before deploying"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot be delivered via <meta> tag — server or CDN header configuration is required.",
+      "Older browsers ignore the header entirely, so it is defense-in-depth, not a guarantee.",
+      "Some directives have browser-specific defaults; Unset means the browser default applies.",
+      "Does not include violation reporting (Reporting API) — blocking only."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Permissions-Policy generator: build a Permissions-Policy HTTP header from simple toggles with presets. Copy or download, 100% private.",
+    "metaTitle": "Permissions Policy Generator - Build the Header | JaurTools",
+    "name": "Permissions Policy Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The Permissions-Policy HTTP header controls which browser features your pages and embedded iframes may use. Each directive takes an allowlist: camera=() denies the camera to everyone, geolocation=(self) allows location only on your own origin, and microphone=(self \"https://meet.example.com\") adds a trusted third party. This generator builds the full header from simple per-directive toggles with Strict and Balanced presets.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your Permissions-Policy header",
+    "tagline": "Build a Permissions-Policy HTTP header from simple per-feature toggles.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Settings: camera set to Deny, geolocation set to Self, microphone set to Custom with trusted origin https://meet.example.com, everything else Unset.\nGenerated header:\nPermissions-Policy: camera=(), geolocation=(self), microphone=(self \"https://meet.example.com\")\nReading: no page or iframe may touch the camera; geolocation works only on your own origin; the microphone works on your origin plus meet.example.com (for example an embedded video-call widget). Serve this as an HTTP response header — a <meta> tag will not work."
+  }
+}

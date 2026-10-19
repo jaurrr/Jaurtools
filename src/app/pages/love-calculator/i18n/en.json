@@ -1,0 +1,115 @@
+{
+  "love-calculator": {
+    "assumptionNote": "This is a game, not a relationship test. Real compatibility comes from communication, shared values, and time together - never from a score on a screen.",
+    "benefits": [
+      "A fun icebreaker for couples, crushes, and friend groups.",
+      "Share your score and compare with friends for laughs.",
+      "Instant result with no sign-up and no personal data collected.",
+      "The same two names always give the same score, so rematches are fair."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is a deterministic hash of the two names. There is no science, psychology, or destiny involved. It is a game designed for fun, like a fortune cookie.",
+        "q": "Is the love calculator accurate?"
+      },
+      {
+        "a": "Yes, by design. The score comes only from the letters of the two names, so the same pair always gets the same score. That makes rematches fair but also proves it knows nothing about the real people.",
+        "q": "Do the same names always give the same score?"
+      },
+      {
+        "a": "It ignores capitalization, so Aarav and aarav give the same result. Spaces at the start or end are trimmed. Spelling matters: Jon and John are different inputs.",
+        "q": "Does capitalization matter?"
+      },
+      {
+        "a": "No. It works with any letters you type, including names in Hindi, Arabic, or any other script. The score is still just for fun.",
+        "q": "Does it work with non-English names?"
+      },
+      {
+        "a": "Then it is telling you what the game knows: nothing about real life. Genuine compatibility shows in how you talk, handle disagreements, and support each other, not in a percentage.",
+        "q": "What if I get a low score with my partner?"
+      },
+      {
+        "a": "Nothing at all. Names stay in your browser and disappear when you close the tab. There is no account, no server, and no history.",
+        "q": "Where do my names go?"
+      }
+    ],
+    "formula": "No science - just a deterministic game formula:\n\n1. Combine the names: lowercased name1 + \"loves\" + lowercased name2.\n2. Run the characters through a 64-bit mixing hash (a variant of MurmurHash).\n3. Score = (hash mod 10100) / 100, rounded to a whole number 0-100.\n4. Bands: 0-19 Chilly, 20-39 Warming Up, 40-59 Sparks, 60-79 Blazing, 80-100 Soulmates.\n\nSame names in, same score out. That is the whole trick.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the first name.",
+      "Type the second name.",
+      "The compatibility score appears instantly with a playful message.",
+      "Try different name pairs or spellings to compare results - it is only a game."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The love calculator is entertainment, not a compatibility test.",
+      "The score comes from a deterministic hash of the two names - same names always give the same score.",
+      "Five bands describe the score: Chilly (0-19), Warming Up (20-39), Sparks (40-59), Blazing (60-79), Soulmates (80-100).",
+      "Capitalization does not change the result; spelling does.",
+      "No names are stored or sent anywhere. Everything happens in your browser.",
+      "Real compatibility research points to shared values, communication, and kindness - not name letters.",
+      "Love calculators have existed since early internet days as harmless party games."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "love calculator, love compatibility calculator, name love match, love test, relationship compatibility game",
+    "labels": {
+      "compatibility": "Compatibility",
+      "enterBothNames": "Enter both names to reveal your score.",
+      "namePlaceholder": "Type a name",
+      "partnerName": "Partner's name",
+      "verdict": "Verdict",
+      "yourName": "Your name"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pure entertainment. It knows nothing about the real people behind the names.",
+      "A low score says nothing about a real relationship. A high score predicts nothing.",
+      "Do not make relationship decisions based on a game score.",
+      "Children should know it is a joke, not a prediction."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free love calculator: enter two names to get a fun compatibility score from 0 to 100 with a playful verdict. Just for fun, private, no sign-up.",
+    "metaTitle": "Love Calculator - Fun Name Compatibility Score | JaurTools",
+    "name": "Love Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type two names and get a fun compatibility score from 0 to 100. The score is a deterministic hash of the name letters, so the same pair always gets the same score. It is pure entertainment with no science behind it - real compatibility comes from communication and shared values.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your love results",
+    "tagline": "Enter two names and get a fun compatibility score - pure entertainment, zero science.",
+    "tiers": {
+      "blazing": {
+        "label": "Blazing",
+        "message": "Things are heating up nicely. Keep the conversation going."
+      },
+      "chilly": {
+        "label": "Chilly",
+        "message": "A frosty start. Maybe you just need better small talk."
+      },
+      "none": {
+        "label": "",
+        "message": ""
+      },
+      "soulmates": {
+        "label": "Soulmates",
+        "message": "Off the charts! Frame this result immediately."
+      },
+      "sparks": {
+        "label": "Sparks",
+        "message": "There are sparks here. Fan them into something more."
+      },
+      "warming": {
+        "label": "Warming Up",
+        "message": "Slow burn territory. Give it time and coffee."
+      }
+    },
+    "workedExample": "Names: Aarav and Diya.\n1. Combine: \"aaravlovesdiya\" (lowercased, joined with \"loves\").\n2. Hash every character with the mixing function.\n3. Take the hash mod 10100, divide by 100, round: the result is a whole number between 0 and 100.\n4. The same two names typed again give the exact same score - the game is deterministic.\n5. The score falls into one of the five bands, from Chilly to Soulmates.",
+    "workedExampleHeading": "Worked example"
+  }
+}

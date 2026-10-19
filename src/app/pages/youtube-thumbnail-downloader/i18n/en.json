@@ -1,0 +1,108 @@
+{
+  "youtube-thumbnail-downloader": {
+    "benefits": [
+      "Get full-HD 1280x720 thumbnails without screenshots or browser extensions.",
+      "Works with every YouTube URL format: watch, youtu.be, embed, Shorts and live links.",
+      "See exactly which resolutions exist before downloading — no guessing.",
+      "Free and unlimited, no account, and no watermark added.",
+      "Direct links are copyable for use in your own pages and documents."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The thumbnail image belongs to the video's creator and is protected by copyright. Downloading for personal reference or fair use is generally fine, but republishing it without permission can be an infringement.",
+        "q": "Is downloading a YouTube thumbnail legal?"
+      },
+      {
+        "a": "YouTube only publishes maxresdefault for videos uploaded in 720p or higher. Older or low-resolution uploads never got one — use sddefault or hqdefault instead.",
+        "q": "Why is the maxres (1280x720) version missing?"
+      },
+      {
+        "a": "No. It only fetches the thumbnail image. Downloading videos needs different software and may violate YouTube's terms of service.",
+        "q": "Can this tool download the actual video?"
+      },
+      {
+        "a": "An 11-character mix of letters, numbers, dashes and underscores — for example dQw4w9WgXcQ. You will find it after v= in a watch URL or after youtu.be/ in a share link.",
+        "q": "What does the video ID look like?"
+      },
+      {
+        "a": "Some browsers block fetching images from YouTube's servers directly. Right-click (or long-press) the preview and choose Save image instead — or copy the direct link.",
+        "q": "The download button shows an error. What now?"
+      },
+      {
+        "a": "Yes. Paste a Shorts link and the ID is extracted the same way; Shorts thumbnails are published in the same five sizes.",
+        "q": "Does the tool work with YouTube Shorts?"
+      },
+      {
+        "a": "No. The ID is extracted in your browser, and only YouTube's public image servers are contacted to load the thumbnails.",
+        "q": "Is my pasted link sent anywhere?"
+      }
+    ],
+    "formula": "https://i.ytimg.com/vi/{video_id}/{quality}.jpg\n\nwhere {quality} is one of: maxresdefault, sddefault, hqdefault, mqdefault, default.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste a YouTube video link (watch, share, embed or Shorts URL) or the 11-character video ID.",
+      "Press Grab thumbnails — the tool checks each resolution against YouTube's servers.",
+      "Preview every available size, from full HD down to the small default.",
+      "Download the size you need as a JPG, or copy its direct link.",
+      "Remember the thumbnail belongs to the video's creator — get permission before reusing it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every YouTube video has thumbnails stored at predictable addresses on i.ytimg.com — the tool simply builds those addresses from the video ID.",
+      "Five sizes are published: maxresdefault (1280x720), sddefault (640x480), hqdefault (480x360), mqdefault (320x180) and default (120x90).",
+      "The video ID is the 11-character code in a YouTube link, for example the part after v= in a watch URL.",
+      "maxresdefault is only published when the uploaded video is at least 720p — older or low-resolution uploads may lack it.",
+      "This tool never downloads or touches the video itself — only its thumbnail image."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "youtube thumbnail grabber, download youtube thumbnail, yt thumbnail downloader, youtube thumbnail hd, get youtube thumbnail from url",
+    "labels": {
+      "availableLabel": "Available",
+      "bestLabel": "Best available size",
+      "checkingLabel": "Checking…",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy link",
+      "downloadThumb": "Download JPG",
+      "downloadingLabel": "Downloading…",
+      "errCopy": "Could not copy the link. Select it manually and copy.",
+      "errDownload": "Your browser blocked the direct download. Right-click the preview and choose Save image, or copy the link.",
+      "errInvalid": "That does not look like a valid YouTube link or video ID. Check the link and try again.",
+      "grabHint": "watch, youtu.be, embed, Shorts or live link — any of them works. The video itself is never downloaded, only the thumbnail.",
+      "grabLabel": "Grab thumbnails",
+      "inputLabel": "YouTube link or video ID",
+      "inputPlaceholder": "https://www.youtube.com/watch?v=… or the 11-character ID",
+      "missingLabel": "Not available",
+      "resNames": {
+        "default": "Default",
+        "hqdefault": "HQ",
+        "maxresdefault": "Full HD",
+        "mqdefault": "MQ",
+        "sddefault": "SD"
+      }
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only thumbnails of public or unlisted videos can be grabbed — private or deleted videos return nothing.",
+      "maxresdefault exists only for videos uploaded in HD; older videos top out at hqdefault or sddefault.",
+      "Thumbnails are the creator's copyrighted artwork — downloading one does not give you the right to republish it.",
+      "The tool cannot download the video itself, only its thumbnail image."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Grab any YouTube video's thumbnail in every resolution, free. Paste a link, preview sizes, download instantly — no signup.",
+    "metaTitle": "YouTube Thumbnail Downloader - HD Thumbnails Free | JaurTools",
+    "name": "YouTube Thumbnail Downloader",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a YouTube video link or ID and this tool pulls the video's thumbnail in every published resolution — 1280x720 down to 120x90 — from YouTube's own image servers. Preview each size and download the one you need as a JPG.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Thumbnail grabber results",
+    "tagline": "Every resolution, one paste.",
+    "workedExample": "Take the video ID dQw4w9WgXcQ. Its full-HD thumbnail lives at https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg (1280 x 720 pixels), the standard one at .../hqdefault.jpg (480 x 360), and the tiny one at .../default.jpg (120 x 90). Paste any link containing that ID and the tool lists all five sizes automatically.",
+    "workedExampleHeading": "Worked example"
+  }
+}

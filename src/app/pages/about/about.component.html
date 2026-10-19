@@ -1,0 +1,182 @@
+<div class="about-page">
+  <p class="eyebrow">{{ translate.t('about.storyEyebrow') }}</p>
+  <h1>{{ translate.t('about.heading') }}</h1>
+
+  <!-- 1. Our story, with the team photo -->
+  <section class="story">
+    <div class="story-grid">
+      <div class="story-text">
+        <h2>{{ translate.t('about.storyHeading') }}</h2>
+        <p class="lead">{{ translate.t('about.story1') }}</p>
+        <p class="muted">{{ translate.t('about.story2') }}</p>
+        <div class="story-chips">
+          <span class="badge">
+            <app-icon name="calendar" aria-hidden="true"></app-icon>
+            {{ translate.t('about.foundedLabel') }} · {{ translate.t('about.foundedValue') }}
+          </span>
+          <span class="badge">
+            <app-icon name="globe" aria-hidden="true"></app-icon>
+            {{ translate.t('about.locationValue') }}
+          </span>
+        </div>
+      </div>
+      <figure class="photo-card">
+        <img src="assets/team.jpg" [alt]="translate.t('about.teamPhotoAlt')" width="1920" height="1280" loading="lazy" />
+        <figcaption>
+          <app-icon name="users" aria-hidden="true"></app-icon>
+          {{ translate.t('about.teamPhotoCaption') }}
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 2. Quick answer -->
+  <section class="quick card">
+    <p class="eyebrow">{{ translate.t('about.quickEyebrow') }}</p>
+    <h2>{{ translate.t('about.quickHeading') }}</h2>
+    <p>{{ translate.t('about.quickText') }}</p>
+  </section>
+
+  <!-- 3. Key facts -->
+  <section class="facts">
+    <p class="eyebrow">{{ translate.t('about.factsEyebrow') }}</p>
+    <h2>{{ translate.t('about.factsHeading') }}</h2>
+    <div class="facts-grid">
+      @for (f of facts; track f.key) {
+        <div class="fact card card-hover">
+          <span class="icon-chip" aria-hidden="true"><app-icon [name]="f.icon"></app-icon></span>
+          <strong>{{ translate.t('about.facts.' + f.key + '.label') }}</strong>
+          <span class="muted">{{ translate.t('about.facts.' + f.key + '.value') }}</span>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- 4. How to use it -->
+  <section class="how">
+    <p class="eyebrow">{{ translate.t('about.howEyebrow') }}</p>
+    <h2>{{ translate.t('about.howHeading') }}</h2>
+    <ol class="steps">
+      @for (s of howSteps; track s.key) {
+        <li class="step card card-hover">
+          <span class="icon-chip" aria-hidden="true"><app-icon [name]="s.icon"></app-icon></span>
+          <strong>{{ translate.t('about.how.' + s.key + '.title') }}</strong>
+          <p class="muted">{{ translate.t('about.how.' + s.key + '.text') }}</p>
+        </li>
+      }
+    </ol>
+  </section>
+
+  <!-- 5. Example -->
+  <section class="examples">
+    <p class="eyebrow">{{ translate.t('about.examplesEyebrow') }}</p>
+    <h2>{{ translate.t('about.examplesHeading') }}</h2>
+    <p class="muted">{{ translate.t('about.examplesIntro') }}</p>
+    <div class="example-grid">
+      @for (e of examples; track e.key) {
+        <div class="example card card-hover">
+          <span class="icon-chip" aria-hidden="true"><app-icon [name]="e.icon"></app-icon></span>
+          <strong>{{ translate.t('about.examples.' + e.key + '.title') }}</strong>
+          <p class="muted">{{ translate.t('about.examples.' + e.key + '.text') }}</p>
+          <a class="btn-primary" [routerLink]="link(e.route)">
+            {{ translate.t('about.examples.' + e.key + '.linkLabel') }}
+            <app-icon name="arrow-right" class="flip-rtl" aria-hidden="true"></app-icon>
+          </a>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- 6. Common use cases -->
+  <section class="usecases">
+    <p class="eyebrow">{{ translate.t('about.useEyebrow') }}</p>
+    <h2>{{ translate.t('about.useHeading') }}</h2>
+    <div class="usecase-grid">
+      @for (u of useCases; track u.key) {
+        <div class="card card-hover">
+          <span class="icon-chip" aria-hidden="true"><app-icon [name]="u.icon"></app-icon></span>
+          <strong>{{ translate.t('about.useCases.' + u.key + '.title') }}</strong>
+          <p class="muted">{{ translate.t('about.useCases.' + u.key + '.text') }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- 7. Benefits -->
+  <section class="benefits card">
+    <p class="eyebrow">{{ translate.t('about.benefitsEyebrow') }}</p>
+    <h2>{{ translate.t('about.benefitsHeading') }}</h2>
+    <ul class="tick-list">
+      @for (b of benefits; track b) {
+        <li>
+          <app-icon name="check" aria-hidden="true"></app-icon>
+          <span>{{ translate.t('about.benefits.' + b) }}</span>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <!-- 8. Good to know — honest limitations -->
+  <section class="limits card">
+    <p class="eyebrow">{{ translate.t('about.limitsEyebrow') }}</p>
+    <h2>{{ translate.t('about.limitsHeading') }}</h2>
+    <ul class="note-list">
+      @for (l of limits; track l.key) {
+        <li>
+          <span class="icon-chip" aria-hidden="true"><app-icon [name]="l.icon"></app-icon></span>
+          <span>{{ translate.t('about.limits.' + l.key) }}</span>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <!-- 9. Privacy and your data -->
+  <section class="privacy card">
+    <p class="eyebrow">{{ translate.t('about.privacyEyebrow') }}</p>
+    <h2>{{ translate.t('about.privacyHeading') }}</h2>
+    <p>{{ translate.t('about.privacy1') }}</p>
+    <p class="muted">{{ translate.t('about.privacy2') }}</p>
+    <a class="btn-ghost" [routerLink]="link('privacy-policy')">
+      <app-icon name="shield-check" aria-hidden="true"></app-icon>
+      {{ translate.t('about.privacyLinkLabel') }}
+    </a>
+  </section>
+
+  <!-- 10. FAQs -->
+  <section class="faq">
+    <p class="eyebrow">{{ translate.t('about.faqEyebrow') }}</p>
+    <h2>{{ translate.t('about.faqHeading') }}</h2>
+    @for (f of faqs; track f) {
+      <details>
+        <summary>{{ translate.t('about.faqs.' + f + '.q') }}</summary>
+        <p>{{ translate.t('about.faqs.' + f + '.a') }}</p>
+      </details>
+    }
+  </section>
+
+  <!-- 11. Team -->
+  <section class="team">
+    <p class="eyebrow">{{ translate.t('about.teamEyebrow') }}</p>
+    <h2>{{ translate.t('about.teamHeading') }}</h2>
+    <p class="muted">{{ translate.t('about.teamIntro') }}</p>
+    <div class="team-grid">
+      @for (m of members; track m.key) {
+        <div class="member card card-hover">
+          <span class="avatar" aria-hidden="true"><app-icon [name]="m.icon"></app-icon></span>
+          <strong>{{ translate.t('about.members.' + m.key + '.name') }}</strong>
+          <span class="muted">{{ translate.t('about.members.' + m.key + '.role') }}</span>
+        </div>
+      }
+    </div>
+    <div class="links">
+      <a class="btn-ghost" [href]="portfolioUrl" target="_blank" rel="noopener">
+        <app-icon name="external-link" aria-hidden="true"></app-icon>
+        {{ translate.t('about.portfolioLabel') }}
+      </a>
+      <a class="btn-ghost" [href]="'mailto:' + email">
+        <app-icon name="mail" aria-hidden="true"></app-icon>
+        {{ translate.t('about.emailLabel') }}: {{ email }}
+      </a>
+    </div>
+  </section>
+</div>

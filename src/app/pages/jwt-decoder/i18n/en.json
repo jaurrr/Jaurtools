@@ -1,0 +1,113 @@
+{
+  "jwt-decoder": {
+    "benefits": [
+      "Inspects tokens instantly: header, payload, and every claim decoded with one paste.",
+      "Checks expiry honestly: expired tokens get a red badge with the exact expiry date.",
+      "Verifies HMAC signatures: prove a token was signed with your secret, in-browser.",
+      "Creates test tokens: mint HS256/384/512 tokens for local development.",
+      "Runs fully in your browser: tokens are decoded locally, never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A compact, URL-safe way to pass claims between two parties: three Base64URL parts (header, payload, signature) joined by dots. Servers sign them so tampering is detectable.",
+        "q": "What is a JWT?"
+      },
+      {
+        "a": "Yes - decoding only reads the Base64URL parts, which anyone holding the token can already do. The signature is not decrypted (it cannot be); it is only verified if you supply the secret.",
+        "q": "Is decoding a JWT safe?"
+      },
+      {
+        "a": "Enter the HMAC secret in the Verify tab. The tool recomputes the signature with WebCrypto and compares it in constant time. Only HS256, HS384, and HS512 can be verified this way.",
+        "q": "How do I verify a token's signature?"
+      },
+      {
+        "a": "The payload is only Base64URL-encoded, not encrypted. Anyone with the token can read it. Never put passwords, secrets, or sensitive personal data in a JWT payload.",
+        "q": "Is the JWT payload encrypted?"
+      },
+      {
+        "a": "The exp claim is a Unix timestamp (seconds since 1970-01-01). The tool converts it to your local date and shows an expired/active badge automatically.",
+        "q": "How do I read the exp claim?"
+      },
+      {
+        "a": "RS256 and other asymmetric algorithms need the signer's public key and a different verification flow, which this tool does not implement. Use it for HMAC (HS*) tokens.",
+        "q": "Why can't I verify RS256 tokens?"
+      }
+    ],
+    "formula": "token = base64url(header) + \".\" + base64url(payload) + \".\" + base64url(signature)\nheader:  { \"alg\": \"HS256\", \"typ\": \"JWT\" }\npayload: { \"sub\": \"1234567890\", \"name\": \"Asha\", \"iat\": 1792281600, \"exp\": 1792368000 }\nsign:    HMAC-SHA256(secret, header_b64 + \".\" + payload_b64)\ndecode:  JSON.parse(base64urlDecode(part))   // no key needed\nverify:  recompute signature, compare bytes   // needs the secret",
+    "formulaHeading": "JWT structure",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste a JWT into the token box on the Decode tab - a sample token is preloaded.",
+      "Read the decoded header and payload, the claims table, and the expiry badge.",
+      "Switch to the Verify tab, enter the HMAC secret, and check the signature.",
+      "Use the Create tab to mint your own HS256/384/512 test tokens from JSON.",
+      "Never paste real production tokens into any website, including this one."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A JWT has three Base64URL parts separated by dots: header, payload, signature.",
+      "Decoding needs no key: header and payload are only encoded, not encrypted.",
+      "The signature proves the token was created with the secret; verification recomputes it with WebCrypto.",
+      "This tool verifies HMAC signatures (HS256, HS384, HS512) with a user-supplied secret.",
+      "The exp claim is a Unix timestamp; the tool renders it as a local date with an expired/active badge.",
+      "You can also create signed test tokens from header/payload JSON plus a secret."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "jwt decoder, decode jwt online, jwt validator, verify jwt signature, jwt debugger, create jwt token",
+    "labels": {
+      "activeLabel": "Active until",
+      "algLabel": "Algorithm",
+      "checkingLabel": "Verifying signature...",
+      "claimsHeading": "Claims",
+      "copiedLabel": "Copied!",
+      "copyLabel": "Copy token",
+      "createButton": "Create token",
+      "createHeaderLabel": "Header JSON",
+      "createPayloadLabel": "Payload JSON",
+      "createSecretLabel": "Secret (HMAC)",
+      "createTab": "Create",
+      "createdLabel": "Your token",
+      "decodeTab": "Decode",
+      "expiredLabel": "Expired",
+      "headerLabel": "Header",
+      "invalidSigLabel": "Invalid signature: the token was NOT signed with this secret.",
+      "noExpLabel": "No expiry claim",
+      "payloadLabel": "Payload",
+      "secretLabel": "Secret (HMAC)",
+      "sigNote": "The signature is binary data, shown truncated. It is verified, never decoded.",
+      "signatureLabel": "Signature",
+      "structBadLabel": "Not a valid JWT: expected three Base64URL parts separated by dots.",
+      "structOkLabel": "Valid structure",
+      "tokenLabel": "JWT token",
+      "tokenWarning": "Security note: never paste real production tokens into any website. Anyone holding a token can read its payload.",
+      "unsupportedAlgLabel": "Only HS256, HS384, and HS512 signatures can be verified here. RS256 and others need the signer's public key.",
+      "validSigLabel": "Valid signature: this token was signed with the given secret.",
+      "verifyButton": "Verify signature",
+      "verifyErrorLabel": "Verification failed: the token or secret could not be processed.",
+      "verifyTab": "Verify"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only HMAC signatures (HS256/384/512) can be verified; RS256/ES256 need public-key flows not implemented here.",
+      "Decoding is not decryption: the payload is readable by anyone holding the token.",
+      "Verification needs the exact secret; a wrong secret simply reports an invalid signature.",
+      "WebCrypto requires a secure context (HTTPS or localhost); very old browsers may lack it."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JWT decoder: decode and inspect JWT headers, payloads, and claims, verify HS256/HS384/HS512 signatures, and create test tokens. Private, no sign-up.",
+    "metaTitle": "JWT Decoder - Decode & Verify JWT Tokens Online | JaurTools",
+    "name": "JWT Decoder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a JWT to decode its header and payload with every claim listed, plus an expired/active badge from the exp claim. Switch to Verify to check an HMAC signature (HS256/384/512) against your secret using WebCrypto, or use Create to mint your own signed test tokens. Everything runs locally - but never paste real production tokens into any website.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JWT Decoder results",
+    "tagline": "Decode, inspect, and verify JWTs - HMAC signature check and token creator included.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Sample token (signed with secret \"jaurtools-demo-secret\"):\neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkw...\n\nDecode:\n- Header: {\"alg\": \"HS256\", \"typ\": \"JWT\"}\n- Payload: {\"sub\": \"1234567890\", \"name\": \"Asha Sharma\", \"iat\": 1792281600, \"exp\": 1792368000}\n- exp = 1792368000 -> 19 Oct 2026, 00:00 -> Active badge.\n\nVerify with \"jaurtools-demo-secret\" -> Valid signature.\nVerify with \"wrong-secret\" -> Invalid signature."
+  }
+}

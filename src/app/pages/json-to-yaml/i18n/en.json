@@ -1,0 +1,100 @@
+{
+  "json-to-yaml": {
+    "benefits": [
+      "One hub for all four formats, so you never hunt for the right converter.",
+      "Swap direction in one click and convert the result straight back.",
+      "Union of all keys becomes the column set, so ragged data still converts cleanly.",
+      "Runs fully in the browser, so API payloads and private rows are never transmitted."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A practical subset: lists of records, single records, nested maps, quoted strings, numbers, booleans, nulls and comments. Anchors, aliases, tags and multi-line block scalars (| and >) are not supported and will show a parse error.",
+        "q": "What YAML is supported?"
+      },
+      {
+        "a": "Yes. In YAML output, nested objects become indented maps and arrays become dash lists. In CSV and XML output, nested values are written as compact JSON text inside the cell or element.",
+        "q": "How are nested values handled?"
+      },
+      {
+        "a": "Yes. Names are sanitized into valid XML names, special characters are escaped, and an XML declaration with UTF-8 encoding is included.",
+        "q": "Is the XML output well-formed?"
+      },
+      {
+        "a": "Both directions are first-class. The swap button flips the formats and converts the current output back into the input box, so round-trips are one click.",
+        "q": "Can I convert back and forth?"
+      },
+      {
+        "a": "The XML reader treats the root's child elements as records and their children as fields. Attributes are ignored; if you need attribute support, use the JSON, XML & CSV converter.",
+        "q": "How is XML input read?"
+      }
+    ],
+    "formula": "records = parse(input, from)  →  output = emit(records, to)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the input format: JSON, YAML, XML or CSV.",
+      "Choose the output format, or press Swap to flip the direction.",
+      "Paste your data, or press Sample for an example in the input format.",
+      "Set the CSV delimiter or XML element names if those options appear.",
+      "Press Download to save the converted file, or Copy to paste it elsewhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Converts between JSON, YAML, XML and CSV in any direction on one page.",
+      "YAML support covers lists of records, nested maps, quoted strings, numbers, booleans, nulls and comments.",
+      "XML input reads child elements as records; XML output is well-formed with customizable element names.",
+      "CSV parsing and emission handle quoting, escaped quotes and line breaks.",
+      "Invalid input shows a friendly error instead of crashing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json yaml xml csv converter, universal data converter online, convert yaml to json, xml to csv free",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "CSV delimiter",
+      "download": "Download",
+      "errorParse": "Could not parse the input. Please check the syntax for the selected format.",
+      "fromLabel": "From format",
+      "inputLabel": "Input data",
+      "inputPh": "Paste data here...",
+      "invalidName": "Root and row names must be valid XML names: start with a letter or underscore.",
+      "outputHeading": "Converted output",
+      "resultFields": "Fields",
+      "resultRecords": "Records",
+      "rootName": "Root element name",
+      "rowName": "Row element name",
+      "sample": "Load sample",
+      "swap": "Swap direction",
+      "toLabel": "To format",
+      "yamlNote": "YAML support is a practical subset: records, nested maps, quoted strings, numbers, booleans, nulls and comments. Anchors and block scalars are not supported."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "YAML anchors, aliases, tags and multi-line block scalars are not supported.",
+      "XML attributes are ignored when reading XML input.",
+      "Nested values become JSON text in CSV and XML output, not expanded structures.",
+      "Very large inputs (tens of MB) can make the browser tab sluggish."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert JSON to clean YAML instantly, with YAML, XML and CSV modes in one tool. Free, private, all in your browser.",
+    "metaTitle": "JSON to YAML - Convert JSON to YAML Config | JaurTools",
+    "name": "JSON to YAML",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick any two of JSON, YAML, XML and CSV and convert between them on one page. Data is normalized into records, then emitted in the target format with correct quoting, escaping and indentation. The swap button flips the direction in one click.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON ↔ YAML ↔ XML ↔ CSV results",
+    "tagline": "One universal converter for JSON, YAML, XML and CSV.",
+    "workedExample": "JSON to YAML input:\n[{\"name\":\"Aarav Sharma\",\"age\":25}]\n\nYAML output:\n- name: Aarav Sharma\n  age: 25\n\n1 record, 2 fields.\n\nYAML to CSV input:\n- name: Aarav Sharma\n  age: 25\n- name: Priya Verma\n  age: 30\n\nCSV output:\nname,age\nAarav Sharma,25\nPriya Verma,30\n\n2 records, 2 fields.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "yaml-formatter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "YAML Formatter",
+    "tagline": "Beautify and validate YAML with clean indentation.",
+    "metaTitle": "YAML Formatter - Pretty Print & Validate YAML Free Online",
+    "metaDescription": "Format YAML with clean 2-space indentation and validate its structure instantly. Handles maps, lists, and nested data. Free, no signup, in your browser.",
+    "keywords": "yaml formatter, pretty print yaml, yaml validator, format yaml online, beautify yaml",
+    "resultsHeading": "YAML formatter results",
+    "quickAnswer": "Paste YAML and this tool validates its structure with a built-in parser, then reprints it with clean, consistent 2-space indentation. It handles mappings, sequences, nested blocks, quoted strings, numbers, booleans, and comments. Copy the formatted result or download it as a file.",
+    "keyFacts": [
+      "YAML is a human-friendly data format widely used for configuration files and CI pipelines.",
+      "Indentation defines structure in YAML: consistent spaces are required, tabs are forbidden.",
+      "Mappings (key: value) and sequences (- item) are the two core building blocks.",
+      "Comments start with # and run to the end of the line.",
+      "The formatter normalizes everything to 2-space indentation, the most common YAML style."
+    ],
+    "howTo": [
+      "Paste your YAML into the editor.",
+      "Read any parse error and fix the YAML if needed.",
+      "Review the normalized output with 2-space indentation.",
+      "Copy the formatted YAML or download it as formatted.yaml.",
+      "Use the sample button to see formatting in action."
+    ],
+    "formula": "Input:\nserver:\n    host: example.com\n        port: 8080\nOutput:\nserver:\n  host: example.com\n  port: 8080\nRule: nesting depth x 2 spaces; mappings and sequences normalized.",
+    "workedExample": "Input:\n# Server configuration\nserver:\n  host: example.com\n  port: 8080\n  tls:\n    enabled: true\nfeatures:\n  - search\n  - voice\nOutput is the same content normalized to exact 2-space indentation, with the comment preserved. A tab-indented line would be rejected with a clear error.",
+    "benefits": [
+      "Consistent indentation prevents silent YAML misconfigurations.",
+      "Instant validation catches structure errors early.",
+      "Comments are preserved in the output.",
+      "Runs fully offline; config files stay private."
+    ],
+    "limitations": [
+      "Implements the common YAML subset: no anchors, aliases, or tags.",
+      "Flow styles ({a: b} and [1, 2]) are read as plain strings, not structures.",
+      "Multi-document files (--- separators) are treated as one document.",
+      "Tab indentation is rejected, per the YAML specification."
+    ],
+    "faqs": [
+      {
+        "q": "Why does YAML care about indentation?",
+        "a": "Indentation defines nesting in YAML, like in Python. Mixing 2 and 4 spaces changes which block a line belongs to, so consistent indentation matters."
+      },
+      {
+        "q": "Can I use tabs?",
+        "a": "No. The YAML specification forbids tabs for indentation. This tool rejects tab-indented lines with a clear error."
+      },
+      {
+        "q": "Are comments kept?",
+        "a": "Full-line comments are preserved. Inline comments are kept when they follow a value with a space."
+      },
+      {
+        "q": "Does it support anchors and aliases?",
+        "a": "No. This formatter implements the common subset used in most config files. Anchors (&), aliases (*), and tags (!) are not supported."
+      },
+      {
+        "q": "Is my YAML uploaded?",
+        "a": "No. Parsing and formatting run entirely in your browser."
+      }
+    ],
+    "assumptionNote": "Common-subset parser: block mappings and sequences, nested blocks, scalars, quotes, comments. No anchors, aliases, flow styles, or multi-document support.",
+    "labels": {
+      "yamlLabel": "YAML input",
+      "sampleLabel": "Load sample",
+      "clearLabel": "Clear",
+      "outputLabel": "Formatted YAML",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied",
+      "downloadLabel": "Download .yaml",
+      "sizeLabel": "Output size (chars)",
+      "parseErrorLabel": "Could not parse the YAML. Check indentation (spaces only) and structure."
+    }
+  }
+}

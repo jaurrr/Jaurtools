@@ -1,0 +1,107 @@
+{
+  "bulk-image-resizer": {
+    "name": "Bulk Image Resizer",
+    "tagline": "Resize dozens of images at once — by percent, max width, max height, or exact size.",
+    "metaTitle": "Bulk Image Resizer Online Free | JaurTools",
+    "metaDescription": "Resize multiple images at once online for free. Batch resize by percent, max dimensions, or exact size. JPG/PNG output. Private, no sign-up.",
+    "keywords": "bulk image resizer, resize multiple images, batch resize photos, image resizer online free",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Drop up to 20 images, choose a mode — 50 percent, max width 800 px, max height 800 px, or exact 800 x 600 — and every image is resized in your browser with aspect ratio preserved (except exact mode). A 2000 x 1500 photo at max width 800 becomes 800 x 600. Download each result or all at once.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Four modes: percent, max width, max height, and exact dimensions.",
+      "Aspect ratio is preserved in every mode except exact, which stretches.",
+      "Images are never upscaled beyond their original size in max modes.",
+      "Output format: keep original, or convert all to PNG or JPG.",
+      "Up to 20 images per batch keeps phones fast and responsive.",
+      "Each resized image gets its own download button plus a Download All option."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Click upload and select up to 20 images (or drag them in).",
+      "Pick a resize mode and enter your target value.",
+      "Choose the output format: keep original, PNG, or JPG.",
+      "Watch each image process — dimensions and file size appear per item.",
+      "Download images individually, or click Download All to save everything."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Percent: newSize = original x (percent / 100).\nMax width W: scale = min(1, W / originalWidth); newSize = original x scale.\nMax height H: scale = min(1, H / originalHeight); newSize = original x scale.\nExact: newSize = (exactWidth, exactHeight), aspect ratio ignored.",
+    "formulaHeading": "Formula",
+    "workedExample": "Photo 2000 x 1500, max width 800:\n1. scale = 800 / 2000 = 0.4 (less than 1, so it applies).\n2. New width: 2000 x 0.4 = 800 px.\n3. New height: 1500 x 0.4 = 600 px.\n4. Result: 800 x 600 — same 4:3 aspect ratio, 16% of the original pixels.\nAt 50 percent mode the same photo would also become 800 x 600.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Prepare a whole product catalog or gallery for the web in one pass.",
+      "Max-width mode is the fastest way to web-optimize camera photos.",
+      "No uploads means client and personal photos stay private.",
+      "Per-image sizes let you spot oversized files before downloading.",
+      "Free, unlimited batches with no watermarks or accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Max 20 images per batch — split larger sets into multiple runs.",
+      "Exact mode stretches images that do not match the ratio; it does not crop.",
+      "Max modes never upscale: a 400 px photo stays 400 px at max width 800.",
+      "JPG output uses quality 92 — visually lossless but technically re-compressed."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "Will resizing reduce image quality?",
+        "a": "Downscaling is safe and usually looks sharper. Quality loss only matters if you upscale (which max modes never do) or re-save JPGs many times. For web use, resized images look identical to the original at their new size."
+      },
+      {
+        "q": "What is the difference between max width and exact?",
+        "a": "Max width scales the image down to fit within that width while keeping its aspect ratio. Exact forces the precise dimensions you type, stretching the image if its ratio differs. Use max modes for photos; exact for fixed-size graphics."
+      },
+      {
+        "q": "Can I resize without keeping aspect ratio?",
+        "a": "Yes — that is what exact mode does. Type any width and height and the image stretches to fit. For undistorted results, stick to percent or max modes."
+      },
+      {
+        "q": "What happens to PNG transparency?",
+        "a": "It is preserved when you keep the original format or choose PNG output. If you convert a transparent PNG to JPG, transparent areas become white because JPG has no alpha channel."
+      },
+      {
+        "q": "Why is Download All slow on my phone?",
+        "a": "Browsers save files one at a time with a short pause between each so nothing is blocked. Twenty full-size images simply take a while — resizing to smaller dimensions first speeds it up a lot."
+      },
+      {
+        "q": "Are my photos uploaded anywhere?",
+        "a": "No. All resizing happens on canvases in your browser. Your photos never leave your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Bulk Image Resizer results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload images",
+      "resizeMode": "Resize mode",
+      "modePercent": "By percent",
+      "modeMaxWidth": "Max width",
+      "modeMaxHeight": "Max height",
+      "modeExact": "Exact size",
+      "percent": "Percent (%)",
+      "maxWidth": "Max width (px)",
+      "maxHeight": "Max height (px)",
+      "exactWidth": "Width (px)",
+      "exactHeight": "Height (px)",
+      "format": "Output format",
+      "formatKeep": "Keep original",
+      "formatPng": "PNG",
+      "formatJpeg": "JPG",
+      "downloadAll": "Download all",
+      "downloadOne": "Download",
+      "processed": "Images processed",
+      "totalSize": "Total size",
+      "invalidFile": "Skipped a non-image file.",
+      "fileTooLarge": "Skipped a file over 10 MB.",
+      "loadFailed": "Could not read one image. It was skipped.",
+      "noFiles": "Upload images to start resizing.",
+      "tooMany": "Maximum 20 images per batch."
+    }
+  }
+}

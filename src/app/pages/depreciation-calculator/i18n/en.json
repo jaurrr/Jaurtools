@@ -1,0 +1,112 @@
+{
+  "depreciation-calculator": {
+    "assumptionNote": "Straight-line spreads cost evenly; double-declining uses 200% of the straight-line rate and never depreciates below salvage value.",
+    "benefits": [
+      "Plans tax deductions year by year with no surprises.",
+      "Shows the true carrying value of assets on your books.",
+      "Compares methods side by side for smarter accounting choices.",
+      "Helps time asset replacement before book value hits zero."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For books, straight-line is simplest and most common. For tax, declining-balance (where allowed) gives bigger early deductions, which are worth more because of the time value of money. Many businesses use straight-line for reporting and an accelerated method for tax.",
+        "q": "Which depreciation method should I use?"
+      },
+      {
+        "a": "Your best estimate of what the asset will be worth when you retire it — resale or scrap value. Depreciation only writes off cost minus salvage, because you expect to recover the salvage amount. If you genuinely expect zero, enter 0.",
+        "q": "What is salvage value?"
+      },
+      {
+        "a": "No. Both methods stop at the salvage value — the schedule caps the final year's depreciation so book value lands exactly on salvage. An asset is never depreciated below what you expect to recover.",
+        "q": "Can depreciation make book value negative?"
+      },
+      {
+        "a": "Because money today is worth more than money later. Bigger deductions in early years cut tax bills sooner, and the time value of those savings usually beats straight-line. It also matches assets like vehicles that lose value fastest when new.",
+        "q": "Why would anyone choose declining-balance?"
+      },
+      {
+        "a": "Not directly — it is a non-cash accounting charge; no money leaves when you 'depreciate'. But it reduces taxable profit, so it reduces tax paid, which does improve cash flow. That tax shield is the real financial benefit.",
+        "q": "Does depreciation affect cash flow?"
+      },
+      {
+        "a": "Use your realistic usage period, or your country's tax tables if this is for tax planning (for example 5 years for vehicles, 3 for computers in many schedules). Longer life means smaller yearly charges; be honest rather than optimistic.",
+        "q": "What useful life should I enter?"
+      }
+    ],
+    "formula": "Straight-line: annual depreciation = (cost - salvage) / useful life.\nDouble-declining: rate = 2 / useful life; yearly depreciation = rate x book value at start of year (capped so book value never drops below salvage).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the asset's purchase cost.",
+      "Enter the salvage (residual) value at end of life.",
+      "Set the useful life in years and pick a method.",
+      "Read the yearly schedule, book values, and total depreciation."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Depreciation spreads an asset's cost over its useful life for accounting and tax.",
+      "Straight-line: equal depreciation every year — simple and predictable.",
+      "Double-declining-balance: 200% of the straight-line rate on the remaining book value — bigger early deductions.",
+      "Book value can never fall below salvage value under either method.",
+      "Total depreciation over the life is identical (cost minus salvage); only the timing differs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "depreciation calculator, straight line depreciation, declining balance depreciation, ddb calculator",
+    "labels": {
+      "annualDepreciation": "Annual depreciation",
+      "assetCost": "Asset purchase cost",
+      "bookValue": "Book value",
+      "decliningBalance": "Declining balance",
+      "methodLabel": "Depreciation method",
+      "salvageValue": "Salvage value at end of life",
+      "scheduleHeading": "Yearly depreciation schedule",
+      "straightLine": "Straight line",
+      "totalDepreciation": "Total depreciation",
+      "usefulLife": "Useful life (years)",
+      "year": "Year"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Tax rules vary by country — this is the accounting math, not tax advice.",
+      "Assumes the asset is used evenly; heavy early use isn't modeled.",
+      "Salvage value is a guess — actual resale can differ a lot.",
+      "Ignores inflation and maintenance costs that change the real economics."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free depreciation calculator: compare straight-line and double-declining-balance methods. Get the yearly depreciation schedule and book values.",
+    "metaTitle": "Depreciation Calculator - Straight Line & DDB | JaurTools",
+    "name": "Depreciation Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A ₹100,000 asset with ₹10,000 salvage value over 5 years depreciates ₹18,000 a year straight-line. Double-declining-balance front-loads it: ₹40,000 in year 1, falling to ₹2,960 in year 5. Both methods depreciate exactly ₹90,000 total — they only differ in timing.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your depreciation schedule",
+    "tagline": "Straight-line or declining-balance depreciation — yearly schedule and book values.",
+    "workedExample": "Cost ₹100,000, salvage ₹10,000, life 5 years:\n1. Straight-line: (100,000 - 10,000) / 5 = ₹18,000 per year; book values 82,000 → 64,000 → 46,000 → 28,000 → 10,000.\n2. Double-declining, rate = 2/5 = 40%: Y1 ₹40,000 (book ₹60,000); Y2 ₹24,000 (book ₹36,000); Y3 ₹14,400 (book ₹21,600); Y4 ₹8,640 (book ₹12,960); Y5 capped at ₹2,960 (book ₹10,000).\n3. Both total ₹90,000 of depreciation — timing is the only difference.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "total": "Total depreciation",
+      "firstYear": "Year 1 depreciation",
+      "bookValue": "Final book value",
+      "totalNote": "over {life} years"
+    },
+    "bars": {
+      "heading": "Depreciation each year",
+      "caption": "Taller bar = bigger write-off that year."
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "Your {cost} asset loses {total} of value over {life} years and is worth {book} at the end.",
+      "l2": "Declining balance front-loads it: year 1 writes off {y1}, the last year only {yl}."
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "Straight line: (cost − salvage value) ÷ useful life — the same amount every year.",
+      "s2": "Declining balance: (2 ÷ life) × remaining book value each year, never below salvage value."
+    }
+  }
+}

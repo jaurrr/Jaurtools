@@ -1,0 +1,93 @@
+{
+  "vibration-test": {
+    "benefits": [
+      "Confirm your phone's vibration motor still works.",
+      "Test distinct patterns so alerts feel different from calls.",
+      "Check the motor before relying on silent alarms.",
+      "Compare short, long, and SOS patterns side by side.",
+      "Works instantly on any phone that supports the Vibration API."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The Vibration API is an Android/Chrome feature. iPhones do not expose vibration to web pages at all, so the page shows not supported. Desktops have no vibration motor, so they show the same message.",
+        "q": "Why does it say not supported on my iPhone?"
+      },
+      {
+        "a": "Press Stop, which sends vibrate(0) and cancels the pattern immediately. Patterns are short anyway - the longest preset here is about two seconds.",
+        "q": "How do I stop a vibration pattern?"
+      },
+      {
+        "a": "Yes, the SOS pattern is the classic distress signal: three short bursts, three long, three short. It is the same rhythm used in Morse code SOS. Use it to test that your motor can handle rapid on-off switching.",
+        "q": "Is the SOS pattern a real distress signal?"
+      },
+      {
+        "a": "No. The web API only accepts on/off timing - it cannot control strength, frequency, or waveform. All patterns are the motor's fixed buzz chopped into timed bursts.",
+        "q": "Can this test vibration strength or intensity?"
+      },
+      {
+        "a": "Try another browser (Chrome on Android is the reference), make sure the phone is not in a mode that disables haptics, and check the system vibration setting. Some phones have a master vibration switch that overrides apps and pages.",
+        "q": "The page says supported but I feel nothing. Why?"
+      }
+    ],
+    "formula": "A pattern is a list of timings in milliseconds.\nOdd positions (1st, 3rd, 5th) = vibrate that long.\nEven positions = pause that long.\nExample: [200, 150, 200] = buzz 200ms, rest 150ms, buzz 200ms.\nTotal = 200 + 150 + 200 = 550ms.",
+    "formulaHeading": "How vibration patterns work",
+    "homeLabel": "Home",
+    "howTo": [
+      "Open this page on your phone and hold the phone in your hand.",
+      "Press one of the pattern buttons: short, long, double, or SOS.",
+      "Feel the buzz and confirm it matches the described pattern.",
+      "Try a custom duration: enter milliseconds and press Vibrate.",
+      "Press Stop to cancel any pattern immediately."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The Vibration API vibrates the phone's motor in timed on/off bursts.",
+      "Patterns are millisecond lists: odd entries vibrate, even entries pause.",
+      "SOS = three short, three long, three short - the classic distress rhythm.",
+      "iPhones do not expose vibration to web pages; desktops have no motor.",
+      "vibrate(0) stops any running pattern instantly.",
+      "Intensity cannot be controlled - only the timing of the fixed buzz."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "vibration test, vibration test online, phone vibration test, vibrate test, haptic test, SOS vibration",
+    "labels": {
+      "custom": "Custom vibration",
+      "duration": "Duration",
+      "hint": "Hold your phone while testing. iPhones do not support vibration in web pages.",
+      "lastPlayed": "Last played",
+      "ms": "ms",
+      "notSupported": "Vibration is not supported on this device or browser.",
+      "patternDouble": "Double buzz",
+      "patternLong": "Long buzz",
+      "patternShort": "Short buzz",
+      "patternSos": "SOS pattern",
+      "patterns": "Test patterns",
+      "stop": "Stop",
+      "stopped": "Stopped",
+      "vibrate": "Vibrate"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "iPhones never support web vibration - the page can only report that.",
+      "Vibration strength is fixed by the hardware; only timing is controllable.",
+      "Some Android skins disable web vibration in battery-saver modes.",
+      "The page cannot measure the motor's health, only whether it fires."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online vibration test: check your phone's vibration motor with test patterns and custom durations. 100% private, no sign-up.",
+    "metaTitle": "Vibration Test - Check Phone Vibration | JaurTools",
+    "name": "Vibration Test",
+    "privacyNote": "This tool runs 100% in your browser. Nothing is recorded or sent anywhere.",
+    "quickAnswer": "A vibration test fires your phone's vibration motor in timed patterns: short buzz, long buzz, double buzz, and the classic SOS rhythm (three short, three long, three short). Patterns are millisecond lists where odd entries vibrate and even entries pause, so [200, 150, 200] means buzz 200ms, rest 150ms, buzz 200ms. You can also enter a custom duration. iPhones do not support web vibration at all.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Vibration test controls",
+    "tagline": "Test your phone's vibration motor with patterns, SOS rhythm, and custom durations.",
+    "workedExample": "You test a phone whose alarms feel weak:\n1. You press Short buzz. The phone buzzes once for 200ms - the motor fires.\n2. You press SOS. You feel three short, three long, three short - timing is correct.\n3. You enter 2000ms custom and press Vibrate. Two full seconds of buzzing confirms the motor runs steadily.\n4. Since every pattern fires correctly, the weak alarms are an app setting, not a dead motor.\nYou check the alarm app and find vibration was set to short.",
+    "workedExampleHeading": "Worked example"
+  }
+}

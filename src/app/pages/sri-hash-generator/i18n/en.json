@@ -1,0 +1,101 @@
+{
+  "sri-hash-generator": {
+    "benefits": [
+      "Proves your CDN files haven't been tampered with — the browser refuses to run altered code.",
+      "Computed with the Web Crypto API in your browser — the same SHA algorithms browsers use to verify.",
+      "One paste gives you both the integrity value and the ready-to-use script/link tag.",
+      "SHA-384 is pre-selected — the current recommended default for SRI.",
+      "Your code never leaves the device; hashing happens locally."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Subresource Integrity (SRI) lets a page verify that a fetched file (script, stylesheet) matches a cryptographic hash before executing it. If a CDN is compromised or serves a different file, the browser blocks it instead of running attacker's code.",
+        "q": "What is Subresource Integrity?"
+      },
+      {
+        "a": "SHA-384 is the current sweet spot: stronger than SHA-256 with negligible cost, and it's what most documentation and examples use. SHA-512 also works everywhere modern. SHA-256 is fine too — all three are supported by every modern browser.",
+        "q": "Which algorithm should I choose?"
+      },
+      {
+        "a": "No. The hash must be computed over the exact bytes served. Any change — even one character, a line-ending change, or different minification — produces a completely different hash and the browser will block the file. Recompute the hash every time the file changes.",
+        "q": "Can I reuse a hash after updating the library?"
+      },
+      {
+        "a": "Always include crossorigin=\"anonymous\". Without it, the browser can't perform the integrity check on cross-origin resources properly, and the check may fail or be skipped. It's required for SRI to work with CDNs.",
+        "q": "Why is crossorigin=\"anonymous\" needed?"
+      },
+      {
+        "a": "Because the browser compares against the exact bytes it downloads. Hash your local file, upload it unchanged, and reference the same file. Line-ending conversions (CRLF vs LF) or BOM changes during upload are classic causes of mismatch.",
+        "q": "My hash doesn't match the file on the server — why?"
+      },
+      {
+        "a": "Mostly no: SRI only verifies file integrity, not that the library is safe or bug-free. It protects against tampered CDNs and man-in-the-middle modification, which is exactly the threat it was designed for. Keep libraries updated regardless.",
+        "q": "Does SRI protect against all supply-chain attacks?"
+      }
+    ],
+    "formula": "integrity = \"sha256-\" | \"sha384-\" | \"sha512-\"  +  base64( SHA(file bytes) )\n\n<script src=\"https://cdn.example.com/lib.js\"\n  integrity=\"sha384-<base64>\"\n  crossorigin=\"anonymous\"></script>\n\nThe hash covers the EXACT bytes served — one changed byte invalidates it.",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Download the exact file you will serve (or copy its exact contents) and paste it into the box.",
+      "Pick the algorithm — SHA-384 is the recommended default.",
+      "Choose whether you need a <script> tag or a stylesheet <link> tag.",
+      "Copy the integrity value or the complete ready-to-paste tag.",
+      "Serve the identical bytes from your CDN or server — any change breaks the hash."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SRI (Subresource Integrity) is a browser feature that checks a file's hash before executing it.",
+      "The integrity attribute holds the algorithm plus the base64-encoded hash: sha384-<base64>.",
+      "Supported algorithms: sha256, sha384, sha512 — all work in every modern browser.",
+      "crossorigin=\"anonymous\" is required for the check to run on cross-origin resources.",
+      "The hash must match the served bytes exactly — even whitespace changes invalidate it.",
+      "If the check fails, the browser blocks the resource and logs a console error — the page keeps working without it."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sri hash generator, subresource integrity generator, integrity hash calculator, sha384 hash online",
+    "labels": {
+      "algoLabel": "Hash algorithm",
+      "bytes": "bytes",
+      "clearButton": "Clear",
+      "computing": "Computing hash…",
+      "copiedMsg": "Copied to clipboard.",
+      "copyHash": "Copy hash",
+      "copySnippet": "Copy tag",
+      "emptyState": "Paste the file contents above to compute its integrity hash.",
+      "exactBytesNote": "The hash covers the exact bytes you paste — hash the file you actually serve, byte for byte.",
+      "hashLabel": "Integrity value",
+      "inputSize": "Input size",
+      "kindLabel": "Tag type",
+      "kindLink": "Stylesheet <link>",
+      "kindScript": "<script> tag",
+      "pasteHint": "Paste the exact file contents here…",
+      "pasteLabel": "File contents",
+      "secureContextError": "Web Crypto is unavailable here — this tool needs a secure context (HTTPS or localhost).",
+      "snippetLabel": "Ready-to-use tag"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Needs a secure context (HTTPS/localhost) — Web Crypto is unavailable on plain HTTP.",
+      "Only verifies integrity, not safety: a malicious-but-intact file still passes.",
+      "You must recompute the hash every time the file changes.",
+      "Very large pastes (tens of MB) may take a moment to hash."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SRI hash generator: compute Subresource Integrity hashes (SHA-256/384/512) for your scripts and stylesheets in your browser. 100% private.",
+    "metaTitle": "SRI Hash Generator - Subresource Integrity Hashes | JaurTools",
+    "name": "SRI Hash Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a file's contents and this tool computes its Subresource Integrity hash using the Web Crypto API: for example, SHA-256 of the text hello gives sha256-LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=. You get both the integrity value and a ready-to-paste <script> or <link> tag with crossorigin=\"anonymous\". The hash must match the served bytes exactly — one changed byte invalidates it.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Integrity hash",
+    "tagline": "Compute Subresource Integrity hashes for your scripts and stylesheets.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input: the 5 characters hello (5 bytes), algorithm SHA-256.\nSteps traced by the tool:\n1. UTF-8 bytes of hello: 68 65 6c 6c 6f.\n2. SHA-256 digest (hex): 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824.\n3. Base64 of the digest: LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=.\n4. Integrity value: sha256-LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=\nReady tag:\n<script src=\"https://cdn.example.com/library.js\"\n  integrity=\"sha256-LPJNul+wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ=\"\n  crossorigin=\"anonymous\"></script>\nChange even one character of the input and the hash changes completely."
+  }
+}

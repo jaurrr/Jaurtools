@@ -1,0 +1,97 @@
+{
+  "flooring-calculator": {
+    "benefits": [
+      "Answers 'how much flooring do I need' in one screen.",
+      "Converts area to whole boxes with the coverage you enter.",
+      "Adjustable waste for straight lays, diagonals, and odd rooms.",
+      "Works in feet or meters.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Multiply length x width. A 12 x 15 ft room is 180 sq ft. Then add waste: 10% for straight lays, 15% for diagonal or irregular rooms.",
+        "q": "How do I calculate how much flooring I need?"
+      },
+      {
+        "a": "10% is standard for straight plank layouts. Use 15% for diagonal patterns, rooms with many corners, or wide planks with more cuts.",
+        "q": "What waste percentage should I use?"
+      },
+      {
+        "a": "Divide your needed square feet by the box coverage and round up. 198 sq ft / 20 sq ft per box = 9.9, so buy 10 boxes.",
+        "q": "How many boxes of flooring do I need?"
+      },
+      {
+        "a": "Keep at least one full box. Future repairs need the same dye lot, and manufacturers discontinue colors regularly.",
+        "q": "Should I buy extra flooring?"
+      },
+      {
+        "q": "Do I measure in square feet or square meters?",
+        "a": "Either — this tool accepts feet or meters and shows both square feet and square meters. Suppliers usually sell by the box with coverage printed in square feet, so the box count uses your entered coverage."
+      },
+      {
+        "q": "How do I measure an L-shaped room?",
+        "a": "Split it into two rectangles, measure each, and add the areas. For example, a 10 x 12 ft main area plus a 6 x 4 ft alcove = 120 + 24 = 144 sq ft before waste."
+      }
+    ],
+    "formula": "area (sq ft) = length x width\nneeded = area x (1 + waste%)\nboxes = ceil(needed / box coverage in sq ft)\nextra = boxes x coverage - needed",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose feet or meters.",
+      "Enter the room's length and width.",
+      "Set the waste allowance (10% for straight lays, 15% for diagonal).",
+      "Enter your product's box coverage in square feet.",
+      "Read the square footage needed and the number of boxes to buy."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Flooring is sold by the box; boxes rarely divide the room evenly — always round up.",
+      "Measure the longest length and width, including closets and alcoves.",
+      "Subtract nothing for small fixtures; the waste allowance covers it.",
+      "Diagonal layouts need about 15% waste instead of 10%.",
+      "Keep one spare box from the same dye lot for future repairs.",
+      "Underlayment is usually sold separately by the roll."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "flooring estimator, how much flooring do i need, laminate flooring calculator, boxes of flooring calculator, square feet flooring calculator",
+    "labels": {
+      "boxCoverage": "Box coverage",
+      "boxesResult": "Boxes to buy",
+      "extraResult": "Extra beyond needed",
+      "ftUnit": "ft",
+      "imperialTab": "Feet",
+      "length": "Length",
+      "mUnit": "m",
+      "metricTab": "Meters",
+      "sqftResult": "Square feet needed",
+      "sqmResult": "Square meters needed",
+      "unitSystem": "Unit system",
+      "waste": "Waste allowance",
+      "wasteNote": "10% for straight layouts, 15% for diagonal or irregular rooms.",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rectangular rooms only; L-shapes need splitting into rectangles.",
+      "Does not plan plank staggering or pattern matching.",
+      "Box coverage varies by product — check the label.",
+      "Underlayment, trim, and transitions are not included."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "How much flooring do you need? Get square feet, waste allowance and box counts for any room. Free flooring estimator.",
+    "metaTitle": "Flooring Calculator - How Much Flooring Do I Need? | JaurTools",
+    "name": "Flooring Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter the room's length and width, set a waste allowance, and enter your product's box coverage. The estimator returns the square footage to buy — with waste — and rounds up to whole boxes, so you never come up short mid-install.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Flooring estimate results",
+    "tagline": "Room measured, waste counted, boxes totaled.",
+    "workedExample": "A 12 x 15 ft living room, 10% waste, boxes covering 20 sq ft:\n\n1. Area = 12 x 15 = 180 sq ft.\n2. Needed = 180 x 1.10 = 198 sq ft (18.39 sq m).\n3. Boxes = ceil(198 / 20) = ceil(9.9) = 10 boxes.\n4. Extra = 10 x 20 - 198 = 2 sq ft left over.\n\nBuy 10 boxes and keep the leftover pieces for future repairs.",
+    "workedExampleHeading": "Worked example"
+  }
+}

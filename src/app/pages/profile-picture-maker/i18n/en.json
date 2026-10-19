@@ -1,0 +1,90 @@
+{
+  "profile-picture-maker": {
+    "benefits": [
+      "Turns any photo into a perfect circle in one click - no photo editor needed.",
+      "Cover-fit keeps your face centered and fills the circle edge to edge.",
+      "A colored ring makes your avatar stand out in feeds and chats.",
+      "Transparent corners mean it looks right on any background.",
+      "Free, instant and fully private - the photo never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The corners are transparent PNG, not white. On most apps the circle sits cleanly on any background. A few old tools show transparency as black - check how yours renders it.",
+        "q": "Will the corners be white or transparent?"
+      },
+      {
+        "a": "The tool cover-fits: it scales your photo so the shorter side fills the circle, then centers it. Use a photo where your face is near the center for the best result.",
+        "q": "How is my photo fitted into the circle?"
+      },
+      {
+        "a": "512 by 512 is the sweet spot for most social profiles - crisp without a huge file. Use 1024 for print or high-DPI displays, 256 for tiny avatars.",
+        "q": "Which output size should I choose?"
+      },
+      {
+        "a": "Set ring width to 0. The circle keeps its transparent corners and downloads as a clean ringless avatar.",
+        "q": "Can I have no ring at all?"
+      },
+      {
+        "a": "Pick any color with the ring color picker. A brand color or a bold contrast color makes the avatar pop in crowded feeds.",
+        "q": "What ring color looks best?"
+      }
+    ],
+    "formula": "circle radius = output size / 2\ncover scale = max(size / image width, size / image height)\nExample: 800 x 600 photo, 512 output, 8 px ring (measured at 512):\nscale = max(512 / 800, 512 / 600) = max(0.64, 0.853) = 0.853.\ndrawn size = 683 x 512, centered -> the middle 512 x 512 shows.\nring radius = 512 / 2 - 8 = 248.",
+    "formulaHeading": "How the circle is made",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a photo up to 25 MB - JPG, PNG, WebP, GIF, BMP or SVG.",
+      "The tool instantly crops it to a circle with a live preview.",
+      "Pick a ring color and width (0 for no ring).",
+      "Choose an output size: 256, 512 or 1024 pixels.",
+      "Download the circular PNG profile photo."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Crops any photo into a perfect circle with transparent corners (PNG).",
+      "Cover-fit: the photo scales so the shorter side fills the circle, centered automatically.",
+      "Optional colored ring from 0 to 40 pixels wide around the circle.",
+      "Output sizes: 256, 512 or 1024 pixels square.",
+      "The preview is rendered by the exact same code as the download.",
+      "Your original file is never modified."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "profile photo maker, round image maker, circular profile picture, circle crop photo online, avatar maker free",
+    "labels": {
+      "changeFile": "Change file",
+      "chooseFile": "Choose a photo",
+      "downloadButton": "Download profile photo",
+      "fileHint": "JPG, PNG, WebP, GIF, BMP or SVG - up to 25 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 25 MB. Please choose a smaller image.",
+      "invalidFile": "That file is not an image. Please choose an image file.",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "outputSize": "Output size",
+      "previewAlt": "Circular profile photo preview",
+      "ringColor": "Ring color",
+      "ringWidth": "Ring width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The crop is always centered - you cannot reposition the face inside the circle.",
+      "Cover-fit trims the longer sides; very wide panoramas lose a lot.",
+      "Some old apps render PNG transparency as black instead of see-through.",
+      "No retouching or background blur - this is a crop tool only."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Turn any photo into a perfect circular avatar with a ring and transparent corners. Cover-fit framing — free online, no signup.",
+    "metaTitle": "Profile Picture Maker - Perfect Circular Avatars | JaurTools",
+    "name": "Profile Picture Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload any photo and get a perfect circular avatar with transparent corners. Cover-fit centers your photo and fills the circle edge to edge; an optional colored ring (0 to 40 pixels) makes it pop. For example, an 800 by 600 photo at 512 output scales by 0.853 to 683 by 512, and the middle 512 by 512 becomes your avatar with a ring at radius 248. Download as PNG in 256, 512 or 1024 pixels.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Profile photo results",
+    "tagline": "Avatars that look sharp everywhere.",
+    "workedExample": "Make a 512-pixel avatar from an 800 x 600 photo with an 8 px ring.\n1. Cover scale = max(512 / 800, 512 / 600) = max(0.64, 0.853) = 0.853.\n2. Drawn size = 800 x 0.853 by 600 x 0.853 = 683 x 512.\n3. Centering offset: x = (512 - 683) / 2 = -85.5, y = (512 - 512) / 2 = 0.\n4. The canvas clips a circle of radius 256 and draws the photo at that offset - the middle 512 x 512 is kept.\n5. Ring: radius = 256 - 8 / 2 = 252, line width 8, in your chosen color.\n6. Download photo-profile.png.",
+    "workedExampleHeading": "Worked example"
+  }
+}

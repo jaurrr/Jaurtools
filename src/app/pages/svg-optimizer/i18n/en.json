@@ -1,0 +1,96 @@
+{
+  "svg-optimizer": {
+    "benefits": [
+      "Smaller files: removing comments and whitespace typically cuts 10–40%.",
+      "Safe minification: the drawing is never changed, only formatting is removed.",
+      "Before/after byte counts prove exactly how much was saved.",
+      "Side-by-side previews confirm the graphic looks identical after optimizing."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "SVG optimization (minification) removes everything the browser does not need to render the graphic: XML comments, whitespace between tags, and redundant spacing. The shapes stay exactly the same.",
+        "q": "What does optimizing an SVG mean?"
+      },
+      {
+        "a": "Comments, indentation and line breaks are invisible to the renderer but still download with the file. On icon-heavy sites, trimming them across dozens of files adds up to real bandwidth savings.",
+        "q": "Why do comments and whitespace matter?"
+      },
+      {
+        "a": "No. The optimizer only removes comments and collapses whitespace. It does not touch path data, colors or coordinates, so the rendered result is pixel-identical.",
+        "q": "Will optimization change how my SVG looks?"
+      },
+      {
+        "a": "The drawing is unchanged, so you can safely replace the original. Keep a readable copy in your source files if you edit SVGs by hand often.",
+        "q": "Should I keep the original file?"
+      },
+      {
+        "a": "Very large SVGs with thousands of paths may need a more aggressive optimizer that also simplifies path data. This tool covers the safe, common 10–40% savings.",
+        "q": "What if my file is huge?"
+      },
+      {
+        "a": "No. Parsing and minifying happen entirely in your browser tab.",
+        "q": "Is my SVG uploaded anywhere?"
+      }
+    ],
+    "formula": "saved bytes = original bytes − optimized bytes\nsaved % = saved bytes ÷ original bytes × 100\n\nTypical result: 10–40% smaller, depending on comments and formatting.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your SVG code or load an .svg file.",
+      "Check the original preview to confirm it renders correctly.",
+      "Press Optimize to strip comments and whitespace.",
+      "Compare the byte counts and the optimized preview.",
+      "Download the smaller optimized.svg file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SVG files are text: comments and whitespace download with every page view.",
+      "Minification removes XML comments, whitespace between tags and redundant spacing.",
+      "The browser renders the optimized file identically to the original.",
+      "Byte counts before and after show the exact saving and percentage.",
+      "Optimization is lossless for the drawing: shapes, colors and coordinates are untouched.",
+      "Smaller files load faster, especially on mobile networks."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg optimizer, svg minifier, optimize svg online, view svg, svg size reducer",
+    "labels": {
+      "afterLabel": "After",
+      "beforeLabel": "Before",
+      "bytesLabel": "bytes",
+      "codeLabel": "SVG code",
+      "downloadButton": "Download optimized SVG",
+      "errorInvalid": "The SVG code is not valid XML. Fix it before optimizing.",
+      "errorRead": "Could not read that file.",
+      "errorSize": "The SVG file must be smaller than 5 MB.",
+      "invalidNote": "Paste valid SVG code to see the preview and optimize it.",
+      "loadFile": "Load .svg file",
+      "optimizeButton": "Optimize",
+      "optimizedPane": "Optimized preview",
+      "originalPane": "Original preview",
+      "savedLabel": "Saved"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only comments and whitespace are removed; path data is not simplified.",
+      "Whitespace inside <text> elements is collapsed, which can alter text spacing — check text-heavy SVGs.",
+      "Very complex files may need a dedicated optimizer for bigger savings.",
+      "The tool cannot fix invalid SVG; validate first."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Shrink SVG file size by removing bloat — view before and after, keep full quality. Free, private, in your browser.",
+    "metaTitle": "SVG Optimizer - Smaller, Cleaner SVGs | JaurTools",
+    "name": "SVG Optimizer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool previews your SVG and shrinks it safely: one click removes XML comments, whitespace between tags and redundant spacing, showing exact byte savings before and after. The graphic renders identically — only formatting is removed. Download the optimized file when you're happy.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG viewer and optimizer results",
+    "tagline": "Leaner SVGs, same artwork.",
+    "workedExample": "You paste an SVG that is 2,480 bytes with comments and heavy indentation.\n\nThe optimizer removes a 96-byte comment, collapses 320 bytes of inter-tag whitespace and trims 30 bytes of redundant spacing.\n\nOptimized size = 2,480 − (96 + 320 + 30) = 2,034 bytes.\nSaved = 446 bytes; saved % = 446 ÷ 2,480 × 100 = 18.0%.\n\nThe side-by-side previews look identical, and the downloaded file is 446 bytes lighter on every page load.",
+    "workedExampleHeading": "Worked example"
+  }
+}

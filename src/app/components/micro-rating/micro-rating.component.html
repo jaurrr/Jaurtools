@@ -1,0 +1,30 @@
+<div class="micro-rating" role="group" [attr.aria-label]="t('ratingQuestion')">
+  @if (hasVoted()) {
+    <p class="micro-rating-thanks">
+      <app-icon name="check" aria-hidden="true"></app-icon>
+      {{ t('ratingThanks') }}
+    </p>
+  } @else {
+    <p class="micro-rating-q">{{ t('ratingQuestion') }}</p>
+    <div class="micro-rating-btns">
+      <button
+        type="button"
+        class="micro-rating-btn"
+        (click)="vote('yes')"
+        [attr.aria-label]="t('ratingYes')"
+      >
+        <app-icon name="thumbs-up" aria-hidden="true"></app-icon>
+        <span>{{ t('ratingYes') }}</span>
+      </button>
+      <button
+        type="button"
+        class="micro-rating-btn"
+        (click)="vote('no')"
+        [attr.aria-label]="t('ratingNo')"
+      >
+        <app-icon name="thumbs-down" aria-hidden="true"></app-icon>
+        <span>{{ t('ratingNo') }}</span>
+      </button>
+    </div>
+  }
+</div>

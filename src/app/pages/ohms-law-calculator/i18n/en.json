@@ -1,0 +1,97 @@
+{
+  "ohms-law-calculator": {
+    "assumptionNote": "Applies to simple DC resistive circuits. AC circuits, reactive components (capacitors, inductors), and non-linear devices like diodes need different math.",
+    "benefits": [
+      "Solve any two-known-values circuit problem in seconds.",
+      "Size components: find the resistor value your LED circuit needs.",
+      "Check power ratings: make sure your resistor can handle the watts.",
+      "Learn electronics: see how V, I, R, and P connect in every combination."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Ohm's Law: V = I x R. Voltage (volts) equals current (amps) times resistance (ohms). It describes how electricity flows through a resistor.",
+        "q": "What is Ohm's Law?"
+      },
+      {
+        "a": "Joule's Law for electric power: P = V x I. Power (watts) equals voltage times current. Combined with Ohm's Law, you can also write P = I^2 x R or P = V^2 / R.",
+        "q": "What is the power formula?"
+      },
+      {
+        "a": "Measure the current and voltage. R = V / I. For example, 9 V across a circuit drawing 0.5 A means R = 9 / 0.5 = 18 ohms.",
+        "q": "How do I find an unknown resistance?"
+      },
+      {
+        "a": "Divide the voltage by the resistance: I = V / R. So 12 V across 4 ohms gives 3 amps. The resistor then dissipates P = 12 x 3 = 36 W.",
+        "q": "How do I find the current?"
+      },
+      {
+        "a": "P = V x I. A 12 V device drawing 2 A uses 24 W. For heating elements and bulbs, higher watts mean more heat or light.",
+        "q": "How do I calculate power consumption?"
+      },
+      {
+        "a": "Pick any pair you know: V and I, V and R, I and R, P and V, P and I, or P and R. The calculator solves the other two values plus power automatically.",
+        "q": "Which two values do I need to enter?"
+      }
+    ],
+    "formula": "Ohm's Law: V = I x R\n\nPower: P = V x I = I^2 x R = V^2 / R\n\nRearranged:\nI = V / R        R = V / I\nV = sqrt(P x R)  I = sqrt(P / R)\nP = V^2 / R      R = V^2 / P\n\nExample: V = 12, R = 4 -> I = 12 / 4 = 3 A, P = 12 x 3 = 36 W.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick which pair of values you know: voltage and current, voltage and resistance, and so on.",
+      "Enter the two numbers.",
+      "All four values - voltage, current, resistance, and power - appear instantly.",
+      "Use the power result to check component ratings before building a circuit."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Ohm's Law: V = I x R. Published by Georg Ohm in 1827.",
+      "Units: volts (V), amps (A), ohms (Ω), watts (W).",
+      "Power: P = V x I. Also P = I^2 x R and P = V^2 / R.",
+      "Doubling voltage across a fixed resistor quadruples the power (P = V^2 / R).",
+      "Resistors convert electric power into heat. That is why high-power resistors get hot.",
+      "Ohm's Law applies to resistive DC circuits. Diodes and transistors are non-linear.",
+      "Series resistances add: R_total = R1 + R2.",
+      "Parallel: 1/R_total = 1/R1 + 1/R2."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ohms law calculator, v ir calculator, voltage current resistance calculator, power calculator watts, ohm's law wheel",
+    "labels": {
+      "current": "Current",
+      "knownPair": "Values you know",
+      "power": "Power",
+      "resistance": "Resistance",
+      "voltage": "Voltage"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "DC resistive circuits only. AC with capacitors and inductors needs impedance math.",
+      "Real components have tolerances; a 5% resistor shifts every answer.",
+      "Does not model heating effects: resistance changes as components warm up.",
+      "Never a substitute for measuring a real circuit with a multimeter."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Ohm's Law calculator: enter any two values (voltage, current, resistance, power) and solve for the rest. V=IR solver with watts. Private, no sign-up.",
+    "metaTitle": "Ohm's Law Calculator - V=IR Solver with Power | JaurTools",
+    "name": "Ohm's Law Calculator",
+    "pairs": {
+      "IR": "I and R",
+      "PI": "P and I",
+      "PR": "P and R",
+      "PV": "P and V",
+      "VI": "V and I",
+      "VR": "V and R"
+    },
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Ohm's Law: V = I x R, and power P = V x I. With 12 V across 4 ohms, current is 12 / 4 = 3 A and power is 12 x 3 = 36 W. Enter any two of voltage, current, resistance, or power above and the calculator finds the rest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your circuit results",
+    "tagline": "Enter any two values - voltage, current, resistance, or power - and solve the rest.",
+    "workedExample": "Known: V = 12 V, R = 4 ohms.\n1. Current: I = V / R = 12 / 4 = 3 A.\n2. Power: P = V x I = 12 x 3 = 36 W. (Check: P = V^2 / R = 144 / 4 = 36 W.)\n3. Resistance stays 4 ohms.\n\nAnother: P = 60 W, V = 120 V -> I = 60 / 120 = 0.5 A, R = 120^2 / 60 = 240 ohms.",
+    "workedExampleHeading": "Worked example"
+  }
+}

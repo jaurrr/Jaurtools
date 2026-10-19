@@ -1,0 +1,96 @@
+{
+  "faq-schema-builder": {
+    "assumptionNote": "Only pairs with both a question and an answer are included in the generated schema.",
+    "benefits": [
+      "Generates valid schema.org FAQPage JSON-LD with zero syntax errors.",
+      "Eligible pages can win FAQ rich results in Google Search.",
+      "No JSON hand-writing — the structure is built for you.",
+      "Add unlimited questions; each becomes a Question entity with an Answer.",
+      "Copy the output or download it as a .json file for your developer."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Add your questions and answers, copy the JSON-LD, and paste it inside a <script type=\"application/ld+json\"> tag in your page head or before </body>. Then test it in Google's Rich Results Test.",
+        "q": "How do I add the schema to my page?"
+      },
+      {
+        "a": "FAQ rich results make your listing taller in search results and can lift click-through rates. They are not guaranteed — Google decides per page — but valid markup is the entry ticket.",
+        "q": "Does FAQ schema improve my Google ranking?"
+      },
+      {
+        "a": "Yes. Keep questions concise, write answers that fully answer the question, and make sure the same Q&A is visible on the page. Hidden-only content violates Google's guidelines.",
+        "q": "Are there content rules for FAQ rich results?"
+      },
+      {
+        "a": "You can, but it is not required. JSON-LD in the page source works without any visible accordion, as long as the questions and answers also appear in the visible page content.",
+        "q": "Do I need a visible FAQ accordion too?"
+      },
+      {
+        "a": "Incomplete pairs are simply skipped in the output, and a warning reminds you to complete at least one pair. Nothing invalid is ever generated.",
+        "q": "What happens if I leave a question or answer empty?"
+      },
+      {
+        "a": "Yes. The schema is language-agnostic — write questions and answers in Hindi, Arabic, or any language and the JSON-LD stays valid.",
+        "q": "Can I write questions in Hindi or Arabic?"
+      }
+    ],
+    "formula": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"<question>\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"<answer>\"\n      }\n    }\n  ]\n}",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Add question for each FAQ entry on your page.",
+      "Type the question exactly as visitors would ask it.",
+      "Write the answer in one or two clear sentences.",
+      "Copy the generated JSON-LD with the copy button.",
+      "Paste it into a <script type=\"application/ld+json\"> tag on your page."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "FAQPage is a schema.org type that describes a list of questions and answers.",
+      "JSON-LD is Google's recommended format for structured data.",
+      "Each entry needs @type Question with a name and an acceptedAnswer.",
+      "The acceptedAnswer holds @type Answer with the answer text.",
+      "Google's Rich Results Test validates the markup before you publish."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "faq schema generator, faq json-ld builder, schema.org faqpage, faq rich snippet generator",
+    "labels": {
+      "addPairLabel": "Add question",
+      "answerLabel": "Answer",
+      "answerPlaceholder": "Type the answer visitors should see...",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "countLabel": "Questions",
+      "downloadLabel": "Download .json",
+      "embedHint": "Paste inside <script type=\"application/ld+json\"> on your page, then test with Google's Rich Results Test.",
+      "errorEmpty": "Add at least one complete question and answer to generate the schema.",
+      "pairLabel": "Question",
+      "questionLabel": "Question",
+      "questionPlaceholder": "Type the question visitors ask...",
+      "removeLabel": "Remove"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Schema markup does not guarantee rich results — Google decides per page.",
+      "Questions and answers must also be visible on the page; hidden-only content is against guidelines.",
+      "Incomplete pairs are skipped, so proofread before publishing.",
+      "Very long answers may be truncated in search results."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Build valid FAQPage JSON-LD schema in seconds. Add questions and answers, copy the structured data, and qualify for Google FAQ rich results.",
+    "metaTitle": "FAQ Schema Builder – Free JSON-LD Generator",
+    "name": "FAQ Schema Builder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "FAQ schema is structured data that tells Google your page contains questions and answers, making it eligible for expandable FAQ rich results in search. It is written as JSON-LD — a script tag with @type FAQPage. This tool builds that JSON-LD from your questions and answers with no syntax to memorize.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Generated FAQ schema",
+    "tagline": "Build valid FAQPage JSON-LD for Google rich results — no syntax needed.",
+    "workedExample": "Add one pair:\nQuestion: Do you offer home delivery?\nAnswer: Yes, we deliver within the city in 2 to 4 hours.\n\nGenerated JSON-LD:\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do you offer home delivery?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Yes, we deliver within the city in 2 to 4 hours.\"\n      }\n    }\n  ]\n}\n\nPaste inside <script type=\"application/ld+json\"> on the page that shows this Q&A.",
+    "workedExampleHeading": "Worked example"
+  }
+}

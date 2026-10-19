@@ -1,0 +1,97 @@
+{
+  "triangle-calculator": {
+    "benefits": [
+      "Solves the whole triangle — area, all three angles, perimeter and type — from just three sides.",
+      "Validates the triangle inequality and explains clearly when sides cannot form a triangle.",
+      "Classifies the triangle by sides and by angles automatically.",
+      "Also gives the circumradius and inradius, useful for geometry problems.",
+      "Everything is computed locally in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Three lengths form a triangle only if the sum of any two is greater than the third: a + b > c, a + c > b, b + c > a. If any check fails — for example sides 1, 2, 10 — no triangle exists.",
+        "q": "How do I know if three sides make a valid triangle?"
+      },
+      {
+        "a": "Use Heron's formula: with semiperimeter s = (a+b+c)/2, area = √(s(s−a)(s−b)(s−c)). It works for any triangle when you know all three sides.",
+        "q": "How is the area calculated from three sides?"
+      },
+      {
+        "a": "The law of cosines: for the angle opposite side a, cos(A) = (b² + c² − a²) / (2bc), then A = arccos of that value. Repeat for each angle.",
+        "q": "How are the angles found?"
+      },
+      {
+        "a": "The circumradius R = abc / (4 × area) is the radius of the circle passing through all three vertices. The inradius r = area / s is the radius of the circle touching all three sides from inside.",
+        "q": "What are the circumradius and inradius?"
+      },
+      {
+        "a": "By sides: equilateral (all equal), isosceles (two equal), scalene (none equal). By angles: right (one 90°), obtuse (one > 90°), acute (all < 90°). A triangle gets one label from each group.",
+        "q": "What do the triangle classifications mean?"
+      }
+    ],
+    "formula": "Semiperimeter: s = (a + b + c) / 2\nHeron's formula: Area = √(s(s − a)(s − b)(s − c))\n\nLaw of cosines (angle A opposite side a):\ncos(A) = (b² + c² − a²) / (2bc)\n\nCircumradius: R = abc / (4 × Area)\nInradius:     r = Area / s\n\nValid only if: a + b > c, a + c > b, b + c > a",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the three side lengths a, b and c.",
+      "The tool checks the triangle inequality automatically.",
+      "Read the area, perimeter and all three angles in the results.",
+      "Check how the triangle is classified — by sides and by angles.",
+      "Use the circumradius and inradius for circle-related geometry."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Any triangle is fully determined by its three side lengths (SSS congruence).",
+      "The three interior angles always add up to exactly 180°.",
+      "Heron's formula finds the area from sides alone — no height needed.",
+      "The longest side is always opposite the largest angle.",
+      "The 3-4-5 triangle is the most famous: a right triangle with area 6."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "triangle calculator, solve triangle, Heron's formula calculator, triangle angles from sides, triangle area calculator",
+    "labels": {
+      "acute": "Acute",
+      "angleA": "Angle A (opposite side a)",
+      "angleB": "Angle B (opposite side b)",
+      "angleC": "Angle C (opposite side c)",
+      "angleType": "Angle classification",
+      "area": "Area",
+      "circumradius": "Circumradius (R)",
+      "equilateral": "Equilateral",
+      "inradius": "Inradius (r)",
+      "invalidNote": "These three lengths cannot form a triangle: the sum of any two sides must be greater than the third side.",
+      "isosceles": "Isosceles",
+      "obtuse": "Obtuse",
+      "perimeter": "Perimeter",
+      "right": "Right-angled",
+      "scalene": "Scalene",
+      "sideA": "Side a",
+      "sideB": "Side b",
+      "sideC": "Side c",
+      "sideType": "Side classification"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only solves triangles from three sides (SSS) — not from angles or mixed inputs.",
+      "Side-equality checks use a small tolerance; near-degenerate inputs may classify unexpectedly.",
+      "Degenerate “flat” triangles (a + b = c) are rejected as invalid.",
+      "Angles are in degrees; radian output is not provided."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free triangle calculator: enter three sides to get area (Heron's formula), all angles, perimeter, classification, circumradius and inradius.",
+    "metaTitle": "Triangle Calculator — Solve Sides, Angles & Area",
+    "name": "Triangle Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter three sides — for example 3, 4, 5 — and get everything: area = 6, angles ≈ 36.87°, 53.13°, 90°, perimeter = 12, a scalene right triangle, circumradius 2.5 and inradius 1.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Triangle results",
+    "tagline": "Solve any triangle: area, angles, perimeter and type from three sides.",
+    "workedExample": "Sides a = 3, b = 4, c = 5:\ns = (3 + 4 + 5) / 2 = 6\nArea = √(6 × 3 × 2 × 1) = √36 = 6\n\ncos(A) = (4² + 5² − 3²) / (2×4×5) = (16+25−9)/40 = 32/40 = 0.8 → A ≈ 36.87°\ncos(B) = (3² + 5² − 4²) / (2×3×5) = (9+25−16)/30 = 18/30 = 0.6 → B ≈ 53.13°\nC = 180 − 36.87 − 53.13 = 90°\n\nPerimeter = 12. Scalene (all sides differ), right-angled (C = 90°).\nR = (3×4×5) / (4×6) = 60/24 = 2.5.  r = 6/6 = 1.",
+    "workedExampleHeading": "Worked example"
+  }
+}

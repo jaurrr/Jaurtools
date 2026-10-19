@@ -1,0 +1,111 @@
+{
+  "svg-converter": {
+    "benefits": [
+      "No software to install: conversion happens with the canvas and DOM APIs already in your browser.",
+      "Scale control: export crisp PNGs at 1× to 8× for retina screens and print.",
+      "Two directions in one page: rasterize SVG to PNG/JPEG, or wrap a raster image inside an SVG.",
+      "JPEG backgrounds: choose transparent, white or black before exporting."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "SVG is a vector format: it describes shapes with math, so it scales perfectly. PNG and JPEG are raster formats: they store a fixed grid of pixels. Converting SVG to PNG freezes the design at a chosen pixel size.",
+        "q": "What is the difference between SVG and PNG?"
+      },
+      {
+        "a": "Embedding wraps the pixels in base64 text inside an <image> element. The result is a valid SVG file, but it does not become a true vector — it stays a bitmap picture in an SVG container.",
+        "q": "Does embedding a photo in SVG make it a vector?"
+      },
+      {
+        "a": "Browsers only render an SVG to canvas when it has explicit dimensions. If the SVG has no width and height attributes, this tool falls back to the viewBox size, or 300 px when nothing is specified.",
+        "q": "Why does my SVG need width and height?"
+      },
+      {
+        "a": "JPEG does not support transparency, so transparent areas become the background color you choose (white or black). Use PNG if you need to keep transparency.",
+        "q": "Why does my PNG look different as a JPEG?"
+      },
+      {
+        "a": "External resources such as linked images or web fonts referenced with <image href=\"...\"> or @import may not render, because canvas rasterization blocks cross-origin content for security.",
+        "q": "Some parts of my SVG are missing in the export. Why?"
+      },
+      {
+        "a": "No. Files are read into memory with the FileReader API and never leave your device.",
+        "q": "Are my files uploaded to a server?"
+      }
+    ],
+    "formula": "output width = SVG width × scale\noutput height = SVG height × scale\n\nbase64 size ≈ original bytes × 4 ÷ 3  (about 33% larger than the source file)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the SVG to raster tab, then paste SVG code or load an .svg file.",
+      "Check the live preview to confirm the graphic renders correctly.",
+      "Set the scale (2× or 4× is ideal for sharp screens) and pick PNG or JPEG with a background.",
+      "Press Convert, preview the result, then download the image.",
+      "For the reverse direction, switch tabs, upload any image, and download the SVG that embeds it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SVG stores shapes as resolution-independent vector math; PNG and JPEG store fixed pixel grids.",
+      "Rasterizing an SVG at a higher scale produces sharper output for retina displays and print.",
+      "Browsers rasterize SVG through an <img> element drawn onto a canvas, which this tool does locally.",
+      "A raster image can be embedded inside an SVG using a base64 data URI in an <image> element.",
+      "Base64 encoding inflates file size by roughly 33% compared to the original image bytes.",
+      "PNG keeps transparency; JPEG is smaller but has no transparency and slight compression artifacts."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg converter, svg to png, svg viewer, png to svg, rasterize svg online",
+    "labels": {
+      "backgroundLabel": "Background",
+      "bgBlack": "Black",
+      "bgTransparent": "Transparent",
+      "bgWhite": "White",
+      "convertButton": "Convert to image",
+      "copySvg": "Copy SVG",
+      "downloadRaster": "Download image",
+      "downloadSvg": "Download SVG",
+      "embedCodeLabel": "Embedded SVG code",
+      "embedNote": "This wraps the pixels inside an SVG <image> element. The result is valid SVG, but the picture itself remains a bitmap.",
+      "errorCanvas": "Could not prepare the canvas.",
+      "errorInvalidSvg": "The SVG code is not valid. Please fix it and try again.",
+      "errorRead": "Could not read that file.",
+      "errorRender": "Could not render the SVG. It may reference external resources.",
+      "errorSize": "Each image must be smaller than 10 MB.",
+      "errorSvgSize": "The SVG file must be smaller than 5 MB.",
+      "errorType": "Only image files are accepted.",
+      "formatLabel": "Format",
+      "invalidNote": "The SVG code is not valid yet. A live preview appears once it parses correctly.",
+      "loadSvgFile": "Load .svg file",
+      "modeLabel": "Conversion direction",
+      "outputSizeLabel": "Output size",
+      "rasterAlt": "Converted raster image preview",
+      "rasterDropHint": "Click to choose a raster image (PNG, JPEG, WebP…)",
+      "scaleLabel": "Scale",
+      "sourceSizeLabel": "Source size",
+      "svgCodeLabel": "SVG code",
+      "toRasterTab": "SVG → PNG / JPEG",
+      "toSvgTab": "Image → SVG (embed)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Externally linked images or fonts inside the SVG may be blocked by browser security rules.",
+      "Embedded SVGs stay bitmaps; the tool does not trace or vectorize photos.",
+      "Very large scale factors (8× on a big SVG) can use a lot of memory.",
+      "Some advanced SVG filters render slightly differently across browsers."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert between SVG and raster image formats with a live viewer built in. Preview every change — free, in your browser.",
+    "metaTitle": "SVG Converter - SVG to Raster & Back | JaurTools",
+    "name": "SVG Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool converts between SVG vector graphics and raster images in both directions. Paste SVG code or upload an .svg file to preview it and export a PNG or JPEG at 1× to 8× scale, or upload any photo to wrap it inside a downloadable SVG file. Everything renders locally with your browser's canvas engine.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG converter results",
+    "tagline": "SVG in, any format out.",
+    "workedExample": "You paste an SVG that is 100 × 100 px and set scale = 4.\n\nOutput width = 100 × 4 = 400 px; output height = 100 × 4 = 400 px.\n\nThe tool renders the vector at 400 × 400 and downloads a PNG with 160,000 pixels — sharp on retina displays. Going the other way, a 90 KB JPEG embedded as base64 grows to about 90 × 4 ÷ 3 ≈ 120 KB of text inside the SVG file.",
+    "workedExampleHeading": "Worked example"
+  }
+}

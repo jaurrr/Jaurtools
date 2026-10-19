@@ -1,0 +1,98 @@
+{
+  "child-height-predictor": {
+    "assumptionNote": "The mid-parental formula is a statistical estimate. Nutrition, health and timing of puberty move the real result, so treat the range as a guide, not a promise.",
+    "benefits": [
+      "Turns two parental heights into a concrete expectation for your child's growth.",
+      "The plus-minus 8.5 cm range shows the honest uncertainty, not false precision.",
+      "Useful for paediatric check-ups and growth-chart conversations.",
+      "Fun and reassuring for curious parents - genetics in one minute."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "About 60-80% of height variation is genetic. Nutrition, sleep, illness and exercise timing explain much of the rest.",
+        "q": "How much of height is genetic?"
+      },
+      {
+        "a": "Boys typically grow until 16-18, girls until 14-16. Late puberty can add growth into the early twenties for boys.",
+        "q": "When do children stop growing?"
+      },
+      {
+        "a": "Yes, modestly. Good nutrition, enough sleep (growth hormone releases at night), regular exercise and treating chronic illness all help a child reach their genetic potential.",
+        "q": "Can nutrition change predicted height?"
+      },
+      {
+        "a": "Use the biological parents' heights if known; otherwise the best available estimate. Adopted children's predictions are less certain.",
+        "q": "What if I do not know the biological parents' heights?"
+      },
+      {
+        "a": "The most common reason is measurement error in a parent's height. Morning height is up to 1-2 cm taller than evening height. Also, the formula is an average, not a guarantee.",
+        "q": "Why does the prediction look wrong?"
+      },
+      {
+        "a": "No. This formula is validated for children. Adults should use the BMI, BMR or healthy-weight calculators instead.",
+        "q": "Does this work for adults?"
+      }
+    ],
+    "formula": "Mid-parental height:\nBoy: (father + mother + 13 cm) / 2.\nGirl: (father + mother - 13 cm) / 2.\nExpected range: prediction plus or minus 8.5 cm (about 90% of children land inside).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Boy or Girl for the child.",
+      "Pick metric (cm) or imperial (ft/in) units.",
+      "Enter the father's and mother's heights as accurately as you can.",
+      "Read the predicted adult height and the plus-minus 8.5 cm range.",
+      "Compare with a paediatric growth chart at check-ups."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The mid-parental height formula is the standard quick estimate used in paediatrics.",
+      "Boys average 13 cm taller than the mid-parental height; girls 13 cm shorter.",
+      "About 90% of children end up within 8.5 cm of the prediction.",
+      "Height is 60-80% genetic; nutrition and health explain much of the rest.",
+      "A boy with a 180 cm father and 165 cm mother is predicted at 179 cm.",
+      "Growth hormone is released mainly during deep sleep, which is why children need plenty of it."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "height calculator, child height predictor, predicted adult height, mid-parental height, how tall will my child be",
+    "labels": {
+      "boyOption": "Boy",
+      "childGenderLabel": "Child",
+      "cmUnit": "cm",
+      "fatherLabel": "Father's height",
+      "feet": "Feet",
+      "girlOption": "Girl",
+      "heightLabel": "Height",
+      "imperialTab": "Imperial (ft / in)",
+      "inchUnit": "in",
+      "inches": "Inches",
+      "metricTab": "Metric (cm)",
+      "motherLabel": "Mother's height",
+      "predictedResult": "Predicted adult height",
+      "rangeResult": "Likely range",
+      "unitSystem": "Unit system"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A statistical estimate, not a guarantee for any individual child.",
+      "Cannot account for nutrition, illness or late puberty.",
+      "Adopted or unknown parental heights make it unreliable.",
+      "Not for adults; use the other health calculators instead."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Predict your child's future adult height from the parents' heights — with the honest range, not a false exact number. Free and instant.",
+    "metaTitle": "Child Height Predictor - Predict Your Child's Adult Height | JaurTools",
+    "name": "Child Height Predictor",
+    "privacyNote": "This calculator runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The mid-parental formula averages the parents' heights, adjusted by 13 cm for the child's sex. A boy with a 180 cm father and 165 cm mother is predicted to reach 179 cm as an adult, with most children landing within 8.5 cm either side: 170.5 to 187.5 cm.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your height prediction",
+    "tagline": "How tall will your child be? An honest estimate.",
+    "workedExample": "Boy, father 180 cm, mother 165 cm:\n1. Sum: 180 + 165 = 345.\n2. Boy adjustment: 345 + 13 = 358.\n3. Divide: 358 / 2 = 179 cm predicted.\n4. Range: 179 - 8.5 = 170.5 cm to 179 + 8.5 = 187.5 cm.\nAbout 90% of children land inside this range.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

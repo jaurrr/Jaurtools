@@ -1,0 +1,92 @@
+{
+  "add-to-a-date": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Add to a Date",
+    "tagline": "Add days, weeks, months or years to any date and get the exact future date instantly.",
+    "metaTitle": "Add to a Date Calculator - Find Future Dates | JaurTools",
+    "metaDescription": "Add days, weeks, months or years to any date with this free calculator. Get the exact future date, weekday and ISO format. Private, no sign-up.",
+    "keywords": "add days to date, add to date calculator, future date calculator, add months to date, date arithmetic calculator",
+    "quickAnswer": "Adding time to a date is simple calendar arithmetic: move forward from the start date by the chosen number of days, weeks, months or years. For example, 30 days after 1 January 2026 is 31 January 2026, a Saturday. Month additions keep the same day number where possible - 1 month after 31 January lands on 3 March, because February is shorter than January.",
+    "keyFacts": [
+      "Adding days is exact: the calendar moves forward one day at a time, so 30 days after 1 January 2026 is 31 January 2026.",
+      "Adding months keeps the same day number when the target month has that day. Adding 1 month to 31 January rolls into early March, because February never has 31 days.",
+      "Adding years keeps the same month and day. Adding 1 year to 29 February 2024 gives 28 February 2025, because 2025 is not a leap year.",
+      "Weeks are exact groups of 7 days, so adding weeks never changes the weekday: 3 weeks after a Monday is always a Monday.",
+      "Leap years are handled automatically, including the century rule: 2000 was a leap year, but 1900 was not."
+    ],
+    "howTo": [
+      "Pick your start date using the date picker.",
+      "Enter how much time you want to add, as a whole number.",
+      "Choose the unit: days, weeks, months or years.",
+      "Read the resulting date, its weekday and its ISO (YYYY-MM-DD) form instantly.",
+      "Use the days-from-today figure to see how far in the future the result lies."
+    ],
+    "formula": "Result = start date + N units.\nDays: result = start date + N days.\nWeeks: result = start date + (N x 7) days.\nMonths: result month = start month + N (day kept when valid).\nYears: result year = start year + N (same month and day).\nExample: 2026-01-01 + 30 days = 2026-01-31.",
+    "workedExample": "Start date: 18 October 2026 (a Sunday).\n1. Amount = 45, unit = days.\n2. October has 31 days, so 18 October + 13 days = 31 October. 32 days remain: November takes 30, leaving 2 days into December.\n3. Result: 2 December 2026.\n4. Weekday check: 45 days = 6 full weeks + 3 days, so Sunday + 3 days = Wednesday.\nISO form: 2026-12-02.",
+    "benefits": [
+      "Get deadlines, delivery dates and project end dates in one click.",
+      "Month-end and leap-year edge cases are handled automatically.",
+      "The weekday is shown with every result, so you never plan on the wrong day.",
+      "Runs fully in your browser - no account, no tracking, works offline."
+    ],
+    "limitations": [
+      "Month arithmetic follows standard calendar rollover. Contracts sometimes define a 'month' differently - check your agreement.",
+      "Public holidays and business days are not considered; this is pure calendar math.",
+      "Time zones are ignored - the output is a calendar date, not a timestamp.",
+      "Extremely large additions (tens of thousands of years) can exceed calendar support."
+    ],
+    "faqs": [
+      {
+        "q": "What happens when I add 1 month to 31 January?",
+        "a": "You land in early March - 3 March, or 2 March in a leap year. Date arithmetic rolls the extra days forward because February has no 31st. This matches how spreadsheets and most calendars behave."
+      },
+      {
+        "q": "Does adding weeks ever change the weekday?",
+        "a": "Never. A week is exactly 7 days, so the weekday stays identical: 6 weeks after a Wednesday is always a Wednesday."
+      },
+      {
+        "q": "How are leap years handled?",
+        "a": "Automatically. Adding 1 year to 29 February 2024 gives 28 February 2025, and adding 4 years gives 29 February 2028."
+      },
+      {
+        "q": "Can I add a negative amount here?",
+        "a": "This tool only moves forward in time. To go backwards, use the Subtract From a Date tool."
+      },
+      {
+        "q": "Does my time zone change the result?",
+        "a": "No. The calculator works with plain calendar dates, so the answer is identical wherever you are."
+      },
+      {
+        "q": "What is the ISO date in the results?",
+        "a": "The international YYYY-MM-DD format, for example 2026-12-02. It removes all confusion between day-first and month-first date styles."
+      }
+    ],
+    "resultsHeading": "Your new date results",
+    "labels": {
+      "startDate": "Start date",
+      "amount": "Amount to add",
+      "unit": "Unit",
+      "days": "Days",
+      "weeks": "Weeks",
+      "months": "Months",
+      "years": "Years",
+      "resultDate": "Resulting date",
+      "weekday": "Day of the week",
+      "isoDate": "ISO date (YYYY-MM-DD)",
+      "daysFromToday": "Days from today"
+    }
+  }
+}

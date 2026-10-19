@@ -1,0 +1,178 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t(slug + '.ui.home')">
+    <a [routerLink]="['/', lang()]">{{ t(slug + '.ui.home') }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t(slug + '.name') }}</span>
+  </nav>
+
+  <h1>{{ t(slug + '.name') }}</h1>
+  <p class="tagline">{{ t(slug + '.tagline') }}</p>
+  <div class="layout">
+    <div class="tool-col">
+      <section class="card tool-card" [attr.aria-label]="t(slug + '.name')">
+        <div class="tool-head">
+          <app-icon name="percent"></app-icon>
+          <h2 class="tool-title">{{ t(slug + '.name') }}</h2>
+        </div>
+
+        <div class="calc-seg-tabs" role="tablist" [attr.aria-label]="t(slug + '.name')">
+          @for (m of modes; track m) {
+            <button
+              type="button"
+              role="tab"
+              [attr.aria-selected]="mode() === m"
+              (click)="setMode(m)"
+            >
+              {{ t(slug + '.ui.mode' + (m === 'of' ? 'Of' : m === 'is' ? 'Is' : 'Change')) }}
+            </button>
+          }
+        </div>
+
+        <div class="inputs">
+          <div>
+            <label class="field-label" [for]="'pc-x-' + mode()">
+              @switch (mode()) {
+                @case ('of') { {{ t(slug + '.ui.labelX1') }} }
+                @case ('is') { {{ t(slug + '.ui.labelX2') }} }
+                @case ('change') { {{ t(slug + '.ui.labelX3') }} }
+              }
+            </label>
+            <input
+              [id]="'pc-x-' + mode()"
+              type="text"
+              inputmode="decimal"
+              [ngModel]="x()"
+              (ngModelChange)="x.set($event)"
+            />
+          </div>
+          <div>
+            <label class="field-label" [for]="'pc-y-' + mode()">
+              @switch (mode()) {
+                @case ('of') { {{ t(slug + '.ui.labelY1') }} }
+                @case ('is') { {{ t(slug + '.ui.labelY2') }} }
+                @case ('change') { {{ t(slug + '.ui.labelY3') }} }
+              }
+            </label>
+            <input
+              [id]="'pc-y-' + mode()"
+              type="text"
+              inputmode="decimal"
+              [ngModel]="y()"
+              (ngModelChange)="y.set($event)"
+            />
+          </div>
+        </div>
+
+        <div class="calc-hero" aria-live="polite">
+          <span class="calc-hero-label">{{ t(slug + '.ui.resultLabel') }}</span>
+          @if (result() === null) {
+            <div class="calc-num calc-num-empty">{{ t(slug + '.ui.empty') }}</div>
+          } @else {
+            <div
+              class="calc-num"
+              [class.is-up]="mode() === 'change' && (result() ?? 0) > 0"
+              [class.is-down]="mode() === 'change' && (result() ?? 0) < 0"
+            >{{ fmt(result() ?? 0) }}</div>
+            @if (changeWord()) {
+              <span
+                class="calc-badge pct-badge"
+                [class.is-up]="(result() ?? 0) > 0"
+                [class.is-down]="(result() ?? 0) < 0"
+              >
+                <app-icon
+                  [name]="(result() ?? 0) > 0 ? 'chevron-up' : 'chevron-down'"
+                  [size]="16"
+                ></app-icon>
+                {{ changeWord() }}
+              </span>
+            }
+          }
+          <p class="calc-hero-sub">{{ resultSentence() }}</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="guide-col">
+      <p class="quick">{{ t(slug + '.quickAnswer') }}</p>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.keyFactsTitle') }}</h2>
+        <ul class="check-list">
+          @for (fact of keyFacts(); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.howToTitle') }}</h2>
+        <ol class="steps">
+          @for (step of howTo(); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.formulaTitle') }}</h2>
+        <p>{{ t(slug + '.formula') }}</p>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.exampleTitle') }}</h2>
+        <p>{{ t(slug + '.workedExample') }}</p>
+      </section>
+
+      <section class="card pros-cons">
+        <div>
+          <h2>{{ t(slug + '.ui.benefitsTitle') }}</h2>
+          <ul class="check-list">
+            @for (b of benefits(); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t(slug + '.ui.limitationsTitle') }}</h2>
+          <ul class="warn-list">
+            @for (l of limitations(); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <section class="card privacy">
+        <h2>
+          <app-icon name="info"></app-icon>
+          {{ t(slug + '.ui.privacyTitle') }}
+        </h2>
+        <p>{{ t(slug + '.privacyNote') }}</p>
+      </section>
+
+      <section class="card faq">
+        <h2>{{ t(slug + '.ui.faqTitle') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+    </div>
+  </div>
+
+  <section class="card related">
+    <h2>{{ t(slug + '.ui.relatedTitle') }}</h2>
+    <div class="related-grid">
+      @for (rel of related; track rel) {
+        <a class="related-card" [routerLink]="['/', lang(), rel]">
+          <span>{{ t(rel + '.name') }}</span>
+          <app-icon name="arrow-right"></app-icon>
+        </a>
+      }
+    </div>
+  </section>
+
+  <p class="reviewed">{{ t(slug + '.lastReviewed') }}</p>
+</div>

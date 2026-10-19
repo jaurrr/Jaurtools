@@ -1,0 +1,90 @@
+{
+  "spell-checker": {
+    "assumptionNote": "The tool uses a bundled compact dictionary of common English words — no downloads, no server. Names, brands and technical terms may be flagged.",
+    "benefits": [
+      "Instant spell checking as you type, right in your browser.",
+      "Misspelled words highlighted in red, like a word processor.",
+      "One-click suggestions replace every occurrence at once.",
+      "No dictionary downloads and no cloud — 100% local.",
+      "Free forever, works offline once the page loads."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It checks each word against a bundled dictionary of common English words and computes edit-distance suggestions (up to 2 edits away) for anything it does not recognize.",
+        "q": "How does this spell checker work?"
+      },
+      {
+        "a": "Type in the box and misspelled words appear with a red wavy underline in the preview. Below it, each flagged word shows up to 5 suggestions as clickable buttons.",
+        "q": "How do I see my mistakes?"
+      },
+      {
+        "a": "Click any suggestion chip and every occurrence of that word in your text is replaced at once, preserving capitalization.",
+        "q": "How do I apply a suggestion?"
+      },
+      {
+        "a": "The dictionary is a compact list of common English words. Proper names, brands, slang and technical terms may be flagged even when spelled correctly.",
+        "q": "Why is a correct word flagged?"
+      },
+      {
+        "a": "Not currently. Suggestions come from the bundled dictionary only — there is no way to add custom words yet.",
+        "q": "Can I add words to the dictionary?"
+      },
+      {
+        "a": "Yes — everything is checked locally in your browser. Nothing you type is uploaded or stored anywhere.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "misspelled = words not in DICTIONARY\nsuggestions(word) = dict words with levenshtein(word, candidate) <= 2\n  sorted by distance, then alphabetically (top 5)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste your text into the input box.",
+      "Misspelled words get a red wavy underline in the preview.",
+      "Review the suggestion chips under each flagged word.",
+      "Click a suggestion to replace every occurrence at once.",
+      "Re-check until the error count reaches zero."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The dictionary is bundled with the page — no downloads, no server calls.",
+      "Checking is done by exact word lookup against common English words.",
+      "Suggestions use Levenshtein edit distance (up to 2 edits).",
+      "Applying a suggestion replaces all occurrences, preserving capitalization.",
+      "The tool runs entirely in your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "spell checker online, free spelling checker, spelling corrector, check spelling online, typo fixer",
+    "labels": {
+      "clearButton": "Clear",
+      "errorsLabel": "Possible errors",
+      "noSuggestion": "No suggestion found",
+      "previewLabel": "Preview",
+      "suggestionsLabel": "Suggestions — click to apply",
+      "textLabel": "Your text",
+      "textPlaceholder": "Type or paste your text here...",
+      "wordsLabel": "Words checked"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Compact dictionary — names, brands and technical terms may be flagged.",
+      "Suggestions are approximate and may miss the word you intended.",
+      "Grammar and punctuation are not checked, only spelling."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online spell checker. Highlights misspellings and suggests corrections instantly — all in your browser, 100% private.",
+    "metaTitle": "Spell Checker — Free Online Spelling Checker",
+    "name": "Spell Checker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Checks your spelling against a bundled dictionary of common English words, entirely in your browser. Misspelled words get a red wavy underline in the live preview, and each flagged word shows up to 5 suggestions as clickable chips — clicking one replaces every occurrence at once, preserving capitalization.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Spell checker",
+    "tagline": "Catch typos instantly — bundled dictionary, one-click fixes, all local.",
+    "workedExample": "Input: \"Please beleive me and adress this package\"\nWords checked: 7\n- \"beleive\" not in dictionary -> flagged. Suggestions: believe, receive -> click \"believe\".\n- \"adress\" not in dictionary -> flagged. Suggestions: address, dress, across, press, stress -> click \"address\".\nClicking a suggestion replaces every occurrence and keeps capitalization.\nResult: \"Please believe me and address this package\"\nErrors: 2 -> 0",
+    "workedExampleHeading": "Worked example"
+  }
+}

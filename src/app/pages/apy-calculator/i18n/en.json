@@ -1,0 +1,92 @@
+{
+  "apy-calculator": {
+    "assumptionNote": "Assumes the nominal rate stays fixed for a full year and interest is credited at the chosen frequency.",
+    "benefits": [
+      "Compares savings accounts with different compounding frequencies on one fair number.",
+      "Shows how much extra compounding really earns you each year.",
+      "Includes a concrete year-end balance on a 1,000 deposit for intuition.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "APY stands for annual percentage yield. It is the real yearly return on savings after compounding, while the nominal rate is the stated rate before compounding. The same 5% nominal rate gives a higher APY when compounded more often.",
+        "q": "What is APY?"
+      },
+      {
+        "a": "Use APY to compare savings and deposit accounts, because it reflects what you actually earn. Use APR to compare borrowing costs, because it reflects what you actually pay. They answer opposite questions.",
+        "q": "Should I compare APY or APR?"
+      },
+      {
+        "a": "More frequent compounding always raises APY a little. Daily compounding on a 5% nominal rate gives 5.1267% APY versus 5.1162% for monthly, a difference of about one dollar per year on a 10,000 balance.",
+        "q": "Does daily compounding matter much?"
+      },
+      {
+        "a": "Yes. In many countries banks must advertise APY so savers can compare accounts fairly. It is sometimes called the effective annual rate or AER.",
+        "q": "Is APY the rate banks advertise?"
+      },
+      {
+        "a": "They can differ when fees eat into returns or when the rate changes during the year. This calculator shows the pure compounding effect; read the account terms for fees and tiered rates.",
+        "q": "Can APY differ from my actual return?"
+      },
+      {
+        "a": "APY = (1 + nominal / m)^m - 1, where m is the number of compounding periods per year. As m grows very large it approaches continuous compounding, e^nominal - 1.",
+        "q": "What is the APY formula?"
+      }
+    ],
+    "formula": "APY = (1 + nominal_rate / m)^m - 1\nm = compounding periods per year (1, 2, 4, 12, 52, 365)\nyear_end_value = deposit x (1 + APY)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the nominal (advertised) annual interest rate.",
+      "Choose how often interest is compounded.",
+      "Read the true APY, the rate earned each period and the year-end value of a 1,000 deposit.",
+      "Try different frequencies to see how compounding changes the return."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "APY, the annual percentage yield, is the effective yearly return after compounding is included.",
+      "The same nominal rate produces a higher APY when interest compounds more frequently.",
+      "A 5% nominal rate compounded monthly is 5.116% APY; compounded daily it is 5.127% APY.",
+      "APY is the standard number for comparing savings accounts, CDs and money-market accounts.",
+      "The difference between APY and the nominal rate is small at low rates but grows as rates rise."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "APY calculator, annual percentage yield calculator, effective interest rate, compound interest calculator",
+    "labels": {
+      "apy": "True APY",
+      "freqAnnual": "Annual",
+      "freqDaily": "Daily",
+      "freqMonthly": "Monthly",
+      "freqQuarter": "Quarterly",
+      "freqSemi": "Semi-annual",
+      "freqWeekly": "Weekly",
+      "frequency": "Compounding frequency",
+      "nominalRate": "Nominal rate (%)",
+      "perPeriodRate": "Rate per period",
+      "yearEndValue": "1,000 grows to"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes the rate never changes during the year.",
+      "Ignores account fees, taxes and minimum-balance rules.",
+      "Does not model tiered rates or promotional periods.",
+      "An estimate for comparison, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free APY calculator. Convert a nominal rate to true annual percentage yield for any compounding frequency. Compare savings fairly. Private, browser-only.",
+    "metaTitle": "APY Calculator — True Annual Percentage Yield",
+    "name": "APY Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "APY is the real yearly return after compounding. A 5% nominal rate compounded monthly equals 5.116% APY, so 10,000 grows to 10,511.62 in one year — slightly more than the nominal rate suggests.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your APY results",
+    "tagline": "Turn any nominal rate into its true yearly yield.",
+    "workedExample": "Nominal rate 5%, compounded monthly (m = 12).\n\nAPY = (1 + 0.05/12)^12 - 1 = 1.00416667^12 - 1 = 1.0511619 - 1 = 5.116%.\n\nRate per period = 5 / 12 = 0.4167%. A 10,000 deposit grows to 10,000 x 1.0511619 = $10,511.62 in one year. Compounded daily instead, APY = (1 + 0.05/365)^365 - 1 = 5.127%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "quotation-generator": {
+    "benefits": [
+      "Professional quotes in minutes instead of wrestling with Word tables.",
+      "Automatic math eliminates addition mistakes on totals, tax, and discounts.",
+      "PDF output looks serious and cannot be casually edited by the client.",
+      "Your client and pricing details stay in the browser. Nothing is uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A quotation is an offer: the price you propose before work starts, usually valid for a limited time. An invoice is a demand for payment after the work is done or goods are delivered. Send the quotation first; convert it to an invoice when the client accepts.",
+        "q": "What is the difference between a quotation and an invoice?"
+      },
+      {
+        "a": "15 to 30 days is standard for services. Material prices fluctuate, so a validity period protects you from being held to old prices months later. This tool defaults to 15 days and prints the validity on the PDF.",
+        "q": "How long should a quotation stay valid?"
+      },
+      {
+        "a": "Yes for services in India at 18 percent in most cases, but GST rules depend on what you sell and where. This tool applies your percentage to the discounted subtotal, which matches standard practice. For exact compliance, confirm with your accountant.",
+        "q": "Should I add GST to my quotation?"
+      },
+      {
+        "a": "Apply the discount first, then tax on the discounted amount. That is how the tool computes it and how tax authorities expect it: tax is charged on what the customer actually pays.",
+        "q": "Is tax calculated before or after the discount?"
+      },
+      {
+        "a": "Yes. The PDF uses the built-in Latin font, so Hindi and Arabic script will not render in the file. Type item descriptions and names in English (Roman script) for the PDF.",
+        "q": "Can I write item names in Hindi or Arabic?"
+      },
+      {
+        "a": "No. A quotation is an offer, not a contract. It becomes binding only when the client accepts it in writing and you both sign an agreement. For large projects, always follow the quotation with a written contract.",
+        "q": "Is a quotation legally binding?"
+      }
+    ],
+    "formula": "Line total = qty x rate.\nSubtotal = sum of line totals.\nDiscount = subtotal x discount% / 100.\nTaxable = subtotal - discount.\nTax = taxable x tax% / 100.\nTotal = taxable + tax.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your business name, phone, and address.",
+      "Add the client name, quotation number, date, and validity days.",
+      "Add line items: description, quantity, and rate each.",
+      "Set the currency symbol, discount percent, and tax percent.",
+      "Download the PDF and send it to your client."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "A quotation (quote or estimate) states your price for goods or services before work begins.",
+      "Every quotation needs: your details, client details, a quote number, date, validity period, itemised lines, and the total.",
+      "Line totals add to the subtotal. Discount comes off first, then tax applies to the discounted amount.",
+      "A validity period (often 15-30 days) protects you from price changes.",
+      "PDF is the right format to send: it looks identical everywhere and resists casual editing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "quotation generator, quote generator, estimate generator, quotation pdf maker, free quotation format",
+    "labels": {
+      "addItem": "Add item",
+      "amount": "Amount",
+      "businessAddress": "Business address",
+      "businessHeading": "Your business",
+      "businessName": "Business name",
+      "businessPhone": "Business phone",
+      "clientAddress": "Client address",
+      "clientHeading": "Client and quote details",
+      "clientName": "Client name",
+      "currency": "Currency symbol",
+      "discountAmt": "Discount",
+      "discountPct": "Discount %",
+      "downloadPdf": "Download PDF",
+      "itemDesc": "Description",
+      "itemLabel": "Item",
+      "itemsHeading": "Line items",
+      "pdfNote": "The PDF uses the built-in Latin font. Type item names in English (Roman script).",
+      "qty": "Qty",
+      "quoteDate": "Date",
+      "quoteNo": "Quote no.",
+      "rate": "Rate",
+      "removeItem": "Remove item",
+      "subtotal": "Subtotal",
+      "taxAmt": "Tax",
+      "taxPct": "Tax %",
+      "total": "Total",
+      "validDays": "Valid (days)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The PDF uses the built-in Latin font, so Hindi and Arabic script will not render. Use English text.",
+      "A quotation is an offer, not a contract or tax invoice. Confirm GST rules with your accountant.",
+      "No saved history. Copy the numbers elsewhere if you need records.",
+      "One fixed layout with no logo upload in this version."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free quotation generator: build professional quotes with line items, discount, and tax. Download as PDF. 100% private, no sign-up.",
+    "metaTitle": "Quotation Generator - Free Quote & Estimate PDF | JaurTools",
+    "name": "Quotation Generator",
+    "pdfTitle": "Quotation",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter your business and client details, add line items with quantity and rate, set discount and tax percentages, and download a professional quotation as PDF. The math is automatic: discount comes off the subtotal first, then tax applies to the discounted amount.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your quotation",
+    "tagline": "Build professional quotations with line items, discount, and tax. Download as PDF.",
+    "workedExample": "Quoting a small business website:\n1. Items: Website design, 1 x 25,000 = 25,000. Logo design, 1 x 5,000 = 5,000.\n2. Subtotal = 25,000 + 5,000 = 30,000.\n3. Discount 10%: 30,000 x 10 / 100 = 3,000. Taxable = 27,000.\n4. Tax 18%: 27,000 x 18 / 100 = 4,860.\n5. Total = 27,000 + 4,860 = 31,860.\nThe PDF shows every line plus the discount and tax breakdown, valid for 15 days.",
+    "workedExampleHeading": "Worked example"
+  }
+}

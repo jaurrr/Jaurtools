@@ -1,0 +1,10 @@
+<div class="legal-page">
+  <h1>{{ translate.t('terms.heading') }}</h1>
+  <p class="muted updated">{{ translate.t('terms.updated') }}</p>
+  @for (s of sections; track s) {
+    <section>
+      <h2>{{ translate.t('terms.' + s + '.title') }}</h2>
+      <p>{{ translate.t('terms.' + s + '.body') }}</p>
+    </section>
+  }
+</div>

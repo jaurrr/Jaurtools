@@ -1,0 +1,94 @@
+{
+  "wifi-qr-code-generator": {
+    "benefits": [
+      "No typing errors: guests scan the QR and join without misreading a long password.",
+      "Works offline: the QR code is generated in your browser, no internet or account needed.",
+      "Correct format automatically: the WiFi QR standard is applied, with special characters escaped.",
+      "Print-friendly: download a high-resolution PNG for your fridge, cafe counter or guest room."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Type your network name (SSID), choose the security type and enter the password. A QR code appears instantly. Guests open their phone camera, scan it and join the WiFi without typing anything.",
+        "q": "How do I share my WiFi with a QR code?"
+      },
+      {
+        "a": "Point your phone camera at the QR code. On iPhone and most Android phones a prompt appears to join the network. Some Android versions need the WiFi settings QR scanner instead.",
+        "q": "How do guests connect by scanning?"
+      },
+      {
+        "a": "Yes. Choose WPA/WPA2 for modern routers, WEP only for very old ones, and Open network for networks without a password. For open networks the password field is hidden and T is omitted from the code.",
+        "q": "Does it support WPA, WEP and open networks?"
+      },
+      {
+        "a": "Yes. Tick the hidden network option and the code includes H:true, which tells the phone to look for a network that does not broadcast its name.",
+        "q": "What about hidden networks?"
+      },
+      {
+        "a": "The code stores your password in plain text, so anyone who scans it learns the password. That is the point of sharing, but only display the QR where you trust the viewers, e.g. at home or in your own cafe.",
+        "q": "Is the QR code secure? Does it expose my password?"
+      },
+      {
+        "a": "Yes. The QR is generated locally and can be screenshotted or downloaded as PNG. Print it and put it on the fridge, the guest room wall or the cafe counter.",
+        "q": "Can I print the QR code?"
+      }
+    ],
+    "formula": "WIFI:T:<WPA|WEP>;S:<ssid>;P:<password>;[H:true;];\nOpen network: WIFI:S:<ssid>;;\nEscape \\ ; , : \" with a backslash: \\\\ \\; \\, \\: \\\"",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your WiFi network name (SSID) exactly as it appears.",
+      "Choose the security type: WPA/WPA2, WEP, or open network.",
+      "Type the WiFi password (hidden for open networks).",
+      "Tick the hidden-network box if your network does not broadcast its name.",
+      "Scan the QR code with your phone to test it, then download the PNG to share or print."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "WiFi QR codes follow the de-facto WIFI: standard: WIFI:T:WPA;S:network;P:password;;",
+      "Phone cameras on iOS 11+ and most Android 10+ devices recognize WiFi QR codes natively.",
+      "Special characters in the SSID or password (;, :, ,, \\\\, \") must be escaped with a backslash; this tool does it automatically.",
+      "The QR code contains the password in plain text, so treat a printed code like a written-down password.",
+      "Hidden networks are supported with the H:true flag.",
+      "Generating the code needs no internet: everything happens in your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "WiFi QR code generator, WiFi password QR, share WiFi QR code, QR code for WiFi, free WiFi QR maker",
+    "labels": {
+      "downloadButton": "Download PNG",
+      "emptyHint": "Enter your network name (SSID) to generate the QR code.",
+      "hiddenLabel": "Hidden network (does not broadcast SSID)",
+      "noteText": "The QR code contains your WiFi password in plain text; share it only where you trust the viewers.",
+      "passwordLabel": "WiFi password",
+      "payloadLabel": "Encoded WiFi data",
+      "qrAlt": "QR code with WiFi connection details",
+      "securityLabel": "Security type",
+      "securityNone": "Open network (no password)",
+      "securityWep": "WEP",
+      "securityWpa": "WPA / WPA2",
+      "ssidLabel": "Network name (SSID)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The QR code stores the password in plain text: anyone with the image can read it.",
+      "Enterprise (WPA2-Enterprise / 802.1X) networks with usernames are not supported by this format.",
+      "Some very old phones cannot scan WiFi QR codes and need the password typed manually.",
+      "A wrong SSID or password produces a valid-looking QR that simply fails to connect; test before printing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate a QR code for your WiFi network free: guests scan and join without typing the password. Supports WPA, WEP, open and hidden networks. No signup.",
+    "metaTitle": "WiFi QR Code Generator — Free WiFi Password QR",
+    "name": "WiFi QR Code Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A WiFi QR code lets guests join your network by scanning with their phone camera, no typing needed. Enter your SSID and password to get a printable QR instantly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "WiFi QR results",
+    "tagline": "Create a scannable QR code for your WiFi network — guests join without typing.",
+    "workedExample": "SSID \"HomeNet\", security WPA, password \"s3cr3t!\".\nStep 1: build the payload: WIFI: then T:WPA (security), S:HomeNet (network name), P:s3cr3t! (password). Step 2: none of these characters need escaping, so the payload is WIFI:T:WPA;S:HomeNet;P:s3cr3t!;; Step 3: the tool encodes this text as a QR code (error correction M, 512 px).\nA guest scans it with their phone camera and the phone offers to join HomeNet directly. If the SSID were \"Home;Net\", the semicolon would be escaped as Home\\;Net in the payload.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "search": {
+    "allTools": "सभी टूल दिखाए जा रहे हैं",
+    "category": "श्रेणी",
+    "clearFilter": "फ़िल्टर हटाएं",
+    "emptyHint": "कोई दूसरा शब्द आज़माएं, या होम पेज पर श्रेणियां देखें।",
+    "emptyTitle": "कोई टूल नहीं मिला",
+    "heading": "टूल खोजें",
+    "metaDescription": "JaurTools के सभी मुफ़्त कैलकुलेटर, कन्वर्टर और जनरेटर खोजें।",
+    "metaTitle": "टूल खोजें | JaurTools",
+    "resultsFor": "परिणाम",
+    "searchLabel": "टूल खोजें",
+    "searchPlaceholder": "खोजने के लिए लिखें…",
+    "clearLetter": "अक्षर फ़िल्टर हटाएँ",
+    "letter": "अक्षर"
+  }
+}

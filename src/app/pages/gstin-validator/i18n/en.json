@@ -1,0 +1,136 @@
+{
+  "gstin-validator": {
+    "assumptionNote": "Validates structure, state code, and checksum only. It cannot confirm the GSTIN is registered or active on the GST portal.",
+    "benefits": [
+      "Catch GSTIN typos before invoices, e-way bills, and filings.",
+      "Verifies the real mod-36 check digit, not just the pattern.",
+      "Identifies the state from the first two digits.",
+      "Fully private: the GSTIN never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "GSTIN is 15 characters: 2-digit state code + 10-character PAN + 1 entity digit + Z + 1 check digit. For example, 07ABCPE1234F1ZD breaks into 07 (Delhi), ABCPE1234F (PAN), 1 (entity), Z, D (check).",
+        "q": "What is the structure of a GSTIN?"
+      },
+      {
+        "a": "The first two digits are the state code where the business is registered: 27 is Maharashtra, 07 is Delhi, 29 is Karnataka, 09 is Uttar Pradesh. This validator recognizes all 36 active GST state codes.",
+        "q": "What do the first two digits of GSTIN mean?"
+      },
+      {
+        "a": "The 15th character is a check digit computed from the first 14 using a mod-36 algorithm. Change any earlier character and the check digit stops matching, which is how typos get caught.",
+        "q": "What is the check digit in GSTIN?"
+      },
+      {
+        "a": "No. It proves the number is well-formed, not that it is registered. The only real confirmation is the GST portal's search, which this offline tool cannot reach.",
+        "q": "Does a valid GSTIN mean the business is registered?"
+      },
+      {
+        "a": "Usually a typo in the PAN portion or the state code. Double-check against the registration certificate. If the check digit fails but everything else looks right, one character is wrong - retype carefully.",
+        "q": "Why does my GSTIN fail the checksum?"
+      },
+      {
+        "a": "Yes. Regular taxpayers get a 15-character GSTIN. UIN holders and some special entities have different formats that this validator does not cover - see the GST portal for those.",
+        "q": "Is every GST number 15 characters?"
+      }
+    ],
+    "formula": "GSTIN structure (15 characters):\nPositions 1-2: state code (01-38, valid codes only)\nPositions 3-12: PAN of the holder (AAAAA9999A, valid holder code)\nPosition 13: entity number (0-9, A-Z)\nPosition 14: always Z\nPosition 15: check digit (mod-36 of first 14 chars)\nCheck: value = (36 - (sum mod 36)) mod 36, digits 0-9 = 0-9, letters A-Z = 10-35.",
+    "formulaHeading": "Structure",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste the 15-character GSTIN into the input box.",
+      "The validator checks it live: length, pattern, state code, PAN holder code, and check digit.",
+      "A green message with the breakdown means the GSTIN is structurally valid.",
+      "A red message tells you exactly which check failed."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A GSTIN is exactly 15 characters long.",
+      "The first two digits are the GST state code, from 01 to 38.",
+      "Characters 3-12 are the PAN of the business or person.",
+      "Character 14 is always the letter Z.",
+      "The 15th character is a mod-36 check digit computed from the first 14.",
+      "Structure alone never proves registration - only the GST portal can confirm that."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gstin validator, gst number check, gstin format validator, verify gstin, gstin checksum",
+    "labels": {
+      "checkChar": "Check character",
+      "enterPrompt": "Enter the GSTIN above to validate it.",
+      "entityCode": "Entity code",
+      "gstin": "GSTIN",
+      "hint": "15 characters: state code + PAN + entity + Z + check digit.",
+      "panPart": "PAN portion",
+      "placeholder": "07ABCPE1234F1ZD",
+      "stateCode": "State code",
+      "validMessage": "Valid GSTIN (checksum passed)."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot check the GST portal; a well-formed GSTIN may be unregistered or cancelled.",
+      "Covers regular GSTINs only, not UIN or special-entity formats.",
+      "Validates structure, never the identity or tax status of the holder.",
+      "Do not rely on this alone for invoices or input tax credit decisions."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free GSTIN validator: check any GST number for correct structure, state code, and check digit instantly. Private, runs in your browser, no sign-up.",
+    "metaTitle": "GSTIN Validator - Check GST Number Format | JaurTools",
+    "name": "GSTIN Validator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A valid GSTIN is 15 characters: a 2-digit state code, a 10-character PAN, an entity digit, the letter Z, and a check digit. 07ABCPE1234F1ZD passes every check: 07 is Delhi, ABCPE1234F is a valid PAN structure, and the final D matches the mod-36 check digit computed from the first 14 characters. This confirms the structure only - the GST portal alone can confirm registration.",
+    "quickAnswerHeading": "Quick answer",
+    "reasons": {
+      "checksum": "The check digit does not match - at least one character is wrong.",
+      "length": "GSTIN must be exactly 15 characters long.",
+      "panHolder": "The PAN portion has an invalid holder code at its 4th character.",
+      "pattern": "GSTIN must follow the pattern: 2 digits, PAN, entity digit, Z, check digit.",
+      "state": "The first two digits are not a valid GST state code."
+    },
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your GSTIN validation result",
+    "states": {
+      "01": "Jammu and Kashmir",
+      "02": "Himachal Pradesh",
+      "03": "Punjab",
+      "04": "Chandigarh",
+      "05": "Uttarakhand",
+      "06": "Haryana",
+      "07": "Delhi",
+      "08": "Rajasthan",
+      "09": "Uttar Pradesh",
+      "10": "Bihar",
+      "11": "Sikkim",
+      "12": "Arunachal Pradesh",
+      "13": "Nagaland",
+      "14": "Manipur",
+      "15": "Mizoram",
+      "16": "Tripura",
+      "17": "Meghalaya",
+      "18": "Assam",
+      "19": "West Bengal",
+      "20": "Jharkhand",
+      "21": "Odisha",
+      "22": "Chhattisgarh",
+      "23": "Madhya Pradesh",
+      "24": "Gujarat",
+      "26": "Dadra and Nagar Haveli and Daman and Diu",
+      "27": "Maharashtra",
+      "29": "Karnataka",
+      "30": "Goa",
+      "31": "Lakshadweep",
+      "32": "Kerala",
+      "33": "Tamil Nadu",
+      "34": "Puducherry",
+      "35": "Andaman and Nicobar Islands",
+      "36": "Telangana",
+      "37": "Andhra Pradesh",
+      "38": "Ladakh"
+    },
+    "tagline": "Validate any GSTIN's structure, state code, and check digit instantly.",
+    "workedExample": "Checking 07ABCPE1234F1ZD:\n1. Length: 15 characters - correct.\n2. Pattern: 07 + ABCPE1234F + 1 + Z + D matches the GSTIN layout.\n3. State code: 07 is a valid code (Delhi).\n4. PAN portion: ABCPE1234F is valid, and its 4th character P is a valid holder code.\n5. Check digit: the mod-36 check digit computed from the first 14 characters is D - matches.\n6. Result: structurally valid GSTIN.",
+    "workedExampleHeading": "Worked example"
+  }
+}

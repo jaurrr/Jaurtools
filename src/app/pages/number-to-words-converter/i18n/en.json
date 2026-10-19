@@ -1,0 +1,88 @@
+{
+  "number-to-words-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Number to Words Converter",
+    "tagline": "Spell out any number in words — cheques, invoices, documents.",
+    "metaTitle": "Number to Words Converter - Spell Out Any Number Free | JaurTools",
+    "metaDescription": "Free number to words converter: spell out any number in English instantly. Perfect for cheques, invoices and legal documents.",
+    "keywords": "number to words, numbers in words, 12345 in words, number spelling, amount in words",
+    "quickAnswer": "Type a whole number and it is spelled out in words instantly — in the language you are browsing in. English uses thousand/million/billion, Hindi uses hazar/lakh/crore, and Arabic follows standard number grammar.",
+    "keyFacts": [
+      "English groups digits in threes: thousand, million, billion, trillion.",
+      "Hindi uses the Indian system: hazar/thousand (1,000), lakh (1,00,000), crore (1,00,00,000).",
+      "Arabic has special dual and plural forms: alf (1000), alfaan (2000), aalaaf (3-10 thousand).",
+      "Writing amounts in words on cheques prevents tampering with digits.",
+      "This tool handles whole numbers from −999 trillion to 999 trillion."
+    ],
+    "howTo": [
+      "Type a whole number into the input field (commas and spaces are ignored).",
+      "The words appear instantly below, in your current site language.",
+      "Switch the site language to get the words in English, Hindi or Arabic.",
+      "Use the formatted number row to double-check the digits.",
+      "Copy the words for cheques, invoices or documents."
+    ],
+    "formula": "English: groups of three digits → hundred, thousand, million, billion, trillion.\nExample: 1,234,567 = one million two hundred and thirty-four thousand five hundred and sixty-seven",
+    "workedExample": "Convert 12345 to words.\nEnglish: 12 thousand + 345 → \"twelve thousand three hundred and forty-five\".\nHindi: 12 hazaar + 345 → \"baarah hazaar teen sau paintaalees\".\nArabic: 12 alf + 345 → \"ithnaa ashara alfan wa thalaathu mi-ah wa khamsah wa arba-oon\".",
+    "benefits": [
+      "Three languages in one tool — English, Hindi and Arabic.",
+      "Hindi follows the Indian lakh/crore system correctly.",
+      "Arabic uses proper dual/plural grammar forms.",
+      "Instant, private, browser-only conversion.",
+      "Handy for cheques, invoices, legal documents and schoolwork."
+    ],
+    "limitations": [
+      "Whole numbers only — decimals like 12.5 are not spelled out.",
+      "Range is limited to safe integers below 1,000,000,000,000,000.",
+      "Arabic output is supported up to 999,999,999.",
+      "Currency names (rupees, dollars) are not added automatically."
+    ],
+    "faqs": [
+      {
+        "q": "How do you write 100000 in words in Hindi?",
+        "a": "Ek laakh (one lakh). The Indian system groups as: 1,000 = ek hazaar, 1,00,000 = ek laakh, 1,00,00,000 = ek karod."
+      },
+      {
+        "q": "Why do cheques need the amount in words?",
+        "a": "Words are much harder to alter than digits, so banks require the amount written out as a fraud check against the figures."
+      },
+      {
+        "q": "What is 1000 in Arabic words?",
+        "a": "'Alf'. Two thousand is 'alfaan', 3-10 thousand uses 'aalaaf' (e.g. 'thalaathatu aalaaf'), and 11+ uses 'alfan' (e.g. 'ahada ashara alfan')."
+      },
+      {
+        "q": "Does it handle decimal numbers?",
+        "a": "No — whole numbers only in this version. A decimal mode (e.g. \"twelve point five\") is planned."
+      },
+      {
+        "q": "What is the largest number supported?",
+        "a": "Up to 999,999,999,999,999 (999 trillion) in English and Hindi; Arabic is supported up to 999,999,999."
+      },
+      {
+        "q": "Is my number sent anywhere?",
+        "a": "No. The conversion runs entirely in your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Number in words",
+    "labels": {
+      "inputLabel": "Number",
+      "numberLabel": "Formatted number",
+      "resultLabel": "In words",
+      "invalidLabel": "Please enter a whole number (digits only, optional minus sign).",
+      "rangeLabel": "Number out of range for this language. Try a smaller number.",
+      "hintLabel": "Switch the site language (top navigation) to get the words in English, Hindi or Arabic."
+    }
+  }
+}

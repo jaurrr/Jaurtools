@@ -1,0 +1,95 @@
+{
+  "image-color-extractor": {
+    "benefits": [
+      "Grabs exact brand or design colors from any image in seconds.",
+      "One-click copying removes typing errors from long HEX codes.",
+      "Percentage shares show which colors actually dominate the image.",
+      "Works offline after the page loads - no waiting on a server.",
+      "Free with no sign-up and no watermark."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "This tool lists up to 96 individual colors sorted by share - the full inventory. The dominant colors tool distils the same image into a 6-swatch palette. Use this one when you need a specific shade, the other when you want a theme.",
+        "q": "How is this different from the dominant colors tool?"
+      },
+      {
+        "a": "Real photos contain gradients, shadows, and JPEG compression noise, so neighbouring pixels almost never match exactly. Flat-design screenshots and logos usually show a short, clean list.",
+        "q": "Why does my photo show thousands of unique colors?"
+      },
+      {
+        "a": "They are exact for the 4-bit bucket each pixel lands in. Two shades that differ by less than about 16 steps per channel merge into one swatch, which is why near-identical tones appear as a single color.",
+        "q": "Are the HEX codes exact?"
+      },
+      {
+        "a": "The tool reads the RGB values of each pixel. For transparent areas, most browsers report the color after blending against the page background, so treat glassy or faded edges as approximate.",
+        "q": "Does it read transparent pixels?"
+      },
+      {
+        "a": "Yes. The Copy palette button copies every visible swatch as a comma-separated list of HEX codes, ready to paste into Figma, CSS, or a design doc.",
+        "q": "Can I copy all the colors at once?"
+      },
+      {
+        "a": "Up to 25 MB. The image is automatically downsampled to 160 pixels on the long edge before counting, so even huge files analyse in a fraction of a second.",
+        "q": "What is the biggest image I can use?"
+      }
+    ],
+    "formula": "bucket = (R >> 4) << 8 | (G >> 4) << 4 | (B >> 4)\nshare of color = pixels in bucket / total pixels x 100\nExample: a 2x2 image (4 pixels) with 2 red pixels: 2 / 4 x 100 = 50%.",
+    "formulaHeading": "How colors are counted",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file (JPG, PNG, WebP, GIF, BMP or SVG) up to 25 MB.",
+      "The tool scans the pixels automatically and shows the unique-color count.",
+      "Set how many swatches you want to see, from 12 up to 96.",
+      "Click any swatch to copy its HEX code, or use Copy palette to grab them all.",
+      "Swap the image any time with the Change file link."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Reads every pixel of your image with the browser canvas API - nothing is uploaded.",
+      "Colors are grouped into 4,096 buckets (4 bits per channel) so near-identical shades merge.",
+      "Results are sorted by pixel share: the biggest color blocks come first.",
+      "JPEG photos can report thousands of unique colors because of compression noise and gradients.",
+      "PNG screenshots with flat colors usually report a small, clean color list.",
+      "Click any swatch to copy its HEX code instantly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "image color extractor, extract colors from image, image color palette finder, get hex from image, photo color codes",
+    "labels": {
+      "analyzing": "Scanning pixels...",
+      "changeFile": "Change file",
+      "chooseFile": "Choose an image file",
+      "copied": "Copied",
+      "copyPalette": "Copy palette as HEX list",
+      "fileHint": "JPG, PNG, WebP, GIF, BMP or SVG - up to 25 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 25 MB. Please choose a smaller image.",
+      "invalidFile": "That file is not an image. Please choose a JPG, PNG, WebP, GIF, BMP or SVG file.",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "maxSwatches": "Swatches to show",
+      "pixelsSampled": "Pixels sampled",
+      "uniqueColors": "Unique colors found"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Colors are grouped into 4,096 buckets, so it cannot report every one of 16.7 million shades exactly.",
+      "JPEG compression noise creates colors that were never in the original design.",
+      "The image is downsampled to 160 pixels wide, so tiny 1-pixel details may disappear.",
+      "Alpha transparency is ignored - the RGB values are what you see after blending."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free image color extractor: upload a photo and get every color with HEX and RGB codes, sorted by share. Click to copy. 100% private, runs in your browser.",
+    "metaTitle": "Image Color Extractor - List Every Color in a Photo | JaurTools",
+    "name": "Image Color Extractor",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload any image and this tool lists its colors from most to least common, each with a HEX and RGB code you can copy in one click. It downsamples the image to at most 160 pixels wide for speed and groups nearly-identical shades into 4,096 buckets. A 2 by 2 image with two red pixels, one blue and one green reports #FF0000 at 50 percent, #0000FF at 25 percent and #00FF00 at 25 percent.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Image color extraction results",
+    "tagline": "See every color hiding inside any image, with HEX and RGB codes you can copy.",
+    "workedExample": "Take a tiny 2 by 2 image: two red pixels, one blue pixel, one green pixel.\n1. Total pixels sampled: 4.\n2. Red bucket: 2 pixels. Share = 2 / 4 x 100 = 50%. HEX #FF0000.\n3. Blue bucket: 1 pixel. Share = 1 / 4 x 100 = 25%. HEX #0000FF.\n4. Green bucket: 1 pixel. Share = 1 / 4 x 100 = 25%. HEX #00FF00.\n5. Sorted by share: #FF0000 (50%), #0000FF (25%), #00FF00 (25%).\nThat is exactly what the tool reports, just scaled up to real photos.",
+    "workedExampleHeading": "Worked example"
+  }
+}

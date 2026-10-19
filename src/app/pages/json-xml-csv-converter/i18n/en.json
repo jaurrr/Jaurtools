@@ -1,0 +1,100 @@
+{
+  "json-xml-csv-converter": {
+    "benefits": [
+      "Real XML attribute support: JSON keys starting with @ become XML attributes and back again.",
+      "Nested JSON objects become nested XML elements, and repeated elements become arrays.",
+      "Dot-notation flattening turns nested JSON into clean CSV columns like address.city.",
+      "One page for JSON, XML and CSV in any direction, with one-click swap."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Prefix the key with @. {\"user\": {\"@id\": \"1\", \"name\": \"Aarav\"}} becomes <user id=\"1\"><name>Aarav</name></user>. Going the other way, XML attributes become @-prefixed keys in the JSON.",
+        "q": "How do I make an XML attribute from JSON?"
+      },
+      {
+        "a": "Use the #text key. {\"note\": {\"@lang\": \"en\", \"#text\": \"Hello\"}} becomes <note lang=\"en\">Hello</note>. Mixed content is preserved on the way back too.",
+        "q": "How do I put text inside an element that has attributes?"
+      },
+      {
+        "a": "Yes. Repeated child elements with the same tag become a JSON array: <tags><tag>a</tag><tag>b</tag></tags> becomes {\"tags\": {\"tag\": [\"a\", \"b\"]}}.",
+        "q": "Are repeated XML elements supported?"
+      },
+      {
+        "a": "Turn on Flatten nested objects. {\"address\": {\"city\": \"Mumbai\"}} becomes the CSV column address.city. With it off, nested values are written as compact JSON text in the cell.",
+        "q": "How does nested JSON become CSV?"
+      },
+      {
+        "a": "CSV has no notion of attributes or nesting, so XML attributes become @-prefixed columns and nested elements become either flattened columns or JSON text, depending on the flatten toggle.",
+        "q": "What happens to XML attributes in CSV output?"
+      }
+    ],
+    "formula": "XML attr: {\"@id\": \"1\"} ↔ <tag id=\"1\"/>  |  flatten: {a: {b: 1}} → column \"a.b\"",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the input format: JSON, XML or CSV.",
+      "Choose the output format, or press Swap to flip the direction.",
+      "Paste your data, or press Sample for an example in the input format.",
+      "Use @ for XML attributes in JSON, #text for mixed text, and the flatten toggle for CSV.",
+      "Press Download to save the converted file, or Copy to paste it elsewhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Converts between JSON, XML and CSV in any direction on one page.",
+      "JSON keys starting with @ become XML attributes; #text becomes element text.",
+      "Repeated XML elements become JSON arrays automatically.",
+      "Optional dot-notation flattening converts nested JSON into clean CSV columns.",
+      "XML output is well-formed with customizable root and row element names."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json xml csv converter, xml attributes json converter, flatten json to csv, convert xml to json online",
+    "labels": {
+      "attrNote": "Tip: in JSON, keys starting with @ become XML attributes, and #text becomes the element's text.",
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "CSV delimiter",
+      "download": "Download",
+      "errorParse": "Could not parse the input. Please check the syntax for the selected format.",
+      "flattenNested": "Flatten nested objects (address.city)",
+      "fromLabel": "From format",
+      "inputLabel": "Input data",
+      "inputPh": "Paste data here...",
+      "invalidName": "Root and row names must be valid XML names: start with a letter or underscore.",
+      "outputHeading": "Converted output",
+      "resultRecords": "Records",
+      "rootName": "Root element name",
+      "rowName": "Row element name",
+      "sample": "Load sample",
+      "swap": "Swap direction",
+      "toLabel": "To format"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "CSV output cannot preserve the distinction between attributes and elements beyond the @ prefix.",
+      "Flattening uses dot notation, which can collide with keys that already contain dots.",
+      "XML namespaces are simplified to local names.",
+      "Very large inputs (tens of MB) can make the browser tab sluggish."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert between JSON, XML and CSV free. Real XML attributes, smart flattening and Excel-ready output — 100% in your browser.",
+    "metaTitle": "JSON XML CSV Converter - Convert Between Data Formats | JaurTools",
+    "name": "JSON XML CSV Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Convert between JSON, XML and CSV with proper XML semantics: @-prefixed JSON keys become XML attributes, #text carries mixed content, repeated elements become arrays, and nested objects flatten to dot-notation CSV columns like address.city.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON, XML & CSV Converter results",
+    "tagline": "Cross-format conversion with real XML attributes.",
+    "workedExample": "XML to JSON input:\n<users>\n  <user id=\"1\">\n    <name>Aarav Sharma</name>\n  </user>\n</users>\n\nJSON output:\n[\n  {\n    \"@id\": \"1\",\n    \"name\": \"Aarav Sharma\"\n  }\n]\n\nThe id attribute becomes the @id key.\n\nJSON to CSV input (flatten on):\n[{\"name\":\"Aarav\",\"address\":{\"city\":\"Mumbai\"}}]\n\nCSV output:\nname,address.city\nAarav,Mumbai\n\n1 record, 2 flattened columns.",
+    "workedExampleHeading": "Worked example"
+  }
+}

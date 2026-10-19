@@ -1,0 +1,92 @@
+{
+  "uk-mortgage-calculator": {
+    "assumptionNote": "This uses standard monthly amortisation at a fixed interest rate. It excludes arrangement fees, valuation fees, stamp duty, and insurance. UK mortgages are often fixed for 2-5 years then revert to a variable rate.",
+    "benefits": [
+      "See your true monthly cost before you commit to the biggest purchase of your life.",
+      "Compare deposit sizes and see exactly how much interest each extra pound of deposit saves.",
+      "Plan your budget years ahead with the total payable and total interest figures.",
+      "Free and instant - no lender sales pitch attached."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Loan-to-value (LTV) is your loan as a percentage of the property price. A £200,000 loan on a £250,000 home is 80% LTV. Lower LTV almost always means a better interest rate, because the lender's risk is smaller.",
+        "q": "What is loan-to-value (LTV)?"
+      },
+      {
+        "a": "Overpayments cut the loan balance, so you pay less interest overall and finish earlier. Most UK fixed deals let you overpay up to 10% of the balance per year without an early repayment charge. Even £50 a month extra makes a noticeable difference over 25 years.",
+        "q": "Should I overpay my mortgage?"
+      },
+      {
+        "a": "They are loans against the home's equity for over-55s, with no monthly repayments - interest rolls up and is repaid when you sell, move into care, or die. They are heavily regulated in the UK and require independent advice. They are very different from standard repayment mortgages.",
+        "q": "What is equity release?"
+      },
+      {
+        "a": "UK stamp duty on a £250,000 home is £0 for a first-time buyer (relief up to £425,000), or £2,500 for an existing homeowner (£0 on the first £125,000, then 2% on the next £125,000). Rates change, so always check the latest HMRC thresholds before budgeting.",
+        "q": "How much stamp duty will I pay?"
+      },
+      {
+        "a": "The mortgage term is how long you take to repay. A longer term means lower monthly payments but much more total interest. A 30-year term on £200,000 at 4.5% costs about £35,000 more in interest than a 25-year term. Choose the shortest term whose payments you can comfortably afford.",
+        "q": "25 or 30 year term - which is better?"
+      },
+      {
+        "a": "Most first-time buyers put down 5-10%. A bigger deposit unlocks lower LTV bands and cheaper rates: moving from 95% to 90% LTV usually cuts the rate noticeably. Below 60% LTV you get the market's best deals, but tying up all your savings leaves no emergency fund.",
+        "q": "How much deposit do I need?"
+      }
+    ],
+    "formula": "Monthly rate r = annual rate / 12.\nNumber of payments n = years x 12.\nMonthly payment = P x r / (1 - (1 + r)^-n).\nTotal payable = monthly payment x n.\nTotal interest = total payable - loan amount.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the property price and your deposit.",
+      "Enter the annual interest rate (the initial fixed rate from your offer or comparison).",
+      "Choose the mortgage term in years.",
+      "Read your monthly payment, LTV, total interest, and total payable.",
+      "Try different deposits and terms to see which combination fits your budget."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "UK mortgages are usually repayment mortgages: each payment covers interest plus part of the capital.",
+      "Most deals are fixed for 2-5 years, then move to the lender's standard variable rate.",
+      "A bigger deposit means a lower loan-to-value and usually a cheaper interest rate.",
+      "First-time buyers in the UK can often buy with a 5% deposit.",
+      "Monthly payments must pass lender affordability stress tests, not just the headline rate.",
+      "Early repayment charges apply if you leave a fixed deal early - typically 1-5% of the balance."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "UK mortgage calculator, mortgage repayment calculator, home loan calculator UK, mortgage monthly payment, LTV calculator",
+    "labels": {
+      "annualRate": "Annual interest rate (%)",
+      "deposit": "Deposit",
+      "homePrice": "Property price",
+      "loanAmount": "Loan amount",
+      "loanToValue": "Loan-to-value (LTV)",
+      "monthlyPayment": "Monthly payment",
+      "totalInterest": "Total interest",
+      "totalPayable": "Total payable",
+      "years": "Term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Fixed-rate only - it does not model the jump to a variable rate after the deal ends.",
+      "Excludes stamp duty, arrangement fees, valuation and legal costs.",
+      "Does not include buildings insurance or life cover lenders may require.",
+      "An estimate for planning, not a mortgage offer. Lenders decide based on full affordability checks."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free UK mortgage calculator: monthly repayment, total interest and LTV for any deposit, rate and term. Plan your home purchase with confidence.",
+    "metaTitle": "UK Mortgage Calculator - Monthly Repayment & Interest | JaurTools",
+    "name": "UK Mortgage Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "A £200,000 mortgage at 4.5% over 25 years costs £1,111.66 per month. Total payable is £333,499.49, of which £133,499.49 is interest. That is an 80% loan-to-value on a £250,000 home with a £50,000 deposit. A bigger deposit or shorter term cuts the total interest sharply.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your mortgage results",
+    "tagline": "UK-style mortgage repayment, total interest and LTV in one quick calculation.",
+    "workedExample": "£250,000 home, £50,000 deposit, 4.5% rate, 25 years:\n1. Loan = 250,000 - 50,000 = £200,000. LTV = 80%.\n2. Monthly rate r = 4.5% / 12 = 0.00375. Payments n = 300.\n3. Monthly payment = 200,000 x 0.00375 / (1 - 1.00375^-300) = £1,111.66.\n4. Total payable = 1,111.66 x 300 = £333,499.49.\n5. Total interest = 333,499.49 - 200,000 = £133,499.49.",
+    "workedExampleHeading": "Worked example"
+  }
+}

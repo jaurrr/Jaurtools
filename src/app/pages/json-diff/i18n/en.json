@@ -1,0 +1,96 @@
+{
+  "json-diff": {
+    "benefits": [
+      "Spots API changes instantly: compare yesterday's and today's responses field by field.",
+      "Speeds up debugging: the exact path of every changed value is listed, no manual scanning.",
+      "Catches silent config drift: added or removed keys show up even in deeply nested objects.",
+      "Documents changes: copy the diff as plain text into tickets, changelogs, or code reviews.",
+      "Runs fully in your browser: sensitive payloads are never uploaded to a server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A structural comparison of two JSON documents. It walks both trees and reports every added, removed, or modified value with its exact path, like $.address.zip.",
+        "q": "What is a JSON diff?"
+      },
+      {
+        "a": "Yes. Both documents must parse as valid JSON first - a syntax error on either side is reported before any comparison happens.",
+        "q": "Does it validate the JSON first?"
+      },
+      {
+        "a": "Paths use a JSONPath-like notation: $.name for object keys, $.tags[1] for the second array item. The $ stands for the document root.",
+        "q": "How do I read the path column?"
+      },
+      {
+        "a": "No. Key order is ignored: {\"a\":1,\"b\":2} and {\"b\":2,\"a\":1} are identical. Only values and key presence are compared.",
+        "q": "Does key order matter?"
+      },
+      {
+        "a": "Arrays compare position by position: $.tags[1] changed means the second item differs. Added or removed items shift later positions, which the diff shows explicitly.",
+        "q": "How are arrays compared?"
+      },
+      {
+        "a": "It compares parsed values, so 1 and 1.0 are equal and formatting differences do not matter. Type changes (\"5\" vs 5) are reported as modifications.",
+        "q": "Are 1 and 1.0 considered different?"
+      }
+    ],
+    "formula": "walk(nodeA, nodeB, path):\n  both objects  -> recurse into each key; missing in A = added, missing in B = removed\n  both arrays   -> compare index by index; extra items = added/removed\n  otherwise     -> values differ (Object.is) = modified\nPath notation: $.key for objects, $.key[i] for array items.",
+    "formulaHeading": "How comparison works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste the first JSON document into the left box and the second into the right box.",
+      "Both documents are parsed instantly; syntax errors are shown under the offending box.",
+      "Read the summary counts: how many values were added, removed, or modified.",
+      "Scan the table: each row shows the path, the change type, and the old and new values.",
+      "Copy the diff as plain text for tickets or changelogs with the copy button."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON Diff compares the structure and values of two JSON documents, not their text.",
+      "Every difference gets a path in JSONPath-like notation: $.address.zip, $.tags[1].",
+      "Three change types: added (only on the right), removed (only on the left), modified (different values).",
+      "Objects compare by key, so key order never creates false differences.",
+      "Arrays compare index by index; inserted or deleted items shift later positions visibly.",
+      "Both inputs must be valid JSON before any comparison runs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json diff, compare json online, json diff checker, json compare tool, diff json files",
+    "labels": {
+      "addedLabel": "Added",
+      "changeCol": "Change",
+      "copiedLabel": "Copied!",
+      "copyLabel": "Copy diff",
+      "identicalLabel": "The two documents are identical.",
+      "leftLabel": "Original JSON (left)",
+      "modifiedLabel": "Modified",
+      "newCol": "New value",
+      "oldCol": "Old value",
+      "pathCol": "Path",
+      "removedLabel": "Removed",
+      "rightLabel": "Modified JSON (right)",
+      "truncatedNote": "Many differences found: showing the first 500 rows."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Both inputs must be valid JSON; the tool cannot diff YAML, XML, or broken JSON.",
+      "Very large documents (tens of megabytes) may be slow since comparison runs on the main thread.",
+      "Long values are truncated at 90 characters in the table - copy the diff for full text.",
+      "Array comparison is positional: reordered items appear as many modifications, not moves."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JSON diff tool: paste two JSON documents and see every added, removed, or changed value with exact paths. Structural comparison in your browser, no sign-up.",
+    "metaTitle": "JSON Diff - Compare Two JSON Documents Online | JaurTools",
+    "name": "JSON Diff",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste two JSON documents and the tool walks both trees, reporting every difference with its exact path: $.age changed from 30 to 31, $.tags[2] was added, $.address.zip was added. Added, removed, and modified values are counted separately and shown in a color-coded table you can copy as plain text.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON Diff results",
+    "tagline": "Compare two JSON documents field by field - every added, removed, or changed value with its exact path.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Left:  {\"name\":\"Asha\",\"age\":30,\"tags\":[\"admin\",\"editor\"]}\nRight: {\"name\":\"Asha\",\"age\":31,\"tags\":[\"admin\",\"viewer\",\"owner\"],\"active\":true}\n\nResult - 4 differences:\n1. MODIFIED $.age: 30 -> 31\n2. MODIFIED $.tags[1]: \"editor\" -> \"viewer\"\n3. ADDED $.tags[2]: \"owner\"\n4. ADDED $.active: true\n\n$.name is identical, so it produces no row. Key order would not matter either."
+  }
+}

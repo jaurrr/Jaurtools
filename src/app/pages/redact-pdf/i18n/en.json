@@ -1,0 +1,96 @@
+{
+  "redact-pdf": {
+    "benefits": [
+      "True redaction: pages are rebuilt from images, so the blacked-out text is genuinely gone — not just covered.",
+      "Find every occurrence of names, numbers and phrases automatically across all pages.",
+      "No software to install and no document ever uploaded — safe for contracts and ID proofs.",
+      "Case-sensitive or case-insensitive matching to fit your needs.",
+      "A per-term hit count proves exactly what was removed before you share the file."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "True redaction destroys the underlying data. Many tools only draw a black rectangle over text that can still be copied underneath. This tool re-renders each page as an image with the matches burned in, then rebuilds the PDF — the original text layer is gone.",
+        "q": "What is the difference between redaction and just covering text?"
+      },
+      {
+        "a": "Separate them with commas or new lines — for example: Rahul Sharma, 98765 43210, A/C 501002. Each term is searched independently and reported separately.",
+        "q": "How do I redact several different words?"
+      },
+      {
+        "a": "By default matching ignores case, so 'Aadhaar' also matches 'aadhaar'. Tick the case-sensitive option for exact-case matching.",
+        "q": "Is the search case-sensitive?"
+      },
+      {
+        "a": "No. The output is a new PDF built from page images, so it contains no selectable text at all — neither the redacted words nor anything else.",
+        "q": "Can anyone recover the redacted text?"
+      },
+      {
+        "a": "Increase the padding by adding a space-separated variant, or redact the whole sentence. The boxes are deliberately drawn slightly larger than the text to avoid slivers.",
+        "q": "What if a match sits at the edge of a box?"
+      },
+      {
+        "a": "No. The reader library (pdf.js) is bundled with the site, so detection, blacking-out and rebuilding all run offline in your browser.",
+        "q": "Does redaction need the internet?"
+      }
+    ],
+    "formula": "for each page: render at 2x → for each match: draw black rect → rebuild page from image\n\nBox geometry: x = match_x − 0.4×font, y = baseline − 1.4×font, w = text_width + 0.8×font, h = 1.55×font.\nResult: output PDF contains 0 selectable characters — redaction is structural, not cosmetic.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the PDF you want to sanitize (up to 50 MB).",
+      "Type the words or phrases to redact, separated by commas or new lines.",
+      "Choose case-sensitive matching only if you need exact case.",
+      "Click redact and wait while every page is scanned and rebuilt.",
+      "Download the sanitized PDF — the matches are permanently blacked out."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Redaction here is structural: each page is rasterized at 2x, matches are burned in as black rectangles, and the PDF is rebuilt from the images.",
+      "Because the rebuilt pages are images, the output has no text layer at all — redacted content cannot be selected, copied or searched.",
+      "Matching is substring-based and finds every occurrence on every page, with a per-term count shown afterwards.",
+      "Black boxes are padded by 40% of the font size on each side so no character slivers peek out.",
+      "The pdf.js reader is bundled with the site; the document itself never leaves your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "redact pdf, black out pdf text, pdf redaction tool, remove sensitive info pdf, sanitize pdf online",
+    "labels": {
+      "busy": "Scanning and redacting, please wait…",
+      "caseLabel": "Case-sensitive matching",
+      "errNoTerms": "Type at least one word or phrase to redact.",
+      "errRender": "Could not process this PDF. It may be corrupted or password-protected.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "PDF file, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "redactButton": "Redact permanently",
+      "statusDone": "Redacted {n} match(es). Download started.",
+      "termsHint": "Separate multiple terms with commas or new lines.",
+      "termsLabel": "Words or phrases to redact",
+      "termsPh": "e.g. Aadhaar number, 98765 43210",
+      "totalHits": "Total redactions"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The output PDF has no selectable text at all — that is what makes redaction real, but it also means you cannot copy any remaining text.",
+      "Handwritten or scanned text cannot be found by text search, so it will not be redacted.",
+      "Phrases split across separate text runs inside the PDF may occasionally be missed.",
+      "Very large PDFs (100+ pages) can be slow to process and may use significant browser memory."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Permanently black out sensitive text in PDFs online for free. True redaction — the text layer is destroyed, not just covered. 100% in your browser.",
+    "metaTitle": "Redact PDF — Permanently Black Out Text Online Free",
+    "name": "Redact PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF, list the words or phrases to remove, and this tool permanently blacks them out with true redaction: every page is re-rendered as an image with the matches burned in, then the PDF is rebuilt with no text layer left behind. Nothing redacted can ever be selected or recovered.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Redact PDF results",
+    "tagline": "Permanently black out sensitive text — real redaction, not a cover-up.",
+    "workedExample": "A 10-page contract contains the term 'Aadhaar' 14 times.\nEach page renders at 2x: about 1191 × 1684 px per A4 page.\nThe tool finds all 14 matches and burns in 14 black boxes (padded by 0.4 × font size).\nThe rebuilt 10-page PDF contains 0 selectable characters — the 14 occurrences are structurally gone.",
+    "workedExampleHeading": "Worked example"
+  }
+}

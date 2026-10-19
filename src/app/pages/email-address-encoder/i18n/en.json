@@ -1,0 +1,92 @@
+{
+  "email-address-encoder": {
+    "assumptionNote": "Encoding hides the address from simple scrapers; it is not encryption and determined harvesters can still decode it.",
+    "benefits": [
+      "Hides email addresses from basic spam bots that scan page source.",
+      "Five encoding styles cover every common anti-spam technique.",
+      "The mailto link snippet keeps one-click email working for real visitors.",
+      "The JavaScript version only writes the address when scripts run, defeating no-JS scrapers.",
+      "Copy-ready output drops straight into footers and contact pages."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use the mailto link snippet: it renders as a normal clickable email link, but the address in the page source is entity-encoded so simple bots cannot read it.",
+        "q": "Which output should I use on my contact page?"
+      },
+      {
+        "a": "Most modern harvesters execute JavaScript, so encoding alone is not a complete defense. Combine it with a contact form or a CAPTCHA for addresses that receive heavy spam.",
+        "q": "Does encoding completely stop spam bots?"
+      },
+      {
+        "a": "Yes. Paste the snippet anywhere in your HTML — header, footer, or contact section. The browser decodes the entities and shows the normal address.",
+        "q": "Where do I paste the encoded snippet?"
+      },
+      {
+        "a": "document.write runs while the page loads and inserts the link. If scripts are blocked, no address appears — which is exactly what stops no-JS scrapers.",
+        "q": "How does the JavaScript version work?"
+      },
+      {
+        "a": "Yes. The encoder works on any valid address, including addresses with plus tags like name+shop@example.com and international domains.",
+        "q": "Does it work with plus addresses like name+tag@example.com?"
+      },
+      {
+        "a": "It is percent-encoding of the full address, useful inside a mailto: href when you build links dynamically. Browsers decode it back to the normal address.",
+        "q": "What is the percent-encoded output for?"
+      }
+    ],
+    "formula": "decimal:  &#<charCode>;      e.g. h -> &#104;\nhex:      &#x<hex>;         e.g. h -> &#x68;\npercent:  %<hex>            e.g. h -> %68\nmailto:   <a href=\"mailto:{decimal}\">{decimal}</a>\njs:       document.write('{mailto snippet}')",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste the email address into the input field.",
+      "Wait for the green validation — the address must contain @ and a domain.",
+      "Review the five encoded outputs generated instantly.",
+      "Copy the style that fits your page with its copy button.",
+      "Paste the snippet into your HTML where the address should appear."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Spam bots harvest emails by scanning raw HTML for the @ symbol.",
+      "HTML entities like &#104; render as normal text but hide the @ from naive scanners.",
+      "JavaScript document.write keeps the address out of the static page source entirely.",
+      "Percent-encoding is the same scheme used in URLs and mailto links.",
+      "No encoding method is encryption — all of them are reversible by design."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "email encoder, email obfuscator, hide email from spammers, mailto encoder, email spam protection",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "decimalLabel": "HTML decimal entities",
+      "emailLabel": "Email address",
+      "errorInvalid": "Enter a valid email address, for example name@example.com.",
+      "hexLabel": "HTML hex entities",
+      "jsLabel": "JavaScript obfuscation",
+      "mailtoLabel": "Mailto link snippet",
+      "percentLabel": "Percent-encoded (for href)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Encoding is obfuscation, not encryption — determined harvesters can decode it.",
+      "JavaScript-rendered addresses do not appear if the visitor blocks scripts.",
+      "Screen readers may read entity-encoded addresses letter by letter.",
+      "Very aggressive bots that execute JavaScript will still find the address."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Encode email addresses to hide them from spam bots. Generate HTML entities, mailto snippets and JavaScript-obfuscated versions instantly, free.",
+    "metaTitle": "Email Address Encoder – Free Anti-Spam Obfuscator",
+    "name": "Email Address Encoder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Publishing a plain email address on a website invites spam bots that scan page source for the @ symbol. Encoding replaces each character with an HTML entity like &#104;, which browsers render normally but simple bots cannot read. This tool generates five encoded versions, including a clickable mailto snippet and a JavaScript version.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Encoded outputs",
+    "tagline": "Obfuscate email addresses to hide them from spam harvesters.",
+    "workedExample": "Encode hello@example.com.\n\nCharacter codes: h=104, e=101, l=108, o=111, @=64, .=46, c=99, m=109.\n\nHTML decimal:\n&#104;&#101;&#108;&#108;&#111;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;\n\nHTML hex:\n&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;\n\nMailto snippet (href and link text both encoded):\n<a href=\"mailto:&#104;&#101;&#108;&#108;&#111;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;\">&#104;&#101;&#108;&#108;&#111;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#109;</a>\n\nPercent-encoded:\n%68%65%6c%6c%6f%40%65%78%61%6d%70%6c%65%2e%63%6f%6d\n\nPaste the snippet into your page: visitors see and click a normal link, while the raw source shows only entities.",
+    "workedExampleHeading": "Worked example"
+  }
+}

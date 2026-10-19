@@ -1,0 +1,86 @@
+{
+  "analogous-color-scheme": {
+    "benefits": [
+      "Generates a harmonious five-color palette from any base color in one click.",
+      "Adjustable spread (10 to 60 degrees) for tighter or bolder schemes.",
+      "Each swatch copies its HEX code instantly for use in CSS or design tools.",
+      "Perfect starting point for website themes, presentations and branding.",
+      "Runs fully offline in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Analogous colors sit next to each other on the color wheel (for example blue, blue-violet and violet). Because they share a hue family, they look calm and unified. Complementary colors sit opposite each other and create strong contrast instead.",
+        "q": "What is the difference between analogous and complementary schemes?"
+      },
+      {
+        "a": "A 30-degree spread is the classic choice — close enough to feel related, far enough to stay distinguishable. Use 10–20 degrees for subtle, elegant palettes and 40–60 degrees for more energetic ones.",
+        "q": "What spread should I use?"
+      },
+      {
+        "a": "Usually yes for backgrounds and decorative elements, but text on an analogous background can lack contrast. Check text colors with a WCAG contrast checker before publishing.",
+        "q": "Can I use an analogous palette for a whole website?"
+      },
+      {
+        "a": "The base swatch keeps your exact color. The four neighbors shift the hue by multiples of the spread while keeping the same saturation and lightness, so every swatch is mathematically related to your base.",
+        "q": "Why do the four neighbor colors look related?"
+      },
+      {
+        "a": "Yes — click the copy button next to any swatch. The HEX code is placed on your clipboard and works directly in CSS, Figma, Photoshop and most design tools.",
+        "q": "Can I copy the colors into my design tool?"
+      }
+    ],
+    "formula": "swatch hue = base hue + (k x spread), k in {-2, -1, 0, 1, 2}\nsaturation and lightness stay equal to the base color\nall angles wrapped to 0-360 degrees",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your base color with the color picker or type its HEX code.",
+      "Move the spread slider to widen or narrow the scheme (10 to 60 degrees).",
+      "Review the five swatches and the gradient strip preview.",
+      "Click the copy button on any swatch to copy its HEX code.",
+      "Paste the codes into your CSS, Figma or presentation."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Analogous colors occupy neighboring positions on the color wheel.",
+      "This tool builds five swatches: the base plus two neighbors on each side.",
+      "Saturation and lightness are kept identical to the base color; only the hue changes.",
+      "The spread slider controls how far apart the neighbors sit (10 to 60 degrees).",
+      "All hue math wraps around 0/360 degrees, so red neighbors work correctly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "analogous color scheme, analogous colors, color scheme generator, color wheel, harmonious color palette",
+    "labels": {
+      "baseColor": "Base color",
+      "baseSwatch": "Base",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyHex": "Copy HEX code",
+      "hexCode": "HEX code",
+      "hueOffset": "Hue offset",
+      "spread": "Spread"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The tool only varies hue; it never suggests lighter/darker versions — use a shades generator for that.",
+      "Five fixed swatches; there is no option for three- or seven-color schemes.",
+      "Harmony is mathematical, not a guarantee of beauty — taste still matters.",
+      "Text placed on analogous backgrounds should be checked for WCAG contrast separately."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free analogous color scheme generator: enter any base color and get five harmonious neighboring hues with HEX codes. Adjustable spread, one-click copy.",
+    "metaTitle": "Analogous Color Scheme Generator | JaurTools",
+    "name": "Analogous Color Scheme",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick any base color and instantly get five harmonious analogous swatches — the base plus two neighboring hues on each side. Adjust the spread from 10 to 60 degrees, preview the palette as a gradient strip, and copy any swatch's HEX code with one click for use in your designs.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your analogous color scheme",
+    "tagline": "Build a harmonious five-color palette from any base color — neighbors on the color wheel, ready to copy.",
+    "workedExample": "Take base color #4f46e5.\nIts hue is about 243 degrees, with 75% saturation and 59% lightness.\nWith a 30-degree spread the five swatch hues are 243 - 60 = 183, 243 - 30 = 213, 243, 243 + 30 = 273 and 243 + 60 = 303 degrees.\nSaturation (75%) and lightness (59%) stay the same, so all five swatches share the same intensity and brightness — only the hue shifts.",
+    "workedExampleHeading": "Worked example"
+  }
+}

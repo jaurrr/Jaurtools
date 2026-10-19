@@ -1,0 +1,175 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <aside class="quick-answer qa-top" aria-label="{{ t('quickAnswerHeading') }}">
+    <h2>{{ t('quickAnswerHeading') }}</h2>
+    <p>{{ t('quickAnswer') }}</p>
+  </aside>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="ascii-table-search">{{ t('labels.search') }}</label>
+        <input id="ascii-table-search" type="text" [ngModel]="query()" (ngModelChange)="setQuery($event)"
+          [attr.placeholder]="t('labels.searchPlaceholder')" />
+      </div>
+
+      <div class="context-grid">
+        <div class="field">
+          <label for="ascii-table-char">{{ t('labels.charToCode') }}</label>
+          <input id="ascii-table-char" type="text" maxlength="2" [ngModel]="charIn()"
+            (ngModelChange)="setCharIn($event)" />
+        </div>
+        <div class="field">
+          <label for="ascii-table-code">{{ t('labels.codeToChar') }}</label>
+          <input id="ascii-table-code" type="number" inputmode="numeric" min="0" max="127"
+            [ngModel]="codeIn()" (ngModelChange)="setCodeIn($event)" />
+        </div>
+      </div>
+
+      <div class="results cv-live">
+        @if (charIn()) {
+          <div class="result-row">
+            <span><app-icon name="type" /> {{ t('labels.codeIs') }}</span>
+            <strong>{{ charCode() }}</strong>
+          </div>
+        }
+        @if (codeChar()) {
+          <div class="result-row">
+            <span>{{ t('labels.charIs') }}</span>
+            <strong>{{ codeChar() }}</strong>
+          </div>
+        }
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>{{ t('labels.colCode') }}</th>
+              <th>{{ t('labels.colChar') }}</th>
+              <th>{{ t('labels.colName') }}</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (r of rows(); track r.code) {
+              <tr>
+                <td class="code">{{ r.code }}</td>
+                <td class="char">{{ r.char }}</td>
+                <td>{{ r.name }}</td>
+                <td>
+                  @if (r.char) {
+                    <button type="button" class="copy-btn" (click)="copyChar(r.char)"
+                      [class.copied]="copiedChar() === r.char"
+                      [attr.aria-label]="copiedChar() === r.char ? t('labels.copiedMessage') : t('labels.copyChar')">
+                      <app-icon [name]="copiedChar() === r.char ? 'check' : 'copy'" />
+                    </button>
+                  }
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <article class="guide">
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

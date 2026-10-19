@@ -1,0 +1,90 @@
+{
+  "reverse-list": {
+    "benefits": [
+      "Instantly flips any list, from 3 lines to 300,000.",
+      "No line is changed — only the order reverses.",
+      "Perfect for turning newest-first logs into chronological order.",
+      "Copy or download the reversed list with one click.",
+      "Private — the list never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The last line becomes the first, the second-to-last becomes second, and so on. The text inside each line is never touched.",
+        "q": "What exactly does reversing a list do?"
+      },
+      {
+        "a": "Yes — reversing twice restores the original order exactly.",
+        "q": "Can I undo it?"
+      },
+      {
+        "a": "Yes. Paste two columns or a table with line breaks; each row flips position but the content of each row is preserved.",
+        "q": "Does it work on multi-column data?"
+      },
+      {
+        "a": "Empty lines keep their position in the reversal like any other line — they are not removed.",
+        "q": "What happens to empty lines?"
+      },
+      {
+        "a": "No. Reversing only reorders lines; to reverse the characters inside each line, use the Reverse Text tool.",
+        "q": "Does it also reverse the text inside each line?"
+      },
+      {
+        "a": "Yes — everything is computed locally and nothing is uploaded.",
+        "q": "Is my list private?"
+      }
+    ],
+    "formula": "reversed = split(text, newline).reverse().join(newline)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your list into the input box, one item per line.",
+      "The reversed list appears instantly in the output box.",
+      "Review the order — the last line is now first.",
+      "Copy it to the clipboard or download it as a .txt file.",
+      "Paste it back into your spreadsheet, document or code."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Reversing flips line order only; the content of each line is unchanged.",
+      "Lines are split on newline characters, including Windows-style line endings.",
+      "Applying the tool twice restores the original order.",
+      "Empty lines are preserved in their flipped positions.",
+      "The tool runs entirely in your browser with no upload."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "reverse list online, flip line order, reverse lines tool, list reverser, reverse text lines",
+    "labels": {
+      "clearButton": "Clear",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "emptyState": "The reversed list will appear here.",
+      "linesLabel": "Lines",
+      "outputLabel": "Reversed list",
+      "textLabel": "Your list",
+      "textPlaceholder": "One item per line..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Reorders lines only — it does not reverse characters within lines.",
+      "Does not sort, deduplicate or otherwise change the lines.",
+      "Line breaks inside a single list item will be treated as separate lines."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free reverse list tool. Flip the order of lines instantly — last line first. Copy or download, 100% private, no sign-up.",
+    "metaTitle": "Reverse List — Flip Line Order Instantly",
+    "name": "Reverse List",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Reverses the order of lines in any list instantly: the last line becomes the first and the first becomes the last. Paste one item per line and get the flipped list back, with one-click copy and .txt download. Handy for reading logs backwards, flipping countdown lists or turning newest-first exports into chronological order.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Reverse list tool",
+    "tagline": "Flip any list's line order instantly — last line first, one click.",
+    "workedExample": "Input (3 lines):\nMonday\nTuesday\nWednesday\n\nSplit into lines: [\"Monday\", \"Tuesday\", \"Wednesday\"]\nReverse the array: [\"Wednesday\", \"Tuesday\", \"Monday\"]\nOutput:\nWednesday\nTuesday\nMonday",
+    "workedExampleHeading": "Worked example"
+  }
+}

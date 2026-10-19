@@ -1,0 +1,95 @@
+{
+  "401k-calculator": {
+    "assumptionNote": "Assumes end-of-year contributions and a constant annual return. All amounts are in the currency you enter.",
+    "benefits": [
+      "Shows the true power of the employer match in real numbers.",
+      "Helps you compare starting early versus contributing more.",
+      "Separates your money, employer money and growth so you can see what drives the result.",
+      "Runs entirely in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A common rule is to contribute at least enough to get the full employer match, since that is an instant return of 50 to 100 percent. Many advisors then suggest working toward 10 to 15 percent of salary including the match.",
+        "q": "How much should I contribute to my 401(k)?"
+      },
+      {
+        "a": "It is money your employer adds to your account based on what you contribute. A typical formula is 50 cents for every dollar you contribute, up to 6 percent of your salary. If you contribute less than that threshold, you leave free money behind.",
+        "q": "What is a 401(k) employer match?"
+      },
+      {
+        "a": "US stocks have returned roughly 7 percent per year after inflation over long periods, but that is backward-looking and not guaranteed. A diversified portfolio might use 5 to 7 percent nominal; this calculator asks you to pick and shows how sensitive the result is.",
+        "q": "What return should I assume?"
+      },
+      {
+        "a": "Essentially, yes, once it is vested. Some employers require you to stay a certain number of years before their contributions fully become yours. Check your plan's vesting schedule.",
+        "q": "Is the match really free money?"
+      },
+      {
+        "a": "Withdrawals before age 59 and a half usually incur income tax plus a 10 percent penalty, with limited hardship exceptions. The calculator assumes you leave the money invested until retirement.",
+        "q": "Can I withdraw from a 401(k) early?"
+      },
+      {
+        "a": "The growth math is the same; only the tax treatment differs. Roth contributions are made after tax and withdrawn tax-free in retirement, while traditional contributions are pre-tax. This tool models the balance, not the tax.",
+        "q": "Does this calculator handle Roth 401(k) contributions?"
+      }
+    ],
+    "formula": "FV = balance x (1 + r)^n + annual_contribution x (((1 + r)^n - 1) / r)\nemployer_match = salary x min(contribution%, max_match%) x match% / 10000",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current 401(k) balance, even if it is zero.",
+      "Enter your annual salary and the percentage of it you contribute each year.",
+      "Enter your employer's match percentage and the maximum salary percentage they match.",
+      "Set an expected annual return and the number of years until retirement.",
+      "Read your projected balance, split into your contributions, employer contributions and investment growth."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A 401(k) is an employer-sponsored retirement account in the United States where contributions are deducted from your paycheck before tax.",
+      "Many employers match a portion of what you contribute, for example 50% of your contributions up to 6% of your salary. That match is free money.",
+      "Contributions grow tax-deferred; you generally pay tax only when you withdraw in retirement, usually after age 59 and a half.",
+      "Annual contribution limits are set by the IRS and change most years; employees aged 50 and over can make extra catch-up contributions.",
+      "Compounding means the single biggest lever is time: starting ten years earlier can matter more than contributing ten percent more."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "401k calculator, 401(k) retirement calculator, employer match calculator, retirement savings projection",
+    "labels": {
+      "balance": "Current balance",
+      "contribPct": "Your contribution (% of salary)",
+      "employeeAnnual": "Your annual contribution",
+      "employerAnnual": "Employer annual match",
+      "growth": "Investment growth",
+      "matchPct": "Employer match (%)",
+      "maxMatchPct": "Employer matches up to (% of salary)",
+      "projected": "Projected balance",
+      "returnPct": "Expected annual return (%)",
+      "salary": "Annual salary",
+      "totalEmployee": "Your total contributions",
+      "totalEmployer": "Employer total contributions",
+      "years": "Years until retirement"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses a constant average return; real market returns vary year to year.",
+      "Does not model taxes, fees, contribution limits or early-withdrawal penalties.",
+      "Ignores salary growth, inflation and employer vesting schedules.",
+      "An estimate for planning only, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free 401(k) calculator with employer match. Project retirement balance from contributions, match, returns and years. 100% private, browser-only.",
+    "metaTitle": "401(k) Calculator — Project Retirement Growth | JaurTools",
+    "name": "401(k) Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A 401(k) calculator projects your retirement balance by compounding your contributions plus your employer's matching contributions at your expected annual return. With a $25,000 balance, 6% of a $75,000 salary, a 50% employer match and 7% returns over 30 years, you could reach about $828,000.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your 401(k) results",
+    "tagline": "Project your 401(k) retirement savings with employer matching.",
+    "workedExample": "Salary $75,000, you contribute 6% ($4,500/year), employer matches 50% of contributions up to 6% of salary ($2,250/year). Starting balance $25,000, return 7%, horizon 30 years.\n\n(1.07)^30 = 7.61225. Balance part: 25,000 x 7.61225 = $190,306. Annual contributions of $6,750: factor = (7.61225 - 1) / 0.07 = 94.4607, so 6,750 x 94.4607 = $637,610. Projected total = $827,916.\n\nOf that, you contributed $135,000, your employer added $67,500, and $600,416 came from growth.",
+    "workedExampleHeading": "Worked example"
+  }
+}

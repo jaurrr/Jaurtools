@@ -1,0 +1,119 @@
+{
+  "device-test": {
+    "benefits": [
+      "Get a full device health summary in one page, no apps to install.",
+      "Spot the weak point fast: low battery, no cookies, slow network, small screen.",
+      "Share the report with support teams instead of describing your device.",
+      "Covers phones, tablets, laptops, and desktops with one honest checklist.",
+      "Every reading comes from real browser APIs - nothing is guessed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Auto-detect reads your user agent and screen to guess the device. It is usually right for phones and desktops, but tablets and 2-in-1 laptops can fool it. Pick your device from the list for a labelled report.",
+        "q": "How accurate is the auto-detect device guess?"
+      },
+      {
+        "a": "That is an info row, not a failure. Some values are hidden by browsers for privacy: Safari and Firefox rarely share memory size or battery level, and battery data is mostly a Chrome/Android feature.",
+        "q": "Why do some rows say Info or Unknown?"
+      },
+      {
+        "a": "Warnings flag things that might bite you: battery under 20 percent, fewer than 4 CPU cores, cookies disabled, or being offline. They are prompts to check, not proof of a defect.",
+        "q": "What does a warning mean?"
+      },
+      {
+        "a": "No. The page reads values like screen size, CPU cores, and battery level through standard browser APIs and shows them on your screen. Copying the report is a manual action - nothing is transmitted automatically.",
+        "q": "Is my device information sent anywhere?"
+      },
+      {
+        "a": "The battery API is a Chrome and Edge feature, mostly on Android and laptops. If your browser does not support it, the row simply shows Unknown - everything else still works.",
+        "q": "Why is the battery row unknown on my device?"
+      },
+      {
+        "a": "Because not every phone exposes a useful gyroscope, magnetometer, or vibration motor to the browser. Those checks live on their own test pages (Gyroscope Test, Vibration Test) where the hardware is handled properly.",
+        "q": "Why is there no camera or sensor row here?"
+      }
+    ],
+    "formula": "Overall status = count of OK checks vs warnings.\nOK = value present and within the healthy range.\nWarning = value present but outside the healthy range (low battery, offline, cookies off).\nInfo = value unavailable or neutral (device guess, locale, touch-less desktop).",
+    "formulaHeading": "How the summary works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Leave the selector on Auto-detect, or pick your exact device from the list.",
+      "Read the checklist. Green means healthy, amber means worth a look, grey is neutral information.",
+      "Tap any warning and follow the hint - for example, charge the battery or enable cookies.",
+      "Press Copy report to share the full summary with a support team."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The checklist reads live values: browser, OS, screen, CPU cores, memory, touch, battery, network, and cookies.",
+      "Green (OK) means the value is present and healthy; amber (Warning) means check it; grey (Info) is neutral.",
+      "Battery level and charging state come from the Battery API, mainly available in Chrome and Edge.",
+      "The network row uses the Network Information API: connection type (like 4g) and downlink speed in Mb/s.",
+      "Touch points above zero means the device reports a touch screen - useful for confirming tablet mode.",
+      "The device guess combines the user agent with screen size; you can override it with the manual list."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "device test, phone test online, check my device, device info, laptop test, tablet test, device health check",
+    "labels": {
+      "charging": "charging",
+      "checkBattery": "Battery",
+      "checkBrowser": "Browser",
+      "checkCookies": "Cookies",
+      "checkCpu": "CPU cores",
+      "checkDevice": "Device",
+      "checkLocale": "Language / timezone",
+      "checkMemory": "Memory",
+      "checkNetwork": "Network",
+      "checkOs": "Operating system",
+      "checkScreen": "Screen",
+      "checkTouch": "Touch screen",
+      "copied": "Copied",
+      "copySummary": "Copy report",
+      "coresUnit": "cores",
+      "devAndroidPhone": "Android phone",
+      "devAuto": "Auto-detect",
+      "devDesktopPc": "Desktop PC",
+      "devImac": "iMac",
+      "devIpad": "iPad",
+      "devIphone": "iPhone",
+      "devMacbook": "MacBook",
+      "devSmartwatch": "Smartwatch",
+      "devTablet": "Tablet",
+      "devWindowsLaptop": "Windows laptop",
+      "deviceChoice": "Which device are you testing?",
+      "disabled": "Disabled",
+      "enabled": "Enabled",
+      "noTouch": "No touch screen",
+      "offline": "Offline",
+      "ok": "OK",
+      "stInfo": "Info",
+      "stOk": "OK",
+      "stWarn": "Warning",
+      "touchPoints": "touch points",
+      "unknown": "Unknown",
+      "warnings": "warnings"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The battery and memory APIs are not supported in every browser - those rows may show Unknown.",
+      "The device guess is a heuristic, not a guarantee; always confirm with the manual list.",
+      "This summary cannot test hardware quality - use the dedicated keyboard, mic, camera, and sensor tests for that.",
+      "Values reflect this browser only; another browser on the same device may report differently."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online device test: check browser, OS, screen, CPU, memory, battery, network, and touch in one report. Works for phones, tablets, laptops. 100% private.",
+    "metaTitle": "Device Test - Full Device Health Check | JaurTools",
+    "name": "Device Test",
+    "privacyNote": "This tool runs 100% in your browser. Your device details never leave your device.",
+    "quickAnswer": "The Device Test reads your browser, operating system, screen size, CPU cores, memory, touch support, battery level, network type, and cookie setting through real browser APIs, then shows them as a colour-coded checklist. Pick your device from the list (Android phone, iPhone, iPad, MacBook, laptop, desktop, tablet, smartwatch) or leave auto-detect on. Copy the report to share it with support.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Device health report",
+    "tagline": "One checklist for your whole device - browser, OS, screen, CPU, battery, and network.",
+    "workedExample": "You run the test on your phone with Auto-detect:\n1. Device row shows Auto-detect: Android phone - correct.\n2. Browser row shows Chrome 126, OS row shows Android 14 - both green.\n3. Battery row shows 15%, not charging - amber warning, so you plug in the charger.\n4. Network row shows 4g, 10 Mb/s - green.\n5. Cookies row shows disabled - amber warning. You enable them and the row turns green.\nYou press Copy report and send it to support.",
+    "workedExampleHeading": "Worked example"
+  }
+}

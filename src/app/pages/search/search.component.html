@@ -1,0 +1,66 @@
+<div class="search-page">
+  <h1>{{ translate.t('search.heading') }}</h1>
+
+  <form class="search-bar" role="search" (submit)="$event.preventDefault()">
+    <label class="sr-only" for="search-input">{{ translate.t('search.searchLabel') }}</label>
+    <app-icon class="search-icon" name="search" aria-hidden="true"></app-icon>
+    <input
+      id="search-input"
+      type="search"
+      autocomplete="off"
+      [placeholder]="translate.t('search.searchPlaceholder')"
+      [value]="q()"
+      (input)="onType($any($event.target).value)"
+    />
+  </form>
+
+  @if (cat() && activeCategoryLabel()) {
+    <p class="filter-row">
+      <span class="badge">
+        <app-icon name="check" aria-hidden="true"></app-icon>
+        {{ translate.t('search.category') }}: {{ activeCategoryLabel() }}
+      </span>
+      <button type="button" class="btn-ghost btn-sm" (click)="clearCategory()">
+        {{ translate.t('search.clearFilter') }}
+      </button>
+    </p>
+  }
+
+  @if (letter()) {
+    <p class="filter-row">
+      <span class="badge">
+        <app-icon name="check" aria-hidden="true"></app-icon>
+        {{ translate.t('search.letter') }}: {{ letter().toUpperCase() }}
+      </span>
+      <button type="button" class="btn-ghost btn-sm" (click)="clearLetter()">
+        {{ translate.t('search.clearLetter') }}
+      </button>
+    </p>
+  }
+
+  <p class="muted result-count">
+    @if (q().trim() || cat() || letter()) {
+      {{ results().length }} {{ translate.t('search.resultsFor') }}
+    } @else {
+      {{ translate.t('search.allTools') }}
+    }
+  </p>
+
+  @if (results().length > 0) {
+    <div class="tool-grid">
+      @for (tool of results(); track tool.slug) {
+        <a class="tool-card" [routerLink]="['/', translate.lang(), tool.slug]">
+          <app-icon [name]="tool.icon" aria-hidden="true"></app-icon>
+          <span class="tool-name">{{ toolName(tool.slug) }}</span>
+          <span class="tool-cat">{{ translate.t('categories.' + tool.category) }}</span>
+        </a>
+      }
+    </div>
+  } @else {
+    <div class="empty">
+      <app-icon name="search" aria-hidden="true"></app-icon>
+      <h2>{{ translate.t('search.emptyTitle') }}</h2>
+      <p class="muted">{{ translate.t('search.emptyHint') }}</p>
+    </div>
+  }
+</div>

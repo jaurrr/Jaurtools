@@ -1,0 +1,90 @@
+{
+  "days-between-dates": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Days Between Dates",
+    "tagline": "Measure the exact duration between two dates and times - days, hours, minutes and business days.",
+    "metaTitle": "Days Between Dates - Exact Duration Calculator | JaurTools",
+    "metaDescription": "Calculate the exact time between two dates: total days, hours, minutes, seconds and business days. Free duration calculator, private, no sign-up.",
+    "keywords": "days between dates, duration calculator, how many days between, business days calculator, time between dates",
+    "quickAnswer": "Enter a start and end date-time and get the precise duration: for example, from 18 October 2026 09:00 to 25 October 2026 17:30 is 7 days and 8.5 hours - 176.5 hours, 10,590 minutes, or 5 business days. An optional toggle includes the end date in the day count.",
+    "keyFacts": [
+      "Durations are computed from exact timestamps, so hours and minutes are precise - not rounded to whole days.",
+      "Business days count Monday to Friday only, using calendar math rather than a holiday list.",
+      "The 'include end date' toggle adds one day when you want both endpoints counted, as some contracts require.",
+      "If the end is before the start, the tool swaps them automatically and reports a positive duration.",
+      "Daylight-saving transitions can make a 'day' 23 or 25 hours long; this tool measures real elapsed time."
+    ],
+    "howTo": [
+      "Enter the start date and time.",
+      "Enter the end date and time.",
+      "Tick 'include end date' if your use case counts both endpoints.",
+      "Read total days, hours, minutes, seconds and business days.",
+      "Use business days for project estimates and notice periods."
+    ],
+    "formula": "Duration = end timestamp minus start timestamp.\nTotal days = duration / 86,400,000 ms.\nTotal hours = duration / 3,600,000 ms.\nBusiness days = full weeks x 5 + weekdays in the leftover days (Mon-Fri).\nExample: 2026-10-18 09:00 to 2026-10-25 17:30 = 7 days 8.5 hours = 176.5 hours.",
+    "workedExample": "Start: 18 October 2026, 09:00. End: 25 October 2026, 17:30.\n1. Timestamps subtracted: 7 days and 8 hours 30 minutes.\n2. Total hours: 7 x 24 + 8.5 = 176.5 hours.\n3. Total minutes: 176.5 x 60 = 10,590 minutes.\n4. Total seconds: 10,590 x 60 = 635,400 seconds.\n5. Business days: Monday 19 to Friday 23 October = 5 days (weekends excluded).",
+    "benefits": [
+      "Timestamp precision settles 'exactly how long' questions for rentals, shifts and SLAs.",
+      "Business-day count is ready-made for work planning.",
+      "Handles overnight and multi-week spans without manual math.",
+      "Private and instant - no spreadsheet needed."
+    ],
+    "limitations": [
+      "Business days exclude weekends only; public holidays are not in any list and are counted as business days.",
+      "Uses your device's time zone for both timestamps; convert first for cross-zone durations.",
+      "Daylight-saving transitions are measured as real elapsed time, which may surprise whole-day counts.",
+      "The 'include end date' convention varies by industry - confirm what your contract means."
+    ],
+    "faqs": [
+      {
+        "q": "Does it count the end date?",
+        "a": "By default, no - from Monday 09:00 to Tuesday 09:00 is exactly 1 day. Tick 'include end date' to add one day when your convention counts both endpoints."
+      },
+      {
+        "q": "How are business days calculated?",
+        "a": "Full weeks contribute 5 business days each, and leftover days are checked one by one for Monday-to-Friday. Public holidays are not subtracted."
+      },
+      {
+        "q": "What if the end is before the start?",
+        "a": "The tool swaps them automatically and reports the positive duration, so the order does not matter."
+      },
+      {
+        "q": "Can I use it for shift lengths?",
+        "a": "Yes - enter clock-in and clock-out times, even overnight. The math handles spans past midnight."
+      },
+      {
+        "q": "Why do hours sometimes not equal days x 24?",
+        "a": "Around daylight-saving transitions a calendar day can be 23 or 25 hours. The tool measures real elapsed time, which is the honest number."
+      },
+      {
+        "q": "Is this the same as the Date Calculator?",
+        "a": "Related but different: this tool measures precise durations between two date-times including business days, while the Date Calculator shifts a date by N days."
+      }
+    ],
+    "resultsHeading": "Duration results",
+    "labels": {
+      "startDateTime": "Start date and time",
+      "endDateTime": "End date and time",
+      "includeEnd": "Include end date in count",
+      "totalDays": "Total days",
+      "totalHours": "Total hours",
+      "totalMinutes": "Total minutes",
+      "totalSeconds": "Total seconds",
+      "businessDays": "Business days (Mon-Fri)",
+      "totalWeeks": "Total weeks"
+    }
+  }
+}

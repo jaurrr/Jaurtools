@@ -1,0 +1,90 @@
+{
+  "url-encoder-decoder": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "URL Encoder / Decoder",
+    "tagline": "Percent-encode text for URLs or decode encoded URLs back to readable text.",
+    "metaTitle": "URL Encoder Decoder — Percent Encoding Online",
+    "metaDescription": "Free URL encoder/decoder: percent-encode text for links and query strings, or decode %20-style URLs back to readable text. Runs in your browser.",
+    "keywords": "url encoder, url decoder, percent encoding, encode url online, decode url, url escape",
+    "quickAnswer": "Paste text, choose Encode to turn it into URL-safe percent-encoding (spaces become %20), or choose Decode to turn an encoded URL back into readable text. Results appear live as you type.",
+    "keyFacts": [
+      "Percent-encoding replaces unsafe characters with % followed by two hex digits (RFC 3986).",
+      "A space encodes as %20; encodeURIComponent leaves letters, digits and -_.!~*'() unescaped.",
+      "URLs cannot contain raw spaces, angle brackets or many Unicode characters — encoding fixes that.",
+      "Query parameters (everything after ?) almost always need encoding.",
+      "Decoding reverses the process; malformed sequences like a lone % cause an error."
+    ],
+    "howTo": [
+      "Paste or type your text into the input box.",
+      "Switch between the Encode and Decode tabs.",
+      "Read the result in the output box as you type.",
+      "Use the copy button to copy the result to your clipboard.",
+      "If decoding shows an error, check for incomplete % sequences."
+    ],
+    "formula": "Encoding: each unsafe byte → %HH (hex).\nExample: \" \" (space, byte 0x20) → \"%20\"\nDecoding: %HH → the original byte.",
+    "workedExample": "Encode \"hello world\".\nStep 1: Letters h,e,l,l,o are safe and stay as-is.\nStep 2: The space is byte 0x20 → \"%20\".\nStep 3: Join: \"hello\" + \"%20\" + \"world\".\nAnswer: \"hello%20world\". Decoding \"hello%20world\" reverses it to \"hello world\".",
+    "benefits": [
+      "Encode and decode in one tool with live results.",
+      "Handles full Unicode text correctly (UTF-8 bytes).",
+      "One-click copy button for the result.",
+      "Clear error message on malformed encoded input.",
+      "Private: your text never leaves the browser."
+    ],
+    "limitations": [
+      "Encodes per encodeURIComponent rules; the older escape() behaviour differs slightly.",
+      "It does not validate that the result is a working URL.",
+      "Very long inputs (megabytes of text) may be slow on old devices.",
+      "Decoding cannot fix double-encoded text automatically."
+    ],
+    "faqs": [
+      {
+        "q": "What is percent-encoding?",
+        "a": "It is the standard way to put special characters into URLs: each unsafe byte becomes % followed by two hexadecimal digits. A space becomes %20, and é becomes %C3%A9."
+      },
+      {
+        "q": "When do I need to encode a URL?",
+        "a": "Whenever a URL contains spaces, non-ASCII characters, or reserved characters like & = ? # inside a parameter value. Unencoded, these break the link or change its meaning."
+      },
+      {
+        "q": "What is the difference between encodeURI and encodeURIComponent?",
+        "a": "encodeURIComponent encodes more characters (including / ? & =), making it right for single parameter values. This tool uses encodeURIComponent rules."
+      },
+      {
+        "q": "Why does decoding fail with an error?",
+        "a": "Decoding fails on malformed sequences such as a % not followed by two hex digits, or a truncated UTF-8 sequence. Fix the % sequences and try again."
+      },
+      {
+        "q": "Can I encode an entire URL including https://?",
+        "a": "You can, but : and / will also be encoded. Usually you encode only the parameter values, not the whole URL."
+      },
+      {
+        "q": "Is my text sent to a server?",
+        "a": "No. Encoding and decoding happen entirely in your browser; your text never leaves your device."
+      }
+    ],
+    "resultsHeading": "URL encode / decode results",
+    "labels": {
+      "modeLabel": "Mode",
+      "encodeTab": "Encode",
+      "decodeTab": "Decode",
+      "inputLabel": "Input text",
+      "outputLabel": "Result",
+      "copyLabel": "Copy result",
+      "copiedLabel": "Copied!",
+      "invalidLabel": "This text is not valid percent-encoded input. Check for incomplete % sequences."
+    }
+  }
+}

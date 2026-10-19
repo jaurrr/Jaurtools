@@ -1,0 +1,100 @@
+{
+  "favicon-generator": {
+    "benefits": [
+      "Generates all six platform sizes (16–512 px) plus a real multi-size .ico file in one click.",
+      "The text mode makes a clean lettermark favicon with zero design tools — pick a letter and two colors.",
+      "A copy-paste HTML snippet wires everything into your site's <head> correctly.",
+      "Cover-fit scaling keeps logos undistorted; nothing is ever stretched."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A favicon is the small icon browsers show in tabs, bookmarks, and history. PNG favicons work in modern browsers; the .ico format is still needed for older browsers and Windows shortcuts. This tool generates both.",
+        "q": "What is a favicon and why do I need one?"
+      },
+      {
+        "a": "Browsers pick the closest size: 16 and 32 px for tabs, 180 px for Apple touch icons, 192 and 512 px for Android/Chrome install prompts. The generated .ico bundles 16, 32, and 48 px in one file.",
+        "q": "Which sizes do I actually need?"
+      },
+      {
+        "a": "In Image mode, your picture is cover-fit: it is scaled so the smaller side fills the square and the excess is cropped, centered. Nothing is stretched or squashed.",
+        "q": "Will my logo get stretched?"
+      },
+      {
+        "a": "Press Download .ico to get favicon.ico (16/32/48 px PNGs inside), then add the copied snippet to your site's <head>. Upload the files to your site root so the paths in the snippet match.",
+        "q": "How do I install the favicon on my website?"
+      },
+      {
+        "a": "Yes — text mode draws your letter(s) in a bold system font on your chosen background color. It is a real rendered image, not an emoji, so it looks crisp at every size.",
+        "q": "Can I make a letter-based favicon?"
+      },
+      {
+        "a": "The letter field accepts up to 2 characters. Single letters render largest and read best at 16 px; two letters work for brand initials like 'JT'.",
+        "q": "How many letters can the text favicon use?"
+      }
+    ],
+    "formula": "scale = max(target / width, target / height)\ndrawnW = width x scale, drawnH = height x scale\noffsetX = (target - drawnW) / 2, offsetY = (target - drawnH) / 2\nICO file = 6-byte header + 16 bytes per entry + PNG data\nExample: 3 entries (16/32/48) -> header bytes 0-5, entries bytes 6-53, PNG data from byte 54.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick Image mode and upload your logo, or Text mode for a lettermark.",
+      "For text mode, type 1–2 letters and choose background and letter colors.",
+      "Press Generate to render all six sizes plus the multi-size .ico.",
+      "Download individual PNGs, or press Download .ico for the complete icon file.",
+      "Press Copy snippet and paste the HTML into your site's <head> section."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Generates six sizes: 16, 32, 48, 180 (Apple touch), 192, and 512 px — the full modern favicon set.",
+      "Builds a genuine multi-size favicon.ico (16/32/48 px PNG entries) with a hand-written ICO encoder.",
+      "Two source modes: upload any image, or design a lettermark with custom colors.",
+      "Cover-fit rendering: images fill the square without stretching; excess is center-cropped.",
+      "Provides a copy-paste HTML snippet with icon, PNG, and apple-touch-icon link tags.",
+      "Everything is rendered with the Canvas API in your browser — no uploads."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "favicon generator online, make favicon from image, favicon ico generator, letter favicon maker, website icon generator",
+    "labels": {
+      "bgColor": "Background color",
+      "copied": "Copied!",
+      "copyError": "Could not copy. Please select the snippet text manually.",
+      "copySnippet": "Copy HTML snippet",
+      "downloadIco": "Download favicon.ico",
+      "downloadPng": "PNG",
+      "fgColor": "Letter color",
+      "generate": "Generate favicons",
+      "imageMode": "From image",
+      "letterLabel": "Letter(s)",
+      "modeLabel": "Source",
+      "needImage": "Please upload an image first, or switch to Text mode.",
+      "sizeError": "That file is larger than 10 MB. Please choose a smaller image.",
+      "sizesHeading": "Generated sizes",
+      "snippetLabel": "HTML snippet for your site",
+      "textMode": "From text",
+      "typeError": "That file could not be read as an image. Please choose an image file.",
+      "uploadLabel": "Upload a logo or image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The .ico bundles 16/32/48 px only — 256 px Vista-style icons are not included.",
+      "Animated source images use their first frame; animation is not preserved.",
+      "Very detailed logos may become unreadable at 16 px — simplify the design first.",
+      "The snippet assumes files are served from your site root (/favicon.ico and so on)."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free favicon generator — make 16–512 px PNGs plus a real multi-size .ico from any image or a lettermark, with a copy-paste HTML snippet. No sign-up.",
+    "metaTitle": "Favicon Generator — Make .ico & PNG Icons Free",
+    "name": "Favicon Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a logo or type 1–2 letters to generate the complete favicon set: six PNG sizes (16–512 px) plus a real multi-size favicon.ico, with a copy-paste HTML snippet for your site. Everything renders in your browser — free, no sign-up.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your favicon results",
+    "tagline": "The complete favicon set — PNGs, .ico, and HTML snippet.",
+    "workedExample": "You upload a 1000 x 600 px logo and press Generate.\nFor the 32 px icon: scale = max(32/1000, 32/600) = 0.0533, drawn as 53.3 x 32 px, cropped to a centered 32 x 32 square.\nThe .ico packs the 16, 32, and 48 px PNGs: header bytes 0–5, three 16-byte entries at bytes 6–53, then the PNG data.",
+    "workedExampleHeading": "Worked example"
+  }
+}

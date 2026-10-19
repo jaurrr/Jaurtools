@@ -1,0 +1,86 @@
+{
+  "html-encoder-decoder": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "HTML Encoder/Decoder",
+    "tagline": "Escape HTML special characters to entities - or decode entities back.",
+    "metaTitle": "HTML Encoder Decoder - Escape HTML Entities | JaurTools",
+    "metaDescription": "Free HTML encoder/decoder: escape < > & quotes into HTML entities, or decode entities back to characters. Instant, in-browser.",
+    "keywords": "html encoder, html decoder, html entities encoder, escape html, html encode online",
+    "resultsHeading": "HTML encoding result",
+    "quickAnswer": "Encoding turns <div> into &lt;div&gt; so code displays as text instead of rendering. Decoding reverses it. Paste your snippet, pick Encode or Decode, and copy the result - all instantly in your browser.",
+    "keyFacts": [
+      "The five characters that must be escaped in HTML text: & → &amp;, < → &lt;, > → &gt;, \" → &quot;, ' → &#39;.",
+      "& must be escaped first - escaping it last would double-encode the other entities.",
+      "Browsers decode named entities (&amp;), decimal (&#38;) and hex (&#x26;) forms.",
+      "Encoding user input before inserting it into HTML is the basic defense against XSS attacks.",
+      "In code samples and tutorials, unescaped < > would vanish or break the page - encoding keeps them visible.",
+      "Decoding is safe: it only translates entities, it never executes scripts."
+    ],
+    "howTo": [
+      "Choose the Encode tab to escape HTML, or Decode to reverse entities.",
+      "Paste or type your text in the input box.",
+      "The converted result appears instantly.",
+      "Copy it with one click."
+    ],
+    "formula": "Encoding (order matters):\n1. & → &amp;\n2. < → &lt;\n3. > → &gt;\n4. \" → &quot;\n5. ' → &#39;\nDecoding: the browser HTML parser reverses every valid entity reference.",
+    "workedExample": "Encode <div class=\"demo\">Hi & bye</div>:\n1. & → &amp; first: <div class=\"demo\">Hi &amp; bye</div>.\n2. < → &lt;, > → &gt;: &lt;div class=\"demo\"&gt;Hi &amp; bye&lt;/div&gt;.\n3. \" → &quot;: &lt;div class=&quot;demo&quot;&gt;Hi &amp; bye&lt;/div&gt;.\nDecode &lt;b&gt;bold&lt;/b&gt; → <b>bold</b>.",
+    "benefits": [
+      "Correct escape order - & first - so output never double-encodes.",
+      "Full entity decoding via the real browser parser, including numeric forms.",
+      "One-click copy for pasting into code or CMS fields.",
+      "Essential for bloggers, tutorial writers, and anyone showing code on a page."
+    ],
+    "limitations": [
+      "Encodes the five critical characters; exotic named entities are left as-is when encoding.",
+      "This is escaping, not sanitizing - for untrusted HTML you still need a proper sanitizer.",
+      "Decoding cannot recover text that was mangled before encoding."
+    ],
+    "faqs": [
+      {
+        "q": "Why do I need to encode HTML?",
+        "a": "Because <, > and & have special meaning in HTML. To show code as visible text - in a tutorial, comment, or CMS - you must escape them, or the browser will try to render them as markup and your text will vanish or break the layout."
+      },
+      {
+        "q": "What is the difference between &lt; and < ?",
+        "a": "They look identical when rendered, but in source code &lt; is the four-character entity that displays as <. Raw < starts a tag. Encoding converts the raw character into the safe entity form."
+      },
+      {
+        "q": "Does HTML encoding prevent XSS?",
+        "a": "Encoding user text before inserting it into HTML is the foundation of XSS defense - injected <script> becomes harmless visible text. But full protection also needs context-aware escaping (attributes, JS, URLs) and ideally a sanitizer for rich HTML."
+      },
+      {
+        "q": "Why must & be escaped first?",
+        "a": "Because the other replacements introduce & characters (&lt; contains &). If & were escaped last, &lt; would become &amp;lt; - double-encoded garbage. Order matters."
+      },
+      {
+        "q": "What are numeric character references?",
+        "a": "Entities written as numbers: &#38; (decimal) or &#x26; (hex) both mean &. They work for any Unicode character, e.g. &#128512; for an emoji, without needing a named entity."
+      },
+      {
+        "q": "Can I decode entities safely?",
+        "a": "Yes - decoding only translates entity text back to characters. It does not execute anything. The result is plain text in the output box, never rendered as live HTML."
+      }
+    ],
+    "labels": {
+      "mode": "Conversion direction",
+      "encodeTab": "Encode",
+      "decodeTab": "Decode",
+      "input": "Input",
+      "output": "Output",
+      "copy": "Copy result"
+    }
+  }
+}

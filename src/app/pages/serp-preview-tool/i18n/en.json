@@ -1,0 +1,98 @@
+{
+  "serp-preview-tool": {
+    "benefits": [
+      "Catches truncated titles before Google rewrites them in search results.",
+      "Live character and pixel estimates while you type - no guessing.",
+      "The SERP preview shows exactly how your snippet could look.",
+      "Separate checks for title and description in one place.",
+      "Helps every page on your site, not just the homepage."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. Google measures in pixels, not characters, and wide letters (W, M) take more room than narrow ones (i, l). The character count is a handy proxy, but the pixel estimate is the more honest signal. This tool shows both.",
+        "q": "Is the 60-character limit exact?"
+      },
+      {
+        "a": "Google truncates it with an ellipsis (...). The cut-off part still exists on your page but searchers never see it, so your most important words should sit in the first 60 characters.",
+        "q": "What happens if my title is too long?"
+      },
+      {
+        "a": "A good title is 50-60 characters, includes your main keyword near the front, and reads like a human wrote it. Avoid stuffing keywords or repeating your brand on every page.",
+        "q": "What makes a good meta title?"
+      },
+      {
+        "a": "A good description is 140-155 characters, summarises the page in one or two sentences, and includes a reason to click. It does not directly raise rankings, but a better snippet earns more clicks.",
+        "q": "What makes a good meta description?"
+      },
+      {
+        "a": "It is a rough estimate: characters x 8 px for titles, x 7 px for descriptions. Real rendering depends on the actual letters and the visitor's device. Treat it as a guide, not a measurement.",
+        "q": "How accurate is the pixel estimate?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser. Nothing you type is uploaded, stored, or seen by anyone else.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "Character count = text.length\n\nEstimated pixels:\n  title px ~= characters x 8\n  description px ~= characters x 7\n\nStatus rules:\n  title: <= 60 chars GOOD, 61-70 WARNING, > 70 TOO LONG\n  description: <= 155 chars GOOD, 156-165 WARNING, > 165 TOO LONG\n\nReference: Google shows roughly 600 px for titles and 920 px for descriptions.\nThese are estimates - real rendering depends on the letters used.\n\nExample:\n  title 'Best Coffee Shops in Mumbai | JaurTools'\n  characters: 39 -> 39 x 8 = 312 px -> GOOD (<= 60, ~= 312 px of 600 px)\n  description (110 chars): 110 x 7 = 770 px -> GOOD (<= 155, ~= 770 px of 920 px)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your page title into the title box.",
+      "Watch the character count, pixel estimate, and status badge update live.",
+      "Paste or type your meta description into the description box.",
+      "Check the SERP preview to see how the snippet could look in Google.",
+      "Trim the text until both badges show green before publishing."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Google truncates titles at roughly 600 pixels wide - about 60 characters.",
+      "Meta descriptions truncate at roughly 920 pixels - about 155 characters.",
+      "Pixel width matters more than character count: wide letters take more room.",
+      "This tool estimates title pixels as characters x 8 and description pixels as characters x 7.",
+      "Status bands: good (green), warning (amber, close to the limit), too long (red).",
+      "The SERP preview mimics how the title and description appear in search results."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "meta title length checker, meta description length checker, seo title checker, serp preview tool, title tag length",
+    "labels": {
+      "clearButton": "Clear",
+      "descCharsLabel": "Description characters",
+      "descLabel": "Meta description",
+      "descPlaceholder": "Type your meta description here...",
+      "pxLabel": "Est. pixels",
+      "serpDescFallback": "Your meta description will appear here...",
+      "serpLabel": "Search result preview",
+      "serpTitleFallback": "Your page title will appear here...",
+      "serpUrl": "https://example.com/your-page",
+      "statusBad": "Too long",
+      "statusGood": "Good",
+      "statusWarn": "Close to limit",
+      "titleCharsLabel": "Title characters",
+      "titleLabel": "Meta title",
+      "titlePlaceholder": "Type your page title here..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pixel widths are estimates, not measurements - real rendering varies by letter and device.",
+      "Google sometimes rewrites titles and descriptions regardless of length.",
+      "Character limits are guidelines; there is no official number from Google.",
+      "The SERP preview is a mimic, not a screenshot of real Google results."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SERP preview tool: check SEO titles and meta descriptions against Google's display limits. Live pixel estimates and search-result preview.",
+    "metaTitle": "SERP Preview Tool - Check Titles & Meta Descriptions Free | JaurTools",
+    "name": "SERP Preview Tool",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your page title and meta description to check them against Google's display limits. Titles should stay under 60 characters (about 600 pixels) and descriptions under 155 characters (about 920 pixels) to avoid truncation. The tool shows live character counts, estimated pixel widths, green/amber/red status badges, and a mock search-result preview. For example, 'Best Coffee Shops in Mumbai | JaurTools' is 39 characters and about 312 pixels - safely in the green.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Meta Title/Description Length Checker results",
+    "tagline": "Preview Google snippets — pixel-accurate title & description check.",
+    "workedExample": "Title: 'Best Coffee Shops in Mumbai | JaurTools'\n\nStep by step:\n1. Characters: count them -> 39.\n   ('Best'=4, +' '=5, 'Coffee'=11, +' '=12, 'Shops'=17, +' '=18, 'in'=20, +' '=21, 'Mumbai'=27, +' '=28, '|'=29, +' '=30, 'JaurTools'=39)\n2. Estimated pixels: 39 x 8 = 312 px.\n3. Status: 39 <= 60 -> GOOD (green).\n\nDescription: 'Find the best coffee shops in Mumbai with ratings, prices and opening hours. Updated weekly for coffee lovers.'\n\n1. Characters: 110.\n2. Estimated pixels: 110 x 7 = 770 px.\n3. Status: 110 <= 155 -> GOOD (green).\n\nBoth fit comfortably inside Google's display limits.",
+    "workedExampleHeading": "Worked example"
+  }
+}

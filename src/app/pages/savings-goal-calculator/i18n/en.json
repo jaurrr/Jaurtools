@@ -1,0 +1,91 @@
+{
+  "savings-goal-calculator": {
+    "assumptionNote": "Assumes monthly deposits at month-end, constant interest compounded monthly, and that you never withdraw. Taxes and inflation are not included.",
+    "benefits": [
+      "Turns a scary big goal into a concrete monthly number you can act on today.",
+      "Shows exactly how much interest shortens the journey - free money for waiting.",
+      "Makes trade-offs visible: save $100 more a month and see the years melt away.",
+      "Free, instant, and private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Roughly 3 to 6 months of essential expenses is the standard emergency-fund target. Big one-off goals - a house down payment, a car, a wedding - are usually 10 to 30% of the purchase price. Pick a number, enter it, and the calculator does the rest.",
+        "q": "How do I choose a savings goal?"
+      },
+      {
+        "a": "Use the interest rate your account actually pays. If you do not know it, 4% is a reasonable placeholder for a decent savings account in 2026. The time difference between 1% and 5% on a 10-year goal is often 1 to 2 years.",
+        "q": "What interest rate should I enter?"
+      },
+      {
+        "a": "Only if the goal is years away. Compounding needs time to matter: over 2 years, interest barely moves the needle. Over 10+ years it can shave off many months of deposits. Either way, a higher rate never hurts.",
+        "q": "Does the interest rate matter much?"
+      },
+      {
+        "a": "Then this formula cannot give you a finish date - you would never reach the goal. Enter the smallest amount you can truly commit to; even $50 a month reaches $50,000 in about 83 years at 0%, which is honest math telling you to raise the deposit or shrink the goal.",
+        "q": "What if I cannot deposit anything monthly?"
+      },
+      {
+        "a": "Two levers: raise the monthly deposit, or raise the rate by moving the money to a higher-yield account. A third option people forget: shrink the goal. A $40,000 goal reached is infinitely better than a $50,000 goal abandoned.",
+        "q": "How can I reach my goal faster?"
+      },
+      {
+        "a": "Enter your goal amount and the date you need it by, then solve backwards: divide the goal by the number of months. A $24,000 goal in 4 years needs $500 a month before interest. Use this calculator to refine the number with interest included.",
+        "q": "How do I save for a goal with a deadline?"
+      }
+    ],
+    "formula": "With interest: months n = ln((goal x r + PMT) / PMT) / ln(1 + r), where r is the monthly rate and PMT the monthly deposit.\nWithout interest: months = goal / PMT.\nYears = floor(months / 12), leftover months = months - years x 12.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your target amount - the full price of whatever you are saving for.",
+      "Enter how much you can deposit every month, honestly.",
+      "Enter the annual interest rate your savings will earn.",
+      "Read how many years and months it will take, plus how much interest contributes.",
+      "Adjust the monthly deposit until the timeline fits your plans."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Time to goal comes from solving the annuity formula backwards for n.",
+      "With interest: n = ln((goal x r + PMT) / PMT) / ln(1 + r).",
+      "Without interest it is simple division: months = goal / monthly deposit.",
+      "Interest earned is largest near the end, when the balance is biggest.",
+      "Doubling the deposit roughly halves the time; raising the rate helps less than raising the deposit."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "savings goal calculator, how long to save calculator, save for goal calculator, time to reach savings goal, down payment savings calculator",
+    "labels": {
+      "interestHelps": "Interest contributes",
+      "interestRate": "Annual interest rate (%)",
+      "monthlyDeposit": "Monthly deposit ($)",
+      "monthsUnit": "months",
+      "savingsGoal": "Savings goal ($)",
+      "timeNeeded": "Time to reach your goal",
+      "totalDeposits": "You will deposit",
+      "totalMonths": "Total months",
+      "yearsUnit": "years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant rate and perfectly regular deposits - life is messier.",
+      "Ignores taxes on interest and inflation eating the goal's price.",
+      "Cannot handle lump-sum deposits along the way.",
+      "An estimate for planning, not financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free savings goal calculator: find out how long it takes to reach your savings target with monthly deposits and interest. Instant and private.",
+    "metaTitle": "Savings Goal Calculator - How Long to Save | JaurTools",
+    "name": "Savings Goal Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "To find how long saving takes, solve the compound-interest formula backwards: with monthly deposits PMT at monthly rate r, months = ln((goal x r + PMT) / PMT) / ln(1 + r). For example, saving $400 a month at 4% toward a $50,000 goal takes about 104.7 months - 8 years and 9 months. You deposit about $41,864 and interest contributes roughly $8,136. Bump the deposit to $500 and the wait drops to about 7 years and 5 months.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your savings timeline",
+    "tagline": "Find out exactly how long it takes to reach your savings goal.",
+    "workedExample": "Goal $50,000, $400/month, 4% annual:\n1. Monthly rate r = 0.04 / 12 = 0.003333.\n2. Months n = ln((50,000 x 0.003333 + 400) / 400) / ln(1.003333).\n3. = ln(566.67 / 400) / ln(1.003333) = ln(1.41667) / 0.003328.\n4. = 0.34831 / 0.003328 = 104.66 months.\n5. That is 8 full years plus 8.66 months - about 8 years and 9 months.\n6. Deposits = 400 x 104.66 = about $41,864; interest covers the remaining ~$8,136.",
+    "workedExampleHeading": "Worked example"
+  }
+}

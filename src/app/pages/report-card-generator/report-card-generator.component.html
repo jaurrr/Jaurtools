@@ -1,0 +1,223 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="two-inputs">
+        <div class="field">
+          <label for="mk-student">{{ t('labels.studentNameLabel') }}</label>
+          <input id="mk-student" type="text" maxlength="80"
+            [ngModel]="studentName()" (ngModelChange)="setStudentName($event)"
+            [attr.placeholder]="t('labels.studentNamePlaceholder')" />
+        </div>
+        <div class="field">
+          <label for="mk-class">{{ t('labels.classLabel') }}</label>
+          <input id="mk-class" type="text" maxlength="40"
+            [ngModel]="className()" (ngModelChange)="setClassName($event)"
+            [attr.placeholder]="t('labels.classPlaceholder')" />
+        </div>
+      </div>
+
+      <h3 class="table-heading">{{ t('labels.subjectsHeading') }}</h3>
+      @for (s of subjects(); track s.id) {
+        <div class="subject-row">
+          <input type="text" maxlength="60" [ngModel]="s.name"
+            (ngModelChange)="setSubjectName(s.id, $event)"
+            [attr.aria-label]="t('labels.subjectNameLabel')" />
+          <input type="number" inputmode="numeric" min="0" [max]="s.max"
+            [ngModel]="s.obtained" (ngModelChange)="setObtained(s.id, $event)"
+            [attr.aria-label]="t('labels.obtainedLabel')" />
+          <span class="slash" aria-hidden="true">/</span>
+          <input type="number" inputmode="numeric" min="1" max="1000"
+            [ngModel]="s.max" (ngModelChange)="setMax(s.id, $event)"
+            [attr.aria-label]="t('labels.maxMarksLabel')" />
+          <button type="button" class="icon-btn" (click)="removeSubject(s.id)"
+            [attr.aria-label]="t('labels.deleteSubjectLabel') + ': ' + s.name">
+            <app-icon name="x" />
+          </button>
+        </div>
+      }
+
+      <div class="field add-row">
+        <label for="mk-new">{{ t('labels.newSubjectLabel') }}</label>
+        <div class="input-row">
+          <input id="mk-new" type="text" maxlength="60"
+            [ngModel]="newSubjectName()" (ngModelChange)="setNewSubjectName($event)"
+            [attr.placeholder]="t('labels.newSubjectPlaceholder')" />
+          <button type="button" class="btn-ghost" (click)="addSubject()">
+            {{ t('labels.addSubjectButton') }}
+          </button>
+        </div>
+      </div>
+
+      @if (formError()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ formError() }}</p>
+      }
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="check" /> {{ t('labels.percentageLabel') }}</span>
+          <strong>{{ oneDecimal().format(percentage()) }}%</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.totalLabel') }}</span>
+          <strong>{{ totalObtained() }} / {{ totalMax() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.gradeLabel') }}</span>
+          <strong><span class="grade-badge">{{ gradeName() }}</span></strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.divisionLabel') }}</span>
+          <strong>{{ divisionName() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.resultLabel') }}</span>
+          <strong class="result-{{ passed() ? 'pass' : 'fail' }}">
+            {{ passed() ? t('labels.passedLabel') : t('labels.failedLabel') }}
+          </strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <section class="report-card" [attr.aria-label]="t('labels.reportCardTitle')">
+        <h3>{{ t('labels.reportCardTitle') }}</h3>
+        <p class="rc-student">
+          <strong>{{ t('labels.studentNameLabel') }}:</strong> {{ studentName() || '—' }}
+          <span class="rc-class"><strong>{{ t('labels.classLabel') }}:</strong> {{ className() || '—' }}</span>
+        </p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">{{ t('labels.subjectCol') }}</th>
+              <th scope="col">{{ t('labels.obtainedCol') }}</th>
+              <th scope="col">{{ t('labels.maxCol') }}</th>
+              <th scope="col">{{ t('labels.percentCol') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (s of subjects(); track s.id) {
+              <tr>
+                <td>{{ s.name }}</td>
+                <td>{{ s.obtained }}</td>
+                <td>{{ s.max }}</td>
+                <td>{{ oneDecimal().format(subjectPercent(s)) }}%</td>
+              </tr>
+            }
+            <tr class="total-row">
+              <td><strong>{{ t('labels.totalLabel') }}</strong></td>
+              <td><strong>{{ totalObtained() }}</strong></td>
+              <td><strong>{{ totalMax() }}</strong></td>
+              <td><strong>{{ oneDecimal().format(percentage()) }}%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="rc-summary">
+          {{ t('labels.gradeLabel') }}: <strong>{{ gradeName() }}</strong> ·
+          {{ t('labels.divisionLabel') }}: <strong>{{ divisionName() }}</strong> ·
+          {{ t('labels.resultLabel') }}: <strong>{{ passed() ? t('labels.passedLabel') : t('labels.failedLabel') }}</strong>
+        </p>
+      </section>
+
+      <button type="button" class="btn-primary" (click)="printCard()">
+        <app-icon name="download" /> {{ t('labels.printButton') }}
+      </button>
+      <p class="note">{{ t('labels.printNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

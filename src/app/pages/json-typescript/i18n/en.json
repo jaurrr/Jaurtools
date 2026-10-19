@@ -1,0 +1,92 @@
+{
+  "json-typescript": {
+    "benefits": [
+      "Skips hand-writing types: paste an API response and get interfaces instantly.",
+      "Infers unions honestly: mixed arrays become (string | number)[] instead of any.",
+      "Keeps property names: original JSON keys are preserved, quoted when invalid identifiers.",
+      "Adapts output: toggle export keywords and optional properties to match your codebase.",
+      "Runs fully in your browser: proprietary payloads are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It walks your JSON and emits one TypeScript interface per object: each key becomes a typed property, nested objects become their own interfaces, and arrays become typed arrays.",
+        "q": "How does JSON to TypeScript work?"
+      },
+      {
+        "a": "JSON strings become string, numbers become number, booleans become boolean, null stays null, arrays become T[] with the item type inferred, and objects become named interfaces.",
+        "q": "How are JSON types mapped to TypeScript types?"
+      },
+      {
+        "a": "It collects the distinct inferred item types and builds a union: [1, \"a\"] becomes (number | string)[]. Empty arrays fall back to unknown[].",
+        "q": "What happens with mixed-type arrays?"
+      },
+      {
+        "a": "Enable the optional-properties toggle: every property gets a ? suffix (name?: string). Useful for partial API responses where fields may be absent.",
+        "q": "Can I make all properties optional?"
+      },
+      {
+        "a": "Yes - the export toggle adds or removes the export keyword on every interface, so the output drops into modules or ambient declaration files as needed.",
+        "q": "Does it add the export keyword?"
+      },
+      {
+        "a": "It is a starting point: add readonly, JSDoc comments, or stricter literal types to taste. Always review generated code before shipping.",
+        "q": "Is the generated code production-ready?"
+      }
+    ],
+    "formula": "value -> TypeScript type:\n  \"text\"          -> string\n  42 / 3.14        -> number\n  true / false     -> boolean\n  null             -> null\n  [T, T]           -> T[]\n  [1, \"a\"]         -> (number | string)[]\n  []               -> unknown[]\n  { ... }          -> interface named after the key (PascalCase)\noptions: export keyword on/off, optional (?) on/off",
+    "formulaHeading": "Type mapping",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JSON into the input box - a sample document is preloaded.",
+      "Set the root interface name (default: Root).",
+      "Toggle export keywords and optional properties to match your codebase style.",
+      "The TypeScript interfaces generate live below the options.",
+      "Copy the code or download it as a .ts file and drop it into your project."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON to TypeScript converts any JSON document into TypeScript interfaces.",
+      "Every object becomes an interface; every key becomes a typed property.",
+      "Strings map to string, numbers to number, booleans to boolean, null stays null.",
+      "Arrays become T[] with inferred item types; mixed arrays become union arrays like (number | string)[].",
+      "Original key names are preserved; invalid identifiers are safely quoted.",
+      "Optional export keywords and optional (?) properties adapt the output to your codebase."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json to typescript, json to ts interface, convert json to typescript, json typescript generator, json to interface online",
+    "labels": {
+      "copiedLabel": "Copied!",
+      "copyLabel": "Copy TypeScript",
+      "downloadLabel": "Download .ts",
+      "exportLabel": "Add export keyword",
+      "ifaceNameLabel": "Root interface name",
+      "inputLabel": "JSON input",
+      "invalidLabel": "Invalid JSON:",
+      "optionalLabel": "Make all properties optional (?)",
+      "outputLabel": "TypeScript interfaces"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Type inference reads one sample: fields that vary in type across responses need manual unions.",
+      "Null stays null rather than a union with undefined - adjust to your strictness settings.",
+      "No JSDoc, readonly modifiers, or literal types are generated - add them yourself.",
+      "Very deep documents produce many interfaces; consider splitting them manually."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JSON to TypeScript converter: paste JSON and get TypeScript interfaces with inferred types, union arrays, and optional properties. Private, no sign-up.",
+    "metaTitle": "JSON to TypeScript - Generate TS Interfaces Online | JaurTools",
+    "name": "JSON to TypeScript",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste JSON and get TypeScript interfaces instantly: strings become string, numbers number, booleans boolean, arrays T[] (mixed arrays become unions like (number | string)[]), and every nested object its own PascalCase interface. Toggle export keywords and optional properties, then copy or download the .ts file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON to TypeScript results",
+    "tagline": "Turn any JSON into TypeScript interfaces - inferred types, unions, optional properties.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input:\n{\"id\": 101, \"name\": \"Asha\", \"isActive\": true,\n \"tags\": [\"admin\", \"editor\"], \"address\": {\"city\": \"Pune\"}}\n\nOutput (root = Root, exported, required):\nexport interface Root {\n  id: number;\n  name: string;\n  isActive: boolean;\n  tags: string[];\n  address: Address;\n}\n\nexport interface Address {\n  city: string;\n}\n\nWith optional properties on, every property gains a ?: id?: number; and so on."
+  }
+}

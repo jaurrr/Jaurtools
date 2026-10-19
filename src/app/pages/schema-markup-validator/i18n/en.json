@@ -1,0 +1,101 @@
+{
+  "schema-markup-validator": {
+    "benefits": [
+      "Catches missing required fields before Google does — invalid markup simply earns no rich result.",
+      "Checks 20 common schema.org types with their real required and recommended fields.",
+      "Handles @graph, arrays, and single objects, so you can paste markup as-is.",
+      "Plain-language verdicts explain each problem — no need to read the schema.org spec.",
+      "Runs entirely in your browser; your page markup is never uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "JSON-LD (JavaScript Object Notation for Linked Data) is Google's recommended format for structured data: a <script type=\"application/ld+json\"> block in your page. Alternatives are Microdata and RDFa, but JSON-LD keeps the markup separate from your visible HTML, which is cleaner and less error-prone.",
+        "q": "What is JSON-LD?"
+      },
+      {
+        "a": "Yes — valid structured data is required for rich results like FAQ dropdowns, star ratings, and recipe cards in search. But validity alone doesn't guarantee them; Google decides when to show rich results based on relevance and quality too.",
+        "q": "Does valid schema improve my search results?"
+      },
+      {
+        "a": "Copy the <script type=\"application/ld+json\"> block from your page source (View Source, not the rendered page) and paste the JSON inside the script tags — or paste the whole script block; the parser reads the JSON content.",
+        "q": "How do I get the JSON-LD from my page?"
+      },
+      {
+        "a": "An error means a required field is missing or the structure is broken — fix these first, they can disqualify the markup. A warning means a recommended field is missing — the markup still works, but adding it improves eligibility for rich results.",
+        "q": "What is the difference between an error and a warning?"
+      },
+      {
+        "a": "Use @graph when one page needs several top-level entities (for example a WebPage plus a BreadcrumbList plus an FAQPage). This validator reads @graph arrays and checks each block separately.",
+        "q": "When should I use @graph?"
+      },
+      {
+        "a": "This tool checks structure and required fields against schema.org shapes. Google's Rich Results Test additionally checks Google-specific policies (like which types earn which rich results). Use both: this one for fast iteration, Google's for final confirmation.",
+        "q": "Is this the same as Google's Rich Results Test?"
+      }
+    ],
+    "formula": "Validation rules per block:\n1. @context must exist and reference schema.org.\n2. @type must exist; if it is one of the 20 known types, its required fields are checked.\n3. Required field missing or empty -> error.\n4. Recommended field missing -> warning.\nChecked types: Article, BlogPosting, NewsArticle, Product, FAQPage, Recipe, Event, Organization, LocalBusiness, WebSite, WebPage, BreadcrumbList, Review, Person, JobPosting, SoftwareApplication, VideoObject, HowTo, ItemList.",
+    "formulaHeading": "Validation rules",
+    "homeLabel": "Home",
+    "howTo": [
+      "Copy the JSON-LD from your page (the content of the <script type=\"application/ld+json\"> block).",
+      "Paste it into the box above. @graph arrays and plain arrays are handled automatically.",
+      "Read the totals: blocks found, errors, and warnings.",
+      "Fix every error — missing required fields can disqualify the markup from rich results.",
+      "Add recommended fields flagged as warnings, then re-paste to confirm a clean result."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Structured data (schema.org vocabulary) helps search engines understand your page content and can unlock rich results.",
+      "JSON-LD is Google's recommended format: a script block separate from your visible HTML.",
+      "Every block needs @context (usually https://schema.org) and @type (like FAQPage or Product).",
+      "Each type has required properties — for example FAQPage needs mainEntity, Product needs name, Article needs headline.",
+      "Missing recommended properties (author, image, datePublished) won't break the markup but weaken rich-result eligibility.",
+      "Invalid or incomplete markup simply earns no rich result — there is no penalty, just a missed opportunity."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "schema markup validator, json-ld validator, structured data checker, schema.org validator",
+    "labels": {
+      "badgeError": "Error",
+      "badgeWarning": "Warning",
+      "blockLabel": "Block {n}",
+      "clearButton": "Clear",
+      "eMissingField": "Required field \"{v}\" is missing or empty.",
+      "eNoContext": "@context is missing — add \"@context\": \"https://schema.org\".",
+      "eNoType": "@type is missing — every block needs a schema.org type.",
+      "emptyState": "Paste your JSON-LD above to validate it against schema.org shapes.",
+      "noIssues": "No issues found — this block looks valid.",
+      "parseError": "This is not valid JSON. Check for trailing commas, missing quotes, or truncated content.",
+      "pasteHint": "Paste your JSON-LD here…",
+      "pasteLabel": "JSON-LD markup",
+      "summaryBlocks": "Blocks found",
+      "summaryErrors": "Errors",
+      "summaryWarnings": "Warnings",
+      "wContext": "@context \"{v}\" does not reference schema.org.",
+      "wMissingRecommended": "Recommended field \"{v}\" is missing.",
+      "wUnknownType": "\"{v}\" is not in the known type list — required fields were not checked."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Checks structure and fields, not Google's rich-result policies — passing here doesn't guarantee a rich result.",
+      "Only 20 common types have required-field rules; unknown types get a warning instead of a full check.",
+      "Cannot verify that URLs, dates, or nested entities inside the markup are correct.",
+      "Does not fetch your live page — it validates exactly the JSON you paste."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free schema markup validator: paste JSON-LD and validate it against schema.org shapes with required and recommended field checks. 100% private.",
+    "metaTitle": "Schema Markup Validator - Validate JSON-LD Structured Data | JaurTools",
+    "name": "Schema Markup Validator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your JSON-LD and this validator checks it against schema.org shapes: @context must reference schema.org, @type must be present, and each of the 20 known types (FAQPage, Product, Article, Recipe, Event, and more) is checked for its required fields like mainEntity, name, or headline. Missing required fields are errors; missing recommended fields like author or image are warnings.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Validation results",
+    "tagline": "Validate pasted JSON-LD against schema.org shapes and required fields.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Sample input — an FAQPage block:\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\"@type\": \"Question\", \"name\": \"What is X?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"X is…\"}},\n    {\"@type\": \"Question\", \"name\": \"How does Y work?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Y works by…\"}}\n  ]\n}\nChecks traced by the tool:\n1. Blocks found: 1.\n2. @context references schema.org: ok.\n3. @type FAQPage is a known type: ok.\n4. Required field mainEntity present and non-empty: ok.\n5. Recommended fields for FAQPage: none defined — no warnings.\nResult: 1 block, 0 errors, 0 warnings — valid markup."
+  }
+}

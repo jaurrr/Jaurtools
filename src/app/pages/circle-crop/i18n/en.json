@@ -1,0 +1,90 @@
+{
+  "circle-crop": {
+    "benefits": [
+      "Turns any photo into a perfect circular profile picture in seconds.",
+      "The crop happens on your device - your photo is never uploaded anywhere.",
+      "Three output sizes (256, 512, 1024 px) cover every profile-picture need.",
+      "Transparent corners mean the circle sits cleanly on any background."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The tool takes the centre square of your photo and cuts a circle out of it, with transparent corners. Download the PNG and upload it wherever a round avatar is needed.",
+        "q": "How do I make a circular profile picture?"
+      },
+      {
+        "a": "PNG, JPG, JPEG, WebP, GIF (first frame), and anything else your browser can display as an image. Files must be 10 MB or smaller.",
+        "q": "Which image formats work?"
+      },
+      {
+        "a": "It crops the largest centred square, then cuts the circle. For off-centre faces, crop the photo in your gallery app first so the face sits in the middle, then use this tool.",
+        "q": "What if my face is not centred?"
+      },
+      {
+        "a": "Yes. It is a single PNG with a transparent background outside the circle, which is exactly what most sites expect for avatars.",
+        "q": "Is the download transparent outside the circle?"
+      },
+      {
+        "a": "Pick 256 px for chat apps, 512 px for social profiles, and 1024 px when you want maximum quality for printing or large displays.",
+        "q": "Which size should I choose?"
+      },
+      {
+        "a": "Nothing is uploaded - the file is read into your browser's memory, drawn on a canvas, and the original object URL is released. Closing the tab clears everything.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "Crop: side = min(width, height); start at ((width - side) / 2, (height - side) / 2).\nCircle: clip path = arc with centre (s/2, s/2) and radius s/2.\nScale the square region onto an s x s canvas (s = 256, 512, or 1024).\nCorners outside the circle stay transparent in the PNG.",
+    "formulaHeading": "How the crop works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file (PNG, JPG, WebP - up to 10 MB).",
+      "Pick the output size: 256, 512, or 1024 pixels square.",
+      "The circular preview appears instantly, cropped from the centre square.",
+      "Press Download PNG and use it as your profile picture anywhere."
+    ],
+    "howToHeading": "How to use this tool",
+    "keyFacts": [
+      "A circle crop takes the centre square of a photo and cuts a circle from it.",
+      "Corners outside the circle are transparent in the downloaded PNG.",
+      "Output sizes: 256 px, 512 px, or 1024 px square.",
+      "Maximum input file size is 10 MB.",
+      "Everything runs in your browser via the canvas element - no uploads.",
+      "The preview updates instantly if you change the output size."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "circle crop, circular profile picture maker, round avatar maker, crop image to circle, profile picture cropper",
+    "labels": {
+      "chooseFile": "Choose image",
+      "download": "Download PNG",
+      "errLoad": "Could not read that image. Try another file.",
+      "errSize": "Images must be 10 MB or smaller.",
+      "errType": "Please choose an image file (PNG, JPG, WebP...).",
+      "noImage": "Upload an image to see the circular preview.",
+      "previewLabel": "Circular crop preview",
+      "sizeLabel": "Output size",
+      "tip": "The crop uses the centre square of your photo; corners become transparent."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Always crops the centre square - you cannot drag to reposition the circle.",
+      "No filters, rotation, or touch-ups; it only crops.",
+      "Animated GIFs export as a still of the first frame.",
+      "Very small source images look soft when scaled up to 1024 px."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free circle crop tool: turn any photo into a circular profile picture with transparent corners. 256/512/1024 px PNG download. 100% private, no upload.",
+    "metaTitle": "Circle Crop - Circular Profile Picture Maker | JaurTools",
+    "name": "Circle Crop",
+    "privacyNote": "This tool runs 100% in your browser. Your photo is never uploaded anywhere.",
+    "quickAnswer": "Upload a photo and get a perfect circular profile picture in seconds. The tool takes the centre square of your image, cuts a circle with transparent corners, and lets you download it as a 256, 512, or 1024 px PNG. Everything happens in your browser on a canvas - your photo is never uploaded to any server.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Cropped preview",
+    "tagline": "Circular profile-picture crop with transparent corners, right in your browser.",
+    "workedExample": "Photo: 1200 x 800 px landscape\n1. Centre square: side = min(1200, 800) = 800, starting at x = 200, y = 0.\n2. Circle clip: centre (256, 256), radius 256 on a 512 px canvas.\n3. The 800 x 800 region scales down onto the canvas.\n4. Download: a 512 x 512 PNG, circular photo, transparent corners.",
+    "workedExampleHeading": "Worked example"
+  }
+}

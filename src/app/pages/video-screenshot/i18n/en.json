@@ -1,0 +1,102 @@
+{
+  "video-screenshot": {
+    "benefits": [
+      "Private by design — frames are captured in your browser, never uploaded.",
+      "Pixel-perfect captures at the video's full native resolution.",
+      "PNG for lossless quality, JPEG with quality control for small files.",
+      "Gallery of all captures with individual download and delete."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Video & Audio",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. There are no accounts, no limits and no watermarks. Video seeking and canvas capture run locally in your browser.",
+        "q": "Is this screenshot tool really free?"
+      },
+      {
+        "a": "The frame is drawn from the decoded video at its exact native resolution — the same pixels you see when paused, with no scaling.",
+        "q": "What resolution are the screenshots?"
+      },
+      {
+        "a": "PNG is lossless and best for text, UI and thumbnails. JPEG at 85% is 5–10× smaller and best for photos and sharing online.",
+        "q": "Should I choose PNG or JPEG?"
+      },
+      {
+        "a": "Seeking is precise to the frame the browser lands on, usually within 0.1 s of your timestamp. Scrub the slider, then capture.",
+        "q": "How precise is the timestamp?"
+      },
+      {
+        "a": "DRM-protected videos (some streaming services) block canvas capture — the browser returns a blank frame. Local files you own always work.",
+        "q": "Why do I get a black image from some videos?"
+      },
+      {
+        "a": "Yes — every capture is stored as a separate image in the gallery with its timestamp, ready to download individually.",
+        "q": "Can I capture multiple frames?"
+      }
+    ],
+    "formula": "Frame pixels = width × height\n1920 × 1080 = 2,073,600 px = 2.07 MP\nJPEG at 85% ≈ 10–20% of PNG size",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose video and select a video file (MP4, WebM, MOV up to 500 MB).",
+      "Scrub the time slider or type an exact timestamp to find your frame.",
+      "Choose PNG for lossless quality or JPEG (with a quality slider) for smaller files.",
+      "Click Capture frame. The tool seeks to the timestamp and grabs the exact frame.",
+      "Download captures individually from the gallery, or clear them all and start over."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Captures any video frame as a PNG or JPEG image in your browser.",
+      "Full native resolution — a 1080p video gives 1920×1080 images.",
+      "Timestamp input with 0.1-second precision plus a scrub slider.",
+      "JPEG quality slider from 10% to 100%.",
+      "Gallery keeps every capture with its timestamp and file size."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "video screenshot, capture frame from video, video to png, video frame grabber, mp4 thumbnail maker free",
+    "labels": {
+      "captureBtn": "Capture frame",
+      "chooseFile": "Choose video",
+      "clearAllBtn": "Clear all",
+      "deleteBtn": "Delete screenshot",
+      "downloadBtn": "Download",
+      "emptyNote": "No captures yet — find a frame and capture it.",
+      "errCapture": "Could not capture that frame. Try a different timestamp.",
+      "errNotReady": "Please choose a video file first.",
+      "errSize": "The video is larger than 500 MB.",
+      "errType": "That file type is not supported. Please choose a video file.",
+      "fileHint": "MP4, WebM, MOV — max 500 MB. Files stay on your device.",
+      "fmt_jpeg": "JPEG (small)",
+      "fmt_png": "PNG (lossless)",
+      "formatLabel": "Image format",
+      "galleryTitle": "Captures",
+      "previewLabel": "Video preview",
+      "qualityLabel": "JPEG quality",
+      "readyNote": "Video loaded. Find a frame and capture it.",
+      "shotAlt": "Captured frame at",
+      "timeLabel": "Timestamp",
+      "workingBtn": "Capturing…"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "DRM-protected videos return blank frames — the browser blocks capture.",
+      "Captures are limited to the video's own resolution; you cannot upscale.",
+      "Seeking precision depends on the browser, typically within 0.1 s.",
+      "Very high-resolution videos (4K) produce large PNG files."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Capture any video frame as PNG or JPEG free in your browser. Full resolution, timestamp precision, gallery with downloads. No uploads.",
+    "metaTitle": "Video Screenshot — Capture Frame as PNG/JPEG Online Free",
+    "name": "Video Screenshot",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a video, scrub to any moment with 0.1-second precision, and capture the exact frame as a PNG or JPEG — all in your browser, nothing uploaded. Captures are pixel-perfect at the video's native resolution (a 1080p video gives 1920×1080 images), and every shot lands in a gallery with its timestamp for individual download. Because decoding, seeking and encoding all run locally, the tool works offline with local files and stays private by design.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Video Screenshot results",
+    "tagline": "Grab any video frame as a crisp PNG or JPEG — free, private, full resolution.",
+    "workedExample": "Capture a frame from a 1920 × 1080 video at 1:23.5.\n\nFrame pixels = 1920 × 1080 = 2,073,600 px = 2.07 megapixels\n\nAs PNG (lossless): typically 1–3 MB depending on detail.\nAs JPEG at 85%: typically 200–400 KB — about 10× smaller.\n\nTen JPEG captures at ~300 KB each = ~3 MB total — light enough to attach to any email, while the PNGs stay perfect for thumbnails and print.",
+    "workedExampleHeading": "Worked example"
+  }
+}

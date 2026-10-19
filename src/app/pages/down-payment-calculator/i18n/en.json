@@ -1,0 +1,87 @@
+{
+  "down-payment-calculator": {
+    "assumptionNote": "Assumes a fixed home price, no investment growth on savings, and no extra purchase costs.",
+    "benefits": [
+      "Turns a huge scary number into a monthly habit.",
+      "Shows the loan you're really signing up for.",
+      "Reveals how a higher percent changes both payment and loan.",
+      "Makes the savings timeline concrete and trackable."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "20% is the traditional sweet spot: it avoids mortgage insurance in most markets and gets better rates. But many first-time buyers put down 5–10% and pay insurance instead — waiting years to reach 20% while prices rise can cost more than the insurance.",
+        "q": "How much down payment do I need for a house?"
+      },
+      {
+        "a": "Mostly, but not absolutely. Beyond 20%, each extra percent saves a little interest but locks cash into an illiquid asset. Keep 3–6 months of expenses liquid no matter what — a house with no emergency fund is a fragile house.",
+        "q": "Is a bigger down payment always better?"
+      },
+      {
+        "a": "If you need it within 3 years, keep it safe — high-yield savings or short FDs. Markets can drop 20% right when you need the money. For horizons beyond 5 years, a conservative mix can help you keep up with rising prices.",
+        "q": "Should I invest my down payment savings or keep it safe?"
+      },
+      {
+        "a": "Budget an extra 2–5% of the price for stamp duty, registration, legal fees, and moving. In India, stamp duty plus registration alone often runs 5–7%. Your true 'cash needed' is the down payment plus these — plan for both.",
+        "q": "What about closing costs?"
+      },
+      {
+        "a": "Please don't. The month after you buy, something will break — and without reserves you'll reach for credit cards at 36% APR. Save the down payment separately; the emergency fund stays untouched.",
+        "q": "Can I use my emergency fund as a down payment?"
+      },
+      {
+        "a": "Directly: every extra rupee down is one less rupee borrowed, plus interest saved over the whole loan. On a 20-year loan at 9%, each ₹1 lakh extra down saves roughly ₹2.16 lakh in total payments.",
+        "q": "Does the down payment affect my EMI?"
+      }
+    ],
+    "formula": "Down payment = home price x down payment % / 100.\nLoan amount = home price - down payment.\nMonthly savings = down payment / months to save.\nExample: 5,000,000 x 20% = 1,000,000; 1,000,000 / 36 = 27,777.78/month.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the home price you're targeting.",
+      "Set your down payment percentage.",
+      "Set how many months you have to save.",
+      "Read the down payment, loan amount, and monthly savings target."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "20% down is the classic target — it usually avoids private mortgage insurance.",
+      "A bigger down payment shrinks your loan, your EMI, and your total interest.",
+      "But draining every rupee for the down payment leaves no emergency buffer — balance matters.",
+      "Most buyers take 2–5 years to save a down payment; automating it is the key.",
+      "Don't forget closing costs: add another 2–5% of the price on top."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "down payment calculator, house down payment calculator, home deposit calculator",
+    "labels": {
+      "downPaymentAmount": "Down payment needed",
+      "downPaymentPercent": "Down payment (%)",
+      "homePrice": "Target home price",
+      "loanAmount": "Loan you will need",
+      "monthlySavings": "Save every month",
+      "savingsMonths": "Months to save"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ignores closing costs, taxes, and fees on top of the down payment.",
+      "Assumes home prices stay flat while you save — they rarely do.",
+      "No interest earned on savings is included.",
+      "Doesn't model mortgage insurance thresholds in your country."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free down payment calculator: see your down payment amount, loan size and how much to save monthly to reach your home goal.",
+    "metaTitle": "Down Payment Calculator - Home Savings Plan | JaurTools",
+    "name": "Down Payment Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "On a ₹5,000,000 home with 20% down, you need ₹1,000,000 upfront and will borrow ₹4,000,000. Saving for it over 36 months means setting aside ₹27,778 every month. A bigger down payment also means a smaller loan, less interest, and often no mortgage insurance.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your down payment plan",
+    "tagline": "Plan your home down payment — amount, loan size, and the monthly savings to get there.",
+    "workedExample": "Home price ₹5,000,000, 20% down, 36 months to save:\n1. Down payment = 5,000,000 x 20 / 100 = ₹1,000,000.\n2. Loan amount = 5,000,000 - 1,000,000 = ₹4,000,000.\n3. Monthly savings = 1,000,000 / 36 = ₹27,777.78.\n4. Set up an automatic transfer of ₹27,778 on payday and the goal funds itself.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,150 @@
+:host {
+  display: block;
+}
+
+.search-page {
+  max-width: 76rem;
+  margin-inline: auto;
+  padding: 2rem 1rem 1rem;
+}
+
+.search-page h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  letter-spacing: -0.01em;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  max-width: 36rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding-inline-start: 1rem;
+  padding-inline-end: 0.35rem;
+  padding-block: 0.3rem;
+}
+
+.search-bar:focus-within {
+  border-color: var(--accent);
+}
+
+.search-bar .search-icon {
+  color: var(--muted);
+  flex: none;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  min-height: 44px;
+  padding: 0 0.35rem;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.1rem 0 0;
+}
+
+.filter-row .badge app-icon {
+  flex: none;
+}
+
+.btn-sm {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.result-count {
+  margin: 1rem 0 1.1rem;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.tool-card {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: start;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  color: var(--text);
+  min-height: 44px;
+}
+
+.tool-card:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.tool-card app-icon {
+  color: var(--accent);
+}
+
+.tool-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.tool-cat {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 1rem;
+}
+
+.empty app-icon {
+  color: var(--muted);
+  margin-inline: auto;
+}
+
+.empty h2 {
+  margin: 0.75rem 0 0.4rem;
+  font-size: 1.25rem;
+}
+
+.empty p {
+  margin: 0;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .tool-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tool-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

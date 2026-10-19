@@ -1,0 +1,98 @@
+{
+  "extract-images-from-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online extractors.",
+      "Real extraction: JPEG photos come out as original-quality JPG files.",
+      "Simple raw images are rebuilt into PNG files pixel by pixel.",
+      "Each image is labeled with its page number, dimensions and format.",
+      "Free and unlimited — extract from as many PDFs as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "JPEG (DCT) photos are extracted with their original bytes — full original quality. Simple uncompressed images are rebuilt into PNGs from their raw pixels.",
+        "q": "What quality are the extracted images?"
+      },
+      {
+        "a": "Some images use exotic encodings (JPEG-2000, CCITT fax, masked or predictor-based images) that a browser cannot decode without heavy libraries. The tool counts them honestly instead of faking output.",
+        "q": "Why are some images skipped?"
+      },
+      {
+        "a": "No — if the same photo appears on five pages, it is stored once in the PDF and extracted once. The page label shows the first page where it was found.",
+        "q": "Will I get duplicates?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Vector drawings and text are not images — this tool only extracts embedded raster images (photos and bitmaps).",
+        "q": "Can it extract charts and vector graphics?"
+      },
+      {
+        "a": "“Download all” triggers one download per image, spaced half a second apart, because browsers block many simultaneous downloads.",
+        "q": "How does “download all” work?"
+      }
+    ],
+    "formula": "JPEG images → original bytes saved as .jpg\nraw images → pixels decoded → rebuilt as .png\nskipped = exotic encodings the browser cannot decode",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the PDF with the images.",
+      "Wait while the tool scans every page's embedded image objects.",
+      "Browse the found images with their page number, size and format.",
+      "Download images one by one, or use “Download all”.",
+      "Check the skipped count — exotic image types are reported honestly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "PDFs store photos as image objects (XObjects) with a Subtype of /Image inside each page's resources.",
+      "JPEG photos use DCTDecode encoding — their stored bytes are already a complete JPEG file.",
+      "Simple images use FlateDecode (zip-like) encoding with raw pixels in RGB or grayscale.",
+      "This tool decodes 8-bit RGB and grayscale Flate images and rebuilds them into PNG files pixel by pixel.",
+      "Images shared across pages are stored once in the PDF and extracted only once."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "extract images from pdf, pdf image extractor free, get pictures from pdf, save pdf images",
+    "labels": {
+      "chooseFile": "Choose PDF file",
+      "downloadAllBtn": "Download all images",
+      "downloadOneLabel": "Download this image",
+      "dropHint": "PDF files up to 50 MB",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while scanning the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "foundLabel": "Images found",
+      "noneFound": "No extractable images were found in this PDF. It may contain only text and vector graphics.",
+      "pagePrefix": "Page",
+      "pagesFound": "pages",
+      "processing": "Scanning pages…",
+      "resetBtn": "Start over",
+      "skippedNote": "could not be decoded in the browser (exotic encodings like JPEG-2000 or fax).",
+      "skippedPrefix": "Skipped images:"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only JPEG and simple raw images are extracted; exotic encodings are skipped and counted.",
+      "Vector graphics, charts and text are not images and cannot be extracted.",
+      "Very large images (over 8000 px) are skipped to protect browser memory.",
+      "Password-protected PDFs must be unlocked before scanning."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Extract images from any PDF free in your browser — JPEG photos and PNG rebuilds, per-page labeled. No upload, no signup.",
+    "metaTitle": "Extract Images from PDF Free — PDF Image Extractor",
+    "name": "Extract Images From PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF and the tool scans every page's embedded photos — JPEGs come out as original-quality JPGs, simple raw images are rebuilt as PNGs, each labeled with page number and size. Download one by one or all at once, locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Extraction results",
+    "tagline": "Pull every embedded photo out of any PDF — right in your browser.",
+    "workedExample": "A 10-page brochure scan finds 3 images:\npage 4 — 1920×1080 JPEG (a photo)\npage 4 — 800×600 JPEG (the same photo reused on page 7 → extracted once)\npage 9 — 400×300 raw grayscale → rebuilt as PNG\nResult: 3 files downloaded, 0 skipped.",
+    "workedExampleHeading": "Worked example"
+  }
+}

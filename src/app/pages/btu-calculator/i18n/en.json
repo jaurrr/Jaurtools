@@ -1,0 +1,105 @@
+{
+  "btu-calculator": {
+    "benefits": [
+      "Sizes heaters and air conditioners from room dimensions in seconds.",
+      "Adjusts for insulation quality and climate instead of using one flat rule.",
+      "Converts BTU to tons of cooling, the unit HVAC quotes use.",
+      "Works in feet or meters.",
+      "Free and private, with no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "climateZones": {
+      "cold": "Cold climate",
+      "moderate": "Moderate climate",
+      "warm": "Warm climate"
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A British Thermal Unit is the heat needed to raise one pound of water by one degree Fahrenheit. In HVAC, it measures how much heat an appliance can add or remove per hour.",
+        "q": "What is a BTU?"
+      },
+      {
+        "a": "One ton of cooling equals 12,000 BTU/h — the heat needed to melt one ton of ice in 24 hours. This tool divides your BTU result by 12,000 to show tons.",
+        "q": "What does 'tons of cooling' mean?"
+      },
+      {
+        "a": "Roughly 20 BTU per square foot for a standard 8-foot ceiling with average insulation. Kitchens, sunrooms, and top-floor rooms need more because of appliances, glass, and roof heat.",
+        "q": "How many BTU per square foot do I need?"
+      },
+      {
+        "a": "Oversized units short-cycle: they cool fast but shut off before dehumidifying, leaving the room clammy and wasting energy. Slightly undersized is often more comfortable.",
+        "q": "Is a bigger AC always better?"
+      },
+      {
+        "a": "It is a planning estimate. For a full-house system, an HVAC professional performs a Manual J load calculation that also weighs ductwork, orientation, and occupancy.",
+        "q": "Can I trust this for a whole house?"
+      }
+    ],
+    "formula": "BTU/h = floor area (sq ft) x 20 x (ceiling height / 8) x insulation factor x climate factor\ninsulation factor: good 1.00, average 1.15, poor 1.30\nclimate factor: warm 0.90, moderate 1.00, cold 1.15\ntons of cooling = BTU/h / 12000",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose feet or meters for your dimensions.",
+      "Enter the room's length, width, and ceiling height.",
+      "Pick the insulation quality that best matches the room.",
+      "Pick your climate zone.",
+      "Read the required BTU/h and the equivalent tons of cooling.",
+      "Size your heater or AC at or slightly above this number."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "BTU/h measures heating or cooling power per hour.",
+      "The classic rule of thumb is about 20 BTU per square foot of floor area.",
+      "Higher ceilings, poor insulation, and hot climates all raise the requirement.",
+      "12,000 BTU/h equals one ton of cooling.",
+      "Oversized air conditioners cool quickly but dehumidify poorly.",
+      "Sun-facing rooms, kitchens, and top floors typically need 10-20% more."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "btu calculator, btu per square foot, ac size calculator, heating calculator, tons of cooling calculator",
+    "labels": {
+      "areaResult": "Floor area",
+      "btuResult": "BTU/h required",
+      "ceiling": "Ceiling height",
+      "climate": "Climate zone",
+      "ftUnit": "ft",
+      "imperialTab": "Feet",
+      "insulation": "Insulation quality",
+      "length": "Length",
+      "mUnit": "m",
+      "metricTab": "Meters",
+      "ruleNote": "Estimate based on the 20 BTU/sq ft rule with adjustments. Not a substitute for a professional Manual J calculation.",
+      "sqftUnit": "sq ft",
+      "tonsResult": "Tons of cooling",
+      "unitSystem": "Unit system",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A simplified rule, not a full Manual J heat-load calculation.",
+      "Ignores windows, sun exposure, occupancy, and appliances.",
+      "Climate zones are coarse; local weather extremes matter.",
+      "Duct losses in central systems are not included."
+    ],
+    "limitationsHeading": "Limitations",
+    "insulationLevels": {
+      "average": "Average insulation",
+      "good": "Good insulation (new / well sealed)",
+      "poor": "Poor insulation (old / drafty)"
+    },
+    "metaDescription": "Free BTU calculator: estimate heating and cooling needs from room size, ceiling height, insulation, and climate. Shows BTU/h and tons of cooling. No sign-up.",
+    "metaTitle": "BTU Calculator: Room Heating & Cooling Size (Free)",
+    "name": "BTU Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter your room's length, width, and ceiling height, then rate the insulation and climate. The calculator applies the 20-BTU-per-square-foot rule with adjustments for tall ceilings, poor insulation, and hot or cold climates, and converts the result to tons of cooling.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "BTU results",
+    "tagline": "What size heater or air conditioner does this room need?",
+    "workedExample": "A 12 x 15 ft bedroom, 8 ft ceiling, average insulation, moderate climate:\n\n1. Floor area = 12 x 15 = 180 sq ft.\n2. Base = 180 x 20 x (8 / 8) = 3,600 BTU/h.\n3. Average insulation factor 1.15: 3,600 x 1.15 = 4,140 BTU/h.\n4. Moderate climate factor 1.00: still 4,140 BTU/h.\n5. Tons of cooling = 4,140 / 12,000 = 0.35 tons.\n\nA 5,000 BTU window AC (the smallest common size) covers this room comfortably.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,162 @@
+<div class="tool-page persona-frame">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" appPasteDrop aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label class="file-label" for="border-file">
+          <app-icon name="upload" />
+          {{ t('labels.uploadLabel') }}
+          <input id="border-file" type="file" accept="image/*" (change)="onFileSelected($event)" />
+        </label>
+      </div>
+
+      @if (fileError()) {
+        <p class="error" role="alert">{{ fileError() }}</p>
+      }
+
+      @if (hasImage()) {
+        <div class="field">
+          <label for="border-width">{{ t('labels.borderWidth') }}</label>
+          <div class="input-row">
+            <input id="border-width" type="number" inputmode="numeric" min="0" max="200" step="1"
+              [ngModel]="borderWidth()" (ngModelChange)="setBorderWidth($event)" />
+            <input type="range" min="0" max="200" step="1" [ngModel]="borderWidth()"
+              (ngModelChange)="setBorderWidth($event)" [attr.aria-label]="t('labels.borderWidth')" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="border-color">{{ t('labels.borderColor') }}</label>
+          <div class="color-row">
+            <input id="border-color" type="color" [ngModel]="borderColor()"
+              (ngModelChange)="setBorderColor($event)" />
+            <input type="text" inputmode="text" maxlength="7" [ngModel]="borderColor()"
+              (ngModelChange)="setBorderColor($event)" [attr.aria-label]="t('labels.borderColor')" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>{{ t('labels.borderMode') }}</label>
+          <div class="input-row">
+            <button type="button" class="btn-secondary" [class.active]="expandMode() === 'outside'"
+              (click)="setMode('outside')">{{ t('labels.modeOutside') }}</button>
+            <button type="button" class="btn-secondary" [class.active]="expandMode() === 'inside'"
+              (click)="setMode('inside')">{{ t('labels.modeInside') }}</button>
+          </div>
+        </div>
+
+        <div class="preview">
+          <canvas #previewCanvas></canvas>
+        </div>
+
+        <div class="results">
+          <div class="result-row">
+            <span>{{ t('labels.originalSize') }}</span>
+            <strong>{{ origW() }} x {{ origH() }}</strong>
+          </div>
+          <div class="result-row total">
+            <span><app-icon name="settings" /> {{ t('labels.newSize') }}</span>
+            <strong>{{ outW() }} x {{ outH() }}</strong>
+          </div>
+        </div>
+
+        <button type="button" class="btn" (click)="download()">
+          <app-icon name="download" /> {{ t('labels.download') }}
+        </button>
+      } @else {
+        <p class="hint">{{ t('labels.noImage') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

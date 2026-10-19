@@ -1,0 +1,104 @@
+{
+  "voltage-drop-calculator": {
+    "name": "Voltage Drop Calculator",
+    "tagline": "Check voltage drop over wire runs — single or three phase, copper or aluminum.",
+    "metaTitle": "Voltage Drop Calculator – Wire Size & Drop % | JaurTools",
+    "metaDescription": "Free voltage drop calculator. Enter voltage, phase, wire size, length and current for copper or aluminum — get drop volts, % and max current, 100% in your browser.",
+    "keywords": "voltage drop calculator, wire voltage drop, cable size voltage drop, voltage drop formula, single phase voltage drop",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Voltage drop grows with current and cable length, and shrinks with thicker wire: single-phase drop is 2×ρ×L×I/A. A 30 m run of 2.5 mm² copper at 16 A on 230 V drops 6.60 V (2.87%) — fine for power circuits (limit 5%) but over the 3% lighting limit. Upsize the wire or shorten the run to fix it.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Voltage drop is the volts lost heating the cable itself — the load receives supply minus drop.",
+      "Copper resistivity is 0.0172 Ω·mm²/m; aluminum is 0.0282 — aluminum drops about 64% more for the same size.",
+      "Single-phase uses 2× (out and back); three-phase uses √3× for line-to-line drop.",
+      "Common limits: 3% for lighting, 5% for power circuits (per IEC guidance).",
+      "Doubling the wire cross-section halves the drop; doubling the length doubles it.",
+      "Undersized cable runs hot: drop is wasted energy and a fire risk at high currents."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Enter the supply voltage (e.g. 230 V single phase, 400 V three phase).",
+      "Choose single or three phase, and copper or aluminum conductor.",
+      "Enter the wire cross-section in mm², the one-way cable length in meters, and the load current in amps.",
+      "Read the voltage drop in volts and percent, the voltage at the load, and the max current for a 5% drop.",
+      "If the verdict is over the limit, increase the wire size until it passes."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "Single phase: Vd = 2 × ρ × L × I ÷ A\nThree phase:  Vd = √3 × ρ × L × I ÷ A\nρ copper = 0.0172, ρ aluminum = 0.0282 Ω·mm²/m\nDrop % = Vd ÷ V × 100",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "230 V, single phase, copper, 2.5 mm², 30 m, 16 A.\nVd = 2 × 0.0172 × 30 × 16 ÷ 2.5 = 16.512 ÷ 2.5 = 6.60 V\nDrop % = 6.60 ÷ 230 × 100 = 2.87%\nVoltage at load = 230 − 6.60 = 223.4 V\nMax current for 5% = 0.05 × 230 × 2.5 ÷ (2 × 0.0172 × 30) = 27.9 A\nVerdict: 2.87% is within the 5% power limit (but above the 3% lighting limit).",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Catches undersized cable before installation — the cheapest time to fix it.",
+      "Covers single and three phase plus both conductor materials in one tool.",
+      "Max-current readout tells you the safe headroom at a glance.",
+      "Honest physics with no hidden fudge factors."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "A steady-state resistive calculation: it ignores reactance, which matters for large cables and long three-phase runs.",
+      "Assumes conductor at ~20 °C: hot cables have higher resistance and slightly more drop.",
+      "Does not check thermal current rating (ampacity) — a wire can pass the drop test yet still overheat; check both.",
+      "Not a substitute for a licensed electrician: wiring must follow your local electrical code."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is voltage drop?",
+        "a": "The voltage lost along the cable due to its resistance. The load sees the supply voltage minus the drop — too much drop makes motors run hot and lights dim."
+      },
+      {
+        "q": "What is an acceptable voltage drop?",
+        "a": "IEC guidance commonly used: 3% for lighting circuits, 5% for other power circuits, measured from the supply origin to the load."
+      },
+      {
+        "q": "Why does three-phase use √3?",
+        "a": "In a balanced three-phase system the line-to-line drop relates to phase current through √3 by the geometry of the three phasors 120° apart."
+      },
+      {
+        "q": "Is aluminum wire worse?",
+        "a": "Aluminum's resistivity is about 64% higher than copper's, so the same size drops more. Equivalent performance needs roughly two standard sizes larger aluminum."
+      },
+      {
+        "q": "Does temperature matter?",
+        "a": "Yes — copper resistance rises about 0.4% per °C. A cable running hot at 70 °C drops roughly 20% more than this 20 °C calculation shows."
+      },
+      {
+        "q": "Length means one-way or round trip?",
+        "a": "Enter the one-way cable length. The formula already accounts for the return path (the factor of 2 in single phase)."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your voltage drop results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "voltageLabel": "Supply voltage (V)",
+      "phaseLabel": "System",
+      "phaseSingle": "Single phase",
+      "phaseThree": "Three phase",
+      "materialLabel": "Conductor",
+      "matCopper": "Copper",
+      "matAluminum": "Aluminum",
+      "sizeLabel": "Wire size (mm²)",
+      "sizeHint": "Cross-sectional area of one conductor.",
+      "lengthLabel": "Cable length — one way (m)",
+      "lengthHint": "The formula accounts for the return path itself.",
+      "currentLabel": "Load current (A)",
+      "currentHint": "Steady current drawn by the load.",
+      "dropLabel": "Voltage drop",
+      "loadLabel": "Voltage at load",
+      "maxLabel": "Max current for 5% drop",
+      "verdictLabel": "Verdict",
+      "okLabel": "Within 3% — fine for lighting and power.",
+      "warnLabel": "3–5% — OK for power circuits, too high for lighting.",
+      "badLabel": "Over 5% — upsize the wire.",
+      "vUnit": "V",
+      "aUnit": "A"
+    }
+  }
+}

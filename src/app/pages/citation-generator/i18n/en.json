@@ -1,0 +1,107 @@
+{
+  "citation-generator": {
+    "benefits": [
+      "Formats references in seconds instead of memorising style manuals.",
+      "Switching styles is one click - reuse the same details for APA, MLA, or Chicago.",
+      "Author names typed once are reformatted correctly for each style.",
+      "No account, no word processor plugin, no copy-paste from shady sites.",
+      "Teaches the structure of a citation by showing each part as you type."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "APA (American Psychological Association) is common in sciences and social sciences. MLA (Modern Language Association) is standard in humanities. Chicago is used in history and publishing. When in doubt, ask your teacher or check the assignment brief - the wrong style can cost marks.",
+        "q": "Which citation style should I use?"
+      },
+      {
+        "a": "Type authors as 'Last, First' and separate multiple authors with a semicolon, e.g. 'Sharma, Rahul; Khan, Ali'. The tool converts them to each style's format: APA uses initials ('Sharma, R., & Khan, A.'), MLA and Chicago spell out first names.",
+        "q": "How do I enter multiple authors?"
+      },
+      {
+        "a": "Leave the year empty and the tool prints (n.d.) for APA or 'n.d.' for Chicago, which is the correct convention for 'no date'. For MLA the year is simply omitted from a website citation.",
+        "q": "What if I do not know the publication year?"
+      },
+      {
+        "a": "APA lowercases the title except the first word ('Modern web development'); MLA and Chicago keep your capitalisation. Real styles also italicise book and journal titles - plain-text output cannot show italics, so add them when you paste into your document.",
+        "q": "Why does the title change case in APA?"
+      },
+      {
+        "a": "No. These follow the standard 7th/9th/17th edition patterns for the common cases, but unusual sources (translated works, reprints, missing authors) have special rules. Always double-check against your institution's guide before submitting.",
+        "q": "Are these citations guaranteed to be 100% correct?"
+      },
+      {
+        "a": "Yes. Everything is formatted in your browser. Your references are never uploaded or stored anywhere.",
+        "q": "Is my reference list private?"
+      }
+    ],
+    "formula": "Author parsing: split on ';', each author as 'Last, First'.\n\nAPA book:\n  Last, F. M., & Last2, F. (Year). Sentence case title. Publisher.\n\nMLA book:\n  Last, First, and First Last. Title. Publisher, Year.\n\nChicago book:\n  Last, First, and First Last. Year. Title. Publisher.\n\nJournal adds volume(issue), pages; Website adds site name and URL.\n\nExample (APA book):\n  authors 'Sharma, Rahul' -> 'Sharma, R.'\n  title 'Modern Web Development' -> 'Modern web development'\n  => Sharma, R. (2023). Modern web development. Tech Press.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your citation style: APA 7th, MLA 9th, or Chicago 17th.",
+      "Pick the source type: book, journal article, or website.",
+      "Type authors as 'Last, First', separating multiple authors with a semicolon.",
+      "Fill in the year, title, and the fields for your source type (publisher, journal details, or site and URL).",
+      "Copy the finished citation into your reference list."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A citation tells readers exactly which source you used: who wrote it, when, and where to find it.",
+      "The three big styles are APA (sciences), MLA (humanities), and Chicago (history/publishing).",
+      "Author formats differ: APA uses initials ('Sharma, R.'), MLA and Chicago spell out first names.",
+      "APA puts the year in brackets right after the author; MLA puts it near the end.",
+      "Book titles are sentence case in APA but keep your capitalisation in MLA and Chicago.",
+      "Journal citations add volume, issue, and page numbers; website citations add the site name and URL."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "citation generator, apa citation generator, mla citation generator, chicago citation, bibliography generator, reference generator",
+    "labels": {
+      "apaOpt": "APA 7th edition",
+      "authorsHint": "Format: Last, First. Separate multiple authors with a semicolon.",
+      "authorsLabel": "Authors",
+      "authorsPlaceholder": "e.g. Sharma, Rahul; Khan, Ali",
+      "bookOpt": "Book",
+      "chicagoOpt": "Chicago 17th edition",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy citation",
+      "emptyNote": "Fill in the author and title above to build your citation.",
+      "issueLabel": "Issue",
+      "journalLabel": "Journal name",
+      "journalOpt": "Journal article",
+      "mlaOpt": "MLA 9th edition",
+      "outputLabel": "Your citation",
+      "pagesLabel": "Pages",
+      "publisherLabel": "Publisher",
+      "siteNameLabel": "Website / site name",
+      "styleLabel": "Citation style",
+      "titleLabel": "Title",
+      "typeLabel": "Source type",
+      "urlLabel": "URL / DOI",
+      "volumeLabel": "Volume",
+      "websiteOpt": "Website",
+      "yearLabel": "Year"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Covers books, journal articles, and websites only - not theses, videos, or legal sources.",
+      "Plain text cannot show italics, which real styles require for book and journal titles.",
+      "Unusual cases (translators, editions, reprints, missing authors) need manual adjustment.",
+      "Always verify against your institution's style guide before submitting academic work."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free citation generator: build APA, MLA, and Chicago bibliography entries for books, journals, and websites from a simple form. No sign-up.",
+    "metaTitle": "Citation Generator - APA, MLA, Chicago | JaurTools",
+    "name": "Citation Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type your source details once and get a correctly formatted citation in APA 7th, MLA 9th, or Chicago 17th style. Enter authors as 'Last, First' separated by semicolons, add the year and title, then the publisher (book), journal details (article), or site and URL (website). For example, 'Sharma, Rahul', 2023, 'Modern Web Development', 'Tech Press' becomes 'Sharma, R. (2023). Modern web development. Tech Press.' in APA. Everything is formatted in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Citation Generator results",
+    "tagline": "Build formatted citation and bibliography entries from a simple form.",
+    "workedExample": "Source: a book, APA style.\nAuthors: Sharma, Rahul\nYear: 2023\nTitle: Modern Web Development\nPublisher: Tech Press\n\nStep by step:\n1. Author: 'Sharma, Rahul' -> last name + initial = 'Sharma, R.'\n2. Year in brackets: '(2023).'\n3. Title in sentence case: 'Modern Web Development' -> 'Modern web development.'\n4. Publisher: 'Tech Press.'\n\nResult:\nSharma, R. (2023). Modern web development. Tech Press.\n\nSame source in MLA:\nSharma, Rahul. Modern Web Development. Tech Press, 2023.\n\nSame source in Chicago:\nSharma, Rahul. 2023. Modern Web Development. Tech Press.",
+    "workedExampleHeading": "Worked example"
+  }
+}

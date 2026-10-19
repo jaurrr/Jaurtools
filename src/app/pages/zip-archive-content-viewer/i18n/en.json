@@ -1,0 +1,101 @@
+{
+  "zip-archive-content-viewer": {
+    "benefits": [
+      "Peek inside a ZIP before downloading or extracting it.",
+      "See real uncompressed sizes to check you have disk space.",
+      "Spot encrypted files and odd compression methods instantly.",
+      "No upload — your archive never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "This tool only reads the ZIP's central directory — the index at the end of the file that lists every entry. It does not decompress anything, which is why listing is instant even for large archives.",
+        "q": "Does it extract the files?"
+      },
+      {
+        "a": "Compression ratio = (1 − packed size ÷ original size) × 100. Text files often compress 60–80%; already-compressed formats like JPEG, MP4, and PNG barely shrink, so a low ratio on those is normal, not a problem.",
+        "q": "What does the compression ratio mean?"
+      },
+      {
+        "a": "The padlock badge marks entries with the encryption flag set. This viewer cannot read encrypted contents, and the companion ZIP File Extractor will skip them too — that is a deliberate safety boundary, not a bug.",
+        "q": "What does the padlock badge mean?"
+      },
+      {
+        "a": "Yes. The central directory stores each entry's original size, packed size, compression method, and name — everything this tool shows. Filenames are decoded as UTF-8, which covers virtually all modern archives.",
+        "q": "Can it list any ZIP file?"
+      },
+      {
+        "a": "Multi-disk (spanned) archives and ZIP64 files larger than 4 GB are not supported — the tool shows a parse error for those. Standard single-file ZIPs from Windows, macOS, Linux, and Android all work.",
+        "q": "Are there ZIP types it cannot read?"
+      },
+      {
+        "a": "The 200 MB cap keeps the browser tab responsive. The whole archive is read into memory to parse the index, and very large files can freeze low-memory phones. For bigger archives, use desktop software.",
+        "q": "Why is there a 200 MB file limit?"
+      }
+    ],
+    "formula": "Listing is index reading, not arithmetic.\nCompression ratio = (1 − packed ÷ original) × 100\nParsed from the ZIP central directory (signature 0x02014b50 entries at the end-of-central-directory offset).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose file and pick a .zip from your device.",
+      "The archive index is read instantly in your browser.",
+      "Browse the file list: names, sizes, methods, and ratios.",
+      "Check the totals to see file count and overall compression."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A ZIP file ends with a central directory — an index of every entry.",
+      "Each entry stores its name, sizes, method, and encryption flag.",
+      "Stored = no compression; Deflated = standard ZIP compression.",
+      "The viewer reads the index only; nothing is decompressed.",
+      "Encrypted entries are flagged but their contents stay hidden.",
+      "Files up to 200 MB are accepted."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zip viewer online, view zip contents, zip file inspector, list zip files, open zip without extracting",
+    "labels": {
+      "byteUnit": "B",
+      "chooseFile": "Choose a ZIP file",
+      "dirLabel": "Folder",
+      "dropHint": "Max 200 MB. The file never leaves your device.",
+      "emptyZip": "The archive contains no entries.",
+      "encryptedYes": "Encrypted",
+      "entriesHeading": "Archive contents",
+      "errorParse": "This file could not be read as a ZIP archive. Multi-disk and ZIP64 archives over 4 GB are not supported.",
+      "errorTooBig": "The file is larger than 200 MB. Please use a smaller archive.",
+      "kbUnit": "KB",
+      "mbUnit": "MB",
+      "methodDeflated": "Deflated",
+      "methodOther": "Other method",
+      "methodStored": "Stored",
+      "reading": "Reading archive...",
+      "saved": "saved",
+      "totalDirs": "Folders",
+      "totalFiles": "Files",
+      "totalPacked": "Packed size",
+      "totalSize": "Original size"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Lists contents only — it does not extract files (use the ZIP File Extractor).",
+      "Cannot read encrypted file contents.",
+      "No support for multi-disk or ZIP64-over-4GB archives.",
+      "200 MB file size cap for browser performance."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free ZIP viewer: list and inspect ZIP archive contents — names, sizes, compression methods, ratios — without extracting. 100% private, no sign-up.",
+    "metaTitle": "ZIP Archive Viewer - List ZIP Contents Online | JaurTools",
+    "name": "ZIP Archive Content Viewer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Drop a ZIP file on this page and instantly see everything inside: file and folder names, original and packed sizes, compression method, per-file ratio, and encryption flags — plus totals for the whole archive. It reads only the archive's index, so even large ZIPs list in a blink. Nothing is uploaded; the file never leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Archive inspection results",
+    "tagline": "See inside any ZIP instantly — names, sizes, methods, ratios. No extraction, no upload.",
+    "workedExample": "A ZIP with report.pdf (1,000,000 bytes → 620,000 packed) and notes.txt (50,000 → 12,000 packed):\n1. report.pdf ratio = (1 − 620,000/1,000,000) × 100 = 38% saved.\n2. notes.txt ratio = (1 − 12,000/50,000) × 100 = 76% saved.\n3. Totals: 2 files, 1,050,000 B original, 632,000 B packed, 39.8% saved overall.",
+    "workedExampleHeading": "Worked example"
+  }
+}

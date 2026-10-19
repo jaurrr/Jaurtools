@@ -1,0 +1,89 @@
+{
+  "ovulation-calculator": {
+    "assumptionNote": "Assumes ovulation 14 days before the next period - the standard calendar method. Real cycles vary.",
+    "benefits": [
+      "Pinpoints the few days that actually matter each month.",
+      "Explains the biology simply - no app account needed.",
+      "Helps time conception attempts or understand your body.",
+      "Works for any cycle length, not just the textbook 28 days."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Very unlikely but not impossible. Sperm can survive up to 5 days, so intercourse just before the window can still lead to pregnancy. After ovulation plus one day, the egg is gone.",
+        "q": "Can I get pregnant outside the fertile window?"
+      },
+      {
+        "a": "The luteal phase (ovulation to next period) is the stable ~14 days. The follicular phase before ovulation is the variable part - that is why counting back from the next period works and counting forward from the last one does not.",
+        "q": "Why 14 days before, not after?"
+      },
+      {
+        "a": "Only roughly. Track 3-6 months of start dates, use the average, and treat the window as wider. Ovulation predictor kits or basal body temperature confirm the real day.",
+        "q": "My cycle is irregular. Is this useful?"
+      },
+      {
+        "a": "For regular cycles, within 1-2 days for most women. But 'most' is not 'all' - one shifted month is normal, especially with stress or illness.",
+        "q": "How accurate is the fertile window?"
+      },
+      {
+        "a": "Less well - PCOS often means irregular or absent ovulation. The calendar assumes ovulation happens, which PCOS disrupts. Talk to a doctor for proper tracking.",
+        "q": "Does this work for PCOS?"
+      },
+      {
+        "a": "The 2-3 days before ovulation give the best odds - sperm are already waiting when the egg arrives. Daily intercourse across the window is fine too.",
+        "q": "When should we try for pregnancy?"
+      }
+    ],
+    "formula": "Ovulation day = last period start + (cycle length - 14)\nFertile window = ovulation - 5 days ... ovulation + 1 day\nNext period = last period start + cycle length\n\nExample: last period 1 Jan, 28-day cycle\nOvulation = 1 Jan + (28 - 14) = 15 Jan\nFertile = 10 Jan to 16 Jan\nNext period = 29 Jan",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the first day of your last period.",
+      "Enter your average cycle length (first day to first day, usually 21-35).",
+      "Your ovulation day, fertile window, and next period appear instantly.",
+      "For conception, aim for the 2-3 days before ovulation.",
+      "Track a few cycles and use your real average for better accuracy."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Ovulation = the ovary releasing an egg, about 14 days before the next period - not 14 days after the last one.",
+      "The fertile window = 5 days before ovulation through 1 day after. Sperm live up to 5 days; the egg lives 12-24 hours.",
+      "Cycle length varies (21-35 days is normal). The luteal phase after ovulation is the stable part, ~14 days.",
+      "Stress, illness, and travel can delay ovulation - the calendar is an estimate.",
+      "This method does not prevent pregnancy reliably on its own.",
+      "Irregular cycles need 3+ months of tracking before the pattern is useful."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ovulation calculator, fertile window calculator, ovulation date calculator, when do i ovulate, fertility calendar",
+    "labels": {
+      "cycleLengthLabel": "Average cycle length (days)",
+      "fertileWindow": "Fertile window",
+      "invalidDate": "Please enter a valid date for your last period.",
+      "lastPeriodLabel": "First day of last period",
+      "nextPeriodLabel": "Next period due",
+      "ovulationDate": "Ovulation day"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "An estimate - real ovulation shifts with stress, illness, and travel.",
+      "Not reliable contraception on its own; sperm survive up to 5 days.",
+      "Very irregular cycles make calendar math unreliable - track first.",
+      "Does not diagnose fertility problems - see a doctor after 12 months of trying (6 if over 35)."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate your ovulation day and fertile window from your last period. Plan or avoid pregnancy with calendar math. Free, private, no sign-up.",
+    "metaTitle": "Ovulation Calculator - Fertile Window | JaurTools",
+    "name": "Ovulation Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Ovulation usually happens about 14 days before your next period. With a 28-day cycle starting 1 January, ovulation falls around 15 January and the fertile window runs 10-16 January (sperm survive up to 5 days, the egg about 1). Your next period is due around 29 January.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your fertility window",
+    "tagline": "Find your fertile window and ovulation day from your last period and cycle length.",
+    "workedExample": "Last period started 1 January, average cycle 28 days:\n1. Ovulation offset: 28 - 14 = 14 days after the start.\n2. 1 Jan + 14 days = 15 January (ovulation day).\n3. Fertile window: 15 Jan - 5 days = 10 Jan through 15 Jan + 1 = 16 Jan.\n4. Next period: 1 Jan + 28 days = 29 January.\n\nWith a 32-day cycle instead: ovulation = 1 Jan + 18 = 19 Jan; fertile = 14-20 Jan.",
+    "workedExampleHeading": "Worked example"
+  }
+}

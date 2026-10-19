@@ -1,0 +1,107 @@
+{
+  "transistor-bias-calculator": {
+    "name": "Transistor Bias Calculator",
+    "tagline": "Find the Q-point of a voltage-divider biased BJT: IC, VCE, VB, VE, and stability.",
+    "metaTitle": "Transistor Bias Calculator – BJT Q-Point Finder | JaurTools",
+    "metaDescription": "Free BJT transistor bias calculator. Enter VCC, divider resistors, RC, RE and beta to get IC, VCE and the operating point — 100% in your browser.",
+    "keywords": "transistor bias calculator, BJT bias calculator, voltage divider bias, Q point calculator, base bias",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "The base voltage is set by the R1–R2 divider: VB = VCC × R2/(R1+R2). Subtract the 0.7 V base–emitter drop to get VE, divide by RE for the emitter current (IC ≈ IE), then VCE = VCC − IC×(RC+RE). With 12 V, 47k/10k, RC 2.2k, RE 1k, β 100: IC ≈ 1.41 mA and VCE ≈ 7.50 V — solidly in the active region.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Voltage-divider bias is the most stable common biasing method: the divider fixes VB nearly independent of β.",
+      "The Q-point (quiescent point) is the DC operating point — IC and VCE with no input signal.",
+      "Approximation used: VBE = 0.7 V for silicon, and IC ≈ IE (ignoring the small base current).",
+      "Active region needs VCE above ~0.2 V; near zero the transistor saturates and stops amplifying linearly.",
+      "Stability rule of thumb: R2 ≤ β×RE/10 keeps the divider stiff against β variation between transistors.",
+      "IC(sat) = VCC/(RC+RE) is the maximum possible collector current — your Q-point IC must stay well below it."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Enter the supply voltage VCC.",
+      "Enter the divider resistors R1 (top) and R2 (bottom) in kΩ.",
+      "Enter the collector resistor RC and emitter resistor RE in kΩ.",
+      "Enter the transistor's current gain β (hFE) from its datasheet.",
+      "Read IC, VCE, the node voltages, saturation current, region, and stability check."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "VB = VCC × R2/(R1+R2)\nVE = VB − 0.7 V\nIE = VE/RE,  IC ≈ IE\nVCE = VCC − IC×(RC+RE)\nIC(sat) = VCC/(RC+RE)\nStable if R2 ≤ β×RE/10",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "VCC 12 V, R1 47 kΩ, R2 10 kΩ, RC 2.2 kΩ, RE 1 kΩ, β 100.\nVB = 12 × 10/57 = 2.11 V\nVE = 2.11 − 0.7 = 1.41 V\nIC ≈ IE = 1.41/1 = 1.405 mA\nVCE = 12 − 1.405 × 3.2 = 7.50 V\nIC(sat) = 12/3.2 = 3.75 mA — operating current is well below it.\nVCE > 0.2 V → active region. R2 = 10 kΩ ≤ β×RE/10 = 10 kΩ → stable bias.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Designs a working amplifier bias point in seconds — no manual algebra.",
+      "Flags saturation and unstable dividers before you solder anything.",
+      "Shows every node voltage, so you know what to expect on a multimeter.",
+      "Teaches the classic analysis steps while it computes."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Uses the approximate analysis (VBE = 0.7 V, IC ≈ IE) — fine for design, not a SPICE replacement.",
+      "Assumes an NPN silicon transistor at room temperature; germanium or PNP needs sign adjustments.",
+      "Ignores Early effect, temperature drift of VBE, and β variation with current.",
+      "DC bias only: AC gain, input/output impedance, and frequency response need separate small-signal analysis.",
+      "An educational design aid — verify critical circuits by measurement."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is the Q-point?",
+        "a": "The quiescent (no-signal) DC operating point of the transistor, described by IC and VCE. A good Q-point sits in the active region with headroom for the signal swing."
+      },
+      {
+        "q": "Why subtract 0.7 V?",
+        "a": "A forward-biased silicon base–emitter junction drops about 0.7 V, so the emitter sits 0.7 V below the base: VE = VB − 0.7 V."
+      },
+      {
+        "q": "Why is IC approximately equal to IE?",
+        "a": "The emitter current splits into collector current plus a small base current (IE = IC + IB). Since IB = IC/β is tiny for β ≥ 50, IC ≈ IE is an excellent approximation."
+      },
+      {
+        "q": "What does saturation mean here?",
+        "a": "If VCE falls near zero, the collector–base junction forward-biases and the transistor saturates — it acts like a closed switch instead of a linear amplifier."
+      },
+      {
+        "q": "What is a stiff voltage divider?",
+        "a": "A divider whose current is much larger than the base current, so VB barely moves when β varies. The rule R2 ≤ β×RE/10 is the standard check."
+      },
+      {
+        "q": "Can I use this for PNP transistors?",
+        "a": "The magnitudes work the same, but polarities reverse (VEE negative, currents flow out). This tool presents the NPN convention — flip signs for PNP."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your transistor bias point",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "vccLabel": "Supply voltage VCC (V)",
+      "r1Label": "R1 — top divider resistor (kΩ)",
+      "dividerHint": "R1 connects VCC to the base node; R2 connects the base node to ground.",
+      "r2Label": "R2 — bottom divider resistor (kΩ)",
+      "rcLabel": "RC — collector resistor (kΩ)",
+      "reLabel": "RE — emitter resistor (kΩ)",
+      "reHint": "RE provides negative feedback that stabilizes the bias point.",
+      "betaLabel": "Current gain β (hFE)",
+      "betaHint": "From the transistor datasheet; typical 100–300 for small-signal BJTs.",
+      "icLabel": "Collector current IC",
+      "vceLabel": "VCE (collector–emitter)",
+      "vbLabel": "Base voltage VB",
+      "veLabel": "Emitter voltage VE",
+      "vcLabel": "Collector voltage VC",
+      "icsatLabel": "Saturation current IC(sat)",
+      "stateLabel": "Operating region",
+      "stateActive": "Active (linear)",
+      "stateSat": "Saturation",
+      "stabilityLabel": "Divider stability",
+      "stableYes": "Stable (R2 ≤ β·RE/10)",
+      "stableNo": "Unstable — lower R2 or raise RE",
+      "vUnit": "V",
+      "maUnit": "mA",
+      "assumptionNoteText": "Assumes NPN silicon at room temperature: VBE = 0.7 V and IC ≈ IE."
+    }
+  }
+}

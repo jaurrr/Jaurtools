@@ -1,0 +1,92 @@
+{
+  "sig-figs-calculator": {
+    "name": "Sig Figs Calculator",
+    "tagline": "Count significant figures in any number and round to any precision — with digit highlighting.",
+    "metaTitle": "Significant Figures Calculator – Sig Figs Counter | JaurTools",
+    "metaDescription": "Free significant figures calculator. Count sig figs in any number, see which digits count, and round to N significant figures — 100% in your browser.",
+    "keywords": "significant figures calculator, sig figs calculator, significant digits counter, round to significant figures",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Type any number: leading zeros never count, zeros between non-zero digits always count, and trailing zeros count only if the number has a decimal point. The tool highlights exactly which digits are significant, shows scientific notation, and rounds your number to any count of sig figs.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "All non-zero digits (1–9) are always significant.",
+      "Zeros between significant digits are significant: 20.03 has 4 sig figs.",
+      "Leading zeros are never significant: 0.00407 has 3 sig figs (4, 0, 7).",
+      "Trailing zeros count only with a decimal point: 4.700 has 4 sig figs, but 4700 has 2 (the zeros are ambiguous).",
+      "Exact counted numbers (12 eggs, 1000 mm in 1 m by definition) have effectively infinite sig figs.",
+      "Your result can never be more precise than your least precise measurement — that is why sig figs matter in science."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Type or paste any number, including decimals and scientific notation like 6.02e23.",
+      "Read the significant-figure count — significant digits are highlighted in color.",
+      "Set how many sig figs you want and read the rounded value below.",
+      "Use the scientific-notation line to see the number's order of magnitude.",
+      "If the input is not a valid number, the tool tells you instead of guessing.",
+      "For homework, count first with the tool, then do the rounding by hand to build the habit."
+    ],
+    "formulaHeading": "Rules applied",
+    "formula": "1. All non-zero digits are significant.\n2. Zeros between significant digits are significant.\n3. Leading zeros are never significant.\n4. Trailing zeros are significant only if a decimal point is present.\nRounding: shift the decimal so N digits remain, round half up.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input: 0.004070\nDigits: 0 0 4 0 7 0 — leading zeros (first two) never count.\nA decimal point is present, so the trailing zero counts.\nSignificant digits: 4, 0, 7, 0 → 4 sig figs.\nRounded to 3 sig figs: 0.00407 (the trailing zero drops).\nScientific notation: 4.0700 × 10^-3.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Settles every classroom argument about which zeros count — with visual proof.",
+      "Rounds correctly to any precision instead of eyeballing it.",
+      "Handles scientific notation inputs like 6.02e23.",
+      "Teaches the rules while it computes, not just the answer."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Follows standard school/lab rules: trailing zeros in numbers like 4700 are counted as not significant, though some contexts treat them as exact.",
+      "Rounding uses round-half-up on binary floating point — extreme 16+ digit inputs may show tiny floating-point artifacts.",
+      "Does not do sig-fig arithmetic (addition/subtraction vs multiplication rules differ) — it counts and rounds single numbers.",
+      "An educational tool: follow your course's or lab's specific conventions for graded work."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "Why don't leading zeros count?",
+        "a": "Leading zeros only set the decimal's position — 0.00407 and 4.07 × 10⁻³ carry the same information. They tell you the scale, not the precision."
+      },
+      {
+        "q": "Does 100 have 1 or 3 significant figures?",
+        "a": "By the standard rule it has 1 — trailing zeros without a decimal point are ambiguous. Write 1.00 × 10² if you mean 3, or 100. (with a decimal point) to show the zeros count."
+      },
+      {
+        "q": "What about exactly counted numbers?",
+        "a": "Counted quantities (24 students) and defined conversions (100 cm = 1 m) are exact and have infinite sig figs — they never limit your result's precision."
+      },
+      {
+        "q": "How does rounding to N sig figs work?",
+        "a": "The decimal shifts so that N digits stay left of the cut, the rest is rounded half-up, and the decimal shifts back. E.g. 0.004070 to 3 sig figs becomes 0.00407."
+      },
+      {
+        "q": "Can I enter scientific notation?",
+        "a": "Yes — 6.02e23, 1.6E-19 and similar forms are accepted. Only the mantissa's digits are evaluated for sig figs."
+      },
+      {
+        "q": "Why does 0.1 + 0.2 matter here?",
+        "a": "Computers store decimals in binary, so very long inputs can show microscopic rounding artifacts. For normal school and lab numbers (under ~15 digits) results are exact."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your significant figures",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "inputLabel": "Number",
+      "inputPlaceholder": "e.g. 0.004070 or 6.02e23",
+      "inputHint": "Decimals and scientific notation (1.6e-19) are accepted.",
+      "roundLabel": "Round to (sig figs)",
+      "sigCountLabel": "Significant figures",
+      "roundedLabel": "Rounded value",
+      "sciLabel": "Scientific notation",
+      "breakdownLabel": "Significant digits highlighted",
+      "invalidLabel": "Please enter a valid number."
+    }
+  }
+}

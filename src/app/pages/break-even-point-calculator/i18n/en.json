@@ -1,0 +1,90 @@
+{
+  "break-even-point-calculator": {
+    "assumptionNote": "Assumes one product, one fixed price, and constant variable cost per unit. Real businesses have product mixes, discounts, and costs that step up with volume - use this as your baseline, then sanity-check against reality.",
+    "benefits": [
+      "Know your survival number: exactly how many units you must sell to stop losing money.",
+      "Price with confidence - see how each dollar of price change moves the break-even point.",
+      "The foundation of every business plan investors will ask for.",
+      "Instant what-if analysis: raise costs, cut price, watch the target move."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Fixed costs do not change with output: rent, salaries, insurance. Variable costs rise with each unit: materials, packaging, payment fees. The distinction matters because only variable costs affect the contribution margin that pays down fixed costs.",
+        "q": "Fixed vs variable costs - what is the difference?"
+      },
+      {
+        "a": "Break-even in revenue is the money target; break-even in units is the sales target. They are the same point expressed differently: break-even revenue = break-even units x price per unit. Use units for operations planning, revenue for financial targets.",
+        "q": "Break-even units vs break-even revenue?"
+      },
+      {
+        "a": "Raise the price, cut variable costs, or cut fixed costs. A $1 price rise on a $15 margin cuts break-even by about 7%. Cutting fixed costs helps one-to-one. Beware: raising price may reduce demand, which this simple model does not capture.",
+        "q": "How do I lower my break-even point?"
+      },
+      {
+        "a": "Margin of safety = (actual or expected sales - break-even sales) / expected sales. If you expect 5,000 units and break-even is 3,333, your margin of safety is 33% - sales can fall a third before you lose money. Higher is safer.",
+        "q": "What is margin of safety?"
+      },
+      {
+        "a": "Yes - use a weighted average contribution margin across products, or calculate break-even revenue = fixed costs / average contribution margin ratio. Single-product break-even is cleaner; with many products, the revenue version is more practical.",
+        "q": "Does it work for multiple products?"
+      },
+      {
+        "a": "It means you lose money on every unit before fixed costs, so you can never break even - more sales just mean bigger losses. Raise the price above variable cost, cut variable cost, or stop selling that product.",
+        "q": "What if variable cost is higher than price?"
+      }
+    ],
+    "formula": "Contribution margin = price per unit - variable cost per unit.\nBreak-even units = fixed costs / contribution margin.\nBreak-even revenue = break-even units x price per unit.\nExample: 50,000 / (25 - 10) = 3,333.33 units; revenue = 83,333.33.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your total fixed costs for the period (rent, salaries, insurance).",
+      "Enter your selling price per unit.",
+      "Enter the variable cost per unit (materials, packaging, fees).",
+      "Read your break-even units, break-even revenue, and contribution margin.",
+      "Test scenarios: what happens if costs rise 10% or you discount 5%?"
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Break-even is the sales level where total revenue exactly covers total costs - zero profit, zero loss.",
+      "Contribution margin (price minus variable cost) is what each unit contributes toward fixed costs.",
+      "Every unit sold past break-even earns the full contribution margin as profit.",
+      "Fixed costs set the hurdle; variable costs set how fast each sale clears it.",
+      "Price rises cut break-even fastest, but may reduce demand.",
+      "Service businesses use the same maths with billable hours instead of units."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "break even calculator, break even point calculator, contribution margin calculator, break even units, break even revenue",
+    "labels": {
+      "breakEvenRevenue": "Break-even revenue",
+      "breakEvenUnits": "Break-even units",
+      "contributionMargin": "Contribution margin per unit",
+      "fixedCosts": "Fixed costs (per period)",
+      "notViable": "Price must be above variable cost - at this price you lose money on every unit and can never break even.",
+      "pricePerUnit": "Selling price per unit",
+      "variableCostPerUnit": "Variable cost per unit"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Single product, single price - real businesses have mixes and discounts.",
+      "Assumes costs stay linear; bulk discounts and overtime change unit costs.",
+      "Ignores demand: it tells you the target, not whether customers will buy.",
+      "A planning baseline, not a full business model."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free break-even calculator: units and revenue needed to cover fixed and variable costs. Contribution margin included. Private, no sign-up.",
+    "metaTitle": "Break-Even Point Calculator - Units & Revenue Target | JaurTools",
+    "name": "Break-Even Point Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Break-even units = fixed costs / (price - variable cost). With $50,000 fixed costs, $25 price, $10 variable cost: contribution margin is $15, break-even is 3,333.33 units, or $83,333.33 in revenue. Every unit past that earns $15 of profit. If your price is below variable cost, you can never break even.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your break-even results",
+    "tagline": "How many units must you sell to stop losing money? Find out now.",
+    "workedExample": "Fixed costs $50,000, price $25, variable cost $10:\n1. Contribution margin = 25 - 10 = $15 per unit.\n2. Break-even units = 50,000 / 15 = 3,333.33 units.\n3. Break-even revenue = 3,333.33 x 25 = $83,333.33.\n4. Check: revenue 83,333.33 - variable costs (3,333.33 x 10 = 33,333.33) - fixed 50,000 = $0. Break-even confirmed.\nSell 3,334 units and you are profitable.",
+    "workedExampleHeading": "Worked example"
+  }
+}

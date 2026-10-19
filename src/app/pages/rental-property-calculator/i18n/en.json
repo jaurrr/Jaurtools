@@ -1,0 +1,97 @@
+{
+  "rental-property-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Rental Property Calculator",
+    "tagline": "Rental ROI, cap rate, and cash flow for any rental property, with vacancy modeled.",
+    "metaTitle": "Rental Property Calculator - ROI, Cap Rate & Cash Flow | JaurTools",
+    "metaDescription": "Free rental property calculator: rental ROI, cap rate, monthly cash flow, and the 1% rule check for any rental property.",
+    "keywords": "rental property calculator, rental roi calculator, cap rate calculator, rental cash flow calculator, 1 percent rule calculator",
+    "resultsHeading": "Your rental property results",
+    "quickAnswer": "Effective rent = rent x (1 - vacancy); cash flow = effective rent - expenses - mortgage; cap rate = NOI / price. Example: a 3,000,000 property renting at 32,000 per month with 5% vacancy, 6,000 monthly expenses, 25% down, and a 9% 15-year loan has 30,400 effective rent, a 22,821 mortgage, 1,579 monthly cash flow, a 9.76% cap rate, and 2.53% cash-on-cash. The 1% rule passes at 1.07%.",
+    "keyFacts": [
+      "Vacancy is not optional math: budget 5 to 10% of rent for empty months in most markets.",
+      "Cap rate = net operating income / price; it compares properties without financing noise.",
+      "The 1% rule: monthly rent of at least 1% of price screens for cash-flow-positive deals.",
+      "The 2% rule is the stricter cousin used in high-yield, high-risk markets.",
+      "Cash-on-cash tells you what your down payment actually earns each year.",
+      "Tenant quality beats a high cap rate: bad tenants destroy returns faster than any formula."
+    ],
+    "howTo": [
+      "Enter the purchase price.",
+      "Enter the monthly rent you can realistically charge.",
+      "Enter the expected vacancy rate as a percentage.",
+      "Enter monthly operating expenses and your financing terms.",
+      "Read effective rent, cash flow, cap rate, cash-on-cash, and the 1% rule verdict."
+    ],
+    "formula": "Effective rent = Rent x (1 - Vacancy % / 100).\nMonthly cash flow = Effective rent - Expenses - Mortgage payment.\nCap rate = (Effective rent - Expenses) x 12 / Price x 100.\nCash-on-cash = Monthly cash flow x 12 / Down payment x 100.\n1% rule = Rent / Price x 100 (pass at 1.0 or more).\nExample: 30,400 - 6,000 - 22,821 = 1,579 cash flow; 292,800 / 3,000,000 = 9.76% cap.",
+    "workedExample": "Price 3,000,000, rent 32,000, vacancy 5%, expenses 6,000, down 25%, loan 2,250,000 at 9% for 15 years:\n1. Effective rent: 32,000 x 0.95 = 30,400.\n2. Mortgage: 2,250,000 x 0.0075 / (1 - 1.0075^-180) = 22,821 per month.\n3. Monthly cash flow: 30,400 - 6,000 - 22,821 = 1,579.\n4. Annual cash flow: 1,579 x 12 = 18,948.\n5. Cap rate: (30,400 - 6,000) x 12 / 3,000,000 = 9.76%.\n6. Cash-on-cash: 18,948 / 750,000 = 2.53%.\n7. 1% rule: 32,000 / 3,000,000 = 1.07% - passes.",
+    "benefits": [
+      "Models vacancy honestly instead of pretending the flat is always full.",
+      "Four key metrics plus the 1% rule verdict on one screen.",
+      "Shows whether leverage helps or hurts this specific deal.",
+      "Fast screening: reject bad deals in a minute, research the survivors."
+    ],
+    "limitations": [
+      "Single-year snapshot: rents, expenses, and vacancy all move over time.",
+      "Ignores appreciation, tax treatment, and principal paydown.",
+      "Closing costs are not in the cash-on-cash figure here; real returns are slightly lower.",
+      "Not investment advice: verify the rent with comparable listings and inspect the property."
+    ],
+    "faqs": [
+      {
+        "q": "What is the 1% rule?",
+        "a": "A screening rule: monthly rent should be at least 1% of the purchase price. A 3,000,000 property should rent for 30,000 or more. It is a filter, not a valuation: passing properties deserve deeper analysis, failing ones are usually skipped."
+      },
+      {
+        "q": "What vacancy rate should I assume?",
+        "a": "Five to 8% (about one month empty per year) suits stable markets; use 10% or more for volatile areas, student housing, or luxury segments. Check local listings: long vacancy ads signal a soft market."
+      },
+      {
+        "q": "Why is cash-on-cash lower than the cap rate?",
+        "a": "Because leverage costs money. The cap rate ignores your loan; cash-on-cash subtracts the mortgage payment. When the loan rate exceeds the cap rate, leverage drags your cash return below the property's own yield, which is called negative leverage."
+      },
+      {
+        "q": "Should I buy for cash flow or appreciation?",
+        "a": "Cash flow pays you now and survives flat markets; appreciation pays later and needs the market's help. Most landlords prefer cash flow first, treating appreciation as a bonus, because you cannot pay bills with unrealized gains."
+      },
+      {
+        "q": "What expenses do new landlords forget?",
+        "a": "Vacancy allowance, routine maintenance (budget 1% of value per year), property management fees, insurance, property tax, and leasing commissions. Together they routinely reach 30 to 45% of gross rent."
+      },
+      {
+        "q": "How is this different from the real estate calculators?",
+        "a": "This one is rental-specific: vacancy modeling, the 1% rule, and rental ROI. The real estate calculator is the quick cash-flow screen, and the investment calculator adds cap rate, GRM, and DSCR for financed deals."
+      }
+    ],
+    "labels": {
+      "price": "Purchase price",
+      "rent": "Monthly rent",
+      "vacancyPct": "Vacancy rate (%)",
+      "expenses": "Monthly operating expenses",
+      "downPct": "Down payment (%)",
+      "annualRate": "Loan rate (% per year)",
+      "years": "Loan term (years)",
+      "effectiveRent": "Effective monthly rent",
+      "mortgage": "Monthly mortgage payment",
+      "monthlyCashFlow": "Monthly cash flow",
+      "capRate": "Cap rate",
+      "cashOnCash": "Cash-on-cash return",
+      "onePercent": "Rent-to-price ratio",
+      "onePass": "1% rule passes: rent is at least 1% of the price.",
+      "oneFail": "1% rule fails: rent is below 1% of the price, cash flow will be tight."
+    }
+  }
+}

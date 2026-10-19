@@ -1,0 +1,200 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t(slug + '.ui.home')">
+    <a [routerLink]="['/', lang()]">{{ t(slug + '.ui.home') }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t(slug + '.name') }}</span>
+  </nav>
+
+  <h1>{{ t(slug + '.name') }}</h1>
+  <p class="tagline">{{ t(slug + '.tagline') }}</p>
+
+  <p class="quick qa-top">{{ t(slug + '.quickAnswer') }}</p>
+  <div class="layout">
+    <div class="tool-col">
+      <section class="card tool-card" [attr.aria-label]="t(slug + '.name')">
+        <div class="tool-head">
+          <app-icon name="ruler"></app-icon>
+          <h2 class="tool-title">{{ t(slug + '.name') }}</h2>
+        </div>
+
+        <label class="field-label" for="uc-category">{{ t(slug + '.ui.category') }}</label>
+        <select id="uc-category" [ngModel]="category()" (ngModelChange)="onCategoryChange($event)">
+          @for (c of categories; track c.key) {
+            <option [value]="c.key">{{ t(slug + '.categories.' + c.key) }}</option>
+          }
+        </select>
+
+        <label class="field-label" for="uc-value">{{ t(slug + '.ui.value') }}</label>
+        <input
+          id="uc-value"
+          type="text"
+          inputmode="decimal"
+          [ngModel]="inputValue()"
+          (ngModelChange)="inputValue.set($event)"
+          [placeholder]="t(slug + '.ui.enterValue')"
+        />
+
+        <div class="field">
+          <span class="field-label" id="uc-from-pills">{{ t(slug + '.ui.from') }}</span>
+          <div class="cv-pills" role="group" aria-labelledby="uc-from-pills">
+            @for (u of unitsFor(category()); track u.key) {
+              <button
+                type="button"
+                class="cv-pill"
+                [class.active]="fromUnit() === u.key"
+                [attr.aria-pressed]="fromUnit() === u.key"
+                (click)="fromUnit.set(u.key)"
+              >
+                {{ u.abbr }}
+              </button>
+            }
+          </div>
+        </div>
+
+        <div class="units-row">
+          <div class="unit-field">
+            <label class="field-label" for="uc-from">{{ t(slug + '.ui.from') }}</label>
+            <select id="uc-from" [ngModel]="fromUnit()" (ngModelChange)="fromUnit.set($event)">
+              @for (u of unitsFor(category()); track u.key) {
+                <option [value]="u.key">{{ unitName(category(), u.key) }} ({{ u.abbr }})</option>
+              }
+            </select>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-icon cv-swap"
+            (click)="swap()"
+            [attr.aria-label]="t(slug + '.ui.swap')"
+            [title]="t(slug + '.ui.swap')"
+          >
+            <app-icon name="refresh-cw"></app-icon>
+          </button>
+
+          <div class="unit-field">
+            <label class="field-label" for="uc-to">{{ t(slug + '.ui.to') }}</label>
+            <select id="uc-to" [ngModel]="toUnit()" (ngModelChange)="toUnit.set($event)">
+              @for (u of unitsFor(category()); track u.key) {
+                <option [value]="u.key">{{ unitName(category(), u.key) }} ({{ u.abbr }})</option>
+              }
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="card results cv-live" [attr.aria-label]="t(slug + '.ui.result')" aria-live="polite">
+        <span class="result-label">{{ t(slug + '.ui.result') }}</span>
+        <div class="result-value">
+          @if (result() !== null) {
+            {{ fmt(result()!) }}
+          } @else {
+            <span class="result-empty">{{ t(slug + '.ui.enterValue') }}</span>
+          }
+        </div>
+        @if (formulaLine()) {
+          <p class="formula-line">{{ formulaLine() }}</p>
+        }
+        @if (result() !== null) {
+          <button type="button" class="btn btn-secondary btn-copy" (click)="copyResult()">
+            <app-icon [name]="copied() ? 'check' : 'copy'"></app-icon>
+            {{ copied() ? t(slug + '.ui.copied') : t(slug + '.ui.copy') }}
+          </button>
+        }
+        <p class="live-note">{{ t(slug + '.ui.liveNote') }}</p>
+      </section>
+    </div>
+
+    <div class="guide-col">
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.keyFactsTitle') }}</h2>
+        <ul class="check-list">
+          @for (fact of keyFacts(); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.howToTitle') }}</h2>
+        <ol class="steps">
+          @for (step of howTo(); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.formulaTitle') }}</h2>
+        <p>{{ t(slug + '.formula') }}</p>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.exampleTitle') }}</h2>
+        <p>{{ t(slug + '.workedExample') }}</p>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of mistakes(); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="card pros-cons">
+        <div>
+          <h2>{{ t(slug + '.ui.benefitsTitle') }}</h2>
+          <ul class="check-list">
+            @for (b of benefits(); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t(slug + '.ui.limitationsTitle') }}</h2>
+          <ul class="warn-list">
+            @for (l of limitations(); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <section class="card privacy">
+        <h2>
+          <app-icon name="info"></app-icon>
+          {{ t(slug + '.ui.privacyTitle') }}
+        </h2>
+        <p>{{ t(slug + '.privacyNote') }}</p>
+      </section>
+
+      <section class="card faq">
+        <h2>{{ t(slug + '.ui.faqTitle') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+    </div>
+  </div>
+
+  <app-micro-rating [slug]="slug" ns="ui"></app-micro-rating>
+
+  <section class="card related">
+    <h2>{{ t(slug + '.ui.relatedTitle') }}</h2>
+    <div class="related-grid">
+      @for (rel of related; track rel) {
+        <a class="related-card" [routerLink]="['/', lang(), rel]">
+          <span>{{ t(rel + '.name') }}</span>
+          <app-icon name="arrow-right"></app-icon>
+        </a>
+      }
+    </div>
+  </section>
+
+  <p class="reviewed">{{ t(slug + '.lastReviewed') }}</p>
+</div>

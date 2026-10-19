@@ -1,0 +1,96 @@
+{
+  "pdf-to-markdown": {
+    "benefits": [
+      "Turn PDFs into clean Markdown for docs, wikis, blogs and note apps.",
+      "Automatic heading and list detection rebuilds the document structure.",
+      "Copy the Markdown or download a ready .md file in one click.",
+      "Toggle detection on or off to match messy or clean layouts.",
+      "Your document never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Markdown is a plain-text format with simple marks: # for headings, - for lists. It renders nicely in GitHub, Notion, Obsidian and most editors.",
+        "q": "What is Markdown?"
+      },
+      {
+        "a": "ALL-CAPS lines, numbered section titles (1.2 …) and lines ending with a colon become ## or ### headings. Bullet and numbered lines become Markdown lists. The rest becomes paragraphs.",
+        "q": "How are headings detected?"
+      },
+      {
+        "a": "Yes — turn off heading or list detection and everything becomes plain paragraphs, which suits documents with unusual layouts.",
+        "q": "Can I turn off the detection?"
+      },
+      {
+        "a": "Links are kept as plain text because PDFs rarely store real URLs in their text layer. Tables are flattened into paragraphs; complex tables need manual cleanup.",
+        "q": "What happens to links and tables?"
+      },
+      {
+        "a": "No. The reader library (pdf.js) is bundled with the site, so extraction and conversion run fully offline in your browser.",
+        "q": "Does conversion need the internet?"
+      },
+      {
+        "a": "It handles English, Hindi, Arabic and other scripts the same way, because detection is based on shape (caps, numbers, bullets) rather than language.",
+        "q": "Does it work for Hindi or Arabic PDFs?"
+      }
+    ],
+    "formula": "heading rules (in order):\n1. matches ^\\d+(\\.\\d+)+\\s → “## ”\n2. letters all UPPERCASE, ≥4 letters, ≤90 chars → “## ”\n3. ends with “:”, ≤60 chars → “### ”\nlists: ^[•\\-*–—]\\s → “- ” ; ^\\d{1,3}[.)]\\s → “1. ”\nelse → paragraph text.\nBlank lines separate blocks; 3+ newlines collapse to 2.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload your PDF (up to 50 MB).",
+      "Conversion starts automatically.",
+      "Toggle heading and list detection to taste.",
+      "Preview the Markdown and check the heading count.",
+      "Copy it or download the .md file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "PDF text is extracted with pdf.js, then reshaped into Markdown with layout heuristics.",
+      "ALL-CAPS lines and numbered section titles become ## headings; colon-ending lines become ### headings.",
+      "Bullet and numbered lines are converted to Markdown list syntax.",
+      "Everything else becomes flowing paragraphs separated by blank lines.",
+      "One-click copy and .md download; files up to 50 MB are supported."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pdf to markdown, convert pdf to md, pdf to md online, pdf markdown converter free",
+    "labels": {
+      "busy": "Converting to Markdown, please wait…",
+      "copied": "Copied",
+      "copyButton": "Copy Markdown",
+      "downloadButton": "Download .md",
+      "errRender": "Could not read this PDF. It may be scanned, corrupted or password-protected.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "PDF file, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "headingCount": "Headings found",
+      "headingsLabel": "Detect headings",
+      "listsLabel": "Detect lists",
+      "outputLabel": "Markdown output",
+      "statusDone": "Conversion complete."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Structure detection is heuristic — unusual layouts may need manual fixes.",
+      "Tables are flattened into paragraphs; complex tables will not survive as tables.",
+      "Very large PDFs (100+ pages) can be slow to process and may use significant browser memory.",
+      "Scanned PDFs have no text layer, so nothing can be converted without OCR."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert PDFs to Markdown online for free. Headings and lists detected automatically, download clean .md files. 100% in your browser.",
+    "metaTitle": "PDF to Markdown — Convert PDF to MD Online Free",
+    "name": "PDF to Markdown",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF and get clean Markdown back: headings detected from caps and numbered titles, bullets turned into real lists, everything else as paragraphs. Copy it to your docs or download a ready .md file — all in your browser, nothing uploaded.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "PDF to Markdown results",
+    "tagline": "Convert PDFs into clean, structured Markdown.",
+    "workedExample": "Input PDF text:\n“ANNUAL REPORT” / “1.1 Revenue” / “• Sales grew 12%” / “The year was strong.”\nOutput Markdown:\n## ANNUAL REPORT\n## 1.1 Revenue\n- Sales grew 12%\nThe year was strong.\nHeading count shown: 2. The .md file is ready for GitHub or Notion.",
+    "workedExampleHeading": "Worked example"
+  }
+}

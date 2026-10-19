@@ -1,0 +1,113 @@
+<div class="tool-page persona-pipe">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="languages" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <input type="file" id="sub-file" class="sr-only" accept=".srt,.vtt,.ass,.ssa,.txt"
+          (change)="onFile($event)" />
+        <label class="file-btn" for="sub-file"><app-icon name="upload" /> {{ t('labels.fileBtn') }}</label>
+        @if (fileName()) {
+          <p class="file-name"><app-icon name="check" [size]="16" /> {{ fileName() }}</p>
+        }
+      </div>
+
+      <div class="field">
+        <label for="sub-input">{{ t('labels.inputLabel') }}</label>
+        <textarea id="sub-input" [ngModel]="inputText()" (ngModelChange)="inputText.set($event)"
+          rows="8" maxlength="500000" dir="ltr" spellcheck="false"
+          [placeholder]="t('labels.pasteHint')"></textarea>
+        <p class="note">{{ t('labels.charCountLabel') }}: {{ charCount() }} / 500000</p>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.directionLabel') }}</label>
+        <div class="chip-row" role="group" [attr.aria-label]="t('labels.directionLabel')">
+          <button type="button" class="chip" [class.active]="direction() === 'auto'"
+            (click)="setDirection('auto')">{{ t('labels.dirAuto') }}</button>
+          <button type="button" class="chip" [class.active]="direction() === 'srt2vtt'"
+            (click)="setDirection('srt2vtt')">SRT &rarr; VTT</button>
+          <button type="button" class="chip" [class.active]="direction() === 'vtt2srt'"
+            (click)="setDirection('vtt2srt')">VTT &rarr; SRT</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="sub-shift">{{ t('labels.shiftLabel') }} ({{ t('labels.msUnit') }})</label>
+        <input type="number" id="sub-shift" [ngModel]="shiftMs()" (ngModelChange)="setShift($event)"
+          inputmode="numeric" min="-3600000" max="3600000" step="100" />
+      </div>
+
+      <div class="field check-row">
+        <input type="checkbox" id="sub-strip" [checked]="stripTags()" (change)="toggleStrip()" />
+        <label for="sub-strip">{{ t('labels.stripTags') }}</label>
+      </div>
+
+      @if (detected() && detected() !== 'unknown') {
+        <div class="results">
+          <div class="result-row"><span>{{ t('labels.detectedRow') }}</span><strong>{{ detected() | uppercase }}</strong></div>
+          <div class="result-row"><span>{{ t('labels.cuesRow') }}</span><strong>{{ cues().length }}</strong></div>
+        </div>
+      }
+      @if (detected() === 'unknown') {
+        <p class="note"><app-icon name="info" [size]="16" /> {{ t('labels.noteUnknown') }}</p>
+      }
+
+      @if (outputText()) {
+        <div class="field">
+          <label for="sub-output">{{ t('labels.outputLabel') }} ({{ outputExt() }})</label>
+          <textarea id="sub-output" rows="8" dir="ltr" spellcheck="false" readonly
+            [value]="outputText()"></textarea>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn-primary" (click)="download()">
+            <app-icon name="download" /> {{ t('labels.downloadBtn') }}
+          </button>
+          <button type="button" class="btn-ghost" (click)="copy()">
+            <app-icon name="copy" /> {{ copied() ? t('labels.copiedBtn') : t('labels.copyBtn') }}
+          </button>
+          <button type="button" class="btn-ghost" (click)="clear()">
+            <app-icon name="refresh-cw" /> {{ t('labels.clearBtn') }}
+          </button>
+        </div>
+      }
+
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" [size]="16" /> {{ error() }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

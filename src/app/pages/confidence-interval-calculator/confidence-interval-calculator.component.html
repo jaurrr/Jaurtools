@@ -1,0 +1,193 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="btn-row" role="group" [attr.aria-label]="t('labels.modeLabel')" style="margin-block-end: 1.25rem; margin-block-start: 0;">
+        <button type="button" class="btn" [class.btn-primary]="mode() === 'mean'" (click)="setMode('mean')">
+          {{ t('labels.meanTab') }}
+        </button>
+        <button type="button" class="btn" [class.btn-primary]="mode() === 'proportion'" (click)="setMode('proportion')">
+          {{ t('labels.propTab') }}
+        </button>
+      </div>
+
+      @if (mode() === 'mean') {
+        <div class="field">
+          <label for="ci-mean">{{ t('labels.sampleMean') }}</label>
+          <div class="input-row">
+            <input id="ci-mean" type="number" inputmode="decimal" step="any" class="short"
+              [ngModel]="sampleMean()" (ngModelChange)="setSampleMean($event)" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="ci-sd">{{ t('labels.stdDev') }}</label>
+          <div class="input-row">
+            <input id="ci-sd" type="number" inputmode="decimal" min="0" step="any" class="short"
+              [ngModel]="stdDev()" (ngModelChange)="setStdDev($event)" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="ci-n">{{ t('labels.sampleSize') }}</label>
+          <div class="input-row">
+            <input id="ci-n" type="number" inputmode="numeric" min="2" step="1" class="short"
+              [ngModel]="n()" (ngModelChange)="setN($event)" />
+          </div>
+        </div>
+      } @else {
+        <div class="field">
+          <label for="ci-p">{{ t('labels.propLabel') }}</label>
+          <div class="input-row">
+            <input id="ci-p" type="number" inputmode="decimal" min="0" max="1" step="0.01" class="short"
+              [ngModel]="prop()" (ngModelChange)="setProp($event)" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="ci-pn">{{ t('labels.sampleSize') }}</label>
+          <div class="input-row">
+            <input id="ci-pn" type="number" inputmode="numeric" min="2" step="1" class="short"
+              [ngModel]="propN()" (ngModelChange)="setPropN($event)" />
+          </div>
+        </div>
+      }
+
+      <div class="field">
+        <label for="ci-conf">{{ t('labels.confidence') }}</label>
+        <select id="ci-conf" [ngModel]="confidence()" (ngModelChange)="setConfidence($event)">
+          <option [ngValue]="90">90%</option>
+          <option [ngValue]="95">95%</option>
+          <option [ngValue]="99">99%</option>
+        </select>
+      </div>
+
+      @if (mode() === 'mean' && meanCI(); as ci) {
+        <div class="results calc-results">
+          <div class="result-row total">
+            <span><app-icon name="info" /> {{ t('labels.interval') }}</span>
+            <strong dir="ltr">{{ fmt().format(ci.lo) }} - {{ fmt().format(ci.hi) }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.margin') }}</span>
+            <strong>± {{ fmt().format(ci.margin) }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.stdError') }}</span>
+            <strong>{{ fmt().format(ci.se) }}</strong>
+          </div>
+        </div>
+      } @else if (mode() === 'proportion' && propCI(); as ci) {
+        <div class="results calc-results">
+          <div class="result-row total">
+            <span><app-icon name="info" /> {{ t('labels.interval') }}</span>
+            <strong dir="ltr">{{ fmt().format(ci.lo) }} - {{ fmt().format(ci.hi) }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.margin') }}</span>
+            <strong>± {{ fmt().format(ci.margin) }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.stdError') }}</span>
+            <strong>{{ fmt().format(ci.se) }}</strong>
+          </div>
+        </div>
+        @if (ci.degenerate) {
+          <p class="note">{{ t('labels.degenerateNote') }}</p>
+        }
+      } @else {
+        <p class="error-note">{{ t('labels.errInvalid') }}</p>
+      }
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

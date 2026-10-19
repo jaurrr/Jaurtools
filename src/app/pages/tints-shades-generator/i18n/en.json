@@ -1,0 +1,90 @@
+{
+  "tints-shades-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Tints & Shades Generator",
+    "tagline": "Build a full tint-and-shade scale from one base color - the backbone of any design system.",
+    "metaTitle": "Tints & Shades Generator - Color Scale from One Color | JaurTools",
+    "metaDescription": "Free tints and shades generator: enter one HEX color and get a full scale of tints (mixed with white) and shades (mixed with black), all copy-ready. Private.",
+    "keywords": "tints and shades, tint shade generator, color scale generator, lighten darken color",
+    "quickAnswer": "Tints mix your color with white; shades mix it with black. From #336699, a 50% tint is #99B3CC (each channel moves halfway to 255: 51 -> 153, 102 -> 179, 153 -> 204) and a 50% shade is #1A334D (each channel halves: 51 -> 26, 102 -> 51, 153 -> 77). The tool builds four tints and four shades at even 20% steps around your base.",
+    "keyFacts": [
+      "Tint = base mixed with white; shade = base mixed with black.",
+      "A 50% tint moves every channel halfway to 255; a 50% shade halves every channel.",
+      "Design systems typically use 4-5 tints for backgrounds and 3-4 shades for text.",
+      "Even steps (20, 40, 60, 80%) make the scale feel smooth and predictable.",
+      "Tints keep the hue; shades keep the hue too - only lightness changes."
+    ],
+    "howTo": [
+      "Enter your base color with the picker or a HEX code like #336699.",
+      "The tint row (toward white) and shade row (toward black) appear instantly.",
+      "Tap any swatch to copy its HEX.",
+      "Use tints for backgrounds, borders and hover states.",
+      "Use shades for headings, body text and pressed states."
+    ],
+    "formula": "Tint(p%) = base + (255 - base) x p. Shade(p%) = base x (1 - p).\nExample: #336699 = RGB(51, 102, 153), 50%:\nTint: 51 + 204 x 0.5 = 153, 102 + 153 x 0.5 = 178.5 -> 179, 153 + 102 x 0.5 = 204 -> #99B3CC.\nShade: 51 x 0.5 = 25.5 -> 26, 102 x 0.5 = 51, 153 x 0.5 = 76.5 -> 77 -> #1A334D.",
+    "workedExample": "#336699 at 50% tint and 50% shade:\n1. Tint: move each channel halfway to 255.\n2. R: 51 + (255 - 51) x 0.5 = 153 -> 99 in hex.\n3. G: 102 + (255 - 102) x 0.5 = 178.5, rounded 179 -> B3.\n4. B: 153 + (255 - 153) x 0.5 = 204 -> CC. Tint = #99B3CC.\n5. Shade: halve each channel: 25.5 -> 26 (1A), 51 (33), 76.5 -> 77 (4D). Shade = #1A334D.\n6. The tool shows these at even 20% steps: 20/40/60/80 tints and shades.",
+    "benefits": [
+      "A complete, even scale from one brand color in seconds.",
+      "Tints and shades never clash with the base - same hue throughout.",
+      "Perfect for building design-system color ramps.",
+      "One tap copies any step into your CSS."
+    ],
+    "limitations": [
+      "Even RGB steps are not perceptually even - mid steps can look bunched.",
+      "Very dark shades may be indistinguishable from black in print.",
+      "Text on mid tints often fails contrast - check before shipping."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between a tint, a shade and a tone?",
+        "a": "A tint mixes the color with white, a shade mixes it with black, and a tone mixes it with gray. This tool generates tints and shades; tones sit between the two rows."
+      },
+      {
+        "q": "Why 20% steps?",
+        "a": "Even steps make the scale predictable: each swatch is visibly distinct from its neighbors without big jumps. Design systems commonly document colors at similar intervals."
+      },
+      {
+        "q": "How do I use these in a design system?",
+        "a": "Name them by step (e.g. blue-20 to blue-80), use light tints for surfaces, the base for primary actions, and dark shades for text."
+      },
+      {
+        "q": "Can tints replace a separate light-mode palette?",
+        "a": "Often yes - tints of your brand color at 10-20% make excellent light-mode backgrounds that stay on-brand."
+      },
+      {
+        "q": "Do shades work for dark mode?",
+        "a": "Yes - deep shades (60-80%) of brand colors make great dark-mode surfaces, with the base color reserved for accents."
+      },
+      {
+        "q": "Are the steps perceptually uniform?",
+        "a": "Not exactly - RGB mixing is linear but human vision is not. The steps are mathematically even, which is the standard, predictable approach."
+      }
+    ],
+    "resultsHeading": "Your tints & shades results",
+    "labels": {
+      "colorLabel": "Base color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #369 or #336699.",
+      "tintsHeading": "Tints (mixed with white)",
+      "shadesHeading": "Shades (mixed with black)",
+      "baseHex": "Base color",
+      "lightestTint": "Lightest tint (80%)",
+      "darkestShade": "Darkest shade (80%)",
+      "copyHex": "Copy HEX",
+      "copied": "Copied"
+    }
+  }
+}

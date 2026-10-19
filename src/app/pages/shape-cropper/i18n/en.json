@@ -1,0 +1,100 @@
+{
+  "shape-cropper": {
+    "name": "Shape Cropper",
+    "tagline": "Circles, stars, hexagons — any shape.",
+    "metaTitle": "Shape Cropper - Crop Photos Into Shapes | JaurTools",
+    "metaDescription": "Crop photos into circles, stars, hexagons and more with transparent or colored backgrounds. Free online.",
+    "keywords": "clip image to shape, circle crop photo, star shape photo, hexagon image crop, photo shape cutter",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a photo, pick a shape — circle, rounded square, triangle, hexagon, star, or diamond — and the tool center-crops your photo to a square, clips it to the shape, and downloads a transparent PNG. A 1200 x 800 photo becomes a 800 x 800 clipped image using the middle 800 px. Choose a white or black background instead of transparency if you prefer.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Six shapes: circle, rounded square, triangle, hexagon, star, diamond.",
+      "Your photo is center-cropped to a square first, so the shape is always balanced.",
+      "Transparent background is the default — perfect for logos and stickers.",
+      "White or black background options for documents and profile pictures.",
+      "The star uses true 5-point geometry; the hexagon is a regular flat-top hexagon.",
+      "Output PNG preserves transparency and sharp shape edges."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload a photo (JPG, PNG, or WebP).",
+      "Pick one of the six shapes.",
+      "Choose transparent, white, or black background.",
+      "Check the live preview — the shape always uses the photo's center.",
+      "Click Download to save the clipped image as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Square side S = min(photoWidth, photoHeight).\nCrop window: x = (photoWidth - S) / 2, y = (photoHeight - S) / 2.\nThe shape path is drawn inside the S x S square, then the photo is painted through it.\nExample: 1200 x 800 -> S = 800, window x = 200, y = 0.",
+    "formulaHeading": "Formula",
+    "workedExample": "Photo 1200 x 800, circle shape, transparent background:\n1. S = min(1200, 800) = 800.\n2. Crop window: x = (1200-800)/2 = 200, y = 0 — the middle 800 x 800 region.\n3. A circle of diameter 800 is drawn centered at (400, 400) of that square.\n4. Result: 800 x 800 PNG — your photo visible inside the circle, transparent corners.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Profile pictures and avatars in perfect circles without an editor.",
+      "Transparent PNGs drop straight into slides, docs, and designs.",
+      "Star and hexagon shapes make thumbnails and badges stand out.",
+      "Center-crop logic keeps faces centered automatically.",
+      "No uploads — personal photos stay on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "The crop always uses the photo center — you cannot pan the crop window.",
+      "Shapes are fixed proportions; no custom polygons or freehand paths.",
+      "Output is square — wide banners cannot be clipped.",
+      "Anti-aliased edges look smooth on screen but may show a faint halo on busy backgrounds."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "Will the background really be transparent?",
+        "a": "Yes, when you pick the transparent option. The PNG keeps a true alpha channel, so it composites cleanly over any background in slides, websites, or design tools."
+      },
+      {
+        "q": "Why is my face cut off?",
+        "a": "The tool center-crops the photo to a square before clipping. If your subject sits near an edge, crop the photo closer to the subject first in any editor, then clip it here."
+      },
+      {
+        "q": "Can I clip to a heart or custom shape?",
+        "a": "Not in this version — the six built-in shapes cover the most common needs. Custom SVG path upload is on the wishlist for a future update."
+      },
+      {
+        "q": "What is the output size?",
+        "a": "The output is square with side equal to your photo's shorter side — an 800 px tall photo gives an 800 x 800 PNG. Nothing is upscaled."
+      },
+      {
+        "q": "Rounded square vs circle — which for profile pictures?",
+        "a": "Circles for personal avatars (WhatsApp, social profiles). Rounded squares for app icons and brand marks, where the fuller shape reads better at small sizes."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. Clipping runs on a canvas in your browser. Your photo never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Clip Image results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photo",
+      "shape": "Shape",
+      "shapeCircle": "Circle",
+      "shapeRounded": "Rounded square",
+      "shapeTriangle": "Triangle",
+      "shapeHexagon": "Hexagon",
+      "shapeStar": "Star",
+      "shapeDiamond": "Diamond",
+      "background": "Background",
+      "bgTransparent": "Transparent",
+      "bgWhite": "White",
+      "bgBlack": "Black",
+      "download": "Download image",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload a photo to see the live preview."
+    }
+  }
+}

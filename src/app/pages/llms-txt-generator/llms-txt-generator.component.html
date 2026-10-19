@@ -1,0 +1,189 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="sparkles" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="llms-name">{{ t('labels.siteName') }}</label>
+        <input id="llms-name" type="text" autocomplete="off" spellcheck="false"
+          [ngModel]="siteName()" (ngModelChange)="setSiteName($event)" placeholder="Example Docs" />
+      </div>
+
+      <div class="field">
+        <label for="llms-url">{{ t('labels.siteUrl') }}</label>
+        <input id="llms-url" type="url" inputmode="url" autocomplete="off" spellcheck="false"
+          [ngModel]="siteUrl()" (ngModelChange)="setSiteUrl($event)" placeholder="https://docs.example.com" dir="ltr" />
+      </div>
+
+      <div class="field">
+        <label for="llms-summary">{{ t('labels.summary') }}</label>
+        <textarea id="llms-summary" class="dv-term-input code" style="min-block-size: 90px"
+          [ngModel]="summary()" (ngModelChange)="setSummary($event)"
+          [attr.placeholder]="t('labels.summaryHint')"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="llms-contact">{{ t('labels.contact') }}</label>
+        <input id="llms-contact" type="text" autocomplete="off" spellcheck="false"
+          [ngModel]="contact()" (ngModelChange)="setContact($event)" placeholder="hello@example.com" />
+      </div>
+
+      <h3 class="table-title">{{ t('labels.linksHeading') }}</h3>
+      @for (l of links(); track $index) {
+        <div class="link-card">
+          <div class="two-col-fields">
+            <div class="field">
+              <label [for]="'llms-sec-' + $index">{{ t('labels.linkSection') }}</label>
+              <input [id]="'llms-sec-' + $index" type="text" autocomplete="off"
+                [ngModel]="l.section" (ngModelChange)="setLinkField($index, 'section', $event)" placeholder="Guides" />
+            </div>
+            <div class="field">
+              <label [for]="'llms-title-' + $index">{{ t('labels.linkTitle') }}</label>
+              <input [id]="'llms-title-' + $index" type="text" autocomplete="off"
+                [ngModel]="l.title" (ngModelChange)="setLinkField($index, 'title', $event)" placeholder="Getting Started" />
+            </div>
+          </div>
+          <div class="field">
+            <label [for]="'llms-url-' + $index">{{ t('labels.linkUrl') }}</label>
+            <input [id]="'llms-url-' + $index" type="url" inputmode="url" autocomplete="off" spellcheck="false"
+              [ngModel]="l.url" (ngModelChange)="setLinkField($index, 'url', $event)" placeholder="https://…" dir="ltr" />
+          </div>
+          <div class="field">
+            <label [for]="'llms-desc-' + $index">{{ t('labels.linkDesc') }}</label>
+            <input [id]="'llms-desc-' + $index" type="text" autocomplete="off"
+              [ngModel]="l.desc" (ngModelChange)="setLinkField($index, 'desc', $event)" [attr.placeholder]="t('labels.linkDescHint')" />
+          </div>
+          @if (links().length > 1) {
+            <button type="button" class="btn ghost" (click)="removeLink($index)">
+              <app-icon name="x" /> {{ t('labels.removeLink') }}
+            </button>
+          }
+        </div>
+      }
+      <div class="btn-row">
+        <button type="button" class="btn ghost" (click)="addLink()">
+          <app-icon name="check" /> {{ t('labels.addLink') }}
+        </button>
+      </div>
+
+      @if (linkIssues().length > 0) {
+        <div class="warnings" role="alert">
+          <h3><app-icon name="triangle-alert" /> {{ t('labels.linksSkipped') }}</h3>
+          <p class="note">{{ t('labels.linksSkippedNote') }}</p>
+        </div>
+      }
+
+      <div class="results">
+        <pre class="code-output dv-term" dir="ltr" aria-label="{{ t('labels.generatedFile') }}">{{ output() }}</pre>
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="copyOutput()">
+            <app-icon name="copy" /> {{ t('labels.copyFile') }}
+          </button>
+          <button type="button" class="btn ghost" (click)="downloadFile()">
+            <app-icon name="download" /> {{ t('labels.downloadFile') }}
+          </button>
+        </div>
+        @if (copied()) {
+          <p class="note success"><app-icon name="check" /> {{ t('labels.copiedMsg') }}</p>
+        }
+        <div class="result-row">
+          <span>{{ t('labels.publishAt') }}</span>
+          <strong class="mono" dir="ltr">/llms.txt</strong>
+        </div>
+      </div>
+
+      <p class="note">{{ t('labels.publishNote') }}</p>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+{
+  "svg-to-jsx-converter": {
+    "benefits": [
+      "Paste an icon and get clean, idiomatic React code in under a second — no manual attribute renaming.",
+      "The output follows React conventions exactly, so it compiles first time with no warnings.",
+      "Style strings become real style objects and props spread onto the root, so icons stay customisable.",
+      "Download as .tsx or .jsx and drop the file straight into any React or Next.js project."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "JSX is the syntax React uses for markup. Browsers understand SVG attributes like class and stroke-width, but React expects className and strokeWidth. This tool applies every rename and conversion for you.",
+        "q": "Why can't I paste SVG directly into React?"
+      },
+      {
+        "a": "The tool checks that your code parses as XML with a single <svg> root. Common causes of the error: unclosed tags, an unescaped & in a path, or pasting HTML instead of SVG.",
+        "q": "Why do I get a parse error?"
+      },
+      {
+        "a": "Yes. Turn off Wrap in a React component and you get the bare JSX markup, ready to paste inside any existing component's return statement.",
+        "q": "Can I get just the JSX without a component wrapper?"
+      },
+      {
+        "a": "Yes — the TypeScript option types props as React.SVGProps<SVGSVGElement>, so className, style, onClick and every standard SVG prop is type-checked. Turn it off for plain JavaScript output.",
+        "q": "Is the output typed for TypeScript?"
+      },
+      {
+        "a": "Yes, data-* and aria-* attributes are left exactly as written, since React passes them through to the DOM unchanged.",
+        "q": "Are data and aria attributes preserved?"
+      },
+      {
+        "a": "No. Your SVG is parsed by your browser's DOMParser and converted by local JavaScript. Nothing is sent to any server.",
+        "q": "Is my SVG uploaded anywhere?"
+      }
+    ],
+    "formula": "Attribute renames:\nclass → className, for → htmlFor\nstroke-width → strokeWidth (hyphenated names become camelCase)\ndata-* and aria-* stay unchanged\nxlink:href → xlinkHref\n\nStyle strings become objects:\nstyle=\"font-size:14px;fill:red\" → style={{ fontSize: '14px', fill: 'red' }}\n\nEmpty elements self-close: <circle … />\nRoot gets {...props} when the spread option is on.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your SVG code into the input box, or press Load sample SVG to try the built-in example.",
+      "Type a component name — letters, numbers and underscores only. It becomes the exported function name.",
+      "Choose your options: component wrapper, TypeScript types, strip width/height, spread props, and style conversion.",
+      "Read the live output below. Copy it with one click or download it as a .tsx / .jsx file.",
+      "Check the preview panel to confirm the icon renders exactly like the original."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSX looks like HTML but is JavaScript: React requires camelCase attributes (strokeWidth, not stroke-width) and className instead of class.",
+      "The converter parses your SVG as real XML with the browser's DOMParser — malformed markup is reported, never silently mangled.",
+      "Every element is counted and re-serialised with consistent 2-space indentation, so the output is readable and diff-friendly.",
+      "Text like {braces} inside SVG text nodes is escaped to {'{'} so it renders literally instead of breaking your component.",
+      "The preview panel renders your original SVG with scripts and event handlers stripped for safety."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg to jsx converter, svg to react converter, convert svg to jsx online, svg to tsx, svg react component generator",
+    "labels": {
+      "clearButton": "Clear",
+      "copied": "Copied!",
+      "copyButton": "Copy JSX",
+      "downloadButton": "Download",
+      "elementsLabel": "SVG elements",
+      "emptyInput": "Paste your SVG code above to convert it.",
+      "inputCharsLabel": "Input characters",
+      "inputLabel": "SVG code",
+      "inputPlaceholder": "<svg …>…</svg>",
+      "nameLabel": "Component name",
+      "namePlaceholder": "Icon",
+      "notSvgError": "The root element must be <svg>.",
+      "optionsHeading": "Options",
+      "outputCharsLabel": "Output characters",
+      "outputLabel": "JSX output",
+      "parseError": "Could not parse the SVG. Check that the code is valid XML with a single <svg> root.",
+      "previewHeading": "Preview",
+      "propsLabel": "Spread props on the root <svg>",
+      "sampleButton": "Load sample SVG",
+      "stripLabel": "Remove width and height",
+      "styleLabel": "Convert style strings to objects",
+      "tsLabel": "TypeScript output",
+      "wrapLabel": "Wrap in a React component"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The tool converts markup only — it does not rewrite your component logic or CSS.",
+      "External references (use href to another file, external images) still need those files at runtime.",
+      "Very large SVGs (hundreds of elements) convert fine but produce long files; consider SVGR-style optimisation for huge illustrations.",
+      "Animations defined with SMIL <animate> tags are copied as-is; React does not control them."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SVG to JSX converter. Paste any SVG and get clean React component code — className, camelCase props, style objects, TypeScript support. 100% private, no sign-up.",
+    "metaTitle": "SVG to JSX Converter — Free Online React Tool | JaurTools",
+    "name": "SVG to JSX Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste any SVG and this tool converts it into React-ready JSX: class becomes className, stroke-width becomes strokeWidth, style strings become style objects, and empty elements self-close. You can wrap the result in a typed React component, spread props onto the root, and download it as .tsx or .jsx. Everything runs locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG to JSX Converter results",
+    "tagline": "Turn any SVG into clean React JSX — proper className, camelCase props, and style objects, in one click.",
+    "workedExample": "Input:\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n  <circle class=\"dot\" cx=\"12\" cy=\"12\" r=\"10\" stroke-width=\"2\" fill=\"none\"/>\n  <text style=\"font-size:14px;fill:red\">Hi</text>\n</svg>\n\nOutput (bare JSX):\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n  <circle className=\"dot\" cx=\"12\" cy=\"12\" r=\"10\" strokeWidth=\"2\" fill=\"none\" />\n  <text style={{ fontSize: '14px', fill: 'red' }}>Hi</text>\n</svg>\n\nWhat changed: class → className, stroke-width → strokeWidth, the style string became a style object, the empty circle self-closed, and the text stayed inline.",
+    "workedExampleHeading": "Worked example"
+  }
+}

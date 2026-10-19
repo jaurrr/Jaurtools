@@ -1,0 +1,94 @@
+{
+  "create-zip": {
+    "benefits": [
+      "No software to install and no account needed; works on any device with a modern browser.",
+      "Your files never leave your device, so private documents stay private.",
+      "Standard ZIP output opens everywhere, including phones and tablets.",
+      "Compression is automatic per file, so you always get the smallest sensible archive."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. It uses the standard ZIP format with Deflate compression, CRC-32 checksums and a central directory. It opens in Windows Explorer, macOS Finder, Linux file managers and mobile apps without any special software.",
+        "q": "Is the ZIP file created here a real ZIP file?"
+      },
+      {
+        "a": "No. Everything happens inside your browser tab using JavaScript. Your files are read from your device, compressed in memory, and downloaded back to you. Nothing is transmitted anywhere.",
+        "q": "Are my files uploaded to a server?"
+      },
+      {
+        "a": "Files like JPEG photos, MP4 videos and existing ZIP archives are already compressed, so there is almost nothing left to squeeze out. Text files, CSVs, logs and code typically shrink to 20-40% of their size.",
+        "q": "Why is my ZIP barely smaller than the original files?"
+      },
+      {
+        "a": "Not with this tool. Encrypted archives need careful key handling, and this version keeps things simple and transparent. If you need encryption, use your operating system's built-in encrypted archive feature.",
+        "q": "Can I add password protection to the ZIP?"
+      },
+      {
+        "a": "The combined size of all selected files is capped at 300 MB. This keeps compression fast and avoids out-of-memory crashes in the browser tab.",
+        "q": "What is the maximum size I can zip?"
+      },
+      {
+        "a": "Yes. Names are stored with the UTF-8 flag, so non-English file names are preserved correctly in modern extractors.",
+        "q": "Do file names in Hindi or Arabic work?"
+      }
+    ],
+    "formula": "archive.zip = local-file-headers + Deflate(file bytes) + central directory + end-of-central-directory record",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose files and select one or more files from your device. Repeat to add more.",
+      "Remove any file you added by mistake with the X button next to it.",
+      "Type a name for the archive, for example project-backup.",
+      "Press Create ZIP and wait a moment while the files are compressed.",
+      "Your browser downloads the .zip file automatically. Open it with your system's built-in extractor."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Produces a genuine ZIP archive using the standard Deflate compression (method 8), readable by every operating system.",
+      "Files that do not compress well, such as already-compressed images or videos, are stored uncompressed so the archive never grows larger than the input.",
+      "File names support Unicode (UTF-8 flag), so names in Hindi, Arabic or any script survive intact.",
+      "A 300 MB total input cap keeps the tool fast and prevents the browser tab from running out of memory.",
+      "Each entry carries a CRC-32 checksum, so corrupted downloads are detected when you extract."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "create zip online, zip files online, compress files, make zip archive, zip creator free",
+    "labels": {
+      "chooseFiles": "Choose files",
+      "clearAll": "Clear all",
+      "createButton": "Create ZIP",
+      "creating": "Compressing...",
+      "done": "Done! {n} files packed into a {s} archive. Your download has started.",
+      "emptyFiles": "No files selected yet.",
+      "errorBuild": "Something went wrong while building the ZIP. Please try again with fewer files.",
+      "errorTooBig": "Adding these files would exceed the 300 MB limit.",
+      "filesHint": "Multiple files allowed. Combined size up to 300 MB.",
+      "removeFile": "Remove file",
+      "resultFiles": "Files in archive",
+      "resultInputSize": "Total input size",
+      "zipNameLabel": "Archive name"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "No password protection or AES encryption; the archive is not encrypted.",
+      "Already-compressed files (JPEG, MP4, existing ZIPs) shrink very little.",
+      "Total input is capped at 300 MB to protect browser memory.",
+      "Folder structure is not preserved; all files are stored at the archive root."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create a ZIP archive online for free. Select multiple files, compress them with Deflate, and download one .zip file. 100% browser-based, no upload.",
+    "metaTitle": "Create ZIP Online Free - Compress Files in Browser | JaurTools",
+    "name": "Create ZIP",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Select any number of files, give the archive a name, and press Create ZIP. Your files are compressed with the Deflate algorithm inside your browser and downloaded as a single standard .zip file that opens in Windows, macOS, Linux, Android and iOS.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Create ZIP results",
+    "tagline": "Bundle multiple files into one ZIP archive, right in your browser.",
+    "workedExample": "You select three files: notes.txt (1,200 bytes), data.csv (4,800 bytes) and photo.jpg (220,000 bytes).\nTotal input = 226,000 bytes (about 220.7 KB).\nText compresses well: notes.txt shrinks to ~480 bytes, data.csv to ~1,900 bytes; the JPEG barely shrinks to ~219,500 bytes.\nThe resulting archive.zip is about 222 KB and extracts back to the exact original three files.",
+    "workedExampleHeading": "Worked example"
+  }
+}

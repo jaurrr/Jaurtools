@@ -1,0 +1,150 @@
+<div class="tool-page persona-canvas">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="code-input">{{ t('labels.codeLabel') }}</label>
+        <textarea id="code-input" rows="10" dir="ltr" spellcheck="false"
+          [ngModel]="code()" (ngModelChange)="setCode($event)"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="code-lang">{{ t('labels.languageLabel') }}</label>
+        <input id="code-lang" type="text" maxlength="30" dir="ltr"
+          [ngModel]="language()" (ngModelChange)="setLanguage($event)" />
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.theme') }}</label>
+        <div class="input-row">
+          <button type="button" class="btn-secondary" [class.active]="theme() === 'dark'"
+            (click)="setTheme('dark')">{{ t('labels.themeDark') }}</button>
+          <button type="button" class="btn-secondary" [class.active]="theme() === 'light'"
+            (click)="setTheme('light')">{{ t('labels.themeLight') }}</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="code-fontsize">{{ t('labels.fontSize') }}</label>
+        <div class="input-row">
+          <input id="code-fontsize" type="number" inputmode="numeric" min="10" max="28" step="1"
+            [ngModel]="fontSize()" (ngModelChange)="setFontSize($event)" />
+          <input type="range" min="10" max="28" step="1" [ngModel]="fontSize()"
+            (ngModelChange)="setFontSize($event)" [attr.aria-label]="t('labels.fontSize')" />
+          <button type="button" class="btn-secondary" (click)="setLineNumbers(!lineNumbers())"
+            [attr.aria-pressed]="lineNumbers()">{{ t('labels.lineNumbers') }}</button>
+        </div>
+      </div>
+
+      <div class="preview">
+        <canvas #previewCanvas></canvas>
+      </div>
+
+      <div class="results">
+        <div class="result-row">
+          <span>{{ t('labels.lines') }}</span>
+          <strong>{{ lineCount() }}</strong>
+        </div>
+        <div class="result-row total">
+          <span><app-icon name="file-text" /> {{ t('labels.chars') }}</span>
+          <strong>{{ charCount() }}</strong>
+        </div>
+      </div>
+
+      <button type="button" class="btn" (click)="download()">
+        <app-icon name="download" /> {{ t('labels.download') }}
+      </button>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

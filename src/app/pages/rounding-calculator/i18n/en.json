@@ -1,0 +1,90 @@
+{
+  "rounding-calculator": {
+    "benefits": [
+      "Two rounding styles in one tool: decimals and significant figures.",
+      "The slider makes trying different precisions quick.",
+      "Shows the original next to the rounded value.",
+      "Half-up rounding, matching school convention.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Decimal places count digits after the point: 3.14159 to 2 places is 3.14. Significant figures count all meaningful digits from the first non-zero one: 0.00314159 to 3 figures is 0.00314.",
+        "q": "What is the difference between decimal places and significant figures?"
+      },
+      {
+        "a": "This calculator uses half-up rounding: 2.5 becomes 3 and 3.5 becomes 4. Negative halves round away from zero: -2.5 becomes -3.",
+        "q": "How does it handle halves like 2.5?"
+      },
+      {
+        "a": "Because floating-point arithmetic is binary. 2.675 cannot be stored exactly, so it sits just below the halfway point and rounds down.",
+        "q": "Why does 2.675 round to 2.67 instead of 2.68?"
+      },
+      {
+        "a": "Yes. Significant figures count leading zeros as placeholders, not figures. 0.00456 has three significant figures: 4, 5 and 6.",
+        "q": "Do significant figures count leading zeros?"
+      },
+      {
+        "a": "Generally, match the least precise measurement in your calculation. Science classes usually teach specific significant-figure rules — follow your teacher's."
+      },
+      {
+        "q": "How many decimal places should I use?"
+      }
+    ],
+    "formula": "Decimal places: round(x × 10^p) / 10^p\nSignificant figures: keep p digits from the first non-zero digit\nHalf-up: 0.5 rounds away from zero",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose decimal places or significant figures.",
+      "Enter the number to round.",
+      "Set the precision with the slider or type it.",
+      "Read the rounded result next to the original.",
+      "Switch modes to compare the two styles."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Rounding to decimal places controls digits after the point.",
+      "Significant figures control the total count of meaningful digits.",
+      "Half-up rounding sends 0.5 away from zero.",
+      "Rounding error is at most half of the last kept digit's place.",
+      "0.1 + 0.2 style floating-point quirks can shift borderline cases."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "rounding calculator, round to decimal places, significant figures calculator, round numbers, round half up",
+    "labels": {
+      "invalidNote": "Enter a valid number and a precision within the allowed range.",
+      "mode": {
+        "decimals": "Decimal places",
+        "sigfigs": "Significant figures"
+      },
+      "modeLabel": "Rounding style",
+      "originalLabel": "Original",
+      "placesLabel": "Places / figures",
+      "resultLabel": "Rounded",
+      "valueLabel": "Number to round"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses half-up only — no banker's rounding or truncation modes.",
+      "Borderline cases can be affected by binary floating-point storage.",
+      "Significant figures capped at 15.",
+      "Does not explain rounding rules beyond the basics."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free rounding calculator: round to decimal places or significant figures with half-up rules. Fully browser-based, no sign-up.",
+    "metaTitle": "Rounding Calculator — Decimal Places & Sig Figs",
+    "name": "Rounding Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Rounding trims a number to a chosen precision. Decimal places count digits after the point: 3.14159 to 2 places is 3.14. Significant figures count meaningful digits from the first non-zero one: 0.00314159 to 3 figures is 0.00314. Halves round up by convention.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Rounding results",
+    "tagline": "Round to decimal places or significant figures.",
+    "workedExample": "Round 3.14159 in two ways.\n\nDecimal places (2): 3.14159 → 3.14.\nThe third digit is 1, below 5, so it rounds down.\n\nSignificant figures (3): 3.14159 → 3.14.\nCount three meaningful digits: 3, 1, 4. The next digit (1) rounds down.\n\nBoth give 3.14 here — but try 0.00314159: 2 decimal places gives 0.00, while 3 significant figures gives 0.00314.",
+    "workedExampleHeading": "Worked example"
+  }
+}

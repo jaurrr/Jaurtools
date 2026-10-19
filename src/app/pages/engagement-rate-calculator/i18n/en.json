@@ -1,0 +1,99 @@
+{
+  "engagement-rate-calculator": {
+    "assumptionNote": "Uses the numbers you enter exactly. Reach, impressions, and paid boosts are not part of this standard formula.",
+    "benefits": [
+      "The industry-standard formula, explained step by step.",
+      "Per-metric breakdown shows whether likes, comments, shares, or saves drive your rate.",
+      "Instant verdict tells you if the rate is low, average, good, or excellent.",
+      "Use it to benchmark your posts and negotiate influencer deals fairly."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Roughly: below 1% is low, 1-3% is average, 3-6% is good, and above 6% is excellent. Smaller accounts typically engage better, so judge against similar-sized accounts in your niche.",
+        "q": "What is a good engagement rate?"
+      },
+      {
+        "a": "The most common standard uses followers as the denominator. Some analysts use reach or impressions instead, which gives lower numbers. For fair comparison, always check which denominator is being used.",
+        "q": "Should I divide by followers or by reach?"
+      },
+      {
+        "a": "Follower growth helps because the denominator grows, but not automatically: if new followers do not engage, your rate falls. Growing an engaged audience raises the rate; growing a passive one lowers it.",
+        "q": "Does more followers mean higher engagement?"
+      },
+      {
+        "a": "Because the audience is larger and more passive. A nano account can hit 8% while a million-follower account celebrates 2%. Brands know this, which is why smaller creators get such good deals.",
+        "q": "Why do big accounts have lower rates?"
+      },
+      {
+        "a": "Usually yes, but not always. Bots can inflate likes. Read the comments: real engagement has genuine conversation, while fake engagement shows generic one-word replies from odd accounts.",
+        "q": "Does high engagement mean real influence?"
+      },
+      {
+        "a": "Stories, reels, and polls for quick feedback, then this calculator for the numbers. Track the rate weekly, test one change at a time, and keep what moves the needle.",
+        "q": "How do I improve my engagement rate?"
+      }
+    ],
+    "formula": "Total interactions = Likes + Comments + Shares + Saves\nEngagement rate % = (Total interactions / Followers) x 100\nExample: (1,200 + 150 + 80 + 60) / 25,000 x 100 = 5.96%.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the likes, comments, shares, and saves for the post or account.",
+      "Enter the follower count at the time of posting.",
+      "Your total interactions and engagement rate appear instantly, with a per-metric breakdown.",
+      "Compare the verdict against the benchmarks in the guide to see where you stand."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Engagement rate = (likes + comments + shares + saves) / followers x 100.",
+      "It is the standard measure of how actively an audience interacts with content.",
+      "Benchmarks: under 1% low, 1-3% average, 3-6% good, above 6% excellent.",
+      "Smaller accounts usually engage better than large ones.",
+      "Different platforms weight interactions differently, so compare like with like.",
+      "Brands use this rate to decide what an influencer is worth."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "engagement rate calculator, social media engagement calculator, instagram engagement rate, interaction rate calculator",
+    "labels": {
+      "engagementRate": "Engagement rate",
+      "followers": "Followers",
+      "metrics": {
+        "comments": "Comments",
+        "likes": "Likes",
+        "saves": "Saves",
+        "shares": "Shares"
+      },
+      "totalInteractions": "Total interactions",
+      "verdict": "Verdict"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only counts what you enter; it cannot detect fake or bot engagement.",
+      "Standard formula uses followers; using reach instead gives different, lower numbers.",
+      "A single viral post can distort an average - measure consistently over time.",
+      "Not financial advice; engagement does not guarantee sales."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free engagement rate calculator: enter likes, comments, shares, saves, and followers to get your engagement rate instantly. Private, no sign-up.",
+    "metaTitle": "Engagement Rate Calculator - Measure Audience Interaction | JaurTools",
+    "name": "Engagement Rate Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Add likes, comments, shares, and saves, divide by followers, and multiply by 100. A post with 1,200 likes, 150 comments, 80 shares, and 60 saves on 25,000 followers has 1,490 total interactions and a 5.96% engagement rate - which rates as good. Under 1% is low, 1-3% is average, 3-6% is good, and above 6% is excellent.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your engagement rate results",
+    "tagline": "Measure how actively your audience really interacts with your content.",
+    "verdicts": {
+      "average": "Average",
+      "excellent": "Excellent",
+      "good": "Good",
+      "low": "Low",
+      "na": "Not available"
+    },
+    "workedExample": "Likes 1,200, comments 150, shares 80, saves 60, followers 25,000:\n1. Total interactions = 1,200 + 150 + 80 + 60 = 1,490.\n2. Engagement rate = (1,490 / 25,000) x 100 = 5.96%.\n3. Per metric: likes 4.80%, comments 0.60%, shares 0.32%, saves 0.24%.\n4. Verdict: 5.96% falls in 3-6%, so the rate is Good.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,195 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="comb-a">{{ t('labels.listALabel') }}</label>
+        <textarea class="ed-textarea" id="comb-a" rows="4" [ngModel]="rawListA()" (ngModelChange)="setListA($event)"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="comb-b">{{ t('labels.listBLabel') }}</label>
+        <textarea class="ed-textarea" id="comb-b" rows="4" [ngModel]="rawListB()" (ngModelChange)="setListB($event)"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="comb-sep">{{ t('labels.separatorLabel') }}</label>
+        <select id="comb-sep" [ngModel]="separator()" (ngModelChange)="separator.set($event)">
+          <option value="space">{{ t('labels.space') }}</option>
+          <option value="hyphen">{{ t('labels.hyphen') }}</option>
+          <option value="underscore">{{ t('labels.underscore') }}</option>
+          <option value="custom">{{ t('labels.custom') }}</option>
+        </select>
+      </div>
+
+      @if (separator() === 'custom') {
+        <div class="field">
+          <label for="comb-custom">{{ t('labels.customSepLabel') }}</label>
+          <input id="comb-custom" type="text" maxlength="10" [ngModel]="customSep()"
+            (ngModelChange)="customSep.set($event)" />
+        </div>
+      }
+
+      <div class="field">
+        <div class="two-inputs">
+          <div>
+            <label for="comb-prefix">{{ t('labels.prefixLabel') }}</label>
+            <input id="comb-prefix" type="text" maxlength="20" [ngModel]="prefix()"
+              (ngModelChange)="prefix.set($event)" />
+          </div>
+          <div>
+            <label for="comb-suffix">{{ t('labels.suffixLabel') }}</label>
+            <input id="comb-suffix" type="text" maxlength="20" [ngModel]="suffix()"
+              (ngModelChange)="suffix.set($event)" />
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="check-row">
+          <input type="checkbox" id="comb-dedupe" [ngModel]="dedupe()"
+            (ngModelChange)="dedupe.set($event)" />
+          <label for="comb-dedupe">{{ t('labels.dedupeLabel') }}</label>
+        </div>
+      </div>
+
+      <div class="results ed-livebar">
+        <div class="result-row">
+          <span>{{ t('labels.combosLabel') }}</span>
+          <strong>{{ totalCombos() }}</strong>
+        </div>
+        <div class="result-row total">
+          <span><app-icon name="arrow-right" /> {{ t('labels.outputLabel') }}</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="combo-output ed-output" dir="ltr">
+          @for (line of lines(); track $index) {
+            <div>{{ line }}</div>
+          } @empty {
+            <span class="muted">{{ t('labels.emptyHint') }}</span>
+          }
+        </div>
+      </div>
+
+      @if (truncated()) {
+        <p class="note">{{ truncatedText() }}</p>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="copyLines()" [disabled]="!lines().length">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copy') }}
+        </button>
+        <button type="button" class="btn" (click)="downloadTxt()" [disabled]="!lines().length">
+          <app-icon name="download" /> {{ t('labels.download') }}
+        </button>
+        <button type="button" class="btn" (click)="clearAll()">
+          <app-icon name="x" /> {{ t('labels.clear') }}
+        </button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

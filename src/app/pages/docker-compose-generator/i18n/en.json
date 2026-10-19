@@ -1,0 +1,103 @@
+{
+  "docker-compose-generator": {
+    "assumptionNote": "Values containing colons, spaces, or special characters are automatically quoted so the YAML stays valid.",
+    "benefits": [
+      "No YAML syntax to memorize — fill in forms and get a valid docker-compose.yml.",
+      "Add unlimited services; each becomes its own top-level service block.",
+      "Ports, environment variables, and volumes are parsed from simple comma or line lists.",
+      "Restart policies use the official Docker values with plain-language labels.",
+      "Download the file directly or copy it — ready for docker compose up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Fill in at least a service name and image, then copy the YAML or download docker-compose.yml. Place the file in your project folder and run docker compose up -d.",
+        "q": "How do I use the generated file?"
+      },
+      {
+        "a": "Type ports as host:container pairs separated by commas, for example 8080:80, 443:443. Each pair becomes one quoted entry under ports.",
+        "q": "How do I write the ports field?"
+      },
+      {
+        "a": "Put one KEY=value pair per line, for example NODE_ENV=production on the first line and PORT=3000 on the second. Each line becomes one list entry under environment.",
+        "q": "How do I write environment variables?"
+      },
+      {
+        "a": "One per line in host-path:container-path form, for example ./data:/data or pgdata:/var/lib/postgresql/data. Named volumes like pgdata need a top-level volumes block, which you add manually.",
+        "q": "How do I write volumes?"
+      },
+      {
+        "a": "unless-stopped restarts the container always, except when you stop it yourself. always restarts even after a manual stop. on-failure restarts only after a crash. no never restarts.",
+        "q": "Which restart policy should I choose?"
+      },
+      {
+        "a": "This generator covers the common subset: image, ports, environment, volumes, and restart. For networks, depends_on, healthchecks, or build sections, add them to the YAML manually after generating.",
+        "q": "Can it generate networks and depends_on?"
+      }
+    ],
+    "formula": "ports:        \"HOST:CONTAINER\" per comma-separated entry\nenvironment: \"KEY=VALUE\" per line\nvolumes:      \"HOST:CONTAINER\" per line\nrestart:      no | always | unless-stopped | on-failure",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Add service for each container your app needs.",
+      "Enter the service name and Docker image, for example nginx:1.25.",
+      "Add ports as comma-separated host:container pairs.",
+      "Add environment variables and volumes, one per line.",
+      "Choose a restart policy, then copy or download the YAML."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "docker-compose.yml declares multi-container apps in a single YAML file.",
+      "Each service needs an image; ports map host ports to container ports.",
+      "Environment entries use the KEY=value list format under each service.",
+      "Restart policies control what Docker does when a container stops or the host reboots.",
+      "Values with colons or spaces are auto-quoted so the YAML parses correctly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "docker compose generator, docker-compose.yml builder, compose file generator, docker yaml generator",
+    "labels": {
+      "addServiceLabel": "Add service",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "downloadLabel": "Download .yml",
+      "envHint": "NODE_ENV=production (one per line)",
+      "envLabel": "Environment variables",
+      "imageLabel": "Image",
+      "nameLabel": "Service name",
+      "portsHint": "8080:80, 443:443",
+      "portsLabel": "Ports",
+      "removeLabel": "Remove",
+      "restartAlways": "Always",
+      "restartLabel": "Restart policy",
+      "restartNo": "No",
+      "restartOnFailure": "On failure",
+      "restartUnlessStopped": "Unless stopped",
+      "serviceCountLabel": "Services",
+      "serviceLabel": "Service",
+      "volumesHint": "./data:/data (one per line)",
+      "volumesLabel": "Volumes"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only the common subset is generated: image, ports, environment, volumes, restart.",
+      "Named volumes need a top-level volumes block that you add manually.",
+      "Networks, depends_on, healthchecks, and build sections are not generated.",
+      "Service names are slugified; exotic characters are replaced with dashes."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Build a valid docker-compose.yml visually. Add services with images, ports, environment variables and volumes, then copy or download the YAML for free.",
+    "metaTitle": "Docker Compose Generator – Free Compose YAML Builder",
+    "name": "Docker Compose Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A docker-compose.yml file describes all the containers an app needs — web server, database, cache — so one docker compose up command starts everything. This tool builds that YAML from simple forms: add services, type images, ports, environment variables and volumes, and download a valid compose file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Generated compose file",
+    "tagline": "Build a valid docker-compose.yml from simple forms — no YAML memorization.",
+    "workedExample": "One service named web with image nginx:1.25, ports 8080:80, environment NODE_ENV=production, restart unless-stopped.\n\nGenerated docker-compose.yml:\nservices:\n  web:\n    image: \"nginx:1.25\"\n    ports:\n      - \"8080:80\"\n    environment:\n      - \"NODE_ENV=production\"\n    restart: unless-stopped\n\nSave as docker-compose.yml and run docker compose up -d to start nginx on http://localhost:8080.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "image-cropper": {
+    "benefits": [
+      "Instant results with no sign-up, watermark, or quality loss on the kept area.",
+      "Aspect presets remove the guesswork for Instagram squares, YouTube thumbnails, and phone wallpapers.",
+      "Everything happens on your device, so private photos are never uploaded to a server.",
+      "The dimension-tagged filename tells you the exact size without opening the file."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No — the pixels inside your selection are copied at full resolution. The output is a lossless PNG, so the cropped area looks exactly like it did in the original. Only the pixels outside the box are discarded.",
+        "q": "Will cropping reduce my image quality?"
+      },
+      {
+        "a": "Free (any shape), 1:1 (square), 4:3 and 3:4 (classic photo), and 16:9 / 9:16 (widescreen and phone wallpaper). Picking a preset centers a selection of that ratio; you can still drag it to reposition.",
+        "q": "Which aspect ratios are available?"
+      },
+      {
+        "a": "Yes. The crop box supports touch: drag with one finger to draw and resize the selection. The controls and buttons are all at least 44 px tall for comfortable tapping.",
+        "q": "Can I crop on my phone?"
+      },
+      {
+        "a": "Any common raster image your browser can decode: JPEG, PNG, WebP, GIF, and BMP, up to 15 MB. The download is always PNG for maximum quality.",
+        "q": "What file types can I upload?"
+      },
+      {
+        "a": "Never. The file is read into your browser's memory and processed with the Canvas API locally. Closing the tab wipes everything.",
+        "q": "Is my photo uploaded anywhere?"
+      },
+      {
+        "a": "Drawing an image to a canvas and exporting it does not carry EXIF metadata along. That is usually a privacy win — the cropped file contains no camera model, date, or GPS coordinates.",
+        "q": "Why did my cropped photo lose its location data?"
+      }
+    ],
+    "formula": "Output width = selection width in pixels\nOutput height = selection height in pixels\nWith an aspect lock: height = width / ratio, e.g. for 16:9, height = width / 1.7778\nExample: a 1200 px wide selection at 16:9 gives 1200 / 1.7778 = 675 px tall.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click the file picker and choose a photo from your device (up to 15 MB).",
+      "Drag on the image to draw the crop box, or pick an aspect preset to get a centered selection instantly.",
+      "Fine-tune the box by dragging again from any corner until the highlighted area is exactly what you want.",
+      "Press the Crop button to render the selection at full resolution.",
+      "Preview the result and press Download to save the PNG to your device."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Cropping keeps the full pixel resolution of the selected area — nothing is resampled or blurred.",
+      "Six aspect presets: free, 1:1, 4:3, 3:4, 16:9, and 9:16 for social posts, thumbnails, and wallpapers.",
+      "The result downloads as a lossless PNG with a filename that includes its dimensions.",
+      "Maximum upload size is 15 MB; JPEG, PNG, WebP, GIF, and BMP files are accepted.",
+      "Cropping re-encodes the image, which strips EXIF metadata such as camera model and GPS — good for privacy.",
+      "Drag the box on touch screens too; the selection snaps to your chosen aspect ratio automatically."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "crop image online, photo cropper, image crop tool, crop picture free, aspect ratio crop",
+    "labels": {
+      "applyCrop": "Crop",
+      "aspectLabel": "Aspect ratio",
+      "cropSize": "Crop selection",
+      "croppedAlt": "Cropped image preview",
+      "downloadCrop": "Download cropped PNG",
+      "dragHint": "Drag on the image to draw your crop box. Pick an aspect preset first if you want a fixed ratio.",
+      "free": "Free",
+      "newImage": "New image",
+      "originalSize": "Original size",
+      "readyLabel": "Cropped image",
+      "sizeError": "That file is larger than 15 MB. Please choose a smaller image.",
+      "stageLabel": "Image with crop selection",
+      "typeError": "That file could not be read as an image. Please choose a JPEG, PNG, WebP, GIF, or BMP file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Works on raster images only — it cannot crop vector (SVG) or multi-page files.",
+      "Cropping discards pixels permanently in the download; keep your original if you may need it later.",
+      "Files larger than 15 MB are rejected to keep the page fast on low-end devices.",
+      "Metadata such as capture date and GPS coordinates is removed from the cropped copy."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Crop any image to exact dimensions or social presets with live preview. Free online, no signup, private.",
+    "metaTitle": "Image Cropper - Crop Images Precisely | JaurTools",
+    "name": "Image Cropper",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo, drag a box over the part you want to keep, and press Crop. You can lock the selection to exact aspect ratios such as 1:1, 4:3, or 16:9. The cropped PNG downloads instantly, and your original file never leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your crop results",
+    "tagline": "Exact crops for every platform.",
+    "workedExample": "You upload a 4000 x 3000 px photo and want a 16:9 banner.\nYou pick the 16:9 preset and drag the box to 2400 px wide; the height snaps to 2400 / 1.7778 = 1350 px.\nPressing Crop renders a 2400 x 1350 px PNG and downloads it as cropped-2400x1350.png.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,356 @@
+<div class="tool-page persona-fit">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <p class="privacy-strip">
+        <app-icon name="shield-check" />
+        <span>{{ t('labels.privacyBadge') }}</span>
+      </p>
+
+      <div class="dropzone" [class.dragging]="dragging()"
+        (dragenter)="onDragOver($event)" (dragover)="onDragOver($event)"
+        (dragleave)="onDragLeave($event)" (drop)="onDrop($event)"
+        (click)="fileInput.click()" (keydown.enter)="fileInput.click()" (keydown.space)="fileInput.click()"
+        tabindex="0" role="button" [attr.aria-label]="t('labels.dropTitle')">
+        <input #fileInput type="file" accept="image/*" multiple (change)="onFileInput($event)" hidden />
+        <app-icon name="upload" />
+        <p class="dz-title">{{ dragging() ? t('labels.dropActive') : t('labels.dropTitle') }}</p>
+        <p class="dz-hint">{{ t('labels.dropHint') }}</p>
+        <span class="btn btn-secondary dz-btn">{{ t('labels.browse') }}</span>
+      </div>
+      <p class="paste-hint"><app-icon name="keyboard" /> {{ t('labels.pasteHint') }}</p>
+
+      @if (batchError()) {
+        <p class="error" role="alert">{{ batchError() }}</p>
+      }
+      @if (hasGif()) {
+        <p class="note"><app-icon name="info" /> {{ t('labels.gifNote') }}</p>
+      }
+
+      @if (items().length > 0) {
+        <div class="batch-head">
+          <h3>{{ t('labels.batchHeading') }} <span class="count">{{ tn('labels.imageCount', items().length) }}</span></h3>
+          <button type="button" class="link-btn" (click)="clearAll()">{{ t('labels.removeAll') }}</button>
+        </div>
+
+        <div class="cards">
+          @for (item of items(); track item.id) {
+            <article class="img-card" [class.active]="item.id === activeId()" [class.busy]="item.status === 'busy'">
+              <button type="button" class="card-thumb" (click)="select(item.id)"
+                [attr.aria-label]="item.name">
+                <img [src]="item.origUrl" [alt]="item.name" loading="lazy" />
+                @if (item.status === 'busy') {
+                  <span class="card-spinner" aria-hidden="true"></span>
+                }
+                <span class="status-pill" [class]="item.status">{{ t('labels.status.' + item.status) }}</span>
+              </button>
+              <div class="card-info">
+                <p class="card-name" [title]="item.name">{{ item.name }}</p>
+                <p class="card-dims">{{ item.width }} × {{ item.height }} · {{ fmt(item.size) }}</p>
+                @if (item.status === 'done') {
+                  <p class="card-out">
+                    → {{ item.outWidth }} × {{ item.outHeight }} · {{ fmt(item.outSize) }}
+                    @if (savedPct(item) > 0) {
+                      <span class="saved">{{ tn('labels.savedPct', savedPct(item)) }}</span>
+                    }
+                  </p>
+                }
+                @if (item.status === 'error') {
+                  <p class="card-err">{{ item.error }}</p>
+                }
+              </div>
+              <div class="card-actions">
+                @if (item.status === 'done' && item.outUrl) {
+                  <button type="button" class="icon-btn" (click)="downloadItem(item)"
+                    [attr.aria-label]="t('labels.download')" [title]="t('labels.download')">
+                    <app-icon name="download" />
+                  </button>
+                }
+                <button type="button" class="icon-btn danger" (click)="removeItem(item.id)"
+                  [attr.aria-label]="t('labels.ariaRemove')" [title]="t('labels.remove')">
+                  <app-icon name="x" />
+                </button>
+              </div>
+            </article>
+          }
+        </div>
+
+        <div class="settings">
+          <h3>{{ t('labels.settingsHeading') }}</h3>
+
+          @if (livePreview(); as lp) {
+            <p class="est-ticker" aria-live="polite">
+              <app-icon name="zap" />
+              {{ t('labels.liveOutput') }}:
+              <strong class="kb-ticker">{{ lp.w }} × {{ lp.h }} px</strong>
+              <span>· ~{{ fmt(liveEstBytes()) }} {{ t('labels.estNote') }}</span>
+            </p>
+          }
+
+          <div class="field">
+            <label id="ri-mode">{{ t('labels.mode') }}</label>
+            <div class="seg" role="group" aria-labelledby="ri-mode">
+              @for (m of modes; track m) {
+                <button type="button" [class.active]="mode() === m" (click)="setMode(m)">
+                  {{ t('labels.' + modeLabelKey(m)) }}
+                </button>
+              }
+            </div>
+          </div>
+
+          <div class="field">
+            <p class="chip-group-label" id="ri-avatars">{{ t('labels.avatarPresets') }}</p>
+            <div class="chip-row" role="group" aria-labelledby="ri-avatars">
+              @for (a of avatarPresets; track a.name) {
+                <button type="button" class="chip" (click)="applyAvatarPreset(a.w, a.h)">
+                  {{ a.name }} <span class="chip__px">{{ a.w }} × {{ a.h }}</span>
+                </button>
+              }
+            </div>
+          </div>
+
+          @if (mode() === 'pixels') {
+            <div class="field">
+              <label for="ri-w">{{ t('labels.width' ) }}</label>
+              <div class="input-row">
+                <input id="ri-w" type="number" inputmode="numeric" min="1" max="12000" step="1"
+                  [ngModel]="outWidth()" (ngModelChange)="setOutWidth($event)" />
+                <span aria-hidden="true">×</span>
+                <input id="ri-h" type="number" inputmode="numeric" min="1" max="12000" step="1"
+                  [ngModel]="outHeight()" (ngModelChange)="setOutHeight($event)"
+                  [attr.aria-label]="t('labels.height')" />
+              </div>
+              <p class="check-row">
+                <input id="ri-lock" type="checkbox" [ngModel]="lockAspect()" (ngModelChange)="setLockAspect($event)" />
+                <label for="ri-lock">{{ t('labels.lockAspect') }}</label>
+              </p>
+            </div>
+          } @else if (mode() === 'percent') {
+            <div class="field">
+              <label for="ri-pct">{{ t('labels.percent') }}</label>
+              <div class="input-row">
+                <input id="ri-pct" type="number" inputmode="numeric" min="1" max="400" step="1"
+                  [ngModel]="percent()" (ngModelChange)="setPercent($event)" />
+                <input type="range" min="1" max="400" step="1" [ngModel]="percent()"
+                  (ngModelChange)="setPercent($event)" [attr.aria-label]="t('labels.percent')" />
+              </div>
+            </div>
+          } @else if (mode() === 'longest') {
+            <div class="field">
+              <label for="ri-long">{{ t('labels.longestSideLabel') }}</label>
+              <div class="input-row">
+                <input id="ri-long" type="number" inputmode="numeric" min="16" max="12000" step="1"
+                  [ngModel]="longestSide()" (ngModelChange)="setLongestSide($event)" />
+                <input type="range" min="16" max="8000" step="1" [ngModel]="longestSide()"
+                  (ngModelChange)="setLongestSide($event)" [attr.aria-label]="t('labels.longestSideLabel')" />
+              </div>
+            </div>
+          } @else if (mode() === 'preset') {
+            <div class="field">
+              <label for="ri-preset">{{ t('labels.presetLabel') }}</label>
+              <select id="ri-preset" [ngModel]="preset()" (ngModelChange)="setPreset($event)">
+                @for (p of presetKeys; track p) {
+                  <option [value]="p">{{ t('labels.presets.' + p) }}</option>
+                }
+              </select>
+            </div>
+            <div class="field">
+              <label id="ri-fit">{{ t('labels.presetFitLabel') }}</label>
+              <div class="seg two" role="group" aria-labelledby="ri-fit">
+                <button type="button" [class.active]="presetFit() === 'exact'" (click)="setPresetFit('exact')">
+                  {{ t('labels.fitExact') }}
+                </button>
+                <button type="button" [class.active]="presetFit() === 'fit'" (click)="setPresetFit('fit')">
+                  {{ t('labels.fitInside') }}
+                </button>
+              </div>
+            </div>
+          } @else {
+            <div class="field">
+              <label for="ri-kb">{{ t('labels.targetSizeLabel') }}</label>
+              <div class="input-row">
+                <input id="ri-kb" type="number" inputmode="numeric" min="5" max="51200" step="1"
+                  [ngModel]="targetKB()" (ngModelChange)="setTargetKB($event)" />
+                <span class="unit">KB</span>
+              </div>
+              <p class="note">{{ t('labels.targetSizeHint') }}</p>
+            </div>
+          }
+
+          <div class="field">
+            <label id="ri-format">{{ t('labels.format') }}</label>
+            <div class="seg four" role="group" aria-labelledby="ri-format">
+              @for (f of formats; track f) {
+                <button type="button" [class.active]="outFormat() === f" (click)="setOutFormat(f)">
+                  {{ f === 'keep' ? t('labels.formatKeep') : f.toUpperCase() }}
+                </button>
+              }
+            </div>
+          </div>
+
+          @if (showQuality()) {
+            <div class="field">
+              <label for="ri-q">{{ t('labels.quality') }} — {{ quality() }}%</label>
+              <input id="ri-q" type="range" min="1" max="100" step="1" [ngModel]="quality()"
+                (ngModelChange)="setQuality($event)" />
+            </div>
+          }
+
+          @if (mode() !== 'filesize') {
+            <p class="check-row">
+              <input id="ri-noup" type="checkbox" [ngModel]="noUpscale()" (ngModelChange)="setNoUpscale($event)" />
+              <label for="ri-noup">{{ t('labels.noUpscale') }}</label>
+            </p>
+          }
+        </div>
+
+        @if (activeItem(); as active) {
+          <div class="preview">
+            <h3>{{ t('labels.previewHeading') }}</h3>
+            @if (active.outUrl && active.status === 'done') {
+              <div class="ba-grid">
+                <figure>
+                  <img [src]="active.origUrl" [alt]="active.name" />
+                  <figcaption>
+                    <strong>{{ t('labels.before') }}</strong>
+                    <span>{{ active.width }} × {{ active.height }} · {{ fmt(active.size) }}</span>
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img [src]="active.outUrl" [alt]="active.name" />
+                  <figcaption>
+                    <strong>{{ t('labels.after') }}</strong>
+                    <span>{{ active.outWidth }} × {{ active.outHeight }} · {{ fmt(active.outSize) }}</span>
+                  </figcaption>
+                </figure>
+              </div>
+            } @else {
+              <p class="note">{{ t('labels.compareHint') }}</p>
+            }
+          </div>
+        }
+
+        <div class="actions">
+          <button type="button" class="btn" (click)="processAll()"
+            [disabled]="processing() || pendingCount() === 0">
+            @if (processing()) {
+              {{ t('labels.processing') }}
+            } @else {
+              {{ tn('labels.processBtn', pendingCount()) }}
+            }
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="downloadZip()"
+            [disabled]="doneCount() === 0 || zipping()">
+            <app-icon name="download" />
+            @if (zipping()) {
+              {{ t('labels.processing') }}
+            } @else {
+              {{ t('labels.downloadZip') }} ({{ doneCount() }})
+            }
+          </button>
+        </div>
+
+        @if (processing()) {
+          <div class="progress" role="progressbar" [attr.aria-valuenow]="batchProgress()"
+            aria-valuemin="0" aria-valuemax="100" [attr.aria-label]="t('labels.processing')">
+            <div class="bar" [style.width.%]="batchProgress()"></div>
+          </div>
+          <p class="note progress-note">{{ batchProgress() }}%</p>
+        }
+      } @else {
+        <p class="note empty">{{ t('labels.noImages') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

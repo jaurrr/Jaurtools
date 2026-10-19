@@ -1,0 +1,101 @@
+{
+  "whatsapp-text-formatter": {
+    "benefits": [
+      "See exactly how your WhatsApp message will look before you send it.",
+      "Turn messy exported chats into clean, readable formatted documents.",
+      "Strip all WhatsApp markup to plain text for reports and archives.",
+      "Copy the rendered HTML to reuse the formatting on a website or blog.",
+      "Download the result as .html or .txt — no account, no upload, no cost."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Surround text with markers: *bold*, _italic_, ~strikethrough~, `code`, ```code block```, and start a line with > for a quote. WhatsApp renders these automatically; this tool shows you the result in advance.",
+        "q": "How does WhatsApp text formatting work?"
+      },
+      {
+        "a": "Paste any text that uses WhatsApp markers. The preview renders them as formatted HTML; the Strip markup mode removes every marker and leaves plain text.",
+        "q": "What does this tool do with my chat text?"
+      },
+      {
+        "a": "This tool only reads the text you paste — it cannot see your WhatsApp account, contacts or chats. Never paste anything you would not want to share.",
+        "q": "Can it read my WhatsApp chats directly?"
+      },
+      {
+        "a": "Use the Strip markup mode, which removes every formatting marker and quote symbol, leaving clean plain text ready for reports or archives.",
+        "q": "How do I remove all formatting from copied chat text?"
+      },
+      {
+        "a": "Yes. The HTML you copy is plain formatted markup — paste it into a blog editor, email composer or document that accepts HTML.",
+        "q": "Can I use the formatted output on my website?"
+      },
+      {
+        "a": "The preview is a close approximation using standard HTML tags. WhatsApp's own app may space things slightly differently, but bold, italic, strikethrough, code and quotes all match.",
+        "q": "Does the preview match WhatsApp exactly?"
+      },
+      {
+        "a": "No. The conversion runs entirely in your browser with JavaScript. Nothing is sent anywhere.",
+        "q": "Is my pasted text uploaded?"
+      }
+    ],
+    "formula": "1. Escape HTML (& < > \") so pasted text is safe\n2. Extract ```code blocks``` into placeholders (parsed last, protected from other rules)\n3. `inline code` -> <code>\n4. *bold* -> <strong>   (asterisks around text)\n5. _italic_ -> <em>     (underscores around text)\n6. ~strike~ -> <del>    (tildes around text)\n7. Lines starting with > -> <blockquote>   (after HTML-escaping, matches &gt;)\n8. Restore code blocks; join lines with <br>\n\nStrip mode: delete ```...``` wrappers, remove every * _ ~ `, and drop leading > on each line.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your WhatsApp chat text (or the sample) into the input box.",
+      "Choose Preview to see formatted output, or Strip markup for plain text.",
+      "Review the live result under the options.",
+      "Copy the plain text or the rendered HTML to your clipboard.",
+      "Download the result as .html or .txt if you need a file.",
+      "Paste the formatted output wherever you need it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "*text* = bold, _text_ = italic, ~text~ = strikethrough.",
+      "`text` = inline code, ```text``` = code block.",
+      "> at the start of a line = quote block.",
+      "Preview mode renders the markup as formatted HTML instantly.",
+      "Strip markup mode removes every marker, leaving plain text.",
+      "Everything runs 100% in your browser — nothing is uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "whatsapp chat formatter, whatsapp bold italic, whatsapp text formatter, format whatsapp message, whatsapp markup",
+    "labels": {
+      "charsLabel": "Input characters",
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy plain text",
+      "copyHtml": "Copy HTML",
+      "downloadHtml": "Download .html",
+      "downloadTxt": "Download .txt",
+      "inputLabel": "Chat text with WhatsApp formatting",
+      "inputPlaceholder": "Paste text with *bold*, _italic_, ~strikethrough~...",
+      "modeLabel": "Output mode",
+      "modePlain": "Strip markup",
+      "modePreview": "Formatted preview",
+      "outputLabel": "Result"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The parser is regex-based, so edge cases differ from WhatsApp: underscores inside words (like snake_case) may be read as italic markers.",
+      "Nested formatting (bold inside italic) renders approximately, not exactly like WhatsApp.",
+      "The preview approximates WhatsApp's styling; exact fonts and spacing belong to the WhatsApp app.",
+      "This tool cannot access your WhatsApp account or import chats — you must paste the text yourself."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free WhatsApp text formatter: preview bold, italic and strikethrough live, then copy clean text for any chat. No sign-up.",
+    "metaTitle": "WhatsApp Text Formatter - Bold, Italic & More Free | JaurTools",
+    "name": "WhatsApp Text Formatter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste text with WhatsApp formatting and choose a mode: Formatted preview renders *bold*, _italic_, ~strikethrough~, code and quotes as styled HTML, while Strip markup removes every marker for clean plain text. Copy the result or download it as .html or .txt.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "WhatsApp formatter results",
+    "tagline": "Format WhatsApp text — bold, italic, strikethrough, live preview.",
+    "workedExample": "Input:  *Hello* _world_ ~oops~ `code`\n\nStep 1: escape HTML (no change here)\nStep 2: no ```blocks``` to extract\nStep 3: `code` -> <code class=\"wa-inline\">code</code>\nStep 4: *Hello* -> <strong>Hello</strong>\nStep 5: _world_ -> <em>world</em>\nStep 6: ~oops~ -> <del>oops</del>\n\nPreview renders: Hello (bold) world (italic) oops (struck through) code (monospace).\n\nStrip markup mode deletes every * _ ~ ` and returns: \"Hello world oops code\".",
+    "workedExampleHeading": "Worked example"
+  }
+}

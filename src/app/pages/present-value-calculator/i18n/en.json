@@ -1,0 +1,92 @@
+{
+  "present-value-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Present Value Calculator",
+    "tagline": "Discount any future amount back to what it is worth in today's money.",
+    "metaTitle": "Present Value Calculator - Discount Future Cash | JaurTools",
+    "metaDescription": "Free present value calculator: discount a future sum to today's value at any rate, term, and compounding frequency.",
+    "keywords": "present value calculator, pv calculator, discount calculator, time value of money calculator, discounted cash flow calculator",
+    "resultsHeading": "Your present value results",
+    "quickAnswer": "Present value = Future value / (1 + r)^n, with periodic rate r and n periods. Example: 1,000,000 due in 10 years at an 8% discount rate is worth 463,193 today, so the discount is 536,807. The longer you wait or the higher the rate, the less future money is worth now.",
+    "keyFacts": [
+      "Present value reverses compounding: it asks what you must invest today to reach a future sum.",
+      "The discount rate is your opportunity cost: what the money could earn elsewhere.",
+      "Higher rates and longer waits both shrink present value dramatically.",
+      "More frequent compounding slightly lowers present value at the same nominal rate.",
+      "Present value is the foundation of bond pricing, NPV, and pension math.",
+      "A future sum's present value can never exceed the sum itself at a positive rate."
+    ],
+    "howTo": [
+      "Enter the future amount you expect to receive or pay.",
+      "Enter the annual discount rate as a percentage.",
+      "Enter how many years away the amount is.",
+      "Choose the compounding frequency that matches your rate.",
+      "Read the present value and the discount, which is the time cost of waiting."
+    ],
+    "formula": "PV = FV / (1 + r)^n.\nFV = future value, r = periodic rate (annual rate / compounding), n = total periods (years x compounding).\nDiscount = FV - PV.\nExample: 1,000,000 / 1.08^10 = 1,000,000 / 2.158925 = 463,193.",
+    "workedExample": "Future value 1,000,000, discount rate 8%, 10 years, annual compounding:\n1. Periodic rate: 0.08; periods: 10.\n2. Growth factor: 1.08^10 = 2.158925.\n3. Present value: 1,000,000 / 2.158925 = 463,193.\n4. Discount: 1,000,000 - 463,193 = 536,807.\nSo 463,193 invested today at 8% grows to exactly 1,000,000 in 10 years.",
+    "benefits": [
+      "Puts any future promise into today's money for fair comparisons.",
+      "Handles annual, semi-annual, quarterly, and monthly compounding.",
+      "The discount row quantifies the cost of waiting in real money.",
+      "Essential first step for NPV and investment analysis."
+    ],
+    "limitations": [
+      "The answer is only as good as your discount rate, which is a judgment call.",
+      "Ignores risk: a promised sum may never arrive, which deserves a higher rate.",
+      "Ignores inflation separately; use a real rate if you want real purchasing power.",
+      "Single-sum only: it does not value a stream of payments (use the payment calculator for that)."
+    ],
+    "faqs": [
+      {
+        "q": "What discount rate should I use?",
+        "a": "Use the return you could earn on money of similar risk: a safe government bond rate for low-risk sums, or your required return for risky ones. For personal decisions, many people use 6 to 10%. The rate choice drives the answer, so test a range."
+      },
+      {
+        "q": "Why is present value less than future value?",
+        "a": "Because money today can be invested and grow. To have 1,000,000 in 10 years at 8%, you only need 463,193 now; the rest is growth you earn by waiting. Present value strips out that growth."
+      },
+      {
+        "q": "Does compounding frequency matter much?",
+        "a": "A little. Monthly compounding discounts slightly more than annual at the same nominal rate, because the effective annual rate is higher. The effect is small next to the choice of rate and years."
+      },
+      {
+        "q": "How does this relate to NPV?",
+        "a": "NPV is the sum of the present values of all future cash flows minus the initial cost. This calculator does one cash flow; the payback calculator's NPV row does a whole series."
+      },
+      {
+        "q": "Can the discount rate be zero?",
+        "a": "Yes. At 0% the present value equals the future value: waiting costs nothing because money does not grow. The calculator handles this automatically."
+      },
+      {
+        "q": "Should I use a real or nominal rate?",
+        "a": "Use a nominal rate for nominal future sums and a real rate (nominal minus inflation) if you want the answer in today's purchasing power. Mixing them is the most common present-value mistake."
+      }
+    ],
+    "labels": {
+      "futureValue": "Future value",
+      "discountRate": "Discount rate (% per year)",
+      "years": "Years in the future",
+      "compounding": "Compounding",
+      "annualOpt": "Annual",
+      "semiOpt": "Semi-annual",
+      "quarterlyOpt": "Quarterly",
+      "monthlyOpt": "Monthly",
+      "presentValue": "Present value",
+      "discount": "Discount (cost of waiting)"
+    }
+  }
+}

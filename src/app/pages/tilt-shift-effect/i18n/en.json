@@ -1,0 +1,99 @@
+{
+  "tilt-shift-effect": {
+    "benefits": [
+      "The miniature look makes cityscapes and crowds look like tiny models.",
+      "Full control: focus position, band height, blur strength and feather are all adjustable.",
+      "No photo editor needed: the layered blur renders with the canvas API.",
+      "Instant preview: every slider updates the result immediately."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Tilt-shift is a photography effect that keeps one horizontal band of the photo sharp while blurring the areas above and below it. The shallow-focus look tricks the brain into seeing a miniature model instead of a real scene.",
+        "q": "What is the tilt-shift effect?"
+      },
+      {
+        "a": "The tool renders a blurred copy of the photo, draws the sharp original underneath, then overlays the blurred version on the top and bottom regions with a gradient mask. The middle band stays sharp.",
+        "q": "How does this tool create the effect?"
+      },
+      {
+        "a": "Put the focus band over the main subject — usually slightly below the vertical center for landscapes. A band of 20–40% of the image height looks most natural.",
+        "q": "Where should I place the focus band?"
+      },
+      {
+        "a": "Feather controls how gradually the blur fades into the sharp band. Low feather gives a hard edge like a real tilt-shift lens; high feather gives a dreamy gradual transition.",
+        "q": "What does feather do?"
+      },
+      {
+        "a": "Yes, but gently: small amounts add atmosphere. Too much blur washes out the top and bottom completely, which can look artificial.",
+        "q": "Can I blur the whole background?"
+      },
+      {
+        "a": "No. The image is processed with the canvas API inside your browser.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "band top = focusY − bandHeight ÷ 2   (all in % of image height)\nband bottom = focusY + bandHeight ÷ 2\n\nsharp where bandTop < y < bandBottom; blurred elsewhere,\nwith a feather gradient softening the transition.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo — cityscapes and scenes shot from above work best.",
+      "Drag the focus position to the band you want to keep sharp.",
+      "Set the band height: narrower bands look more miniature.",
+      "Increase the blur for a stronger effect and feather for a softer transition.",
+      "Download the miniature-style PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Tilt-shift mimics the shallow depth of field of a tilt-shift camera lens.",
+      "A sharp horizontal band surrounded by blur reads as a miniature scene to the eye.",
+      "The effect works by compositing a blurred copy over the top and bottom regions.",
+      "A gradient mask feathers the transition between sharp and blurred areas.",
+      "Photos taken from a high angle sell the miniature illusion best.",
+      "All compositing happens locally with canvas layers and gradient masks."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "tilt-shift effect, miniature effect photo, tilt shift filter online, miniature photo maker",
+    "labels": {
+      "bandLabel": "Focus band height",
+      "blurLabel": "Blur strength",
+      "downloadButton": "Download PNG",
+      "dropHint": "Click to choose a photo",
+      "emptyNote": "Upload a photo to apply the tilt-shift effect.",
+      "errorRead": "Could not read that image.",
+      "errorSize": "The image must be smaller than 15 MB.",
+      "errorType": "Only image files are accepted.",
+      "featherLabel": "Feather (soft edge)",
+      "featherNote": "Higher values blend the blur into the sharp band more gradually.",
+      "focusLabel": "Focus position",
+      "focusNote": "0% = top of the photo, 100% = bottom.",
+      "originalAlt": "Original photo",
+      "originalLabel": "Original",
+      "outputSizeLabel": "Output size",
+      "resultAlt": "Tilt-shift result",
+      "resultLabel": "Tilt-shift"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The miniature illusion works best on photos taken from above; portraits gain little.",
+      "Very large photos are downscaled to 1600 px on the long edge.",
+      "The blur is uniform; real lenses also blur with distance-based falloff.",
+      "Extremely high blur values can look artificial rather than miniature."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free tilt-shift effect. Give any photo the miniature-model look with adjustable focus band, blur and feather — right in your browser.",
+    "metaTitle": "Tilt-Shift Effect — Miniature Photo Look Online",
+    "name": "Tilt-Shift Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Tilt-shift makes real photos look like miniature models by keeping one horizontal band sharp and blurring the rest. Upload a photo, position the focus band, tune the blur and feather, and download the result — all rendered locally with canvas.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Tilt-shift effect results",
+    "tagline": "Give photos the miniature look with an adjustable focus band.",
+    "workedExample": "You upload a 1200 × 800 city photo and set focus = 60%, band = 30%, blur = 8 px, feather = 25%.\n\nFocus line y = 60% × 800 = 480 px.\nBand top = 480 − (30% × 800) ÷ 2 = 480 − 120 = 360 px.\nBand bottom = 480 + 120 = 600 px.\nFeather = 25% × 800 = 200 px of soft transition.\n\nThe 240 px band from y = 360 to y = 600 stays tack sharp while the sky above and street below melt into blur — the city reads as a tiny model.",
+    "workedExampleHeading": "Worked example"
+  }
+}

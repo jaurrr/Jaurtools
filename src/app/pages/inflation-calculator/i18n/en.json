@@ -1,0 +1,89 @@
+{
+  "inflation-calculator": {
+    "assumptionNote": "CPI values are approximate US CPI-U annual averages built into this page, not live data. They are updated only when this page is revised - for official figures, check the Bureau of Labor Statistics.",
+    "benefits": [
+      "See what old prices mean in today's money - salaries, house prices, anything.",
+      "Compare purchasing power across years with one calculation.",
+      "The annualized rate shows the true yearly erosion, not just the total.",
+      "Free, instant, and private - no data leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "CPI (Consumer Price Index) tracks the price of a fixed basket of consumer goods and services over time. When CPI rises from 172.2 to 322.0, that basket costs 87% more - that is inflation.",
+        "q": "What is CPI?"
+      },
+      {
+        "a": "Because inflation compounds. 87% over 25 years averages about 2.54% per year, not 87/25 = 3.48%. Each year's inflation applies to already-higher prices. That is why the annualized figure is the honest one.",
+        "q": "Why is the annualized rate lower than cumulative divided by years?"
+      },
+      {
+        "a": "CPI measures the average basket, but your basket differs. Housing, healthcare, and college have risen much faster than CPI, while electronics got cheaper. CPI is the best general measure, not your personal inflation rate.",
+        "q": "Is CPI the same as my cost of living?"
+      },
+      {
+        "a": "Roughly, yes, for averages: wages roughly track CPI over long periods, which is why the inflation-adjusted comparison is fair. But specific jobs and cities diverge a lot - tech wages vs rural wages, for example.",
+        "q": "Do salaries keep up with inflation?"
+      },
+      {
+        "a": "Pick the two years in the dropdowns and enter the amount. The calculator reverses the ratio: a 2025 amount becomes its 2000 equivalent by dividing instead of multiplying.",
+        "q": "Can I go backwards, from today to the past?"
+      },
+      {
+        "a": "The table ends at 2025 because it is built into the page and updated manually. For 2026 onward, check the latest CPI release from the Bureau of Labor Statistics and compare it to the 2025 value of 322.0 shown here.",
+        "q": "Why does the table stop at 2025?"
+      }
+    ],
+    "formula": "Adjusted value = amount x (CPI in target year / CPI in start year)\nCumulative inflation % = (ratio - 1) x 100\nAnnualized rate % = (ratio^(1/years) - 1) x 100",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the amount you want to adjust.",
+      "Pick the starting year.",
+      "Pick the target year.",
+      "Read the inflation-adjusted value, cumulative inflation, and the annualized rate."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Inflation = the general rise in prices, which shrinks what money buys.",
+      "CPI (Consumer Price Index) is the standard US measure.",
+      "Adjusted value = amount x (target CPI / start CPI).",
+      "Cumulative inflation is not the yearly rate - annualize it for the honest figure.",
+      "The built-in CPI table is static and needs periodic updates."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "inflation calculator, cpi inflation calculator, purchasing power calculator, historical value calculator, cost of living calculator",
+    "labels": {
+      "adjustedValue": "Adjusted value",
+      "amount": "Amount ($)",
+      "annualizedRate": "Annualized inflation rate",
+      "cpiFrom": "CPI (start year)",
+      "cpiTo": "CPI (target year)",
+      "cumulativeInflation": "Cumulative inflation",
+      "fromYear": "From year",
+      "toYear": "To year"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Static approximate CPI table - not live data and needs periodic updates.",
+      "US CPI only; other countries' inflation differs.",
+      "CPI is an average basket, not your personal cost of living.",
+      "Estimate only - not for contracts or legal indexation."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free inflation calculator: adjust any amount for US CPI inflation between 2000 and 2025. See cumulative and annualized rates. Private, no sign-up.",
+    "metaTitle": "Inflation Calculator - CPI Purchasing Power (2000-2025) | JaurTools",
+    "name": "Inflation Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "$100 in the year 2000 equals about $187 in 2025: CPI rose from 172.2 to 322.0, a cumulative inflation of 87%, which annualizes to about 2.54% per year over the 25 years. The calculator uses a built-in static CPI table, so treat recent years as approximate.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your inflation results",
+    "tagline": "See what any amount was worth across years, via CPI.",
+    "workedExample": "$100 in 2000, adjusted to 2025:\n1. CPI 2000 = 172.2, CPI 2025 = 322.0.\n2. Ratio = 322.0 / 172.2 = 1.8699.\n3. Adjusted value = $100 x 1.8699 = about $187.00.\n4. Cumulative inflation = (1.8699 - 1) x 100 = 87.0%.\n5. Annualized = 1.8699^(1/25) - 1 = about 2.54% per year.\nNote: 87 / 25 = 3.48% would be wrong - compounding makes the true yearly rate 2.54%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

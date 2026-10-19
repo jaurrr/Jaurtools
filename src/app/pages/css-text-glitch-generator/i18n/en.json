@@ -1,0 +1,93 @@
+{
+  "css-text-glitch-generator": {
+    "assumptionNote": "The HTML and CSS below always match the current settings.",
+    "benefits": [
+      "No JavaScript and no images — the effect is two CSS pseudo-elements animated with keyframes.",
+      "The text stays real selectable text, so it remains SEO-friendly and screen-reader friendly.",
+      "Glitch offset scales automatically with font size, so the effect looks right at any size.",
+      "Works in every modern browser; older ones simply show the clean base text.",
+      "Copy-paste output drops into landing pages, 404 pages, and hero banners in seconds."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Copy the CSS into your stylesheet and place the HTML div where the heading should appear. The two pseudo-elements read the same text from data-text and animate automatically.",
+        "q": "How do I add the glitch text to my site?"
+      },
+      {
+        "a": "Yes. Edit the color values of .glitch-text::before and .glitch-text::after in the generated CSS, or regenerate here with the color pickers.",
+        "q": "Can I change the glitch colors later?"
+      },
+      {
+        "a": "The pseudo-elements use clip-path slices and small translate offsets — both animate on the GPU — so the effect stays smooth even on mid-range phones.",
+        "q": "Will the animation slow down my page?"
+      },
+      {
+        "a": "Yes. The base element holds real text, so search engines and screen readers read it normally. Only the two decorative copies are hidden behind the animation.",
+        "q": "Is the text still readable by search engines?"
+      },
+      {
+        "a": "Change the animation duration in the generated CSS (for example 2s to 4s) or regenerate with a slower speed here. Pair it with your own prefers-reduced-motion rule if your audience needs it.",
+        "q": "How do I make the glitch slower or calmer?"
+      },
+      {
+        "a": "Yes. The generated snippets are plain CSS and HTML with no license attached — use them in personal and commercial projects freely.",
+        "q": "Is the generated code free for commercial use?"
+      }
+    ],
+    "formula": "offset = max(1, round(font-size / 24)) px\n\nEach pseudo-element cycles 6 clip-path slices while\ntranslating +/- offset on both axes.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the word or short phrase you want to glitch, up to 30 characters.",
+      "Pick the base text color and the two glitch colors.",
+      "Set the font size between 24 and 96 pixels.",
+      "Choose the animation speed — lower values glitch more intensely.",
+      "Copy the generated CSS and HTML into your project."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The glitch uses ::before and ::after pseudo-elements that both render attr(data-text).",
+      "Six keyframe stops slice the copies with clip-path and shift them by a few pixels.",
+      "The two copies animate in opposite directions (alternate-reverse) for the classic RGB-split look.",
+      "Offset scales with font size: 48 px text shifts by 2 px, 96 px text by 4 px.",
+      "Everything runs on transform and clip-path, so the animation is GPU-accelerated."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css glitch text generator, glitch effect css, text glitch animation, rgb split text css",
+    "labels": {
+      "baseColorLabel": "Text color",
+      "color1Label": "Glitch color 1",
+      "color2Label": "Glitch color 2",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "fontSizeLabel": "Font size",
+      "offsetLabel": "Glitch offset",
+      "previewLabel": "Glitch preview",
+      "speedLabel": "Speed",
+      "textLabel": "Text"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The effect needs the exact same text in both the element and its data-text attribute.",
+      "Very long phrases can overflow small screens — keep text short for best results.",
+      "Browsers without clip-path support show the two color copies stacked, which looks messy.",
+      "Rapid flashing may bother motion-sensitive visitors; offer a calm alternative where needed."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create animated CSS glitch text effects. Customize the text, colors, font size and speed, preview live, and copy clean HTML and CSS with no JavaScript needed.",
+    "metaTitle": "CSS Glitch Text Generator – Free Animated Text Effect",
+    "name": "CSS Text Glitch Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Glitch text is the cyberpunk-style heading effect where a word appears to split into red and cyan copies that jitter sideways. It is built with two CSS pseudo-elements that render the same text from a data-text attribute, then animate clip-path slices in opposite directions. This tool generates the full HTML and CSS for any word, colors, and speed.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Glitch preview",
+    "tagline": "Generate pure-CSS glitch text animations for headings and banners.",
+    "workedExample": "Type GLITCH with font size 48 px, text color #0f172a, glitch colors #ff005e and #00d4ff, speed 2 seconds.\n\noffset = max(1, round(48 / 24)) = 2 px.\n\nThe ::before copy renders in #ff005e and the ::after copy in #00d4ff; both cycle six clip-path slices while translating up to 2 px in opposite directions, twice per second. Paste the CSS plus this HTML:\n<div class=\"glitch-text\" data-text=\"GLITCH\">GLITCH</div>\nand the heading glitches immediately with no JavaScript.",
+    "workedExampleHeading": "Worked example"
+  }
+}

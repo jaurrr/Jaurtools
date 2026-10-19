@@ -1,0 +1,162 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="search" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="ua-input">{{ t('labels.pasteLabel') }}</label>
+        <textarea id="ua-input" class="dv-term-input code" style="min-block-size: 90px" spellcheck="false"
+          [ngModel]="uaInput()" (ngModelChange)="setUa($event)"
+          [attr.placeholder]="t('labels.pasteHint')" dir="ltr"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn" (click)="useMyUa()">
+          <app-icon name="zap" /> {{ t('labels.useMyUa') }}
+        </button>
+        <button type="button" class="btn ghost" (click)="clearInput()">
+          <app-icon name="x" /> {{ t('labels.clearButton') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.samplesLabel') }}</label>
+        <div class="chip-row" role="group" [attr.aria-label]="t('labels.samplesLabel')">
+          <button type="button" class="chip" (click)="useSample(0)">{{ t('labels.sampleChrome') }}</button>
+          <button type="button" class="chip" (click)="useSample(1)">{{ t('labels.sampleIphone') }}</button>
+          <button type="button" class="chip" (click)="useSample(2)">{{ t('labels.sampleBot') }}</button>
+        </div>
+      </div>
+
+      @if (result(); as r) {
+        <div class="results">
+          <div class="result-row total">
+            <span><app-icon name="globe" /> {{ t('labels.browserLabel') }}</span>
+            <strong>{{ r.browser }}{{ r.browserVersion ? ' ' + r.browserVersion : '' }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.engineLabel') }}</span>
+            <strong>{{ r.engine || '—' }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.osLabel') }}</span>
+            <strong>{{ r.os }}{{ r.osVersion ? ' ' + r.osVersion : '' }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.deviceTypeLabel') }}</span>
+            <strong><span class="badge" [class.pass]="r.deviceType === 'Desktop'" [class.warn]="r.deviceType === 'Mobile' || r.deviceType === 'Tablet'">{{ t('labels.device_' + r.deviceType.toLowerCase()) }}</span></strong>
+          </div>
+          @if (r.device) {
+            <div class="result-row">
+              <span>{{ t('labels.deviceLabel') }}</span>
+              <strong class="mono">{{ r.device }}</strong>
+            </div>
+          }
+          <div class="result-row">
+            <span>{{ t('labels.botLabel') }}</span>
+            <strong><span class="badge" [class.fail]="r.isBot" [class.pass]="!r.isBot">{{ r.isBot ? t('labels.botYes') : t('labels.botNo') }}</span></strong>
+          </div>
+          @if (r.isBot && r.botName) {
+            <div class="result-row">
+              <span>{{ t('labels.botNameLabel') }}</span>
+              <strong class="mono">{{ r.botName }}</strong>
+            </div>
+          }
+        </div>
+      } @else {
+        <p class="note">{{ t('labels.emptyState') }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

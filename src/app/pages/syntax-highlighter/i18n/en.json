@@ -1,0 +1,88 @@
+{
+  "syntax-highlighter": {
+    "assumptionNote": "Uses a lightweight pattern-based highlighter, not a full language parser. It handles everyday code well but can mis-color rare edge cases like nested template literals or unusual regexes.",
+    "benefits": [
+      "Preview documentation and tutorial code in seconds without installing anything.",
+      "Copy or download a styled HTML snippet ready to paste into blogs and docs.",
+      "Supports the five languages most people actually paste: JS, Python, HTML, CSS, JSON.",
+      "Free, instant, and private - your code never leaves the browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Syntax highlighting colors code by meaning - keywords, strings, comments, numbers - so your eyes can scan structure instantly instead of reading character by character. Studies consistently show it speeds up reading and debugging.",
+        "q": "What is syntax highlighting?"
+      },
+      {
+        "a": "JavaScript, Python, HTML, CSS, and JSON. These cover the vast majority of code people share in docs, tutorials, and blog posts. Pick the language from the dropdown; the colors adapt to each language's grammar.",
+        "q": "Which languages are supported?"
+      },
+      {
+        "a": "Click Download HTML to get a standalone page with your highlighted code and its styles baked in. Paste the <pre> block into any blog or documentation page that allows raw HTML, or restyle the tok-* classes to match your theme.",
+        "q": "How do I use the highlighted code on my blog?"
+      },
+      {
+        "a": "It is a pattern-based highlighter: fast regular expressions, not a full parser. That keeps it instant and dependency-free, but exotic syntax (nested template literals, heredocs, unusual regex literals) can confuse it. The limitation is stated honestly above the tool.",
+        "q": "Why not use a full parser like Prism or highlight.js?"
+      },
+      {
+        "a": "Yes. The highlighter escapes your code first, then only inserts its own <span> tags, so nothing you paste can run as a script. The download is a plain styled page with no JavaScript at all.",
+        "q": "Is it safe to paste untrusted code?"
+      },
+      {
+        "a": "The colors are CSS classes (tok-k for keywords, tok-s for strings, and so on), so restyle them freely. The download includes the same class names with default colors - swap the hex values to match your brand.",
+        "q": "Can I change the colors?"
+      }
+    ],
+    "formula": "Pipeline, one pass:\n1. Escape the code: & -> &amp;, < -> &lt;, > -> &gt;.\n2. Run one combined pattern per language: comments | strings | keywords | numbers | functions.\n3. Wrap each match in <span class=\"tok-x\">.\n4. Non-matching text passes through unchanged.",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the language of your code from the dropdown.",
+      "Paste your code into the editor (or press Load sample to try one).",
+      "The highlighted preview updates as you type.",
+      "Copy the raw code, or download the styled HTML snippet for your blog or docs."
+    ],
+    "howToHeading": "How to use this highlighter",
+    "keyFacts": [
+      "Syntax highlighting colors keywords, strings, comments, numbers, and function names differently.",
+      "This tool highlights JavaScript, Python, HTML, CSS, and JSON.",
+      "It works in one pass: escape HTML, match token patterns, wrap matches in styled spans.",
+      "Your code is escaped before highlighting, so pasted code can never execute.",
+      "The download is a standalone HTML file with the colors baked in as CSS classes."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "syntax highlighter, code highlighter, code colorizer online, highlight javascript code, code snippet formatter",
+    "labels": {
+      "codeLabel": "Your code",
+      "copiedButton": "Copied!",
+      "copyCode": "Copy code",
+      "downloadHtml": "Download HTML",
+      "language": "Language",
+      "loadSample": "Load sample",
+      "previewLabel": "Highlighted preview"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pattern-based, not a full parser - rare edge cases can mis-highlight.",
+      "Only five languages are supported.",
+      "Very large files (100k+ characters) may feel sluggish on old phones.",
+      "Not a code editor: no autocomplete, linting, or error checking."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free syntax highlighter: paste code and preview beautiful highlighted output for JS, Python, HTML, CSS, and JSON. Copy or download the HTML.",
+    "metaTitle": "Syntax Highlighter - Colorize Code Online | JaurTools",
+    "name": "Syntax Highlighter",
+    "privacyNote": "This tool runs 100% in your browser. Your code never leaves your device.",
+    "quickAnswer": "Syntax highlighting colors code by meaning - keywords, strings, comments, numbers - so structure is visible at a glance. This tool highlights JavaScript, Python, HTML, CSS, and JSON in one fast pass: it escapes your code, matches token patterns with regular expressions, and wraps each match in a styled span. Paste code, watch it colorize live, then copy it or download a standalone HTML snippet for your blog. It is pattern-based rather than a full parser, so exotic edge cases can occasionally mis-color - an honest trade-off for instant, dependency-free highlighting.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Highlight your code",
+    "tagline": "Preview beautiful syntax-highlighted code for five languages, instantly.",
+    "workedExample": "Paste this JavaScript:\nfunction greet(name) {\n  const message = \"Hello!\"; // a comment\n  return message;\n}\nThe highlighter produces:\n- function, const, return wrapped as keywords (purple, bold)\n- \"Hello!\" wrapped as a string (green)\n- // a comment wrapped as a comment (gray, italic)\n- greet wrapped as a function name (blue)\nEverything else passes through as plain text.",
+    "workedExampleHeading": "Worked example"
+  }
+}

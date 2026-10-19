@@ -1,0 +1,186 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="btn-row" role="group" [attr.aria-label]="t('labels.modeLabel')" style="margin-block-end: 1.25rem; margin-block-start: 0;">
+        <button type="button" class="btn" [class.btn-primary]="mode() === 'dec2frac'" (click)="setMode('dec2frac')">
+          {{ t('labels.decTab') }}
+        </button>
+        <button type="button" class="btn" [class.btn-primary]="mode() === 'frac2dec'" (click)="setMode('frac2dec')">
+          {{ t('labels.fracTab') }}
+        </button>
+      </div>
+
+      @if (mode() === 'dec2frac') {
+        <div class="field">
+          <label for="df-dec">{{ t('labels.decimalInput') }}</label>
+          <input id="df-dec" type="text" inputmode="decimal" dir="ltr" autocomplete="off"
+            [ngModel]="decText()" (ngModelChange)="setDecText($event)" />
+        </div>
+
+        @if (decResult(); as r) {
+          <div class="results calc-results">
+            <div class="result-row total">
+              <span><app-icon name="file-text" /> {{ t('labels.simplified') }}</span>
+              <strong dir="ltr">{{ r.fraction }}</strong>
+            </div>
+            @if (r.hasMixed) {
+              <div class="result-row">
+                <span>{{ t('labels.mixed') }}</span>
+                <strong dir="ltr">{{ r.mixed }}</strong>
+              </div>
+            }
+          </div>
+        } @else {
+          <p class="error-note">{{ t('labels.errInvalidDec') }}</p>
+        }
+      } @else {
+        <div class="field">
+          <label for="df-frac">{{ t('labels.fractionInput') }}</label>
+          <input id="df-frac" type="text" inputmode="decimal" dir="ltr" autocomplete="off"
+            [attr.placeholder]="t('labels.fractionHint')"
+            [ngModel]="fracText()" (ngModelChange)="setFracText($event)" />
+        </div>
+
+        @if (fracResult(); as r) {
+          <div class="results calc-results">
+            <div class="result-row total">
+              <span><app-icon name="file-text" /> {{ t('labels.decimalValue') }}</span>
+              <strong dir="ltr">{{ r.decimal }}</strong>
+            </div>
+            <div class="result-row">
+              <span>{{ t('labels.simplified') }}</span>
+              <strong dir="ltr">{{ r.fraction }}</strong>
+            </div>
+            @if (r.hasMixed) {
+              <div class="result-row">
+                <span>{{ t('labels.mixed') }}</span>
+                <strong dir="ltr">{{ r.mixed }}</strong>
+              </div>
+            }
+          </div>
+        } @else {
+          <p class="error-note">{{ t('labels.errInvalidFrac') }}</p>
+        }
+      }
+      <div class="calc-quickrows">
+        <h3>{{ t('labels.quickAnswersTitle') }}</h3>
+        @for (q of quickRows(); track q.dec) {
+          <div class="calc-quickrow">
+            <strong dir="ltr">{{ q.q }}</strong>
+            <p dir="ltr">{{ q.a }}</p>
+          </div>
+        }
+      </div>
+
+      <table class="calc-ref-table">
+        <caption>{{ t('labels.refTableTitle') }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ t('labels.decimalCol') }}</th>
+            <th scope="col">{{ t('labels.fractionCol') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of refTable(); track r.dec) {
+            <tr>
+              <td dir="ltr">{{ r.dec }}</td>
+              <td dir="ltr"><strong>{{ r.frac }}</strong></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

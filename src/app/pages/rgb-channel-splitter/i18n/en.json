@@ -1,0 +1,88 @@
+{
+  "rgb-channel-splitter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "RGB Channel Splitter",
+    "tagline": "See exactly what any color is made of.",
+    "metaTitle": "RGB Channel Splitter - See Red, Green & Blue Channels | JaurTools",
+    "metaDescription": "Split any color into its red, green and blue channels and see exactly what it's made of. Free, instant.",
+    "keywords": "rgb channels, color channels viewer, rgb values, split color channels, hex to rgb",
+    "quickAnswer": "Every screen color is a mix of three channels: red, green and blue, each from 0 to 255. #FF5733 splits into R = 255 (100%), G = 87 (34.1%), B = 51 (20%). The high red with moderate green makes the warm orange; the low blue keeps it from turning purple or gray.",
+    "keyFacts": [
+      "RGB channels each range from 0 (none) to 255 (full strength).",
+      "Equal channels make grays: RGB(128, 128, 128) is middle gray.",
+      "The channel with the highest value decides the color's family - here red wins.",
+      "Two channels at 255 make secondaries: red + green = yellow, green + blue = cyan.",
+      "Channel bars show each value as a percentage of 255 for quick comparison."
+    ],
+    "howTo": [
+      "Pick a color with the picker or type a HEX code like #FF5733.",
+      "Read each channel's value (0-255) and its percentage of full strength.",
+      "Compare the bars to see which channels dominate the mix.",
+      "Use the values directly in CSS: rgb(255, 87, 51).",
+      "Try pure primaries (#FF0000, #00FF00, #0000FF) to see single-channel bars."
+    ],
+    "formula": "Channel value = the byte at its HEX position.\nExample: #FF5733:\nR = 0xFF = 255 -> 255 / 255 = 100%\nG = 0x57 = 87 -> 87 / 255 = 34.1%\nB = 0x33 = 51 -> 51 / 255 = 20.0%",
+    "workedExample": "#FF5733 split into channels:\n1. Take the HEX pairs: FF, 57, 33.\n2. Convert: 0xFF = 255, 0x57 = 87, 0x33 = 51.\n3. As percentages of 255: 100%, 34.1%, 20.0%.\n4. Reading: red dominates (full), green contributes a third (warming it to orange), blue is low (keeping it warm, not purple).",
+    "benefits": [
+      "Understand any color's recipe at a glance.",
+      "Channel values paste directly into CSS, SVG and canvas code.",
+      "Great teaching aid for how screens mix light into color.",
+      "Spot why a color looks muddy: balanced mid channels mean gray-ish."
+    ],
+    "limitations": [
+      "RGB describes screens, not print - printers use CMYK, which mixes differently.",
+      "Channel numbers say nothing about how bright a color looks to human eyes.",
+      "Values assume sRGB; wide-gamut displays interpret them slightly differently."
+    ],
+    "faqs": [
+      {
+        "q": "Why 0 to 255 for each channel?",
+        "a": "Each channel gets one byte (8 bits), and 8 bits hold 256 values: 0 through 255. Three bytes make the 24-bit color in every HEX code."
+      },
+      {
+        "q": "What do equal channel values make?",
+        "a": "Grays. RGB(0,0,0) is black, RGB(255,255,255) is white, and anything equal in between - like RGB(128,128,128) - is a neutral gray."
+      },
+      {
+        "q": "How do I make yellow from channels?",
+        "a": "Turn red and green to full and blue off: RGB(255, 255, 0). Screens make yellow from red + green light, which surprises people used to paint mixing."
+      },
+      {
+        "q": "Can I use these values in CSS?",
+        "a": "Yes - rgb(255, 87, 51) works everywhere, and it is exactly equivalent to #FF5733."
+      },
+      {
+        "q": "What does a low blue channel mean?",
+        "a": "Blue pulls colors toward cool/purple. Low blue with high red and moderate green is the recipe for warm oranges, ambers and browns."
+      },
+      {
+        "q": "Is this the same as CMYK channels?",
+        "a": "No. CMYK is for print (cyan, magenta, yellow, black ink). RGB is additive light for screens - the two systems are not interchangeable."
+      }
+    ],
+    "resultsHeading": "Your RGB channel results",
+    "labels": {
+      "colorLabel": "Color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #F53 or #FF5733.",
+      "rgbValue": "RGB value",
+      "hexValue": "HEX value",
+      "redChannel": "Red channel strength",
+      "greenChannel": "Green channel strength",
+      "blueChannel": "Blue channel strength"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "binary-to-text-converter": {
+    "benefits": [
+      "Decodes binary dumps from logs, tutorials, and puzzles into readable text instantly.",
+      "Encodes text the other way for learning how computers store characters.",
+      "Validates your binary: invalid 8-bit groups are flagged, not silently mangled.",
+      "Useful for students learning number systems and character encoding.",
+      "Works both directions in one page - no need for two separate tools."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Paste it and choose Binary to Text. Spaces, tabs, and line breaks between groups are ignored, but every group must be exactly 8 digits of 0 and 1. The tool tells you how many invalid groups it found.",
+        "q": "Can I decode binary copied from somewhere else?"
+      },
+      {
+        "a": "This tool uses 8-bit groups, which cover codes 0 to 255: basic Latin letters, digits, punctuation, and Latin-1 accented characters. Characters outside that range (like most emoji and many non-Latin scripts) need multi-byte UTF-8, which this tool does not encode.",
+        "q": "Why does my emoji turn into strange characters?"
+      },
+      {
+        "a": "Use the Text to Binary direction. Each character becomes its 8-bit code, groups separated by spaces, ready to paste into a document or assignment.",
+        "q": "How do I convert text into binary?"
+      },
+      {
+        "a": "Computers store everything as bits. Text is stored as numbers (character codes), and each code is written in binary. Eight bits make one byte, which is why text is usually converted in 8-bit groups.",
+        "q": "Why is text converted in groups of 8 bits?"
+      },
+      {
+        "a": "Make sure each group is exactly 8 digits long and contains only 0 and 1. Short groups like '101' are rejected on purpose - pad them with leading zeros to '00000101'.",
+        "q": "My binary has groups shorter than 8 bits. What should I do?"
+      },
+      {
+        "a": "Most likely. The tool checks that every group is valid binary before decoding, so a failed decode means the input itself has a problem. Fix the flagged groups and try again.",
+        "q": "The tool says my binary is invalid. Is that a bug?"
+      }
+    ],
+    "formula": "Decoding (binary to text):\nFor each 8-bit group G:\n  code = G[0]x2^7 + G[1]x2^6 + ... + G[7]x2^0\n  character = char(code)\n\nEncoding (text to binary):\nFor each character C:\n  group = binary(C's code) padded to 8 digits\n\nExample: 'H' has code 72 = 64 + 8 = 01001000.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a direction: Binary to Text (decode) or Text to Binary (encode).",
+      "For decoding, paste binary as 8-bit groups separated by spaces, e.g. '01001000 01101001'.",
+      "For encoding, just type or paste any text.",
+      "The result appears instantly. Invalid binary groups are reported, not guessed.",
+      "Copy the result or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Computers store text as numbers called character codes.",
+      "Each code is written in binary (base 2) using only the digits 0 and 1.",
+      "This tool works with 8-bit groups, covering codes 0 to 255.",
+      "For example, 'H' is code 72, which is 01001000 in binary (64 + 8).",
+      "Groups can be separated by spaces, tabs, or line breaks.",
+      "Any group that is not exactly eight 0/1 digits is flagged as invalid."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "binary to text, text to binary, binary decoder, binary translator, binary to ascii, decode binary online",
+    "labels": {
+      "clearButton": "Clear",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy result",
+      "decodeTab": "Binary to Text",
+      "directionLabel": "Direction",
+      "downloadButton": "Download .txt",
+      "encodeTab": "Text to Binary",
+      "inputLabel": "Input",
+      "inputPlaceholder": "01001000 01101001",
+      "invalidError": "{n} group(s) are not valid 8-bit binary (must be exactly eight 0/1 digits).",
+      "outputLabel": "Output",
+      "statsLabel": "Groups / characters"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only 8-bit groups (codes 0-255). Multi-byte UTF-8 characters like most emoji are not supported.",
+      "It decodes character codes, not meaning: random binary gives random characters.",
+      "It cannot tell you what an unknown binary dump was meant to represent.",
+      "Very long inputs are fine, but the result is limited to what fits in your browser tab."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free binary to text converter: decode binary code into readable text instantly. Handles UTF-8, ASCII, spaced or continuous binary input.",
+    "metaTitle": "Binary to Text Converter - Decode Binary to Words Free | JaurTools",
+    "name": "Binary to Text Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Binary to text converts 8-bit binary groups into readable characters: each group is a character code written in base 2. For example, '01001000 01101001' decodes to 'Hi' because 01001000 is code 72 ('H') and 01101001 is code 105 ('i'). Paste your binary with spaces between groups, and invalid groups are flagged instead of silently misread. The tool also works in reverse, turning any text into 8-bit binary.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Binary to Text results",
+    "tagline": "Decode binary code into readable text — instant, in your browser.",
+    "workedExample": "Input (Binary to Text mode):\n01001000 01101001\n\nStep by step:\n1. Split into groups: '01001000' and '01101001'.\n2. Group 1: 0x128+1x64+0x32+0x16+1x8+0x4+0x2+0x1 = 64 + 8 = 72 -> 'H'.\n3. Group 2: 0x128+1x64+1x32+0x16+1x8+0x4+0x2+1x1 = 64 + 32 + 8 + 1 = 105 -> 'i'.\n\nOutput: Hi\n\nReverse (Text to Binary mode):\n'H' -> 72 -> 01001000, 'i' -> 105 -> 01101001\nOutput: 01001000 01101001",
+    "workedExampleHeading": "Worked example"
+  }
+}

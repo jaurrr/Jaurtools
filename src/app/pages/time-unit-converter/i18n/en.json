@@ -1,0 +1,130 @@
+{
+  "time-unit-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Time Unit Converter",
+    "tagline": "Convert between milliseconds, seconds, minutes, hours, days, weeks, months and years.",
+    "metaTitle": "Time Converter — Hours to Minutes, Days to Years",
+    "metaDescription": "Free time unit converter: ms, seconds, minutes, hours, days, weeks, months, years. Exact factors, instant results in your browser.",
+    "keywords": "time converter, hours to minutes, minutes to seconds, days to hours, weeks to days, time unit converter",
+    "quickAnswer": "Enter a duration, pick the unit you have and the one you want. The tool converts instantly — 1 hour is 3,600 seconds, a day is 86,400 seconds — and shows the exact rate used.",
+    "keyFacts": [
+      "The second is the SI base unit of time, defined by 9,192,631,770 oscillations of a caesium-133 atom.",
+      "One minute is 60 seconds, one hour is 3,600 seconds, one day is 86,400 seconds.",
+      "A week is exactly 604,800 seconds (7 × 86,400).",
+      "Calendar months vary (28–31 days); this tool uses the average month of 30.44 days.",
+      "A year is taken as 365.25 days here, averaging in leap years."
+    ],
+    "howTo": [
+      "Type the duration value into the value field.",
+      "Choose the source unit from the \"From\" dropdown.",
+      "Choose the target unit from the \"To\" dropdown.",
+      "Read the converted duration instantly; swap reverses the direction.",
+      "Check the rate line for the exact conversion factor."
+    ],
+    "formula": "result = value × (from-unit in seconds) ÷ (to-unit in seconds)\nExample: minutes = hours × 3600 ÷ 60",
+    "workedExample": "Convert 2.5 hours to minutes.\nStep 1: 2.5 hours in seconds = 2.5 × 3600 = 9000 s.\nStep 2: 1 minute = 60 s.\nStep 3: 9000 ÷ 60 = 150.\nAnswer: 2.5 hours = 150 minutes.",
+    "benefits": [
+      "Eight time units from milliseconds to years in one tool.",
+      "Exact factors for fixed units; documented averages for months and years.",
+      "Instant, private, browser-only calculation.",
+      "Shows the exact conversion rate with every result.",
+      "Useful for project planning, billing hours, and study schedules."
+    ],
+    "limitations": [
+      "Months and years are averages (30.44 and 365.25 days), not calendar-exact.",
+      "Leap seconds are not accounted for.",
+      "Results rounded to 6 decimal places.",
+      "Values beyond ±1e15 are clamped."
+    ],
+    "faqs": [
+      {
+        "q": "How many seconds are in an hour?",
+        "a": "3,600 seconds. One hour = 60 minutes × 60 seconds."
+      },
+      {
+        "q": "How many hours are in a week?",
+        "a": "168 hours. One week = 7 days × 24 hours."
+      },
+      {
+        "q": "Why is a month 30.44 days here?",
+        "a": "Calendar months have 28–31 days. 30.44 days is the average month length (365.25 ÷ 12), which keeps long-range conversions consistent."
+      },
+      {
+        "q": "How do I convert minutes to hours?",
+        "a": "Divide minutes by 60. Example: 150 minutes ÷ 60 = 2.5 hours."
+      },
+      {
+        "q": "What is a millisecond?",
+        "a": "One thousandth of a second. It is used for reaction times, network latency and animation frame timing (about 16.7 ms per frame at 60 fps)."
+      },
+      {
+        "q": "Is my data sent anywhere?",
+        "a": "No. Conversion happens entirely in your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Time conversion results",
+    "labels": {
+      "valueLabel": "Value",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "resultLabel": "Result",
+      "rateLabel": "Conversion rate",
+      "swapLabel": "Swap units"
+    },
+    "units": [
+      {
+        "id": "ms",
+        "name": "Millisecond",
+        "symbol": "ms"
+      },
+      {
+        "id": "s",
+        "name": "Second",
+        "symbol": "s"
+      },
+      {
+        "id": "min",
+        "name": "Minute",
+        "symbol": "min"
+      },
+      {
+        "id": "hr",
+        "name": "Hour",
+        "symbol": "h"
+      },
+      {
+        "id": "day",
+        "name": "Day",
+        "symbol": "d"
+      },
+      {
+        "id": "week",
+        "name": "Week",
+        "symbol": "wk"
+      },
+      {
+        "id": "month",
+        "name": "Month (avg)",
+        "symbol": "mo"
+      },
+      {
+        "id": "year",
+        "name": "Year (avg)",
+        "symbol": "yr"
+      }
+    ]
+  }
+}

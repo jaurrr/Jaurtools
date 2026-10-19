@@ -1,0 +1,91 @@
+{
+  "sharpen-image": {
+    "benefits": [
+      "Crisp up slightly soft photos, screenshots, and scanned text in one click.",
+      "The unsharp-mask method boosts edges without shifting colors.",
+      "The amount slider runs from gentle touch-up to punchy detail pop.",
+      "Runs fully offline; your photos never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the photo and raise the amount slider from 0 to 3. Values around 0.8–1.2 suit most photos; higher values give a punchy, edgy look. Press Download to save.",
+        "q": "How do I sharpen a blurry photo?"
+      },
+      {
+        "a": "It uses unsharp masking: a blurred copy is subtracted from the original to find edges, then those edges are amplified by your amount setting.",
+        "q": "What sharpening method is used?"
+      },
+      {
+        "a": "Honestly: no. Sharpening enhances edges that are already there; it cannot recreate detail lost to bad focus or motion blur. Expect crisper, not miraculous.",
+        "q": "Can it fix a very blurry photo?"
+      },
+      {
+        "a": "Usually yes — most phone photos benefit from a light 0.5–1.0 sharpen. But noisy night shots can look worse, because sharpening also amplifies grain.",
+        "q": "Should I sharpen every photo?"
+      },
+      {
+        "a": "Pushing the amount past about 2 creates bright/dark halos along edges and crunchy noise. If you see halos, dial it back.",
+        "q": "Why do I see halos around edges?"
+      },
+      {
+        "a": "No. Everything is computed pixel-by-pixel in your browser; the photo is never uploaded anywhere.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "blur = gaussian_blur(image, 1px)\nout = original + amount × (original − blur)\namount 0–3, result clamped to 0–255",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the photo you want to sharpen.",
+      "Raise the amount slider slowly and watch edges crisp up in the preview.",
+      "Stop before halos appear — around 1.0 for most photos.",
+      "Choose PNG or JPG output format.",
+      "Press Download to save the sharpened image."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Unsharp masking compares each pixel with a blurred copy to find edges.",
+      "The difference (original − blur) is added back, scaled by your amount setting.",
+      "Amount 0 means no change; amount 3 is very aggressive.",
+      "The result is clamped to 0–255 so no channel can overflow.",
+      "Sharpening works at full resolution — no pixels are added or removed."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sharpen image, sharpen photo, unsharp mask online, clarify blurry photo, enhance image detail",
+    "labels": {
+      "amount": "Sharpen amount",
+      "download": "Download sharpened image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "honestNote": "Honest note: sharpening crisps existing edges — it cannot recover detail lost to bad focus or motion blur.",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "pickOne": "Choose an image above to sharpen it.",
+      "preview": "Sharpened preview",
+      "upload": "Image to sharpen"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot fix out-of-focus or motion-blurred photos — lost detail stays lost.",
+      "Over-sharpening creates halos and amplifies noise and JPEG artifacts.",
+      "Very noisy images should be denoised first with the Remove Noise tool.",
+      "Animated GIFs are processed as a single still frame."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Sharpen an image online for free. Crisp up soft photos with adjustable unsharp-mask sharpening, live preview, and PNG/JPG download. No signup needed.",
+    "metaTitle": "Sharpen Image Online Free — Photo Sharpener Tool | JaurTools",
+    "name": "Sharpen Image",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and raise the sharpen amount to boost edge contrast with unsharp masking. Around 1.0 crisps most photos; higher values get punchy but can halo. Download the PNG or JPG — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sharpen results",
+    "tagline": "Crisp up soft photos with adjustable unsharp-mask sharpening.",
+    "workedExample": "A pixel with original value 120 and blurred value 100, amount 1.5:\nout = 120 + 1.5 × (120 − 100) = 120 + 30 = 150\nThe edge pixel brightens from 120 to 150, increasing local contrast. A flat-area pixel (120 vs blurred 118) barely moves: 120 + 1.5 × 2 = 123.",
+    "workedExampleHeading": "Worked example"
+  }
+}

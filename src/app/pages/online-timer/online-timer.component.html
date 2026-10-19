@@ -1,0 +1,242 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="timer" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.mode')">
+        <button type="button" [class.active]="tab() === 'countdown'" (click)="setTab('countdown')">
+          {{ t('labels.tabCountdown') }}
+        </button>
+        <button type="button" [class.active]="tab() === 'stopwatch'" (click)="setTab('stopwatch')">
+          {{ t('labels.tabStopwatch') }}
+        </button>
+      </div>
+
+      @if (tab() === 'countdown') {
+        <div class="tm-ring-wrap">
+          <svg class="tm-ring" viewBox="0 0 200 200" role="img" [attr.aria-label]="t('labels.tabCountdown')">
+            <circle class="tm-ring-bg" cx="100" cy="100" r="88" />
+            <circle
+              class="tm-ring-fg"
+              cx="100"
+              cy="100"
+              r="88"
+              [attr.stroke-dasharray]="ringC"
+              [attr.stroke-dashoffset]="ringOffset()"
+            />
+          </svg>
+          <div class="tm-ring-center">
+            <div class="big-display" role="timer" [attr.aria-label]="t('labels.tabCountdown')">{{ cdDisplay() }}</div>
+            @if (cdState() === 'done') {
+              <p class="note done"><app-icon name="check" /> {{ t('labels.timeUp') }}</p>
+            }
+          </div>
+        </div>
+
+        @if (cdState() === 'idle' || cdState() === 'done') {
+          <div class="calc-goals" role="group" [attr.aria-label]="t('labels.presetsLabel')">
+            @for (p of presets; track p) {
+              <button type="button" class="calc-goal" (click)="setPreset(p)">
+                <app-icon name="timer" /> {{ p }} {{ t('labels.minutesShort') }}
+              </button>
+            }
+          </div>
+          <div class="field">
+            <label>{{ t('labels.setDuration') }}</label>
+            <div class="hms-row">
+              <div>
+                <input type="number" inputmode="numeric" min="0" max="99" [attr.aria-label]="t('labels.hours')"
+                  [ngModel]="inH()" (ngModelChange)="setInH($event)" [disabled]="cdState() === 'done'" />
+                <small>{{ t('labels.hoursShort') }}</small>
+              </div>
+              <div>
+                <input type="number" inputmode="numeric" min="0" max="59" [attr.aria-label]="t('labels.minutes')"
+                  [ngModel]="inM()" (ngModelChange)="setInM($event)" [disabled]="cdState() === 'done'" />
+                <small>{{ t('labels.minutesShort') }}</small>
+              </div>
+              <div>
+                <input type="number" inputmode="numeric" min="0" max="59" [attr.aria-label]="t('labels.seconds')"
+                  [ngModel]="inS()" (ngModelChange)="setInS($event)" [disabled]="cdState() === 'done'" />
+                <small>{{ t('labels.secondsShort') }}</small>
+              </div>
+            </div>
+          </div>
+        }
+
+        <div class="btn-row">
+          @if (cdState() === 'idle' || cdState() === 'done') {
+            <button type="button" class="btn primary" (click)="cdStart()">
+              <app-icon name="timer" /> {{ t('labels.start') }}
+            </button>
+          }
+          @if (cdState() === 'running') {
+            <button type="button" class="btn" (click)="cdPause()">{{ t('labels.pause') }}</button>
+          }
+          @if (cdState() === 'paused') {
+            <button type="button" class="btn primary" (click)="cdResume()">{{ t('labels.resume') }}</button>
+          }
+          @if (cdState() !== 'idle') {
+            <button type="button" class="btn ghost" (click)="cdReset()">
+              <app-icon name="refresh-cw" /> {{ t('labels.reset') }}
+            </button>
+          }
+        </div>
+      } @else {
+        <div class="big-display" role="timer" [attr.aria-label]="t('labels.tabStopwatch')">{{ swDisplay() }}</div>
+
+        <div class="btn-row">
+          @if (swState() !== 'running') {
+            <button type="button" class="btn primary" (click)="swStart()">
+              <app-icon name="timer" /> {{ t('labels.start') }}
+            </button>
+          } @else {
+            <button type="button" class="btn" (click)="swPause()">{{ t('labels.pause') }}</button>
+          }
+          @if (swState() === 'running') {
+            <button type="button" class="btn" (click)="swLap()">{{ t('labels.lap') }}</button>
+          }
+          @if (swState() !== 'idle') {
+            <button type="button" class="btn ghost" (click)="swReset()">
+              <app-icon name="refresh-cw" /> {{ t('labels.reset') }}
+            </button>
+          }
+        </div>
+
+        @if (laps().length > 0) {
+          <div class="laps">
+            <div class="laps-head">
+              <h3>{{ t('labels.laps') }}</h3>
+              <button type="button" class="link-btn" (click)="swClearLaps()">{{ t('labels.clearLaps') }}</button>
+            </div>
+            <ol>
+              @for (lap of laps(); track $index) {
+                <li>
+                  <span>{{ t('labels.lap') }} {{ laps().length - $index }}</span>
+                  <strong>{{ fmtSwPublic(lap) }}</strong>
+                </li>
+              }
+            </ol>
+          </div>
+        }
+      }
+
+      <ul class="calc-shortcuts" [attr.aria-label]="t('labels.shortcutsTitle')">
+        <li><kbd class="calc-kbd">Space</kbd><span>{{ t('labels.shortcutToggle') }}</span></li>
+      </ul>
+
+      <table class="calc-compare">
+        <caption>{{ t('labels.compareTitle') }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ t('labels.compareTool') }}</th>
+            <th scope="col">{{ t('labels.compareWhen') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ t('name') }}</th>
+            <td>{{ t('labels.compareTimer') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'online-stopwatch']">{{ relatedName('online-stopwatch') }}</a></th>
+            <td>{{ t('labels.compareStopwatch') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'pomodoro-timer']">{{ relatedName('pomodoro-timer') }}</a></th>
+            <td>{{ t('labels.comparePomodoro') }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

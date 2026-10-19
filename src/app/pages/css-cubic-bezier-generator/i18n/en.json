@@ -1,0 +1,98 @@
+{
+  "css-cubic-bezier-generator": {
+    "benefits": [
+      "The SVG curve shows exactly how your easing accelerates and decelerates over time.",
+      "Five standard presets (linear, ease, ease-in, ease-out, ease-in-out) give you trusted starting points.",
+      "The play button animates a real dot with your exact curve, so you feel the timing before shipping it.",
+      "y-values beyond 0–1 create overshoot and bounce effects that keyword easings cannot express.",
+      "Copy-ready output works in transitions, animations, and the Web Animations API alike."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A cubic Bézier curve is defined by four points: P0 and P3 are fixed at (0,0) and (1,1), while you control the two handles P1 (x1,y1) and P2 (x2,y2). The curve maps animation time (x-axis) to progress (y-axis): a steep section means fast motion, a flat section means slow motion. The SVG on this page draws that exact curve.",
+        "q": "What does the curve actually represent?"
+      },
+      {
+        "a": "x1 and x2 must stay between 0 and 1 because they represent points in time — you cannot go back in time or skip ahead. y1 and y2 can go outside 0–1: values above 1 overshoot past the target, and values below 0 dip backward first, which is how bounce and anticipation effects are made.",
+        "q": "Why are x values limited to 0–1 but y values are not?"
+      },
+      {
+        "a": "ease is cubic-bezier(0.25, 0.1, 0.25, 1): it starts fast, slows through the middle, and eases into the end. ease-in-out is cubic-bezier(0.42, 0, 0.58, 1): symmetric, slow at both ends and fastest in the middle. They feel different — ease is snappier at the start, ease-in-out is calmer and balanced.",
+        "q": "What is the difference between ease and ease-in-out?"
+      },
+      {
+        "a": "Use transition-timing-function or the timing keyword inside the transition/animation shorthand: transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1). The same four numbers also work in @keyframes via animation-timing-function and in JavaScript with element.animate().",
+        "q": "How do I apply a cubic-bezier in my CSS?"
+      },
+      {
+        "a": "Yes, and it is a deliberate feature: y-values above 1 make the animation overshoot its target before settling back (springy), and values below 0 make it pull back first (anticipation). This is how you build playful, physical-feeling motion without JavaScript physics.",
+        "q": "Can the animation go past its target and come back?"
+      },
+      {
+        "a": "Never animate layout-triggering properties like width, height, top, or left — they force the browser to recalculate layout every frame. Animate transform (translate, scale, rotate) and opacity instead; they run on the GPU and stay smooth at 60fps on phones.",
+        "q": "Which CSS properties are safe to animate?"
+      }
+    ],
+    "formula": "cubic-bezier(x1, y1, x2, y2)\n\nP0 = (0, 0)            start — fixed\nP1 = (x1, y1)          first control handle — you set this\nP2 = (x2, y2)          second control handle — you set this\nP3 = (1, 1)            end — fixed\n\nConstraints: 0 ≤ x1, x2 ≤ 1   (time cannot go backward)\n             y1, y2 free      (overshoot and anticipation allowed)\n\nKeywords: linear = (0,0,1,1) · ease = (0.25,0.1,0.25,1)\n          ease-in = (0.42,0,1,1) · ease-out = (0,0,0.58,1) · ease-in-out = (0.42,0,0.58,1)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Start from a preset (linear, ease, ease-in, ease-out, ease-in-out) or drag the four sliders.",
+      "Watch the SVG curve: steep parts mean fast motion, flat parts mean slow motion.",
+      "Press Play to feel the timing on the demo dot; adjust the duration slider to taste.",
+      "Copy the cubic-bezier() declaration into your transition or animation.",
+      "Prefer animating transform and opacity for smooth 60fps motion on phones."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "cubic-bezier(x1, y1, x2, y2) defines a custom easing curve for CSS transitions and animations.",
+      "The four numbers are the two control handles of a Bézier curve from (0,0) to (1,1).",
+      "The x-axis is time and the y-axis is progress: steep curve sections animate fast, flat sections animate slowly.",
+      "x1 and x2 must be between 0 and 1; y1 and y2 can exceed that range to create overshoot and bounce.",
+      "All five CSS easing keywords (linear, ease, ease-in, ease-out, ease-in-out) are just named cubic-bezier curves.",
+      "The same function works in the transition shorthand, animation-timing-function, and element.animate()."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cubic bezier generator, css easing generator, css transition timing, bezier curve editor, css animation easing",
+    "labels": {
+      "copiedMessage": "Copied",
+      "copyButton": "Copy CSS",
+      "cssOutputLabel": "Your CSS",
+      "curveLabel": "Easing curve visualization",
+      "downloadButton": "Download .css",
+      "durationLabel": "Demo duration",
+      "playButton": "Play animation",
+      "presetLabel": "Presets"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Slider ranges are x: 0–1 and y: −0.5–1.5; extreme y-values beyond that must be typed by hand.",
+      "The demo animates a single dot; complex multi-property choreography still needs your own keyframes.",
+      "Overshoot curves can push content outside its container — test with overflow in mind.",
+      "The preview timing is exact, but perceived speed also depends on distance traveled and duration."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Design custom CSS easing curves visually with an SVG editor. Sliders, presets, live animation demo, copy-ready cubic-bezier(). Free online tool.",
+    "metaTitle": "CSS Cubic-Bezier Generator — Free Online Tool",
+    "name": "CSS Cubic-Bezier Generator",
+    "presets": {
+      "ease": "Ease",
+      "easeIn": "Ease-in",
+      "easeInOut": "Ease-in-out",
+      "easeOut": "Ease-out",
+      "linear": "Linear"
+    },
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Design custom CSS easing curves with four sliders and a live SVG curve, starting from trusted presets like ease and ease-out. Press play to feel the timing on a real animated dot, then copy the cubic-bezier() timing function into your transitions and animations.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Cubic-bezier results",
+    "tagline": "Custom easing curves, drawn and felt.",
+    "workedExample": "Preset: ease-out → x1 0, y1 0, x2 0.58, y2 1.\nGenerated CSS:\ntransition-timing-function: cubic-bezier(0, 0, 0.58, 1);\nReading the curve: it starts at full speed (steep at the left) and gradually flattens toward the end, so the motion decelerates smoothly into its final position — the classic feel for menus and dialogs appearing. Changing x2 to 0.2 would make the slowdown start much earlier.",
+    "workedExampleHeading": "Worked example"
+  }
+}

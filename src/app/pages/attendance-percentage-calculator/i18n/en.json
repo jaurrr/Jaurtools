@@ -1,0 +1,95 @@
+{
+  "attendance-percentage-calculator": {
+    "assumptionNote": "The tool uses the common 75% minimum-attendance rule. Your college or school may require a different percentage — the math works the same, but check your institution's rule.",
+    "benefits": [
+      "See instantly whether your attendance is safe or in the danger zone.",
+      "The recovery plan tells you exactly how many classes in a row you must attend.",
+      "The bunk planner shows how many classes you can safely miss.",
+      "Your numbers stay private in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Attendance percentage = (classes attended / classes held) x 100. With 28 attended out of 40 held, that is (28 / 40) x 100 = 70%.",
+        "q": "How is attendance percentage calculated?"
+      },
+      {
+        "a": "Most Indian colleges and universities require a minimum of 75% attendance to sit for exams. Some institutions set 70% or 80%, so always check your own college's rule.",
+        "q": "Why is 75% the target?"
+      },
+      {
+        "a": "Attend every class from now on. The tool computes the exact count: with 40 held and 28 attended, you need 8 consecutive classes to reach exactly 75% — (28 + 8) / (40 + 8) = 36 / 48 = 75%.",
+        "q": "My attendance is below 75%. How do I recover?"
+      },
+      {
+        "a": "Yes — the bunk planner computes it. With 34 attended out of 40 (85%), you can miss 5 classes: 34 / 45 = 75.6%, still above 75%. Missing a 6th would drop you to 34 / 46 = 73.9%.",
+        "q": "Can I see how many classes I can safely skip?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser's memory; nothing is uploaded or stored.",
+        "q": "Is my data private?"
+      },
+      {
+        "a": "Yes. Update the two numbers after every class and the plan stays accurate all semester.",
+        "q": "Can I use this through the whole semester?"
+      }
+    ],
+    "formula": "Percentage = (attended / held) x 100\nClasses needed to reach 75% = ceil((0.75 x held - attended) / 0.25)\nClasses you can miss (staying >= 75%) = floor(attended / 0.75 - held)\nStatus: >= 75% safe, 65–74% warning, below 65% danger",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the total number of classes held so far.",
+      "Enter the number of classes you actually attended.",
+      "Read your percentage and status instantly.",
+      "If you are below 75%, follow the recovery count — attend that many classes in a row.",
+      "If you are above 75%, check the bunk planner before skipping a class."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Attendance percentage = (attended / held) x 100.",
+      "The recovery formula tells you exactly how many consecutive classes bring you back to 75%.",
+      "The bunk planner tells you how many classes you can miss while staying at or above 75%.",
+      "Status bands: 75% and above is safe, 65–74% is a warning, below 65% is danger.",
+      "Attended can never exceed held — the tool enforces this automatically."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "attendance percentage calculator, attendance calculator, 75 percent attendance calculator, college attendance calculator, bunk calculator",
+    "labels": {
+      "adviceNeeded": "Attend this many classes in a row to reach 75%",
+      "adviceSafe": "You are at or above 75%. Check the bunk planner before skipping.",
+      "attendedLabel": "Classes attended",
+      "bunkLabel": "Classes you can miss (stay ≥ 75%)",
+      "heldLabel": "Classes held",
+      "neededLabel": "Classes to attend in a row (reach 75%)",
+      "percentageLabel": "Attendance percentage",
+      "statusLabel": "Status"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses the common 75% rule — your institution may require a different percentage.",
+      "Assumes every future class counts equally; some colleges weight labs or tutorials differently.",
+      "Medical or duty leave rules are not modeled — check your college's concession policy.",
+      "No data is saved between visits."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free attendance percentage calculator: enter classes held and attended, get your percentage, recovery plan to reach 75%, and safe-bunk count. Private, no signup.",
+    "metaTitle": "Attendance Percentage Calculator — 75% Recovery Planner",
+    "name": "Attendance Percentage Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Attendance Percentage Calculator tells you exactly where your attendance stands. Enter classes held and classes attended to get your percentage instantly, plus a recovery plan — how many classes in a row you must attend to reach 75% — or a bunk planner showing how many classes you can safely miss while staying above 75%. Everything runs privately in your browser with no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Attendance Percentage Calculator results",
+    "statusNames": {
+      "danger": "Danger zone",
+      "safe": "Safe",
+      "warning": "Warning"
+    },
+    "tagline": "Check your attendance %, get a recovery plan to reach 75%, or see safe bunks.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Say 40 classes have been held and you attended 28. Percentage = (28 / 40) x 100 = 70.0% — the warning band. To recover to 75%: needed = ceil((0.75 x 40 - 28) / 0.25) = ceil((30 - 28) / 0.25) = ceil(8) = 8 classes in a row. Check: (28 + 8) / (40 + 8) = 36 / 48 = 75.0% exactly. Now flip it: 40 held, 34 attended = 85.0%, safe. Bunkable = floor(34 / 0.75 - 40) = floor(45.33 - 40) = 5 classes. Check: 34 / 45 = 75.6%, still above 75%."
+  }
+}

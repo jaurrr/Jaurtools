@@ -1,0 +1,88 @@
+{
+  "irr-calculator": {
+    "benefits": [
+      "One number that summarizes an investment's annualized efficiency.",
+      "Lets you rank competing projects against your hurdle rate.",
+      "Handles irregular cash flows - no need for equal yearly amounts.",
+      "Honest when there is no solution, instead of showing a fake rate."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on risk: 7-10% is often acceptable for safe projects, 15%+ for riskier ventures, and startups may demand 25%+. Compare against your cost of capital or hurdle rate, not an absolute number.",
+        "q": "What is a good IRR?"
+      },
+      {
+        "a": "IRR exists only if some discount rate makes NPV exactly zero. If all cash flows are positive (free money) or the investment never pays back, no such rate exists and the honest answer is no solution.",
+        "q": "Why does my IRR say no solution?"
+      },
+      {
+        "a": "Use both. NPV measures dollars of value created; IRR measures percentage efficiency. When they disagree on mutually exclusive projects, NPV usually gives the better decision for maximizing wealth.",
+        "q": "IRR vs NPV - which should I use?"
+      },
+      {
+        "a": "Yes. A negative IRR means the investment loses money even before discounting - you would have been better off holding cash.",
+        "q": "Can IRR be negative?"
+      },
+      {
+        "a": "There is no closed-form formula; this tool uses bisection - it repeatedly halves the search range between -99.99% and 1000% until NPV is within 0.0001 of zero.",
+        "q": "How is IRR actually calculated?"
+      },
+      {
+        "a": "This version uses yearly periods. For monthly flows, convert them to equivalent yearly totals first.",
+        "q": "Does it handle monthly cash flows?"
+      }
+    ],
+    "formula": "0 = -Initial + CF1/(1+r)^1 + CF2/(1+r)^2 + ... + CFn/(1+r)^n\nSolved by bisection: the calculator narrows the rate until NPV is effectively zero (within 0.0001).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your initial investment as a positive number (it is treated as money going out).",
+      "Enter the cash you expect back in each of years 1 to 8; leave later years at 0.",
+      "Negative yearly values are allowed for follow-on investments.",
+      "Your IRR appears instantly, alongside total inflows and net profit.",
+      "If no rate makes NPV zero, the tool says so honestly instead of inventing a number."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "IRR = the rate r where NPV = 0: -initial + CF1/(1+r) + CF2/(1+r)^2 + ... = 0.",
+      "A project is usually attractive when its IRR exceeds your required rate of return (hurdle rate).",
+      "Higher IRR is not always better - it ignores project size, duration, and reinvestment assumptions.",
+      "Cash flows that change sign more than once can produce multiple IRRs or none at all.",
+      "IRR assumes interim cash flows are reinvested at the IRR itself - often an optimistic assumption.",
+      "Pair IRR with NPV: NPV tells you value created in dollars, IRR tells you efficiency in percent."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "irr calculator, internal rate of return calculator, irr formula, investment return calculator, npv irr",
+    "labels": {
+      "cashFlowYear": "Cash flow - Year",
+      "initialInvestment": "Initial investment",
+      "irr": "Internal rate of return (IRR)",
+      "netProfit": "Net profit",
+      "noSolution": "No rate makes the NPV of these cash flows zero, so no IRR exists. Check that the investment is eventually paid back.",
+      "totalInflows": "Total cash inflows"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes cash flows can be reinvested at the IRR - usually optimistic.",
+      "Ignores scale: a 50% IRR on $100 means little next to 15% on $1M.",
+      "Unconventional cash flows (sign changes) can yield multiple or no IRRs.",
+      "Estimates only - weak cash-flow forecasts give a weak IRR."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free IRR calculator: enter your initial investment and yearly cash flows to find the internal rate of return. Instant, private, browser-based.",
+    "metaTitle": "IRR Calculator - Internal Rate of Return | JaurTools",
+    "name": "IRR Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "IRR is the discount rate that makes an investment's net present value zero - its true annualized return. For example, investing $10,000 and receiving $2,000, $3,000, $4,000 and $5,000 over four years gives an IRR of about 12.9%. Enter your cash flows to find yours.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your IRR results",
+    "tagline": "Find the internal rate of return of any series of cash flows - the true annualized yield of an investment.",
+    "workedExample": "Invest $10,000; receive $2,000 / $3,000 / $4,000 / $5,000 in years 1-4:\n1. Try 12%: NPV = -10,000 + 1,785.71 + 2,391.58 + 2,847.18 + 3,177.57 = +$202.05\n2. Try 15%: NPV = -10,000 + 1,739.13 + 2,268.43 + 2,630.07 + 2,858.77 = -$503.60\n3. Zero sits between 12% and 15%; narrowing gives r = 12.86%.\n4. IRR is about 12.9%. Total in: $14,000. Net profit: $4,000.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "css-switch-generator": {
+    "assumptionNote": "The HTML and CSS below always match the current settings.",
+    "benefits": [
+      "No JavaScript required — the toggle works with a plain checkbox and CSS selectors.",
+      "Keyboard accessible out of the box: tab to focus, space to toggle, with a visible focus ring.",
+      "Tiny footprint: under 1 KB of CSS, no icon font or framework needed.",
+      "The :checked + .track selector works in React, Vue, Angular, and plain HTML alike.",
+      "Smooth 0.25 second transitions feel native on both desktop and mobile."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Copy the CSS into your stylesheet and place the HTML label where the toggle should appear. Clicking the track flips the hidden checkbox, and the CSS :checked selector moves the knob.",
+        "q": "How do I use the switch in my project?"
+      },
+      {
+        "a": "In React, control the checkbox with checked and onChange. In Vue, use v-model. The CSS stays exactly the same — only the way you read the checked state changes.",
+        "q": "Can I bind the switch to React or Vue state?"
+      },
+      {
+        "a": "Yes. The knob is always pure white (#ffffff) in this generator, but you can change the background property of .track::before in the generated CSS to any color.",
+        "q": "Can I change the knob color?"
+      },
+      {
+        "a": "Yes. The switch uses a real checkbox, so form submission, required validation, and screen readers treat it like any other input — only the visuals are custom.",
+        "q": "Does the switch work inside an HTML form?"
+      },
+      {
+        "a": "Yes. The generated code includes a focus-visible outline on the track, and the knob animates with transform, which keeps it smooth for motion-sensitive users when combined with your own reduced-motion rules.",
+        "q": "Is the switch accessible?"
+      },
+      {
+        "a": "Yes. The generated snippets are plain CSS and HTML with no license attached — use them in personal and commercial projects freely.",
+        "q": "Is the generated code free for commercial use?"
+      }
+    ],
+    "formula": "height = round(width x 0.55)\nknob = height - 8\ntravel = width - knob - 8",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Set the switch width with the slider, from 40 to 120 pixels.",
+      "Pick the color the track shows when the switch is on.",
+      "Choose the pill or rounded track shape.",
+      "Click the preview switch to test the toggle animation.",
+      "Copy the generated CSS and HTML into your project."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A pure-CSS toggle switch is a styled checkbox — the knob moves using the input:checked + .track selector.",
+      "The track height is always 55 percent of the width, keeping the classic toggle proportion.",
+      "The knob slides with translateX, so the animation is GPU-accelerated and smooth.",
+      "A focus-visible outline is included so keyboard users can see the active switch.",
+      "The generated code has no dependencies and works in every modern browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css switch generator, css toggle switch, pure css toggle, on off switch css",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "dimensionsLabel": "Track size",
+      "knobLabel": "Knob size",
+      "onColorLabel": "On color",
+      "previewLabel": "Switch preview",
+      "shapeLabel": "Track shape",
+      "shapePill": "Pill",
+      "shapeRounded": "Rounded",
+      "widthLabel": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The switch is a binary on/off control — it cannot represent a third indeterminate state without extra code.",
+      "Labels like On and Off next to the switch must be added in your own HTML.",
+      "Very old browsers without CSS transitions will flip the knob instantly instead of animating.",
+      "Right-to-left layouts need the knob travel direction mirrored manually."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Design custom pure-CSS toggle switches. Adjust width, on-color and track shape, test the toggle live, and copy clean HTML and CSS with no JavaScript needed.",
+    "metaTitle": "CSS Switch Generator – Free Pure-CSS Toggle Builder",
+    "name": "CSS Switch Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A toggle switch is the sliding on/off control you see in settings pages and dark-mode buttons. It is really just a styled checkbox: clicking it flips a hidden input, and a CSS :checked selector slides the knob and recolors the track. This tool generates that HTML and CSS for any width and brand color.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Switch preview",
+    "tagline": "Generate pure-CSS toggle switches in any size and color — no JavaScript needed.",
+    "workedExample": "Set width 64 px, on-color #4f46e5, and the pill shape.\n\nheight = round(64 x 0.55) = 35 px\nknob = 35 - 8 = 27 px\ntravel = 64 - 27 - 8 = 29 px\n\nThe unchecked track is #cbd5e1 gray; when checked it becomes #4f46e5 and the knob translates 29 px to the right. Paste the CSS plus this HTML:\n<label class=\"css-switch\">\n  <input type=\"checkbox\">\n  <span class=\"track\"></span>\n</label>\nand the toggle works immediately, keyboard included.",
+    "workedExampleHeading": "Worked example"
+  }
+}

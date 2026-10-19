@@ -1,0 +1,95 @@
+{
+  "curl-fetch-axios-converter": {
+    "assumptionNote": "Only common curl flags are converted; unsupported flags are listed under the summary instead of being silently dropped.",
+    "benefits": [
+      "Turns terminal-tested API calls into frontend code in seconds — no manual rewriting.",
+      "Parses real-world curl: quoted headers, JSON bodies, form data, basic auth, and timeouts.",
+      "Generates both fetch and axios output, so it fits any project stack.",
+      "Flags browser-forbidden headers (User-Agent, Cookie) with honest comments instead of broken code.",
+      "Great for migrating Postman or terminal experiments into a web app."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The converter maps each flag to its equivalent: -X sets the method, -H adds headers, -d sets the body, -u becomes an Authorization header or axios auth, and -m becomes AbortSignal.timeout or the axios timeout option.",
+        "q": "How are curl flags mapped to fetch options?"
+      },
+      {
+        "a": "Yes. -F name=value becomes formData.append calls, and -F file=@path.pdf is converted with a comment showing where to plug in your file input.",
+        "q": "Does it handle multipart form uploads (-F)?"
+      },
+      {
+        "a": "The axios tab generates an axios({ method, url, headers, data }) config object. Install axios in your project with npm install axios, then paste the snippet inside an async function.",
+        "q": "How do I use the axios output?"
+      },
+      {
+        "a": "Yes. Paste multi-line commands copied from Chrome DevTools (Copy as cURL) or terminals — backslash line continuations are handled automatically.",
+        "q": "Can I paste multi-line curl commands?"
+      },
+      {
+        "a": "A comment is added to the output instead, because browsers block the User-Agent header. The header only works in Node.js, where you can set it manually.",
+        "q": "Why is there a comment instead of my -A user agent header?"
+      },
+      {
+        "a": "Unsupported flags are listed under the summary so nothing is silently lost. Common gaps: --proxy settings, client certificates (--cert), and --http2 prior knowledge.",
+        "q": "What happens with flags the converter does not support?"
+      }
+    ],
+    "formula": "fetch mapping:\n  -X METHOD   -> method: 'METHOD'\n  -H \"N: V\"    -> headers: { 'N': 'V' }\n  -d BODY      -> body: JSON.stringify({...}) or body: '...'\n  -u U:P       -> 'Authorization': 'Basic ' + btoa('U:P')\n  -m SEC       -> signal: AbortSignal.timeout(SEC * 1000)\n  -F N=V       -> FormData append calls",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your curl command into the input box — multi-line commands work.",
+      "Check the parsed summary: method, URL, and header count.",
+      "Switch between the Fetch and Axios tabs to preview each output.",
+      "Copy the generated code with the copy button.",
+      "Paste it into your project inside an async function and adjust as needed."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "curl commands are tokenized respecting single quotes, double quotes, and backslash escapes.",
+      "A -d body automatically upgrades the method from GET to POST, matching curl behavior.",
+      "JSON bodies are detected and re-emitted as pretty-printed JSON.stringify calls.",
+      "-G moves data parameters into the URL query string instead of the body.",
+      "--data-urlencode percent-encodes values exactly like curl does."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "curl to fetch converter, curl to axios, convert curl to javascript, curl to fetch online",
+    "labels": {
+      "axiosTab": "Axios",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "errorNoUrl": "No URL found. Paste a complete curl command including its URL.",
+      "fetchTab": "Fetch",
+      "headersLabel": "Headers",
+      "inputLabel": "Curl command",
+      "inputPlaceholder": "curl -X POST https://api.example.com/users -H \"Content-Type: application/json\" -d '{\"name\":\"Asha\"}'",
+      "methodLabel": "Method",
+      "outputLabel": "Output format",
+      "unsupportedLabel": "Flags not converted",
+      "urlLabel": "URL"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Browsers block User-Agent, Referer, and Cookie headers — these become comments, not working code.",
+      "curl --insecure has no browser equivalent; TLS is always validated by fetch and axios.",
+      "Proxy settings, client certificates, and custom CA bundles cannot be translated.",
+      "Extremely unusual quoting or shell-specific syntax may not tokenize correctly."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert curl commands to JavaScript fetch or axios code instantly. Paste any curl command, preview the parsed request, and copy clean working code for free.",
+    "metaTitle": "Curl to Fetch/Axios Converter – Free Online Tool",
+    "name": "Curl to Fetch/Axios Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Developers often test APIs in the terminal with curl, then need the same request in JavaScript. This tool parses the curl command — method, headers, body, auth, and timeouts — and generates equivalent fetch() or axios code you can paste straight into your project.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Converted code",
+    "tagline": "Paste a curl command, get clean fetch or axios JavaScript instantly.",
+    "workedExample": "Input:\ncurl -X POST https://api.example.com/users \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"name\":\"Asha\",\"age\":28}'\n\nParsed: method POST, 1 header, JSON body detected.\n\nFetch output:\nconst response = await fetch('https://api.example.com/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n    \"name\": \"Asha\",\n    \"age\": 28\n  }),\n});\n\nconst data = await response.json();\nconsole.log(data);\n\nAxios output:\nconst response = await axios({\n  method: 'post',\n  url: 'https://api.example.com/users',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  data: {\n    \"name\": \"Asha\",\n    \"age\": 28\n  },\n});\n\nconsole.log(response.data);",
+    "workedExampleHeading": "Worked example"
+  }
+}

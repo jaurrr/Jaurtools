@@ -1,0 +1,268 @@
+<div class="tool-page fin-type-quick">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dc-debt">{{ t('labels.totalDebt') }}</label>
+          <span class="fin-live-chip">{{ totalDebt() }}</span>
+        </div>
+          <span class="fin-live-chip">{{ totalDebt() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="dc-debt" type="number" inputmode="decimal" min="0" max="100000000" step="5000"
+            [ngModel]="totalDebt()" (ngModelChange)="setTotalDebt($event)" />
+          <input type="range" min="0" max="5000000" step="5000" [ngModel]="totalDebt()"
+            (ngModelChange)="setTotalDebt($event)" [attr.aria-label]="t('labels.totalDebt')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dc-apr">{{ t('labels.currentApr') }}</label>
+          <span class="fin-live-chip">{{ currentApr() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ currentApr() }}%</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="dc-apr" type="number" inputmode="decimal" min="0" max="60" step="0.5"
+            [ngModel]="currentApr()" (ngModelChange)="setCurrentApr($event)" />
+          <input type="range" min="0" max="60" step="0.5" [ngModel]="currentApr()"
+            (ngModelChange)="setCurrentApr($event)" [attr.aria-label]="t('labels.currentApr')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dc-payment">{{ t('labels.currentMonthlyPayment') }}</label>
+          <span class="fin-live-chip">{{ currentPayment() }}</span>
+        </div>
+          <span class="fin-live-chip">{{ currentPayment() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="dc-payment" type="number" inputmode="decimal" min="0" max="1000000" step="500"
+            [ngModel]="currentPayment()" (ngModelChange)="setCurrentPayment($event)" />
+          <input type="range" min="0" max="100000" step="500" [ngModel]="currentPayment()"
+            (ngModelChange)="setCurrentPayment($event)" [attr.aria-label]="t('labels.currentMonthlyPayment')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dc-new-apr">{{ t('labels.newApr') }}</label>
+          <span class="fin-live-chip">{{ newApr() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ newApr() }}%</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="dc-new-apr" type="number" inputmode="decimal" min="0" max="60" step="0.5"
+            [ngModel]="newApr()" (ngModelChange)="setNewApr($event)" />
+          <input type="range" min="0" max="60" step="0.5" [ngModel]="newApr()"
+            (ngModelChange)="setNewApr($event)" [attr.aria-label]="t('labels.newApr')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dc-term">{{ t('labels.newTermMonths') }}</label>
+          <span class="fin-live-chip">{{ newTerm() }}</span>
+        </div>
+          <span class="fin-live-chip">{{ newTerm() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="dc-term" type="number" inputmode="numeric" min="6" max="120" step="6"
+            [ngModel]="newTerm()" (ngModelChange)="setNewTerm($event)" />
+          <input type="range" min="6" max="120" step="6" [ngModel]="newTerm()"
+            (ngModelChange)="setNewTerm($event)" [attr.aria-label]="t('labels.newTermMonths')" />
+        </div>
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-duel">
+        <div class="fin-duel-card">
+          <span>{{ t('labels.currentPlan') }}</span>
+          <strong>{{ moneyFmt().format(current().interest) }}</strong>
+          <small>{{ tp('duel.subCur', { m: current().months, pay: moneyFmt().format(currentPayment()) }) }}</small>
+        </div>
+        <div class="fin-duel-card">
+          <span>{{ t('labels.newPlan') }}</span>
+          <strong>{{ moneyFmt().format(newInterest()) }}</strong>
+          <small>{{ tp('duel.subNew', { pay: moneyFmt().format(newPayment()) }) }}</small>
+        </div>
+      </div>
+      <div class="fin-verdict">
+        <app-icon name="check" />
+        <p>@if (verdict() === 'consolidation') { {{ t('labels.recommendationConsolidation') }} } @else { {{ t('labels.recommendationCurrent') }} } {{ tp('duel.verdictSave', { s: moneyFmt().format(totalSavings()) }) }}</p>
+      </div>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { a: moneyFmt().format(current().interest), b: moneyFmt().format(newInterest()), d: moneyFmt().format(totalSavings()) }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.switch', { d: moneyFmt().format(monthlySavings()) }) }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+
+
+      <div class="fin-duel">
+        <div class="fin-duel-card">
+          <span>{{ t('labels.currentPlan') }}</span>
+          <strong>{{ moneyFmt().format(current().interest) }}</strong>
+          <small>{{ tp('duel.subCur', { m: current().months, pay: moneyFmt().format(currentPayment()) }) }}</small>
+        </div>
+        <div class="fin-duel-card">
+          <span>{{ t('labels.newPlan') }}</span>
+          <strong>{{ moneyFmt().format(newInterest()) }}</strong>
+          <small>{{ tp('duel.subNew', { pay: moneyFmt().format(newPayment()) }) }}</small>
+        </div>
+      </div>
+      <div class="fin-verdict">
+        <app-icon name="check" />
+        <p>@if (verdict() === 'consolidation') { {{ t('labels.recommendationConsolidation') }} } @else { {{ t('labels.recommendationCurrent') }} } {{ tp('duel.verdictSave', { s: moneyFmt().format(totalSavings()) }) }}</p>
+      </div>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { a: moneyFmt().format(current().interest), b: moneyFmt().format(newInterest()), d: moneyFmt().format(totalSavings()) }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.switch', { d: moneyFmt().format(monthlySavings()) }) }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+        @if (canPayoffCurrent()) {
+          
+          
+        } @else {
+          <p class="note fin-note"><app-icon name="triangle-alert" /> {{ t('labels.payoffWarning') }}</p>
+        }
+        
+        
+        
+        
+      
+    
+      
+    
+      </div>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

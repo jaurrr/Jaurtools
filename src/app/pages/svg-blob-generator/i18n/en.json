@@ -1,0 +1,93 @@
+{
+  "svg-blob-generator": {
+    "benefits": [
+      "Tiny file size: a smooth organic shape usually needs less than 1 KB of SVG code.",
+      "Infinitely scalable: the blob stays crisp at any screen size or resolution.",
+      "Original every time: the seeded random generator never repeats the exact same shape twice.",
+      "Paste-ready code: copy the SVG and drop it straight into HTML or CSS backgrounds."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An SVG blob is an irregular rounded shape drawn with a vector path. Designers use them as soft decorative backgrounds behind text, portraits and icons because they feel friendly and modern.",
+        "q": "What is an SVG blob?"
+      },
+      {
+        "a": "The tool places a chosen number of points around a circle and pulls each one toward or away from the center by a random amount. It then connects the points with smooth quadratic curves, producing the wavy organic outline.",
+        "q": "How is the blob shape generated?"
+      },
+      {
+        "a": "Lower values keep the blob nearly circular; higher values make it spikier and more irregular. Most hero-section blobs look best between 20% and 40%.",
+        "q": "What does the irregularity slider do?"
+      },
+      {
+        "a": "Yes. The size slider changes the viewBox and the output dimensions, and SVG scales without any quality loss, so one file works from mobile to desktop.",
+        "q": "Can I change the size without losing quality?"
+      },
+      {
+        "a": "Yes. Copy the SVG code and use it as an <img> source, inline it in your HTML for styling, or URL-encode it into a CSS background. Because it is a vector, it always stays sharp.",
+        "q": "How do I use the blob on my website?"
+      },
+      {
+        "a": "No. The whole generator runs with JavaScript in your browser tab; no data is sent anywhere.",
+        "q": "Is anything uploaded to a server?"
+      }
+    ],
+    "formula": "radius of point i = R × (1 + random(−1 … 1) × irregularity)\nangle of point i = i × 360° ÷ points\n\nPoints are joined with quadratic Bézier curves through their midpoints:\nM mid(p0,p1) Q p1 mid(p1,p2) Q p2 mid(p2,p3) … Z",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Move the Points slider to choose how many anchor points shape the blob.",
+      "Adjust Irregularity to make the outline wavier or more circular.",
+      "Tune Smoothness; lower values show angular straight segments instead of curves.",
+      "Pick a fill color, size and optional rotation for your design.",
+      "Press the shuffle button until you like the shape, then download the SVG file or copy the code."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A blob is an organic, irregular rounded shape defined by a single SVG path element.",
+      "This generator builds the path from points arranged around a circle with randomized radii.",
+      "A seeded random number generator (mulberry32) decides the shape, so every shuffle is unique.",
+      "Quadratic Bézier curves through the midpoints of point pairs create the smooth wavy edge.",
+      "The output is a standard SVG file that works in every modern browser and design tool.",
+      "Fill color, size, rotation and edge smoothness are all adjustable before download."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg blob generator, blob maker, organic shape svg, random blob svg, blob background generator",
+    "labels": {
+      "codeLabel": "SVG code",
+      "copiedLabel": "Copied",
+      "copySvg": "Copy SVG",
+      "downloadSvg": "Download SVG",
+      "fillLabel": "Fill color",
+      "irregularityLabel": "Irregularity",
+      "pointsLabel": "Points",
+      "randomize": "New random blob",
+      "rotationLabel": "Rotation",
+      "sizeLabel": "Canvas size",
+      "smoothnessLabel": "Smoothness"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The generator makes decorative blobs only; it cannot trace photos or draw custom artwork.",
+      "Shapes are random, so you cannot type in exact coordinates for a specific blob.",
+      "Very high irregularity can create sharp spikes that poke past the canvas edge.",
+      "The file contains a single flat path; gradients or layered effects are not included."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SVG blob generator. Create random organic blob shapes with adjustable points, irregularity and smoothness. Download the SVG code instantly.",
+    "metaTitle": "SVG Blob Generator — Create Random Organic Blob Shapes",
+    "name": "SVG Blob Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An SVG blob generator creates random organic shapes — those soft, wavy blobs used as backgrounds in modern web design. This tool places points around a circle, randomizes their distance from the center, and joins them with smooth curves. Adjust points, irregularity, smoothness, color and size, then download the SVG file or copy the code for your website.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG blob generator results",
+    "tagline": "Create random organic blob shapes for your designs — downloadable as SVG code or file.",
+    "workedExample": "You set points = 8, irregularity = 30% and canvas size = 400 px.\n\nBase radius R = 400 × 0.4 = 160 px.\nEach point radius = 160 × (1 ± 0.30), so every radius falls between 160 × 0.70 = 112 px and 160 × 1.30 = 208 px.\nAngles are 360 ÷ 8 = 45° apart. The generator joins the eight points with quadratic curves through their midpoints, producing a smooth closed path that fills roughly the middle 55% of the canvas.",
+    "workedExampleHeading": "Worked example"
+  }
+}

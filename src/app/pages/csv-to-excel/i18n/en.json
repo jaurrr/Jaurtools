@@ -1,0 +1,96 @@
+{
+  "csv-to-excel": {
+    "benefits": [
+      "Turns CSV exports from banks, CRMs and government portals into a proper spreadsheet in one click.",
+      "No Excel installation needed; the file opens in Excel, Google Sheets, LibreOffice and WPS.",
+      "Numbers stay numbers, so formulas and sorting work immediately in the spreadsheet.",
+      "Everything is processed locally, so confidential data never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The download is a genuine Office Open XML (.xlsx) workbook built to the standard: workbook, worksheet, styles and sheet data parts. It opens in Excel, Google Sheets, LibreOffice Calc and WPS Office.",
+        "q": "Is the downloaded file a real Excel file?"
+      },
+      {
+        "a": "Values that look like plain numbers, for example 25 or -12.5, are written as numeric cells so you can sum and sort them. Everything else, including codes like 00123, stays as text.",
+        "q": "Will my numbers stay as numbers?"
+      },
+      {
+        "a": "The converter builds a single-sheet workbook, which covers the vast majority of CSV conversions. For multi-sheet workbooks, convert each CSV separately.",
+        "q": "Can I create multiple sheets?"
+      },
+      {
+        "a": "Yes, Unicode text is fully supported. Hindi, Arabic and other scripts appear correctly in the cells.",
+        "q": "Does it support Hindi or Arabic text?"
+      },
+      {
+        "a": "Roughly 30-50 MB of CSV pasted text, which is several hundred thousand rows. Beyond that the browser tab may slow down, so split very large files first.",
+        "q": "How large a CSV can I convert?"
+      }
+    ],
+    "formula": ".xlsx = ZIP container + xl/workbook.xml + xl/worksheets/sheet1.xml + xl/styles.xml + relationships",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your CSV, upload a .csv file, or press Sample to try an example.",
+      "Leave the delimiter on Auto or choose it manually.",
+      "Type a name for the worksheet, up to 31 characters.",
+      "Press Convert and download the .xlsx file.",
+      "Open it in Excel, Google Sheets or LibreOffice."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Generates a genuine .xlsx workbook: ZIP container with workbook, worksheet, styles and relationship parts.",
+      "Plain numbers are written as numeric cells, so sorting and formulas work out of the box.",
+      "Text with leading zeros, such as 00123, is preserved exactly as text.",
+      "Delimiter auto-detection supports comma, semicolon, tab and pipe.",
+      "Short rows are padded so the sheet is a perfect rectangle."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "csv to excel online, convert csv to xlsx, csv to spreadsheet free, csv to excel converter",
+    "labels": {
+      "clear": "Clear",
+      "convert": "Convert to Excel",
+      "converting": "Building...",
+      "delimAuto": "Auto-detect",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "Delimiter",
+      "errorBuild": "Could not build the Excel file. Please check your CSV and try again.",
+      "inputLabel": "CSV input",
+      "inputPh": "Paste CSV here...",
+      "previewHeading": "Preview (first 8 rows)",
+      "resultCols": "Columns",
+      "resultRows": "Rows",
+      "sample": "Load sample",
+      "sheetName": "Worksheet name",
+      "uploadCsv": "Upload CSV",
+      "xlsxNote": "The download is a standard .xlsx workbook with one worksheet."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Single worksheet only; multi-sheet workbooks are not created.",
+      "Very large CSVs (hundreds of thousands of rows) may slow the browser.",
+      "No formulas, charts or cell formatting are added; it is a plain data sheet.",
+      "Dates stay as text; Excel date serial conversion is not applied."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert CSV to Excel online free. Paste or upload CSV and download a real .xlsx workbook that opens in Excel and Google Sheets. No upload, 100% browser-based.",
+    "metaTitle": "CSV to Excel Online Free - Convert CSV to XLSX | JaurTools",
+    "name": "CSV to Excel",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste or upload a CSV and download a genuine .xlsx workbook. The tool parses your data with proper quote handling, writes numbers as numeric cells, and packages everything into a standard Excel file that opens in Excel, Google Sheets, LibreOffice and WPS.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "CSV to Excel results",
+    "tagline": "Turn any CSV into a real Excel workbook in one click.",
+    "workedExample": "Input CSV (3 rows, 3 columns):\nname,age,city\nAarav Sharma,25,Mumbai\nPriya Verma,30,Delhi\n\nThe tool detects the comma delimiter, parses 3 rows and 3 columns, and writes Sheet1 with:\n- A1=name, B1=age, C1=city (text cells)\n- A2=Aarav Sharma (text), B2=25 (numeric), C2=Mumbai (text)\n- A3=Priya Verma (text), B3=30 (numeric), C3=Delhi (text)\n\nThe downloaded data.xlsx opens in Excel with sortable numeric ages.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "color-contrast-checker": {
+    "benefits": [
+      "Instant WCAG 2.x contrast ratio for any text/background pair.",
+      "Clear pass/fail badges for AA and AAA, normal and large text.",
+      "Live text preview shows exactly how the pair looks.",
+      "Swap button flips the colors in one click.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "AA is the standard most sites target: 4.5:1 for normal text, 3:1 for large text (18pt/24px or 14pt/19px bold and up). AAA is stricter: 7:1 for normal text, 4.5:1 for large text. Government and accessibility-focused sites often require AA at minimum.",
+        "q": "What is the difference between WCAG AA and AAA?"
+      },
+      {
+        "a": "No — the ratio only measures relative brightness (luminance) between the two colors. A pair can pass the math yet still be hard to read for people with color blindness, which is why real-user testing still matters.",
+        "q": "Does a passing ratio guarantee readability?"
+      },
+      {
+        "a": "Yes — enter the exact HEX codes from your stylesheet, or pick them with the color pickers. The luminance formula matches the official WCAG definition, so the ratio is the same number an auditor would compute.",
+        "q": "Can I test my website's exact colors?"
+      },
+      {
+        "a": "Large text means 18pt (24px) or larger, or 14pt (19px) bold or larger. Because bigger, bolder glyphs are easier to read, WCAG allows a lower 3:1 ratio for them at AA level.",
+        "q": "What counts as large text?"
+      },
+      {
+        "a": "No — everything is computed locally in JavaScript. Your colors never leave your device.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "L = 0.2126 x R + 0.7152 x G + 0.0722 x B\n(each channel linearized: c <= 0.03928 ? c/12.92 : ((c + 0.055)/1.055)^2.4)\nratio = (Llighter + 0.05) / (Ldarker + 0.05)\nAA normal >= 4.5 | AA large >= 3 | AAA normal >= 7 | AAA large >= 4.5",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the text color and the background color (or type HEX codes).",
+      "Read the contrast ratio instantly — 1:1 is no contrast, 21:1 is maximum.",
+      "Check the pass/fail badges for AA and AAA, normal and large text.",
+      "Look at the live text preview to judge the pair with your own eyes.",
+      "Use Swap to flip the colors and test the reverse pair."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Contrast ratio ranges from 1:1 (identical colors) to 21:1 (black on white).",
+      "WCAG AA requires 4.5:1 for normal text and 3:1 for large text.",
+      "WCAG AAA requires 7:1 for normal text and 4.5:1 for large text.",
+      "Luminance weights green most (0.7152), then red (0.2126), then blue (0.0722).",
+      "The ratio is symmetric — swapping the colors gives the same number."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "color contrast checker, wcag contrast ratio, accessibility checker, text contrast test, aa aaa contrast",
+    "labels": {
+      "aaLarge": "AA large text",
+      "aaNormal": "AA normal text",
+      "aaaLarge": "AAA large text",
+      "aaaNormal": "AAA normal text",
+      "bgColor": "Background color",
+      "bgHex": "Background HEX code",
+      "fail": "Fail",
+      "pass": "Pass",
+      "ratio": "Contrast ratio",
+      "sampleText": "The quick brown fox jumps over the lazy dog",
+      "swap": "Swap colors",
+      "textColor": "Text color",
+      "textHex": "Text HEX code"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Measures luminance contrast only — it cannot detect color-blindness issues.",
+      "Does not account for font weight, transparency layers or background images.",
+      "Alpha/transparency in the input colors is ignored.",
+      "WCAG guidance evolves; this implements the widely used WCAG 2.x formula."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free WCAG color contrast checker: test any text/background pair for AA and AAA compliance. Instant ratio, pass/fail badges, live preview.",
+    "metaTitle": "Color Contrast Checker (WCAG AA/AAA) | JaurTools",
+    "name": "Color Contrast Checker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter any text and background color to get the WCAG contrast ratio instantly, with clear pass/fail badges for AA and AAA at normal and large text sizes. A live preview shows the pair as real text. The calculation uses the official WCAG luminance formula, entirely in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your contrast check results",
+    "tagline": "Test any text/background pair against WCAG AA and AAA — instant ratio, clear verdicts.",
+    "workedExample": "Check black #000000 on white #ffffff.\nLuminance of black = 0 (all channels zero).\nLuminance of white: each channel is 1.0, linearized stays 1.0, so L = 0.2126 + 0.7152 + 0.0722 = 1.0.\nRatio = (1.0 + 0.05) / (0 + 0.05) = 1.05 / 0.05 = 21.\nResult: 21:1 — the maximum possible, passing AA and AAA for all text sizes.",
+    "workedExampleHeading": "Worked example"
+  }
+}

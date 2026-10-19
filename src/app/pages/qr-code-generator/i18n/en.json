@@ -1,0 +1,171 @@
+{
+  "qr-code-generator": {
+    "benefits": [
+      "Instant codes with no signup, no watermark and no usage limits.",
+      "Logo mode built in — no separate editor or second tool needed.",
+      "Exact PNG sizes for screen or print.",
+      "Everything is drawn locally, so your links and images stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "faqs": [
+      {
+        "a": "No. A static QR code is just a picture of your text or link, so it works forever. What can break is the destination — if a URL stops working, the code still scans but leads nowhere.",
+        "q": "Do QR codes expire?"
+      },
+      {
+        "a": "Yes, as long as you use error correction Q or H and keep the logo to about a fifth of the code. The logo covers part of the pattern, and the extra correction data fills the gap. Always test-scan before printing.",
+        "q": "Will a QR code with my logo still scan?"
+      },
+      {
+        "a": "Use 256 px for on-screen display, 512 px for general sharing, and 1024 px for print — larger prints need more pixels to stay sharp.",
+        "q": "Which size should I download?"
+      },
+      {
+        "a": "Extra data woven into the code so it still scans when scratched, dirty or partly covered: L recovers about 7%, M about 15%, Q about 25% and H about 30%. Higher levels make the pattern denser.",
+        "q": "What is error correction?"
+      },
+      {
+        "a": "Yes. Codes you generate here are yours to use anywhere — on packaging, business cards, posters or websites — free of charge.",
+        "q": "Can I use the QR code commercially?"
+      },
+      {
+        "a": "No. The code is drawn entirely in your browser. Your text, URLs and logo images are never uploaded or stored.",
+        "q": "Is my content uploaded anywhere?"
+      }
+    ],
+    "faqsHeading": "Frequently asked questions",
+    "formula": "A QR code is a grid of dark and light squares called modules. The error-correction level decides how much of the grid can be damaged or covered and still scan: L recovers about 7%, M about 15%, Q about 25% and H about 30%. Higher correction stores more backup data, so the grid gets denser for the same text.",
+    "formulaHeading": "How QR codes work",
+    "home": "Home",
+    "howTo": [
+      "Pick a content type and fill in its fields — URL, WiFi, contact, SMS, email, phone, location, Bitcoin or plain text.",
+      "Choose Standard mode, or With Logo to place your own image in the center.",
+      "Pick a size and an error-correction level — use Q or H with a logo.",
+      "Check the live preview, then download your code as PNG, SVG or PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "QR codes hold up to about 4,000 text characters — short URLs and plain text scan most reliably.",
+      "Higher error correction lets the code survive damage, and is required when a logo covers the center.",
+      "A logo covers roughly a fifth of the code, so always test-scan before printing.",
+      "The PNG downloads at the exact pixel size you choose: 256, 512 or 1024.",
+      "Your content never leaves the browser — the code is drawn locally on your device."
+    ],
+    "keyFactsHeading": "Key facts",
+    "lastReviewed": "Last reviewed",
+    "limitations": [
+      "QR codes with a logo need error correction Q or H — with L or M the code may fail to scan.",
+      "Very long text produces a denser, harder-to-scan pattern — keep content short when possible.",
+      "Always test-scan with a real phone camera before printing on packaging or signs.",
+      "Some older scanner apps struggle with very small printed codes."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free QR code generator with 9 content types (URL, WiFi, vCard, SMS, email, location, Bitcoin…), dot styles, frames and logo mode. Download PNG, SVG or PDF. No signup, fully private.",
+    "metaTitle": "QR Code Generator — With Logo Mode, Free PNG Download | JaurTools",
+    "name": "QR Code Generator",
+    "privacyHeading": "Privacy",
+    "privacyNote": "Codes are generated entirely in your browser. Your text, URLs and logo images are never uploaded, stored or shared.",
+    "quickAnswer": "Pick a content type — URL, text, WiFi, contact, SMS, email, phone, location or Bitcoin — fill the fields and the code renders live. Style the dots, add a SCAN ME frame, drop in your logo, then download as PNG, SVG or PDF. Free, instant and private.",
+    "quickAnswerLabel": "Quick answer",
+    "relatedHeading": "Related tools",
+    "tagline": "Turn links, WiFi logins, contacts and more into scannable QR codes — styled your way, with your logo in the center.",
+    "ui": {
+      "bgLabel": "Background color",
+      "btcAddress": "Bitcoin address",
+      "btcAddressPh": "bc1q…",
+      "btcAmount": "Amount (BTC, optional)",
+      "btcLabel": "Label (optional)",
+      "contentLabel": "Text or URL",
+      "contentPlaceholder": "https://example.com or any text…",
+      "download": "Download",
+      "downloadEmpty": "Generate a QR code first, then download it.",
+      "downloadError": "Could not create the download file. Please try again.",
+      "ecLabel": "Error correction",
+      "ecNames": {
+        "H": "H — recovers 30%",
+        "L": "L — recovers 7%",
+        "M": "M — recovers 15%",
+        "Q": "Q — recovers 25%"
+      },
+      "emailBody": "Message",
+      "emailBodyPh": "Write your message…",
+      "emailSubject": "Subject",
+      "emailTo": "Recipient email",
+      "fgLabel": "QR color",
+      "formatLabel": "Download format",
+      "frameLabel": "Frame",
+      "frames": {
+        "bottom": "Banner at bottom",
+        "none": "No frame",
+        "top": "Banner on top"
+      },
+      "generate": "Generate QR code",
+      "generateError": "Could not generate the QR code. Try shorter text.",
+      "generating": "Generating…",
+      "latLabel": "Latitude",
+      "latPh": "28.6139",
+      "liveHint": "Updates live as you type",
+      "lngLabel": "Longitude",
+      "lngPh": "77.2090",
+      "logoChoose": "Choose image",
+      "logoError": "Could not read that image. Try a PNG or JPG file.",
+      "logoHint": "A PNG or JPG with a clear subject works best.",
+      "logoLabel": "Logo image",
+      "logoMissing": "Please choose a logo image first, or switch to Standard mode.",
+      "logoNote": "Logo mode covers the center of the code. Use error correction Q or H, and test-scan with your phone before printing.",
+      "logoRemove": "Remove logo",
+      "modeLabel": "Mode",
+      "modeLogo": "With Logo",
+      "modeStandard": "Standard",
+      "phoneNumber": "Phone number",
+      "phoneNumberPh": "+91 98765 43210",
+      "pixels": "px",
+      "previewEmpty": "Your QR code will appear here.",
+      "previewTitle": "Preview",
+      "scanMe": "SCAN ME",
+      "sizeLabel": "Image size",
+      "smsMessage": "Message",
+      "smsMessagePh": "Hi! Scan to text me.",
+      "smsNumber": "Phone number",
+      "smsNumberPh": "+91 98765 43210",
+      "styleLabel": "Dot style",
+      "styles": {
+        "dots": "Dots",
+        "rounded": "Rounded",
+        "square": "Square"
+      },
+      "typeLabel": "Content type",
+      "types": {
+        "bitcoin": "Bitcoin",
+        "email": "Email",
+        "location": "Location",
+        "phone": "Phone",
+        "sms": "SMS",
+        "text": "Plain text",
+        "url": "URL",
+        "vcard": "Contact (vCard)",
+        "wifi": "WiFi"
+      },
+      "urlLabel": "Website URL",
+      "urlPlaceholder": "https://example.com",
+      "vcEmail": "Email",
+      "vcFirst": "First name",
+      "vcLast": "Last name",
+      "vcOrg": "Company / organisation",
+      "vcPhone": "Phone",
+      "wifiHidden": "Hidden network",
+      "wifiPassword": "Password",
+      "wifiSecurities": {
+        "WEP": "WEP",
+        "WPA": "WPA/WPA2",
+        "nopass": "No password"
+      },
+      "wifiSecurity": "Security",
+      "wifiSsid": "Network name (SSID)",
+      "wifiSsidPh": "MyWiFi"
+    },
+    "workedExample": "Paste https://jaurtools.com, choose 512 px with level M, and press Generate — the code appears instantly, and any phone camera opens the site when scanned. In With Logo mode the same code is redrawn with your image centered on a white rounded badge, ready to download.",
+    "workedExampleHeading": "Worked example"
+  }
+}

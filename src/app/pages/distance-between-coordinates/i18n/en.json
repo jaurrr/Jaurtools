@@ -1,0 +1,86 @@
+{
+  "distance-between-coordinates": {
+    "benefits": [
+      "Pure haversine math — no maps API or location tracking.",
+      "Instant results in kilometers, miles, and meters.",
+      "Validates latitude and longitude ranges.",
+      "Useful for travel planning, logistics, and geography homework.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The shortest path over the Earth's surface between two latitude/longitude points, computed with the haversine formula. It assumes a perfect sphere of radius 6,371 km.",
+        "q": "What does this calculator measure?"
+      },
+      {
+        "a": "No. It measures the straight great-circle line. Driving or flying routes are longer because they follow roads and air corridors.",
+        "q": "Is this the driving distance?"
+      },
+      {
+        "a": "Latitude runs -90 to 90 (equator to poles); longitude runs -180 to 180. Use negative for south latitudes and west longitudes — for example, New York is 40.7128, -74.0060.",
+        "q": "How do I enter coordinates?"
+      },
+      {
+        "a": "About 0.5% at most. Earth is slightly flattened at the poles; the haversine's spherical assumption is plenty accurate for planning.",
+        "q": "How accurate is the haversine formula?"
+      },
+      {
+        "a": "They are the same thing. Haversine is the standard trigonometric formula for great-circle distance on a sphere.",
+        "q": "Haversine vs great-circle — which is it?"
+      }
+    ],
+    "formula": "a = sin^2(dLat/2) + cos(lat1) x cos(lat2) x sin^2(dLon/2)\nc = 2 x atan2(sqrt(a), sqrt(1 - a))\ndistance = 6371 km x c   (angles in radians)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the latitude and longitude of point A in decimal degrees.",
+      "Enter the latitude and longitude of point B.",
+      "Read the great-circle distance in km, miles, and meters.",
+      "Use negative numbers for south latitudes and west longitudes."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Latitude: -90 to 90. Longitude: -180 to 180.",
+      "The haversine formula gives the shortest path over a sphere.",
+      "Earth's mean radius used here: 6,371 km.",
+      "1 degree of latitude is about 111 km everywhere.",
+      "1 degree of longitude shrinks to zero at the poles.",
+      "Great-circle routes are why flights to Europe arc over the Atlantic."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "distance between coordinates, haversine calculator, lat long distance, great circle distance, gps distance calculator",
+    "labels": {
+      "greatCircleNote": "Great-circle (as the crow flies) distance on a sphere of radius 6,371 km. Not a driving distance.",
+      "kmResult": "Distance (km)",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "mResult": "Distance (meters)",
+      "miResult": "Distance (miles)",
+      "pointA": "Point A",
+      "pointB": "Point B"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Straight-line distance only; roads and flight paths are longer.",
+      "Treats Earth as a perfect sphere (error under ~0.5%).",
+      "Does not account for altitude differences.",
+      "Very close points may show rounding noise in meters."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free distance calculator: enter two latitude/longitude pairs and get the great-circle distance in km, miles, and meters using the haversine formula. No sign-up.",
+    "metaTitle": "Distance Between Coordinates (Haversine, Free)",
+    "name": "Distance Between Coordinates",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter two sets of latitude and longitude in decimal degrees, and this calculator applies the haversine formula to return the great-circle distance — the shortest path over Earth's surface — in kilometers, miles, and meters.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Distance results",
+    "tagline": "Great-circle distance between any two points on Earth.",
+    "workedExample": "New York (40.7128, -74.0060) to London (51.5074, -0.1278):\n\n1. Convert to radians and take the differences in latitude and longitude.\n2. a = sin^2(dLat/2) + cos(lat1) x cos(lat2) x sin^2(dLon/2) = 0.1792.\n3. c = 2 x atan2(sqrt(0.1792), sqrt(0.8208)) = 0.8743 radians.\n4. Distance = 6371 x 0.8743 = 5,570.2 km, about 3,461 miles.\n\nA flat map would suggest a longer straight line; the great-circle arc is the true shortest path.",
+    "workedExampleHeading": "Worked example"
+  }
+}

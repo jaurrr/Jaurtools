@@ -1,0 +1,17 @@
+{
+  "search": {
+    "allTools": "Showing all tools",
+    "category": "Category",
+    "clearFilter": "Clear filter",
+    "emptyHint": "Try a different keyword, or browse the categories on the home page.",
+    "emptyTitle": "No tools found",
+    "heading": "Search tools",
+    "metaDescription": "Search all free JaurTools calculators, converters and generators.",
+    "metaTitle": "Search tools | JaurTools",
+    "resultsFor": "results",
+    "searchLabel": "Search tools",
+    "searchPlaceholder": "Type to search…",
+    "clearLetter": "Clear letter filter",
+    "letter": "Letter"
+  }
+}

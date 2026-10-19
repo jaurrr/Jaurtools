@@ -1,0 +1,164 @@
+{
+  "age-calculator": {
+    "benefits": [
+      "Instant, exact breakdown in years, months and days.",
+      "Dual-date mode answers 'how old was I on that day?' in one step.",
+      "Live-ticking seconds make the lifetime totals feel real.",
+      "No account and no tracking — your dates never leave this browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "faqs": [
+      {
+        "a": "The calculator takes the reference date minus your birth date, counting whole calendar years first, then whole months, then the leftover days. From 1 January 2000 to 18 October 2026 that gives 26 years, 9 months and 17 days.",
+        "q": "How is age in years, months and days calculated?"
+      },
+      {
+        "a": "Months have 28 to 31 days, so borrowing days across a month boundary can look surprising — for example 31 January to 30 March shows as 1 month and 27 days. The total-days number is always exact, so trust that for precise durations.",
+        "q": "Why does the result look odd around month ends?"
+      },
+      {
+        "a": "In non-leap years your birthday is counted on 28 February and the next-birthday countdown points there. In leap years it lands on 29 February itself.",
+        "q": "I was born on 29 February. How is my birthday handled?"
+      },
+      {
+        "a": "Yes. Change the 'Age at date' field to any date on or after your birth date, and every screen — age, totals, next birthday — is recalculated for that day.",
+        "q": "Can I find my age on a date in the past?"
+      },
+      {
+        "a": "No. The page runs entirely in your browser. Nothing you type is uploaded, saved or shared.",
+        "q": "Is my date of birth stored anywhere?"
+      },
+      {
+        "a": "Days, weeks, hours and minutes are exact, counted from midnight on your birth date. Seconds tick live from the moment you open the page. Heartbeats and breaths are estimates from average rates of 70 per minute and 16 per minute.",
+        "q": "How accurate are the lifetime totals?"
+      }
+    ],
+    "faqsHeading": "Frequently asked questions",
+    "formula": "Age = reference date minus date of birth, counted as whole calendar years first, then whole months, then the remaining days. Totals build on the exact day count: weeks = days / 7, hours = days x 24, minutes = hours x 60.",
+    "formulaHeading": "Formula",
+    "home": "Home",
+    "howTo": [
+      "Pick your date of birth in the first field.",
+      "Optionally change 'Age at date' to find your age on a specific past or present day.",
+      "Read your exact age on the Main screen.",
+      "Use the tabs to explore totals, your next birthday, birth details and fun stats."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Your age is counted from your date of birth up to today, or up to a date you choose.",
+      "Leap years are handled automatically — 29 February birthdays work in every year.",
+      "Calendar months have different lengths, so one 'month' of age is not a fixed number of days.",
+      "The seconds counter ticks live while this page stays open.",
+      "Heartbeat and breath totals are rough estimates from average rates, not medical measurements."
+    ],
+    "keyFactsHeading": "Key facts",
+    "lastReviewed": "Last reviewed",
+    "limitations": [
+      "Month-end quirk: from 31 January to 30 March the tool reports 1 month and 27 days, because it borrows February's 28 days. Calendar months are irregular by nature.",
+      "The total-days figure is always exact — use it when you need a precise duration.",
+      "Dates before 1 January 1900 are not accepted.",
+      "Heartbeat and breath figures assume fixed average rates and are illustrative only."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free age calculator: enter your date of birth for your exact age in years, months and days, live totals, next-birthday countdown and fun stats. No signup, fully private.",
+    "metaTitle": "Age Calculator — Exact Age in Years, Months & Days | JaurTools",
+    "name": "Age Calculator",
+    "privacyHeading": "Privacy",
+    "privacyNote": "Every calculation happens on your own device. Your date of birth is never uploaded, stored, shared or sent to any server.",
+    "quickAnswer": "Enter your date of birth and this free age calculator shows your exact age in years, months and days. Set a second date to see how old you were — or will be — on any day. Everything runs in your browser; nothing is uploaded or stored.",
+    "quickAnswerLabel": "Quick answer",
+    "relatedHeading": "Related tools",
+    "tagline": "Your exact age in years, months and days — with live totals, your next birthday and fun lifetime stats.",
+    "ui": {
+      "asOfLabel": "Age at",
+      "atRate": "at 70 beats/min",
+      "birthstone": "Birthstone",
+      "birthstones": [
+        "Garnet",
+        "Amethyst",
+        "Aquamarine",
+        "Diamond",
+        "Emerald",
+        "Pearl",
+        "Ruby",
+        "Peridot",
+        "Sapphire",
+        "Opal",
+        "Topaz",
+        "Turquoise"
+      ],
+      "bornLabel": "Born",
+      "breathRate": "at 16 breaths/min",
+      "breaths": "Estimated breaths",
+      "days": "days",
+      "daysWord": "days",
+      "dobLabel": "Date of birth",
+      "errors": {
+        "before1900": "Dates before 1 January 1900 are not supported.",
+        "future": "Date of birth cannot be after the reference date.",
+        "invalid": "Please enter a valid date of birth.",
+        "refFuture": "'Age at date' cannot be in the future."
+      },
+      "estimatesNote": "Estimates only — based on average rates of 70 heartbeats and 16 breaths per minute.",
+      "feb29Note": "Born on 29 February: celebrated on 28 February in non-leap years.",
+      "generation": "Generation",
+      "generations": {
+        "alpha": "Generation Alpha",
+        "boomer": "Baby Boomer",
+        "genx": "Generation X",
+        "genz": "Generation Z",
+        "millennial": "Millennial",
+        "silent": "Silent Generation"
+      },
+      "heartbeats": "Estimated heartbeats",
+      "liveNote": "Seconds tick live while this page is open.",
+      "months": "months",
+      "nextIn": "Your next birthday is in",
+      "onWeekday": "on",
+      "prompt": "Enter your date of birth above to see your exact age.",
+      "refHint": "Keep today, or pick any date on or after your birth date.",
+      "refLabel": "Age at date",
+      "screenBirth": "Birth details",
+      "screenBreakdown": "Breakdown",
+      "screenFun": "Fun stats",
+      "screenMain": "Main",
+      "screenNext": "Next birthday",
+      "todayIs": "Today is your birthday — happy birthday!",
+      "totalDays": "Total days",
+      "totalHours": "Total hours",
+      "totalMinutes": "Total minutes",
+      "totalMonths": "Total months",
+      "totalSeconds": "Total seconds",
+      "totalWeeks": "Total weeks",
+      "turning": "You turn",
+      "weekdays": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "years": "years",
+      "zodiac": {
+        "aquarius": "Aquarius",
+        "aries": "Aries",
+        "cancer": "Cancer",
+        "capricorn": "Capricorn",
+        "gemini": "Gemini",
+        "leo": "Leo",
+        "libra": "Libra",
+        "pisces": "Pisces",
+        "sagittarius": "Sagittarius",
+        "scorpio": "Scorpio",
+        "taurus": "Taurus",
+        "virgo": "Virgo"
+      },
+      "zodiacSign": "Zodiac sign"
+    },
+    "workedExample": "Born 1 January 2000, measured on 18 October 2026: years = 2026 - 2000 = 26; months = 10 - 1 = 9; days = 18 - 1 = 17. Result: 26 years, 9 months, 17 days — a total of 9,787 days, which is 321 months or 1,398 weeks.",
+    "workedExampleHeading": "Worked example"
+  }
+}

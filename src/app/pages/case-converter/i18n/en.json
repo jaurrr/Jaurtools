@@ -1,0 +1,100 @@
+{
+  "case-converter": {
+    "benefits": [
+      "Fixes text pasted in ALL CAPS from PDFs or forms in one click.",
+      "Title Case gives headings and names a professional look instantly.",
+      "Sentence case cleans up sloppy typing for essays and emails.",
+      "Inverse case is handy for fixing text typed with Caps Lock on.",
+      "Live character, word, and line counts help with length-limited fields."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Title Case capitalises the first letter of every word: 'hello world' becomes 'Hello World'. Sentence case capitalises only the first letter of each sentence: 'hello world. how are you' becomes 'Hello world. How are you'.",
+        "q": "What is the difference between Title Case and Sentence case?"
+      },
+      {
+        "a": "Yes. If your text was typed with Caps Lock stuck on ('hELLO'), the Inverse option flips every letter's case and gives you 'Hello'. Then pick the case you actually want.",
+        "q": "I typed everything with Caps Lock on. Can this fix it?"
+      },
+      {
+        "a": "The tool uses standard Unicode case rules, so accented Latin letters like e to E convert correctly. Scripts without case (Arabic, Hindi, Chinese) are left untouched, which is the correct behaviour.",
+        "q": "Does it work with accented or non-English letters?"
+      },
+      {
+        "a": "Alternating case flips every letter: 'hello' becomes 'HeLlO'. It is mostly a joke or stylistic format for social media. The tool skips non-letters when counting the alternation, so punctuation does not break the pattern.",
+        "q": "What is alternating case for?"
+      },
+      {
+        "a": "No. The tool changes letter case only. It does not fix spelling, grammar, or punctuation, and Title Case will capitalise small words (like 'and' or 'the') that some style guides keep lowercase.",
+        "q": "Will Title Case follow APA or Chicago style rules?"
+      },
+      {
+        "a": "Yes. It runs entirely in your browser. Nothing you paste is uploaded, stored, or seen by anyone else.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "upper: every letter -> UPPERCASE\nlower: every letter -> lowercase\ntitle: first letter of each word Upper, the rest lower\n  'hello world' -> 'Hello World'\nsentence: whole text lowercased, then the first letter after each '.', '!', '?' (or the start) -> Upper\n  'hello. world' -> 'Hello. World'\nalternating: letters flip Upper/lower/Upper..., skipping non-letters\n  'hello' -> 'HeLlO'\ninverse: each letter's case is swapped\n  'hELLO' -> 'Hello'",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your text into the input box.",
+      "Click the case you want: UPPER, lower, Title, Sentence, aLtErNaTiNg, or InVeRsE.",
+      "The converted text appears instantly in the result box.",
+      "Check the live character, word, and line counts if you have a length limit.",
+      "Copy the result or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "UPPERCASE makes every letter capital: useful for headings and emphasis.",
+      "lowercase makes every letter small: useful for URLs and code.",
+      "Title Case capitalises the first letter of each word: 'hello world' becomes 'Hello World'.",
+      "Sentence case capitalises only the first letter of each sentence.",
+      "aLtErNaTiNg cAsE flips every letter for a playful, stylised look.",
+      "InVeRsE case swaps each letter's case: handy when Caps Lock was stuck on."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "case converter, uppercase to lowercase, title case converter, sentence case, text case changer, change text case online",
+    "labels": {
+      "alternatingBtn": "aLtErNaTiNg",
+      "caseLabel": "Choose a case",
+      "charsLabel": "Characters",
+      "clearButton": "Clear",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "inputLabel": "Your text",
+      "inputPlaceholder": "Type or paste your text here...",
+      "inverseBtn": "InVeRsE",
+      "linesLabel": "Lines",
+      "lowerBtn": "lowercase",
+      "outputLabel": "Converted text",
+      "sentenceBtn": "Sentence case",
+      "titleBtn": "Title Case",
+      "upperBtn": "UPPERCASE",
+      "wordsLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Changes letter case only - it does not fix spelling or grammar.",
+      "Title Case capitalises every word, including small words that some style guides keep lowercase.",
+      "Sentence case splits on '.', '!' and '?' only; abbreviations like 'e.g.' may confuse it.",
+      "Scripts without letter case (Arabic, Hindi, Chinese) are unaffected, which is correct but means nothing changes for them."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free case converter: change text between UPPERCASE, lowercase, Title Case, Sentence case, aLtErNaTiNg and InVeRsE instantly. Private, browser-only.",
+    "metaTitle": "Case Converter - Upper, Lower, Title & Sentence | JaurTools",
+    "name": "Case Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A case converter changes the capitalisation of your text. Paste your text and pick a style: UPPERCASE ('hello' becomes 'HELLO'), lowercase, Title Case ('hello world' becomes 'Hello World'), Sentence case (only the first letter of each sentence is capitalised), aLtErNaTiNg ('hello' becomes 'HeLlO'), or InVeRsE (swaps each letter's case, perfect for text typed with Caps Lock on). The result appears instantly with live character, word, and line counts.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Case Converter results",
+    "tagline": "Convert text between uppercase, lowercase, title case and sentence case.",
+    "workedExample": "Input: 'hello world. how are you?'\n\n1. Title Case: first letter of each word upper, rest lower\n   'hello world. how are you?' -> 'Hello World. How Are You?'\n2. Sentence case: whole text lowered, then first letter of each sentence upper\n   'hello world. how are you?' -> 'Hello world. How are you?'\n3. UPPER: 'HELLO WORLD. HOW ARE YOU?'\n4. Alternating (letters only): 'HeLlO wOrLd. HoW aRe YoU?'\n   (the space and punctuation do not reset the flip pattern)",
+    "workedExampleHeading": "Worked example"
+  }
+}

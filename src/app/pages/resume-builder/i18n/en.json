@@ -1,0 +1,95 @@
+{
+  "resume-builder": {
+    "benefits": [
+      "A clean, complete resume in minutes instead of hours of Word formatting.",
+      "The structured sections prompt you so you forget nothing recruiters expect.",
+      "PDF output looks identical on every recruiter's screen.",
+      "Your career details stay in your browser. Nothing is uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A resume is a short 1-2 page summary for job applications, standard in India, the US, and the Gulf. A CV (curriculum vitae) is longer and detailed, used for academic, research, and medical roles. For most jobs, build a resume; for PhD or professor roles, build a CV.",
+        "q": "Resume or CV: which do I need?"
+      },
+      {
+        "a": "Keep it to one page if you have under 5 years of experience, two pages at most beyond that. Recruiters spend about 7 seconds on the first scan, so the top third must sell you: name, title, and a 2-3 line summary.",
+        "q": "How long should my resume be?"
+      },
+      {
+        "a": "Mirror the job posting's keywords naturally: the exact skill names, tools, and titles it mentions. Many companies filter with Applicant Tracking Systems (ATS) before a human reads anything. Simple formatting, standard headings, and real keywords beat fancy design for getting through.",
+        "q": "How do I get past ATS filters?"
+      },
+      {
+        "a": "For each role: title, company, dates, then 2-4 bullet points starting with strong verbs and including numbers. Compare: weak: Responsible for website. Strong: Rebuilt company website in Angular, cutting load time from 6s to 1.8s. Numbers prove impact.",
+        "q": "How do I write strong experience bullets?"
+      },
+      {
+        "a": "Yes. The PDF uses the built-in Latin font, so Hindi and Arabic script will not render in the file. Write your resume in English (Roman script). You can read this page in Hindi or Arabic, but the downloaded PDF needs English text.",
+        "q": "Can I write my resume in Hindi or Arabic?"
+      },
+      {
+        "a": "No photo, no date of birth, no marital status, no religion, and no full home address on a job resume. These invite bias and are irrelevant to hiring. City and country are enough, plus email and phone.",
+        "q": "Should I add a photo or personal details?"
+      }
+    ],
+    "formula": "Strong resume = header (name, title, contact) + 3-line summary + skills + experience (title, company, dates, quantified bullets) + education.\nRule: one page under 5 years experience, numbers in every bullet, keywords from the job post.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Fill your name, title, and contact details.",
+      "Write a 2-3 line summary of who you are professionally.",
+      "List skills separated by commas.",
+      "Add experience: role, company, dates, and achievement bullets.",
+      "Add education, check the preview, and download the PDF."
+    ],
+    "howToHeading": "How to use this maker",
+    "keyFacts": [
+      "A resume is a 1-2 page summary of your professional profile for job applications.",
+      "Recruiters scan the top third first: name, title, and summary must sell you in seconds.",
+      "Quantified achievements beat duty lists. Numbers prove impact.",
+      "ATS software filters resumes before humans read them, so use standard headings and real keywords.",
+      "Keep personal details minimal: photo, age, and marital status do not belong on a job resume."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "resume maker, cv maker, free resume builder, resume pdf generator, cv template pdf",
+    "labels": {
+      "downloadPdf": "Download PDF",
+      "education": "Education",
+      "email": "Email",
+      "experience": "Experience",
+      "fullName": "Full name",
+      "jobTitle": "Job title",
+      "location": "Location",
+      "pdfNote": "The PDF uses the built-in Latin font, so write your resume in English (Roman script).",
+      "phone": "Phone",
+      "previewHeading": "Live preview",
+      "skills": "Skills",
+      "skillsHint": "Separate skills with commas.",
+      "summary": "Professional summary",
+      "website": "Website or portfolio"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The PDF uses the built-in Latin font, so Hindi and Arabic script will not render. Use English text.",
+      "One fixed layout. No photo upload and no design themes in this version.",
+      "No spell-checking. Proofread carefully before sending to recruiters.",
+      "A template cannot replace tailoring: customise keywords for each job posting."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free resume builder: fill a simple form, get a clean ATS-friendly resume as PDF. Live preview, private — nothing leaves your browser.",
+    "metaTitle": "Resume Builder - Create a Professional Resume Free | JaurTools",
+    "name": "Resume Builder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Fill one form with your contact details, summary, skills, experience, and education, and download a clean one-page resume as PDF. The live preview updates as you type and the layout uses standard headings that ATS software reads easily. Everything stays in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your resume",
+    "tagline": "Build a professional ATS-friendly resume — PDF in minutes.",
+    "workedExample": "Jauhar builds his resume:\n1. Header: Jauhar Ayyub, Frontend Developer, email, phone, Hyderabad, portfolio link.\n2. Summary: 2 lines on 2 years of Angular experience.\n3. Skills: Angular, TypeScript, RxJS, HTML, CSS, SCSS, REST APIs, Git.\n4. Experience: Frontend Developer, Digital Transformation Factory (2024-Present) with 3 quantified bullets; freelance work with 2 bullets.\n5. Education: BCA, Veer Bahadur Purvanchal University (2024).\n6. Download PDF: a one-page resume with clear sections, ready to attach to applications.",
+    "workedExampleHeading": "Worked example"
+  }
+}

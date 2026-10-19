@@ -1,0 +1,90 @@
+{
+  "future-value-calculator": {
+    "benefits": [
+      "See what your savings could become before committing to a plan.",
+      "Compare starting later vs saving more - time and contributions both shown.",
+      "Understand how much of the result is compounding, not just deposits.",
+      "Free, instant, and private - no advisor meeting needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The annuity formula: FV = PV x (1+r)^n + PMT x ((1+r)^n - 1)/r, where r is the monthly rate and n the number of months. The first term grows your lump sum; the second grows your stream of monthly payments.",
+        "q": "What is the future value formula?"
+      },
+      {
+        "a": "Yes - set the lump sum to 0 and only monthly contributions count. Set monthly contributions to 0 and only the lump sum grows. Both can also work together.",
+        "q": "Can I use only monthly payments, no lump sum?"
+      },
+      {
+        "a": "Compounding is monthly: your annual rate is divided by 12. So 7% annual becomes about 0.5833% per month. A monthly-contribution model is more accurate for regular savers than annual compounding.",
+        "q": "Is compounding monthly or yearly?"
+      },
+      {
+        "a": "Mostly time. In the worked example below, 10 years at 7% turns $34,000 of contributions into $54,713. Stretch it to 20 years and the same contributions grow far more, because later years compound on an already-large balance.",
+        "q": "Time vs amount - which matters more?"
+      },
+      {
+        "a": "Use a conservative rate like 5-6% to see a safer range, then compare with 7-8% to see the upside. The gap between the two answers shows how sensitive your plan is to returns.",
+        "q": "Which interest rate should I use?"
+      },
+      {
+        "a": "No. This calculator is a planning tool, not a prediction. Real investments fluctuate, charge fees, and get taxed. Use it to compare plans, not to promise an outcome.",
+        "q": "Is this a guaranteed prediction?"
+      }
+    ],
+    "formula": "Monthly rate r = annual rate / 12, months n = years x 12\nFV = lump sum x (1+r)^n + monthly payment x ((1+r)^n - 1) / r\nContributions = lump sum + monthly payment x n\nGrowth (interest) = FV - contributions",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your starting lump sum (0 if you are starting from scratch).",
+      "Enter how much you will add each month.",
+      "Enter the expected annual return and the number of years.",
+      "Read the future value, your total contributions, and the growth separately.",
+      "Adjust years or the monthly amount to compare plans."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Future value = what your money grows into at a given rate over time.",
+      "Two engines work at once: the lump sum compounds, and monthly payments compound too.",
+      "Monthly compounding matches how most people actually save.",
+      "Growth accelerates late: the last years add far more than the first.",
+      "Contributions vs growth are shown separately so you can see compounding at work."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "future value calculator, fv calculator, savings growth calculator, compound growth calculator",
+    "labels": {
+      "annualRate": "Annual return (%/yr)",
+      "contribShare": "From monthly payments",
+      "contributed": "You contributed",
+      "futureValue": "Future value",
+      "growth": "Growth (interest)",
+      "lumpShare": "From lump sum",
+      "lumpSum": "Lump sum ($)",
+      "monthlyContrib": "Monthly contribution ($)",
+      "years": "Years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant rate and constant contributions - real investments vary.",
+      "Ignores inflation, taxes, and fees, so real purchasing power will be lower.",
+      "Not a prediction or guarantee of returns.",
+      "Not financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free future value calculator: grow a lump sum plus monthly contributions at any rate. See contributions vs growth. Instant, private, no sign-up.",
+    "metaTitle": "Future Value Calculator - Grow Savings Forward | JaurTools",
+    "name": "Future Value Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A $10,000 lump sum plus $200 per month at 7% annual for 10 years grows to about $54,713. You contributed $34,000, so compounding earned about $20,713. Contributions are shown separately from growth so you can see exactly what time and compounding did.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your future value results",
+    "tagline": "Grow a lump sum and monthly payments forward at any rate.",
+    "workedExample": "$10,000 lump sum, $200/month, 7%/yr, 10 years:\n1. Monthly rate r = 0.07 / 12 = 0.0058333, n = 120 months.\n2. Growth factor (1+r)^n = 1.0058333^120 = about 2.00966.\n3. Lump-sum part: $10,000 x 2.00966 = $20,097.\n4. Payments part: $200 x (2.00966 - 1) / 0.0058333 = $200 x 173.08 = $34,617.\n5. FV = $20,097 + $34,617 = about $54,713.\n6. Contributions = $10,000 + $200 x 120 = $34,000. Growth = about $20,713.",
+    "workedExampleHeading": "Worked example"
+  }
+}

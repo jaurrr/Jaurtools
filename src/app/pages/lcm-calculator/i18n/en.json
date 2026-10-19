@@ -1,0 +1,91 @@
+{
+  "lcm-calculator": {
+    "assumptionNote": "Inputs are whole numbers from 0 to 1,000,000. If either input is 0, the LCM is 0.",
+    "benefits": [
+      "Instant answer with the exact formula shown, not a black box.",
+      "Shows the GCF too, so you see how the two ideas connect.",
+      "The workhorse for adding fractions with different denominators.",
+      "Aligns repeating schedules - buses, shifts, maintenance cycles.",
+      "Handles numbers up to a million."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The LCM (least common multiple) is the smallest positive number that is a multiple of two or more numbers. For 12 and 18, the LCM is 36 - the smallest number appearing in both times tables.",
+        "q": "What is the least common multiple?"
+      },
+      {
+        "a": "List multiples of each number and pick the smallest one they share. The fast way: LCM(a, b) = (a x b) / GCF(a, b). For 12 and 18: (12 x 18) / 6 = 216 / 6 = 36.",
+        "q": "How do you find the LCM?"
+      },
+      {
+        "a": "Use LCM for repeating cycles - when two events repeat at different intervals, the LCM tells you when they next coincide. Use GCF for splitting things into the largest equal groups.",
+        "q": "When do I use LCM instead of GCF?"
+      },
+      {
+        "a": "Yes, and the relationship is exact: LCM(a, b) x GCF(a, b) = a x b. This calculator uses that identity, so the GCF shown is the same one the LCM was built from.",
+        "q": "Are LCM and GCF related?"
+      },
+      {
+        "a": "Take the LCM of the first two, then the LCM of that result with the third number, and so on. For example, LCM(4, 6, 8) = LCM(LCM(4, 6), 8) = LCM(12, 8) = 24.",
+        "q": "How do I find the LCM of three numbers?"
+      },
+      {
+        "a": "Find the LCM of the denominators and use it as the common denominator. For 1/4 + 1/6: LCM(4, 6) = 12, so 3/12 + 2/12 = 5/12. The LCM gives the smallest possible denominator.",
+        "q": "How does LCM help add fractions?"
+      }
+    ],
+    "formula": "LCM(a, b) = (a x b) / GCF(a, b)\nExample: LCM(12, 18) = (12 x 18) / 6 = 216 / 6 = 36.\nAlso: LCM(a, b) x GCF(a, b) = a x b.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your two whole numbers in the input boxes.",
+      "The LCM appears instantly, with the GCF shown underneath.",
+      "Read the method line to see the exact arithmetic used.",
+      "Use the result as a common denominator for fraction problems.",
+      "For three numbers, take the LCM of the first two, then combine with the third."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The LCM is the smallest positive number that is a multiple of each input.",
+      "LCM(a, b) = (a x b) / GCF(a, b) - the fastest reliable method.",
+      "LCM x GCF always equals the product of the two numbers.",
+      "The LCM of the denominators is the smallest common denominator for fractions.",
+      "When one number divides the other, the LCM is simply the larger number.",
+      "LCM problems model any repeating schedule: bus routes, shift rotas, maintenance windows."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "lcm calculator, least common multiple calculator, lowest common multiple, lcm of two numbers, common denominator calculator",
+    "labels": {
+      "firstLabel": "First number",
+      "gcfLabel": "Their GCF",
+      "lcmLabel": "Least common multiple",
+      "methodLabel": "Method",
+      "secondLabel": "Second number",
+      "stepGcf": "GCF",
+      "stepMethod": "Method"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Two numbers only - chain the results for three or more.",
+      "Whole numbers only; decimals are rounded down.",
+      "The product a x b is computed exactly up to 1,000,000 inputs.",
+      "It answers the arithmetic, not word problems - read the question yourself."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free LCM calculator: find the least common multiple of two numbers instantly, with the GCF and the exact method shown. Ideal for fraction denominators.",
+    "metaTitle": "LCM Calculator - Least Common Multiple with Method | JaurTools",
+    "name": "LCM Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The least common multiple of 12 and 18 is 36. Using the formula LCM = (12 x 18) / GCF(12, 18): the GCF of 12 and 18 is 6, so (216) / 6 = 36. Check: the multiples of 12 are 12, 24, 36, ... and of 18 are 18, 36, ... - 36 is the smallest they share. This calculator shows the LCM, the GCF and the method for any two numbers.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "LCM results",
+    "tagline": "Find the least common multiple of two numbers - with the GCF and method shown.",
+    "workedExample": "Find LCM(12, 18):\n1. Find GCF(12, 18): 18 = 12 x 1 + 6, then 12 = 6 x 2 + 0, so GCF = 6.\n2. Multiply: 12 x 18 = 216.\n3. Divide: 216 / 6 = 36.\n4. Check with multiples: 12 -> 12, 24, 36; 18 -> 18, 36. The smallest shared multiple is 36.",
+    "workedExampleHeading": "Worked example"
+  }
+}

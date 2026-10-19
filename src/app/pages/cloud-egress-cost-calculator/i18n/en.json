@@ -1,0 +1,91 @@
+{
+  "cloud-egress-cost-calculator": {
+    "assumptionNote": "This is an estimator with a single flat per-GB rate plus a free tier. Real providers use volume tiers, regional pricing, and CDN discounts - always confirm against your provider's current pricing page before budgeting.",
+    "benefits": [
+      "Estimate data-transfer bills before launch, not after the invoice shock.",
+      "Compare providers: plug in each one's rate and free tier to see the real difference.",
+      "Size your CDN strategy - see when a CDN pays for itself in egress savings.",
+      "Plan video, download, and API products with honest bandwidth economics."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Egress is data leaving the cloud provider's network to the internet - every download, stream, or API response your users receive. Ingress (uploads into the cloud) is usually free. Providers charge for egress because backbone bandwidth costs them real money.",
+        "q": "What is cloud egress?"
+      },
+      {
+        "a": "Typical list prices are around $0.09/GB for the first 10 TB/month on major clouds, dropping with volume tiers. Some providers charge $0.12+/GB, while flat-fee hosts and R2-style storage charge $0. Egress is often the single largest line item on a cloud bill.",
+        "q": "What does egress usually cost per GB?"
+      },
+      {
+        "a": "Use a CDN: cached content is served from the edge, often at far lower per-GB rates or free tiers. Compress images and video, enable caching headers, and consider providers with free egress for the same-region or CDN-served traffic.",
+        "q": "How can I reduce egress costs?"
+      },
+      {
+        "a": "Ingress - uploading data into the cloud - is free on virtually all major providers. Transfers between services in the same region are usually free too. Egress charges apply when data leaves to the internet or to another region.",
+        "q": "Is uploading (ingress) free?"
+      },
+      {
+        "a": "Cloudflare R2 famously charges $0 for egress, which is why it is popular for download-heavy workloads. But compare total cost: storage, operations, and compute pricing differ, and migration has its own cost. This calculator lets you model any rate, including $0.",
+        "q": "Is R2 really free for egress?"
+      },
+      {
+        "a": "A 2-hour HD movie stream is roughly 3 GB. At $0.09/GB that is about $0.27 per viewer just in bandwidth. One million views costs around $270,000 in egress alone - which is exactly why streaming economics depend on CDNs and peering deals.",
+        "q": "What does streaming cost in egress?"
+      }
+    ],
+    "formula": "Billable GB = max(0, monthly GB - free tier GB).\nMonthly cost = billable GB x price per GB.\nYearly cost = monthly cost x 12.\nEffective per GB = monthly cost / monthly GB.\nExample: (12,288 - 100) x 0.09 = $1,096.92/month.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your monthly data transfer out in GB.",
+      "Enter the provider's free tier in GB (0 if there is none).",
+      "Enter the per-GB egress price from the provider's pricing page.",
+      "Read your monthly and yearly cost plus the effective per-GB rate.",
+      "Try different providers' rates to compare the real cost of switching."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Egress = data leaving the cloud to the internet; ingress (uploads) is usually free.",
+      "List price is often ~$0.09/GB for the first 10 TB, with volume discounts beyond.",
+      "Egress is frequently the biggest surprise line item on cloud bills.",
+      "Some providers charge $0 egress (e.g. R2-style storage) but differ elsewhere.",
+      "CDNs cut egress costs by serving cached content from the edge.",
+      "1 TB = 1,024 GB in cloud billing - mind the units when estimating."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cloud egress calculator, data transfer cost calculator, AWS egress cost, bandwidth cost estimator, cloud pricing calculator",
+    "labels": {
+      "billableGB": "Billable data",
+      "effectivePerGB": "Effective cost per GB",
+      "freeGB": "Free tier (GB/month)",
+      "gbUnit": "GB",
+      "monthlyCost": "Monthly egress cost",
+      "monthlyGB": "Monthly transfer out (GB)",
+      "pricePerGB": "Price per GB ($)",
+      "yearlyCost": "Yearly egress cost"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Flat-rate model; real pricing has volume tiers and regional differences.",
+      "Excludes request fees, storage, and compute - egress is only one line item.",
+      "Provider prices change; verify against the current pricing page.",
+      "An estimate for planning, not a quote from any provider."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free cloud egress cost calculator: estimate monthly data-transfer costs with any per-GB rate and free tier. Plan bandwidth budgets honestly.",
+    "metaTitle": "Cloud Egress Cost Calculator - Data Transfer Pricing | JaurTools",
+    "name": "Cloud Egress Cost Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "12 TB/month (12,288 GB) with a 100 GB free tier at $0.09/GB costs $1,096.92 per month - $13,163.04 per year. Egress (data leaving the cloud) is often the biggest surprise on cloud bills; ingress (uploads) is usually free. Always model egress before launching a download- or video-heavy product.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your egress cost results",
+    "tagline": "Estimate what moving data out of the cloud really costs you.",
+    "workedExample": "12,288 GB/month, 100 GB free tier, $0.09/GB:\n1. Billable GB = 12,288 - 100 = 12,188 GB.\n2. Monthly cost = 12,188 x 0.09 = $1,096.92.\n3. Yearly cost = 1,096.92 x 12 = $13,163.04.\n4. Effective per GB = 1,096.92 / 12,288 = $0.0893.\nAt $0/GB (R2-style), the same transfer costs $0 - which is why provider choice matters.",
+    "workedExampleHeading": "Worked example"
+  }
+}

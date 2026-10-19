@@ -1,0 +1,116 @@
+{
+  "ear-training": {
+    "assumptionNote": "Drills play clean sine tones at A4 = 440 Hz reference. Intervals are presented as simple (within one octave); compound intervals like ninths and tenths are not included.",
+    "benefits": [
+      "Build the core musician skill: recognising intervals and chords by ear alone.",
+      "Start with 5 easy intervals and grow to all 12 when you are ready.",
+      "Instant feedback with score, accuracy, and streak keeps practice honest.",
+      "Harmonic mode trains you to hear two notes at once - the real-world listening skill."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An interval is the distance between two notes, measured in semitones. A minor third is 3 semitones (C to Eb), a perfect fifth is 7 (C to G), an octave is 12. Train your ear on the sound of each distance and you can identify any melody's steps.",
+        "q": "What is an interval?"
+      },
+      {
+        "a": "Learn them in this order: perfect fifth (strong and open), octave (same note, higher), major third (bright), perfect fourth, then minor third. These five are the basic set here. Add minor second and tritone later - they are the hardest to tell apart.",
+        "q": "Which intervals should I learn first?"
+      },
+      {
+        "a": "Yes, and they are worth learning: a major triad (C-E-G) sounds bright and resolved, minor (C-Eb-G) sounds darker, diminished (C-Eb-Gb) sounds tense, augmented (C-E-G#) sounds dreamy and unstable. The triad drill plays all four.",
+        "q": "What is the difference between major, minor, diminished, and augmented triads?"
+      },
+      {
+        "a": "Melodic means one note after the other (easier - you compare two clear pitches). Harmonic means both notes at the same time (harder - you must pick the blend apart). Master melodic first, then switch on harmonic mode for the real challenge.",
+        "q": "Melodic or harmonic intervals - which is harder?"
+      },
+      {
+        "a": "Ten focused minutes daily beats an hour once a week. Aim for 80% accuracy on the basic set before moving to the full 12 intervals. Your brain builds pitch memory during sleep, so short daily sessions compound fast.",
+        "q": "How long should I practise each day?"
+      },
+      {
+        "a": "Relative pitch is learnable by almost everyone; perfect pitch (naming any note cold) is rare and mostly set in childhood. This tool trains relative pitch - hearing distances between notes - which is the skill working musicians actually use.",
+        "q": "Can anyone learn perfect pitch?"
+      }
+    ],
+    "formula": "Interval size in semitones:\nm2=1, M2=2, m3=3, M3=4, P4=5, tritone=6,\nP5=7, m6=8, M6=9, m7=10, M7=11, octave=12.\nTriads: major = 0-4-7, minor = 0-3-7,\ndiminished = 0-3-6, augmented = 0-4-8.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your drill: intervals or triads.",
+      "For intervals, pick the basic set (5 easy intervals) or the full set (all 12).",
+      "Tap New round to hear the mystery sound. Replay it as often as you like.",
+      "Click the answer you hear. The correct button turns green; a wrong pick turns red.",
+      "Watch your score and streak - the next round starts automatically."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "An interval is the distance between two notes: a perfect fifth is 7 semitones, an octave is 12.",
+      "The basic set (major 2nd, major 3rd, perfect 4th, perfect 5th, octave) covers most melodies.",
+      "A major triad is 0-4-7 semitones; minor is 0-3-7; diminished 0-3-6; augmented 0-4-8.",
+      "Melodic intervals play notes one after another; harmonic intervals play them together.",
+      "Ten focused minutes a day builds pitch memory faster than one long weekly session.",
+      "Relative pitch (hearing distances) is learnable by almost everyone with practice."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ear training, interval ear training, chord ear training, music ear training online, interval recognition",
+    "labels": {
+      "accuracyLabel": "Accuracy",
+      "drillIntervals": "Intervals",
+      "drillLabel": "Drill type",
+      "drillTriads": "Triads",
+      "harmonicLabel": "Play intervals harmonically (both notes together)",
+      "intervals": {
+        "M2": "Major 2nd",
+        "M3": "Major 3rd",
+        "M6": "Major 6th",
+        "M7": "Major 7th",
+        "P4": "Perfect 4th",
+        "P5": "Perfect 5th",
+        "P8": "Octave",
+        "TT": "Tritone",
+        "m2": "Minor 2nd",
+        "m3": "Minor 3rd",
+        "m6": "Minor 6th",
+        "m7": "Minor 7th"
+      },
+      "levelBasic": "Basic (5 intervals)",
+      "levelFull": "Full (12 intervals)",
+      "levelLabel": "Difficulty",
+      "newRoundLabel": "New round",
+      "optionsLabel": "What did you hear?",
+      "replayLabel": "Replay",
+      "scoreLabel": "Score",
+      "streakLabel": "Current streak",
+      "triads": {
+        "aug": "Augmented",
+        "dim": "Diminished",
+        "major": "Major",
+        "minor": "Minor"
+      }
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Sine tones only - real instruments have richer harmonics that change how intervals sound.",
+      "Simple intervals only; compound intervals (9ths, 11ths) are not included.",
+      "Random base notes stay within one octave of middle C, not the full instrument range.",
+      "No rhythm or melody context - isolated drills are the starting point, not the whole skill."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free ear training: interval and chord recognition drills with instant feedback, scoring, and streaks. Basic to full difficulty. No sign-up.",
+    "metaTitle": "Ear Training - Interval & Chord Recognition Drills | JaurTools",
+    "name": "Ear Training",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Tap New round to hear a mystery interval or triad, then click what you heard - correct answers turn green, build your streak, and the next round starts automatically. Start with the basic 5 intervals (major 2nd, major 3rd, perfect 4th, perfect 5th, octave) until you pass 80% accuracy, then open the full 12 and switch on harmonic mode to hear both notes together.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Training results",
+    "tagline": "Interval and chord recognition drills with instant feedback, scoring, and streaks.",
+    "workedExample": "Interval drill, basic set:\n1. Tap New round. You hear two notes: C4 then G4 (a perfect fifth, 7 semitones).\n2. You click Perfect 5th. Green - correct. Score 1/1, streak 1.\n3. Next: C4 then F4 (perfect fourth, 5 semitones). You click Perfect 4th. Correct again.\n4. Next: C4 then E4 (major third). You click Minor 3rd - red. The right answer (Major 3rd) turns green.\n5. After 20 rounds at 16/20, your accuracy is 80% - time to try the full set.",
+    "workedExampleHeading": "Worked example"
+  }
+}

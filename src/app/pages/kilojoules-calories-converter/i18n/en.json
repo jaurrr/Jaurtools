@@ -1,0 +1,92 @@
+{
+  "kilojoules-calories-converter": {
+    "assumptionNote": "Daily reference is 2,000 kcal (8,368 kJ) - a rough average. Your own needs depend on age, size, and activity.",
+    "benefits": [
+      "Reads any nutrition label in the world - kJ or kcal, nothing is foreign.",
+      "Makes recipe and fitness-app numbers comparable in seconds.",
+      "The daily-reference line puts every snack into honest perspective.",
+      "Great teaching aid: students see the SI unit and the food unit side by side."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The joule is the official SI unit, so Australia, New Zealand, and much of Europe use kJ. The US, UK, and India stayed with kcal because cooks and dieters know it. Both describe the same energy - this converter bridges them.",
+        "q": "Why do some labels show kJ and others kcal?"
+      },
+      {
+        "a": "No - and this is the classic confusion. One kilocalorie equals 1,000 small calories. When a label or trainer says 'calories', they mean kilocalories (kcal) almost every time.",
+        "q": "Is 1 calorie the same as 1 kilocalorie?"
+      },
+      {
+        "a": "Roughly 8,700 kJ (2,000 kcal) for an average woman and 10,500 kJ (2,500 kcal) for an average man. Smaller, older, or less active people need less; athletes need far more.",
+        "q": "How many kJ should I eat per day?"
+      },
+      {
+        "a": "Neither - they are the same quantity in different units. Accuracy depends on the food analysis behind the label, not on the unit printed.",
+        "q": "Which is more accurate, kJ or kcal?"
+      },
+      {
+        "a": "No. Celery-style claims ignore that digestion is efficient. No common food costs more energy to digest than it provides.",
+        "q": "Do negative-calorie foods exist?"
+      },
+      {
+        "a": "Serving sizes differ (100 g vs per pack), and rounding rules differ. The underlying energy per 100 g is usually the same food underneath.",
+        "q": "Why does the same food show different values in different countries?"
+      }
+    ],
+    "formula": "1 kcal = 4.184 kJ (exact).\nkJ = kcal x 4.184\nkcal = kJ / 4.184\nExample: 2000 kcal x 4.184 = 8368 kJ.\nExample: 500 kJ / 4.184 = 119.5 kcal.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the direction: calories to kilojoules, or kilojoules to calories.",
+      "Type the energy value from the label, recipe, or fitness app.",
+      "The converted value appears instantly - no button needed.",
+      "Compare against the daily reference to see what share of a day it covers.",
+      "Use it whenever you read a nutrition panel - it works offline after the first load."
+    ],
+    "howToHeading": "How to use this converter",
+    "keyFacts": [
+      "In nutrition, 'calories' almost always means kilocalories (kcal) - 1,000 small calories.",
+      "1 kcal = 4.184 kJ exactly. The joule is the SI unit of energy; the calorie predates it.",
+      "Australia and New Zealand print kJ on food labels; the US and India print kcal.",
+      "Average daily needs: about 8,700 kJ (2,000 kcal) for women and 10,500 kJ (2,500 kcal) for men - varies with size and activity.",
+      "Label values are averages from lab analysis; the real food varies by around 10%.",
+      "Drinks hide energy well: a 330 ml cola has roughly 590 kJ (140 kcal)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "kj to calories, kilojoules to calories converter, calories to kj, food energy conversion, nutrition label kj kcal",
+    "labels": {
+      "convertedEnergy": "Converted energy",
+      "dailyContext": "Share of a day",
+      "dailyReference": "About {pct}% of a 2,000 kcal day",
+      "directionLabel": "Conversion direction",
+      "energyValue": "Energy value",
+      "kcalLabel": "kcal",
+      "kcalToKj": "Calories to kJ",
+      "kjLabel": "kJ",
+      "kjToKcal": "kJ to calories"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only converts energy units - it cannot estimate calories in food you have not measured.",
+      "Label values are averages; cooking method and portion size change real intake.",
+      "Daily needs are rough averages - yours depend on age, size, and activity.",
+      "'Calories burned' on gym machines is usually overstated by 15-30%."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert kilojoules to calories and back instantly. Learn why food labels show both, and read nutrition panels like a pro. Free, private, no sign-up.",
+    "metaTitle": "kJ to Calories Converter | JaurTools",
+    "name": "Kilojoules to Calories Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "One food calorie (kilocalorie) equals 4.184 kilojoules. So 2,000 kcal - a typical daily intake - is 8,368 kJ. To convert, multiply kcal by 4.184 for kJ, or divide kJ by 4.184 for kcal.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your conversion results",
+    "tagline": "Switch between kilojoules and kilocalories in one tap - the two units on every food label.",
+    "workedExample": "Read a label showing 1,050 kJ per serving:\n1. Choose the direction: kJ to kcal.\n2. Divide: 1050 / 4.184 = 251.0 kcal.\n3. Context: that is about 12.5% of a 2,000 kcal day.\n\nConvert 500 kcal to kJ:\n1. Multiply: 500 x 4.184 = 2092 kJ.",
+    "workedExampleHeading": "Worked example"
+  }
+}

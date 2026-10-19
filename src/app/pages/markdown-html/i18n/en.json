@@ -1,0 +1,87 @@
+{
+  "markdown-html": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Markdown to HTML",
+    "tagline": "Convert Markdown to clean HTML with a live preview.",
+    "metaTitle": "Markdown to HTML Converter - Free Online with Preview",
+    "metaDescription": "Convert Markdown to HTML instantly with live preview. Supports headings, lists, code, links, and quotes. Free, no signup, runs in your browser.",
+    "keywords": "markdown to html, md to html converter, markdown converter online, markdown preview",
+    "resultsHeading": "Markdown to HTML results",
+    "quickAnswer": "This tool converts Markdown text into HTML as you type, with a live preview of the rendered result. It supports headings, bold, italic, inline code, fenced code blocks, bullet and numbered lists, blockquotes, links, images, and horizontal rules, and lets you copy the HTML or download it as a file.",
+    "keyFacts": [
+      "Markdown is a lightweight markup language created by John Gruber in 2004 for writing readable plain text.",
+      "The converter escapes raw HTML characters first, so pasted code can never inject scripts into the preview.",
+      "Fenced code blocks (triple backticks) preserve formatting and are rendered inside pre and code tags.",
+      "Links open in a new tab with rel=\"noopener\" for safe browsing.",
+      "The output is semantic HTML: h1 to h6, ul, ol, blockquote, strong, and em tags."
+    ],
+    "howTo": [
+      "Paste or type your Markdown in the editor on the left.",
+      "Watch the live preview render on the right as you type.",
+      "Use the sample button to see supported syntax in action.",
+      "Copy the generated HTML or download it as a standalone .html file.",
+      "Paste the HTML into a CMS, email template, or static page."
+    ],
+    "formula": "Input:  ## Title  ->  Output: <h2>Title</h2>\nInput:  **bold**  ->  Output: <strong>bold</strong>\nInput:  - item    ->  Output: <ul><li>item</li></ul>",
+    "workedExample": "Typing this Markdown:\n# Welcome\n\nThis is **bold** and this is a [link](https://jaurtools.com).\n\n- one\n- two\nproduces:\n<h1>Welcome</h1>\n<p>This is <strong>bold</strong> and this is a <a href=\"https://jaurtools.com\" target=\"_blank\" rel=\"noopener\">link</a>.</p>\n<ul><li>one</li><li>two</li></ul>",
+    "benefits": [
+      "Instant conversion with zero waiting or uploads.",
+      "Safe preview: input is escaped before rendering.",
+      "Copy-ready HTML for blogs, docs, and emails.",
+      "Works fully offline once the page is loaded."
+    ],
+    "limitations": [
+      "Implements the common Markdown subset, not every GitHub-flavored extension.",
+      "Tables, footnotes, and task lists are not converted by this version.",
+      "Raw HTML inside Markdown is shown as text, not rendered.",
+      "The preview uses default styling; your site CSS will change the final look."
+    ],
+    "faqs": [
+      {
+        "q": "Is the conversion done locally?",
+        "a": "Yes. The Markdown parser runs entirely in your browser with JavaScript. Nothing you type is uploaded anywhere."
+      },
+      {
+        "q": "Why is my table not converting?",
+        "a": "This version implements the common Markdown subset and does not include table parsing. Use the Markdown Table Generator tool for tables, then paste the result."
+      },
+      {
+        "q": "Can I use the HTML in WordPress?",
+        "a": "Yes. Copy the output and paste it into a Custom HTML block. The markup is standard and works in any CMS."
+      },
+      {
+        "q": "Does it support code blocks?",
+        "a": "Yes. Triple-backtick fenced blocks are rendered as pre and code elements with their formatting preserved."
+      },
+      {
+        "q": "Is the preview safe from scripts?",
+        "a": "Yes. All input is HTML-escaped before Markdown rules are applied, so script tags in your text are displayed as text, never executed."
+      }
+    ],
+    "assumptionNote": "Subset parser: headings, emphasis, code, lists, quotes, links, images, and rules. No tables or footnotes in this version.",
+    "labels": {
+      "sourceLabel": "Markdown input",
+      "sourcePlaceholder": "Type or paste Markdown here...",
+      "previewLabel": "Live preview",
+      "sampleLabel": "Load sample",
+      "clearLabel": "Clear",
+      "htmlSizeLabel": "HTML size (chars)",
+      "copyLabel": "Copy HTML",
+      "copiedLabel": "Copied",
+      "downloadLabel": "Download .html"
+    }
+  }
+}

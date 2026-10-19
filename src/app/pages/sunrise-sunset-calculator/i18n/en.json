@@ -1,0 +1,106 @@
+{
+  "sunrise-sunset-calculator": {
+    "benefits": [
+      "Plan shoots, hikes, and outdoor events around real light instead of guessing.",
+      "Fasting observers can cross-check published timetables with independent math.",
+      "Gardeners and solar-panel owners can see exactly how daylight shifts through the year.",
+      "Works for any spot on Earth — mountain villages and places with no local almanac included."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Date & Time",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Within about one to two minutes for most places. It uses the same NOAA algorithm as printed almanacs. Local terrain, weather, and your exact elevation can shift the visible sunrise by a few minutes.",
+        "q": "How accurate is this sunrise/sunset calculator?"
+      },
+      {
+        "a": "Two reasons. First, clock time covers a whole timezone, but the Sun peaks at 12:00 only on the zone's central meridian. Second, Earth's orbit is elliptical and its axis is tilted, so the length of a solar day varies through the year — the equation of time shifts solar noon by up to about 16 minutes.",
+        "q": "Why is solar noon not at 12:00?"
+      },
+      {
+        "a": "Above the Arctic Circle (and below the Antarctic Circle) the Sun can stay above the horizon for 24 hours in summer — the midnight sun — or below it all winter. When the math detects this, the tool says so instead of inventing times.",
+        "q": "What are polar day and polar night?"
+      },
+      {
+        "a": "No. The calculation is done in UTC from your coordinates, then displayed in your device's timezone. If you are checking a far-away place, convert mentally — or use our time zone converter.",
+        "q": "Do I need to enter my timezone?"
+      },
+      {
+        "a": "Golden hour is roughly the first hour after sunrise and the last hour before sunset, when sunlight is warm and soft — prized by photographers. Blue hour is the twilight just before sunrise and after sunset. This tool's sunrise and sunset times mark their boundaries.",
+        "q": "What are golden hour and blue hour?"
+      },
+      {
+        "a": "The solar math itself is DST-free because everything is computed in UTC. Your device applies its own timezone rules only when displaying the result, so daylight saving is handled correctly and automatically.",
+        "q": "Does it account for daylight saving time?"
+      }
+    ],
+    "formula": "NOAA solar algorithm (simplified):\n1. Day of year N; longitude hour = longitude / 15\n2. Approx time t = N + (6 - lngHour) / 24 for sunrise, N + (18 - lngHour) / 24 for sunset\n3. Sun's mean anomaly M = 0.9856 x t - 3.289\n4. True longitude L = M + 1.916·sin M + 0.020·sin 2M + 282.634\n5. Right ascension RA from L; declination via sinDec = 0.39782·sin L\n6. Hour angle: cosH = (cos 90.833° - sinDec·sinLat) / (cosDec·cosLat)\n7. Local mean time T = H + RA - 0.06571·t - 6.622; UTC time = T - lngHour",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a preset city, or select Custom and type any latitude (-90 to 90) and longitude (-180 to 180).",
+      "Pick the date you care about — past and future dates both work.",
+      "Sunrise, sunset, solar noon, and day length appear instantly below the inputs.",
+      "Use the results to plan photography around golden hour, cross-check fasting timetables, or schedule outdoor work.",
+      "For another place, just change the coordinates — nothing is saved or sent anywhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Sunrise and sunset depend on only three things: your latitude, your longitude, and the date.",
+      "The tool uses the official zenith angle of 90.833 degrees, which accounts for atmospheric refraction and the Sun's apparent size — this is why its times match published almanacs.",
+      "Solar noon is the moment the Sun stands highest. It rarely falls exactly at 12:00 because of your longitude offset and the equation of time.",
+      "Near the poles the Sun can stay up (or down) for a full 24 hours — the tool detects polar day and polar night instead of showing fake times.",
+      "Times are displayed in your device's timezone. The underlying math is computed in UTC, so daylight-saving changes can never corrupt the result."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sunrise sunset calculator, sunrise time, sunset time, solar noon calculator, day length calculator, golden hour times",
+    "labels": {
+      "customOption": "Custom (my own coordinates)",
+      "date": "Date",
+      "dayLength": "Day length",
+      "deviceTzNote": "Times are shown in your device's timezone.",
+      "hoursShort": "h",
+      "invalidInput": "Please enter a valid latitude, longitude, and date.",
+      "latitude": "Latitude (°)",
+      "longitude": "Longitude (°)",
+      "minutesShort": "m",
+      "polarDay": "Polar day on this date — the Sun stays above the horizon for 24 hours here.",
+      "polarNight": "Polar night on this date — the Sun stays below the horizon all day here.",
+      "preset": "City",
+      "presetNames": [
+        "New Delhi, India",
+        "Mumbai, India",
+        "Riyadh, Saudi Arabia",
+        "Dubai, UAE",
+        "London, UK",
+        "New York, USA",
+        "Sydney, Australia",
+        "Cairo, Egypt"
+      ],
+      "solarNoon": "Solar noon",
+      "sunrise": "Sunrise",
+      "sunset": "Sunset"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Times are geometric predictions, accurate to about 1–2 minutes. Hills, tall buildings, and haze shift the moment you actually see the Sun.",
+      "Results are shown in your device's timezone, not necessarily the location's own local timezone.",
+      "The model ignores elevation — at high altitude the Sun appears slightly earlier.",
+      "Estimates only. Where precision is legally or religiously binding, confirm with an official authority."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate sunrise, sunset, solar noon and day length for any latitude, longitude and date. Free and accurate solar math — no sign-up, runs in your browser.",
+    "metaTitle": "Sunrise & Sunset Calculator — Exact Times by Location",
+    "name": "Sunrise/Sunset Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter a latitude and longitude (or pick a preset city) plus a date, and this calculator returns that day's sunrise, sunset, solar noon, and total day length. It uses the standard NOAA solar-position algorithm — the same math behind printed almanacs — entirely in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sunrise/Sunset Calculator results",
+    "tagline": "Find exact sunrise, sunset, solar noon, and day length for any place on Earth and any date — computed in your browser with real solar math.",
+    "workedExample": "New Delhi — latitude 28.6139° N, longitude 77.2090° E — 21 June 2026 (summer solstice):\nSunrise: 23:53 UTC = 05:23 IST\nSunset: 13:51 UTC = 19:21 IST\nSolar noon: 12:22 IST (6.87 hours after sunrise, the midpoint)\nDay length: 13 h 58 m\nSanity check: 19:21 minus 05:23 = 13 h 58 m. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "snake-game": {
+    "benefits": [
+      "Sharpens reaction time and spatial planning — every move needs a two-second look-ahead.",
+      "Three speed settings, so beginners and veterans both get a fair challenge.",
+      "Works with keyboard (arrows or WASD) and big on-screen buttons for phones.",
+      "A full run takes two minutes: the perfect coffee-break game."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Games & Fun",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The snake starts in the middle moving right. Press Start, then steer with the arrow keys (or W, A, S, D). On a phone, tap the on-screen arrow buttons. The spacebar pauses and resumes the game.",
+        "q": "How do I control the snake?"
+      },
+      {
+        "a": "Eat the red food dot. Each one is worth 10 points and makes your snake one segment longer. There is no time limit — your only enemies are the walls and your own tail.",
+        "q": "How do I score points?"
+      },
+      {
+        "a": "Two ways: hitting any of the four walls, or running into any segment of your own body. One useful trick the code uses: the snake cannot reverse directly (right into left), which is what kills most beginners.",
+        "q": "How does the game end?"
+      },
+      {
+        "a": "Slow moves the snake every 180 milliseconds, Normal every 130, and Fast every 90. Food is always worth 10 points, so faster games simply give you more chances to score — and more chances to crash. Start on Normal.",
+        "q": "What is the difference between the speed settings?"
+      },
+      {
+        "a": "Yes. When the snake eats, the new head is added but the tail is not removed, so the body grows by exactly one segment. That is why a long snake is harder to steer — every meal adds one more segment to avoid.",
+        "q": "Does the snake get longer when it eats?"
+      },
+      {
+        "a": "Your high score is kept while this tab stays open and resets when you reload. Nothing is stored on any server — the game never sends data anywhere.",
+        "q": "Is my high score saved?"
+      }
+    ],
+    "formula": "Score = 10 x foods eaten.\nEach tick: the head moves one cell in the current direction. The tail follows — unless food is eaten, in which case the tail stays and the snake grows by one segment.\nGame over when the head leaves the 20x20 grid or touches any body segment.",
+    "formulaHeading": "How scoring works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Press Start. The snake begins in the center of the board, moving right.",
+      "Steer with arrow keys or W/A/S/D on a keyboard, or the on-screen arrows on a phone. Spacebar pauses.",
+      "Eat the red food: each one scores 10 points and grows the snake by one segment.",
+      "Avoid the walls and your own tail — either one ends the run.",
+      "Pick your speed before or during play: Slow, Normal, or Fast. Beat your high score!"
+    ],
+    "howToHeading": "How to play",
+    "keyFacts": [
+      "Snake runs on a 20x20 grid. The snake starts 3 segments long in the center.",
+      "Every red food dot eaten scores 10 points and grows the snake by exactly one segment.",
+      "The game ends if the head hits a wall or any part of the snake's own body.",
+      "Three speed settings change how fast the snake moves: Slow (180 ms per step), Normal (130 ms), Fast (90 ms).",
+      "You cannot reverse direction instantly — pressing the opposite arrow is ignored, which prevents instant self-crashes.",
+      "The keyboard controls are arrow keys or W/A/S/D; the spacebar pauses and resumes."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "snake game, play snake online, classic snake game, snake game free",
+    "labels": {
+      "canvasLabel": "Snake game board",
+      "controlsHint": "Keyboard: arrows or W/A/S/D to steer, spacebar to pause. On mobile, use the buttons above.",
+      "dpadDown": "Move down",
+      "dpadLabel": "Direction buttons",
+      "dpadLeft": "Move left",
+      "dpadRight": "Move right",
+      "dpadUp": "Move up",
+      "finalScoreMsg": "Final score",
+      "highScoreLabel": "Best",
+      "overMsg": "Game over! Score:",
+      "pauseButton": "Pause",
+      "pausedMsg": "Paused — press resume to continue.",
+      "playAgainButton": "Play Again",
+      "playingMsg": "Eat the red food. Avoid walls and your tail.",
+      "readyMsg": "Press Start when you are ready.",
+      "restartButton": "Restart",
+      "resumeButton": "Resume",
+      "scoreLabel": "Score",
+      "speedFast": "Fast",
+      "speedLabel": "Speed",
+      "speedNormal": "Normal",
+      "speedSlow": "Slow",
+      "startButton": "Start Game"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The high score lives only in this browser tab and resets on reload.",
+      "No levels or power-ups — this is the pure classic version.",
+      "Fast mode on a small phone screen can feel cramped.",
+      "Keyboard controls need the page to have focus; clicking elsewhere pauses nothing, but keys stop working until you click back."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Play the classic Snake game free online: eat, grow, and beat your high score. Keyboard + mobile controls, 3 speed settings, no sign-up, 100% private.",
+    "metaTitle": "Snake Game - Play the Classic Free | JaurTools",
+    "name": "Snake Game",
+    "privacyNote": "This game runs 100% in your browser. Your scores never leave your device.",
+    "quickAnswer": "Steer the snake around a 20x20 board, eat the red food, and grow longer. Every food scores 10 points. The run ends when you hit a wall or your own tail. Three speed settings (Slow, Normal, Fast) fit every skill level, and your best score is tracked while you play.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Snake Game results",
+    "tagline": "The timeless classic — eat, grow, and chase your high score with keyboard or touch controls.",
+    "workedExample": "Start: length 3, score 0, moving right.\n1. After 4 ticks the head reaches the food. Score becomes 10, and the tail is kept, so length becomes 4.\n2. Six ticks later the head eats a second food. Score becomes 20, length becomes 5.\n3. The head then turns up into its own body — collision detected, game over with a final score of 20.",
+    "workedExampleHeading": "Worked example"
+  }
+}

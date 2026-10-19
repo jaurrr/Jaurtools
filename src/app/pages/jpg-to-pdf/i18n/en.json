@@ -1,0 +1,100 @@
+{
+  "jpg-to-pdf": {
+    "benefits": [
+      "Completely private — your photos never leave your device, unlike online converters.",
+      "One image per page, in exactly the order you arrange them.",
+      "Three page modes: A4, US Letter, or a page shaped to each image.",
+      "Aspect ratio is always preserved — photos are never stretched or squashed.",
+      "Free and unlimited — convert as many photo sets as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — JPEG and PNG embed directly. WebP and GIF are converted to PNG in your browser first (animated GIFs keep only their first frame).",
+        "q": "Which image formats are supported?"
+      },
+      {
+        "a": "Use the up/down arrow buttons on each image to reorder the pages before creating the PDF.",
+        "q": "How do I change the page order?"
+      },
+      {
+        "a": "Never. Each image is scaled to fit inside the page with its proportions locked, centered with equal margins.",
+        "q": "Will my photos be stretched?"
+      },
+      {
+        "a": "Choose the “Match image” page size — each page is shaped to its photo's aspect ratio instead of a fixed A4 or Letter.",
+        "q": "Can I avoid the white borders?"
+      },
+      {
+        "a": "Yes, up to 20 MB per image. Very large photos are scaled down to fit the page automatically.",
+        "q": "Is there a size limit per image?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your photos never leave your device.",
+        "q": "Are my photos uploaded to a server?"
+      }
+    ],
+    "formula": "scale = min((page width − 2 × margin) ÷ image width,\n              (page height − 2 × margin) ÷ image height)\ndrawn width = image width × scale    drawn height = image height × scale",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose images” and select your photos (JPG, PNG, WebP or GIF).",
+      "Reorder them with the arrow buttons — each image becomes one page in this order.",
+      "Pick a page size: A4, US Letter, or “Match image” for borderless pages.",
+      "Set the margin around each photo.",
+      "Click “Create PDF” and download the finished document."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Each image gets its own PDF page, centered with the margin you choose on all sides.",
+      "“Match image” shapes each page to the photo's own aspect ratio, scaled so the long edge fits about 595 points.",
+      "JPEG bytes are embedded directly without re-encoding; PNG, WebP and GIF become PNG pages.",
+      "The tool reads each image's real pixel dimensions in your browser before building the PDF.",
+      "Page order is exactly the order shown in the image list when you click “Create PDF”."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "images to pdf, jpg to pdf, png to pdf, photos to pdf free, convert images to pdf online",
+    "labels": {
+      "chooseImages": "Choose images",
+      "createBtn": "Create PDF",
+      "downloadBtn": "Download PDF",
+      "errNoImages": "Please add at least one image.",
+      "errProcess": "Something went wrong while creating the PDF. Please try again.",
+      "imagesLabel": "Images (one per page)",
+      "imgHint": "JPG, PNG, WebP or GIF — each becomes one page, max 20 MB each",
+      "letterLabel": "US Letter",
+      "marginLabel": "Margin around photo (pt)",
+      "matchLabel": "Match image",
+      "matchNote": "“Match image” shapes each page to the photo instead of using a fixed page size.",
+      "moveDown": "Move down",
+      "moveUp": "Move up",
+      "pageSizeLabel": "Page size",
+      "processing": "Working…",
+      "removeLabel": "Remove image",
+      "resetBtn": "Start over",
+      "successMsg": "PDF created. Download it below."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Animated GIFs keep only their first frame — browsers cannot decode animation frames.",
+      "Very tall or wide panoramas are scaled down to fit the page.",
+      "No captions or text on pages — photos only.",
+      "Each image is limited to 20 MB to protect browser memory."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert JPG and other images into a single PDF free. Drag, drop, reorder pages and download — all in your browser.",
+    "metaTitle": "JPG to PDF - Convert Images to PDF Free | JaurTools",
+    "name": "JPG to PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Add your photos, arrange their order, pick A4, Letter or image-matched pages, and download a real PDF with one photo per page — aspect ratio always preserved, everything local in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Conversion results",
+    "tagline": "Combine images into one clean PDF.",
+    "workedExample": "A 4000×3000 photo on A4 (595.28 × 841.89 pt) with a 36 pt margin:\nusable = 523.28 × 769.89 pt\nscale = min(523.28 ÷ 4000, 769.89 ÷ 3000) = min(0.1308, 0.2566) = 0.1308\ndrawn = 4000 × 0.1308 × 3000 × 0.1308 = 523 × 392 pt\nThe photo fills the page width, centered vertically.",
+    "workedExampleHeading": "Worked example"
+  }
+}

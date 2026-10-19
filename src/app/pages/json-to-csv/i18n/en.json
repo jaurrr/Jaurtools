@@ -1,0 +1,98 @@
+{
+  "json-to-csv": {
+    "benefits": [
+      "One page for both directions, so you never open the wrong converter.",
+      "Union of all object keys becomes the header row, so ragged JSON still converts cleanly.",
+      "Nested objects and arrays are safely stringified into their cells instead of breaking.",
+      "Everything runs locally; API keys or private rows in your data are never transmitted."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Both a single object and an array of objects are accepted. A single object becomes a one-row CSV; an array becomes one row per object.",
+        "q": "Does the JSON have to be an array?"
+      },
+      {
+        "a": "All keys from all objects are collected, in first-seen order. Objects missing a key get an empty cell in that column.",
+        "q": "What if my objects have different keys?"
+      },
+      {
+        "a": "They are converted with JSON.stringify into the cell, so the information is preserved as compact JSON text inside the CSV field.",
+        "q": "How are nested objects handled in JSON to CSV?"
+      },
+      {
+        "a": "The first CSV row becomes the property names. Turn to CSV to JSON mode, paste, and you get an array of objects with optional pretty printing.",
+        "q": "How do I go from CSV back to JSON?"
+      },
+      {
+        "a": "The converter reads the JSON you pasted and shows a clear error message pointing at invalid JSON. Fix the syntax, for example a missing comma or quote, and it converts.",
+        "q": "What happens with invalid JSON?"
+      }
+    ],
+    "formula": "CSV row = join(values in header order, delimiter)  |  JSON object = { header: cell } per row",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a direction: JSON to CSV or CSV to JSON.",
+      "Paste your data into the box, or press Sample.",
+      "Choose the CSV delimiter: comma, semicolon, tab or pipe.",
+      "For CSV to JSON, toggle pretty printing if you want indented output.",
+      "Press Download to save the file, or Copy to paste it into your code."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Converts JSON to CSV and CSV to JSON on one page with a direction toggle.",
+      "JSON keys become the CSV header row in first-seen order.",
+      "Nested values are stringified into their cells instead of being dropped.",
+      "CSV parsing handles quoted fields, escaped quotes and line breaks.",
+      "Invalid JSON shows a friendly error instead of crashing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json to csv online, csv to json online, json csv converter two way, convert json csv free",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "csvLabel": "CSV input",
+      "csvToJson": "CSV to JSON",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "CSV delimiter",
+      "direction": "Conversion direction",
+      "download": "Download",
+      "errorJson": "Invalid JSON. Please check for missing commas, quotes or brackets.",
+      "inputPh": "Paste here...",
+      "jsonLabel": "JSON input",
+      "jsonToCsv": "JSON to CSV",
+      "outputHeading": "Output",
+      "pretty": "Pretty print JSON (indented)",
+      "resultFields": "Fields per record",
+      "resultRecords": "Records",
+      "sample": "Load sample"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Flat tables only; nested structures are stringified, not expanded.",
+      "Duplicate JSON keys keep the last value, as per JSON rules.",
+      "Very large inputs (tens of MB) can make the browser tab sluggish.",
+      "CSV headers are treated as plain text property names."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert JSON arrays to clean CSV free. Auto-flattens nested objects, custom delimiters, Excel-ready — 100% in your browser.",
+    "metaTitle": "JSON to CSV - Convert JSON to Spreadsheet Online | JaurTools",
+    "name": "JSON to CSV",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste JSON to get CSV, or paste CSV to get JSON, on a single page. The converter maps object keys to header columns, handles quoting correctly, and shows a clear error if your JSON is invalid. Download the result or copy it straight into your code.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON ↔ CSV results",
+    "tagline": "Flatten JSON into spreadsheet-ready CSV.",
+    "workedExample": "JSON to CSV input:\n[{\"name\":\"Aarav Sharma\",\"age\":25},{\"name\":\"Priya Verma\",\"age\":30}]\n\nOutput CSV:\nname,age\nAarav Sharma,25\nPriya Verma,30\n\n2 records, 2 fields each.\n\nCSV to JSON input:\nname,age\nAarav Sharma,25\n\nPretty output:\n[\n  { \"name\": \"Aarav Sharma\", \"age\": \"25\" }\n]\n\nNote: CSV values stay strings in this direction.",
+    "workedExampleHeading": "Worked example"
+  }
+}

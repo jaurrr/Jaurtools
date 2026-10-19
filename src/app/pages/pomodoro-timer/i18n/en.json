@@ -1,0 +1,96 @@
+{
+  "pomodoro-timer": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Pomodoro Timer",
+    "tagline": "Focus in timed sprints with short and long breaks - the classic Pomodoro technique.",
+    "metaTitle": "Pomodoro Timer - Focus & Break Cycle Timer | JaurTools",
+    "metaDescription": "Free Pomodoro timer: 25-minute focus sessions with short and long breaks, fully adjustable. Track completed sessions. Runs in your browser, no sign-up.",
+    "keywords": "pomodoro timer, focus timer, study timer, productivity timer, pomodoro technique",
+    "quickAnswer": "The Pomodoro technique splits work into 25-minute focus sessions separated by 5-minute breaks, with a 15-minute break after every 4 sessions. Set your lengths, press start, and the timer cycles automatically while counting completed sessions. One full cycle is 100 minutes of focused work with 30 minutes of breaks.",
+    "keyFacts": [
+      "The classic Pomodoro is 25 minutes of focus, 5 minutes of rest, repeated 4 times, then a 15-minute long break.",
+      "Short, fixed sprints beat vague 'work all afternoon' plans because the finish line is always near.",
+      "The timer advances automatically: focus -> short break -> focus ... -> long break -> focus.",
+      "Session lengths are fully adjustable - students often prefer 50/10, writers 25/5.",
+      "Counting completed sessions turns an abstract day into visible progress."
+    ],
+    "howTo": [
+      "Set your focus length (default 25 minutes) and break lengths.",
+      "Choose after how many sessions the long break comes (default 4).",
+      "Press Start and work on one task until the timer ends the session.",
+      "Rest during breaks - step away from the screen.",
+      "Press Reset anytime to start a fresh sequence."
+    ],
+    "formula": "One cycle = N focus sessions + (N - 1) short breaks + 1 long break.\nFocus time per cycle = N x focus length.\nBreak time per cycle = (N - 1) x short + 1 x long.\nClassic: 4 x 25 + 3 x 5 + 15 = 100 min focus + 30 min breaks.",
+    "workedExample": "Classic settings: 25 / 5 / 15, long break after 4.\n1. Session 1: 25 min focus -> 5 min break.\n2. Session 2: 25 min focus -> 5 min break.\n3. Session 3: 25 min focus -> 5 min break.\n4. Session 4: 25 min focus -> 15 min long break.\n5. Totals: 100 minutes of focus, 30 minutes of rest, 4 completed sessions.",
+    "benefits": [
+      "Turns big scary tasks into small finishable sprints.",
+      "Regular breaks protect focus and reduce end-of-day burnout.",
+      "Adjustable lengths fit studying, coding, writing or housework.",
+      "No account, no tracking - just a clean timer."
+    ],
+    "limitations": [
+      "Browser timers can drift slightly and pause in background tabs; treat it as a guide, not a lab instrument.",
+      "There is no alarm sound - keep the tab visible or check back.",
+      "The technique suits solo focused work best; meetings cannot be Pomodoro'd.",
+      "Changing settings mid-run is disabled to protect the current session - pause or reset first."
+    ],
+    "faqs": [
+      {
+        "q": "What is the Pomodoro technique?",
+        "a": "A time-management method: work in focused 25-minute sprints with 5-minute breaks, taking a longer 15-minute break after every 4 sprints. It was named after a tomato-shaped kitchen timer."
+      },
+      {
+        "q": "Can I change the 25-minute default?",
+        "a": "Yes - set any focus, short-break and long-break lengths before starting. Many people prefer 50/10 for deep work."
+      },
+      {
+        "q": "Does it switch phases automatically?",
+        "a": "Yes. When a focus session ends it moves to a break, and when a break ends it returns to focus, counting completed sessions."
+      },
+      {
+        "q": "What should I do during breaks?",
+        "a": "Step away from the screen: stretch, drink water, look outside. Avoid starting another task - the break is the point."
+      },
+      {
+        "q": "Why is there no sound alarm?",
+        "a": "This version is intentionally simple and works without audio permissions. Keep the tab visible to catch phase changes."
+      },
+      {
+        "q": "Does it keep running if I close the tab?",
+        "a": "No - the timer lives in the page. Closing or reloading the tab resets it."
+      }
+    ],
+    "resultsHeading": "Pomodoro Timer results",
+    "labels": {
+      "focusLength": "Focus (minutes)",
+      "shortBreak": "Short break (minutes)",
+      "longBreak": "Long break (minutes)",
+      "cyclesBeforeLong": "Sessions before long break",
+      "start": "Start",
+      "pause": "Pause",
+      "resume": "Resume",
+      "reset": "Reset",
+      "phaseIdle": "Ready",
+      "phaseFocus": "Focus",
+      "phaseShort": "Short break",
+      "phaseLong": "Long break",
+      "completedSessions": "Completed focus sessions",
+      "currentCycle": "Session in cycle",
+      "minutesUnit": "min"
+    }
+  }
+}

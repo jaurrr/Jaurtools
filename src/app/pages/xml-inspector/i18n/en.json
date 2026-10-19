@@ -1,0 +1,93 @@
+{
+  "xml-inspector": {
+    "benefits": [
+      "See the structure of any XML in seconds — no desktop software needed.",
+      "Collapsible tree makes huge documents navigable.",
+      "Element, attribute, and depth counts help you size up an API response fast.",
+      "Error messages point at malformed markup instead of failing silently."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "This tool is a viewer, not an editor. It parses your XML with the browser's built-in DOMParser and renders the resulting tree. If you need to edit XML, use a code editor and re-paste the result here to re-inspect it.",
+        "q": "Can I edit the XML here?"
+      },
+      {
+        "a": "Yes. The parser enforces the XML specification strictly: every opening tag needs a matching closing tag, attribute values need quotes, and there must be exactly one root element. The error box shows the parser's own message, which usually names the line and column of the problem.",
+        "q": "Why does my XML fail to parse?"
+      },
+      {
+        "a": "The page accepts up to 200,000 characters, which covers most API responses and config files. Extremely large documents (multi-megabyte feeds) may render slowly because every node becomes a collapsible element in the page.",
+        "q": "Is there a size limit?"
+      },
+      {
+        "a": "No. Your XML is parsed locally by the browser's own XML engine and is never transmitted anywhere. You can safely inspect documents containing API keys or personal data — though you should still avoid pasting secrets into any website as a habit.",
+        "q": "Is my XML uploaded anywhere?"
+      },
+      {
+        "a": "Namespaces are part of the tag name as the parser sees them, so <svg:rect> shows up as svg:rect. Prefix declarations (xmlns attributes) appear in the attribute list like any other attribute. The tool does not resolve or validate schemas.",
+        "q": "How are XML namespaces shown?"
+      },
+      {
+        "a": "Common culprits: an unescaped & (write &amp;), a < inside text content, mismatched open/close tags, or two root elements. Paste the snippet into this tool — the parser error names the exact line and column, which is usually enough to spot it.",
+        "q": "What is the most common XML mistake?"
+      }
+    ],
+    "formula": "XML is parsed with the browser's built-in DOMParser — there is no arithmetic formula.\nElement count = number of element nodes in the document.\nAttribute count = sum of attributes across all elements.\nMax depth = longest path from the root element to any leaf, counting the root as 1.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your XML into the text box (or keep the loaded sample).",
+      "The tree, element count, attribute count, and max depth update instantly.",
+      "Click any element to collapse or expand its children.",
+      "If the XML is malformed, read the error message — it names the line and column.",
+      "Use Load sample to restore the example, or Clear to start empty."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "XML (eXtensible Markup Language) is a strict, tag-based data format.",
+      "Every XML document must have exactly one root element.",
+      "Attribute values must be quoted; tags are case-sensitive.",
+      "The browser's DOMParser validates structure while parsing.",
+      "This tool renders the parsed tree with collapsible nodes.",
+      "Nothing is uploaded — parsing happens entirely in your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "xml inspector, xml viewer online, xml tree viewer, xml parser online, view xml structure",
+    "labels": {
+      "attributesLabel": "Attributes",
+      "clearInput": "Clear",
+      "depthLabel": "Max depth",
+      "elementsLabel": "Elements",
+      "errorEmpty": "The text box is empty — paste some XML to inspect it.",
+      "errorHeading": "Parse error",
+      "errorParse": "The XML could not be parsed. Check the error message and fix the markup.",
+      "loadSample": "Load sample",
+      "placeholder": "Paste your XML here...",
+      "treeHeading": "Document tree",
+      "xmlLabel": "XML input"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Viewer only — you cannot edit nodes in the tree.",
+      "No schema (XSD/DTD) validation, only well-formedness checks.",
+      "Very large documents may render slowly in the browser.",
+      "Text content is trimmed to 200 characters per node in the display."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free XML inspector: paste XML and explore it as a collapsible tree with element, attribute, and depth counts. Instant parse errors. 100% private, no sign-up.",
+    "metaTitle": "XML Inspector - View XML as a Tree Online | JaurTools",
+    "name": "XML Inspector",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The XML Inspector parses your XML with the browser's built-in XML engine and renders it as a collapsible tree, so you can see the exact structure at a glance. It also reports the total element count, attribute count, and maximum nesting depth, and shows precise parse errors for malformed markup. The sample document — a small book catalog — parses into 7 elements, 4 attributes, and a max depth of 3.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "XML inspection results",
+    "tagline": "Paste XML and explore it as a collapsible tree — with counts, depth, and clear parse errors.",
+    "workedExample": "The loaded sample catalog:\n1. Root element: <catalog> (depth 1).\n2. Two <book> children, each with id and lang attributes (depth 2).\n3. Each book has <title> and <price> children (depth 3).\n4. Totals: 1 + 2 + 4 = 7 elements, 2 × 2 = 4 attributes, max depth 3.",
+    "workedExampleHeading": "Worked example"
+  }
+}

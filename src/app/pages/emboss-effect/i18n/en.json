@@ -1,0 +1,93 @@
+{
+  "emboss-effect": {
+    "benefits": [
+      "Turns flat photos into 3D-looking reliefs — great for textures, logos, and artistic posters.",
+      "Color emboss keeps the original hues while adding sculpted depth, a look few free tools offer.",
+      "The depth slider goes from a subtle paper-press effect to a dramatic chiseled carving.",
+      "Runs per pixel in your browser with zero upload — private photos stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Emboss is a convolution filter: a 3x3 kernel compares each pixel with its neighbors. Edges become bright on one side and dark on the other, which your eye reads as raised relief. The result is shifted to mid-gray (128) so flat areas look neutral.",
+        "q": "How does the emboss effect work?"
+      },
+      {
+        "a": "Gray emboss converts to luminance first, giving the classic monochrome relief look. Color emboss applies the same kernel to the red, green, and blue channels separately, so the relief keeps the photo's original colors.",
+        "q": "What is the difference between gray and color emboss?"
+      },
+      {
+        "a": "Depth scales the kernel values. At 0.5 the relief is gentle, like pressed paper; at 3.0 the edges are strongly exaggerated, like a deep carving. Around 1.0 is the classic emboss look.",
+        "q": "What does the depth slider change?"
+      },
+      {
+        "a": "Photos with strong edges — text, logos, architecture — give the most dramatic relief. Very smooth gradients produce almost no effect because there are no edges to emphasize.",
+        "q": "Which images look best embossed?"
+      },
+      {
+        "a": "The preview is capped at 1400 px on the long edge for speed; the PNG download matches the preview exactly.",
+        "q": "What resolution is the download?"
+      },
+      {
+        "a": "Yes. Transparency is flattened: the emboss is computed on the composited RGB values and the output is fully opaque. For logos with transparency, use the Color Emboss mode on a solid background version.",
+        "q": "Does it keep transparency?"
+      }
+    ],
+    "formula": "kernel (depth d) = [-2d -d 0; -d 1 d; 0 d 2d]\nresult = 128 + sum(kernel x neighborhood)\nExample (gray, d = 1), center 120 surrounded by 100:\nsum = -200-100+0-100+120+100+0+100+200 = 120\nresult = 128 + 120 = 248 (bright relief edge).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo from your device (up to 15 MB).",
+      "Pick Gray for the classic monochrome relief or Color to keep the original hues.",
+      "Drag the depth slider to taste — 1.0 is the classic look, 3.0 is dramatic.",
+      "Preview the relief effect live in your browser.",
+      "Press Download to save the embossed image as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Emboss is a real 3x3 convolution filter that turns edges into light-and-shadow relief, like a carving.",
+      "Two modes: grayscale emboss (classic monochrome relief) and color emboss (relief in original hues).",
+      "Depth slider (0.5–3.0) scales the kernel from a gentle paper-press to a deep carving.",
+      "Flat areas render as neutral mid-gray (128); edges become bright on one side and dark on the other.",
+      "Computed per pixel with the Canvas API — the image never leaves your browser.",
+      "The download is a lossless PNG, rendered at up to 1400 px on the long edge."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "emboss effect online, emboss filter, relief effect photo, 3d emboss image, color emboss",
+    "labels": {
+      "colorMode": "Color emboss",
+      "depth": "Relief depth",
+      "downloadPng": "Download PNG",
+      "grayMode": "Gray emboss",
+      "modeLabel": "Mode",
+      "newImage": "New image",
+      "originalSize": "Original size",
+      "sizeError": "That file is larger than 15 MB. Please choose a smaller image.",
+      "stageLabel": "Emboss preview",
+      "typeError": "That file could not be read as an image. Please choose a JPEG, PNG, WebP, GIF, or BMP file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rendering is capped at 1400 px on the long edge, so huge originals are scaled down first.",
+      "Transparency is flattened — the output is fully opaque.",
+      "Only the classic directional emboss kernel is offered; no multi-angle or bevel variants.",
+      "Smooth, edgeless images show almost no effect since the filter only reacts to edges."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Give photos a 3D carved-relief emboss look — gray or full color emboss with adjustable depth. Free, instant, in your browser.",
+    "metaTitle": "Emboss Effect - 3D Carved-Relief Look | JaurTools",
+    "name": "Emboss Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo to give it a 3D carved-relief look with a real convolution emboss filter. Choose gray or color emboss and dial the relief depth from subtle to dramatic. The PNG downloads instantly and your photo never leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your emboss results",
+    "tagline": "Carved-relief photos in one click.",
+    "workedExample": "You upload a logo and pick Gray emboss at depth 1.0.\nA pixel of value 120 surrounded by 100s gives kernel sum = 120, so the output pixel = 128 + 120 = 248 — a bright relief edge.\nThe logo downloads as a monochrome relief PNG: emboss-1400x900.png.",
+    "workedExampleHeading": "Worked example"
+  }
+}

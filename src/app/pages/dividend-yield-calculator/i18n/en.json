@@ -1,0 +1,90 @@
+{
+  "dividend-yield-calculator": {
+    "assumptionNote": "Yield is calculated on the current share price you enter and the stated annual dividend. Dividends are never guaranteed - companies can cut them, and share prices move daily, so yield moves with them.",
+    "benefits": [
+      "Compare income stocks at a glance: yield is the standard yardstick.",
+      "See your real annual and monthly dividend income from your share count.",
+      "Spot value: a falling price pushes yield up, which can signal a bargain - or trouble.",
+      "Essential maths for retirement income planning with dividend portfolios."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A yield of 3-5% is typical for mature dividend payers. Above 6-8%, be cautious: the market may be pricing in a dividend cut, because yield rises when the share price falls. Very high yield is often a warning, not a gift.",
+        "q": "What is a good dividend yield?"
+      },
+      {
+        "a": "Yield on cost never changes unless the dividend changes: it is the dividend divided by what YOU paid. Current yield moves with the market price. If you bought at $40 and the dividend is $2.40, your yield on cost is 6% even if the current yield at $60 is 4%.",
+        "q": "Yield on cost vs current yield?"
+      },
+      {
+        "a": "Most pay quarterly, some monthly, some annually. The annual dividend per share used in this calculator is the total of all payments over the year. Your annual income figure is the same regardless of payment frequency.",
+        "q": "How often are dividends paid?"
+      },
+      {
+        "a": "Usually yes, though rules vary. In the US, qualified dividends get lower tax rates; in India, dividends are taxed in the investor's hands at slab rates. This calculator shows pre-tax income - subtract your local tax for the real figure.",
+        "q": "Are dividends taxed?"
+      },
+      {
+        "a": "Often the opposite. A soaring yield usually means the price crashed, which often precedes a dividend cut. Check the payout ratio (dividends / earnings): above 80-100% the dividend is hard to sustain. Sustainable yield with growing dividends beats a flashy headline yield.",
+        "q": "Is a very high yield always better?"
+      },
+      {
+        "a": "DRIP (Dividend Reinvestment Plan) uses your dividends to buy more shares automatically, compounding your holding. Over decades, reinvested dividends drive most of total stock market returns. This calculator shows cash income; with DRIP your share count - and future income - grows instead.",
+        "q": "Should I reinvest dividends (DRIP)?"
+      }
+    ],
+    "formula": "Dividend yield = annual dividend per share / share price x 100.\nAnnual income = annual dividend per share x shares owned.\nMonthly income = annual income / 12.\nExample: 2.40 / 60 x 100 = 4.00%.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the annual dividend per share (total of all payments in a year).",
+      "Enter the current share price.",
+      "Enter how many shares you own (or plan to buy).",
+      "Read the yield, your annual and monthly income, and the position cost.",
+      "Try different prices to see how yield moves as the share price changes."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Dividend yield = annual dividend per share divided by the share price, times 100.",
+      "Yield and price move in opposite directions: price up, yield down.",
+      "A 4% yield means $4 of annual dividend income per $100 invested.",
+      "Mature dividend payers typically yield 2-5%; above 8% often signals danger.",
+      "Dividends are paid from company profits and can be cut in bad times.",
+      "Total return = dividend yield + share price growth; yield is only half the story."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "dividend yield calculator, dividend income calculator, stock yield calculator, dividend per share calculator",
+    "labels": {
+      "annualDividend": "Annual dividend per share",
+      "annualIncome": "Annual dividend income",
+      "dividendYield": "Dividend yield",
+      "monthlyIncome": "Monthly income (avg)",
+      "portfolioCost": "Position cost",
+      "sharePrice": "Current share price",
+      "sharesOwned": "Shares owned"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pre-tax figures only - dividend taxes vary by country and are not deducted.",
+      "A snapshot: prices move daily and dividends can be cut.",
+      "Ignores share price growth or loss - total return needs both halves.",
+      "Not investment advice; high yield can signal a distressed company."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free dividend yield calculator: dividend income as a percentage of share price, plus your annual and monthly income. Private, no sign-up.",
+    "metaTitle": "Dividend Yield Calculator - Income as % of Price | JaurTools",
+    "name": "Dividend Yield Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Dividend yield is the annual dividend per share divided by the share price. At $2.40 dividend and $60 price, yield is 4.00%. Own 100 shares: annual income is $240 ($20/month average) on a $6,000 position. Remember yield rises when the price falls - a very high yield can warn of a coming dividend cut.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your dividend yield results",
+    "tagline": "Dividend income as a percentage of share price - plus your real income.",
+    "workedExample": "$2.40 annual dividend, $60 share price, 100 shares:\n1. Yield = 2.40 / 60 x 100 = 4.00%.\n2. Annual income = 2.40 x 100 = $240.\n3. Monthly average = 240 / 12 = $20.\n4. Position cost = 60 x 100 = $6,000.\nSo $6,000 invested produces $240 per year in dividends before tax.",
+    "workedExampleHeading": "Worked example"
+  }
+}

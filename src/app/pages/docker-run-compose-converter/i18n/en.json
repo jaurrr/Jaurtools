@@ -1,0 +1,91 @@
+{
+  "docker-run-compose-converter": {
+    "assumptionNote": "Only common run flags are converted; -d becomes docker compose up -d instead of a compose key.",
+    "benefits": [
+      "Turns a working docker run command into a repeatable compose file in seconds.",
+      "Parses real-world commands: quoted values, --flag=value form, and combined short flags.",
+      "Repeated -p, -e, and -v flags each become proper YAML list entries.",
+      "The service name comes from --name, or is derived from the image name.",
+      "--env-file, --workdir, --user, and --network are translated too."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Paste the command into the input box. The tool tokenizes it, extracts the flags, and builds a services block. Copy the YAML or download docker-compose.yml, then run docker compose up -d.",
+        "q": "How do I convert my docker run command?"
+      },
+      {
+        "a": "It becomes the service name. If you omit --name, the tool derives one from the image — for example node:20-alpine becomes the service node.",
+        "q": "What does --name become?"
+      },
+      {
+        "a": "-it, --rm, --privileged, and similar runtime-only flags are skipped because compose has no equivalent. Detached mode (-d) becomes docker compose up -d when you run the file.",
+        "q": "What happens to -it and --rm?"
+      },
+      {
+        "a": "Yes. Everything after the image name is treated as the container command and emitted as the command: key, so docker run ubuntu bash becomes command: bash.",
+        "q": "Does it handle the command after the image?"
+      },
+      {
+        "a": "The tokenizer respects single quotes, double quotes, and backslash escapes, so -e \"API_KEY=abc 123\" keeps its space. Extremely unusual shell syntax may still fail.",
+        "q": "Does it handle quoted values with spaces?"
+      },
+      {
+        "a": "Each -e becomes an environment list entry and each --env-file becomes an env_file entry. Both can be used together in the same command.",
+        "q": "What is the difference between -e and --env-file handling?"
+      }
+    ],
+    "formula": "docker run [flags] IMAGE [CMD]\n  --name N      ->  services: { N: }\n  -p H:C        ->  ports: [\"H:C\"]\n  -e K=V        ->  environment: [\"K=V\"]\n  -v H:C        ->  volumes: [\"H:C\"]\n  --restart R   ->  restart: R\n  CMD after image -> command: CMD",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your docker run command into the input box.",
+      "Check the parsed summary: service name, image, and flag count.",
+      "Review the generated compose YAML.",
+      "Copy the output or download docker-compose.yml.",
+      "Run docker compose up -d with the file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "docker run flags map almost one-to-one to compose service keys.",
+      "-p becomes ports, -e becomes environment, -v becomes volumes.",
+      "Everything after the image name is the container command.",
+      "--name sets the compose service name; without it, the image name is used.",
+      "Multi-line commands with backslash continuations are handled automatically."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "docker run to compose, docker run to docker-compose.yml, convert docker run command, docker compose from run",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "downloadLabel": "Download .yml",
+      "errorInvalid": "Could not parse a docker run command. Check the command and try again.",
+      "flagsLabel": "Flags converted",
+      "imageLabel": "Image",
+      "inputLabel": "docker run command",
+      "serviceLabel": "Service name"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Runtime-only flags (-it, --rm, --privileged) have no compose equivalent and are skipped.",
+      "--hostname, --ip, and --mac-address are currently ignored.",
+      "Build-related flags do not apply to run commands and are not handled.",
+      "Unusual shell expansions like $(...) are not evaluated."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert docker run commands to docker-compose.yml online. Paste any docker run command and get a valid compose file with ports, env vars and volumes.",
+    "metaTitle": "Docker Run to Compose Converter – Free Online Tool",
+    "name": "Docker Run to Compose Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Developers prototype with long docker run commands, then need the same setup saved as a compose file for the team. This tool parses the run command — name, ports, environment, volumes, restart policy, and the trailing command — and generates the equivalent docker-compose.yml.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Generated compose file",
+    "tagline": "Paste a docker run command, get a ready docker-compose.yml.",
+    "workedExample": "Input:\ndocker run -d --name web -p 8080:80 -e NODE_ENV=production -v /data:/data --restart unless-stopped nginx:1.25\n\nParsed: service web, image nginx:1.25, 1 port, 1 env var, 1 volume, restart unless-stopped.\n\nOutput (docker-compose.yml):\nservices:\n  web:\n    image: \"nginx:1.25\"\n    ports:\n      - \"8080:80\"\n    environment:\n      - \"NODE_ENV=production\"\n    volumes:\n      - \"/data:/data\"\n    restart: unless-stopped\n\nSave and run docker compose up -d — the -d flag becomes the up command option.",
+    "workedExampleHeading": "Worked example"
+  }
+}

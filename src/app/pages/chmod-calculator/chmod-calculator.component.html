@@ -1,0 +1,206 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="perm-grid" role="group" [attr.aria-label]="t('labels.permGridLabel')">
+        @for (cls of classes; track cls) {
+          <fieldset class="perm-row">
+            <legend>{{ classLabel(cls) }}</legend>
+            @for (bit of bits; track bit) {
+              <label class="perm-check">
+                <input
+                  type="checkbox"
+                  [checked]="permBit(cls, bit)"
+                  (change)="toggleBit(cls, bit)"
+                />
+                <span>{{ bitLabel(bit) }} ({{ bit === 'r' ? 4 : bit === 'w' ? 2 : 1 }})</span>
+              </label>
+            }
+          </fieldset>
+        }
+      </div>
+
+      <div class="field">
+        <span class="field-label" id="chmod-special">{{ t('labels.specialBitsLabel') }}</span>
+        <div class="check-row" role="group" aria-labelledby="chmod-special">
+          <label class="perm-check">
+            <input type="checkbox" [checked]="setuid()" (change)="toggleSpecial('setuid')" />
+            <span>{{ t('labels.setuidLabel') }}</span>
+          </label>
+          <label class="perm-check">
+            <input type="checkbox" [checked]="setgid()" (change)="toggleSpecial('setgid')" />
+            <span>{{ t('labels.setgidLabel') }}</span>
+          </label>
+          <label class="perm-check">
+            <input type="checkbox" [checked]="sticky()" (change)="toggleSpecial('sticky')" />
+            <span>{{ t('labels.stickyLabel') }}</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="result-row total">
+          <span><app-icon name="lock" /> {{ t('labels.octalLabel') }}</span>
+          <strong class="ltr">{{ octal4() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.symbolicLabel') }}</span>
+          <strong class="ltr">{{ symbolic() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.verboseLabel') }}</span>
+          <strong class="ltr">{{ verbose() }}</strong>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="chmod-cmd">{{ t('labels.commandLabel') }}</label>
+        <div class="input-row">
+          <input
+            id="chmod-cmd"
+            class="ltr code-box"
+            type="text"
+            readonly
+            [value]="chmodCommand()"
+            [attr.aria-label]="t('labels.commandLabel')"
+          />
+          <button type="button" class="copy-btn" (click)="copy(chmodCommand(), 'cmd')">
+            <app-icon name="copy" />
+            {{ copiedKey() === 'cmd' ? t('labels.copiedMessage') : t('labels.copyButton') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="chmod-octal-in">{{ t('labels.manualOctalLabel') }}</label>
+        <div class="input-row">
+          <input
+            id="chmod-octal-in"
+            class="ltr"
+            type="text"
+            inputmode="numeric"
+            maxlength="4"
+            [ngModel]="octalInput()"
+            (ngModelChange)="setOctalInput($event)"
+          />
+          <button type="button" class="copy-btn" (click)="applyOctal()">
+            {{ t('labels.applyButton') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="chmod-sym-in">{{ t('labels.manualSymbolicLabel') }}</label>
+        <div class="input-row">
+          <input
+            id="chmod-sym-in"
+            class="ltr"
+            type="text"
+            maxlength="9"
+            [ngModel]="symbolicInput()"
+            (ngModelChange)="setSymbolicInput($event)"
+          />
+          <button type="button" class="copy-btn" (click)="applySymbolic()">
+            {{ t('labels.applyButton') }}
+          </button>
+        </div>
+      </div>
+
+      @if (error()) {
+        <p class="note error" role="alert">{{ error() }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

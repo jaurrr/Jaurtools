@@ -1,0 +1,89 @@
+{
+  "common-factor-calculator": {
+    "benefits": [
+      "Finds the GCD of up to 8 numbers instantly - no long division by hand.",
+      "Lists every common factor, not just the greatest one.",
+      "Exact BigInt arithmetic: no rounding, even for huge integers.",
+      "The coprime check tells you at a glance when numbers share nothing but 1."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The GCD (greatest common divisor) is the largest number that divides all of them exactly. For 12, 18, 24 it is 6, because 6 divides each one and no larger number does.",
+        "q": "What is the GCD?"
+      },
+      {
+        "a": "Numbers are coprime when their GCD is 1 - they share no factor besides 1. 7 and 11 are coprime. The tool tells you this directly.",
+        "q": "What does coprime mean?"
+      },
+      {
+        "a": "List the factors of the smallest number and test each against the rest - or let this tool do it: the common factors of 12, 18, 24 are 1, 2, 3, 6.",
+        "q": "How do I find common factors by hand?"
+      },
+      {
+        "a": "Yes - negatives are converted to their absolute values first, since factors are about divisibility. -12 and 18 have GCD 6.",
+        "q": "Do negative numbers work?"
+      },
+      {
+        "a": "The GCD is still computed and shown, but the full factor list is skipped past one trillion to keep the page fast. The GCD alone answers most real questions.",
+        "q": "Why is the factor list missing for huge numbers?"
+      },
+      {
+        "a": "Fractions have infinitely many common divisors, so the idea only makes sense for whole numbers. Non-integers are ignored by this tool.",
+        "q": "Can I use decimals?"
+      }
+    ],
+    "formula": "Euclid's algorithm: gcd(a, b) = gcd(b, a mod b), until the remainder is 0.\nExample: gcd(18, 12): 18 mod 12 = 6; 12 mod 6 = 0 -> gcd = 6.\nFor more numbers: gcd(a, b, c) = gcd(gcd(a, b), c).\nCommon factors = all divisors of the GCD.",
+    "formulaHeading": "The method",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type 2 to 8 whole numbers, separated by commas, spaces, or new lines.",
+      "The greatest common divisor appears instantly as the headline result.",
+      "Below it you get every common factor, smallest to largest.",
+      "A note appears when your numbers are coprime (GCD = 1)."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "A common factor divides every number in the list with no remainder.",
+      "GCD of 12, 18, 24 = 6.",
+      "Common factors of 12, 18, 24 are 1, 2, 3, 6 - every divisor of the GCD.",
+      "Numbers with GCD 1 are called coprime (example: 7 and 11).",
+      "The GCD never exceeds the smallest number in the list.",
+      "Negative inputs are treated by absolute value; non-integers are skipped."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "common factor calculator, GCD calculator, greatest common divisor, HCF calculator, find common factors",
+    "labels": {
+      "clear": "Clear",
+      "coprimeNote": "These numbers are coprime - their only common factor is 1.",
+      "errNeedTwo": "Enter at least two whole numbers.",
+      "factorCount": "Common factors found",
+      "gcd": "Greatest common divisor (GCD)",
+      "numbersHint": "12, 18, 24",
+      "numbersInput": "Your numbers (whole numbers)",
+      "tooBigNote": "The GCD is above one trillion, so the full list is skipped - the GCD above is still exact."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Whole numbers only - decimals and fractions are skipped.",
+      "Factor listing stops past a GCD of one trillion (the GCD itself is still shown).",
+      "Up to 8 numbers per calculation.",
+      "It finds common factors, not prime factorisations - use a factor tree for those."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free common factor calculator: enter numbers and get the GCD plus every common factor, computed exactly. Coprime check included. Private, no sign-up.",
+    "metaTitle": "Common Factor Calculator - GCD Finder | JaurTools",
+    "name": "Common Factor Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Enter whole numbers and get their greatest common divisor plus every common factor. For 12, 18, and 24: the GCD is 6, and the common factors are 1, 2, 3, 6. Numbers whose only common factor is 1 are flagged as coprime. Everything is computed exactly with BigInt, so even huge integers give correct answers.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Common Factor results",
+    "tagline": "GCD plus every common factor of your numbers, computed exactly.",
+    "workedExample": "Numbers: 12, 18, 24\n1. gcd(12, 18): 18 mod 12 = 6; 12 mod 6 = 0 -> 6.\n2. gcd(6, 24): 24 mod 6 = 0 -> 6.\n3. GCD = 6.\n4. Divisors of 6: 1, 2, 3, 6 - these are all the common factors.",
+    "workedExampleHeading": "Worked example"
+  }
+}

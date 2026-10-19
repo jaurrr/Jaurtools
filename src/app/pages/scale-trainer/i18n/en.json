@@ -1,0 +1,110 @@
+{
+  "scale-trainer": {
+    "assumptionNote": "Scales are built in equal temperament from middle C upward (C4 = MIDI 60). Note names use sharp spellings, and the melodic minor shown is the ascending jazz form.",
+    "benefits": [
+      "See and hear any of 10 essential scales in all 12 keys instantly.",
+      "Practice patterns (thirds, four-note groups) build real finger technique, not just knowledge.",
+      "Adjustable tempo from 40 to 208 BPM grows with you from beginner to advanced.",
+      "Degree numbers under each note teach you the scale's structure, not just its sound."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A scale is an ordered set of notes spanning an octave. The major scale (do-re-mi) uses the step pattern 2-2-1-2-2-2-1 semitones. Different step patterns create different moods: minor scales sound darker, pentatonics sound open and safe.",
+        "q": "What is a scale?"
+      },
+      {
+        "a": "The minor pentatonic: five notes, no harsh intervals, almost impossible to play a wrong-sounding note. In A minor that is A-C-D-E-G. It is the backbone of rock, blues, and countless solos - learn it first, then add the blues note.",
+        "q": "Which scale should a beginner learn first?"
+      },
+      {
+        "a": "The major pentatonic drops the 4th and 7th degrees of the major scale, leaving 1-2-3-5-6. Those two dropped notes are the ones that clash most, so the pentatonic always sounds smooth. The minor pentatonic is the same idea built from the minor scale.",
+        "q": "What is a pentatonic scale?"
+      },
+      {
+        "a": "The blues scale is the minor pentatonic plus one extra note: the flat fifth (the blues note). In A that gives A-C-D-Eb-E-G. That single added note creates the tension and cry that defines blues phrasing.",
+        "q": "What makes the blues scale different?"
+      },
+      {
+        "a": "Modes are rotations of the major scale: Dorian starts on the 2nd degree, Phrygian on the 3rd, Mixolydian on the 5th. Same notes as the parent major scale, different home note - which completely changes the mood. Dorian (1-2-b3-4-5-6-b7) is the jazziest minor sound.",
+        "q": "What are modes?"
+      },
+      {
+        "a": "Play it slowly enough to make zero mistakes - usually 60 BPM to start. Speed up by 4 BPM only when a tempo feels effortless. Practising fast with mistakes teaches your fingers the mistakes; practising slow with precision teaches them the scale.",
+        "q": "How fast should I practise scales?"
+      }
+    ],
+    "formula": "Major scale steps (semitones): 2-2-1-2-2-2-1\nNatural minor: 2-1-2-2-1-2-2\nMajor pentatonic: 2-2-3-2-3\nMinor pentatonic: 3-2-2-3-2\nBlues: 3-2-1-1-3-2\nNote from degree: midi = rootMidi + interval.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the root note: any of the 12 notes.",
+      "Choose one of 10 scales, from major to blues to Dorian.",
+      "Pick a practice pattern: straight, in thirds, or four-note groups.",
+      "Set a comfortable tempo - start slow, around 60-80 BPM.",
+      "Tap Play and play along with the scale, then raise the tempo as it gets easy."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The major scale step pattern is 2-2-1-2-2-2-1 semitones: C-D-E-F-G-A-B.",
+      "The natural minor pattern is 2-1-2-2-1-2-2: A-B-C-D-E-F-G.",
+      "Pentatonic scales use 5 notes per octave; the blues scale adds a 6th (the flat fifth).",
+      "Practising in thirds (1-3-2-4-3-5...) builds melodic fluency, not just up-and-down speed.",
+      "Start new scales at 60 BPM and raise the tempo only when it feels effortless.",
+      "Modes (Dorian, Mixolydian, Phrygian) reuse major-scale notes starting from a different home note."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "scale trainer, guitar scales, piano scales, pentatonic scale, blues scale, scale practice patterns",
+    "labels": {
+      "bpmLabel": "Tempo (BPM)",
+      "notesLabel": "Scale notes",
+      "notesResult": "Notes",
+      "patternLabel": "Practice pattern",
+      "patterns": {
+        "fours": "Four-note groups (1-2-3-4, 2-3-4-5...)",
+        "straight": "Straight up and down",
+        "thirds": "In thirds (1-3-2-4, 3-5...)"
+      },
+      "playLabel": "Play scale",
+      "rootLabel": "Root note",
+      "scaleLabel": "Scale",
+      "scaleResult": "Scale",
+      "scales": {
+        "blues": "Blues",
+        "dorian": "Dorian",
+        "harMinor": "Harmonic minor",
+        "majPent": "Major pentatonic",
+        "major": "Major",
+        "melMinor": "Melodic minor",
+        "minPent": "Minor pentatonic",
+        "mixolydian": "Mixolydian",
+        "natMinor": "Natural minor",
+        "phrygian": "Phrygian"
+      },
+      "stepsResult": "Step pattern (semitones)",
+      "stopLabel": "Stop"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ten scales only - exotic scales (whole-tone, diminished, Arabic maqams) are not included.",
+      "Playback is a clean synthesized tone, not your instrument's sound.",
+      "Patterns are fixed sequences; custom practice patterns cannot be defined.",
+      "Note names use sharps only; flat spellings are not shown."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free scale trainer: see and hear 10 essential scales in all 12 keys with practice patterns and adjustable tempo. Notes, degrees, and step patterns. No sign-up.",
+    "metaTitle": "Scale Trainer - Practice Scales in Every Key | JaurTools",
+    "name": "Scale Trainer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick a root and one of 10 scales - C major gives you C-D-E-F-G-A-B with the step pattern 2-2-1-2-2-2-1. Every note shows its degree number and semitone distance, so you learn structure as well as sound. Tap Play to hear the scale at your chosen tempo, and switch the practice pattern to thirds (1-3-2-4...) or four-note groups to build real technique instead of just running up and down.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Scale results",
+    "tagline": "See and hear 10 essential scales in every key - with practice patterns and tempo control.",
+    "workedExample": "A minor pentatonic practice:\n1. Root = A, scale = Minor pentatonic.\n2. Intervals: 0-3-5-7-10 semitones above A.\n3. Notes: A4 (degree 1), C5 (2), D5 (3), E5 (4), G5 (5).\n4. Step pattern: 3-2-2-3-2 - the gaps between consecutive notes.\n5. Pattern = in thirds, tempo = 80 BPM. Tap Play: you hear A-C, C-E, E-G... pairs climbing the scale.\n6. Play along on your instrument, then raise to 84 BPM when it feels easy.",
+    "workedExampleHeading": "Worked example"
+  }
+}

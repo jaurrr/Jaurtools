@@ -1,0 +1,97 @@
+{
+  "photo-equalizer": {
+    "benefits": [
+      "Rescues washed-out or backlit photos by spreading tones across the full brightness range.",
+      "Area mode fixes just the dark subject — the sky and background stay untouched.",
+      "The before/after checkbox lets you verify the improvement before downloading.",
+      "Real histogram equalization math, the same technique taught in image-processing courses."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Histogram equalization redistributes brightness levels so they use the full 0–255 range. It builds a histogram of tones, computes the cumulative distribution, and remaps each tone. Dark, flat photos gain punchy contrast because crowded tones get spread apart.",
+        "q": "What is histogram equalization?"
+      },
+      {
+        "a": "Luminance mode equalizes overall brightness while preserving the original colors — best for photos. RGB mode equalizes each color channel separately, which can shift colors dramatically (a blue cast may turn orange). Try luminance first.",
+        "q": "Luminance or RGB mode — which should I pick?"
+      },
+      {
+        "a": "Switch to Area mode, drag a box around the dark subject, and only those pixels are equalized. The rest of the photo is left exactly as it was.",
+        "q": "Can I equalize just part of the image?"
+      },
+      {
+        "a": "Equalization amplifies everything, including JPEG noise and grain in shadows. If the result looks gritty, the original had heavy noise in the dark areas — a mild denoise before equalizing helps.",
+        "q": "Why does my photo look noisy after equalizing?"
+      },
+      {
+        "a": "Equalization stretches tones apart, which can create visible banding in smooth gradients like skies. The area mode helps: equalize only the subject, not the sky.",
+        "q": "Why do I see bands in the sky?"
+      },
+      {
+        "a": "The preview is capped at 1400 px on the long edge; the PNG download matches the preview. Huge originals are scaled down first.",
+        "q": "What resolution is the download?"
+      }
+    ],
+    "formula": "histogram h(v) = count of pixels with tone v\ncdf(v) = sum of h(0..v)\nnew(v) = round((cdf(v) - cdfMin) / (N - cdfMin) x 255)\nExample: 4 pixels with grays [50, 50, 100, 200]\ncdf: 50->2, 100->3, 200->4; cdfMin = 2\nmap(50) = 0, map(100) = 128, map(200) = 255.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo from your device (up to 15 MB).",
+      "Choose Full for the whole image or Area, then drag a box over the region to fix.",
+      "Pick Luminance for natural contrast or RGB for dramatic per-channel equalization.",
+      "Tick the compare box to flip between original and equalized versions.",
+      "Press Download to save the equalized image as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Histogram equalization spreads the image's tones across the full 0–255 brightness range for maximum contrast.",
+      "Two scopes: Full (whole image) and Area (drag a box — only those pixels change).",
+      "Two channel modes: Luminance (preserves colors) and RGB (equalizes each channel, stronger color shifts).",
+      "A compare checkbox flips the preview between the original and the equalized version.",
+      "Computed per pixel with the Canvas API — the photo never leaves your browser.",
+      "The download is a lossless PNG, rendered at up to 1400 px on the long edge."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "equalize image online, histogram equalization, photo contrast fix, auto contrast image, fix dark photo",
+    "labels": {
+      "areaScope": "Selected area",
+      "channelLabel": "Channel mode",
+      "compareLabel": "Show original (compare)",
+      "downloadPng": "Download PNG",
+      "dragHint": "Drag on the image to select the area to equalize.",
+      "fullScope": "Full image",
+      "luminanceMode": "Luminance",
+      "newImage": "New image",
+      "originalSize": "Original size",
+      "rgbMode": "RGB channels",
+      "scopeLabel": "Equalize scope",
+      "sizeError": "That file is larger than 15 MB. Please choose a smaller image.",
+      "stageLabel": "Equalization preview",
+      "typeError": "That file could not be read as an image. Please choose a JPEG, PNG, WebP, GIF, or BMP file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rendering is capped at 1400 px on the long edge, so huge originals are scaled down first.",
+      "Equalization amplifies noise and JPEG artifacts in dark areas — it cannot distinguish noise from detail.",
+      "Smooth gradients (skies) may show banding after aggressive equalization.",
+      "It cannot recover detail that was clipped to pure black or pure white in the original."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Rescue flat, dark photos with real histogram equalization — full image or just one area. Free online.",
+    "metaTitle": "Photo Equalizer - Rescue Flat, Dark Photos | JaurTools",
+    "name": "Photo Equalizer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a flat or dark photo and let real histogram equalization spread its tones for punchy contrast — on the full image or just a dragged selection. Luminance and RGB modes, with before/after compare. Free, private, instant PNG download.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your equalization results",
+    "tagline": "Punchy contrast for dull photos.",
+    "workedExample": "A 4-pixel row has grays [50, 50, 100, 200].\nHistogram: 50 appears twice, 100 once, 200 once; cdfMin = 2.\nmap(50) = (2-2)/(4-2) x 255 = 0; map(100) = (3-2)/2 x 255 = 128; map(200) = 255.\nThe flat row becomes [0, 0, 128, 255] — full contrast from the same data.",
+    "workedExampleHeading": "Worked example"
+  }
+}

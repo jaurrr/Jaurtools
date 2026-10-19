@@ -1,0 +1,95 @@
+{
+  "metronome": {
+    "benefits": [
+      "Rock-solid timing: a lookahead scheduler keeps beats accurate even when the tab is busy.",
+      "Tap tempo finds the BPM of any song in seconds — just tap along.",
+      "Visual beat dots plus an accented downbeat make odd meters like 5/4 and 7/8 easy to feel.",
+      "Three click sounds and volume control, from a soft practice tick to a loud band-room click."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Video & Audio",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — there are no accounts, no timers that cut out, and no ads interrupting your practice. The Web Audio scheduler runs as long as your tab is open.",
+        "q": "Is this metronome really free?"
+      },
+      {
+        "a": "The tool measures the average gap between your last taps and converts it to BPM (60,000 ÷ average milliseconds). Tap at least twice, steadily, for a stable reading.",
+        "q": "How does tap tempo work?"
+      },
+      {
+        "a": "A lookahead scheduler plans each click about 120 ms in advance using the audio clock, which is far more precise than the screen timer. That is why it stays steady even on busy devices.",
+        "q": "Why is it more accurate than a phone timer app?"
+      },
+      {
+        "a": "Keep the tab open and audible. Browsers may throttle background tabs; if beats sound uneven, bring the tab to the front. Some mobile browsers pause audio when the screen locks.",
+        "q": "Can I use it with the screen off?"
+      },
+      {
+        "a": "Start 10–20 BPM below your target, play the passage cleanly three times, then raise by 4 BPM. The tap-tempo button helps you find the exact tempo of recordings you want to learn.",
+        "q": "How should I practice with it?"
+      },
+      {
+        "a": "BPM is just a speed number, so any instrument — guitar, piano, drums, violin — works the same. Set the beats-per-bar to match the time signature you are practicing.",
+        "q": "Is it only for drummers?"
+      }
+    ],
+    "formula": "Seconds per beat = 60 ÷ BPM\nBar duration = beats per bar × 60 ÷ BPM\nExample: 120 BPM → 60 ÷ 120 = 0.5 s per beat",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Set the tempo: drag the BPM slider, type a number (30–240), or tap the Tap button in rhythm.",
+      "Choose beats per bar (2–12) to match your time signature — 4 for 4/4, 3 for 3/4, 6 for 6/8.",
+      "Keep Accent first beat on to hear the downbeat clearly, or turn it off for a flat pulse.",
+      "Pick a click sound (click, woodblock, beep) and set a comfortable volume.",
+      "Press Start. The beat dots light up in time; press Stop when done."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Tempo range 30–240 BPM with slider, number input and tap tempo.",
+      "Time signatures from 2 to 12 beats per bar, with an accented downbeat option.",
+      "Lookahead scheduling (120 ms) on the Web Audio clock for steady, drift-free beats.",
+      "Three synthesized click sounds: click, woodblock and beep, with volume control.",
+      "Visual beat dots flash in sync with the audio clicks."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "online metronome, metronome bpm, tap tempo, free metronome, practice metronome, bpm tapper",
+    "labels": {
+      "accentLabel": "Accent first beat",
+      "barRow": "One bar lasts",
+      "beatsLabel": "Beats per bar",
+      "bpmLabel": "Tempo",
+      "bpmUnit": "BPM",
+      "soundLabel": "Click sound",
+      "sound_beep": "Beep",
+      "sound_click": "Click",
+      "sound_woodblock": "Woodblock",
+      "spbRow": "One beat lasts",
+      "startBtn": "Start",
+      "stopBtn": "Stop",
+      "tapBtn": "Tap",
+      "volumeLabel": "Volume"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Timing depends on your device's audio stack; very old devices may add slight jitter.",
+      "Browsers can throttle background tabs, which may make beats uneven — keep the tab visible.",
+      "Sound is synthesized, not a sampled metronome; purists may prefer a hardware click.",
+      "No subdivision clicks (eighth notes) — it ticks the beat only."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online metronome with adjustable BPM (30–240), tap tempo, time signatures and accent. Accurate Web Audio timing. No sign-up.",
+    "metaTitle": "Online Metronome Free — Adjustable BPM with Tap Tempo",
+    "name": "Metronome",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A precise practice metronome that runs entirely in your browser: set any tempo from 30 to 240 BPM with the slider, by typing, or by tapping along to a song; choose 2–12 beats per bar with an accented downbeat; pick from three click sounds. A lookahead scheduler on the Web Audio clock keeps every beat accurate, and beat dots flash in sync.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Metronome results",
+    "tagline": "Steady, accurate clicks for practice — adjustable BPM, tap tempo, any time signature.",
+    "workedExample": "Set 120 BPM in 4/4.\n\nSeconds per beat = 60 ÷ 120 = 0.5 s\nBar duration = 4 × 0.5 = 2.0 s\n\nA 3-minute song at 120 BPM has 3 × 120 = 360 beats.\n\nSlow practice: drop to 100 BPM → 60 ÷ 100 = 0.6 s per beat, giving your fingers 20% more time per note. Raise by 4 BPM whenever a passage feels easy — from 100 to 120 BPM is just 5 small steps.",
+    "workedExampleHeading": "Worked example"
+  }
+}

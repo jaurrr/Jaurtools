@@ -1,0 +1,97 @@
+{
+  "online-whiteboard": {
+    "benefits": [
+      "Instant — no account, no install, and no heavy app to load.",
+      "Works on phones and tablets with finger or stylus input.",
+      "PNG export drops straight into slides, documents, and chats.",
+      "Undo and the eraser make it forgiving for rough brainstorming."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Every tool on JaurTools is free with no account, no trial, and no watermark on your PNG export. The whiteboard runs entirely in your browser, so there is nothing to pay for and nothing to sign up to.",
+        "q": "Is this whiteboard really free?"
+      },
+      {
+        "a": "Nowhere. Your strokes live only in the browser tab's memory and nothing is uploaded to a server. If you want to keep a drawing, click Download PNG before closing or refreshing the tab — afterwards it is gone for good.",
+        "q": "Where is my drawing saved?"
+      },
+      {
+        "a": "Yes. The board supports touch input, so you can draw with a finger or a stylus on phones and tablets. For finer control, a stylus or a mouse on a desktop gives the steadiest lines.",
+        "q": "Can I use it on my phone?"
+      },
+      {
+        "a": "PNG, rendered at the board's on-screen resolution scaled to your device's pixel density. PNG keeps lines sharp on a clean white background, which prints well and pastes cleanly into slides and documents.",
+        "q": "What image format does the download use?"
+      },
+      {
+        "a": "Twenty. Each new stroke pushes the previous board state onto the undo stack, and the oldest state is dropped once you pass twenty. For long sessions, download a PNG checkpoint before experimenting.",
+        "q": "How many undo steps do I get?"
+      },
+      {
+        "a": "No. This is a personal sketchpad, not a collaborative board. Real-time collaboration needs a server to sync strokes, and JaurTools is deliberately server-free to protect your privacy.",
+        "q": "Can two people draw together?"
+      }
+    ],
+    "formula": "The whiteboard is a drawing tool, not a calculator — there is no formula.\nStrokes are rendered as paths on an HTML canvas at your device's pixel density, so lines stay crisp on high-resolution screens.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the pen tool, pick a colour, and set a brush size that suits your sketch.",
+      "Press and drag on the board to draw. Use the line, rectangle, or circle tools for neat shapes.",
+      "Pick the eraser to rub out mistakes, or use Undo to step back through recent strokes.",
+      "Use Clear board to wipe everything and start fresh.",
+      "Click Download PNG to save your finished drawing as an image file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Freehand pen, eraser, line, rectangle, and circle tools cover most quick-sketch needs.",
+      "Brush size adjusts from 1 to 50 pixels; the pen colour can be any value you pick.",
+      "Undo keeps your last 20 strokes, so mistakes are never permanent.",
+      "The board is touch-friendly — draw with a finger or stylus on phones and tablets.",
+      "Export is a standard PNG file, ready to share, print, or paste into documents.",
+      "Your drawing exists only in the page. Refreshing the tab clears the board."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "online whiteboard, free drawing board, sketch online, digital whiteboard, draw online free",
+    "labels": {
+      "clear": "Clear board",
+      "colorLabel": "Pen colour",
+      "downloadPng": "Download PNG",
+      "drawingArea": "Drawing area. Press and drag to draw.",
+      "emptyNote": "The board starts blank — your first stroke appears here.",
+      "sizeLabel": "Brush size",
+      "sizeUnit": "px",
+      "strokes": "Strokes drawn",
+      "toolCircle": "Circle",
+      "toolEraser": "Eraser",
+      "toolLine": "Line",
+      "toolPen": "Pen",
+      "toolRect": "Rectangle",
+      "toolbarLabel": "Drawing tools",
+      "undo": "Undo"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The board is not saved — refreshing or closing the tab erases it, so download first.",
+      "No collaboration: it is a single-user sketchpad, not a shared whiteboard.",
+      "No text tool or layers, unlike full design software.",
+      "Very large, detailed drawings can feel slow on older devices."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online whiteboard: sketch, annotate and export PNGs with zero signup. Everything runs in your browser — private by design.",
+    "metaTitle": "Online Whiteboard - Free Drawing Board in Your Browser | JaurTools",
+    "name": "Online Whiteboard",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "JaurTools Whiteboard is a free digital drawing board that lives in your browser. Pick a pen colour and brush size, sketch with your mouse or finger, add lines, rectangles and circles, erase mistakes, undo up to 20 strokes, and download the finished board as a PNG image. Nothing is uploaded — your drawing never leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Whiteboard results",
+    "tagline": "Sketch and annotate freely — export when you're done.",
+    "workedExample": "Sketching a quick flowchart:\n1. Select the rectangle tool and draw three boxes for Start, Process, and End.\n2. Switch to the line tool and connect the boxes.\n3. Pick the pen, choose a dark colour, and label each box.\n4. Fix a wobbly line with the eraser or Undo.\n5. Click Download PNG and share the flowchart in your team chat.",
+    "workedExampleHeading": "Worked example"
+  }
+}

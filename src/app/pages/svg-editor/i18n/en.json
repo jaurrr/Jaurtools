@@ -1,0 +1,102 @@
+{
+  "svg-editor": {
+    "benefits": [
+      "See every keystroke rendered instantly without pressing a preview button.",
+      "Zoom from 25% to 400% to inspect fine details or check small icons.",
+      "Stage backgrounds: checkerboard reveals transparency, dark mode previews light icons.",
+      "Debounced rendering keeps typing smooth even with large SVG files."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A live viewer renders your SVG code in a preview pane as you type, with a short delay so typing stays smooth. An optimizer, by contrast, focuses on shrinking the file by removing comments and whitespace.",
+        "q": "How is this different from an SVG optimizer?"
+      },
+      {
+        "a": "Yes, partially. A <style> block with CSS rules works, because the styles travel with the markup. External stylesheets or fonts referenced by URL are not fetched for security reasons.",
+        "q": "Does CSS inside the SVG work in the preview?"
+      },
+      {
+        "a": "The preview updates 250 milliseconds after you stop typing. This debounce prevents the browser from re-rendering on every keystroke, which keeps editing fast.",
+        "q": "Why does the preview update slightly after I type?"
+      },
+      {
+        "a": "The zoom is a visual scaling of the preview pane only. It uses CSS transform, so the SVG code and any download stay at the original size.",
+        "q": "Does zooming change the downloaded file?"
+      },
+      {
+        "a": "Checkerboard shows transparency accurately, light matches most web pages, and dark helps you check light-colored icons that would be invisible on white.",
+        "q": "Which stage background should I use?"
+      },
+      {
+        "a": "No. The code stays in your browser tab and is never sent to a server.",
+        "q": "Is my code uploaded anywhere?"
+      }
+    ],
+    "formula": "preview delay = 250 ms after the last keystroke\nrendered zoom = original size × (zoom ÷ 100)\n\nExample: 120 px SVG at 200% zoom renders at 120 × 2 = 240 px in the pane.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste SVG code in the left code pane, or load an .svg file.",
+      "Watch the right preview pane render the graphic automatically as you type.",
+      "Use the zoom slider to inspect details from 25% to 400%.",
+      "Switch the stage background to check transparency or light icons on dark.",
+      "Copy the code or download the SVG file when you are happy with it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A live SVG viewer shows the rendered graphic next to the code that produces it.",
+      "The preview refreshes with a 250 ms debounce so fast typing never stutters.",
+      "Zoom is a CSS transform on the preview only; it never alters the SVG itself.",
+      "A checkerboard stage background reveals transparent areas that white would hide.",
+      "The validity indicator turns green only when the code parses as well-formed XML.",
+      "Line and character counts help you track file size while you edit."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg editor viewer, live svg preview, svg playground, view svg code online",
+    "labels": {
+      "charsLabel": "Characters",
+      "clearButton": "Clear",
+      "codePaneLabel": "Code",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy",
+      "downloadButton": "Download SVG",
+      "errorInvalid": "The SVG code is not valid XML. Fix it before downloading.",
+      "errorRead": "Could not read that file.",
+      "errorSvgSize": "The SVG file must be smaller than 5 MB.",
+      "invalidNote": "The code is not valid SVG yet. Fix the markup to see a preview.",
+      "linesLabel": "Lines",
+      "liveBad": "Invalid XML",
+      "liveOk": "Live preview",
+      "loadFile": "Load .svg",
+      "previewPaneLabel": "Preview",
+      "stageChecker": "Checker",
+      "stageDark": "Dark",
+      "stageLabel": "Stage background",
+      "stageLight": "Light",
+      "zoomLabel": "Preview zoom"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This is for editing and viewing code, not for drawing with a mouse.",
+      "Very complex files with thousands of elements can still feel heavy.",
+      "External images and fonts referenced by URL are blocked from the preview.",
+      "The debounce means the preview always lags typing by a fraction of a second."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Edit SVG code with instant live preview — tweak shapes, colors and paths visually, then copy or download. Free online.",
+    "metaTitle": "SVG Editor - Edit SVG Code Live | JaurTools",
+    "name": "SVG Editor",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This is a live SVG playground: type or paste SVG code on the left and watch it render instantly on the right. Zoom from 25% to 400%, switch between checkerboard, light and dark stage backgrounds to check transparency, and download the file when it looks right.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG editor and viewer results",
+    "tagline": "Code on one side, art on the other.",
+    "workedExample": "You paste the sample code (4 lines, about 240 characters) and set zoom = 200%.\n\nThe editor shows: Lines = 4, Characters ≈ 240.\nThe 120 px square renders at 120 × (200 ÷ 100) = 240 px in the preview pane.\nYou change fill=\"#4f46e5\" to fill=\"#dc2626\"; 250 ms after your last keystroke the preview updates automatically and the rounded square turns red — no save or refresh needed.",
+    "workedExampleHeading": "Worked example"
+  }
+}

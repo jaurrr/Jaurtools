@@ -1,0 +1,97 @@
+{
+  "image-to-svg-converter": {
+    "benefits": [
+      "Turn a logo or icon PNG into a scalable SVG without design software.",
+      "Vector output stays sharp at any size — perfect for print and retina screens.",
+      "Copy the SVG code straight into your website or design tool.",
+      "The whole pipeline runs locally; your artwork never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload a PNG or JPG, choose 2 colors for a silhouette trace or up to 6 for a color trace, adjust detail and smoothing, then download the .svg file or copy its code.",
+        "q": "How do I convert a PNG to SVG?"
+      },
+      {
+        "a": "With 2 colors the tool thresholds the brightness: everything darker than your threshold becomes black vector shapes. It is ideal for logos, stamps, and line art.",
+        "q": "What does the 2-color mode do?"
+      },
+      {
+        "a": "The tracer quantizes the image into your chosen number of dominant colors, traces each color region separately, and stacks them as filled vector paths — a simplified, stylized version of the photo.",
+        "q": "What happens with 3–6 colors?"
+      },
+      {
+        "a": "No. This is a contour tracer, not an AI vectorizer: it follows color boundaries with polygons. Flat logos and icons trace beautifully; detailed photos become stylized art.",
+        "q": "Will the SVG look exactly like my photo?"
+      },
+      {
+        "a": "Yes. SVG is resolution-independent, so the traced file scales from favicon to billboard with zero quality loss.",
+        "q": "Is the SVG truly scalable?"
+      },
+      {
+        "a": "No. Tracing is done with JavaScript in your browser; your image is never uploaded to any server.",
+        "q": "Is my image uploaded anywhere?"
+      }
+    ],
+    "formula": "case = TL + 2·TR + 4·BR + 8·BL   (marching-squares, 16 cases)\npath = DouglasPeucker(polyline, ε)\noutput = Σ filled paths, one per color layer, fill-rule evenodd",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the raster image (PNG or JPG) you want to vectorize.",
+      "Choose 2 colors for a black silhouette trace, or 3–6 colors for a stylized color trace.",
+      "Set the trace detail (image is downsampled to this size) and the smoothing amount.",
+      "Watch the live vector preview update as you adjust the sliders.",
+      "Press Download SVG to save the file, or Copy SVG code to paste it elsewhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The image is downsampled to your detail setting (200–600 px) before tracing, which keeps tracing fast.",
+      "Marching squares scans every 2 × 2 pixel cell and draws contour segments for 16 possible cases.",
+      "Segments are joined into polygons, simplified with the Douglas-Peucker algorithm, and emitted as SVG paths.",
+      "With 2 colors, brightness below your threshold becomes the traced shape; with 3–6, the dominant colors are quantized and traced per layer.",
+      "Tiny specks below 4 px² are dropped automatically to keep the SVG clean."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "raster to svg, png to svg, vectorize image, image tracer, convert jpg to svg, vector tracer online",
+    "labels": {
+      "colors": "Colors",
+      "copied": "Copied!",
+      "copySvg": "Copy SVG code",
+      "detail": "Trace detail (max px)",
+      "download": "Download SVG",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "paths": "Vector paths",
+      "pickOne": "Choose an image above to trace it into SVG.",
+      "preview": "Vector preview",
+      "qualityNote": "Quality note: this is a contour tracer for flat art and logos. Detailed photos trace as stylized art, not a pixel-perfect copy.",
+      "smoothing": "Path smoothing",
+      "svgSize": "SVG file size",
+      "threshold": "Brightness threshold",
+      "upload": "Image to vectorize"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This is a contour tracer, not AI vectorization — fine gradients and soft shadows become flat bands.",
+      "Best for flat logos, icons, and high-contrast art; busy photos give abstract results.",
+      "The SVG approximates shapes with polygons; tiny text may lose legibility.",
+      "High detail settings (600 px, 6 colors) take a few seconds on slower phones."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert raster images to scalable SVG vectors with real tracing. Perfect for logos and icons — free, in your browser.",
+    "metaTitle": "Image to SVG Converter - Vectorize Images | JaurTools",
+    "name": "Image to SVG Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a raster image and the tool traces its color boundaries into real vector paths using marching squares, then simplifies them into clean SVG. Choose 2 colors for a silhouette or up to 6 for stylized color art, and download the scalable SVG — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Tracer results",
+    "tagline": "Pixels in, vectors out.",
+    "workedExample": "A 400 × 300 px logo traced at detail 400 with 2 colors and threshold 128:\ncells scanned = 400 × 300 = 120,000 (16 marching-squares cases each)\nEvery pixel darker than brightness 128 becomes part of the black mask; the mask boundary is converted to polygons, simplified, and written as SVG paths.\nThe result scales from a 16 px favicon to a poster with zero quality loss.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "organize-pdf-pages": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online organizers.",
+      "Drag-and-drop reordering plus arrow buttons for precise moves.",
+      "A live preview of the new page order before you apply it.",
+      "Pages are copied, not re-rendered — quality stays exactly as in the original.",
+      "Free and unlimited — reorganize as many PDFs as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Drag a row onto another row, or use the up/down arrow buttons on each page. The preview line always shows the current new order.",
+        "q": "How do I reorder pages?"
+      },
+      {
+        "a": "No — pages are copied as-is from the source in your chosen order. Nothing is re-rendered.",
+        "q": "Does reordering change quality?"
+      },
+      {
+        "a": "Yes — each page keeps its own size, so mixed-size documents reorder cleanly.",
+        "q": "Can I reorder a PDF with mixed page sizes?"
+      },
+      {
+        "a": "Combine this with the Delete PDF Pages tool: delete the extras first, then reorder what remains.",
+        "q": "Can I also remove pages while reordering?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Click “Start over” to reload — or just upload the file again to restore the original order.",
+        "q": "How do I undo a reorder?"
+      }
+    ],
+    "formula": "new order = your arranged list of original page numbers\noutput page 1 = original page (order[1]), output page 2 = original page (order[2]), …",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the PDF you want to reorganize.",
+      "Drag page rows into the new order, or use the arrow buttons.",
+      "Check the order preview line to confirm the sequence.",
+      "Click “Apply new order”.",
+      "Download the reordered PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Reordering builds a new document by copying pages in your chosen sequence — the original file is never modified.",
+      "Each row shows the page's original number, so you always know what moves where.",
+      "The order preview lists the new sequence as original page numbers: “4, 1, 2, 3”.",
+      "copyPages preserves each page's size, fonts and images exactly.",
+      "The result is saved with object streams for a compact file."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "organize pdf pages, rearrange pdf pages, reorder pdf online free, sort pdf pages",
+    "labels": {
+      "applyBtn": "Apply new order",
+      "chooseFile": "Choose PDF file",
+      "downloadBtn": "Download reordered PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errNoFile": "Please choose a PDF file first.",
+      "errProcess": "Something went wrong while processing the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "moveDown": "Move down",
+      "moveUp": "Move up",
+      "orderLabel": "Page order (drag to reorder)",
+      "orderNote": "Drag a row onto another row, or use the arrow buttons.",
+      "pagePrefix": "Page",
+      "pagesFound": "pages",
+      "previewLabel": "New order",
+      "processing": "Working…",
+      "resetBtn": "Start over",
+      "successMsg": "Pages reordered. Download your PDF below."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pages cannot be duplicated here — each original page appears exactly once.",
+      "Interactive form fields and bookmarks are not preserved in the new order.",
+      "Very large PDFs (50 MB+) are not accepted to protect browser memory.",
+      "Password-protected PDFs must be unlocked before reorganizing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Reorder PDF pages free in your browser — drag-and-drop page organizing with live order preview. No upload, no signup.",
+    "metaTitle": "Organize PDF Pages Free — Reorder & Rearrange PDF",
+    "name": "Organize PDF Pages",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, drag pages into any order (with a live preview of the new sequence), and download the reordered file — pages copied losslessly, all locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Reorder results",
+    "tagline": "Rearrange pages in any PDF — right in your browser.",
+    "workedExample": "A 4-page PDF reordered to “4, 1, 2, 3”:\noutput page 1 = original page 4\noutput page 2 = original page 1\noutput page 3 = original page 2\noutput page 4 = original page 3\nThe downloaded PDF opens on what used to be the last page.",
+    "workedExampleHeading": "Worked example"
+  }
+}

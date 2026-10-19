@@ -1,0 +1,94 @@
+{
+  "html-viewer": {
+    "assumptionNote": "The preview runs in a sandboxed iframe: scripts, forms, and plugins are blocked for safety.",
+    "benefits": [
+      "Preview HTML instantly without saving files or running a server.",
+      "Sandboxed iframe keeps even untrusted snippets from running scripts.",
+      "Auto-render updates the preview as you type; manual mode renders on demand.",
+      "Light and dark preview backgrounds test both color schemes.",
+      "Character and line counts help with snippet size limits."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Paste your HTML into the editor. With auto-render on, the preview updates as you type. Turn auto-render off for large documents and press Render when ready.",
+        "q": "How do I preview my HTML?"
+      },
+      {
+        "a": "The iframe uses sandbox=\"\" with no allow-scripts, so JavaScript cannot run inside the preview. This keeps the tool safe even with HTML you did not write yourself.",
+        "q": "Is it safe to preview HTML from untrusted sources?"
+      },
+      {
+        "a": "No. Scripts are intentionally blocked by the sandbox. The viewer is for markup and styling; use your browser's devtools or a local server to test JavaScript.",
+        "q": "Why does my JavaScript not run in the preview?"
+      },
+      {
+        "a": "The sandbox also blocks form submission, popups, and plugins. If your snippet needs those, test it in a real page instead.",
+        "q": "Why does my form not submit in the preview?"
+      },
+      {
+        "a": "Yes. The srcdoc attribute carries the full document, so <style> blocks and inline styles render exactly like a saved file would.",
+        "q": "Does CSS in a <style> tag work?"
+      },
+      {
+        "a": "The editor caps input at 200,000 characters to keep the tab responsive. For larger files, save them locally and open them in the browser.",
+        "q": "Is there a size limit?"
+      }
+    ],
+    "formula": "<iframe\n  srcdoc=\"<your HTML>\"\n  sandbox=\"\"\n  title=\"Preview\">\n</iframe>\n\nsandbox=\"\" blocks: scripts, forms,\nplugins, popups, same-origin access.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste raw HTML into the editor box.",
+      "Keep auto-render on for live updates, or turn it off for big files.",
+      "Switch the preview background between light and dark.",
+      "Press Render in manual mode to update the preview.",
+      "Use the character count to stay within snippet limits."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The srcdoc attribute lets an iframe render HTML directly from a string.",
+      "sandbox=\"\" blocks scripts, forms, popups, and plugins inside the frame.",
+      "External stylesheets and images load only if the URLs are reachable.",
+      "The preview renders exactly what a browser would show for the markup.",
+      "Input is capped at 200,000 characters to protect performance."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "html viewer, html preview online, render html, html live preview, test html snippet",
+    "labels": {
+      "autoRenderLabel": "Auto-render",
+      "charsLabel": "Characters",
+      "clearLabel": "Clear",
+      "errorTooLong": "Input exceeds 200,000 characters and was trimmed.",
+      "inputLabel": "HTML code",
+      "linesLabel": "Lines",
+      "previewLabel": "HTML preview",
+      "renderLabel": "Render",
+      "themeDark": "Dark",
+      "themeLabel": "Preview background",
+      "themeLight": "Light"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "JavaScript never runs in the preview — the sandbox blocks scripts.",
+      "Forms cannot submit and popups cannot open inside the frame.",
+      "External resources need network access and valid URLs.",
+      "Very large documents may render slowly on low-end devices."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Paste HTML and preview it live in a safe sandboxed frame. Free online HTML viewer with auto-render and light/dark preview backgrounds.",
+    "metaTitle": "HTML Viewer – Free Live HTML Preview Online",
+    "name": "HTML Viewer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An HTML viewer renders markup instantly so you can check a snippet without saving a file or starting a server. This tool shows your HTML live in a sandboxed iframe — scripts stay blocked for safety — with light and dark preview backgrounds.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Live preview",
+    "tagline": "Paste raw HTML and watch it render live — safely sandboxed.",
+    "workedExample": "Paste this into the editor:\n<h1 style=\"color: #4f46e5;\">Hello, preview!</h1>\n<p>Edit the HTML and watch this render live.</p>\n\nThe preview frame shows a large indigo heading followed by the paragraph, exactly as a browser renders it. Add a <style> block:\n<style>body { background: #f8fafc; }</style>\nand the preview background changes immediately. Scripts stay blocked: <script>alert(1)</script> does nothing in the frame.",
+    "workedExampleHeading": "Worked example"
+  }
+}

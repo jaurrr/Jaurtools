@@ -1,0 +1,147 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+      <p class="dv-example">
+        <button type="button" class="dv-example-btn" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ tc('tryExample') }}
+        </button>
+      </p>
+
+
+      <div class="result-row total">
+        <span><app-icon name="file-text" /> {{ t('labels.wordsLabel') }}</span>
+        <strong>{{ wordCount() }}</strong>
+      </div>
+      <div class="result-row">
+        <span>{{ t('labels.charsLabel') }}</span>
+        <strong>{{ charCount() }}</strong>
+      </div>
+      <div class="result-row">
+        <span>{{ t('labels.linesLabel') }}</span>
+        <strong>{{ lineCount() }}</strong>
+      </div>
+
+      <div class="md-split">
+        <div class="field">
+          <label for="md-input">{{ t('labels.editorLabel') }}</label>
+          <textarea class="dv-term-input" id="md-input" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="mdText()" (ngModelChange)="setMd($event)"></textarea>
+          <div class="dv-inout">
+            <button type="button" class="btn-ghost" (click)="upFile.click()">
+              <app-icon name="upload" /> {{ tc('uploadFile') }}
+            </button>
+            <input #upFile type="file" accept=".md,.markdown,text/markdown" (change)="onUpload($event)" hidden />
+          </div>
+        </div>
+        <div class="field">
+          <span class="field-label" id="md-preview-label">{{ t('labels.previewLabel') }}</span>
+          <div class="md-preview" role="region" aria-labelledby="md-preview-label" tabindex="0" [innerHTML]="html()"></div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="copyHtml()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyHtmlLabel') }}
+        </button>
+        <button type="button" class="btn" (click)="download('html')">
+          <app-icon name="download" /> {{ t('labels.downloadHtmlLabel') }}
+        </button>
+        <button type="button" class="btn" (click)="download('md')">
+          <app-icon name="download" /> {{ t('labels.downloadMdLabel') }}
+        </button>
+      </div>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

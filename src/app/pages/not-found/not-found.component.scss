@@ -1,0 +1,33 @@
+:host {
+  display: block;
+}
+
+.not-found {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.not-found app-icon {
+  color: var(--muted);
+  margin-inline: auto;
+}
+
+.code {
+  margin: 1rem 0 0;
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.not-found h1 {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.not-found .muted {
+  margin: 0 0 1.5rem;
+}

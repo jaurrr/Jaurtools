@@ -1,0 +1,96 @@
+{
+  "css-glassmorphism-generator": {
+    "benefits": [
+      "Live preview on a colorful scene shows the frosted effect exactly as your users will see it.",
+      "Saturation control adds the vibrant, colorful glass look that plain blur alone cannot achieve.",
+      "The -webkit-backdrop-filter prefix is included automatically for Safari compatibility.",
+      "Subtle border and soft shadow are baked in — the two details that sell the glass illusion.",
+      "One copy-paste class works on cards, navbars, modals, and sidebars with no JavaScript."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "backdrop-filter applies graphical effects — blur, brightness, contrast, saturate — to the area behind an element, while filter applies them to the element itself. Glassmorphism needs backdrop-filter because the frosted look comes from blurring whatever is behind the card, not the card's own content.",
+        "q": "What is the difference between backdrop-filter and filter?"
+      },
+      {
+        "a": "Add both lines: backdrop-filter: blur(12px); and -webkit-backdrop-filter: blur(12px);. Safari required the prefixed version for years, and older iOS versions still do. This tool's output includes the prefix automatically.",
+        "q": "Why does my glass effect not work in Safari?"
+      },
+      {
+        "a": "Three things sell the illusion: a semi-transparent background (10–25% opacity), a 1px light border at slightly higher opacity than the fill, and a soft drop shadow. Also make sure something colorful sits behind the card — glass over a flat gray background just looks gray.",
+        "q": "How do I make glassmorphism look good, not washed out?"
+      },
+      {
+        "a": "Text directly on glass can fail contrast checks, especially over busy backgrounds. Use dark text on light glass or white text on dark glass, keep the blur strong enough to mute the background, and test with a contrast checker. Never put critical small text on very transparent glass.",
+        "q": "Is text on glassmorphism accessible?"
+      },
+      {
+        "a": "backdrop-filter is GPU-accelerated but still costs performance: each glass element forces the browser to re-render the backdrop. A few cards are fine; dozens of large blurred panels — especially animating — can drop frames on phones. Use it sparingly on mobile layouts.",
+        "q": "Does backdrop-filter hurt performance?"
+      },
+      {
+        "a": "Yes — a fixed navbar or sidebar with backdrop-filter: blur() over scrolling content is one of the most popular uses. Just remember the element needs a semi-transparent background; a fully transparent background with backdrop-filter still blurs, but the glass tint is what makes it readable.",
+        "q": "Can I use glassmorphism for a navbar?"
+      }
+    ],
+    "formula": ".glass {\n  background: rgba(255, 255, 255, 0.2);   /* 10–25% opacity */\n  backdrop-filter: blur(12px) saturate(150%);\n  -webkit-backdrop-filter: blur(12px) saturate(150%);  /* Safari */\n  border: 1px solid rgba(255, 255, 255, 0.4);          /* edge highlight */\n  border-radius: 16px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);           /* lift */\n}\n\nRecipe: translucent fill + backdrop blur + brighter 1px border + soft shadow.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Drag the blur slider until the background behind the card looks frosted but still recognizable.",
+      "Set the transparency low (15–25%) so the backdrop shows through the glass.",
+      "Boost saturation to 120–180% for the vibrant, colorful glass look.",
+      "Round the corners and keep the subtle border on — it defines the glass edge.",
+      "Copy the CSS and apply the .glass class to cards, navbars, or modals."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Glassmorphism mimics frosted glass: a translucent panel that blurs and saturates whatever is behind it.",
+      "The core is backdrop-filter: blur() combined with a semi-transparent rgba() background.",
+      "A 1px border at slightly higher opacity than the fill creates the bright edge that sells the glass illusion.",
+      "saturate(120–180%) restores the color richness that blurring washes out.",
+      "Safari needs the -webkit-backdrop-filter prefix; all other modern browsers use the standard property.",
+      "The effect only works when something visible sits behind the element — glass over a flat background looks flat."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "glassmorphism generator, css glass effect, backdrop-filter generator, frosted glass css, glass card css",
+    "labels": {
+      "blurLabel": "Blur strength",
+      "borderLabel": "Subtle border",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy CSS",
+      "cssOutputLabel": "Your CSS",
+      "demoText": "Frosted glass, pure CSS.",
+      "demoTitle": "Glass card",
+      "downloadButton": "Download .css",
+      "previewLabel": "Live glassmorphism preview",
+      "radiusLabel": "Corner radius",
+      "saturationLabel": "Saturation boost",
+      "tintLabel": "Glass tint",
+      "transparencyLabel": "Transparency"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "backdrop-filter needs a real backdrop — over flat or empty backgrounds the effect is invisible.",
+      "Very old browsers and some embedded webviews do not support backdrop-filter; the card then shows only the translucent fill.",
+      "Heavy use of large blurred panels can cost GPU performance on low-end phones.",
+      "Text contrast on glass must be checked manually; busy backdrops can make small text unreadable."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate frosted-glass CSS visually: blur, transparency, saturation, tint, and border with live preview. Copy-ready glassmorphism. Free online tool.",
+    "metaTitle": "CSS Glassmorphism Generator — Free Online Tool",
+    "name": "CSS Glassmorphism Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Design frosted-glass cards visually — blur strength, transparency, saturation boost, tint color, corner radius, and an optional edge border — with a live preview over a colorful scene. Copy the complete CSS, including the Safari prefix, and drop it onto any card, navbar, or modal.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Glassmorphism results",
+    "tagline": "Frosted-glass CSS, tuned live.",
+    "workedExample": "Settings: blur 12px, transparency 20%, saturation 150%, corner radius 16px, border on, tint #ffffff.\nGenerated CSS:\n.glass {\n  background: rgba(255, 255, 255, 0.2);\n  backdrop-filter: blur(12px) saturate(150%);\n  -webkit-backdrop-filter: blur(12px) saturate(150%);\n  border: 1px solid rgba(255, 255, 255, 0.4);\n  border-radius: 16px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);\n}\nReading it: the 20% white fill lets the backdrop show through, the 12px blur frosts it, 150% saturation restores color richness, and the 40%-opacity white border draws the bright glass edge.",
+    "workedExampleHeading": "Worked example"
+  }
+}

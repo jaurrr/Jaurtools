@@ -1,0 +1,92 @@
+{
+  "jsonpath-tester": {
+    "benefits": [
+      "Queries without code: extract exactly the values you need from any JSON.",
+      "Tests expressions live: every keystroke re-runs the query with instant feedback.",
+      "Learns JSONPath fast: four sample expressions demonstrate the core syntax.",
+      "Debugs APIs: verify response shapes and filter conditions before writing code.",
+      "Runs fully in your browser: production payloads are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A query language for JSON, like XPath for XML. Expressions such as $.store.book[?(@.price < 10)].title select values by navigating the document structure.",
+        "q": "What is JSONPath?"
+      },
+      {
+        "a": "$ is the document root. .name selects a child property, [0] the first array item, [-1] the last, [*] all children, and ..name searches recursively at any depth.",
+        "q": "What do $, ., [], and .. mean?"
+      },
+      {
+        "a": "[?(...)] keeps only items matching the condition, where @ is the current item: [?(@.price < 10)] keeps books cheaper than 10. You can combine conditions with &&, ||, !, and parentheses.",
+        "q": "How do filter expressions work?"
+      },
+      {
+        "a": "Yes: [0:2] takes items 0 and 1, [::2] takes every second item, and [0,2] takes items 0 and 2 (a union). Negative indices count from the end.",
+        "q": "Can I slice arrays?"
+      },
+      {
+        "a": "Use brackets with quotes: $.store['book title'] or $['store']['book']. Dots only work for simple identifier-like names.",
+        "q": "How do I access keys with spaces or special characters?"
+      },
+      {
+        "a": "No - this implementation covers the practical core: children, indices, wildcards, recursion, slices, unions, and filters with comparisons. Script expressions and regex match operators are not supported.",
+        "q": "Does it support the full JSONPath specification?"
+      }
+    ],
+    "formula": "$.store.book[0].title   -> child, index, child\n$.store.book[*].author    -> wildcard over array\n$..price                   -> recursive: every 'price' at any depth\n$.store.book[0:2]          -> slice: items 0 and 1\n$.store.book[0,2]          -> union: items 0 and 2\n$.store.book[-1]           -> negative index: last item\n$[?(@.price < 10)]         -> filter: @ is the current item\nfilters: == != < <= > >=, && || !, ( ), @.field, @[0]",
+    "formulaHeading": "Syntax cheat sheet",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JSON document into the document box - a bookstore sample is preloaded.",
+      "Type a JSONPath expression starting with $; results update live.",
+      "Click a sample expression to see wildcards, recursion, filters, and negative indices in action.",
+      "Read each match's full path and its value in the results table.",
+      "Refine the expression until it selects exactly what you need, then use it in your code."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSONPath Tester evaluates JSONPath expressions against any JSON document, live.",
+      "$ is the root; .child and ['child'] navigate objects; [0], [-1], and [0:2] navigate arrays.",
+      "* selects all children; ..name searches recursively for a key at any depth.",
+      "[?(@.price < 10)] filters arrays with comparisons, &&, ||, !, and parentheses.",
+      "[0,2] is a union selecting multiple indices; negative indices count from the end.",
+      "Every match reports its full path (like $.store.book[2].title) and its value."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "jsonpath tester, jsonpath online, test jsonpath expression, jsonpath query tool, jsonpath evaluator",
+    "labels": {
+      "docLabel": "JSON document",
+      "exprErrorLabel": "Expression error",
+      "exprLabel": "JSONPath expression",
+      "invalidJsonLabel": "Invalid JSON:",
+      "matchesLabel": "Matches",
+      "noMatchesLabel": "No matches for this expression.",
+      "pathCol": "Path",
+      "samplesLabel": "Try a sample",
+      "valueCol": "Value"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Covers the practical core only: script expressions and regex match operators are not supported.",
+      "Recursive descent (..) on huge documents may be slow since it walks the whole tree.",
+      "Filter errors are treated as non-matches rather than reported - keep expressions simple.",
+      "Path display uses bracket notation for unusual keys, which some JSONPath flavors write differently."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JSONPath tester: query any JSON document with JSONPath expressions - wildcards, recursion, slices, unions, and filters. Live results. Private, no sign-up.",
+    "metaTitle": "JSONPath Tester - Query JSON with JSONPath Online | JaurTools",
+    "name": "JSONPath Tester",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type a JSONPath expression like $.store.book[?(@.price < 10)].title and see every match with its full path instantly. Supports child access, indices (including negative), wildcards, recursive descent (..), slices, unions, and filter expressions with comparisons and boolean logic - all evaluated live in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSONPath Tester results",
+    "tagline": "Query any JSON with JSONPath - wildcards, filters, recursion, slices, live results.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Document: a store with 4 books priced 8.95, 12.99, 8.99, 22.99.\n\nExpression: $.store.book[?(@.price < 10)].title\n1. $.store.book selects the array of 4 books.\n2. [?(@.price < 10)] keeps books 0 and 2 (8.95 and 8.99).\n3. .title extracts the title of each.\n\nResult - 2 matches:\n$.store.book[0].title = \"Sayings of the Century\"\n$.store.book[2].title = \"Moby Dick\""
+  }
+}

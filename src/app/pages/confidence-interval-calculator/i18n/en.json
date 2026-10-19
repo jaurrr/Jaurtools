@@ -1,0 +1,95 @@
+{
+  "confidence-interval-calculator": {
+    "assumptionNote": "Uses the normal (z) approximation: fine for large samples. For small samples (n under 30) a t-distribution interval is more accurate - treat these results as approximate.",
+    "benefits": [
+      "Turns a sample mean into an honest range instead of a false single number.",
+      "Both modes covered: means (test scores, weights) and proportions (polls, conversion rates).",
+      "Shows the margin of error and standard error, not just the interval.",
+      "90%, 95%, and 99% levels with one tap - no z-table lookup needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It means: if you repeated the sampling the same way many times, about 95% of the intervals built this way would contain the true value. It does NOT mean there is a 95% chance the true value is inside this particular interval.",
+        "q": "What does 95% confidence really mean?"
+      },
+      {
+        "a": "Yes. The margin of error shrinks with the square root of n, so quadrupling the sample halves the margin. That is why polls of 1,000 people quote about ±3 points.",
+        "q": "Does a bigger sample give a narrower interval?"
+      },
+      {
+        "a": "A smaller margin (tighter interval). 90% uses z = 1.645 instead of 1.96, so the interval narrows - but you accept a 1-in-10 chance of missing the true value instead of 1-in-20.",
+        "q": "What changes at 90% confidence?"
+      },
+      {
+        "a": "Standard error = standard deviation / sqrt(n). It measures how much sample means wobble around the true mean. The margin of error is just z times the standard error.",
+        "q": "What is the standard error?"
+      },
+      {
+        "a": "For a proportion of 0.6 with n = 400 at 95%: SE = sqrt(0.6 x 0.4 / 400) = 0.0245, margin = 1.96 x 0.0245 = 0.048, so the interval is 0.552 to 0.648 (55.2% to 64.8%).",
+        "q": "How is the proportion example computed?"
+      },
+      {
+        "a": "The Wald interval collapses to zero width there, which is misleading. Exact methods (Clopper-Pearson) handle the edges properly - this tool warns you instead of pretending.",
+        "q": "Why the warning at 0% or 100%?"
+      }
+    ],
+    "formula": "Mean: CI = x-bar ± z x (s / sqrt(n))\nProportion: CI = p-hat ± z x sqrt(p-hat x (1 - p-hat) / n)\nz-values: 90% -> 1.645, 95% -> 1.96, 99% -> 2.576\nExample: 50 ± 1.96 x (10 / 10) = 50 ± 1.96 = (48.04, 51.96)",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the mode: Mean (averages) or Proportion (percentages).",
+      "For a mean: enter the sample mean, standard deviation, and sample size.",
+      "For a proportion: enter it as a decimal (0.6 for 60%) plus the sample size.",
+      "Pick 90%, 95%, or 99% confidence and read the interval, margin, and standard error."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "A 95% CI for mean 50, sd 10, n 100 is (48.04, 51.96).",
+      "The interval = estimate ± z x standard error.",
+      "z is 1.645 at 90%, 1.96 at 95%, and 2.576 at 99%.",
+      "Quadrupling the sample size halves the margin of error.",
+      "A 95% CI does not mean a 95% chance the truth is inside this interval.",
+      "For a proportion, enter it as a decimal: 0.6 means 60%."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "confidence interval calculator, margin of error calculator, CI calculator, proportion confidence interval, z interval calculator",
+    "labels": {
+      "confidence": "Confidence level",
+      "degenerateNote": "At 0 or 1 the simple (Wald) interval collapses to a point - treat this result with caution.",
+      "errInvalid": "Check your inputs: standard deviation >= 0, proportion between 0 and 1, sample size >= 2.",
+      "interval": "Confidence interval",
+      "margin": "Margin of error",
+      "meanTab": "Mean",
+      "modeLabel": "Calculation mode",
+      "propLabel": "Sample proportion (0-1)",
+      "propTab": "Proportion",
+      "sampleMean": "Sample mean",
+      "sampleSize": "Sample size (n)",
+      "stdDev": "Standard deviation",
+      "stdError": "Standard error"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses the normal (z) approximation - small samples really need the t-distribution.",
+      "Assumes a roughly normal sampling distribution and independent observations.",
+      "The proportion mode uses the Wald interval, which misbehaves near 0 and 1.",
+      "Garbage in, garbage out: a biased sample gives a precisely wrong interval."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free confidence interval calculator for means and proportions at 90%, 95%, 99% confidence. Shows margin of error and standard error. Private, no sign-up.",
+    "metaTitle": "Confidence Interval Calculator - Margin of Error | JaurTools",
+    "name": "Confidence Interval Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Enter your sample statistics and get the confidence interval instantly. For a sample mean of 50 with standard deviation 10 and n = 100 at 95% confidence: the standard error is 1, the margin is 1.96, and the interval is 48.04 to 51.96. The proportion mode handles polls and rates: 0.6 with n = 400 gives 0.552 to 0.648. 90%, 95%, and 99% levels are one tap away.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Confidence Interval results",
+    "tagline": "Confidence intervals for means and proportions, with margin of error shown.",
+    "workedExample": "Mean mode: x-bar = 50, s = 10, n = 100, 95%\n1. Standard error: 10 / sqrt(100) = 10 / 10 = 1.\n2. Margin: 1.96 x 1 = 1.96.\n3. Interval: 50 - 1.96 = 48.04 to 50 + 1.96 = 51.96.\nProportion check: p = 0.6, n = 400, 95%\n1. SE = sqrt(0.6 x 0.4 / 400) = sqrt(0.0006) = 0.0245.\n2. Margin: 1.96 x 0.0245 = 0.048.\n3. Interval: 0.552 to 0.648.",
+    "workedExampleHeading": "Worked example"
+  }
+}

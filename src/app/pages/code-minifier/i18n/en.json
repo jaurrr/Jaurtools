@@ -1,0 +1,100 @@
+{
+  "code-minifier": {
+    "benefits": [
+      "Shrinks files for faster page loads: every comment, indent and redundant space is stripped.",
+      "String-safe tokenizing means quotes, template literals and regex are never corrupted.",
+      "ASI-aware newline handling keeps minified JavaScript behaving exactly like the source.",
+      "Copy or download the minified file straight into your build or deploy step."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It removes comments, indentation and redundant whitespace, and drops the final semicolon before a CSS closing brace. It does not rename variables or restructure code, so savings of 15-40% are typical for human-written code, less for already-compact code.",
+        "q": "How much smaller do files get?"
+      },
+      {
+        "a": "No. It only removes whitespace and comments: strings, template literals, regular expressions and all identifiers are preserved exactly. Newlines are kept wherever removing them could change ASI behaviour. Still, always test minified code before deploying, as with any minifier.",
+        "q": "Does minification change what my code does?"
+      },
+      {
+        "a": "Because the minifier masks them before touching anything else. Strings, template literals and regex literals are extracted first, the code is shrunk, then they are restored byte for byte. A // inside a URL string is never mistaken for a comment.",
+        "q": "Why are my strings never broken?"
+      },
+      {
+        "a": "No. This is a lightweight whitespace-and-comment minifier. Terser and esbuild also rename local variables, drop dead code and apply hundreds of AST transforms for much bigger savings. Use this tool for quick, safe shrinking; use Terser or esbuild in your build pipeline for production bundles.",
+        "q": "Is this as powerful as Terser or esbuild?"
+      },
+      {
+        "a": "Yes. Everything runs locally in your browser tab. Your code is never uploaded, logged or sent anywhere, so proprietary code is safe to minify here.",
+        "q": "Is my code sent to a server?"
+      },
+      {
+        "a": "There is no hard limit, but very large files (several hundred kilobytes) may feel sluggish because minification runs live on every keystroke. For huge files, paste, wait a beat, then copy the result.",
+        "q": "Is there a size limit?"
+      }
+    ],
+    "formula": "JavaScript: tokenize (strings, template literals, regex, comments masked) -> drop comments (replaced by a newline, ASI-safe) -> collapse horizontal whitespace -> strip spaces around { } ( ) ; , : [ ] -> drop newlines only around safe punctuation, never between operands.\nCSS: drop comments -> collapse whitespace -> strip spaces around { } : ; , and inside ( ) -> drop the last ; before }.\nHTML: extract pre/textarea/script/style raw -> drop comments -> collapse whitespace between tags -> collapse remaining runs to one space.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the language tab: JavaScript, CSS or HTML.",
+      "Paste your formatted code into the input box, or press Sample to try an example.",
+      "The minified output updates live below, with input size, output size and savings %.",
+      "Review the output, then copy it or download it as a .min.js, .min.css or .min.html file.",
+      "For production bundles, prefer Terser or esbuild; this tool is for quick, safe shrinking."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A lightweight minifier for JavaScript, CSS and HTML that removes comments and redundant whitespace.",
+      "String-aware tokenizing: quotes, template literals and regex literals are masked before shrinking and restored untouched.",
+      "JavaScript: comments become newlines (never empty deletions), so ASI behaviour is preserved; newlines are dropped only around safe punctuation.",
+      "CSS: spaces stripped around braces, colons, semicolons and commas; the final semicolon before } is dropped; @media and (...) spacing stays valid.",
+      "HTML: comments removed, whitespace between tags collapsed; pre, textarea, script and style contents are kept byte-for-byte.",
+      "Minification is live: every keystroke re-minifies instantly, entirely in your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "code minifier, js minifier, css minifier, html minifier, minify javascript online, compress css",
+    "labels": {
+      "charsLabel": "characters",
+      "clearButton": "Clear",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy",
+      "cssTab": "CSS",
+      "downloadButton": "Download",
+      "emptyNote": "Paste code above to see it minified here.",
+      "htmlTab": "HTML",
+      "inLabel": "Input",
+      "inputLabel": "Your code",
+      "inputPlaceholder": "Paste formatted code here...",
+      "jsTab": "JavaScript",
+      "languageLabel": "Language",
+      "minifyErrorLabel": "Minification failed on this input; showing the original text.",
+      "outLabel": "Output",
+      "outputLabel": "Minified code",
+      "sampleButton": "Sample",
+      "savingsLabel": "Size reduction"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Lightweight, not Terser: it never renames variables, drops dead code or restructures logic.",
+      "Spacing around operators (+, =, =>) is preserved, so output is not maximally compact.",
+      "Newlines are kept wherever removing them could change ASI behaviour.",
+      "HTML minification does not understand whitespace-sensitive layouts beyond pre and textarea; review output."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online code minifier: compress JavaScript, CSS and HTML by stripping comments and whitespace. String-safe and ASI-aware, 100% in your browser.",
+    "metaTitle": "Code Minifier - Minify JS, CSS & HTML | JaurTools",
+    "name": "Code Minifier",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste formatted JavaScript, CSS or HTML and this minifier strips comments, indentation and redundant whitespace while strings, template literals and regex stay untouched. A 90-character greeting function shrinks to 72 characters (20% smaller) and still runs identically. It is a lightweight, safety-first minifier: newlines are kept wherever removing them could change behaviour.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Code Minifier results",
+    "tagline": "Compress JavaScript, CSS and HTML by stripping comments and whitespace - safely.",
+    "workedExample": "JavaScript input (90 characters):\nfunction greet(name) {\n  if (name) {\n    return \"Hello, \" + name;\n  }\n  return \"Hello!\";\n}\nOutput (72 characters, 20% smaller):\nfunction greet(name){if(name){return \"Hello, \" + name;}return \"Hello!\";}\nCSS input (44 characters):\n.card {\n  color: #333;\n  background: #fff;\n}\nOutput (33 characters, 25% smaller):\n.card{color:#333;background:#fff}",
+    "workedExampleHeading": "Worked example"
+  }
+}

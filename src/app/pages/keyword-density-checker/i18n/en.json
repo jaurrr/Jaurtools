@@ -1,0 +1,97 @@
+{
+  "keyword-density-checker": {
+    "assumptionNote": "Word counts treat hyphenated forms and contractions as written. The built-in stopword list is English-focused; Hindi and Arabic text will show different top-word results.",
+    "benefits": [
+      "Instant SEO feedback — see whether your target keyword is underused or stuffed.",
+      "The top-words table reveals the themes your draft actually emphasizes.",
+      "Phrase analysis catches repeated two-word combinations you would miss by eye.",
+      "Runs fully offline after load; your draft is never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Keyword density is the percentage of times a keyword appears relative to the total word count. For 'cat' appearing twice in 9 words, density = (2 / 9) x 100 = 22.22%.",
+        "q": "What is keyword density?"
+      },
+      {
+        "a": "There is no official Google percentage — Google's own guidance is that the text should 'sound natural'. As a rule of thumb, 1–2% for a primary keyword in a long article is comfortable; anything above 3–4% starts to look forced to readers.",
+        "q": "What is a good keyword density?"
+      },
+      {
+        "a": "Counting matches case-insensitively on whole words. 'Cat', 'CAT', and 'cat' all count; 'cats' or 'concatenate' do not, because the match uses word boundaries.",
+        "q": "Is the keyword match case-sensitive? Does 'cats' count for 'cat'?"
+      },
+      {
+        "a": "Yes. The top-10 table excludes common English stopwords (the, and, is...) so real content words surface. Phrases skip pairs where both words are stopwords.",
+        "q": "Why do the top-words and top-phrases tables exclude some words?"
+      },
+      {
+        "a": "Your text is processed in memory in your browser and never sent anywhere. Nothing is stored or logged.",
+        "q": "Is my text private?"
+      },
+      {
+        "a": "Punctuation is stripped and words are split on whitespace, so 'well-known' counts as one token and 'don't' counts as one token. Numbers count as words.",
+        "q": "How are hyphenated words and numbers counted?"
+      }
+    ],
+    "formula": "Density (%) = (keyword occurrences / total words) x 100\nWord count = tokens after lowercasing and stripping punctuation\nKeyword match = case-insensitive, whole-word (word boundaries)\nPhrase density (%) = (phrase occurrences / (total words - 1)) x 100",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your article, product description, or paragraph into the text box.",
+      "Type the keyword or phrase you want to check in the keyword field.",
+      "Read the density percentage, occurrence count, and totals instantly.",
+      "Scan the top-10 words and top-5 phrases tables for accidental overuse.",
+      "Rewrite the overused spots and re-paste until the density reads naturally."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Keyword density = (keyword occurrences / total words) x 100. A density of 2% means the keyword appears twice per 100 words.",
+      "Matching is case-insensitive and whole-word: 'Cat' counts for 'cat', but 'cats' does not.",
+      "The top-10 single-word table filters out common English stopwords so content words surface.",
+      "The top-5 two-word phrases table skips pairs where both words are stopwords.",
+      "Google has no official density rule — its published test is simply that the text should sound natural."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "keyword density checker, keyword frequency checker, seo keyword density, word frequency counter, keyword stuffing checker",
+    "labels": {
+      "charsLabel": "Characters (no spaces)",
+      "countCol": "Count",
+      "densityCol": "Density",
+      "densityLabel": "Keyword density",
+      "keywordCountLabel": "Keyword occurrences",
+      "keywordLabel": "Keyword to check",
+      "keywordPlaceholder": "e.g. digital marketing",
+      "phraseCol": "Phrase",
+      "sentencesLabel": "Sentences",
+      "textLabel": "Your text",
+      "textPlaceholder": "Paste your article or paragraph here...",
+      "topPhrasesHeading": "Top two-word phrases",
+      "topWordsHeading": "Top single words",
+      "totalWordsLabel": "Total words",
+      "wordCol": "Word"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The stopword filter is English-focused; Hindi and Arabic top-word lists will include common filler words.",
+      "Density is a rough signal, not a ranking guarantee — Google weighs many factors.",
+      "Very long pastes (over 50,000 characters) are truncated for performance.",
+      "Synonyms and plurals are not grouped; 'cat' and 'cats' are counted separately."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free keyword density checker: paste text, get keyword density %, word and phrase frequency tables instantly. Private, no signup, runs in your browser.",
+    "metaTitle": "Free Keyword Density Checker — SEO Word Frequency Tool",
+    "name": "Keyword Density Checker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Keyword Density Checker analyzes any pasted text in seconds. It reports your keyword's density percentage, occurrence count, total words, characters, and sentences, plus top-10 single-word and top-5 two-word-phrase frequency tables. Matching is case-insensitive and whole-word, common English stopwords are filtered from the tables, and everything runs privately in your browser with no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Keyword Density Checker results",
+    "tagline": "Analyze keyword frequency in any text — density percentage, word and phrase tables, instantly.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Take the sentence 'The cat sat on the mat. The cat slept.' and the keyword 'cat'. Tokenizing gives 9 words: the, cat, sat, on, the, mat, the, cat, slept. The keyword 'cat' appears twice (case-insensitive, whole-word), so density = (2 / 9) x 100 = 22.22%. Removing stopwords (the, on) leaves cat x2, sat x1, mat x1, slept x1 — the top-words table. For two-word phrases there are 8 possible pairs; 'the cat' occurs twice, so its phrase density = (2 / 8) x 100 = 25.00%, the highest in the table. A 22% density on a real article would signal heavy overuse."
+  }
+}

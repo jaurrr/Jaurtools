@@ -1,0 +1,95 @@
+{
+  "react-native-shadow-generator": {
+    "assumptionNote": "تستخدم المعاينة الويب CSS box-shadow، الذي يُعرض بشكل مختلف قليلًا عن ظلال iOS الأصلية. يعرض iOS shadowColor/shadowOffset/shadowOpacity/shadowRadius؛ ويعرض Android الـ elevation فقط. اختبر على جهاز حقيقي.",
+    "benefits": [
+      "احصل على كود ظل صحيح لـ iOS وAndroid في مكان واحد - دون تخمين الخصائص.",
+      "عاين الظل بصريًا قبل كتابة سطر واحد.",
+      "انسخ مقتطف StyleSheet جاهزًا مباشرة إلى مكونك.",
+      "اضبط الـ elevation لـ Android وخصائص الظل لـ iOS بشكل مستقل."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات يومية",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "يستخدم iOS shadowColor وshadowOffset ({width, height}) وshadowOpacity (0-1) وshadowRadius. يتجاهل Android كل ذلك ويستخدم الـ elevation فقط (رقم). يخرج هذا المولد الاثنين.",
+        "q": "لماذا تحتاج ظلال iOS وAndroid كودًا مختلفًا؟"
+      },
+      {
+        "a": "نعم، لكن الـ elevation تقريب تقريبي. ينتج ظلًا بأسلوب Material بناءً على عمق z للعرض، وليس لونك أو تمويهك. للتحكم الدقيق بالبكسل على Android، استخدم مكتبة ظل مخصصة أو SVG.",
+        "q": "هل يطابق الـ elevation ظل iOS تمامًا؟"
+      },
+      {
+        "a": "الخطأ الأكثر شيوعًا: يُقص الظل لأن الأب لديه overflow: 'hidden'، أو backgroundColor على العرض الخاطئ. وأيضًا، على iOS، تحتاج الظلال backgroundColor على العرض المظلل.",
+        "q": "لماذا لا يظهر ظلي؟"
+      },
+      {
+        "a": "استخدم إزاحات صغيرة (0-4)، وتمويهًا معتدلًا (4-10)، وشفافية منخفضة (0.1-0.3). الظلال الداكنة القاسية تبدو رخيصة. الظلال الخفية تبدو فاخرة.",
+        "q": "ما الذي يجعل الظل يبدو جيدًا؟"
+      },
+      {
+        "a": "تستخدم المعاينة الويب CSS box-shadow، وهو قريب لكنه ليس مطابقًا للعرض الأصلي. إنه دليل. تحقق دائمًا من المظهر النهائي على جهاز حقيقي أو محاكٍ.",
+        "q": "هل المعاينة مطابقة للبكسل مع الأصلي؟"
+      },
+      {
+        "a": "غالبًا نعم. مكتبات مثل react-native-shadow-2 تمنحك تحكم التمويه واللون على Android، وهو ما لا يستطيعه الـ elevation. لكن لمعظم البطاقات والأزرار، يكفي الـ elevation مع خصائص iOS.",
+        "q": "هل أحتاج مكتبة ظل لـ Android؟"
+      }
+    ],
+    "formula": "لا رياضيات - هذه مولد كود. كيف تُرسم القطع:\n\niOS (ظل UIView):\nshadowColor: '#000000'        <- لونك المختار\nshadowOffset: { width: 0, height: 4 }  <- الإزاحة X / Y\nshadowOpacity: 0.25          <- الشفافية / 100\nshadowRadius: 6              <- نصف قطر التمويه\n\nAndroid (ارتفاع Material):\nelevation: 4                 <- منزلق منفصل، 0-24\n\nالمكافئ في معاينة الويب: box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25).",
+    "formulaHeading": "كيف يعمل",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "اختر لون الظل واضبط الإزاحة X/Y ونصف قطر التمويه والشفافية.",
+      "اضبط elevation الخاص بـ Android بشكل منفصل.",
+      "شاهد المعاينة المباشرة تتحدث.",
+      "انسخ كود StyleSheet أو نزّله كملف .js، ثم الصقه في مكونك."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "تختلف ظلال React Native حسب المنصة: يستخدم iOS خصائص shadow*، ويستخدم Android الـ elevation.",
+      "iOS: shadowColor وshadowOffset {width, height} وshadowOpacity (0 إلى 1) وshadowRadius.",
+      "Android: elevation (0 إلى 24+). اللون والتمويه غير مدعومين أصليًا.",
+      "يتوقع shadowOpacity 0-1 وليس 0-100. خطأ شائع هو تمرير 25 بدل 0.25.",
+      "على iOS، يحتاج العرض المظلل backgroundColor وإلا قد لا يُعرض الظل.",
+      "العروض الأب ذات overflow: 'hidden' تقص الظلال. انتبه في القوائم والبطاقات.",
+      "يؤثر الـ elevation أيضًا على ترتيب الرسم على Android: الأعلى يُرسم فوق.",
+      "معاينة الويب هي CSS box-shadow: قريبة، لكنها ليست مطابقة للبكسل مع الأصلي."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "مولد ظل react native، ظل صندوق rn، ظل ios في react native، مولد elevation لأندرويد، ظل stylesheet في react native",
+    "labels": {
+      "blurRadius": "نصف قطر التمويه",
+      "copied": "تم النسخ",
+      "copyCode": "نسخ الكود",
+      "downloadJs": "تنزيل .js",
+      "elevation": "elevation الخاص بـ Android",
+      "offsetX": "الإزاحة X",
+      "offsetY": "الإزاحة Y",
+      "opacity": "الشفافية (٪)",
+      "preview": "معاينة الظل",
+      "previewText": "بطاقة",
+      "shadowColor": "لون الظل"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "elevation الخاص بـ Android تقريبي. لا تحكم أصلي باللون أو التمويه على Android.",
+      "معاينة الويب دليل، وليست مطابقة للبكسل مع العرض الأصلي.",
+      "لا يعالج الظلال المتحركة أو ظلال حالة الضغط.",
+      "للظلال المتقدمة على Android، استخدم مكتبة مخصصة مثل react-native-shadow-2."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "مولد ظل React Native مجاني: صمم ظلال iOS وelevation الخاص بـ Android بصريًا، ثم انسخ كود StyleSheet. معاينة مباشرة، دون تسجيل.",
+    "metaTitle": "مولد ظل React Native - iOS وAndroid | JaurTools",
+    "name": "مولد ظل React Native",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "يحتاج React Native كود ظل مختلفًا لكل منصة: يستخدم iOS shadowColor وshadowOffset وshadowOpacity وshadowRadius، بينما يستخدم Android الـ elevation فقط. صمم الاثنين بصريًا أعلاه، ثم انسخ مقتطف StyleSheet المولد إلى مكونك. تعرض المعاينة المباشرة تقريب ويب قريبًا للنتيجة الأصلية.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "كود الظل الخاص بك",
+    "tagline": "صمم ظلال React Native بصريًا - خصائص iOS مع elevation الخاص بـ Android، جاهز للنسخ.",
+    "workedExample": "نمط بطاقة بالإعدادات الافتراضية:\n1. اضبط: اللون #000000، الإزاحة (0، 4)، النصف قطر 6، الشفافية 25٪، الـ elevation 4.\n2. مخرج iOS: shadowColor '#000000'، shadowOffset {width: 0, height: 4}، shadowOpacity 0.25، shadowRadius 6.\n3. مخرج Android: elevation 4.\n4. الصق مقتطف StyleSheet في مكونك وطبّق style={styles.card}.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

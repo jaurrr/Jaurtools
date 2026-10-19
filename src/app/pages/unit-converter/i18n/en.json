@@ -1,0 +1,158 @@
+{
+  "unit-converter": {
+    "benefits": [
+      "Covers everyday needs — cooking, travel, schoolwork, fitness and file sizes — on one page.",
+      "Exact defined factors, not rounded guesses, so school and work answers are correct.",
+      "No sign-up, nothing in the way, works on any device.",
+      "Private: your numbers never leave your browser."
+    ],
+    "categories": {
+      "area": "Area",
+      "data": "Data",
+      "length": "Length",
+      "speed": "Speed",
+      "temperature": "Temperature",
+      "time": "Time",
+      "volume": "Volume",
+      "weight": "Weight"
+    },
+    "faqs": [
+      {
+        "a": "Very. Length and weight use internationally defined exact factors — 1 inch is exactly 2.54 cm, 1 pound exactly 0.45359237 kg. Temperature uses the true formulas including the 273.15 Kelvin offset. Displayed results may be rounded, but the underlying math keeps full precision.",
+        "q": "How accurate is the converter?"
+      },
+      {
+        "a": "This tool follows the computing convention where data doubles in powers of two: 1 KB = 1,024 bytes, 1 MB = 1,024 KB. Storage manufacturers sometimes advertise with 1,000 instead, which is why a “1 TB” drive shows less in your operating system.",
+        "q": "Why does 1 KB = 1,024 bytes here?"
+      },
+      {
+        "a": "Pick the Temperature category, enter your value, and choose Celsius and Fahrenheit in the two dropdowns. The tool applies °F = °C × 9/5 + 32 (and the reverse), so 100 °C becomes exactly 212 °F.",
+        "q": "How do I convert Celsius to Fahrenheit?"
+      },
+      {
+        "a": "No — and deliberately so. Exchange rates move every minute and need a live data feed; a static converter would show you yesterday's rate as if it were true. This tool converts fixed physical units only.",
+        "q": "Can it convert currencies?"
+      },
+      {
+        "a": "Yes. Once the page has loaded, every conversion is pure JavaScript in your browser. You can even turn on airplane mode and it keeps working.",
+        "q": "Does it work offline?"
+      },
+      {
+        "a": "Extremely large or tiny results switch to scientific notation (like 1.5e+12) because that is how computers display numbers beyond normal range. The value is still exact — it is only the display format that changes.",
+        "q": "Why is my result in scientific notation?"
+      }
+    ],
+    "formula": "For most units: result = value × (from-unit factor ÷ to-unit factor), where each factor is the unit's size in the category's base unit (meter, kilogram, liter, and so on). Temperature is special-cased: °F = °C × 9/5 + 32 and K = °C + 273.15.",
+    "howTo": [
+      "Choose a category such as Length or Temperature.",
+      "Type the value you want to convert.",
+      "Pick the “from” unit and the “to” unit in the two dropdowns.",
+      "Read the instant result plus the conversion-factor line beneath it.",
+      "Use Swap to reverse the direction without retyping anything."
+    ],
+    "keyFacts": [
+      "Eight categories: length, weight, temperature, area, volume, speed, time and digital data — 43 units in total.",
+      "Length uses exact international definitions: 1 mile = 1,609.344 meters, 1 inch = 2.54 cm, 1 foot = 0.3048 m.",
+      "Temperature uses the real formulas, not approximations — including the 273.15 offset for Kelvin.",
+      "Every result shows its conversion-factor line (for example, 1 mile = 1.609344 km) so you can verify the math yourself.",
+      "The Swap button flips the from/to units in one tap.",
+      "Results are computed live in your browser with full floating-point precision."
+    ],
+    "lastReviewed": "Last reviewed: October 18, 2026",
+    "limitations": [
+      "Time conversions use fixed averages (1 year = 365.25 days) — they ignore leap seconds and calendar subtleties.",
+      "Data units use the binary computing convention (1 KB = 1,024 bytes); storage makers sometimes use 1,000.",
+      "It converts fixed physical units, not currencies or other live rates that change every minute.",
+      "Extreme values may display in scientific notation; that is normal floating-point display, not an error."
+    ],
+    "metaDescription": "Free unit converter: convert length, weight, temperature, area, volume, speed, time and data instantly with exact factors. No sign-up, works offline in your browser.",
+    "metaTitle": "Free Unit Converter — Length, Weight, Temperature & More",
+    "name": "Unit Converter",
+    "privacyNote": "All conversions happen locally in your browser. No values are uploaded, stored or tracked.",
+    "quickAnswer": "Pick a category, enter a value, and choose the units to convert from and to. This free unit converter instantly shows the result with its exact conversion factor — miles to kilometers, Celsius to Fahrenheit, megabytes to gigabytes. All math runs in your browser; nothing is sent anywhere.",
+    "tagline": "Convert length, weight, temperature, area, volume, speed, time and data instantly — free and precise.",
+    "ui": {
+      "benefitsTitle": "Why use it",
+      "category": "Category",
+      "copied": "Copied",
+      "copy": "Copy result",
+      "empty": "—",
+      "enterValue": "Enter a value to convert",
+      "exampleTitle": "Worked example",
+      "faqTitle": "Frequently asked questions",
+      "formulaTitle": "How conversion works",
+      "from": "From",
+      "home": "Home",
+      "howToTitle": "How to use",
+      "keyFactsTitle": "Key facts",
+      "limitationsTitle": "Limitations",
+      "privacyTitle": "Privacy note",
+      "relatedTitle": "Related tools",
+      "result": "Result",
+      "swap": "Swap units",
+      "to": "To",
+      "value": "Value"
+    },
+    "units": {
+      "area": {
+        "acre": "Acre",
+        "ft2": "Square foot",
+        "ha": "Hectare",
+        "km2": "Square kilometer",
+        "m2": "Square meter",
+        "mi2": "Square mile"
+      },
+      "data": {
+        "b": "Byte",
+        "gb": "Gigabyte",
+        "kb": "Kilobyte",
+        "mb": "Megabyte",
+        "tb": "Terabyte"
+      },
+      "length": {
+        "cm": "Centimeter",
+        "ft": "Foot",
+        "in": "Inch",
+        "km": "Kilometer",
+        "m": "Meter",
+        "mi": "Mile",
+        "mm": "Millimeter",
+        "yd": "Yard"
+      },
+      "speed": {
+        "kmh": "Kilometers per hour",
+        "knot": "Knot",
+        "mph": "Miles per hour",
+        "ms": "Meters per second"
+      },
+      "temperature": {
+        "c": "Celsius",
+        "f": "Fahrenheit",
+        "k": "Kelvin"
+      },
+      "time": {
+        "day": "Day",
+        "h": "Hour",
+        "min": "Minute",
+        "s": "Second",
+        "week": "Week",
+        "year": "Year"
+      },
+      "volume": {
+        "floz": "Fluid ounce (US)",
+        "gal": "Gallon (US)",
+        "l": "Liter",
+        "m3": "Cubic meter",
+        "ml": "Milliliter"
+      },
+      "weight": {
+        "g": "Gram",
+        "kg": "Kilogram",
+        "lb": "Pound",
+        "oz": "Ounce",
+        "t": "Tonne"
+      }
+    },
+    "workedExample": "Length example: 1 mile → kilometers. A mile is exactly 1,609.344 meters and a kilometer is 1,000 meters, so 1 × 1,609.344 ÷ 1,000 = 1.609344 km. Temperature example: 100 °C → °F = 100 × 9/5 + 32 = 212 °F."
+  }
+}

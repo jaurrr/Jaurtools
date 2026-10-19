@@ -1,0 +1,88 @@
+{
+  "monochromatic-color-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Monochromatic Color Generator",
+    "tagline": "One hue, endless harmony.",
+    "metaTitle": "Monochromatic Color Generator - Single-Hue Palettes | JaurTools",
+    "metaDescription": "Build a harmonious single-hue palette from any color — shades from near-black to near-white. Free, instant.",
+    "keywords": "monochromatic colors, monochromatic palette, single hue shades, monochromatic color scheme",
+    "quickAnswer": "A monochromatic palette keeps one hue and varies only lightness. From #4A90D9 (HSL 211, 65%, 57%), the tool spreads shades evenly: at 30% lightness the math gives #1B4B7E, at 70% it gives #81B1E4. Because the hue never changes, every shade sits naturally beside the others - the safest palette a designer can pick.",
+    "keyFacts": [
+      "Monochromatic = one hue, one saturation, many lightness levels.",
+      "The tool spreads shades evenly between 12% and 88% lightness so nothing is pure black or white.",
+      "Same-hue palettes can never clash - they are the safest choice for beginners.",
+      "Use the darkest shade for text, mid shades for UI elements, lightest for backgrounds.",
+      "Monochromatic schemes work beautifully for data charts where one series needs emphasis levels."
+    ],
+    "howTo": [
+      "Enter your base color with the picker or a HEX code like #4A90D9.",
+      "Choose how many shades you want: 4, 6 or 8.",
+      "Shades appear instantly, evenly spread from dark to light.",
+      "Tap any shade to copy its HEX code.",
+      "Use dark shades for text and light shades for backgrounds in your design."
+    ],
+    "formula": "Each shade = HSL(base hue, base saturation, L), with L spread evenly from 12% to 88%.\nExample: #4A90D9 -> HSL(211, 65%, 57%).\nAt L = 30%: HSL(211, 65%, 30%) = RGB(27, 75, 126) = #1B4B7E.\nAt L = 70%: HSL(211, 65%, 70%) = RGB(129, 177, 228) = #81B1E4.",
+    "workedExample": "Base #4A90D9, converted to HSL(211, 65%, 57%):\n1. Keep hue 211 and saturation 65% fixed.\n2. At 30% lightness: chroma math gives RGB(27, 75, 126), which is #1B4B7E - a deep navy.\n3. At 70% lightness: the same math gives RGB(129, 177, 228), which is #81B1E4 - a soft sky blue.\n4. With 6 shades, lightness steps are 12, 27, 42, 58, 73 and 88 - a smooth ramp with no jumps.",
+    "benefits": [
+      "Impossible to clash - one hue always looks intentional and calm.",
+      "Perfect for monochrome brand identities and minimalist interfaces.",
+      "Great for charts: darker = more important, lighter = less important.",
+      "Copy any shade with one tap - no design tool needed."
+    ],
+    "limitations": [
+      "One hue can feel flat; most designs add one accent color for energy.",
+      "Adjacent mid shades may be hard to tell apart - check contrast for text use.",
+      "Very dark shades on black backgrounds can disappear; test in context."
+    ],
+    "faqs": [
+      {
+        "q": "What does monochromatic mean in color theory?",
+        "a": "It means a palette built from a single hue. You vary only lightness (and sometimes saturation) to create depth, so the palette is automatically harmonious."
+      },
+      {
+        "q": "Why does the tool stop at 12% and 88% lightness?",
+        "a": "Pure black and pure white add no hue information and are rarely useful as palette shades. Stopping just short keeps every shade recognizably part of the family."
+      },
+      {
+        "q": "Can I use this for a dark-mode palette?",
+        "a": "Yes - use the darkest 2-3 shades as your dark-mode surfaces and text, and the lightest shades for highlights."
+      },
+      {
+        "q": "How is this different from tints and shades?",
+        "a": "Tints mix with white and shades mix with black in RGB space. This tool moves lightness in HSL space, which preserves the perceived color family more smoothly."
+      },
+      {
+        "q": "How many shades should I pick?",
+        "a": "Four is enough for a simple UI (text, primary, border, background). Six to eight suits design systems that need hover, disabled and divider states."
+      },
+      {
+        "q": "Will these shades pass accessibility contrast checks?",
+        "a": "Dark shades on light shades usually pass easily, but mid-on-mid pairs can fail. Always run the specific pair through a contrast checker before shipping text."
+      }
+    ],
+    "resultsHeading": "Your monochromatic palette results",
+    "labels": {
+      "colorLabel": "Base color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #4A9 or #4A90D9.",
+      "countLabel": "Number of shades",
+      "baseHue": "Base hue",
+      "baseSat": "Base saturation",
+      "copyHex": "Copy HEX",
+      "copied": "Copied"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "palette-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Palette Generator",
+    "tagline": "Generate harmonious color schemes - complementary, analogous, triadic and more - from one color.",
+    "metaTitle": "Palette Generator - Color Schemes from One Color | JaurTools",
+    "metaDescription": "Free palette generator: enter one HEX color and get complementary, analogous, triadic, tetradic and split-complementary schemes with copy-ready HEX codes.",
+    "keywords": "palette generator, color scheme generator, color palette maker, complementary colors, analogous colors",
+    "quickAnswer": "A palette generator builds color schemes from one base color using hue-wheel math. From #4A90D9 (hue 211), the complementary scheme adds hue 211 + 180 = 31, giving #D9944A - a warm amber that sits opposite the blue. Analogous schemes take neighbors at plus/minus 15-30 degrees for calm designs; triadic and tetradic schemes use evenly spaced hues for energy.",
+    "keyFacts": [
+      "Complementary = base hue + 180 degrees: maximum hue contrast, two colors.",
+      "Analogous = base hue plus/minus 15-30 degrees: calm, nature-like harmony.",
+      "Triadic = three hues 120 degrees apart: balanced but vibrant.",
+      "Tetradic = two complementary pairs (rectangle on the wheel): rich, needs careful balance.",
+      "Split-complementary = base plus the two neighbors of its complement: strong contrast, easier than full complementary.",
+      "Saturation and lightness stay at the base color's values, so every scheme feels related."
+    ],
+    "howTo": [
+      "Enter your base color with the picker or a HEX code like #4A90D9.",
+      "Pick a scheme: complementary, analogous, triadic, tetradic, split-complementary or monochromatic.",
+      "The palette appears instantly as swatches with HEX codes.",
+      "Tap any swatch to copy its HEX.",
+      "Use the base color for 60% of the design, the scheme colors for 30% and 10%."
+    ],
+    "formula": "Each scheme color = HSL(base hue + offset, base saturation, base lightness).\nExample: #4A90D9 -> HSL(211, 65%, 57%).\nComplementary: offset +180 -> HSL(31, 65%, 57%) = RGB(217, 148, 74) = #D9944A.\nAnalogous: offsets -30, -15, +15, +30 around hue 211.",
+    "workedExample": "Base #4A90D9 = HSL(211, 65%, 57%), complementary scheme:\n1. Add 180 to the hue: 211 + 180 = 391, wrapped to 31 degrees.\n2. Keep saturation 65% and lightness 57%.\n3. HSL(31, 65%, 57%) converts to RGB(217, 148, 74).\n4. In HEX: 217 = D9, 148 = 94, 74 = 4A -> #D9944A.\n5. Result: deep blue #4A90D9 paired with warm amber #D9944A - classic opposite-wheel harmony.",
+    "benefits": [
+      "Six professional schemes from a single brand color in seconds.",
+      "Every scheme is mathematically harmonious - no clashing by construction.",
+      "Copy-ready HEX codes drop straight into CSS or design tools.",
+      "Great for logos, websites and presentations that need a full palette fast."
+    ],
+    "limitations": [
+      "Math harmony is a starting point - always judge the palette with your eyes.",
+      "Tetradic schemes have four strong colors; use one as dominant or the design feels chaotic.",
+      "Scheme colors may still fail WCAG text contrast - check pairs you use for text."
+    ],
+    "faqs": [
+      {
+        "q": "Which scheme should I choose for a website?",
+        "a": "Start with analogous for calm, content-heavy sites, or complementary when you need one strong accent (like a call-to-action button). Triadic suits playful brands; tetradic is for rich, complex designs."
+      },
+      {
+        "q": "Why do scheme colors keep the same saturation and lightness?",
+        "a": "Keeping them fixed makes every color feel like it belongs to the same family. If the tool also varied saturation, some schemes would look random rather than designed."
+      },
+      {
+        "q": "What is the 60-30-10 rule?",
+        "a": "A classic guideline: 60% of the design uses the dominant color, 30% a secondary, 10% an accent. It keeps even bold palettes feeling balanced."
+      },
+      {
+        "q": "Can a palette have more than these schemes?",
+        "a": "The six schemes here cover the standard color-theory set used in professional design. Combining schemes (e.g. analogous base + complementary accent) is how designers extend them."
+      },
+      {
+        "q": "Do these schemes work for dark mode?",
+        "a": "The hue relationships work in any mode. For dark mode, take the same hues and lower the lightness of backgrounds while keeping accents bright."
+      },
+      {
+        "q": "Are the HEX codes exact?",
+        "a": "Yes - every HEX is computed from the HSL math and rounded to the nearest whole RGB value, then shown exactly as computed."
+      }
+    ],
+    "resultsHeading": "Your palette results",
+    "labels": {
+      "colorLabel": "Base color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #4A9 or #4A90D9.",
+      "schemeLabel": "Color scheme",
+      "schemeComplementary": "Complementary",
+      "schemeAnalogous": "Analogous",
+      "schemeTriadic": "Triadic",
+      "schemeTetradic": "Tetradic",
+      "schemeSplit": "Split-complementary",
+      "schemeMono": "Monochromatic",
+      "paletteCount": "Colors in palette",
+      "baseTag": "Base",
+      "copyHex": "Copy HEX",
+      "copied": "Copied"
+    }
+  }
+}

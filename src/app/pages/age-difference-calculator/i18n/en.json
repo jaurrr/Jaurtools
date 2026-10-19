@@ -1,0 +1,93 @@
+{
+  "age-difference-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Age Difference Calculator",
+    "tagline": "Find the exact age gap between two birthdates in years, months and days.",
+    "metaTitle": "Age Difference Calculator - Gap Between Two Dates | JaurTools",
+    "metaDescription": "Calculate the exact age difference between two birthdates. Get years, months, days, total days and weeks. Free, private, no sign-up.",
+    "keywords": "age difference calculator, age gap calculator, difference between two birthdays, how much older",
+    "quickAnswer": "The age gap is the calendar distance between the two birthdates, counted in full years, then remaining months, then remaining days. For example, between 15 June 1995 and 10 March 2000 the gap is 4 years, 8 months and 24 days - 1,730 days in total. The calculator also tells you who is older.",
+    "keyFacts": [
+      "Age gaps are counted like ages: full years first, then leftover months, then leftover days.",
+      "A 'year' here is a calendar year, not 365 days - leap days are handled by the calendar automatically.",
+      "The order of the dates does not matter; the tool always reports the gap as a positive distance and names the older person.",
+      "Total days is the most precise single number: it counts every calendar day between the two dates.",
+      "The same math powers age calculators, anniversary trackers and eligibility checks."
+    ],
+    "howTo": [
+      "Enter the first birthdate.",
+      "Enter the second birthdate - the order does not matter.",
+      "Read the gap in years, months and days instantly.",
+      "Check total days, weeks and months for planning or curiosity.",
+      "The older person is named automatically above the results."
+    ],
+    "formula": "Gap = later date minus earlier date.\nYears = full calendar years between the dates.\nRemaining months = full months left after removing the years.\nRemaining days = days left after removing years and months.\nTotal days = (later - earlier) in milliseconds / 86,400,000.\nExample: 2000-03-10 minus 1995-06-15 = 4 years, 8 months, 24 days = 1,730 days.",
+    "workedExample": "Birthdates: 15 June 1995 and 10 March 2000.\n1. The earlier date is 15 June 1995, so that person is older.\n2. Full years: 15 June 1995 to 15 June 1999 = 4 years.\n3. Remaining months: 15 June 1999 to 15 February 2000 = 8 months.\n4. Remaining days: 15 February 2000 to 10 March 2000 = 24 days (2000 is a leap year).\n5. Gap: 4 years, 8 months, 24 days = 1,730 days total.",
+    "benefits": [
+      "Settles 'how much older' debates with an exact, indisputable number.",
+      "Total days and weeks are handy for anniversary and milestone planning.",
+      "Works for any two dates - birthdays, weddings, company foundings.",
+      "Fully private: birthdates never leave your browser."
+    ],
+    "limitations": [
+      "This is calendar distance only; it says nothing about development, maturity or compatibility.",
+      "For legal age checks, what matters is the age of each person, not the gap - verify with official rules.",
+      "Time of birth is ignored; two people born on the same date show a zero gap.",
+      "Dates must be valid calendar dates within the supported range."
+    ],
+    "faqs": [
+      {
+        "q": "Does the order of the two dates matter?",
+        "a": "No. Enter them in any order - the calculator finds the earlier date, names that person as older, and reports the gap as a positive number."
+      },
+      {
+        "q": "Why is the year count not simply days divided by 365?",
+        "a": "Because calendar years are not all 365 days long. Counting full calendar years first, then months, then days matches how people actually state ages and gaps."
+      },
+      {
+        "q": "How are leap days treated?",
+        "a": "They are just ordinary calendar days. Someone born on 29 February still accumulates total days normally; only the year/month breakdown follows calendar rules."
+      },
+      {
+        "q": "Can I compare dates that are not birthdays?",
+        "a": "Yes - any two dates work: wedding dates, founding dates, project start dates. The math is identical."
+      },
+      {
+        "q": "What does 'total months' mean?",
+        "a": "The whole gap expressed in months: full years times 12 plus the remaining months. For the example above, 4 x 12 + 8 = 56 months."
+      },
+      {
+        "q": "Is my data sent anywhere?",
+        "a": "No. Every calculation happens in your browser; the dates you enter never leave your device."
+      }
+    ],
+    "resultsHeading": "Your age gap results",
+    "labels": {
+      "firstDate": "First birthdate",
+      "secondDate": "Second birthdate",
+      "olderPerson": "Older person",
+      "firstPerson": "First person",
+      "secondPerson": "Second person",
+      "ageGap": "Age gap",
+      "totalDays": "Total days",
+      "totalWeeks": "Total weeks",
+      "totalMonths": "Total months",
+      "years": "years",
+      "months": "months",
+      "days": "days"
+    }
+  }
+}

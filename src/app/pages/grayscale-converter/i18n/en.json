@@ -1,0 +1,89 @@
+{
+  "grayscale-converter": {
+    "name": "Grayscale Converter",
+    "tagline": "Pure black & white in one click.",
+    "metaTitle": "Grayscale Converter - Black & White Photos | JaurTools",
+    "metaDescription": "Convert any photo to black and white instantly, with a blend slider from full color to pure B&W. Free online tool, no signup.",
+    "keywords": "grayscale image, black and white photo converter, desaturate image online, photo to bw free",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a photo and drag the blend slider: 0 keeps full color, 100 gives pure black and white. Each pixel's gray value comes from the standard luminance formula — 0.299 x red + 0.587 x green + 0.114 x blue — so a pixel of (200, 100, 50) becomes gray 124. Download the result as PNG.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Grayscale uses the luminance formula, not a simple average — green counts most because eyes are most sensitive to it.",
+      "The blend slider mixes color and gray, so 50 gives a faded vintage wash.",
+      "Black-and-white conversion is lossless in the sense that no detail is blurred — only color is removed.",
+      "The output PNG keeps full resolution and sharpness.",
+      "Grayscale photos print cheaper and look timeless in documents and portfolios.",
+      "The same formula powers the B&W modes in professional cameras and editors."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload a photo (JPG, PNG, or WebP).",
+      "Drag the blend slider: 100 for full black and white, lower for a faded color wash.",
+      "Compare the live preview with your original at a glance.",
+      "Click Download to save the grayscale image as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Luminance (ITU-R BT.601):\ngray = 0.299 x R + 0.587 x G + 0.114 x B\nBlend:\nresult = color + (gray - color) x (blend / 100)\nAt blend = 100, every channel equals gray.",
+    "formulaHeading": "Formula",
+    "workedExample": "Pixel (R=200, G=100, B=50), blend 100:\n1. 0.299 x 200 = 59.8.\n2. 0.587 x 100 = 58.7.\n3. 0.114 x 50 = 5.7.\n4. gray = 59.8 + 58.7 + 5.7 = 124.2, rounded to 124.\n5. Result pixel: (124, 124, 124) — a neutral mid-gray.\nAt blend 50 the same pixel would become (162, 112, 87): halfway between color and gray.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "One-click timeless black-and-white look for portraits and street shots.",
+      "The blend slider doubles as a fade/desaturate effect for vintage edits.",
+      "True luminance weighting keeps skin tones natural, unlike naive averaging.",
+      "No quality loss — resolution and sharpness are untouched.",
+      "Runs fully offline in your browser; sensitive photos stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Conversion is one-way in the download — color cannot be recovered from the PNG.",
+      "A single global conversion; no selective color or channel-mixer control.",
+      "Photos that rely on color contrast (charts, maps) may lose meaning in gray.",
+      "The blend slider cannot push saturation above the original."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "Is this a true black-and-white conversion?",
+        "a": "Yes. It uses the standard luminance formula (0.299R + 0.587G + 0.114B) that cameras and professional editors use, weighted to match human vision. It is not a naive average of the three channels."
+      },
+      {
+        "q": "What does the blend slider do?",
+        "a": "It mixes the original color with the grayscale version. At 100 you get pure black and white; at 50 a faded, desaturated look; at 0 the untouched original. Anything in between is a partial fade."
+      },
+      {
+        "q": "Will my photo lose sharpness?",
+        "a": "No. Only color information is removed. Resolution, sharpness, and detail are pixel-identical to the original."
+      },
+      {
+        "q": "Can I get the color back after downloading?",
+        "a": "No — the downloaded PNG genuinely contains only gray pixels. Always keep your original file if you might want color later."
+      },
+      {
+        "q": "Why do some photos look flat in black and white?",
+        "a": "Photos that separate subjects by color rather than brightness lose that separation in gray. Images with strong light-and-shadow contrast convert best. The blend slider lets you keep a hint of color when full B&W falls flat."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. Conversion happens pixel by pixel in your browser. Your photo never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Grayscale Image results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photo",
+      "blend": "Black & white blend",
+      "download": "Download image",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload a photo to see the live preview."
+    }
+  }
+}

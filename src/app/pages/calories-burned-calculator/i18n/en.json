@@ -1,0 +1,107 @@
+{
+  "calories-burned-calculator": {
+    "activities": {
+      "briskwalk": "Brisk walking (5.6 km/h)",
+      "cycle": "Cycling, moderate effort",
+      "dance": "Dancing",
+      "housework": "Housework",
+      "run10": "Running (10 km/h)",
+      "run8": "Running (8 km/h)",
+      "soccer": "Soccer",
+      "stairs": "Climbing stairs",
+      "swim": "Swimming, moderate",
+      "walk": "Walking (4 km/h)",
+      "weights": "Weight training",
+      "yoga": "Yoga"
+    },
+    "assumptionNote": "MET values are population averages. Fitness level, terrain, speed and effort shift your real burn, so treat the result as a solid estimate, not a measurement.",
+    "benefits": [
+      "Instantly compares which activities give you the most burn per minute.",
+      "Weight-adjusted results are fairer than generic per-hour tables.",
+      "Helps you budget exercise into a weekly calorie plan.",
+      "Shows that everyday activities like housework and stairs genuinely count."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A MET is a metabolic equivalent: 1 MET is your resting burn, about 1 kcal per kg per hour. An 8-MET activity burns roughly eight times your resting rate.",
+        "q": "What is a MET?"
+      },
+      {
+        "a": "A 70 kg person burns about 343 kcal in 30 minutes running at 10 km/h, 105 kcal walking slowly, or 280 kcal swimming moderately. Heavier people burn proportionally more.",
+        "q": "How many calories do common activities burn?"
+      },
+      {
+        "a": "Fitness watches estimate from heart rate and movement, which adds personal data but also sensor error. MET tables use averages and are surprisingly close for steady activities.",
+        "q": "Are fitness watch calories more accurate?"
+      },
+      {
+        "a": "No. Spot reduction is a myth. Exercise burns calories across the whole body; where you lose fat first is genetic.",
+        "q": "Can I target belly fat with exercise?"
+      },
+      {
+        "a": "About 60-70% of your daily burn is BMR and digestion, not exercise. That is why diet matters more for weight loss, while exercise matters more for health and keeping weight off.",
+        "q": "Why does exercise matter if it burns so few calories?"
+      },
+      {
+        "a": "You cannot out-train a bad diet: a 500 kcal dessert takes over an hour of running to offset. Use exercise for fitness and food for weight control.",
+        "q": "Can I out-train a bad diet?"
+      }
+    ],
+    "formula": "Calories = MET x weight (kg) x hours.\n1 MET = 1 kcal per kg per hour (resting burn).\nExample: 9.8 x 70 x 0.5 = 343 kcal.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your activity from the list.",
+      "Pick metric (kg) or imperial (lb) and enter your body weight.",
+      "Enter how many minutes you did it.",
+      "Read the calories burned, the per-hour rate and the activity's MET value."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "A MET (metabolic equivalent) measures activity intensity against resting burn.",
+      "1 MET equals about 1 kcal per kg per hour at rest.",
+      "The Compendium of Physical Activities catalogues MET values for hundreds of activities.",
+      "Running at 10 km/h is 9.8 MET; walking at 4 km/h is 3.5 MET.",
+      "Heavier people burn more calories for the same activity and duration.",
+      "A 70 kg person running 30 minutes at 10 km/h burns about 343 kcal."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "calories burned calculator, met calculator, exercise calorie calculator, how many calories burned running",
+    "labels": {
+      "activityLabel": "Activity",
+      "caloriesResult": "Calories burned",
+      "durationLabel": "Duration (minutes)",
+      "imperialTab": "Imperial (lb)",
+      "kcalHourUnit": "kcal/hour",
+      "kcalUnit": "kcal",
+      "metLabel": "Intensity",
+      "metricTab": "Metric (kg)",
+      "perHourLabel": "Burn rate",
+      "unitSystem": "Unit system",
+      "weightLabel": "Body weight"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "MET values are averages; your fitness, terrain and effort change the real number.",
+      "Ignores afterburn (EPOC), which is small for most workouts anyway.",
+      "Fitness, heat and hills all shift the real burn away from the table.",
+      "An estimate for planning, not a lab measurement."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free calories burned calculator: pick an activity, enter your weight and minutes, and see the calories burned using MET values. Private, no sign-up.",
+    "metaTitle": "Calories Burned Calculator - Exercise Calories | JaurTools",
+    "name": "Calories Burned Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Calories burned equal the activity's MET value times your weight in kg times the hours. Running at 10 km/h (9.8 MET) for 30 minutes burns about 343 kcal for a 70 kg person. Heavier people burn proportionally more for the same activity.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your calories burned",
+    "tagline": "See exactly how many calories any activity burns - by weight, duration and intensity.",
+    "workedExample": "70 kg, running at 10 km/h, 30 minutes:\n1. MET value for running at 10 km/h = 9.8.\n2. Hours = 30 / 60 = 0.5.\n3. Calories = 9.8 x 70 x 0.5 = 343 kcal.\n4. Per-hour rate = 9.8 x 70 = 686 kcal/hour.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

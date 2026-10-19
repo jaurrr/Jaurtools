@@ -1,0 +1,96 @@
+{
+  "debt-consolidation-calculator": {
+    "assumptionNote": "Assumes fixed rates, no new borrowing, no fees, and that the 'average APR' fairly represents all current debts.",
+    "benefits": [
+      "One payment instead of five — simpler to manage, harder to miss.",
+      "A lower rate means more of each payment attacks principal.",
+      "Can improve your credit mix and lower utilization over time.",
+      "Gives a fixed finish date instead of revolving forever."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "When three things are true: the new rate is clearly lower than your current average, the monthly payment fits your budget, and you will not run up new balances on the freed cards. Miss any one of these and consolidation usually backfires.",
+        "q": "When is debt consolidation a good idea?"
+      },
+      {
+        "a": "Temporarily, a little — the new loan triggers a hard inquiry and lowers your average account age. But paying down revolving balances lowers utilization, which often lifts your score within months. For disciplined borrowers the net effect is usually positive.",
+        "q": "Does consolidation hurt my credit score?"
+      },
+      {
+        "a": "A 0% balance-transfer card wins if you can clear the debt inside the promo window (usually 12–18 months) — but the rate after the promo is brutal, and transfer fees run 3–5%. A consolidation loan is better for larger balances you need years to repay.",
+        "q": "Balance transfer card or consolidation loan?"
+      },
+      {
+        "a": "Because term matters as much as rate. Cutting your rate from 18% to 10% but stretching from 32 to 60 months can still raise total interest. Always compare total interest paid, not just the monthly figure — this calculator shows both.",
+        "q": "Why does a lower monthly payment sometimes cost more overall?"
+      },
+      {
+        "a": "Origination fees (1–5% of the loan), balance-transfer fees (3–5%), prepayment penalties on old loans, and annual fees. A 'low rate' with a 4% origination fee can be worse than a slightly higher rate with no fee. Add fees to the loan amount when comparing.",
+        "q": "What fees should I watch for?"
+      },
+      {
+        "a": "Yes — the debt snowball or avalanche method (see our debt payoff calculator) consolidates your focus instead of your balances: one extra payment aimed at a single debt at a time. It costs no fees and builds the same payoff momentum.",
+        "q": "Can I consolidate without a loan?"
+      }
+    ],
+    "formula": "Current plan: simulate month by month — interest = balance x APR/12, subtract payment, repeat until zero.\nNew loan payment M = L x i(1+i)^n / ((1+i)^n - 1).\nMonthly saving = current payment - new payment.\nTotal saving = current total paid - new total paid.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your total current debt and its average APR.",
+      "Enter what you currently pay each month across all debts.",
+      "Enter the consolidation loan's APR and term.",
+      "Compare monthly payment, total interest, and the final verdict."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Consolidation replaces several debts with one loan, ideally at a lower rate.",
+      "It only saves money if the new APR is lower than your current weighted average.",
+      "Stretching the term lowers the monthly payment but can raise total interest — watch both.",
+      "Origination fees of 1–5% can quietly eat the savings; include them in the loan amount.",
+      "The biggest risk is behavioral: new debt on freed-up cards wipes out every gain."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "debt consolidation calculator, consolidate debt calculator, debt consolidation loan comparison",
+    "labels": {
+      "currentApr": "Current average APR (%)",
+      "currentMonthlyPayment": "Current total monthly payment",
+      "currentPlan": "Current plan",
+      "monthlyPayment": "Monthly payment",
+      "monthlySavings": "Monthly savings",
+      "monthsToPayoff": "Months to pay off",
+      "monthsUnit": "months",
+      "newApr": "Consolidation loan APR (%)",
+      "newPlan": "Consolidation loan",
+      "newTermMonths": "Loan term (months)",
+      "payoffWarning": "Your current payment does not cover the monthly interest, so the current plan would never pay off. The comparison below assumes you raise it.",
+      "recommendationConsolidation": "Consolidation wins — total savings",
+      "recommendationCurrent": "Staying put wins — extra cost of consolidating",
+      "totalDebt": "Total current debt",
+      "totalInterest": "Total interest"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses one average APR — real debts have different rates and minimums.",
+      "Ignores origination fees, balance-transfer fees, and closing costs.",
+      "A longer term can mean more total interest despite the lower payment.",
+      "Does not fix overspending — new debt after consolidating is the classic trap."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free debt consolidation calculator: compare your current debts with a single consolidation loan. See monthly savings, total interest and the verdict.",
+    "metaTitle": "Debt Consolidation Calculator - Is It Worth It? | JaurTools",
+    "name": "Debt Consolidation Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "On ₹200,000 of debt at 18% APR with ₹8,000 monthly payments, you would pay ₹52,559 in interest over 32 months. A 10% consolidation loan over 36 months cuts the payment to ₹6,453 and total interest to ₹32,324 — saving ₹20,235 overall. Consolidation wins when the new rate is meaningfully lower and you stop adding new debt.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your consolidation comparison",
+    "tagline": "Compare juggling multiple debts against one consolidation loan — see the real savings.",
+    "workedExample": "Debt ₹200,000 at 18% APR, paying ₹8,000/month; consolidation loan at 10% APR over 36 months:\n1. Current plan: 32 months, total paid ₹252,558.56, interest ₹52,558.56.\n2. New payment: i = 0.10/12 = 0.008333; M = 200,000 x 0.008333 x 1.34818 / 0.34818 = ₹6,453.44.\n3. New total = 6,453.44 x 36 = ₹232,323.75; interest = ₹32,323.75.\n4. Monthly saving = 8,000 - 6,453.44 = ₹1,546.56; total saving = 252,558.56 - 232,323.75 = ₹20,234.81.\nConsolidation wins.",
+    "workedExampleHeading": "Worked example"
+  }
+}

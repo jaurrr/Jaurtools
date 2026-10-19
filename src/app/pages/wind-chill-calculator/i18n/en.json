@@ -1,0 +1,101 @@
+{
+  "wind-chill-calculator": {
+    "assumptionNote": "The wind chill formula is valid only for air temperatures at or below 10°C (50°F) combined with wind speeds above 4.8 km/h (3 mph). Outside this range the number is shown for reference but is not a true wind chill.",
+    "benefits": [
+      "Tells you how cold it actually feels, not just the thermometer reading.",
+      "The frostbite-risk badge turns a number into a clear safety decision.",
+      "Works in both metric and imperial units for travel and forecasts.",
+      "Instant results help you dress correctly before stepping outside."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Wind chill describes how cold the air feels on exposed skin when wind strips away the thin layer of warm air your body maintains. At 0°C with a 20 km/h wind, the air feels like minus 5.2°C. It is a feels-like temperature, not an actual temperature — your thermometer still reads 0°C.",
+        "q": "What is wind chill exactly?"
+      },
+      {
+        "a": "The official formula (used by weather services in the US, Canada, and the UK) was developed from experiments on human volunteers in cold wind tunnels. It models heat loss from exposed skin. It is well validated inside its range: at or below 10°C with wind above 4.8 km/h. Outside that range it is meaningless.",
+        "q": "Is the wind chill formula accurate?"
+      },
+      {
+        "a": "Wind chill cannot go above the actual air temperature — if it feels warmer than the thermometer, that is humidity or sunshine, not wind chill. Also, wind chill applies to exposed skin, so it does not tell you how fast a car radiator or a water pipe will cool.",
+        "q": "Can wind chill be warmer than the air temperature?"
+      },
+      {
+        "a": "Cover exposed skin: balaclava or scarf, insulated gloves, and windproof outer layers. The risk badge on this page follows Environment Canada guidance: below minus 28°C, exposed skin can freeze within 30 minutes; below minus 40°C, within 10 minutes. Keep trips short and check on other people.",
+        "q": "How do I stay safe when wind chill is very low?"
+      },
+      {
+        "a": "No. Wind chill is only defined for cold conditions. For hot weather, weather services use the heat index, which combines temperature and humidity to estimate how hot it feels. JaurTools plans a heat index calculator as a companion tool.",
+        "q": "Is there a summer version of wind chill?"
+      },
+      {
+        "a": "Because your body heats a thin boundary layer of air next to your skin, and wind constantly replaces it with cold air. The faster the wind, the faster heat is carried away, so your skin cools toward the wind chill value rather than the still-air temperature.",
+        "q": "Why does wind make cold feel colder?"
+      }
+    ],
+    "formula": "Wind chill (°C) = 13.12 + 0.6215 × T − 11.37 × V^0.16 + 0.3965 × T × V^0.16\nT = air temperature in °C, V = wind speed in km/h.\nValid only when T ≤ 10°C and V ≥ 4.8 km/h.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your temperature unit: Celsius or Fahrenheit.",
+      "Enter the air temperature from your thermometer or forecast.",
+      "Pick your wind-speed unit: km/h or mph.",
+      "Enter the wind speed. Use the sustained wind, not gusts, for the standard value.",
+      "Read the feels-like temperature and the frostbite-risk badge instantly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Wind chill is the feels-like temperature on exposed skin in wind and cold.",
+      "The standard formula comes from US and Canadian weather services.",
+      "At 0°C with a 20 km/h wind, it feels like minus 5.2°C.",
+      "The formula is only valid at or below 10°C with wind above 4.8 km/h.",
+      "Below minus 28°C wind chill, exposed skin can freeze within 30 minutes.",
+      "Wind chill never applies to objects — only to living, heat-producing skin."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "wind chill calculator, feels like temperature calculator, wind chill formula, frostbite risk, wind chill chart",
+    "labels": {
+      "airTemp": "Air temperature",
+      "celsiusTab": "°C",
+      "fahrenheitTab": "°F",
+      "frostbiteRisk": "Frostbite risk",
+      "kmhTab": "km/h",
+      "mphTab": "mph",
+      "outOfRange": "Outside the formula's valid range (needs 10°C or below with wind above 4.8 km/h). The number shown is for reference only.",
+      "speedUnitLabel": "Wind speed unit",
+      "tempUnitLabel": "Temperature unit",
+      "windChill": "Feels-like temperature",
+      "windSpeed": "Wind speed"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only valid at or below 10°C with wind above 4.8 km/h — outside that it is not a real wind chill.",
+      "Applies to exposed human skin, not objects, cars, or pipes.",
+      "Ignores sunshine, humidity, clothing, and activity level, which all change how cold you feel.",
+      "Frostbite times are estimates; individual risk varies with health and clothing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free wind chill calculator: find the feels-like temperature from air temperature and wind speed, with a frostbite-risk rating. Metric and imperial. Private, no sign-up.",
+    "metaTitle": "Wind Chill Calculator - Feels-Like Temperature | JaurTools",
+    "name": "Wind Chill Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Wind chill is how cold the air feels on exposed skin when wind strips away your body's warm air layer. At 0°C with a 20 km/h wind, it feels like minus 5.2°C — noticeably colder than the thermometer says. The calculator uses the official US/Canadian formula and adds a frostbite-risk rating, so you know whether to add a layer or stay inside.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your wind chill results",
+    "risk": {
+      "extreme": "Extreme — frostbite in ~5 min",
+      "high": "High — frostbite in ~30 min",
+      "low": "Low",
+      "moderate": "Moderate — risk with long exposure",
+      "veryHigh": "Very high — frostbite in ~10 min"
+    },
+    "tagline": "Feels-like temperature from air temperature and wind speed, with a frostbite-risk rating.",
+    "workedExample": "Air temperature 0°C, wind 20 km/h:\n1. Compute V^0.16: 20^0.16 = 1.615.\n2. Wind chill = 13.12 + 0.6215 × 0 − 11.37 × 1.615 + 0.3965 × 0 × 1.615.\n3. = 13.12 − 18.36 = −5.24°C.\n4. Rounded: minus 5.2°C (about 22.6°F) — risk level Low.",
+    "workedExampleHeading": "Worked example"
+  }
+}

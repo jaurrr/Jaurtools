@@ -1,0 +1,96 @@
+{
+  "protein-calculator": {
+    "assumptionNote": "Factors follow ISSN sport-nutrition ranges for healthy adults. Kidney disease needs medical limits.",
+    "benefits": [
+      "Ends the 'am I eating enough protein?' guessing.",
+      "Per-meal splits make the target actually cookable.",
+      "Protects muscle during fat loss - the main job of protein.",
+      "Based on sport-nutrition ranges, not influencer claims."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Healthy kidneys handle up to ~2.5-3 g/kg fine. Beyond ~2.2 g/kg there is just no extra muscle benefit - the surplus becomes expensive calories.",
+        "q": "Can I eat too much protein?"
+      },
+      {
+        "a": "Yes with variety. Combine legumes, grains, soy, and nuts across the day; soy and quinoa are complete proteins on their own. You may need slightly more total grams since plant protein digests a bit less completely.",
+        "q": "Is plant protein enough?"
+      },
+      {
+        "a": "The 'anabolic window' is wider than claimed - total daily protein matters far more than timing. Eating within a few hours of training is plenty.",
+        "q": "Do I need protein right after training?"
+      },
+      {
+        "a": "A convenience, not a requirement. One scoop (~25 g) helps when whole food is impractical. It counts exactly like food protein.",
+        "q": "What about protein powder?"
+      },
+      {
+        "a": "Yes - about 1.2-1.6 g/kg. Aging muscles resist growth signals, so older adults need more protein per meal (~40 g) to trigger the same response.",
+        "q": "Should older adults eat more protein?"
+      },
+      {
+        "a": "Yes: it is the most filling macro, costs energy to digest (~20-30% of its calories), and protects muscle in a deficit - which keeps metabolism higher.",
+        "q": "Does protein help weight loss?"
+      }
+    ],
+    "formula": "Daily protein (g) = weight (kg) x factor\n\nFactors:\nSedentary: 1.2\nLightly active: 1.4\nActive: 1.6\nBuilding muscle: 1.8\nDieting / athlete: 2.0\n\nPer meal = daily / meals\n\nExample: 70 kg, active\n= 70 x 1.6 = 112 g/day\nPer meal (3): 112 / 3 = 37.3 g",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your body weight in kg.",
+      "Pick the activity level closest to your life.",
+      "Your daily grams appear instantly, with 3-meal and 4-meal splits.",
+      "Build each meal around a palm-sized protein portion.",
+      "Recalculate if your weight changes by 5 kg or your training changes."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Protein needs scale with body weight: 1.2-2.2 g per kg per day.",
+      "Sedentary: ~1.2 g/kg. Active: ~1.6 g/kg. Building muscle or dieting: 1.8-2.0 g/kg.",
+      "Spread protein across 3-4 meals - the body uses ~30-50 g per meal best.",
+      "1 g protein = 4 kcal.",
+      "Good sources: eggs (~6 g each), chicken breast (~31 g per 100 g), lentils (~9 g per 100 g cooked), Greek yogurt (~10 g per 100 g).",
+      "Kidneys handle high protein fine in healthy people - the risk myth comes from existing kidney disease."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "protein calculator, how much protein per day, daily protein intake, protein per kg, protein requirements",
+    "labels": {
+      "activityLabel": "Activity level",
+      "dailyProtein": "Daily protein target",
+      "gUnit": "g/day",
+      "levels": {
+        "active": "Active (exercise regularly)",
+        "build": "Building muscle",
+        "cut": "Dieting / athlete",
+        "light": "Lightly active",
+        "sedentary": "Sedentary"
+      },
+      "perMeal3": "Per meal (3 meals)",
+      "perMeal4": "Per meal (4 meals)",
+      "weightKg": "Body weight (kg)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses total body weight - very overweight people should use lean mass or target weight.",
+      "Factors are ranges; individual needs vary with age and training.",
+      "Does not assess protein quality - vary your sources.",
+      "People with kidney disease need a doctor's limits, not this calculator."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "How much protein per day? Get your target from weight and activity level, with per-meal splits. Free, private, no sign-up.",
+    "metaTitle": "Protein Calculator - Daily Protein Intake | JaurTools",
+    "name": "Protein Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Multiply body weight by 1.2-2.0 g/kg depending on activity. A 70 kg active person needs about 112 g per day (70 x 1.6) - roughly 37 g across 3 meals. Dieters and athletes go higher (2.0 g/kg); sedentary people need less (1.2 g/kg).",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your protein results",
+    "tagline": "Your daily protein target from body weight and activity - with per-meal splits.",
+    "workedExample": "You weigh 70 kg and train regularly (active):\n1. Pick the factor: active = 1.6 g/kg.\n2. Multiply: 70 x 1.6 = 112 g per day.\n3. Split over 3 meals: 112 / 3 = 37.3 g per meal.\n4. Split over 4 meals: 112 / 4 = 28 g per meal.\n5. In food terms: about 4 eggs (24 g) + 150 g chicken breast (~46 g) + 200 g Greek yogurt (~20 g) + lentils and grains for the rest.",
+    "workedExampleHeading": "Worked example"
+  }
+}

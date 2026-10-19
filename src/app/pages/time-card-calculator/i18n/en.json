@@ -1,0 +1,90 @@
+{
+  "time-card-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Time Card Calculator",
+    "tagline": "Your whole work week, totaled with overtime handled.",
+    "metaTitle": "Time Card Calculator - Weekly Hours, Overtime & Pay | JaurTools",
+    "metaDescription": "Build your weekly time card: enter daily clock-in/out times and breaks, get totals, overtime and gross pay. Free, no signup.",
+    "keywords": "hours calculator, time card calculator, weekly hours calculator, work hours calculator, timesheet calculator",
+    "quickAnswer": "Enter clock-in and clock-out times for each day of the week - for example 09:00 to 17:30 Monday to Friday gives 8.5 hours a day, 42.5 hours for the week. With a 40-hour threshold, that is 40 regular hours plus 2.5 overtime hours. Overnight shifts work too: 22:00 to 06:00 counts as 8 hours.",
+    "keyFacts": [
+      "Daily hours = end time minus start time. 09:00 to 17:30 is 8.5 hours.",
+      "If the end time is earlier than the start time, the shift is treated as overnight and 24 hours are added.",
+      "The weekly total is the simple sum of the seven daily totals.",
+      "Overtime = max(0, total minus threshold). The threshold defaults to 40 hours but is adjustable.",
+      "Breaks are not deducted automatically - enter times net of breaks, or shorten the shift."
+    ],
+    "howTo": [
+      "Set your overtime threshold (default 40 hours per week).",
+      "For each day, enter start and end times in 24-hour format.",
+      "Leave a day blank for days off.",
+      "Read daily hours, the weekly total, regular hours and overtime instantly.",
+      "Adjust any time and watch the totals update."
+    ],
+    "formula": "Daily hours = end - start (if end <= start, add 24 h for overnight).\nWeekly total = sum of daily hours.\nOvertime = max(0, total - threshold).\nRegular = total - overtime.\nExample: 5 x 8.5 h = 42.5 h; threshold 40 -> overtime = 2.5 h.",
+    "workedExample": "Monday to Friday, 09:00 to 17:30; weekend off. Threshold 40.\n1. Daily: 17:30 minus 09:00 = 8.5 hours.\n2. Five days: 5 x 8.5 = 42.5 hours total.\n3. Regular: min(42.5, 40) = 40 hours.\n4. Overtime: 42.5 - 40 = 2.5 hours.\n5. Saturday and Sunday blank = 0 hours each.",
+    "benefits": [
+      "Faster and less error-prone than adding times in your head or a spreadsheet.",
+      "Overnight shifts handled without manual date math.",
+      "Adjustable threshold fits 40-hour weeks, 48-hour rules or part-time schedules.",
+      "Private: your work schedule never leaves your browser."
+    ],
+    "limitations": [
+      "Breaks are not deducted - enter net working times.",
+      "This counts hours only; pay rates and overtime multipliers belong in the Overtime Calculator.",
+      "Overnight detection assumes end <= start means next day; split shifts need separate handling.",
+      "Rounding policies (for example, to 15 minutes) are not applied."
+    ],
+    "faqs": [
+      {
+        "q": "How do I enter an overnight shift?",
+        "a": "Just enter it normally, for example 22:00 to 06:00. When the end time is not later than the start, the tool adds 24 hours automatically."
+      },
+      {
+        "q": "Are breaks deducted?",
+        "a": "No. Enter your times net of breaks - for example, a 09:00 to 17:00 day with an hour of lunch becomes 09:00 to 16:00, or split the day."
+      },
+      {
+        "q": "Can I change the 40-hour threshold?",
+        "a": "Yes. Set any threshold to match your contract, country rules or part-time schedule."
+      },
+      {
+        "q": "What time format should I use?",
+        "a": "24-hour format (HH:MM), for example 14:30 for half past two in the afternoon."
+      },
+      {
+        "q": "Does it calculate my pay?",
+        "a": "No - this tool counts hours. Enter the totals into the Overtime Calculator to convert hours to pay."
+      },
+      {
+        "q": "Is my schedule stored anywhere?",
+        "a": "No. Everything is computed live in your browser and disappears when you leave the page."
+      }
+    ],
+    "resultsHeading": "Weekly hours results",
+    "assumptionNote": "Shifts where the end time is not later than the start time are treated as overnight shifts (24 hours added). Breaks are not deducted - enter net working times.",
+    "labels": {
+      "threshold": "Overtime threshold (hours/week)",
+      "start": "start",
+      "end": "end",
+      "totalHours": "Total hours",
+      "regularHours": "Regular hours",
+      "overtimeHours": "Overtime hours",
+      "hoursUnit": "h",
+      "overnightNote": "End <= start is treated as an overnight shift."
+    }
+  }
+}

@@ -1,0 +1,239 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <p class="dv-example">
+        <button type="button" class="dv-example-btn" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ tc('tryExample') }}
+        </button>
+        @if (restored()) {
+          <span class="dv-autosave"><app-icon name="refresh-cw" /> {{ tc('restoredNote') }}</span>
+        }
+      </p>
+
+      <div class="field">
+        <label for="rx-pattern">{{ t('labels.patternLabel') }}</label>
+        <div class="dv-codeblock">
+          <div class="dv-codeblock-head"><span class="dv-codeblock-title" dir="ltr">/{{ pattern() }}/{{ flagsStr() }}</span></div>
+          <input id="rx-pattern" class="dv-term-input single" type="text" dir="ltr"
+            [ngModel]="pattern()" (ngModelChange)="setPattern($event)"
+            [attr.placeholder]="t('labels.patternPlaceholder')" autocomplete="off" spellcheck="false" maxlength="1000" />
+        </div>
+        @if (outcome().error) {
+          <p class="alert error dv-status dv-status-bad" role="alert"><app-icon name="triangle-alert" /> <span dir="ltr">{{ outcome().error }}</span></p>
+        }
+      </div>
+
+      <p class="dv-picker-label">{{ tc('flavorLabel') }}</p>
+      <div class="dv-picker" role="group" [attr.aria-label]="tc('flavorLabel')">
+        <button type="button" class="dv-chip" [attr.aria-pressed]="flavor() === 'js'" (click)="setFlavor('js')">{{ t('labels.flavorJs') }}</button>
+        <button type="button" class="dv-chip" [attr.aria-pressed]="flavor() === 'python'" (click)="setFlavor('python')">{{ t('labels.flavorPython') }}</button>
+        <button type="button" class="dv-chip" [attr.aria-pressed]="flavor() === 'pcre'" (click)="setFlavor('pcre')">{{ t('labels.flavorPcre') }}</button>
+      </div>
+      <p class="note">{{ t('labels.flavorHint') }}</p>
+      @if (compatIssue()) {
+        <p class="alert warn dv-status dv-status-warn" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.compatWarn') }}</p>
+      }
+
+      <div class="field">
+        <span class="field-label">{{ t('labels.flagsLabel') }}</span>
+        <div class="unit-toggle dv-toggle" role="group" [attr.aria-label]="t('labels.flagsLabel')">
+          <button type="button" class="active" disabled>g</button>
+          <button type="button" [class.active]="flagI()" (click)="toggleFlag('i')" [attr.aria-pressed]="flagI()">i</button>
+          <button type="button" [class.active]="flagM()" (click)="toggleFlag('m')" [attr.aria-pressed]="flagM()">m</button>
+          <button type="button" [class.active]="flagS()" (click)="toggleFlag('s')" [attr.aria-pressed]="flagS()">s</button>
+          <button type="button" [class.active]="flagU()" (click)="toggleFlag('u')" [attr.aria-pressed]="flagU()">u</button>
+        </div>
+        <p class="note">{{ t('labels.flagsHint') }}</p>
+      </div>
+
+      <div class="dv-viewtabs" role="tablist" [attr.aria-label]="t('resultsHeading')">
+        <button type="button" role="tab" [attr.aria-selected]="mode() === 'test'" (click)="setMode('test')">
+          <app-icon name="search" /> {{ tc('testModeLabel') }}
+        </button>
+        <button type="button" role="tab" [attr.aria-selected]="mode() === 'replace'" (click)="setMode('replace')">
+          <app-icon name="refresh-cw" /> {{ tc('replaceModeLabel') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="rx-text">{{ t('labels.testLabel') }}</label>
+        <div class="dv-codeblock">
+          <div class="dv-codeblock-head"><span class="dv-codeblock-title">test.txt</span></div>
+          <textarea id="rx-text" class="dv-term-input" rows="6" dir="ltr" [ngModel]="testText()"
+            (ngModelChange)="setTestText($event)" spellcheck="false"></textarea>
+        </div>
+      </div>
+
+      @if (mode() === 'replace') {
+        <div class="field">
+          <label for="rx-repl">{{ t('labels.replaceWithLabel') }}</label>
+          <input id="rx-repl" class="text-input mono" type="text" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="replacement()" (ngModelChange)="replacement.set($event)"
+            [attr.placeholder]="t('labels.replacePh')" maxlength="500" />
+        </div>
+        <div class="field">
+          <span class="field-label">{{ t('labels.replaceResultLabel') }}</span>
+          <pre class="code-output dv-term" dir="ltr" tabindex="0">{{ replaceResult() }}</pre>
+        </div>
+      } @else {
+        @if (!outcome().error) {
+          <div class="results">
+            <div class="result-row total">
+              <span><app-icon name="zap" /> {{ t('labels.matchesLabel') }}</span>
+              <strong class="dv-badge ok">{{ outcome().matches.length }}</strong>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="field-label">{{ t('labels.highlightLabel') }}</span>
+            <div class="preview-pane dv-pane" aria-live="polite"><div dir="ltr" style="white-space: pre-wrap; word-break: break-word;">@for (s of segments(); track $index) {@if (s.hit) {<mark>{{ s.text }}</mark>} @else {<span>{{ s.text }}</span>}}</div></div>
+          </div>
+
+          @if (outcome().matches.length) {
+            <div class="dv-matches">
+              @for (m of outcome().matches; track $index; let i = $index) {
+                <div class="dv-matchcard">
+                  <div class="dv-match-head"><span>#{{ i + 1 }}</span><span dir="ltr">{{ t('labels.indexLabel') }}: {{ m.index }}</span></div>
+                  <code>{{ m.text === '' ? '(empty)' : m.text }}</code>
+                  @if (m.groups.length) {
+                    <div class="dv-groups">
+                      @for (g of m.groups; track $index) {
+                        <span>{{ g === '' ? '∅' : g }}</span>
+                      }
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+            <div class="dv-inout">
+              <button type="button" class="btn-ghost" (click)="exportJson()">
+                <app-icon name="download" /> {{ tc('exportJsonLabel') }}
+              </button>
+              <button type="button" class="btn-ghost" (click)="exportCsv()">
+                <app-icon name="download" /> {{ tc('exportCsvLabel') }}
+              </button>
+            </div>
+          } @else {
+            <p class="note">{{ t('labels.noMatchesLabel') }}</p>
+          }
+        }
+      }
+
+      @if (explanation().length && !outcome().error) {
+        <h3 class="split-heading">{{ tc('explainHeading') }}</h3>
+        <ul class="dv-explain">
+          @for (e of explanation(); track $index) {
+            <li><code dir="ltr">{{ e.token }}</code><span>{{ t('labels.' + e.descKey) }}</span></li>
+          }
+        </ul>
+      }
+
+      <h3 class="split-heading">{{ tc('quickRefHeading') }}</h3>
+      <div class="dv-quickref">
+        @for (q of quickTokens(); track q.snippet) {
+          <button type="button" (click)="insertToken(q.snippet)" [attr.aria-label]="q.snippet">
+            <code dir="ltr">{{ q.snippet }}</code><span>{{ t('labels.' + q.descKey) }}</span>
+          </button>
+        }
+      </div>
+
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      @if (t('assumptionNote')) {
+        <p class="note">{{ t('assumptionNote') }}</p>
+      }
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

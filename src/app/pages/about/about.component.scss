@@ -1,0 +1,268 @@
+:host {
+  display: block;
+}
+
+.about-page {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: 2rem 1rem 1rem;
+}
+
+.about-page > h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  letter-spacing: -0.01em;
+}
+
+.about-page > section {
+  margin-block: 0;
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.about-page h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.35rem, 3.4vw, 1.75rem);
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  font-size: 1.1rem;
+}
+
+/* 1. Story */
+.story-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.story-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.photo-card {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  padding: 0.75rem;
+  box-shadow: var(--shadow-md);
+  max-width: 44rem;
+}
+
+.photo-card img {
+  border-radius: var(--radius-xl);
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.photo-card figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem 0.25rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.photo-card figcaption app-icon {
+  color: var(--accent);
+  flex: none;
+}
+
+/* Shared icon chip */
+.icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  flex: none;
+}
+
+/* 3. Facts */
+.facts-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.fact {
+  display: grid;
+  gap: 0.25rem;
+  justify-items: start;
+}
+
+.fact strong {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.fact .muted {
+  font-size: 1.02rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* 4. How to use */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.step {
+  display: grid;
+  gap: 0.4rem;
+  justify-items: start;
+  margin: 0;
+}
+
+.step p {
+  margin: 0;
+}
+
+/* 5. Examples */
+.example-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.example {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+}
+
+.example p {
+  margin: 0 0 0.5rem;
+}
+
+.example .btn-primary {
+  margin-top: auto;
+}
+
+/* 6. Use cases */
+.usecase-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.usecase-grid .card {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+}
+
+.usecase-grid p {
+  margin: 0;
+}
+
+/* 7 + 8. Lists */
+.tick-list,
+.note-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.tick-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 1.02rem;
+}
+
+.tick-list app-icon {
+  color: var(--accent);
+  flex: none;
+  margin-top: 0.2rem;
+}
+
+.note-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.note-list .icon-chip {
+  width: 40px;
+  height: 40px;
+}
+
+.note-list span:last-child {
+  padding-top: 0.45rem;
+}
+
+/* 11. Team */
+.team-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.member {
+  display: grid;
+  gap: 0.3rem;
+  justify-items: start;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.member .muted {
+  font-size: 0.9rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .example-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .usecase-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

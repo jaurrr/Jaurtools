@@ -1,0 +1,84 @@
+{
+  "permutation-and-combination-calculator": {
+    "benefits": [
+      "Exact integer results — no rounding errors on large values.",
+      "Handles n up to 1000 for real counting problems.",
+      "Both nPr and nCr shown side by side for easy comparison.",
+      "Ideal for probability, statistics and exam preparation.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use permutations when the order of selection matters (1st, 2nd, 3rd prizes). Use combinations when only the selected group matters (a card hand, a committee).",
+        "q": "When do I use permutations vs combinations?"
+      },
+      {
+        "a": "With 10 runners, choose 3 medal winners where the medal color matters: n = 10, r = 3, so nPr = 10 x 9 x 8 = 720 possible medal arrangements.",
+        "q": "How do I count medal winners among 10 runners?"
+      },
+      {
+        "a": "Set r to 0. There is exactly 1 way to choose nothing from any n, so nC0 = 1 and nP0 = 1.",
+        "q": "What is nCr when r is 0?"
+      },
+      {
+        "a": "Yes, using BigInt exact integer arithmetic. Results for n up to 1000 are computed precisely, not as floating-point approximations.",
+        "q": "Is the calculator accurate for large numbers?"
+      },
+      {
+        "a": "Yes, as long as both are whole numbers between 0 and 1000. If r > n, the calculator shows a note explaining the requirement.",
+        "q": "Can n and r be any numbers?"
+      }
+    ],
+    "formula": "nPr = n! / (n - r)!\nnCr = n! / (r! x (n - r)!)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter n, the total number of items to choose from.",
+      "Enter r, the number of items you pick.",
+      "Read nPr (order matters) and nCr (order does not matter).",
+      "For large counts, the calculator keeps the exact integer result.",
+      "Swap r for different values to compare scenarios."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A permutation counts arrangements where order matters: nPr = n! / (n - r)!",
+      "A combination counts selections where order does not matter: nCr = n! / (r! x (n - r)!).",
+      "nPr is always greater than or equal to nCr for the same n and r.",
+      "nCr = nC(n - r): choosing r is the same as leaving out n - r.",
+      "Both n and r must be whole numbers with 0 <= r <= n.",
+      "Permutations and combinations are the foundation of probability calculations."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "permutation calculator, combination calculator, nPr calculator, nCr calculator, combinations and permutations",
+    "labels": {
+      "combinationLabel": "nCr (combinations)",
+      "invalidNote": "Enter whole numbers with 0 ≤ r ≤ n (n up to 1000).",
+      "nLabel": "n (total items)",
+      "permutationLabel": "nPr (permutations)",
+      "rLabel": "r (items chosen)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only works for whole numbers — fractions and decimals have no meaning here.",
+      "Extremely large n can produce huge outputs (n limited to 1000).",
+      "It counts possibilities; it cannot pick the winning combination.",
+      "Does not handle permutations with repeated items."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free nPr and nCr calculator: compute permutations and combinations exactly for n up to 1000. Fully browser-based, no sign-up.",
+    "metaTitle": "Permutation and Combination Calculator — nPr / nCr",
+    "name": "Permutation and Combination Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Permutations count arrangements where order matters; combinations count groups where it does not. nPr equals n! divided by (n-r)!, and nCr equals n! divided by r! times (n-r)!. Pick the one that matches whether order matters in your question.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "nPr / nCr results",
+    "tagline": "Count arrangements (nPr) and selections (nCr).",
+    "workedExample": "A committee of 3 people is chosen from 10 candidates.\n\nOrder does not matter, so use combinations:\nnCr = 10! / (3! x 7!) = (10 x 9 x 8) / (3 x 2 x 1) = 720 / 6 = 120.\n\nThere are 120 possible committees.\n\nIf instead the 3 people win gold, silver and bronze (order matters):\nnPr = 10! / 7! = 10 x 9 x 8 = 720 possible medal arrangements.",
+    "workedExampleHeading": "Worked example"
+  }
+}

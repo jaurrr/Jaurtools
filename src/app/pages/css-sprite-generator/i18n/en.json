@@ -1,0 +1,102 @@
+{
+  "css-sprite-generator": {
+    "benefits": [
+      "Fewer HTTP requests: one sprite sheet replaces many individual icon downloads.",
+      "Faster page loads on mobile networks where each extra request adds latency.",
+      "No server needed: the sheet is built in your browser with the canvas API.",
+      "Copy-paste CSS with correct background-position values calculated for you."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A CSS sprite is one image that holds many smaller graphics. Instead of loading ten icon files, the page loads one file and shows each icon by shifting the visible window with the CSS background-position property.",
+        "q": "What is a CSS sprite?"
+      },
+      {
+        "a": "Every separate image file needs its own HTTP request. On slow networks each request adds noticeable delay. One sprite sheet means one request, so icon-heavy pages like navigation bars and toolbars load faster.",
+        "q": "Why should I use sprites instead of separate images?"
+      },
+      {
+        "a": "Horizontal works well for a row of toolbar icons, vertical suits menus, and grid is best when you have many icons and want a compact, roughly square sheet. The generated CSS is identical in concept; only the offsets differ.",
+        "q": "Which layout should I choose?"
+      },
+      {
+        "a": "Without padding, rounding differences in some browsers can reveal a one-pixel sliver of the neighboring image. A few pixels of padding give every sprite a clean border.",
+        "q": "Why is padding important?"
+      },
+      {
+        "a": "Yes, but plan ahead: for retina displays, build the sheet at double size from double-size source images and scale it down with background-size. This generator keeps original dimensions, so prepare your sources accordingly.",
+        "q": "Can I use the sprite with responsive or retina designs?"
+      },
+      {
+        "a": "No. The sheet is composed on a canvas element inside your own browser tab. Nothing is sent to any server.",
+        "q": "Do my images get uploaded anywhere?"
+      }
+    ],
+    "formula": "sheet width (horizontal) = sum of all image widths + padding × (image count + 1)\nsheet height (horizontal) = tallest image height + padding × 2\n\nExample offset for image n: x = padding + sum of widths of images before n + padding × (n − 1)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click the upload area and select two or more image files (PNG with transparency works best).",
+      "Pick a layout: horizontal places images in a row, vertical in a column, grid wraps into columns.",
+      "Adjust the padding slider so there is a clean gap between neighboring images.",
+      "Type a CSS class prefix (for example icons) that will name all generated classes.",
+      "Click Download PNG to save the sprite sheet, then Copy CSS and paste the rules into your stylesheet."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A CSS sprite is a single image file that contains many smaller images arranged side by side.",
+      "Websites use sprites for icons, buttons and logos to reduce the number of server requests.",
+      "Each sprite is shown with CSS background-image plus a negative background-position offset.",
+      "Horizontal, vertical and grid layouts are all supported; grid needs a column count.",
+      "Padding around each image prevents neighboring sprites from bleeding into view.",
+      "The generated CSS class names are built from your file names, so name files clearly before uploading."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sprite generator, css sprite generator, sprite sheet maker, combine images css, background position generator",
+    "labels": {
+      "columnsLabel": "Grid columns",
+      "copiedLabel": "Copied",
+      "copyCss": "Copy CSS",
+      "countLabel": "Images combined",
+      "cssLabel": "Generated CSS",
+      "downloadPng": "Download PNG sheet",
+      "dropHint": "Click to choose images (or drag and drop them here)",
+      "emptyNote": "Upload at least one image to start building your sprite sheet.",
+      "errorLoad": "Could not read that image file.",
+      "errorSize": "Each image must be smaller than 10 MB.",
+      "errorType": "Only image files are accepted.",
+      "gridTab": "Grid",
+      "horizontalTab": "Horizontal",
+      "layoutLabel": "Layout",
+      "paddingLabel": "Padding between images",
+      "prefixLabel": "CSS class prefix",
+      "removeLabel": "Remove",
+      "sheetAlt": "Generated sprite sheet preview",
+      "sheetSizeLabel": "Sheet size",
+      "verticalTab": "Vertical"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Very large source images create very large sheets; sprites suit icons and small graphics best.",
+      "All images keep their original size; the tool does not resize or compress them.",
+      "Class names are derived from file names, so odd characters are replaced with dashes.",
+      "Adding one new icon later usually means regenerating the whole sheet."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Pack multiple images into one CSS sprite sheet and get ready-to-use CSS background-position code instantly. Free online tool.",
+    "metaTitle": "CSS Sprite Generator - Sprites + Ready CSS | JaurTools",
+    "name": "CSS Sprite Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A sprite generator packs several small images into one larger image (a sprite sheet) and writes the CSS background-position rules for you. This cuts the number of HTTP requests your page makes, which usually means faster loading. Upload your images, choose horizontal, vertical or grid layout, set the padding, then download the PNG sheet and copy the CSS.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sprite generator results",
+    "tagline": "One sheet, zero extra requests.",
+    "workedExample": "You upload three 32 × 32 px icons and choose horizontal layout with 8 px padding.\n\nSheet width = 32 + 32 + 32 + 8 × (3 + 1) = 96 + 32 = 128 px.\nSheet height = 32 + 8 × 2 = 48 px.\n\nThe generated CSS positions are: icon 1 at -8px -8px, icon 2 at -48px -8px, icon 3 at -88px -8px. Each class also carries its own width and height of 32 px, so the browser shows exactly one icon per element.",
+    "workedExampleHeading": "Worked example"
+  }
+}

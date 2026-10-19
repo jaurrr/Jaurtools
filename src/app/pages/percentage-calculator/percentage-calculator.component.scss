@@ -1,0 +1,275 @@
+@use '../../../styles/cat-calc';
+
+.tool-page {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 1rem 1rem 2rem;
+  color: var(--text);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-block-end: 1rem;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 1rem;
+}
+
+.quick {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-inline-start: 4px solid var(--accent);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.65;
+}
+
+.layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(20rem, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+
+  .tool-col {
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+.tool-col,
+.guide-col {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.tool-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-block-end: 1rem;
+  color: var(--accent);
+}
+
+.pct-badge {
+  gap: 0.35rem;
+}
+
+.pct-badge.is-up {
+  background: color-mix(in srgb, #22c55e 14%, transparent);
+  border-color: color-mix(in srgb, #22c55e 45%, transparent);
+  color: #15803d;
+}
+
+.pct-badge.is-down {
+  background: color-mix(in srgb, #ef4444 14%, transparent);
+  border-color: color-mix(in srgb, #ef4444 45%, transparent);
+  color: #b91c1c;
+}
+
+[data-theme='dark'] .pct-badge.is-up {
+  color: #86efac;
+}
+
+[data-theme='dark'] .pct-badge.is-down {
+  color: #fca5a5;
+}
+
+.calc-num.is-up {
+  background: none;
+  color: #15803d;
+}
+
+.calc-num.is-down {
+  background: none;
+  color: #b91c1c;
+}
+
+[data-theme='dark'] .calc-num.is-up {
+  color: #86efac;
+}
+
+[data-theme='dark'] .calc-num.is-down {
+  color: #fca5a5;
+}
+
+.tool-title {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.inputs {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 420px) {
+  .inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field-label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: 0.5rem;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.check-list,
+.warn-list,
+.steps {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  display: grid;
+  gap: 0.55rem;
+  line-height: 1.65;
+}
+
+.pros-cons {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .pros-cons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.privacy {
+  border-inline-start: 4px solid var(--accent);
+}
+
+.faq details {
+  border-block-start: 1px solid var(--border);
+  padding: 0.25rem 0;
+}
+
+.faq details:last-of-type {
+  border-block-end: 1px solid var(--border);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.faq details p {
+  color: var(--muted);
+  padding-block-end: 0.75rem;
+  line-height: 1.7;
+}
+
+.related {
+  margin-block-start: 1.5rem;
+}
+
+.related-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.related-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.related-card:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.reviewed {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 2rem 0 0;
+}

@@ -1,0 +1,92 @@
+{
+  "right-triangle-calculator": {
+    "benefits": [
+      "Solves the entire triangle from just two sides.",
+      "Angles, area and perimeter in one view.",
+      "Two input modes cover the common homework cases.",
+      "Guard rails block impossible triangles.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Enter any two sides you know. A right triangle is fully determined by two sides, because the third side follows from the Pythagorean theorem and the angles from trigonometry.",
+        "q": "What do I need to know to solve a right triangle?"
+      },
+      {
+        "a": "Use the tangent: angle = arctan(opposite / adjacent). Opposite the side of length a with adjacent side b, angle A = arctan(a / b).",
+        "q": "How do I find an angle from two sides?"
+      },
+      {
+        "a": "The acute angles always add to 90 degrees, so the second angle is 90 minus the first. The right angle itself is always 90 degrees.",
+        "q": "Why do the two acute angles add to 90 degrees?"
+      },
+      {
+        "a": "Half the product of the legs: area = (a × b) / 2. The legs are perpendicular, so they serve as base and height.",
+        "q": "What is the area formula?"
+      },
+      {
+        "a": "Check the order: when you give a leg and the hypotenuse, the hypotenuse must be the longest side. Increase it or fix the leg value.",
+        "q": "Why does the calculator show a note instead of answers?"
+      }
+    ],
+    "formula": "c = √(a² + b²)\nAngle A = arctan(a / b)\nAngle B = 90° - A\nArea = (a × b) / 2\nPerimeter = a + b + c",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose what you know: two legs, or a leg plus the hypotenuse.",
+      "Enter the side lengths.",
+      "The calculator solves all sides and angles instantly.",
+      "Read the area and perimeter too.",
+      "Switch modes if your known values are different."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Two sides fully determine a right triangle.",
+      "The hypotenuse comes from the Pythagorean theorem: c = √(a² + b²).",
+      "Angles come from inverse trig: A = arctan(a / b).",
+      "The two acute angles always sum to 90 degrees.",
+      "Area is half the product of the legs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "right triangle calculator, solve right triangle, right triangle angles, hypotenuse area perimeter, trigonometry calculator",
+    "labels": {
+      "angleALabel": "Angle A",
+      "angleBLabel": "Angle B",
+      "areaLabel": "Area",
+      "hypLabel": "Hypotenuse c",
+      "invalidNote": "Enter positive sides, and make sure the hypotenuse is the longest side.",
+      "mode": {
+        "legHyp": "Leg + hypotenuse",
+        "legs": "Two legs"
+      },
+      "modeLabel": "Known values",
+      "perimeterLabel": "Perimeter",
+      "sideALabel": "Side a (leg)",
+      "sideBLabel": "Side b (leg)",
+      "sideCLabel": "Side c (hypotenuse)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only right triangles — not acute or obtuse ones.",
+      "Sides must be positive and the hypotenuse the longest.",
+      "Angle results are decimal approximations.",
+      "Cannot solve from angles alone without a side."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free right triangle calculator: enter two sides to get all sides, angles, area and perimeter. Fully browser-based, no sign-up.",
+    "metaTitle": "Right Triangle Calculator — Sides, Angles, Area",
+    "name": "Right Triangle Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A right triangle is fully solved from any two sides. The missing side comes from the Pythagorean theorem, the acute angles from inverse tangent, the area from half the product of the legs, and the perimeter from the sum of all three sides.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Triangle solution",
+    "tagline": "Get every side, angle, area and perimeter.",
+    "workedExample": "A right triangle has legs a = 3 and b = 4.\n\nc = √(3² + 4²) = √25 = 5.\nAngle A = arctan(3 / 4) ≈ 36.87°.\nAngle B = 90° - 36.87° ≈ 53.13°.\nArea = (3 × 4) / 2 = 6.\nPerimeter = 3 + 4 + 5 = 12.\n\nThe classic 3-4-5 triangle, fully solved.",
+    "workedExampleHeading": "Worked example"
+  }
+}

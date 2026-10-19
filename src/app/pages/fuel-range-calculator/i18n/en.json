@@ -1,0 +1,95 @@
+{
+  "fuel-range-calculator": {
+    "assumptionNote": "Range assumes steady mileage. City traffic, AC use, hills, and aggressive driving all reduce real-world range — keep a safety margin and refuel before the tank is truly empty.",
+    "benefits": [
+      "Know exactly how far you can drive before needing fuel.",
+      "Plan refuelling stops on long trips with confidence.",
+      "See the full-tank cost before you reach the pump.",
+      "Your numbers stay private in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Range = fuel in the tank (litres) x mileage (km per litre). With 12 litres at 15 km/L, range = 12 x 15 = 180 km.",
+        "q": "How is driving range calculated?"
+      },
+      {
+        "a": "Your real mileage comes from experience: fill the tank, note the odometer, drive normally, refill, and divide the kilometres driven by the litres added. Do this over 2–3 tanks for a reliable average.",
+        "q": "How do I find my vehicle's real mileage?"
+      },
+      {
+        "a": "Fill needed = tank capacity - current fuel. Cost = fill needed x price per litre. With a 40 L tank, 12 L inside, and fuel at 100 per litre: (40 - 12) x 100 = 2,800.",
+        "q": "How is the full-tank cost calculated?"
+      },
+      {
+        "a": "Real mileage drops in traffic, with the AC on, on hills, and with aggressive acceleration. The calculator shows the ideal range — keep a 10–15% safety margin on unfamiliar routes.",
+        "q": "Why is my real range less than calculated?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser's memory; nothing is uploaded or stored.",
+        "q": "Is my data private?"
+      },
+      {
+        "a": "Yes. Fill-needed and cost work for any vehicle — just enter the right tank capacity and mileage.",
+        "q": "Does this work for bikes and trucks too?"
+      }
+    ],
+    "formula": "Current range (km) = current fuel (L) x mileage (km/L)\nFull-tank range (km) = tank capacity (L) x mileage (km/L)\nFuel to fill (L) = tank capacity - current fuel\nFill cost = fuel to fill x price per litre\nFuel level (%) = (current fuel / tank capacity) x 100",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your tank's full capacity in litres.",
+      "Enter how much fuel is currently in the tank.",
+      "Enter your vehicle's mileage in km per litre.",
+      "Enter the current fuel price per litre.",
+      "Read your driving range, full-tank range, fuel needed, and fill cost instantly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Driving range = fuel in the tank x mileage (km per litre).",
+      "Full-tank range tells you the maximum distance on one complete fill.",
+      "Fuel-to-fill and its cost are computed from tank capacity minus current fuel.",
+      "The fuel bar shows your tank level as a percentage at a glance.",
+      "Current fuel can never exceed tank capacity — the tool enforces this."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "fuel range calculator, driving range calculator, mileage calculator, fuel cost calculator, how far can I drive calculator",
+    "labels": {
+      "capacityLabel": "Tank capacity",
+      "currency": "₹",
+      "currentFuelLabel": "Fuel in tank now",
+      "currentRangeLabel": "Your driving range",
+      "fillCostLabel": "Cost to fill the tank",
+      "fillNeededLabel": "Fuel needed for full tank",
+      "fuelPercentLabel": "Tank level",
+      "fullRangeLabel": "Full-tank range",
+      "mileageLabel": "Mileage",
+      "priceLabel": "Fuel price",
+      "unitKm": "km",
+      "unitKmL": "km/L",
+      "unitL": "L"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes steady mileage; traffic, AC, hills, and driving style change real range.",
+      "No reserve-fuel modeling — refuel before the tank runs dry.",
+      "Currency is a display symbol only; no conversion is performed.",
+      "No data is saved between visits."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free fuel range calculator: enter tank capacity, current fuel, and mileage to get driving range, full-tank range, and fill cost. Private, no signup.",
+    "metaTitle": "Fuel Range Calculator — Driving Range & Fill Cost",
+    "name": "Fuel Range Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Fuel Range Calculator tells you exactly how far your fuel will take you. Enter your tank capacity, current fuel level, mileage, and fuel price to instantly see your driving range, full-tank range, how much fuel you need for a full tank, and what that fill will cost. Everything runs privately in your browser with no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Fuel Range Calculator results",
+    "tagline": "How far will your fuel take you? Range, full-tank distance, and fill cost.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A car has a 40-litre tank with 12 litres inside, mileage of 15 km/L, and fuel priced at 100 per litre. Current range = 12 x 15 = 180 km. Full-tank range = 40 x 15 = 600 km. Fuel needed for a full tank = 40 - 12 = 28 litres. Fill cost = 28 x 100 = 2,800. Tank level = (12 / 40) x 100 = 30.0%. So the driver can go 180 km now, and a full tank costs 2,800."
+  }
+}

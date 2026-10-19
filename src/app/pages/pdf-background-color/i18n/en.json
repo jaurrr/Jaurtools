@@ -1,0 +1,96 @@
+{
+  "pdf-background-color": {
+    "name": "PDF Background Color",
+    "tagline": "Give every PDF page a colored background — reading tints, brand colors, dark mode.",
+    "metaTitle": "PDF Background Color — Change PDF Page Color Online Free | JaurTools",
+    "metaDescription": "Add a background color to PDF pages online for free. Pick any color, set opacity, preview live, and download. Great for reading tints and branded documents. Private in-browser tool.",
+    "keywords": "pdf background color, change pdf background, pdf page color, colored pdf background online",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Color the pages",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Pick any color (or type a hex code), set how strong it is, preview it live on a sample page, and the tool paints that color behind every page of your PDF — your text and images stay exactly where they were, on top.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "The color is drawn as a full-page rectangle behind your existing content.",
+      "Opacity from 5% to 100%: a soft reading tint or a bold brand background.",
+      "8 curated presets plus a full color picker and hex-code input.",
+      "Text, vector graphics, and images all stay on top of the color.",
+      "The live mock preview updates instantly as you pick colors."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Upload your PDF (up to 50 MB).",
+      "Choose a preset swatch, pick a custom color, or type a hex code like #dbeafe.",
+      "Adjust opacity and watch the live preview.",
+      "Click apply and download the recolored PDF."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "final_pixel = background × opacity + page × (1 − opacity)\n\nwhere background = your chosen RGB color. At 100% opacity the page behind is fully covered; at 20% you get a gentle tint. The rectangle is drawn first in the page graphics stream, so all original content renders on top of it.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A 200-page ebook with harsh white pages: choose #fef3c7 (warm paper) at 100% opacity. Every page gets a warm paper background while the text stays exactly as printed — easier on the eyes for long reading sessions, in one download.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Reading tints reduce eye strain on long documents.",
+      "Brand-colored pages for proposals, menus, and certificates.",
+      "Live preview — see the exact color before processing.",
+      "Hex input for precise brand colors.",
+      "No upload; your documents stay on your device."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Pages that are full-bleed photos or scans won't show the color — the image covers it.",
+      "Existing colored backgrounds are covered, not blended, at 100% opacity.",
+      "Very dark backgrounds can make dark text hard to read — preview first.",
+      "Some printers charge more for full-page color; consider this before printing."
+    ],
+    "privacyNote": "Recoloring happens entirely in your browser. Your PDF is never uploaded.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "How does the background color work?",
+        "a": "The tool draws a full-page colored rectangle behind your page content, then places your original page on top. Text and images are untouched — they just sit on a colored sheet now."
+      },
+      {
+        "q": "Why can I not see the color on some pages?",
+        "a": "If a page is a full-page photo or scan, that image covers the color completely. The background shows wherever the page itself is blank or transparent."
+      },
+      {
+        "q": "What is a good opacity for reading?",
+        "a": "For reading tints, 100% opacity with a light color (like warm paper #fef3c7) works best. Lower opacities are for subtle effects over existing designs."
+      },
+      {
+        "q": "Can I use my brand exact color?",
+        "a": "Yes — type the hex code (e.g. #1e3a8a) into the color field for a precise match."
+      },
+      {
+        "q": "Will it print the background?",
+        "a": "Yes, the color is part of the PDF. Note that PDF viewers have a 'print backgrounds' setting, and full-page color uses more ink."
+      },
+      {
+        "q": "Does it work in dark mode?",
+        "a": "The preview adapts to your theme. For a dark-reading effect, pick a dark color like #1e293b — light text stays readable on top."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "fileLabel": "PDF file",
+      "fileHint": "PDF up to 50 MB",
+      "colorLabel": "Background color",
+      "customLabel": "Custom color",
+      "previewLabel": "Live preview",
+      "opacityLabel": "Color strength",
+      "pagesLabel": "pages",
+      "buildButton": "Apply background",
+      "downloadButton": "Download PDF",
+      "busy": "Applying…",
+      "statusDone": "Background applied to {n} pages.",
+      "errType": "Please choose a valid PDF file.",
+      "errSize": "File is larger than 50 MB.",
+      "errRead": "Could not read this PDF.",
+      "errBuild": "Could not apply the background."
+    }
+  }
+}

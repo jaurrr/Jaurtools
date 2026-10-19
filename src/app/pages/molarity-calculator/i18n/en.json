@@ -1,0 +1,94 @@
+{
+  "molarity-calculator": {
+    "assumptionNote": "Assumes the solute dissolves fully in the stated final volume of solution. Volume changes on mixing and incomplete dissolving are not modeled.",
+    "benefits": [
+      "Prepare lab solutions correctly: get the exact grams to weigh for any target molarity.",
+      "Convert between mass and moles without looking up formulas each time.",
+      "Check homework and exam answers with a trusted reference calculation.",
+      "Scale recipes up or down: doubling the volume at the same molarity doubles the mass needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Molarity (M) = moles of solute / liters of solution. It tells you how concentrated a solution is. A 1 M solution has 1 mole dissolved in each liter.",
+        "q": "What is molarity?"
+      },
+      {
+        "a": "Molarity counts moles per liter. Molality counts moles per kilogram of solvent. They are close for dilute water solutions but differ for concentrated ones.",
+        "q": "What is the difference between molarity and molality?"
+      },
+      {
+        "a": "Molar mass = the mass of one mole of the substance in g/mol. NaCl is 58.44, glucose (C6H12O6) is 180.16, water is 18.015. Sum the atomic masses of the formula.",
+        "q": "How do I find the molar mass?"
+      },
+      {
+        "a": "Rearrange the formula: mass = molarity x volume x molar mass. For 0.5 L of 1 M NaCl: 1 x 0.5 x 58.44 = 29.22 g.",
+        "q": "How many grams do I need for a target molarity?"
+      },
+      {
+        "a": "Yes: 1 M = 1000 mM. This calculator shows both units. Biology and medicine often use mM or uM for dilute solutions.",
+        "q": "Can I convert between M and mM?"
+      },
+      {
+        "a": "Molarity changes with temperature because liquids expand. If exact work matters, prepare solutions at the lab's working temperature and use volumetric glassware.",
+        "q": "Does temperature affect molarity?"
+      }
+    ],
+    "formula": "Molarity (M) = Moles of solute / Liters of solution\n\nFrom mass: Moles = Mass (g) / Molar mass (g/mol)\nCombined: M = [Mass / Molar mass] / Volume (L)\n\nExample: 58.44 g NaCl (molar mass 58.44 g/mol) in 1 L = (58.44 / 58.44) / 1 = 1.0000 M.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your input: from mass (enter grams and molar mass) or from moles directly.",
+      "Enter the final volume of the solution in liters.",
+      "The molarity appears instantly in mol/L (M) and millimolar (mM).",
+      "For lab work, weigh out the mass shown and dissolve it in the target volume."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Molarity = moles of solute per liter of solution, written as M or mol/L.",
+      "1 M = 1000 mM = 1,000,000 uM.",
+      "Moles = mass (g) / molar mass (g/mol).",
+      "The volume is the final solution volume, not just the water added.",
+      "Avogadro's number: 1 mole = 6.022 x 10^23 particles.",
+      "Standard lab solutions are often 0.1 M or 1 M.",
+      "Dilution follows M1 x V1 = M2 x V2.",
+      "Molarity is temperature-dependent because liquid volumes expand when warm."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "molarity calculator, molar concentration calculator, moles to molarity, molarity from mass, solution concentration calculator",
+    "labels": {
+      "fromMass": "From mass",
+      "fromMoles": "From moles",
+      "inputMode": "Input mode",
+      "massGrams": "Mass of solute (g)",
+      "millimolar": "Millimolar",
+      "molarMass": "Molar mass (g/mol)",
+      "molarity": "Molarity",
+      "moles": "Moles of solute",
+      "molesUsed": "Moles used",
+      "volumeLiters": "Solution volume (L)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes complete dissolving and no volume change on mixing.",
+      "Does not model ionic strength, activity, or non-ideal solutions.",
+      "Molar mass must be correct. Double-check the chemical formula first.",
+      "For precision lab work, use calibrated volumetric glassware and the lab temperature."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free molarity calculator: find molar concentration from mass or moles and solution volume. Results in M and mM. Private, no sign-up.",
+    "metaTitle": "Molarity Calculator - Molar Concentration | JaurTools",
+    "name": "Molarity Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Molarity = moles / liters of solution. Dissolving 58.44 g of NaCl (molar mass 58.44 g/mol, so 1 mole) in 1 liter of solution gives exactly 1.0000 M. Enter your mass, molar mass, and volume above for any solution.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your molarity results",
+    "tagline": "Find molar concentration from mass or moles - with results in M and mM.",
+    "workedExample": "58.44 g NaCl, molar mass 58.44 g/mol, final volume 1 L.\n1. Moles = 58.44 / 58.44 = 1.0000 mol.\n2. Molarity = 1.0000 / 1 = 1.0000 M.\n3. In millimolar: 1.0000 x 1000 = 1000.0000 mM.\n\nAnother: 2 moles in 0.5 L = 2 / 0.5 = 4.0000 M.",
+    "workedExampleHeading": "Worked example"
+  }
+}

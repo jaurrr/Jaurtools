@@ -1,0 +1,93 @@
+{
+  "bulk-qr-code-generator": {
+    "benefits": [
+      "Generate dozens of QR codes in one click instead of one by one.",
+      "Every code uses the same error-correction and size settings, so prints look consistent.",
+      "Download each PNG individually with a clear qr-1, qr-2 filename.",
+      "Your list never leaves the browser. Supplier URLs and internal codes stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "L for low (7 percent recoverable), M for medium (15 percent), Q for quartile (25 percent), H for high (30 percent). Higher levels survive damage and logos but make the code denser. M is the right default for clean prints; use Q or H for outdoor labels or codes printed very small.",
+        "q": "Which error correction level should I pick?"
+      },
+      {
+        "a": "Up to 50 codes per batch. That cap keeps the page fast on phones. For larger runs, split your list and generate twice; the settings stay as you left them.",
+        "q": "How many QR codes can I generate at once?"
+      },
+      {
+        "a": "A Version-40 QR code holds up to 4,296 alphanumeric characters, but long text makes a very dense code that is hard to scan. Keep each line under about 100 characters for reliable scanning, and use short URLs where possible.",
+        "q": "How much text can one QR code hold?"
+      },
+      {
+        "a": "Yes. Every code is generated locally by the qrcode library in your browser. Nothing is sent to any server, so internal SKUs, private links, and WiFi details stay on your device.",
+        "q": "Is my list uploaded anywhere?"
+      },
+      {
+        "a": "Usually the text is simply too long or contains characters the encoder rejects at the chosen settings. Shorten the line and try again. If it still fails, generate that single code with error correction L.",
+        "q": "Why did one of my codes fail?"
+      },
+      {
+        "a": "The PNG downloads at the pixel size you selected: 256, 512, or 1024. For print, pick 1024 and place the image at a physical size of at least 2 x 2 cm. PNG is raster, so do not enlarge it far beyond its pixel size.",
+        "q": "What print size should I use?"
+      }
+    ],
+    "formula": "Batch: lines = input split by newline, trimmed, empties removed, capped at 50.\nEach code: QR(text, errorCorrectionLevel, width, margin = 2) -> PNG data URL.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your list: one URL or text per line.",
+      "Choose the error correction level (M is a safe default) and PNG size.",
+      "Click Generate. Each line becomes a QR code in the grid below.",
+      "Download the codes you need with the button under each one.",
+      "For more than 50 lines, split the list and run a second batch."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "A QR code stores text, URLs, or contact data in a square grid that phones scan with the camera.",
+      "This tool turns a whole list into QR codes at once: one line of text becomes one code.",
+      "Error correction (L, M, Q, H) lets a code still scan when partly damaged or dirty. Level M recovers 15 percent of the data.",
+      "All generation happens in your browser with the open-source qrcode library. No uploads, no watermarks.",
+      "PNG downloads are named qr-1.png, qr-2.png, and so on, in list order."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bulk qr code generator, multiple qr codes at once, batch qr code generator, qr code list generator, free bulk qr generator",
+    "labels": {
+      "clear": "Clear",
+      "downloadOne": "Download",
+      "ecLabel": "Error correction",
+      "generate": "Generate QR codes",
+      "generating": "Generating...",
+      "inputLabel": "One URL or text per line",
+      "inputPlaceholder": "https://example.com/product-1\nhttps://example.com/product-2\nTABLE-12",
+      "itemFailed": "This line could not be encoded. Try shortening it.",
+      "lineCount": "Lines detected",
+      "resultsCount": "QR codes",
+      "sizeLabel": "PNG size",
+      "trimmedNote": "Only the first 50 lines were generated. Split longer lists into batches."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Maximum 50 codes per batch. Larger lists must be split.",
+      "Each PNG downloads separately. There is no single ZIP download in this version.",
+      "Very long lines make dense codes that scan poorly. Keep lines short.",
+      "PNG is raster: enlarging far beyond the chosen pixel size blurs the code."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free bulk QR code generator: paste a list and create up to 50 QR codes at once in your browser. Download each as PNG. No sign-up, fully private.",
+    "metaTitle": "Bulk QR Code Generator - Up to 50 Codes at Once | JaurTools",
+    "name": "Bulk QR Code Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a list with one URL or text per line and generate up to 50 QR codes in a single click, each downloadable as a PNG. Error correction and pixel size apply to the whole batch. Everything is generated locally in your browser, so private lists never leave your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your QR codes",
+    "tagline": "Paste a list, get up to 50 QR codes at once. Each downloads as PNG.",
+    "workedExample": "A cafe owner needs table QR codes:\n1. She pastes 3 lines: https://example.com/menu, https://example.com/menu?table=5, TABLE-12.\n2. Error correction M, size 512 px. Clicks Generate.\n3. Three QR codes appear: qr-1.png, qr-2.png, qr-3.png.\n4. She downloads each, prints them at 4 x 4 cm, and sticks one on every table.\nScanning any code opens the right menu link on the customer's phone.",
+    "workedExampleHeading": "Worked example"
+  }
+}

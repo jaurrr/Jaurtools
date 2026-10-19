@@ -1,0 +1,93 @@
+{
+  "standard-deviation-calculator": {
+    "benefits": [
+      "Computes both population and sample standard deviation — and explains which one to use.",
+      "Shows variance, mean and count alongside, so you see the full picture.",
+      "No statistics software or spreadsheet formulas to wrestle with.",
+      "Accepts pasted lists with commas, spaces or line breaks.",
+      "Private by design: everything is calculated in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use population SD (σ) when your data is the entire group you care about — e.g. every student in a class. Use sample SD (s) when your data is a subset used to estimate a larger group — e.g. 200 surveyed voters standing in for a whole city.",
+        "q": "Population or sample — which should I choose?"
+      },
+      {
+        "a": "Bessel's correction divides by n−1 instead of n. A sample tends to underestimate the true spread, and n−1 corrects that bias, giving a slightly larger and more honest estimate.",
+        "q": "Why does sample variance divide by n−1?"
+      },
+      {
+        "a": "Standard deviation is in the same units as your data, while variance is in squared units. If your data is in centimeters, the SD is in centimeters (easy to interpret) but the variance is in cm².",
+        "q": "What is the difference between variance and standard deviation?"
+      },
+      {
+        "a": "The empirical rule: for roughly bell-shaped data, about 68% of values fall within one SD of the mean, 95% within two SDs, and 99.7% within three SDs.",
+        "q": "What does one standard deviation from the mean mean?"
+      },
+      {
+        "a": "A single value has no spread — deviation from itself is zero. The tool needs at least two values for sample SD (division by n−1) and at least one for population SD.",
+        "q": "Why does it need at least two numbers?"
+      }
+    ],
+    "formula": "Mean:  x̄ = Σx / n\n\nPopulation variance:  σ² = Σ(x − x̄)² / n\nPopulation SD:        σ  = √(Σ(x − x̄)² / n)\n\nSample variance:  s² = Σ(x − x̄)² / (n − 1)   (Bessel's correction)\nSample SD:        s  = √(Σ(x − x̄)² / (n − 1))",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your numbers, separated by commas, spaces or line breaks.",
+      "Choose Population if your data is the whole group, or Sample if it is a subset.",
+      "The headline result shows the standard deviation for your chosen type.",
+      "Compare both population and sample values in the rows below.",
+      "Check the mean, variance and count to sanity-check your data."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Standard deviation measures spread: how far values typically sit from the mean.",
+      "Variance is the average of the squared deviations; SD is its square root.",
+      "Sample SD divides by n−1 (Bessel's correction); population SD divides by n.",
+      "A larger SD means more spread-out data; an SD of 0 means all values are identical.",
+      "SD is in the same units as your data, which makes it easy to interpret."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "standard deviation calculator, SD calculator, population vs sample standard deviation, variance calculator",
+    "labels": {
+      "count": "Count",
+      "emptyNote": "Enter at least one number to calculate.",
+      "ignoredNote": "Non-numeric entries ignored",
+      "inputLabel": "Your numbers",
+      "inputPlaceholder": "Example: 2, 4, 4, 4, 5, 5, 7, 9",
+      "mean": "Mean",
+      "population": "Population",
+      "populationSd": "Population SD (σ)",
+      "populationShort": "population",
+      "sample": "Sample",
+      "sampleSd": "Sample SD (s)",
+      "sampleShort": "sample",
+      "stdDev": "Standard deviation",
+      "typeLabel": "Data type",
+      "variance": "Variance"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "SD describes spread around the mean — for heavily skewed data the median and IQR may be more meaningful.",
+      "A single extreme outlier can inflate the SD dramatically.",
+      "Sample SD with fewer than ~30 values is itself an imprecise estimate.",
+      "The tool computes descriptive statistics; it does not test hypotheses."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free standard deviation calculator: paste your data to get population and sample SD, variance, mean and count. Plain-English guidance included.",
+    "metaTitle": "Standard Deviation Calculator — Population & Sample SD",
+    "name": "Standard Deviation Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your numbers — for example 2, 4, 4, 4, 5, 5, 7, 9 — and get the standard deviation instantly: population SD = 2, sample SD ≈ 2.138. Choose Population when your data is the whole group, Sample when it is a subset.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Deviation results",
+    "tagline": "Population and sample standard deviation, variance and mean from your data.",
+    "workedExample": "Data: 2, 4, 4, 4, 5, 5, 7, 9  (n = 8)\nMean: (2+4+4+4+5+5+7+9) / 8 = 40 / 8 = 5\nSquared deviations: 9, 1, 1, 1, 0, 0, 4, 16 → sum = 32\n\nPopulation: variance = 32 / 8 = 4,  SD = √4 = 2\nSample: variance = 32 / 7 ≈ 4.5714,  SD = √4.5714 ≈ 2.1381",
+    "workedExampleHeading": "Worked example"
+  }
+}

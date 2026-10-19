@@ -1,0 +1,194 @@
+<div class="tool-page fin-type-invoice">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="inv-business">{{ t('labels.businessName') }}</label>
+        <input id="inv-business" type="text" [ngModel]="businessName()"
+          (ngModelChange)="setBusinessName($event)" />
+      </div>
+
+      <div class="field">
+        <label for="inv-client">{{ t('labels.clientName') }}</label>
+        <input id="inv-client" type="text" [ngModel]="clientName()"
+          (ngModelChange)="setClientName($event)" />
+      </div>
+
+      <div class="field">
+        <label for="inv-no">{{ t('labels.invoiceNo') }}</label>
+        <input id="inv-no" type="text" [ngModel]="invoiceNo()"
+          (ngModelChange)="setInvoiceNo($event)" />
+      </div>
+
+      <div class="field">
+        <label for="inv-date">{{ t('labels.invoiceDate') }}</label>
+        <input id="inv-date" type="date" [ngModel]="invoiceDate()"
+          (ngModelChange)="setInvoiceDate($event)" />
+      </div>
+
+      <div class="field">
+        <label for="inv-currency">{{ t('labels.currency') }}</label>
+        <select id="inv-currency" [ngModel]="currency()" (ngModelChange)="setCurrency($event)">
+          <option value="USD">{{ t('labels.usd') }}</option>
+          <option value="EUR">{{ t('labels.eur') }}</option>
+          <option value="INR">{{ t('labels.inr') }}</option>
+          <option value="GBP">{{ t('labels.gbp') }}</option>
+          <option value="SAR">{{ t('labels.sar') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="inv-discount">{{ t('labels.discountRate') }}</label>
+        <input id="inv-discount" type="number" inputmode="decimal" min="0" max="100" step="0.5"
+          [ngModel]="discountRate()" (ngModelChange)="setDiscountRate($event)" />
+      </div>
+
+      <div class="field">
+        <label for="inv-tax">{{ t('labels.taxRate') }}</label>
+        <input id="inv-tax" type="number" inputmode="decimal" min="0" max="100" step="0.5"
+          [ngModel]="taxRate()" (ngModelChange)="setTaxRate($event)" />
+      </div>
+
+      <h3 class="items-heading">{{ t('labels.itemsHeading') }}</h3>
+      @for (item of items(); track $index) {
+        <div class="item-row">
+          <input type="text" [attr.aria-label]="t('labels.description')"
+            [placeholder]="t('labels.description')"
+            [ngModel]="item.desc" (ngModelChange)="setItemDesc($index, $event)" />
+          <input type="number" inputmode="decimal" min="0" [attr.aria-label]="t('labels.qty')"
+            [placeholder]="t('labels.qty')"
+            [ngModel]="item.qty" (ngModelChange)="setItemQty($index, $event)" />
+          <input type="number" inputmode="decimal" min="0" [attr.aria-label]="t('labels.rate')"
+            [placeholder]="t('labels.rate')"
+            [ngModel]="item.rate" (ngModelChange)="setItemRate($index, $event)" />
+          <strong>{{ currencySymbol() }}{{ moneyFmt().format(item.qty * item.rate) }}</strong>
+          <button type="button" class="btn secondary" (click)="removeItem($index)">
+            {{ t('labels.remove') }}
+          </button>
+        </div>
+      }
+      <div class="btn-row">
+        <button type="button" class="btn secondary" (click)="addItem()">
+          {{ t('labels.addItem') }}
+        </button>
+      </div>
+
+      <ul class="fin-payslip">
+        <li>
+          <span>{{ t('labels.subtotal') }}</span><i class="fin-dots" aria-hidden="true"></i>
+          <strong>{{ currencySymbol() }}{{ moneyFmt().format(subtotal()) }}</strong>
+        </li>
+        <li class="fin-deduct">
+          <span>{{ t('labels.discount') }} ({{ discountRate() }}%)</span><i class="fin-dots" aria-hidden="true"></i>
+          <strong>−{{ currencySymbol() }}{{ moneyFmt().format(discountAmt()) }}</strong>
+        </li>
+        <li>
+          <span>{{ t('labels.tax') }} ({{ taxRate() }}%)</span><i class="fin-dots" aria-hidden="true"></i>
+          <strong>{{ currencySymbol() }}{{ moneyFmt().format(taxAmt()) }}</strong>
+        </li>
+        <li class="fin-total">
+          <span><app-icon name="file-text" /> {{ t('labels.total') }}</span><i class="fin-dots" aria-hidden="true"></i>
+          <strong>{{ currencySymbol() }}{{ moneyFmt().format(total()) }}</strong>
+        </li>
+      </ul>
+
+      <div class="btn-row">
+        <button type="button" class="btn" (click)="downloadPdf()">
+          <app-icon name="download" /> {{ t('labels.downloadPdf') }}
+        </button>
+      </div>
+      <p class="note fin-note">{{ t('labels.pdfNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,189 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="motor-power">{{ t('labels.power') }}</label>
+        <div class="input-row">
+          <input id="motor-power" type="number" inputmode="decimal" min="0" max="10000" step="0.5"
+            [ngModel]="power()" (ngModelChange)="setPower($event)" />
+          <input type="range" min="0" max="100" step="0.5" [ngModel]="power()"
+            (ngModelChange)="setPower($event)" [attr.aria-label]="t('labels.power')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.powerUnit')">
+        <button type="button" [class.active]="powerUnit() === 'hp'" (click)="setPowerUnit('hp')">
+          {{ t('labels.hpTab') }}
+        </button>
+        <button type="button" [class.active]="powerUnit() === 'kw'" (click)="setPowerUnit('kw')">
+          {{ t('labels.kwTab') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="motor-phases">{{ t('labels.phases') }}</label>
+        <select id="motor-phases" [ngModel]="phases()" (ngModelChange)="setPhases(+$event)">
+          <option [ngValue]="1">{{ t('labels.singlePhase') }}</option>
+          <option [ngValue]="3">{{ t('labels.threePhase') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="motor-voltage">{{ t('labels.voltage') }}</label>
+        <div class="input-row">
+          <input id="motor-voltage" type="number" inputmode="decimal" min="1" max="33000" step="1"
+            [ngModel]="voltage()" (ngModelChange)="setVoltage($event)" />
+          <input type="range" min="110" max="660" step="1" [ngModel]="voltage()"
+            (ngModelChange)="setVoltage($event)" [attr.aria-label]="t('labels.voltage')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="motor-eff">{{ t('labels.efficiency') }}</label>
+        <div class="input-row">
+          <input id="motor-eff" type="number" inputmode="decimal" min="1" max="100" step="0.5"
+            [ngModel]="efficiency()" (ngModelChange)="setEfficiency($event)" />
+          <input type="range" min="50" max="99" step="0.5" [ngModel]="efficiency()"
+            (ngModelChange)="setEfficiency($event)" [attr.aria-label]="t('labels.efficiency')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="motor-pf">{{ t('labels.powerFactor') }}</label>
+        <div class="input-row">
+          <input id="motor-pf" type="number" inputmode="decimal" min="0.01" max="1" step="0.01"
+            [ngModel]="powerFactor()" (ngModelChange)="setPowerFactor($event)" />
+          <input type="range" min="0.5" max="1" step="0.01" [ngModel]="powerFactor()"
+            (ngModelChange)="setPowerFactor($event)" [attr.aria-label]="t('labels.powerFactor')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="motor-mult">{{ t('labels.multiplier') }}</label>
+        <div class="input-row">
+          <input id="motor-mult" type="number" inputmode="decimal" min="1" max="12" step="0.5"
+            [ngModel]="multiplier()" (ngModelChange)="setMultiplier($event)" />
+          <input type="range" min="3" max="8" step="0.5" [ngModel]="multiplier()"
+            (ngModelChange)="setMultiplier($event)" [attr.aria-label]="t('labels.multiplier')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.fullLoadCurrent') }}</span>
+          <strong>{{ amps().format(fullLoadCurrent()) }} {{ t('labels.ampsUnit') }}</strong>
+        </div>
+        <div class="result-row total">
+          <span><app-icon name="zap" /> {{ t('labels.startingCurrent') }}</span>
+          <strong>{{ amps1().format(startingCurrent()) }} {{ t('labels.ampsUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.startingKva') }}</span>
+          <strong>{{ amps1().format(startingKva()) }} {{ t('labels.kvaUnit') }}</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      @if (t('assumptionNote') !== '') {
+        <p class="note">{{ t('assumptionNote') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

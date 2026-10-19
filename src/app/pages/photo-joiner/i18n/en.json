@@ -1,0 +1,98 @@
+{
+  "photo-joiner": {
+    "name": "Photo Joiner",
+    "tagline": "One long strip from many photos.",
+    "metaTitle": "Photo Joiner - Combine Photos Into One Strip | JaurTools",
+    "metaDescription": "Merge multiple photos into one long vertical or horizontal strip with spacing control. Free, in-browser.",
+    "keywords": "combine images, merge photos online, join images vertically, stitch photos together free",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload 2 or more photos and choose vertical stacking or a horizontal row. In vertical mode every photo scales to the same width: two 800 x 600 photos with a 16 px gap produce one 800 x 1216 image (600 + 16 + 600). Set the gap and background color, then download the merged PNG.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Two directions: vertical stack (tall strip) or horizontal row (wide banner).",
+      "All photos scale to match the first photo's width (vertical) or height (horizontal).",
+      "Aspect ratio is always preserved — photos scale, never stretch.",
+      "Gap from 0 to 100 px separates photos; background color fills the gaps.",
+      "Photos of different sizes align cleanly because each is scaled to the shared edge.",
+      "Output PNG keeps every photo's detail at the merged size."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload 2 or more photos in the order you want them.",
+      "Choose vertical stacking or a horizontal row.",
+      "Drag the gap slider and pick a background color.",
+      "Check the live preview and the final output size.",
+      "Click Download to save the combined image as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Vertical: outWidth = width of first photo.\nscaledHeight(i) = photoHeight(i) x (outWidth / photoWidth(i)).\noutHeight = sum(scaledHeight) + gap x (n - 1).\nHorizontal mirrors this with heights. Example: two 800x600, gap 16 -> 800 x 1216.",
+    "formulaHeading": "Formula",
+    "workedExample": "Two photos 800 x 600, vertical, gap 16:\n1. outWidth = 800 (first photo's width).\n2. Photo 1 scaled height: 600 x (800/800) = 600.\n3. Photo 2 scaled height: 600 x (800/800) = 600.\n4. outHeight = 600 + 16 + 600 = 1216.\n5. Result: one 800 x 1216 PNG — both photos full-width, 16 px gap between them.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Build screenshot walkthroughs and tutorials as one scrollable image.",
+      "Before/after comparisons stacked in a single shareable file.",
+      "Panorama-style banners from multiple shots without editing skills.",
+      "Consistent widths make the strip look professionally assembled.",
+      "No uploads — long personal screenshot threads stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Photos scale to the first photo's edge — mixed sizes lose some resolution.",
+      "No overlap or blending between photos; edges are hard cuts with gaps.",
+      "Very long strips (10+ tall photos) create huge files that some apps reject.",
+      "Order follows upload order and cannot be rearranged inside the tool."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "How many images can I combine?",
+        "a": "Up to 20. Beyond that the output gets enormous and slow. For very long screenshot threads, combine in two batches: merge the first 10, download, then combine that result with the rest."
+      },
+      {
+        "q": "Will photos with different sizes look okay?",
+        "a": "Yes. Each photo scales to the shared edge (width in vertical mode) while keeping its aspect ratio, so everything aligns in a clean strip. Smaller photos are upscaled to match, which can soften them slightly."
+      },
+      {
+        "q": "Can I remove the gap between photos?",
+        "a": "Yes — set the gap to 0 and photos touch edge to edge with no background showing. A small gap of 8 to 16 px usually reads cleaner for tutorial strips."
+      },
+      {
+        "q": "Vertical or horizontal — which should I pick?",
+        "a": "Vertical for phone screenshots, tutorials, and chat threads (they scroll naturally). Horizontal for panoramas, banner images, and side-by-side comparisons."
+      },
+      {
+        "q": "What is the output size?",
+        "a": "It depends on your photos: width equals the first photo's width (vertical mode), and height is the sum of scaled heights plus gaps. The preview shows the exact final dimensions before you download."
+      },
+      {
+        "q": "Are my photos uploaded to a server?",
+        "a": "No. Merging happens on a canvas in your browser. Your photos never leave your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Combine Images results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photos",
+      "direction": "Direction",
+      "dirVertical": "Vertical stack",
+      "dirHorizontal": "Horizontal row",
+      "gap": "Gap (px)",
+      "bgColor": "Background color",
+      "clearPhotos": "Clear photos",
+      "download": "Download image",
+      "photos": "Photos",
+      "outSize": "Output size",
+      "invalidFile": "Skipped a non-image file.",
+      "fileTooLarge": "Skipped a file over 10 MB.",
+      "loadFailed": "Could not read one image. It was skipped.",
+      "needPhotos": "Upload at least 2 photos to combine.",
+      "tooMany": "Maximum 20 photos allowed."
+    }
+  }
+}

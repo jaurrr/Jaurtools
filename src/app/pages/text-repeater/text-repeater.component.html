@@ -1,0 +1,174 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="repeat-input">{{ t('labels.textLabel') }}</label>
+        <textarea class="ed-textarea" id="repeat-input" [ngModel]="rawText()" (ngModelChange)="setText($event)"
+          [attr.placeholder]="t('labels.textPlaceholder')" rows="3"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="repeat-count">{{ t('labels.countLabel') }}</label>
+        <div class="input-row">
+          <input id="repeat-count" type="number" inputmode="numeric" min="1" max="100000" step="1"
+            [ngModel]="count()" (ngModelChange)="setCount($event)" />
+          <input type="range" min="1" max="1000" step="1" [ngModel]="count()"
+            (ngModelChange)="setCount($event)" [attr.aria-label]="t('labels.countLabel')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.separatorLabel') }}</label>
+        <div class="btn-row">
+          <button type="button" class="btn" [class.primary]="separator() === 'newline'" (click)="setSeparator('newline')">
+            {{ t('labels.sepNewline') }}
+          </button>
+          <button type="button" class="btn" [class.primary]="separator() === 'space'" (click)="setSeparator('space')">
+            {{ t('labels.sepSpace') }}
+          </button>
+          <button type="button" class="btn" [class.primary]="separator() === 'comma'" (click)="setSeparator('comma')">
+            {{ t('labels.sepComma') }}
+          </button>
+          <button type="button" class="btn" [class.primary]="separator() === 'none'" (click)="setSeparator('none')">
+            {{ t('labels.sepNone') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="results ed-livebar">
+        <div class="result-row total">
+          <span><app-icon name="copy" /> {{ t('labels.repeatsLabel') }}</span>
+          <strong>{{ actualCount() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.charsLabel') }}</span>
+          <strong>{{ output().length }}</strong>
+        </div>
+      </div>
+
+      @if (truncated()) {
+        <p class="note">{{ t('labels.truncatedNote') }}</p>
+      }
+
+      <div class="field">
+        <label>{{ t('labels.outputLabel') }}</label>
+        <div class="output-box ed-output" aria-live="polite">{{ output() || t('labels.emptyState') }}</div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="copyOutput()" [disabled]="!output()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedNote') : t('labels.copyButton') }}
+        </button>
+        <button type="button" class="btn" (click)="downloadTxt()" [disabled]="!output()">
+          <app-icon name="download" /> {{ t('labels.downloadButton') }}
+        </button>
+        <button type="button" class="btn" (click)="clear()" [disabled]="!text()">
+          <app-icon name="x" /> {{ t('labels.clearButton') }}
+        </button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

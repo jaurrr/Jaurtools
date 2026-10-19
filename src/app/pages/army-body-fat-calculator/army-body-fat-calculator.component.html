@@ -1,0 +1,221 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="abf-gender">{{ t('labels.genderLabel') }}</label>
+        <select id="abf-gender" [ngModel]="gender()" (ngModelChange)="setGender($event)">
+          <option value="male">{{ t('labels.maleOption') }}</option>
+          <option value="female">{{ t('labels.femaleOption') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="abf-age">{{ t('labels.ageGroupLabel') }}</label>
+        <select id="abf-age" [ngModel]="ageGroup()" (ngModelChange)="setAgeGroup($event)">
+          <option value="17-20">17-20</option>
+          <option value="21-27">21-27</option>
+          <option value="28-39">28-39</option>
+          <option value="40+">40+</option>
+        </select>
+      </div>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.unitSystem')">
+        <button type="button" [class.active]="unit() === 'metric'" (click)="setUnit('metric')">
+          {{ t('labels.metricTab') }}
+        </button>
+        <button type="button" [class.active]="unit() === 'imperial'" (click)="setUnit('imperial')">
+          {{ t('labels.imperialTab') }}
+        </button>
+      </div>
+
+      @if (unit() === 'metric') {
+        <div class="field">
+          <label for="abf-cm">{{ t('labels.heightLabel') }} (cm)</label>
+          <div class="input-row">
+            <input id="abf-cm" type="number" inputmode="decimal" min="120" max="220" step="0.5"
+              [ngModel]="cm()" (ngModelChange)="setCm($event)" />
+            <input type="range" min="120" max="220" step="0.5" [ngModel]="cm()"
+              (ngModelChange)="setCm($event)" [attr.aria-label]="t('labels.heightLabel')" class="calc-range" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="abf-neck-cm">{{ t('labels.neckLabel') }} (cm)</label>
+          <input id="abf-neck-cm" type="number" inputmode="decimal" min="25" max="70" step="0.5"
+            [ngModel]="neckCm()" (ngModelChange)="setNeckCm($event)" />
+        </div>
+
+        @if (gender() === 'male') {
+          <div class="field">
+            <label for="abf-abd-cm">{{ t('labels.abdomenLabel') }} (cm)</label>
+            <input id="abf-abd-cm" type="number" inputmode="decimal" min="50" max="160" step="0.5"
+              [ngModel]="abdomenCm()" (ngModelChange)="setAbdomenCm($event)" />
+          </div>
+        } @else {
+          <div class="field">
+            <label for="abf-waist-cm">{{ t('labels.waistLabel') }} (cm)</label>
+            <input id="abf-waist-cm" type="number" inputmode="decimal" min="50" max="160" step="0.5"
+              [ngModel]="waistCm()" (ngModelChange)="setWaistCm($event)" />
+          </div>
+          <div class="field">
+            <label for="abf-hip-cm">{{ t('labels.hipLabel') }} (cm)</label>
+            <input id="abf-hip-cm" type="number" inputmode="decimal" min="60" max="180" step="0.5"
+              [ngModel]="hipCm()" (ngModelChange)="setHipCm($event)" />
+          </div>
+        }
+      } @else {
+        <div class="field">
+          <label>{{ t('labels.heightLabel') }} ({{ t('labels.inchUnit') }})</label>
+          <div class="height-row">
+            <input type="number" inputmode="numeric" min="4" max="7" [attr.aria-label]="t('labels.feet')"
+              [ngModel]="feet()" (ngModelChange)="setFeet($event)" />
+            <input type="number" inputmode="numeric" min="0" max="11" [attr.aria-label]="t('labels.inches')"
+              [ngModel]="inches()" (ngModelChange)="setInches($event)" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="abf-neck-in">{{ t('labels.neckLabel') }} ({{ t('labels.inchUnit') }})</label>
+          <input id="abf-neck-in" type="number" inputmode="decimal" min="10" max="28" step="0.5"
+            [ngModel]="neckIn()" (ngModelChange)="setNeckIn($event)" />
+        </div>
+
+        @if (gender() === 'male') {
+          <div class="field">
+            <label for="abf-abd-in">{{ t('labels.abdomenLabel') }} ({{ t('labels.inchUnit') }})</label>
+            <input id="abf-abd-in" type="number" inputmode="decimal" min="20" max="65" step="0.5"
+              [ngModel]="abdomenIn()" (ngModelChange)="setAbdomenIn($event)" />
+          </div>
+        } @else {
+          <div class="field">
+            <label for="abf-waist-in">{{ t('labels.waistLabel') }} ({{ t('labels.inchUnit') }})</label>
+            <input id="abf-waist-in" type="number" inputmode="decimal" min="20" max="65" step="0.5"
+              [ngModel]="waistIn()" (ngModelChange)="setWaistIn($event)" />
+          </div>
+          <div class="field">
+            <label for="abf-hip-in">{{ t('labels.hipLabel') }} ({{ t('labels.inchUnit') }})</label>
+            <input id="abf-hip-in" type="number" inputmode="decimal" min="24" max="72" step="0.5"
+              [ngModel]="hipIn()" (ngModelChange)="setHipIn($event)" />
+          </div>
+        }
+      }
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="shield-check" /> {{ t('labels.bodyFatResult') }}</span>
+          <strong>{{ oneDecimal().format(fatPct()) }}%</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.maxAllowed') }}</span>
+          <strong>{{ oneDecimal().format(maxAllowed()) }}%</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.standardStatus') }}</span>
+          <strong>
+            <span class="status-badge status-{{ status() }}">{{ t('labels.' + status()) }}</span>
+          </strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

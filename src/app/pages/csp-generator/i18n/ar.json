@@ -1,0 +1,109 @@
+{
+  "csp-generator": {
+    "benefits": [
+      "ابنِ سياسة صحيحة دون حفظ صياغة التوجيهات أو قواعد الاقتباس.",
+      "مصادر بنقرة واحدة مثل ‎'self' و'none' وhttps: وغيرها، مع مضيفات مخصصة وتدقيق.",
+      "يولّد قيمة ترويسة HTTP ونسخة الوسم meta معًا، جاهزين للصق.",
+      "افتراضيات آمنة ومعقولة: بدائل صارمة مع تفعيل upgrade-insecure-requests."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "سياسة أمان المحتوى معيار أمان للمتصفح. يرسل خادمك (أو وسم meta) سياسة تحدد بالضبط المصادر التي يجوز لها تحميل السكربتات والأنماط والصور والموارد الأخرى. كل ما ليس في القائمة يُحظَر، مما يُبطل معظم هجمات البرمجة عبر المواقع (XSS) حتى لو حقن المهاجم ترميزًا.",
+        "q": "ما هي سياسة أمان المحتوى؟"
+      },
+      {
+        "a": "default-src هو البديل لكل توجيه جلب لا تضبطه صراحة. ضبط default-src ‏'self' يعني أن السكربتات والصور والخطوط وكل شيء آخر لا يجوز تحميلها إلا من أصلك الخاص ما لم تضف توجيهًا أكثر تحديدًا مثل script-src. وهو أهم توجيه على الإطلاق.",
+        "q": "ماذا يفعل default-src؟"
+      },
+      {
+        "a": "في الغالب لا، إطلاقًا. ‎'unsafe-inline' يعيد السماح بالسكربتات والأنماط المضمنة التي صُمم CSP لحظرها، مما يزيل معظم حمايته من XSS. الأفضل نقل الكود إلى ملفات خارجية واستخدام nonces أو hashes. فعّله فقط أثناء ترحيل موقع قديم، وخطط لإزالته.",
+        "q": "هل أسمح بـ 'unsafe-inline'؟"
+      },
+      {
+        "a": "أضف ترويسة استجابة HTTP ‏:Content-Security-Policy: <سياستك>. في Apache ‏:Header set Content-Security-Policy \"...\"‎؛ وفي Nginx ‏:add_header Content-Security-Policy \"...\"‎؛. وعلى المضيفات الثابتة (Netlify وCloudflare Pages وVercel) اضبطها في إعدادات الترويسات. نسخة الوسم meta تعمل أيضًا لكنها لا تدعم frame-ancestors أو report-uri.",
+        "q": "كيف أنشر السياسة المُولّدة؟"
+      },
+      {
+        "a": "ابدأ بوضع الإبلاغ فقط: أرسل السياسة كـ Content-Security-Policy-Report-Only مع report-uri. عندها تسجل المتصفحات المخالفات دون حظر شيء. أصلح كل مخالفة مشروعة في تقاريرك، ثم حوّل السياسة نفسها إلى وضع الإنفاذ. لا يولّد هذا الباني نسخة ترويسة الإبلاغ فقط، لكن نص السياسة مطابق.",
+        "q": "كيف أطرح سياسة دون كسر موقعي؟"
+      },
+      {
+        "a": "يتحكم frame-ancestors في المواقع التي يجوز لها تضمين صفحتك في إطار أو iframe، مما يوقف الـ clickjacking. وهو يعمل كترويسة HTTP فقط وليس في وسم meta أبدًا. ‎'none' يحظر كل التضمين؛ و'self' يسمح لأصلك الخاص فقط بتأطير الصفحة.",
+        "q": "ما فائدة frame-ancestors؟"
+      }
+    ],
+    "formula": "Content-Security-Policy: <توجيه> <قائمة-مصادر>؛ <توجيه> <قائمة-مصادر>؛ ...\n\nكلمات المصادر (مقتبسة): 'self' = نفس الأصل، 'none' = لا شيء مسموح،\n'unsafe-inline' = السماح بالكود المضمن (يُضعِف حماية XSS)،\n'unsafe-eval' = السماح بـ eval() (يُضعِف الحماية).\nالمخططات/المضيفات (غير مقتبسة): https: وdata: وblob: وhttps://cdn.example.com.\nتوجيهات الجلب غير المحددة تعود إلى default-src.\n'none' حصري: لا يجوز دمجه مع مصادر أخرى في نفس التوجيه.",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "بدّل التوجيهات التي يحتاجها موقعك. مجموعة بداية صارمة مفعّلة افتراضيًا.",
+      "لكل توجيه، انقر مصادر سريعة ('self' و'none' وhttps: ...) أو أضف مضيفات مخصصة.",
+      "'none' حصري: اختياره يمسح المصادر الأخرى للتوجيه.",
+      "بدّل upgrade-insecure-requests وblock-all-mixed-content حسب الحاجة، وأضف report-uri.",
+      "انسخ قيمة الترويسة إلى إعدادات خادمك، أو وسم meta إلى رأس HTML.",
+      "اطرح أولًا بوضع Content-Security-Policy-Report-Only ثم انفّذ."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "تخبر سياسة أمان المحتوى المتصفح بالضبط بالمصادر التي يجوز لها تحميل كل نوع مورد.",
+      "كل ما ليس في القائمة البيضاء يُحظَر، مما يُبطل معظم هجمات XSS.",
+      "default-src هو البديل لكل توجيه جلب تتركه غير مضبوط.",
+      "لا يجوز دمج 'none' مع مصادر أخرى في نفس التوجيه.",
+      "يعيد upgrade-insecure-requests كتابة الموارد الفرعية http:// إلى https:// تلقائيًا.",
+      "frame-ancestors (دفاع الـ clickjacking) يعمل كترويسة HTTP فقط وليس في وسم meta."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "csp builder, content security policy generator, csp header generator, csp policy builder",
+    "labels": {
+      "addButton": "إضافة",
+      "copiedMessage": "تم النسخ",
+      "copyHeaderButton": "نسخ الترويسة",
+      "copyMetaButton": "نسخ وسم meta",
+      "dir_base_uri": "عناوين URL التي يجوز ظهورها في وسوم <base> (يمنع اختطاف الوسم base).",
+      "dir_connect_src": "أين يجوز للسكربتات الاتصال: fetch وXHR وWebSocket وEventSource.",
+      "dir_default_src": "البديل لكل توجيه جلب لا تضبطه صراحة.",
+      "dir_font_src": "أين يجوز تحميل الخطوط.",
+      "dir_form_action": "أين يجوز إرسال النماذج.",
+      "dir_frame_ancestors": "المواقع التي يجوز لها تضمين هذه الصفحة في إطار (دفاع clickjacking).",
+      "dir_frame_src": "عناوين URL التي يجوز تحميلها في الأطر وiframe.",
+      "dir_img_src": "أين يجوز تحميل الصور.",
+      "dir_media_src": "أين يجوز تحميل الصوت والفيديو.",
+      "dir_object_src": "أين يجوز تحميل الإضافات (<object> و<embed> و<applet>). يُنصَح بـ 'none'.",
+      "dir_script_src": "أين يجوز تحميل السكربتات. يتجاوز default-src للسكربتات.",
+      "dir_style_src": "أين يجوز تحميل أوراق الأنماط والأنماط المضمنة.",
+      "directiveCountLabel": "التوجيهات في السياسة",
+      "flagsLabel": "أعلام السياسة",
+      "headerLabel": "قيمة ترويسة HTTP",
+      "hostPlaceholder": "مثل https://cdn.example.com",
+      "invalidHostLabel": "أدخل مضيفًا دون مسافات أو فواصل منقوطة، مثل https://cdn.example.com.",
+      "metaLabel": "نسخة وسم meta",
+      "metaNote": "ملاحظة: يُتجاهَل frame-ancestors وreport-uri في وسوم meta. فضّل ترويسة HTTP.",
+      "removeLabel": "إزالة",
+      "reportUriLabel": "report-uri (نقطة استقبال تقارير المخالفات)",
+      "resetButton": "إعادة للافتراضي"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "يولّد نص السياسة؛ ولا يستطيع تثبيت الترويسة على خادمك بنفسه.",
+      "نسخة الوسم meta لا تستطيع إنفاذ frame-ancestors أو report-uri.",
+      "لا يولّد هذا الباني nonces أو hashes للسكربتات المضمنة.",
+      "السياسة بجودة اختبارها فقط: تحقق دائمًا في وضع الإبلاغ فقط أولًا."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "أنشئ ترويسة Content-Security-Policy صحيحة باستخدام محرر توجيهات بصري. مجاني في متصفحك — دون تسجيل.",
+    "metaTitle": "مولّد CSP أونلاين - أنشئ ترويسات سياسة أمان المحتوى | JaurTools",
+    "name": "مولّد CSP",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "بدّل التوجيهات وانقر كلمات المصادر مثل 'self' أو أضف مضيفاتك الخاصة، فيجمّع الباني ترويسة Content-Security-Policy صالحة مع نسخة وسم meta. وتنتج الافتراضيات الآمنة: ‎default-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests. انسخ الترويسة إلى إعدادات خادمك واطرح أولًا بوضع الإبلاغ فقط.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "نتائج باني CSP",
+    "tagline": "أنشئ ترويسة CSP صحيحة بصريًا.",
+    "workedExample": "الهدف: سياسة بداية صارمة لموقع ثابت.\n1. أبقِ الافتراضيات مفعّلة: default-src وobject-src وbase-uri وform-action وframe-ancestors.\n2. default-src ‏'self': كل شيء يُحمَّل من أصلك الخاص ما لم يُتجاوَز.\n3. object-src ‏'none': يحظر الإضافات القديمة تمامًا.\n4. base-uri ‏'self' مع form-action ‏'self': يوقفان اختطاف الوسم base ومنشورات النماذج الخارجية.\n5. frame-ancestors ‏'self': أصلك الخاص وحده يجوز له تضمين الصفحة.\n6. upgrade-insecure-requests: يعيد كتابة الموارد الفرعية http:// إلى https://.\nقيمة الترويسة:\ndefault-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests\nانشرها أولًا كـ Content-Security-Policy-Report-Only وأصلح المخالفات ثم انفّذ.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

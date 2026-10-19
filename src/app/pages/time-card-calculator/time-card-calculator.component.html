@@ -1,0 +1,186 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="hrs-threshold">{{ t('labels.threshold') }}</label>
+        <div class="input-row">
+          <input id="hrs-threshold" type="number" inputmode="decimal" min="0" max="168" step="0.5"
+            [ngModel]="threshold()" (ngModelChange)="setThreshold($event)" />
+        </div>
+      </div>
+
+      <table class="tc-grid">
+        <caption class="sr-only">{{ t('resultsHeading') }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ t('labels.dayCol') }}</th>
+            <th scope="col">{{ t('labels.start') }}</th>
+            <th scope="col">{{ t('labels.end') }}</th>
+            <th scope="col">{{ t('labels.hoursCol') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (name of dayNames(); track $index) {
+            <tr [class.is-ot]="daily()[$index] !== null && (daily()[$index] ?? 0) > 8">
+              <th scope="row" class="day-name">{{ name }}</th>
+              <td>
+                <input type="time" [ngModel]="starts()[$index]" (ngModelChange)="setStart($index, $event)"
+                  [attr.aria-label]="name + ' ' + t('labels.start')" />
+              </td>
+              <td>
+                <input type="time" [ngModel]="ends()[$index]" (ngModelChange)="setEnd($index, $event)"
+                  [attr.aria-label]="name + ' ' + t('labels.end')" />
+              </td>
+              <td class="day-hours" aria-live="polite">{{ dayText($index) }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+
+      <p class="note">{{ t('labels.overnightNote') }}</p>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="clock" /> {{ t('labels.totalHours') }}</span>
+          <strong>{{ totalText() }} {{ t('labels.hoursUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.regularHours') }}</span>
+          <strong>{{ regularText() }} {{ t('labels.hoursUnit') }}</strong>
+        </div>
+        <div class="result-row" [class.ot-hot]="overtime() > 0">
+          <span>{{ t('labels.overtimeHours') }}</span>
+          <strong>{{ overtimeText() }} {{ t('labels.hoursUnit') }}</strong>
+        </div>
+      </div>
+
+      <p class="tc-math" aria-live="polite">
+        <app-icon name="calculator" />
+        {{ totalText() }}h − {{ threshold() }}h {{ t('labels.threshold') }} = {{ overtimeText() }}h {{ t('labels.overtimeHours') }}
+      </p>
+
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copySummary()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? translate.t('common.copied') : t('labels.copySummary') }}</span>
+        </button>
+      </div>
+
+      <table class="calc-compare">
+        <caption>{{ t('labels.compareTitle') }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ t('labels.compareTool') }}</th>
+            <th scope="col">{{ t('labels.compareWhen') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ t('name') }}</th>
+            <td>{{ t('labels.compareTimecard') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'overtime-calculator']">{{ relatedName('overtime-calculator') }}</a></th>
+            <td>{{ t('labels.compareOvertime') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'time-duration-calculator']">{{ relatedName('time-duration-calculator') }}</a></th>
+            <td>{{ t('labels.compareDuration') }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

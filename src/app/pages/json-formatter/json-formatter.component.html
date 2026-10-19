@@ -1,0 +1,180 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+      <p class="dv-example">
+        <button type="button" class="dv-example-btn" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ tc('tryExample') }}
+        </button>
+        @if (restored()) {
+          <span class="dv-autosave"><app-icon name="refresh-cw" /> {{ tc('restoredNote') }}</span>
+        }
+      </p>
+
+
+      <div class="field">
+        <label for="fmt-input">{{ t('labels.inputLabel') }}</label>
+        <textarea class="dv-term-input" id="fmt-input" dir="ltr" spellcheck="false" autocomplete="off"
+          [ngModel]="input()" (ngModelChange)="setInput($event)"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="fmt-indent">{{ t('labels.indentLabel') }}</label>
+        <select id="fmt-indent" [ngModel]="indent()" (ngModelChange)="setIndent($event)">
+          <option value="2">{{ t('labels.indent2') }}</option>
+          <option value="4">{{ t('labels.indent4') }}</option>
+          <option value="tab">{{ t('labels.indentTab') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="checkbox-row" for="fmt-sort">
+          <input id="fmt-sort" type="checkbox" [ngModel]="sortKeys()" (ngModelChange)="sortKeys.set($event)" />
+          {{ t('labels.sortKeysLabel') }}
+        </label>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="format()">
+          <app-icon name="sparkles" /> {{ t('labels.formatLabel') }}
+        </button>
+        <button type="button" class="btn" (click)="minify()">
+          {{ t('labels.minifyLabel') }}
+        </button>
+        <button type="button" class="btn" (click)="upFile.click()">
+          <app-icon name="upload" /> {{ tc('uploadFile') }}
+        </button>
+        <input #upFile type="file" accept=".json,application/json" (change)="onUpload($event)" hidden />
+      </div>
+
+      @if (parsed().error) {
+        <p class="alert error dv-status dv-status-bad" role="alert">
+          <strong>{{ t('labels.invalidLabel') }}</strong><br />
+          @if (parsed().line > 0) {
+            {{ t('labels.errorAtLabel') }} {{ parsed().line }}, {{ parsed().col }}<br />
+          }
+          <span class="mono">{{ parsed().error }}</span>
+        </p>
+      } @else if (!parsed().empty) {
+        <p class="alert success dv-status dv-status-ok"><app-icon name="check" /> {{ t('labels.validLabel') }}</p>
+      }
+
+      @if (output()) {
+        <div class="results">
+          <div class="dv-codeblock">
+            <div class="dv-codeblock-head">
+              <span class="dv-codeblock-title" id="fmt-output-title">{{ t('labels.outputLabel') }}</span>
+              <span class="dv-codeblock-actions">
+                <button type="button" class="dv-copybtn" (click)="copyOutput()" [attr.aria-label]="t('labels.copyLabel')">
+                  <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}
+                </button>
+              </span>
+            </div>
+            <pre id="fmt-output" class="code-output dv-term" tabindex="0" role="region" [attr.aria-labelledby]="'fmt-output-title'">{{ output() }}</pre>
+          </div>
+          <div class="stat-grid">
+            <div class="stat"><strong>{{ fmt(sizeBytes()) }}</strong><span>{{ t('labels.sizeLabel') }}</span></div>
+            <div class="stat"><strong>{{ fmt(stats().keys) }}</strong><span>{{ t('labels.keysLabel') }}</span></div>
+            <div class="stat"><strong>{{ stats().depth }}</strong><span>{{ t('labels.depthLabel') }}</span></div>
+          </div>
+          <div class="btn-row">
+            <button type="button" class="btn" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadLabel') }}
+            </button>
+          </div>
+        </div>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

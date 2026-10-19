@@ -1,0 +1,93 @@
+{
+  "word-counter": {
+    "benefits": [
+      "Free forever: no sign-up, no interrupting ads, no word limits.",
+      "Instant results — ideal for essays, assignments, blog posts, resumes and social-media captions.",
+      "Works on phones, tablets and desktops, in any language or script.",
+      "Private by design: nothing you type is uploaded, saved or tracked."
+    ],
+    "faqs": [
+      {
+        "a": "It splits your text wherever there is whitespace — spaces, tabs and line breaks — and counts the non-empty pieces. Extra spaces between words do not change the result, so pasting from Word, PDFs or web pages is safe.",
+        "q": "How does the word counter count words?"
+      },
+      {
+        "a": "Both. You get a “Characters” count that includes every space and line break, and a “Characters (no spaces)” count with all whitespace removed. Use whichever one your publisher, form or platform asks for.",
+        "q": "Does it count characters with or without spaces?"
+      },
+      {
+        "a": "No. All counting happens locally in your browser with JavaScript. Your text is never sent to a server, never stored, and never seen by anyone but you — you can even disconnect from the internet after the page loads.",
+        "q": "Is my text uploaded anywhere?"
+      },
+      {
+        "a": "The tool starts a new sentence at every . ! or ? mark, plus । for Hindi and ؟ for Arabic. Abbreviations like “e.g.” may add extra breaks — that is a known limitation of simple sentence detection.",
+        "q": "What counts as a sentence?"
+      },
+      {
+        "a": "It divides your word count by 200, the widely used average adult reading speed in words per minute. Anything under a minute shows as “Under 1 min”; longer texts show the rounded-up minute count.",
+        "q": "How is reading time calculated?"
+      },
+      {
+        "a": "No. Because everything runs in your own browser, you can paste an entire book chapter if you like. Extremely long texts (hundreds of thousands of words) may feel slightly slower on very old phones, but there is no hard limit.",
+        "q": "Is there a word limit?"
+      }
+    ],
+    "formula": "Words = number of non-empty chunks after splitting the text on whitespace. Characters (no spaces) = total characters minus all spaces, tabs and line breaks. Reading time in minutes = words ÷ 200.",
+    "howTo": [
+      "Type directly into the text box, or paste text from anywhere with Ctrl+V (Cmd+V on Mac).",
+      "Watch the six counters update live as you type.",
+      "Use the character counts to fit essays, meta descriptions, captions and form limits.",
+      "Use the reading-time estimate to judge how long your article, speech or script will take.",
+      "Press Clear to empty the box and start over."
+    ],
+    "keyFacts": [
+      "Words are counted by splitting your text on whitespace — double spaces, tabs and line breaks never inflate the count.",
+      "Characters are shown both with and without spaces, matching what publishers, editors and form fields ask for.",
+      "Sentences are detected at every . ! ? mark (plus । and ؟ for Hindi and Arabic text), and paragraphs at every blank line.",
+      "Reading time assumes an average adult speed of 200 words per minute.",
+      "Counting happens instantly as you type — there is no button to press and no waiting.",
+      "Your text never leaves your device: the whole tool runs in your browser, even offline after the page loads."
+    ],
+    "lastReviewed": "Last reviewed: October 18, 2026",
+    "limitations": [
+      "Hyphenated words like “well-known” count as one word; some style guides count them as two.",
+      "Abbreviations such as “e.g.” or “Mr.” can make the sentence counter see extra sentence breaks.",
+      "Reading time is a rough average — technical or unfamiliar text takes most people longer.",
+      "It counts what you paste; it cannot check grammar, spelling or plagiarism."
+    ],
+    "metaDescription": "Free online word counter: count words, characters (with/without spaces), sentences, paragraphs and reading time instantly. No sign-up, 100% private, runs in your browser.",
+    "metaTitle": "Free Word Counter Online — Count Words, Characters & Reading Time",
+    "name": "Word Counter",
+    "privacyNote": "Everything you type stays in your browser's memory. This page sends no text to any server, stores nothing on your device, and keeps working even if you go offline after loading.",
+    "quickAnswer": "Paste any text into the box and this free word counter instantly shows the word count, character count with and without spaces, sentence and paragraph counts, and estimated reading time. Everything is calculated live in your browser — nothing is uploaded or stored.",
+    "tagline": "Count words, characters, sentences and paragraphs instantly — free, right in your browser.",
+    "ui": {
+      "benefitsTitle": "Why use it",
+      "characters": "Characters",
+      "clear": "Clear",
+      "empty": "—",
+      "exampleTitle": "Worked example",
+      "faqTitle": "Frequently asked questions",
+      "formulaTitle": "How counting works",
+      "home": "Home",
+      "howToTitle": "How to use",
+      "inputLabel": "Your text",
+      "keyFactsTitle": "Key facts",
+      "lessThanMinute": "Under 1 min",
+      "limitationsTitle": "Limitations",
+      "minuteShort": "min",
+      "noSpaces": "Characters (no spaces)",
+      "paragraphs": "Paragraphs",
+      "placeholder": "Type or paste your text here…",
+      "privacyTitle": "Privacy note",
+      "readingTime": "Reading time",
+      "relatedTitle": "Related tools",
+      "sentences": "Sentences",
+      "words": "Words",
+      "copyStats": "Copy stats",
+      "downloadTxt": "Download .txt",
+      "copied": "Copied!"
+    },
+    "workedExample": "Example: “The quick brown fox jumps.” contains 5 words, 26 characters with spaces and 22 without, 1 sentence and 1 paragraph. At 200 words per minute, the reading time is well under a minute — so the tool shows “Under 1 min”."
+  }
+}

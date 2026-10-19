@@ -1,0 +1,98 @@
+{
+  "n-up-pdf": {
+    "name": "N-Up PDF — Multiple Pages Per Sheet",
+    "tagline": "Print 2, 4, 6 or 9 PDF pages on a single sheet — perfect handouts and booklets.",
+    "metaTitle": "N-Up PDF — Print Multiple Pages Per Sheet Online Free | JaurTools",
+    "metaDescription": "Impose 2, 4, 6 or 9 PDF pages onto one sheet online for free. Choose A4, Letter or Legal, portrait or landscape, and download instantly. Private in-browser processing.",
+    "keywords": "n-up pdf, multiple pages per sheet, 2 up pdf, 4 up pdf, pdf imposition online, print 2 pages per sheet",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Impose pages",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Upload a PDF, pick how many pages go on each sheet (1, 2, 4, 6 or 9), choose the sheet size and orientation, and get a new PDF with your pages neatly arranged in a grid — ready to print as handouts.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "N-up imposition places N source pages on one output sheet in reading order.",
+      "Each page keeps its aspect ratio — nothing is stretched; pages are centered in their grid cells.",
+      "A 12-page PDF at 4-up becomes exactly 3 sheets; empty cells are simply left blank.",
+      "Sheet sizes: A4, Letter, Legal — each in portrait or landscape.",
+      "A 14 pt gutter separates cells so cut lines are easy to see."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Upload your PDF (up to 50 MB).",
+      "Pick pages per sheet: 1, 2, 4, 6 or 9 — the live preview shows the grid.",
+      "Choose sheet size (A4, Letter, Legal) and orientation.",
+      "Click build and download the imposed PDF."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "cell_w = (sheet_w − gutter × (cols + 1)) / cols\ncell_h = (sheet_h − gutter × (rows + 1)) / rows\nscale = min(cell_w / page_w, cell_h / page_h)\nsheets_needed = ceil(total_pages / N)\n\nGrids: 2-up = 2×1, 4-up = 2×2, 6-up = 3×2, 9-up = 3×3. Each page is scaled by the smaller of the width/height ratios, so it always fits without distortion.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A 20-page slide deck at 4-up on A4 landscape: the grid is 2×2, so each sheet holds 4 slides and 20 / 4 = 5 sheets exactly. Each slide is scaled to fit its cell (about 270 × 190 pt on A4 landscape with gutters) — a 5-page handout instead of 20.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Cut paper use by up to 9x for drafts, handouts, and slide printouts.",
+      "Live grid preview shows exactly how pages will be arranged before you build.",
+      "Aspect-ratio-safe scaling — no stretched or squashed pages.",
+      "Standard sheet sizes with both orientations for any printer.",
+      "Everything runs locally; no upload of your documents."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Pages are placed in order only — custom page arrangements are not supported.",
+      "High N-up values make text tiny; 9-up suits slides, not dense documents.",
+      "Interactive elements (form fields, links) may not survive imposition.",
+      "Rotated source pages keep their rotation metadata, which can surprise layouts."
+    ],
+    "privacyNote": "Imposition is computed entirely in your browser with pdf-lib. Your PDF never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What does N-up mean?",
+        "a": "It is print jargon for putting N pages on one sheet. 2-up = 2 pages per sheet, 4-up = 4, and so on — commonly used for handouts and booklets."
+      },
+      {
+        "q": "Will my pages look stretched?",
+        "a": "No. Each page is scaled uniformly to fit its grid cell, so proportions are preserved and the page is centered with even margins."
+      },
+      {
+        "q": "What happens with leftover pages?",
+        "a": "The last sheet simply has fewer filled cells — a 10-page PDF at 4-up gives 2 full sheets and one sheet with 2 pages."
+      },
+      {
+        "q": "Can I print booklets with this?",
+        "a": "N-up arranges pages in reading order, which is ideal for handouts. True booklet imposition (reordered for folding) is a different layout this tool does not do."
+      },
+      {
+        "q": "Which orientation should I pick?",
+        "a": "Match your content: landscape slides usually look best on landscape sheets at 4-up or 6-up; portrait documents suit portrait sheets."
+      },
+      {
+        "q": "Do hyperlinks still work?",
+        "a": "Usually not — imposition rebuilds pages as graphics, so links and form fields may be lost. Keep a copy of the original if you need them."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "fileLabel": "PDF file",
+      "fileHint": "PDF up to 50 MB",
+      "nLabel": "Pages per sheet",
+      "sheetLabel": "Sheet size",
+      "orientLabel": "Orientation",
+      "orientPortrait": "Portrait",
+      "orientLandscape": "Landscape",
+      "perSheetLabel": "pages per sheet",
+      "pagesLabel": "pages",
+      "buildButton": "Build N-up PDF",
+      "downloadButton": "Download PDF",
+      "busy": "Imposing pages…",
+      "statusDone": "Done: {n} pages → {s} sheets.",
+      "errType": "Please choose a valid PDF file.",
+      "errSize": "File is larger than 50 MB.",
+      "errRead": "Could not read this PDF.",
+      "errBuild": "Could not build the N-up PDF."
+    }
+  }
+}

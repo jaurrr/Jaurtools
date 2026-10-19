@@ -1,0 +1,114 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="zap" /> {{ t('resultsHeading') }}</h2>
+      <div class="field">
+        <label for="vd-volt">{{ t('labels.voltageLabel') }}</label>
+        <div class="input-row">
+          <input id="vd-volt" type="number" inputmode="decimal" min="1" max="11000" step="1"
+            [ngModel]="voltage()" (ngModelChange)="setVoltage($event)" />
+          <input type="range" min="12" max="440" step="1" [ngModel]="voltage()" (ngModelChange)="setVoltage($event)"
+            [attr.aria-label]="t('labels.voltageLabel')" class="calc-range" />
+        </div>
+      </div>
+      <div class="field">
+        <label>{{ t('labels.phaseLabel') }}</label>
+        <div class="btn-row" role="group" [attr.aria-label]="t('labels.phaseLabel')">
+          <button [class.active]="phase() === 'single'" (click)="setPhase('single')">{{ t('labels.phaseSingle') }}</button>
+          <button [class.active]="phase() === 'three'" (click)="setPhase('three')">{{ t('labels.phaseThree') }}</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>{{ t('labels.materialLabel') }}</label>
+        <div class="btn-row" role="group" [attr.aria-label]="t('labels.materialLabel')">
+          <button [class.active]="material() === 'copper'" (click)="setMaterial('copper')">{{ t('labels.matCopper') }}</button>
+          <button [class.active]="material() === 'aluminum'" (click)="setMaterial('aluminum')">{{ t('labels.matAluminum') }}</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="vd-size">{{ t('labels.sizeLabel') }}</label>
+        <div class="input-row">
+          <input id="vd-size" type="number" inputmode="decimal" min="0.5" max="1000" step="0.5"
+            [ngModel]="wireSize()" (ngModelChange)="setWireSize($event)" />
+          <input type="range" min="1" max="50" step="0.5" [ngModel]="wireSize()" (ngModelChange)="setWireSize($event)"
+            [attr.aria-label]="t('labels.sizeLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.sizeHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="vd-len">{{ t('labels.lengthLabel') }}</label>
+        <div class="input-row">
+          <input id="vd-len" type="number" inputmode="decimal" min="0.5" max="5000" step="1"
+            [ngModel]="length()" (ngModelChange)="setLength($event)" />
+          <input type="range" min="1" max="200" step="1" [ngModel]="length()" (ngModelChange)="setLength($event)"
+            [attr.aria-label]="t('labels.lengthLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.lengthHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="vd-cur">{{ t('labels.currentLabel') }}</label>
+        <div class="input-row">
+          <input id="vd-cur" type="number" inputmode="decimal" min="0" max="2000" step="1"
+            [ngModel]="current()" (ngModelChange)="setCurrent($event)" />
+          <input type="range" min="1" max="100" step="1" [ngModel]="current()" (ngModelChange)="setCurrent($event)"
+            [attr.aria-label]="t('labels.currentLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.currentHint') }}</p>
+      </div>
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span>{{ t('labels.dropLabel') }}</span>
+          <strong>{{ fmt2().format(drop()) }} {{ t('labels.vUnit') }} ({{ fmt2().format(dropPct()) }}%)</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.loadLabel') }}</span>
+          <strong>{{ fmt1().format(loadVoltage()) }} {{ t('labels.vUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.maxLabel') }}</span>
+          <strong>{{ fmt1().format(maxCurrent()) }} {{ t('labels.aUnit') }}</strong>
+        </div>
+        <p class="note">{{ t('labels.verdictLabel') }}: {{ verdict() }}</p>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

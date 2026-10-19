@@ -1,0 +1,116 @@
+{
+  "add-page-numbers-to-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online numbering services.",
+      "Works on any PDF, including scanned documents and image-only pages.",
+      "Precise positioning with six preset spots plus adjustable margin and size.",
+      "Free and unlimited — number as many documents as you like.",
+      "Professional result using the built-in Helvetica font, which every PDF reader supports."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The numbers are drawn into the page content itself, so they print, export and display exactly like the rest of your document in every PDF reader.",
+        "q": "Will the page numbers appear when I print the PDF?"
+      },
+      {
+        "a": "Not with this tool — the numbers are baked into the pages when the new PDF is saved. Keep a copy of your original file if you might want an unnumbered version later.",
+        "q": "Can I remove the page numbers afterwards?"
+      },
+      {
+        "a": "Yes. Numbering adds new text on top of each page, so it works on scanned pages, image-only PDFs and digitally created documents alike.",
+        "q": "Does it work on scanned PDFs?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser using the pdf-lib library. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Unlock it first in your PDF reader (File → save an unprotected copy, if you have the password), then number the unlocked copy with this tool.",
+        "q": "My PDF is password protected. What should I do?"
+      },
+      {
+        "a": "Bottom center is the most common in books, theses and formal reports. Top right is popular for business documents. The tool offers all six standard positions.",
+        "q": "Which position is standard for page numbers?"
+      }
+    ],
+    "formula": "centered x = (page width − number width) ÷ 2\ny = margin from the page edge (in points, 72 pt = 1 inch)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the document you want to number.",
+      "Pick a position — bottom center is the classic choice for reports, theses and books.",
+      "Choose a format such as “7”, “Page 7” or “7 / 42”, and set the starting number if needed.",
+      "Adjust font size, color and margin, then click “Add page numbers”.",
+      "Download the new PDF and spot-check the numbers in your PDF reader."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Page numbers are drawn directly onto each page with the standard Helvetica font, so they render identically in every PDF reader and printer.",
+      "A PDF page is measured in points: an A4 page is 595.28 × 841.89 points, and 72 points make exactly one inch.",
+      "You can start numbering from any number — handy when your PDF is one chapter of a larger document that begins on page 47.",
+      "The “skip first page” option keeps cover pages clean while numbering every page after it.",
+      "Numbering never touches your original text or layout; it only adds small text inside the margin you choose."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "add page numbers to pdf, pdf page numbering, number pdf pages online, insert page numbers pdf, free pdf page number tool",
+    "labels": {
+      "addBtn": "Add page numbers",
+      "chooseFile": "Choose PDF file",
+      "colorBlack": "Black",
+      "colorBlue": "Blue",
+      "colorGray": "Gray",
+      "colorLabel": "Color",
+      "colorRed": "Red",
+      "downloadBtn": "Download numbered PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "fmt_n": "7",
+      "fmt_n-of-total": "7 / 42",
+      "fmt_page-n": "Page 7",
+      "fmt_page-n-of-total": "Page 7 of 42",
+      "formatLabel": "Number format",
+      "marginLabel": "Margin (pt)",
+      "pagesFound": "pages",
+      "pos_bc": "Bottom center",
+      "pos_bl": "Bottom left",
+      "pos_br": "Bottom right",
+      "pos_tc": "Top center",
+      "pos_tl": "Top left",
+      "pos_tr": "Top right",
+      "positionLabel": "Number position",
+      "processing": "Working…",
+      "resetBtn": "Start over",
+      "sizeLabel": "Font size (pt)",
+      "skipFirstLabel": "Skip numbering the first page",
+      "startLabel": "Start number",
+      "successMsg": "Page numbers added. Download your PDF below."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Numbers become a permanent part of the PDF once saved — this tool cannot remove numbers later.",
+      "You need some empty margin space; numbers placed over existing content may overlap it.",
+      "Password-protected PDFs must be unlocked before numbering.",
+      "Files larger than 50 MB are not accepted to protect browser memory."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Add page numbers to any PDF free in your browser. Choose position, format and style. No upload, no signup — your file never leaves your device.",
+    "metaTitle": "Add Page Numbers to PDF Free — Online PDF Page Number Tool",
+    "name": "Add Page Numbers to PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, pick where the numbers go (top or bottom, left, center or right), choose a format like “5 / 20”, and download the numbered file. Everything runs locally in your browser, so your document stays private and the whole job takes under a minute.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Add page numbers results",
+    "tagline": "Stamp clean, professional page numbers onto any PDF — right in your browser.",
+    "workedExample": "On an A4 page (595.28 pt wide), the number “5 / 12” at 11 pt is about 34 pt wide. Centered at the bottom with a 36 pt margin:\nx = (595.28 − 34) ÷ 2 = 280.64 pt from the left edge\ny = 36 pt from the bottom edge\nThe number sits exactly centered, half an inch above the bottom of the page.",
+    "workedExampleHeading": "Worked example"
+  }
+}

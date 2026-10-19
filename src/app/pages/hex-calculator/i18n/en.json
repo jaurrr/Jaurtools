@@ -1,0 +1,86 @@
+{
+  "hex-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "HEX Calculator",
+    "tagline": "Do arithmetic directly in hexadecimal - add, subtract, multiply and divide.",
+    "metaTitle": "HEX Calculator - Hexadecimal Arithmetic Online | JaurTools",
+    "metaDescription": "Free HEX calculator: add, subtract, multiply and divide hexadecimal numbers. Shows results in HEX and decimal instantly.",
+    "keywords": "hex calculator, hexadecimal calculator, hex addition, hex arithmetic, hex math",
+    "resultsHeading": "Hexadecimal calculation results",
+    "quickAnswer": "Type two hex numbers (digits 0-9 and A-F), pick +, −, × or ÷, and get the answer in HEX and decimal. Example: FF + 1 = 100 in hex, which is 256 in decimal. Invalid characters show a clear error.",
+    "keyFacts": [
+      "Hexadecimal is base-16: digits 0-9 then A=10, B=11, C=12, D=13, E=14, F=15.",
+      "Each hex digit = exactly 4 bits (a nibble); two digits = one byte (00-FF).",
+      "Programmers use hex for memory addresses, colour codes, and bit masks because it is compact.",
+      "FF₁₆ = 255, 100₁₆ = 256, 1000₁₆ = 4096 - powers of 16 grow fast.",
+      "Division here is integer division (truncated), matching how most low-level code divides.",
+      "Negative results are shown with a minus sign in both HEX and decimal."
+    ],
+    "howTo": [
+      "Type the first hexadecimal number (0-9, A-F).",
+      "Choose the operation: +, −, × or ÷.",
+      "Type the second hexadecimal number.",
+      "Read the HEX result and its decimal equivalent instantly."
+    ],
+    "formula": "Convert each input from base-16 to decimal, apply the operation, convert back.\nHEX → decimal: sum of digit × 16^position.\nDecimal → HEX: repeated division by 16, reading remainders.\nExample: FF₁₆ = 15×16 + 15 = 255; 255 + 1 = 256 = 100₁₆.",
+    "workedExample": "Compute FF + 1:\n1. FF₁₆ = 15 × 16 + 15 = 255.\n2. 1₁₆ = 1.\n3. 255 + 1 = 256.\n4. 256 in hex: 256 ÷ 16 = 16 remainder 0; 16 ÷ 16 = 1 remainder 0; 1 ÷ 16 = 0 remainder 1 → read remainders upward: 100.\n5. Result: 100₁₆ = 256 decimal.",
+    "benefits": [
+      "True hex arithmetic - no manual base conversion round-trips.",
+      "Shows HEX and decimal side by side, great for learning.",
+      "Catches invalid digits (like G or Z) with a clear error.",
+      "Integer division matches C/Python // behaviour for whole numbers."
+    ],
+    "limitations": [
+      "Integer arithmetic only - no fractions; division truncates toward zero.",
+      "No bitwise operators (AND/OR/XOR/shifts) - use a programmer calculator for those.",
+      "Very large values beyond JavaScript safe integers (2⁵³) may lose precision."
+    ],
+    "faqs": [
+      {
+        "q": "How do I add hexadecimal numbers?",
+        "a": "Convert to decimal, add, convert back - or add digit by digit carrying at 16 instead of 10. Example: FF + 1: F+1 overflows to 0 carry 1, giving 100₁₆. This tool does it instantly."
+      },
+      {
+        "q": "What is FF in decimal?",
+        "a": "255. F = 15, so FF = 15×16 + 15 = 255. It is the largest value one byte can hold."
+      },
+      {
+        "q": "Why do programmers use hexadecimal?",
+        "a": "Because it maps cleanly to binary: one hex digit = 4 bits, two digits = one byte. Memory addresses, colour codes (#FF0000) and bit masks are far more readable in hex than in long binary strings."
+      },
+      {
+        "q": "How do I convert hex to decimal by hand?",
+        "a": "Multiply each digit by 16^position (positions from right, starting at 0) and add. For 1A3: 1×256 + 10×16 + 3 = 256 + 160 + 3 = 419."
+      },
+      {
+        "q": "What does the 0x prefix mean?",
+        "a": "0x marks a number as hexadecimal in code (0xFF = 255). You can type values with or without the prefix here - letters A-F are what matter."
+      },
+      {
+        "q": "Is hex division exact?",
+        "a": "This calculator uses integer division (truncated toward zero), like C or Python //. 7 ÷ 2 = 3, not 3.5. The remainder is discarded."
+      }
+    ],
+    "labels": {
+      "firstValue": "First HEX value",
+      "secondValue": "Second HEX value",
+      "operation": "Operation",
+      "hexResult": "Result (HEX)",
+      "decResult": "Result (decimal)",
+      "invalidHex": "Invalid hexadecimal. Use only digits 0-9 and letters A-F."
+    }
+  }
+}

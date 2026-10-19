@@ -1,0 +1,171 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="handwriting-input">{{ t('labels.textLabel') }}</label>
+        <textarea class="ed-textarea" id="handwriting-input" [ngModel]="text()" (ngModelChange)="setText($event)"
+          [attr.placeholder]="t('labels.textPlaceholder')" rows="4"></textarea>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.styleLabel') }}</label>
+        <div class="btn-row">
+          <button type="button" class="btn" [class.primary]="style() === 'classic'" (click)="setStyle('classic')">
+            {{ t('labels.styleClassic') }}
+          </button>
+          <button type="button" class="btn" [class.primary]="style() === 'casual'" (click)="setStyle('casual')">
+            {{ t('labels.styleCasual') }}
+          </button>
+          <button type="button" class="btn" [class.primary]="style() === 'elegant'" (click)="setStyle('elegant')">
+            {{ t('labels.styleElegant') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="handwriting-ink">{{ t('labels.inkLabel') }}</label>
+        <div class="input-row">
+          <input id="handwriting-ink" type="color" [ngModel]="ink()" (ngModelChange)="setInk($event)"
+            [attr.aria-label]="t('labels.inkLabel')" />
+          <div class="swatches" role="group" [attr.aria-label]="t('labels.inkLabel')">
+            <button type="button" class="swatch" style="background:#1e3a8a" (click)="setInk('#1e3a8a')" [attr.aria-label]="t('labels.inkBlue')"></button>
+            <button type="button" class="swatch" style="background:#111827" (click)="setInk('#111827')" [attr.aria-label]="t('labels.inkBlack')"></button>
+            <button type="button" class="swatch" style="background:#b91c1c" (click)="setInk('#b91c1c')" [attr.aria-label]="t('labels.inkRed')"></button>
+            <button type="button" class="swatch" style="background:#166534" (click)="setInk('#166534')" [attr.aria-label]="t('labels.inkGreen')"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="handwriting-size">{{ t('labels.sizeLabel') }}: {{ size() }}px</label>
+        <input id="handwriting-size" type="range" min="24" max="96" step="4"
+          [ngModel]="size()" (ngModelChange)="setSize($event)" />
+      </div>
+
+      <div class="check-row">
+        <label class="check">
+          <input type="checkbox" [checked]="ruled()" (change)="toggleRuled()" />
+          <span>{{ t('labels.ruledLabel') }}</span>
+        </label>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.previewLabel') }}</label>
+        <div class="canvas-wrap">
+          <canvas #paper></canvas>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="downloadPng()">
+          <app-icon name="download" /> {{ t('labels.downloadButton') }}
+        </button>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

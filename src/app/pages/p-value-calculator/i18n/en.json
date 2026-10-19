@@ -1,0 +1,96 @@
+{
+  "p-value-calculator": {
+    "assumptionNote": "The statistic must come from a test whose assumptions are met (normality for z, approximate normality for t). This tool computes the p-value; it does not check assumptions.",
+    "benefits": [
+      "Both z and t tests in one place, with one or two tails.",
+      "No statistics tables needed - exact values to 6 decimals.",
+      "The 5% significance call is made for you, in plain words.",
+      "Degrees of freedom adjustable for any t-test.",
+      "Instant feedback while you explore what-if scenarios."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A p-value is the probability of seeing a test statistic at least this extreme if the null hypothesis were true. p = 0.05 means: if nothing were really happening, results this extreme would occur 5% of the time by chance alone.",
+        "q": "What is a p-value?"
+      },
+      {
+        "a": "A z-test uses the standard normal distribution and applies when the population standard deviation is known or the sample is large. A t-test uses the t-distribution with degrees of freedom and is the right choice for small samples with estimated standard deviation.",
+        "q": "What is the difference between a z-test and a t-test?"
+      },
+      {
+        "a": "One-tailed tests one direction only (is it greater?). Two-tailed tests either direction (is it different?). Two-tailed is the default in most research because it does not assume the direction in advance.",
+        "q": "One-tailed or two-tailed?"
+      },
+      {
+        "a": "0.05 is the conventional significance level: a p-value below it is called statistically significant. It is a historical convention from the 1920s, not a law of nature - always report the exact p-value too.",
+        "q": "Why is 0.05 the magic number?"
+      },
+      {
+        "a": "No. A p-value measures surprise under the null hypothesis, not the probability that the hypothesis is true, and not the size of the effect. A tiny p-value can come from a trivial effect in a huge sample.",
+        "q": "Does a small p-value prove my hypothesis?"
+      },
+      {
+        "a": "The t-distribution has heavier tails than the normal distribution, accounting for the extra uncertainty of estimating the standard deviation from a small sample. As degrees of freedom grow, the t-distribution converges to the normal.",
+        "q": "Why do I need degrees of freedom for a t-test?"
+      }
+    ],
+    "formula": "Z-test: p = 2 x (1 - Phi(|z|)) for two-tailed; p = 1 - Phi(z) for one-tailed.\nPhi is the standard normal CDF.\nT-test with v degrees of freedom: two-tailed p = I(v/(v+t^2), v/2, 1/2),\nwhere I is the regularized incomplete beta function.\nSignificant when p < 0.05.",
+    "formulaHeading": "Formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose z-test or t-test.",
+      "Enter your test statistic (the z or t value from your analysis).",
+      "For t-tests, enter the degrees of freedom.",
+      "Pick one-tailed or two-tailed.",
+      "Read the p-value and the plain-words significance verdict."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The p-value is the probability of results at least this extreme under the null hypothesis.",
+      "Smaller p means more surprising results if the null were true.",
+      "p < 0.05 is the conventional bar for statistical significance.",
+      "Z-tests use the normal distribution; t-tests use the t-distribution with degrees of freedom.",
+      "Two-tailed tests check both directions; one-tailed checks one.",
+      "A p-value is not the probability that the hypothesis is true."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "p value calculator, p-value from z score, p-value from t statistic, z test p value, t test p value calculator, significance calculator",
+    "labels": {
+      "dfLabel": "Degrees of freedom",
+      "interpLabel": "Verdict (5% level)",
+      "notSignificant": "Not significant (p >= 0.05)",
+      "pValueLabel": "P-value",
+      "significant": "Significant (p < 0.05)",
+      "statisticLabel": "Test statistic (z or t)",
+      "tailsLabel": "Tails",
+      "tails_one": "One-tailed",
+      "tails_two": "Two-tailed",
+      "testTypeLabel": "Test type",
+      "test_t": "t-test",
+      "test_z": "z-test"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Educational tool - not for clinical, legal or regulatory decisions.",
+      "It computes p from your statistic; it cannot verify test assumptions.",
+      "Only z and t tests - no chi-square, F or ANOVA.",
+      "P-values alone do not measure effect size or practical importance."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free p-value calculator: get p-values from z or t test statistics, one or two-tailed, with a plain-words significance verdict at the 5% level.",
+    "metaTitle": "P-Value Calculator - From Z or T Test Statistics | JaurTools",
+    "name": "P-Value Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A z-score of 1.96, two-tailed, gives p = 0.05: there is a 5% chance of seeing results this extreme if nothing were really happening. That is exactly the conventional significance threshold, so the result is significant at the 5% level. This calculator handles z-tests and t-tests, one or two-tailed, and states the verdict in plain words.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "P-value results",
+    "tagline": "P-values from z or t statistics - one or two-tailed, with a clear verdict.",
+    "workedExample": "Z = 1.96, two-tailed:\n1. Standard normal CDF at 1.96: Phi(1.96) = 0.975.\n2. Upper tail: 1 - 0.975 = 0.025.\n3. Two-tailed: 2 x 0.025 = 0.05.\n4. Compare with 0.05: 0.05 is not less than 0.05, so this is right on the boundary - significant at the 5% level by convention (p <= 0.05).\n5. T-test version with 10 df and t = 1.96 gives p = 0.0784, not significant - heavier tails need stronger evidence.",
+    "workedExampleHeading": "Worked example"
+  }
+}

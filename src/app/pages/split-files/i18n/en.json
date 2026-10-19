@@ -1,0 +1,97 @@
+{
+  "split-files": {
+    "benefits": [
+      "Fit big files onto size-limited uploads, email attachments, or FAT32 drives (4 GB limit).",
+      "Send huge files over chat apps that cap attachments at 25–100 MB.",
+      "No software to install and no waiting for an upload — everything happens on your device.",
+      "Byte-exact slicing means the rejoined file is identical to the original, bit for bit."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. Splitting copies exact byte ranges, so each part is a perfect slice of the original. As long as you rejoin all parts in order, the result is bit-for-bit identical to the original file.",
+        "q": "Will splitting damage my file?"
+      },
+      {
+        "a": "On Windows, open Command Prompt and run: copy /b file_part1+file_part2+file_part3 whole.ext. On Linux or macOS, run: cat file_part* > whole.ext. Replace the names with your actual part names, in numeric order.",
+        "q": "How do I rejoin the parts?"
+      },
+      {
+        "a": "The file size is rarely an exact multiple of the chunk size. The last part simply holds the leftover bytes. For example, a 25 MB file split into 10 MB chunks gives 10 MB, 10 MB, and 5 MB.",
+        "q": "Why is the last part smaller?"
+      },
+      {
+        "a": "Yes — any file type can be split: videos, ZIPs, ISOs, documents, anything. The tool never looks inside the file; it only slices bytes.",
+        "q": "Can I split a video or ZIP file?"
+      },
+      {
+        "a": "Yes, 2 GB. Beyond that, browsers handle file slices less reliably, especially on phones. For multi-gigabyte files, a desktop tool like 7-Zip is a safer choice.",
+        "q": "Is there a file size limit?"
+      },
+      {
+        "a": "Never. The splitting runs entirely in your browser using the File API. Your file never leaves your device.",
+        "q": "Are my files uploaded anywhere?"
+      }
+    ],
+    "formula": "Number of parts = ceil(file size in bytes / chunk size in bytes).\nSize of each full part = chunk size in bytes.\nSize of the last part = file size - (parts - 1) x chunk size.\nExample: 52,428,800 bytes / 10,485,760 bytes = 5 parts.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click the file button and choose the file you want to split.",
+      "Pick \"By chunk size\" and enter the megabytes per part, or \"By number of parts\" and enter how many parts you want.",
+      "The tool instantly shows the file size, the number of parts, and the size of each part.",
+      "Download parts one by one, or use \"Download all parts\" to save them together.",
+      "Move or share the parts, then rejoin them in order on the other side to restore the original file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Splitting cuts a file into exact byte ranges — no compression, no format change, no data loss.",
+      "Two ways to split: by chunk size (every part is at most N MB) or by number of parts (parts are as equal as possible).",
+      "Part names get a _part1, _part2 suffix before the file extension so they sort in order.",
+      "The last part is usually smaller — it holds whatever bytes are left over.",
+      "To rejoin, concatenate the parts in numeric order (Windows: copy /b part1+part2 whole; Linux/macOS: cat part* > whole)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "split files online, file splitter, split large file into parts, chunk file, split zip file",
+    "labels": {
+      "chooseFile": "Choose a file",
+      "chunkSizeMb": "Chunk size (MB)",
+      "clearFile": "Remove file",
+      "downloadAll": "Download all parts",
+      "downloadPart": "Download",
+      "errorTooLarge": "This file is larger than 2 GB, which this tool cannot split.",
+      "fileHint": "Any file type. Splitting is done locally in your browser.",
+      "fileName": "File",
+      "fileSize": "Total size",
+      "modeCount": "By number of parts",
+      "modeLabel": "Split method",
+      "modeSize": "By chunk size",
+      "noFile": "Choose a file above to split it into parts.",
+      "numParts": "Number of parts",
+      "part": "Part",
+      "partCount": "Number of parts"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The parts are not compressed — five 10 MB parts still total 50 MB.",
+      "Some download managers or email filters may rename or reorder parts; keep the _partN names intact.",
+      "Files over 2 GB are not accepted, and very large files can feel slow on low-memory phones.",
+      "Rejoining needs the parts in the right order — a shuffled part means a corrupted file."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free file splitter: break any file into smaller chunks by size or number of parts. Runs 100% in your browser — no upload, no sign-up.",
+    "metaTitle": "Split Files Online - Split Large Files into Parts | JaurTools",
+    "name": "Split Files",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick a file, choose a chunk size (for example 10 MB) or a number of parts (for example 4), and download each part separately. A 50 MB file split into 10 MB chunks gives you 5 parts named file_part1 to file_part5. Parts are exact byte slices, so nothing is changed or compressed — rejoin them in order to restore the original.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Split Files results",
+    "tagline": "Split any file into smaller parts by size or count — free, private, and right in your browser.",
+    "workedExample": "File: backup.zip, 50 MB (52,428,800 bytes). Chunk size: 10 MB (10,485,760 bytes).\n1. Parts = 52,428,800 / 10,485,760 = 5.\n2. Parts 1 to 4 are each 10,485,760 bytes (10 MB).\n3. Part 5 = 52,428,800 - (4 x 10,485,760) = 52,428,800 - 41,943,040 = 10,485,760 bytes (10 MB).\n4. You download backup_part1.zip to backup_part5.zip and rejoin them in order to get the original 50 MB file back.",
+    "workedExampleHeading": "Worked example"
+  }
+}

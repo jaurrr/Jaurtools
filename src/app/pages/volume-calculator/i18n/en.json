@@ -1,0 +1,95 @@
+{
+  "volume-calculator": {
+    "benefits": [
+      "Covers the six most-used 3D shapes: cube, cuboid, sphere, cylinder, cone and square pyramid.",
+      "Full-precision results with no rounding surprises.",
+      "Bonus surface-area and base-area rows computed automatically.",
+      "Works with any unit: mm, cm, m, in or ft.",
+      "Runs entirely in your browser; nothing is uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Volume measures the space inside a 3D shape, in cubic units (cm³, m³...). Surface area measures the outer skin, in square units. You need volume for capacity (how much fits inside) and surface area for material (paint, wrapping).",
+        "q": "What is the difference between volume and surface area?"
+      },
+      {
+        "a": "A cone fills exactly one third of the cylinder with the same base and height. This was known to the ancient Greeks — Democritus stated it and Eudoxus proved it. The pyramid is likewise one third of its box.",
+        "q": "Why is a cone one third of a cylinder?"
+      },
+      {
+        "a": "Yes — the unit selector changes only the label on the result. It does not convert between units, so enter all dimensions in the same unit you select.",
+        "q": "Can I use inches or feet instead of cm?"
+      },
+      {
+        "a": "The sphere formula comes from calculus: V = ∫π(r²−x²)dx from −r to r, which evaluates to (4/3)πr³. Archimedes found it geometrically and was so proud it was carved on his tomb.",
+        "q": "Where does the sphere formula (4/3)πr³ come from?"
+      },
+      {
+        "a": "The pyramid here has a square base: V = (1/3) × base² × height. For other bases, multiply the base area by the height and divide by three — the one-third rule works for any pyramid.",
+        "q": "Does the pyramid have to have a square base?"
+      }
+    ],
+    "formula": "Cube:     V = a³\nCuboid:   V = l × w × h\nSphere:   V = (4/3)πr³\nCylinder: V = πr²h\nCone:     V = (1/3)πr²h\nPyramid (square base): V = (1/3) × b² × h\n\nPrism rule: V = (area of base) × height\nPyramid/cone rule: V = (area of base) × height / 3",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the 3D shape from the dropdown.",
+      "Enter its dimensions — every value in the same unit.",
+      "Pick the unit label (mm, cm, m, in, ft) for the result.",
+      "Read the volume, shown in cubic units.",
+      "Check the bonus row for surface area or base area where available."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Volume is always measured in cubic units (cm³, m³, in³...).",
+      "A sphere holds the most volume for the least surface of any shape.",
+      "Doubling every dimension multiplies the volume by eight (cube scaling).",
+      "Cones and pyramids hold exactly one third of their matching cylinder/box.",
+      "1 cm³ of water weighs 1 gram — which is how the metric system was designed."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "volume calculator, sphere volume, cylinder volume, cone volume, cube volume, pyramid volume",
+    "labels": {
+      "baseSide": "Base side length",
+      "detailBaseArea": "Base area",
+      "detailSurfaceArea": "Surface area",
+      "height": "Height",
+      "length": "Length",
+      "radius": "Radius",
+      "shape": "Shape",
+      "shapeCone": "Cone",
+      "shapeCube": "Cube",
+      "shapeCuboid": "Cuboid (rectangular box)",
+      "shapeCylinder": "Cylinder",
+      "shapePyramid": "Square pyramid",
+      "shapeSphere": "Sphere",
+      "side": "Side length",
+      "unit": "Unit",
+      "volume": "Volume",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only the six listed shapes are supported — irregular shapes need numerical methods.",
+      "All dimensions must use the same unit; the tool does not convert between units.",
+      "Results assume perfect geometric shapes; real containers have wall thickness.",
+      "Display rounds to 8 significant digits; the underlying math uses full precision."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free volume calculator for cube, cuboid, sphere, cylinder, cone and square pyramid. Enter dimensions, get exact volume in any unit.",
+    "metaTitle": "Volume Calculator — Cube, Sphere, Cylinder, Cone, Pyramid",
+    "name": "Volume Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick a shape and enter its dimensions — for example a cylinder of radius 3 cm and height 5 cm holds π × 9 × 5 = 141.372 cm³. Cube, cuboid, sphere, cone and square pyramid are supported, in mm, cm, m, in or ft.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Volume results",
+    "tagline": "Volumes of cubes, cuboids, spheres, cylinders, cones and pyramids.",
+    "workedExample": "Cylinder with r = 3 cm, h = 5 cm:\nV = πr²h = π × 3² × 5 = π × 9 × 5 = 45π ≈ 141.372 cm³\n\nSphere with r = 3 cm:\nV = (4/3)πr³ = (4/3) × π × 27 = 36π ≈ 113.097 cm³\n\nCone with r = 3 cm, h = 5 cm:\nV = (1/3)πr²h = (1/3) × π × 9 × 5 = 15π ≈ 47.124 cm³ — exactly one third of the matching cylinder.",
+    "workedExampleHeading": "Worked example"
+  }
+}

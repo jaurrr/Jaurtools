@@ -1,0 +1,173 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="scoreboard">
+        <div class="score">
+          <span class="score-label"><app-icon name="zap" /> {{ t('labels.scoreLabel') }}</span>
+          <strong>{{ score() }}</strong>
+        </div>
+        <div class="score">
+          <span class="score-label"><app-icon name="star" /> {{ t('labels.highScoreLabel') }}</span>
+          <strong>{{ highScore() }}</strong>
+        </div>
+      </div>
+
+      <p class="status" role="status">{{ statusText() }}</p>
+
+      <div class="calc-score" aria-live="polite">
+        <div class="calc-score-top">
+          <span class="calc-score-label">{{ t('labels.nextTargetLabel') }}: {{ nextTarget() }}</span>
+          <span class="calc-score-num">{{ score() }}<span class="calc-score-den">/{{ nextTarget() }}</span></span>
+        </div>
+        <div class="calc-score-track" role="progressbar" [attr.aria-valuenow]="targetProgress()" aria-valuemin="0" aria-valuemax="100">
+          <div class="calc-score-fill" [style.inline-size.%]="targetProgress()"></div>
+        </div>
+      </div>
+
+      <div class="canvas-wrap calc-testarea">
+        <canvas #board width="400" height="400" [attr.aria-label]="t('labels.canvasLabel')"></canvas>
+        @if (state() === 'over') {
+          <div class="game-over">
+            <h3>{{ t('labels.overMsg') }}</h3>
+            <p>{{ t('labels.finalScoreMsg') }}: <strong>{{ finalScore() }}</strong></p>
+            <button type="button" class="btn" (click)="start()">
+              <app-icon name="refresh-cw" /> {{ t('labels.playAgainButton') }}
+            </button>
+          </div>
+        }
+        @if (state() === 'ready') {
+          <div class="game-over">
+            <p>{{ t('labels.readyMsg') }}</p>
+            <button type="button" class="btn" (click)="start()">
+              <app-icon name="zap" /> {{ t('labels.startButton') }}
+            </button>
+          </div>
+        }
+      </div>
+
+      <div class="speed-row" role="group" [attr.aria-label]="t('labels.speedLabel')">
+        <button type="button" [class.active]="speed() === 'slow'" (click)="setSpeed('slow')">{{ t('labels.speedSlow') }}</button>
+        <button type="button" [class.active]="speed() === 'normal'" (click)="setSpeed('normal')">{{ t('labels.speedNormal') }}</button>
+        <button type="button" [class.active]="speed() === 'fast'" (click)="setSpeed('fast')">{{ t('labels.speedFast') }}</button>
+      </div>
+
+      <div class="btn-row">
+        @if (state() === 'playing') {
+          <button type="button" class="btn ghost" (click)="pause()">{{ t('labels.pauseButton') }}</button>
+        } @else if (state() === 'paused') {
+          <button type="button" class="btn" (click)="resume()">{{ t('labels.resumeButton') }}</button>
+        }
+        @if (state() !== 'ready') {
+          <button type="button" class="btn" (click)="start()">
+            <app-icon name="refresh-cw" /> {{ t('labels.restartButton') }}
+          </button>
+        }
+      </div>
+
+      <div class="dpad" [attr.aria-label]="t('labels.dpadLabel')">
+        <button type="button" class="dpad-up" (click)="turn('up')" [attr.aria-label]="t('labels.dpadUp')">▲</button>
+        <button type="button" class="dpad-left" (click)="turn('left')" [attr.aria-label]="t('labels.dpadLeft')">◀</button>
+        <button type="button" class="dpad-right" (click)="turn('right')" [attr.aria-label]="t('labels.dpadRight')">▶</button>
+        <button type="button" class="dpad-down" (click)="turn('down')" [attr.aria-label]="t('labels.dpadDown')">▼</button>
+      </div>
+      <p class="note">{{ t('labels.controlsHint') }}</p>
+
+      <ul class="calc-shortcuts" [attr.aria-label]="t('labels.shortcutsTitle')">
+        <li><kbd class="calc-kbd">&#8592;&#8593;&#8595;&#8594;</kbd><span>{{ t('labels.shortcutSteer') }}</span></li>
+        <li><kbd class="calc-kbd">Space</kbd><span>{{ t('labels.shortcutPause') }}</span></li>
+      </ul>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

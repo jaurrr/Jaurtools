@@ -1,0 +1,92 @@
+{
+  "cpm-cpc-cpa-calculator": {
+    "assumptionNote": "Uses the totals you enter; it does not split results by campaign, placement, or time period. For real optimisation, compare these metrics per ad set, not just account-wide.",
+    "benefits": [
+      "One input, five metrics: CPM, CPC, CPA, CTR, and conversion rate together.",
+      "Compare campaigns apples-to-apples on the metric that matters for your goal.",
+      "Spot funnel leaks: high CTR but low conversion rate means a landing-page problem.",
+      "Essential for media buyers, freelancers, and anyone spending on Meta or Google ads."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "CPM (cost per mille) is the cost per 1,000 impressions - best for brand awareness. CPC (cost per click) is the cost per click - best for traffic. CPA (cost per acquisition) is the cost per conversion - best for sales and leads. Use the metric that matches your campaign goal.",
+        "q": "CPM vs CPC vs CPA - which should I use?"
+      },
+      {
+        "a": "Google Search CPMs are often $20-40+, Meta/Facebook $5-15, and display networks $1-5 - but it varies wildly by country, audience, and season. India and Gulf markets are typically cheaper than the US and UK. Benchmark against your own history, not a global average.",
+        "q": "What is a good CPM?"
+      },
+      {
+        "a": "From the same numbers: CPA = CPC / conversion rate. A $0.25 CPC with a 5% conversion rate gives a $5 CPA. So you can lower CPA either by cutting CPC (cheaper clicks) or by raising conversion rate (better landing page) - usually the landing page is the bigger lever.",
+        "q": "How are CPC, CPA, and conversion rate linked?"
+      },
+      {
+        "a": "For display and social, 1-2% CTR is typical; for Google Search, 3-6% is common because of high intent. Low CTR usually means weak creative or wrong audience; very high CTR with no conversions means clickbait creative.",
+        "q": "What is a good click-through rate?"
+      },
+      {
+        "a": "Compare CPA to customer lifetime value, not to zero. If a customer is worth $50 to you, a $5 CPA is excellent. Break-even CPA = average order value x gross margin. Spend more than that per acquisition and you lose money on every sale.",
+        "q": "What CPA should I target?"
+      },
+      {
+        "a": "Attribution windows, bot traffic, and view-through conversions inflate platform numbers. Track with UTM parameters and your own analytics, deduplicate conversions, and always sanity-check platform-reported CPA against actual revenue.",
+        "q": "Can I trust the platform's numbers?"
+      }
+    ],
+    "formula": "CPM = ad spend / impressions x 1,000.\nCPC = ad spend / clicks.\nCPA = ad spend / conversions.\nCTR = clicks / impressions x 100.\nConversion rate = conversions / clicks x 100.\nExample: 500/100,000x1,000 = $5.00 CPM; 500/2,000 = $0.25 CPC; 500/100 = $5.00 CPA.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter total impressions served.",
+      "Enter total clicks received.",
+      "Enter total conversions tracked.",
+      "Enter total ad spend.",
+      "Read CPM, CPC, CPA, CTR, and conversion rate - then find your weakest funnel stage."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "CPM = cost per 1,000 impressions; CPC = cost per click; CPA = cost per conversion.",
+      "CTR = clicks / impressions; conversion rate = conversions / clicks.",
+      "CPA = CPC / conversion rate - improve either half to cut acquisition cost.",
+      "Compare CPA against customer lifetime value, not against zero.",
+      "Low CTR signals creative or targeting problems; low conversion rate signals landing-page problems.",
+      "Ad metrics vary hugely by platform, country, and season - benchmark against yourself."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "CPM calculator, CPC calculator, CPA calculator, cost per click calculator, ad metrics calculator, CTR calculator",
+    "labels": {
+      "adSpend": "Total ad spend",
+      "clicks": "Clicks",
+      "conversionRate": "Conversion rate",
+      "conversions": "Conversions",
+      "cpa": "CPA (cost per acquisition)",
+      "cpc": "CPC (cost per click)",
+      "cpm": "CPM (cost per 1,000)",
+      "ctr": "CTR (click-through rate)",
+      "impressions": "Impressions"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Account-wide totals; real optimisation needs per-campaign breakdowns.",
+      "Does not account for attribution windows or bot/invalid traffic.",
+      "CPA means little without customer lifetime value for context.",
+      "A reporting tool, not a substitute for proper ad analytics."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free CPM/CPC/CPA calculator: ad cost metrics plus CTR and conversion rate from your campaign totals. For media buyers and advertisers.",
+    "metaTitle": "CPM CPC CPA Calculator - Ad Cost Metrics | JaurTools",
+    "name": "CPM/CPC/CPA Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "$500 spend on 100,000 impressions, 2,000 clicks, 100 conversions: CPM is $5.00, CPC is $0.25, CPA is $5.00, CTR is 2%, and conversion rate is 5%. Remember CPA = CPC / conversion rate, so fixing your landing page often cuts acquisition cost more than chasing cheaper clicks.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your ad metrics results",
+    "tagline": "Turn campaign totals into CPM, CPC, CPA, CTR, and conversion rate.",
+    "workedExample": "100,000 impressions, 2,000 clicks, 100 conversions, $500 spend:\n1. CPM = 500 / 100,000 x 1,000 = $5.00.\n2. CPC = 500 / 2,000 = $0.25.\n3. CPA = 500 / 100 = $5.00.\n4. CTR = 2,000 / 100,000 x 100 = 2.00%.\n5. Conversion rate = 100 / 2,000 x 100 = 5.00%.\nCheck: CPA = CPC / conversion rate = 0.25 / 0.05 = $5.00. Consistent.",
+    "workedExampleHeading": "Worked example"
+  }
+}

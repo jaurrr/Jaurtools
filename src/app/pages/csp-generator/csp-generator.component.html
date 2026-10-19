@@ -1,0 +1,239 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      @for (def of directiveDefs; track def.id) {
+        <div class="field directive">
+          <label class="perm-check">
+            <input
+              type="checkbox"
+              [checked]="directives()[def.id].enabled"
+              (change)="toggleDirective(def.id)"
+            />
+            <span class="ltr dir-name">{{ def.id }}</span>
+          </label>
+          <p class="dir-desc">{{ directiveLabel(def.id) }}</p>
+          @if (directives()[def.id].enabled) {
+            <div class="chip-row">
+              @for (q of quickSources; track q) {
+                <button
+                  type="button"
+                  class="chip ltr"
+                  [class.active]="directives()[def.id].sources.includes(q)"
+                  (click)="addSource(def.id, q)"
+                >
+                  {{ q }}
+                </button>
+              }
+            </div>
+            <div class="input-row host-row">
+              <input
+                type="text"
+                class="ltr grow"
+                spellcheck="false"
+                [placeholder]="t('labels.hostPlaceholder')"
+                [ngModel]="customHost()[def.id] ?? ''"
+                (ngModelChange)="setCustomHost(def.id, $event)"
+                [attr.aria-label]="t('labels.hostPlaceholder')"
+              />
+              <button type="button" class="copy-btn" (click)="addCustomHost(def.id)">
+                {{ t('labels.addButton') }}
+              </button>
+            </div>
+            @if (hostError()[def.id]) {
+              <p class="note error" role="alert">{{ hostError()[def.id] }}</p>
+            }
+            @if (directives()[def.id].sources.length > 0) {
+              <ul class="source-list">
+                @for (s of directives()[def.id].sources; track s) {
+                  <li>
+                    <code class="ltr">{{ s }}</code>
+                    <button
+                      type="button"
+                      class="icon-btn"
+                      (click)="removeSource(def.id, s)"
+                      [attr.aria-label]="t('labels.removeLabel') + ' ' + s"
+                    >
+                      <app-icon name="x" />
+                    </button>
+                  </li>
+                }
+              </ul>
+            }
+          }
+        </div>
+      }
+
+      <div class="field">
+        <span class="field-label">{{ t('labels.flagsLabel') }}</span>
+        <div class="check-row">
+          <label class="perm-check">
+            <input type="checkbox" [checked]="upgradeInsecure()" (change)="toggleUpgrade()" />
+            <span class="ltr">upgrade-insecure-requests</span>
+          </label>
+          <label class="perm-check">
+            <input type="checkbox" [checked]="blockMixed()" (change)="toggleBlockMixed()" />
+            <span class="ltr">block-all-mixed-content</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="csp-report">{{ t('labels.reportUriLabel') }}</label>
+        <input
+          id="csp-report"
+          type="text"
+          class="ltr full"
+          spellcheck="false"
+          placeholder="https://example.com/csp-report"
+          [ngModel]="reportUri()"
+          (ngModelChange)="setReportUri($event)"
+        />
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="copy-btn" (click)="reset()">
+          <app-icon name="refresh-cw" /> {{ t('labels.resetButton') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="csp-header">{{ t('labels.headerLabel') }}</label>
+        <div class="input-row">
+          <textarea
+            id="csp-header"
+            class="dv-term-input ltr code-area"
+            rows="4"
+            readonly
+            [value]="headerValue()"
+          ></textarea>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="copy-btn primary" (click)="copy(headerValue(), 'header')">
+            <app-icon name="copy" />
+            {{ copiedKey() === 'header' ? t('labels.copiedMessage') : t('labels.copyHeaderButton') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="csp-meta">{{ t('labels.metaLabel') }}</label>
+        <div class="input-row">
+          <textarea
+            id="csp-meta"
+            class="dv-term-input ltr code-area"
+            rows="3"
+            readonly
+            [value]="metaTag()"
+          ></textarea>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="copy-btn" (click)="copy(metaTag(), 'meta')">
+            <app-icon name="copy" />
+            {{ copiedKey() === 'meta' ? t('labels.copiedMessage') : t('labels.copyMetaButton') }}
+          </button>
+        </div>
+        <p class="note">{{ t('labels.metaNote') }}</p>
+      </div>
+
+      <div class="results">
+        <div class="result-row total">
+          <span><app-icon name="shield-check" /> {{ t('labels.directiveCountLabel') }}</span>
+          <strong>{{ headerValue().split(';').length }}</strong>
+        </div>
+      </div>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

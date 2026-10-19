@@ -1,0 +1,117 @@
+{
+  "icon-to-png-converter": {
+    "benefits": [
+      "Turns vector icons into crisp PNGs at any size from 16 to 1024 px — perfect for docs, slides, and apps.",
+      "Paste any SVG path (including Font Awesome's free icons) to render exactly that artwork.",
+      "Transparent background by default, with an optional solid color for avatars and badges.",
+      "Recolor icons to your brand palette with one click — no design software needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Font Awesome icons are vector SVG paths. This tool renders those paths onto a canvas at your chosen pixel size and exports a PNG. Pick from the 20 built-in icons, or paste any SVG path data to render that exact icon.",
+        "q": "How does an icon become a PNG?"
+      },
+      {
+        "a": "Yes. Copy the 'd' attribute from any Font Awesome free SVG (or any SVG icon), paste it into the custom path box, and it renders immediately. Respect the icon's license — Font Awesome Free requires attribution.",
+        "q": "Can I render real Font Awesome icons?"
+      },
+      {
+        "a": "The 20 built-in icons are original artwork drawn in the same 24×24 style — they are not Font Awesome's copyrighted files. For pixel-identical FA icons, paste the official SVG path as described above.",
+        "q": "Are the built-in icons the real Font Awesome icons?"
+      },
+      {
+        "a": "SVG paths scale infinitely, so any size is equally crisp. For web use, 256–512 px covers retina displays; for favicons or tiny UI, export at exactly the display size (16–64 px).",
+        "q": "What size should I export?"
+      },
+      {
+        "a": "The path box accepts the contents of an SVG path 'd' attribute (the M/L/C/Z commands). If the artwork uses a different viewBox, results may be offset — the renderer assumes the standard 24×24 icon grid.",
+        "q": "What can I paste into the custom path box?"
+      },
+      {
+        "a": "Tick the background option and pick a color. The icon is drawn centered on a solid square — ideal for profile pictures, app icons, and social avatars.",
+        "q": "How do I get a solid background instead of transparency?"
+      }
+    ],
+    "formula": "pad = size x (padding / 100)\ncontent = size - 2 x pad\nscale = content / 24\nExample: size = 256 px, padding = 10%\npad = 25.6 px, content = 204.8 px, scale = 204.8 / 24 = 8.53\nEach icon unit becomes 8.53 px on the canvas.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click one of the 20 built-in icons, or paste an SVG path into the custom box.",
+      "Pick the icon color, and optionally enable a solid background color.",
+      "Drag the size slider (16–1024 px) and set the padding percentage.",
+      "Preview the crisp vector rendering on the checkerboard canvas.",
+      "Press Download to save the PNG with transparency (or your background)."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Renders icons as true vector paths on canvas — crisp at any size from 16 to 1024 px.",
+      "20 built-in icons in the classic 24×24 icon-grid style, all original artwork.",
+      "Custom path box renders any pasted SVG path data, including Font Awesome free icons.",
+      "Icon color picker plus optional solid background color for badges and avatars.",
+      "Adjustable padding (0–40%) controls the breathing room around the glyph.",
+      "Exports lossless PNG with transparency by default; everything runs in the browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "icon to png, font awesome to png, svg to png icon, render icon png, icon png generator",
+    "labels": {
+      "badPath": "That path data could not be parsed. Please paste a valid SVG path.",
+      "bgColor": "Background color",
+      "bgEnabled": "Solid background",
+      "customHint": "Paste the 'd' attribute of any SVG icon (for example, a Font Awesome free icon) to render it.",
+      "customPath": "Custom SVG path",
+      "customPlaceholder": "M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z",
+      "downloadPng": "Download PNG",
+      "emptyPath": "Paste an SVG path above, or pick a built-in icon.",
+      "iconColor": "Icon color",
+      "names": {
+        "arrowRight": "Arrow right",
+        "bell": "Bell",
+        "camera": "Camera",
+        "check": "Check",
+        "close": "Close",
+        "download": "Download",
+        "envelope": "Envelope",
+        "folder": "Folder",
+        "heart": "Heart",
+        "home": "Home",
+        "image": "Image",
+        "lock": "Lock",
+        "moon": "Moon",
+        "music": "Music note",
+        "phone": "Phone",
+        "plus": "Plus",
+        "search": "Search",
+        "star": "Star",
+        "upload": "Upload",
+        "user": "User"
+      },
+      "padding": "Padding",
+      "pickIcon": "Pick an icon",
+      "size": "Export size",
+      "stageLabel": "Icon preview"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The custom renderer assumes a 24×24 icon grid; paths from other viewBoxes may be misplaced.",
+      "Only fill rendering is supported — stroke-based icons render as outlines may look thin.",
+      "Multi-color SVG icons are flattened to a single icon color.",
+      "Built-in icons are original artwork, not Font Awesome's copyrighted files."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Render crisp icon PNGs at any size from 20 built-in icons or any SVG path you paste. Free, no signup, instant download.",
+    "metaTitle": "Icon to PNG Converter - Crisp Icon PNGs | JaurTools",
+    "name": "Icon to PNG Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Render crisp icon PNGs at any size: pick from 20 built-in icons or paste any SVG path — including Font Awesome's free icons — then set color, size, padding, and background. The PNG downloads instantly, all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your icon results",
+    "tagline": "Any icon, any size, crisp PNG.",
+    "workedExample": "You pick the Heart icon at 256 px with 10% padding and a transparent background.\npad = 256 x 0.10 = 25.6 px; content = 204.8 px; scale = 204.8 / 24 = 8.53.\nThe heart path is drawn 8.53x and downloaded as heart-256px.png — sharp edges at any zoom.",
+    "workedExampleHeading": "Worked example"
+  }
+}

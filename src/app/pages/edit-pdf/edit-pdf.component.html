@@ -1,0 +1,260 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <span class="field-label" id="ep-file-label">{{ t('labels.fileLabel') }}</span>
+        <div class="file-drop fl-drop" role="button" tabindex="0" (click)="fileInput.click()"
+          (keydown.enter)="fileInput.click()" [attr.aria-labelledby]="'ep-file-label'" [class.dragging]="fileDragging()" (dragover)="onDragOverFile($event)" (dragleave)="fileDragging.set(false)" (drop)="onDropFile($event, fileInput)">
+          <app-icon name="upload" />
+          <span>{{ t('labels.chooseFile') }}</span>
+          <small>{{ t('labels.dropHint') }}</small>
+        </div>
+        <input #fileInput id="ep-file" type="file" accept="application/pdf,.pdf" (change)="onFile($event)" hidden />
+        @if (fileName()) {
+          <p class="file-meta"><app-icon name="file-text" /> {{ fileName() }} — {{ t('labels.pagesFound') }}: {{ pageCount() }}</p>
+        }
+      </div>
+
+      <div class="field">
+        <span class="field-label">{{ t('labels.kindLabel') }}</span>
+        <div class="chip-row" role="group" [attr.aria-label]="t('labels.kindLabel')">
+          <button type="button" class="chip" [class.active]="curKind() === 'text'" (click)="setKind('text')">{{ t('labels.kind_text') }}</button>
+          <button type="button" class="chip" [class.active]="curKind() === 'image'" (click)="setKind('image')">{{ t('labels.kind_image') }}</button>
+          <button type="button" class="chip" [class.active]="curKind() === 'rect'" (click)="setKind('rect')">{{ t('labels.kind_rect') }}</button>
+          <button type="button" class="chip" [class.active]="curKind() === 'ink'" (click)="setKind('ink')">{{ t('labels.kind_ink') }}</button>
+        </div>
+      </div>
+
+      <div class="two-inputs">
+        <div class="field">
+          <label for="ep-page">{{ t('labels.pageLabel') }}</label>
+          <input id="ep-page" type="number" inputmode="numeric" min="1" [max]="pageCount()"
+            [ngModel]="curPage()" (ngModelChange)="setPage($event)" />
+        </div>
+        <div class="field">
+          <label for="ep-color">{{ t('labels.colorLabel') }}</label>
+          <select id="ep-color" [ngModel]="curColor()" (ngModelChange)="setColor($event)">
+            <option value="black">{{ t('labels.colorBlack') }}</option>
+            <option value="gray">{{ t('labels.colorGray') }}</option>
+            <option value="blue">{{ t('labels.colorBlue') }}</option>
+            <option value="red">{{ t('labels.colorRed') }}</option>
+            <option value="green">{{ t('labels.colorGreen') }}</option>
+          </select>
+        </div>
+      </div>
+
+      @if (curKind() === 'text') {
+        <div class="field">
+          <label for="ep-text">{{ t('labels.textLabel') }}</label>
+          <input id="ep-text" type="text" maxlength="500" [ngModel]="curText()"
+            (ngModelChange)="setText($event)" [placeholder]="t('labels.textPlaceholder')" />
+        </div>
+        <div class="field">
+          <label for="ep-size">{{ t('labels.sizeLabel') }}</label>
+          <input id="ep-size" type="number" inputmode="numeric" min="6" max="72" step="1"
+            [ngModel]="curFontSize()" (ngModelChange)="setFontSize($event)" />
+        </div>
+      }
+
+      @if (curKind() === 'image') {
+        <div class="field">
+          <span class="field-label" id="ep-img-label">{{ t('labels.imageLabel') }}</span>
+          <div class="file-drop fl-drop" role="button" tabindex="0" (click)="imgInput.click()"
+            (keydown.enter)="imgInput.click()" [attr.aria-labelledby]="'ep-img-label'" [class.dragging]="fileDragging()" (dragover)="onDragOverFile($event)" (dragleave)="fileDragging.set(false)" (drop)="onDropFile($event, imgInput)">
+            <app-icon name="upload" />
+            <span>{{ t('labels.chooseImage') }}</span>
+            <small>{{ t('labels.imgHint') }}</small>
+          </div>
+          <input #imgInput id="ep-img" type="file" accept="image/*" (change)="onImage($event)" hidden />
+          @if (imgReady()) {
+            <p class="file-meta"><app-icon name="check" /> {{ imgName() }}</p>
+          }
+        </div>
+      }
+
+      @if (curKind() === 'ink') {
+        <div class="field">
+          <span class="field-label" id="ep-pad-label">{{ t('labels.padLabel') }}</span>
+          <canvas #drawPad class="draw-pad" width="600" height="220" role="img"
+            [attr.aria-labelledby]="'ep-pad-label'"
+            (pointerdown)="padDown($event)" (pointermove)="padMove($event)"
+            (pointerup)="padUp()" (pointercancel)="padUp()" (pointerleave)="padUp()"></canvas>
+          <div class="btn-row">
+            <button type="button" class="btn" (click)="clearPad()">
+              <app-icon name="refresh-cw" /> {{ t('labels.clearPadBtn') }}
+            </button>
+          </div>
+        </div>
+      }
+
+      @if (curKind() === 'image' || curKind() === 'ink' || curKind() === 'rect') {
+        <div class="two-inputs">
+          <div class="field">
+            <label for="ep-w">{{ t('labels.wLabel') }}</label>
+            <input id="ep-w" type="number" inputmode="numeric" min="1" max="100" step="1"
+              [ngModel]="curW()" (ngModelChange)="setW($event)" />
+          </div>
+          @if (curKind() === 'rect') {
+            <div class="field">
+              <label for="ep-h">{{ t('labels.hLabel') }}</label>
+              <input id="ep-h" type="number" inputmode="numeric" min="1" max="100" step="1"
+                [ngModel]="curH()" (ngModelChange)="setH($event)" />
+            </div>
+          }
+        </div>
+      }
+
+      <div class="two-inputs">
+        <div class="field">
+          <label for="ep-x">{{ t('labels.xLabel') }}</label>
+          <input id="ep-x" type="number" inputmode="numeric" min="0" max="100" step="1"
+            [ngModel]="curX()" (ngModelChange)="setX($event)" />
+        </div>
+        <div class="field">
+          <label for="ep-y">{{ t('labels.yLabel') }}</label>
+          <input id="ep-y" type="number" inputmode="numeric" min="0" max="100" step="1"
+            [ngModel]="curY()" (ngModelChange)="setY($event)" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn" (click)="addElement()" [disabled]="!fileName()">
+          <app-icon name="check" /> {{ t('labels.addBtn') }}
+        </button>
+      </div>
+
+      @if (elements().length > 0) {
+        <div class="field">
+          <span class="field-label">{{ t('labels.addedLabel') }} ({{ elements().length }})</span>
+          @for (e of elements(); track e.id) {
+            <div class="list-row fl-row">
+              <span class="grow">{{ t('labels.kind_' + e.kind) }} — {{ t('labels.pageLabel') }} {{ e.page + 1 }}</span>
+              <button type="button" class="icon-btn" (click)="removeElement(e.id)" [attr.aria-label]="t('labels.removeLabel')">
+                <app-icon name="x" />
+              </button>
+            </div>
+          }
+        </div>
+      }
+
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="apply()" [disabled]="busy() || elements().length === 0">
+          <app-icon name="sparkles" /> {{ busy() ? t('labels.processing') : t('labels.applyBtn') }}
+        </button>
+        <button type="button" class="btn" (click)="reset()">
+          <app-icon name="refresh-cw" /> {{ t('labels.resetBtn') }}
+        </button>
+      </div>
+
+      @if (done()) {
+        <div class="results">
+          <p class="success" role="status"><app-icon name="check" /> {{ t('labels.successMsg') }}</p>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadBtn') }}
+            </button>
+          </div>
+        </div>
+      }
+
+      <p class="note">{{ t('labels.honestNote') }}</p>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,194 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="kh-file">{{ t('labels.fileLabel') }}</label>
+        <input id="kh-file" type="file" accept=".txt,text/plain" (change)="onFile($event)" />
+        <p class="hint">{{ t('labels.fileHint') }}</p>
+      </div>
+
+      <div class="field">
+        <label for="kh-text">{{ t('labels.pasteLabel') }}</label>
+        <textarea id="kh-text" rows="8"
+          [ngModel]="rawText()" (ngModelChange)="setRawText($event)"
+          [attr.placeholder]="t('labels.pastePlaceholder')"
+          [attr.aria-describedby]="fileError() ? 'kh-error' : null"></textarea>
+      </div>
+
+      @if (fileError()) {
+        <p class="error" id="kh-error" role="alert"><app-icon name="triangle-alert" /> {{ fileError() }}</p>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn-ghost" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ t('labels.sampleButton') }}
+        </button>
+        <button type="button" class="btn-ghost" (click)="clearAll()">
+          <app-icon name="x" /> {{ t('labels.clearButton') }}
+        </button>
+      </div>
+
+      @if (entries().length > 0) {
+        <div class="results calc-results">
+          <div class="result-row total">
+            <span><app-icon name="file-text" /> {{ t('labels.entriesLabel') }}</span>
+            <strong>{{ entries().length }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('typeNames.highlight') }}</span>
+            <strong>{{ highlightCount() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('typeNames.note') }}</span>
+            <strong>{{ noteCount() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('typeNames.bookmark') }}</span>
+            <strong>{{ bookmarkCount() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.booksLabel') }}</span>
+            <strong>{{ bookCount() }}</strong>
+          </div>
+        </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+        <h3 class="table-heading">{{ t('labels.entriesHeading') }}</h3>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">{{ t('labels.colBook') }}</th>
+                <th scope="col">{{ t('labels.colType') }}</th>
+                <th scope="col">{{ t('labels.colLocation') }}</th>
+                <th scope="col">{{ t('labels.colContent') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (c of entries(); track $index) {
+                <tr>
+                  <td>{{ c.title }}@if (c.author) { <span class="muted">({{ c.author }})</span> }</td>
+                  <td><span class="type-badge type-{{ c.type }}">{{ typeName(c.type) }}</span></td>
+                  <td>{{ c.page ? 'p. ' + c.page + ', ' : '' }}{{ c.location ? 'loc. ' + c.location : '—' }}</td>
+                  <td class="content-cell">{{ c.content || '—' }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="table-heading">{{ t('labels.exportHeading') }}</h3>
+        <div class="btn-row">
+          <button type="button" class="btn-primary" (click)="exportMarkdown()">
+            <app-icon name="download" /> {{ t('labels.exportMd') }}
+          </button>
+          <button type="button" class="btn-primary" (click)="exportCsv()">
+            <app-icon name="download" /> {{ t('labels.exportCsv') }}
+          </button>
+          <button type="button" class="btn-primary" (click)="exportJson()">
+            <app-icon name="download" /> {{ t('labels.exportJson') }}
+          </button>
+        </div>
+      } @else if (rawText().trim()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.noEntriesFound') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

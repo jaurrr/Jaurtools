@@ -1,0 +1,91 @@
+{
+  "distance-calculator": {
+    "benefits": [
+      "Straight-line distance between any two points, instantly.",
+      "Also gives the midpoint and the slope of the connecting line.",
+      "Works with decimals and negatives - full coordinate plane, not just the first quadrant.",
+      "Ideal for geometry homework, game development, and map math."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is Pythagoras in disguise: the distance is the hypotenuse of a right triangle with legs |x2 - x1| and |y2 - y1|. So d = sqrt((x2 - x1)2 + (y2 - y1)2).",
+        "q": "Why does the formula use a square root?"
+      },
+      {
+        "a": "Average the coordinates: ((x1 + x2) / 2, (y1 + y2) / 2). For (1, 2) and (4, 6) that is (2.5, 4).",
+        "q": "How is the midpoint found?"
+      },
+      {
+        "a": "A vertical line has undefined (infinite) slope because you would divide by zero. The tool says so honestly instead of showing a huge number.",
+        "q": "Why does the slope say undefined?"
+      },
+      {
+        "a": "No - this is the straight-line (Euclidean) distance on a flat plane. Road distances follow streets, and GPS distances follow the Earth's curve; both need different tools.",
+        "q": "Is this the same as driving distance?"
+      },
+      {
+        "a": "Yes. Decimals, negatives, and large values all work - the whole coordinate plane is supported.",
+        "q": "Can I use negative coordinates?"
+      },
+      {
+        "a": "The slope would be 0 / 0, which is meaningless. Distance is simply 0: the points are the same spot.",
+        "q": "What if both points are identical?"
+      }
+    ],
+    "formula": "Distance: d = sqrt((x2 - x1) squared + (y2 - y1) squared)\nMidpoint: ((x1 + x2) / 2, (y1 + y2) / 2)\nSlope: m = (y2 - y1) / (x2 - x1)\nExample: (1, 2) to (4, 6): d = sqrt(9 + 16) = 5",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the x and y coordinates of point A.",
+      "Enter the x and y coordinates of point B.",
+      "The distance, midpoint, and slope appear instantly.",
+      "Decimals and negative coordinates are fully supported."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Distance = sqrt((x2 - x1)2 + (y2 - y1)2) - the Pythagorean theorem.",
+      "(1, 2) to (4, 6): dx = 3, dy = 4, distance = 5.",
+      "Midpoint of (1, 2) and (4, 6) is (2.5, 4).",
+      "Slope = dy / dx = 4 / 3 = 1.3333.",
+      "A vertical line has undefined slope (division by zero).",
+      "Order of the points does not change the distance."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "distance calculator, distance between two points, coordinate distance calculator, midpoint calculator, slope calculator",
+    "labels": {
+      "distance": "Distance",
+      "midpoint": "Midpoint",
+      "pointA": "Point A (x, y)",
+      "pointB": "Point B (x, y)",
+      "slope": "Slope",
+      "vertical": "Undefined (vertical line)",
+      "x1": "Point A x-coordinate",
+      "x2": "Point B x-coordinate",
+      "y1": "Point A y-coordinate",
+      "y2": "Point B y-coordinate"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "2D plane only - no 3D distance between (x, y, z) points.",
+      "Straight-line distance only; not road, walking, or great-circle distance.",
+      "Slope is undefined for vertical lines (shown honestly as such).",
+      "Very large coordinates may lose a little floating-point precision."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free distance calculator: straight-line distance between two points, plus midpoint and slope. Works with decimals and negatives. Private, no sign-up.",
+    "metaTitle": "Distance Calculator - Between Two Points | JaurTools",
+    "name": "Distance Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Enter two points and get the straight-line distance instantly. From (1, 2) to (4, 6): the differences are 3 and 4, so the distance is sqrt(9 + 16) = 5. The tool also shows the midpoint (2.5, 4) and the slope (4/3 = 1.3333). Decimals and negative coordinates work across the whole plane.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Distance results",
+    "tagline": "Straight-line distance, midpoint, and slope for any two points.",
+    "workedExample": "A = (1, 2), B = (4, 6)\n1. Differences: dx = 4 - 1 = 3; dy = 6 - 2 = 4.\n2. Square and add: 9 + 16 = 25.\n3. Square root: sqrt(25) = 5. Distance = 5.\n4. Midpoint: ((1 + 4) / 2, (2 + 6) / 2) = (2.5, 4).\n5. Slope: 4 / 3 = 1.3333.",
+    "workedExampleHeading": "Worked example"
+  }
+}

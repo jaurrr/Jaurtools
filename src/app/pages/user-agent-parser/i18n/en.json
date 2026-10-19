@@ -1,0 +1,105 @@
+{
+  "user-agent-parser": {
+    "benefits": [
+      "Identifies browser, version, engine, OS, and device from any UA string in milliseconds.",
+      "Detects bots and crawlers — essential for reading server logs correctly.",
+      "Try your own UA with one click, or explore realistic samples.",
+      "Device type (desktop/mobile/tablet/bot) helps you debug responsive issues.",
+      "Runs entirely in your browser; nothing is uploaded or logged."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It's the identification string every browser sends with web requests. Servers and analytics use it to know which browser, OS, and device is visiting. You can see yours with the Use my user agent button above.",
+        "q": "What is a user agent string?"
+      },
+      {
+        "a": "Mostly yes for common browsers, but UA strings can be spoofed easily — any client can send any string. Treat parsed results as a hint for analytics and debugging, never as a security boundary.",
+        "q": "Can I trust what the parser says?"
+      },
+      {
+        "a": "The classic reason is history: early browsers pretended to be Mozilla for compatibility, and the habit stuck. Modern Chrome's UA literally starts with Mozilla/5.0 and lists AppleWebKit, KHTML, Gecko, and Safari — a fossil record of browser wars.",
+        "q": "Why does every UA string say Mozilla?"
+      },
+      {
+        "a": "Client Hints (Sec-CH-UA headers) are the modern replacement: structured, privacy-respecting headers that replace UA sniffing. But UA strings aren't going away — logs, bots, and legacy systems still use them.",
+        "q": "What are Client Hints?"
+      },
+      {
+        "a": "Detection looks for bot/crawler/spider keywords. Sophisticated scrapers fake real browser UAs, so this catches honest bots (Googlebot, Bingbot) — not stealth scrapers. For those, you need behavioral detection.",
+        "q": "How reliable is bot detection?"
+      },
+      {
+        "a": "Browsers are freezing UA strings (Chrome reduces them) to limit fingerprinting. The major version and platform stay, but minor details are being removed. That's fine for this tool's purpose — browser family and device type remain detectable.",
+        "q": "Are user agent strings going away?"
+      }
+    ],
+    "formula": "Detection order used by this tool:\n1. Bot check: bot|crawler|spider|crawl|slurp|mediapartners|… keywords.\n2. Browser: Edg/Edge → OPR/Opera → SamsungBrowser → CriOS → FxiOS → Chrome → Firefox → Version…Safari → MSIE/Trident.\n3. Engine: Blink (Chromium family), WebKit (Safari/iOS), Gecko (Firefox), Trident (IE).\n4. OS: Windows NT 10.0 → 10/11; iPhone/iPad → iOS; Android x.y; Mac OS X → macOS; CrOS; Linux.\n5. Device: Bot → Tablet (iPad/Tablet tokens) → Mobile (Mobile/Android/iPhone) → Desktop.",
+    "formulaHeading": "Detection rules",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste any user agent string into the box, or click Use my user agent.",
+      "Or try a sample: desktop Chrome, iPhone Safari, or Googlebot.",
+      "Read the breakdown: browser and version, engine, OS, device type, and bot status.",
+      "Use the device type badge to sanity-check responsive behavior for that visitor.",
+      "Remember UA strings can be spoofed — treat results as hints, not proof."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A user agent (UA) string identifies the client software making a web request.",
+      "Browsers send it with every request; servers use it for analytics, bot filtering, and compatibility.",
+      "Chromium browsers share the Blink engine; Safari uses WebKit; Firefox uses Gecko.",
+      "Windows NT 10.0 in a UA means Windows 10 or 11 — they share the version token.",
+      "Bots usually identify themselves (Googlebot, Bingbot) but scrapers often fake browser UAs.",
+      "UA strings are being frozen/reduced for privacy, but browser family and device type remain detectable."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "user agent parser, ua parser, parse user agent string, browser detector, bot detector",
+    "labels": {
+      "botLabel": "Bot",
+      "botNameLabel": "Bot name",
+      "botNo": "No — looks like a real browser",
+      "botYes": "Yes",
+      "browserLabel": "Browser",
+      "clearButton": "Clear",
+      "device_bot": "Bot",
+      "device_desktop": "Desktop",
+      "device_mobile": "Mobile",
+      "device_tablet": "Tablet",
+      "deviceLabel": "Device model",
+      "deviceTypeLabel": "Device type",
+      "emptyState": "Paste a user agent string above — or use your own, or try a sample.",
+      "engineLabel": "Engine",
+      "osLabel": "Operating system",
+      "pasteHint": "Paste a user agent string here…",
+      "pasteLabel": "User agent string",
+      "sampleBot": "Googlebot",
+      "sampleChrome": "Chrome on Windows",
+      "sampleIphone": "iPhone Safari",
+      "samplesLabel": "Try a sample",
+      "useMyUa": "Use my user agent"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "UA strings are trivially spoofable — results are hints, not proof of identity.",
+      "Windows 10 and 11 share the NT 10.0 token and can't be told apart.",
+      "Reduced/frozen UA strings (Chrome's UA reduction) hide minor versions.",
+      "Rare browsers and in-app webviews may parse as Unknown."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free user agent parser: paste any UA string to identify browser, version, engine, OS, device, and bots. 100% private, runs in your browser.",
+    "metaTitle": "User Agent Parser - Identify Browser, OS & Bots | JaurTools",
+    "name": "User-Agent Parser",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a user agent string and this parser identifies the browser and version, rendering engine, operating system, device type, and whether it's a bot. For example, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 parses as Chrome 126, Blink engine, Windows 10/11, desktop — not a bot.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Parsed result",
+    "tagline": "Parse any user agent string into browser, OS, device, and bot detection.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input:\nMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36\nTraced by the tool:\n1. Bot check: no bot keywords — not a bot.\n2. Browser: no Edg/OPR/SamsungBrowser/CriOS/FxiOS tokens; Chrome/126.0.0.0 matches — Chrome 126.\n3. Engine: Chromium family — Blink. (The Safari token is a historical leftover, ignored.)\n4. OS: Windows NT 10.0 — Windows 10 / 11 (indistinguishable).\n5. Device: no Tablet tokens, no Mobile token — Desktop.\nResult: Chrome 126 · Blink · Windows 10/11 · Desktop · not a bot."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "svg-stroke-to-fill": {
+    "benefits": [
+      "Identical rendering everywhere: fills look the same in browsers, printers and cutting machines.",
+      "No stroke scaling surprises: outlined shapes keep their weight when resized or transformed.",
+      "Laser cutters and vinyl plotters often require filled outlines, not strokes.",
+      "The original fill of each shape is preserved; only the outline becomes a path."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A stroke is an outline drawn centered on a shape's edge, with a width. A fill is the solid area of a shape. Converting a stroke to a fill means replacing the outline with a new closed path whose area covers exactly where the outline was.",
+        "q": "What does stroke-to-fill mean?"
+      },
+      {
+        "a": "Some platforms ignore stroke widths: certain printers, engravers and cutting machines only process filled areas. Also, a shape with vector-effect or non-scaling stroke can change weight unexpectedly when scaled. Outlined shapes behave identically everywhere.",
+        "q": "Why convert strokes to fills?"
+      },
+      {
+        "a": "The tool samples points along each stroked shape with getTotalLength and getPointAtLength, offsets them by half the stroke width on both sides using the path normal, and joins the offsets into a closed polygon filled with the stroke color.",
+        "q": "How does the conversion work?"
+      },
+      {
+        "a": "For straight lines it is exact. For curves it is an approximation that improves with more samples: 64 samples already follow most curves smoothly, and 200 samples hug tight bends closely.",
+        "q": "Is the result exact?"
+      },
+      {
+        "a": "Dashed strokes are drawn as if they were solid — the dashes are not preserved. Gradient or patterned strokes become a single solid color taken from the stroke attribute.",
+        "q": "What happens to dashed strokes?"
+      },
+      {
+        "a": "No. The SVG is parsed and processed in a hidden element inside your browser tab.",
+        "q": "Is my SVG uploaded anywhere?"
+      }
+    ],
+    "formula": "offset point = sample point ± (stroke-width ÷ 2) along the path normal\noutline path = forward offsets joined, then reversed backward offsets, closed with Z\n\nsample i position = getPointAtLength(totalLength × i ÷ samples)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your SVG code with stroked shapes (lines, circles, paths) into the editor.",
+      "Set the sample count: higher values follow curves more closely.",
+      "Press Convert to outlines. The tool lists how many shapes were converted.",
+      "Check the preview: outlines should now be solid filled paths.",
+      "Download the converted SVG for print, engraving or cutting."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A stroke is painted centered on a shape's edge, extending half the stroke width to each side.",
+      "Converting replaces each stroked outline with a new <path> whose fill equals the old stroke color.",
+      "The browser's getTotalLength() and getPointAtLength() APIs measure any geometry element.",
+      "Offset points are computed along the normal (perpendicular) of the path direction.",
+      "Original fills stay untouched; only stroke attributes are removed after conversion.",
+      "Curved shapes are approximated by sampling — more samples mean a closer match."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg stroke to fill, convert stroke to outline, svg outline stroke, stroke to path converter",
+    "labels": {
+      "codeLabel": "SVG code",
+      "convertButton": "Convert to outlines",
+      "convertedLabel": "Shapes converted",
+      "downloadButton": "Download SVG",
+      "emptyNote": "Paste an SVG with stroked shapes, then press Convert to outlines.",
+      "errorInvalid": "The SVG code is not valid XML. Fix it before converting.",
+      "outputLabel": "Converted SVG code",
+      "samplesLabel": "Curve samples",
+      "samplesNote": "More samples follow curves more closely but make larger files.",
+      "skippedLabel": "Shapes skipped (no measurable length)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Curved strokes are approximated by sampling, not mathematically exact outlines.",
+      "Dashed strokes are converted as solid; dash patterns are not preserved.",
+      "Gradient, pattern or image strokes become a single solid color.",
+      "Elements with exotic stroke-width units or zero length are skipped."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert SVG strokes to filled paths for clean outlines and editable fonts. Paste SVG code and download — free, in-browser.",
+    "metaTitle": "SVG Stroke to Fill - Outlines to Filled Shapes | JaurTools",
+    "name": "SVG Stroke to Fill",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool converts SVG strokes into fills: every stroked outline becomes a closed filled path covering the same area. That guarantees identical rendering in browsers, printers and cutting machines that ignore stroke widths. Paste your SVG, choose the curve sample count, and download the outlined version.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Stroke-to-fill converter results",
+    "tagline": "Strokes become solid shapes.",
+    "workedExample": "The sample has a line from (10, 30) to (110, 30) with stroke-width = 10.\n\nHalf width = 10 ÷ 2 = 5. The direction is horizontal, so the normal is vertical.\n\nThe generated ribbon path is: M 10,25 L 110,25 L 110,35 L 10,35 Z — a 100 × 10 rectangle filled with the stroke color #4f46e5, exactly where the outline was. The original <line> keeps its position but loses its stroke attributes, and the circle is converted the same way with 64 samples around its curve.",
+    "workedExampleHeading": "Worked example"
+  }
+}

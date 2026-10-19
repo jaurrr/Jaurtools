@@ -1,0 +1,94 @@
+{
+  "diff-checker": {
+    "name": "Diff Checker",
+    "tagline": "Spot every change between two texts, instantly.",
+    "metaTitle": "Diff Checker - Compare Two Texts Online Free | JaurTools",
+    "metaDescription": "Compare two texts line by line and word by word — see exactly what was added, removed or kept. Free, private, runs in your browser.",
+    "keywords": "text diff, compare text online, diff checker, text comparison tool, find differences in text",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Paste the original text on the left and the new version on the right. The tool aligns them with a longest-common-subsequence algorithm and highlights added lines in green and removed lines in red, with counts of each — perfect for checking edits, translations, or config changes.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "A diff finds the longest common subsequence (LCS) of lines shared by both texts, then marks everything else as added or removed.",
+      "This tool diffs line by line: rewording inside a line shows the whole line as changed, which is ideal for documents and code.",
+      "Side-by-side view keeps both versions aligned so you can read old and new together.",
+      "Whitespace matters: a trailing space makes two lines technically different — normalize spacing before comparing if needed.",
+      "Large inputs are capped at 500 lines per side to keep the comparison instant in the browser.",
+      "The algorithm behind this tool — longest common subsequence — belongs to the same family of ideas as Unix diff and git diff."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Paste the original text in the left box and the modified text in the right box.",
+      "Differences appear instantly — no button needed.",
+      "Green rows are lines added in the new version; red rows are lines removed from the old one.",
+      "Use Swap to flip the two sides, Sample to see a demo, or Clear to start over.",
+      "Read the counts above the table for a quick summary of how much changed.",
+      "For long documents, compare one section at a time to keep the table easy to read."
+    ],
+    "formulaHeading": "Algorithm",
+    "formula": "LCS(i,j) = LCS(i+1,j+1) + 1        if line i == line j\nLCS(i,j) = max(LCS(i+1,j), LCS(i,j+1))  otherwise\nBacktrack from (0,0): follow matches, emit deletions/additions on the way.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Left (4 lines):\nThe quick brown fox / jumps over / the lazy dog / and runs away\nRight (5 lines):\nThe quick brown fox / leaps over / the lazy dog / and walks away / The end\nCommon subsequence: line 1 and line 3.\nResult: 2 unchanged, 2 removed (jumps over, and runs away), 3 added (leaps over, and walks away, The end).",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Instant visual proof of what changed between two drafts.",
+      "No uploads: contracts, code, and private documents stay on your device.",
+      "Swap and sample buttons make experimenting frictionless.",
+      "Clean side-by-side table that works on mobile too."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Line-based: a single changed word flags the whole line — it does not highlight word-level changes within a line.",
+      "Capped at 500 lines per side for browser performance; split bigger files first.",
+      "Treats lines as plain text: rich formatting differences are not compared.",
+      "A comparison aid, not a merge tool — it cannot combine the two versions for you."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "How does the diff algorithm work?",
+        "a": "It computes the longest common subsequence (LCS) of the two line sequences with dynamic programming, then walks back through the table emitting unchanged, deleted, and added lines in order."
+      },
+      {
+        "q": "Why does a tiny edit mark the whole line as changed?",
+        "a": "This is a line-based diff, like classic Unix diff. It compares whole lines, so any character change flags the line. Word-level highlighting is a different feature this tool does not include."
+      },
+      {
+        "q": "Does whitespace affect the comparison?",
+        "a": "Yes — lines must match exactly, including spaces and tabs. If spacing noise pollutes your diff, normalize both texts (e.g. trim trailing spaces) before comparing."
+      },
+      {
+        "q": "Is there a line limit?",
+        "a": "Yes, 500 lines per side. Beyond that the comparison table would slow down the browser, so the tool asks you to split larger files."
+      },
+      {
+        "q": "Can I compare code files?",
+        "a": "Yes — paste code as plain text. It works well for spotting changed lines between two versions of a function or config file."
+      },
+      {
+        "q": "Are my texts uploaded anywhere?",
+        "a": "No. The comparison runs entirely in your browser tab. Nothing is sent to any server."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your text comparison",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "textALabel": "Original text",
+      "textBLabel": "New text",
+      "swapLabel": "Swap",
+      "sampleLabel": "Load sample",
+      "clearLabel": "Clear",
+      "addedLabel": "Lines added",
+      "removedLabel": "Lines removed",
+      "unchangedLabel": "Lines unchanged",
+      "colALabel": "Original",
+      "colBLabel": "New",
+      "tooLargeLabel": "Please keep each text under 500 lines for a fast comparison."
+    }
+  }
+}

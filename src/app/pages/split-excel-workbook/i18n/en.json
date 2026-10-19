@@ -1,0 +1,90 @@
+{
+  "split-excel-workbook": {
+    "benefits": [
+      "Turns one multi-sheet workbook into separate files without Excel installed.",
+      "Tick only the sheets you need; each becomes its own genuine .xlsx file.",
+      "Each output keeps its original sheet name inside the workbook.",
+      "Everything runs locally, so confidential spreadsheets never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Modern .xlsx files only. The old binary .xls format is not supported. Re-save such files as .xlsx first.",
+        "q": "Does it support old .xls files?"
+      },
+      {
+        "a": "The workbook's own sheet names are read and listed with their row counts, so you can pick exactly the sheets you want before splitting.",
+        "q": "How do I know which sheets are inside?"
+      },
+      {
+        "a": "Only stored cell values are carried into the parts. Formulas, charts, images and cell formatting are not preserved; formula cells use their last saved values.",
+        "q": "Are formulas and formatting preserved?"
+      },
+      {
+        "a": "Yes. Each output is a single-sheet workbook that keeps the original sheet's name, for example report-Sales.xlsx keeps the sheet Sales.",
+        "q": "Does each file keep its sheet name?"
+      },
+      {
+        "a": "They download one after another with a short pause, named workbook-sheetname.xlsx. Your browser may ask permission for multiple downloads.",
+        "q": "How are the files downloaded?"
+      }
+    ],
+    "formula": "one .xlsx per selected sheet = genuine single-sheet .xlsx workbook per sheet",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose file and select an .xlsx workbook from your device.",
+      "Wait while the workbook is read and its sheets are listed.",
+      "Tick the sheets you want as separate files, or use Select all.",
+      "Press Split workbook and download each .xlsx file one by one."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Splits a multi-sheet .xlsx workbook into one file per worksheet.",
+      "Each output is a genuine single-sheet .xlsx workbook that opens everywhere.",
+      "Sheet names and row counts are listed so you can choose exactly what to extract.",
+      "Select all or select none with one click; tick individual sheets freely.",
+      "Files download sequentially as workbook-sheetname.xlsx."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "split excel workbook, extract sheets from excel, save each sheet as separate file, xlsx sheet splitter",
+    "labels": {
+      "chooseFile": "Choose Excel file",
+      "done": "Done! {n} files downloaded one by one.",
+      "downloadNote": "Files download one after another. Your browser may ask permission for multiple downloads.",
+      "emptyState": "Select an .xlsx file to see its worksheets here.",
+      "errorParse": "Could not read this file. Please make sure it is a valid modern .xlsx workbook.",
+      "errorSplit": "Something went wrong while splitting. Please try again.",
+      "fileHint": "Modern .xlsx workbooks only. Files stay on your device.",
+      "loading": "Reading workbook...",
+      "resultSheets": "Sheets (total → selected)",
+      "rowsSuffix": "rows",
+      "selectAll": "Select all",
+      "selectNone": "Select none",
+      "splitButton": "Split workbook",
+      "splitting": "Splitting..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Modern .xlsx only; legacy .xls files are not supported.",
+      "Only stored values are carried over; formulas, charts and formatting are lost.",
+      "Files download one by one; there is no single combined download.",
+      "Very large workbooks may slow the browser while splitting."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Split an Excel workbook online free. Extract each worksheet into its own .xlsx file with one click. 100% browser-based, no upload.",
+    "metaTitle": "Split Excel Workbook Online Free - One File Per Sheet | JaurTools",
+    "name": "Split Excel Workbook",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload an .xlsx workbook and get one genuine .xlsx file per worksheet. Tick the sheets you want, and each downloads as its own workbook keeping the original sheet name.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Split Excel Workbook results",
+    "tagline": "Extract every worksheet into its own Excel file.",
+    "workedExample": "A workbook report.xlsx has 3 sheets:\nSales (11 rows), Staff (6 rows), Notes (3 rows).\n\nYou tick Sales and Staff only.\nThe tool downloads:\nreport-Sales.xlsx with the Sales sheet (11 rows)\nreport-Staff.xlsx with the Staff sheet (6 rows)\n\n2 genuine .xlsx files from 2 selected sheets.",
+    "workedExampleHeading": "Worked example"
+  }
+}

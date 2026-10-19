@@ -1,0 +1,102 @@
+{
+  "flyer-maker": {
+    "benefits": [
+      "Design a flyer in minutes — no design skills or software needed.",
+      "Three purpose-built templates: sale, event, and grand opening.",
+      "Full-colour 1080px PNG export, ready for WhatsApp and print.",
+      "Live preview updates as you type."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "PNG at 1080 × 1350 pixels (portrait) or 1080 × 1080 (square). That is crisp for phone screens, WhatsApp sharing, and social posts. For large-format printing (A3 and above), use desktop design software — 1080 px is not enough for big posters.",
+        "q": "What size is the exported flyer?"
+      },
+      {
+        "a": "Yes. The square 1080 × 1080 size is exactly what Instagram, Facebook, and WhatsApp Status display best. Portrait 1080 × 1350 suits stories and phone wallpapers.",
+        "q": "Can I use it for Instagram posts?"
+      },
+      {
+        "a": "The canvas renders with system fonts (the same family your device uses for its interface), so the flyer looks consistent everywhere but cannot use decorative web fonts. This keeps the tool fast and dependency-free.",
+        "q": "Which fonts does it use?"
+      },
+      {
+        "a": "No. Everything is drawn locally on a canvas in your browser. Your business name, phone number, and offer details never leave your device.",
+        "q": "Is my flyer text uploaded anywhere?"
+      },
+      {
+        "a": "It depends on your country's rules, but generally: use photos you took yourself or from free libraries like Unsplash and Pexels, never Google Images. This tool does not add images — your text-only flyer is automatically safe.",
+        "q": "What images can I legally use on flyers?"
+      },
+      {
+        "a": "This maker covers the essentials: headline, offer, date, and contact. For multi-page brochures, photo collages, or QR codes, use a full design tool. JaurTools plans a QR generator as a companion tool.",
+        "q": "Can I make complex brochures with it?"
+      }
+    ],
+    "formula": "The flyer is a design tool, not a calculator — there is no formula.\nEach template is drawn programmatically on an HTML canvas:\nportrait = 1080 × 1350 px, square = 1080 × 1080 px.\nText is auto-wrapped to fit; the date renders as an accent-coloured pill.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a template: Sale, Event, or Grand Opening.",
+      "Type your headline, offer details, date, and contact info.",
+      "Choose an accent colour and a portrait or square size.",
+      "Watch the live preview and click Download PNG when it looks right."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Three templates: Sale, Event, and Grand Opening.",
+      "Portrait export is 1080 × 1350 px; square is 1080 × 1080 px.",
+      "Six accent colours plus any custom colour.",
+      "Text auto-wraps; the date renders as a coloured pill.",
+      "The preview is the exact pixels you download.",
+      "Everything renders locally — nothing is uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "flyer maker online, free flyer creator, sale poster maker, event flyer template, business flyer design",
+    "labels": {
+      "accentLabel": "Accent colour",
+      "contactLabel": "Contact line",
+      "customColor": "Custom colour",
+      "dateLabel": "Date / time line",
+      "downloadBtn": "Download PNG",
+      "previewLabel": "Flyer preview",
+      "resNote": "Exports at full resolution: 1080 × 1350 (portrait) or 1080 × 1080 (square).",
+      "sizeLabel": "Flyer size",
+      "sizes": {
+        "portrait": "Portrait (1080 × 1350)",
+        "square": "Square (1080 × 1080)"
+      },
+      "subtitleLabel": "Offer / details",
+      "templateLabel": "Template",
+      "templates": {
+        "event": "Event",
+        "opening": "Grand Opening",
+        "sale": "Sale"
+      },
+      "titleLabel": "Headline",
+      "titlePlaceholder": "Your headline"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Text-only designs — no photo or logo uploads.",
+      "System fonts only; no decorative typography.",
+      "1080 px is too small for large-format printing.",
+      "Three templates; no fully custom layouts."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free flyer maker: design sale, event, and grand-opening flyers in your browser. Live preview, custom colours, 1080px PNG export. Private, no sign-up.",
+    "metaTitle": "Free Flyer Maker - Design Posters Online | JaurTools",
+    "name": "Flyer Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick a template (Sale, Event, or Grand Opening), type your headline, offer, date, and contact details, choose an accent colour, and download a crisp 1080-pixel PNG — ready for WhatsApp, Instagram, or print. The flyer is drawn live on a canvas in your browser as you type, so the preview is exactly what you download. No account, no watermark, no upload.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your flyer",
+    "tagline": "Design sale, event, and grand-opening flyers in minutes — live preview, PNG export.",
+    "workedExample": "A shop sale flyer:\n1. Template: Sale. Accent: rose (#e11d48).\n2. Headline: 'Diwali Mega Sale'. Offer: 'Up to 50% off all ethnic wear'.\n3. Date: 'Sunday, 8 November · 10 AM – 9 PM'.\n4. Contact: 'Call 98765 43210 · MG Road, Hyderabad'.\n5. Size: Square → Download PNG → share on WhatsApp Status.",
+    "workedExampleHeading": "Worked example"
+  }
+}

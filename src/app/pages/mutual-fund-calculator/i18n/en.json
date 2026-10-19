@@ -1,0 +1,92 @@
+{
+  "mutual-fund-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Mutual Fund Calculator",
+    "tagline": "Project your mutual fund growth net of expense ratio, with lump sum and SIP combined.",
+    "metaTitle": "Mutual Fund Calculator - Growth Net of Fees | JaurTools",
+    "metaDescription": "Free mutual fund calculator: project lump sum and SIP growth net of expense ratio. See how much fees cost you over time.",
+    "keywords": "mutual fund calculator, sip calculator with expense ratio, fund growth calculator, expense ratio impact calculator",
+    "resultsHeading": "Your mutual fund results",
+    "quickAnswer": "Your fund grows at the gross return minus the expense ratio, compounded monthly. Example: a 10,000 monthly SIP at 12% gross return with a 1.5% expense ratio grows to about 2,108,148 in 10 years (net return 10.5%). Without the fee it would reach 2,300,387, so the 1.5% fee quietly costs 192,239. Same return, same market: the only difference is the fee.",
+    "keyFacts": [
+      "The expense ratio is the fund's annual fee, deducted from returns before you see them.",
+      "Net return = gross return - expense ratio. Compounding works on the net figure.",
+      "A 1% higher fee looks small but can erase 15 to 25 percent of your gains over decades.",
+      "Index funds usually charge 0.1 to 0.5%; actively managed funds often charge 1 to 2.5%.",
+      "SIP (systematic investment plan) rupee-cost averages: you buy more units when prices fall.",
+      "Past returns never guarantee future returns. Projections are scenarios, not promises."
+    ],
+    "howTo": [
+      "Enter your one-time lump sum investment, if any.",
+      "Enter your monthly SIP amount.",
+      "Enter the expected gross annual return before fees (be conservative).",
+      "Enter the fund's expense ratio from its factsheet.",
+      "Set the investment horizon in years and compare final value, gains, and the fees-lost row."
+    ],
+    "formula": "Monthly rate i = (gross return - expense ratio) / 12.\nSIP future value = S x ((1 + i)^n - 1) / i, with n = months.\nLump sum future value = P x (1 + i)^n.\nFees lost = Future value at gross return - Future value at net return.\nExample: 10,000 SIP, 10.5% net, 120 months -> 10,000 x ((1.00875^120 - 1) / 0.00875) = 2,108,148.",
+    "workedExample": "Monthly SIP 10,000, gross return 12%, expense ratio 1.5%, 10 years, no lump sum:\n1. Net annual return: 12 - 1.5 = 10.5%.\n2. Monthly rate: 0.105 / 12 = 0.00875; months = 120.\n3. Growth factor: (1.00875^120 - 1) / 0.00875 = 210.81.\n4. Final value: 10,000 x 210.81 = 2,108,148.\n5. Total invested: 10,000 x 120 = 1,200,000, so gains = 908,148.\n6. At 12% gross the value would be 2,300,387, so the fee costs 192,239.",
+    "benefits": [
+      "Shows the true cost of fees in real money, not just a percentage.",
+      "Combines lump sum and monthly SIP in one projection.",
+      "Helps you compare two funds with the same return but different fees.",
+      "Instant what-if: raise the return or lower the fee and watch the result move."
+    ],
+    "limitations": [
+      "Projections are not predictions: markets are volatile and returns vary.",
+      "Uses a constant annual return; real funds swing up and down every year.",
+      "Ignores taxes on gains, exit loads, and inflation.",
+      "Not investment advice: read the fund's offer document and consider a licensed advisor."
+    ],
+    "faqs": [
+      {
+        "q": "What is the expense ratio?",
+        "a": "It is the fund's yearly operating cost, expressed as a percentage of assets, and it is deducted from returns automatically. You never pay it as a bill; it just silently reduces your growth. Find it in the fund's factsheet or offer document."
+      },
+      {
+        "q": "Why does a small fee matter so much?",
+        "a": "Because compounding multiplies the fee's effect. A 1.5% fee does not take 1.5% of your final money; it takes 1.5% of your balance every year, including on growth you already earned. Over 20 to 30 years that compounds into a very large sum, as the fees-lost row shows."
+      },
+      {
+        "q": "Should I pick the fund with the lowest expense ratio?",
+        "a": "Not automatically. Fees are one of the few reliable predictors of net returns, so all else equal, lower is better. But compare funds in the same category, and also check tracking error, fund size, and the manager's record before deciding."
+      },
+      {
+        "q": "What gross return should I assume?",
+        "a": "Be conservative. Long-term equity funds have historically returned around 10 to 12% annually in India, but the future can differ and any single decade can disappoint. Many planners use 10% for equity and 6 to 7% for debt when projecting."
+      },
+      {
+        "q": "Does this handle step-up SIPs?",
+        "a": "Not directly. This calculator uses a fixed monthly amount. To approximate a step-up SIP, run the calculation twice: once for the base SIP and once for the extra amount starting later, then add the results."
+      },
+      {
+        "q": "Are SIP returns guaranteed?",
+        "a": "No. A SIP only averages your purchase cost; it does not protect against market falls. In a falling market your SIP buys cheaper units, which helps the recovery, but the final value still depends on where the market ends."
+      }
+    ],
+    "labels": {
+      "initial": "Lump sum investment",
+      "monthly": "Monthly SIP amount",
+      "grossReturn": "Expected gross return (% per year)",
+      "expenseRatio": "Expense ratio (% per year)",
+      "years": "Investment period (years)",
+      "totalInvested": "Total invested",
+      "netReturn": "Net annual return",
+      "finalValue": "Projected final value",
+      "gains": "Gains",
+      "feesLost": "Lost to fees"
+    }
+  }
+}

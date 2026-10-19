@@ -1,0 +1,85 @@
+{
+  "sales-tax-calculator": {
+    "benefits": [
+      "No more checkout surprises - you know the final price before you buy.",
+      "Makes comparing prices across cities and states fair, since rates differ.",
+      "Helps sellers quote accurate totals to customers.",
+      "Free, instant, and private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Sales tax is set by state, county, and city, so the combined rate depends on exactly where you buy. The US average is roughly 7 to 8% when everything is combined, but some places charge 0% and others top 10%. Check your local rate for the exact number.",
+        "q": "What is the sales tax rate where I live?"
+      },
+      {
+        "a": "In the US, advertised prices usually exclude sales tax, which is added at checkout. In most of Europe and many other countries, the displayed price already includes VAT. If you are traveling, do not assume the rules match home.",
+        "q": "Is sales tax included in the price?"
+      },
+      {
+        "a": "Sales tax applies to most physical goods and, in many places, some services and digital products. Groceries, medicine, and clothing are exempt in some states. Rules vary wildly, so this calculator just does the math - it does not decide what is taxable.",
+        "q": "What items are taxed?"
+      },
+      {
+        "a": "Online sellers generally must collect tax for the state where the item is delivered (destination-based sourcing), though small sellers may be exempt below certain thresholds. The total on your order confirmation is the legal amount.",
+        "q": "Do I pay sales tax on online purchases?"
+      },
+      {
+        "a": "Divide the tax-inclusive total by (1 + rate). A $108 total at 8% tax means the pre-tax price was 108 / 1.08 = $100. The tax was $8.",
+        "q": "How do I work backwards from a total?"
+      },
+      {
+        "a": "Rounding usually happens per line item or on the total, to the nearest cent. Half-cent amounts are the classic edge case: most systems round half up. The differences are pennies, but they explain why receipts sometimes differ from your mental math by a cent.",
+        "q": "Why is my receipt a cent off?"
+      }
+    ],
+    "formula": "Tax = price x (rate / 100).\nTotal = price + tax = price x (1 + rate / 100).\nReverse: pre-tax price = total / (1 + rate / 100).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the price before tax, exactly as shown on the shelf or listing.",
+      "Enter the sales tax rate for where you are buying (e.g. 8.5).",
+      "The tax amount and the total you will actually pay appear instantly.",
+      "If rates combine (state + county + city), add them into one rate before entering."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Sales tax = a percentage added to the price of goods and some services at the point of sale.",
+      "Total = price x (1 + rate / 100). An 8.5% rate on $120 gives $130.20.",
+      "Rates are set by state, county, and city, and the combined rate is what you actually pay.",
+      "In the US, shelf prices usually exclude tax; in most of Europe, VAT is already included.",
+      "Some items (groceries, medicine, clothing) are exempt in certain places."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sales tax calculator, price with tax calculator, tax inclusive price calculator, checkout total calculator, vat calculator",
+    "labels": {
+      "preTaxPrice": "Price before tax",
+      "price": "Price before tax ($)",
+      "taxAmount": "Sales tax",
+      "taxRate": "Sales tax rate (%)",
+      "totalWithTax": "Total with tax"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Does not know your local rate - you must enter the correct combined rate.",
+      "Does not handle exemptions; it taxes the full price you enter.",
+      "Rounding rules can make receipts differ by a cent.",
+      "Covers sales-tax-style math, not full VAT/GST invoice rules."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free sales tax calculator: find the price with sales tax added, plus the exact tax amount. Instant, private, no sign-up.",
+    "metaTitle": "Sales Tax Calculator - Price With Tax | JaurTools",
+    "name": "Sales Tax Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Sales tax is a percentage added at checkout: total = price x (1 + rate / 100). A $120 item at 8.5% tax costs $120 x 1.085 = $130.20, of which $10.20 is tax. In the US, shelf prices usually exclude tax, so the number on the tag is not what you pay - this calculator shows the real total before you reach the register.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your price with tax",
+    "tagline": "See the real checkout price with sales tax added.",
+    "workedExample": "Price $120, tax rate 8.5%:\n1. Tax = 120 x (8.5 / 100) = 120 x 0.085 = $10.20.\n2. Total = 120 + 10.20 = $130.20.\n3. Check: 120 x 1.085 = $130.20.\nReverse: a $130.20 receipt at 8.5% means pre-tax price = 130.20 / 1.085 = $120.",
+    "workedExampleHeading": "Worked example"
+  }
+}

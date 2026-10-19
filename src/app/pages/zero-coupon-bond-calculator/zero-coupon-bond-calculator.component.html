@@ -1,0 +1,246 @@
+<div class="tool-page fin-type-invest">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle" role="group" [attr.aria-label]="t('labels.modeLabel')">
+        <button type="button" [class.active]="mode() === 'price'" (click)="setMode('price')">
+          {{ t('labels.priceMode') }}
+        </button>
+        <button type="button" [class.active]="mode() === 'yield'" (click)="setMode('yield')">
+          {{ t('labels.yieldMode') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="zc-face">{{ t('labels.faceValue') }}</label>
+          <span class="fin-live-chip">{{ money().format(faceValue()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ money().format(faceValue()) }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="zc-face" type="number" inputmode="decimal" min="0" max="1000000000" step="100"
+            [ngModel]="faceValue()" (ngModelChange)="setFaceValue($event)" />
+            <input type="range" min="0" max="1000000000" step="100" [ngModel]="faceValue()" (ngModelChange)="setFaceValue($event)" [attr.aria-label]="t('labels.faceValue')" />
+        </div>
+      </div>
+
+      @if (mode() === 'price') {
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="zc-yield">{{ t('labels.annualYield') }}</label>
+          <span class="fin-live-chip">{{ annualYield() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ annualYield() }}%</span>
+        </div>
+          <div class="input-row fin-slider">
+            <input id="zc-yield" class="short" type="number" inputmode="decimal" min="-50" max="100" step="0.1"
+              [ngModel]="annualYield()" (ngModelChange)="setAnnualYield($event)" />
+            <input type="range" min="0" max="15" step="0.1" [ngModel]="annualYield()"
+              (ngModelChange)="setAnnualYield($event)" [attr.aria-label]="t('labels.annualYield')" />
+          </div>
+        </div>
+      } @else {
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="zc-market">{{ t('labels.marketPrice') }}</label>
+          <span class="fin-live-chip">{{ money().format(marketPrice()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ money().format(marketPrice()) }}</span>
+        </div>
+          <div class="input-row fin-slider">
+            <input id="zc-market" type="number" inputmode="decimal" min="0" max="1000000000" step="1"
+              [ngModel]="marketPrice()" (ngModelChange)="setMarketPrice($event)" />
+            <input type="range" min="0" max="1000000000" step="1" [ngModel]="marketPrice()" (ngModelChange)="setMarketPrice($event)" [attr.aria-label]="t('labels.marketPrice')" />
+          </div>
+        </div>
+      }
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="zc-years">{{ t('labels.yearsToMaturity') }}</label>
+          <span class="fin-live-chip">{{ years() }}</span>
+        </div>
+          <span class="fin-live-chip">{{ years() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="zc-years" class="short" type="number" inputmode="decimal" min="0" max="100" step="0.5"
+            [ngModel]="years()" (ngModelChange)="setYears($event)" />
+            <input type="range" min="0" max="100" step="0.5" [ngModel]="years()" (ngModelChange)="setYears($event)" [attr.aria-label]="t('labels.yearsToMaturity')" />
+        </div>
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="zap" /> {{ t('labels.yieldToMaturity') }}</span>
+          <strong>{{ twoDecimals().format(solvedYield()) }}%</strong>
+          <small>{{ tp('hero.note', { p: money().format(faceValue()), y: years() }) }}</small>
+        </div>
+      </div>
+
+
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="zap" /> {{ t('labels.bondPrice') }}</span>
+          <strong>{{ money().format(bondPrice()) }}</strong>
+          <small>{{ tp('hero.note', { p: money().format(faceValue()), y: years() }) }}</small>
+        </div>
+        <div class="fin-hero-sub">
+          <div>
+            <span>{{ t('labels.discountLabel') }}</span>
+            <strong>{{ money().format(discount()) }}</strong>
+          </div>
+        </div>
+      </div>
+
+        @if (mode() === 'price') {
+          
+        } @else {
+          
+        }
+        
+      
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { p: money().format(faceValue()), t: money().format(bondPrice()), r: money().format(bondPrice()), y: years() }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ t('meaning.l2') }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ t('tip.compare') }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+    
+      
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { p: money().format(faceValue()), t: twoDecimals().format(solvedYield()), r: twoDecimals().format(solvedYield()), y: years() }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ t('meaning.l2') }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ t('tip.compare') }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+    
+      </div>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

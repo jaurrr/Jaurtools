@@ -1,0 +1,105 @@
+{
+  "area-calculator": {
+    "benefits": [
+      "Instant, exact answers for the shapes you meet in homework, floor plans, and garden projects.",
+      "One page covers seven shapes, so you never hunt for the right formula again.",
+      "Metric or imperial - the maths is identical, only your unit label changes.",
+      "Great for quick material estimates: paint, tiles, carpet, and fencing all start with area."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Square the radius and multiply by pi (3.14159...). A circle of radius 5 has area 3.14159 x 25 = 78.54 square units. The calculator above does it the moment you type.",
+        "q": "How do I find the area of a circle?"
+      },
+      {
+        "a": "Multiply the two parallel sides? No - that is the common mistake. The correct formula is half the sum of the two parallel sides, times the height: Area = (a + b) / 2 x h. For bases 8 and 5 with height 4, that is 6.5 x 4 = 26.",
+        "q": "What is the area of a trapezoid?"
+      },
+      {
+        "a": "Yes, for a perfect square and a perfect circle the numbers match the true mathematical value. The only rounding is the display, which shows up to 4 decimal places. For construction work, always add 5-10% extra for cutting waste.",
+        "q": "Is this calculator accurate enough for building work?"
+      },
+      {
+        "a": "No conversion happens inside the tool. Enter all dimensions in the same unit (all centimetres, or all feet) and read the answer in square units of that unit. Mixing units, like metres with centimetres, gives a wrong answer.",
+        "q": "Can I mix metres and centimetres?"
+      },
+      {
+        "a": "It is exactly half the rectangle's area: Area = base x height / 2. Any side can serve as the base as long as the height is measured perpendicular to it. This works for every triangle - right, acute, or obtuse.",
+        "q": "What is the triangle area formula?"
+      },
+      {
+        "a": "Multiply the base by the vertical height (not the slanted side): Area = base x height. A parallelogram with base 9 and height 5 has area 45. If you only know the side length and the angle, use base x side x sin(angle).",
+        "q": "How is a parallelogram different from a rectangle?"
+      }
+    ],
+    "formula": "Rectangle: A = length x width\nSquare: A = side squared\nCircle: A = pi x radius squared\nTriangle: A = base x height / 2\nTrapezoid: A = (base A + base B) / 2 x height\nParallelogram: A = base x height\nEllipse: A = pi x a x b  (a, b = semi-axes)",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the shape from the dropdown list - rectangle, square, circle, triangle, trapezoid, parallelogram, or ellipse.",
+      "Enter the dimensions the calculator asks for, all in the same unit (for example, all in metres).",
+      "The area appears instantly in square units, rounded to a readable 4 decimal places.",
+      "Change the shape any time; the input fields and formula update automatically."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Area measures the two-dimensional space inside a shape, always in square units (m2, cm2, ft2).",
+      "Rectangle: multiply length by width. A 12 m by 8 m room has an area of 96 m2.",
+      "Circle: multiply pi by the radius squared. Radius 5 gives about 78.54 square units.",
+      "Triangle: half of base times height. Base 10 and height 6 give 30 square units.",
+      "Trapezoid: average the two parallel sides, then multiply by the height.",
+      "Ellipse: multiply pi by the two semi-axes. A 6 by 4 ellipse has area about 75.40."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "area calculator, area of rectangle, area of circle, area of triangle, square footage calculator, shape area formulas",
+    "labels": {
+      "area": "Area",
+      "dimA_circle": "Radius",
+      "dimA_ellipse": "Semi-axis a",
+      "dimA_parallelogram": "Base",
+      "dimA_rectangle": "Length",
+      "dimA_square": "Side",
+      "dimA_trapezoid": "Base A",
+      "dimA_triangle": "Base",
+      "dimB_ellipse": "Semi-axis b",
+      "dimB_parallelogram": "Height",
+      "dimB_rectangle": "Width",
+      "dimB_trapezoid": "Base B",
+      "dimB_triangle": "Height",
+      "dimC_trapezoid": "Height",
+      "shape": "Shape",
+      "shape_circle": "Circle",
+      "shape_ellipse": "Ellipse",
+      "shape_parallelogram": "Parallelogram",
+      "shape_rectangle": "Rectangle",
+      "shape_square": "Square",
+      "shape_trapezoid": "Trapezoid",
+      "shape_triangle": "Triangle",
+      "sqUnits": "sq units",
+      "unitNote": "Enter every dimension in the same unit; the answer is in square units of that unit."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Flat 2D shapes only - it cannot compute surface areas of 3D objects like spheres or boxes.",
+      "It assumes perfect shapes. Real rooms and plots are rarely exact rectangles, so measure twice.",
+      "No unit conversion: mixing metres and centimetres in one calculation gives a wrong answer.",
+      "Display rounding (4 decimals) is fine for estimates but not for precision engineering."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free area calculator for 7 shapes: rectangle, square, circle, triangle, trapezoid, parallelogram, ellipse. Instant answers with formulas. Private, no sign-up.",
+    "metaTitle": "Area Calculator - 7 Shapes, Instant Results | JaurTools",
+    "name": "Area Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Pick a shape, enter its dimensions, and get the area instantly. A 12 by 8 rectangle has an area of 96 square units (12 x 8 = 96). A circle of radius 5 has an area of about 78.54 (pi x 25). This calculator covers seven common shapes - rectangle, square, circle, triangle, trapezoid, parallelogram, and ellipse - using the standard geometry formulas, with results shown to 4 decimal places.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Area Calculator results",
+    "tagline": "Area of 7 common 2D shapes, computed instantly with the correct formula for each.",
+    "workedExample": "Rectangle, length 12 m, width 8 m:\n1. Formula: Area = length x width.\n2. Substitute: Area = 12 x 8.\n3. Multiply: 12 x 8 = 96.\n4. Attach square units: 96 m2.\nSecond check - circle, radius 5:\n1. Formula: Area = pi x r squared.\n2. Substitute: 3.14159 x 25.\n3. Result: 78.5398, shown as 78.5398.",
+    "workedExampleHeading": "Worked example"
+  }
+}

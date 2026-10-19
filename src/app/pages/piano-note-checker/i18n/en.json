@@ -1,0 +1,97 @@
+{
+  "piano-note-checker": {
+    "assumptionNote": "The keyboard covers two octaves, C4 to B5, in equal temperament at A4 = 440 Hz. Quiz notes are drawn from this range only, and note names use sharp spellings.",
+    "benefits": [
+      "Learn the piano layout by touch: click any key to see its name and exact frequency.",
+      "Quiz mode trains your ear with instant right-or-wrong feedback and a streak counter.",
+      "Replay any mystery note as often as you like - no pressure, no timer.",
+      "Works on touch screens, so you can drill on your phone anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Middle C is C4 at 261.63 Hz. On this keyboard it is the first white key on the left. On a real piano, it sits near the centre, usually under the brand logo, at the boundary between the bass and treble sections.",
+        "q": "Where is middle C?"
+      },
+      {
+        "a": "White keys play the natural notes A through G, and black keys play the sharps and flats between them. Each octave has 7 white and 5 black keys in the same repeating pattern: groups of two, then groups of three.",
+        "q": "Why are piano keys black and white?"
+      },
+      {
+        "a": "Associate each note with a landmark: C sits just left of the two-black-key group, F just left of the three-black-key group. Start by finding all the Cs, then learn D (between the two blacks) and work outward. The quiz mode here drills exactly this.",
+        "q": "How do I memorise which key is which note?"
+      },
+      {
+        "a": "Start with just the white keys (C to B) until you score above 80%, then include the black keys. Use the replay button freely - hearing the note several times before answering builds the memory faster than guessing.",
+        "q": "How should I practise with the quiz?"
+      },
+      {
+        "a": "It tests pitch recognition by ear, which is the foundation of playing by ear, transcribing songs, and singing in tune. Interval and chord drills in the ear-training tool are the natural next step once single notes feel easy.",
+        "q": "What does note identification actually train?"
+      },
+      {
+        "a": "This keyboard spans C4 (261.63 Hz) to B5 (987.77 Hz) - two octaves in the middle of the piano's range. A full piano runs from A0 (27.5 Hz) to C8 (4186 Hz), but the middle octaves are where melodies live.",
+        "q": "What range does this keyboard cover?"
+      }
+    ],
+    "formula": "Note name from MIDI: name = NOTE_NAMES[midi mod 12] + (floor(midi / 12) - 1)\nFrequency: f = 440 x 2^((midi - 69) / 12)\nExample: C4 is MIDI 60: f = 440 x 2^(-9/12) = 261.63 Hz.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Explore mode: click any key to hear it and see its name and frequency.",
+      "Switch to Quiz mode to start a note-identification drill with scoring.",
+      "Listen to the mystery note - replay it as many times as you need.",
+      "Click the key you think it was. Correct answers build your streak.",
+      "Watch your accuracy: above 80% on white keys means you are ready for black keys too."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Middle C (C4) is 261.63 Hz and sits at the centre of the piano's range.",
+      "Each octave has 12 notes: 7 white keys (naturals) and 5 black keys (sharps/flats).",
+      "C is always just left of the group of two black keys; F just left of the group of three.",
+      "A4 (440 Hz) is the tuning reference for the whole orchestra.",
+      "This keyboard covers C4 to B5: two octaves, MIDI notes 60 to 83.",
+      "Note names repeat every octave: every C sounds like every other C, just higher or lower."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "piano note checker, identify piano notes, piano notes quiz, learn piano notes, piano ear training",
+    "labels": {
+      "accuracyLabel": "Accuracy",
+      "correctLabel": "Correct! Well done.",
+      "keyboardLabel": "Piano keyboard (C4 - B5)",
+      "lastNoteLabel": "Last note played",
+      "listenLabel": "Listen to the mystery note, then click the key you think it was.",
+      "modeExplore": "Explore",
+      "modeLabel": "Mode",
+      "modeQuiz": "Quiz me",
+      "newNoteLabel": "New note",
+      "replayLabel": "Play the note again",
+      "scoreLabel": "Score",
+      "showNamesLabel": "Show note names on the keys",
+      "streakLabel": "Current streak",
+      "wrongLabel": "Not quite - that was"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Two octaves only (C4-B5); the full piano range is not covered.",
+      "Quiz tests single notes only - intervals and chords are in the ear-training tool.",
+      "Note names use sharps only; flat spellings are not shown.",
+      "The tone is a clean sine wave, not a real piano sample."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free piano note checker: click any key on a 2-octave keyboard to see its name and frequency, or test yourself in quiz mode with scoring. No sign-up.",
+    "metaTitle": "Piano Note Checker - Identify Notes by Ear | JaurTools",
+    "name": "Piano Note Checker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Click any key to hear it and see its name and exact frequency - middle C (C4) is 261.63 Hz. In quiz mode, a mystery note plays and you click the key you think it was, with score, accuracy, and streak tracking. Tip: C always sits just left of the two-black-key group, F just left of the three-black-key group. Above 80% accuracy on white keys means you are ready for the black keys too.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Note checker results",
+    "tagline": "Click any piano key to identify it - or quiz yourself and train your ear.",
+    "workedExample": "Quiz round:\n1. Switch to Quiz mode. A mystery note plays - say it is E4 (329.63 Hz).\n2. Tap replay twice to fix the sound in your memory.\n3. You click the E key. Correct - score 1/1, streak 1.\n4. Next note plays: F#4. You click F. Wrong - the answer was F#4, streak resets.\n5. After 10 rounds at 8/10, your accuracy is 80% - ready to include black keys.",
+    "workedExampleHeading": "Worked example"
+  }
+}

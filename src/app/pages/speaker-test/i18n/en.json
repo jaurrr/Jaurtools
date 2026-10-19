@@ -1,0 +1,95 @@
+{
+  "speaker-test": {
+    "benefits": [
+      "Confirm left and right speakers (or headphone drivers) both work.",
+      "Catch a dead speaker, loose cable, or wrong balance setting fast.",
+      "Hear the full frequency sweep to judge bass and treble response.",
+      "Check headphones and phone speakers with the same page.",
+      "No app to install - works in any modern browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "That means one channel is not reaching the speaker. Check the cable, the balance setting in your OS sound options, and try another pair of headphones. If the right channel also stays silent with different headphones, the jack or sound card may be faulty.",
+        "q": "I hear the left tone but not the right. What is wrong?"
+      },
+      {
+        "a": "No - the frequencies are what matter, not the speaker brand. The sweep moves from 200 Hz to 8000 Hz, which covers the range where human hearing is most sensitive. Expensive speakers may sound fuller, but a missing frequency will show up on any working speaker.",
+        "q": "Do I need expensive speakers for the sweep to be useful?"
+      },
+      {
+        "a": "100 Hz is deep bass - you feel it more than hear it. 440 Hz is the standard concert A note, easy to hear. 1000 Hz is a mid-range reference tone. 8000 Hz is high treble - many laptop speakers fade out before this point.",
+        "q": "What do the 100, 440, 1000 and 8000 Hz tones mean?"
+      },
+      {
+        "a": "Start at a low volume and raise it gradually. The tones are pure sine waves with no harsh harmonics, but 8000 Hz at full volume can be uncomfortable. Never use test tones around small children or pets at high volume.",
+        "q": "Can test tones damage my hearing?"
+      },
+      {
+        "a": "It works on phones too, but phone speakers are mono - left and right tones will sound identical. The sweep still helps you judge how much bass and treble the tiny speaker produces.",
+        "q": "Does this work on a phone speaker?"
+      },
+      {
+        "a": "Check three things: the OS volume and mute state, whether the browser tab is muted (right-click the tab), and whether another app is holding the audio device. On phones, confirm the phone is not in silent or do-not-disturb mode with media muted.",
+        "q": "I hear nothing at all. What should I check?"
+      }
+    ],
+    "formula": "Tone = a sine wave at one fixed frequency, played for 5 seconds.\nSweep = a sine wave gliding from 200 Hz to 8000 Hz over 20 seconds.\nLeft = sound only in the left channel. Right = only the right channel.\nCenter = equal sound in both channels (mono).",
+    "formulaHeading": "What the tones are",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a channel: Left, Right, or Center (both).",
+      "Choose a test frequency - 440 Hz is a good starting point.",
+      "Set the volume low, then press Play tone.",
+      "For a full check, press Play sweep and listen from 200 Hz to 8000 Hz.",
+      "If one side is silent or much quieter, check your cable and balance settings."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Left and right channel tests prove each speaker (or headphone driver) receives its own signal.",
+      "A pure 440 Hz tone is the musical note A - your reference point for normal hearing.",
+      "The 20-second sweep glides from 200 Hz (bass) to 8000 Hz (treble) so you can hear drop-outs.",
+      "Small laptop and phone speakers often fade below 300 Hz and above 6000 Hz - that is normal physics, not a fault.",
+      "Test tones are generated live in your browser with the Web Audio API - no audio files needed.",
+      "Start quiet and raise the volume slowly; high-frequency tones can be uncomfortable at full volume."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "speaker test, speaker test online, left right speaker test, headphone test, test my speakers, audio test tones",
+    "labels": {
+      "center": "Center",
+      "channel": "Channel",
+      "frequency": "Frequency",
+      "left": "Left",
+      "playSweep": "Play frequency sweep",
+      "playTone": "Play tone",
+      "playing": "Playing",
+      "right": "Right",
+      "safetyNote": "Tones play for 5 seconds, the sweep for 20 seconds. Start at low volume and raise it gradually.",
+      "stop": "Stop",
+      "tone": "Tone",
+      "volume": "Volume"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This page cannot measure true loudness in decibels - only what you hear.",
+      "It cannot detect distortion at high volumes the way a microphone measurement could.",
+      "Phone and laptop speakers are physically limited; weak bass there is expected.",
+      "Browser autoplay policies mean you must press a button - tones never start by themselves."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online speaker test: play left/right/center tones and a 20-second frequency sweep to check speakers and headphones. 100% private, no sign-up.",
+    "metaTitle": "Speaker Test - Left/Right Tones & Sweep | JaurTools",
+    "name": "Speaker Test",
+    "privacyNote": "This tool runs 100% in your browser. The test tones are generated locally - nothing is recorded or sent anywhere.",
+    "quickAnswer": "A speaker test plays test tones through your speakers or headphones. The Left and Right buttons send sound to one side only, Center sends it to both, and the frequency sweep glides from 200 Hz to 8000 Hz over 20 seconds. If you hear the left tone only on the left, your stereo setup is correct. A silent side means a dead speaker, loose cable, or wrong balance setting.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Speaker test controls",
+    "tagline": "Play left/right test tones and a full frequency sweep to check your speakers and headphones.",
+    "workedExample": "You test a new pair of headphones:\n1. You pick Right and play the 440 Hz tone. You hear it only in the right ear - correct.\n2. You pick Left. The tone moves to the left ear - the channels are not swapped.\n3. You play the sweep. The sound glides smoothly upward; around 7000 Hz it gets quieter, which is normal for small drivers.\n4. No crackling at any point, so the drivers are healthy.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "sqlite-database-viewer": {
+    "benefits": [
+      "Inspect any SQLite file instantly — no installing DB Browser, no command line, no setup.",
+      "A real SQLite engine runs your queries, so the SQL you test here behaves exactly like it will in your app.",
+      "Learn and experiment safely: the sample database teaches joins and aggregations with zero risk.",
+      "CSV export moves query results straight into Excel, Google Sheets, or reports."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. The file is read by your browser's File API and processed by WebAssembly code running locally. Nothing is sent to any server — you can verify this by opening the tool after the page loads and then disconnecting your network.",
+        "q": "Is my database file uploaded anywhere?"
+      },
+      {
+        "a": ".db, .sqlite, .sqlite3, .db3 and .s3db files open directly. Plain SQLite format databases are supported; encrypted databases (SQLCipher) and files whose journal is missing may fail to open.",
+        "q": "Which SQLite file formats are supported?"
+      },
+      {
+        "a": "You can run any SQL, including INSERT, UPDATE and DELETE, but everything happens in a private in-memory copy. Your original file is never modified, and changes are lost when you close the tab. Download results as CSV if you need to keep them.",
+        "q": "Can I edit or delete data?"
+      },
+      {
+        "a": "sql.js loads the whole database into memory, so a 100 MB file needs at least that much free RAM plus overhead. Close other tabs, use a desktop browser, and prefer smaller extracts for quick inspection.",
+        "q": "Why does a large file load slowly?"
+      },
+      {
+        "a": "It runs genuine SQLite, so standard SQLite SQL works: joins, subqueries, CTEs, window functions, GROUP BY and most built-in functions. Syntax specific to MySQL or PostgreSQL may need small rewrites.",
+        "q": "Does it support my SQL dialect?"
+      },
+      {
+        "a": "Not necessarily — an empty result simply means no rows matched. The tool shows a note in that case. Check your WHERE conditions and table-name spelling first.",
+        "q": "The query returned no rows. Is that an error?"
+      }
+    ],
+    "formula": "List tables:\nSELECT name FROM sqlite_master\nWHERE type IN ('table', 'view')\nAND name NOT LIKE 'sqlite_%'\nORDER BY name;\n\nColumn schema:\nPRAGMA table_info(\"users\");\n\nPaged rows:\nSELECT * FROM \"users\"\nLIMIT 25 OFFSET 0;",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose file and pick your SQLite database, or press Load sample database to explore a ready-made example with users and orders tables.",
+      "Pick a table from the dropdown. The schema panel shows every column with its type, nullability, and primary-key flags.",
+      "Page through the table rows with the Previous and Next controls, or change how many rows appear per page.",
+      "Type any SQL in the query box — SELECT, JOIN, GROUP BY, even CREATE TABLE — and press Run query.",
+      "Export what you see: download the result as CSV or copy it as tab-separated text for spreadsheets."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SQLite is the most widely deployed database engine in the world — it powers phones, browsers, and apps, storing an entire database in a single portable file.",
+      "This viewer runs sql.js, the official SQLite engine compiled to WebAssembly, so queries execute with genuine SQLite semantics in your browser.",
+      "Supported files: .db, .sqlite, .sqlite3, .db3 and .s3db. Files up to 100 MB open comfortably on a desktop browser.",
+      "System tables (sqlite_%) are hidden from the table list to keep the view clean.",
+      "Every session works on a private in-memory copy. Running queries here never changes your original file."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sqlite viewer, sqlite database viewer online, open db file online, sqlite browser, view sqlite file, run sql query online",
+    "labels": {
+      "binaryLabel": "[binary data]",
+      "browseButton": "Choose file",
+      "clearButton": "Close database",
+      "clearSqlButton": "Clear",
+      "colDefault": "Default",
+      "colName": "Column",
+      "colNull": "Nullable",
+      "colPk": "Primary key",
+      "colType": "Type",
+      "copied": "Copied!",
+      "copyError": "Copy failed. Select the text manually and copy it.",
+      "copyTsv": "Copy as TSV",
+      "downloadCsv": "Download CSV",
+      "emptyQuery": "Type a SQL query first.",
+      "fileSizeError": "The file is too large. Please choose a file under 100 MB.",
+      "fileTypeError": "That file does not look like a SQLite database. Please choose a .db, .sqlite or .sqlite3 file.",
+      "initError": "Could not start the database engine. Check your connection and reload the page.",
+      "nextPage": "Next",
+      "noDatabase": "Open a database file or load the sample database first.",
+      "noLabel": "No",
+      "noTables": "No tables found in this database.",
+      "ofLabel": "of",
+      "pageLabel": "Page",
+      "pageSizeLabel": "Rows per page",
+      "prevPage": "Previous",
+      "queryOkNoRows": "Query ran successfully. No rows returned.",
+      "queryResultsHeading": "Query results",
+      "readError": "Could not read that file. It may be corrupted or not a SQLite database.",
+      "rowsHeading": "Rows",
+      "rowsUnit": "rows",
+      "runButton": "Run query",
+      "sampleButton": "Load sample database",
+      "sampleName": "sample-database.db",
+      "schemaHeading": "Table schema",
+      "sqlHeading": "Run a SQL query",
+      "sqlLabel": "SQL query",
+      "sqlPlaceholder": "SELECT * FROM users LIMIT 10;",
+      "statusLoading": "Loading…",
+      "tablesHeading": "Tables",
+      "uploadHint": "Choose a .db, .sqlite or .sqlite3 file (max 100 MB). The file is read locally — it is never uploaded.",
+      "yesLabel": "Yes"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Read-mostly workflow: the database lives in memory, so changes are not saved back to your file.",
+      "Very large databases (over 100 MB) may be slow or run out of browser memory.",
+      "Encrypted or password-protected SQLite files cannot be opened — this tool has no decryption.",
+      "Exotic extensions and custom collations may behave slightly differently than native SQLite."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online SQLite database viewer. Open .db, .sqlite and .sqlite3 files in your browser, browse tables, view schemas and run SQL queries. 100% private, no sign-up.",
+    "metaTitle": "SQLite Database Viewer — Open .db Files Online | JaurTools",
+    "name": "SQLite Database Viewer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool opens SQLite database files (.db, .sqlite, .sqlite3) directly in your browser using the real sql.js engine. Pick a file or load the built-in sample to browse tables, inspect column schemas, page through rows, and run your own SQL queries — with CSV export. The file never leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SQLite Database Viewer results",
+    "tagline": "Open any SQLite database file right in your browser — browse tables, inspect schemas, and run SQL queries. Nothing is uploaded.",
+    "workedExample": "The sample database has a users table with 5 rows:\n1. Run: SELECT city, COUNT(*) AS users FROM users GROUP BY city ORDER BY users DESC;\n2. SQLite groups the 5 rows by city: Delhi appears twice (Aarav, Rohan), Mumbai twice (Priya, Kabir), Hyderabad once (Sana).\n3. Result: Delhi 2, Mumbai 2, Hyderabad 1.\n4. Try a join: SELECT u.name, o.item, o.amount FROM users u JOIN orders o ON o.user_id = u.id; — it returns 4 rows: Aarav's Keyboard (2499.00) and Monitor (12499.00), Priya's Mouse (899.50), Sana's Headphones (1999.00).",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "final-grade-calculator": {
+    "benefits": [
+      "Tells you exactly what the final exam must score.",
+      "Flags impossible targets before you waste hope on them.",
+      "Shows your maximum possible grade honestly.",
+      "Handles any exam weight from 1% to 100%.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Required = (desired grade - current grade x (1 - exam weight)) / exam weight. With 85% now, a 30% final, and a 90% target: (90 - 85 x 0.7) / 0.3 = 101.7% — impossible.",
+        "q": "What score do I need on the final to get an A?"
+      },
+      {
+        "a": "When the required score exceeds 100%. Lower the target or check with your instructor whether extra credit exists — the math cannot be negotiated.",
+        "q": "What if the calculator says impossible?"
+      },
+      {
+        "a": "Current x (1 - weight) + 100 x weight. With 85% and a 30% final: 85 x 0.7 + 100 x 0.3 = 89.5%.",
+        "q": "What is the highest grade I can still get?"
+      },
+      {
+        "a": "Yes, as long as it is one final graded component. For multiple remaining items, use the weight of just the final exam.",
+        "q": "Does this work if the final is the only thing left?"
+      },
+      {
+        "a": "This tool assumes straight percentage weighting. Curved classes, dropped lowest scores, and extra credit change the math — ask your instructor for the syllabus formula.",
+        "q": "My class is curved. Does this still work?"
+      }
+    ],
+    "formula": "required final score = (desired - current x (1 - weight)) / weight\nmaximum possible = current x (1 - weight) + 100 x weight\npoints already locked = current x (1 - weight)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current grade as a percentage.",
+      "Enter the final exam's weight as a percentage of the course.",
+      "Enter the final grade you want.",
+      "Read the required exam score and whether the target is possible.",
+      "Try a lower target to see a reachable score."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Final grade = weighted average of coursework and the final exam.",
+      "The heavier the final, the more it can move your grade.",
+      "A required score above 100% means the target is mathematically impossible.",
+      "Your 'locked' points are current grade x (1 - exam weight).",
+      "Small changes in the exam weight swing the required score a lot.",
+      "Always confirm the weighting scheme in your course syllabus."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "final grade calculator, what do i need on my final, grade calculator final exam, final exam score calculator",
+    "labels": {
+      "currentLabel": "Current grade",
+      "desiredLabel": "Desired final grade",
+      "lockedResult": "Points already locked in",
+      "maxResult": "Maximum possible grade",
+      "requiredResult": "Score needed on final",
+      "roundingNote": "Percentages are rounded to one decimal. Confirm the exact weighting in your syllabus.",
+      "statusResult": "Verdict",
+      "weightLabel": "Final exam weight"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes straight percentage weighting with no curve.",
+      "Ignores dropped scores, extra credit, and rounding policies.",
+      "Treats all remaining coursework as one final component.",
+      "Syllabus rules always override this calculator."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free final grade calculator: enter your current grade, the final exam weight, and your target to see the exact score you need. No sign-up.",
+    "metaTitle": "Final Grade Calculator: What You Need on the Final (Free)",
+    "name": "Final Grade Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter your current grade, the final exam's weight, and the grade you want. The calculator solves for the exact final-exam score you need, shows your maximum possible grade, and tells you honestly when a target is mathematically impossible.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Grade results",
+    "status": {
+      "already": "Already secured",
+      "easy": "Easily doable",
+      "impossible": "Impossible",
+      "possible": "Possible but tough"
+    },
+    "tagline": "What do you need on the final exam?",
+    "workedExample": "Current grade 85%, final worth 30%, target 90%:\n\n1. Points locked = 85 x (1 - 0.30) = 59.5.\n2. Required = (90 - 59.5) / 0.30 = 30.5 / 0.30 = 101.7%.\n3. Verdict: impossible — even a perfect final only reaches 89.5%.\n4. Lower the target to 89%: (89 - 59.5) / 0.30 = 98.3% — possible but tough.\n\nAim for the A- instead of the A, and study accordingly.",
+    "workedExampleHeading": "Worked example"
+  }
+}

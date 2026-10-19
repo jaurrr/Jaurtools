@@ -1,0 +1,95 @@
+{
+  "css-inliner": {
+    "benefits": [
+      "Purpose-built for email: inlined HTML renders consistently in Gmail, Outlook, and Apple Mail.",
+      "Real CSS parsing — comments stripped, selectors matched with querySelectorAll, specificity respected by order.",
+      "Existing inline styles are preserved and win over stylesheet rules, exactly like the cascade.",
+      "The tool reports applied and skipped rules, so you see precisely what was inlined.",
+      "One click produces a complete email-ready HTML document you can paste into your sender."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Most email clients — especially Gmail and Outlook — strip or ignore <style> blocks and external stylesheets. The only styling they reliably honor is the style attribute on each element. Inlining moves every CSS declaration onto the elements it targets, so your design survives the trip through the inbox.",
+        "q": "Why do emails need inline CSS?"
+      },
+      {
+        "a": "This tool skips any selector containing a colon, which covers :hover, :focus, :active, ::before, ::after, and similar. Email clients barely support interactive pseudo-classes anyway, so nothing important is lost — but check the skipped count if your design depended on them.",
+        "q": "What happens to :hover and other pseudo-classes?"
+      },
+      {
+        "a": "Yes — existing style attributes are parsed first and kept on top. Stylesheet rules are applied underneath them, so your hand-written inline styles always win, matching how the CSS cascade treats inline styles as the most specific.",
+        "q": "Do my existing inline styles survive?"
+      },
+      {
+        "a": "This tool handles the common cases well: element, class, ID, and descendant selectors. It does not evaluate media queries, @keyframes, or complex cascade edge cases. For bulletproof production emails, still run a final test send through a preview service.",
+        "q": "Can I inline a full responsive email template?"
+      },
+      {
+        "a": "Yes. The inliner only touches style attributes and removes <style> tags; your links, images, alt text, and tracking pixels pass through unchanged. Always re-check your links after any HTML transformation, though.",
+        "q": "Will my links and tracking pixels still work?"
+      },
+      {
+        "a": "CSS comments are stripped before parsing, so they never appear in your output. HTML comments are left alone, which is useful because email developers often use them for Outlook conditional comments.",
+        "q": "Are comments preserved in the output?"
+      }
+    ],
+    "formula": "For each rule  selector { declarations }:\n  1. Skip selectors containing ':' (pseudo-classes/elements).\n  2. Find elements with document.querySelectorAll(selector).\n  3. Merge:  style = { ...ruleDeclarations, ...existingInlineStyle }\n     (existing inline styles win — the cascade rule)\n  4. Remove all <style> tags from the output.\n\nSpecificity between stylesheet rules is resolved by order:\nlater rules override earlier ones for the same property.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your email HTML into the first box (a sample is pre-loaded).",
+      "Paste or type your CSS into the second box.",
+      "Click Inline CSS. Each rule is matched against your HTML and written into style attributes.",
+      "Check the applied/skipped counts — pseudo-class rules like a:hover are reported as skipped.",
+      "Copy the result or download the complete email-ready HTML document."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Most email clients strip <style> blocks, so email CSS must live in style attributes to render reliably.",
+      "Inlining means copying each CSS rule's declarations onto every element its selector matches.",
+      "<style> blocks and external stylesheets are stripped or ignored.",
+      "Pseudo-classes like :hover cannot be inlined and are skipped by every inliner.",
+      "When a stylesheet rule and an existing inline style set the same property, the inline style wins.",
+      "Comments in CSS are stripped during inlining; the output contains only the merged declarations.",
+      "A final test send is still recommended, because email clients each have their own quirks."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css inliner, inline css tool, email css inliner, css to inline style, email html generator",
+    "labels": {
+      "copiedMessage": "Copied",
+      "copyButton": "Copy result",
+      "cssLabel": "Your CSS",
+      "downloadButton": "Download .html",
+      "errorEmpty": "Please paste both HTML and CSS first.",
+      "htmlLabel": "Your HTML",
+      "inlineButton": "Inline CSS",
+      "resultLabel": "Inlined HTML",
+      "sampleButton": "Load sample",
+      "statsApplied": "Declarations applied",
+      "statsSkipped": "Rules skipped (pseudo-classes etc.)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pseudo-class and pseudo-element selectors (:hover, ::before, etc.) cannot be inlined and are skipped.",
+      "Media queries and @-rules are ignored — responsive email techniques need manual handling.",
+      "Complex specificity edge cases are resolved by simple rule order, not a full cascade engine.",
+      "Very large stylesheets on huge documents may take a moment; this is a development aid, not a bulk pipeline."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Inline CSS into HTML for email-ready output. Real CSS parsing, pseudo-class reporting, copy and download. Free online tool, runs in your browser.",
+    "metaTitle": "CSS Inliner — Inline CSS for Email — Free Online Tool",
+    "name": "CSS Inliner",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your HTML and CSS, and this tool moves every stylesheet rule into style attributes on the matching elements — producing email-ready HTML that renders consistently in Gmail, Outlook, and Apple Mail. Pseudo-class rules are reported as skipped, existing inline styles are preserved, and you can download the finished document.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Inliner results",
+    "tagline": "Stylesheet CSS, moved into style attributes — email-ready.",
+    "workedExample": "HTML: <p class=\"hi\">Hello</p>\nCSS: .hi { color: red; font-weight: bold; }\nInlined result:\n<p class=\"hi\" style=\"color: red; font-weight: bold\">Hello</p>\nThe class attribute stays (harmless), while both declarations now live in the style attribute where email clients will honor them. A rule like a:hover would be counted as skipped, since pseudo-classes cannot be inlined.",
+    "workedExampleHeading": "Worked example"
+  }
+}

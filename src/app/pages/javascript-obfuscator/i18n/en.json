@@ -1,0 +1,97 @@
+{
+  "javascript-obfuscator": {
+    "benefits": [
+      "Hides implementation details: casual readers can no longer skim your logic at a glance.",
+      "Shrinks casual copying: renamed identifiers and escaped strings raise the effort bar for copy-paste reuse.",
+      "Strips comments automatically: internal notes and TODOs never ship to the browser.",
+      "Keeps code working: transformations preserve semantics, so the output runs exactly like the input.",
+      "Runs fully in your browser: proprietary source code is never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It rewrites readable JavaScript into a harder-to-read but functionally identical form: identifiers become short generated names, string contents become hex escapes, and comments and extra whitespace are removed.",
+        "q": "What does a JavaScript obfuscator do?"
+      },
+      {
+        "a": "No. Obfuscation is a speed bump, not a lock. Anyone determined can reformat and trace the code with browser developer tools. Never put secrets, passwords, or API keys in client-side code - obfuscated or not.",
+        "q": "Does obfuscation make my code secure?"
+      },
+      {
+        "a": "Yes. Renaming only touches declared local identifiers, strings keep their exact values through hex escapes, and whitespace collapsing never crosses line boundaries, so the output behaves identically. Still, always test the obfuscated file before deploying it.",
+        "q": "Will the obfuscated code still work?"
+      },
+      {
+        "a": "Yes - they are never renamed. The tool keeps a built-in list of language keywords and common browser and Node globals (window, document, console, Math, JSON, and others) untouched.",
+        "q": "Are built-ins like console and Math renamed?"
+      },
+      {
+        "a": "It handles all of them: single quotes, double quotes, and template literals. Inside template literals, ${...} interpolations are preserved while the surrounding text is escaped.",
+        "q": "What about template literals?"
+      },
+      {
+        "a": "Obfuscation only slows readers down. Minification also shrinks file size for faster loading. This tool does light whitespace collapsing; pair it with a real minifier for production size savings.",
+        "q": "Obfuscation vs minification - what is the difference?"
+      }
+    ],
+    "formula": "rename:  declared name  ->  _0x0, _0x1, _0x2, ... (base-36 counter)\nescape:  \"Hi\"  ->  \"\\x48\\x69\"   (every char becomes a hex escape)\nstrip:   // comment  ->  removed,   /* block */  ->  single space\nOrder: scan strings/comments -> mask strings -> rename identifiers -> collapse spaces -> restore escaped strings.",
+    "formulaHeading": "How it transforms code",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JavaScript into the source box, or edit the sample to experiment.",
+      "Toggle the three transforms: rename identifiers, hex-escape strings, and strip comments.",
+      "The obfuscated output updates live below the options.",
+      "Check the stats: bytes before and after, size ratio, and how many identifiers were renamed.",
+      "Copy the output or download it as obfuscated.js, then test it in your browser before shipping."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Obfuscation rewrites code to be hard to read while keeping it functionally identical - it is not encryption.",
+      "This tool applies three transforms: identifier renaming (_0x0, _0x1, ...), string hex-escaping (\\xNN), and comment/whitespace removal.",
+      "Renaming only affects identifiers declared with var, let, const, function, or class. Function parameters are left as-is.",
+      "Language keywords and common globals (window, document, console, Math, JSON, ...) are never renamed.",
+      "Template literal ${...} interpolations are preserved; only the surrounding text is escaped.",
+      "Comment stripping is string-aware: // inside a URL string is not treated as a comment."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "javascript obfuscator, js obfuscator online, obfuscate javascript, js code scrambler, javascript minifier",
+    "labels": {
+      "copiedLabel": "Copied!",
+      "copyLabel": "Copy output",
+      "downloadLabel": "Download .js",
+      "escapeLabel": "Hex-escape string contents (\\xNN)",
+      "moduleWarning": "This code uses import/export. Renaming may break module bindings - review the output carefully before use.",
+      "obfuscatedSizeLabel": "Obfuscated (bytes)",
+      "originalSizeLabel": "Original (bytes)",
+      "outputLabel": "Obfuscated output",
+      "ratioLabel": "Size ratio",
+      "renameLabel": "Rename declared identifiers (_0x0, _0x1, ...)",
+      "renamedLabel": "Identifiers renamed",
+      "sourceLabel": "JavaScript source",
+      "stripLabel": "Strip comments and collapse whitespace"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Obfuscation is not security: determined readers can still reverse it with developer tools. Never hide secrets in client-side code.",
+      "Regex literals containing quotes or comment markers are not fully parsed - test the output before deploying.",
+      "Function parameters and object properties are not renamed, only declared variable, function, and class names.",
+      "Code using import/export needs manual review: renaming can break module bindings.",
+      "Very large files (megabytes) may take a moment to process since everything runs on the main thread."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JavaScript obfuscator: rename identifiers, hex-escape strings, and strip comments right in your browser. Output works exactly like the input. Private, no sign-up.",
+    "metaTitle": "JavaScript Obfuscator - Obfuscate JS Online Free | JaurTools",
+    "name": "JavaScript Obfuscator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste JavaScript in, and the tool renames declared identifiers to short names like _0x0, converts string contents to hex escapes like \\x48\\x69, and strips comments - producing code that runs identically but is much harder to skim. It is a deterrent against casual copying, not real security: never put secrets in client-side code.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JavaScript Obfuscator results",
+    "tagline": "Make your JavaScript hard to skim: rename identifiers, hex-escape strings, strip comments - all in your browser.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input:\nfunction calculateTotal(price, taxRate) {\n  const tax = price * taxRate;\n  return price + tax;\n}\nconst message = \"Your total is: \";\n\nWith all three transforms on, the output becomes:\nfunction _0x0(price, taxRate) {\n const _0x1 = price * taxRate;\n return price + _0x1;\n}\nconst _0x2 = \"\\x59\\x6f\\x75\\x72\\x20\\x74\\x6f\\x74\\x61\\x6c\\x20\\x69\\x73\\x3a\\x20\";\n\ncalculateTotal became _0x0, tax became _0x1, message became _0x2, the comment vanished, and \"Your total is: \" became hex escapes. The code computes exactly the same values."
+  }
+}

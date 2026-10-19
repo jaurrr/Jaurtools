@@ -1,0 +1,83 @@
+{
+  "prime-factorization-calculator": {
+    "benefits": [
+      "Instant factor trees for homework without long division.",
+      "Detects prime numbers automatically.",
+      "Handles numbers up to one trillion.",
+      "Clean exponent notation, easy to read.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A prime factor is a prime number that divides another number exactly. Every whole number greater than 1 is either prime or can be written as a product of prime factors.",
+        "q": "What is a prime factor?"
+      },
+      {
+        "a": "Yes. A prime number has only one factor — itself — so the breakdown is just the number with exponent 1.",
+        "q": "Does it work for prime numbers?"
+      },
+      {
+        "a": "Divide by 2 repeatedly, then by 3, 5, 7 and so on, collecting each divisor and its count. The result is unique for every number.",
+        "q": "How do I factorize by hand?"
+      },
+      {
+        "a": "The Fundamental Theorem of Arithmetic guarantees every integer greater than 1 has exactly one prime factorization (up to ordering).",
+        "q": "Is the prime factorization always unique?"
+      },
+      {
+        "a": "Numbers up to 1,000,000,000,000 (one trillion) are supported. Larger numbers are refused to keep the browser responsive.",
+        "q": "What is the largest number it can handle?"
+      }
+    ],
+    "formula": "n = p1^a1 x p2^a2 x ... x pk^ak\nwhere each p is prime and each a >= 1",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter any whole number from 2 up to one trillion.",
+      "The calculator breaks it into prime factors instantly.",
+      "Read the result in exponent form, for example 2^2 x 3 x 5.",
+      "If the number is prime, the calculator tells you.",
+      "Try nearby numbers to compare their structures."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every whole number greater than 1 is either prime or a product of primes.",
+      "Prime factorization is unique — each number has exactly one.",
+      "Small factors are found by trial division: 2, 3, 5, 7 and so on.",
+      "The exponent shows how many times a prime divides the number.",
+      "Factorization underpins GCD, LCM and fraction simplification."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "prime factorization calculator, factor tree calculator, prime factors, factorization calculator, prime factor breakdown",
+    "labels": {
+      "distinctLabel": "Distinct prime factors",
+      "factorsLabel": "Prime factorization",
+      "invalidNote": "Enter a whole number from 2 to 1,000,000,000,000.",
+      "numberLabel": "Number",
+      "primeNote": "This number is prime — it cannot be broken down further."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only whole numbers from 2 upward — no fractions or decimals.",
+      "Numbers above one trillion are refused to protect performance.",
+      "It finds factors; it cannot explain why a number factors that way.",
+      "Trial division is not the method used for cryptographic-size numbers."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free prime factorization calculator: break any number into its prime factors with exponents, up to one trillion. Fully browser-based, no sign-up.",
+    "metaTitle": "Prime Factorization Calculator — Prime Factor Breakdown",
+    "name": "Prime Factorization Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Prime factorization breaks a number into the prime numbers that multiply to make it. Divide out 2 as many times as possible, then 3, 5, 7 and so on, counting how many times each divides evenly. The result is unique: every number has exactly one prime factorization.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Factorization results",
+    "tagline": "Break any number into its prime building blocks.",
+    "workedExample": "Factorize 60.\n\n60 / 2 = 30, 30 / 2 = 15 — so 2 appears twice.\n15 / 3 = 5 — so 3 appears once.\n5 is prime.\n\n60 = 2^2 x 3 x 5.\n\nCheck: 4 x 3 x 5 = 60. Correct.",
+    "workedExampleHeading": "Worked example"
+  }
+}

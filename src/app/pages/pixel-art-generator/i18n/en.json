@@ -1,0 +1,97 @@
+{
+  "pixel-art-generator": {
+    "benefits": [
+      "Create unique generative art, avatars, and textures with one click.",
+      "Mirror symmetry modes turn noise into kaleidoscope-style patterns.",
+      "Two-color control keeps the output matching your brand or project palette.",
+      "The PNG downloads at exact pixel size — ready for games, textiles, or backgrounds."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Pick your grid size, cell size, two colors, and density, then press Regenerate until you like the pattern. Press Download to save it as a PNG.",
+        "q": "How do I generate random bitmap art?"
+      },
+      {
+        "a": "Density is the probability that any cell uses the first color. At 50%, roughly half the cells use each color; at 80%, the first color dominates.",
+        "q": "What does the density slider do?"
+      },
+      {
+        "a": "Yes — the X, Y, and XY symmetry modes mirror the random half-grid, which creates balanced kaleidoscope and mandala-style patterns.",
+        "q": "Can I make symmetrical patterns?"
+      },
+      {
+        "a": "The output canvas is exactly grid × cell size, for example 24 × 24 cells at 12 px = 288 × 288 px. Increase the cell size for a bigger file.",
+        "q": "What size is the downloaded image?"
+      },
+      {
+        "a": "Yes, everything is generated with JavaScript in your browser. Nothing is uploaded or stored anywhere.",
+        "q": "Is it really random and private?"
+      }
+    ],
+    "formula": "canvas_w = cols × cell_px,  canvas_h = rows × cell_px\ncell(x, y) = colorA  if rand() < density  else  colorB\nsymmetry mirrors the generated half-grid across the chosen axes",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Set the grid columns and rows, and the pixel size of each cell.",
+      "Choose your two colors, or press the dice button for a random palette.",
+      "Set the density to control how much of the first color appears.",
+      "Pick a symmetry mode — or none — for the pattern style you want.",
+      "Press Regenerate until you love the pattern, then Download the PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Each cell is filled independently: color A with probability = density, otherwise color B.",
+      "The grid ranges from 4 × 4 up to 128 × 128 cells.",
+      "Cell size ranges from 2 to 32 px, which sets the final canvas dimensions.",
+      "Symmetry modes mirror one generated half across the X axis, Y axis, or both.",
+      "Pressing Regenerate re-seeds the generator for a brand-new pattern."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "random bitmap generator, generative art, pixel art generator, random pattern, procedural texture, avatar generator",
+    "labels": {
+      "canvasSize": "Canvas size",
+      "cellSize": "Cell size (px)",
+      "colorA": "First color",
+      "colorB": "Second color",
+      "columns": "Columns",
+      "density": "Density of first color (%)",
+      "download": "Download PNG",
+      "grid": "Grid size (columns × rows)",
+      "pickOne": "Adjust the settings and press Regenerate to create art.",
+      "preview": "Generated bitmap preview",
+      "randomColors": "Random palette",
+      "regenerate": "Regenerate",
+      "rows": "Rows",
+      "symmetry": "Symmetry"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The art is purely random — you cannot draw or edit individual cells.",
+      "Only two colors per artwork; gradients are not supported.",
+      "Very large grids (128 × 128 at 32 px cells = 4096 px) may be slow on old phones.",
+      "Patterns are not guaranteed unique, though collisions are extremely unlikely."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create unique generative pixel art with symmetry modes, custom colors and density controls. Free, instant, endless variations.",
+    "metaTitle": "Pixel Art Generator - Unique Generative Pixel Art | JaurTools",
+    "name": "Pixel Art Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Set a grid size, cell size, two colors, and density, then press Regenerate to create unique generative pixel art. Mirror symmetry modes make kaleidoscope patterns. Download the exact-size PNG — everything is generated locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Generator results",
+    "symmetries": {
+      "none": "No symmetry",
+      "x": "Mirror left–right",
+      "xy": "Mirror both axes",
+      "y": "Mirror top–bottom"
+    },
+    "tagline": "Unique pixel art, endless variations.",
+    "workedExample": "A 16 × 16 grid with 10 px cells and 50% density:\ncanvas = 16 × 10 = 160 × 160 px\ncells = 16 × 16 = 256\nExpected color-A cells ≈ 256 × 0.5 = 128\nWith XY symmetry, only the 8 × 8 = 64-cell quadrant is random; the other three quadrants are mirrors of it.",
+    "workedExampleHeading": "Worked example"
+  }
+}

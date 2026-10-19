@@ -1,0 +1,87 @@
+{
+  "base64-encoder-decoder": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Base64 Encoder/Decoder",
+    "tagline": "Encode any text to Base64 or decode Base64 back to text - with full Unicode support.",
+    "metaTitle": "Base64 Encoder Decoder - Encode & Decode Online | JaurTools",
+    "metaDescription": "Free Base64 encoder and decoder with Unicode support. Convert text to Base64 or decode Base64 strings instantly in your browser.",
+    "keywords": "base64 encoder, base64 decoder, base64 encode online, decode base64, base64 converter",
+    "resultsHeading": "Base64 conversion result",
+    "quickAnswer": "Base64 turns binary data into plain ASCII text using 64 safe characters (A-Z, a-z, 0-9, +, /). For example, \"Hello\" encodes to \"SGVsbG8=\". Paste text and pick Encode, or paste Base64 and pick Decode - invalid input shows a clear error instead of garbage.",
+    "keyFacts": [
+      "Base64 output uses only A-Z, a-z, 0-9, plus (+), slash (/), and equals (=) as padding.",
+      "Encoded output is about 33% larger than the input - 3 bytes become 4 characters.",
+      "Base64 is an encoding, not encryption. Anyone can decode it; it provides zero secrecy.",
+      "Padding with = makes the length a multiple of 4. One or two = signs may appear at the end.",
+      "This tool handles full Unicode correctly by encoding text as UTF-8 bytes first - many simple tools corrupt non-English text.",
+      "Common uses: embedding images in HTML/CSS, email attachments (MIME), API tokens, and data URLs."
+    ],
+    "howTo": [
+      "Choose the Encode tab to turn text into Base64, or Decode to reverse it.",
+      "Paste or type your text in the input box.",
+      "The result appears instantly in the output box.",
+      "Use the copy button to grab the result."
+    ],
+    "formula": "Encoding: every 3 input bytes (24 bits) are split into four 6-bit groups; each group maps to one of 64 characters.\nDecoding reverses the process. Padding: input length mod 3 = 1 → two \"=\"; = 2 → one \"=\".",
+    "workedExample": "Encode \"Hello\":\n1. UTF-8 bytes: 72 101 108 108 111.\n2. Grouped into 6-bit chunks and mapped: S G V s b G 8 =.\n3. Result: \"SGVsbG8=\".\nDecode \"SmF1clRvb2xz\":\n1. Split into 6-bit values and regroup into bytes.\n2. Bytes spell: J a u r T o o l s.\n3. Result: \"JaurTools\".",
+    "benefits": [
+      "True Unicode support - Hindi, Arabic, and emoji encode correctly, unlike naive btoa-only tools.",
+      "Instant two-way conversion with a clear error message on invalid Base64.",
+      "One-click copy for pasting tokens or data into code.",
+      "Everything stays in your browser - safe for sensitive strings."
+    ],
+    "limitations": [
+      "Text only - this tool does not encode files or images (use a file-to-Base64 tool for that).",
+      "Base64 is not encryption; never treat encoded secrets as protected.",
+      "Extremely long inputs (many megabytes) may feel slow because the whole string is processed at once."
+    ],
+    "faqs": [
+      {
+        "q": "What is Base64 used for?",
+        "a": "Base64 represents binary data as plain text. It is used in email attachments, embedding images directly in HTML or CSS (data URLs), JWT tokens, and anywhere binary bytes must travel through text-only channels."
+      },
+      {
+        "q": "Is Base64 encryption?",
+        "a": "No. Base64 is an encoding, not encryption - anyone can decode it instantly with no key. Never use it to hide passwords or secrets; it only changes how data looks, not who can read it."
+      },
+      {
+        "q": "Why does my Base64 end with = signs?",
+        "a": "The = characters are padding. Base64 works in groups of 3 bytes → 4 characters. If your input is not a multiple of 3 bytes, padding fills the gap: one = for a 1-byte shortfall pattern, two = for the other case."
+      },
+      {
+        "q": "Why is Base64 output longer than the input?",
+        "a": "Each 3 bytes of input become 4 characters of output, so the result is roughly 33% larger. This size cost is the trade-off for text-safe representation."
+      },
+      {
+        "q": "Can Base64 handle Hindi or Arabic text?",
+        "a": "Yes - this tool first converts your text to UTF-8 bytes, then encodes those bytes. Simple tools that skip the UTF-8 step corrupt non-English characters; this one does not."
+      },
+      {
+        "q": "What does \"invalid Base64\" mean?",
+        "a": "It means the input contains characters outside the Base64 alphabet, or has wrong padding/length. Check for stray spaces, line breaks, or missing = padding at the end."
+      }
+    ],
+    "labels": {
+      "mode": "Conversion direction",
+      "encodeTab": "Encode",
+      "decodeTab": "Decode",
+      "input": "Input",
+      "output": "Output",
+      "copy": "Copy result",
+      "invalidInput": "That does not look like valid Base64. Check for typos or missing padding."
+    }
+  }
+}

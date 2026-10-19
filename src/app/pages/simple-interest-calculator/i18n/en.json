@@ -1,0 +1,89 @@
+{
+  "simple-interest-calculator": {
+    "benefits": [
+      "Shows at a glance how much cheaper simple interest is than compound over long periods.",
+      "Answers everyday questions - loan cost, deposit growth - in seconds.",
+      "The side-by-side toggle teaches the compounding lesson better than any textbook paragraph.",
+      "Free, instant, and private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Simple interest is calculated only on the original principal: I = P x r x t. Compound interest is calculated on principal plus accumulated interest: A = P x (1 + r)^t. Compounding makes money grow faster - and makes debt grow faster too.",
+        "q": "What is the difference between simple and compound interest?"
+      },
+      {
+        "a": "Almost always compound, and usually daily or monthly rather than yearly. Banks compound your savings (good for you) and credit cards compound your debt (bad for you). The toggle in this calculator shows the gap for your exact numbers.",
+        "q": "Do banks use simple or compound interest?"
+      },
+      {
+        "a": "Rearrange the simple-interest formula: t = I / (P x r). For $500 of interest on $10,000 at 5%: t = 500 / (10,000 x 0.05) = 1 year. With compounding you would solve t = ln(A/P) / ln(1 + r).",
+        "q": "How do I find the time needed?"
+      },
+      {
+        "a": "Rearrange: r = I / (P x t). If $10,000 earned $1,800 over 3 years with simple interest, r = 1,800 / (10,000 x 3) = 0.06 = 6%.",
+        "q": "How do I find the interest rate?"
+      },
+      {
+        "a": "Yes. Divide the annual rate by 12 and use months as the time unit, or divide by 365 for days. A 6% annual rate is 0.5% per month. The formula works with any consistent time unit.",
+        "q": "Can I use months instead of years?"
+      },
+      {
+        "a": "It is interest on interest - the reason savings accelerate and debts snowball. Over 30 years at 7%, $10,000 compounded yearly becomes $76,123, while simple interest only reaches $31,000. Time is the fuel.",
+        "q": "Why is compounding called the eighth wonder of the world?"
+      }
+    ],
+    "formula": "Simple: Interest = P x r x t. Total = P x (1 + r x t).\nCompound (yearly): Total = P x (1 + r)^t. Interest = Total - P.\nP = principal, r = annual rate as a decimal, t = years.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Simple or Compound with the toggle.",
+      "Enter the principal - the starting amount of money.",
+      "Enter the annual interest rate as a percentage.",
+      "Enter the time in years (fractions like 2.5 are fine).",
+      "Compare the interest earned and the total for both modes."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Simple interest: I = P x r x t - interest is charged only on the original principal.",
+      "Compound interest: A = P x (1 + r)^t - interest earns interest on itself.",
+      "The gap between the two grows explosively with time and with the rate.",
+      "Short-term loans and some bonds use simple interest; savings accounts and credit cards compound.",
+      "Always confirm whether a quoted rate compounds, and how often."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "simple interest calculator, compound interest calculator, interest calculator, loan interest calculator, savings interest calculator",
+    "labels": {
+      "compoundTab": "Compound",
+      "interestEarned": "Interest earned",
+      "mode": "Interest type",
+      "principal": "Principal ($)",
+      "rate": "Annual rate (%)",
+      "simpleTab": "Simple",
+      "totalValue": "Total value",
+      "years": "Time (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant rate for the whole period.",
+      "Compound mode assumes yearly compounding; real accounts often compound monthly or daily.",
+      "Ignores taxes, fees, deposits, and withdrawals.",
+      "Estimates only - not financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free simple and compound interest calculator: see interest earned and total value for savings or loans. Instant, private, no sign-up.",
+    "metaTitle": "Simple Interest Calculator - Compound Too | JaurTools",
+    "name": "Simple Interest Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Simple interest is calculated only on the original amount: $10,000 at 6% for 3 years earns 10,000 x 0.06 x 3 = $1,800, for a total of $11,800. Compound interest earns interest on the interest: $10,000 x (1.06)^3 = $11,910.16, so $1,910.16 of interest. The difference looks small over 3 years, but over 30 years at 7%, compounding turns $10,000 into $76,123 while simple interest only reaches $31,000.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your interest results",
+    "tagline": "Simple and compound interest on savings or loans - compare both instantly.",
+    "workedExample": "$10,000 principal, 6% annual, 3 years:\nSimple:\n1. Interest = 10,000 x 0.06 x 3 = $1,800.\n2. Total = 10,000 + 1,800 = $11,800.\nCompound (yearly):\n1. Total = 10,000 x (1.06)^3 = 10,000 x 1.191016 = $11,910.16.\n2. Interest = 11,910.16 - 10,000 = $1,910.16.\nCompounding earned an extra $110.16 over 3 years.",
+    "workedExampleHeading": "Worked example"
+  }
+}

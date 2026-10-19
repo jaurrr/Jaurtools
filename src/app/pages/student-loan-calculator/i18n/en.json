@@ -1,0 +1,88 @@
+{
+  "student-loan-calculator": {
+    "assumptionNote": "Assumes a fixed interest rate, monthly compounding, equal monthly payments, and no fees or missed payments. Real loans may have origination fees and variable rates.",
+    "benefits": [
+      "Shows the true lifetime cost of the loan - the number that actually matters.",
+      "Makes the term trade-off concrete: shorter term means a bigger payment but far less interest.",
+      "Helps you test extra payments: even $50 more a month shortens the loan noticeably.",
+      "Free, instant, and private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The standard formula: monthly payment = P x r x (1+r)^n / ((1+r)^n - 1), where P is the loan amount, r the monthly rate, and n the number of payments. This calculator runs it for you.",
+        "q": "How is the monthly payment calculated?"
+      },
+      {
+        "a": "Yes, and it is the fastest way to cut total interest. Because extra payments go straight to principal, they shorten the loan from the end - where payments are almost all interest. Just confirm your lender applies extra payments to principal with no prepayment penalty.",
+        "q": "Should I pay extra on my student loan?"
+      },
+      {
+        "a": "Federal loans (US) offer income-driven plans, deferment, and forgiveness programs, with fixed rates set by Congress. Private loans have rates set by your credit score and fewer protections, but can be cheaper for strong borrowers. Compare the total cost, not just the monthly payment.",
+        "q": "Federal vs private student loans?"
+      },
+      {
+        "a": "Only if the math works: refinancing at a lower rate with the same term always saves money. But refinancing federal loans into private ones permanently forfeits federal protections like income-driven repayment and forgiveness. Never refinance federal loans lightly.",
+        "q": "Should I refinance my student loan?"
+      },
+      {
+        "a": "Interest usually accrues from day one on unsubsidized loans, even while you are in school. On subsidized federal loans, the government pays the interest while you study. Capitalized interest - added to the principal at repayment - is why balances can grow before you pay a cent.",
+        "q": "Does interest accrue while I am in school?"
+      },
+      {
+        "a": "Roughly: every extra year of term at the same rate adds about one year's worth of interest payments. That is why a 20-year payoff on a $25,000 loan costs nearly double the interest of a 10-year payoff.",
+        "q": "How much does a longer term really cost?"
+      }
+    ],
+    "formula": "Monthly payment = P x r x (1 + r)^n / ((1 + r)^n - 1).\nP = loan amount, r = monthly rate (annual / 12), n = number of payments.\nTotal paid = monthly payment x n. Total interest = total paid - P.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the total amount borrowed (before any payments).",
+      "Enter the annual interest rate on the loan.",
+      "Enter the repayment term in years.",
+      "Read your monthly payment, total interest, and total amount paid.",
+      "Try a shorter term or a lower rate to see how much interest you would save."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Monthly payment = P x r x (1+r)^n / ((1+r)^n - 1), with r the monthly rate and n the payment count.",
+      "Early payments are mostly interest; later payments are mostly principal.",
+      "Total interest grows roughly with the square of the loan term.",
+      "Extra payments attack principal directly and shorten the loan from the end.",
+      "Federal loans carry protections (income-driven plans, forgiveness) that private loans do not."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "student loan calculator, education loan calculator, student loan payment calculator, loan payoff calculator, student loan interest calculator",
+    "labels": {
+      "interestRate": "Annual interest rate (%)",
+      "loanAmount": "Loan amount ($)",
+      "loanTerm": "Repayment term (years)",
+      "monthlyPayment": "Monthly payment",
+      "totalInterest": "Total interest",
+      "totalPaid": "Total you will pay"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a fixed rate; variable-rate loans change over time.",
+      "Ignores origination fees, late fees, and deferment periods.",
+      "Does not model income-driven repayment plans.",
+      "An estimate for planning, not lending or financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free student loan calculator: find your monthly payment, total interest, and payoff cost for education loans. Instant and private.",
+    "metaTitle": "Student Loan Calculator - Payment & Payoff | JaurTools",
+    "name": "Student Loan Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "A student loan payment comes from the amortization formula: $25,000 at 6.5% over 10 years (120 payments) means a monthly payment of about $283.90. Over the life of the loan you pay about $34,068 total - $9,068 of it interest. Shorten the term to 7 years and the payment rises to about $371 but total interest falls to roughly $6,150. That trade-off - payment size versus total interest - is the whole game.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your loan results",
+    "tagline": "Monthly payment, total interest, and payoff cost for education loans.",
+    "workedExample": "$25,000 loan, 6.5% annual, 10 years (120 payments):\n1. Monthly rate r = 0.065 / 12 = 0.0054167.\n2. (1 + r)^120 = about 1.9122.\n3. Monthly = 25,000 x 0.0054167 x 1.9122 / (1.9122 - 1).\n4. = 25,000 x 0.010358 / 0.9122 = 25,000 x 0.011356 = about $283.90.\n5. Total paid = 283.90 x 120 = about $34,068.\n6. Total interest = 34,068 - 25,000 = about $9,068.",
+    "workedExampleHeading": "Worked example"
+  }
+}

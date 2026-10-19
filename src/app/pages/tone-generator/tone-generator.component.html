@@ -1,0 +1,207 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="calc-term" aria-live="polite">
+        <canvas #scope class="tone-scope" [attr.aria-label]="t('labels.scopeLabel')"></canvas>
+        <div class="calc-term-out" dir="ltr">{{ freq() }} Hz</div>
+        <p class="calc-term-sub" dir="ltr">
+          {{ t('labels.waveforms.' + wave()) }} · {{ t('labels.periodLabel') }}: {{ twoDec().format(period()) }} ms
+        </p>
+      </div>
+
+      <div class="field">
+        <label for="tone-freq">{{ t('labels.frequencyLabel') }}</label>
+        <div class="calc-slider-wrap">
+          <span class="calc-bubble" [style.inset-inline-start.%]="freqBubbleLeft()">{{ freq() }} Hz</span>
+          <input
+            id="tone-freq"
+            type="number"
+            inputmode="decimal"
+            min="20"
+            max="20000"
+            step="1"
+            [ngModel]="freq()"
+            (ngModelChange)="setFreq($event)"
+            class="tone-num"
+          />
+          <input
+            type="range"
+            min="20"
+            max="20000"
+            step="1"
+            [ngModel]="freq()"
+            (ngModelChange)="setFreq($event)"
+            [attr.aria-label]="t('labels.frequencyLabel')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.presetsLabel') }}</label>
+        <div class="chip-row">
+          @for (p of presets; track p.name) {
+            <button type="button" class="chip" [class.active]="freq() === p.freq" (click)="applyPreset(p.freq)">
+              {{ p.name }}
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tone-wave">{{ t('labels.waveformLabel') }}</label>
+        <select id="tone-wave" [ngModel]="wave()" (ngModelChange)="setWave($event)">
+          <option value="sine">{{ t('labels.waveforms.sine') }}</option>
+          <option value="triangle">{{ t('labels.waveforms.triangle') }}</option>
+          <option value="square">{{ t('labels.waveforms.square') }}</option>
+          <option value="sawtooth">{{ t('labels.waveforms.sawtooth') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tone-vol">{{ t('labels.volumeLabel') }}</label>
+        <div class="input-row">
+          <input
+            id="tone-vol"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            [ngModel]="volume()"
+            (ngModelChange)="setVolume($event)"
+            [attr.aria-label]="t('labels.volumeLabel')" class="calc-range" />
+          <span class="vol-value">{{ volume() }}%</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tone-dur">{{ t('labels.durationLabel') }}</label>
+        <select id="tone-dur" [ngModel]="duration()" (ngModelChange)="setDuration($event)">
+          <option [ngValue]="1">{{ t('labels.durations.one') }}</option>
+          <option [ngValue]="2">{{ t('labels.durations.two') }}</option>
+          <option [ngValue]="5">{{ t('labels.durations.five') }}</option>
+          <option [ngValue]="0">{{ t('labels.durations.continuous') }}</option>
+        </select>
+      </div>
+
+      <div class="play-row">
+        @if (!playing()) {
+          <button type="button" class="play-btn" (click)="play()">
+            <app-icon name="activity" /> {{ t('labels.playLabel') }}
+          </button>
+        } @else {
+          <button type="button" class="play-btn stop" (click)="stopTone()">
+            <app-icon name="x" /> {{ t('labels.stopLabel') }}
+          </button>
+        }
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="activity" /> {{ t('labels.frequencyResult') }}</span>
+          <strong>{{ twoDec().format(freq()) }} Hz</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.periodLabel') }}</span>
+          <strong>{{ twoDec().format(period()) }} ms</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.wavelengthLabel') }}</span>
+          <strong>{{ twoDec().format(wavelength()) }} m</strong>
+        </div>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

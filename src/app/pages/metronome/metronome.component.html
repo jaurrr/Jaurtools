@@ -1,0 +1,103 @@
+<div class="tool-page persona-play">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="timer" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="bpm-display" aria-live="polite">
+        <strong>{{ bpm() }}</strong>
+        <span>{{ t('labels.bpmUnit') }}</span>
+      </div>
+
+      <div class="beat-dots" aria-hidden="true">
+        @for (b of beatArray(); track b) {
+          <span class="beat-dot" [class.active]="activeBeat() === b" [class.accent]="b === 0 && accent()"></span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="metro-bpm">{{ t('labels.bpmLabel') }}</label>
+        <div class="input-row">
+          <input type="number" id="metro-bpm" [ngModel]="bpm()" (ngModelChange)="setBpm($event)"
+            inputmode="numeric" min="30" max="240" step="1" />
+          <input type="range" [ngModel]="bpm()" (ngModelChange)="setBpm($event)" min="30" max="240"
+            step="1" [attr.aria-label]="t('labels.bpmLabel')" />
+          <button type="button" class="btn-ghost" (click)="tap()">{{ t('labels.tapBtn') }}</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label id="metro-beats-label">{{ t('labels.beatsLabel') }}</label>
+        <div class="chip-row" role="group" aria-labelledby="metro-beats-label">
+          @for (o of beatOptions; track o) {
+            <button type="button" class="chip" [class.active]="beatsPerBar() === o" (click)="setBeats(o)">{{ o }}</button>
+          }
+        </div>
+      </div>
+
+      <div class="field check-row">
+        <input type="checkbox" id="metro-accent" [checked]="accent()" (change)="toggleAccent()" />
+        <label for="metro-accent">{{ t('labels.accentLabel') }}</label>
+      </div>
+
+      <div class="field">
+        <label id="metro-sound-label">{{ t('labels.soundLabel') }}</label>
+        <div class="chip-row" role="group" aria-labelledby="metro-sound-label">
+          @for (o of soundOptions; track o) {
+            <button type="button" class="chip" [class.active]="sound() === o" (click)="setSound(o)">{{ t('labels.sound_' + o) }}</button>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="metro-vol">{{ t('labels.volumeLabel') }}</label>
+        <div class="input-row">
+          <input type="range" id="metro-vol" [ngModel]="volume()" (ngModelChange)="setVolume($event)"
+            min="0" max="100" step="1" />
+          <span class="note">{{ volume() }}%</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-primary big-btn" (click)="toggle()">
+        <app-icon [name]="running() ? 'x' : 'zap'" /> {{ running() ? t('labels.stopBtn') : t('labels.startBtn') }}
+      </button>
+
+      <div class="results">
+        <div class="result-row"><span>{{ t('labels.spbRow') }}</span><strong>{{ secondsPerBeat().toFixed(2) }}s</strong></div>
+        <div class="result-row"><span>{{ t('labels.barRow') }}</span><strong>{{ barDuration().toFixed(2) }}s</strong></div>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

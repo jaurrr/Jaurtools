@@ -1,0 +1,95 @@
+{
+  "binary-calculator": {
+    "benefits": [
+      "Adds, subtracts, multiplies, and divides binary numbers with exact BigInt arithmetic.",
+      "Shows every result in binary, decimal, and hexadecimal side by side.",
+      "Division also shows the remainder - handy for bit-level and low-level work.",
+      "Perfect companion for students learning base-2 arithmetic and logic gates."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Binary is base 2: each digit (bit) is worth twice the one to its right. 1010 = 1x8 + 0x4 + 1x2 + 0x1 = 10. Addition works like decimal addition but 1 + 1 = 10 (carry the 1).",
+        "q": "How does binary addition work?"
+      },
+      {
+        "a": "It is exact integer division: the quotient is truncated toward zero and the leftover is shown as the remainder. 1100 / 10 (12 / 2) gives quotient 110 (6) and remainder 0.",
+        "q": "What does division show?"
+      },
+      {
+        "a": "Yes - up to 128 bits per input, computed with BigInt, so there is no 32-bit overflow like in many online tools.",
+        "q": "Can it handle large binary numbers?"
+      },
+      {
+        "a": "0b1010 means binary 1010. The 0b prefix is the standard way programmers write binary literals, and the tool accepts it in the maths behind the scenes.",
+        "q": "What does the 0b prefix mean?"
+      },
+      {
+        "a": "Type only 0 and 1. The tool strips anything else automatically, and shows a friendly message if a box is left empty.",
+        "q": "What if I type a 2?"
+      },
+      {
+        "a": "Because subtraction can go below zero: 101 - 110 = -1, shown as -1 in binary. Computers store this with two's complement, but plain signed form is clearer for learning.",
+        "q": "Why do I see a minus sign?"
+      }
+    ],
+    "formula": "Addition: 1 + 1 = 10 (carry 1)\nSubtraction: 10 - 1 = 1 (borrow 2)\nValue: 1010 = 1x8 + 0x4 + 1x2 + 0x1 = 10\nExample: 1010 + 1100 = 10110  (10 + 12 = 22)",
+    "formulaHeading": "Binary basics",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the first binary number using only 0s and 1s.",
+      "Choose the operation: add, subtract, multiply, or divide.",
+      "Type the second binary number.",
+      "Read the answer in binary, decimal, and hexadecimal - plus the remainder for division."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Binary uses only two digits: 0 and 1. Each position is worth double the previous.",
+      "1010 in binary = 10 in decimal (8 + 2).",
+      "1010 + 1100 = 10110: that is 10 + 12 = 22 in decimal.",
+      "1100 / 10 = 110 remainder 0 (12 / 2 = 6).",
+      "Results also show hexadecimal, the compact base-16 form programmers use.",
+      "Up to 128 bits per input, computed exactly with BigInt - no overflow."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "binary calculator, binary addition calculator, binary arithmetic, binary to decimal, binary division remainder",
+    "labels": {
+      "decimal": "decimal",
+      "errDivZero": "Cannot divide by zero.",
+      "errInvalid": "Type only 0s and 1s in both boxes.",
+      "firstBinary": "First binary number",
+      "opAdd": "Add (+)",
+      "opDiv": "Divide (/)",
+      "opMul": "Multiply (x)",
+      "opSub": "Subtract (-)",
+      "operation": "Operation",
+      "remainder": "Remainder (binary)",
+      "resultBinary": "Result (binary)",
+      "resultDecimal": "Result (decimal)",
+      "resultHex": "Result (hex)",
+      "secondBinary": "Second binary number"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Binary only - no octal input, though hex output is shown.",
+      "Division is integer division with a remainder; no binary fractions.",
+      "Inputs capped at 128 bits to keep the page responsive.",
+      "Negative results show a plain minus sign, not two's complement."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free binary calculator: add, subtract, multiply, divide binary numbers with exact results in binary, decimal, and hex. Division shows remainder. No sign-up.",
+    "metaTitle": "Binary Calculator - Binary Arithmetic | JaurTools",
+    "name": "Binary Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Type two binary numbers and get exact results. 1010 + 1100 = 10110: that is 10 + 12 = 22 in decimal. Every answer appears in binary, decimal, and hexadecimal, and division also shows the remainder. Inputs up to 128 bits are computed exactly with BigInt, so there is no overflow.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Binary calculation results",
+    "tagline": "Exact binary arithmetic with decimal and hex readouts, plus division remainder.",
+    "workedExample": "1010 + 1100\n1. Convert: 1010 = 8 + 2 = 10; 1100 = 8 + 4 = 12.\n2. Add in decimal: 10 + 12 = 22.\n3. Convert back: 22 = 16 + 4 + 2 = 10110.\nSecond check - 1100 / 10:\n1. Convert: 12 / 2 = 6 remainder 0.\n2. Binary: quotient 110, remainder 0.",
+    "workedExampleHeading": "Worked example"
+  }
+}

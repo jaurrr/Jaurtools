@@ -1,0 +1,125 @@
+{
+  "power-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Power Converter",
+    "tagline": "Convert watts, kilowatts, megawatts, horsepower and BTU per hour instantly.",
+    "metaTitle": "Power Converter — Watts to Horsepower Online",
+    "metaDescription": "Free power converter: W, mW, kW, MW, hp, PS, BTU/h. Exact conversion factors for engines, appliances and HVAC, in your browser.",
+    "keywords": "power converter, watts to horsepower, hp to kw, kw to watts, btu to watts",
+    "quickAnswer": "Enter the power value, choose the unit you have and the one you want. The tool converts instantly using standard definitions — 1 mechanical horsepower equals 745.699872 watts and 1 metric horsepower (PS) equals 735.49875 watts.",
+    "keyFacts": [
+      "The watt is the SI unit of power: one joule of energy transferred per second.",
+      "One mechanical (imperial) horsepower is defined as exactly 745.7 watts.",
+      "One metric horsepower (PS, Pferdestärke) equals 735.49875 watts.",
+      "The kilowatt-hour (kWh) measures energy, not power — 1 kW running for 1 hour.",
+      "One BTU per hour equals about 0.293 watts, common in air-conditioner ratings."
+    ],
+    "howTo": [
+      "Type the power value into the value field.",
+      "Pick the source unit from the \"From\" dropdown.",
+      "Pick the target unit from the \"To\" dropdown.",
+      "Read the result instantly; tap swap to reverse the conversion.",
+      "Check the conversion rate line to see the exact factor used."
+    ],
+    "formula": "result = value × (from-unit in watts) ÷ (to-unit in watts)\nExample: kW = hp × 745.699872 ÷ 1000",
+    "workedExample": "Convert 100 horsepower to kilowatts.\nStep 1: 100 hp in watts = 100 × 745.699872 = 74569.9872 W.\nStep 2: 1 kW = 1000 W.\nStep 3: 74569.9872 ÷ 1000 = 74.569987.\nAnswer: 100 hp = 74.569987 kW.",
+    "benefits": [
+      "Distinguishes imperial horsepower from metric PS — a common source of error.",
+      "Covers household (mW, W), industrial (kW, MW) and engine (hp, PS) scales.",
+      "Instant, private, browser-only calculation.",
+      "Shows the exact conversion rate alongside the result.",
+      "Useful for car specs, appliances, generators and HVAC sizing."
+    ],
+    "limitations": [
+      "Horsepower has several historical definitions; this tool uses mechanical hp and metric PS.",
+      "It converts power units only — kWh (energy) is a different quantity.",
+      "Results are rounded to 6 decimal places.",
+      "Values beyond ±1e15 are clamped for safety."
+    ],
+    "faqs": [
+      {
+        "q": "How many watts is 1 horsepower?",
+        "a": "One mechanical horsepower is 745.699872 watts (about 0.746 kW). One metric horsepower (PS) is 735.49875 watts — slightly less."
+      },
+      {
+        "q": "What is the difference between hp and PS?",
+        "a": "Mechanical hp (imperial) is defined as 550 foot-pounds per second = 745.7 W. Metric PS (Pferdestärke) is 75 kilogram-metres per second = 735.5 W. Car brochures in Europe usually quote PS."
+      },
+      {
+        "q": "How do I convert BTU/h to watts?",
+        "a": "Multiply BTU per hour by 0.29307107. A 12,000 BTU/h air conditioner is about 3,517 W (3.5 kW) of cooling power."
+      },
+      {
+        "q": "Is kW the same as kWh?",
+        "a": "No. kW (kilowatt) is power — the rate of energy use. kWh (kilowatt-hour) is energy — 1 kW used for one hour. Your electricity bill charges kWh."
+      },
+      {
+        "q": "How many horsepower is a 2 kW motor?",
+        "a": "2000 W ÷ 745.699872 = 2.682 hp (mechanical), or 2000 ÷ 735.49875 = 2.719 PS."
+      },
+      {
+        "q": "Does the tool send my data anywhere?",
+        "a": "No. All conversion happens inside your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Power conversion results",
+    "labels": {
+      "valueLabel": "Value",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "resultLabel": "Result",
+      "rateLabel": "Conversion rate",
+      "swapLabel": "Swap units"
+    },
+    "units": [
+      {
+        "id": "mw",
+        "name": "Milliwatt",
+        "symbol": "mW"
+      },
+      {
+        "id": "w",
+        "name": "Watt",
+        "symbol": "W"
+      },
+      {
+        "id": "kw",
+        "name": "Kilowatt",
+        "symbol": "kW"
+      },
+      {
+        "id": "mwatt",
+        "name": "Megawatt",
+        "symbol": "MW"
+      },
+      {
+        "id": "hp",
+        "name": "Horsepower (imperial)",
+        "symbol": "hp"
+      },
+      {
+        "id": "ps",
+        "name": "Horsepower (metric PS)",
+        "symbol": "PS"
+      },
+      {
+        "id": "btuh",
+        "name": "BTU per hour",
+        "symbol": "BTU/h"
+      }
+    ]
+  }
+}

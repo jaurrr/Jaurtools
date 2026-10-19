@@ -1,0 +1,101 @@
+{
+  "steps-to-miles-calculator": {
+    "assumptionNote": "Stride estimated from height averages; calorie factor 0.53 kcal/kg/km assumes flat walking.",
+    "benefits": [
+      "Gives your step count real meaning in km and calories.",
+      "Personalized by height and sex - not a one-size stride.",
+      "Reverse mode plans routes: know the steps before you walk.",
+      "Motivates: watch small daily walks compound into real distance."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "About 1,400-1,500 for most adults. A 170 cm man takes ~1,418 steps per km (100,000/70.55). Taller people take fewer.",
+        "q": "How many steps are in a kilometre?"
+      },
+      {
+        "a": "No - it was a 1960s pedometer marketing slogan. Research shows benefits plateau around 7,000-8,000 steps for most adults. More is fine, but not required.",
+        "q": "Is 10,000 steps a day necessary?"
+      },
+      {
+        "a": "Hip width and leg proportions differ on average, giving slightly different stride-to-height ratios: 0.415 vs 0.413. The difference is small but real.",
+        "q": "Why do men and women have different stride factors?"
+      },
+      {
+        "a": "Within ~20% for flat walking. Speed, hills, load, and fitness all shift the real burn. Treat it as a good estimate, not lab data.",
+        "q": "How accurate are the calories?"
+      },
+      {
+        "a": "Yes - running stride lengthens and calorie cost roughly doubles per km. This calculator is tuned for walking.",
+        "q": "Does running change the math?"
+      },
+      {
+        "a": "Walk 10 normal steps, measure the distance, divide by 10. Or count steps over a known 100 m stretch. Use your number in place of the estimate.",
+        "q": "How do I measure my real stride?"
+      }
+    ],
+    "formula": "Stride (cm) = height (cm) x 0.415 (men) or x 0.413 (women)\nDistance (km) = steps x stride / 100,000\nSteps = distance (km) x 100,000 / stride\nCalories (kcal) = weight (kg) x distance (km) x 0.53\n\nExample: 10,000 steps, man, 170 cm, 70 kg\nStride = 170 x 0.415 = 70.55 cm\nDistance = 10,000 x 70.55 / 100,000 = 7.055 km\nCalories = 70 x 7.055 x 0.53 = 261.7 kcal",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose 'Steps to distance' or 'Distance to steps'.",
+      "Enter your steps (or km), height, sex, and weight.",
+      "Distance, stride, and calories appear instantly.",
+      "Compare your daily total against the 7,000-8,000 step sweet spot.",
+      "Recheck if your weight changes - calories scale with it."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Stride length ~ height x 0.415 for men, x 0.413 for women (in cm).",
+      "Distance (km) = steps x stride(cm) / 100,000.",
+      "Walking burns ~0.53 kcal per kg per km; running roughly double.",
+      "The 10,000-step goal is marketing from 1960s Japan - but 7,000-8,000 already captures most benefits.",
+      "Uphill, sand, and load all raise the calorie cost.",
+      "Phone step counters are usually within 5-10% of true steps."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "steps to calories calculator, steps to km calculator, how many steps in a km, step counter calories, stride length calculator",
+    "labels": {
+      "caloriesBurned": "Calories burned",
+      "cmUnit": "cm",
+      "distanceKm": "Distance (km)",
+      "distanceResult": "Distance walked",
+      "distanceTab": "Distance to steps",
+      "female": "Female",
+      "heightCm": "Height (cm)",
+      "kcalUnit": "kcal",
+      "kmUnit": "km",
+      "male": "Male",
+      "modeLabel": "Calculator mode",
+      "sexLabel": "Sex",
+      "stepsCount": "Steps",
+      "stepsResult": "Steps needed",
+      "stepsTab": "Steps to distance",
+      "stepsUnit": "steps",
+      "strideLength": "Your stride",
+      "weightKg": "Weight (kg)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Stride ratios are averages - measure your own 100 steps for precision.",
+      "Calorie factor 0.53 is for flat walking; hills and running differ.",
+      "Phone counters miss steps and add phantom ones - ~5-10% error.",
+      "Not medical advice - a fitness tracker is not a doctor."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert steps to miles, kilometers and calories burned — or distance back into steps — using your stride length. Free and instant.",
+    "metaTitle": "Steps to Miles Calculator - Convert Steps to Distance & Calories | JaurTools",
+    "name": "Steps to Miles Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Your stride is roughly height x 0.415 (men) or x 0.413 (women) in cm. A 170 cm man has a ~70.6 cm stride, so 10,000 steps cover about 7.06 km and burn about 262 kcal at 70 kg. Going the other way: 5 km needs about 7,337 steps for a 165 cm woman.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your steps results",
+    "tagline": "Turn your step count into real distance and calories.",
+    "workedExample": "10,000 steps, 170 cm man, 70 kg:\n1. Stride: 170 x 0.415 = 70.55 cm.\n2. Distance: 10,000 x 70.55 / 100,000 = 7.055 km.\n3. Calories: 70 x 7.055 x 0.53 = 261.7 kcal.\n\nReverse - 5 km walk, 165 cm woman:\n1. Stride: 165 x 0.413 = 68.15 cm.\n2. Steps: 5 x 100,000 / 68.15 = 7,337 steps.",
+    "workedExampleHeading": "Worked example"
+  }
+}

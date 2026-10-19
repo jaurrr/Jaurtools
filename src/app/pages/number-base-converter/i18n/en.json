@@ -1,0 +1,95 @@
+{
+  "number-base-converter": {
+    "assumptionNote": "Whole numbers only, within JavaScript safe-integer range. Digits must be valid for the selected base.",
+    "benefits": [
+      "All four bases at once - no converting twice.",
+      "Strict digit validation catches typos like 8 in binary.",
+      "Hex output in uppercase, matching programming conventions.",
+      "Monospace display makes long binary strings easy to read.",
+      "Negative numbers are supported."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A number base is how many distinct digits a counting system uses. Decimal (base 10) uses 0-9, binary (base 2) uses 0-1, octal (base 8) uses 0-7, and hexadecimal (base 16) uses 0-9 plus A-F. Computers think in binary; humans read decimal.",
+        "q": "What is a number base?"
+      },
+      {
+        "a": "Repeatedly divide by 2 and record the remainders, then read them bottom to top. For 42: 42/2=21 r0, 21/2=10 r1, 10/2=5 r0, 5/2=2 r1, 2/2=1 r0, 1/2=0 r1. Reading up: 101010. This calculator does it instantly.",
+        "q": "How do you convert decimal to binary?"
+      },
+      {
+        "a": "Group the binary digits in fours from the right and replace each group with its hex digit. 101010 groups as 10 1010 = 2 A, so 0x2A. This calculator shows both forms side by side.",
+        "q": "How do you convert binary to hexadecimal?"
+      },
+      {
+        "a": "Hex is shorthand for binary: each hex digit stands for exactly 4 binary digits, so programmers read memory addresses and colors (#FF5733) far more easily than long binary strings.",
+        "q": "Why do programmers use hexadecimal?"
+      },
+      {
+        "a": "It means you typed a digit the base does not allow - like 2 in binary or 9 in octal. Check the base buttons: select the base your number is written in, not the base you want out.",
+        "q": "Why does it say my number is invalid?"
+      },
+      {
+        "a": "Yes. A leading minus sign is accepted, and every output keeps the sign: -42 decimal is -101010 binary.",
+        "q": "Can it convert negative numbers?"
+      }
+    ],
+    "formula": "Binary: digits 0-1, place values 1, 2, 4, 8, ...\nOctal: digits 0-7 | Decimal: digits 0-9 | Hex: digits 0-9, A-F.\nValue = sum of (digit x base^position), positions counted from 0 at the right.\nConvert via decimal as the middle step: source base -> decimal -> target base.",
+    "formulaHeading": "How conversion works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type your number into the input box.",
+      "Select the base it is written in: binary (2), octal (8), decimal (10) or hexadecimal (16).",
+      "All four conversions appear instantly - binary, octal, decimal and hex.",
+      "If the number is flagged invalid, check for digits the base does not allow.",
+      "Try 42 in decimal to see the classic 101010 / 52 / 2A result."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A base is the count of distinct digits a number system uses.",
+      "Binary (2) uses 0-1, octal (8) uses 0-7, decimal (10) uses 0-9, hex (16) uses 0-9 and A-F.",
+      "Each position left multiplies the place value by the base.",
+      "One hex digit always equals exactly 4 binary digits.",
+      "Computers store binary; hex is the human-friendly shorthand for it.",
+      "Decimal is base 10 because humans have ten fingers - nothing deeper than that."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "number base converter, binary converter, decimal to binary, binary to decimal, hex converter, octal converter, base 16 converter",
+    "labels": {
+      "base_10": "Decimal (10)",
+      "base_16": "Hex (16)",
+      "base_2": "Binary (2)",
+      "base_8": "Octal (8)",
+      "binaryLabel": "Binary (base 2)",
+      "decimalLabel": "Decimal (base 10)",
+      "fromBaseLabel": "Number is written in",
+      "hexLabel": "Hexadecimal (base 16)",
+      "invalidLabel": "Invalid number for the selected base. Check your digits.",
+      "octalLabel": "Octal (base 8)",
+      "valueLabel": "Number to convert"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Whole numbers only - no fractional binary or hex.",
+      "Limited to JavaScript safe integers (about 9 quadrillion).",
+      "Only bases 2, 8, 10 and 16 - no base 3, 5, 12 or 36.",
+      "It converts values, not formatted strings like 0x prefixes or IP addresses."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free number base converter: convert between binary, octal, decimal and hexadecimal instantly. Type a number, pick its base, see all four forms.",
+    "metaTitle": "Number Base Converter - Binary, Octal, Decimal, Hex | JaurTools",
+    "name": "Number Base Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "42 in decimal is 101010 in binary, 52 in octal, and 2A in hexadecimal. Binary uses only 0 and 1 with place values doubling each step: 32 + 8 + 2 = 42. Type any whole number, tell the tool which base it is written in, and all four conversions appear instantly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Base conversion results",
+    "tagline": "Convert between binary, octal, decimal and hexadecimal - all four at once.",
+    "workedExample": "Convert 42 (decimal) to binary, octal and hex:\n1. Binary: 42 = 32 + 8 + 2 = 2^5 + 2^3 + 2^1, so the bits are 101010.\n2. Check: 32 + 0 + 8 + 0 + 2 + 0 = 42.\n3. Octal: group bits in threes from the right: 101 010 = 5 2, so 52.\n4. Hex: group bits in fours: 10 1010 = 2 A, so 2A.\n5. Verify: 2x16 + 10 = 42.",
+    "workedExampleHeading": "Worked example"
+  }
+}

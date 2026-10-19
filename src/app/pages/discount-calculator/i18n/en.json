@@ -1,0 +1,89 @@
+{
+  "discount-calculator": {
+    "assumptionNote": "Assumes discounts apply sequentially to the reduced price and tax applies to the final discounted price.",
+    "benefits": [
+      "Exposes the real price behind 'was/now' marketing.",
+      "Shows stacked coupons' true combined effect.",
+      "Prevents mental-math errors at the checkout.",
+      "Makes comparing two sale offers instant."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Because the second discount applies to the already-discounted price, not the original. 25% off ₹2,000 leaves ₹1,500; 10% off that leaves ₹1,350. Total saved is ₹650, which is 32.5% of ₹2,000. Stacked discounts always multiply: (1−0.25)×(1−0.10) = 0.675, so you pay 67.5%.",
+        "q": "Why isn't 25% + 10% equal to 35% off?"
+      },
+      {
+        "a": "Divide the sale price by (1 − discount/100). A ₹1,350 item at 32.5% off was originally 1,350 / 0.675 = ₹2,000. Handy for checking whether a 'was' price on the tag is honest.",
+        "q": "How do I reverse-calculate the original price?"
+      },
+      {
+        "a": "After, in almost every jurisdiction — you pay tax on what you actually pay. That is why the calculator applies tax to the discounted price. If a store ever taxes the pre-discount price, that is worth questioning.",
+        "q": "Is tax charged before or after the discount?"
+      },
+      {
+        "a": "A discount lowers the price you pay now; cashback returns money later (often as store credit or after conditions). A 10% discount beats 10% cashback because the cashback may expire, be restricted, or require another purchase.",
+        "q": "What's the difference between discount and cashback?"
+      },
+      {
+        "a": "BOGO on identical items equals 50% off per item — better than most percent sales. But it forces you to buy two. If you only needed one, a 30% discount on a single item is the better deal for you.",
+        "q": "How do I compare 'buy 1 get 1 free' with a percent discount?"
+      },
+      {
+        "a": "Often. 'Was ₹4,000, now ₹2,000' only means something if the item actually sold at ₹4,000. Retailers inflate was-prices before sales. Track the price for a few weeks before big sale events, or compare with other stores.",
+        "q": "Do sale prices include hidden markups?"
+      }
+    ],
+    "formula": "Discount amount = price x discount% / 100.\nSale price = price - discount amount.\nStacked: final = price x (1 - d1/100) x (1 - d2/100).\nEffective discount = (price - final) / price x 100.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the original price.",
+      "Enter the discount percentage.",
+      "Add an extra coupon discount if you have one (0 if not).",
+      "Add tax if needed, then read the sale price and your savings."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Discounts apply to the current price — stacked discounts multiply, they don't add.",
+      "25% off followed by 10% off equals 32.5% off, not 35%.",
+      "Tax is charged on the discounted price, not the original — a small extra saving.",
+      "'Up to 70% off' usually means one item; the average discount is far lower.",
+      "A discount only saves money if you were going to buy it anyway."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "discount calculator, sale price calculator, percent off calculator, discount percentage calculator",
+    "labels": {
+      "discountPercent": "Discount (%)",
+      "effectiveDiscount": "Effective discount",
+      "extraDiscount": "Extra coupon discount (% — 0 if none)",
+      "originalPrice": "Original price",
+      "salePrice": "Sale price",
+      "taxPercent": "Tax (%)",
+      "totalWithTax": "Total with tax",
+      "youSave": "You save"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ignores shipping, which can erase a discount.",
+      "Assumes the 'original' price was genuine — inflated was-prices are common.",
+      "Doesn't judge whether the deal is actually good value.",
+      "Currency rounding at the till may differ by a paisa or two."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free discount calculator: find the sale price from any discount percent, stack an extra coupon, add tax, and see your total savings.",
+    "metaTitle": "Discount Calculator - Sale Price & Savings | JaurTools",
+    "name": "Discount Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A ₹2,000 item at 25% off costs ₹1,500. Stack an extra 10% coupon and it drops to ₹1,350 — you save ₹650 total, an effective 32.5% off. Note the trick: 25% + 10% is not 35% off, because the second discount applies to the already-reduced price.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your discount results",
+    "tagline": "Sale price, stacked discounts, and tax — know exactly what you pay and save.",
+    "workedExample": "Price ₹2,000, 25% off, extra 10% coupon, no tax:\n1. After 25%: 2,000 x (1 - 0.25) = ₹1,500.\n2. After extra 10%: 1,500 x (1 - 0.10) = ₹1,350.\n3. Savings = 2,000 - 1,350 = ₹650.\n4. Effective discount = 650 / 2,000 x 100 = 32.5% — not 35%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "poster-maker": {
+    "benefits": [
+      "A finished poster in about a minute — no design software, no learning curve.",
+      "Consistent, professional layout: spacing, alignment and contrast are handled for you.",
+      "Free with no watermark, so the poster is genuinely usable for a shop or event.",
+      "Your wording stays private on your own device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. All three templates, the live preview, and unlimited PNG downloads are free, with no account and no watermark stamped on your poster.",
+        "q": "Is the Poster Maker really free?"
+      },
+      {
+        "a": "1080 by 1350 pixels, a 4:5 portrait ratio. That is crisp for phone screens, Instagram posts, and WhatsApp status, and it prints cleanly up to A4 size.",
+        "q": "What size is the downloaded poster?"
+      },
+      {
+        "a": "No. The PNG contains only your design — no logo, no branding, nothing extra.",
+        "q": "Will there be a watermark on my poster?"
+      },
+      {
+        "a": "Yes. Anything you type is your own content, and the downloaded file is yours to print, post, or share commercially.",
+        "q": "Can I use the poster for my shop or business?"
+      },
+      {
+        "a": "Headlines wrap automatically at 860 pixels wide so text always stays inside the safe margins. Shorten the headline if you want it on a single line.",
+        "q": "Why does my long headline split into two lines?"
+      },
+      {
+        "a": "No. The poster is drawn with your browser's built-in canvas — it even keeps working if your connection drops after the page loads.",
+        "q": "Do I need to install anything?"
+      }
+    ],
+    "formula": "Canvas: 1080 x 1350 px (4:5 portrait).\nHeadline: bold system font, up to 132 px, wrapped to fit an 860 px column.\nSafe margins: 140 px on all sides; footer pinned 140 px from the bottom.\nExport: PNG via canvas.toDataURL, one file per click.",
+    "formulaHeading": "Design specs",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a template: Sunset for sales and events, Minimal for professional notices, Festive for celebrations.",
+      "Type your headline, subtitle, details (date, venue — one per line), and footer line.",
+      "Watch the live preview update with every keystroke.",
+      "When it looks right, press Download PNG and save the file.",
+      "Share the PNG on WhatsApp or social media, or print it — the resolution suits A4 and smaller prints."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every poster renders on a 1080 x 1350 px canvas — a 4:5 portrait ratio that looks sharp on Instagram, WhatsApp status, and A4 prints.",
+      "Three built-in templates: Sunset (bold gradient), Minimal (clean white), and Festive (dark celebration). Each re-lays-out your text automatically.",
+      "Long headlines wrap automatically so text never overflows the safe margins.",
+      "Download is a standard PNG file, typically 300 to 600 KB, ready to share or print.",
+      "Everything runs in your browser with plain canvas drawing — no account, no upload, no watermark added to your design."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "poster maker, free poster maker online, poster design tool, make poster online, event poster maker, sale poster maker",
+    "labels": {
+      "detailsLabel": "Details (one per line)",
+      "downloadButton": "Download PNG",
+      "footerLabel": "Footer line",
+      "previewLabel": "Live preview",
+      "sizeNote": "Exports at 1080 x 1350 px — sharp for screens and A4 prints.",
+      "subtitleLabel": "Subtitle",
+      "templateLabel": "Choose a template",
+      "titleLabel": "Headline"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only three fixed templates — you cannot drag elements around like in a full design app.",
+      "Fonts are limited to clean system fonts, so there is no decorative typography.",
+      "Export is PNG only; there is no editable file format or PDF export.",
+      "No photo upload — these templates are text-and-shape designs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Make posters free in your browser: 3 designer templates, your own headline and details, instant PNG download. No signup, no watermark, no upload.",
+    "metaTitle": "Free Poster Maker — Design Posters Online, No Signup",
+    "name": "Poster Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Poster Maker turns your words into a finished poster in under a minute. Choose one of three designer templates, type your headline, subtitle, details and footer line, preview the 1080 by 1350 design live, then download it as a PNG. It is free, needs no signup, adds no watermark, and your text never leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Poster Maker results",
+    "tagline": "Design a clean, print-ready poster in your browser — pick a template, type your text, download the PNG.",
+    "templates": {
+      "festive": "Festive",
+      "minimal": "Minimal",
+      "sunset": "Sunset"
+    },
+    "workedExample": "A shop owner needs a weekend sale poster. She picks the Sunset template and types the headline 'Mega Sale' (8 characters, fits on one line at 128 px), the subtitle 'Up to 50% off everything', details 'Saturday, 24 October, 10 AM onwards' on line one and 'City Mall, Main Road' on line two, and the footer 'Visit our store today'. The tool centers the headline at 560 px from the top, stacks the subtitle 150 px below it, pins the details 320 px from the bottom, and exports a 1080 x 1350 PNG of roughly 450 KB — ready for her WhatsApp status in under a minute.",
+    "workedExampleHeading": "Worked example"
+  }
+}

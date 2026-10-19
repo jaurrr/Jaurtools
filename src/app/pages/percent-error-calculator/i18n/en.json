@@ -1,0 +1,88 @@
+{
+  "percent-error-calculator": {
+    "benefits": [
+      "Quick accuracy check for lab experiments and school homework.",
+      "Handles positive, negative and decimal values.",
+      "Shows absolute error alongside the percentage.",
+      "No sign-up, no waiting, no data sent anywhere.",
+      "Works smoothly on phones, tablets and desktops."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Percent error is the difference between a measured value and the accepted true value, expressed as a percentage of the true value. It shows how accurate a measurement is.",
+        "q": "What is percent error?"
+      },
+      {
+        "a": "By convention, no. The absolute value is taken, so percent error is always zero or positive. A result of 0% means perfect agreement with the true value.",
+        "q": "Can percent error be negative?"
+      },
+      {
+        "a": "In school labs, under 5% is usually considered good and under 10% acceptable. Precision instruments aim for well under 1%.",
+        "q": "What is a good percent error?"
+      },
+      {
+        "a": "Percent error compares a measurement against a known true value. Percent change compares two measured values over time, showing an increase or decrease.",
+        "q": "What is the difference between percent error and percent change?"
+      },
+      {
+        "a": "The formula divides by the theoretical value. If it is zero, the division is undefined, so the calculator shows a note instead of a result.",
+        "q": "Why can't the theoretical value be zero?"
+      },
+      {
+        "a": "Absolute error is the raw difference between the measured and true values, |experimental - theoretical|, without dividing by the true value. It keeps the original units of the measurement.",
+        "q": "What is absolute error?"
+      }
+    ],
+    "formula": "Percent error = |experimental - theoretical| / |theoretical| x 100",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your measured (experimental) value in the first field.",
+      "Enter the accepted or theoretical value in the second field.",
+      "The calculator computes the percent error instantly as you type.",
+      "Read the absolute error too, for the raw difference in the original units.",
+      "Repeat for multiple trials — the smallest percent error marks the most accurate measurement."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Percent error measures accuracy — how close a measurement is to the accepted true value.",
+      "The result is always expressed as a positive percentage, never negative.",
+      "Percent error can exceed 100% when the measured value is far from the true value.",
+      "Scientists and students use it in lab reports to judge the quality of an experiment.",
+      "It differs from percent change, which compares two measured values rather than a measurement against a true value.",
+      "A low percent error means high accuracy; 0% means the measurement matched the true value exactly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "percent error calculator, percentage error formula, experimental vs theoretical, absolute error, measurement accuracy calculator",
+    "labels": {
+      "absoluteErrorLabel": "Absolute error",
+      "experimentalLabel": "Measured (experimental) value",
+      "percentErrorLabel": "Percent error",
+      "theoreticalLabel": "Accepted (theoretical) value",
+      "zeroNote": "The theoretical value cannot be zero — percent error is undefined there."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only meaningful when a true value is known or accepted.",
+      "Cannot tell whether the error is systematic or random.",
+      "The theoretical value must not be zero, since the formula divides by it.",
+      "Not a substitute for proper statistical error analysis."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free percent error calculator: enter measured and theoretical values to get percent error and absolute error. Fully browser-based, no sign-up.",
+    "metaTitle": "Percent Error Calculator — Experimental vs True Value",
+    "name": "Percent Error Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Percent error tells you how accurate a measurement is compared to the true value. Subtract the true value from the measured value, divide by the true value, multiply by 100 and take the absolute value. A 0% error means a perfect match.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Percent error results",
+    "tagline": "See how close your experimental result is to the accepted true value.",
+    "workedExample": "You measure the density of water as 0.98 g/cm³. The accepted value is 1.00 g/cm³.\n\nPercent error = |0.98 - 1.00| / |1.00| x 100 = 0.02 / 1.00 x 100 = 2%.\n\nAbsolute error = |0.98 - 1.00| = 0.02 g/cm³.\n\nThe measurement sits 2% away from the true value — a solid result for a school lab experiment.",
+    "workedExampleHeading": "Worked example"
+  }
+}

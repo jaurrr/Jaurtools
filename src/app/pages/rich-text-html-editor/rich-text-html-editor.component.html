@@ -1,0 +1,89 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="type" /> {{ t('resultsHeading') }}</h2>
+      <div class="toolbar" role="toolbar" [attr.aria-label]="t('labels.toolbarLabel')">
+        <button (click)="format('bold')" [attr.title]="t('labels.boldLabel')" [attr.aria-label]="t('labels.boldLabel')"><b>B</b></button>
+        <button (click)="format('italic')" [attr.title]="t('labels.italicLabel')" [attr.aria-label]="t('labels.italicLabel')"><i>I</i></button>
+        <button (click)="format('underline')" [attr.title]="t('labels.underlineLabel')" [attr.aria-label]="t('labels.underlineLabel')"><u>U</u></button>
+        <button (click)="format('strikeThrough')" [attr.title]="t('labels.strikeLabel')" [attr.aria-label]="t('labels.strikeLabel')"><s>S</s></button>
+        <button (click)="format('formatBlock', 'h1')" [attr.title]="t('labels.h1Label')">H1</button>
+        <button (click)="format('formatBlock', 'h2')" [attr.title]="t('labels.h2Label')">H2</button>
+        <button (click)="format('formatBlock', 'h3')" [attr.title]="t('labels.h3Label')">H3</button>
+        <button (click)="format('formatBlock', 'p')" [attr.title]="t('labels.paraLabel')">¶</button>
+        <button (click)="format('insertUnorderedList')" [attr.title]="t('labels.ulLabel')" [attr.aria-label]="t('labels.ulLabel')">• <app-icon name="menu" /></button>
+        <button (click)="format('insertOrderedList')" [attr.title]="t('labels.olLabel')" [attr.aria-label]="t('labels.olLabel')">1. <app-icon name="menu" /></button>
+        <button (click)="format('formatBlock', 'blockquote')" [attr.title]="t('labels.quoteLabel')">“”</button>
+        <button (click)="format('formatBlock', 'pre')" [attr.title]="t('labels.codeLabel')">&lt;&gt;</button>
+        <button (click)="format('removeFormat')" [attr.title]="t('labels.clearFormatLabel')" [attr.aria-label]="t('labels.clearFormatLabel')"><app-icon name="x" /></button>
+      </div>
+      <div class="field link-row">
+        <label class="sr-only" for="rte-link">{{ t('labels.linkLabel') }}</label>
+        <input id="rte-link" type="url" inputmode="url" [placeholder]="t('labels.linkPlaceholder')"
+          [ngModel]="linkUrl()" (ngModelChange)="setLinkUrl($event)" />
+        <button (click)="applyLink()">{{ t('labels.applyLinkLabel') }}</button>
+        <button (click)="format('unlink')" [attr.title]="t('labels.unlinkLabel')">{{ t('labels.unlinkLabel') }}</button>
+      </div>
+      <div class="field">
+        <label class="sr-only" for="rte-editor">{{ t('labels.editorLabel') }}</label>
+        @if (!showSource()) {
+          <div id="rte-editor" class="editor" contenteditable="true" (input)="onEditorInput()"
+            [attr.aria-label]="t('labels.editorLabel')" role="textbox" aria-multiline="true"></div>
+        } @else {
+          <textarea id="rte-source" rows="12" dir="ltr" [ngModel]="sourceText()"
+            (ngModelChange)="setSourceText($event)" [attr.aria-label]="t('labels.sourceLabel')"></textarea>
+        }
+      </div>
+      <div class="btn-row">
+        <button class="primary" (click)="toggleSource()">
+          <app-icon name="type" /> {{ showSource() ? t('labels.visualLabel') : t('labels.sourceLabel') }}
+        </button>
+        <button (click)="copyHtml()"><app-icon name="copy" /> {{ t('labels.copyLabel') }}</button>
+        <button (click)="downloadHtml()"><app-icon name="download" /> {{ t('labels.downloadLabel') }}</button>
+        <button (click)="clearEditor()"><app-icon name="refresh-cw" /> {{ t('labels.clearLabel') }}</button>
+      </div>
+      @if (copied()) { <p class="note" role="status">{{ t('labels.copiedLabel') }}</p> }
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.wordsLabel') }}</span><strong>{{ wordCount() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.charsLabel') }}</span><strong>{{ charCount() }}</strong>
+        </div>
+      </div>
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

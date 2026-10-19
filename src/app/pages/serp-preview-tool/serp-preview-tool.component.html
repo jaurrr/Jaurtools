@@ -1,0 +1,186 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="meta-title">{{ t('labels.titleLabel') }}</label>
+        <input
+          id="meta-title"
+          type="text"
+          [ngModel]="title()"
+          (ngModelChange)="setTitle($event)"
+          placeholder="{{ t('labels.titlePlaceholder') }}"
+        />
+        <div class="meter">
+          <div class="meter-bar" [class]="titleStatus()" [style.width.%]="titlePx() > titlePxLimit ? 100 : (titlePx() / titlePxLimit) * 100"></div>
+        </div>
+        <div class="stat-row">
+          <span>{{ t('labels.titleCharsLabel') }}: <strong>{{ titleChars() }}</strong></span>
+          <span>{{ t('labels.pxLabel') }}: <strong>~{{ titlePx() }}</strong></span>
+          <span class="status" [class]="titleStatus()">{{ statusLabel(titleStatus()) }}</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="meta-desc">{{ t('labels.descLabel') }}</label>
+        <textarea class="ed-textarea"
+          id="meta-desc"
+          rows="3"
+          [ngModel]="description()"
+          (ngModelChange)="setDescription($event)"
+          placeholder="{{ t('labels.descPlaceholder') }}"
+        ></textarea>
+        <div class="meter">
+          <div class="meter-bar" [class]="descStatus()" [style.width.%]="descPx() > descPxLimitDesktop ? 100 : (descPx() / descPxLimitDesktop) * 100"></div>
+        </div>
+        <div class="stat-row">
+          <span>{{ t('labels.descCharsLabel') }}: <strong>{{ descChars() }}</strong></span>
+          <span>{{ t('labels.pxLabel') }}: <strong>~{{ descPx() }}</strong></span>
+          <span class="status" [class]="descStatus()">{{ statusLabel(descStatus()) }}</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="meta-keyword">{{ t('labels.keywordLabel') }}</label>
+        <input
+          id="meta-keyword"
+          type="text"
+          [ngModel]="keyword()"
+          (ngModelChange)="setKeyword($event)"
+          placeholder="{{ t('labels.keywordPlaceholder') }}"
+        />
+      </div>
+
+      <div class="field">
+        <span class="output-title" id="serp-label">{{ t('labels.serpLabel') }}</span>
+        <div class="serp-duo" aria-labelledby="serp-label">
+          <div class="serp-frame">
+            <h3>{{ t('labels.desktopLabel') }}</h3>
+            <div class="serp-card">
+              <span class="serp-url">{{ t('labels.serpUrl') }}</span>
+              <span class="serp-title">@for (s of desktopTitle(); track $index) { @if (s.b) { <b>{{ s.t }}</b> } @else { {{ s.t }} } } @empty { {{ title() || t('labels.serpTitleFallback') }} }</span>
+              <span class="serp-desc">@for (s of desktopDesc(); track $index) { @if (s.b) { <b>{{ s.t }}</b> } @else { {{ s.t }} } } @empty { {{ description() || t('labels.serpDescFallback') }} }</span>
+            </div>
+            <p class="serp-px-note" [class.over]="titlePx() > titlePxLimit">~{{ titlePx() }}px / {{ titlePxLimit }}px</p>
+          </div>
+          <div class="serp-frame serp-mobile">
+            <h3>{{ t('labels.mobileLabel') }}</h3>
+            <div class="serp-card">
+              <span class="serp-url">{{ t('labels.serpUrl') }}</span>
+              <span class="serp-title">@for (s of mobileTitle(); track $index) { @if (s.b) { <b>{{ s.t }}</b> } @else { {{ s.t }} } } @empty { {{ title() || t('labels.serpTitleFallback') }} }</span>
+              <span class="serp-desc">@for (s of mobileDesc(); track $index) { @if (s.b) { <b>{{ s.t }}</b> } @else { {{ s.t }} } } @empty { {{ description() || t('labels.serpDescFallback') }} }</span>
+            </div>
+            <p class="serp-px-note" [class.over]="titlePx() > titlePxLimitMobile">~{{ titlePx() }}px / {{ titlePxLimitMobile }}px</p>
+          </div>
+        </div>
+        <p class="live-note">{{ t('labels.liveNote') }}</p>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn ghost" (click)="clear()">{{ t('labels.clearButton') }}</button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

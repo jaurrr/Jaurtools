@@ -1,0 +1,106 @@
+{
+  "protect-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device; the encryption module is bundled with the site and runs locally.",
+      "Real AES-256 encryption — the PDF standard's strongest protection, readable by Adobe Reader and others.",
+      "Two passwords: a user password to open the file, and an optional owner password for permissions.",
+      "Granular permissions: control printing and copying separately.",
+      "Free and unlimited — protect as many PDFs as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "User password: anyone opening the PDF must type it. Owner password: controls permissions like printing and copying; if you leave it empty, your user password doubles as the owner password.",
+        "q": "User password vs owner password — what is the difference?"
+      },
+      {
+        "a": "AES-256, the strongest encryption the PDF standard defines. It is the same level banks and governments use for documents.",
+        "q": "How strong is the encryption?"
+      },
+      {
+        "a": "Yes. The encryption follows the PDF standard, so Adobe Reader, Preview, Chrome, Edge and mobile readers all ask for the password normally.",
+        "q": "Will Adobe Reader open the protected file?"
+      },
+      {
+        "a": "Yes. The encryption module (@cantoo/pdf-lib, a pdf-lib fork with encryption support) is bundled with the site, so protection works fully offline. Your document itself is never uploaded anywhere.",
+        "q": "Does it work offline?"
+      },
+      {
+        "a": "No — and neither can we. Passwords are typed into your browser and used only for the encryption step. If you lose the password, the file cannot be recovered. Write it down somewhere safe.",
+        "q": "Can you recover my password if I forget it?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      }
+    ],
+    "formula": "protected PDF = original content encrypted with AES-256\nopen password → user password    permissions password → owner password",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the PDF you want to protect.",
+      "Type a user password (at least 4 characters) — this is what readers will ask for.",
+      "Optionally set a different owner password and adjust printing/copying permissions.",
+      "Click “Protect PDF” and wait for the encryption to finish.",
+      "Download the protected PDF and test it: open it and confirm it asks for your password."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "PDF encryption scrambles every string and stream in the file with AES-256; without the password the content is unreadable.",
+      "The user password gates opening; the owner password gates permissions like printing and copying.",
+      "Permissions are enforced by PDF readers on the honor system — most respect them, but they are not unbreakable locks.",
+      "This tool uses @cantoo/pdf-lib (a pdf-lib fork with encryption support), bundled with the site.",
+      "After encrypting, the tool re-opens the file with your password to verify the protection worked."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "protect pdf, password protect pdf online free, encrypt pdf, lock pdf with password",
+    "labels": {
+      "allowCopyLabel": "Allow copying text and images",
+      "allowPrintLabel": "Allow printing",
+      "chooseFile": "Choose PDF file",
+      "downloadBtn": "Download protected PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while protecting the PDF. The file may be corrupted or already encrypted.",
+      "errShortPw": "Please use a password of at least 4 characters.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "honestNote": "Honest note: the encryption module is bundled with the site and works fully offline. Permissions (printing/copying) are honored by most readers but are not unbreakable.",
+      "loadingEngine": "Loading the encryption module…",
+      "ownerNote": "Optional. If empty, your user password is also used as the owner password.",
+      "ownerPwLabel": "Owner password (optional)",
+      "ownerPwPlaceholder": "Leave empty to reuse the user password",
+      "pagesFound": "pages",
+      "processing": "Encrypting…",
+      "protectBtn": "Protect PDF",
+      "resetBtn": "Start over",
+      "successMsg": "PDF protected with AES-256 encryption. Download it below.",
+      "userPwLabel": "User password (to open the file)",
+      "userPwPlaceholder": "At least 4 characters",
+      "verifiedMsg": "Verified: the protected file opens correctly with your password."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A lost password cannot be recovered — not by you, not by us.",
+      "Already-encrypted PDFs cannot be re-protected by this tool.",
+      "Permissions rely on readers honoring them; determined users can bypass them.",
+      "An internet connection is needed the first time to load the encryption module."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Password-protect any PDF free in your browser — real AES-256 encryption, user and owner passwords, print/copy permissions. No upload.",
+    "metaTitle": "Protect PDF Free — Password Protect PDF Online",
+    "name": "Protect PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, set a user password (and an optional owner password), choose printing and copying permissions, and download a genuinely AES-256 encrypted file. It uses a real encryption module bundled with the site — your document never leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Protection results",
+    "tagline": "Lock any PDF with a real password — right in your browser.",
+    "workedExample": "A 2.4 MB contract protected with the user password “monsoon-2026”:\nbefore → anyone opening the file sees all pages immediately\nafter → every reader asks for the password before showing page 1\nThe file size stays about 2.4 MB — encryption scrambles content without shrinking it.",
+    "workedExampleHeading": "Worked example"
+  }
+}

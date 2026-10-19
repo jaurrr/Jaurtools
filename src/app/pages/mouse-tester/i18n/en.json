@@ -1,0 +1,107 @@
+{
+  "mouse-tester": {
+    "benefits": [
+      "Find a dead right-click, middle-click, or side button in seconds.",
+      "Measure click speed (CPS) with a fair 5-second test window.",
+      "Confirm the scroll wheel registers both directions evenly.",
+      "Check double-click timing before it causes frustration in games.",
+      "Works with any mouse, trackpad, or touchscreen - no drivers needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The click-speed pad counts each press for exactly 5 seconds, so 30 clicks equals 6.0 clicks per second. Most people land between 4 and 7 CPS. Gamers with drag-click or butterfly techniques can reach 10 or more.",
+        "q": "How is CPS (clicks per second) calculated?"
+      },
+      {
+        "a": "Open this page in another browser or app. If it works there, the first app was swallowing the event. If it fails everywhere, check the switch, cable, or wireless receiver - and try another USB port.",
+        "q": "One button does not register anywhere. What now?"
+      },
+      {
+        "a": "It can be the wheel encoder wearing out, dust inside the mouse, or the app ignoring small scroll steps. If scrolling fails in this page too, the hardware is suspect; if it works here, the app is filtering the input.",
+        "q": "My scroll wheel skips or jumps. Is it broken?"
+      },
+      {
+        "a": "Probably not - the browser just sees a press. What can look like lag is the OS double-click speed setting, which decides how close together two clicks must be to count as a double-click. Adjust it in your OS mouse settings.",
+        "q": "Double-clicks feel slow. Is my mouse lagging?"
+      },
+      {
+        "a": "For a fair number: same finger, same posture, five full seconds, no warm-up clicking. Do it three times and take the best. Comparing numbers from different test lengths is meaningless - always use 5 seconds.",
+        "q": "How do I get a fair CPS score?"
+      },
+      {
+        "a": "Yes, and this page is a good way to check them. Extra side buttons show up as Back and Forward, and DPI-shift or sniper buttons usually register as one of the standard codes or as a keyboard event.",
+        "q": "Can this test gaming mice with extra buttons?"
+      }
+    ],
+    "formula": "CPS (clicks per second) = total clicks / 5 seconds.\nExample: 32 clicks in 5 seconds = 32 / 5 = 6.4 CPS.\nScroll balance = |scroll up - scroll down| should be close to 0 for even scrolling.",
+    "formulaHeading": "What this page measures",
+    "homeLabel": "Home",
+    "howTo": [
+      "Press each button on your mouse inside the button pads. Each pad flashes and counts its presses.",
+      "For click speed: press the big pad once to start the 5-second timer, then click as fast as you can.",
+      "Double-click the double-click pad. Each recognised double-click adds one to the counter.",
+      "Scroll up and down inside the scroll zone to test both wheel directions.",
+      "Compare up vs down counts - they should be close if the wheel is healthy."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Mice report button codes: 0 = left, 1 = middle (wheel click), 2 = right, 3 = back, 4 = forward.",
+      "A button that never flashes here is either physically broken or blocked by another app.",
+      "CPS = total clicks divided by 5 seconds. 4 to 7 CPS is normal; above 10 is very fast.",
+      "Scroll events carry a direction (deltaY): negative means up, positive means down.",
+      "Right-click is suppressed on this page so the browser menu does not interrupt your test.",
+      "Double-click detection uses your OS timing setting, so the same hardware can feel different on two computers."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "mouse tester, mouse test online, click speed test, CPS test, double click test, scroll wheel test",
+    "labels": {
+      "bestCps": "Best CPS",
+      "btnBack": "Back",
+      "btnForward": "Forward",
+      "btnLeft": "Left",
+      "btnMiddle": "Middle",
+      "btnRight": "Right",
+      "buttonsHint": "Press each mouse button inside its pad. Working buttons flash and count up.",
+      "buttonsTest": "Button test",
+      "clicks": "Clicks",
+      "cps": "Clicks per second (CPS)",
+      "cpsHint": "Press the pad to start, then click as fast as you can for 5 seconds.",
+      "cpsPadLabel": "Click speed test pad",
+      "cpsTest": "Click speed test",
+      "dblHint": "Double-click here",
+      "dblPadLabel": "Double click test pad",
+      "dblTest": "Double-click test",
+      "reset": "Reset all",
+      "restartCps": "Start new test",
+      "scrollDown": "Scroll down events",
+      "scrollHint": "Scroll up and down here with your mouse wheel.",
+      "scrollPadLabel": "Scroll wheel test area",
+      "scrollTest": "Scroll wheel test",
+      "scrollUp": "Scroll up events",
+      "startCps": "Click here to start the 5-second test"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only the five standard button codes are shown; exotic macro buttons may not register.",
+      "CPS depends on your technique and fatigue - it is not a medical or hardware certification.",
+      "The test sees what the browser receives; OS-level mouse acceleration and drivers sit outside it.",
+      "Touchpads report the same codes as mice, so left and right may behave differently than you expect."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online mouse tester: test every button, measure click speed (CPS) in a 5-second test, check double-click and scroll wheel. 100% private, no sign-up.",
+    "metaTitle": "Mouse Tester - Buttons, CPS & Scroll Test | JaurTools",
+    "name": "Mouse Tester",
+    "privacyNote": "This tool runs 100% in your browser. Your clicks never leave your device.",
+    "quickAnswer": "A mouse tester checks all five standard buttons (left, middle, right, back, forward), measures your click speed in a 5-second test, counts double-clicks, and verifies the scroll wheel in both directions. If a button pad flashes and counts up, that button works. The click-speed result is total clicks divided by 5, giving clicks per second.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Mouse test results",
+    "tagline": "Test every mouse button, measure your click speed, and check the scroll wheel.",
+    "workedExample": "You run the click-speed test:\n1. You press the pad. The 5-second timer starts.\n2. You click as fast as you can: the counter reaches 32.\n3. The timer ends. CPS = 32 / 5 = 6.4 clicks per second.\n4. Your best score so far updates to 6.4.\nThen you test the wheel: 40 scroll-up events and 41 scroll-down events - even, so the wheel is healthy.",
+    "workedExampleHeading": "Worked example"
+  }
+}

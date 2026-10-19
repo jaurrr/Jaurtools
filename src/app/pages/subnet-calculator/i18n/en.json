@@ -1,0 +1,100 @@
+{
+  "subnet-calculator": {
+    "benefits": [
+      "Plans networks correctly: know exactly how many devices a subnet can hold before you deploy anything.",
+      "Catches configuration mistakes: a wrong mask is the most common cause of being able to reach some machines but not others.",
+      "Speeds up firewall and ACL rules: network and wildcard values copy straight into router configs.",
+      "Makes the math concrete: binary masks and AND/OR logic become visible instead of abstract.",
+      "Runs fully in your browser: internal company addresses are never sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A 32-bit number that splits an IP address into a network part and a host part. Wherever the mask has a 1 bit, that bit belongs to the network; wherever it has a 0 bit, it belongs to the host. A /24 prefix gives the mask 255.255.255.0.",
+        "q": "What is a subnet mask?"
+      },
+      {
+        "a": "254. A /24 leaves 8 host bits, so 2^8 = 256 total addresses. The network address (first) and broadcast address (last) cannot be assigned to devices, leaving 254 usable.",
+        "q": "How many usable hosts does a /24 subnet have?"
+      },
+      {
+        "a": "The network address is the first address of a subnet and identifies the subnet itself. The broadcast address is the last address and reaches every host in the subnet at once. Neither can be assigned to a single device.",
+        "q": "What is the difference between the network address and the broadcast address?"
+      },
+      {
+        "a": "Because the network address and the broadcast address are reserved by definition. Assigning either to a device breaks subnet communication, so the usable count is always total minus 2 (except /31 and /32, which follow special rules).",
+        "q": "Why do you subtract 2 from the total address count?"
+      },
+      {
+        "a": "Point-to-point links between exactly two devices, such as two routers. RFC 3021 allows both addresses of a /31 to be used as host addresses, since no broadcast is needed on a two-device link.",
+        "q": "What is a /31 subnet used for?"
+      },
+      {
+        "a": "Yes. 192.168.0.0/16 is one of the three RFC 1918 private ranges, along with 10.0.0.0/8 and 172.16.0.0/12. Private addresses work inside local networks and are never routed on the public internet.",
+        "q": "Is 192.168.1.1 a private address?"
+      }
+    ],
+    "formula": "mask      = 32-bit number with the first P bits set to 1\nnetwork   = ip address AND subnet mask\nbroadcast = network address OR (NOT subnet mask)\nwildcard  = NOT subnet mask\nusable hosts = 2^(32-P) - 2        (for prefix P of 30 or less)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type an IPv4 address, for example 192.168.1.10 - four numbers from 0 to 255 separated by dots.",
+      "Set the prefix length with the slider or the number box. /24 is the common home and office value.",
+      "Read the network address, broadcast address, and first and last usable host from the results table.",
+      "Copy the subnet mask and wildcard mask into router, firewall, or DHCP scope configurations.",
+      "Check the class and scope rows to confirm whether the address is private or public."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "An IPv4 address is 32 bits. The prefix length (for example /24) says how many of those bits identify the network; the rest identify hosts.",
+      "Subnet mask = the prefix bits set to 1. /24 becomes 255.255.255.0, /16 becomes 255.255.0.0, /8 becomes 255.0.0.0.",
+      "Network address = IP address AND subnet mask. Broadcast address = network address OR the inverted (wildcard) mask.",
+      "Usable hosts = 2 raised to (32 - prefix), minus 2. The minus 2 removes the network and broadcast addresses, which cannot be assigned to devices.",
+      "/31 subnets are special: both addresses are usable for point-to-point links (RFC 3021). /32 identifies a single host.",
+      "Private ranges (RFC 1918): 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16. Everything else is public routable space."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ip subnet calculator, subnet mask calculator, network address calculator, broadcast address calculator, cidr subnet calculator",
+    "labels": {
+      "binaryLabel": "Address (binary)",
+      "broadcastLabel": "Broadcast address",
+      "classLabel": "IP class",
+      "firstHostLabel": "First usable host",
+      "invalidIp": "Please enter a valid IPv4 address, for example 192.168.1.10.",
+      "ipLabel": "IPv4 address",
+      "lastHostLabel": "Last usable host",
+      "maskBinaryLabel": "Mask (binary)",
+      "maskLabel": "Subnet mask",
+      "networkLabel": "Network address",
+      "prefixLabel": "Prefix length (CIDR)",
+      "privateScope": "Private (RFC 1918)",
+      "publicScope": "Public",
+      "scopeLabel": "Address scope",
+      "totalLabel": "Total addresses",
+      "usableLabel": "Usable hosts",
+      "wildcardLabel": "Wildcard mask"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "IPv4 only. IPv6 uses 128-bit addresses and different notation - this tool does not cover it.",
+      "Classful addressing (Class A/B/C) is shown for reference only; modern networks are classless (CIDR).",
+      "It computes addresses, not reachability. Two devices in the same subnet still need working cables, switches, and routes.",
+      "Private/public detection uses the standard RFC 1918 ranges and ignores carrier-grade NAT (100.64.0.0/10)."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate subnet mask, network address, broadcast address and usable host range from any IP/CIDR. Free, instant, runs in your browser.",
+    "metaTitle": "Subnet Calculator - Network, Broadcast & Host Range | JaurTools",
+    "name": "Subnet Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "For 192.168.1.10/24 the subnet mask is 255.255.255.0, the network address is 192.168.1.0, the broadcast address is 192.168.1.255, and usable hosts run from 192.168.1.1 to 192.168.1.254 - 254 usable addresses out of 256 total. The tool computes all of this from the 32-bit address and the prefix length using simple bitwise math.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "IP Subnet Calculator results",
+    "tagline": "Subnet math, solved instantly.",
+    "workedExample": "Input: 192.168.1.10 with prefix /24.\n1. Mask: the first 24 bits are 1s -> 11111111.11111111.11111111.00000000 = 255.255.255.0.\n2. Network: 192.168.1.10 AND 255.255.255.0 = 192.168.1.0.\n3. Wildcard: NOT 255.255.255.0 = 0.0.0.255.\n4. Broadcast: 192.168.1.0 OR 0.0.0.255 = 192.168.1.255.\n5. Hosts: 2^(32-24) = 256 total addresses, 256 - 2 = 254 usable.\n6. Range: 192.168.1.1 (first usable) to 192.168.1.254 (last usable).\n7. Class C, private address (RFC 1918 range 192.168.0.0/16).",
+    "workedExampleHeading": "Worked example"
+  }
+}

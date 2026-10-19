@@ -1,0 +1,109 @@
+{
+  "csp-generator": {
+    "benefits": [
+      "Build a correct policy without memorizing directive syntax or quoting rules.",
+      "One-click sources for 'self', 'none', https: and more, plus custom hosts with validation.",
+      "Generates both the HTTP header value and the meta-tag version, ready to paste.",
+      "Sensible secure defaults: strict fallbacks with upgrade-insecure-requests on."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Content Security Policy is a browser security standard. Your server (or a meta tag) sends a policy listing exactly which sources may load scripts, styles, images and other resources. Anything not listed is blocked, which shuts down most cross-site scripting (XSS) attacks even if an attacker injects markup.",
+        "q": "What is a Content Security Policy?"
+      },
+      {
+        "a": "default-src is the fallback for every fetch directive you do not set explicitly. Setting default-src 'self' means scripts, images, fonts and everything else may only load from your own origin unless you add a more specific directive like script-src. It is the single most important directive.",
+        "q": "What does default-src do?"
+      },
+      {
+        "a": "Almost always, no. 'unsafe-inline' re-allows the inline scripts and styles that CSP is designed to block, which removes most of its XSS protection. Prefer moving code to external files and using nonces or hashes. Only enable it while migrating a legacy site, and plan to remove it.",
+        "q": "Should I allow 'unsafe-inline'?"
+      },
+      {
+        "a": "Add an HTTP response header: Content-Security-Policy: <your policy>. In Apache: Header set Content-Security-Policy \"...\"; in Nginx: add_header Content-Security-Policy \"...\";. On static hosts (Netlify, Cloudflare Pages, Vercel) set it in the host's header configuration. The meta-tag version works too but cannot use frame-ancestors or report-uri.",
+        "q": "How do I deploy the generated policy?"
+      },
+      {
+        "a": "Start in report-only mode: send the policy as Content-Security-Policy-Report-Only with a report-uri. Browsers then log violations without blocking anything. Fix every legitimate violation in your reports, then switch the same policy to enforcing mode. This builder does not generate the report-only header variant, but the policy text is identical.",
+        "q": "How do I roll out a policy without breaking my site?"
+      },
+      {
+        "a": "frame-ancestors controls which sites may embed your page in a frame or iframe, which stops clickjacking. It only works as an HTTP header, never in a meta tag. 'none' blocks all embedding; 'self' allows only your own origin to frame the page.",
+        "q": "What is frame-ancestors for?"
+      }
+    ],
+    "formula": "Content-Security-Policy: <directive> <source-list>; <directive> <source-list>; ...\n\nSource keywords (quoted): 'self' = same origin, 'none' = nothing allowed,\n'unsafe-inline' = allow inline code (weakens XSS protection),\n'unsafe-eval' = allow eval() (weakens protection).\nSchemes/hosts (unquoted): https:, data:, blob:, https://cdn.example.com.\nUnspecified fetch directives fall back to default-src.\n'none' is exclusive: it cannot be combined with other sources.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Toggle the directives your site needs. A strict starter set is enabled by default.",
+      "Per directive, click quick sources ('self', 'none', https:, ...) or add custom hosts.",
+      "'none' is exclusive: selecting it clears the directive's other sources.",
+      "Toggle upgrade-insecure-requests and block-all-mixed-content as needed, and add a report-uri.",
+      "Copy the header value into your server config, or the meta tag into your HTML head.",
+      "Roll out with Content-Security-Policy-Report-Only first, then enforce."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Content Security Policy tells the browser exactly which sources may load each resource type.",
+      "Anything not allowlisted is blocked, which neutralizes most XSS attacks.",
+      "default-src is the fallback for every fetch directive you leave unset.",
+      "'none' cannot be combined with other sources in the same directive.",
+      "upgrade-insecure-requests rewrites http:// subresources to https:// automatically.",
+      "frame-ancestors (clickjacking defense) only works as an HTTP header, not in a meta tag."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "csp builder, content security policy generator, csp header generator, csp policy builder",
+    "labels": {
+      "addButton": "Add",
+      "copiedMessage": "Copied",
+      "copyHeaderButton": "Copy header",
+      "copyMetaButton": "Copy meta tag",
+      "dir_base_uri": "Which URLs may appear in <base> tags (prevents base-tag hijacking).",
+      "dir_connect_src": "Where scripts may connect: fetch, XHR, WebSocket, EventSource.",
+      "dir_default_src": "Fallback for every fetch directive you do not set explicitly.",
+      "dir_font_src": "Where fonts may load from.",
+      "dir_form_action": "Where forms may be submitted to.",
+      "dir_frame_ancestors": "Which sites may embed this page in a frame (clickjacking defense).",
+      "dir_frame_src": "Which URLs may be loaded in frames and iframes.",
+      "dir_img_src": "Where images may load from.",
+      "dir_media_src": "Where audio and video may load from.",
+      "dir_object_src": "Where plugins (<object>, <embed>, <applet>) may load from. 'none' recommended.",
+      "dir_script_src": "Where scripts may load from. Overrides default-src for scripts.",
+      "dir_style_src": "Where stylesheets and inline styles may load from.",
+      "directiveCountLabel": "Directives in policy",
+      "flagsLabel": "Policy flags",
+      "headerLabel": "HTTP header value",
+      "hostPlaceholder": "e.g. https://cdn.example.com",
+      "invalidHostLabel": "Enter a host without spaces or semicolons, e.g. https://cdn.example.com.",
+      "metaLabel": "Meta tag version",
+      "metaNote": "Note: frame-ancestors and report-uri are ignored in meta tags. Prefer the HTTP header.",
+      "removeLabel": "Remove",
+      "reportUriLabel": "report-uri (violation reports endpoint)",
+      "resetButton": "Reset to defaults"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Generates the policy text; it cannot install the header on your server for you.",
+      "The meta-tag version cannot enforce frame-ancestors or report-uri.",
+      "This builder does not generate nonces or hashes for inline scripts.",
+      "A policy is only as good as its testing: always validate in report-only mode first."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate a correct Content-Security-Policy header with a visual directive editor. Free, in your browser — no signup.",
+    "metaTitle": "CSP Generator - Build Content Security Policy Headers | JaurTools",
+    "name": "CSP Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Toggle directives, click source keywords like 'self' or add your own hosts, and this builder assembles a valid Content-Security-Policy header plus the meta-tag version. The secure defaults produce: default-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests. Copy the header into your server config and roll out via report-only mode first.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "CSP Builder results",
+    "tagline": "Build a correct CSP header visually.",
+    "workedExample": "Goal: a strict starter policy for a static site.\n1. Keep the defaults enabled: default-src, object-src, base-uri, form-action, frame-ancestors.\n2. default-src 'self': everything loads from your own origin unless overridden.\n3. object-src 'none': blocks legacy plugins entirely.\n4. base-uri 'self' + form-action 'self': stops base-tag hijacking and off-site form posts.\n5. frame-ancestors 'self': only your own origin may embed the page.\n6. upgrade-insecure-requests: rewrites http:// subresources to https://.\nHeader value:\ndefault-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests\nDeploy it as Content-Security-Policy-Report-Only first, fix violations, then enforce.",
+    "workedExampleHeading": "Worked example"
+  }
+}

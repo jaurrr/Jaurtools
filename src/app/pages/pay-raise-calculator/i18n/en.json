@@ -1,0 +1,88 @@
+{
+  "pay-raise-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Pay Raise Calculator",
+    "tagline": "See your new salary, raise amount, and monthly increase from any percentage raise.",
+    "metaTitle": "Pay Raise Calculator - New Salary After Raise | JaurTools",
+    "metaDescription": "Free pay raise calculator: enter your salary and raise percentage to see your new annual and monthly pay instantly.",
+    "keywords": "pay raise calculator, salary raise calculator, new salary calculator, raise percentage calculator",
+    "resultsHeading": "Your pay raise results",
+    "quickAnswer": "New salary = current salary x (1 + raise / 100). Example: a 600,000 salary with an 8% raise grows by 48,000 to 648,000 per year, which is 4,000 more per month. Remember the raise is usually quoted on gross pay before tax, so your take-home increase will be smaller after deductions.",
+    "keyFacts": [
+      "Most raises are quoted as a percentage of your current gross annual salary.",
+      "Annual raise = current salary x (raise percent / 100).",
+      "Monthly increase = annual raise / 12, before tax and deductions.",
+      "Inflation quietly eats raises: a 5% raise with 6% inflation is a real pay cut.",
+      "Promotions typically add 10 to 20%, while annual merit raises run 3 to 8% in most industries.",
+      "Negotiate the percentage on your total compensation, not just base salary, when bonuses matter."
+    ],
+    "howTo": [
+      "Enter your current gross annual salary.",
+      "Enter the raise percentage you were offered or are negotiating for.",
+      "Read your raise amount, new annual salary, and monthly increase instantly.",
+      "Compare the monthly increase with your actual take-home by applying your tax rate.",
+      "Try a higher percentage to set your negotiation target before the meeting."
+    ],
+    "formula": "Raise amount = Current salary x (Raise % / 100).\nNew salary = Current salary + Raise amount.\nMonthly increase = Raise amount / 12.\nExample: 600,000 x 0.08 = 48,000; new salary = 648,000; monthly increase = 4,000.",
+    "workedExample": "Current salary 600,000, raise 8%:\n1. Raise amount: 600,000 x 8 / 100 = 48,000.\n2. New annual salary: 600,000 + 48,000 = 648,000.\n3. Monthly increase: 48,000 / 12 = 4,000.\n4. New monthly pay: 648,000 / 12 = 54,000.\nAll figures are gross, before tax and deductions.",
+    "benefits": [
+      "Instant clarity on what any raise percentage really means for your pay.",
+      "Helps you set a concrete negotiation target before review meetings.",
+      "Shows the monthly figure, which is what your budget actually feels.",
+      "Free and private: no salary data ever leaves your browser."
+    ],
+    "limitations": [
+      "Uses gross salary. Taxes, provident fund, and other deductions reduce take-home.",
+      "Does not model bonuses, stock grants, or benefits, which are part of total compensation.",
+      "A flat rupee raise needs converting to a percentage first: (raise / salary) x 100.",
+      "Estimates only, not payroll advice: your employer's payroll decides the final numbers."
+    ],
+    "faqs": [
+      {
+        "q": "Is the raise calculated on gross or net salary?",
+        "a": "On gross salary, before tax and deductions. Employers quote raises on gross pay, so enter your gross annual salary. Your take-home increase will be smaller once taxes and deductions apply."
+      },
+      {
+        "q": "What is a good raise percentage?",
+        "a": "It depends on your market and performance. Annual merit raises commonly run 3 to 8%, promotions 10 to 20%, and job switches often 20 to 40% or more. Always compare against inflation: a raise below inflation is a real-terms pay cut."
+      },
+      {
+        "q": "How do I convert a flat raise to a percentage?",
+        "a": "Divide the flat amount by your current salary and multiply by 100. A 50,000 raise on a 600,000 salary is (50,000 / 600,000) x 100 = 8.33%. Enter that percentage here."
+      },
+      {
+        "q": "Should I negotiate salary or percentage?",
+        "a": "Negotiate the final number you want, and use the percentage to check it is realistic. Saying 'I am targeting 700,000, which is about a 16% increase' sounds more grounded than a bare percentage."
+      },
+      {
+        "q": "Does this include my bonus?",
+        "a": "No. This calculator works on base salary only. If your bonus is a fixed percentage of salary, it rises with the raise too: a 10% bonus on the example above adds another 4,800 per year."
+      },
+      {
+        "q": "Why is my take-home increase smaller than shown?",
+        "a": "Because the monthly increase shown is gross. Income tax, provident fund contributions, and professional tax all take a cut. Apply your marginal tax rate to the gross increase for a rough take-home estimate."
+      }
+    ],
+    "labels": {
+      "salary": "Current annual salary (gross)",
+      "raisePct": "Raise (%)",
+      "raiseAmount": "Annual raise amount",
+      "monthlyIncrease": "Monthly increase (gross)",
+      "newSalary": "New annual salary",
+      "newMonthly": "New monthly pay (gross)"
+    }
+  }
+}

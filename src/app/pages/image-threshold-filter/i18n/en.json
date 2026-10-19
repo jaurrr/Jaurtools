@@ -1,0 +1,96 @@
+{
+  "image-threshold-filter": {
+    "benefits": [
+      "Dramatic high-contrast look for posters, logos and stencil art.",
+      "Prepares scans for OCR: clean black text on white reads more reliably.",
+      "Tiny file sizes: two colors compress extremely well as PNG.",
+      "Invert toggle gives a negative-film effect with one click."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Thresholding compares every pixel's brightness to a cutoff value. Pixels brighter than the cutoff become white; darker ones become black. The result is a pure two-color image.",
+        "q": "What is thresholding?"
+      },
+      {
+        "a": "Each pixel is converted to luminance with the standard weights: 0.299 × red + 0.587 × green + 0.114 × blue. Green counts most because human eyes are most sensitive to green light.",
+        "q": "How is pixel brightness calculated?"
+      },
+      {
+        "a": "Lower thresholds keep more pixels black (darker result); higher thresholds keep more white. For documents, start near 128 and adjust until the text is solid black on clean white.",
+        "q": "Which threshold value should I use?"
+      },
+      {
+        "a": "Thresholding destroys gradients and subtle shading — everything becomes pure black or white. For smooth black-and-white photos, a grayscale filter preserves tones better.",
+        "q": "Will this work well on photos?"
+      },
+      {
+        "a": "Inversion swaps black and white, useful for negative effects or for dark-mode versions of line art. It does not change which pixels pass the threshold, only their final color.",
+        "q": "What does the invert option do?"
+      },
+      {
+        "a": "No. Pixel processing runs with the canvas API inside your browser.",
+        "q": "Is my image uploaded anywhere?"
+      }
+    ],
+    "formula": "luminance = 0.299 × R + 0.587 × G + 0.114 × B\npixel = white (255) if luminance ≥ threshold, else black (0)\ninvert: pixel = 255 − pixel",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo or scan using the upload area.",
+      "Move the threshold slider and watch the result update instantly.",
+      "Try lower values for darker results and higher values for brighter ones.",
+      "Enable invert for a negative effect if you like.",
+      "Download the black-and-white PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Thresholding reduces an image to exactly two colors: black and white.",
+      "Every pixel is first converted to a single brightness value (luminance).",
+      "Pixels at or above the threshold become white; the rest become black.",
+      "The standard luminance weights are 0.299 red, 0.587 green, 0.114 blue.",
+      "The effect is popular for stencil art, logos, QR-style graphics and OCR prep.",
+      "Large images are scaled to 1600 px on the long edge for fast processing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "threshold image, black and white filter, high contrast image, image binarization, threshold filter online",
+    "labels": {
+      "downloadButton": "Download PNG",
+      "dropHint": "Click to choose an image",
+      "emptyNote": "Upload an image to apply the threshold effect.",
+      "errorRead": "Could not read that image.",
+      "errorSize": "The image must be smaller than 15 MB.",
+      "errorType": "Only image files are accepted.",
+      "invertLabel": "Invert (negative)",
+      "originalAlt": "Original image",
+      "originalLabel": "Original",
+      "outputSizeLabel": "Output size",
+      "resultAlt": "Threshold result",
+      "resultLabel": "Threshold",
+      "thresholdLabel": "Threshold",
+      "thresholdNote": "0 = everything black, 255 = everything white."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "All gradients and shading are lost; the output has only two colors.",
+      "Very large images are downscaled to 1600 px on the long edge.",
+      "Fine details can disappear at extreme threshold values.",
+      "The result is not suitable for photographs that need smooth tones."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert photos to high-contrast black and white with an adjustable threshold slider. Live preview — free and instant.",
+    "metaTitle": "Image Threshold Filter - High-Contrast B&W | JaurTools",
+    "name": "Image Threshold Filter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Thresholding turns any image into pure black and white: every pixel brighter than the cutoff becomes white, every darker pixel becomes black. Upload a photo, drag the threshold slider from 0 to 255, optionally invert it, and download the high-contrast PNG.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Threshold results",
+    "tagline": "Pure black, pure white, no gray.",
+    "workedExample": "Take one pixel with RGB (200, 150, 100) and threshold = 128.\n\nLuminance = 0.299 × 200 + 0.587 × 150 + 0.114 × 100\n         = 59.8 + 88.05 + 11.4\n         = 159.25\n\n159.25 ≥ 128, so the pixel becomes white (255, 255, 255).\n\nWith invert on, it would instead become black (0, 0, 0). Every pixel in the image is decided the same way, independently.",
+    "workedExampleHeading": "Worked example"
+  }
+}

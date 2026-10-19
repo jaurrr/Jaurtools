@@ -1,0 +1,114 @@
+{
+  "meta-tags-generator": {
+    "benefits": [
+      "एक फॉर्म SEO बेसिक के साथ Open Graph और Twitter Card कवर करता है। कोई टैग याद रखने की ज़रूरत नहीं।",
+      "लाइव कैरेक्टर काउंटर टाइटल 60 और डिस्क्रिप्शन 160 कैरेक्टर से कम रखते हैं।",
+      "OG टैग तय करते हैं कि WhatsApp, Facebook और X पर शेयर होने पर पेज कैसा दिखेगा।",
+      "आउटपुट किसी भी साइट के <head> में सीधे पेस्ट होता है, WordPress से हैंड-कोडेड HTML तक।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "जनरेटर",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "Title tag गूगल नतीजों में क्लिक करने योग्य हेडलाइन है, 60 कैरेक्टर से कम रखें। Meta description उसके नीचे का सारांश टेक्स्ट है, 160 कैरेक्टर से कम रखें। दोनों मिलकर तय करते हैं कि सर्चर आपका पेज क्लिक करेंगे या नहीं। Keywords meta tag को गूगल अनदेखा करता है पर डालना हानिरहित है।",
+        "q": "Title और meta description किस लिए हैं?"
+      },
+      {
+        "a": "Open Graph टैग (og:title, og:description, og:image) प्रीव्यू कार्ड नियंत्रित करते हैं जब लिंक WhatsApp, Facebook, LinkedIn और Telegram पर शेयर होता है। इनके बिना ऐप अंदाज़ा लगाते हैं, अक्सर गलत इमेज या टेक्स्ट चुनते हैं।",
+        "q": "Open Graph टैग क्या हैं?"
+      },
+      {
+        "a": "बड़े summary कार्ड के लिए कम से कम 1200 x 630 px की इमेज इस्तेमाल करें। इसे अपने डोमेन पर HTTPS से होस्ट करें। टैग डालने के बाद Facebook के Sharing Debugger या X के Card Validator से प्रीव्यू रिफ़्रेश करें, क्योंकि दोनों पुराने प्रीव्यू ज़बरदस्त कैश करते हैं।",
+        "q": "शेयरिंग के लिए कौन सी इमेज इस्तेमाल करूं? मेरा प्रीव्यू अपडेट क्यों नहीं हो रहा?"
+      },
+      {
+        "a": "noindex उन पेजों पर लगाएं जो गूगल में कभी नहीं चाहिए: थैंक-यू पेज, एडमिन एरिया, स्टेजिंग साइट और पतले डुप्लिकेट पेज। जो खोजा जाना चाहिए उस पर index, follow रखें। ध्यान रहे noindex गूगल द्वारा मानी जाने वाली रिक्वेस्ट है, पासवर्ड नहीं; यह पेज को सीधे विज़िटर से नहीं छिपाता।",
+        "q": "noindex कब इस्तेमाल करना चाहिए?"
+      },
+      {
+        "a": "Canonical tag गूगल को बताता है कि मिलते-जुलते पेज होने पर मास्टर कॉपी कौन सा URL है, जैसे फ़िल्टर वाले प्रोडक्ट पेज या HTTP बनाम HTTPS वर्शन। यह आपकी रैंकिंग के डुप्लिकेट-कंटेंट डायल्यूशन को रोकता है।",
+        "q": "Canonical tag किस लिए है?"
+      },
+      {
+        "a": "हां। गूगल की doorway-page पॉलिसी उन साइटों को दंड देती है जहां कई पेज एक जैसे टाइटल और डिस्क्रिप्शन शेयर करते हैं। हर पेज के लिए अलग टाइटल और डिस्क्रिप्शन लिखें; यह टूल सिर्फ मैकेनिक्स आसान करता है।",
+        "q": "क्या हर पेज के meta tag अलग होने चाहिए?"
+      }
+    ],
+    "formula": "SEO कोर: <title> (<= 60 chars) + meta description (<= 160 chars) + robots + canonical।\nसोशल: og:title + og:description + og:image (1200x630) + og:type + twitter:card।\nनियम: हर पेज पर अलग title + description, कोई डुप्लिकेट नहीं।",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "Basic SEO सेक्शन भरें: title, description, keywords, author, robots, canonical।",
+      "कैरेक्टर काउंटर देखें: टाइटल 60 या कम, डिस्क्रिप्शन 160 या कम रखें।",
+      "Open Graph जानकारी डालें: पेज URL, शेयर इमेज (1200 x 630), और साइट नाम।",
+      "Twitter card प्रकार और अपना @username सेट करें।",
+      "टैग कॉपी करें और अपने पेज के <head> में पेस्ट करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "Meta tag पेज के <head> में रहते हैं और सर्च इंजन व सोशल ऐप को पेज का वर्णन करते हैं।",
+      "Title tag और meta description आपके गूगल सर्च नतीजे और क्लिक-थ्रू रेट बनाते हैं।",
+      "Open Graph टैग WhatsApp, Facebook, LinkedIn और Telegram पर प्रीव्यू कार्ड तय करते हैं।",
+      "Twitter card टैग X पर प्रीव्यू तय करते हैं। summary_large_image बड़ा इमेज कार्ड देता है।",
+      "हर पेज को अलग टैग चाहिए। पेजों में डुप्लिकेट टाइटल SEO को नुकसान पहुंचाते हैं।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "meta tags generator, open graph generator, twitter card generator, og tags generator, seo meta tags",
+    "labels": {
+      "author": "लेखक",
+      "basicHeading": "बेसिक SEO",
+      "canonical": "Canonical URL",
+      "copied": "कॉपी हो गया!",
+      "copy": "टैग कॉपी करें",
+      "description": "Meta description",
+      "title": "पेज शीर्षक",
+      "keywords": "मेटा कीवर्ड",
+      "download": ".html डाउनलोड करें",
+      "ogDescription": "OG description",
+      "ogHeading": "Open Graph",
+      "ogImage": "OG image URL",
+      "ogSiteName": "साइट का नाम",
+      "ogTitle": "OG title",
+      "ogType": "OG type",
+      "ogTypeArticle": "Article",
+      "ogTypeWebsite": "Website",
+      "ogUrl": "पेज URL",
+      "outputHeading": "बनाए गए meta tag",
+      "pasteNote": "अपने HTML पेज के <head> सेक्शन में पेस्ट करें।",
+      "robIF": "index, follow",
+      "robIN": "index, nofollow",
+      "robNF": "noindex, follow",
+      "robNN": "noindex, nofollow",
+      "robots": "Robots",
+      "sameAsDescription": "meta description दोबारा इस्तेमाल के लिए खाली छोड़ें",
+      "sameAsTitle": "पेज title दोबारा इस्तेमाल के लिए खाली छोड़ें",
+      "themeColor": "थीम रंग",
+      "twHeading": "Twitter Card",
+      "twLarge": "बड़ी इमेज वाला Summary",
+      "twSummary": "Summary",
+      "twitterCard": "कार्ड प्रकार",
+      "twitterSite": "साइट @username"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "टैग सिर्फ सुझाव देते हैं। गूगल नतीजों में आपका title या description बदल सकता है।",
+      "सोशल ऐप प्रीव्यू कैश करते हैं। टैग बदलने के बाद debugger टूल अपडेट करें।",
+      "यह टूल सत्यापित नहीं कर सकता कि इमेज URL पहुंच योग्य या सही साइज़ का है।",
+      "टैग अकेले पेज रैंक नहीं करते; कंटेंट क्वालिटी रैंकिंग तय करती है।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त meta tag जनरेटर: लाइव कैरेक्टर काउंटर के साथ SEO meta tag के साथ Open Graph और Twitter Card टैग बनाएं। कॉपी या डाउनलोड करें। प्राइवेट, कोई साइन-अप नहीं।",
+    "metaTitle": "Meta Tags Generator - SEO + Open Graph + Twitter | JaurTools",
+    "name": "मेटा टैग जनरेटर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "एक फॉर्म भरें और पूरे meta tag पाएं: लाइव कैरेक्टर काउंटर वाला SEO title और description, robots और canonical टैग, WhatsApp और Facebook प्रीव्यू के लिए Open Graph टैग, और X के लिए Twitter Card टैग। आउटपुट सीधे आपके पेज के <head> सेक्शन में पेस्ट होता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "आपके meta tag",
+    "tagline": "लाइव कैरेक्टर काउंटर के साथ SEO meta tag के साथ Open Graph और Twitter Card।",
+    "workedExample": "एक ब्लॉगर अपनी नई पोस्ट को टैग करती है:\n1. Title: How to Brew Filter Coffee at Home (34 कैरेक्टर, 60 से कम)।\n2. Description: Step-by-step filter coffee recipe with grind sizes and ratios. (68 कैरेक्टर, 160 से कम)।\n3. OG image: https://example.com/images/filter-coffee.jpg (1200 x 630)।\n4. Twitter card: summary_large_image। Site: @herblog।\n5. वह टैग <head> में पेस्ट करती है और Facebook का Sharing Debugger जांचती है।\nअब उसका लिंक WhatsApp और X पर सही title, description और फ़ोटो के साथ शेयर होता है।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

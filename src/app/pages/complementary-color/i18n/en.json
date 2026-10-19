@@ -1,0 +1,87 @@
+{
+  "complementary-color": {
+    "benefits": [
+      "Find the exact opposite color on the wheel (+180 degrees) instantly.",
+      "Also shows the two split-complementary colors (+/-150 degrees) for softer contrast.",
+      "Each swatch copies its HEX code with one click.",
+      "Perfect for call-to-action buttons, accents and attention-grabbing pairs.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Complementary colors sit directly opposite on the color wheel — blue and orange, red and green. They create the strongest possible contrast, which is why they are used for call-to-action buttons and highlights.",
+        "q": "What are complementary colors?"
+      },
+      {
+        "a": "Split-complementary uses the two colors adjacent to the direct complement (+/-150 degrees instead of 180). You keep strong contrast but with less visual tension — easier to use across a whole page.",
+        "q": "What is split-complementary?"
+      },
+      {
+        "a": "For #4f46e5 (hue ~243 degrees), the complement sits at 63 degrees: a yellow-green around #e5dd48. Opposite hues always pair this way — the tool computes it exactly for your base color.",
+        "q": "What is the complement of indigo #4f46e5?"
+      },
+      {
+        "a": "Use the complement sparingly — for buttons, links and small accents. Large areas of two complements side by side can vibrate and tire the eyes. Split-complementary pairs are safer for bigger surfaces.",
+        "q": "How do I use complements without hurting readability?"
+      },
+      {
+        "a": "No — the hue rotation math runs locally in JavaScript. Nothing leaves your device.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "complement hue = (base hue + 180) mod 360\nsplit-complementary hues = (base hue +/- 150) mod 360\nsaturation and lightness stay equal to the base color",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your base color or type its HEX code.",
+      "Read the complement (+180 degrees) and the two split-complementary colors (+/-150 degrees).",
+      "Preview all four as a gradient strip.",
+      "Click the copy button on any swatch to copy its HEX code.",
+      "Use complements for accents, buttons and highlights in your design."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A complement sits exactly 180 degrees away on the color wheel.",
+      "Split-complementary colors sit at +150 and -150 degrees.",
+      "Only the hue rotates; saturation and lightness match the base color.",
+      "Complementary pairs give the maximum possible hue contrast.",
+      "All angles wrap around 0/360 degrees."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "complementary color, opposite color, color wheel complement, split complementary, contrast colors",
+    "labels": {
+      "baseColor": "Base color",
+      "baseSwatch": "Base",
+      "complement": "Complement",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyHex": "Copy this HEX code",
+      "hexCode": "HEX code",
+      "splitA": "Split-complementary A",
+      "splitB": "Split-complementary B"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Maximum hue contrast does not guarantee readable text — check WCAG contrast separately.",
+      "Full-strength complements can vibrate when placed side by side in large areas.",
+      "Only hue is rotated; no lighter/darker variants are suggested.",
+      "Taste still matters — math finds the opposite, not the prettiest pair."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free complementary color finder: get the exact opposite color (+180°) plus split-complementary pairs for any base color, with one-click HEX copy.",
+    "metaTitle": "Complementary Color Finder | JaurTools",
+    "name": "Complementary Color",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter any base color to get its exact complement — the color 180 degrees away on the wheel — plus the two split-complementary colors at +/-150 degrees for softer contrast. Each swatch shows its HEX code with a copy button and all four preview as a gradient strip. Perfect for accents, buttons and highlights.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your complementary colors",
+    "tagline": "Find the exact opposite on the color wheel — plus softer split-complementary pairs.",
+    "workedExample": "Take #4f46e5 with hue ~243.4 degrees, saturation 75.4%, lightness 58.6%.\nComplement: (243.4 + 180) mod 360 = 63.4 degrees.\nhsl(63.4, 75.4%, 58.6%): chroma C = 0.6235; x = 0.5882; m = 0.2745.\nSector 1 (60-120 deg): (x, c, 0) + m = (0.8627, 0.8980, 0.2745); x255 = (220.0, 229.0, 70.0), rounds to (220, 229, 70).\nResult: #dce546 — a yellow-green, the exact complement of the indigo base.",
+    "workedExampleHeading": "Worked example"
+  }
+}

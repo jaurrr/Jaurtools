@@ -1,0 +1,103 @@
+{
+  "filter-numbers": {
+    "assumptionNote": "Numbers can be separated by commas, spaces, semicolons or new lines. Non-numeric entries are ignored. Even, odd and prime rules only apply to whole numbers.",
+    "benefits": [
+      "Cleans a messy list in one click - no spreadsheet formulas needed.",
+      "The prime filter doubles as a quick prime-number finder.",
+      "Divisibility filtering is handy for grouping roll numbers, batches or lots.",
+      "Remove-duplicates gives you a clean unique list instantly.",
+      "Copy the filtered result straight into another app."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Filtering keeps only the numbers that satisfy a rule; sorting just rearranges the numbers you already have. This tool offers both: keep-even or keep-prime are filters, while ascending/descending are sorts that reorder the whole list without removing anything.",
+        "q": "What is the difference between filtering and sorting?"
+      },
+      {
+        "a": "Type them exactly as they are - for example: 12, 7, 30, 5, 18, 3. Commas, spaces, semicolons and line breaks all work as separators, and you can mix them freely.",
+        "q": "How do I enter my numbers?"
+      },
+      {
+        "a": "A prime is a whole number greater than 1 that has exactly two factors: 1 and itself. The first primes are 2, 3, 5, 7, 11, 13, 17 and 19. Note that 1 is not prime and 2 is the only even prime.",
+        "q": "What counts as a prime number?"
+      },
+      {
+        "a": "Yes. After filtering, tap the copy button and the kept numbers are copied to your clipboard, ready to paste into Excel, Google Sheets, a message or another calculator.",
+        "q": "Can I copy the filtered numbers?"
+      },
+      {
+        "a": "Pick divisible-by and set the value to 5. Every kept number then leaves no remainder when divided by 5, so the result is exactly the multiples of 5 in your list.",
+        "q": "How do I find all multiples of 5 in my list?"
+      },
+      {
+        "a": "No. The tool is deliberately simple: one rule at a time. For combined rules, filter once, copy the result, paste it back in, and apply the second rule.",
+        "q": "Can I combine two rules at once?"
+      }
+    ],
+    "formula": "keep(n): n satisfies the chosen rule\neven: n mod 2 = 0 | odd: n mod 2 = 1 (integers only)\nprime: exactly 2 factors | divisible by k: n mod k = 0\ngreater than k: n > k | less than k: n < k\nunique: first occurrence kept, later repeats dropped",
+    "formulaHeading": "Filter rules",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your numbers into the box, separated by commas, spaces or line breaks.",
+      "Pick a rule from the dropdown: keep even, keep odd, keep prime, divisible by, greater than, less than, unique, or sort.",
+      "If the rule needs a value (divisible by, greater than, less than), enter it in the second box.",
+      "The kept numbers appear instantly, with counts of how many were kept and removed.",
+      "Use the copy button to grab the filtered list."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A filter keeps only list members that satisfy a rule and drops the rest.",
+      "Even numbers divide by 2 with no remainder; odd numbers always leave a remainder of 1.",
+      "Prime numbers have exactly two factors. 1 is not prime; 2 is the only even prime.",
+      "Divisible-by-k keeps every number n where n mod k = 0 - those are the multiples of k.",
+      "Remove-duplicates keeps the first occurrence of each value and drops repeats.",
+      "Sorting ascending or descending reorders the list without removing any number."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "filter numbers, keep even numbers, find prime numbers in list, remove duplicates numbers, filter numbers by rule, number list filter",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy result",
+      "inputLabel": "Your numbers",
+      "inputPlaceholder": "Example: 12, 7, 30, 5, 18, 3",
+      "keptLabel": "Kept numbers",
+      "noneLabel": "None",
+      "paramLabel": "Value",
+      "removedLabel": "Removed",
+      "ruleLabel": "Filter rule",
+      "rule_divisible": "Keep: divisible by",
+      "rule_even": "Keep: even",
+      "rule_greater": "Keep: greater than",
+      "rule_less": "Keep: less than",
+      "rule_odd": "Keep: odd",
+      "rule_prime": "Keep: prime",
+      "rule_sortAsc": "Sort: ascending",
+      "rule_sortDesc": "Sort: descending",
+      "rule_unique": "Keep: unique (remove duplicates)",
+      "totalLabel": "Total numbers"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "One rule per run - rules cannot be combined in a single pass.",
+      "Even/odd/prime rules ignore decimal numbers, since parity and primality are defined for integers.",
+      "Lists longer than 50,000 characters are truncated to keep the page responsive.",
+      "This is a quick list tool, not a full spreadsheet - it cannot save or export files."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free number filter: keep even, odd, prime or divisible-by numbers from any list, remove duplicates, or sort. Paste your list and get results instantly.",
+    "metaTitle": "Filter Numbers - Keep Even, Odd, Prime by Rule | JaurTools",
+    "name": "Filter Numbers",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool keeps only the numbers in your list that satisfy a rule. From the list 12, 7, 30, 5, 18, 3, the keep-even rule returns 12, 30 and 18 - three numbers kept, three removed. You can also keep odd or prime numbers, keep numbers divisible by any value, keep numbers above or below a threshold, remove duplicates, or sort ascending and descending. Numbers may be separated by commas, spaces or line breaks.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Filter results",
+    "tagline": "Keep or drop numbers from a list by rule - even, odd, prime, divisible, unique, sorted.",
+    "workedExample": "Filter the list 12, 7, 30, 5, 18, 3 with the keep-even rule:\n1. Check each number: 12 mod 2 = 0 (keep), 7 mod 2 = 1 (drop), 30 mod 2 = 0 (keep).\n2. Continue: 5 mod 2 = 1 (drop), 18 mod 2 = 0 (keep), 3 mod 2 = 1 (drop).\n3. Kept: 12, 30, 18. Removed: 7, 5, 3.\n4. Result: 3 kept out of 6 total.",
+    "workedExampleHeading": "Worked example"
+  }
+}

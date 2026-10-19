@@ -1,0 +1,95 @@
+{
+  "react-native-shadow-generator": {
+    "assumptionNote": "वेब प्रीव्यू CSS box-shadow उपयोग करता है, जो नेटिव iOS शैडो से थोड़ा अलग रेंडर होता है। iOS shadowColor/shadowOffset/shadowOpacity/shadowRadius रेंडर करता है; Android केवल elevation रेंडर करता है। असली डिवाइस पर टेस्ट करें।",
+    "benefits": [
+      "एक जगह सही iOS और Android शैडो कोड पाएं - props का अनुमान नहीं।",
+      "एक भी लाइन लिखने से पहले शैडो को विज़ुअली प्रीव्यू करें।",
+      "तैयार StyleSheet स्निपेट सीधे अपने कंपोनेंट में कॉपी करें।",
+      "Android के लिए elevation और iOS के लिए शैडो props अलग-अलग ट्यून करें।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "रोज़मर्रा के टूल",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "iOS shadowColor, shadowOffset ({width, height}), shadowOpacity (0-1) और shadowRadius उपयोग करता है। Android इन सबको अनदेखा करता है और केवल elevation (एक संख्या) उपयोग करता है। यह जनरेटर दोनों आउटपुट देता है।",
+        "q": "iOS और Android शैडो को अलग कोड क्यों चाहिए?"
+      },
+      {
+        "a": "हां, लेकिन elevation एक मोटा अनुमान है। यह व्यू की z-डेप्थ के आधार पर Material-शैली शैडो बनाता है, आपके रंग या ब्लर का नहीं। Android पर पिक्सल कंट्रोल के लिए कस्टम शैडो लाइब्रेरी या SVG उपयोग करें।",
+        "q": "क्या elevation iOS शैडो से बिल्कुल मेल खाता है?"
+      },
+      {
+        "a": "सबसे आम गलती: शैडो क्लिप हो जाता है क्योंकि पैरेंट में overflow: 'hidden' है, या backgroundColor गलत व्यू पर है। साथ ही iOS पर शैडो को शैडो वाले व्यू पर backgroundColor चाहिए।",
+        "q": "मेरा शैडो क्यों नहीं दिख रहा?"
+      },
+      {
+        "a": "छोटे ऑफसेट (0-4), मध्यम ब्लर (4-10) और कम ओपैसिटी (0.1-0.3) उपयोग करें। कठोर डार्क शैडो सस्ते लगते हैं। सूक्ष्म शैडो प्रीमियम लगते हैं।",
+        "q": "शैडो को क्या अच्छा बनाता है?"
+      },
+      {
+        "a": "वेब प्रीव्यू CSS box-shadow उपयोग करता है, जो करीब है लेकिन नेटिव रेंडरिंग जैसा नहीं है। यह एक गाइड है। अंतिम लुक हमेशा असली डिवाइस या सिम्युलेटर पर जांचें।",
+        "q": "क्या प्रीव्यू नेटिव जैसा पिक्सल-समान है?"
+      },
+      {
+        "a": "अक्सर, हां। react-native-shadow-2 जैसी लाइब्रेरी Android पर ब्लर और रंग कंट्रोल देती हैं, जो elevation नहीं दे सकता। लेकिन अधिकतर कार्ड और बटन के लिए elevation प्लस iOS props पर्याप्त हैं।",
+        "q": "क्या मुझे Android के लिए शैडो लाइब्रेरी चाहिए?"
+      }
+    ],
+    "formula": "कोई गणित नहीं - यह एक कोड जनरेटर है। टुकड़े कैसे मैप होते हैं:\n\niOS (UIView शैडो):\nshadowColor: '#000000'        <- आपका चुना रंग\nshadowOffset: { width: 0, height: 4 }  <- ऑफसेट X / Y\nshadowOpacity: 0.25          <- ओपैसिटी / 100\nshadowRadius: 6              <- ब्लर रेडियस\n\nAndroid (Material elevation):\nelevation: 4                 <- अलग स्लाइडर, 0-24\n\nवेब प्रीव्यू समतुल्य: box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25)।",
+    "formulaHeading": "यह कैसे काम करता है",
+    "homeLabel": "होम",
+    "howTo": [
+      "शैडो रंग चुनें और ऑफसेट X/Y, ब्लर रेडियस और ओपैसिटी समायोजित करें।",
+      "Android elevation अलग से सेट करें।",
+      "लाइव प्रीव्यू को अपडेट होते देखें।",
+      "StyleSheet कोड कॉपी करें या .js फ़ाइल के रूप में डाउनलोड करें, फिर अपने कंपोनेंट में पेस्ट करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "React Native शैडो प्लेटफॉर्म के हिसाब से भिन्न हैं: iOS shadow* props उपयोग करता है, Android elevation उपयोग करता है।",
+      "iOS: shadowColor, shadowOffset {width, height}, shadowOpacity (0 से 1), shadowRadius।",
+      "Android: elevation (0 से 24+)। रंग और ब्लर नेटिव रूप से सपोर्टेड नहीं हैं।",
+      "shadowOpacity 0-1 चाहता है, 0-100 नहीं। 0.25 के बजाय 25 पास करना आम बग है।",
+      "iOS पर शैडो वाले व्यू को backgroundColor चाहिए वरना शैडो रेंडर नहीं हो सकता।",
+      "overflow: 'hidden' वाले पैरेंट व्यू शैडो क्लिप करते हैं। लिस्ट और कार्ड में ध्यान रखें।",
+      "Elevation Android पर ड्रॉ ऑर्डर भी प्रभावित करता है: अधिक elevation ऊपर ड्रॉ होता है।",
+      "वेब प्रीव्यू CSS box-shadow है: करीब, लेकिन नेटिव जैसा पिक्सल-समान नहीं।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "react native shadow generator, rn बॉक्स शैडो, ios शैडो react native, android elevation जनरेटर, react native stylesheet शैडो",
+    "labels": {
+      "blurRadius": "ब्लर रेडियस",
+      "copied": "कॉपी हुआ",
+      "copyCode": "कोड कॉपी करें",
+      "downloadJs": ".js डाउनलोड करें",
+      "elevation": "Android elevation",
+      "offsetX": "ऑफसेट X",
+      "offsetY": "ऑफसेट Y",
+      "opacity": "ओपैसिटी (%)",
+      "preview": "शैडो प्रीव्यू",
+      "previewText": "कार्ड",
+      "shadowColor": "शैडो रंग"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "Android elevation अनुमानित है। Android पर कोई नेटिव रंग या ब्लर कंट्रोल नहीं।",
+      "वेब प्रीव्यू एक गाइड है, नेटिव रेंडरिंग जैसा पिक्सल-समान नहीं।",
+      "एनिमेटेड शैडो या प्रेस्ड-स्टेट शैडो हैंडल नहीं करता।",
+      "उन्नत Android शैडो के लिए react-native-shadow-2 जैसी समर्पित लाइब्रेरी उपयोग करें।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त React Native शैडो जनरेटर: iOS शैडो और Android elevation विज़ुअली डिज़ाइन करें, फिर StyleSheet कोड कॉपी करें। लाइव प्रीव्यू, बिना साइन-अप।",
+    "metaTitle": "React Native शैडो जनरेटर - iOS और Android | JaurTools",
+    "name": "React Native शैडो जनरेटर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "React Native को प्रति प्लेटफॉर्म अलग शैडो कोड चाहिए: iOS shadowColor, shadowOffset, shadowOpacity और shadowRadius उपयोग करता है, जबकि Android केवल elevation उपयोग करता है। ऊपर दोनों को विज़ुअली डिज़ाइन करें, फिर जनरेटेड StyleSheet स्निपेट अपने कंपोनेंट में कॉपी करें। लाइव प्रीव्यू नेटिव परिणाम का नज़दीकी वेब अनुमान दिखाता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "आपका शैडो कोड",
+    "tagline": "React Native शैडो विज़ुअली डिज़ाइन करें - iOS props प्लस Android elevation, कॉपी-रेडी।",
+    "workedExample": "डिफ़ॉल्ट के साथ कार्ड स्टाइल:\n1. सेट करें: रंग #000000, ऑफसेट (0, 4), रेडियस 6, ओपैसिटी 25%, elevation 4।\n2. iOS आउटपुट: shadowColor '#000000', shadowOffset {width: 0, height: 4}, shadowOpacity 0.25, shadowRadius 6।\n3. Android आउटपुट: elevation 4।\n4. StyleSheet स्निपेट अपने कंपोनेंट में पेस्ट करें और style={styles.card} लागू करें।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

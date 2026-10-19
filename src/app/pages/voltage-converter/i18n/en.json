@@ -1,0 +1,110 @@
+{
+  "voltage-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Voltage Converter",
+    "tagline": "Convert voltage between millivolts, volts, kilovolts and megavolts instantly.",
+    "metaTitle": "Voltage Converter — mV, V, kV Online",
+    "metaDescription": "Free voltage converter: millivolts, volts, kilovolts, megavolts. Exact metric scaling for electronics and power systems, in your browser.",
+    "keywords": "voltage converter, mv to v, v to kv, volts to kilovolts, voltage units",
+    "quickAnswer": "Type the voltage, pick the unit you have and the one you want. Voltage scales by clean powers of ten — 1 kV = 1,000 V and 1 V = 1,000 mV — so conversions are exact.",
+    "keyFacts": [
+      "The volt is the SI unit of electric potential: one joule per coulomb.",
+      "Voltage scales by powers of ten: 1,000 mV = 1 V, 1,000 V = 1 kV, 1,000 kV = 1 MV.",
+      "Household mains are 230 V (most of the world) or 120 V (North America).",
+      "Electronics work in millivolts to volts; power grids run in kilovolts.",
+      "High-voltage transmission (hundreds of kV) reduces energy loss over distance."
+    ],
+    "howTo": [
+      "Enter the voltage value in the value field.",
+      "Choose the source unit from the \"From\" dropdown.",
+      "Choose the target unit from the \"To\" dropdown.",
+      "Read the converted voltage instantly; swap reverses it.",
+      "The rate line confirms the exact power-of-ten factor."
+    ],
+    "formula": "result = value × (from-unit in volts) ÷ (to-unit in volts)\nExample: kV = V ÷ 1000",
+    "workedExample": "Convert 230 V to kilovolts.\nStep 1: 230 V in volts = 230.\nStep 2: 1 kV = 1000 V.\nStep 3: 230 ÷ 1000 = 0.23.\nAnswer: 230 V = 0.23 kV.",
+    "benefits": [
+      "Covers electronics (mV), everyday (V) and power-system (kV, MV) scales.",
+      "Exact powers of ten — no rounding error possible.",
+      "Instant, private, browser-only calculation.",
+      "Shows the exact conversion factor with every result.",
+      "Useful for students, hobbyists and electrical engineers."
+    ],
+    "limitations": [
+      "Converts voltage magnitude only — not AC/DC, frequency or phase.",
+      "Results rounded to 6 decimal places for display.",
+      "It does not check whether a voltage is safe to work with.",
+      "Values beyond ±1e15 are clamped."
+    ],
+    "faqs": [
+      {
+        "q": "How many volts are in a kilovolt?",
+        "a": "1,000 volts. A kilovolt is simply a thousand volts, written 1 kV = 1,000 V."
+      },
+      {
+        "q": "How do I convert millivolts to volts?",
+        "a": "Divide millivolts by 1,000. Example: 3,300 mV ÷ 1,000 = 3.3 V."
+      },
+      {
+        "q": "What voltage is a car battery?",
+        "a": "About 12.6 V when fully charged (a nominal 12 V lead-acid battery). Electric-vehicle packs are hundreds of volts."
+      },
+      {
+        "q": "Why do power lines use kilovolts?",
+        "a": "Higher voltage means lower current for the same power, which cuts resistive heating losses in the wires — so grids transmit at 110–765 kV."
+      },
+      {
+        "q": "Is 230 V the same as 0.23 kV?",
+        "a": "Yes, exactly. 230 ÷ 1,000 = 0.23 kV. Same voltage, different unit."
+      },
+      {
+        "q": "Is my data sent anywhere?",
+        "a": "No. Conversion happens entirely in your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Voltage conversion results",
+    "labels": {
+      "valueLabel": "Value",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "resultLabel": "Result",
+      "rateLabel": "Conversion rate",
+      "swapLabel": "Swap units"
+    },
+    "units": [
+      {
+        "id": "mv",
+        "name": "Millivolt",
+        "symbol": "mV"
+      },
+      {
+        "id": "v",
+        "name": "Volt",
+        "symbol": "V"
+      },
+      {
+        "id": "kv",
+        "name": "Kilovolt",
+        "symbol": "kV"
+      },
+      {
+        "id": "mv2",
+        "name": "Megavolt",
+        "symbol": "MV"
+      }
+    ]
+  }
+}

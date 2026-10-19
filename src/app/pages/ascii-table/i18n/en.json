@@ -1,0 +1,91 @@
+{
+  "ascii-table": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "ASCII Table",
+    "tagline": "Look up any ASCII character code (0-127), search names, and convert characters to codes.",
+    "metaTitle": "ASCII Table - Character Codes 0-127 Lookup | JaurTools",
+    "metaDescription": "Free ASCII table: all 128 character codes with names and symbols. Search, convert a character to its code, or a code to its character.",
+    "keywords": "ascii table, ascii code, ascii characters, char to ascii, ascii lookup",
+    "resultsHeading": "ASCII lookup results",
+    "quickAnswer": "ASCII assigns every common character a number from 0 to 127. For example, the capital letter A is 65, lowercase a is 97, and the digit 0 is 48. Type any character above to see its code instantly, or type a code to see its character.",
+    "keyFacts": [
+      "ASCII (American Standard Code for Information Interchange) defines 128 characters, numbered 0 to 127.",
+      "Codes 0-31 are control characters (like TAB = 9, LF = 10, ESC = 27) that do not print.",
+      "Code 32 is Space; 48-57 are digits 0-9; 65-90 are A-Z; 97-122 are a-z.",
+      "Code 127 is DEL (delete), also non-printing.",
+      "Uppercase and lowercase letters differ by exactly 32 (A=65, a=97).",
+      "Modern text is usually UTF-8, which is backward-compatible: the first 128 UTF-8 codes are identical to ASCII."
+    ],
+    "howTo": [
+      "Use the search box to filter by code number, character, or name (try \"65\", \"A\", or \"line\").",
+      "Type a character in the first box to see its ASCII code.",
+      "Type a code (0-127) in the second box to see its character.",
+      "Tap the copy button on any row to copy a printable character."
+    ],
+    "formula": "No formula - ASCII is a fixed lookup table.\nHandy relationships: lowercase = uppercase + 32.\nDigit character value = code − 48 (so \"7\" is 55, and 55 − 48 = 7).",
+    "workedExample": "Encode the word \"Hi\":\n1. H is uppercase: code 72.\n2. i is lowercase: code 105.\n3. So \"Hi\" = 72, 105.\nDecode 74 97 117 114:\n1. 74 = J, 97 = a, 117 = u, 114 = r.\n2. Together: \"Jaur\".",
+    "benefits": [
+      "All 128 codes on one page - faster than scrolling through long reference sites.",
+      "Two-way lookup: character to code and code to character in the same view.",
+      "Copy buttons grab symbols without fiddling with keyboard codes.",
+      "Useful for programmers debugging text encodings and protocols."
+    ],
+    "limitations": [
+      "Covers standard 7-bit ASCII (0-127) only - no extended ASCII or Unicode symbols.",
+      "Control characters have no printable symbol, so their copy buttons are hidden.",
+      "Names shown are the common short names, not the full formal descriptions."
+    ],
+    "faqs": [
+      {
+        "q": "What is the ASCII code for A?",
+        "a": "Capital A is 65. Lowercase a is 97. The whole uppercase alphabet runs 65-90 and lowercase runs 97-122."
+      },
+      {
+        "q": "What is ASCII code 32?",
+        "a": "Code 32 is the Space character - the blank space you type with the spacebar. It is the first printable character in the table."
+      },
+      {
+        "q": "What are ASCII control characters?",
+        "a": "Codes 0-31 (plus 127) are control characters. They do not represent printable symbols; they control devices or text flow. Common ones: 9 = horizontal tab, 10 = line feed (new line), 13 = carriage return, 27 = escape."
+      },
+      {
+        "q": "What is the difference between ASCII and Unicode?",
+        "a": "ASCII covers 128 characters - enough for basic English. Unicode covers over 149,000 characters from every writing system. UTF-8, the dominant Unicode encoding, keeps the first 128 codes identical to ASCII, so plain English text looks the same in both."
+      },
+      {
+        "q": "How do I convert a character to ASCII in code?",
+        "a": "In most languages there is a built-in function: Python uses ord(\"A\") which returns 65; JavaScript uses \"A\".charCodeAt(0); C casts with (int)\"A\". The reverse uses chr(65) or String.fromCharCode(65)."
+      },
+      {
+        "q": "Why is there a gap between uppercase and lowercase letters?",
+        "a": "The 32-code gap (A=65, a=97) was a deliberate design choice in the 1960s so that flipping a single bit (bit 5) converts case. Programmers still exploit this trick today."
+      }
+    ],
+    "labels": {
+      "search": "Search codes, characters, names",
+      "searchPlaceholder": "Try 65, A, or \"tab\"...",
+      "charToCode": "Character → code",
+      "codeToChar": "Code → character",
+      "codeIs": "ASCII code",
+      "charIs": "Character",
+      "colCode": "Code",
+      "colChar": "Char",
+      "colName": "Name",
+      "copyChar": "Copy character",
+      "copiedMessage": "Copied!"
+    }
+  }
+}

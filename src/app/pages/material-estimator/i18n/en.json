@@ -1,0 +1,103 @@
+{
+  "material-estimator": {
+    "benefits": [
+      "Covers mulch, gravel, sand, and topsoil in one place.",
+      "Shows volume, weight, and bag counts together so you can compare bulk vs bagged pricing.",
+      "Waste allowance is adjustable for uneven ground.",
+      "Works in feet/inches or meters/centimeters.",
+      "Free with no sign-up, runs fully in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Multiply the area by the depth in feet, then divide by 27 (27 cubic feet = 1 cubic yard). A 10 x 10 ft bed at 3 inches deep is 10 x 10 x 0.25 = 25 cubic feet = 0.93 cubic yards.",
+        "q": "How do I calculate cubic yards of mulch?"
+      },
+      {
+        "a": "Typical values: mulch ~500 lb, topsoil ~2,000 lb, sand ~2,700 lb, and gravel ~2,800 lb per cubic yard. Actual weight varies with moisture and compaction, which is why this tool states its assumptions.",
+        "q": "How much does a cubic yard of gravel weigh?"
+      },
+      {
+        "a": "A 2-cubic-foot bag covers 24 square feet at 1 inch deep, 12 square feet at 2 inches, and 8 square feet at 3 inches. This tool divides your total volume by 2 to get the bag count.",
+        "q": "How many bags of mulch cover a given area?"
+      },
+      {
+        "a": "Mulch beds usually get 2-4 inches, gravel paths 2-3 inches, and leveling sand under pavers about 1 inch. Deeper is not always better — mulch piled against trunks causes rot.",
+        "q": "How deep should I lay mulch or gravel?"
+      },
+      {
+        "a": "Bulk is usually cheaper per yard for large areas; bags win for small beds and precise placement. Compare the tool's yard and bag numbers against your supplier's prices.",
+        "q": "Is it cheaper to buy in bulk or in bags?"
+      }
+    ],
+    "formula": "volume (cu ft) = length x width x (depth in inches / 12)\ncubic yards = volume (cu ft) / 27\nweight (tons) = cubic yards x material density (lb/cu yd) / 2000\nbags (2 cu ft) = volume (cu ft) / 2",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick feet/inches or meters/centimeters.",
+      "Enter the length and width of the area.",
+      "Enter the depth of material you want to lay.",
+      "Choose the material: mulch, gravel, sand, or topsoil.",
+      "Set a waste allowance (10% is a safe default for uneven ground).",
+      "Read off cubic yards, tons, and bag counts to order."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Landscaping materials are sold by volume (cubic yards) or weight (tons); this tool gives you both.",
+      "One cubic yard = 27 cubic feet, roughly a pile 3 ft x 3 ft x 3 ft.",
+      "Mulch is light (~500 lb per cubic yard); gravel is heavy (~2,800 lb per cubic yard).",
+      "A 2-cubic-foot bag covers about 8 square feet at 3 inches deep.",
+      "A 10% waste allowance covers settling, spills, and uneven ground.",
+      "Delivery trucks often charge per load, so round up to the supplier's minimum."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "material estimator, mulch calculator, gravel calculator, topsoil calculator, cubic yards calculator, landscaping material calculator",
+    "labels": {
+      "bagsResult": "2-cu-ft bags (approx)",
+      "cfResult": "Cubic feet (with waste)",
+      "cmUnit": "cm",
+      "cyResult": "Cubic yards needed",
+      "densityNote": "Assumed densities: mulch 500, topsoil 2000, sand 2700, gravel 2800 lb per cubic yard. Real weight varies with moisture.",
+      "depth": "Depth",
+      "ftUnit": "ft",
+      "imperialTab": "Feet / Inches",
+      "inUnit": "in",
+      "length": "Length",
+      "mUnit": "m",
+      "material": "Material",
+      "metricTab": "Meters / cm",
+      "tonsResult": "Weight (tons)",
+      "unitSystem": "Unit system",
+      "waste": "Waste allowance",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Densities are typical averages; wet gravel or compacted soil weigh more.",
+      "Does not account for slopes, existing material, or compaction underfoot.",
+      "Bag counts are estimates; bag volumes vary slightly by brand.",
+      "Always confirm with your supplier before ordering a full truckload."
+    ],
+    "limitationsHeading": "Limitations",
+    "materials": {
+      "gravel": "Gravel / stone",
+      "mulch": "Mulch",
+      "sand": "Sand",
+      "topsoil": "Topsoil"
+    },
+    "metaDescription": "Free landscaping material estimator: calculate cubic yards, tons, and bag counts for mulch, gravel, sand, and topsoil. Includes waste allowance. No sign-up.",
+    "metaTitle": "Material Estimator: Mulch, Gravel & Sand Calculator (Free)",
+    "name": "Material Estimator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter the length, width, and depth of your area plus the material, and this estimator computes cubic yards, cubic feet, tons, and bag counts — with an adjustable waste allowance. It covers mulch, gravel, sand, and topsoil, using standard bulk densities for each.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Material estimate results",
+    "tagline": "How much mulch, gravel, sand, or topsoil do you actually need?",
+    "workedExample": "A 20 x 10 ft flower bed with 3 inches of mulch and 10% waste:\n\n1. Volume = 20 x 10 x (3 / 12) = 50 cubic feet.\n2. Cubic yards = 50 / 27 = 1.85 cy; with 10% waste = 2.04 cy.\n3. Weight = 2.04 x 500 / 2000 = 0.51 tons.\n4. Bags = 55 / 2 = 27.5, so buy 28 two-cubic-foot bags.\n\nOrder about 2 cubic yards in bulk, or 28 bags.",
+    "workedExampleHeading": "Worked example"
+  }
+}

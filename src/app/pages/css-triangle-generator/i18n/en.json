@@ -1,0 +1,94 @@
+{
+  "css-triangle-generator": {
+    "benefits": [
+      "Generates the classic CSS border triangle with a live preview - no guessing pixel values.",
+      "Four directions (up, down, left, right) with one tap.",
+      "One-click copy gives you clean, commented-ready CSS for your stylesheet.",
+      "Teaches the border trick properly, so you can build arrows and tooltips yourself."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Borders meet at 45-degree angles. When an element has zero width and height, its four borders become four triangles meeting at the centre. Colouring one border and making the rest transparent leaves a single triangle.",
+        "q": "How does the CSS triangle trick work?"
+      },
+      {
+        "a": "Yes - the preview uses the exact same border values as the generated code, so what you see is what you paste.",
+        "q": "Is the preview exactly what the code makes?"
+      },
+      {
+        "a": "For an up-pointing triangle: left and right borders are transparent with width = half the triangle width; the bottom border gets the height and the colour. A 100x60 up triangle uses 50px transparent sides and a 60px coloured bottom.",
+        "q": "How do I make an up-pointing triangle?"
+      },
+      {
+        "a": "The generator only accepts 6-digit hex (#4f46e5). For transparency, add an 8-digit hex manually (like #4f46e580) or use rgba() in your stylesheet after pasting.",
+        "q": "Can I use rgba or transparency?"
+      },
+      {
+        "a": "Change the two transparent border widths to the same value as each other, or set width equal to height: a 60x60 triangle with 30px side borders is equilateral-ish. True equilateral triangles need slightly different maths (height = width x 0.866).",
+        "q": "How do I make an equilateral triangle?"
+      },
+      {
+        "a": "For modern projects, clip-path: polygon() is cleaner and scales better. But the border trick still wins for tiny UI arrows and tooltips with zero extra markup - which is why it remains popular.",
+        "q": "Border trick or clip-path - which is better?"
+      }
+    ],
+    "formula": ".triangle {\n  width: 0;\n  height: 0;\n  border-left: 50px solid transparent;\n  border-right: 50px solid transparent;\n  border-bottom: 60px solid #4f46e5;\n}\nRule: side borders = width / 2, coloured border = height, pointing away from the colour.",
+    "formulaHeading": "The CSS pattern",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the direction the triangle should point: up, down, left, or right.",
+      "Set the width and height in pixels (4 to 400).",
+      "Choose the colour with the picker or type a hex code.",
+      "Watch the live preview, then press Copy and paste the CSS into your project."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "CSS triangles use the border trick: zero-size box, one coloured border, rest transparent.",
+      "Up triangle: transparent left/right borders, coloured bottom border.",
+      "Side border widths equal half the triangle width (50px for a 100px wide triangle).",
+      "The coloured border's width equals the triangle height.",
+      "The triangle points away from the coloured border.",
+      "Works in every browser - it is plain CSS with no dependencies."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css triangle generator, css arrow generator, border triangle css, css tooltip arrow, triangle css code",
+    "labels": {
+      "color": "Colour",
+      "colorHex": "Hex colour code",
+      "copied": "Copied!",
+      "copy": "Copy CSS",
+      "cssOutput": "Your CSS",
+      "dir_down": "Down",
+      "dir_left": "Left",
+      "dir_right": "Right",
+      "dir_up": "Up",
+      "direction": "Direction",
+      "height": "Height (px)",
+      "previewLabel": "Triangle preview",
+      "width": "Width (px)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only right-style border triangles - no curved or gradient triangles.",
+      "Hex colours only in the picker; convert rgba yourself after pasting.",
+      "Very large triangles (near 400px) can look jagged on some screens.",
+      "The trick needs a zero-size element, so it cannot wrap text inside."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free CSS triangle generator: pick direction, size, and colour, preview live, and copy clean border-triangle CSS. Perfect for arrows and tooltips. No sign-up.",
+    "metaTitle": "CSS Triangle Generator - Arrows & Tooltips | JaurTools",
+    "name": "CSS Triangle Generator",
+    "privacyNote": "This tool runs 100% in your browser. Nothing you type ever leaves your device.",
+    "quickAnswer": "Pick a direction, width, height, and colour - the tool shows a live preview and generates the classic CSS border-triangle code. A 100x60 up-pointing triangle in indigo becomes: zero-size box, 50px transparent left/right borders, and a 60px solid #4f46e5 bottom border. Press Copy and paste it straight into your stylesheet for arrows, tooltips, and dropdown carets.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your triangle",
+    "tagline": "CSS border triangles and arrows with live preview and one-click copy.",
+    "workedExample": "Up triangle, width 100, height 60, colour #4f46e5:\n1. Half width: 100 / 2 = 50.\n2. Left border: 50px solid transparent.\n3. Right border: 50px solid transparent.\n4. Bottom border: 60px solid #4f46e5.\n5. The visible shape is a 100x60 triangle pointing up.",
+    "workedExampleHeading": "Worked example"
+  }
+}

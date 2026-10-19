@@ -1,0 +1,104 @@
+{
+  "bac-calculator": {
+    "assumptionNote": "Widmark is an educational estimate, not a legal or medical measurement. Never drive after drinking, whatever this calculator says.",
+    "benefits": [
+      "Shows in seconds why a heavy meal and hours of waiting matter.",
+      "The sober-in estimate helps you plan a safe ride home instead of guessing.",
+      "Demonstrates why smaller people reach the same BAC on fewer drinks.",
+      "Educational tool for driving-safety classes and responsible drinking."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The most common legal limit is 0.08% in many countries, 0.05% or 0.03% in others, and zero for new drivers. Limits vary by country and state, so check your local law and never drive after drinking.",
+        "q": "What is the legal alcohol limit for driving?"
+      },
+      {
+        "a": "Widmark's formula is a rough estimate. Your real BAC depends on food, hydration, health, medication and individual metabolism. A breathalyzer or blood test is the only real measurement.",
+        "q": "How accurate is the Widmark formula?"
+      },
+      {
+        "a": "One standard drink is about 14 grams of pure alcohol: one 330 ml beer at 5%, one 140 ml glass of wine at 12%, or one 40 ml shot of spirits at 40%. Strong cocktails can equal two or more standard drinks.",
+        "q": "What counts as one standard drink?"
+      },
+      {
+        "a": "Nothing speeds up alcohol metabolism. Coffee, cold air and cold showers only wake you up; the alcohol leaves your blood at about 0.015% per hour no matter what you do.",
+        "q": "Does coffee sober you up faster?"
+      },
+      {
+        "a": "Women typically have a higher proportion of body fat and less body water than men of the same weight, so the same amount of alcohol produces a higher BAC. The formula uses 0.66 for women and 0.73 for men.",
+        "q": "Why do women get a higher BAC from the same drinks?"
+      },
+      {
+        "a": "Eating slows alcohol absorption, so your BAC peaks lower and later than on an empty stomach. But the total alcohol is the same, so it does not make driving safe.",
+        "q": "Does eating before drinking lower my BAC?"
+      }
+    ],
+    "formula": "BAC% = (alcohol in oz x 5.14) / (weight in lb x r) - 0.015 x hours\nr = 0.73 (male) or 0.66 (female). One standard drink = 0.6 oz of pure alcohol.\nThe body clears roughly 0.015% per hour.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Male or Female and choose metric (kg) or imperial (lb) units.",
+      "Enter your body weight.",
+      "Count your standard drinks: 330 ml beer, 140 ml wine or 40 ml spirits each count as one.",
+      "Enter the hours since your first drink.",
+      "Read your estimated BAC and the approximate hours until it reaches zero."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "BAC (blood alcohol concentration) is measured as grams of alcohol per 100 ml of blood, shown as a percentage.",
+      "Widmark's 1932 formula is the classic estimate: alcohol divided by body water, minus 0.015% per hour of metabolism.",
+      "Men use a distribution factor of 0.73, women 0.66, because women average less body water per kilogram.",
+      "A 180-lb man who has 4 standard drinks over 2 hours reaches about 0.064%.",
+      "Food slows absorption but does not reduce the total alcohol that must be metabolized.",
+      "Only time lowers BAC. Coffee, food and cold air do not speed up alcohol elimination."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bac calculator, blood alcohol calculator, widmark formula, alcohol level calculator, drunk driving limit",
+    "labels": {
+      "bacResult": "Estimated BAC",
+      "drinksLabel": "Standard drinks",
+      "femaleOption": "Female",
+      "genderLabel": "Gender",
+      "hoursLabel": "Hours since first drink",
+      "hoursUnit": "hours",
+      "imperialTab": "Imperial (lb)",
+      "levelLabel": "Level",
+      "maleOption": "Male",
+      "metricTab": "Metric (kg)",
+      "safetyWarning": "This is an educational estimate only. Never drive after drinking, whatever this number says.",
+      "soberInLabel": "Approximately sober in",
+      "standardDrinkNote": "One standard drink = 330 ml beer (5%), 140 ml wine (12%) or 40 ml spirits (40%).",
+      "unitSystem": "Unit system",
+      "weightLabel": "Body weight"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "levels": {
+      "high": "High",
+      "impaired": "Impaired",
+      "low": "Low",
+      "sober": "Sober / minimal"
+    },
+    "limitations": [
+      "This is an estimate, not a legal measurement. A breathalyzer or blood test is the only real test.",
+      "Individual metabolism, food, medication and health change your real BAC.",
+      "The result cannot tell you it is safe to drive. Do not drive after drinking, period.",
+      "Drinks vary widely in strength; counting standard drinks is itself an estimate."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free BAC calculator using the Widmark formula. Estimate your blood alcohol level from weight, drinks and hours, plus time until sober. Educational estimate - never drive after drinking.",
+    "metaTitle": "BAC Calculator - Estimate Blood Alcohol Level | JaurTools",
+    "name": "BAC Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Widmark's formula estimates blood alcohol from your weight, the number of standard drinks and the hours since your first drink. A 180-lb man who has 4 drinks over 2 hours reaches about 0.064% BAC and needs roughly 4 more hours to reach zero. This is an educational estimate, not legal proof, and you should never drive after drinking.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your BAC estimate",
+    "tagline": "Estimate your blood alcohol level with the Widmark formula - educational estimate, never a reason to drive.",
+    "workedExample": "Male, 180 lb, 4 standard drinks over 2 hours:\n1. Alcohol = 4 x 0.6 = 2.4 oz.\n2. 2.4 x 5.14 = 12.336; weight factor = 180 x 0.73 = 131.4.\n3. 12.336 / 131.4 = 0.0939.\n4. Metabolism: 0.015 x 2 = 0.03.\n5. BAC = 0.0939 - 0.03 = 0.0639%, about 0.064%.\nTime to zero: 0.064 / 0.015 = about 4.3 hours from the estimate.",
+    "workedExampleHeading": "Worked example",
+    "relatedHeading": "Related tools"
+  }
+}

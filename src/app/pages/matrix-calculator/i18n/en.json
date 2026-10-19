@@ -1,0 +1,96 @@
+{
+  "matrix-calculator": {
+    "assumptionNote": "Supports 2x2 and 3x3 matrices with real-number entries. Results are rounded to 4 decimals for display.",
+    "benefits": [
+      "Add, subtract and multiply with zero setup - just type the numbers.",
+      "Determinant in one tap, with the exact value shown.",
+      "Inverse via Gauss-Jordan elimination, with singular matrices caught and reported.",
+      "Editable 2x2 and 3x3 grids that keep row-column structure visible.",
+      "Every result is computed live as you type."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A matrix is a rectangular grid of numbers arranged in rows and columns. Matrices represent transformations, systems of equations, and data tables. A 2x2 matrix has 2 rows and 2 columns.",
+        "q": "What is a matrix?"
+      },
+      {
+        "a": "Multiply each row of the first matrix by each column of the second and sum the products. For 2x2: C[1,1] = A[1,1]*B[1,1] + A[1,2]*B[2,1]. Order matters: A x B is usually not equal to B x A.",
+        "q": "How do you multiply two matrices?"
+      },
+      {
+        "a": "The determinant is a single number computed from a square matrix. For 2x2 [[a,b],[c,d]] it is ad - bc. A zero determinant means the matrix is singular - it has no inverse and squashes space flat.",
+        "q": "What is a determinant?"
+      },
+      {
+        "a": "The inverse A^-1 is the matrix that undoes A: A x A^-1 = identity matrix. It exists only when the determinant is non-zero. You use it to solve matrix equations like A x = b via x = A^-1 b.",
+        "q": "What is a matrix inverse?"
+      },
+      {
+        "a": "A singular matrix has determinant zero and no inverse. Geometrically it collapses space into fewer dimensions - for example, projecting 3D onto a plane. This calculator detects singular matrices and says so instead of producing garbage.",
+        "q": "What is a singular matrix?"
+      },
+      {
+        "a": "Yes - addition, subtraction and element-wise structure all work for any same-sized pair. Multiplication needs the inner dimensions to match. This tool fixes both matrices to the same square size, so everything lines up.",
+        "q": "Do both matrices need the same size?"
+      }
+    ],
+    "formula": "Addition: (A+B)[i,j] = A[i,j] + B[i,j]\nMultiplication: (AB)[i,j] = sum over k of A[i,k] x B[k,j]\n2x2 determinant: det = ad - bc\nInverse: A x A^-1 = I (exists only when det != 0)",
+    "formulaHeading": "Formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the matrix size: 2x2 or 3x3.",
+      "Choose the operation: add, subtract, multiply, determinant or inverse.",
+      "Type the numbers into matrix A (and matrix B for two-matrix operations).",
+      "The result appears instantly below the inputs.",
+      "For inverse, check the determinant is non-zero - singular matrices are flagged."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A matrix is a grid of numbers with rows and columns; a 2x2 has 2 rows and 2 columns.",
+      "Addition and subtraction work entry by entry on same-sized matrices.",
+      "Multiplication combines rows of the first with columns of the second; order matters.",
+      "The 2x2 determinant is ad - bc for [[a,b],[c,d]].",
+      "An inverse exists only when the determinant is non-zero.",
+      "A x A^-1 equals the identity matrix (1s on the diagonal, 0s elsewhere)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "matrix calculator, matrix multiplication calculator, matrix inverse calculator, determinant calculator, 2x2 matrix, 3x3 matrix calculator",
+    "labels": {
+      "cellLabel": "Cell",
+      "matrixALabel": "Matrix A",
+      "matrixBLabel": "Matrix B",
+      "opLabel": "Operation",
+      "op_add": "Add (A + B)",
+      "op_determinant": "Determinant of A",
+      "op_inverse": "Inverse of A",
+      "op_multiply": "Multiply (A x B)",
+      "op_subtract": "Subtract (A - B)",
+      "resultLabel": "Result",
+      "singularError": "Singular matrix: determinant is 0, so no inverse exists.",
+      "sizeLabel": "Matrix size"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only 2x2 and 3x3 square matrices - no larger or rectangular ones.",
+      "Display rounds to 4 decimals; very small values may show as 0.",
+      "The inverse uses floating-point arithmetic, not exact fractions.",
+      "This is a calculator, not a linear-algebra course - it computes without teaching proofs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free matrix calculator: add, subtract and multiply 2x2 and 3x3 matrices, plus determinant and inverse with singular-matrix detection. Instant results.",
+    "metaTitle": "Matrix Calculator - Multiply, Inverse, Determinant | JaurTools",
+    "name": "Matrix Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "For A = [[1,2],[3,4]], the determinant is 1x4 - 2x3 = -2, and the inverse is [[-2,1],[1.5,-0.5]]. Check: multiply them and you get the identity [[1,0],[0,1]]. This calculator handles 2x2 and 3x3 matrices: addition, subtraction, multiplication, determinant and inverse - all computed live in your browser, with singular matrices clearly flagged.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Matrix results",
+    "tagline": "Add, multiply, invert 2x2 and 3x3 matrices - determinant and inverse included.",
+    "workedExample": "Determinant and inverse of A = [[1,2],[3,4]]:\n1. Determinant: det = 1x4 - 2x3 = 4 - 6 = -2.\n2. Non-zero, so the inverse exists.\n3. Inverse = (1 / -2) x [[4,-2],[-3,1]] = [[-2,1],[1.5,-0.5]].\n4. Verify: [[1,2],[3,4]] x [[-2,1],[1.5,-0.5]] = [[-2+3,1-1],[-6+6,3-2]] = [[1,0],[0,1]], the identity matrix.",
+    "workedExampleHeading": "Worked example"
+  }
+}

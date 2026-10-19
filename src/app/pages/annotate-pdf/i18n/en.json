@@ -1,0 +1,134 @@
+{
+  "annotate-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online annotation tools.",
+      "Real PDF annotations that Adobe Reader, Preview and mobile readers can open, edit and reply to.",
+      "Five markup types cover the most common review jobs: notes, highlights, boxes, circles and arrows-style lines.",
+      "Free and unlimited — mark up as many documents as you like.",
+      "Highlights and shapes sit in the annotation layer, so your original page content is never altered."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. These are standard PDF annotations, so they open in Adobe Reader, Preview, Chrome, Edge and most mobile PDF apps. You can move, edit and delete them there too.",
+        "q": "Will the annotations work in Adobe Reader?"
+      },
+      {
+        "a": "Sticky notes are the only annotation type that needs no position input — they appear as small comment icons. Highlights, rectangles, ellipses and lines use the position you choose.",
+        "q": "Do sticky notes need a position?"
+      },
+      {
+        "a": "No. Annotations live in a separate layer above the page. Your original text, images and layout are untouched.",
+        "q": "Do annotations change my original PDF content?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Positions are percentages of the page size, so the same numbers land in the same relative spot on A4, Letter or any other page size in your document.",
+        "q": "My PDF has mixed page sizes. Will positions still work?"
+      },
+      {
+        "a": "Yes — add as many annotations as you need across any pages. They are all applied when you click “Apply annotations”.",
+        "q": "Can I add several annotations at once?"
+      }
+    ],
+    "formula": "x = (horizontal % ÷ 100) × page width\ny = (vertical % ÷ 100) × page height\nwidth = (width % ÷ 100) × page width    height = (height % ÷ 100) × page height",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the document you want to mark up.",
+      "Pick an annotation type: sticky note, highlight, rectangle, ellipse or line.",
+      "Choose the page, the position and the size, and type your comment text.",
+      "Click “Add annotation” — repeat for every markup you need across the document.",
+      "Click “Apply annotations”, then download the marked-up PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Annotations are standard PDF objects (subtypes Text, Highlight, Square, Circle and Line) stored in a layer above the page content.",
+      "A highlight stores four corner points (QuadPoints) so readers can render the colored band precisely over the text.",
+      "PDF pages use a point-based grid: an A4 page is 595.28 × 841.89 points, with (0, 0) at the bottom-left corner.",
+      "Sticky notes appear as small icons; the reader opens the comment text when you click them.",
+      "Because annotations are separate objects, any PDF reader can list, edit or delete them without touching your document."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "annotate pdf, markup pdf online, highlight pdf free, pdf sticky notes, pdf comment tool",
+    "labels": {
+      "addBtn": "Add annotation",
+      "addedLabel": "Annotations added",
+      "applyBtn": "Apply annotations",
+      "chooseFile": "Choose PDF file",
+      "colorBlack": "Black",
+      "colorBlue": "Blue",
+      "colorGreen": "Green",
+      "colorLabel": "Color",
+      "colorRed": "Red",
+      "colorYellow": "Yellow",
+      "defaultNote": "Note",
+      "downloadBtn": "Download annotated PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errNoAnnots": "Add at least one annotation first.",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNoText": "Please type a note for the sticky note.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "fromLabel": "From: X % (0–100)",
+      "hLabel": "Height % (1–100)",
+      "pageLabel": "Page",
+      "pagesFound": "pages",
+      "pos_bc": "Bottom center",
+      "pos_bl": "Bottom left",
+      "pos_br": "Bottom right",
+      "pos_custom": "Custom",
+      "pos_mc": "Middle center",
+      "pos_ml": "Middle left",
+      "pos_mr": "Middle right",
+      "pos_tc": "Top center",
+      "pos_tl": "Top left",
+      "pos_tr": "Top right",
+      "positionLabel": "Position",
+      "processing": "Working…",
+      "removeLabel": "Remove annotation",
+      "resetBtn": "Start over",
+      "successMsg": "Annotations applied. Download your PDF below.",
+      "textLabel": "Comment text",
+      "textPlaceholder": "Type your comment…",
+      "toLabel": "To: X % (0–100)",
+      "typeLabel": "Annotation type",
+      "type_ellipse": "Ellipse",
+      "type_highlight": "Highlight",
+      "type_line": "Line",
+      "type_note": "Sticky note",
+      "type_rect": "Rectangle",
+      "wLabel": "Width % (1–100)",
+      "xLabel": "X % (0–100)",
+      "y2Label": "To: Y % (0–100)",
+      "yLabel": "Y % (0–100)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "There is no live visual preview; placement is by preset position or percentage coordinates.",
+      "Freehand drawing is not supported here — use the Edit PDF tool for that.",
+      "Very precise placement over small text may need a couple of tries with the custom coordinates.",
+      "Password-protected PDFs must be unlocked before annotating."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Annotate any PDF free in your browser — sticky notes, highlights, rectangles, ellipses, lines. Real PDF annotations. No upload, no signup.",
+    "metaTitle": "Annotate PDF Free — Highlight & Markup PDF Online",
+    "name": "Annotate PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, add sticky notes, highlights, rectangles, ellipses and lines at any position, then download the marked-up file. These are real PDF annotations that open in Adobe Reader and other apps — and everything runs locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Annotation results",
+    "tagline": "Mark up any PDF with notes, highlights and shapes — right in your browser.",
+    "workedExample": "Highlight a paragraph in the middle of an A4 page (595.28 × 841.89 pt):\nx = 20% → 0.20 × 595.28 = 119.06 pt from the left\ny = 40% → 0.40 × 841.89 = 336.76 pt from the bottom\nwidth = 40% → 0.40 × 595.28 = 238.11 pt\nheight = 8% → 0.08 × 841.89 = 67.35 pt\nA yellow band 238 × 67 pt appears over that paragraph.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "debt-to-income-ratio-calculator": {
+    "assumptionNote": "Assumes all figures are monthly and complete; the front-end ratio uses housing cost only.",
+    "benefits": [
+      "The exact lens lenders use — see yourself as they see you.",
+      "Itemizing exposes which debt type is dragging the ratio up.",
+      "The front-end ratio tells you how much house you can actually afford.",
+      "Tracking it quarterly shows whether your plan is working."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For US mortgages, the classic comfort zone is 28% front-end / 36% back-end; qualified mortgages cap back-end at 43%. Personal loan and card lenders are looser but still flag anything above 40%. In India, banks typically want total EMIs under 40–50% of net income.",
+        "q": "What DTI do lenders want?"
+      },
+      {
+        "a": "Front-end counts only housing costs (rent or EMI plus tax and insurance) against income. Back-end counts every recurring debt. A renter with no other debt can have 25% front-end and 25% back-end; a homeowner with car and card debt might be 25% front-end but 40% back-end.",
+        "q": "Front-end vs back-end DTI — what's the difference?"
+      },
+      {
+        "a": "Three levers: raise income, cut debts, or both. Fastest wins: pay off a small debt entirely (its whole payment disappears from the ratio), refinance to a lower rate, or add income. Avoid the fake fix — extending terms lowers payments but raises total cost.",
+        "q": "How can I lower my DTI fast?"
+      },
+      {
+        "a": "No. Lenders count only debt obligations: EMIs, minimum card payments, student loans, alimony, and similar fixed debts. Living expenses matter for your budget but not for the DTI formula — which is exactly why a 'good' DTI can still feel tight.",
+        "q": "Does DTI include groceries and subscriptions?"
+      },
+      {
+        "a": "Because DTI uses gross income and ignores your actual cost of living. Expensive cities, childcare, and medical costs can leave nothing despite a 30% DTI. Run the numbers on take-home pay minus all real expenses — that is your true budget.",
+        "q": "My DTI is fine but I'm still struggling. Why?"
+      },
+      {
+        "a": "If your back-end DTI is above 36%, usually yes — paying off even one small debt can drop the ratio several points and unlock better rates. But don't drain your emergency fund to do it; lenders also like seeing cash reserves.",
+        "q": "Should I pay down debt before applying for a loan?"
+      }
+    ],
+    "formula": "Back-end DTI = (housing + car + cards + student + other) / gross monthly income x 100.\nFront-end ratio = housing / gross monthly income x 100.\nExample: 27,000 / 90,000 x 100 = 30% back-end; 15,000 / 90,000 x 100 = 16.7% front-end.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your gross monthly income.",
+      "Itemize each monthly debt: housing, car, cards, student loans, other.",
+      "Read your back-end DTI, front-end ratio, and the verdict.",
+      "Use the verdict bands to decide whether to borrow, wait, or pay down first."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "DTI = all monthly debt payments ÷ gross monthly income × 100.",
+      "Back-end DTI counts every debt; front-end counts housing costs only.",
+      "The classic lender rule: 28% front-end / 36% back-end for a comfortable mortgage.",
+      "Above 43% back-end, qualified mortgages in the US become very hard to get.",
+      "DTI ignores credit score and savings — lenders weigh all three together."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "debt to income ratio calculator, dti calculator, front end back end ratio calculator",
+    "labels": {
+      "bands": {
+        "high": "High",
+        "low": "Low",
+        "moderate": "Moderate",
+        "veryHigh": "Very high"
+      },
+      "carLoan": "Car loan / EMI",
+      "creditCards": "Credit card minimums",
+      "dtiRatio": "Back-end DTI ratio",
+      "frontEndRatio": "Front-end (housing) ratio",
+      "housingCost": "Housing (rent / EMI)",
+      "monthlyIncome": "Gross monthly income",
+      "otherDebts": "Other monthly debts",
+      "studentLoans": "Student loans",
+      "verdict": "Verdict"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses gross income; net income gives a stricter, often wiser picture.",
+      "Ignores interest rates, savings, and job stability.",
+      "Lender rules vary by country and loan type — US thresholds cited here.",
+      "A good DTI with maxed-out cards can still mean trouble."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free DTI calculator: itemize your monthly debts and income to get your debt-to-income ratio, front-end ratio and a lender-style verdict.",
+    "metaTitle": "Debt-to-Income Ratio Calculator - DTI Check | JaurTools",
+    "name": "Debt-to-Income Ratio Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "With ₹90,000 monthly income and ₹27,000 in total debt payments (₹15,000 housing + ₹6,000 car + ₹4,000 cards + ₹2,000 other), your back-end DTI is 30% and your front-end (housing) ratio is 16.7% — a moderate, mortgage-friendly profile. Lenders start worrying above 36% back-end and 28% front-end.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your DTI results",
+    "tagline": "The full lender-style DTI breakdown — itemized debts, front-end and back-end ratios.",
+    "workedExample": "Income ₹90,000/month; housing ₹15,000; car ₹6,000; cards ₹4,000; other ₹2,000:\n1. Total debts = 15,000 + 6,000 + 4,000 + 2,000 = ₹27,000.\n2. Back-end DTI = 27,000 / 90,000 x 100 = 30%.\n3. Front-end = 15,000 / 90,000 x 100 = 16.67%.\n4. Verdict: moderate (20–35%) — borrowable, but pay down cards before adding new debt.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "pwa-manifest-checker": {
+    "benefits": [
+      "يكشف الأخطاء الصغيرة (أيقونة 512px مفقودة أو خطأ مطبعي في display) التي تكسر قابلية التثبيت بصمت.",
+      "يتحقق من أحجام الأيقونات والألوان والقيم المسموحة مقابل المواصفة الحقيقية — لا تخمين.",
+      "يعمل فورًا في متصفحك؛ دون رفع بيان تطبيقك إلى أي خادم.",
+      "أحكام pass/warn/fail الواضحة تخبرك بالضبط ما الذي تصلحه وما الموصى به فقط.",
+      "يقترن بمولّد Web App Manifest للبناء ثم التحقق في تدفق واحد."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "شروط قابلية التثبيت: كحد أدنى name (أو short_name) وstart_url وضبط display على standalone/fullscreen/minimal-ui وأيقونات تشمل 192px و512px بصيغة PNG، مع التقديم عبر HTTPS وعامل خدمة. ويتحقق هذا الفاحص من نصف القائمة الخاص بالبيان.",
+        "q": "ما الذي يجعل PWA قابلًا للتثبيت؟"
+      },
+      {
+        "a": "تشكّل أيقونات Android التكيفية الأيقونة بأشكال (دائرة ومربع مدور). وتتضمن الأيقونة القابلة للتشكيل حشوة آمنة لئلا يُقص شيء مهم. وبدونها قد يقص Android أيقونتك بشكل محرج — ومن هنا التحذير لا الفشل.",
+        "q": "لماذا يريد الفاحص أيقونة maskable؟"
+      },
+      {
+        "a": "يلوّن theme_color شريط أدوات المتصفح ومبدل المهام بما يطابق علامتك؛ وbackground_color هي خلفية شاشة البداية أثناء إطلاق التطبيق. ويجب أن يكون كلاهما لون CSS صالحًا.",
+        "q": "ما فائدة theme_color وbackground_color؟"
+      },
+      {
+        "a": "قد تفتقد البيانات القديمة الحقل id؛ والمتصفحات الحديثة تجعله افتراضيًا على start_url. ويُوصى بمعرف صريح لأن تغيير start_url لاحقًا سيجعل المتصفح يعامل تطبيقك كتثبيت جديد تمامًا ويفقد القديم.",
+        "q": "هل أحتاج الحقل id؟"
+      },
+      {
+        "a": "يحد scope عناوين URL التي تنتمي إلى تطبيقك — فالروابط خارجه تُفتح في المتصفح. وعند حذفه يكون افتراضيًا على دليل البيان. اضبطه صراحة (غالبًا ‎\"/\"‎) ليكون التنقل متوقعًا.",
+        "q": "ماذا يفعل scope؟"
+      },
+      {
+        "a": "يتحقق هذا الفاحص من مستند البيان نفسه. وللصورة الكاملة تأكد أيضًا من ربط البيان من HTML ‏(<link rel=\"manifest\">)‎ وتقديمه بنوع MIME الصحيح وعبر HTTPS مع تسجيل عامل خدمة — فتلك خارج نطاق هذه الأداة بالتصميم.",
+        "q": "البيان عندي ناجح — هل PWA قابل للتثبيت حتمًا؟"
+      }
+    ],
+    "formula": "قائمة فحص قابلية التثبيت المتحقق منها هنا:\n1. وجود name أو short_name\n2. وجود start_url\n3. ‏display ضمن {fullscreen, standalone, minimal-ui, browser}\n4. ‏icons[]‎ غير فارغة مع مدخلي 192x192 و512x512\n5. ‏theme_color وbackground_color‎ لونا CSS صالحين\n6. الموصى به: scope وid وdescription وأيقونة maskable\nالحكم: pass = مطلوب وصالح، وwarn = موصى به لكنه مفقود، وfail = مطلوب لكنه مفقود/غير صالح.",
+    "formulaHeading": "ما الذي يُفحص",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "افتح ملف البيان (عادة manifest.webmanifest أو manifest.json) وانسخ محتواه كاملًا.",
+      "الصق JSON في المربع أعلاه. يعمل التحقق فورًا — ولا يُرفع أي شيء.",
+      "اقرأ الأعداد: الناجح والتحذيرات والفاشل.",
+      "عالج حالات الفشل أولًا — فهي تحجب قابلية التثبيت — ثم التحذيرات.",
+      "أصلح المشكلات في بيانك والصق مجددًا وتأكد من نجاح كل شيء."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "بيان تطبيق الويب ملف JSON يخبر المتصفح باسم تطبيقك وأيقوناته وألوانه وكيف يجب إطلاقه.",
+      "تشترط المتصفحات حقولًا محددة قبل عرض تثبيت: name/short_name وstart_url ووضع display صالح وأيقونتي 192px و512px.",
+      "يتحكم الحقل display في نافذة التطبيق: fullscreen أو standalone (بمظهر التطبيق دون واجهة المتصفح) أو minimal-ui أو browser.",
+      "يجب أن تكون الأيقونات PNG؛ ويُوصى بنسخة بغرض maskable لئلا تقص أيقونات Android التكيفية رسومك.",
+      "يلوّن theme_color مبدل مهام النظام وواجهة المتصفح؛ ويملأ background_color شاشة البداية أثناء الإطلاق.",
+      "يجب ربط البيان من HTML عبر ‎<link rel=\"manifest\" href=\"/manifest.webmanifest\">‎ ليسري مفعوله."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "pwa manifest checker, web app manifest validator, manifest.json checker, pwa installability test",
+    "labels": {
+      "badge_fail": "فاشل",
+      "badge_pass": "ناجح",
+      "badge_warn": "تحذير",
+      "checkBg": "background_color",
+      "checkDesc": "description",
+      "checkDisplay": "display",
+      "checkIcon192": "أيقونة 192px",
+      "checkIcon512": "أيقونة 512px",
+      "checkIcons": "مصفوفة icons",
+      "checkId": "id",
+      "checkMaskable": "أيقونة maskable",
+      "checkName": "name / short_name",
+      "checkOrientation": "orientation",
+      "checkScope": "scope",
+      "checkStartUrl": "start_url",
+      "checkTheme": "theme_color",
+      "clearButton": "مسح",
+      "dBgFail": "‎\"{v}\"‎ ليس لون CSS صالحًا.",
+      "dBgMissing": "مفقود — تعود شاشة البداية إلى الأبيض.",
+      "dBgOk": "‎\"{v}\"‎ لون CSS صالح.",
+      "dDescOk": "الوصف موجود.",
+      "dDescWarn": "مفقود — موصى به لحوارات التثبيت وقوائم التطبيقات.",
+      "dDisplayFail": "‎\"{v}\"‎ ليس وضع display صالحًا. استخدم fullscreen أو standalone أو minimal-ui أو browser.",
+      "dDisplayMissing": "مفقود — يعود المتصفح افتراضيًا إلى browser وهو غير قابل للتثبيت.",
+      "dDisplayOk": "‎\"{v}\"‎ وضع display صالح وقابل للتثبيت.",
+      "dIcon192Fail": "لم توجد أيقونة 192x192 — مطلوبة لقابلية التثبيت.",
+      "dIcon192Ok": "أيقونة 192x192 موجودة.",
+      "dIcon512Fail": "لم توجد أيقونة 512x512 — مطلوبة لقابلية التثبيت.",
+      "dIcon512Ok": "أيقونة 512x512 موجودة.",
+      "dIconsFail": "مصفوفة icons مفقودة أو فارغة.",
+      "dIconsOk": "مُعلن عن {v} أيقونة.",
+      "dIdOk": "المعرف ‎\"{v}\"‎ موجود.",
+      "dIdWarn": "مفقود — يعود id افتراضيًا إلى start_url؛ اضبطه صراحة ليصمد أمام تغييرات URL.",
+      "dMaskableOk": "أيقونة maskable مُعلنة.",
+      "dMaskableWarn": "لا توجد أيقونة maskable — موصى بها لئلا تقص أيقونات Android التكيفية رسومك.",
+      "dNameFail": "لا name ولا short_name موجود.",
+      "dNameOk": "المستخدم: ‎\"{v}\"‎.",
+      "dOrientationFail": "‎\"{v}\"‎ ليس قيمة orientation صالحة.",
+      "dOrientationOk": "‎\"{v}\"‎ صالحة.",
+      "dScopeOk": "النطاق ‎\"{v}\"‎.",
+      "dScopeWarn": "مفقود — يعود افتراضيًا إلى دليل البيان؛ اضبطه صراحة (غالبًا ‎\"/\"‎).",
+      "dStartUrlFail": "‏start_url مفقود.",
+      "dStartUrlOk": "‏start_url هو ‎\"{v}\"‎.",
+      "dThemeFail": "‎\"{v}\"‎ ليس لون CSS صالحًا.",
+      "dThemeMissing": "مفقود — تعود واجهة المتصفح إلى الألوان الافتراضية.",
+      "dThemeOk": "‎\"{v}\"‎ لون CSS صالح.",
+      "emptyState": "الصق JSON بيان تطبيق الويب أعلاه للتحقق منه.",
+      "parseError": "هذا ليس JSON صالحًا. تحقق من الفواصل الزائدة أو علامات الاقتباس المفقودة أو المحتوى المبتور.",
+      "pasteHint": "الصق JSON الخاص بـ manifest.webmanifest هنا…",
+      "pasteLabel": "JSON بيان تطبيق الويب",
+      "summaryFail": "فاشل",
+      "summaryPass": "ناجح",
+      "summaryWarn": "تحذيرات"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "يتحقق من مستند البيان فقط — لا من وسم ‎<link rel=\"manifest\">‎ ولا نوع MIME ولا HTTPS ولا عامل الخدمة.",
+      "لا يستطيع جلب ملفات أيقوناتك للتأكد من مطابقة الأحجام الفعلية للأحجام المعلنة.",
+      "يستخدم التحقق من الألوان محلل CSS في المتصفح، فقد تختلف النتائج قليلًا باختلاف المتصفح.",
+      "قد يتجاهل هذا الفاحص امتدادات البيان الصحيحة لكن غير المألوفة."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "فاحص بيان PWA مجاني: الصق JSON بيان تطبيق الويب وتحقق من الأيقونات ووضع display والألوان ومتطلبات قابلية التثبيت. بخصوصية كاملة.",
+    "metaTitle": "PWA Manifest Checker - التحقق من بيان تطبيق الويب | JaurTools",
+    "name": "فاحص بيان PWA",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "الصق JSON بيان تطبيق الويب وسيتحقق هذا الفاحص منه مقابل متطلبات قابلية التثبيت: الاسم وstart_url ووضع display وأيقونتي 192px و512px ولوني السمة والخلفية، مع الحقول الموصى بها مثل scope وid والأيقونة maskable. ويحصل كل فحص على حكم pass أو warn أو fail مع شرح بلغة واضحة لما يجب إصلاحه.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "التحقق من البيان",
+    "tagline": "تحقق من بيان تطبيق الويب مقابل متطلبات قابلية تثبيت PWA.",
+    "workedExampleHeading": "مثال محلول",
+    "workedExample": "بيان عينة: الاسم Example Tools وshort_name ‏ExTools وstart_url ‏/‎ وdisplay ‏standalone ولون السمة #4f46e5 ولون الخلفية #ffffff والوصف موجود وأيقونتان (192x192 و512x512 بصيغة PNG إحداهما بغرض any maskable). دون scope ودون id.\nالفحوص المتتبعة:\n1. ‏name/short_name: ناجح — المستخدم Example Tools.\n2. ‏start_url: ناجح — ‎/‎.\n3. ‏display: ناجح — standalone قابل للتثبيت.\n4. ‏icons: ناجح — مُعلن عن 2. ‏192px: ناجح. 512px: ناجح. ‏maskable: ناجح.\n5. لون السمة #4f46e5: ناجح — لون CSS صالح. لون الخلفية #ffffff: ناجح.\n6. ‏scope: تحذير — مفقود. ‏id: تحذير — مفقود. ‏description: ناجح.\nالإجمالي: 10 ناجح وتحذيران و0 فاشل. البيان قابل للتثبيت؛ وإضافة scope وid تزيل التحذيرين."
+  }
+}

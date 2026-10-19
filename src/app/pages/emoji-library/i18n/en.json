@@ -1,0 +1,97 @@
+{
+  "emoji-library": {
+    "benefits": [
+      "Find the right emoji in seconds instead of scrolling your keyboard endlessly.",
+      "Click-to-copy works everywhere — WhatsApp, Instagram, documents, code.",
+      "Names in your own language make the library usable for everyone.",
+      "Runs fully offline after load; nothing you search is tracked."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "categories": {
+      "food": "Food",
+      "hands": "Hands & gestures",
+      "hearts": "Hearts",
+      "nature": "Nature",
+      "objects": "Objects",
+      "smileys": "Smileys & faces",
+      "symbols": "Symbols"
+    },
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Click any emoji and it is copied to your clipboard instantly. Then paste it wherever you like — WhatsApp, Instagram, email, or a document. A confirmation message shows which emoji was copied.",
+        "q": "How do I copy an emoji?"
+      },
+      {
+        "a": "The library holds 84 carefully chosen emojis across 7 categories: smileys, hands, hearts, nature, food, objects, and symbols — the ones people actually use every day.",
+        "q": "How many emojis are in the library?"
+      },
+      {
+        "a": "Yes. The search box matches names in English, Hindi, and Arabic at the same time, so searching 'dil', 'heart', or the Arabic word for 'heart' all find the heart emojis.",
+        "q": "Can I search in Hindi or Arabic?"
+      },
+      {
+        "a": "Emoji rendering depends on your device's emoji font. The same emoji can look slightly different on Android, iPhone, and Windows — that is normal and the meaning stays the same.",
+        "q": "Why does an emoji look different on my phone than on my laptop?"
+      },
+      {
+        "a": "This is a curated everyday set, not the full Unicode list of 3,000+ emojis. The focus is on the most-used emojis with clean, reliable rendering on all devices.",
+        "q": "Are all Unicode emojis included?"
+      },
+      {
+        "a": "Yes. Copying an emoji is just copying a text character — it works in any app that accepts text.",
+        "q": "Can I use these emojis in WhatsApp and Instagram?"
+      }
+    ],
+    "formula": "Copy: navigator.clipboard.writeText(emoji), with a textarea fallback for older browsers.\nSearch: case-insensitive substring match across the English, Hindi, and Arabic names.\nLayout: responsive grid (auto-fill, 76 px minimum) with 44 px+ touch targets.",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type a word in the search box — 'love', 'pyar', or 'hubb' all work — or pick a category pill.",
+      "Tap any emoji card to copy it instantly; a confirmation appears.",
+      "Paste it wherever you want: WhatsApp, Instagram, email, or documents.",
+      "Switch the site language to see every emoji name in English, Hindi, or Arabic."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "84 emojis across 7 categories: smileys, hands, hearts, nature, food, objects, and symbols.",
+      "One click copies any emoji to your clipboard with a visible confirmation.",
+      "Search matches emoji names in all three languages at once — English, Hindi, and Arabic.",
+      "Category pills filter the grid instantly; the count updates live.",
+      "Every emoji name is translated, so the library is fully usable in English, Hindi, and Arabic."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "emoji library, emoji list, copy emoji, emoji search, free emojis, emoji copy paste",
+    "labels": {
+      "allCategories": "All",
+      "categoryLabel": "Category",
+      "copiedMsg": "copied to clipboard",
+      "copyHint": "click to copy",
+      "noResults": "No emojis match your search. Try another word.",
+      "searchLabel": "Search emojis",
+      "searchPlaceholder": "Search: heart, dil, hubb...",
+      "showingLabel": "Showing"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A curated set of 84 everyday emojis — not the full 3,000+ Unicode list.",
+      "Emoji appearance varies by device and operating system.",
+      "Older browsers fall back to a hidden-textarea copy method, which needs the page to be focused.",
+      "No skin-tone or gender variants are included in this set."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Search and copy emojis instantly — dozens of emojis across categories, in your language. Free, no signup.",
+    "metaTitle": "Emoji Library - Search & Copy Emojis Instantly | JaurTools",
+    "name": "Emoji Library",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Emojis Library is a searchable collection of 84 everyday emojis across 7 categories. Search by name in English, Hindi, or Arabic, filter by category, and click any emoji to copy it to your clipboard instantly — then paste it into WhatsApp, Instagram, documents, or anywhere else. Everything runs privately in your browser with no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Emojis Library results",
+    "tagline": "Find the perfect emoji and copy it in one tap.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "You want a red heart for a birthday message. You type 'dil' in the search box. The search matches the Hindi, English, and Arabic names at once, so the red heart card appears along with the other hearts. You click the red heart card, the toast confirms the red heart was copied to your clipboard, and you paste it into WhatsApp. From search to paste: under five seconds."
+  }
+}

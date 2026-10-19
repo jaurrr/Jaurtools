@@ -1,0 +1,87 @@
+{
+  "posterize-effect": {
+    "benefits": [
+      "Create bold poster-style artwork from any photo with one slider.",
+      "Fewer colors mean dramatically smaller PNG files for the web.",
+      "The palette readout shows exactly how many distinct colors the result uses.",
+      "Everything runs locally — your photo never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload a photo and move the levels slider. Fewer levels mean a stronger, flatter poster look. Press Download to save the result as PNG or JPG.",
+        "q": "How do I posterize a photo?"
+      },
+      {
+        "a": "Each channel (red, green, blue) is rounded to the nearest of N evenly spaced steps. With N levels per channel, the image can use at most N × N × N distinct colors.",
+        "q": "What does the levels slider actually change?"
+      },
+      {
+        "a": "Yes — 2–3 levels on a high-contrast photo gives a striking silhouette poster. For cleaner art, remove the background first with the Remove Background tool.",
+        "q": "Can I make silhouette-style art with this?"
+      },
+      {
+        "a": "No. PNG output is lossless and JPG uses high quality (92%). Posterization itself is a style choice, not a quality defect.",
+        "q": "Will posterizing damage my photo?"
+      },
+      {
+        "a": "No. The effect is computed pixel-by-pixel in your browser; the original file is never uploaded anywhere.",
+        "q": "Is my photo uploaded to a server?"
+      }
+    ],
+    "formula": "step = 255 / (levels − 1)\nchannel_out = round(round(channel_in / 255 × (levels − 1)) × step)\nmax_colors = levels³",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the photo you want to turn into poster art.",
+      "Move the levels slider from 2 (boldest) to 8 (subtlest) and watch the live preview.",
+      "Pick the palette size that gives the look you want.",
+      "Choose PNG or JPG output format.",
+      "Press Download to save the posterized image."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Posterization reduces each color channel to a fixed number of evenly spaced steps.",
+      "With 4 levels per channel, the image uses at most 4 × 4 × 4 = 64 distinct colors.",
+      "Lower level counts create flat, graphic, poster-like regions of color.",
+      "Higher level counts keep the photo realistic with only a slight stylized feel.",
+      "The output keeps the original pixel dimensions."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "posterize effect, posterize image, poster effect photo, reduce colors image, pop art effect online",
+    "labels": {
+      "download": "Download posterized image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "levels": "Color levels per channel",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "palette": "Distinct colors (max)",
+      "pickOne": "Choose an image above to see the posterize preview.",
+      "preview": "Posterized preview",
+      "upload": "Image to posterize"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Posterization is a stylistic effect — it intentionally discards smooth gradients.",
+      "Very low level counts can merge faces into unrecognizable blobs.",
+      "The effect applies to the whole image; selective-area posterization is not included.",
+      "Animated GIFs are processed as a single still frame."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Posterize an image online for free. Reduce colors to a bold poster look with an adjustable levels slider, live preview, and PNG/JPG download. No signup needed.",
+    "metaTitle": "Posterize Effect Online Free — Poster Art Photo | JaurTools",
+    "name": "Posterize Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and drag the levels slider to crush its colors into flat poster-style bands. Two levels give a bold graphic look; eight keep it subtle. Download as PNG or JPG — all processing stays in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Posterize results",
+    "tagline": "Reduce any photo to flat bands of color for a bold retro poster look.",
+    "workedExample": "A channel value of 100 with 3 levels:\nstep = 255 / (3 − 1) = 127.5\nlevel = round(100 / 255 × 2) = round(0.784) = 1\noutput = round(1 × 127.5) = 128\nSo every channel can only be 0, 128, or 255, and the whole image uses at most 3 × 3 × 3 = 27 distinct colors.",
+    "workedExampleHeading": "Worked example"
+  }
+}

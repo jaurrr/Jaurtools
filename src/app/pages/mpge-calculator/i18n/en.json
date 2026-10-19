@@ -1,0 +1,89 @@
+{
+  "mpge-calculator": {
+    "assumptionNote": "Uses the EPA standard: 1 gallon of gasoline = 33.7 kWh of electricity. This compares energy content only, not cost, emissions, or charging losses.",
+    "benefits": [
+      "Compare any EV to gasoline cars on a scale everyone understands.",
+      "See the real meaning of window-sticker MPGe numbers for your own driving.",
+      "Convert your measured mi/kWh into the EPA's official economy figure.",
+      "Make EV-to-gasoline comparisons in debates with hard numbers."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "MPGe = miles per gallon equivalent. It answers: how far would this EV go on the energy in one gallon of gasoline? The EPA set 33.7 kWh of electricity equal to one gallon.",
+        "q": "What does MPGe mean?"
+      },
+      {
+        "a": "33.7 kWh. That is the energy content the EPA assigns to one US gallon of gasoline. Divide your kWh by 33.7 to get gallon-equivalents, then divide miles by that.",
+        "q": "How many kWh is one gallon equivalent?"
+      },
+      {
+        "a": "No. MPGe measures energy efficiency, not money. An EV at 130 MPGe can still cost more per mile than a gas car if electricity is expensive and gas is cheap. Use a fuel-cost calculator for the money question.",
+        "q": "Does higher MPGe mean cheaper driving?"
+      },
+      {
+        "a": "The EPA rates most EVs between 90 and 140 MPGe combined. The most efficient small EVs top 130. Electric trucks and large SUVs sit around 60 to 80.",
+        "q": "What is a good MPGe?"
+      },
+      {
+        "a": "Divide MPGe by 33.7 to get mi/kWh. So a 134.8 MPGe car gets 4.0 mi/kWh. Going the other way: mi/kWh x 33.7 = MPGe.",
+        "q": "How do I convert MPGe to miles per kWh?"
+      },
+      {
+        "a": "It ignores charging losses (8-15%), battery manufacturing, and the source of the electricity. It is an energy-efficiency metric for comparing vehicles, not a full environmental score.",
+        "q": "What does MPGe leave out?"
+      }
+    ],
+    "formula": "Gallon-equivalents = kWh used / 33.7\nMPGe = Miles driven / Gallon-equivalents\n\nCombined: MPGe = Miles x 33.7 / kWh\n\nExample: 250 miles, 60 kWh -> 60 / 33.7 = 1.7804 gallon-eq -> 250 / 1.7804 = 140.4 MPGe.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the miles you drove.",
+      "Enter the kWh your EV used.",
+      "Your MPGe appears instantly, with the gallon-equivalent energy and mi/kWh.",
+      "Compare the result to EPA window-sticker figures for any car."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "MPGe = miles per gallon equivalent, the EPA's way to compare EVs with gasoline cars.",
+      "1 gallon of gasoline = 33.7 kWh of electricity, by EPA definition.",
+      "MPGe = miles / (kWh / 33.7). Equivalently, MPGe = mi/kWh x 33.7.",
+      "Most EVs rate 90 to 140 MPGe. Gasoline cars typically rate 25 to 40 MPG.",
+      "A 4.0 mi/kWh EV equals about 135 MPGe.",
+      "MPGe measures energy, not cost or emissions.",
+      "Charging losses of 8-15% are not in the MPGe figure.",
+      "Window-sticker MPGe is measured on standard EPA test cycles, not real roads."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "mpge calculator, miles per gallon equivalent calculator, ev mpge, electric car economy calculator, kwh to mpge",
+    "labels": {
+      "gallonEquivalent": "Gallon-equivalents used",
+      "kwhUsed": "Energy used (kWh)",
+      "milesDriven": "Miles driven",
+      "milesPerKwh": "Miles per kWh",
+      "mpge": "MPGe"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Compares energy content only. Cost and emissions depend on your electricity and gas prices.",
+      "Ignores charging losses unless your kWh number includes them.",
+      "Real-world driving differs from EPA test cycles.",
+      "A single number cannot capture city vs highway differences."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free MPGe calculator: convert your EV's miles and kWh into miles per gallon equivalent (EPA 33.7 kWh standard). Private, no sign-up.",
+    "metaTitle": "MPGe Calculator - Electric Vehicle Economy | JaurTools",
+    "name": "MPGe Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "MPGe = miles / (kWh / 33.7). Driving 250 miles on 60 kWh uses 1.78 gallon-equivalents, giving 140.4 MPGe - about four times the economy of a typical gasoline car. The 33.7 kWh figure is the EPA's energy content for one gallon of gasoline.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your MPGe results",
+    "tagline": "Convert your EV's energy use into miles per gallon equivalent - the EPA standard.",
+    "workedExample": "250 miles driven, 60 kWh used.\n1. Gallon-equivalents: 60 / 33.7 = 1.7804.\n2. MPGe = 250 / 1.7804 = 140.42, shown as 140.4.\n3. Check: mi/kWh = 250 / 60 = 4.17, and 4.17 x 33.7 = 140.4. It matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

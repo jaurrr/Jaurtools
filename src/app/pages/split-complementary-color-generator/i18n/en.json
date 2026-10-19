@@ -1,0 +1,88 @@
+{
+  "split-complementary-color-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Split-Complementary Color Generator",
+    "tagline": "Your color + its opposite's neighbors.",
+    "metaTitle": "Split-Complementary Color Generator - Bold 3-Color Schemes | JaurTools",
+    "metaDescription": "Generate the bold split-complementary scheme: your color plus the two neighbors of its opposite. Free.",
+    "keywords": "split complementary colors, split complementary color scheme, 3 color scheme, color harmony",
+    "quickAnswer": "Split-complementary takes your base color plus the two colors flanking its direct opposite: base hue + 150 and + 210 degrees. From #4A90D9 (hue 211), you get hue 1 -> #D94C4A and hue 61 -> #D6D94A. It keeps the punch of a complementary pair but is far easier to balance, because the two accents are close neighbors, not rivals.",
+    "keyFacts": [
+      "Split-complementary = base hue, base + 150, base + 210 degrees.",
+      "The two accent hues sit 60 degrees apart, flanking the true complement.",
+      "Strong visual contrast like complementary, but with less tension and more room to play.",
+      "A favorite for logos and illustrations that need energy without chaos.",
+      "Use the base for 60-70% of the design and split the rest between the two accents."
+    ],
+    "howTo": [
+      "Enter your base color with the picker or a HEX code like #4A90D9.",
+      "The three scheme colors appear instantly as swatches.",
+      "Read each color's hue, HEX, RGB and HSL.",
+      "Tap any swatch to copy its HEX.",
+      "Let the base dominate; use the two splits as accents."
+    ],
+    "formula": "Split colors = HSL(base hue + 150, S, L) and HSL(base hue + 210, S, L).\nExample: #4A90D9 -> HSL(211, 65%, 57%).\nSplit 1: hue (211 + 150) mod 360 = 1 -> HSL(1, 65%, 57%) = RGB(217, 76, 74) = #D94C4A.\nSplit 2: hue (211 + 210) mod 360 = 61 -> HSL(61, 65%, 57%) = RGB(214, 217, 74) = #D6D94A.",
+    "workedExample": "Base #4A90D9 = HSL(211, 65%, 57%):\n1. True complement would be hue 211 + 180 = 31.\n2. Split 1: 211 + 150 = 361, wrapped to 1 degree.\n3. HSL(1, 65%, 57%) converts to RGB(217, 76, 74): 217 = D9, 76 = 4C, 74 = 4A -> #D94C4A, a warm red.\n4. Split 2: 211 + 210 = 421, wrapped to 61 degrees.\n5. HSL(61, 65%, 57%) converts to RGB(214, 217, 74): 214 = D6, 217 = D9, 74 = 4A -> #D6D94A, a zesty yellow-green.\n6. Final scheme: deep blue, warm red, zesty yellow-green.",
+    "benefits": [
+      "Beginner-friendly: bold contrast that is hard to get wrong.",
+      "Three colors is the sweet spot for logos, slides and illustrations.",
+      "More interesting than complementary, calmer than triadic.",
+      "Copy-ready HEX codes for every color in the scheme."
+    ],
+    "limitations": [
+      "Three strong colors still need a clear dominant - do not use them equally.",
+      "The two accents are warm/cool relatives; check they suit your brand mood.",
+      "Text contrast between the accents themselves is often poor - check pairs."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference from regular complementary?",
+        "a": "Complementary uses the exact opposite hue (base + 180). Split-complementary uses the two hues beside it (base + 150 and + 210). You keep strong contrast but gain a third color and lose the harsh tension of direct opposites."
+      },
+      {
+        "q": "Why 150 and 210 degrees?",
+        "a": "They are 30 degrees on either side of the true complement (180). That 30-degree nudge is the whole trick: close enough for contrast, far enough for harmony."
+      },
+      {
+        "q": "How should I proportion the three colors?",
+        "a": "Let the base take 60-70%, then split the remainder between the two accents - often 20% and 10%. Equal thirds usually look restless."
+      },
+      {
+        "q": "Can I use this for a website palette?",
+        "a": "Yes - base for backgrounds and body, one split for primary buttons, the other for highlights and alerts. It is a classic startup-site recipe."
+      },
+      {
+        "q": "What if my base is already warm?",
+        "a": "Then your splits land in cool territory, which is exactly the point - the scheme guarantees contrast in both directions around the wheel."
+      },
+      {
+        "q": "Are the computed HEX codes exact?",
+        "a": "Yes - each is computed from the HSL offsets and rounded to the nearest whole RGB value."
+      }
+    ],
+    "resultsHeading": "Your split-complementary results",
+    "labels": {
+      "colorLabel": "Base color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #4A9 or #4A90D9.",
+      "baseTag": "Base",
+      "splitA": "Split 1 (+150 deg)",
+      "splitB": "Split 2 (+210 deg)",
+      "copyHex": "Copy HEX",
+      "copied": "Copied"
+    }
+  }
+}

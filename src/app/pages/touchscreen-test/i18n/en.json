@@ -1,0 +1,88 @@
+{
+  "touchscreen-test": {
+    "benefits": [
+      "Check every corner of your screen responds to touch.",
+      "Count real simultaneous touch points - 5, 10, or more.",
+      "Find dead zones where taps never register.",
+      "Verify multi-touch gestures before a game or drawing app needs them.",
+      "No app to install - works in any phone or tablet browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The page listens to the browser's touch events. If only one dot appears while two fingers are down, the touch controller, screen protector, or browser is limiting multi-touch. Remove the case and screen protector and try again before blaming the screen.",
+        "q": "Only one dot appears with two fingers down. Why?"
+      },
+      {
+        "a": "Drag one finger slowly across the whole screen in straight lines. Where the dot jumps, lags, or disappears, the digitizer is faulty. The edges and corners are the most common dead zones.",
+        "q": "How do I find dead zones on my screen?"
+      },
+      {
+        "a": "Usually yes. Most modern phones support 5 or 10 simultaneous points. The maximum this page records is whatever the browser reports through the touch events - that is the number apps actually get.",
+        "q": "My phone claims 10-point touch. Will this page show 10?"
+      },
+      {
+        "a": "A glove blocks the capacitive signal that touch screens need. The dot will not appear, or will flicker. That is physics, not a defect - use a touchscreen-compatible glove.",
+        "q": "Why does nothing happen when I wear gloves?"
+      },
+      {
+        "a": "It depends on the finger size, screen size, and touch controller. Two-finger zoom needs 2 points, many drawing apps use 3, and some games want 5. This page shows your real limit so you know what apps can use.",
+        "q": "How many touch points do I actually need?"
+      }
+    ],
+    "formula": "Each finger = one touch point with a unique ID and X/Y position.\nActive touches = points currently on the screen.\nMax touches = the highest active count seen since reset.\nDead zone = an area where no point appears even though you touch it.",
+    "formulaHeading": "What the numbers mean",
+    "homeLabel": "Home",
+    "howTo": [
+      "Open this page on your phone or tablet.",
+      "Place one finger on the area. A dot with an ID appears.",
+      "Add more fingers, one at a time. Each gets its own dot and ID.",
+      "Drag fingers across the screen to check every corner and edge.",
+      "Read the maximum simultaneous count, then reset to test again."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every finger on the screen is one touch point with a unique ID and coordinates.",
+      "The maximum simultaneous count is what games and drawing apps can actually use.",
+      "Most phones support 5 to 10 points; budget phones sometimes fewer.",
+      "Dead zones show up as areas where the dot jumps or never appears.",
+      "The page uses touch-action none so the browser does not scroll while you test.",
+      "Gloves block capacitive touch - that is expected, not a defect."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "touchscreen test, touch screen test online, multi touch test, phone screen test, dead zone test, touch points test",
+    "labels": {
+      "activeTouches": "Active touches now",
+      "maxTouches": "Maximum simultaneous touches",
+      "no": "No",
+      "noTouchDevice": "Your device does not report a touch screen. Open this page on a phone or tablet to test.",
+      "reset": "Reset",
+      "touchAreaLabel": "Multi-touch test area. Place your fingers here.",
+      "touchHint": "Touch here with your fingers. Each finger gets a dot.",
+      "touchSupported": "Touch screen detected",
+      "yes": "Yes"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Desktop browsers cannot test touch without a touch screen.",
+      "The reported maximum is what the browser exposes - the hardware might support more.",
+      "Palm rejection and OS gestures can swallow touches before the page sees them.",
+      "This test cannot fix a dead zone; it only reveals it."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online touchscreen test: check multi-touch points, find dead zones, and count simultaneous touches live. 100% private, no sign-up.",
+    "metaTitle": "Touchscreen Test - Multi-Touch & Dead Zones | JaurTools",
+    "name": "Touchscreen Test",
+    "privacyNote": "This tool runs 100% in your browser. Your touch data never leaves your device.",
+    "quickAnswer": "A touchscreen test shows a dot for every finger on your screen, each with a unique ID, and counts how many touches are active at once. The maximum simultaneous count tells you what multi-touch gestures your device really supports. Drag fingers across the whole screen to find dead zones - areas where the dot jumps or never appears. Most phones support 5 to 10 touch points.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Touch test results",
+    "tagline": "Test multi-touch with live dots - count touch points and find dead screen zones.",
+    "workedExample": "You test a used phone before buying it:\n1. You place one finger: one dot appears with ID 0.\n2. You add four more fingers: five dots, IDs 0 to 4, all tracking smoothly.\n3. You drag all five across the screen. In the top-right corner, two dots flicker and vanish - a dead zone.\n4. The maximum count reads 5, so the phone supports 5-point touch.\nVerdict: the screen works but has a dead corner, so you negotiate a lower price.",
+    "workedExampleHeading": "Worked example"
+  }
+}

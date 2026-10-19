@@ -1,0 +1,90 @@
+{
+  "auto-loan-calculator": {
+    "assumptionNote": "Assumes a fixed interest rate and monthly payments. Excludes sales tax, title, registration and insurance.",
+    "benefits": [
+      "Shows your exact monthly payment before you visit the dealer.",
+      "Reveals the total interest and the true total cost of the car.",
+      "Lets you test bigger down payments or shorter terms instantly.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Auto loan rates depend on your credit score, the loan term and the lender. Shorter terms usually carry lower rates. Check your score, compare at least three lenders, and get pre-approved before shopping for the car.",
+        "q": "How do I get the best auto loan rate?"
+      },
+      {
+        "a": "A bigger down payment reduces the amount you borrow, which lowers the monthly payment and the total interest. It also protects you from owing more than the car is worth if its value drops.",
+        "q": "Does a bigger down payment help?"
+      },
+      {
+        "a": "36, 48 and 60 months are the most common terms. Longer terms mean lower monthly payments but more total interest; some buyers now take 72 or 84 months, which usually costs far more in interest.",
+        "q": "What loan term should I choose?"
+      },
+      {
+        "a": "Yes, in most places. Selling the car pays off the loan balance, and you keep or owe the difference. Check whether your loan has a prepayment penalty first.",
+        "q": "Can I sell a car with a loan on it?"
+      },
+      {
+        "a": "Lenders usually let you pay extra toward the principal, which shortens the loan and saves interest. Confirm there is no prepayment penalty, then apply extra payments to principal, not future payments.",
+        "q": "Can I pay off my car loan early?"
+      },
+      {
+        "a": "Many lenders advertise a rate for a 60-month term, while dealers may quote a shorter term with a different rate. Always compare the same term and check the APR, which includes fees.",
+        "q": "Why do two quotes for the same car differ?"
+      }
+    ],
+    "formula": "loan = price - down_payment\nmonthly_payment = loan x r x (1 + r)^n / ((1 + r)^n - 1), r = rate / 12\ntotal_interest = payment x n - loan\ntotal_cost = payment x n + down_payment",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the car's purchase price.",
+      "Enter your down payment.",
+      "Enter the annual interest rate.",
+      "Enter the loan term in years.",
+      "Read the monthly payment, total interest and the car's true total cost."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "An auto loan payment covers interest on the remaining balance plus a slice of principal each month.",
+      "The amount you borrow is the price minus your down payment and any trade-in value.",
+      "A larger down payment lowers both the monthly payment and the total interest you pay.",
+      "Longer loan terms reduce the monthly payment but increase the total interest significantly.",
+      "Interest is front-loaded: early payments are mostly interest, later ones mostly principal."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "auto loan calculator, car loan calculator, car payment calculator, vehicle financing",
+    "labels": {
+      "down": "Down payment",
+      "loan": "Amount financed",
+      "payment": "Monthly payment",
+      "price": "Car price",
+      "rate": "Annual rate (%)",
+      "totalCost": "Total cost of car",
+      "totalInterest": "Total interest",
+      "years": "Term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Excludes sales tax, title, registration, fees and insurance.",
+      "Fixed rate only; variable-rate loans are not modeled.",
+      "Assumes on-time payments with no extras.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free auto loan calculator. Find your monthly car payment, total interest and true total cost from price, down payment and rate. Private, browser-only.",
+    "metaTitle": "Auto Loan Calculator — Monthly Car Payment",
+    "name": "Auto Loan Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A $30,000 car with $5,000 down at 7% for 5 years means financing $25,000 at about $495 per month. You pay about $4,702 in total interest, so the car's true cost is about $34,702.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your auto loan results",
+    "tagline": "Know your real monthly car payment and total cost.",
+    "workedExample": "Price $30,000, down payment $5,000, rate 7%, term 5 years (60 months).\n\nLoan = 30,000 - 5,000 = $25,000. r = 0.07/12 = 0.0058333. payment = 25,000 x 0.0058333 x 1.0058333^60 / (1.0058333^60 - 1) = 145.8333 / 0.294634 = $495.03 per month.\n\nTotal interest = 495.03 x 60 - 25,000 = $4,702. Total cost = 495.03 x 60 + 5,000 = $34,702.",
+    "workedExampleHeading": "Worked example"
+  }
+}

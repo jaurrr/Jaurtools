@@ -1,0 +1,205 @@
+<div class="tool-page fin-type-quick">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle" role="group" [attr.aria-label]="t('labels.mode')">
+        <button type="button" [class.active]="mode() === 'cost-price'" (click)="setMode('cost-price')">
+          {{ t('labels.modeCostPrice') }}
+        </button>
+        <button type="button" [class.active]="mode() === 'cost-margin'" (click)="setMode('cost-margin')">
+          {{ t('labels.modeCostMargin') }}
+        </button>
+        <button type="button" [class.active]="mode() === 'price-markup'" (click)="setMode('price-markup')">
+          {{ t('labels.modePriceMarkup') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="mm-a">{{ fieldALabel() }}</label>
+        <input id="mm-a" type="number" inputmode="decimal" min="0" step="0.5"
+          [ngModel]="a()" (ngModelChange)="setA($event)" />
+      </div>
+
+      <div class="field">
+        <label for="mm-b">{{ fieldBLabel() }}</label>
+        <input id="mm-b" type="number" inputmode="decimal" step="0.5"
+          [ngModel]="b()" (ngModelChange)="setB($event)" />
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="calculator" /> {{ t('labels.marginPct') }}</span>
+          <strong>{{ pctFmt().format(result().margin) }}%</strong>
+          <small>{{ t('hero.note') }}</small>
+        </div>
+      </div>
+      <ul class="fin-split">
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.cost') }}</span>
+          <span class="fin-val">{{ moneyFmt().format(result().cost) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.sellingPrice') }}</span>
+          <span class="fin-val">{{ moneyFmt().format(result().price) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.profit') }}</span>
+          <span class="fin-val">{{ moneyFmt().format(result().profit) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.markupPct') }}</span>
+          <span class="fin-val">{{ pctFmt().format(result().markup) }}%</span>
+        </li>
+      </ul>
+
+        @if (result().valid) {
+          
+          
+          
+          
+          
+        } @else {
+          <p class="verdict">{{ t('labels.invalidMargin') }}</p>
+        }
+      
+      <div class="fin-split-cards">
+        <div class="fin-split-card fin-highlight">
+          <span>{{ t('labels.cost') }}</span>
+          <strong>{{ moneyFmt().format(result().cost) }}</strong>
+        </div>
+        <div class="fin-split-card">
+          <span>{{ t('labels.sellingPrice') }}</span>
+          <strong>{{ moneyFmt().format(result().price) }}</strong>
+        </div>
+        <div class="fin-split-card">
+          <span>{{ t('labels.profit') }}</span>
+          <strong>{{ moneyFmt().format(result().profit) }}</strong>
+        </div>
+      </div>
+      <ul class="fin-split">
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.markupPct') }}</span>
+          <span class="fin-val">{{ pctFmt().format(result().markup) }}%</span>
+        </li>
+      </ul>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { p: a(), t: pctFmt().format(result().margin) }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ t('tip.sanity') }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+    
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

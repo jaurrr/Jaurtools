@@ -1,0 +1,98 @@
+{
+  "body-surface-area-calculator": {
+    "assumptionNote": "BSA is used with clinical judgment in real medicine. This calculator is for education and estimation only.",
+    "benefits": [
+      "Matches the formula clinicians use, so the number is directly comparable to medical references.",
+      "Essential for understanding how drug doses are scaled to body size.",
+      "Tracks growth or body-size change more meaningfully than weight alone.",
+      "Instant result with no tables or nomograms to read."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "categories": {
+      "above": "Above typical range",
+      "average": "Typical adult range",
+      "below": "Below typical range"
+    },
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "About 1.6 to 1.9 square metres covers most adults, with 1.73 as the classic reference. Children are far lower, often under 1.0.",
+        "q": "What is a normal BSA?"
+      },
+      {
+        "a": "Chemotherapy and many other drugs are dosed per square metre of BSA because drug clearance tracks body surface better than weight alone. GFR is also reported per 1.73 m2.",
+        "q": "Why do doctors use BSA instead of weight?"
+      },
+      {
+        "a": "Du Bois (1916) is the classic and most validated. Mosteller is simpler and within 1-2% of Du Bois for most adults. The differences rarely matter clinically.",
+        "q": "Which BSA formula is most accurate?"
+      },
+      {
+        "a": "Yes. Mosteller: BSA = square root of (height in cm x weight in kg / 3600). It is the easiest to compute by hand and is standard in many hospitals.",
+        "q": "Is there a simpler BSA formula?"
+      },
+      {
+        "a": "No. BSA formulas are validated for adults and older children. Infant dosing uses dedicated pediatric tables and a clinician's judgment.",
+        "q": "Can BSA be used for infants?"
+      },
+      {
+        "a": "This tool estimates BSA correctly, but real dosing also accounts for kidney and liver function, age and the specific drug. Always let a clinician do dosing math.",
+        "q": "Can I use this for medicine doses?"
+      }
+    ],
+    "formula": "Du Bois (1916):\nBSA = 0.007184 x weight(kg)^0.425 x height(cm)^0.725\nMosteller (simpler): BSA = sqrt(height(cm) x weight(kg) / 3600).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick metric (cm/kg) or imperial (ft/in, lb) units.",
+      "Enter your height and weight.",
+      "Your body surface area in square metres appears instantly.",
+      "Compare it with the typical adult range of about 1.5 to 2.1 m2."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Body surface area (BSA) is the total surface of the human body, measured in square metres.",
+      "The Du Bois formula from 1916 remains the most widely used BSA equation in medicine.",
+      "A typical adult BSA is about 1.73 m2, which is why kidney function (GFR) is reported per 1.73 m2.",
+      "Chemotherapy doses are usually calculated per square metre of BSA.",
+      "The simpler Mosteller formula is within 1-2% of Du Bois for most adults.",
+      "A 70 kg, 175 cm adult has a BSA of about 1.85 m2."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bsa calculator, body surface area calculator, dubois formula, mosteller formula, body surface area dosing",
+    "labels": {
+      "bsaResult": "Your BSA",
+      "feet": "Feet",
+      "heightLabel": "Height",
+      "imperialTab": "Imperial (ft / lb)",
+      "inchUnit": "in",
+      "inches": "Inches",
+      "m2Unit": "m2",
+      "metricTab": "Metric (cm / kg)",
+      "rangeLabel": "Range",
+      "unitSystem": "Unit system",
+      "weightLabel": "Weight"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "An estimate from a 1916 formula based on nine subjects; modern scans differ slightly.",
+      "Cannot reflect unusual body shapes or amputations.",
+      "Real drug dosing involves more than BSA: kidneys, liver, age and the drug itself.",
+      "For education only, never a substitute for a clinician's dosing calculation."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free body surface area calculator using the Du Bois formula. Compute BSA in m2 for medical dosing reference, with metric and imperial units. Private, no sign-up.",
+    "metaTitle": "Body Surface Area Calculator (Du Bois) | JaurTools",
+    "name": "Body Surface Area Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Body surface area is estimated from height and weight. A 70 kg adult at 175 cm has a BSA of about 1.85 square metres by the Du Bois formula. Clinicians use BSA to scale drug doses and report kidney function (GFR) per 1.73 m2, the classic reference body surface.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your BSA results",
+    "tagline": "Compute your body surface area in m2 - the value clinicians use to scale drug doses.",
+    "workedExample": "70 kg, 175 cm:\n1. 70^0.425: ln(70) = 4.2485; 0.425 x 4.2485 = 1.8056; e^1.8056 = 6.08.\n2. 175^0.725: ln(175) = 5.1650; 0.725 x 5.1650 = 3.7446; e^3.7446 = 42.33.\n3. BSA = 0.007184 x 6.08 x 42.33 = 1.85 m2.\nMosteller check: sqrt(175 x 70 / 3600) = sqrt(3.4028) = 1.84 m2, matching closely.",
+    "workedExampleHeading": "Worked example",
+    "relatedHeading": "Related tools"
+  }
+}

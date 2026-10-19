@@ -1,0 +1,87 @@
+{
+  "price-per-square-foot-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Price Per Square Foot Calculator",
+    "tagline": "Compare property prices fairly with the unit price per square foot.",
+    "metaTitle": "Price Per Square Foot Calculator - Compare Property Prices Fairly | JaurTools",
+    "metaDescription": "Free price per square foot calculator: divide any property price by its area to compare listings fairly. Also shows per sq m and per sq yd.",
+    "keywords": "price per square foot calculator, price per sq ft, property unit price calculator, real estate price comparison",
+    "resultsHeading": "Your unit price results",
+    "quickAnswer": "Price per square foot = total price / area in square feet. Example: a property listed at 8,500,000 for 1,200 sq ft costs 7,083.33 per sq ft, which is 76,244.29 per sq m. Unit price lets you compare a 900 sq ft flat with a 1,400 sq ft one on equal footing, but it never captures location, condition, or layout differences.",
+    "keyFacts": [
+      "Unit price divides the total price by the area, so different-sized properties become comparable.",
+      "Always compare carpet area with carpet area, or built-up with built-up: mixing them misleads.",
+      "1 sq m = 10.7639 sq ft; 1 sq yd = 9 sq ft.",
+      "Price per sq ft varies hugely by micro-location, floor, facing, and age of the building.",
+      "New launches often quote a lower per-sq-ft price but on inflated super built-up area.",
+      "Unit price is a screening tool, not a valuation: two flats at the same rate can differ wildly in value."
+    ],
+    "howTo": [
+      "Enter the total property price.",
+      "Enter the area in square feet.",
+      "Read the price per sq ft instantly, plus per sq m and per sq yd.",
+      "Use the same area definition for every listing you compare.",
+      "Shortlist by unit price, then visit and judge condition and location yourself."
+    ],
+    "formula": "Price per sq ft = Total price / Area in sq ft.\nPrice per sq m = Price per sq ft x 10.7639.\nPrice per sq yd = Price per sq ft x 9.\nExample: 8,500,000 / 1,200 = 7,083.33 per sq ft.",
+    "workedExample": "Price 8,500,000, area 1,200 sq ft:\n1. Price per sq ft: 8,500,000 / 1,200 = 7,083.33.\n2. Price per sq m: 7,083.33 x 10.7639 = 76,244.29.\n3. Price per sq yd: 7,083.33 x 9 = 63,750.00.\nA second listing at 9,900,000 for 1,400 sq ft = 7,071.43 per sq ft, slightly cheaper per unit despite the higher total.",
+    "benefits": [
+      "Makes different-sized listings directly comparable in one number.",
+      "Exposes inflated pricing hidden behind a low-sounding total.",
+      "Also converts to sq m and sq yd for regional listing conventions.",
+      "Takes five seconds and needs no sign-up."
+    ],
+    "limitations": [
+      "Ignores location, floor, facing, condition, and amenities, which drive real value.",
+      "Depends on the area definition used: carpet vs built-up vs super built-up.",
+      "Does not include registration, stamp duty, or brokerage costs.",
+      "A low unit price can signal problems: always inspect before concluding it is a deal."
+    ],
+    "faqs": [
+      {
+        "q": "What is a good price per square foot?",
+        "a": "There is no universal good number: it depends entirely on the city and micro-location. Research recent sales of similar flats in the same neighborhood, then compare your listing's unit price against that local benchmark."
+      },
+      {
+        "q": "Carpet area vs built-up area: which should I use?",
+        "a": "Carpet area, the actual usable floor inside the walls, whenever the listing provides it. Built-up adds wall thickness and balconies; super built-up adds a share of common areas. The same flat looks cheaper per sq ft on super built-up area, which is why builders prefer quoting it."
+      },
+      {
+        "q": "Why do two identical flats have different per-sq-ft prices?",
+        "a": "Floor rise premiums, facing (park or road), corner units, furnishing, distress sales, and negotiation all move the number. Unit price starts the comparison; it never finishes it."
+      },
+      {
+        "q": "Does a lower price per sq ft always mean a better deal?",
+        "a": "No. It can mean a worse location, an older building, legal issues, or poor construction. Treat a surprisingly low unit price as a reason to investigate, not a reason to celebrate."
+      },
+      {
+        "q": "How do I convert between sq ft, sq m, and sq yd?",
+        "a": "Multiply: 1 sq m equals 10.7639 sq ft, and 1 sq yd equals 9 sq ft. The calculator shows all three automatically from the sq ft figure."
+      },
+      {
+        "q": "Should I include stamp duty and registration in the price?",
+        "a": "For comparing listings, use the quoted price so every listing is treated the same. For your own budget, add 5 to 10% for stamp duty, registration, and brokerage on top of the unit-price math."
+      }
+    ],
+    "labels": {
+      "price": "Total price",
+      "area": "Area (sq ft)",
+      "perSqft": "Price per sq ft",
+      "perSqm": "Price per sq m",
+      "perSqyd": "Price per sq yd"
+    }
+  }
+}

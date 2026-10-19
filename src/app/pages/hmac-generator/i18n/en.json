@@ -1,0 +1,90 @@
+{
+  "hmac-generator": {
+    "assumptionNote": "Message and key are encoded as UTF-8. WebCrypto needs a secure context (HTTPS or localhost).",
+    "benefits": [
+      "Verify webhook signatures from Stripe, GitHub, and other providers.",
+      "Test API authentication schemes that sign requests with a shared secret.",
+      "Three SHA-2 variants with hex or base64 output cover every common format.",
+      "Keys and messages never leave the browser — safe for real secrets.",
+      "Instant recompute on every keystroke speeds up debugging."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Paste the payload into the message field and your webhook secret into the key field, then compare the output with the signature header the provider sent. Use the same algorithm and encoding the provider documents.",
+        "q": "How do I verify a webhook signature?"
+      },
+      {
+        "a": "A plain hash like SHA-256(message) proves integrity but anyone can recompute it. HMAC mixes in a secret key, so only someone with the key can produce or verify the signature — that adds authenticity.",
+        "q": "What is the difference between HMAC and a plain hash?"
+      },
+      {
+        "a": "Treat the key like a password: generate it randomly, make it long (at least 32 bytes), store it in a secrets manager, and never commit it to git or paste it into chat.",
+        "q": "How should I choose an HMAC key?"
+      },
+      {
+        "a": "Yes. HMAC output is deterministic — the same key, message, and algorithm always give the same signature, which is exactly what makes verification possible.",
+        "q": "Will the same inputs always give the same output?"
+      },
+      {
+        "a": "Hex is the most common format in docs and headers (64 characters for SHA-256). Base64 is shorter (44 characters) and used by some providers like AWS-style signatures.",
+        "q": "Should I use hex or base64 output?"
+      },
+      {
+        "a": "WebCrypto's HMAC supports SHA-1, SHA-256, SHA-384, and SHA-512, but not MD5. This tool offers the three SHA-2 variants because MD5 and SHA-1 HMAC are deprecated for security use.",
+        "q": "Why is there no HMAC-MD5 option?"
+      }
+    ],
+    "formula": "HMAC(K, m) = H((K' xor opad) || H((K' xor ipad) || m))\n\nK' = key padded to the hash block size\nipad = 0x36 repeated, opad = 0x5c repeated",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste the message or payload into the message field.",
+      "Enter the secret key — it never leaves your browser.",
+      "Choose HMAC-SHA-256, SHA-384, or SHA-512.",
+      "Pick hex or base64 output encoding.",
+      "Copy the signature with the copy button."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "HMAC is a keyed hash: it proves both integrity and authenticity of a message.",
+      "The construction nests two hash passes with padded key material (ipad/opad).",
+      "SHA-256 output is 64 hex characters; SHA-512 is 128.",
+      "The same key and message always produce the same signature.",
+      "WebCrypto computes HMAC natively in the browser via the SubtleCrypto API."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "hmac generator, hmac sha256 online, webhook signature verifier, hmac calculator, api signature generator",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "encodingLabel": "Output encoding",
+      "errorSecureContext": "WebCrypto needs a secure context (HTTPS or localhost) to compute HMAC.",
+      "keyLabel": "Secret key",
+      "messageLabel": "Message",
+      "resultLabel": "HMAC signature"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Needs a secure context (HTTPS or localhost) — WebCrypto is unavailable on plain HTTP.",
+      "MD5 and SHA-1 HMAC are not offered; they are deprecated for security.",
+      "A leaked key lets anyone forge signatures — protect it like a password.",
+      "Timing attacks are irrelevant here, but compare signatures in constant time server-side."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate HMAC-SHA256, SHA384 and SHA512 signatures online. Verify webhook signatures and API auth with hex or base64 output, free.",
+    "metaTitle": "HMAC Generator – Free HMAC-SHA256 Online Tool",
+    "name": "HMAC Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "HMAC is a hash combined with a secret key: it proves a message was not modified and that the sender knows the key. APIs and webhooks use it to sign requests — the receiver recomputes the signature with the shared secret and compares. This tool computes HMAC-SHA-256, SHA-384, and SHA-512 in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "HMAC signature",
+    "tagline": "Compute keyed HMAC signatures for webhooks and API auth.",
+    "workedExample": "Message: The quick brown fox jumps over the lazy dog\nKey: key\nAlgorithm: HMAC-SHA-256, hex output.\n\nHMAC-SHA256(\"key\", \"The quick brown fox jumps over the lazy dog\")\n= f7bc83f430538424b13298e6aa6fb143ef4d59a14946175997479dbc2d1a3cd8\n\nThis is the standard test vector — any correct HMAC implementation produces exactly this value. Change one character of the key or message and the signature changes completely.",
+    "workedExampleHeading": "Worked example"
+  }
+}

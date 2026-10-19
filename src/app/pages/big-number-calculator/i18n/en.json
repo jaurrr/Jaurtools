@@ -1,0 +1,96 @@
+{
+  "big-number-calculator": {
+    "benefits": [
+      "Adds, subtracts, multiplies, and divides numbers of any size - no float rounding ever.",
+      "0.1 + 0.2 gives exactly 0.3, fixing the classic computer arithmetic surprise.",
+      "Division precision is your choice: 10, 20, 30, or 50 decimal places.",
+      "The digit counter tells you exactly how big your result is."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Computers store decimals in binary floating point, which cannot represent 0.1 exactly - so 0.1 + 0.2 becomes 0.30000000000000004. This calculator does arithmetic on the digit strings themselves, like long addition on paper, so the answer is exact.",
+        "q": "Why does 0.1 + 0.2 equal 0.3 here?"
+      },
+      {
+        "a": "Addition, subtraction, and multiplication are exact to the last digit. Division is truncated (cut off, not rounded) at your chosen precision - a 10 / 3 at 20 places gives 3.33333333333333333333.",
+        "q": "Is every operation exact?"
+      },
+      {
+        "a": "Up to 600 digits across both inputs. That covers everything from cryptography-sized integers to long financial chains. Longer inputs are rejected with a friendly message to keep your browser responsive.",
+        "q": "How big can the numbers be?"
+      },
+      {
+        "a": "Truncation, like cutting a ribbon: 10 / 3 at 2 places is 3.33, not 3.34. Bankers rounding and school rounding would both give 3.34. The guide below states this openly so nobody is surprised.",
+        "q": "Is division rounded or truncated?"
+      },
+      {
+        "a": "No. This is pure arithmetic on digit strings - no powers, roots, factorials, or trigonometry. For those, use the Exponent Calculator or Basic Calculator.",
+        "q": "Does it do powers and roots?"
+      },
+      {
+        "a": "Yes - type the minus sign before the number. -7 / 2 gives -3.5, and -5 + 8 gives 3. Sign rules work exactly like school maths.",
+        "q": "Can I use negative numbers?"
+      }
+    ],
+    "formula": "Addition/subtraction: align decimal points, add or subtract digit by digit.\nMultiplication: multiply digit strings, place the point after (decimals of A + decimals of B) digits.\nDivision: long division, truncated (not rounded) at the chosen precision.\nExample: 0.1 + 0.2 = 0.3 exactly.",
+    "formulaHeading": "How it calculates",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the first number - as many digits as you like, decimals included.",
+      "Pick the operation: add, subtract, multiply, or divide.",
+      "Type the second number. For division, also choose the decimal precision.",
+      "The exact result appears below, with a count of its significant digits."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Arbitrary-precision means the only limit is how many digits you type, not the computer's float size.",
+      "0.1 + 0.2 = 0.3 exactly - the classic 0.30000000000000004 surprise cannot happen here.",
+      "123456789123456789 x 987654321987654321 = 121932631356500531347203169112635269, exact.",
+      "Division is truncated at 10, 20, 30, or 50 decimal places - your choice.",
+      "Inputs are capped at 600 digits total to keep the page fast.",
+      "Negative numbers and decimals work with normal school sign rules."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "big number calculator, arbitrary precision calculator, exact decimal calculator, large number multiplication, high precision division",
+    "labels": {
+      "decimals": "decimals",
+      "digits": "Significant digits",
+      "errDivZero": "Cannot divide by zero.",
+      "errInvalid": "Enter valid numbers (digits with an optional decimal point).",
+      "errTooLong": "Numbers are too long - please stay under 600 digits in total.",
+      "firstNumber": "First number",
+      "opAdd": "Add (+)",
+      "opDiv": "Divide (/)",
+      "opMul": "Multiply (x)",
+      "opSub": "Subtract (-)",
+      "operation": "Operation",
+      "precision": "Division precision",
+      "result": "Result",
+      "secondNumber": "Second number",
+      "truncNote": "Division results are truncated (cut off), not rounded, at the chosen precision."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Division is truncated, not rounded - 10 / 3 at 2 places is 3.33, not 3.34.",
+      "Only the four basic operations; no powers, roots, or scientific functions.",
+      "Inputs capped at 600 digits; beyond that the page would slow down.",
+      "Truncated division means results are always slightly less than the true value."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free big number calculator with true arbitrary precision: exact addition, subtraction, multiplication and high-precision division. No float errors. Private, no sign-up.",
+    "metaTitle": "Big Number Calculator - Arbitrary Precision | JaurTools",
+    "name": "Big Number Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "An exact calculator for numbers of any size. Ordinary calculators store 0.1 approximately, so 0.1 + 0.2 shows 0.30000000000000004. This tool computes on the digit strings directly, like long arithmetic on paper, so 0.1 + 0.2 = 0.3 exactly. It handles addition, subtraction, multiplication, and division of huge numbers - for example 123456789123456789 x 987654321987654321 = 121932631356500531347203169112635269 - with division truncated at 10 to 50 decimal places of your choice.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Big Number results",
+    "tagline": "Exact arithmetic on numbers of any size - no floating-point surprises, ever.",
+    "workedExample": "0.1 + 0.2\n1. Align decimal points: 0.1 and 0.2.\n2. Add digit by digit: 1 + 2 = 3 tenths.\n3. Result: 0.3 exactly (no 0.30000000000000004).\nSecond check - 10 / 3 at 20 decimals:\n1. Long division: 3 goes into 10 three times, remainder 1, bring down 0...\n2. Result: 3.33333333333333333333 (truncated, not rounded).",
+    "workedExampleHeading": "Worked example"
+  }
+}

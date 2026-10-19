@@ -1,0 +1,93 @@
+{
+  "image-splitter": {
+    "benefits": [
+      "Slice a photo into equal tiles for Instagram grids, puzzles, or print layouts.",
+      "Each tile downloads at full resolution — no quality lost in the cut.",
+      "Per-tile download links plus a download-all button for the whole set.",
+      "Everything runs locally; your photo never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the image, set the number of rows and columns, and the tool slices it into that grid. Download tiles one by one or press Download all.",
+        "q": "How do I split an image into pieces?"
+      },
+      {
+        "a": "Each tile is cut at full resolution, so quality is preserved. PNG tiles are lossless; JPG tiles use high quality (92%).",
+        "q": "Do the tiles lose quality?"
+      },
+      {
+        "a": "A 3 × 3 grid gives the classic Instagram puzzle look: upload the 9 tiles in order and they reassemble into the full photo on your profile.",
+        "q": "How do I make an Instagram grid puzzle?"
+      },
+      {
+        "a": "Yes — the last row and column absorb any remainder pixels, so nothing is cropped or lost. Every pixel appears in exactly one tile.",
+        "q": "What if the image does not divide evenly?"
+      },
+      {
+        "a": "The Download all button saves tiles one after another with a short pause so your browser does not block them. Filenames are numbered by row and column.",
+        "q": "How does Download all work?"
+      },
+      {
+        "a": "No. Slicing is done on canvases in your browser; the photo is never uploaded anywhere.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "tile_w = floor(width / cols),  tile_h = floor(height / rows)\nlast column width  = width − tile_w × (cols − 1)\nlast row height     = height − tile_h × (rows − 1)\ntiles = rows × cols",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the image you want to slice.",
+      "Set the number of rows and columns for the grid.",
+      "Preview the tiles and their exact pixel sizes.",
+      "Choose PNG or JPG tile format.",
+      "Download tiles individually, or press Download all for the full set."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The image is sliced into an exact rows × columns grid — up to 10 × 10 = 100 tiles.",
+      "Tiles are cut at full resolution with no scaling or resampling.",
+      "Remainder pixels go to the last row and column, so no pixel is ever lost.",
+      "Each tile is named by its grid position, like photo-r2c3.png.",
+      "The live preview shows every tile with its dimensions before you download."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "split image, slice image, image splitter, cut photo into pieces, instagram grid maker, tile image online",
+    "labels": {
+      "columns": "Columns",
+      "downloadAll": "Download all tiles",
+      "downloadTile": "Download",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Tile format",
+      "grid": "Grid (rows × columns)",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "pickOne": "Choose an image above to split it into tiles.",
+      "rows": "Rows",
+      "tileCount": "Tiles",
+      "upload": "Image to split"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Grids are limited to 10 × 10 (100 tiles) to protect browser memory.",
+      "Tiles are rectangular only — no custom shapes or diagonal cuts.",
+      "Download all triggers many files at once; your browser may ask for permission.",
+      "EXIF metadata from the original is not carried into the tiles."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Slice any photo into a clean grid of full-resolution tiles. Choose rows and columns, download tiles individually — free and instant.",
+    "metaTitle": "Image Splitter - Slice Photos Into Grids | JaurTools",
+    "name": "Image Splitter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and choose a rows × columns grid to slice it into full-resolution tiles. Each tile downloads individually with a position-based filename, or grab them all at once — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Split results",
+    "tagline": "One photo, many perfect tiles.",
+    "workedExample": "A 1200 × 800 px photo split into 3 columns × 2 rows:\ntile_w = floor(1200 / 3) = 400 px\ntile_h = floor(800 / 2) = 400 px\ntiles = 3 × 2 = 6, each exactly 400 × 400 px\nA 1000 × 800 px photo into 3 columns: tile_w = floor(1000 / 3) = 333 px, and the last column gets 1000 − 333 × 2 = 334 px — no pixel lost.",
+    "workedExampleHeading": "Worked example"
+  }
+}

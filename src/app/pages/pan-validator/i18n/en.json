@@ -1,0 +1,121 @@
+{
+  "pan-validator": {
+    "assumptionNote": "This checks only the structure of the PAN. It cannot confirm whether the PAN is issued, active, or belongs to anyone.",
+    "benefits": [
+      "Catch typos before submitting PAN on forms, KYC, and tax filings.",
+      "Explains what each position in the number means, including the holder type.",
+      "Validates instantly as you type - no waiting, no server.",
+      "Fully private: your PAN never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "PAN follows the format AAAAA9999A: five letters, four digits, one letter. The 4th letter tells the holder type - P for individual person, C for company, H for HUF, and so on. The 5th letter is usually the first letter of the holder's surname or name.",
+        "q": "What is the format of a PAN card number?"
+      },
+      {
+        "a": "The 4th character: P = Person (individual), C = Company, H = HUF (Hindu Undivided Family), F = Firm, A = Association of Persons, T = Trust, B = Body of Individuals, L = Local Authority, J = Artificial Juridical Person, G = Government.",
+        "q": "What does the 4th letter of PAN mean?"
+      },
+      {
+        "a": "No. Structural validation only confirms the number looks right. The income tax department's database is the only authority that can confirm a PAN is real and active.",
+        "q": "Does a valid format mean the PAN is genuine?"
+      },
+      {
+        "a": "It is usually fine for drafts and learning. For anything official - KYC, bank accounts, tax filings - always copy it from the actual PAN card. One wrong letter can route your money or records to the wrong person.",
+        "q": "Can I use a sample PAN on official forms?"
+      },
+      {
+        "a": "Yes. PAN is uppercase by design, and this validator converts your input automatically. Lowercase, extra spaces, and mixed case are all accepted and normalized.",
+        "q": "Is PAN case sensitive?"
+      },
+      {
+        "a": "First, check for typos - a single wrong character is the most common cause. If it still fails, the number may be incomplete or fictitious. Never alter a PAN to force it to validate; get the correct number from the card.",
+        "q": "What should I do if my PAN fails validation?"
+      }
+    ],
+    "formula": "PAN structure: AAAAA9999A\nPositions 1-3: alphabetic serial (AAA to ZZZ)\nPosition 4: holder type code (C, P, H, F, A, T, B, L, J, G)\nPosition 5: first letter of surname / entity name\nPositions 6-9: numeric serial (0001 to 9999)\nPosition 10: alphabetic check character (A to Z)",
+    "formulaHeading": "Structure",
+    "holderTypes": {
+      "a": "Association of Persons",
+      "b": "Body of Individuals",
+      "c": "Company",
+      "f": "Firm",
+      "g": "Government",
+      "h": "HUF (Hindu Undivided Family)",
+      "j": "Artificial Juridical Person",
+      "l": "Local Authority",
+      "p": "Person (Individual)",
+      "t": "Trust"
+    },
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste the 10-character PAN into the input box.",
+      "The validator checks it live: length, pattern, and holder-type code.",
+      "A green message means the format is valid; a red message explains exactly what is wrong.",
+      "Read the breakdown to see what each position of the PAN represents."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A PAN is exactly 10 characters: 5 letters, 4 digits, 1 letter.",
+      "The 4th character encodes the holder type: P for person, C for company, H for HUF, and 7 more codes.",
+      "The 5th character is usually the first letter of the holder's surname or entity name.",
+      "Positions 6-9 are a running number from 0001 to 9999.",
+      "The last character is an alphabetic check character.",
+      "Structure alone never proves a PAN is issued or active - only the tax database can do that."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pan validator, pan card number check, pan format validator, verify pan number, pan card validation",
+    "labels": {
+      "checkChar": "Check character (position 10)",
+      "enterPrompt": "Enter your PAN above to check its format.",
+      "hint": "10 characters: 5 letters, 4 digits, 1 letter.",
+      "holderCode": "Holder code (position 4)",
+      "panNumber": "PAN number",
+      "placeholder": "ABCPE1234F",
+      "sequencePart": "Sequence (positions 6-9)",
+      "serialPart": "Serial (positions 1-3)",
+      "surnameInitial": "Surname initial (position 5)",
+      "validMessage": "Valid PAN format."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Validates structure only; it cannot check the income tax department's records.",
+      "A structurally valid PAN may still be fake, cancelled, or belong to someone else.",
+      "Do not use this as the only check for KYC or financial transactions.",
+      "Estimates only in the sense of format; no official verification is possible offline."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free PAN validator: check any Indian PAN card number for correct format, holder type, and structure instantly. Private, runs in your browser, no sign-up.",
+    "metaTitle": "PAN Validator - Check PAN Card Number Format | JaurTools",
+    "name": "PAN Validator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A valid PAN is 10 characters: five letters, four digits, one letter. ABCPE1234F passes: the 4th character P means the holder is an individual person, the 5th character P matches a surname initial, and the rest follow the pattern. This check confirms the structure only - it cannot tell you whether the PAN is real or active, since only the income tax database knows that.",
+    "quickAnswerHeading": "Quick answer",
+    "reasons": {
+      "holder": "The 4th character must be a valid holder code (C, P, H, F, A, T, B, L, J, G).",
+      "length": "PAN must be exactly 10 characters long.",
+      "pattern": "PAN must follow the AAAAA9999A format: 5 letters, 4 digits, 1 letter."
+    },
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your PAN validation result",
+    "tagline": "Instantly check whether a PAN card number has the correct format.",
+    "workedExample": "Checking ABCPE1234F:\n1. Length: 10 characters - correct.\n2. Pattern: ABCPE are letters, 1234 are digits, F is a letter - matches AAAAA9999A.\n3. Holder code: the 4th character is P, which is a valid code meaning Person (Individual).\n4. Result: structurally valid PAN format.",
+    "workedExampleHeading": "Worked example",
+    "verify": {
+      "validBadge": "Valid PAN",
+      "invalidBadge": "Invalid PAN",
+      "emptyTitle": "Enter a PAN to verify"
+    },
+    "partsDesc": {
+      "serial": "Alphabetic series (AAA–ZZZ)",
+      "holder": "Holder type",
+      "surname": "First letter of surname",
+      "sequence": "Sequential number",
+      "check": "Alphabetic check digit"
+    }
+  }
+}

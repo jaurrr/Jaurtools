@@ -1,0 +1,123 @@
+{
+  "report-card-generator": {
+    "benefits": [
+      "Total, percentage, grade, and division calculated instantly — no manual math errors.",
+      "Add or remove subjects freely; every subject can have its own maximum marks.",
+      "A clean report card preview is ready to print for parents or records.",
+      "Student data stays private on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "divisions": {
+      "fail": "Fail",
+      "first": "First Division",
+      "second": "Second Division",
+      "third": "Third Division"
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Percentage = (total marks obtained / total maximum marks) x 100. With 390 out of 500, that is (390 / 500) x 100 = 78%.",
+        "q": "How is the percentage calculated?"
+      },
+      {
+        "a": "The grades follow a common Indian school scale: A+ for 90% and above, A for 80–89, B+ for 70–79, B for 60–69, C for 50–59, D for 40–49, and F below 40. Divisions are First (60+), Second (45–59), Third (33–44), and Fail (below 33).",
+        "q": "What grade and division scale does the tool use?"
+      },
+      {
+        "a": "Yes. Click the maximum-marks box for any subject and type a different value — the tool clamps obtained marks so they can never exceed the maximum.",
+        "q": "Can subjects have different maximum marks?"
+      },
+      {
+        "a": "Use the print button. Only the report card prints — the rest of the page is hidden — so you get a clean card for parents or school records, or save it as PDF from the print dialog.",
+        "q": "How do I print or save the report card?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser's memory; nothing is uploaded or stored anywhere.",
+        "q": "Is student data private?"
+      },
+      {
+        "a": "No. This is a straightforward marks calculator, not an official school document. For board-exam or admission purposes, use the marksheet issued by your school or board.",
+        "q": "Is this an official marksheet?"
+      }
+    ],
+    "formula": "Percentage = (total obtained / total maximum) x 100\nSubject percentage = (obtained / max) x 100\nGrades: A+ >= 90, A >= 80, B+ >= 70, B >= 60, C >= 50, D >= 40, F < 40\nDivisions: First >= 60, Second >= 45, Third >= 33, Fail < 33\nResult: Pass if percentage >= 33, else Fail",
+    "formulaHeading": "The formulas",
+    "grades": {
+      "a": "A",
+      "aplus": "A+",
+      "b": "B",
+      "bplus": "B+",
+      "c": "C",
+      "d": "D",
+      "f": "F"
+    },
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the student's name and class.",
+      "Enter obtained and maximum marks for each subject. Add more subjects with the 'Add subject' button, or remove ones you do not need.",
+      "The total, percentage, grade, division, and pass/fail result update instantly.",
+      "Review the report card preview at the bottom of the tool.",
+      "Press 'Print report card' to print it — or save it as a PDF from the print dialog."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Enter marks for any number of subjects, each with its own maximum marks.",
+      "Percentage, grade (A+ to F), division (First to Fail), and pass/fail are computed instantly.",
+      "Obtained marks can never exceed the subject's maximum — the tool clamps them automatically.",
+      "The report card preview shows per-subject percentages plus the grand total.",
+      "Printing isolates just the report card, so you get a clean card for records."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "marks calculator, report card generator, percentage calculator marks, grade calculator, school report card maker, division calculator",
+    "labels": {
+      "addSubjectButton": "Add subject",
+      "classLabel": "Class",
+      "classPlaceholder": "e.g. Class 10-A",
+      "deleteSubjectLabel": "Remove subject",
+      "divisionLabel": "Division",
+      "errorSubjectName": "Please type a subject name first.",
+      "failedLabel": "Fail",
+      "gradeLabel": "Grade",
+      "maxCol": "Max",
+      "maxMarksLabel": "Maximum marks",
+      "newSubjectLabel": "Add another subject",
+      "newSubjectPlaceholder": "e.g. Computer Science",
+      "obtainedCol": "Obtained",
+      "obtainedLabel": "Marks obtained",
+      "passedLabel": "Pass",
+      "percentCol": "%",
+      "percentageLabel": "Percentage",
+      "printButton": "Print report card",
+      "printNote": "Printing shows only the report card — choose 'Save as PDF' in the print dialog for a digital copy.",
+      "reportCardTitle": "Report Card",
+      "resultLabel": "Result",
+      "studentNameLabel": "Student name",
+      "studentNamePlaceholder": "e.g. Aarav Sharma",
+      "subjectCol": "Subject",
+      "subjectNameLabel": "Subject name",
+      "subjectsHeading": "Subjects",
+      "totalLabel": "Total"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A calculator, not an official marksheet — board purposes need the school-issued document.",
+      "One fixed grade scale; schools with different scales should treat grades as indicative.",
+      "No data is saved between visits — note down or print the card.",
+      "Printed output depends on your browser's print settings."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Enter subject marks and get total, percentage, grade and division — plus a clean printable report card. Free, works in your browser.",
+    "metaTitle": "Report Card Generator - Marks Entry & Printable Report Card | JaurTools",
+    "name": "Report Card Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Marks Entry + Report Card Generator turns subject marks into a complete result in seconds. Enter obtained and maximum marks for any number of subjects, and the tool instantly computes the total, percentage, grade (A+ to F), division (First to Fail), and pass/fail result, then shows a clean report card you can print or save as PDF. Everything runs privately in your browser with no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Marks Entry + Report Card Generator results",
+    "tagline": "Marks in, report card out — ready to print.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Take five subjects, each out of 100: Hindi 82, English 76, Mathematics 91, Science 68, Social Science 73. Total obtained = 82 + 76 + 91 + 68 + 73 = 390. Total maximum = 500. Percentage = (390 / 500) x 100 = 78.0%. On the A+–F scale, 78% falls in the 70–79 band, so the grade is B+. On the division scale, 78% is above 60, so the division is First Division. Since 78% is above 33, the result is Pass."
+  }
+}

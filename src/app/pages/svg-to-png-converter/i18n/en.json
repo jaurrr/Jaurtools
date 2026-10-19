@@ -1,0 +1,103 @@
+{
+  "svg-to-png-converter": {
+    "benefits": [
+      "Exact pixel control: type the width and height instead of guessing a scale factor.",
+      "Aspect-ratio lock keeps the graphic undistorted while you change one dimension.",
+      "Works from real SVG files, not just pasted code, with the source dimensions shown.",
+      "Background choice and a pixel-count readout for planning print or web use."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "SVG is a vector format that scales perfectly, but many platforms — social media, document editors, printers — only accept raster images like PNG. Converting an SVG to PNG at the right pixel size prepares it for those platforms.",
+        "q": "Why convert SVG to PNG?"
+      },
+      {
+        "a": "The tool reads the width, height or viewBox of your file. If none are present it reports an error, because the browser cannot rasterize a dimension-less SVG.",
+        "q": "How does the tool know the SVG size?"
+      },
+      {
+        "a": "With the lock on, changing the width recalculates the height to keep the same proportions, and vice versa. Turn it off only if you intentionally want to stretch the graphic.",
+        "q": "What does the aspect-ratio lock do?"
+      },
+      {
+        "a": "Larger PNGs are sharper on high-density screens but take more memory and disk space. For web use, 1024–2048 px on the long edge is usually plenty; for print, aim for your target size in inches times 300.",
+        "q": "How large should my PNG be?"
+      },
+      {
+        "a": "PNG supports transparency, so empty areas stay see-through. Choose white or black if the destination needs an opaque background, such as some document previews.",
+        "q": "Will transparency be preserved?"
+      },
+      {
+        "a": "No. The file is read into memory locally and never sent anywhere.",
+        "q": "Is my file uploaded to a server?"
+      }
+    ],
+    "formula": "locked height = target width × (source height ÷ source width)\nlocked width = target height × (source width ÷ source height)\npixel count = target width × target height",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload your .svg file using the upload area.",
+      "Check the detected source dimensions shown above the inputs.",
+      "Type your target width or height; the other side follows automatically with the lock on.",
+      "Choose a background: transparent, white or black.",
+      "Press Convert, preview the PNG, then download it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SVG files store vector shapes; PNG files store a fixed grid of pixels.",
+      "Browsers rasterize SVG by drawing it into an image element on a canvas.",
+      "An SVG needs real dimensions (width/height or viewBox) to be rasterized.",
+      "The aspect-ratio lock preserves proportions: height = width × (sourceH ÷ sourceW).",
+      "PNG keeps transparency; optional white or black backgrounds flatten it.",
+      "All conversion happens locally with the canvas API."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg to png, convert svg to png, svg file to png, svg to png converter",
+    "labels": {
+      "backgroundLabel": "Background",
+      "bgBlack": "Black",
+      "bgTransparent": "Transparent",
+      "bgWhite": "White",
+      "convertButton": "Convert to PNG",
+      "downloadButton": "Download PNG",
+      "dropHint": "Click to choose an .svg file",
+      "emptyNote": "Upload an .svg file to start converting.",
+      "errorCanvas": "Could not prepare the canvas.",
+      "errorInvalid": "That file is not valid SVG. Please choose another file.",
+      "errorNoDims": "The SVG has no width, height or viewBox, so it cannot be rasterized.",
+      "errorRead": "Could not read that file.",
+      "errorRender": "Could not render the SVG. It may reference external resources.",
+      "errorSize": "The SVG file must be smaller than 10 MB.",
+      "heightLabel": "Height",
+      "lockLabel": "Lock aspect ratio",
+      "outputSizeLabel": "Output size",
+      "pixelCountLabel": "Total pixels",
+      "previewAlt": "Converted PNG preview",
+      "sourceLabel": "Source",
+      "widthLabel": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The SVG must declare dimensions; files without width/height/viewBox are rejected.",
+      "External images or fonts inside the SVG are blocked by browser security.",
+      "Extremely large target sizes (8000 px) can exhaust memory on low-end devices.",
+      "Turning the aspect lock off intentionally distorts the graphic."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert SVG files to crisp PNG images at any scale with live preview. Set exact pixel size and download — free, no signup.",
+    "metaTitle": "SVG to PNG Converter - Crisp PNG From SVG | JaurTools",
+    "name": "SVG to PNG Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool converts SVG files to PNG at the exact size you choose. Upload an .svg file, type the target width and height (the aspect-ratio lock keeps proportions correct), pick a background, and download the PNG. The pixel-count readout tells you exactly how large the result is.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG to PNG results",
+    "tagline": "Vectors rendered pixel-perfect.",
+    "workedExample": "You upload an SVG logo that is 300 × 200 px and keep the aspect lock on.\n\nYou type target width = 1200.\nLocked height = 1200 × (200 ÷ 300) = 1200 × 0.6667 = 800 px.\nPixel count = 1200 × 800 = 960,000 pixels.\n\nThe PNG downloads as logo-1200x800.png — a 4× enlargement that stays perfectly sharp because the source was vector.",
+    "workedExampleHeading": "Worked example"
+  }
+}

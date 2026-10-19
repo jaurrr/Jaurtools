@@ -1,0 +1,95 @@
+{
+  "sleep-calculator": {
+    "assumptionNote": "Assumes 90-minute cycles and 15 minutes to fall asleep - averages; individual cycles run 80-120 minutes.",
+    "benefits": [
+      "Waking at a cycle boundary cuts morning grogginess.",
+      "Turns 'I should sleep more' into three concrete bedtimes.",
+      "Works both directions: fixed alarm or fixed bedtime.",
+      "Teaches the 90-minute rhythm - useful for naps too (20 or 90 min, never 60)."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Most adults do well on 5-6 cycles (7.5-9 hours). Teenagers need more (8-10 hours). If you wake refreshed and function well, your count is right.",
+        "q": "How many sleep cycles do I need?"
+      },
+      {
+        "a": "You probably woke mid-cycle from deep sleep. Six hours is exactly 4 cycles; 8 hours can land mid-cycle if your cycles run long. Try the cycle-aligned times above.",
+        "q": "Why do I feel worse after 8 hours than 6?"
+      },
+      {
+        "a": "Yes. A 20-minute nap stays in light sleep; a 60-minute nap wakes you from deep sleep (groggy). A full 90-minute nap completes a cycle and is the other good option.",
+        "q": "Is a 20-minute nap better than an hour?"
+      },
+      {
+        "a": "Yes - without it you would set the alarm a quarter-hour too early and wake mid-cycle. If you fall asleep slower, go to bed earlier.",
+        "q": "Does the 15-minute fall-asleep buffer matter?"
+      },
+      {
+        "a": "Normal - everyone surfaces between cycles. Do not check the time anxiously; just let the next cycle start. Frequent long awakenings are worth mentioning to a doctor.",
+        "q": "What if I wake up at night?"
+      },
+      {
+        "a": "No - 8 is an average. The range is 7-9 for most adults. Regularity and cycle alignment matter more than hitting exactly 8.",
+        "q": "Do I need exactly 8 hours?"
+      }
+    ],
+    "formula": "Bedtime = wake time - (cycles x 90 min + 15 min to fall asleep)\nWake time = bedtime + 15 min + cycles x 90 min\n\nExample: wake at 6:30\n6 cycles: 6:30 - (540 + 15) min = 6:30 - 9:15 = 21:15\n5 cycles: 6:30 - 7:45 = 22:45\n4 cycles: 6:30 - 6:15 = 00:15",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose 'Wake at...' if you have an alarm time, or 'Bed at...' if tonight is fixed.",
+      "Enter the time.",
+      "Pick one of the three cycle options - more cycles when you can.",
+      "Add the 15-minute wind-down: screens off, lights low.",
+      "Keep the same time daily, even weekends - your rhythm adapts in about a week."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "A full sleep cycle lasts about 90 minutes: light sleep, deep sleep, then REM.",
+      "Waking mid-cycle (especially from deep sleep) causes grogginess - sleep inertia.",
+      "Most adults need 5-6 cycles: 7.5 to 9 hours.",
+      "It takes the average person about 15 minutes to fall asleep - counted in this calculator.",
+      "Deep sleep clusters in the first half of the night; REM in the second.",
+      "Consistent bedtimes beat perfect calculations - regularity trains your body clock."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sleep calculator, bedtime calculator, sleep cycle calculator, what time should i sleep, wake up calculator",
+    "labels": {
+      "bedAtLabel": "Go to bed at",
+      "bedTab": "Bed at...",
+      "bedTimeLabel": "What time are you going to bed?",
+      "cyclesLabel": "Cycles",
+      "hoursUnit": "hrs",
+      "invalidTime": "Please enter a valid time.",
+      "modeLabel": "Calculator mode",
+      "sleepHoursLabel": "Sleep",
+      "tableLabel": "Suggested times by sleep cycles",
+      "wakeAtLabel": "Wake up at",
+      "wakeTab": "Wake at...",
+      "wakeTimeLabel": "What time do you want to wake up?"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cycle length varies 80-120 minutes between people.",
+      "Stress, caffeine, alcohol, and illness fragment cycles.",
+      "Shift workers and new parents cannot always keep cycles - regularity matters more.",
+      "Not a medical tool - persistent insomnia or snoring needs a doctor."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Find the best bedtime for your alarm or the best wake time for tonight. Built on 90-minute sleep cycles. Free, private, no sign-up.",
+    "metaTitle": "Sleep Calculator - Bedtime & Wake Time Planner | JaurTools",
+    "name": "Sleep Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Sleep runs in ~90-minute cycles, and waking at the end of one feels far better than mid-cycle. To wake at 6:30, go to bed at 21:15 (6 cycles), 22:45 (5 cycles), or 00:15 (4 cycles) - each includes 15 minutes to fall asleep. Going to bed at 23:00? Set the alarm for 5:15, 6:45, or 8:15.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your sleep plan",
+    "tagline": "Plan bedtimes and wake times around 90-minute sleep cycles - wake up refreshed.",
+    "workedExample": "You must wake at 6:30:\n1. Convert to minutes: 6 x 60 + 30 = 390.\n2. 6 cycles need 6 x 90 + 15 = 555 min of bed time.\n3. 390 - 555 = -165; add 1440 (one day) = 1275 min = 21:15.\n4. 5 cycles: 390 - 465 = -75 + 1440 = 1365 = 22:45.\n5. 4 cycles: 390 - 375 = 15 = 00:15.\n\nYou go to bed at 23:00:\n1. Add 15 min to fall asleep + 5 cycles (450 min) = 465 min.\n2. 23:00 + 465 min = 6:45 wake time.",
+    "workedExampleHeading": "Worked example"
+  }
+}

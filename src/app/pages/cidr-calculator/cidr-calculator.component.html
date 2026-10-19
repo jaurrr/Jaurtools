@@ -1,0 +1,172 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="cidr-input">{{ t('labels.cidrLabel') }}</label>
+        <input id="cidr-input" class="text-input mono" type="text" dir="ltr"
+          spellcheck="false" autocomplete="off" placeholder="192.168.0.0/24"
+          [ngModel]="cidrText()" (ngModelChange)="setCidr($event)" />
+      </div>
+
+      @if (block(); as b) {
+        <div class="results">
+          @if (b.normalized) {
+            <p class="alert info dv-status">{{ t('labels.normalizedNote') }}</p>
+          }
+          <div class="result-row total">
+            <span><app-icon name="globe" /> {{ t('labels.rangeLabel') }}</span>
+            <strong class="mono">{{ b.network }} - {{ b.broadcast }}</strong>
+          </div>
+          <table class="kv-table">
+            <tbody>
+              <tr><th scope="row">{{ t('labels.networkLabel') }}</th><td class="mono">{{ b.network }}/{{ b.prefix }}</td></tr>
+              <tr><th scope="row">{{ t('labels.maskLabel') }}</th><td class="mono">{{ b.mask }}</td></tr>
+              <tr><th scope="row">{{ t('labels.wildcardLabel') }}</th><td class="mono">{{ b.wildcard }}</td></tr>
+              <tr><th scope="row">{{ t('labels.broadcastLabel') }}</th><td class="mono">{{ b.broadcast }}</td></tr>
+              <tr><th scope="row">{{ t('labels.firstHostLabel') }}</th><td class="mono">{{ b.firstHost }}</td></tr>
+              <tr><th scope="row">{{ t('labels.lastHostLabel') }}</th><td class="mono">{{ b.lastHost }}</td></tr>
+              <tr><th scope="row">{{ t('labels.totalLabel') }}</th><td>{{ fmt(b.total) }}</td></tr>
+              <tr><th scope="row">{{ t('labels.usableLabel') }}</th><td>{{ fmt(b.usable) }}</td></tr>
+              <tr><th scope="row">{{ t('labels.classLabel') }}</th><td>{{ b.ipClass }}</td></tr>
+              <tr><th scope="row">{{ t('labels.scopeLabel') }}</th>
+                <td>{{ b.isPrivate ? t('labels.privateScope') : t('labels.publicScope') }}</td></tr>
+            </tbody>
+          </table>
+
+          <h3 class="split-heading">{{ t('labels.splitHeading') }}</h3>
+          <div class="field">
+            <label for="cidr-newprefix">{{ t('labels.newPrefixLabel') }}</label>
+            <div class="input-row">
+              <input id="cidr-newprefix" type="number" inputmode="numeric" min="0" max="32" step="1" dir="ltr"
+                [ngModel]="newPrefix()" (ngModelChange)="setNewPrefix($event)" />
+              <input type="range" [min]="b.prefix" max="32" step="1" [ngModel]="newPrefix()"
+                (ngModelChange)="setNewPrefix($event)" [attr.aria-label]="t('labels.newPrefixLabel')" />
+            </div>
+          </div>
+
+          @if (split(); as s) {
+            <p class="note">{{ t('labels.subnetCountNote') }}: <strong>{{ fmt(s.total) }}</strong></p>
+            @if (s.truncated) {
+              <p class="alert info dv-status">{{ t('labels.truncatedNote') }}</p>
+            }
+            <div class="table-wrap">
+              <table class="diff-table">
+                <thead>
+                  <tr>
+                    <th scope="col">{{ t('labels.subnetCol') }}</th>
+                    <th scope="col">{{ t('labels.rangeCol') }}</th>
+                    <th scope="col">{{ t('labels.usableCol') }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (row of s.rows; track row.cidr) {
+                    <tr>
+                      <td class="mono">{{ row.cidr }}</td>
+                      <td class="mono">{{ row.range }}</td>
+                      <td>{{ fmt(row.usable) }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          }
+        </div>
+      } @else {
+        <p class="alert error dv-status dv-status-bad" role="alert">{{ t('labels.invalidCidr') }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

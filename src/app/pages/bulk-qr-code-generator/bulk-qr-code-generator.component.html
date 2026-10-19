@@ -1,0 +1,170 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="bq-input">{{ t('labels.inputLabel') }}</label>
+        <textarea id="bq-input" rows="6" dir="ltr" [placeholder]="t('labels.inputPlaceholder')"
+          [ngModel]="input()" (ngModelChange)="setInput($event)"></textarea>
+        <p class="note">{{ t('labels.lineCount') }}: {{ lineCount() }}</p>
+      </div>
+
+      <div class="two-fields">
+        <div class="field">
+          <label for="bq-ec">{{ t('labels.ecLabel') }}</label>
+          <select id="bq-ec" [ngModel]="ecLevel()" (ngModelChange)="setEcLevel($event)">
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="Q">Q</option>
+            <option value="H">H</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bq-size">{{ t('labels.sizeLabel') }}</label>
+          <select id="bq-size" [ngModel]="size()" (ngModelChange)="setSize(+$event)">
+            <option [value]="256">256 px</option>
+            <option [value]="512">512 px</option>
+            <option [value]="1024">1024 px</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary gn-regen" (click)="generate()" [disabled]="generating() || lineCount() === 0">
+          <app-icon name="qr-code" /> {{ generating() ? t('labels.generating') : t('labels.generate') }}
+        </button>
+        @if (items().length > 0) {
+          <button type="button" class="btn" (click)="clear()">
+            <app-icon name="x" /> {{ t('labels.clear') }}
+          </button>
+        }
+      </div>
+      @if (trimmed()) {
+        <p class="note" role="status">{{ t('labels.trimmedNote') }}</p>
+      }
+
+      @if (items().length > 0) {
+        <h3 class="sub-heading">{{ t('labels.resultsCount') }}: {{ items().length }}</h3>
+        <div class="qr-grid">
+          @for (item of items(); track $index) {
+            <figure class="qr-item">
+              @if (item.failed) {
+                <p class="error"><app-icon name="triangle-alert" /> {{ t('labels.itemFailed') }}</p>
+              } @else {
+                <img [src]="item.url" [alt]="item.text" loading="lazy" />
+              }
+              <figcaption dir="ltr">{{ item.text }}</figcaption>
+              @if (!item.failed) {
+                <button type="button" class="btn btn-small" (click)="downloadItem(item, $index)">
+                  <app-icon name="download" /> {{ t('labels.downloadOne') }}
+                </button>
+              }
+            </figure>
+          }
+        </div>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

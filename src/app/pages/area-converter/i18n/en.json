@@ -1,0 +1,97 @@
+{
+  "area-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Area Converter",
+    "tagline": "Convert between square metres, square feet, acres, hectares and more - instantly.",
+    "metaTitle": "Area Converter - m², ft², Acres, Hectares | JaurTools",
+    "metaDescription": "Free area converter: convert square metres, square feet, square yards, acres, hectares, square miles and more. Fast, accurate, private.",
+    "keywords": "area converter, square meter to square feet, acre to hectare, sq ft to sq m, land area converter",
+    "resultsHeading": "Area conversion results",
+    "quickAnswer": "1 acre equals 4,046.86 square metres (0.4047 hectares). To convert any area, multiply by the factor that turns your starting unit into square metres, then divide by the factor of your target unit. Example: 2.5 acres × 4,046.8564224 = 10,117.14 m².",
+    "keyFacts": [
+      "The base unit here is the square metre (m²). Every conversion runs through it, so all 10 units stay consistent.",
+      "1 acre = 4,046.8564224 m² exactly, by international definition.",
+      "1 hectare = 10,000 m², exactly 2.47105 acres.",
+      "1 square foot = 0.09290304 m²; 1 square yard = 0.83612736 m².",
+      "1 square mile = 2,589,988.11 m² (about 259 hectares).",
+      "Land records in India often use acres, hectares, guntha or bigha. Bigha sizes vary by state, so this tool sticks to standard international units."
+    ],
+    "howTo": [
+      "Type the area value you want to convert.",
+      "Pick the unit you are converting from (for example, Acre).",
+      "Pick the unit you want (for example, Square metre).",
+      "The result appears instantly. Use the swap button to reverse the direction."
+    ],
+    "formula": "result = value × (square metres per \"from\" unit) ÷ (square metres per \"to\" unit).\nFactors (m² per unit): sq ft 0.09290304, sq yd 0.83612736, sq in 0.00064516, sq m 1, sq km 1,000,000, sq mi 2,589,988.110336, acre 4,046.8564224, hectare 10,000.",
+    "workedExample": "Convert 2.5 acres to square metres:\n1. Factor for acre: 4,046.8564224 m² per acre.\n2. Multiply: 2.5 × 4,046.8564224 = 10,117.141056.\n3. Result: 10,117.14 m² (about 1.012 hectares, since 10,117.14 ÷ 10,000 = 1.0117).",
+    "benefits": [
+      "One tool for land, flooring, construction and property listings - no separate calculators.",
+      "Exact international factors, not rounded guesses, so quotes and documents stay correct.",
+      "Swap button reverses conversions in one tap when comparing listings.",
+      "Works offline in your browser with zero sign-up."
+    ],
+    "limitations": [
+      "Covers standard international units only - regional units like bigha or guntha (which vary by state) are not included.",
+      "Converts area only; it cannot estimate land price, which depends on location and market.",
+      "Very large values are rounded to 4 decimals for readability."
+    ],
+    "faqs": [
+      {
+        "q": "How many square feet are in one square metre?",
+        "a": "One square metre equals 10.7639 square feet. So a 100 m² apartment is about 1,076.4 sq ft. Multiply square metres by 10.7639 to get square feet."
+      },
+      {
+        "q": "How many acres are in one hectare?",
+        "a": "One hectare equals 2.47105 acres. Conversely, one acre equals 0.404686 hectares. Farmers and land records in many countries switch between these two constantly."
+      },
+      {
+        "q": "What is the difference between an acre and a hectare?",
+        "a": "Both measure land area. A hectare is exactly 10,000 m² (a 100 m × 100 m square), while an acre is 4,046.86 m². The hectare is the metric standard; the acre is the imperial standard still used in the US, UK and parts of India."
+      },
+      {
+        "q": "How do I convert square yards to square feet?",
+        "a": "One square yard equals 9 square feet. Multiply square yards by 9. For example, 50 sq yd = 450 sq ft."
+      },
+      {
+        "q": "Is a square kilometre the same as 1,000 square metres?",
+        "a": "No - a common mistake. One square kilometre is 1,000 m × 1,000 m = 1,000,000 square metres. Area scales with the square of the length."
+      },
+      {
+        "q": "Why do area conversions use squared factors?",
+        "a": "Because area is length × length. If 1 ft = 0.3048 m, then 1 sq ft = 0.3048² = 0.09290304 m². Every linear factor must be squared before it applies to area."
+      }
+    ],
+    "labels": {
+      "value": "Value",
+      "from": "From",
+      "to": "To",
+      "swap": "Swap units",
+      "result": "Result",
+      "units": {
+        "sqm": "Square metre (m²)",
+        "sqkm": "Square kilometre (km²)",
+        "sqcm": "Square centimetre (cm²)",
+        "sqmm": "Square millimetre (mm²)",
+        "sqft": "Square foot (ft²)",
+        "sqyd": "Square yard (yd²)",
+        "sqin": "Square inch (in²)",
+        "sqmi": "Square mile (mi²)",
+        "acre": "Acre",
+        "hectare": "Hectare (ha)"
+      }
+    }
+  }
+}

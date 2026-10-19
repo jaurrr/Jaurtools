@@ -1,0 +1,140 @@
+{
+  "invisible-character": {
+    "benefits": [
+      "One click copies a truly invisible character - no hunting through character maps.",
+      "Eight different blanks for every need: zero-width, word joiner, hangul filler, and more.",
+      "The repeat builder makes blank nicknames and empty messages in seconds.",
+      "Each card shows the exact Unicode code point, so you know what you are pasting.",
+      "Works in games, chats, and forms that reject empty input."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "chars": [
+      {
+        "code": "U+200B",
+        "key": "zwsp",
+        "name": "Zero Width Space",
+        "usage": "Truly invisible; breaks words without showing a gap."
+      },
+      {
+        "code": "U+200C",
+        "key": "zwnj",
+        "name": "Zero Width Non-Joiner",
+        "usage": "Stops letters joining in Arabic and Indic scripts."
+      },
+      {
+        "code": "U+200D",
+        "key": "zwj",
+        "name": "Zero Width Joiner",
+        "usage": "Joins letters and emoji sequences invisibly."
+      },
+      {
+        "code": "U+2060",
+        "key": "wj",
+        "name": "Word Joiner",
+        "usage": "Invisible glue that prevents line breaks."
+      },
+      {
+        "code": "U+00A0",
+        "key": "nbsp",
+        "name": "Non-Breaking Space",
+        "usage": "A space that never wraps to a new line."
+      },
+      {
+        "code": "U+3164",
+        "key": "hangul",
+        "name": "Hangul Filler",
+        "usage": "The classic blank-nickname trick character."
+      },
+      {
+        "code": "U+2800",
+        "key": "braille",
+        "name": "Braille Blank",
+        "usage": "An empty braille cell that looks like a space."
+      },
+      {
+        "code": "U+1680",
+        "key": "ogham",
+        "name": "Ogham Space",
+        "usage": "A wide space from the Ogham script block."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Each card shows the code point (like U+200B) and a description. Zero Width Space is the most invisible. Hangul Filler (U+3164) is the famous one for blank game nicknames. Try pasting each into your target app to see which one it accepts.",
+        "q": "Which invisible character should I use?"
+      },
+      {
+        "a": "Some apps strip zero-width characters on purpose to stop abuse. Try the Hangul Filler (U+3164) or Braille Blank (U+2800) instead - they survive in far more apps. The builder lets you test quickly.",
+        "q": "The game still says my name is empty. What now?"
+      },
+      {
+        "a": "Technically no - the field contains characters, they are just invisible. Some apps detect and reject them anyway. Use them for fun and formatting, not to bypass rules that matter.",
+        "q": "Is using an invisible name cheating?"
+      },
+      {
+        "a": "These are real Unicode characters with real code points. Screen readers may announce some as 'blank' or skip them, which can confuse blind users. Avoid them in public content where accessibility matters.",
+        "q": "Do invisible characters cause accessibility problems?"
+      },
+      {
+        "a": "No. Copying from here is the safe way: you get exactly the character shown on the card. Random sites sometimes bundle hidden extra characters or even malicious text.",
+        "q": "Can I just copy these from any website?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser. Nothing is uploaded or tracked.",
+        "q": "Is this tool private?"
+      }
+    ],
+    "formula": "Each card holds one Unicode character identified by its code point:\n  Zero Width Space = U+200B\n  Zero Width Non-Joiner = U+200C\n  Zero Width Joiner = U+200D\n  Word Joiner = U+2060\n  Non-Breaking Space = U+00A0\n  Hangul Filler = U+3164\n  Braille Blank Pattern = U+2800\n  Ogham Space Mark = U+1680\n\nBuilder: result = chosen character repeated N times (N = 1..50).\n\nExample: Hangul Filler (U+3164) repeated 3 times = a 3-character string that renders as blank.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Browse the eight invisible characters and read what each is for.",
+      "Click Copy on any card to put that single character on your clipboard.",
+      "Paste it where you need it: a nickname field, chat, or document.",
+      "Need more than one? Use the builder: pick a character, set how many, and copy the bundle.",
+      "If one character gets rejected by an app, try another - apps filter them differently."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Unicode includes characters that take up no visible space when rendered.",
+      "Zero Width Space (U+200B) is invisible but still counts as a character.",
+      "Hangul Filler (U+3164) is the famous character behind blank game nicknames.",
+      "Different apps accept different invisible characters; some strip them out.",
+      "This tool gives you eight of the most useful ones, each with its code point.",
+      "The builder repeats any character 1 to 50 times for nicknames and empty messages."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "invisible character, invisible text copy, blank character copy, zero width space, invisible name, blank nickname trick",
+    "labels": {
+      "builderLabel": "Blank-text builder",
+      "builtLabel": "Characters in bundle",
+      "charSelectLabel": "Character",
+      "copiedLabel": "Copied",
+      "copyBuiltButton": "Copy bundle",
+      "copyButton": "Copy",
+      "repeatLabel": "Repeat"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Some apps and games detect and strip invisible characters on purpose.",
+      "Screen readers may announce or skip them, which hurts accessibility in public content.",
+      "They do not make text truly empty - character counts and validation still see them.",
+      "Overuse in usernames can look like impersonation and get accounts flagged."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free invisible character tool: copy zero-width spaces, hangul filler, braille blanks and more. Blank nickname builder included. Private.",
+    "metaTitle": "Invisible Character - Copy Blank Unicode Text | JaurTools",
+    "name": "Invisible Character",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Invisible characters are real Unicode characters that render as blank space. This tool gives you eight of the most useful: Zero Width Space (U+200B), Zero Width Non-Joiner (U+200C), Zero Width Joiner (U+200D), Word Joiner (U+2060), Non-Breaking Space (U+00A0), Hangul Filler (U+3164) - the classic blank-nickname trick - Braille Blank (U+2800), and Ogham Space (U+1680). Click any card to copy it, or use the builder to repeat a character up to 50 times for blank nicknames and empty messages.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Invisible Character results",
+    "tagline": "Copy invisible Unicode characters for blank names and empty text.",
+    "workedExample": "Making a blank game nickname with Hangul Filler:\n1. Find the 'Hangul Filler' card (code point U+3164).\n2. In the builder, select Hangul Filler and set Repeat to 3.\n3. The bundle is 3 characters long: U+3164 U+3164 U+3164.\n4. Click 'Copy bundle' and paste into the game's name field.\n5. The name field shows blank, but it contains 3 real characters, so 'empty name' validation passes.\n\nIf the game strips it, try the Braille Blank (U+2800) card instead - different apps filter different characters.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "speaker-cleaner": {
+    "benefits": [
+      "Shake trapped water out of phone speakers with low-frequency pulses.",
+      "Loosen dust in speaker grilles with a high-frequency sweep.",
+      "Free alternative to paid cleaner apps - no install, no ads.",
+      "Timed automatically: 30 seconds for water, 20 seconds for dust.",
+      "Safe when used as directed - pure tones, no harmful signals."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Low-frequency sound moves the speaker cone back and forth strongly, which pushes trapped water droplets out of the grille - the same idea as the Apple Watch water-eject feature. It helps with light splashes; it cannot fix a soaked, dead speaker.",
+        "q": "How does sound push water out of a speaker?"
+      },
+      {
+        "a": "It helps after light splashes and rain. Dry the phone first, hold it speaker-down, and run the 30-second eject mode. For heavy water damage or no sound at all, visit a repair shop - sound cannot fix corroded contacts.",
+        "q": "My phone fell in water. Will this save it?"
+      },
+      {
+        "a": "Point the speaker downward so gravity helps, set the volume to 70-80 percent, and run the eject mode once or twice. Repeat only if you still hear muffled sound. Do not blast it at 100 percent - that risks the driver.",
+        "q": "What is the best way to use the water-eject mode?"
+      },
+      {
+        "a": "The sweep runs from 400 Hz to 12000 Hz. Fine dust vibrates loose as the frequency passes each particle's resonance. It works for surface dust in the grille; packed-in grime needs a soft brush.",
+        "q": "How does the dust mode work?"
+      },
+      {
+        "a": "Used as directed - moderate volume, one or two runs - it is safe. The tones are smooth sine waves, the same kind your speaker plays with music. Avoid maximum volume for long periods on any speaker.",
+        "q": "Can these tones damage my speaker?"
+      },
+      {
+        "a": "Yes. The eject mode shakes any small speaker. Laptop and tablet speakers benefit too, though phone speakers trap water most often because they face upward in pockets and rain.",
+        "q": "Does this work for laptop or tablet speakers?"
+      }
+    ],
+    "formula": "Water eject = 165 Hz sine wave, pulsing 4 times per second, for 30 seconds.\nLow frequency = large cone movement = pushes water droplets out.\nDust mode = sine sweep from 400 Hz to 12000 Hz over 20 seconds.\nSweeping frequency = shakes loose particles of different sizes.",
+    "formulaHeading": "What the tones do",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Water eject (30s) for trapped water or Dust removal (20s) for dust.",
+      "Set the volume to 70-80 percent - loud, but not maximum.",
+      "Hold the phone with the speaker facing down so gravity helps.",
+      "Press Start and keep the phone steady until the progress bar finishes.",
+      "If sound is still muffled, run it once more. Then wipe the grille dry."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Low-frequency pulses move the speaker cone strongly, pushing water droplets out of the grille.",
+      "The water-eject mode runs a pulsing 165 Hz tone for 30 seconds.",
+      "The dust mode sweeps 400 Hz to 12000 Hz over 20 seconds to shake dust loose.",
+      "Hold the speaker facing down so gravity helps the water escape.",
+      "70 to 80 percent volume is the sweet spot - effective without stressing the driver.",
+      "This helps with splashes and rain, not with soaked or corroded speakers."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "speaker cleaner, water eject sound, phone speaker cleaner, remove water from speaker, dust removal sound, speaker fix sound",
+    "labels": {
+      "cleanMode": "Cleaning mode",
+      "cleaning": "Cleaning",
+      "done": "Done",
+      "durationLabel": "Duration",
+      "dustDesc": "A 20-second sweep from 400 Hz to 12000 Hz that shakes dust out of the speaker grille.",
+      "ejectDesc": "A 30-second pulsing 165 Hz tone that pushes trapped water out of the speaker.",
+      "mode": "Mode",
+      "patternDust": "Dust removal (20s)",
+      "patternEject": "Water eject (30s)",
+      "progress": "Cleaning progress",
+      "safetyNote": "Use 70-80% volume. Do not use at maximum volume for long periods. Keep away from ears at high volume.",
+      "start": "Start cleaning",
+      "stop": "Stop",
+      "volume": "Volume"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot repair water damage - corrosion and dead drivers need a repair shop.",
+      "Only shakes loose surface dust; packed grime needs physical cleaning.",
+      "Very old or damaged speakers may rattle - stop if you hear distress.",
+      "Not a waterproofing fix; it does not make the phone water-resistant."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online speaker cleaner: play water-eject tones and dust-removal sweeps to clean phone speakers. 100% private, no app needed.",
+    "metaTitle": "Speaker Cleaner - Water Eject & Dust Removal | JaurTools",
+    "name": "Speaker Cleaner",
+    "privacyNote": "This tool runs 100% in your browser. The cleaning tones are generated locally - nothing is recorded or sent anywhere.",
+    "quickAnswer": "The Speaker Cleaner plays two cleaning sounds: a 30-second water-eject mode (a 165 Hz tone pulsing 4 times per second that shakes trapped water out of the speaker) and a 20-second dust-removal mode (a sweep from 400 Hz to 12000 Hz that loosens dust in the grille). Hold the phone speaker-down at 70-80 percent volume. It helps with splashes and dust - not with soaked or damaged speakers.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Speaker cleaner controls",
+    "tagline": "Push water and dust out of your speakers with timed cleaning tones.",
+    "workedExample": "Your phone got splashed and the speaker sounds muffled:\n1. You wipe the phone dry and choose Water eject (30s).\n2. You set the volume to 80 percent and hold the phone speaker-down.\n3. You press Start. A deep pulsing tone plays for 30 seconds; you see tiny droplets shake out.\n4. The progress bar finishes. The speaker sounds clearer but still slightly dull.\n5. You run it once more. The muffle is gone.\nYou wipe the grille and the phone sounds normal again.",
+    "workedExampleHeading": "Worked example"
+  }
+}

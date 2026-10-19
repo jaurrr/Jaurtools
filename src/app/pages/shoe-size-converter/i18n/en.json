@@ -1,0 +1,110 @@
+{
+  "shoe-size-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Shoe Size Converter",
+    "tagline": "Convert shoe sizes between UK, US men, US women, EU and Japanese systems.",
+    "metaTitle": "Shoe Size Converter — UK, US, EU, JP Size Chart",
+    "metaDescription": "Free international shoe size converter: UK, US men, US women, EU, Japanese. Pick a system and size, see all equivalents instantly.",
+    "keywords": "shoe size converter, uk to us shoe size, eu shoe size chart, japanese shoe size, international shoe sizes",
+    "quickAnswer": "Choose the sizing system you know (UK, US men, US women, EU or Japanese), pick your size, and the tool shows the matching size in every other system at once — plus the full chart with your row highlighted.",
+    "keyFacts": [
+      "The UK system starts near 3 for adults and increases in half sizes; US men is roughly UK + 0.5.",
+      "US women sizes run about 1.5 larger than US men for the same foot.",
+      "EU sizes are based on the Paris point (2/3 cm per size) and run higher numerically.",
+      "Japanese sizes are the simplest: they equal foot length in centimetres (e.g. 26.5 = 26.5 cm).",
+      "Sizes vary between brands, so always check the maker size chart for an exact fit."
+    ],
+    "howTo": [
+      "Select the sizing system your size is written in.",
+      "Choose your size from the size dropdown.",
+      "Read the equivalent sizes in all other systems in the results.",
+      "Scroll the chart to compare neighbouring sizes.",
+      "When buying online, confirm against the brand own size chart."
+    ],
+    "formula": "The systems are related by lookup tables, not a single formula.\nApproximate relations: US men ≈ UK + 0.5, US women ≈ UK + 1.5, EU ≈ UK + 33, JP (cm) ≈ foot length",
+    "workedExample": "Your size is EU 42. Find the UK equivalent.\nStep 1: Select system \"EU\" and size \"42\".\nStep 2: The chart row for EU 42 reads: UK 8, US men 8.5, US women 10, JP 26.5.\nAnswer: EU 42 = UK 8 = US men 8.5 = US women 10 = JP 26.5 cm.",
+    "benefits": [
+      "All five major sizing systems in one view.",
+      "Full chart included, with your size row highlighted.",
+      "No math needed — direct lookup is instant and error-free.",
+      "Great for ordering shoes from US, UK, EU or Japanese stores.",
+      "Private: nothing you enter leaves your browser."
+    ],
+    "limitations": [
+      "Charts are standardised approximations; brands and lasts vary.",
+      "Half-size and wide/narrow fittings are not modelled.",
+      "Children and infant sizes are not included in this version.",
+      "When in doubt, measure foot length in cm and use the JP column."
+    ],
+    "faqs": [
+      {
+        "q": "What is EU 42 in UK size?",
+        "a": "EU 42 corresponds to UK 8, which is US men 8.5 and US women 10."
+      },
+      {
+        "q": "How do US men and US women sizes differ?",
+        "a": "For the same foot, US women is about 1.5 sizes larger than US men. Example: US men 8.5 = US women 10."
+      },
+      {
+        "q": "What does Japanese shoe size mean?",
+        "a": "Japanese sizes equal the foot length in centimetres. JP 26.5 means the shoe fits a 26.5 cm foot — the most direct system of all."
+      },
+      {
+        "q": "Why do sizes differ between brands?",
+        "a": "Each brand uses its own last (foot mould) and may round differently, so a UK 8 in one brand can fit like a UK 7.5 in another. Always check the brand chart."
+      },
+      {
+        "q": "How do I measure my foot for the right size?",
+        "a": "Stand on paper, mark heel and longest toe, and measure the distance in cm. Compare with the JP column of the chart."
+      },
+      {
+        "q": "Is my size data stored anywhere?",
+        "a": "No. The conversion runs entirely in your browser; nothing is sent or stored."
+      }
+    ],
+    "resultsHeading": "Shoe size results",
+    "labels": {
+      "systemLabel": "Size system",
+      "sizeLabel": "Your size",
+      "resultLabel": "Matching sizes",
+      "noMatchLabel": "That size was not found in the chart. Try a neighbouring size.",
+      "hintLabel": "Brands vary — always confirm with the maker size chart before buying.",
+      "chartLabel": "Full international size chart"
+    },
+    "systemOptions": [
+      {
+        "id": "uk",
+        "name": "UK"
+      },
+      {
+        "id": "usMen",
+        "name": "US Men"
+      },
+      {
+        "id": "usWomen",
+        "name": "US Women"
+      },
+      {
+        "id": "eu",
+        "name": "EU"
+      },
+      {
+        "id": "jp",
+        "name": "JP (cm)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "investment-calculator": {
+    "assumptionNote": "Contributions are assumed at the end of each compounding period and the annual rate stays constant for the whole period. Taxes, fees, and inflation are not included.",
+    "benefits": [
+      "See exactly how much of your future wealth comes from compounding vs deposits.",
+      "Compare monthly, quarterly, and annual compounding with one tap.",
+      "Test 'what if I add $100 more per month' - the answer usually surprises people.",
+      "Free, instant, and private - no broker account needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Both use the same core math, but this calculator adds compounding-frequency choice (monthly, quarterly, annual) and is built around an investing mindset: initial stake plus recurring contributions. Future value is the pure math version.",
+        "q": "How is this different from the Future Value calculator?"
+      },
+      {
+        "a": "Yes - set the initial amount to 0. The whole result then comes from monthly contributions compounding over time, which is exactly how most people invest.",
+        "q": "Can I start with zero?"
+      },
+      {
+        "a": "Monthly compounding applies one-twelfth of the annual rate each month. Quarterly applies one-fourth every three months. The differences are small but real: more frequent compounding always wins slightly, which is why this calculator lets you switch.",
+        "q": "Monthly vs quarterly vs annual compounding?"
+      },
+      {
+        "a": "Contributions are assumed at the end of each compounding period. Monthly contributions are grouped to match the period you pick: for quarterly compounding, each quarter gets 3 months of contributions.",
+        "q": "When are contributions assumed to be made?"
+      },
+      {
+        "a": "Because real returns vary year to year and this calculator assumes one fixed rate. Use a conservative 5-6% for planning and compare with 8-10% to see the range of possible outcomes.",
+        "q": "Why would my real investment differ?"
+      },
+      {
+        "a": "No. This is a planning projection, not a prediction or a recommendation. It ignores which assets to buy, when to rebalance, taxes, and fees. Talk to a licensed professional before investing real money.",
+        "q": "Is this investment advice?"
+      }
+    ],
+    "formula": "Periods per year p = 12, 4, or 1; period rate r = annual rate / p; periods n = years x p\nPayment per period = monthly contribution x 12 / p\nFV = initial x (1+r)^n + payment per period x ((1+r)^n - 1) / r\nContributions = initial + monthly contribution x 12 x years\nGrowth = FV - contributions",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the compounding frequency: monthly, quarterly, or annual.",
+      "Enter your initial investment (0 to start from scratch).",
+      "Enter your monthly contribution.",
+      "Enter the expected annual return and the number of years.",
+      "Read the future value, your contributions, and the growth separately."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Investing growth = your deposits plus compounding on those deposits.",
+      "More frequent compounding grows slightly faster.",
+      "Contributions usually dominate early; compounding dominates late.",
+      "The growth row shows exactly what compounding earned you.",
+      "A fixed rate is assumed - real markets fluctuate."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "investment calculator, investment growth calculator, recurring investment calculator, compound investment calculator, sip future value calculator",
+    "labels": {
+      "annualRate": "Expected annual return (%/yr)",
+      "contributed": "You contributed",
+      "frequency": "Compounding frequency",
+      "freqAnnual": "Annual",
+      "freqMonthly": "Monthly",
+      "freqQuarterly": "Quarterly",
+      "fromContrib": "From contributions",
+      "fromInitial": "From initial amount",
+      "futureValue": "Future value",
+      "growth": "Growth (returns)",
+      "initial": "Initial investment ($)",
+      "monthlyContrib": "Monthly contribution ($)",
+      "years": "Years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant rate - real investments fluctuate.",
+      "Ignores inflation, taxes, and fees, so real purchasing power will be lower.",
+      "Not a prediction of actual returns.",
+      "Not investment advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free investment calculator: future value of an initial stake plus monthly contributions with monthly, quarterly, or annual compounding. Private, no sign-up.",
+    "metaTitle": "Investment Calculator - Growth with Recurring Contributions | JaurTools",
+    "name": "Investment Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "$5,000 initial plus $300 per month at 8% annual for 20 years (monthly compounding) grows to about $201,340. You contributed $77,000, so compounding earned about $124,340 - more than 1.6 times what you put in. The growth column shows exactly what compounding did.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your investment results",
+    "tagline": "Future value of an initial stake plus monthly contributions, at any frequency.",
+    "workedExample": "$5,000 initial, $300/month, 8%/yr, 20 years, monthly compounding:\n1. Period rate r = 0.08 / 12 = 0.0066667, n = 240 months.\n2. Growth factor (1+r)^n = 1.0066667^240 = about 4.92680.\n3. Initial part: $5,000 x 4.92680 = $24,634.\n4. Contributions part: $300 x (4.92680 - 1) / 0.0066667 = $300 x 589.02 = $176,706.\n5. FV = $24,634 + $176,706 = about $201,340.\n6. Contributions = $5,000 + $300 x 240 = $77,000. Growth = about $124,340.",
+    "workedExampleHeading": "Worked example"
+  }
+}

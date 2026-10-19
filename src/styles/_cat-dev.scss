@@ -1,0 +1,1016 @@
+/* JaurTools category design language: DEV (terminal / code) + PDF / FILE (file-card workflows).
+   Wired once from src/styles.scss: @use 'styles/cat-dev';
+   All classes are additive — they only set properties the per-tool component
+   stylesheets do not, so existing tools keep their look and gain the new layer. */
+
+:root {
+  --dv-term-bg: #0b1220;
+  --dv-term-deep: #020617;
+  --dv-term-text: #e2e8f0;
+  --dv-term-muted: #94a3b8;
+  --dv-term-line: #1e293b;
+  --dv-ok: #16a34a;
+  --dv-ok-deep: #14532d;
+  --dv-bad: #dc2626;
+  --dv-bad-deep: #7f1d1d;
+  --dv-warn: #d97706;
+  --dv-warn-deep: #713f12;
+  --dv-info: #2563eb;
+  --dv-info-deep: #1e3a8a;
+}
+
+/* ---------- DEV: terminal code panes ---------- */
+
+.dv-term {
+  border: 1px solid var(--dv-term-line);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgb(2 6 23 / 0.3);
+  tab-size: 2;
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+
+  &::-webkit-scrollbar {
+    inline-size: 8px;
+    block-size: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 8px;
+  }
+
+  &::selection {
+    background: rgb(99 102 241 / 0.45);
+  }
+}
+
+.dv-codeblock {
+  background: var(--dv-term-bg);
+  border: 1px solid var(--dv-term-line);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 12px 28px -14px rgb(2 6 23 / 0.55);
+}
+
+.dv-codeblock-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-block-size: 44px;
+  padding: 0.375rem 0.75rem;
+  background: rgb(255 255 255 / 0.03);
+  border-block-end: 1px solid var(--dv-term-line);
+
+  &::before {
+    content: '';
+    flex: none;
+    inline-size: 3.25rem;
+    block-size: 0.75rem;
+    background-image:
+      radial-gradient(circle closest-side, #f87171 96%, transparent 100%),
+      radial-gradient(circle closest-side, #fbbf24 96%, transparent 100%),
+      radial-gradient(circle closest-side, #34d399 96%, transparent 100%);
+    background-size: 0.75rem 0.75rem;
+    background-position: 0 center, 1.25rem center, 2.5rem center;
+    background-repeat: no-repeat;
+  }
+}
+
+.dv-codeblock-title {
+  flex: 1;
+  min-inline-size: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--dv-term-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  direction: ltr;
+  text-align: start;
+}
+
+.dv-codeblock-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-inline-start: auto;
+}
+
+.dv-copybtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  min-inline-size: 44px;
+  min-block-size: 44px;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dv-term-line);
+  background: rgb(255 255 255 / 0.06);
+  color: var(--dv-term-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgb(255 255 255 / 0.12);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.dv-codeblock .dv-term {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+/* ---------- DEV: validator status ---------- */
+
+.dv-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-weight: 600;
+
+  &::before {
+    content: '';
+    flex: none;
+    inline-size: 0.75rem;
+    block-size: 0.75rem;
+    margin-block-start: 0.35em;
+    border-radius: 999px;
+    background: var(--dv-info);
+    box-shadow: 0 0 0 4px rgb(37 99 235 / 0.18);
+  }
+
+  &.dv-status-ok::before {
+    background: #22c55e;
+    box-shadow: 0 0 0 4px rgb(34 197 94 / 0.18);
+  }
+
+  &.dv-status-bad::before {
+    background: #ef4444;
+    box-shadow: 0 0 0 4px rgb(239 68 68 / 0.18);
+  }
+
+  &.dv-status-warn::before {
+    background: #f59e0b;
+    box-shadow: 0 0 0 4px rgb(245 158 11 / 0.18);
+  }
+}
+
+.dv-pill {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.dv-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  min-inline-size: 44px;
+  min-block-size: 32px;
+  padding: 0.25rem 0.875rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+
+  &.ok { background: #dcfce7; color: #166534; }
+  &.bad { background: #fee2e2; color: #991b1b; }
+  &.warn { background: #fef9c3; color: #854d0e; }
+  &.info { background: #dbeafe; color: #1e40af; }
+}
+
+/* ---------- DEV: table outputs ---------- */
+
+.dv-kv tbody tr,
+.dv-diff tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.dv-kv tbody tr:hover {
+  background: rgb(99 102 241 / 0.06);
+}
+
+.dv-diff td:first-child {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+}
+
+/* ---------- DEV: tester panes ---------- */
+
+.dv-tester {
+  display: grid;
+  gap: 1rem;
+}
+
+.dv-pane {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+  padding: 0.875rem 1rem;
+  min-block-size: 6rem;
+  overflow: auto;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.dv-pane.dv-term {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875rem;
+}
+
+mark,
+.dv-mark {
+  background: #fde047;
+  color: #713f12;
+  border-radius: 0.25rem;
+  padding-inline: 0.125rem;
+}
+
+.dv-toggle button {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 700;
+  min-inline-size: 48px;
+}
+
+.dv-checks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.dv-checks .check-item {
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.dv-checks .check-item:hover {
+  border-color: var(--accent);
+}
+
+/* ---------- PDF / FILE: dropzones ---------- */
+
+.fl-drop {
+  background-image: linear-gradient(180deg, rgb(79 70 229 / 0.05), transparent 60%);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  app-icon svg {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    color: var(--accent);
+  }
+
+  small {
+    max-inline-size: 32rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 4px rgb(79 70 229 / 0.12);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  &.dragging {
+    border-style: solid;
+    border-color: var(--accent);
+    background-color: rgb(79 70 229 / 0.1);
+    transform: scale(1.01);
+  }
+}
+
+/* ---------- PDF / FILE: file cards ---------- */
+
+.fl-row {
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px -2px rgb(2 6 23 / 0.12);
+  }
+
+  &[draggable='true']:hover {
+    cursor: grab;
+  }
+
+  &[draggable='true']:active {
+    cursor: grabbing;
+  }
+
+  .fl-icon {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 44px;
+    block-size: 44px;
+    border-radius: 0.625rem;
+    background: rgb(79 70 229 / 0.1);
+    color: var(--accent);
+  }
+
+  .fl-name {
+    min-inline-size: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    direction: ltr;
+    text-align: start;
+  }
+
+  .fl-meta {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    font-weight: 400;
+  }
+}
+
+.fl-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 44px;
+  min-block-size: 28px;
+  padding-inline: 0.625rem;
+  border-radius: 999px;
+  background: rgb(79 70 229 / 0.1);
+  color: var(--accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.fl-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+/* ---------- PDF / FILE: progress ---------- */
+
+.fl-progress {
+  block-size: 0.625rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+  margin-block: 1rem;
+
+  > span {
+    display: block;
+    block-size: 100%;
+    inline-size: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--accent), #818cf8);
+    transition: inline-size 0.25s ease;
+  }
+
+  &.indeterminate > span {
+    inline-size: 40%;
+    animation: fl-slide 1.1s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes fl-slide {
+  from { margin-inline-start: -40%; }
+  to { margin-inline-start: 100%; }
+}
+
+/* ---------- PDF / FILE: action toolbar ---------- */
+
+.fl-toolbar {
+  position: sticky;
+  inset-block-end: 0;
+  z-index: 5;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  margin-block: 1rem 0;
+}
+
+/* ---------- DEV: terminal input editors ---------- */
+
+.dv-term-input {
+  inline-size: 100%;
+  min-block-size: 10rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--dv-term-line);
+  border-radius: 0.75rem;
+  background: var(--dv-term-bg);
+  color: var(--dv-term-text);
+  caret-color: #818cf8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  tab-size: 2;
+  resize: vertical;
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+
+  &::placeholder {
+    color: var(--dv-term-muted);
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+
+  &::selection {
+    background: rgb(99 102 241 / 0.45);
+  }
+}
+
+.dv-codeblock .dv-term-input {
+  border: 0;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.dv-term-input.single {
+  min-block-size: 3.5rem;
+}
+
+/* ---------- DEV: "try an example" chip ---------- */
+
+.dv-example {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.dv-example-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-block-size: 44px;
+  padding: 0.375rem 0.875rem;
+  border: 1px dashed var(--accent);
+  border-radius: 999px;
+  background: rgb(79 70 229 / 0.06);
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(79 70 229 / 0.12);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/* ---------- DEV: privacy proof note ---------- */
+
+.dv-privacy-proof {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-block: 1rem 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+
+  app-icon {
+    flex: none;
+    margin-block-start: 0.125rem;
+    color: var(--dv-ok);
+  }
+}
+
+/* ---------- DEV: autosave note ---------- */
+
+.dv-autosave {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-inline-start: 0.5rem;
+}
+
+/* ---------- DEV: flavor / mode picker chips ---------- */
+
+.dv-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 0.75rem;
+
+  .dv-chip {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: 44px;
+    padding: 0.375rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    &:hover {
+      border-color: var(--accent);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    &[aria-pressed='true'] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+  }
+}
+
+.dv-picker-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-block: 1rem 0 0;
+}
+
+/* ---------- DEV: dual-view tabs ---------- */
+
+.dv-viewtabs {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+  margin-block-end: 1rem;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    min-block-size: 44px;
+    padding: 0.375rem 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--text);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    &[aria-selected='true'] {
+      background: var(--accent);
+      color: #fff;
+    }
+  }
+}
+
+/* ---------- DEV: JWT segment colors ---------- */
+
+.dv-jwt {
+  padding: 1rem;
+  border: 1px solid var(--dv-term-line);
+  border-radius: 0.75rem;
+  background: var(--dv-term-bg);
+  color: var(--dv-term-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  word-break: break-all;
+  direction: ltr;
+  text-align: start;
+  cursor: default;
+}
+
+.dv-seg-h { color: #f472b6; }
+.dv-seg-p { color: #a78bfa; }
+.dv-seg-s { color: #2dd4bf; }
+.dv-seg-dot { color: var(--dv-term-muted); }
+
+button.dv-seg {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0.25rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.dv-seg-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 0.75rem 0;
+  font-size: 0.8125rem;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  i {
+    inline-size: 0.75rem;
+    block-size: 0.75rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+  }
+}
+
+/* ---------- DEV: regex explanation + quick reference ---------- */
+
+.dv-explain {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+
+  li {
+    display: flex;
+    gap: 0.625rem;
+    align-items: baseline;
+    padding: 0.375rem 0.625rem;
+    border-radius: 0.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+}
+
+.dv-quickref {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.375rem;
+  margin-block-start: 0.75rem;
+  font-size: 0.8125rem;
+
+  button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    min-block-size: 44px;
+    padding: 0.5rem 0.625rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    text-align: start;
+
+    &:hover {
+      border-color: var(--accent);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    span {
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+  }
+}
+
+/* ---------- DEV: match cards ---------- */
+
+.dv-matches {
+  display: grid;
+  gap: 0.5rem;
+  margin-block-start: 0.75rem;
+}
+
+.dv-matchcard {
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  font-size: 0.875rem;
+
+  .dv-match-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-block-end: 0.25rem;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    word-break: break-all;
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+
+  .dv-groups {
+    margin-block-start: 0.375rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+
+    span {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      padding: 0.125rem 0.5rem;
+      border-radius: 999px;
+      background: rgb(79 70 229 / 0.08);
+      color: var(--accent);
+      direction: ltr;
+    }
+  }
+}
+
+/* ---------- DEV: file in/out row ---------- */
+
+.dv-inout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 0.75rem;
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    min-block-size: 44px;
+    padding: 0.375rem 0.875rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--text);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  }
+}
+
+/* ---------- DEV: live badge ---------- */
+
+.dv-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dv-ok);
+
+  &::before {
+    content: '';
+    inline-size: 0.5rem;
+    block-size: 0.5rem;
+    border-radius: 999px;
+    background: currentcolor;
+    animation: dv-pulse 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes dv-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* ---------- PDF / FILE: thumbnail rail (page cards) ---------- */
+
+.fl-thumbrail {
+  display: flex;
+  gap: 0.625rem;
+  overflow-x: auto;
+  padding: 0.75rem 0.25rem;
+  margin-block: 0.75rem;
+  scrollbar-width: thin;
+}
+
+.fl-thumb {
+  flex: none;
+  inline-size: 6.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.625rem;
+  background: var(--bg);
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: var(--accent);
+  }
+
+  &.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgb(79 70 229 / 0.25);
+  }
+
+  &.excluded {
+    opacity: 0.45;
+  }
+
+  .fl-thumb-page {
+    aspect-ratio: 1 / 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      linear-gradient(180deg, rgb(79 70 229 / 0.06), transparent 70%),
+      repeating-linear-gradient(0deg, transparent 0 10px, rgb(148 163 184 / 0.12) 10px 11px);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--muted);
+  }
+
+  .fl-thumb-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: 32px;
+      block-size: 32px;
+      border: 0;
+      border-radius: 0.375rem;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+
+      &:hover {
+        background: rgb(220 38 38 / 0.1);
+        color: var(--dv-bad);
+      }
+    }
+  }
+}
+
+.fl-rail-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-block: 1rem 0 0;
+}
+
+/* ---------- dark theme ---------- */
+
+[data-theme='dark'] {
+  .dv-term {
+    background: var(--dv-term-deep);
+    scrollbar-color: #475569 transparent;
+
+    &::-webkit-scrollbar-thumb {
+      background: #475569;
+    }
+  }
+
+  .dv-codeblock {
+    background: var(--dv-term-deep);
+    box-shadow: 0 12px 28px -14px rgb(0 0 0 / 0.7);
+  }
+
+  mark,
+  .dv-mark {
+    background: #a16207;
+    color: #fef9c3;
+  }
+
+  .dv-status-ok {
+    color: #86efac;
+  }
+
+  .dv-status-bad {
+    color: #fca5a5;
+  }
+
+  .dv-status-warn {
+    color: #fcd34d;
+  }
+
+  .dv-badge {
+    &.ok { background: #14532d; color: #dcfce7; }
+    &.bad { background: #7f1d1d; color: #fee2e2; }
+    &.warn { background: #713f12; color: #fef9c3; }
+    &.info { background: #1e3a8a; color: #dbeafe; }
+  }
+
+  .fl-drop {
+    background-image: linear-gradient(180deg, rgb(129 140 248 / 0.08), transparent 60%);
+  }
+
+  .fl-toolbar {
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+  }
+}
+
+/* ---------- desktop refinements ---------- */
+
+@media (min-width: 768px) {
+  .fl-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .dv-tester {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .fl-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fl-toolbar {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    background: none;
+    backdrop-filter: none;
+    border: 0;
+    padding: 0;
+  }
+}
+
+[dir='rtl'] {
+  .dv-codeblock-head::before {
+    background-position: 100% center, calc(100% - 1.25rem) center, calc(100% - 2.5rem) center;
+  }
+}

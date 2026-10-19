@@ -1,0 +1,89 @@
+{
+  "conception-calculator": {
+    "assumptionNote": "These dates are estimates from average cycle timing. Ovulation timing varies, so ultrasound dating in early pregnancy is more accurate.",
+    "benefits": [
+      "Turns a last period date into the three dates that matter: conception, due date and fertile window.",
+      "Helps you prepare questions before your first prenatal appointment.",
+      "Private: sensitive dates never leave your browser.",
+      "Instant results with no account or app install."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Gestational age is counted from the first day of the last period, not from conception, which is why pregnancy is dated as 40 weeks even though the embryo is 38 weeks old.",
+        "q": "Why is pregnancy counted as 40 weeks?"
+      },
+      {
+        "a": "Ovulation usually happens about 14 days before the next period, so conception falls around LMP + (cycle length - 14). Longer cycles push conception later.",
+        "q": "How is the conception date estimated?"
+      },
+      {
+        "a": "Only about 4-5% of babies arrive on their exact due date. Most come within two weeks either side, and first pregnancies often run a little late.",
+        "q": "How accurate is the due date?"
+      },
+      {
+        "a": "Yes. Enter the LMP that came before the missed period, plus your usual cycle length, and the calculator estimates from there.",
+        "q": "Can I use this if my period is late?"
+      },
+      {
+        "a": "No. Sperm can survive up to 5 days, so the fertile window covers the days before ovulation, not just ovulation day itself.",
+        "q": "Is the fertile window just ovulation day?"
+      },
+      {
+        "a": "A dating ultrasound in the first trimester measures the embryo directly and can shift the due date by days. Doctors use the ultrasound date when it differs clearly.",
+        "q": "Which is more accurate: LMP or ultrasound?"
+      }
+    ],
+    "formula": "Ovulation (estimated conception) = LMP + (cycle length - 14) days.\nFertile window = ovulation - 5 days to ovulation + 1 day.\nDue date (Naegele's rule) = LMP + 280 days (40 weeks).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the first day of your last menstrual period.",
+      "Enter your usual cycle length in days (28 is typical).",
+      "Read your estimated conception date, due date and fertile window.",
+      "Take these dates to your first prenatal appointment for confirmation."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Conception is estimated at ovulation, about 14 days before the next period in a 28-day cycle.",
+      "Pregnancy is dated from the last menstrual period, adding two weeks before conception.",
+      "Naegele's rule: add 280 days (40 weeks) to the LMP for the due date.",
+      "Sperm can survive up to 5 days, so the fertile window starts well before ovulation.",
+      "Only about 4-5% of babies are born on their exact due date.",
+      "Early ultrasound dating is more accurate than LMP math when cycles are irregular."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "conception date calculator, when did I conceive, ovulation date calculator, due date calculator, fertile window calculator",
+    "labels": {
+      "conceptionResult": "Estimated conception",
+      "cycleLabel": "Usual cycle length (days)",
+      "dueResult": "Estimated due date",
+      "fertileResult": "Fertile window",
+      "invalidDate": "Please enter a valid date.",
+      "lmpLabel": "First day of last period",
+      "lmpNote": "The first day of your most recent menstrual period."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only: ovulation timing varies between women and cycles.",
+      "Irregular cycles make LMP-based dating unreliable.",
+      "Cannot confirm pregnancy; only a test or clinician can.",
+      "Not a substitute for prenatal care or ultrasound dating."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Estimate your conception date from your last period or due date, plus your fertile window and due date. Free, private, no signup.",
+    "metaTitle": "Conception Calculator - Estimate Your Conception Date | JaurTools",
+    "name": "Conception Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your dates never leave your device.",
+    "quickAnswer": "Conception is estimated at ovulation: last period plus (cycle length minus 14) days. With a last period of 1 June 2026 and a 28-day cycle, conception falls around 15 June 2026, the due date is 8 March 2027, and the fertile window runs 10-16 June.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your conception results",
+    "tagline": "Your likely conception date, fertile window, and due date in seconds.",
+    "workedExample": "LMP 1 June 2026, 28-day cycle:\n1. Ovulation = LMP + (28 - 14) = 1 June + 14 days = 15 June 2026.\n2. Fertile window = 15 June - 5 days to 15 June + 1 day = 10 to 16 June 2026.\n3. Due date = LMP + 280 days = 8 March 2027.\n(Check: June 1 + 280 days lands on March 8 of the following year.)",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

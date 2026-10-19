@@ -1,0 +1,89 @@
+{
+  "roth-ira-calculator": {
+    "assumptionNote": "Assumes a constant annual return and that your monthly contribution stays within IRS annual limits. Earnings are shown tax-free, which assumes a qualified withdrawal (age 59.5+, account open 5+ years). Not tax advice.",
+    "benefits": [
+      "Shows the real prize of a Roth IRA: decades of tax-free growth on every dollar of earnings.",
+      "Makes the cost of waiting visible - every year of delay costs tens of thousands.",
+      "Helps you sanity-check whether you can actually stay under the annual contribution limit.",
+      "Instant and free, with no brokerage account needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "You contribute after-tax dollars, and qualified withdrawals - including all the growth - are completely tax-free in retirement. A traditional IRA gives you a tax deduction now but taxes withdrawals later. Roth usually wins if you expect to be in the same or a higher tax bracket in retirement.",
+        "q": "Roth IRA vs traditional IRA: which is better?"
+      },
+      {
+        "a": "For 2026, the limit is $7,000 per year ($8,000 if you are 50 or older). This calculator assumes your monthly contribution respects that cap - if you enter $600 a month ($7,200 a year), reduce it to stay legal.",
+        "q": "What is the Roth IRA contribution limit?"
+      },
+      {
+        "a": "You can withdraw your own contributions at any time without tax or penalty, because you already paid tax on them. Earnings are a different story: withdraw them before 59.5 and before the account is 5 years old, and you generally owe tax plus a 10% penalty.",
+        "q": "Can I withdraw money early from a Roth IRA?"
+      },
+      {
+        "a": "High earners face income limits on direct Roth contributions. The common workaround is the 'backdoor Roth': contribute to a traditional IRA (no deduction), then convert it to Roth. The rules around this are fiddly, so check current IRS guidance or a tax pro.",
+        "q": "What if I earn too much to contribute directly?"
+      },
+      {
+        "a": "The 5-year rule says the account must be open at least 5 years before earnings withdrawals count as qualified. Each conversion also starts its own 5-year clock. It rarely bites people who open an account early and leave it alone, but it matters for backdoor Roth conversions.",
+        "q": "What is the 5-year rule?"
+      },
+      {
+        "a": "Yes, and it is usually worth doing if you expect a long career of rising income. Paying tax at today's (presumably lower) rate to get decades of tax-free growth is the core Roth advantage.",
+        "q": "Should a young person choose Roth?"
+      }
+    ],
+    "formula": "Monthly rate r = annual return / 12. Months n = years x 12.\nFuture value = PMT x ((1 + r)^n - 1) / r, where PMT is the monthly contribution.\nEarnings = future value - total contributions.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your planned monthly contribution. Remember the IRS annual limit ($7,000 in 2026, $8,000 if 50+).",
+      "Set an expected annual return - 7 to 8% is a common long-term assumption for stock-heavy portfolios.",
+      "Enter how many years you will keep contributing.",
+      "See your projected tax-free total, what you put in, and what compounding earned you.",
+      "Try a lower return to see a cautious projection, or fewer years to see the cost of starting late."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "A Roth IRA is funded with after-tax dollars, so qualified withdrawals - including all growth - are tax-free.",
+      "Growth follows the annuity formula: FV = PMT x ((1 + r)^n - 1) / r.",
+      "The 2026 contribution limit is $7,000 per year, or $8,000 if you are 50 or older.",
+      "Qualified withdrawals generally require age 59.5 and an account open at least 5 years.",
+      "Income limits restrict direct contributions for high earners; the backdoor Roth is the usual workaround.",
+      "Unlike traditional IRAs, Roth IRAs have no required minimum distributions during your lifetime."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "roth ira calculator, roth ira growth calculator, roth vs traditional ira calculator, roth ira contribution calculator, tax free retirement calculator",
+    "labels": {
+      "annualReturn": "Expected annual return (%)",
+      "monthlyContrib": "Monthly contribution ($)",
+      "projectedValue": "Projected tax-free value",
+      "taxFreeEarnings": "Tax-free earnings",
+      "totalContributed": "Total you contribute",
+      "years": "Years contributing"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant return; real markets fluctuate and can lose money.",
+      "Does not enforce IRS contribution or income limits - check the current year's rules.",
+      "Ignores inflation, so the total is in future dollars.",
+      "This is a planning estimate, not tax or financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Roth IRA calculator: project tax-free growth of your Roth IRA contributions over decades. Instant, private, no sign-up.",
+    "metaTitle": "Roth IRA Calculator - Project Tax-Free Growth | JaurTools",
+    "name": "Roth IRA Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "A Roth IRA grows tax-free: you pay tax on contributions now, then qualified withdrawals - including all the growth - cost you nothing in tax. For example, $500 a month at 8% for 30 years grows to about $745,200, even though you only contributed $180,000. That means roughly $565,200 of tax-free earnings. The catch: annual contributions are capped ($7,000 in 2026) and earnings withdrawals must generally wait until 59.5.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your Roth IRA projection",
+    "tagline": "Project decades of tax-free Roth IRA growth from your monthly contributions.",
+    "workedExample": "$500/month, 8% annual return, 30 years:\n1. Monthly rate r = 0.08 / 12 = 0.006667. Months n = 30 x 12 = 360.\n2. Growth factor: (1.006667)^360 = about 10.936.\n3. Future value = 500 x (10.936 - 1) / 0.006667 = 500 x 1,490.33 = about $745,200.\n4. Total contributed = 500 x 360 = $180,000.\n5. Tax-free earnings = 745,200 - 180,000 = about $565,200.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "mortgage-calculator": {
+    "benefits": [
+      "No surprises: see tax, insurance, and PMI before you fall in love with a house.",
+      "Shows exactly when PMI drops off as your down payment grows.",
+      "Compare 15 vs 30-year terms in seconds.",
+      "Private - your home-buying numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The four parts of a mortgage payment: Principal, Interest, property Tax, and homeowner's Insurance. Lenders quote PITI because it is the real monthly cost - this calculator adds PMI and HOA on top.",
+        "q": "What is PITI?"
+      },
+      {
+        "a": "Put 20% down, or once you owe 80% or less of the home's value, ask your lender to drop PMI (they must drop it automatically at 78% for most conventional loans).",
+        "q": "How do I avoid PMI?"
+      },
+      {
+        "a": "15-year: higher payment, much less total interest, faster equity. 30-year: lower payment, more flexibility, more interest. Many buyers take the 30-year and make extra payments - the best of both.",
+        "q": "15-year vs 30-year mortgage?"
+      },
+      {
+        "a": "The 28/36 rule: keep housing under 28% of gross monthly income and all debts under 36%. Enter the resulting monthly budget here and work backwards to a price.",
+        "q": "How much house can I afford?"
+      },
+      {
+        "a": "Usually yes, via escrow: the lender collects 1/12 of the yearly tax each month and pays the bill for you. Same for homeowner's insurance.",
+        "q": "Are property taxes included in my mortgage payment?"
+      },
+      {
+        "a": "No. Everything is computed in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Loan = price - down payment; r = rate/12/100; n = years x 12\nP&I = loan x r / (1 - (1+r)^-n)\nTax = yearly tax / 12; Insurance = yearly / 12\nPMI = loan x PMI rate / 12 (only if down < 20%)\nTotal = P&I + tax + insurance + PMI + HOA",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the home price and your down payment.",
+      "Enter the interest rate and loan term.",
+      "Add yearly property tax, yearly insurance, PMI rate, and monthly HOA.",
+      "Read the full monthly breakdown and the true total.",
+      "Try a bigger down payment to watch PMI disappear at 20%."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "PITI = Principal + Interest + Tax + Insurance - the four parts of most mortgage payments.",
+      "PMI (private mortgage insurance) applies below 20% down and protects the lender, not you.",
+      "Property tax and insurance are usually escrowed - collected monthly, paid yearly by the lender.",
+      "A 15-year loan has higher payments but roughly half the lifetime interest of a 30-year.",
+      "The 28/36 rule: housing under 28% of gross income, all debt under 36%.",
+      "HOA dues are not part of the mortgage but are part of the monthly cost of the home."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "mortgage calculator, home loan calculator, monthly mortgage payment, piti calculator, pmi calculator",
+    "labels": {
+      "annualRate": "Interest rate (%)",
+      "downPayment": "Down payment",
+      "hoa": "HOA (monthly)",
+      "hoaLabel": "HOA",
+      "homeInsurance": "Home insurance (yearly)",
+      "homePrice": "Home price",
+      "insurance": "Insurance",
+      "pmi": "PMI",
+      "pmiRate": "PMI rate (%)",
+      "principalInterest": "Principal and interest",
+      "propertyTax": "Property tax (yearly)",
+      "tax": "Property tax",
+      "termYears": "Loan term (years)",
+      "totalMonthly": "Total monthly"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - actual tax, insurance, and PMI quotes vary by property and lender.",
+      "Fixed-rate model; adjustable-rate payments change over time.",
+      "Excludes closing costs, maintenance, and utilities.",
+      "Not a loan offer or pre-approval - talk to a lender for real numbers."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free mortgage calculator: monthly payment with principal, interest, property tax, insurance, PMI, and HOA. Private, browser-based.",
+    "metaTitle": "Mortgage Calculator - Monthly Payment with Tax and PMI | JaurTools",
+    "name": "Mortgage Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Your real monthly cost is PITI plus extras. A $400,000 home with 20% down at 6.5% over 30 years: $2,023 principal and interest + $400 tax + $150 insurance + $100 HOA = $2,673 per month. Enter your numbers for the full picture.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your monthly mortgage cost",
+    "tagline": "True monthly home cost - principal, interest, tax, insurance, PMI, and HOA in one number.",
+    "workedExample": "$400,000 home, $80,000 down, 6.5%, 30 years, $4,800 tax, $1,800 insurance, $100 HOA:\n1. Loan = $320,000. P&I = 320,000 x 0.0063207 = $2,022.61.\n2. Tax = 4,800/12 = $400; insurance = 1,800/12 = $150.\n3. PMI = $0 (20% down reaches the threshold).\n4. Total = 2,022.61 + 400 + 150 + 100 = $2,672.61/month.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "projects": {
+    "jaurtools": {
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "configurations": {
+            "development": {
+              "extractLicenses": false,
+              "namedChunks": true,
+              "optimization": false,
+              "sourceMap": true
+            },
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "4mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "50kb",
+                  "maximumError": "150kb"
+                }
+              ],
+              "outputHashing": "all"
+            }
+          },
+          "defaultConfiguration": "production",
+          "options": {
+            "assets": [
+              "src/assets"
+            ],
+            "index": "src/index.html",
+            "outputPath": {
+              "base": "dist/jaurtools"
+            },
+            "styles": [
+              "src/styles.scss"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "browser": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "pako",
+              "node-html-better-parser",
+              "qrcode",
+              "pdfjs-dist",
+              "sql.js",
+              "bcryptjs"
+            ]
+          }
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "development": {
+              "buildTarget": "jaurtools:build:development"
+            },
+            "production": {
+              "buildTarget": "jaurtools:build:production"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "jaurtools:build"
+          }
+        }
+      },
+      "projectType": "application",
+      "schematics": {}
+    }
+  },
+  "version": 1,
+  "cli": {
+    "analytics": false
+  }
+}

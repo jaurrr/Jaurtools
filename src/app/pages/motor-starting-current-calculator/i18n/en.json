@@ -1,0 +1,98 @@
+{
+  "motor-starting-current-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Motor Starting Current Calculator",
+    "tagline": "Estimate a motor's full-load current and inrush starting current from its rating plate.",
+    "metaTitle": "Motor Starting Current Calculator (Inrush) | JaurTools",
+    "metaDescription": "Free motor starting current calculator: estimate full-load current and inrush current for single and three-phase motors. Size breakers and cables safely.",
+    "keywords": "motor starting current calculator, inrush current calculator, motor full load current, NEMA locked rotor current",
+    "resultsHeading": "Your motor current results",
+    "quickAnswer": "An induction motor draws roughly 5 to 7 times its full-load current at start-up. Full-load current = Power (W) / (root-3 x Voltage x efficiency x power factor) for three-phase motors. Example: a 10 HP, 415 V three-phase motor at 88% efficiency and 0.85 power factor draws about 13.87 A at full load and about 83.2 A at start with a 6x multiplier. Size breakers, contactors, and cables for the inrush value, not the running current.",
+    "keyFacts": [
+      "Direct-on-line starting current is typically 5 to 7 times the full-load current for standard induction motors.",
+      "Full-load current depends on real power output, voltage, efficiency, and power factor - not just horsepower.",
+      "Three-phase current divides by root 3 (1.732); single-phase motors draw root-3 times more for the same power.",
+      "NEMA code letters on the nameplate define locked-rotor kVA per HP, which pins down the exact starting current.",
+      "Soft starters and star-delta starters reduce inrush to about 2 to 4 times full-load current.",
+      "Undersized protection trips on start-up; oversized protection may not protect the motor at all."
+    ],
+    "howTo": [
+      "Enter the motor's rated power from the nameplate, in HP or kW.",
+      "Select single-phase or three-phase, then enter the supply voltage.",
+      "Enter the nameplate efficiency and power factor (defaults 88% and 0.85 suit most standard motors).",
+      "Set the starting-current multiplier: 6 is typical for direct-on-line starting, 2 to 4 for star-delta or soft start.",
+      "Use the inrush result to select breaker, contactor, overload relay, and cable sizes."
+    ],
+    "formula": "Three-phase: I = P / (1.732 x V x efficiency x power factor), with P in watts.\nSingle-phase: I = P / (V x efficiency x power factor).\nStarting current = Full-load current x starting multiplier.\nExample: 10 HP = 7,460 W; 7,460 / (1.732 x 415 x 0.88 x 0.85) = 13.87 A; 13.87 x 6 = 83.2 A inrush.",
+    "workedExample": "10 HP motor, 415 V, three-phase, 88% efficiency, 0.85 power factor, multiplier 6:\n1. Convert power: 10 x 746 = 7,460 W.\n2. Full-load current: 7,460 / (1.732 x 415 x 0.88 x 0.85) = 7,460 / 537.66 = 13.87 A.\n3. Starting current: 13.87 x 6 = 83.2 A.\n4. Starting kVA (3-phase): 1.732 x 415 x 83.2 / 1,000 = 59.8 kVA.\nSo the breaker and contactor must handle an 83 A inrush even though the motor runs at 14 A.",
+    "benefits": [
+      "Sizes protection correctly the first time, avoiding nuisance tripping on start-up.",
+      "Covers single-phase and three-phase motors with one tool.",
+      "Works from standard nameplate data, no clamp meter needed for planning.",
+      "Adjustable multiplier handles direct-on-line, star-delta, and soft starters."
+    ],
+    "limitations": [
+      "Estimates only. Real inrush depends on rotor design, load inertia, and supply impedance.",
+      "Uses nameplate efficiency and power factor, which vary with actual loading.",
+      "Not a substitute for an electrician's verification before finalizing protection and cable sizes.",
+      "Does not model variable-frequency drives, which control starting current electronically."
+    ],
+    "faqs": [
+      {
+        "q": "Why does a motor draw so much current at start?",
+        "a": "At standstill the rotor is not turning, so there is no back-EMF to oppose the supply voltage. The motor looks almost like a short circuit until it spins up and back-EMF builds, which is why current spikes to 5 to 7 times the running value for a fraction of a second to a few seconds."
+      },
+      {
+        "q": "What multiplier should I use?",
+        "a": "Use 6 for direct-on-line starting of a standard motor, 5 to 7 as the typical range. For star-delta starting use about 2 to 3, and for a soft starter use the manufacturer's stated value, usually 2 to 4. If the nameplate shows a NEMA code letter, look up its locked-rotor kVA per HP for the exact figure."
+      },
+      {
+        "q": "Can I size the cable for the running current only?",
+        "a": "No. Cables must carry the running current continuously, but breakers, contactors, and fuses must survive the inrush without tripping or welding. Size the cable for full-load current with the standard derating factors, then verify the protection co-ordinates with the starting current."
+      },
+      {
+        "q": "How do HP and kW relate?",
+        "a": "1 HP equals 746 W (0.746 kW) of mechanical output. This calculator converts automatically, so enter whichever unit is on the nameplate."
+      },
+      {
+        "q": "Why is power factor in the formula?",
+        "a": "The supply must deliver both real power (which does the work) and reactive power (which magnetizes the motor). Power factor is the ratio of real to total power, so a lower power factor means more current for the same mechanical output."
+      },
+      {
+        "q": "Does this work for DC motors?",
+        "a": "No. DC motor starting current depends on armature resistance and the starter used, which is a different calculation. This tool is for AC induction motors only."
+      }
+    ],
+    "labels": {
+      "power": "Rated power",
+      "powerUnit": "Power unit",
+      "hpTab": "HP",
+      "kwTab": "kW",
+      "phases": "Supply phases",
+      "singlePhase": "Single-phase",
+      "threePhase": "Three-phase",
+      "voltage": "Supply voltage (V)",
+      "efficiency": "Efficiency (%)",
+      "powerFactor": "Power factor",
+      "multiplier": "Starting-current multiplier",
+      "fullLoadCurrent": "Full-load current",
+      "startingCurrent": "Starting (inrush) current",
+      "startingKva": "Starting apparent power",
+      "ampsUnit": "A",
+      "kvaUnit": "kVA"
+    }
+  }
+}

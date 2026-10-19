@@ -1,0 +1,131 @@
+<div class="tool-page persona-play">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="mic" /> {{ t('resultsHeading') }}</h2>
+
+      @if (!supported()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" [size]="16" /> {{ t('labels.errUnsupported') }}</p>
+      }
+
+      <div class="field">
+        <label for="tts-text">{{ t('labels.textLabel') }}</label>
+        <textarea id="tts-text" [ngModel]="text()" (ngModelChange)="text.set($event)"
+          rows="6" maxlength="5000" [placeholder]="t('labels.textHint')"></textarea>
+        <p class="note">{{ t('labels.charCountLabel') }}: {{ text().length }} / 5000</p>
+      </div>
+
+      <div class="field">
+        <label for="tts-voice">{{ t('labels.voiceLabel') }}</label>
+        <select id="tts-voice" [ngModel]="voiceURI()" (ngModelChange)="voiceURI.set($event)">
+          <option value="">{{ t('labels.defaultVoice') }}</option>
+          @for (v of voices(); track trackVoice($index, v)) {
+            <option [value]="v.voiceURI">{{ voiceLabel(v) }}</option>
+          }
+        </select>
+        @if (voices().length === 0) {
+          <p class="note"><app-icon name="info" [size]="16" /> {{ t('labels.noVoices') }}</p>
+        }
+      </div>
+
+      <div class="field">
+        <label for="tts-rate">{{ t('labels.rateLabel') }}: {{ rate().toFixed(1) }}x</label>
+        <div class="input-row">
+          <input type="range" id="tts-rate" [ngModel]="rate()" (ngModelChange)="setRate($event)"
+            min="0.5" max="2" step="0.1" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tts-pitch">{{ t('labels.pitchLabel') }}: {{ pitch().toFixed(1) }}</label>
+        <div class="input-row">
+          <input type="range" id="tts-pitch" [ngModel]="pitch()" (ngModelChange)="setPitch($event)"
+            min="0.5" max="2" step="0.1" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tts-volume">{{ t('labels.volumeLabel') }}: {{ (volume() * 100).toFixed(0) }}%</label>
+        <div class="input-row">
+          <input type="range" id="tts-volume" [ngModel]="volume()" (ngModelChange)="setVolume($event)"
+            min="0" max="1" step="0.05" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        @if (status() !== 'speaking') {
+          <button type="button" class="btn-primary" (click)="speak()">
+            <app-icon name="mic" /> {{ t('labels.speakBtn') }}
+          </button>
+        }
+        @if (status() === 'speaking') {
+          <button type="button" class="btn-ghost" (click)="pause()">
+            <app-icon name="clock" /> {{ t('labels.pauseBtn') }}
+          </button>
+        }
+        @if (status() === 'paused') {
+          <button type="button" class="btn-primary" (click)="resume()">
+            <app-icon name="mic" /> {{ t('labels.resumeBtn') }}
+          </button>
+        }
+        @if (status() !== 'idle') {
+          <button type="button" class="btn-ghost" (click)="stop()">
+            <app-icon name="x" /> {{ t('labels.stopBtn') }}
+          </button>
+        }
+      </div>
+
+      <div class="results">
+        <div class="result-row">
+          <span><app-icon name="activity" [size]="16" /> {{ t('labels.statusRow') }}</span>
+          <strong>{{ t('labels.' + statusKey()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span><app-icon name="type" [size]="16" /> {{ t('labels.wordsRow') }}</span>
+          <strong>{{ wordCount() }}</strong>
+        </div>
+        <div class="result-row">
+          <span><app-icon name="timer" [size]="16" /> {{ t('labels.durationRow') }}</span>
+          <strong>{{ estSeconds() }} {{ t('labels.secUnit') }}</strong>
+        </div>
+      </div>
+
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" [size]="16" /> {{ error() }}</p>
+      }
+      <p class="note">{{ t('labels.testNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

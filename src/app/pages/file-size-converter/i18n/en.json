@@ -1,0 +1,95 @@
+{
+  "file-size-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "File Size Converter",
+    "tagline": "Convert file sizes between B, KB, MB, GB and TB - decimal or binary.",
+    "metaTitle": "File Size Converter - MB to KB to GB Calculator | JaurTools",
+    "metaDescription": "Free file size converter: MB to KB, GB to MB and every combination. Choose decimal (1000) or binary (1024) math. Instant, private.",
+    "keywords": "file size converter, mb to kb, gb to mb, kb to mb, file size calculator",
+    "resultsHeading": "File size conversion results",
+    "quickAnswer": "2.5 GB = 2,500 MB in decimal math (×1,000) or 2,560 MiB in binary math (×1,024). Pick Decimal for how storage makers and the web measure files, Binary for how operating systems see them. Enter a value, choose from/to units, and swap any time.",
+    "keyFacts": [
+      "Decimal (SI): each step ×1,000. 1 MB = 1,000 KB = 1,000,000 bytes.",
+      "Binary (IEC): each step ×1,024. 1 MiB = 1,024 KiB = 1,048,576 bytes.",
+      "The two systems differ by 2.4% at KB, 4.9% at MB and 7.4% at GB - enough to matter for upload limits.",
+      "A \"100 MB upload limit\" is usually decimal: 100,000,000 bytes.",
+      "Email attachments are often capped around 25 MB - compress or split bigger files.",
+      "Video bitrate math: a 10 Mbps stream for 60 s ≈ 75 MB (10 ÷ 8 × 60)."
+    ],
+    "howTo": [
+      "Choose Decimal (×1,000) or Binary (×1,024) math.",
+      "Type the file size value.",
+      "Pick the from-unit and to-unit (B, KB, MB, GB, TB).",
+      "Read the instant result; swap reverses it."
+    ],
+    "formula": "result = value × (bytes per from-unit) ÷ (bytes per to-unit).\nDecimal: KB 1,000, MB 10⁶, GB 10⁹, TB 10¹².\nBinary: KB 1,024, MB 1,048,576, GB 1,073,741,824, TB 1,099,511,627,776.\nExample (decimal): 2.5 GB → MB = 2.5 × 10⁹ ÷ 10⁶ = 2,500 MB.",
+    "workedExample": "Convert 2.5 GB to MB:\n1. Decimal: 2.5 × 1,000,000,000 = 2,500,000,000 bytes.\n2. ÷ 1,000,000 = 2,500 MB.\n3. Binary instead: 2.5 × 1,073,741,824 = 2,684,354,560 bytes.\n4. ÷ 1,048,576 = 2,560 MiB.",
+    "benefits": [
+      "Both math systems in one tool - match whatever your platform actually uses.",
+      "Settles upload-limit questions: is that 100 MB decimal or binary?",
+      "Handy for video, backup and attachment size planning.",
+      "Instant, private, no sign-up."
+    ],
+    "limitations": [
+      "Converts the number only - actual files carry filesystem overhead that changes on-disk size.",
+      "Upload limits on real sites may use either system; check the site docs when it matters.",
+      "Does not estimate compression; zipping changes the real byte count."
+    ],
+    "faqs": [
+      {
+        "q": "How many KB are in 1 MB?",
+        "a": "1,000 KB in decimal math, 1,024 KiB in binary math. File managers and web upload limits almost always mean decimal; RAM and OS internals mean binary."
+      },
+      {
+        "q": "How many MB are in 1 GB?",
+        "a": "1,000 MB decimal or 1,024 MiB binary. A \"16 GB\" phone has about 16,000 MB of decimal storage before the OS and formatting take their share."
+      },
+      {
+        "q": "Should I use decimal or binary?",
+        "a": "Use decimal (×1,000) when talking about files, downloads, and storage products - that is what makers and the web use. Use binary (×1,024) for memory, OS internals, and developer tooling."
+      },
+      {
+        "q": "Why is my 1 TB drive only 931 GB?",
+        "a": "The maker counts decimal terabytes (10¹² bytes). Your OS divides by 1,024³, showing 931 GiB. Same bytes, different ruler - try the Byte Size Calculator to see both."
+      },
+      {
+        "q": "How big can an email attachment be?",
+        "a": "Most providers cap attachments around 25 MB (decimal). For bigger files, use a cloud link instead of attaching."
+      },
+      {
+        "q": "How do I estimate video file size?",
+        "a": "Size ≈ bitrate × seconds ÷ 8. A 10 Mbps video for 60 seconds ≈ 10 ÷ 8 × 60 = 75 MB. Add ~5% for container overhead."
+      }
+    ],
+    "labels": {
+      "mode": "Unit system",
+      "decimalTab": "Decimal (×1,000)",
+      "binaryTab": "Binary (×1,024)",
+      "value": "Value",
+      "from": "From",
+      "to": "To",
+      "swap": "Swap units",
+      "result": "Result",
+      "units": {
+        "B": "Bytes (B)",
+        "KB": "Kilobytes",
+        "MB": "Megabytes",
+        "GB": "Gigabytes",
+        "TB": "Terabytes"
+      }
+    }
+  }
+}

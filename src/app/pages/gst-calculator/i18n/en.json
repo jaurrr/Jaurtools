@@ -1,0 +1,84 @@
+{
+  "gst-calculator": {
+    "benefits": [
+      "Quote prices correctly: add GST to a net price or strip it from a gross price in seconds.",
+      "One-tap rate buttons for 5%, 12%, 18%, and 28% - plus any custom rate.",
+      "Check bills and invoices: verify that the GST charged on a receipt is correct.",
+      "Free, instant, and private - no data leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The five standard GST slabs in India are 0%, 5%, 12%, 18%, and 28%. Essentials like fresh food are at 0-5%, most services at 18%, and luxury goods at 28%. This calculator has one-tap buttons for all five.",
+        "q": "What are the GST rates in India?"
+      },
+      {
+        "a": "Because stripping tax is not the same as applying it. 18% GST on Rs 1,000 adds Rs 180, making Rs 1,180. To reverse it, divide by 1.18: Rs 1,180 / 1.18 = Rs 1,000. The tax inside a gross amount is always gross x rate / (100 + rate).",
+        "q": "How do I remove GST from a price?"
+      },
+      {
+        "a": "CGST goes to the central government and SGST to the state government - each is half the total rate. So 18% GST = 9% CGST + 9% SGST. For sales between states, IGST applies at the full 18% instead.",
+        "q": "What is CGST vs SGST vs IGST?"
+      },
+      {
+        "a": "Most goods and services in India, including restaurant food, electronics, and professional services. Petrol, diesel, alcohol, and electricity are outside GST and taxed separately. Real estate sales are also outside GST.",
+        "q": "What is GST charged on?"
+      },
+      {
+        "a": "Use Add mode with the net amount, or Strip mode with the gross amount - then pick the slab. For example Rs 1,000 at 12% gives Rs 1,120 gross, and Rs 1,120 stripped at 12% gives Rs 1,000 net.",
+        "q": "How do I calculate 12% GST on Rs 1,000?"
+      }
+    ],
+    "formula": "Add GST: tax = net amount x rate / 100; total = net + tax\nStrip GST: net = gross amount / (1 + rate/100); tax = gross - net\nEquivalently: tax = gross x rate / (100 + rate)",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Add GST (net to gross) or Strip GST (gross to net).",
+      "Enter the amount.",
+      "Pick a rate with the preset buttons (0/5/12/18/28) or type a custom rate.",
+      "Read the net amount, the GST tax, and the total instantly."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "GST = Goods and Services Tax, India's single indirect tax on most goods and services.",
+      "Standard slabs: 0%, 5%, 12%, 18%, 28%.",
+      "Adding GST: multiply the net price by (1 + rate).",
+      "Stripping GST: divide the gross price by (1 + rate) - not the same as subtracting the rate.",
+      "CGST + SGST apply within a state; IGST applies between states."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gst calculator, gst calculator india, add gst, remove gst, gst tax calculator, reverse gst calculator",
+    "labels": {
+      "addTab": "Add GST",
+      "amount": "Amount",
+      "mode": "Calculator mode",
+      "net": "Net amount (excl. GST)",
+      "rate": "GST rate (%)",
+      "stripTab": "Strip GST",
+      "tax": "GST tax",
+      "total": "Total (incl. GST)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rates and slabs change with GST Council decisions - verify the current slab for your item.",
+      "Estimates only - for invoices and tax filing, use a CA or official GST portal figures.",
+      "Currency is rupees; it does not convert to other currencies.",
+      "Educational tool, not tax advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free GST calculator: add or strip GST at 0%, 5%, 12%, 18%, 28% or any custom rate. Verify bills and invoices instantly. Private, no sign-up.",
+    "metaTitle": "GST Calculator - Add or Strip GST (India) | JaurTools",
+    "name": "GST Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Rs 1,000 plus 18% GST = Rs 1,180 total, with Rs 180 of tax. Strip 18% GST from Rs 1,180 and you get Rs 1,000 net - the tax inside the gross amount is Rs 180, not Rs 212. One-tap buttons cover all five Indian GST slabs: 0%, 5%, 12%, 18%, and 28%.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your GST results",
+    "tagline": "Add GST to a net price or strip it from a gross price, at any rate.",
+    "workedExample": "Rs 1,000 at 18% GST:\nAdd mode:\n1. Tax = Rs 1,000 x 18 / 100 = Rs 180.\n2. Total = Rs 1,000 + Rs 180 = Rs 1,180.\nStrip mode (gross = Rs 1,180):\n3. Net = Rs 1,180 / 1.18 = Rs 1,000.\n4. Tax = Rs 1,180 - Rs 1,000 = Rs 180.\nCheck: Rs 1,180 x 18 / 118 = Rs 180. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

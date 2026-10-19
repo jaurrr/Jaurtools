@@ -1,0 +1,93 @@
+{
+  "va-mortgage-calculator": {
+    "assumptionNote": "The funding fee is financed into the loan balance, which is how most borrowers pay it. This calculator excludes property tax, homeowner's insurance, and HOA fees, which lenders add on top of principal and interest.",
+    "benefits": [
+      "VA loans need no down payment and no private mortgage insurance - see the true cost in one place.",
+      "The funding fee is often the most misunderstood VA cost; this shows exactly how it grows your loan.",
+      "Compare first-use vs subsequent-use funding fees before you buy again.",
+      "Instant estimate with no lender login or credit check."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The VA funding fee is a one-time fee paid to the Department of Veterans Affairs that keeps the loan program running without taxpayer cost. For first-time use with zero down payment it is 2.15% of the loan (higher for subsequent use, lower with a down payment). Most borrowers finance it into the loan rather than paying cash at closing.",
+        "q": "What is the VA funding fee?"
+      },
+      {
+        "a": "Veterans receiving VA compensation for a service-connected disability are exempt from the funding fee, as are some surviving spouses. If you are exempt, set the funding fee to 0% in this calculator.",
+        "q": "Who is exempt from the funding fee?"
+      },
+      {
+        "a": "The big ones: no down payment required, no private mortgage insurance, competitive interest rates, and limits on closing costs the veteran can pay. The trade-off is the funding fee and the requirement to use the home as your primary residence.",
+        "q": "What are the main VA loan benefits?"
+      },
+      {
+        "a": "Eligibility requires a Certificate of Eligibility (COE), generally available to veterans, active-duty service members, National Guard and Reserve members with qualifying service, and some surviving spouses. Your lender can usually pull the COE for you in minutes.",
+        "q": "Who is eligible for a VA loan?"
+      },
+      {
+        "a": "Yes, but the fee is higher: 3.3% with zero down for subsequent use (vs 2.15% first use). Making a down payment of 5% or more lowers it. If you plan to use the benefit again, this calculator's fee slider lets you compare both scenarios.",
+        "q": "Can I use a VA loan more than once?"
+      },
+      {
+        "a": "Usually yes - the fee is rolled into the loan balance at closing, so you pay interest on it over the life of the loan. You can also pay it in cash at closing if you prefer a smaller loan. This calculator assumes it is financed, which is the common choice.",
+        "q": "Is the funding fee added to the loan?"
+      }
+    ],
+    "formula": "Base loan = home price - down payment.\nFunding fee = base loan x fee% / 100.\nTotal loan = base loan + funding fee.\nMonthly rate r = annual rate / 12; n = years x 12.\nMonthly payment = total loan x r / (1 - (1 + r)^-n).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the home price and any down payment (0 is normal for VA loans).",
+      "Set your VA funding fee percentage (2.15% first use with 0 down; 0% if exempt).",
+      "Enter the interest rate and loan term from your offer.",
+      "Read your monthly payment, the financed fee, and the total loan balance.",
+      "Compare fee scenarios to see the real cost of financing the fee vs paying it at closing."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "VA loans are backed by the US Department of Veterans Affairs and require no down payment.",
+      "No private mortgage insurance (PMI) on VA loans - a major saving vs conventional loans with small deposits.",
+      "The funding fee replaces PMI: 2.15% of the loan for first use with 0 down, 3.3% for subsequent use.",
+      "Veterans with a service-connected disability rating are exempt from the funding fee.",
+      "The fee drops with a down payment: around 1.5% with 5% down, 1.25% with 10% down.",
+      "You need a Certificate of Eligibility (COE); most lenders can obtain it for you quickly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "VA mortgage calculator, VA loan calculator, VA funding fee calculator, VA home loan payment",
+    "labels": {
+      "annualRate": "Annual interest rate (%)",
+      "baseLoan": "Base loan (before fee)",
+      "downPayment": "Down payment",
+      "fundingFee": "Funding fee amount",
+      "fundingFeePercent": "VA funding fee (%)",
+      "homePrice": "Home price",
+      "monthlyPayment": "Monthly payment",
+      "totalInterest": "Total interest",
+      "totalLoan": "Total loan (fee included)",
+      "years": "Term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Excludes property tax, insurance, and HOA dues - real monthly housing cost is higher.",
+      "Funding fee percentages change; verify the current VA fee tables before closing.",
+      "Does not model VA IRRRL refinancing or hybrid ARM products.",
+      "An estimate for planning, not a loan offer or eligibility determination."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free VA mortgage calculator: monthly payment with the VA funding fee financed into your loan. See the true cost of your VA home loan.",
+    "metaTitle": "VA Mortgage Calculator - Payment With Funding Fee | JaurTools",
+    "name": "VA Mortgage Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "A $400,000 home with 0 down at 6.25% over 30 years: the 2.15% first-use funding fee adds $8,600, making the loan $408,600. Monthly payment is $2,515.82. Veterans with a service-connected disability are exempt from the funding fee - set it to 0% if that applies.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your VA loan results",
+    "tagline": "VA loan payments with the funding fee financed into your loan balance.",
+    "workedExample": "$400,000 home, $0 down, 2.15% funding fee, 6.25% rate, 30 years:\n1. Base loan = 400,000 - 0 = $400,000.\n2. Funding fee = 400,000 x 2.15 / 100 = $8,600.\n3. Total loan = 400,000 + 8,600 = $408,600.\n4. Monthly rate r = 6.25% / 12 = 0.005208. Payments n = 360.\n5. Monthly payment = 408,600 x 0.005208 / (1 - 1.005208^-360) = $2,515.82.",
+    "workedExampleHeading": "Worked example"
+  }
+}

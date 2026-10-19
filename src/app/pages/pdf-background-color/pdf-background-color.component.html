@@ -1,0 +1,158 @@
+<div class="tool-page bg-tool">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card paint" [attr.aria-label]="t('resultsHeading')">
+      <h2><app-icon name="sparkles" /> {{ t('resultsHeading') }}</h2>
+
+      <label class="dropzone" for="bg-file">
+        <app-icon name="upload" />
+        <span class="dz-title">{{ t('labels.fileLabel') }}</span>
+        <span class="dz-hint">{{ t('labels.fileHint') }}</span>
+        <input id="bg-file" type="file" accept="application/pdf,.pdf"
+          (change)="onFileSelected($event)" [attr.aria-label]="t('labels.fileLabel')" />
+      </label>
+
+      <div class="paint-studio">
+        <div class="swatch-panel">
+          <span class="field-label">{{ t('labels.colorLabel') }}</span>
+          <div class="swatches">
+            @for (p of presets; track p) {
+              <button type="button" class="swatch" [class.active]="color() === p"
+                [style.background]="p" (click)="setColor(p)"
+                [attr.aria-label]="t('labels.colorLabel') + ' ' + p"></button>
+            }
+            <label class="swatch custom" [style.background]="color()" [attr.aria-label]="t('labels.customLabel')">
+              <app-icon name="settings" />
+              <input type="color" [ngModel]="color()" (ngModelChange)="setColor($event)" class="sr-only" />
+            </label>
+          </div>
+          <div class="color-code">
+            <input type="text" maxlength="7" [ngModel]="color()" (ngModelChange)="setColor($event)"
+              [attr.aria-label]="t('labels.colorLabel')" spellcheck="false" />
+          </div>
+        </div>
+        <div class="page-mock" aria-hidden="true">
+          <div class="mock-page" [style.background]="previewBg()">
+            <div class="mock-lines"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <span class="mock-cap">{{ t('labels.previewLabel') }}</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="bg-opacity">{{ t('labels.opacityLabel') }}: {{ opacity() }}%</label>
+        <input id="bg-opacity" type="range" min="5" max="100" step="5"
+          [ngModel]="opacity()" (ngModelChange)="setOpacity($event)"
+          [attr.aria-label]="t('labels.opacityLabel')" />
+      </div>
+
+      @if (fileName()) {
+        <div class="file-meta">
+          <app-icon name="file-text" />
+          <span class="fname">{{ fileName() }}</span>
+          <span class="fsize">{{ pageCount() }} {{ t('labels.pagesLabel') }}</span>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="build()" [disabled]="busy()">
+            <app-icon name="sparkles" /> {{ t('labels.buildButton') }}
+          </button>
+          @if (outSize() > 0) {
+            <button type="button" class="btn ghost" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadButton') }} ({{ fmt(outSize()) }})
+            </button>
+          }
+        </div>
+      }
+
+      @if (busy()) {
+        <p class="status" role="status"><app-icon name="refresh-cw" /> {{ t('labels.busy') }}</p>
+      }
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+      @if (status()) {
+        <p class="status" role="status"><app-icon name="check" /> {{ status() }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

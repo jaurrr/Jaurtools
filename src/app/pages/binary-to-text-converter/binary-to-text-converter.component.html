@@ -1,0 +1,170 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="mode-tabs" role="group" [attr.aria-label]="t('labels.directionLabel')">
+        <button type="button" [attr.aria-pressed]="direction() === 'decode'" (click)="setDirection('decode')">
+          {{ t('labels.decodeTab') }}
+        </button>
+        <button type="button" [attr.aria-pressed]="direction() === 'encode'" (click)="setDirection('encode')">
+          {{ t('labels.encodeTab') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="bin-input">{{ t('labels.inputLabel') }}</label>
+        <textarea class="ed-textarea"
+          id="bin-input"
+          rows="6"
+          [ngModel]="rawInput()"
+          (ngModelChange)="setInput($event)"
+          placeholder="{{ t('labels.inputPlaceholder') }}"
+          [attr.dir]="direction() === 'decode' ? 'ltr' : undefined"
+        ></textarea>
+      </div>
+
+      @if (error()) {
+        <p class="error" role="alert">{{ error() }}</p>
+      }
+
+      <div class="swap-row">
+        <button type="button" class="cv-swap" (click)="swap()" [attr.aria-label]="t('labels.swapLabel')">
+          <app-icon name="arrow-left-right"></app-icon>
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="bin-output">{{ t('labels.outputLabel') }}</label>
+        <textarea class="ed-textarea ed-output" id="bin-output" rows="6" readonly [value]="output()"></textarea>
+      </div>
+
+      <div class="status-line" aria-live="polite">
+        <span>{{ t('labels.statsLabel') }}: <strong>{{ statCount() }}</strong></span>
+        @if (input().trim() !== '') {
+          @if (error()) {
+            <span class="status-pill bad"><app-icon name="x"></app-icon>{{ t('labels.statusInvalid') }}</span>
+          } @else {
+            <span class="status-pill ok"><app-icon name="check"></app-icon>{{ t('labels.statusValid') }}</span>
+          }
+        }
+      </div>
+      <p class="live-note">{{ t('labels.liveNote') }}</p>
+      <p class="sister-link">
+        <app-icon name="arrow-left-right"></app-icon>
+        <a [routerLink]="['/', translate.lang(), 'text-to-binary-converter']">{{ t('labels.sisterLink') }}</a>
+      </p>
+
+      <div class="actions">
+        <button type="button" class="btn primary" (click)="copy()" [disabled]="!output()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyButton') }}
+        </button>
+        <button type="button" class="btn" (click)="download()" [disabled]="!output()">
+          <app-icon name="download" /> {{ t('labels.downloadButton') }}
+        </button>
+        <button type="button" class="btn ghost" (click)="clear()">{{ t('labels.clearButton') }}</button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

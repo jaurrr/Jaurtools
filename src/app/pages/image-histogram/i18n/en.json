@@ -1,0 +1,97 @@
+{
+  "image-histogram": {
+    "benefits": [
+      "Reveals exposure problems your eyes miss: crushed shadows and blown highlights.",
+      "Mean brightness and tonal reading summarise any photo in one glance.",
+      "RGB mode exposes color casts - like a blue-heavy white balance.",
+      "Instant analysis of up to 25 MB images, right in the browser.",
+      "Free, private, and works offline after the page loads."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A gap with no pixels means that tonal range is missing entirely. A gap between two humps is normal in high-contrast scenes like a night street with bright signs.",
+        "q": "What does a gap in the histogram mean?"
+      },
+      {
+        "a": "Spikes at 0 and 255 mean lost detail: pure black shadows and pure white highlights with nothing in between. If your photo's key subject sits in those spikes, retake it with different exposure.",
+        "q": "My histogram has spikes at both ends. Is that bad?"
+      },
+      {
+        "a": "In RGB mode the three channels are drawn on top of each other. Where they overlap you see gray; where one channel sticks out you see its color - that tells you which channel dominates those tones.",
+        "q": "How do I read the RGB overlay?"
+      },
+      {
+        "a": "No. It is a summary: an overexposed white wall and a bright snowy landscape both push right, but only your eyes know which is a mistake. Use it as a guide, not a verdict.",
+        "q": "Does a right-heavy histogram mean the photo is bad?"
+      },
+      {
+        "a": "Up to 25 MB. The image is downsampled to 200 pixels on the long edge before counting, which keeps the chart instant without changing its shape.",
+        "q": "How big can the image be?"
+      }
+    ],
+    "formula": "luminance = 0.299 x R + 0.587 x G + 0.114 x B\nmean brightness = sum of all luminance values / pixel count\nExample: four pixels with luminance 0, 85, 170, 255:\nmean = (0 + 85 + 170 + 255) / 4 = 510 / 4 = 127.5.\nBins 0-15 are the darkest tones, bins 240-255 the brightest.",
+    "formulaHeading": "How the chart is built",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file (JPG, PNG, WebP, GIF, BMP or SVG) up to 25 MB.",
+      "The tool counts pixels automatically and draws the chart.",
+      "Switch between Luminance (overall brightness) and RGB channels.",
+      "Read the mean brightness, tonal reading and shadow/highlight percentages.",
+      "Change the image any time with the Change file link."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A histogram counts how many pixels sit at each brightness level from 0 (black) to 255 (white).",
+      "Luminance weights green most (0.587) because human eyes are most sensitive to green.",
+      "A hump on the left means a dark photo; a hump on the right means a bright one.",
+      "Spikes jammed against 0 or 255 mean detail is lost in shadows or highlights.",
+      "RGB mode overlays the red, green and blue channels to reveal color casts.",
+      "Two humps usually mean a high-contrast scene, not a broken image."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "image histogram, photo histogram analyzer, tonal distribution chart, exposure histogram online, rgb histogram viewer",
+    "labels": {
+      "analyzing": "Counting pixels...",
+      "brightestPixels": "Brightest pixels (240-255)",
+      "changeFile": "Change file",
+      "chartLabel": "Tonal distribution chart of the uploaded image",
+      "chooseFile": "Choose an image file",
+      "darkestPixels": "Darkest pixels (0-15)",
+      "fileHint": "JPG, PNG, WebP, GIF, BMP or SVG - up to 25 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 25 MB. Please choose a smaller image.",
+      "invalidFile": "That file is not an image. Please choose a JPG, PNG, WebP, GIF, BMP or SVG file.",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "meanBrightness": "Mean brightness",
+      "modeLabel": "Chart mode",
+      "modeLuma": "Luminance",
+      "modeRgb": "RGB channels",
+      "readingBalanced": "Balanced",
+      "readingBright": "Bright",
+      "readingDark": "Dark",
+      "tonalReading": "Tonal reading"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "It describes tones, not quality - a dark photo can be perfectly good.",
+      "Downsampled to 200 pixels, so it cannot report per-pixel detail.",
+      "It cannot tell you why a photo is dark - exposure, subject and lighting all look the same here.",
+      "Color casts need your eyes too: the chart shows the numbers, not the mood."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free image histogram tool: upload a photo and see its tonal distribution chart with luminance and RGB channels, mean brightness and exposure reading. Private.",
+    "metaTitle": "Image Histogram - Tonal Distribution Chart | JaurTools",
+    "name": "Image Histogram",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and get its tonal distribution chart: 256 bars counting pixels from black (0) to white (255), in luminance or RGB-channel mode. You also get mean brightness, a dark/balanced/bright reading, and the share of near-black and near-white pixels. For example, four pixels with luminance 0, 85, 170 and 255 give a mean of 127.5 - a balanced image.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Image histogram results",
+    "tagline": "See your photo's tonal distribution as a chart - luminance and RGB channels.",
+    "workedExample": "Take a tiny image of four pixels with luminance values 0, 85, 170, 255.\n1. Each value lands in its own bin: bin 0, bin 85, bin 170, bin 255 - count 1 each.\n2. Mean brightness = (0 + 85 + 170 + 255) / 4 = 510 / 4 = 127.5.\n3. Tonal reading: 127.5 sits between 64 and 192, so the image reads as Balanced.\n4. Darkest pixels (bins 0-15): 1 of 4 = 25%. Brightest (240-255): 1 of 4 = 25%.\n5. Real photos produce the same chart with thousands of pixels per bin.",
+    "workedExampleHeading": "Worked example"
+  }
+}

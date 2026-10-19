@@ -1,0 +1,94 @@
+{
+  "long-division-calculator": {
+    "assumptionNote": "Works with non-negative whole dividends and positive whole divisors. Decimals are rounded down.",
+    "benefits": [
+      "Shows the exact long-division routine taught in school, digit by digit.",
+      "The verification line proves the answer: divisor x quotient + remainder = dividend.",
+      "Remainder handling is explicit - no guessing where leftovers go.",
+      "Perfect for checking homework without revealing only the answer.",
+      "Handles dividends up to 999,999,999."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Work left to right through the dividend's digits. At each step: see how many times the divisor fits into the current working number, multiply, subtract, then bring down the next digit. Repeat until no digits remain.",
+        "q": "What are the steps of long division?"
+      },
+      {
+        "a": "The remainder is what is left over after dividing as evenly as possible. For 1250 / 6, the quotient is 208 and the remainder is 2, because 6 x 208 = 1248 and 1250 - 1248 = 2.",
+        "q": "What is a remainder in division?"
+      },
+      {
+        "a": "No. Division by zero is undefined - no number multiplied by zero gives a non-zero dividend. This calculator requires a divisor of at least 1.",
+        "q": "Can you divide by zero?"
+      },
+      {
+        "a": "Leading zeros in the quotient are skipped automatically - 022 becomes 22. Internally the tool tracks each quotient digit, so the working shows the zeros even though the answer drops them.",
+        "q": "Why does the working show a 0 quotient digit?"
+      },
+      {
+        "a": "Yes. The result and every step are exact whole-number arithmetic - this tool never rounds. The verification line at the bottom always balances perfectly.",
+        "q": "Is the answer exact?"
+      },
+      {
+        "a": "Bring down means appending the next digit of the dividend to the current remainder. For 154 / 7: after 15 - 14 = 1, you bring down the 4 to make 14, then continue dividing.",
+        "q": "What does bring down mean?"
+      }
+    ],
+    "formula": "dividend = divisor x quotient + remainder, with 0 <= remainder < divisor.\nPer digit: working = previous remainder x 10 + next digit;\nquotient digit = floor(working / divisor); new remainder = working - quotient digit x divisor.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the dividend - the number being divided.",
+      "Enter the divisor - the number you are dividing by.",
+      "Read the quotient and the remainder instantly.",
+      "Follow the numbered working to see each divide-multiply-subtract-bring-down cycle.",
+      "Check the verification line at the bottom to confirm the answer."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Long division processes the dividend one digit at a time, left to right.",
+      "Each cycle is: divide, multiply, subtract, bring down the next digit.",
+      "The quotient collects one digit per cycle; leading zeros are dropped in the final answer.",
+      "The remainder is always smaller than the divisor.",
+      "dividend = divisor x quotient + remainder is the check that always balances.",
+      "Division by zero is undefined - the divisor must be at least 1."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "long division calculator, long division with steps, division with remainder calculator, step by step division, divide calculator with working",
+    "labels": {
+      "checkLabel": "Verify",
+      "dividendLabel": "Dividend",
+      "divisorLabel": "Divisor",
+      "quotientLabel": "Quotient",
+      "remainderLabel": "Remainder",
+      "stepBringDown": "bring down",
+      "stepCheck": "Check",
+      "stepGoes": "goes into",
+      "stepInto": "Divide",
+      "stepsLabel": "Step-by-step working"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Whole numbers only - no decimal dividends or divisors.",
+      "The verification uses exact integer arithmetic; it does not produce decimal quotients.",
+      "Dividends above 999,999,999 are clamped.",
+      "It shows the standard algorithm only, not alternative division methods."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free long division calculator with step-by-step working. Enter dividend and divisor to get the quotient, remainder, and every divide-multiply-subtract step.",
+    "metaTitle": "Long Division Calculator - Step-by-Step Working | JaurTools",
+    "name": "Long Division Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "154 / 7 = 22 exactly, with remainder 0. The working: 7 goes into 15 two times (2 x 7 = 14, 15 - 14 = 1), bring down the 4 to make 14, 7 goes into 14 two times (2 x 7 = 14, 14 - 14 = 0). Quotient 22, remainder 0, and the check confirms: 7 x 22 + 0 = 154.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Long division results",
+    "tagline": "Step-by-step long division with quotient, remainder and full working.",
+    "workedExample": "Divide 154 by 7:\n1. First digit 1: 7 goes into 1 zero times. Quotient digit 0.\n2. Bring down 5: working number 15. 7 goes into 15 two times: 2 x 7 = 14, 15 - 14 = 1. Quotient digit 2.\n3. Bring down 4: working number 14. 7 goes into 14 two times: 2 x 7 = 14, 14 - 14 = 0. Quotient digit 2.\n4. No digits left. Quotient digits 022 become 22. Remainder 0.\n5. Check: 7 x 22 + 0 = 154.",
+    "workedExampleHeading": "Worked example"
+  }
+}

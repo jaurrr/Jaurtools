@@ -1,0 +1,102 @@
+{
+  "image-compressor": {
+    "benefits": [
+      "Shrinks photos up to 90 percent so pages load faster and uploads stop timing out.",
+      "Works entirely offline - ideal for slow connections or private photos.",
+      "Side-by-side size numbers prove the saving before you download.",
+      "JPEG, WebP and PNG output covers websites, email and print.",
+      "No sign-up, no watermark, no upload to a stranger's server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use the Compress button again after changing quality. There is no extra penalty: each run re-encodes from your original file, not from the last compressed copy.",
+        "q": "Can I compress the same image twice?"
+      },
+      {
+        "a": "Yes. Pick a smaller max width (for example 1600 pixels) and a quality around 70 to 80. The tool resizes first, then compresses, so you get a small file that still looks good on screens.",
+        "q": "How do I make the file really tiny?"
+      },
+      {
+        "a": "The quality slider is ignored for PNG because PNG compression is lossless - it only applies to JPEG and WebP. PNGs shrink mostly by resizing to smaller dimensions.",
+        "q": "Why does quality not change my PNG?"
+      },
+      {
+        "a": "For photos: JPEG at 75 to 85 percent quality is the sweet spot. WebP gives about 25 to 30 percent smaller files than JPEG at the same look - use it when the destination supports it.",
+        "q": "JPEG or WebP - which should I choose?"
+      },
+      {
+        "a": "Lossy compression throws away fine detail permanently, so text-heavy screenshots can blur below quality 60. Keep the original and stay above 70 for anything you need to read.",
+        "q": "Will compression damage my image?"
+      }
+    ],
+    "formula": "savings % = (original bytes - compressed bytes) / original bytes x 100\nresize: new height = original height x (max width / original width)\nExample: a 4000 x 3000 photo limited to 1600 wide:\nscale = 1600 / 4000 = 0.4 -> 1600 x 1200 pixels.",
+    "formulaHeading": "How compression works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file up to 50 MB - JPG, PNG, WebP, GIF, BMP or SVG.",
+      "Pick an output format: JPEG (photos), WebP (smallest) or PNG (lossless).",
+      "Drag the quality slider. Around 80 percent looks identical for most photos.",
+      "Set a max width if you also want to shrink the dimensions.",
+      "Press Compress, check the before and after sizes, then download."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JPEG and WebP use lossy compression: lower quality means a smaller file with more artefacts.",
+      "PNG uses lossless compression: the quality slider has no effect on PNG output.",
+      "Resizing dimensions shrinks files far more than lowering quality - a 4000-pixel photo halved in width has a quarter of the pixels.",
+      "JPEG cannot store transparency: transparent areas become white.",
+      "WebP is about 25 to 30 percent smaller than JPEG at equal visual quality.",
+      "This tool re-encodes from your original file every time, so repeated tries never degrade quality."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "compress image online, reduce image size, image compressor free, shrink photo size, jpg compressor, webp compressor",
+    "labels": {
+      "changeFile": "Change file",
+      "chooseFile": "Choose an image file",
+      "compressButton": "Compress image",
+      "compressFailed": "Could not compress that image. Please try a different file.",
+      "compressedSize": "Compressed size",
+      "downloadButton": "Download compressed image",
+      "fileHint": "JPG, PNG, WebP, GIF, BMP or SVG - up to 50 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 50 MB. Please choose a smaller image.",
+      "formatJpeg": "JPEG - best for photos",
+      "formatPng": "PNG - lossless",
+      "formatWebp": "WebP - smallest size",
+      "invalidFile": "That file is not an image. Please choose an image file.",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "maxWidth": "Max width (pixels)",
+      "maxWidthHint": "Images wider than this are resized down before compressing.",
+      "originalSize": "Original size",
+      "outputFormat": "Output format",
+      "previewAlt": "Compressed image preview",
+      "processing": "Compressing...",
+      "quality": "Quality",
+      "saved": "You saved",
+      "before": "Before",
+      "after": "After"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Lossy formats discard detail permanently - keep your original for important photos.",
+      "The quality slider does nothing for PNG output (lossless by design).",
+      "GIF and SVG inputs are rasterised: animation and vector editability are lost.",
+      "Very large images are limited by your device's memory."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free image compressor: shrink JPG, PNG and WebP photos in your browser with quality control, resizing and instant download. No upload, no sign-up.",
+    "metaTitle": "Image Compressor - Reduce Photo Size Online | JaurTools",
+    "name": "Image Compressor",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo, set a quality (around 80 percent is the sweet spot), pick JPEG or WebP output and optionally shrink the width. A typical 2.4 MB phone photo at 1600 pixels wide and 80 percent JPEG quality becomes roughly 480 KB - about 80 percent smaller with no visible difference. Everything happens in your browser, so the photo is never uploaded.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Image compression results",
+    "tagline": "Shrink JPG, PNG and WebP photos in seconds - with quality and size control.",
+    "workedExample": "Take a 4000 x 3000 phone photo, 2.4 MB, and compress it to JPEG at 80 percent quality with a max width of 1600.\n1. Resize: scale = 1600 / 4000 = 0.4. New size = 1600 x 1200 pixels.\n2. Pixels drop from 12 million to 1.92 million - six times fewer.\n3. JPEG re-encodes at quality 80, typically around 480 KB for this kind of photo.\n4. Savings = (2.4 - 0.48) / 2.4 x 100 = 80%.\nExact results vary by photo detail, but 70 to 85 percent savings are normal at these settings.",
+    "workedExampleHeading": "Worked example"
+  }
+}

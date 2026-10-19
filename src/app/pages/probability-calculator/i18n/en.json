@@ -1,0 +1,89 @@
+{
+  "probability-calculator": {
+    "benefits": [
+      "Solve single, AND and OR probability problems in one place.",
+      "The sliders make exploring what-if scenarios intuitive.",
+      "Shows the complement and odds alongside the result.",
+      "Ideal for homework, games and exam revision.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Probability is the chance that an event happens, measured from 0 (impossible) to 1 (certain), often shown as a percentage. A fair coin landing heads has probability 0.5, or 50%.",
+        "q": "What is probability?"
+      },
+      {
+        "a": "Use AND when you need both events to happen (multiply the probabilities). Use OR when you need at least one of them to happen (add, then subtract the overlap).",
+        "q": "When do I use AND versus OR?"
+      },
+      {
+        "a": "Independent events do not affect each other — flipping two coins. Dependent events do — drawing cards without putting the first one back. This calculator assumes independence for AND and OR.",
+        "q": "What are independent events?"
+      },
+      {
+        "a": "Multiply 0.5 x 0.5 x 0.5 = 0.125, or 12.5%. That is the AND of three independent 50% events.",
+        "q": "What is the probability of three heads in a row?"
+      },
+      {
+        "a": "Odds of 2 to 1 against mean the event has a 1 in 3 chance: probability = 1 / (1 + 2) = 33.33%. In general, probability = 1 / (1 + odds-against).",
+        "q": "How do I convert odds to probability?"
+      }
+    ],
+    "formula": "Single event: P = favorable outcomes / total outcomes\nAND (independent): P(A and B) = P(A) x P(B)\nOR (independent): P(A or B) = P(A) + P(B) - P(A) x P(B)\nComplement: P(not A) = 1 - P(A)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Single event, A AND B, or A OR B.",
+      "Set the probability of event A as a percentage.",
+      "For AND or OR, also set the probability of event B.",
+      "Read the combined probability, its complement and the odds.",
+      "Try different values to see how the chances shift."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Probability always lies between 0 and 1, or 0% and 100%.",
+      "The complement of an event is 1 minus its probability.",
+      "For independent events, AND multiplies probabilities.",
+      "For OR, add the probabilities and subtract the overlap once.",
+      "Percentages are probabilities multiplied by 100."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "probability calculator, and or probability, combined probability calculator, odds calculator, chance calculator",
+    "labels": {
+      "complementLabel": "Complement (does not happen)",
+      "mode": {
+        "and": "A AND B",
+        "or": "A OR B",
+        "single": "Single event"
+      },
+      "modeLabel": "Calculation mode",
+      "oddsLabel": "Odds against",
+      "pALabel": "Probability of event A (%)",
+      "pBLabel": "Probability of event B (%)",
+      "resultLabel": "Probability"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "AND and OR modes assume independent events — real events often are not.",
+      "Cannot handle conditional probability like P(A given B).",
+      "Garbage in, garbage out: estimates only as good as your input probabilities.",
+      "Not a gambling tool — the house edge is not modeled."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free probability calculator: single, AND and OR probabilities for independent events, with complement and odds. Fully browser-based, no sign-up.",
+    "metaTitle": "Probability Calculator — AND / OR / Single Event",
+    "name": "Probability Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Probability measures how likely an event is, from 0% to 100%. For two independent events, the AND probability is the product of the two probabilities, and the OR probability is their sum minus the product. The complement is simply one minus the probability.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Probability results",
+    "tagline": "Combine event probabilities the right way.",
+    "workedExample": "A bag holds red and blue marbles. The chance of drawing red is 50% and the chance of drawing an even-numbered marble is 30%.\n\nP(red AND even) = 0.50 x 0.30 = 0.15 = 15%.\nP(red OR even) = 0.50 + 0.30 - 0.15 = 0.65 = 65%.\n\nSo there is a 15% chance of both, and a 65% chance of at least one.",
+    "workedExampleHeading": "Worked example"
+  }
+}

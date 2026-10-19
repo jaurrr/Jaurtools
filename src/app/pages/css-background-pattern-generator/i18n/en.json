@@ -1,0 +1,102 @@
+{
+  "css-background-pattern-generator": {
+    "benefits": [
+      "Zero images to download or host — pure CSS gradients render instantly and scale to any screen.",
+      "Tiny CSS footprint: a full-page pattern is often under 300 bytes, far lighter than any image file.",
+      "Infinitely customizable: colors, tile size, and pattern type can be tweaked live before you copy.",
+      "Retina-sharp at every resolution because gradients are vector-drawn by the browser.",
+      "Works in every modern browser with no prefixes and no JavaScript required."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A CSS background pattern is a repeating design built entirely from CSS gradients — radial, linear, conic, or repeating — instead of an image file. Because the browser tiles the gradient mathematically, the pattern stays sharp at any size and costs almost nothing in page weight.",
+        "q": "What is a CSS background pattern?"
+      },
+      {
+        "a": "Yes. The patterns this tool generates use standard gradients (radial-gradient, linear-gradient, conic-gradient, repeating-linear-gradient) that have been supported in all modern browsers for years, including Chrome, Firefox, Safari, and Edge. No vendor prefixes are needed.",
+        "q": "Do these patterns work in all browsers?"
+      },
+      {
+        "a": "In most cases you cannot stack a pattern over a photo with a single background, because background-image layers replace each other. But you can layer gradients: put the pattern gradient first and the photo URL second in a comma-separated background-image list, and make the pattern semi-transparent so the photo shows through.",
+        "q": "Can I combine a pattern with a background image?"
+      },
+      {
+        "a": "For the best performance, keep the tile size small (16–48px) and prefer simple two-stop gradients. Patterns are painted by the GPU and are generally cheap, but very large tiles with many gradient layers can slow down low-end phones when scrolling.",
+        "q": "Do CSS patterns slow down my page?"
+      },
+      {
+        "a": "Yes — every pattern here is plain CSS, so you can drop the output into a Tailwind project via arbitrary values (for example bg-[radial-gradient(...)]), a styled component, or a utility class in your stylesheet. For repeated use, save it as a CSS class or variable.",
+        "q": "Can I use these with Tailwind or styled-components?"
+      },
+      {
+        "a": "The quickest way is the pattern itself: set the shape color to transparent-ish and let the page background show through. Or use background-blend-mode: overlay on the patterned element so its color mixes with whatever sits behind it.",
+        "q": "How do I make a pattern blend with the section behind it?"
+      }
+    ],
+    "formula": ".pattern {\n  background-color: <base color>;\n  background-image: <gradient layers>;\n  background-size: <tile width> <tile height>;\n}\n\nDots: radial-gradient(circle, FG r, transparent r+1)\nGrid: linear-gradient(FG 1px, transparent 1px) + linear-gradient(90deg, ...)\nStripes: repeating-linear-gradient(45deg, FG 0 half, transparent half full)\nChecker: conic-gradient(FG 25%, transparent 0 50%, FG 0 75%, transparent 0)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick one of the eight pattern styles: dots, grid, diagonal stripes, horizontal stripes, checkerboard, cross, zigzag, or waves.",
+      "Choose the base color and the pattern color with the color pickers.",
+      "Drag the tile-size slider to make the pattern denser or sparser; the preview updates live.",
+      "Copy the generated CSS class and paste it into your stylesheet.",
+      "Rename the .my-pattern class to whatever fits your project, and apply it to any element."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "CSS patterns are made from gradients, not images: radial-gradient draws dots and circles, linear-gradient draws lines and stripes, and conic-gradient draws checkerboards.",
+      "The browser tiles the gradient automatically using background-size, so a few lines of CSS can fill an entire page with a seamless pattern.",
+      "Because gradients are resolution-independent, CSS patterns stay perfectly sharp on retina and 4K displays without extra assets.",
+      "A typical pattern declaration is under 300 bytes — orders of magnitude smaller than a PNG or SVG doing the same job.",
+      "Multiple gradient layers can be comma-separated in one background-image, which is how zigzag, cross, and wave patterns are built.",
+      "background-size controls the tile: smaller tiles make the pattern denser, larger tiles make it bolder and sparser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css background pattern, css pattern generator, gradient pattern, css dots pattern, css grid background, seamless css pattern",
+    "labels": {
+      "bgColorLabel": "Background color",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy CSS",
+      "cssOutputLabel": "Your CSS",
+      "downloadButton": "Download .css",
+      "fgColorLabel": "Pattern color",
+      "patternLabel": "Pattern style",
+      "previewLabel": "Live pattern preview",
+      "sizeLabel": "Tile size"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only in the sense of rendering: very old browsers (Internet Explorer) do not support conic-gradient or multiple backgrounds well.",
+      "Complex multi-layer patterns can be harder to read in code than a simple class name — add a comment when you paste them.",
+      "Patterns are decorative; keep contrast ratios accessible when text sits on top of a patterned background.",
+      "The zigzag and wave patterns use fixed math that looks best at tile sizes that divide evenly."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate seamless CSS-only background patterns — dots, grid, stripes, checkerboard, zigzag and more. Live preview, copyable CSS, no images needed. Free tool.",
+    "metaTitle": "CSS Background Pattern Generator — Free Online Tool",
+    "name": "CSS Background Pattern Generator",
+    "patterns": {
+      "checkerboard": "Checkerboard",
+      "cross": "Cross",
+      "diagonal": "Diagonal stripes",
+      "dots": "Dots",
+      "grid": "Grid",
+      "horizontal": "Horizontal stripes",
+      "waves": "Waves",
+      "zigzag": "Zigzag"
+    },
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool generates seamless, CSS-only background patterns — dots, grids, stripes, checkerboards, zigzags and more — using pure gradients, with zero image files. Pick a pattern, choose your colors and tile size, preview it live, then copy the ready-to-paste CSS into your project.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Pattern results",
+    "tagline": "Seamless CSS-only background patterns — no images, just gradients.",
+    "workedExample": "Pattern: Dots, pattern color #4f46e5, background #ffffff, tile size 24px.\nGenerated CSS:\n.my-pattern {\n  background-color: #ffffff;\n  background-image: radial-gradient(circle, #4f46e5 6px, transparent 7px);\n  background-size: 24px 24px;\n}\nThe dot radius is one quarter of the tile (24 / 4 = 6px), so raising the tile size to 48px would double the dot to 12px and halve the pattern density.",
+    "workedExampleHeading": "Worked example"
+  }
+}

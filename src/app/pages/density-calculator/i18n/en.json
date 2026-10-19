@@ -1,0 +1,98 @@
+{
+  "density-calculator": {
+    "benefits": [
+      "Solves for density, mass, or volume from the other two.",
+      "Handles grams, kilograms, cm3, mL, and liters.",
+      "Shows results in standard scientific units.",
+      "Great for school physics and lab prep.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Density = mass / volume. A 500 g block occupying 250 cm3 has density 500 / 250 = 2 g/cm3.",
+        "q": "How do I calculate density?"
+      },
+      {
+        "a": "Rearrange the formula: mass = density x volume. Aluminum (2.7 g/cm3) filling 100 cm3 weighs 2.7 x 100 = 270 g.",
+        "q": "How do I find mass from density?"
+      },
+      {
+        "a": "Volume = mass / density. 500 g of water (1 g/cm3) occupies 500 / 1 = 500 cm3, which is 500 mL.",
+        "q": "How do I find volume from density?"
+      },
+      {
+        "a": "1 g/cm3 = 1000 kg/m3. Multiply g/cm3 by 1000 to get kg/m3.",
+        "q": "How do I convert g/cm3 to kg/m3?"
+      },
+      {
+        "a": "Yes: 1 mL = 1 cm3 exactly, so they are interchangeable in these calculations.",
+        "q": "Is 1 mL the same as 1 cm3?"
+      }
+    ],
+    "formula": "density (p) = mass (m) / volume (V)\nmass = density x volume\nvolume = mass / density\nunits: g/cm3 = 1000 kg/m3",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose what to solve for: density, mass, or volume.",
+      "Enter the two values you know, with their units.",
+      "Read the answer in standard units (g/cm3, g, or cm3).",
+      "Switch the solve target to rearrange the formula instantly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Density is mass per unit volume: p = m / V.",
+      "Water's density is 1 g/cm3 (1000 kg/m3) at 4 C — the reference for specific gravity.",
+      "Objects denser than their fluid sink; less dense ones float.",
+      "1 mL = 1 cm3 exactly.",
+      "Density of gases is usually given in kg/m3 or g/L.",
+      "Temperature changes density slightly, especially for gases."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "density calculator, mass volume density, p=m/v calculator, density formula calculator, specific gravity calculator",
+    "labels": {
+      "densityLabel": "Density",
+      "massLabel": "Mass",
+      "massUnitLabel": "Mass unit",
+      "resultDensity": "Density",
+      "resultMass": "Mass",
+      "resultVolume": "Volume",
+      "solveLabel": "Solve for",
+      "unitNote": "Results use g/cm3, grams, and cm3. 1 g/cm3 = 1000 kg/m3.",
+      "volUnitLabel": "Volume unit",
+      "volumeLabel": "Volume"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes uniform density; mixtures and porous materials vary.",
+      "Ignores temperature and pressure effects on density.",
+      "Very small or very large values may lose display precision.",
+      "For gases, use the ideal-gas relation rather than fixed densities."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free density calculator: solve for density, mass, or volume with p = m/V. Supports grams, kg, cm3, mL, and liters. No sign-up.",
+    "metaTitle": "Density Calculator: p = m/V Solver (Free)",
+    "name": "Density Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick whether to solve for density, mass, or volume, enter the two known values with their units, and the calculator applies p = m/V instantly — converting grams, kilograms, cubic centimeters, milliliters, and liters behind the scenes.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Density results",
+    "solveOptions": {
+      "density": "Density (p = m/V)",
+      "mass": "Mass (m = p x V)",
+      "volume": "Volume (V = m/p)"
+    },
+    "tagline": "Solve p = m/V for density, mass, or volume.",
+    "volUnitNames": {
+      "L": "L",
+      "cm3": "cm3",
+      "mL": "mL"
+    },
+    "workedExample": "A metal block weighs 500 g and displaces 250 cm3 of water:\n\n1. Density = mass / volume = 500 / 250 = 2 g/cm3.\n2. In kg/m3: 2 x 1000 = 2000 kg/m3 — close to aluminum (2700 kg/m3), so it is a lighter alloy.\n3. Solving for mass instead: a 100 cm3 piece of the same metal weighs 2 x 100 = 200 g.\n\nThe same three numbers rearrange to answer any of the three questions.",
+    "workedExampleHeading": "Worked example"
+  }
+}

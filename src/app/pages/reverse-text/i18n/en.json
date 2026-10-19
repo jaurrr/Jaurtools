@@ -1,0 +1,95 @@
+{
+  "reverse-text": {
+    "assumptionNote": "Characters are reversed by Unicode code point, so emoji and combined marks stay intact as far as the browser's string handling allows.",
+    "benefits": [
+      "Three reversal modes: characters, word order, or each line separately.",
+      "Instant results — no button to press, updates as you type.",
+      "Fun for puzzles, palindromes and playful messages.",
+      "Copy or download the reversed text with one click.",
+      "Private — your text never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Character mode reverses every character including spaces. Word mode reverses the order of words but keeps each word readable. Line mode reverses the characters inside each line separately.",
+        "q": "What is the difference between the three modes?"
+      },
+      {
+        "a": "Use Word order mode. It keeps each word intact and only flips their sequence.",
+        "q": "How do I reverse the order of words?"
+      },
+      {
+        "a": "Yes — the tool is fully reversible. Reversing the output with the same mode returns the original text.",
+        "q": "Can I get the original text back?"
+      },
+      {
+        "a": "Yes. Characters are handled by Unicode code point, so emoji and Hindi/Arabic text reverse correctly.",
+        "q": "Does it handle emoji?"
+      },
+      {
+        "a": "Try reversing your text and comparing — a palindrome reads the same forwards and backwards in Character mode.",
+        "q": "Can I use this to check palindromes?"
+      },
+      {
+        "a": "Yes — everything runs locally in your browser.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "chars:  reverse of the character sequence\nwords:  reverse of the word sequence (spaces preserved)\nlines:  each line's characters reversed independently",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste your text into the input box.",
+      "Pick a mode: Characters, Word order, or Each line.",
+      "Read the reversed text from the output box as you type.",
+      "Copy it to the clipboard or download it as a .txt file.",
+      "Try Word order mode for readable-but-backwards sentences."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Character mode reverses the entire text, spaces included.",
+      "Word order mode keeps every word readable and only flips their sequence.",
+      "Line mode reverses the characters within each line separately.",
+      "Reversing is fully reversible — run it again to get the original.",
+      "Everything is computed locally in your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "reverse text online, flip text backwards, reverse string tool, backwards text generator, reverse words order",
+    "labels": {
+      "charsLabel": "Characters",
+      "clearButton": "Clear",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "emptyState": "Reversed text will appear here.",
+      "modeChars": "Characters",
+      "modeLabel": "Reverse mode",
+      "modeLines": "Each line",
+      "modeWords": "Word order",
+      "outputLabel": "Reversed text",
+      "textLabel": "Your text",
+      "textPlaceholder": "Type here to reverse..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Reversing is not encryption — anyone can reverse it back.",
+      "Complex emoji with joiners may split in some browsers.",
+      "Word mode treats punctuation attached to words as part of the word."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free reverse text tool. Flip characters, word order or each line instantly. Copy or download results, 100% private.",
+    "metaTitle": "Reverse Text — Flip Characters, Words or Lines Instantly",
+    "name": "Reverse Text",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Reverses text three ways: every character backwards, words in reverse order, or each line's characters reversed separately. Type or paste text and see the result update live, then copy it or download it as a .txt file. Great for puzzles, palindromes and playful backwards messages.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Reverse text tool",
+    "tagline": "Flip text backwards — characters, word order, or each line — live.",
+    "workedExample": "Input: \"hello world\"\nCharacter mode: \"dlrow olleh\"\nWord order mode: \"world hello\"\nLine mode (single line): \"dlrow olleh\"\n\nInput (two lines):\nabc\ndef\nLine mode output:\ncba\nfed",
+    "workedExampleHeading": "Worked example"
+  }
+}

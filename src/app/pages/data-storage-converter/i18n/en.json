@@ -1,0 +1,98 @@
+{
+  "data-storage-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Data Storage Converter",
+    "tagline": "Convert bits, bytes, KB, MB, GB, TB - decimal and binary units side by side.",
+    "metaTitle": "Data Storage Converter - Bits Bytes KB MB GB TB | JaurTools",
+    "metaDescription": "Free data storage converter: convert between bits, bytes, KB, MB, GB, TB, PB and binary KiB, MiB, GiB, TiB instantly.",
+    "keywords": "data storage converter, bits to bytes, gb to mb, tb to gb, mb to kb converter",
+    "resultsHeading": "Data storage conversion results",
+    "quickAnswer": "1 GB (decimal) = 1,000 MB, while 1 GiB (binary) = 1,024 MiB. Pick any from/to pair - for example, 8 gigabits ÷ 8 = 1 gigabyte, so a \"100 Mbps\" connection downloads at most 12.5 MB/s. Binary units (KiB, MiB, GiB, TiB) use powers of 1,024.",
+    "keyFacts": [
+      "8 bits = 1 byte. Divide bits by 8 to get bytes - the single most useful storage conversion.",
+      "Decimal units (KB, MB, GB, TB) multiply by 1,000 each step; binary units (KiB, MiB, GiB, TiB) multiply by 1,024.",
+      "Network speeds are sold in bits (Mbps); downloads are measured in bytes (MB/s) - divide by 8.",
+      "1 TB = 1,000 GB but 1 TiB = 1,024 GiB. The gap grows at each step: ~2.4% at kilo, ~7.4% at giga.",
+      "A single-layer DVD holds 4.7 GB; a dual-layer Blu-ray holds 50 GB.",
+      "Cloud storage is billed in decimal GB, which is why providers and operating systems report different numbers."
+    ],
+    "howTo": [
+      "Type the storage value.",
+      "Choose the from-unit (bits, bytes, KB... up to TiB).",
+      "Choose the to-unit.",
+      "Read the instant result; swap reverses it."
+    ],
+    "formula": "result = value × (bytes per from-unit) ÷ (bytes per to-unit).\nBytes per unit: bit 0.125, B 1, KB 1,000, MB 1,000,000, GB 10⁹, TB 10¹², PB 10¹⁵, KiB 1,024, MiB 1,048,576, GiB 1,073,741,824, TiB 1,099,511,627,776.\nExample: 1 GB → MB = 1 × 10⁹ ÷ 10⁶ = 1,000 MB.",
+    "workedExample": "Convert 100 Mbps to MB/s:\n1. 100 megabits = 100 ÷ 8 = 12.5 megabytes.\n2. So a 100 Mbps plan downloads at most 12.5 MB/s.\nConvert 2 TiB to GB:\n1. 2 × 1,099,511,627,776 = 2,199,023,255,552 bytes.\n2. ÷ 1,000,000,000 = 2,199.02 GB.",
+    "benefits": [
+      "Bits and bytes in one place - ends the Mbps vs MB/s confusion.",
+      "Both decimal and binary ladders, so ISP numbers and OS numbers can be compared honestly.",
+      "Swap button for quick reverse checks.",
+      "Instant and private - no data leaves your browser."
+    ],
+    "limitations": [
+      "Decimal vs binary naming follows standards, but real products label things inconsistently - always check which one a spec means.",
+      "Does not account for formatting overhead or file-system reserved space.",
+      "Throughput conversions ignore protocol overhead (real speeds are a bit lower)."
+    ],
+    "faqs": [
+      {
+        "q": "How many MB are in 1 GB?",
+        "a": "1,000 MB in decimal (the storage-industry standard), or 1,024 MiB in binary. When someone says \"GB\" without specifying, storage makers mean 1,000 MB while operating systems usually mean 1,024 MiB."
+      },
+      {
+        "q": "How do I convert Mbps to MB/s?",
+        "a": "Divide by 8. A 100 Mbps connection transfers at most 12.5 MB/s. In practice expect a bit less because of network overhead."
+      },
+      {
+        "q": "What is bigger: GB or GiB?",
+        "a": "GiB is bigger. 1 GiB = 1,073,741,824 bytes while 1 GB = 1,000,000,000 bytes. The GiB is about 7.37% larger."
+      },
+      {
+        "q": "How many bits are in a byte?",
+        "a": "8 bits = 1 byte, always. This is the fixed definition behind every bits↔bytes conversion."
+      },
+      {
+        "q": "Why do I need both KB and KiB?",
+        "a": "Because the industry used \"KB\" for both 1,000 and 1,024 bytes for decades, causing real confusion (and lawsuits). KiB/MiB/GiB are the unambiguous binary names standardized by the IEC."
+      },
+      {
+        "q": "How much is 1 TB in GB?",
+        "a": "1,000 GB decimal, or about 931.3 GiB binary - which is why a \"1 TB\" drive shows roughly 931 GB in your operating system."
+      }
+    ],
+    "labels": {
+      "value": "Value",
+      "from": "From",
+      "to": "To",
+      "swap": "Swap units",
+      "result": "Result",
+      "units": {
+        "bit": "Bit",
+        "B": "Byte (B)",
+        "KB": "Kilobyte (KB)",
+        "MB": "Megabyte (MB)",
+        "GB": "Gigabyte (GB)",
+        "TB": "Terabyte (TB)",
+        "PB": "Petabyte (PB)",
+        "KiB": "Kibibyte (KiB)",
+        "MiB": "Mebibyte (MiB)",
+        "GiB": "Gibibyte (GiB)",
+        "TiB": "Tebibyte (TiB)"
+      }
+    }
+  }
+}

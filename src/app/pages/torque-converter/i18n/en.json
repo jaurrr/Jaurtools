@@ -1,0 +1,120 @@
+{
+  "torque-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Torque Converter",
+    "tagline": "Convert torque between N·m, kN·m, lbf·ft, lbf·in and kgf·m instantly.",
+    "metaTitle": "Torque Converter — lbf·ft to N·m Online",
+    "metaDescription": "Free torque converter: newton-metres, kilonewton-metres, pound-feet, pound-inches, kilogram-force metres. Exact factors in your browser.",
+    "keywords": "torque converter, lb ft to nm, nm to ft lbs, torque units, ft-lb to newton meter",
+    "quickAnswer": "Enter the torque value, pick the unit you have and the one you want. The tool converts instantly using exact definitions — 1 lbf·ft = 1.355817948 N·m — which matters when you are torquing bolts to spec.",
+    "keyFacts": [
+      "Torque is force × distance: the newton-metre is the SI unit of torque.",
+      "One pound-force foot equals exactly 1.355817948 newton-metres.",
+      "One kilogram-force metre equals 9.80665 N·m (standard gravity × 1 metre).",
+      "Car engines quote torque in N·m (metric markets) or lb·ft (US market).",
+      "Bolt tightening specs are torque values — using the wrong unit can strip threads."
+    ],
+    "howTo": [
+      "Type the torque value into the value field.",
+      "Choose the source unit from the \"From\" dropdown.",
+      "Choose the target unit from the \"To\" dropdown.",
+      "Read the converted torque instantly; swap reverses the direction.",
+      "Use the rate line to double-check the factor before torquing hardware."
+    ],
+    "formula": "result = value × (from-unit in N·m) ÷ (to-unit in N·m)\nExample: N·m = (lbf·ft) × 1.355817948",
+    "workedExample": "Convert 100 lbf·ft to N·m.\nStep 1: 1 lbf·ft = 1.355817948 N·m.\nStep 2: 100 × 1.355817948 = 135.5817948.\nAnswer: 100 lbf·ft = 135.581795 N·m (rounded to 6 decimals).",
+    "benefits": [
+      "Covers metric and imperial torque units used in automotive and engineering.",
+      "Exact definitions — critical for bolt torque specifications.",
+      "Instant, private, browser-only calculation.",
+      "Shows the exact conversion rate with every result.",
+      "Handy for mechanics, DIY repairs and engineering homework."
+    ],
+    "limitations": [
+      "Converts static torque units only, not dynamic power-torque curves.",
+      "Results rounded to 6 decimal places.",
+      "Always verify critical fastener specs against the manufacturer manual.",
+      "Values beyond ±1e15 are clamped."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert lb·ft to N·m?",
+        "a": "Multiply by 1.355817948. Example: 100 lb·ft × 1.355817948 = 135.58 N·m."
+      },
+      {
+        "q": "What is the difference between lb·ft and ft·lb?",
+        "a": "For torque they mean the same thing — pound-force times foot. (Foot-pounds can also mean energy in other contexts, but torque wrenches read lb·ft.)"
+      },
+      {
+        "q": "How many N·m is 1 kgf·m?",
+        "a": "9.80665 N·m, because 1 kilogram-force = 9.80665 newtons and torque is force × 1 metre."
+      },
+      {
+        "q": "Why does my car manual list torque in N·m?",
+        "a": "Metric markets use newton-metres as the SI unit. US manuals list lb·ft. They describe the same twisting force, just in different units."
+      },
+      {
+        "q": "Can I use this for bolt torque specs?",
+        "a": "Yes for the unit math, but always confirm the final spec value in the manufacturer service manual before tightening critical fasteners."
+      },
+      {
+        "q": "Is my data sent anywhere?",
+        "a": "No. Conversion happens entirely in your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Torque conversion results",
+    "labels": {
+      "valueLabel": "Value",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "resultLabel": "Result",
+      "rateLabel": "Conversion rate",
+      "swapLabel": "Swap units"
+    },
+    "units": [
+      {
+        "id": "ncm",
+        "name": "Newton-centimetre",
+        "symbol": "N·cm"
+      },
+      {
+        "id": "nm",
+        "name": "Newton-metre",
+        "symbol": "N·m"
+      },
+      {
+        "id": "knm",
+        "name": "Kilonewton-metre",
+        "symbol": "kN·m"
+      },
+      {
+        "id": "kgfm",
+        "name": "Kilogram-force metre",
+        "symbol": "kgf·m"
+      },
+      {
+        "id": "lbfin",
+        "name": "Pound-force inch",
+        "symbol": "lbf·in"
+      },
+      {
+        "id": "lbfft",
+        "name": "Pound-force foot",
+        "symbol": "lbf·ft"
+      }
+    ]
+  }
+}

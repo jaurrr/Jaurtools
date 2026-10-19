@@ -1,0 +1,109 @@
+{
+  "create-pdf": {
+    "benefits": [
+      "Completely private — your text and images never leave your device.",
+      "Two builders in one tool: flowing multi-page text documents and one-image-per-page photo PDFs.",
+      "Automatic word wrap and pagination — just paste text, the tool handles pages.",
+      "Real PDF metadata: your title and author are stored in the document properties.",
+      "Free and unlimited — create as many PDFs as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — long text flows across as many pages as needed automatically, with proper margins and line spacing.",
+        "q": "Can I create a multi-page document?"
+      },
+      {
+        "a": "Yes. The title is set in bold at the top of the first page and stored in the PDF's metadata along with the author name.",
+        "q": "Can I add a title and author?"
+      },
+      {
+        "a": "A4 (595.28 × 841.89 pt) and US Letter (612 × 792 pt). The tool uses real point dimensions from the PDF standard.",
+        "q": "Which page sizes are supported?"
+      },
+      {
+        "a": "JPEG and PNG embed directly. WebP and GIF are converted to PNG in your browser first (animated GIFs keep only their first frame).",
+        "q": "Which image formats can I use?"
+      },
+      {
+        "a": "Images are fitted inside the page with their aspect ratio preserved — never stretched. Very large images are scaled down to fit.",
+        "q": "Will my photos be stretched?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Nothing you type or upload leaves your device.",
+        "q": "Is my text uploaded to a server?"
+      }
+    ],
+    "formula": "characters per line ≈ usable width ÷ (font size × 0.5)\nlines per page = usable height ÷ (font size × 1.45)\nimage scale = min(usable width ÷ image width, usable height ÷ image height)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the Text tab for a written document, or the Images tab for a photo PDF.",
+      "For text: type a title and author (optional), paste your text, and set the font size and margins.",
+      "For images: add your photos — each becomes one full page, in the order you choose.",
+      "Pick the page size: A4 or US Letter.",
+      "Click “Create PDF” and download the finished document."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The text builder wraps words by measuring each line with the real Helvetica font metrics — no guessing.",
+      "Pagination is automatic: when the next line would cross the bottom margin, a new page starts.",
+      "A4 is 595.28 × 841.89 points and US Letter is 612 × 792 points (72 points = 1 inch).",
+      "Your title and author are written into the PDF's document metadata, visible in any reader's properties panel.",
+      "Each image gets its own page, centered and scaled to fit with its aspect ratio preserved."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "create pdf, make pdf online free, text to pdf, images to pdf, pdf maker free",
+    "labels": {
+      "authorLabel": "Author (optional)",
+      "authorPlaceholder": "e.g. Jauhar Ayyub",
+      "bodyLabel": "Document text",
+      "bodyPlaceholder": "Paste or type your text here…",
+      "chooseImages": "Choose images",
+      "createBtn": "Create PDF",
+      "downloadBtn": "Download PDF",
+      "errNoImages": "Please add at least one image.",
+      "errNoText": "Please type some text first.",
+      "errProcess": "Something went wrong while creating the PDF. Please try again.",
+      "imagesLabel": "Images (one per page)",
+      "imgHint": "JPG, PNG, WebP or GIF — each image becomes one page",
+      "letterLabel": "US Letter",
+      "marginLabel": "Margin (pt)",
+      "moveDown": "Move down",
+      "moveUp": "Move up",
+      "pageSizeLabel": "Page size",
+      "processing": "Working…",
+      "removeLabel": "Remove image",
+      "resetBtn": "Start over",
+      "sizeLabel": "Font size (pt)",
+      "successMsg": "PDF created. Download it below.",
+      "tabImages": "From images",
+      "tabLabel": "Create from",
+      "tabText": "From text",
+      "titleLabel": "Title (optional)",
+      "titlePlaceholder": "e.g. My Report"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Text uses the standard Helvetica font only — no font choices or rich formatting.",
+      "Only Latin characters are supported; Hindi, Arabic and other scripts may not render.",
+      "Tables, columns and complex layouts are not supported — plain flowing text only.",
+      "Very long documents (hundreds of pages) may be slow on low-end devices."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create a PDF free in your browser — from text with auto pagination, or from images one per page. A4/Letter. No upload, no signup.",
+    "metaTitle": "Create PDF Free — Make PDF from Text or Images Online",
+    "name": "Create PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type or paste text — with automatic word wrap and pagination — or add images that each become one full page. Set A4 or Letter size, add a title and author, and download a real, properly structured PDF, all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Create PDF results",
+    "tagline": "Turn text or images into a real PDF — right in your browser.",
+    "workedExample": "A 2,000-character note on A4 (595.28 × 841.89 pt), 12 pt font, 72 pt margins:\nusable width = 595.28 − 144 = 451.28 pt → about 75 characters per line\nusable height = 841.89 − 144 = 697.89 pt → 697.89 ÷ 16.8 ≈ 41 lines per page\n2,000 ÷ 75 ≈ 27 lines — fits on a single page.",
+    "workedExampleHeading": "Worked example"
+  }
+}

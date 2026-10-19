@@ -1,0 +1,111 @@
+{
+  "weight-calculator": {
+    "assumptionNote": "Gravity values are average surface values. Your mass - the amount of matter in your body - stays the same everywhere; only your weight changes.",
+    "benefits": [
+      "Makes the mass-vs-weight distinction click in a way textbooks rarely do.",
+      "Great for students: enter your mass once and tour the whole solar system instantly.",
+      "Removes unit confusion by showing newtons, kilogram-force, and pound-force side by side.",
+      "The custom gravity mode covers anything else - an elevator, an aircraft, or a sci-fi planet."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Mass is the amount of matter in an object, measured in kilograms, and it is the same everywhere. Weight is the force gravity pulls that mass with, measured in newtons, and it changes with gravity. On the Moon you weigh less because the Moon pulls weaker - but your mass is identical.",
+        "q": "What is the difference between mass and weight?"
+      },
+      {
+        "a": "Your weight in kilograms - what bathroom scales display - is kilogram-force, an old unit equal to the force of Earth gravity on one kilogram. Physicists prefer newtons. On Earth the two numbers are nearly equal, which is why scales get away with it.",
+        "q": "Why does my scale show kg if weight is in newtons?"
+      },
+      {
+        "a": "Surface gravity of the Moon is about 1.62 m/s squared, roughly one-sixth of Earth's 9.807. A 70 kg person weighs about 686 N on Earth and only 113 N on the Moon - that is why Apollo astronauts could bounce around in heavy suits.",
+        "q": "How much would I weigh on the Moon?"
+      },
+      {
+        "a": "Divide your Earth weight in newtons by 9.807 to get your mass in kilograms. That mass never changes - multiply it by any gravity to get your weight there.",
+        "q": "How do I find my mass from my weight?"
+      },
+      {
+        "a": "Roughly 2.5 times your Earth weight: Jupiter's surface gravity is about 24.79 m/s squared. A 70 kg person would weigh about 1,736 N there - over 176 kilogram-force. You would not enjoy standing up.",
+        "q": "How much would I weigh on Jupiter?"
+      },
+      {
+        "a": "The International Space Station is in free fall around Earth, so astronauts and everything around them accelerate together - scales read zero. They are not beyond gravity; at that altitude gravity is still about 90% of Earth's surface value.",
+        "q": "Why are astronauts weightless in space?"
+      }
+    ],
+    "formula": "Weight = mass x gravity.\nNewtons: W (N) = m (kg) x g (m/s squared).\nKilogram-force: kgf = W / 9.80665.\nPound-force: lbf = W x 0.224809.\nExample: 70 kg on the Moon: 70 x 1.62 = 113.4 N.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your mass unit: kilograms or pounds.",
+      "Enter your mass - the number your bathroom scale shows in kg is close enough.",
+      "Choose a planet or moon from the list, or pick Custom gravity and type any value.",
+      "Read your weight instantly in newtons, kilogram-force, and pound-force.",
+      "Compare Earth with the Moon and Jupiter to feel how gravity shapes weight."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Weight is a force: W = mass x gravity, measured in newtons (N), not kilograms.",
+      "Earth's average surface gravity is 9.807 m/s squared; the Moon's is 1.62; Jupiter's is 24.79.",
+      "Your mass is identical on every planet. A 70 kg person is 70 kg on the Moon too - but weighs only about 113 N there.",
+      "Kilogram-force (kgf) is the old unit bathroom scales use: 1 kgf = 9.80665 N. On Earth, kgf and kg look the same.",
+      "Pound-force (lbf) is the imperial unit of force: 1 lbf = 4.44822 N.",
+      "The Sun's surface gravity is about 274 m/s squared - roughly 28 times Earth's. Do not try this at home."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "weight calculator, weight from mass and gravity, weight on moon mars jupiter, mass to weight converter, newtons calculator",
+    "labels": {
+      "body": "Planet or moon",
+      "bodyNames": [
+        "Earth",
+        "Moon",
+        "Mars",
+        "Mercury",
+        "Venus",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune",
+        "Pluto",
+        "Sun",
+        "Custom gravity"
+      ],
+      "customGravity": "Custom gravity (m/s squared)",
+      "gravityUnit": "m/s²",
+      "gravityUsed": "Gravity used",
+      "kgTab": "Kilograms (kg)",
+      "kgfUnit": "kgf",
+      "lbTab": "Pounds (lb)",
+      "lbfUnit": "lbf",
+      "massKg": "Mass (kg)",
+      "massLb": "Mass (lb)",
+      "massUnitSystem": "Mass unit system",
+      "weightKgf": "Weight (kilogram-force)",
+      "weightLbf": "Weight (pound-force)",
+      "weightN": "Weight (newtons)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses average surface gravity; real gravity varies slightly with altitude and location.",
+      "The listed planets are gas or ice giants - you could not actually stand on their surfaces.",
+      "Weight in kilogram-force is a force unit, not a mass - scales blur this distinction on Earth.",
+      "This is an educational estimate, not lab-grade measurement."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate your weight from mass and gravity: see what you would weigh on the Moon, Mars, Jupiter, and every planet in newtons, kgf, and lbf. Free, no sign-up.",
+    "metaTitle": "Weight Calculator: Your Weight on Any Planet | JaurTools",
+    "name": "Weight Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Weight = mass x gravity. A 70 kg person weighs about 686 N on Earth (70.0 kgf / 154.3 lbf), about 113 N on the Moon, and about 1,736 N on Jupiter. Your mass never changes - only the pull of gravity does. Pick a planet above and this tool shows your weight in newtons, kilogram-force, and pound-force instantly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Weight Calculator results",
+    "tagline": "What would you weigh on the Moon, Mars, or Jupiter? Enter your mass and tour the solar system.",
+    "workedExample": "Mass 70 kg, on the Moon (g = 1.62 m/s squared):\n1. Weight in newtons: 70 x 1.62 = 113.4 N.\n2. Kilogram-force: 113.4 / 9.80665 = 11.56 kgf.\n3. Pound-force: 113.4 x 0.224809 = 25.49 lbf.\nFor comparison on Earth: 70 x 9.807 = 686.49 N = 70.00 kgf = 154.33 lbf.\nSame mass, very different weight - gravity does all the work.",
+    "workedExampleHeading": "Worked example"
+  }
+}

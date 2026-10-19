@@ -1,0 +1,91 @@
+{
+  "apr-calculator": {
+    "assumptionNote": "Assumes a fixed nominal rate, monthly payments and upfront fees deducted from the loan proceeds.",
+    "benefits": [
+      "Reveals the true cost of borrowing, not just the advertised rate.",
+      "Lets you compare two loan offers with different fee structures fairly.",
+      "Shows exactly how much fees add to your cost over the loan's life.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "APR stands for annual percentage rate. It is the yearly cost of borrowing expressed as a percentage, including both the interest rate and certain fees, so it reflects the true price of the loan better than the nominal rate alone.",
+        "q": "What is APR?"
+      },
+      {
+        "a": "The nominal (stated) rate is the rate used to compute your monthly payment on the full loan amount. The APR is higher whenever there are upfront fees, because you effectively pay interest on money you never received. With no fees, the two are equal.",
+        "q": "How is APR different from the interest rate?"
+      },
+      {
+        "a": "Compare APRs for loans with the same term, because a longer term can make the APR look lower while total interest is higher. Also check for fees not included in the APR, such as late-payment charges.",
+        "q": "How should I compare loan offers?"
+      },
+      {
+        "a": "No. In many countries lenders must disclose APR, but the exact fee set included varies by regulation. Always read the loan disclosure to see which fees are inside the APR figure.",
+        "q": "Does APR include every fee?"
+      },
+      {
+        "a": "An APR is designed for installment loans with a fixed term. For revolving credit like credit cards, the effective rate depends on how you use and repay the balance, so a single APR number is less meaningful.",
+        "q": "Can APR compare credit cards too?"
+      },
+      {
+        "a": "This calculator solves the standard present-value equation numerically with a bisection search, which is the same definition regulators use: the discount rate that makes the present value of all payments equal to the amount you actually receive.",
+        "q": "How is APR calculated here?"
+      }
+    ],
+    "formula": "monthly_payment = P x r / (1 - (1 + r)^-n), r = nominal_rate / 12\nAPR = the rate r* that solves: net_received = payment x (1 - (1 + r*)^-n) / r*\nAPR_annual = r* x 12 (solved numerically)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the loan amount before fees.",
+      "Enter the upfront fees charged by the lender.",
+      "Enter the nominal (advertised) annual interest rate.",
+      "Enter the loan term in years.",
+      "Read the true APR, your monthly payment and the total cost of fees plus interest."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "APR, the annual percentage rate, expresses the total yearly cost of a loan as a single percentage.",
+      "It folds upfront fees and charges into the rate, so loans with the same nominal rate can have different APRs.",
+      "A $10,000 loan at 8% with $200 in fees over 3 years has a true APR of about 9.38%, not 8%.",
+      "Comparing APRs is the fairest way to compare loan offers with different fee structures.",
+      "Regulators in many countries require lenders to disclose APR so borrowers can compare offers."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "APR calculator, annual percentage rate calculator, true loan cost, loan comparison calculator",
+    "labels": {
+      "amount": "Loan amount",
+      "apr": "True APR",
+      "fees": "Upfront fees",
+      "monthlyPayment": "Monthly payment",
+      "netReceived": "Amount you receive",
+      "nominalRate": "Nominal rate (%)",
+      "totalCost": "Interest + fees",
+      "totalOfPayments": "Total of payments",
+      "years": "Term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Fixed-rate installment loans only; variable rates are not modeled.",
+      "Only the fees you enter are included; other charges may apply.",
+      "Ignores late-payment penalties and insurance costs.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free APR calculator. Find the true annual percentage rate of a loan including fees. Compare loan offers fairly. Private, browser-only.",
+    "metaTitle": "APR Calculator — True Annual Percentage Rate",
+    "name": "APR Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "APR is the true yearly cost of a loan including fees. A $10,000 loan at 8% nominal with $200 in fees over 3 years has a true APR of about 9.38% — you receive $9,800 but pay $11,281 in total, so fees and interest cost you $1,481.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your APR results",
+    "tagline": "Find the true yearly cost of any loan, fees included.",
+    "workedExample": "Loan $10,000, fees $200, nominal rate 8%, term 3 years (36 months).\n\nr = 0.08/12 = 0.0066667. payment = 10,000 x 0.0066667 / (1 - 1.0066667^-36) = 66.6667 / 0.212747 = $313.36 per month. You receive 10,000 - 200 = $9,800.\n\nAPR is the monthly rate r* with 9,800 = 313.36 x (1 - (1 + r*)^-36) / r*, which solves to r* = 0.007815, so APR = 0.007815 x 12 = 9.38%.\n\nTotal of payments = 313.36 x 36 = $11,281. Interest + fees = 11,281 - 9,800 = $1,481.",
+    "workedExampleHeading": "Worked example"
+  }
+}

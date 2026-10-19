@@ -1,0 +1,95 @@
+{
+  "excel-to-csv": {
+    "benefits": [
+      "Extracts data from .xlsx workbooks without Excel installed, on any device.",
+      "Pick any worksheet from a multi-sheet workbook before converting.",
+      "Choose the output delimiter to match your region or your import tool.",
+      "Everything is parsed locally, so confidential spreadsheets never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Modern .xlsx files only. The old binary .xls format from Excel 2003 and earlier uses a completely different structure and is not supported. Re-save such files as .xlsx in any spreadsheet app first.",
+        "q": "Does it support old .xls files?"
+      },
+      {
+        "a": "Dates in Excel are stored as serial numbers with a display format. This tool reads the stored value, so a date may appear as a number like 45658. This is honest raw extraction; use a spreadsheet app if you need formatted dates.",
+        "q": "Why do dates show as numbers?"
+      },
+      {
+        "a": "The tool reads the workbook's sheet list and lets you pick one worksheet at a time. Convert each sheet you need separately.",
+        "q": "Can I convert all sheets at once?"
+      },
+      {
+        "a": "Only the stored cell values are read. Formulas are evaluated by Excel when the file was saved, and this tool reads the last saved values, not the formulas themselves.",
+        "q": "Are formulas converted or their results?"
+      },
+      {
+        "a": "Merged cells only keep their value in the top-left cell; the other cells of the merge read as empty. This matches how the data is actually stored in the file.",
+        "q": "How are merged cells handled?"
+      }
+    ],
+    "formula": "CSV = for each row: join(cells, delimiter) with quoting when a cell contains the delimiter, quotes or line breaks",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose file and select an .xlsx workbook from your device.",
+      "Wait a moment while the workbook is parsed in your browser.",
+      "Pick the worksheet you want from the dropdown.",
+      "Choose the CSV delimiter: comma, semicolon, tab or pipe.",
+      "Press Download to save the .csv file, or Copy to paste it elsewhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Reads genuine .xlsx workbooks by parsing the ZIP container and sheet XML directly.",
+      "Handles shared strings, inline strings, numbers and booleans correctly.",
+      "Lists every worksheet so you can convert exactly the sheet you need.",
+      "Cells containing the delimiter, quotes or line breaks are quoted per CSV rules.",
+      "Short rows are padded so the CSV is a perfect rectangle."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "excel to csv online, convert xlsx to csv, xlsx to csv free, extract excel data",
+    "labels": {
+      "chooseFile": "Choose Excel file",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "CSV delimiter",
+      "download": "Download CSV",
+      "emptyState": "Select an .xlsx file to see its worksheets here.",
+      "errorParse": "Could not read this file. Please make sure it is a valid modern .xlsx workbook.",
+      "fileHint": "Modern .xlsx workbooks only. Files stay on your device.",
+      "loading": "Reading workbook...",
+      "previewHeading": "Preview (first 8 rows)",
+      "resultCols": "Columns",
+      "resultRows": "Rows",
+      "resultSheets": "Worksheets",
+      "sheetLabel": "Worksheet"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Modern .xlsx only; legacy .xls files are not supported.",
+      "Date cells appear as Excel serial numbers, not formatted dates.",
+      "Only stored values are read; formulas, charts and images are skipped.",
+      "Very large workbooks (hundreds of thousands of rows) may slow the browser."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert Excel to CSV online free. Upload an .xlsx workbook, pick a worksheet, choose a delimiter and download clean CSV. 100% browser-based, no upload.",
+    "metaTitle": "Excel to CSV Online Free - Convert XLSX to CSV | JaurTools",
+    "name": "Excel to CSV",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload an .xlsx workbook and download any worksheet as clean CSV. The tool parses the real Excel file format in your browser, handles shared strings and numbers correctly, and lets you pick the worksheet and the delimiter before downloading.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Excel to CSV results",
+    "tagline": "Extract any worksheet from an Excel file as clean CSV.",
+    "workedExample": "An .xlsx workbook has one worksheet, Sales, with:\nA1=Product, B1=Qty, C1=Price\nA2=Pen, B2=100, C2=12.5\n\nThe tool lists 1 worksheet. Selecting Sales with the comma delimiter produces:\nProduct,Qty,Price\nPen,100,12.5\n\n1 worksheet, 2 rows, 3 columns converted to CSV.",
+    "workedExampleHeading": "Worked example"
+  }
+}

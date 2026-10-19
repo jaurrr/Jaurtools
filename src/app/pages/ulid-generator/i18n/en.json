@@ -1,0 +1,89 @@
+{
+  "ulid-generator": {
+    "benefits": [
+      "Sortable by creation time with no extra column: ideal for database primary keys and event logs.",
+      "URL-safe and human-readable: safe in links, file names and logs without encoding.",
+      "Compact 26-character form: shorter than a 36-character UUID with the timestamp bonus.",
+      "Generated locally with secure randomness: nothing is sent to any server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "ULID stands for Universally Unique Lexicographically Sortable Identifier. It is a 26-character ID made of a 48-bit millisecond timestamp plus 80 bits of random data, encoded in Crockford Base32. Because the timestamp comes first, ULIDs sort in the order they were created.",
+        "q": "What is a ULID?"
+      },
+      {
+        "a": "Use ULID when you want IDs that sort by creation time, are shorter (26 vs 36 characters) and are URL-safe. Use UUID when you want the widest library support or must not expose creation time. Both are effectively collision-free.",
+        "q": "ULID vs UUID: which should I use?"
+      },
+      {
+        "a": "The random 16 characters are drawn from crypto.getRandomValues(), which is a cryptographically secure random source in every modern browser. They are suitable for IDs; they are not passwords or secret tokens, so treat them as public identifiers.",
+        "q": "Are these ULIDs cryptographically secure?"
+      },
+      {
+        "a": "Only if both the millisecond timestamp and all 80 random bits match, which has a probability of about 1 in 1.2 million billion billion for the same millisecond. In practice, collisions do not happen.",
+        "q": "Can two ULIDs be identical?"
+      },
+      {
+        "a": "ULIDs use Crockford Base32, which deliberately drops I, L, O and U because they are easy to confuse with 1, 1, 0 and V. This makes ULIDs safer to read aloud or copy by hand.",
+        "q": "Why are the letters I, L, O and U missing?"
+      },
+      {
+        "a": "Decode the first 10 characters as a Base32 number using the Crockford alphabet. The result is the Unix timestamp in milliseconds. This tool shows the decoded creation time next to every generated ULID.",
+        "q": "How do I extract the timestamp from a ULID?"
+      }
+    ],
+    "formula": "ULID = CrockfordBase32(timestamp_ms, 48 bits) + CrockfordBase32(random, 80 bits)\nAlphabet: 0123456789ABCDEFGHJKMNPQRSTVWXYZ\nLength: 10 + 16 = 26 characters",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose how many ULIDs you need with the slider or number box (1 to 100).",
+      "Click Generate to create a fresh batch instantly.",
+      "Each ULID is shown with the date and time it was created.",
+      "Click the copy icon on any ULID to copy it, or use Copy all to grab the whole list.",
+      "Use Download to save all ULIDs as a text file for seeding databases or test data."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A ULID is exactly 26 characters long, using the Crockford Base32 alphabet (digits plus letters, excluding I, L, O and U to avoid confusion).",
+      "The first 10 characters encode a 48-bit Unix timestamp in milliseconds, so ULIDs generated later always sort after earlier ones.",
+      "The last 16 characters hold 80 bits of cryptographically secure random data, making collisions practically impossible.",
+      "ULIDs are URL-safe and case-insensitive: they need no special encoding in links, file names or query strings.",
+      "Unlike UUIDs, ULIDs reveal their creation time and sort naturally, which makes database indexing and log reading simpler.",
+      "The randomness in this tool comes from the browser's crypto.getRandomValues(), the same secure source used by password managers."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ULID generator, ULID maker, unique identifier, time sortable ID, Crockford base32, database ID generator, free ULID tool",
+    "labels": {
+      "copyAllButton": "Copy all",
+      "copyButton": "Copy ULID",
+      "countLabel": "How many ULIDs",
+      "downloadButton": "Download .txt",
+      "generateButton": "Generate",
+      "noteText": "Randomness is generated locally with the browser's secure crypto API.",
+      "timestampLabel": "Created"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "ULIDs reveal their creation time, so do not use them where the timing of a record must stay secret.",
+      "The timestamp uses millisecond precision: two IDs created in the same millisecond share a prefix (the random part still differs).",
+      "This tool generates random ULIDs only; it does not check uniqueness against your database.",
+      "Not a replacement for signed tokens: a ULID proves nothing about who created it."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate cryptographically secure ULIDs instantly in your browser. Time-sortable, URL-safe 26-character IDs for databases and APIs. Free, no signup.",
+    "metaTitle": "ULID Generator — Free Time-Sortable Unique ID Maker",
+    "name": "ULID Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A ULID (Universally Unique Lexicographically Sortable Identifier) is a 26-character ID that starts with a timestamp, so IDs sort in creation order. This tool generates up to 100 secure ULIDs at once, entirely in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "ULID results",
+    "tagline": "Create time-sortable, URL-safe unique IDs for databases, APIs and distributed systems.",
+    "workedExample": "The first 10 characters of a ULID encode the timestamp. Take \"01ARZ3NDEK\": in Crockford Base32, 0=0, 1=1, A=10, R=24, Z=31, 3=3, N=21, D=13, E=14, K=19. Multiply each value by the matching power of 32 and add them:\n1 x 32^8 + 10 x 32^7 + 24 x 32^6 + 31 x 32^5 + 3 x 32^4 + 21 x 32^3 + 13 x 32^2 + 14 x 32 + 19 = 1469922850259\nThat is 1,469,922,850,259 milliseconds since the Unix epoch (30 July 2016). The remaining 16 characters carry the 80 bits of random data.",
+    "workedExampleHeading": "Worked example"
+  }
+}

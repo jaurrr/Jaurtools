@@ -1,0 +1,252 @@
+<div class="tool-page fin-type-compare">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="rvb-price">{{ t('labels.price') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-price" type="number" inputmode="decimal" min="0" max="100000000000" step="10000"
+            [ngModel]="price()" (ngModelChange)="setPrice($event)" />
+          <input type="range" min="0" max="50000000" step="10000" [ngModel]="price()"
+            (ngModelChange)="setPrice($event)" [attr.aria-label]="t('labels.price')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-down">{{ t('labels.downPct') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-down" type="number" inputmode="decimal" min="0" max="100" step="1"
+            [ngModel]="downPct()" (ngModelChange)="setDownPct($event)" />
+          <input type="range" min="0" max="50" step="1" [ngModel]="downPct()"
+            (ngModelChange)="setDownPct($event)" [attr.aria-label]="t('labels.downPct')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-closing">{{ t('labels.closingPct') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-closing" type="number" inputmode="decimal" min="0" max="20" step="0.5"
+            [ngModel]="closingPct()" (ngModelChange)="setClosingPct($event)" />
+          <input type="range" min="0" max="10" step="0.5" [ngModel]="closingPct()"
+            (ngModelChange)="setClosingPct($event)" [attr.aria-label]="t('labels.closingPct')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-rate">{{ t('labels.annualRate') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-rate" type="number" inputmode="decimal" min="0" max="30" step="0.1"
+            [ngModel]="annualRate()" (ngModelChange)="setAnnualRate($event)" />
+          <input type="range" min="0" max="20" step="0.1" [ngModel]="annualRate()"
+            (ngModelChange)="setAnnualRate($event)" [attr.aria-label]="t('labels.annualRate')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-years">{{ t('labels.years') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-years" type="number" inputmode="numeric" min="1" max="40" step="1"
+            [ngModel]="years()" (ngModelChange)="setYears($event)" />
+          <input type="range" min="1" max="30" step="1" [ngModel]="years()"
+            (ngModelChange)="setYears($event)" [attr.aria-label]="t('labels.years')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-rent">{{ t('labels.rent') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-rent" type="number" inputmode="decimal" min="0" max="100000000" step="500"
+            [ngModel]="rent()" (ngModelChange)="setRent($event)" />
+          <input type="range" min="0" max="500000" step="500" [ngModel]="rent()"
+            (ngModelChange)="setRent($event)" [attr.aria-label]="t('labels.rent')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-rentgrowth">{{ t('labels.rentGrowth') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-rentgrowth" type="number" inputmode="decimal" min="0" max="20" step="0.5"
+            [ngModel]="rentGrowth()" (ngModelChange)="setRentGrowth($event)" />
+          <input type="range" min="0" max="15" step="0.5" [ngModel]="rentGrowth()"
+            (ngModelChange)="setRentGrowth($event)" [attr.aria-label]="t('labels.rentGrowth')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-app">{{ t('labels.appreciation') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-app" type="number" inputmode="decimal" min="-10" max="20" step="0.5"
+            [ngModel]="appreciation()" (ngModelChange)="setAppreciation($event)" />
+          <input type="range" min="0" max="12" step="0.5" [ngModel]="appreciation()"
+            (ngModelChange)="setAppreciation($event)" [attr.aria-label]="t('labels.appreciation')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-own">{{ t('labels.ownCostPct') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-own" type="number" inputmode="decimal" min="0" max="15" step="0.5"
+            [ngModel]="ownCostPct()" (ngModelChange)="setOwnCostPct($event)" />
+          <input type="range" min="0" max="8" step="0.5" [ngModel]="ownCostPct()"
+            (ngModelChange)="setOwnCostPct($event)" [attr.aria-label]="t('labels.ownCostPct')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rvb-horizon">{{ t('labels.horizon') }}</label>
+        <div class="input-row fin-slider">
+          <input id="rvb-horizon" type="number" inputmode="numeric" min="1" max="40" step="1"
+            [ngModel]="horizon()" (ngModelChange)="setHorizon($event)" />
+          <input type="range" min="1" max="20" step="1" [ngModel]="horizon()"
+            (ngModelChange)="setHorizon($event)" [attr.aria-label]="t('labels.horizon')" />
+        </div>
+      </div>
+
+      <div class="fin-duel">
+        <div class="fin-duel-card" [class.fin-winner]="difference() > 0">
+          <span><app-icon name="banknote" /> {{ t('duel.buy') }}</span>
+          <strong>{{ money0().format(netBuyCost()) }}</strong>
+          <small>{{ tp('duel.buySub', { equity: money0().format(equity()) }) }}</small>
+          @if (difference() > 0) {
+            <em class="fin-duel-tag">{{ t('duel.winner') }}</em>
+          }
+        </div>
+        <div class="fin-duel-card" [class.fin-winner]="difference() < 0">
+          <span><app-icon name="wallet" /> {{ t('duel.rent') }}</span>
+          <strong>{{ money0().format(totalRentCost()) }}</strong>
+          <small>{{ tp('duel.rentSub', { years: horizon() }) }}</small>
+          @if (difference() < 0) {
+            <em class="fin-duel-tag">{{ t('duel.winner') }}</em>
+          }
+        </div>
+      </div>
+
+      @if (difference() > 0) {
+        <div class="fin-verdict">
+          <app-icon name="check" />
+          <p><strong>{{ t('labels.buyWins') }}</strong> {{ tp('meaning.l2', { diff: money0().format(absDiff()), years: horizon() }) }}</p>
+        </div>
+      } @else if (difference() < 0) {
+        <div class="fin-verdict">
+          <app-icon name="info" />
+          <p><strong>{{ t('labels.rentWins') }}</strong> {{ tp('meaning.l3', { diff: money0().format(absDiff()) }) }}</p>
+        </div>
+      } @else {
+        <div class="fin-verdict">
+          <app-icon name="scale" />
+          <p><strong>{{ t('labels.tie') }}</strong> {{ t('meaning.tie') }}</p>
+        </div>
+      }
+
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { years: horizon(), rent: money0().format(totalRentCost()), buy: money0().format(netBuyCost()), equity: money0().format(equity()) }) }}</span></li>
+        </ul>
+      </div>
+
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+      @if (t('assumptionNote') !== '') {
+        <p class="note fin-note">{{ t('assumptionNote') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

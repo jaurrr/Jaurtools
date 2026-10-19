@@ -1,0 +1,88 @@
+{
+  "college-cost-calculator": {
+    "assumptionNote": "Assumes constant education inflation, a constant savings return, and equal monthly contributions with no withdrawals.",
+    "benefits": [
+      "Turns a scary future bill into one clear monthly number.",
+      "Shows the true cost of waiting to start saving.",
+      "Accounts for inflation instead of pretending today's fees will hold.",
+      "Gives you a concrete target to automate with a monthly investment."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Faster than general inflation. In India, quality private college fees have risen roughly 6–10% a year for a decade; in the US the long-run average is around 3–4% above general inflation. This calculator defaults to 6% — adjust it to match the colleges you are actually considering.",
+        "q": "How fast do college costs really rise?"
+      },
+      {
+        "a": "Because each year's fees inflate separately. Year two costs 6% more than year one, year three 6% more than year two, and so on. Over four years that compounding adds roughly 9% on top of four times the first-year figure.",
+        "q": "Why is the 4-year total so much bigger than 4x the first year?"
+      },
+      {
+        "a": "A lump sum invested today grows the most because every rupee compounds for the full period. But most families cannot spare one, so disciplined monthly saving is the realistic path — and starting today beats waiting for a lump sum that may never come.",
+        "q": "Is it better to save monthly or invest a lump sum?"
+      },
+      {
+        "a": "Be conservative. Equity-heavy portfolios have delivered 10–12% long-term in India, but with real volatility. Many planners use 8–10% for horizons over 10 years and lower the assumption as college approaches. Never assume the best historical return.",
+        "q": "What return should I assume on savings?"
+      },
+      {
+        "a": "Yes — add them to the annual cost input. For many students, accommodation, food, travel, and books add 30–50% on top of tuition. It is better to overestimate now than to fall short later.",
+        "q": "Should I count hostel and living costs?"
+      },
+      {
+        "a": "The monthly target jumps sharply because compounding has less time to help. Rerun the calculator with 5 years: you will see the monthly figure roughly triple. At that point, combining savings with a part-time education loan or targeting scholarships becomes realistic planning, not failure.",
+        "q": "What if I start late, with only 5 years left?"
+      }
+    ],
+    "formula": "Future annual cost = present cost x (1 + inflation)^years.\n4-year total = FV x ((1 + inflation)^4 - 1) / inflation.\nMonthly saving PMT = total x i / ((1 + i)^N - 1), where i = monthly return, N = months until college.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter what one year of college costs today.",
+      "Set the expected yearly rise in education costs.",
+      "Enter how many years until college starts.",
+      "Set the return you expect on your savings, then read the monthly target."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Education inflation usually runs at 6–10% a year, well above general inflation.",
+      "A degree's total price is roughly four times the first-year cost, plus inflation each year.",
+      "Starting 15 years early can cut the required monthly saving to less than half of a 7-year plan.",
+      "Investment returns compound too — a 10% return does roughly a third of the work for you.",
+      "Fees are only part of it: hostel, travel, and living costs often add 30–50%."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "college cost calculator, future college cost, education savings calculator, tuition inflation calculator",
+    "labels": {
+      "costInflation": "Education inflation (% per year)",
+      "currentAnnualCost": "One year of college costs today",
+      "monthlySavingsNeeded": "Save every month",
+      "projectedAnnualCost": "Projected cost of one year",
+      "savingsReturn": "Expected savings return (%)",
+      "total4YearCost": "Total for a 4-year degree",
+      "yearsUntilCollege": "Years until college starts"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Education inflation and market returns are guesses — reality will differ.",
+      "Covers tuition-style costs only; living expenses vary wildly by city.",
+      "Ignores scholarships, grants, and education loans that change the math.",
+      "Assumes steady monthly saving with no breaks — life rarely cooperates."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free college cost calculator: project future tuition with inflation and calculate the monthly savings needed to fund a 4-year degree. Start planning today.",
+    "metaTitle": "College Cost Calculator - Future Fees & Savings Plan | JaurTools",
+    "name": "College Cost Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "If college costs ₹500,000 a year today and education inflation runs at 6%, one year will cost ₹1,198,279 in 15 years, and a 4-year degree will cost about ₹5,242,011 in total. Saving ₹12,647 every month at a 10% return gets you there. Starting early is the real trick — delay costs more than market timing ever could.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your college cost plan",
+    "tagline": "Project future college costs with inflation and find out exactly how much to save each month.",
+    "workedExample": "₹500,000 per year today, 6% education inflation, 15 years away, 10% savings return:\n1. Future annual cost = 500,000 x (1.06)^15 = 500,000 x 2.39656 = ₹1,198,279.10.\n2. 4-year total = 1,198,279.10 x ((1.06)^4 - 1) / 0.06 = 1,198,279.10 x 4.37462 = ₹5,242,010.91.\n3. Monthly rate = 0.10 / 12 = 0.008333; months = 180; (1.008333)^180 = 4.45392.\n4. Monthly saving = 5,242,010.91 x 0.008333 / (4.45392 - 1) = ₹12,647.49.",
+    "workedExampleHeading": "Worked example"
+  }
+}

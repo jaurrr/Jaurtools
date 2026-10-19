@@ -1,0 +1,98 @@
+{
+  "horsepower-calculator": {
+    "benefits": [
+      "Two methods: torque x RPM for engines, watts for electric motors.",
+      "Handles lb-ft and N-m torque units.",
+      "Shows hp, kW, and PS side by side.",
+      "Explains where the 5252 constant comes from.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For engines: HP = torque (lb-ft) x RPM / 5252. For electric motors: HP = watts / 745.7. This tool does both.",
+        "q": "How do you calculate horsepower?"
+      },
+      {
+        "a": "It comes from James Watt's definition: 1 hp = 33,000 ft-lb per minute. Divide 33,000 by 2 pi and you get 5252.11 — the RPM where torque and horsepower numerically cross.",
+        "q": "Where does 5252 come from?"
+      },
+      {
+        "a": "One mechanical horsepower = 745.7 watts. Metric PS (Pferdestarke) is slightly smaller: 1 PS = 735.5 W, so 1 hp = 1.01387 PS.",
+        "q": "How many watts is one horsepower?"
+      },
+      {
+        "a": "Torque is twisting force; horsepower is how fast that force is applied. Two engines can make the same torque, but the one that revs higher makes more horsepower.",
+        "q": "Torque vs horsepower — what is the difference?"
+      },
+      {
+        "a": "Yes for steady-state output, which is what dynamometers measure. Real driving also involves gearing, weight, and aerodynamics.",
+        "q": "Is this accurate for car engines?"
+      }
+    ],
+    "formula": "HP = torque (lb-ft) x RPM / 5252\nHP = power (watts) / 745.7\nkW = HP x 0.7457\nPS = HP x 1.01387\n1 N-m = 0.737562 lb-ft",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the Torque tab for engines or the Electric tab for motors.",
+      "For torque: enter torque and its unit, plus the RPM.",
+      "For electric: enter the power in watts or kilowatts.",
+      "Read horsepower, plus the kW and PS equivalents."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "1 mechanical horsepower = 745.7 watts.",
+      "HP = torque x RPM / 5252 for engines.",
+      "Torque and HP curves always cross at 5252 RPM.",
+      "1 PS (metric hp) = 0.986 hp.",
+      "Electric motors are rated in watts or kilowatts.",
+      "Peak HP happens near redline; peak torque much lower."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "horsepower calculator, hp from torque, torque to hp formula, watts to horsepower, kw to hp calculator",
+    "labels": {
+      "electricNote": "Electric motor ratings: 1 hp = 745.7 W of mechanical output.",
+      "electricTab": "Electric motor",
+      "hpResult": "Horsepower",
+      "kwResult": "Kilowatts",
+      "modeLabel": "Calculation method",
+      "powerLabel": "Power output",
+      "powerUnitLabel": "Power unit",
+      "psResult": "Metric HP (PS)",
+      "rpmLabel": "Engine speed (RPM)",
+      "torqueLabel": "Torque",
+      "torqueTab": "Torque x RPM",
+      "torqueUnitLabel": "Torque unit"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Steady-state math; does not model gearing or drivetrain losses.",
+      "Advertised engine figures are measured at the crank, not the wheels.",
+      "Electric input watts differ from mechanical output watts by efficiency.",
+      "Assumes standard mechanical horsepower (745.7 W)."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free horsepower calculator: convert torque x RPM to HP, or watts to horsepower. Shows hp, kW, and PS. lb-ft and N-m supported. No sign-up.",
+    "metaTitle": "Horsepower Calculator: Torque & Watts to HP (Free)",
+    "name": "Horsepower Calculator",
+    "powerUnitNames": {
+      "kw": "kW",
+      "w": "W"
+    },
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Choose the Torque tab and enter torque plus RPM, or the Electric tab and enter watts — the calculator returns horsepower using HP = torque x RPM / 5252 or HP = watts / 745.7, along with the kilowatt and metric-PS equivalents.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Horsepower results",
+    "tagline": "From torque or watts to horsepower.",
+    "torqueUnitNames": {
+      "lbft": "lb-ft",
+      "nm": "N-m"
+    },
+    "workedExample": "An engine making 300 lb-ft of torque at 4000 RPM:\n\n1. HP = 300 x 4000 / 5252 = 1,200,000 / 5252 = 228.5 hp.\n2. Kilowatts = 228.5 x 0.7457 = 170.4 kW.\n3. Metric PS = 228.5 x 1.01387 = 231.7 PS.\n4. The same torque at 5252 RPM would be exactly 300 hp — the crossover point.\n\nFor an electric motor: 1500 W / 745.7 = 2.0 hp.",
+    "workedExampleHeading": "Worked example"
+  }
+}

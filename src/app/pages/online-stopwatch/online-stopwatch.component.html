@@ -1,0 +1,195 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="calc-stage" id="stopwatch-stage">
+        <div class="calc-stage-bar">
+          <span class="calc-hero-label"><app-icon name="timer" /> {{ t('labels.liveLabel') }}</span>
+          <button
+            type="button"
+            class="calc-iconbtn"
+            (click)="toggleFullscreen()"
+            [attr.aria-label]="t('labels.fullscreenLabel')"
+            [title]="t('labels.fullscreenLabel')"
+          >
+            <app-icon name="display" />
+          </button>
+        </div>
+
+        <div class="sw-display" [class.live]="running()" aria-live="off">{{ display() }}</div>
+
+        <div class="btn-row sw-controls">
+          @if (!running()) {
+            <button type="button" class="btn primary" (click)="startWatch()">
+              <app-icon name="timer" /> {{ elapsedMs() === 0 ? t('labels.start') : t('labels.resume') }}
+            </button>
+          } @else {
+            <button type="button" class="btn" (click)="pauseWatch()">
+              <app-icon name="timer" /> {{ t('labels.pause') }}
+            </button>
+          }
+          <button type="button" class="btn" (click)="addLap()" [disabled]="!running()">
+            <app-icon name="check" /> {{ t('labels.lap') }}
+          </button>
+          <button type="button" class="btn" (click)="resetWatch()">
+            <app-icon name="refresh-cw" /> {{ t('labels.reset') }}
+          </button>
+        </div>
+      </div>
+
+      <ul class="calc-shortcuts" [attr.aria-label]="t('labels.shortcutsTitle')">
+        <li><kbd class="calc-kbd">Space</kbd><span>{{ t('labels.shortcutToggle') }}</span></li>
+        <li><kbd class="calc-kbd">L</kbd><span>{{ t('labels.shortcutLap') }}</span></li>
+        <li><kbd class="calc-kbd">R</kbd><span>{{ t('labels.shortcutReset') }}</span></li>
+        <li><kbd class="calc-kbd">F</kbd><span>{{ t('labels.shortcutFullscreen') }}</span></li>
+      </ul>
+
+      @if (laps().length) {
+        <ul class="log-list" [attr.aria-label]="t('labels.laps')">
+          @for (r of laps(); track r.n) {
+            <li [class.lap-fast]="r.n === fastestN()" [class.lap-slow]="r.n === slowestN() && laps().length > 1">
+              <span class="tag">{{ t('labels.lap') }} {{ r.n }}</span>
+              <span>{{ fmtMs(r.lap) }}</span>
+              <span class="tag">{{ fmtMs(r.total) }}</span>
+            </li>
+          }
+        </ul>
+        <div class="results calc-results">
+          <div class="result-row">
+            <span>{{ t('labels.fastest') }}</span>
+            <strong>{{ t('labels.lap') }} {{ fastestN() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.slowest') }}</span>
+            <strong>{{ t('labels.lap') }} {{ slowestN() }}</strong>
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="button" class="calc-copy" [class.copied]="copied()" (click)="exportLaps()">
+            <app-icon [name]="copied() ? 'check' : 'copy'" />
+            <span>{{ copied() ? translate.t('common.copied') : t('labels.exportLaps') }}</span>
+          </button>
+        </div>
+      } @else {
+        <p class="note">{{ t('labels.noLaps') }}</p>
+      }
+
+      <table class="calc-compare">
+        <caption>{{ t('labels.compareTitle') }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ t('labels.compareTool') }}</th>
+            <th scope="col">{{ t('labels.compareWhen') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ t('name') }}</th>
+            <td>{{ t('labels.compareStopwatch') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'online-timer']">{{ relatedName('online-timer') }}</a></th>
+            <td>{{ t('labels.compareTimer') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'pomodoro-timer']">{{ relatedName('pomodoro-timer') }}</a></th>
+            <td>{{ t('labels.comparePomodoro') }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="note">{{ t('labels.accuracyNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+{
+  "vat-calculator": {
+    "assumptionNote": "Rates are the standard VAT/GST rates you enter; reduced rates for specific goods (food, books, children's clothes in the UK) are not modelled. Use the rate slider for 0%, 5%, or the standard 20%.",
+    "benefits": [
+      "Check whether a quoted price already includes VAT before you pay.",
+      "Small businesses: quote prices ex-VAT and gross-up correctly for customers.",
+      "See the real tax component of every purchase - eye-opening on big items.",
+      "Essential for UK freelancers deciding whether to register for VAT."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Value Added Tax (VAT) is a consumption tax added at each stage of production, but the consumer ultimately pays it. In the UK the standard rate is 20%; Saudi Arabia and the UAE charge 15% and 5% respectively; India uses GST (a similar system) with rates of 5%, 12%, 18%, and 28%.",
+        "q": "What is VAT?"
+      },
+      {
+        "a": "When you remove VAT, you divide by (1 + rate), not subtract the percentage. Removing 20% from £120: 120 / 1.2 = £100, not £96. Subtracting 20% from £120 gives the wrong answer (£96) because the original 20% was calculated on the £100 net price.",
+        "q": "Why can't I just subtract 20% to remove VAT?"
+      },
+      {
+        "a": "The UK VAT registration threshold is £90,000 of taxable turnover in a rolling 12-month period. Below that, registration is voluntary. Voluntary registration lets you reclaim VAT on expenses but forces you to charge VAT to customers - worth it mainly for B2B businesses.",
+        "q": "When must a UK business register for VAT?"
+      },
+      {
+        "a": "VAT is a European-style tax charged on value added at each stage; GST (Goods and Services Tax) is India's unified version of the same idea. Both are ultimately paid by the end consumer. The maths in this calculator works identically for both.",
+        "q": "VAT vs GST - what is the difference?"
+      },
+      {
+        "a": "Yes - many items have reduced or zero rates. In the UK: 5% on domestic energy, 0% on most food, books, and children's clothes. Saudi Arabia applies 15% broadly with limited exemptions. Check your country's tax authority for the exact rate on your item.",
+        "q": "Is VAT always 20% / 15%?"
+      }
+    ],
+    "formula": "Adding VAT: gross = net x (1 + rate).\nVAT amount = net x rate.\nRemoving VAT: net = gross / (1 + rate).\nVAT amount = gross - net.\nExample (20%): removing from 120 -> 120 / 1.2 = 100.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Add VAT (you have the net price) or Remove VAT (you have the gross price).",
+      "Enter the price.",
+      "Set the VAT rate (20% is the UK standard, 15% Saudi, 5% UAE).",
+      "Read the net price, the VAT amount, and the gross price instantly."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "UK standard VAT is 20%; reduced 5% on energy, 0% on most food, books, and children's clothes.",
+      "Saudi Arabia charges 15% VAT, the UAE 5%, India uses GST at 5/12/18/28%.",
+      "UK businesses must register for VAT at £90,000 taxable turnover in 12 months.",
+      "Removing VAT means dividing by 1.2 (at 20%), not subtracting 20% - a common and costly mistake.",
+      "Consumer prices in the UK and Gulf must legally be shown VAT-inclusive.",
+      "Businesses can usually reclaim the VAT they pay on expenses from the tax authority."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "VAT calculator, add VAT, remove VAT, GST calculator, VAT inclusive exclusive calculator",
+    "labels": {
+      "addMode": "Add VAT",
+      "grossPrice": "Gross price (incl. VAT)",
+      "modeLabel": "Calculation mode",
+      "netPrice": "Net price (excl. VAT)",
+      "price": "Price",
+      "removeMode": "Remove VAT",
+      "vatAmount": "VAT amount",
+      "vatRate": "VAT rate (%)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "One flat rate - it does not handle mixed baskets with different VAT rates.",
+      "Excludes customs duty and other taxes that may apply on imports.",
+      "Thresholds and rates change; verify with your tax authority before filing.",
+      "A maths tool, not tax advice - consult an accountant for your business."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free VAT calculator: add or remove VAT from any price. UK 20%, Saudi 15%, UAE 5%, India GST. Instant, private, no sign-up.",
+    "metaTitle": "VAT Calculator - Add or Remove VAT From Prices | JaurTools",
+    "name": "VAT Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Removing 20% VAT from £120: net price is £100, VAT is £20 (120 / 1.2 = 100). Adding 20% VAT to £100: gross is £120. Never just subtract 20% from the gross - that gives the wrong answer. The UK standard rate is 20%, Saudi Arabia 15%, UAE 5%.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your VAT results",
+    "tagline": "Add VAT to net prices or strip it out of gross prices - any rate.",
+    "workedExample": "£120 including 20% VAT:\n1. Net = gross / (1 + rate) = 120 / 1.2 = £100.\n2. VAT amount = 120 - 100 = £20.\n3. Check: 100 x 20% = £20, and 100 + 20 = £120. Correct.\nWrong method: 120 - 20% = £96, which is wrong because the 20% was charged on the £100 net price, not the £120 gross.",
+    "workedExampleHeading": "Worked example"
+  }
+}

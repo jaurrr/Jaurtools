@@ -1,0 +1,97 @@
+{
+  "logo-maker": {
+    "benefits": [
+      "A decent logo in under a minute - no design software to learn.",
+      "Live preview: every change shows instantly on the canvas.",
+      "PNG export at 1024x1024 is sharp enough for websites and social profiles.",
+      "SVG export scales forever for print, signs, and merchandise.",
+      "Colour pickers and shape presets keep the design clean and consistent."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "1024x1024 pixels - sharp for websites, social profiles, and documents. The SVG export has no resolution limit at all, so use that for print.",
+        "q": "What size is the exported PNG?"
+      },
+      {
+        "a": "It uses the fonts installed on your device (Arial, Georgia, Verdana, and friends). The PNG bakes the text into pixels, so it looks identical everywhere. The SVG references the font by name, so it renders best on devices that have that font.",
+        "q": "Which fonts can I use?"
+      },
+      {
+        "a": "Keep it short: 1 to 3 characters work best (initials like 'JT'). Long words shrink to fit and lose impact. This tool is for simple text marks, not full wordmarks.",
+        "q": "How much text should my logo have?"
+      },
+      {
+        "a": "Yes. Everything you type and design stays in your browser. Nothing is uploaded.",
+        "q": "Is my logo design private?"
+      },
+      {
+        "a": "You made it, so you own the design. But simple letter shapes cannot be trademarked in most places, and this tool does not check whether your text clashes with an existing brand - do that check before using it commercially.",
+        "q": "Can I trademark a logo made here?"
+      },
+      {
+        "a": "This tool makes simple, clean text-and-shape logos: perfect for projects, clubs, and placeholders. For a complex brand identity with custom icons, hire a designer.",
+        "q": "Is this a replacement for a professional designer?"
+      }
+    ],
+    "formula": "Canvas (size S, centre C = S/2):\n  circle: arc(C, C, radius S x 0.42), filled with the background colour\n  rounded square: side S x 0.84, corner radius side x 0.22\n  square: side S x 0.84, sharp corners\n  text: font-size = (size% / 100) x S, centred at (C, C)\n\nSVG (512 x 512) mirrors the same geometry:\n  <circle cx=\"256\" cy=\"256\" r=\"215\"/> + <text text-anchor=\"middle\"/>\n\nExample: text 'JT', circle, indigo #4f46e5, white text, size 46%:\n  PNG 1024: circle at (512, 512) radius 430; text 471 px, centred at (512, 512).\n  SVG: <circle cx=\"256\" cy=\"256\" r=\"215.04\" fill=\"#4f46e5\"/> and\n  <text x=\"256\" y=\"256\" font-size=\"235.52\" fill=\"#ffffff\">JT</text>.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type your brand text - 1 to 3 characters (like initials) works best.",
+      "Pick a system font and drag the size slider until the text fills the shape nicely.",
+      "Choose a background shape: none, circle, rounded square, or square.",
+      "Pick the text and background colours with the colour pickers.",
+      "Export as PNG (1024x1024) for web use or SVG for print and scaling."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A logo mark here is text plus an optional background shape: circle, rounded square, or square.",
+      "The preview canvas renders your design live as you change any setting.",
+      "PNG export is always 1024x1024 pixels - crisp for screens.",
+      "SVG export is vector: it scales to any size without losing sharpness.",
+      "Only system fonts are used, so the PNG looks identical on every device.",
+      "Designs are made in your browser; nothing is uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "logo maker, free logo maker, text logo generator, simple logo design, png logo maker, svg logo export",
+    "labels": {
+      "bgColorLabel": "Background colour",
+      "boldLabel": "Bold text",
+      "exportPngButton": "Export PNG",
+      "exportSvgButton": "Export SVG",
+      "fontLabel": "Font",
+      "pngSizeLabel": "PNG export size",
+      "shapeCircle": "Circle",
+      "shapeLabel": "Background shape",
+      "shapeNone": "None",
+      "shapeRounded": "Rounded",
+      "shapeSquare": "Square",
+      "sizeLabel": "Text size",
+      "textColorLabel": "Text colour",
+      "textLabel": "Logo text"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Simple text-and-shape marks only - no custom icons, gradients, or effects.",
+      "Limited to 12 characters; long names shrink and lose impact.",
+      "SVG text references the font by name, so it needs that font installed to render identically.",
+      "No trademark check: verify your design does not clash with an existing brand before commercial use."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free logo maker: design simple text logos with shapes and colours, preview live, export PNG 1024 or SVG. No sign-up, private.",
+    "metaTitle": "Logo Maker - Simple Text Logo Designer | JaurTools",
+    "name": "Logo Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type your brand initials, pick a font and size, choose a background shape (circle, rounded square, square, or none), and set your colours - the preview updates live. Export a 1024x1024 PNG for websites and social profiles, or a vector SVG that scales forever for print. For example, 'JT' in a bold Arial on an indigo circle exports as a crisp app-style icon. Everything is designed in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Logo Maker results",
+    "tagline": "Design simple text logos with shapes, colours, and instant preview.",
+    "workedExample": "Design: 'JT' on an indigo circle.\nSettings: text 'JT', font Arial bold, size 46%, text colour #ffffff, shape circle, background #4f46e5.\n\nPNG export (1024 x 1024):\n1. White background fills 1024 x 1024.\n2. Circle: centre (512, 512), radius 1024 x 0.42 = 430.08, filled #4f46e5.\n3. Text: font-size 0.46 x 1024 = 471.04 px, bold Arial, centred at (512, 512), filled #ffffff.\n\nSVG export (512 x 512):\n<circle cx=\"256\" cy=\"256\" r=\"215.04\" fill=\"#4f46e5\"/>\n<text x=\"256\" y=\"256\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"Arial\" font-weight=\"bold\" font-size=\"235.52\" fill=\"#ffffff\">JT</text>",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "margin-markup-calculator": {
+    "benefits": [
+      "Ends the margin-vs-markup confusion with live numbers.",
+      "Price backwards from a target margin in one step.",
+      "Check supplier quotes and competitor pricing in seconds.",
+      "Private - your pricing strategy never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Both measure the same profit, but margin divides by selling price while markup divides by cost. A $40 profit on a $100 sale is 40% margin and 66.7% markup.",
+        "q": "What is the difference between margin and markup?"
+      },
+      {
+        "a": "No. Margin = profit / price, and profit can never exceed price (cost would have to be negative). If you need more than 100%, you are thinking of markup, which has no ceiling.",
+        "q": "Can margin be over 100%?"
+      },
+      {
+        "a": "Use the cost + margin mode: enter your cost and 40. The calculator returns price = cost / 0.60. A $60 cost needs a $100 price for 40% margin.",
+        "q": "How do I price for a 40% margin?"
+      },
+      {
+        "a": "Retail and most services quote margin (share of the selling price). Manufacturing and contracting often use markup on cost. Pick the one your industry speaks, and convert when comparing.",
+        "q": "Which should I use for my business?"
+      },
+      {
+        "a": "Gross - it uses direct cost only. Net margin subtracts rent, salaries, taxes, and everything else, and needs your full profit-and-loss statement.",
+        "q": "Is this gross or net margin?"
+      },
+      {
+        "a": "No. Everything is computed in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Profit = price - cost\nMargin % = profit / price x 100\nMarkup % = profit / cost x 100\nFrom margin: price = cost / (1 - margin/100)\nFrom markup: cost = price / (1 + markup/100)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose what you know: cost + price, cost + margin, or price + markup.",
+      "Enter the two numbers.",
+      "Read the full picture: cost, price, profit, margin %, and markup %.",
+      "Switch modes to check a quote from the other direction."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Margin = profit / selling price x 100. Markup = profit / cost x 100.",
+      "The same $40 profit is a 40% margin but a 66.7% markup - the denominator changes everything.",
+      "Margin can never reach 100% (that would need zero cost); markup has no upper limit.",
+      "Retailers usually think in margin; wholesalers and contractors often quote markup.",
+      "To convert: price = cost / (1 - margin); cost = price / (1 + markup).",
+      "Mixing the two up is the most common pricing mistake in small business."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "margin calculator, markup calculator, profit margin formula, markup vs margin, gross margin calculator",
+    "labels": {
+      "cost": "Cost",
+      "costLabel": "Cost",
+      "invalidMargin": "Margin must be below 100%.",
+      "marginInputLabel": "Margin (%)",
+      "marginPct": "Margin",
+      "markupInputLabel": "Markup (%)",
+      "markupPct": "Markup",
+      "mode": "I know",
+      "modeCostMargin": "Cost + margin %",
+      "modeCostPrice": "Cost + selling price",
+      "modePriceMarkup": "Selling price + markup %",
+      "priceLabel": "Selling price",
+      "profit": "Profit",
+      "sellingPrice": "Selling price"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Covers gross margin on direct cost only - not net margin after overhead, taxes, or shipping.",
+      "Assumes a single unit cost; volume discounts and fixed costs need deeper analysis.",
+      "Estimates only - confirm pricing decisions against your full accounts."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free margin and markup calculator: convert between cost, selling price, margin % and markup %. Instant, private, browser-based.",
+    "metaTitle": "Margin and Markup Calculator - Convert Cost, Price, Profit | JaurTools",
+    "name": "Margin and Markup Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Margin is profit as a share of price; markup is profit as a share of cost. Buy at $60 and sell at $100: profit is $40, margin is 40%, and markup is 66.7%. Pick what you know - cost and price, cost and margin, or price and markup - and the calculator fills in the rest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Margin and markup results",
+    "tagline": "Convert between cost, price, margin, and markup - solve for any missing number.",
+    "workedExample": "Cost $60, selling price $100:\n1. Profit = 100 - 60 = $40\n2. Margin = 40 / 100 x 100 = 40%\n3. Markup = 40 / 60 x 100 = 66.67%\nReverse check: cost $60 with 40% margin -> price = 60 / (1 - 0.40) = $100. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

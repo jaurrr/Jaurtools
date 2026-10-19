@@ -1,0 +1,96 @@
+{
+  "business-card-maker": {
+    "benefits": [
+      "A professional card in about a minute — no designer needed for a first impression.",
+      "Three clean templates that suit freelancers, shops, and corporate roles alike.",
+      "No watermark, so the card is genuinely usable for print and WhatsApp sharing.",
+      "Your contact details stay private on your own device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The templates, live preview, and unlimited PNG downloads are free with no account and no watermark.",
+        "q": "Is the Business Card Maker free?"
+      },
+      {
+        "a": "1050 by 600 pixels, which is the standard 3.5 by 2 inch card at 300 DPI. Print shops accept this size directly.",
+        "q": "What size is the business card?"
+      },
+      {
+        "a": "No. The PNG contains only your card design — nothing is stamped onto it.",
+        "q": "Is there a watermark?"
+      },
+      {
+        "a": "Yes — share the PNG on WhatsApp, attach it to emails, or send the file to any print shop. The 300 DPI resolution is the print standard.",
+        "q": "Can I print it or share it on WhatsApp?"
+      },
+      {
+        "a": "Yes. Type your details in Hindi, Arabic, or English — the card renders them exactly as typed.",
+        "q": "Can I make a card in Hindi or Arabic?"
+      },
+      {
+        "a": "No. The card draws with your browser's built-in canvas, so it works even offline after the page loads.",
+        "q": "Do I need to install anything?"
+      }
+    ],
+    "formula": "Canvas: 1050 x 600 px = 3.5 x 2 in at 300 DPI (standard card size).\nName: 72–84 px bold; title and company stacked below at 90 px and 300 px from the top.\nContact lines at 38–40 px from 390 px downward, 90 px left margin.\nExport: PNG via canvas.toDataURL, one file per click.",
+    "formulaHeading": "Design specs",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a template: Dark for a premium look, Light for a clean corporate feel, Band for a bold modern style.",
+      "Type your name, job title, company, phone, email, and website.",
+      "Watch the live preview update with every keystroke.",
+      "Press Download PNG when it looks right.",
+      "Share the PNG on WhatsApp or send it to a print shop — 300 DPI is the print standard."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every card renders at 1050 x 600 px — the standard 3.5 by 2 inch business card at 300 DPI, accepted by print shops.",
+      "Three templates: Dark (premium slate with indigo accent), Light (clean corporate white), and Band (bold gradient header).",
+      "All six contact fields — name, title, company, phone, email, website — are laid out automatically with print-safe margins.",
+      "The layout follows the classic card hierarchy: name largest, then title, company, and contact lines in smaller type.",
+      "Everything runs in your browser with canvas drawing — no account, no upload, no watermark."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "business card maker, free business card maker online, visiting card maker, digital business card, make visiting card online",
+    "labels": {
+      "companyLabel": "Company",
+      "downloadButton": "Download PNG",
+      "emailLabel": "Email",
+      "jobTitleLabel": "Job title",
+      "nameLabel": "Full name",
+      "phoneLabel": "Phone",
+      "previewLabel": "Live preview",
+      "sizeNote": "Exports at 1050 x 600 px (3.5 x 2 in @ 300 DPI) — print-shop standard.",
+      "templateLabel": "Choose a template",
+      "websiteLabel": "Website"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Three fixed templates only — no custom layout or drag-and-drop.",
+      "System fonts only; no decorative typography.",
+      "PNG export only — no editable file format.",
+      "No logo or photo upload; these are text-and-shape designs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Make business cards free in your browser: 3 professional templates, your contact details, instant PNG download at print resolution. No signup, no watermark.",
+    "metaTitle": "Free Business Card Maker — Visiting Cards Online, No Signup",
+    "name": "Business Card Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Business Card Maker designs a print-ready business card from your details in under a minute. Choose Dark, Light, or Band, type your name, title, company, phone, email, and website, watch the 1050 by 600 card preview update live, then download it as a PNG at 300 DPI print resolution. Free, no signup, no watermark, and your details never leave your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Business Card Maker results",
+    "tagline": "Design a professional business card in your browser — pick a template, add your details, download the PNG.",
+    "templates": {
+      "band": "Band",
+      "dark": "Dark",
+      "light": "Light"
+    },
+    "workedExample": "A freelancer needs a card for a client meeting. She picks the Dark template and types 'Jauhar Ayyub' (84 px bold name at 220 px from the top), 'Frontend Developer', 'JaurTools Studio', '+91 98765 43210', 'hello@example.com', and 'www.example.com'. The tool stacks the title at 300 px, the company at 380 px, and the contact lines from 460 px downward with a 90 px left margin, then exports a 1050 x 600 PNG — the standard 3.5 by 2 inch card at 300 DPI, ready to send to the print shop in about a minute.",
+    "workedExampleHeading": "Worked example"
+  }
+}

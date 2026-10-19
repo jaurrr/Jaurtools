@@ -1,0 +1,90 @@
+{
+  "flexbox-playground": {
+    "assumptionNote": "يستخدم CSS المولّد أسماء أصناف عادية (.container و.item-N)؛ أعد تسميتها لتطابق ترميزك.",
+    "benefits": [
+      "شاهد flex-direction وjustify-content وalign-items تتغير مباشرة — دون تخمين.",
+      "انقر أي مربع لتجاوز align-self وflex-grow الخاصين به.",
+      "CSS المولّد نظيف وجاهز للصق في أي ورقة أنماط.",
+      "يستبدل منزلق الفجوة حيل الهوامش المربكة بخاصية gap الحديثة.",
+      "يعمل كمختبر تعلّم لنموذج flexbox ثنائي المحور الذهني."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "يحاذي justify-content العناصر على المحور الرئيسي (flex-direction)، بينما يحاذي align-items على المحور المتقاطع. مع flex-direction: row يحرّك justify-content العناصر يمينًا ويسارًا ويحرّك align-items أعلى وأسفل.",
+        "q": "ما الفرق بين justify-content وalign-items؟"
+      },
+      {
+        "a": "نعم. انقر أي مربع مرقّم لتحديده، ثم اضبط align-self وflex-grow في لوحة العنصر المحدد. يكتسب مخرج CSS قاعدة .item-N بتجاوزاتك.",
+        "q": "هل يمكنني تنسيق عنصر واحد بشكل مختلف؟"
+      },
+      {
+        "a": "مع flex-wrap: nowrap تنكمش العناصر لتناسب سطرًا واحدًا وقد تتجاوزه. ومع wrap تتدفق العناصر الزائدة إلى أسطر جديدة. جرّب 8 عناصر مع nowrap مقابل wrap لتشعر بالفرق.",
+        "q": "ماذا يغيّر flex-wrap؟"
+      },
+      {
+        "a": "يوزّع flex-grow المساحة المتبقية تناسبيًا. مع عنصرين بنمو 1 و2 يحصل الثاني على ضعف المساحة الحرة للأول. اضبط النمو 0 لإبقاء العنصر بحجمه الطبيعي.",
+        "q": "كيف يعمل flex-grow؟"
+      },
+      {
+        "a": "يدفع space-between العنصر الأول إلى البداية والأخير إلى النهاية؛ ويمنح space-around كل عنصر مساحة متساوية على الجانبين؛ ويجعل space-evenly كل فجوة — بما فيها الحواف — متطابقة.",
+        "q": "ما الفرق بين space-between وspace-around وspace-evenly؟"
+      },
+      {
+        "a": "نعم — انسخ CSS المولّد، وأعد تسمية .container إلى صنفك، وأضف قاعدة العنصر إذا تجاوزت عنصرًا واحدًا. المخرجات CSS عادي بلا اعتماديات.",
+        "q": "هل يمكنني استخدام CSS المولّد في الإنتاج؟"
+      }
+    ],
+    "formula": ".container {\n  display: flex;\n  flex-direction: <row | column | ...>;\n  justify-content: <المحور الرئيسي>;\n  align-items: <المحور المتقاطع>;\n  flex-wrap: <nowrap | wrap>;\n  gap: <N>px;\n}\n.item-N {\n  align-self: <تجاوز>;\n  flex-grow: <N>;\n}",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "اختر flex-direction لضبط المحور الرئيسي: row أو column.",
+      "اختر justify-content لمحاذاة المحور الرئيسي وalign-items للمتقاطع.",
+      "بدّل flex-wrap واسحب منزلق الفجوة.",
+      "غيّر عدد العناصر بين 2 و8.",
+      "انقر مربعًا لتحديده، وتجاوز align-self وflex-grow، ثم انسخ CSS."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "يرتّب Flexbox العناصر على محور رئيسي واحد مع محور متقاطع اختياري.",
+      "يضع flex-direction: row من اليسار لليمين؛ وcolumn من الأعلى للأسفل.",
+      "يوزّع justify-content المساحة الحرة على المحور الرئيسي.",
+      "يضع align-items العناصر على المحور المتقاطع؛ والافتراضي stretch.",
+      "تضبط gap التباعد بين العناصر دون حيل الهوامش."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "ملعب flexbox, مولد flexbox, مختبر css flex, دليل flexbox المرئي, justify-content align-items",
+    "labels": {
+      "clickHint": "انقر مربعًا مرقّمًا لتحديده ثم تجاوزه أدناه.",
+      "copiedLabel": "تم النسخ",
+      "copyLabel": "نسخ",
+      "gapLabel": "الفجوة",
+      "itemCountLabel": "عدد العناصر",
+      "itemLabel": "العنصر",
+      "selectedItemLabel": "العنصر المحدد"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "تُغطَّى خصائص flexbox الأكثر استخدامًا فقط — وليس دقائق order وflex-basis وshrink.",
+      "لمربعات المعاينة أحجام دنيا ثابتة؛ وستختلف أحجام المحتوى الحقيقي.",
+      "يحتاج align-self: baseline محتوى نصيًا حقيقيًا ليتضح بشكل صحيح.",
+      "أسماء الأصناف المولّدة عامة؛ أعد تسميتها لمشروعك."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "جرّب CSS flexbox بصريًا. غيّر الاتجاه والمحاذاة والالتفاف والفجوة، وتجاوز عناصر فردية، وانسخ CSS نظيفًا فورًا.",
+    "metaTitle": "ملعب Flexbox – مختبر CSS Flex مرئي مجاني",
+    "name": "ملعب Flexbox",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "Flexbox هو نظام التخطيط أحادي البعد في CSS: يوزّع الحاوي عناصره على محور رئيسي، ويتحكم justify-content في محاذاة المحور الرئيسي ويتحكم align-items في المتقاطع. يتيح لك هذا الملعب تبديل كل خاصية مباشرة ونسخ CSS الناتج.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "معاينة Flexbox",
+    "tagline": "تعلّم CSS flexbox واختبره بصريًا ثم انسخ CSS.",
+    "workedExample": "اضبط flex-direction ‏row وjustify-content ‏center وalign-items ‏center وflex-wrap ‏wrap والفجوة 16 بكسل و4 عناصر. حدد العنصر 3 مع align-self ‏flex-start وflex-grow ‏1.\n\nCSS المولّد:\n.container {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 16px;\n}\n\n.item-3 {\n  align-self: flex-start;\n  flex-grow: 1;\n}\n\nتبقى العناصر 1 و2 و4 متمركزة بينما يتمدد العنصر 3 للأعلى وينمو ليأخذ المساحة الحرة.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

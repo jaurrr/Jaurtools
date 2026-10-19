@@ -1,0 +1,91 @@
+{
+  "birthday-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Birthday Calculator",
+    "tagline": "Your exact age, next birthday countdown and fun birthday facts in one place.",
+    "metaTitle": "Birthday Calculator - Age & Next Birthday Countdown | JaurTools",
+    "metaDescription": "Enter your birthdate to see your exact age in years, months and days, a live countdown to your next birthday, and the weekday you were born on. Free & private.",
+    "keywords": "birthday calculator, how old am i, next birthday countdown, age calculator, what day was i born",
+    "quickAnswer": "Enter your birthdate and the calculator works out your exact age today - for example, born 10 March 2000 means 26 years, 7 months and 8 days old on 18 October 2026 - plus a countdown to your next birthday (143 days away, on 10 March 2027, a Wednesday) and the weekday you were born on (Friday).",
+    "keyFacts": [
+      "Your age in years, months and days is counted like an odometer: full years first, then leftover months, then leftover days.",
+      "The next-birthday countdown uses calendar days, so it is exact even across leap years.",
+      "Knowing the weekday you were born on is just calendar math - no astrology involved.",
+      "People born on 29 February legally celebrate on 28 February or 1 March in non-leap years; this tool counts down to 28 February.",
+      "The day-of-year number tells you how far through the year a birthday falls - day 69 of 365, for example."
+    ],
+    "howTo": [
+      "Enter your birthdate with the date picker.",
+      "Your exact age in years, months and days appears instantly.",
+      "See how many days remain until your next birthday, with its date and weekday.",
+      "Discover which weekday you were born on.",
+      "Share the countdown with friends - the numbers update every day."
+    ],
+    "formula": "Age = today minus birthdate.\nFull years = complete calendar years since birth.\nRemaining months/days = leftover after removing the full years.\nDays to next birthday = next birthday date minus today.\nExample: born 2000-03-10, today 2026-10-18 -> 26 years, 7 months, 8 days; next birthday in 143 days.",
+    "workedExample": "Birthdate: 10 March 2000. Today: 18 October 2026.\n1. Full years: 10 March 2000 to 10 March 2026 = 26 years.\n2. Leftover months: 10 March 2026 to 10 October 2026 = 7 months.\n3. Leftover days: 10 October to 18 October = 8 days.\n4. Age: 26 years, 7 months, 8 days.\n5. Next birthday: 10 March 2027, which is 143 days away and falls on a Wednesday.\n6. Born on: 10 March 2000 was a Friday.",
+    "benefits": [
+      "One page for your exact age, countdown and birthday trivia.",
+      "Countdowns make great screenshots for birthday invitations.",
+      "No sign-up and no data stored - safe for children's birthdates too.",
+      "Updates automatically every day you open it."
+    ],
+    "limitations": [
+      "29 February birthdays are counted down to 28 February in non-leap years - a common convention, not a legal rule.",
+      "Age is calendar-based; it does not measure biological or developmental age.",
+      "Time zones are ignored; the countdown uses your device's local date.",
+      "Dates before 1900 may not display correctly in every browser."
+    ],
+    "faqs": [
+      {
+        "q": "How is my exact age calculated?",
+        "a": "By counting full calendar years from your birthdate to today, then the leftover whole months, then the leftover days - the same way people state their age in years, months and days."
+      },
+      {
+        "q": "I was born on 29 February. When is my next birthday?",
+        "a": "This tool counts down to 28 February in non-leap years, which is the most common convention. Your legal birthday may differ by country - some use 1 March."
+      },
+      {
+        "q": "Why does the countdown change by one each day?",
+        "a": "Because it counts whole calendar days remaining. It ticks over at midnight in your device's local time."
+      },
+      {
+        "q": "What day of the week was I born on?",
+        "a": "Enter your birthdate and the 'born on' result shows it - pure calendar math, accurate for any date in the supported range."
+      },
+      {
+        "q": "Can I check someone else's birthday?",
+        "a": "Yes. Enter any birthdate - the tool stores nothing, so it is safe to use for family and friends."
+      },
+      {
+        "q": "Does it work for future birthdates?",
+        "a": "No - a birthdate in the future gives no meaningful age. The tool expects a date in the past."
+      }
+    ],
+    "resultsHeading": "Your birthday results",
+    "labels": {
+      "birthdate": "Your birthdate",
+      "yourAge": "Your exact age",
+      "nextBirthday": "Next birthday",
+      "daysUntil": "Days until next birthday",
+      "bornOn": "You were born on",
+      "nextWeekday": "Next birthday falls on",
+      "years": "years",
+      "months": "months",
+      "days": "days",
+      "dayOfYear": "Day of the year"
+    }
+  }
+}

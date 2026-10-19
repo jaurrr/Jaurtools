@@ -1,0 +1,86 @@
+{
+  "sql-formatter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "SQL Formatter",
+    "tagline": "Beautify SQL queries with clean indentation and casing.",
+    "metaTitle": "SQL Formatter - Beautify SQL Queries Online Free",
+    "metaDescription": "Format and beautify SQL instantly: keyword casing, clause line breaks, and indentation for MySQL, PostgreSQL, T-SQL, and SQLite. Free, no signup, in your browser.",
+    "keywords": "sql formatter, format sql online, beautify sql, sql pretty print, mysql formatter",
+    "resultsHeading": "SQL formatter results",
+    "quickAnswer": "Paste any SQL query and this tool reformats it with consistent keyword casing, line breaks before major clauses, and indentation for subqueries. Choose your dialect, toggle uppercase keywords on or off, and copy the clean result for your editor, migration, or documentation.",
+    "keyFacts": [
+      "Formatting never changes what a query does; it only changes whitespace and letter casing.",
+      "Strings in quotes and comments are preserved exactly, including their original casing.",
+      "Each major clause (SELECT, FROM, WHERE, ORDER BY) starts on its own line for scannability.",
+      "AND and OR conditions are indented under WHERE so logic reads top to bottom.",
+      "The dialect setting labels your workflow; the core formatting rules are shared across dialects."
+    ],
+    "howTo": [
+      "Paste your SQL query into the editor.",
+      "Pick your dialect: standard SQL, MySQL, PostgreSQL, T-SQL, or SQLite.",
+      "Toggle uppercase keywords on or off to match your team style.",
+      "Review the formatted output below.",
+      "Copy it into your SQL editor or migration file."
+    ],
+    "formula": "Input:  select id,name from users where active=1 order by id;\nOutput:\nSELECT id,\n  name\nFROM users\nWHERE active = 1\nORDER BY id;",
+    "workedExample": "Input:\nselect id, name, email, created_at from users where active = 1 and city = 'Mumbai' order by created_at desc limit 10;\nOutput:\nSELECT id,\n  name,\n  email,\n  created_at\nFROM users\nWHERE active = 1\n  AND city = 'Mumbai'\nORDER BY created_at DESC\nLIMIT 10;",
+    "benefits": [
+      "Readable queries are faster to review and debug.",
+      "Consistent style across a team with one click.",
+      "Preserves strings and comments untouched.",
+      "Works fully offline; queries never leave your device."
+    ],
+    "limitations": [
+      "This is a lightweight formatter, not a full SQL parser; exotic syntax may format imperfectly.",
+      "It does not validate SQL: syntactically wrong queries still format.",
+      "Very deeply nested queries can indent more than some style guides prefer.",
+      "Stored procedures with dialect-specific blocks get basic treatment only."
+    ],
+    "faqs": [
+      {
+        "q": "Does formatting change my query results?",
+        "a": "No. Only whitespace and keyword casing change. The logic, strings, and comments stay exactly the same."
+      },
+      {
+        "q": "Which dialects are supported?",
+        "a": "Standard SQL, MySQL, PostgreSQL, T-SQL, and SQLite. The formatter handles common syntax for all of them; pick the closest match for niche features."
+      },
+      {
+        "q": "Will it fix broken SQL?",
+        "a": "No. It formats what you paste without validating it. A query with a syntax error will format but still fail when run."
+      },
+      {
+        "q": "Can I use lowercase keywords?",
+        "a": "Yes. Toggle uppercase keywords off and the formatter outputs lowercase clause keywords while keeping your identifiers as typed."
+      },
+      {
+        "q": "Is my query sent to a server?",
+        "a": "No. Formatting runs entirely in your browser. Sensitive queries never leave your device."
+      }
+    ],
+    "assumptionNote": "Lightweight formatter: handles common SELECT/INSERT/UPDATE/DELETE well; exotic or procedural syntax gets basic treatment.",
+    "labels": {
+      "sqlLabel": "SQL query",
+      "dialectLabel": "SQL dialect",
+      "upperLabel": "Uppercase keywords",
+      "onLabel": "On",
+      "offLabel": "Off",
+      "outputLabel": "Formatted SQL",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied"
+    }
+  }
+}

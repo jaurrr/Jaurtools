@@ -1,0 +1,96 @@
+{
+  "chart-maker": {
+    "name": "Chart Maker",
+    "tagline": "Turn typed data into clean bar, line, and pie charts — download as a crisp PNG image.",
+    "metaTitle": "Chart Maker Online Free - Bar Line Pie | JaurTools",
+    "metaDescription": "Make bar, line, and pie charts online for free. Type your data, customize colors, download as PNG. No sign-up, 100% private.",
+    "keywords": "chart maker online, bar chart generator, line chart maker, pie chart creator free, data chart image",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Type one label and value per line — like Mon,120 — pick bar, line, or pie, add a title, and the chart renders on a 900 x 600 canvas. Bar height follows the rule height = (value / max) x plotHeight: with values 120, 200, 150, the max is 200, so the bars reach 60, 100, and 75 percent of the plot. Download the PNG for slides and posts.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Three chart types: bar for comparisons, line for trends, pie for shares.",
+      "Data entry is plain text: one label,value pair per line, up to 24 points.",
+      "Bars and lines scale to the maximum value so the biggest point always fills the plot.",
+      "Pie slices are labeled with percentages computed from the total.",
+      "Negative values are supported in bar and line charts.",
+      "The 900 x 600 PNG is sharp enough for slides, documents, and social posts."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Pick the chart type: bar, line, or pie.",
+      "Type your data as label,value — one pair per line.",
+      "Add a chart title and pick the main color.",
+      "Check the live preview; fix any red error message about bad lines.",
+      "Click Download to save the chart as a PNG image."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Bar/line scaling: height = (value / maxValue) x plotHeight.\nPie slices: sliceAngle = (value / total) x 360 degrees.\nPercent label = value / total x 100.\nExample: values 120, 200, 150 -> total 470; pie shares 25.5%, 42.6%, 31.9%.",
+    "formulaHeading": "Formula",
+    "workedExample": "Data: Mon,120 / Tue,200 / Wed,150. Bar chart, plot height 400 px:\n1. maxValue = 200.\n2. Mon: 120/200 x 400 = 240 px (60% of plot).\n3. Tue: 200/200 x 400 = 400 px (full height).\n4. Wed: 150/200 x 400 = 300 px (75% of plot).\n5. Pie version: total = 470; Mon = 120/470 = 25.5%, Tue = 42.6%, Wed = 31.9% — slices of 91.9, 153.2, and 114.9 degrees.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Charts for homework, reports, and posts without spreadsheet software.",
+      "Consistent clean styling — no clashing default spreadsheet themes.",
+      "Instant PNG download sized right for slides and documents.",
+      "Pie percentages are computed for you — no manual math.",
+      "Your data never leaves the browser; sensitive numbers stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Max 24 data points — this is a quick chart tool, not a BI suite.",
+      "Single data series only; no grouped bars or multi-line comparison.",
+      "No date axis intelligence — labels are treated as plain text.",
+      "Styling is fixed and minimal; custom fonts and annotations are not included."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "How do I enter my data?",
+        "a": "One pair per line in the form label,value — for example: Mon,120 on the first line, Tue,200 on the second. Commas separate the label from the number. Decimals like 12.5 work fine."
+      },
+      {
+        "q": "Which chart type should I use?",
+        "a": "Bars compare categories (sales by month). Lines show change over time. Pies show parts of a whole (market share). If your values can be negative, avoid pie — negative slices are meaningless."
+      },
+      {
+        "q": "Can I compare two data series?",
+        "a": "Not in this version — one series per chart. For a comparison, make two charts with the same color and place them side by side in your document or slide."
+      },
+      {
+        "q": "Why does my pie chart look wrong?",
+        "a": "Pie charts need all-positive values that form a meaningful whole. Check for typos like a missing comma (Mon120 is invalid) or negative numbers, and the error message will point at the exact line."
+      },
+      {
+        "q": "What size is the downloaded image?",
+        "a": "900 x 600 pixels — crisp on screens and fine for printing up to about 7 inches wide. It scales cleanly into PowerPoint, Word, and social posts."
+      },
+      {
+        "q": "Is my data uploaded anywhere?",
+        "a": "No. Parsing and drawing happen entirely in your browser. Your numbers never leave your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Chart Maker results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "chartType": "Chart type",
+      "typeBar": "Bar",
+      "typeLine": "Line",
+      "typePie": "Pie",
+      "dataLabel": "Your data (label,value per line)",
+      "chartTitle": "Chart title",
+      "barColor": "Main color",
+      "download": "Download chart",
+      "points": "Data points",
+      "maxValue": "Maximum value",
+      "totalValue": "Total",
+      "parseError": "Line {line} is invalid. Use the format label,value.",
+      "noData": "Enter at least 2 data lines to draw a chart."
+    }
+  }
+}

@@ -1,0 +1,205 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="globe" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="sc-meta">{{ t('labels.pasteLabel') }}</label>
+        <textarea id="sc-meta" class="dv-term-input code" spellcheck="false"
+          [ngModel]="metaInput()" (ngModelChange)="setMeta($event)"
+          [attr.placeholder]="t('labels.pasteHint')" dir="ltr"></textarea>
+      </div>
+
+      <h3 class="table-title">{{ t('labels.manualHeading') }}</h3>
+      <div class="field">
+        <label for="sc-title">{{ t('labels.fTitle') }}</label>
+        <input id="sc-title" type="text" autocomplete="off" [ngModel]="mTitle()" (ngModelChange)="setMTitle($event)" />
+      </div>
+      <div class="field">
+        <label for="sc-desc">{{ t('labels.fDesc') }}</label>
+        <input id="sc-desc" type="text" autocomplete="off" [ngModel]="mDesc()" (ngModelChange)="setMDesc($event)" />
+      </div>
+      <div class="field">
+        <label for="sc-image">{{ t('labels.fImage') }}</label>
+        <input id="sc-image" type="url" inputmode="url" autocomplete="off" spellcheck="false"
+          [ngModel]="mImage()" (ngModelChange)="setMImage($event)" placeholder="https://…" dir="ltr" />
+      </div>
+      <div class="field">
+        <label for="sc-url">{{ t('labels.fUrl') }}</label>
+        <input id="sc-url" type="url" inputmode="url" autocomplete="off" spellcheck="false"
+          [ngModel]="mUrl()" (ngModelChange)="setMUrl($event)" placeholder="https://…" dir="ltr" />
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.fCard') }}</label>
+        <div class="chip-row" role="group" [attr.aria-label]="t('labels.fCard')">
+          <button type="button" class="chip" [class.active]="cardType() === 'auto'" (click)="setCardType('auto')">{{ t('labels.cardAuto') }}</button>
+          <button type="button" class="chip" [class.active]="cardType() === 'summary'" (click)="setCardType('summary')">{{ t('labels.cardSummary') }}</button>
+          <button type="button" class="chip" [class.active]="cardType() === 'large'" (click)="setCardType('large')">{{ t('labels.cardLarge') }}</button>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn ghost" (click)="clearInput()">
+          <app-icon name="x" /> {{ t('labels.clearButton') }}
+        </button>
+      </div>
+
+      @if (issues().length > 0 && hasAny()) {
+        <div class="warnings" role="alert">
+          <h3><app-icon name="triangle-alert" /> {{ t('labels.checksHeading') }}</h3>
+          <ul>
+            @for (i of issues(); track $index) {
+              <li>{{ t('labels.' + i) }}</li>
+            }
+          </ul>
+        </div>
+      }
+
+      @if (hasAny()) {
+        <div class="results">
+          <h3 class="table-title">{{ t('labels.previewX') }}</h3>
+          <div class="preview-cards" style="grid-template-columns: 1fr">
+            @if (card().type === 'large') {
+              <div class="social-card" dir="ltr">
+                @if (card().image) {
+                  <img class="card-img" [src]="card().image" [alt]="card().title" loading="lazy" />
+                } @else {
+                  <div class="card-img card-img-empty"><app-icon name="globe" /></div>
+                }
+                <div class="card-body">
+                  @if (domain()) { <div class="card-domain">{{ domain() }}</div> }
+                  <div class="card-title">{{ card().title || '—' }}</div>
+                  <p class="card-desc">{{ card().desc }}</p>
+                </div>
+              </div>
+            } @else {
+              <div class="social-card x-summary" dir="ltr">
+                @if (card().image) {
+                  <img class="card-img" [src]="card().image" [alt]="card().title" loading="lazy" />
+                } @else {
+                  <div class="card-img card-img-empty"><app-icon name="globe" /></div>
+                }
+                <div class="card-body">
+                  @if (domain()) { <div class="card-domain">{{ domain() }}</div> }
+                  <div class="card-title">{{ card().title || '—' }}</div>
+                  <p class="card-desc">{{ card().desc }}</p>
+                </div>
+              </div>
+            }
+          </div>
+
+          <h3 class="table-title">{{ t('labels.previewFb') }}</h3>
+          <div class="preview-cards" style="grid-template-columns: 1fr">
+            <div class="social-card" dir="ltr">
+              @if (card().image) {
+                <img class="card-img" [src]="card().image" [alt]="card().title" loading="lazy" />
+              } @else {
+                <div class="card-img card-img-empty"><app-icon name="globe" /></div>
+              }
+              <div class="card-body">
+                @if (domain()) { <div class="card-domain">{{ domain() }}</div> }
+                <div class="card-title">{{ card().title || '—' }}</div>
+                <p class="card-desc">{{ card().desc }}</p>
+              </div>
+            </div>
+          </div>
+          <p class="note">{{ t('labels.previewNote') }}</p>
+        </div>
+      } @else {
+        <p class="note">{{ t('labels.emptyState') }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

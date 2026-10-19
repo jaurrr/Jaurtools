@@ -1,0 +1,99 @@
+{
+  "heat-index-calculator": {
+    "benefits": [
+      "Know when heat is dangerous before you exercise, work, or travel outdoors.",
+      "Understand why 32 C in Mumbai feels far hotter than 32 C in dry desert air.",
+      "Protect children, the elderly, and pets: their bodies cool less efficiently.",
+      "Plan events, construction shifts, and sports practice around safe hours.",
+      "Pair with the temperature converter to compare readings across unit systems."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The feels-like temperature that combines air temperature and humidity. High humidity stops sweat from evaporating, so the body cannot cool itself and the air feels hotter than the thermometer says.",
+        "q": "What is the heat index?"
+      },
+      {
+        "a": "The NOAA heat index formula is validated for temperatures of 80 F (27 C) and above. Below that, the effect of humidity on how hot it feels is negligible, so the heat index is just the air temperature.",
+        "q": "Why does it only work above 80 F?"
+      },
+      {
+        "a": "Yes - dry heat also affects people, mainly through dehydration. The heat index measures how heat plus humidity stresses the body. In dry heat, drink water and rest; the danger is dehydration and heat stroke even without humidity.",
+        "q": "Is dry heat safe?"
+      },
+      {
+        "a": "They measure different things. Wind chill describes heat loss in cold wind; the heat index describes reduced cooling in humid heat. They never overlap.",
+        "q": "What is the difference between heat index and wind chill?"
+      },
+      {
+        "a": "Not always. The main adjustments: when humidity is below 13% and temperature is 80 to 112 F, the index drops a little (dry air cools better). When humidity is above 85% and temperature is 80 to 87 F, it rises. This calculator applies both.",
+        "q": "Are there adjustments for very low or very high humidity?"
+      },
+      {
+        "a": "Above a heat index of about 103 F (39 C), heat cramps and heat exhaustion become likely with activity, and heat stroke is possible with long exposure. Above 125 F (52 C), heat stroke is highly likely. Take these thresholds seriously.",
+        "q": "At what heat index does it become dangerous?"
+      }
+    ],
+    "formula": "Rothfusz regression (NOAA), temperature T in F, relative humidity R in %:\n\nHI = -42.379 + 2.04901523 x T + 10.14333127 x R\n     - 0.22475541 x T x R - 0.00683783 x T^2 - 0.05481717 x R^2\n     + 0.00122874 x T^2 x R + 0.00085282 x T x R^2\n     - 0.00000199 x T^2 x R^2\n\nAdjustments: if R < 13% and 80 <= T <= 112, subtract ((13 - R)/4) x sqrt((17 - |T - 95|)/17).\nIf R > 85% and 80 <= T <= 87, add ((R - 85)/10) x ((87 - T)/5).\nBelow 80 F: HI = air temperature.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Fahrenheit or Celsius.",
+      "Enter the air temperature and the relative humidity percentage.",
+      "The heat index and its risk level appear instantly.",
+      "If the index is in the caution range or above, shift outdoor activity to cooler hours and drink water."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The heat index is the feels-like temperature combining air temperature and humidity.",
+      "It uses the Rothfusz regression published by the US National Weather Service (NOAA).",
+      "It only applies at 80 F (27 C) and above. Below that, humidity barely changes how heat feels.",
+      "Risk bands: below 80 F low, 80-90 F caution, 91-103 F extreme caution, 104-125 F danger, above 125 F extreme danger.",
+      "High humidity stops sweat from evaporating, so the body cannot cool itself.",
+      "Heat index readings assume shade and light wind. Direct sun can add up to 15 F.",
+      "Children, the elderly, and outdoor workers face the highest risk in high heat index conditions.",
+      "Celsius conversion: the formula works in Fahrenheit internally, then converts the result."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "heat index calculator, feels like temperature calculator, apparent temperature, humidity heat calculator, noaa heat index",
+    "labels": {
+      "belowRangeNote": "Below 80 F (27 C), humidity barely changes how heat feels, so the heat index equals the air temperature.",
+      "celsius": "Celsius",
+      "fahrenheit": "Fahrenheit",
+      "heatIndex": "Heat index",
+      "humidity": "Relative humidity (%)",
+      "riskLevel": "Risk level",
+      "tempUnit": "Temperature unit",
+      "temperature": "Air temperature"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Valid only at 80 F (27 C) and above. Below that, the heat index equals the air temperature.",
+      "Assumes shade and light wind. Direct sun can make it feel up to 15 F hotter.",
+      "Individual factors - age, health, clothing, fitness - change real heat risk.",
+      "This is a weather estimate, not medical advice. Treat danger bands seriously."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free heat index calculator: enter temperature and humidity to see the feels-like temperature (NOAA formula) with risk levels. Works in F and C. Private, no sign-up.",
+    "metaTitle": "Heat Index Calculator - Feels-Like Temperature | JaurTools",
+    "name": "Heat Index Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The heat index combines temperature and humidity into the feels-like temperature. At 90 F (32 C) with 60% humidity, the air feels like about 100 F (38 C) - the extreme-caution band. The calculation uses the NOAA Rothfusz regression, valid at 80 F (27 C) and above.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your heat index results",
+    "risks": {
+      "caution": "Caution",
+      "danger": "Danger",
+      "extreme-caution": "Extreme caution",
+      "extreme-danger": "Extreme danger",
+      "low": "Low"
+    },
+    "tagline": "Enter temperature and humidity to see the feels-like temperature with NOAA risk levels.",
+    "workedExample": "Temperature 90 F, relative humidity 60%.\n1. T = 90 and R = 60 are in range (T >= 80), so use the Rothfusz regression.\n2. Plugging in: -42.379 + 2.04901523 x 90 + 10.14333127 x 60 - ... = 99.7.\n3. Humidity is not below 13% or above 85%, so no adjustment applies.\n4. Heat index = 99.7 F (about 37.6 C) - the Extreme caution band.",
+    "workedExampleHeading": "Worked example"
+  }
+}

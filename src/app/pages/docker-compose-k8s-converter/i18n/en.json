@@ -1,0 +1,90 @@
+{
+  "docker-compose-k8s-converter": {
+    "assumptionNote": "Only image, ports, environment, and restart are converted; everything else in the compose file is ignored.",
+    "benefits": [
+      "Moves a compose-based app toward Kubernetes without hand-writing manifests.",
+      "Each service becomes a Deployment plus a ClusterIP Service with matching labels.",
+      "Port mappings translate to containerPort and Service port/targetPort pairs.",
+      "Environment variables become proper env entries in the container spec.",
+      "Restart policies map to the closest Kubernetes restartPolicy."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Paste your docker-compose.yml into the input box. The tool parses the services block and generates one Deployment and one Service per service. Download the YAML and apply it with kubectl apply -f k8s-manifests.yaml.",
+        "q": "How do I deploy the generated manifests?"
+      },
+      {
+        "a": "unless-stopped and always become restartPolicy: Always, on-failure becomes OnFailure, and no becomes Never. Note that Deployments always use Always in practice; adjust the policy if you generate a Pod or Job.",
+        "q": "How are restart policies translated?"
+      },
+      {
+        "a": "The Service port is the host side of the mapping and targetPort is the container side. For 8080:80, the Service listens on 8080 and forwards to container port 80.",
+        "q": "How do port mappings translate?"
+      },
+      {
+        "a": "List entries like - NODE_ENV=production become env name/value pairs. Map-style environment blocks are supported too. Secrets are not created — move sensitive values to Kubernetes Secrets manually.",
+        "q": "What happens to environment variables?"
+      },
+      {
+        "a": "No. Volumes are intentionally skipped because host paths rarely exist on cluster nodes. Create PersistentVolumeClaims for your data and attach them to the generated Deployments.",
+        "q": "Are volumes converted?"
+      },
+      {
+        "a": "Yes, as long as it uses the common subset: services with image, ports, environment, and restart. Exotic keys are ignored rather than breaking the parse.",
+        "q": "Will it handle my real compose file?"
+      }
+    ],
+    "formula": "compose service  ->  Deployment + Service\n  image: X        ->  containers[0].image: X\n  ports \"H:C\"     ->  containerPort: C, Service port: H, targetPort: C\n  environment     ->  env: [{name, value}]\n  restart         ->  restartPolicy (Always / OnFailure / Never)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your docker-compose.yml into the input box.",
+      "Check the parsed summary: service count and generated resources.",
+      "Review the generated Deployment and Service manifests.",
+      "Copy the output or download k8s-manifests.yaml.",
+      "Apply with kubectl apply -f k8s-manifests.yaml and adjust as needed."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A Kubernetes Deployment manages a set of identical Pods running your container image.",
+      "A Service gives those Pods a stable network identity inside the cluster.",
+      "containerPort documents which port the container listens on; the Service port is what others call.",
+      "Environment entries map one-to-one to env name/value pairs in the container spec.",
+      "The parser handles the common compose subset: image, ports, environment, restart."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "docker compose to kubernetes, compose to k8s converter, kompose online, docker to kubernetes yaml",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "downloadLabel": "Download .yaml",
+      "errorInvalid": "Could not parse a valid compose file. Check the YAML and try again.",
+      "inputLabel": "docker-compose.yml",
+      "resourcesLabel": "K8s resources",
+      "servicesLabel": "Services"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Volumes are not converted — host paths do not exist on cluster nodes.",
+      "build:, depends_on:, networks:, and healthchecks are ignored.",
+      "Secrets are never generated; move sensitive env values to Kubernetes Secrets.",
+      "The YAML parser covers the common subset, not the full compose specification."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert docker-compose.yml to Kubernetes manifests online. Paste your compose file and get Deployment plus Service YAML for every service, free.",
+    "metaTitle": "Compose to Kubernetes Converter – Free K8s YAML Tool",
+    "name": "Docker Compose to K8s Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Teams outgrow docker compose when they move to Kubernetes, but rewriting every service as manifests by hand is tedious. This tool parses your compose file and generates a Deployment and a ClusterIP Service for each service, translating images, port mappings, environment variables, and restart policies.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Generated Kubernetes manifests",
+    "tagline": "Turn docker-compose.yml into Kubernetes Deployments and Services.",
+    "workedExample": "Input:\nservices:\n  web:\n    image: nginx:1.25\n    ports:\n      - \"8080:80\"\n    environment:\n      - NODE_ENV=production\n    restart: unless-stopped\n\nOutput (k8s-manifests.yaml):\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: web\nspec:\n  replicas: 1\n  selector:\n    matchLabels:\n      app: web\n  template:\n    metadata:\n      labels:\n        app: web\n    spec:\n      restartPolicy: Always\n      containers:\n        - name: web\n          image: nginx:1.25\n          ports:\n            - containerPort: 80\n          env:\n            - name: NODE_ENV\n              value: \"production\"\n---\napiVersion: v1\nkind: Service\nmetadata:\n  name: web\nspec:\n  selector:\n    app: web\n  type: ClusterIP\n  ports:\n    - protocol: TCP\n      port: 8080\n      targetPort: 80\n\nApply with kubectl apply -f k8s-manifests.yaml.",
+    "workedExampleHeading": "Worked example"
+  }
+}

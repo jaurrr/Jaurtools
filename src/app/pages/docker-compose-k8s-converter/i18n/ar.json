@@ -1,0 +1,90 @@
+{
+  "docker-compose-k8s-converter": {
+    "assumptionNote": "تُحوَّل image وports وenvironment وrestart فقط؛ ويُتجاهَل كل ما عداها في ملف compose.",
+    "benefits": [
+      "ينقل تطبيقًا مبنيًا على compose نحو Kubernetes دون كتابة البيانات يدويًا.",
+      "كل خدمة تصبح Deployment وService من نوع ClusterIP بتسميات متطابقة.",
+      "تُترجَم تعيينات المنافذ إلى أزواج containerPort ومنفذ الخدمة/المنفذ المستهدف.",
+      "تصبح متغيرات البيئة إدخالات env صحيحة في مواصفات الحاوية.",
+      "تُربَط سياسات إعادة التشغيل بأقرب restartPolicy في Kubernetes."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "الصق ملف docker-compose.yml في مربع الإدخال. تُحلَّل كتلة الخدمات ويُنشَأ Deployment وService لكل خدمة. نزّل YAML وطبّقه عبر kubectl apply -f k8s-manifests.yaml.",
+        "q": "كيف أنشر البيانات المولّدة؟"
+      },
+      {
+        "a": "تصبح unless-stopped وalways بصيغة restartPolicy: Always، وon-failure تصبح OnFailure، وno تصبح Never. لاحظ أن Deployments تستخدم Always عمليًا دائمًا؛ وعدّل السياسة إذا ولّدت Pod أو Job.",
+        "q": "كيف تُترجَم سياسات إعادة التشغيل؟"
+      },
+      {
+        "a": "منفذ الخدمة هو جانب المضيف من التعيين وtargetPort هو جانب الحاوية. بالنسبة لـ 8080:80 تستمع الخدمة على 8080 وتُحوِّل إلى منفذ الحاوية 80.",
+        "q": "كيف تُترجَم تعيينات المنافذ؟"
+      },
+      {
+        "a": "تصبح إدخالات القائمة مثل - NODE_ENV=production أزواج اسم/قيمة في env. وكتل البيئة بنمط الخريطة مدعومة أيضًا. لا تُنشَأ أسرار — انقل القيم الحساسة يدويًا إلى Kubernetes Secrets.",
+        "q": "ماذا يحدث لمتغيرات البيئة؟"
+      },
+      {
+        "a": "لا. تُتخطَّى الأحجام عمدًا لأن مسارات المضيف نادرًا ما توجد على عقد العنقود. أنشئ PersistentVolumeClaims لبياناتك وأرفقها بالـ Deployments المولّدة.",
+        "q": "هل تُحوَّل الأحجام؟"
+      },
+      {
+        "a": "نعم، ما دامت تستخدم المجموعة الشائعة: خدمات بصور ومنافذ وبيئة وإعادة تشغيل. تُتجاهَل المفاتيح الغريبة دون كسر التحليل.",
+        "q": "هل سيتعامل مع ملف compose الحقيقي الخاص بي؟"
+      }
+    ],
+    "formula": "خدمة compose  ->  Deployment + Service\n  image: X        ->  containers[0].image: X\n  ports \"H:C\"     ->  containerPort: C, منفذ الخدمة: H, targetPort: C\n  environment     ->  env: [{name, value}]\n  restart         ->  restartPolicy (Always / OnFailure / Never)",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "الصق ملف docker-compose.yml في مربع الإدخال.",
+      "تحقق من الملخص المُحلَّل: عدد الخدمات والموارد المولّدة.",
+      "راجع بيانات Deployment وService المولّدة.",
+      "انسخ المخرجات أو نزّل k8s-manifests.yaml.",
+      "طبّق عبر kubectl apply -f k8s-manifests.yaml وعدّل حسب الحاجة."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "تدير Deployment في Kubernetes مجموعة من الـ Pods المتطابقة التي تشغّل صورة الحاوية.",
+      "تمنح Service تلك الـ Pods هوية شبكية مستقرة داخل العنقود.",
+      "يوثّق containerPort المنفذ الذي تستمع عليه الحاوية؛ ومنفذ الخدمة هو ما يستدعيه الآخرون.",
+      "تُربَط إدخالات البيئة واحدًا لواحد بأزواج اسم/قيمة env في مواصفات الحاوية.",
+      "يتعامل المُحلِّل مع مجموعة compose الشائعة: image وports وenvironment وrestart."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "docker compose إلى kubernetes, محول compose إلى k8s, kompose أونلاين, docker إلى kubernetes yaml",
+    "labels": {
+      "copiedLabel": "تم النسخ",
+      "copyLabel": "نسخ",
+      "downloadLabel": "تنزيل .yaml",
+      "errorInvalid": "تعذّر تحليل ملف compose صالح. تحقق من YAML وحاول مجددًا.",
+      "inputLabel": "docker-compose.yml",
+      "resourcesLabel": "موارد K8s",
+      "servicesLabel": "الخدمات"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "لا تُحوَّل الأحجام — مسارات المضيف غير موجودة على عقد العنقود.",
+      "تُتجاهَل build: وdepends_on: وnetworks: وhealthchecks.",
+      "لا تُولَّد أسرار أبدًا؛ انقل قيم env الحساسة إلى Kubernetes Secrets.",
+      "يغطي مُحلِّل YAML المجموعة الشائعة لا مواصفات compose الكاملة."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "حوّل docker-compose.yml إلى بيانات Kubernetes أونلاين. الصق ملف compose واحصل على YAML لبيانات Deployment وService لكل خدمة مجانًا.",
+    "metaTitle": "محول Compose إلى Kubernetes – أداة YAML مجانية",
+    "name": "محول Docker Compose إلى K8s",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "تتجاوز الفرق docker compose عند الانتقال إلى Kubernetes، لكن إعادة كتابة كل خدمة كبيانات يدويًا مهمة مملة. تُحلِّل هذه الأداة ملف compose وتُنشئ Deployment وService من نوع ClusterIP لكل خدمة، مترجمةً الصور وتعيينات المنافذ ومتغيرات البيئة وسياسات إعادة التشغيل.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "بيانات Kubernetes المولّدة",
+    "tagline": "حوّل docker-compose.yml إلى Deployments وServices في Kubernetes.",
+    "workedExample": "الإدخال:\nservices:\n  web:\n    image: nginx:1.25\n    ports:\n      - \"8080:80\"\n    environment:\n      - NODE_ENV=production\n    restart: unless-stopped\n\nالمخرجات (k8s-manifests.yaml):\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: web\nspec:\n  replicas: 1\n  selector:\n    matchLabels:\n      app: web\n  template:\n    metadata:\n      labels:\n        app: web\n    spec:\n      restartPolicy: Always\n      containers:\n        - name: web\n          image: nginx:1.25\n          ports:\n            - containerPort: 80\n          env:\n            - name: NODE_ENV\n              value: \"production\"\n---\napiVersion: v1\nkind: Service\nmetadata:\n  name: web\nspec:\n  selector:\n    app: web\n  type: ClusterIP\n  ports:\n    - protocol: TCP\n      port: 8080\n      targetPort: 80\n\nطبّق عبر kubectl apply -f k8s-manifests.yaml.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

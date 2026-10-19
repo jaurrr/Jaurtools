@@ -1,0 +1,234 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t(slug + '.ui.home')">
+    <a [routerLink]="['/', lang()]">{{ t(slug + '.ui.home') }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t(slug + '.name') }}</span>
+  </nav>
+
+  <h1>{{ t(slug + '.name') }}</h1>
+  <p class="tagline">{{ t(slug + '.tagline') }}</p>
+  <div class="layout">
+    <div class="tool-col">
+      <div class="card tool-card" [attr.aria-label]="t(slug + '.name')">
+        <div class="tool-head">
+          <app-icon name="type"></app-icon>
+          <h2 class="tool-title">{{ t(slug + '.name') }}</h2>
+        </div>
+        <div class="ed-split">
+          <div class="ed-pane">
+            <label class="field-label" for="wc-text">{{ t(slug + '.ui.inputLabel') }}</label>
+            <textarea
+              id="wc-text"
+              class="ed-textarea"
+              [class.drop-active]="dragOver()"
+              rows="8"
+              [ngModel]="rawText()"
+              (ngModelChange)="setText($event)"
+              (dragover)="onDragOver($event)"
+              (dragleave)="onDragLeave()"
+              (drop)="onDrop($event)"
+              [placeholder]="t(slug + '.ui.placeholder')"
+            ></textarea>
+            <p class="drop-hint">
+              <app-icon name="upload"></app-icon>
+              {{ t(slug + '.ui.dropHint') }}
+            </p>
+            <div class="actions">
+              <button type="button" class="btn btn-secondary" (click)="clearText()">
+                <app-icon name="refresh-cw"></app-icon>
+                {{ t(slug + '.ui.clear') }}
+              </button>
+            </div>
+          </div>
+          <div class="ed-pane">
+            <span class="field-label" id="wc-live-label">{{ t(slug + '.ui.words') }}</span>
+            <div class="stat-grid ed-livebar" role="group" aria-labelledby="wc-live-label">
+              <div class="stat stat-primary">
+                <span class="stat-value">{{ stats().words }}</span>
+                <span class="stat-label">{{ t(slug + '.ui.words') }}</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">{{ stats().characters }}</span>
+                <span class="stat-label">{{ t(slug + '.ui.characters') }}</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">{{ stats().charactersNoSpaces }}</span>
+                <span class="stat-label">{{ t(slug + '.ui.noSpaces') }}</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">{{ stats().sentences }}</span>
+                <span class="stat-label">{{ t(slug + '.ui.sentences') }}</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">{{ stats().paragraphs }}</span>
+                <span class="stat-label">{{ t(slug + '.ui.paragraphs') }}</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">{{ readingTime() }}</span>
+                <span class="stat-label">{{ t(slug + '.ui.readingTime') }}</span>
+              </div>
+            </div>
+
+            <div class="density-strip" role="group" [attr.aria-label]="t(slug + '.ui.densityHeading')">
+              <h3>{{ t(slug + '.ui.densityHeading') }}</h3>
+              @if (density().length > 0) {
+                <ul class="density-rows">
+                  @for (row of density(); track row.word) {
+                    <li class="density-row">
+                      <span class="density-word">{{ row.word }}</span>
+                      <span class="density-meta">{{ densityLabel(row) }}</span>
+                      <span class="density-bar" aria-hidden="true">
+                        <span [style.width.%]="row.density"></span>
+                      </span>
+                    </li>
+                  }
+                </ul>
+              } @else {
+                <p class="density-empty">{{ t(slug + '.ui.densityEmpty') }}</p>
+              }
+            </div>
+
+            <div class="goal-presets" role="group" [attr.aria-label]="t(slug + '.ui.goalsHeading')">
+              @for (g of goals; track g.id) {
+                <button
+                  type="button"
+                  class="goal-preset"
+                  [class.active]="activeGoal() === g.id"
+                  (click)="toggleGoal(g.id)"
+                  [attr.aria-pressed]="activeGoal() === g.id"
+                >
+                  <span class="goal-name">
+                    <app-icon name="target"></app-icon>
+                    {{ goalName(g.id) }}
+                  </span>
+                  <span class="goal-target">{{ g.target }} {{ goalUnitLabel(g.unit) }}</span>
+                  @if (activeGoal() === g.id && goalProgress()) {
+                    <span class="goal-count">{{ goalProgress()?.done }} / {{ g.target }}</span>
+                    <span class="goal-progress" aria-hidden="true">
+                      <span [style.width.%]="goalProgress()?.pct"></span>
+                    </span>
+                  }
+                </button>
+              }
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn btn-secondary" (click)="copyStats()" [disabled]="stats().words === 0">
+                <app-icon [name]="copied() ? 'check' : 'copy'"></app-icon>
+                {{ copied() ? t(slug + '.ui.copied') : t(slug + '.ui.copyStats') }}
+              </button>
+              <button type="button" class="btn btn-secondary" (click)="downloadTxt()" [disabled]="stats().words === 0">
+                <app-icon name="download"></app-icon>
+                {{ t(slug + '.ui.downloadTxt') }}
+              </button>
+            </div>
+            <p class="live-note">{{ t(slug + '.ui.liveNote') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-col">
+      <p class="quick">{{ t(slug + '.quickAnswer') }}</p>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.keyFactsTitle') }}</h2>
+        <ul class="check-list">
+          @for (fact of keyFacts(); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.howToTitle') }}</h2>
+        <ol class="steps">
+          @for (step of howTo(); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.formulaTitle') }}</h2>
+        <p>{{ t(slug + '.formula') }}</p>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.rulesTitle') }}</h2>
+        <ul class="check-list">
+          @for (rule of countRules(); track $index) {
+            <li>{{ rule }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.exampleTitle') }}</h2>
+        <p>{{ t(slug + '.workedExample') }}</p>
+      </section>
+
+      <section class="card">
+        <h2>{{ t(slug + '.ui.mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of mistakes(); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="card pros-cons">
+        <div>
+          <h2>{{ t(slug + '.ui.benefitsTitle') }}</h2>
+          <ul class="check-list">
+            @for (b of benefits(); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t(slug + '.ui.limitationsTitle') }}</h2>
+          <ul class="warn-list">
+            @for (l of limitations(); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <section class="card privacy">
+        <h2>
+          <app-icon name="info"></app-icon>
+          {{ t(slug + '.ui.privacyTitle') }}
+        </h2>
+        <p>{{ t(slug + '.privacyNote') }}</p>
+      </section>
+
+      <section class="card faq">
+        <h2>{{ t(slug + '.ui.faqTitle') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug" ns="ui"></app-micro-rating>
+    </div>
+  </div>
+
+  <section class="card related">
+    <h2>{{ t(slug + '.ui.relatedTitle') }}</h2>
+    <div class="related-grid">
+      @for (rel of related; track rel) {
+        <a class="related-card" [routerLink]="['/', lang(), rel]">
+          <span>{{ t(rel + '.name') }}</span>
+          <app-icon name="arrow-right"></app-icon>
+        </a>
+      }
+    </div>
+  </section>
+
+  <p class="reviewed">{{ t(slug + '.lastReviewed') }}</p>
+</div>

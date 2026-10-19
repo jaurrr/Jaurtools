@@ -1,0 +1,92 @@
+{
+  "tasbih-dhikr-counter": {
+    "benefits": [
+      "A clean, focused counter with no distractions during dhikr.",
+      "Round vibration tells you when a set of 33 or 100 completes.",
+      "Progress ring shows exactly where you are in the current round.",
+      "Count is saved on your device — close the page and continue later."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Tasbih is the practice of glorifying Allah by repeating phrases like SubhanAllah (Glory be to Allah), Alhamdulillah (Praise be to Allah), and Allahu Akbar (Allah is Greatest) — traditionally 33 times each after prayers, often counted on prayer beads.",
+        "q": "What is tasbih / dhikr?"
+      },
+      {
+        "a": "Yes. Your count, target, and chosen dhikr are saved in your browser's local storage on your device, so you can close the page and continue later.",
+        "q": "Is my count saved if I close the page?"
+      },
+      {
+        "a": "Pick 33, 100, 500, or 1000 from the presets, or type any number up to 100,000 in the custom box. Rounds = floor(count / target), and the ring shows progress within the current round.",
+        "q": "How do targets and rounds work?"
+      },
+      {
+        "a": "The toggle controls the Vibration API. On supported mobile browsers, each tap gives a short buzz and a completed round gives a longer double buzz. Desktop browsers generally ignore it.",
+        "q": "How does vibration work?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser; nothing is uploaded or stored anywhere.",
+        "q": "Is this private?"
+      },
+      {
+        "a": "Use the reset button to start the count from zero. Your target and dhikr choice are kept.",
+        "q": "How do I start over?"
+      }
+    ],
+    "formula": "Rounds completed = floor(count / target)\nProgress in round (%) = ((count mod target) / target) x 100\nRing offset = circumference x (1 - progress / 100), circumference = 2 x pi x 54\nVibration: 25 ms per tap; [120, 60, 120] ms on round completion",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a dhikr from the five presets, or keep SubhanAllah.",
+      "Set your target: 33, 100, 500, 1000, or a custom number.",
+      "Tap the big circle once per recitation — the count and ring update instantly.",
+      "Watch the rounds counter; vibration marks each completed round.",
+      "Your count auto-saves on this device, so you can continue later."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Five common dhikr phrases included, each shown in your site language.",
+      "Targets of 33, 100, 500, and 1000 as presets, plus any custom target up to 100,000.",
+      "A progress ring fills as you move through the current round.",
+      "Vibration feedback on every tap, with a longer pattern when a round completes.",
+      "Count, target, and dhikr choice persist in your browser's local storage."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "tasbih counter, dhikr counter, digital tasbih, zikr counter online, prayer beads counter, subhanallah counter",
+    "labels": {
+      "customTargetLabel": "Custom target",
+      "dhikrLabel": "Choose a dhikr",
+      "offLabel": "Off",
+      "onLabel": "On",
+      "progressLabel": "Progress in current round",
+      "resetButton": "Reset count",
+      "roundsLabel": "Rounds completed",
+      "storageNote": "Your count is saved only in this browser on your device.",
+      "tapLabel": "Tap to count",
+      "targetLabel": "Target per round",
+      "vibrateLabel": "Vibration"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Vibration works on most mobile browsers; desktops typically ignore it.",
+      "Data lives in one browser only — clearing browser data erases the count.",
+      "A counter aid, not a religious authority — counts are your own record.",
+      "No audio feedback; the counter is silent by design."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free tasbih and dhikr counter: tap to count, targets 33/100/500/1000 or custom, progress ring, round vibration, auto-save. Private, no signup.",
+    "metaTitle": "Tasbih / Dhikr Counter — Free Digital Prayer Beads",
+    "name": "Tasbih / Dhikr Counter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Tasbih / Dhikr Counter is a focused digital counter for remembrance. Pick from five common dhikr phrases, set a target of 33, 100, 500, 1000, or any custom number, and tap the big circle once per recitation. A progress ring fills through each round, vibration marks taps and completed rounds, the rounds counter tracks your sets, and your count auto-saves on your device so you can continue later — all privately in your browser with no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Tasbih / Dhikr Counter results",
+    "tagline": "Count your dhikr with a tap — targets, progress ring, and round vibration.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "You choose 'SubhanAllah' with a target of 100 and tap 250 times. Rounds = floor(250 / 100) = 2 complete rounds. Progress in the current round = ((250 mod 100) / 100) x 100 = 50%, so the ring is half full and the counter shows 50 / 100. At tap 100 and tap 200 the phone gave the longer double-buzz marking each completed round. Close the page at 250 — reopening restores count 250, target 100, and 'SubhanAllah' from local storage."
+  }
+}

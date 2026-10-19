@@ -1,0 +1,253 @@
+{
+  "http-status-codes": {
+    "assumptionNote": "Code names stay in English because they are the official IETF reason phrases; descriptions are localized.",
+    "benefits": [
+      "Look up any status code in seconds with instant search.",
+      "Category filters group codes by 1xx informational through 5xx server errors.",
+      "Each code explains both what it means and when you will see it.",
+      "Fully offline reference — no network needed after the page loads.",
+      "Beginner-friendly wording without RFC jargon."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "codes": {
+      "c100": {
+        "desc": "The server received the request headers and the client should continue sending the body.",
+        "use": "Large uploads where the client checks with Expect: 100-continue before sending data."
+      },
+      "c101": {
+        "desc": "The server agrees to switch protocols, for example from HTTP to WebSocket.",
+        "use": "WebSocket handshakes negotiated with an Upgrade header."
+      },
+      "c103": {
+        "desc": "The server sends preliminary headers so the client can preload resources early.",
+        "use": "Servers that want the browser to start fetching CSS or JS before the full response."
+      },
+      "c200": {
+        "desc": "The request succeeded and the server returned the requested data.",
+        "use": "Normal successful GET, POST, PUT, and DELETE responses."
+      },
+      "c201": {
+        "desc": "The request succeeded and a new resource was created on the server.",
+        "use": "POST requests that create a user, order, or record; check the Location header."
+      },
+      "c202": {
+        "desc": "The request was accepted for processing but is not complete yet.",
+        "use": "Background jobs and queues where work finishes asynchronously."
+      },
+      "c204": {
+        "desc": "The request succeeded but there is no content to return.",
+        "use": "DELETE requests and form submissions that need no response body."
+      },
+      "c206": {
+        "desc": "The server returned part of the resource as requested with a Range header.",
+        "use": "Video streaming and resumable downloads that fetch byte ranges."
+      },
+      "c301": {
+        "desc": "The resource moved permanently to a new URL; update bookmarks and links.",
+        "use": "Domain changes and HTTP-to-HTTPS migrations; browsers cache this redirect."
+      },
+      "c302": {
+        "desc": "The resource was found but is temporarily at a different URL.",
+        "use": "Temporary promotions or maintenance pages; not cached like 301."
+      },
+      "c303": {
+        "desc": "The response is at another URL and should be fetched with GET.",
+        "use": "After a form POST, redirecting to a result page to avoid resubmission."
+      },
+      "c304": {
+        "desc": "The cached copy is still fresh; the server sent no body.",
+        "use": "Conditional requests with If-None-Match or If-Modified-Since saving bandwidth."
+      },
+      "c307": {
+        "desc": "Temporary redirect that preserves the original request method and body.",
+        "use": "Temporary URL changes for POST or PUT requests that must not become GET."
+      },
+      "c308": {
+        "desc": "Permanent redirect that preserves the original request method and body.",
+        "use": "Permanent URL changes where the method must survive the redirect."
+      },
+      "c400": {
+        "desc": "The server could not understand the request because of invalid syntax.",
+        "use": "Malformed JSON bodies, missing required fields, or bad query parameters."
+      },
+      "c401": {
+        "desc": "Authentication is required and missing or invalid.",
+        "use": "Missing or expired tokens; the response should include WWW-Authenticate."
+      },
+      "c402": {
+        "desc": "Reserved for payment-related errors; rarely used in practice.",
+        "use": "Payment-gated APIs that chose this code for billing failures."
+      },
+      "c403": {
+        "desc": "The server understood the request but refuses to authorize it.",
+        "use": "Logged-in users accessing admin pages or resources they do not own."
+      },
+      "c404": {
+        "desc": "The server cannot find the requested resource.",
+        "use": "Wrong URLs, deleted pages, or mistyped API endpoints."
+      },
+      "c405": {
+        "desc": "The HTTP method is not allowed for this resource.",
+        "use": "Sending POST to an endpoint that only accepts GET."
+      },
+      "c408": {
+        "desc": "The server timed out waiting for the client to send the request.",
+        "use": "Very slow clients or stalled uploads on busy servers."
+      },
+      "c409": {
+        "desc": "The request conflicts with the current state of the resource.",
+        "use": "Creating a user with an email that already exists."
+      },
+      "c410": {
+        "desc": "The resource is gone permanently and will not come back.",
+        "use": "Deleted content where you want search engines to drop the URL."
+      },
+      "c413": {
+        "desc": "The request body is larger than the server accepts.",
+        "use": "Uploads exceeding the server's size limit; check the limit and retry smaller."
+      },
+      "c414": {
+        "desc": "The URL is longer than the server is willing to process.",
+        "use": "GET requests stuffing too much data into query parameters."
+      },
+      "c415": {
+        "desc": "The media type of the request body is not supported.",
+        "use": "Posting XML to a JSON-only API or missing Content-Type."
+      },
+      "c422": {
+        "desc": "The request was well-formed but semantically invalid.",
+        "use": "Validation errors: correct JSON shape but failing business rules."
+      },
+      "c425": {
+        "desc": "The server refuses to process a request sent too early.",
+        "use": "TLS early-data (0-RTT) requests that might be replayed."
+      },
+      "c426": {
+        "desc": "The client must switch to a different protocol to continue.",
+        "use": "Old clients told to upgrade from HTTP/1.0 or plain WebSocket."
+      },
+      "c429": {
+        "desc": "The client sent too many requests in a short time.",
+        "use": "Rate-limited APIs; respect the Retry-After header before retrying."
+      },
+      "c431": {
+        "desc": "The request headers are too large for the server.",
+        "use": "Oversized cookies or too many headers; clear cookies and retry."
+      },
+      "c451": {
+        "desc": "The resource is unavailable for legal reasons.",
+        "use": "Content blocked by court order or government censorship."
+      },
+      "c500": {
+        "desc": "The server hit an unexpected condition it does not know how to handle.",
+        "use": "Unhandled exceptions and crashes in server code; check server logs."
+      },
+      "c501": {
+        "desc": "The server does not support the functionality required.",
+        "use": "Requests for features the server has not implemented."
+      },
+      "c502": {
+        "desc": "A gateway or proxy received an invalid response from upstream.",
+        "use": "Reverse proxies like nginx when the app server crashes or is unreachable."
+      },
+      "c503": {
+        "desc": "The server is temporarily unable to handle the request.",
+        "use": "Overload or maintenance windows; retry later, honoring Retry-After."
+      },
+      "c504": {
+        "desc": "A gateway timed out waiting for the upstream server.",
+        "use": "Slow backend responses behind a proxy or load balancer."
+      },
+      "c505": {
+        "desc": "The server does not support the HTTP version used in the request.",
+        "use": "Very old or very new HTTP versions the server cannot speak."
+      },
+      "c507": {
+        "desc": "The server cannot store the representation needed to complete the request.",
+        "use": "WebDAV uploads when the disk or quota is full."
+      },
+      "c511": {
+        "desc": "The client must authenticate to gain network access.",
+        "use": "Captive portals on public Wi-Fi intercepting the first request."
+      }
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "1xx means informational, 2xx success, 3xx redirection, 4xx client error, and 5xx server error. The first digit tells you who needs to act: 4xx is usually your bug, 5xx is the server's problem.",
+        "q": "What do the code categories mean?"
+      },
+      {
+        "a": "401 means you are not authenticated — log in or send a valid token. 403 means you are authenticated but not allowed — the server refuses regardless of login.",
+        "q": "What is the difference between 401 and 403?"
+      },
+      {
+        "a": "Use 301 for permanent moves (browsers and search engines remember it) and 302 or 307 for temporary ones. Use 307/308 instead of 301/302 when the request method and body must survive the redirect.",
+        "q": "When should I use 301 vs 302?"
+      },
+      {
+        "a": "Yes. 429 tells you to slow down and often includes a Retry-After header with the wait time. Hammering the API anyway can get your key suspended.",
+        "q": "Should I retry after a 429 Too Many Requests?"
+      },
+      {
+        "a": "Type the number (like 404) or a word (like timeout) in the search box, or tap a category chip such as 4xx to browse client errors.",
+        "q": "How do I find a code quickly?"
+      },
+      {
+        "a": "404 means the specific resource was not found. Check the URL for typos, confirm the resource still exists, and for APIs verify the endpoint path and HTTP method.",
+        "q": "What should I do when I get a 404?"
+      }
+    ],
+    "formula": "1xx Informational  - request received, keep going\n2xx Success        - request received and accepted\n3xx Redirection    - follow the Location header\n4xx Client error   - fix the request and retry\n5xx Server error   - the server failed; retry later",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type a code number or keyword in the search box.",
+      "Tap a category chip (1xx-5xx) to narrow the list.",
+      "Click any code to expand its meaning and typical use.",
+      "Read the when-you-see-it note to decide your next step.",
+      "Use the guide below to learn the categories."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "HTTP status codes are three digits sent with every response.",
+      "The first digit defines the category: 1xx through 5xx.",
+      "Codes are standardized by the IETF in the HTTP specifications.",
+      "4xx errors mean the client should change the request.",
+      "5xx errors mean the server failed to fulfill a valid request."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "http status codes, http status code list, 404 meaning, 500 error meaning, http response codes",
+    "labels": {
+      "allLabel": "All",
+      "categoryLabel": "Category filter",
+      "countLabel": "Codes shown",
+      "meaningLabel": "Meaning",
+      "noResultsLabel": "No codes match your search.",
+      "searchLabel": "Search codes",
+      "searchPlaceholder": "Try 404, timeout, redirect...",
+      "useLabel": "When you see it"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Covers the 40 most common codes; rare and experimental codes are omitted.",
+      "Descriptions are simplified — the RFCs define exact edge-case semantics.",
+      "Unofficial codes like 419 and 509 are not included.",
+      "Search matches English names and the localized description text."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Look up any HTTP status code instantly. Search 40 common codes from 100 to 511 with plain-language meanings and when-you-see-it guidance.",
+    "metaTitle": "HTTP Status Codes – Free Lookup Reference",
+    "name": "HTTP Status Codes",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Every HTTP response carries a three-digit status code: 2xx means success, 3xx means redirect, 4xx means the client made a mistake, and 5xx means the server failed. This reference lists 40 common codes with plain-language meanings so you can diagnose any response in seconds.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Status code lookup",
+    "tagline": "Look up any HTTP status code — what it means and what to do.",
+    "workedExample": "Your API call returns 429.\n\nSearch 429: Too Many Requests — the client sent too many requests in a short time. When you see it: the API is rate-limited; read the Retry-After header and wait before retrying instead of hammering the endpoint.\n\nCompare with 503 Service Unavailable: the server itself is overloaded or in maintenance. Both say wait, but 429 is your quota while 503 is their capacity.",
+    "workedExampleHeading": "Worked example"
+  }
+}

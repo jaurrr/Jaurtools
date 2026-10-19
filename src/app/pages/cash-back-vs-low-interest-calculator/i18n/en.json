@@ -1,0 +1,94 @@
+{
+  "cash-back-vs-low-interest-calculator": {
+    "assumptionNote": "Assumes the full price (minus any rebate) is financed, the APR stays fixed for the whole term, and there are no extra fees.",
+    "benefits": [
+      "Stops you from picking the deal that only looks cheaper.",
+      "Shows the true total cost, including every dollar of interest.",
+      "Takes 30 seconds at the dealership before you sign anything.",
+      "Works for any financed purchase, not just cars."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on the numbers. A large rebate with a small APR gap favors cash back; a big APR gap over a long term favors the low rate. The only reliable way to know is to compare the total amount paid under both offers — which is exactly what this calculator does.",
+        "q": "Is cash back or a low interest rate better?"
+      },
+      {
+        "a": "Usually not. Manufacturers present them as alternatives: take the rebate with standard financing, or take the promotional APR and give up the rebate. Some dealers advertise both, but the fine print almost always forces a choice.",
+        "q": "Can I get both the rebate and the low APR?"
+      },
+      {
+        "a": "Yes — usually in favor of the low APR. Interest compounds over time, so the rate gap matters more the longer you borrow. On a 72-month loan, even a 2-point APR difference can outweigh a $2,000 rebate.",
+        "q": "Does a longer loan term change the answer?"
+      },
+      {
+        "a": "Totals. A lower monthly payment stretched over a longer term can cost thousands more in interest. Compare the total paid over the same term length to keep the comparison honest.",
+        "q": "Should I compare monthly payments or totals?"
+      },
+      {
+        "a": "Early payoff shrinks the interest advantage of the low-APR deal, which can flip the winner toward cash back. If you expect to clear the loan in a year or two, rerun the numbers with that shorter term.",
+        "q": "What if I plan to pay the loan off early?"
+      },
+      {
+        "a": "Yes. The same math applies to any financed purchase where you are offered a rebate versus a promotional rate — appliances, furniture, or equipment.",
+        "q": "Does this work for purchases other than cars?"
+      }
+    ],
+    "formula": "Monthly payment M = L x i(1+i)^n / ((1+i)^n - 1), where L = loan amount, i = APR/12, n = months.\nOption A: L = price - cash back, financed at the higher APR.\nOption B: L = price, financed at the low APR.\nTotal paid = M x n. The cheaper total wins.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the vehicle's sale price.",
+      "Enter the cash-back rebate and the APR that comes with it.",
+      "Enter the low APR offered without the rebate.",
+      "Set the loan term in months, then compare the two totals.",
+      "Pick the option with the lower total paid — that is the real saving."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Cash back lowers the amount you finance; a low APR lowers the interest you pay on the full price.",
+      "The winner depends on three things: the rebate size, the APR gap, and the loan term.",
+      "Longer terms magnify the APR gap, so low-APR deals usually win on 60- to 72-month loans.",
+      "A big rebate with only a small APR difference usually favors taking the cash back.",
+      "Compare the total amount paid, not the monthly payment — a lower payment can still cost more overall."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cash back vs low interest calculator, rebate vs low apr, car loan comparison calculator, cashback or low interest rate",
+    "labels": {
+      "aprLow": "Low APR without rebate (%)",
+      "aprWithCashBack": "APR with cash back (%)",
+      "cashBack": "Cash-back rebate",
+      "monthlyPayment": "Monthly payment",
+      "optionCashBack": "Cash-back option",
+      "optionLowApr": "Low-APR option",
+      "price": "Vehicle price",
+      "recommendationCashBack": "Cash back wins — you save",
+      "recommendationLowApr": "Low APR wins — you save",
+      "termMonths": "Loan term (months)",
+      "totalInterest": "Total interest",
+      "totalPaid": "Total paid"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ignores taxes, dealer fees, and insurance, which can differ between offers.",
+      "Assumes the full amount (after the rebate) is financed with no down payment.",
+      "Does not account for investing the rebate instead of putting it toward the loan.",
+      "Estimates only — your lender's exact terms are the final word."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free calculator comparing cash-back rebates vs low-APR car deals. Enter the price, rebate, both APRs and the term to see which offer costs less overall.",
+    "metaTitle": "Cash Back vs Low Interest Calculator - Compare Car Deals | JaurTools",
+    "name": "Cash Back vs Low Interest Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "On a $30,000 car, a $2,000 rebate at 6.9% APR for 60 months costs $33,187 in total, while 0.9% APR with no rebate costs $30,691. The low-APR deal wins here by $2,496 — but with a bigger rebate or a smaller rate gap, cash back can win. Run your own numbers above.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your cash-back comparison results",
+    "tagline": "Compare a cash-back rebate against a low-APR financing deal and see which one really costs less.",
+    "workedExample": "Price $30,000, $2,000 cash back, 6.9% APR with rebate, 0.9% APR without, 60 months:\n1. Option A loan = 30,000 - 2,000 = $28,000. Monthly = $553.11. Total = 553.11 x 60 = $33,186.81.\n2. Option B loan = $30,000. Monthly = $511.52. Total = 511.52 x 60 = $30,691.31.\n3. Difference: 33,186.81 - 30,691.31 = $2,495.50.\nThe 0.9% APR deal wins by $2,495.50.",
+    "workedExampleHeading": "Worked example"
+  }
+}

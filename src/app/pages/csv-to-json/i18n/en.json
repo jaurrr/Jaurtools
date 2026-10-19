@@ -1,0 +1,97 @@
+{
+  "csv-to-json": {
+    "benefits": [
+      "Feeds spreadsheet exports straight into APIs, databases and JavaScript apps that speak JSON.",
+      "Optional type detection turns numbers and booleans into real JSON values instead of strings.",
+      "Pretty or compact output to match whatever your code or API expects.",
+      "Runs fully offline in the browser, so private datasets are never transmitted."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Duplicate headers get suffixed automatically (name, name_2, name_3) in most tools, but here the safest approach is to rename the header row before converting. This tool keeps the last value for a repeated key, so check your headers first.",
+        "q": "What happens with duplicate column names?"
+      },
+      {
+        "a": "Yes, if the first row contains data rather than headers, turn off First row is header. The output becomes an array of arrays instead of an array of objects.",
+        "q": "Can I convert a CSV without a header row?"
+      },
+      {
+        "a": "Turn on Detect types. Plain numbers become JSON numbers, true/false become booleans, and empty cells become null. Codes with leading zeros like 00123 stay as strings only if you leave detection off; with it on, they become numbers, so keep it off for such data.",
+        "q": "How do I keep numbers as numbers?"
+      },
+      {
+        "a": "Quoted fields follow the standard rules: double quotes inside are escaped as two quotes, and line breaks inside quoted fields are preserved as \\n in the JSON strings.",
+        "q": "How are quoted fields with line breaks handled?"
+      },
+      {
+        "a": "Paste it into the box instead. The browser clipboard handles very large text better than most textarea limits, and conversion of several megabytes works fine.",
+        "q": "My CSV is too large to paste comfortably. Any tip?"
+      }
+    ],
+    "formula": "JSON = [ { header1: value, header2: value } for each data row ]",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your CSV, upload a .csv file, or press Sample.",
+      "Leave the delimiter on Auto or pick it manually.",
+      "Keep First row is header on if your CSV has column names.",
+      "Optionally turn on Detect types for real numbers and booleans.",
+      "Press Download to save data.json, or Copy to paste it into your code."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Converts each CSV row into a JSON object using the first row as property names.",
+      "Properly handles quoted fields, escaped quotes and line breaks inside quotes.",
+      "Blank rows are skipped and short rows are padded automatically.",
+      "Empty header cells are renamed to column1, column2 and so on.",
+      "Optional type detection converts numbers, booleans and empty cells to real JSON values."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "csv to json online, convert csv to json, csv json converter free, spreadsheet to json",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "delimAuto": "Auto-detect",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "Delimiter",
+      "download": "Download JSON",
+      "firstRowHeader": "First row is header",
+      "inputLabel": "CSV input",
+      "inputPh": "Paste CSV here...",
+      "outputHeading": "JSON output",
+      "pretty": "Pretty print (indented)",
+      "resultFields": "Fields per record",
+      "resultRecords": "Records",
+      "sample": "Load sample",
+      "typedValues": "Detect types (numbers, booleans)",
+      "uploadCsv": "Upload CSV"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Flat structure only; nested objects are not created from CSV.",
+      "Duplicate header names overwrite earlier values, so rename them first.",
+      "With type detection on, codes like 00123 become the number 123.",
+      "Very large inputs (tens of MB) can make the browser tab sluggish."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert CSV to JSON online free. Paste or upload CSV and get a JSON array of objects with proper quoting, optional type detection, pretty or compact output.",
+    "metaTitle": "CSV to JSON Online Free - Convert CSV to JSON Array | JaurTools",
+    "name": "CSV to JSON",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste or upload a CSV and get a JSON array of objects back. The first row becomes the property names, quoted fields are parsed correctly, and optional type detection turns numbers and booleans into real JSON values. Download the result as data.json or copy it straight into your code.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "CSV to JSON results",
+    "tagline": "Turn spreadsheet data into JSON arrays in one click.",
+    "workedExample": "Input CSV:\nname,age,city\nAarav Sharma,25,Mumbai\nPriya Verma,30,Delhi\n\nWith First row is header on and Detect types on, the output is:\n[\n  { \"name\": \"Aarav Sharma\", \"age\": 25, \"city\": \"Mumbai\" },\n  { \"name\": \"Priya Verma\", \"age\": 30, \"city\": \"Delhi\" }\n]\n\n2 records, 3 fields each. Note age is the number 25, not the string \"25\".",
+    "workedExampleHeading": "Worked example"
+  }
+}

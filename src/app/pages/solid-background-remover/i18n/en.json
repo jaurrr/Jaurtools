@@ -1,0 +1,104 @@
+{
+  "solid-background-remover": {
+    "benefits": [
+      "Turn a solid-background photo into a transparent PNG for logos, stickers, and thumbnails.",
+      "Click the preview to sample the exact background color — no guessing hex codes.",
+      "Feather control softens edges so cutouts look natural, not jagged.",
+      "Runs fully offline; your photos never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the photo, pick the background color (or click the preview to sample it), choose flood-fill or chroma-key mode, adjust tolerance, and press Download. The background becomes transparent or your chosen color.",
+        "q": "How do I remove a photo background?"
+      },
+      {
+        "a": "Flood-fill starts from the image edges and removes only connected background areas — best when the subject touches no border in the background color. Chroma-key removes the color everywhere, including inside the subject.",
+        "q": "Flood-fill or chroma-key — which mode?"
+      },
+      {
+        "a": "Click directly on the background in the preview. The tool reads that exact pixel's color and sets it as the target.",
+        "q": "How do I pick the exact background color?"
+      },
+      {
+        "a": "Yes. Choose White or a custom color instead of Transparent, and the removed area is filled with it on download.",
+        "q": "Can I replace the background with a color instead?"
+      },
+      {
+        "a": "Honestly: it works on solid, even backgrounds (studio backdrops, green screens, white product shots). Busy or gradient backgrounds give messy results — that is a hard limitation of color-keying.",
+        "q": "Will it work on any photo?"
+      },
+      {
+        "a": "No. Every pixel is processed with JavaScript in your browser; the photo is never uploaded.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "dist = √((r−tr)² + (g−tg)² + (b−tb)²)\nremove pixel if dist ≤ tolerance × 2   (tolerance 0–100 → 0–200 units)\nfeather: alpha ramps from 0 to 1 across the feather band",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the photo with a solid-color background.",
+      "Click the background in the preview to sample its exact color, or set it with the color picker.",
+      "Choose flood-fill (edges inward) or chroma-key (everywhere) mode.",
+      "Adjust tolerance until the background disappears without eating the subject; add feather to soften edges.",
+      "Pick transparent, white, or a custom replacement background, then Download."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Color-keying removes pixels whose color is within a tolerance distance of your target color.",
+      "Flood-fill mode grows the removal region inward from the image borders.",
+      "Tolerance maps 0–100 to a color distance of 0–200 (max possible distance is about 442).",
+      "Feather creates a soft alpha ramp at the boundary instead of a hard edge.",
+      "The removed-percentage readout tells you exactly how much of the image was keyed out."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keyModes": {
+      "chroma": "Chroma key (everywhere)",
+      "flood": "Flood fill (from edges)"
+    },
+    "keywords": "remove background, transparent background, chroma key online, green screen remover, background eraser, cut out image",
+    "labels": {
+      "background": "Replacement background",
+      "bgCustom": "Custom color",
+      "bgTransparent": "Transparent",
+      "bgWhite": "White",
+      "copied": "Copied!",
+      "download": "Download result",
+      "feather": "Edge feather",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "keyMode": "Removal mode",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "pickHint": "Tip: click the background in the preview to sample its exact color.",
+      "pickOne": "Choose an image above to remove its background.",
+      "preview": "Background removal preview (click to sample color)",
+      "removedPct": "Background removed",
+      "targetColor": "Background color to remove",
+      "tolerance": "Color tolerance",
+      "upload": "Photo with a solid-color background"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Works only on solid, even-colored backgrounds — not on busy, textured, or gradient scenes.",
+      "Fine hair, fur, and semi-transparent edges cannot be separated cleanly by color.",
+      "Anti-aliased edges may leave a faint halo of the old background color.",
+      "This is color-keying, not AI segmentation: it cannot understand what the subject is."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Key out solid-color backgrounds to transparency — click to sample the exact color, tune tolerance. Free online, no signup.",
+    "metaTitle": "Solid Background Remover - Key Out Solid Backgrounds | JaurTools",
+    "name": "Solid Background Remover",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo with a solid-color background, click the preview to sample that color, and tune tolerance and feather. The tool keys the background out to transparency (or a replacement color) using flood-fill or chroma-key — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Background removal results",
+    "tagline": "Click a color, it's gone.",
+    "workedExample": "Target color pure green #00FF00 = (0, 255, 0), pixel (10, 240, 10), tolerance 15 (→ 30 distance units):\ndist = √(10² + 15² + 10²) = √425 ≈ 20.6\n20.6 ≤ 30, so the pixel is removed (alpha → 0).\nA subject pixel (200, 50, 60): dist = √(200² + 205² + 60²) ≈ 292.6 > 30, so it is kept fully opaque.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "tap-tempo": {
+    "assumptionNote": "Tempo is measured from your taps only - it assumes you tap steadily on the beat. A pause longer than 2.5 seconds resets the measurement, and the metronome click is a simple synthesized tick, not a studio click track.",
+    "benefits": [
+      "Find the exact tempo of any song in seconds - just tap along.",
+      "Spacebar tapping works too, so you can tap without looking at the screen.",
+      "Built-in metronome plays your tapped tempo back for practice.",
+      "Milliseconds-per-beat readout helps you set delays and DAW tempos precisely."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "BPM (beats per minute) counts how many beats fit in one minute. 60 BPM is one beat per second, 120 BPM is two beats per second. Most pop songs sit between 90 and 130 BPM; ballads are slower, dance tracks faster.",
+        "q": "What is BPM?"
+      },
+      {
+        "a": "Tap on the beat - usually where you would clap or nod your head. Tap at least 4-6 times; more taps give a steadier average. The tool uses your last 8 intervals, so early wobbly taps stop affecting the result.",
+        "q": "How do I tap accurately?"
+      },
+      {
+        "a": "Tap the big button with your finger, or press the spacebar - both work. On desktop, the spacebar is easiest because you can keep your eyes on the music. Each press counts as one beat.",
+        "q": "Can I tap with the keyboard?"
+      },
+      {
+        "a": "Yes - toggle the metronome on and it clicks at your tapped tempo, with a flashing display on each beat. It is perfect for checking whether a tempo feels right before you commit to it.",
+        "q": "Does it have a metronome?"
+      },
+      {
+        "a": "60,000 divided by the BPM: at 120 BPM each beat lasts 500 ms. Producers use this to set delay times - a quarter-note delay at 120 BPM is 500 ms, an eighth note is 250 ms.",
+        "q": "How do I convert BPM to milliseconds?"
+      },
+      {
+        "a": "No - and that is normal. Human tapping varies by a few BPM even for steady tappers. The tool averages your last 8 taps to smooth this out. If the number jumps wildly, slow down and tap more deliberately on the strongest beats.",
+        "q": "Why does my BPM keep changing slightly?"
+      }
+    ],
+    "formula": "BPM = 60,000 / average tap interval (ms)\nMilliseconds per beat = 60,000 / BPM\nExample: taps every 500 ms: BPM = 60,000 / 500 = 120.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Tap the big button (or press the spacebar) in time with the music - on every beat.",
+      "Tap at least 4 times; 8 or more taps give the steadiest reading.",
+      "Read your BPM. Toggle the metronome to hear it played back.",
+      "Tap Reset to start a fresh measurement.",
+      "Use the ms-per-beat value to set delay times or DAW tempos."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "BPM = beats per minute: 60 BPM is one beat per second, 120 BPM is two per second.",
+      "The tool averages your last 8 tap intervals for a stable reading.",
+      "A gap of more than 2.5 seconds between taps resets the measurement.",
+      "Milliseconds per beat = 60,000 / BPM: at 120 BPM, each beat is 500 ms.",
+      "Most pop songs fall between 90 and 130 BPM.",
+      "Tapping on the strongest beats (kick drum, downbeats) gives the steadiest result."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "tap tempo, BPM tap, tempo finder, beats per minute calculator, online metronome",
+    "labels": {
+      "bpmResult": "Measured tempo",
+      "bpmUnit": "BPM",
+      "metronomeLabel": "Metronome at tapped tempo",
+      "msLabel": "Milliseconds per beat",
+      "msUnit": "ms",
+      "resetLabel": "Reset",
+      "tapHint": "Tip: you can also tap the spacebar.",
+      "tapLabel": "Tap",
+      "tapsLabel": "Taps counted"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Accuracy depends on your tapping steadiness - shaky tapping gives shaky BPM.",
+      "It measures the tempo you tap, not the song's true tempo; tapping half-time or double-time is common.",
+      "The metronome is a simple click, not an accented multi-beat pattern.",
+      "Only the last 12 taps are kept; very long tapping sessions do not improve the average further."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free tap tempo: tap along with any song to measure its BPM instantly. Spacebar support, built-in metronome, and ms-per-beat readout. No sign-up.",
+    "metaTitle": "Tap Tempo - Find Any Song's BPM | JaurTools",
+    "name": "Tap Tempo",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Tap the big button (or the spacebar) on every beat - after 4 taps you get a live BPM reading that steadies as you keep tapping. Four taps 500 ms apart measure exactly 120 BPM, since BPM = 60,000 / average interval. Toggle the metronome to hear your tempo played back with a flash on each beat, and use the ms-per-beat readout to set delay times in your DAW.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Tempo results",
+    "tagline": "Tap along with any song to measure its BPM - with metronome and ms-per-beat readout.",
+    "workedExample": "Finding a song's tempo:\n1. The song plays. You tap on each kick-drum hit: tap... tap... tap... tap...\n2. Your tap times: 0, 512, 1005, 1518 ms. Intervals: 512, 493, 513 ms.\n3. Average interval = (512 + 493 + 513) / 3 = 506 ms.\n4. BPM = 60,000 / 506 = 118.6 BPM.\n5. Keep tapping: after 8 taps the reading settles at 118.8 BPM.\n6. ms per beat = 60,000 / 118.8 = 505 ms - set your delay to 505 ms for quarter notes.",
+    "workedExampleHeading": "Worked example"
+  }
+}

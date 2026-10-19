@@ -1,0 +1,114 @@
+{
+  "photo-overlay": {
+    "benefits": [
+      "Add a logo, watermark, or second photo on top of a base image in seconds.",
+      "Six blend modes create double-exposure and lighting effects with no photo editor.",
+      "Opacity and scale sliders give precise control over how the layers combine.",
+      "Everything runs locally, so private photos are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "blends": {
+      "darken": "Darken",
+      "lighten": "Lighten",
+      "multiply": "Multiply",
+      "overlay": "Overlay",
+      "screen": "Screen",
+      "source-over": "Normal"
+    },
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Choose the background photo and the overlay image, then set opacity, blend mode, scale, and position. The preview updates live; press Download to save the fused PNG or JPG.",
+        "q": "How do I overlay one image on another?"
+      },
+      {
+        "a": "Normal places the overlay on top with your opacity setting. Multiply darkens where layers overlap, Screen brightens, Overlay adds contrast, Darken keeps the darker pixel, Lighten keeps the lighter one.",
+        "q": "What do the blend modes do?"
+      },
+      {
+        "a": "Yes — pick a PNG overlay with transparency (like a logo), and its transparent areas let the base image show through exactly as in a real editor.",
+        "q": "Can the overlay have a transparent background?"
+      },
+      {
+        "a": "The canvas keeps the base image's original dimensions, so no quality is lost. JPG output uses high quality (92%).",
+        "q": "Does overlaying reduce quality?"
+      },
+      {
+        "a": "Yes, the opacity slider goes from 0 (invisible overlay) to 100 (fully opaque). Values around 40–70 work best for watermark-style effects.",
+        "q": "Can I make the overlay semi-transparent?"
+      },
+      {
+        "a": "Your images never leave the device — blending is done pixel-by-pixel on an HTML canvas in your browser.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "scaled_w = overlay_w × (scale / 100)\nscaled_h = overlay_h × (scale / 100)\ncenter_x = (base_w − scaled_w) / 2,  center_y = (base_h − scaled_h) / 2\npixel_out = blend(base_pixel, overlay_pixel × opacity)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the background photo as the base image and the second photo as the overlay.",
+      "Set the overlay opacity (0–100%) and choose a blend mode such as Normal, Multiply, or Screen.",
+      "Adjust the overlay scale percentage and pick one of the nine position presets.",
+      "Watch the live preview and fine-tune until the fusion looks right.",
+      "Choose PNG or JPG and press Download to save the result."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The output always keeps the base image's width and height.",
+      "The overlay is scaled by your percentage, then placed at one of nine preset positions.",
+      "Opacity blends the two layers: 0% hides the overlay, 100% makes it fully opaque.",
+      "Blend modes change how overlapping pixels mix — Multiply for shadows, Screen for light, Overlay for contrast.",
+      "The preview re-renders instantly on every change; nothing is uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "overlay images, fuse two images, photo overlay, blend images, double exposure online, watermark photo",
+    "labels": {
+      "blendMode": "Blend mode",
+      "download": "Download fused image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "opacity": "Overlay opacity (%)",
+      "overlayScale": "Overlay scale (%)",
+      "overlaySize": "Overlay size",
+      "pickTwo": "Choose a base image and an overlay image to see the fusion.",
+      "position": "Overlay position",
+      "preview": "Overlay preview",
+      "uploadBase": "Base image (background)",
+      "uploadOverlay": "Overlay image (foreground)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The overlay keeps its aspect ratio — it cannot be stretched or rotated.",
+      "Fine edge blending (feathered masks) is not included; edges stay sharp.",
+      "Very large base images may render slowly on low-end phones.",
+      "EXIF metadata from the originals is not carried into the fused file."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Fuse a second image over a base photo with opacity, blend modes and positioning. Free, live preview.",
+    "metaTitle": "Photo Overlay - Blend Two Photos | JaurTools",
+    "name": "Photo Overlay",
+    "positions": {
+      "bc": "Bottom center",
+      "bl": "Bottom left",
+      "br": "Bottom right",
+      "c": "Center",
+      "cl": "Middle left",
+      "cr": "Middle right",
+      "tc": "Top center",
+      "tl": "Top left",
+      "tr": "Top right"
+    },
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a base photo and a second overlay image, then control the fusion with opacity, blend mode, scale, and position. The preview updates live and you can download the fused PNG or JPG — all processing stays in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Overlay results",
+    "tagline": "Two photos, one seamless blend.",
+    "workedExample": "Base photo 1200 × 800 px with a 400 × 400 px logo overlay at 50% scale, centered, opacity 60%:\nscaled size = 400 × 0.5 = 200 × 200 px\nx = (1200 − 200) / 2 = 500,  y = (800 − 200) / 2 = 300\nThe logo is drawn at position (500, 300) with 60% opacity in Normal blend mode, and the result downloads as a 1200 × 800 px image.",
+    "workedExampleHeading": "Worked example"
+  }
+}

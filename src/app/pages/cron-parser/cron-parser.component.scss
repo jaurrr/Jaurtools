@@ -1,0 +1,173 @@
+@import '../bmi-calculator/bmi-calculator.component.scss';
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+input[type='text'] {
+  min-block-size: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  min-inline-size: 0;
+}
+
+.grow {
+  flex: 1;
+}
+
+.code-box {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block-end: 1.25rem;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-block-size: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex: none;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.desc-text {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-block: 0 1rem;
+}
+
+.field-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  margin-block-end: 1rem;
+  font-size: 0.9375rem;
+
+  caption {
+    text-align: start;
+    font-weight: 700;
+    padding-block-end: 0.5rem;
+  }
+
+  th,
+  td {
+    border: 1px solid var(--border);
+    padding: 0.625rem 0.75rem;
+    text-align: start;
+    vertical-align: top;
+  }
+
+  thead th {
+    background: var(--bg);
+  }
+
+  .code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    white-space: nowrap;
+  }
+}
+
+.errors {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+
+  li {
+    color: #b91c1c;
+    font-weight: 600;
+  }
+}
+
+[data-theme='dark'] .errors li {
+  color: #fca5a5;
+}
+
+.runs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+
+  li {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.625rem 0.875rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9375rem;
+  }
+}
+
+.note.error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .note.error {
+  color: #fca5a5;
+}
+
+@media (max-width: 640px) {
+  .field-table thead {
+    display: none;
+  }
+
+  .field-table,
+  .field-table tbody {
+    display: block;
+  }
+
+  .field-table tr {
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    margin-block-end: 0.75rem;
+    overflow: hidden;
+  }
+
+  .field-table th[scope='row'] {
+    display: block;
+    border: none;
+    background: var(--bg);
+  }
+
+  .field-table td {
+    display: block;
+    border: none;
+    border-block-start: 1px solid var(--border);
+  }
+
+  .field-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--muted);
+    margin-block-end: 0.25rem;
+  }
+}

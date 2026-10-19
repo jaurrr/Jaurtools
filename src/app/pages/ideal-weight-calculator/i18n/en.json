@@ -1,0 +1,98 @@
+{
+  "ideal-weight-calculator": {
+    "assumptionNote": "These are reference ranges, not personal targets. Frame size, muscle and age shift your healthy weight, so use them as a guide and check with a professional for personal goals.",
+    "benefits": [
+      "Gives you a concrete target range instead of a vague 'lose some weight'.",
+      "Three classic formulas let you see the consensus rather than one opinion.",
+      "Drug dosing and anaesthesia use Devine, so the number matches clinical references.",
+      "Rechecking yearly keeps the target honest as your body changes."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Devine (1974) is the oldest and still used for drug dosing. Robinson (1983) adjusted the base weights. Miller (1983) fitted the formula to real population data. They usually agree within 2-3 kg.",
+        "q": "Which formula is most accurate?"
+      },
+      {
+        "a": "No. They are adult reference formulas. Children's healthy weight is judged on growth charts with a paediatrician.",
+        "q": "Do these work for children?"
+      },
+      {
+        "a": "Frame size, muscle mass and age all matter. A muscular person can be healthy above the range, and an older adult may be fine slightly below it.",
+        "q": "What if I am above the range but muscular?"
+      },
+      {
+        "a": "IBW came from 1959 life-insurance tables and was never meant as a beauty standard. Use it as a health reference, not an appearance goal.",
+        "q": "Is ideal weight the same as attractive weight?"
+      },
+      {
+        "a": "Because they were fitted to different datasets with different base weights. The 2-3 kg spread between them is the honest uncertainty of the whole idea.",
+        "q": "Why do the three formulas disagree?"
+      },
+      {
+        "a": "Compare with the BMI healthy range too: for most heights the formulas land inside the 18.5-24.9 BMI band. Use both together for a sanity check.",
+        "q": "Should I also check BMI?"
+      }
+    ],
+    "formula": "Devine (1974): male 50 + 2.3 x (inches over 5 ft); female 45.5 + 2.3 x (inches over 5 ft).\nRobinson (1983): male 52 + 1.9 x (inches over 5 ft); female 49 + 1.7 x (inches over 5 ft).\nMiller (1983): male 56.2 + 1.41 x (inches over 5 ft); female 53.1 + 1.36 x (inches over 5 ft).\nAll results in kg.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Male or Female.",
+      "Pick metric (cm) or imperial (ft/in) and enter your height.",
+      "Read your healthy weight from three classic formulas: Devine, Robinson and Miller.",
+      "Use the range they agree on as your reference band.",
+      "Compare with your BMI healthy range for a second opinion."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Ideal body weight (IBW) formulas date back to Devine's 1974 paper for drug dosing.",
+      "All three formulas add weight per inch above 5 feet (60 inches).",
+      "Women's formulas start about 4-5 kg lower than men's at the same height.",
+      "A 5'9\" man gets 70.7 kg (Devine), 69.1 kg (Robinson) and 68.9 kg (Miller).",
+      "The formulas usually sit inside the BMI healthy range of 18.5-24.9.",
+      "They describe a reference, not a prescription: frame and muscle shift real targets."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "healthy weight calculator, ideal body weight calculator, devine formula, robinson formula, ideal weight for height",
+    "labels": {
+      "devineResult": "Devine (drug dosing)",
+      "feet": "Feet",
+      "femaleOption": "Female",
+      "genderLabel": "Gender",
+      "heightLabel": "Height",
+      "imperialTab": "Imperial (ft / in)",
+      "inchUnit": "in",
+      "inches": "Inches",
+      "kgUnit": "kg",
+      "lbUnit": "lb",
+      "maleOption": "Male",
+      "metricTab": "Metric (cm)",
+      "millerResult": "Miller",
+      "robinsonResult": "Robinson",
+      "unitSystem": "Unit system"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Reference ranges, not personal prescriptions.",
+      "Cannot see frame size, muscle or fat distribution.",
+      "Based on old datasets that may not match every population.",
+      "Not for children or pregnancy."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Find your ideal body weight range with the Devine, Robinson, Miller and Hamwi formulas. Free, instant, metric and imperial.",
+    "metaTitle": "Ideal Weight Calculator - Find Your Healthy Weight Range | JaurTools",
+    "name": "Ideal Weight Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Healthy weight formulas add weight per inch above 5 feet. A 5'9\" man gets 70.7 kg by Devine, 69.1 kg by Robinson and 68.9 kg by Miller - a tight consensus around 69-71 kg. These are reference ranges, not personal prescriptions; frame size and muscle shift real targets.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your healthy weight results",
+    "tagline": "Your ideal weight range from trusted clinical formulas.",
+    "workedExample": "Male, 5'9\" (69 inches):\n1. Inches over 5 ft = 69 - 60 = 9.\n2. Devine: 50 + 2.3 x 9 = 50 + 20.7 = 70.7 kg.\n3. Robinson: 52 + 1.9 x 9 = 52 + 17.1 = 69.1 kg.\n4. Miller: 56.2 + 1.41 x 9 = 56.2 + 12.69 = 68.9 kg.\n5. Consensus band: about 68.9 to 70.7 kg.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

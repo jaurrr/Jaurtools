@@ -1,0 +1,88 @@
+{
+  "personal-loan-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Personal Loan Calculator",
+    "tagline": "Find the EMI, total interest, and total cost of any unsecured personal loan.",
+    "metaTitle": "Personal Loan Calculator - EMI & Interest | JaurTools",
+    "metaDescription": "Free personal loan calculator: find your EMI, total interest, and total repayment for any loan amount, rate, and tenure.",
+    "keywords": "personal loan calculator, personal loan emi calculator, unsecured loan calculator, loan emi calculator",
+    "resultsHeading": "Your personal loan results",
+    "quickAnswer": "EMI = P x r x (1 + r)^n / ((1 + r)^n - 1), with monthly rate r and n months. Example: a 200,000 loan at 11% for 3 years has an EMI of 6,547.74. You repay 235,719 in total, so the loan costs 35,719 in interest. Personal loans carry no collateral, which is exactly why their rates run higher than secured loans.",
+    "keyFacts": [
+      "A personal loan is unsecured: no collateral, so the lender charges a higher rate for the risk.",
+      "EMI stays fixed for the whole tenure on a fixed-rate personal loan.",
+      "Typical tenures run 1 to 5 years; longer tenures lower the EMI but raise total interest.",
+      "Processing fees of 1 to 3% and GST are usually added on top of the interest.",
+      "Prepayment or foreclosure charges may apply if you close the loan early.",
+      "Your credit score largely decides the rate you are offered."
+    ],
+    "howTo": [
+      "Enter the loan amount you need.",
+      "Enter the annual interest rate the lender quoted.",
+      "Enter the tenure in years.",
+      "Read your EMI, total interest, and total repayment instantly.",
+      "Try a shorter tenure to see how much interest you save."
+    ],
+    "formula": "EMI = P x r x (1 + r)^n / ((1 + r)^n - 1).\nP = loan amount, r = monthly rate (annual rate / 12), n = months.\nTotal interest = (EMI x n) - P.\nExample: 200,000 at 11% for 36 months: r = 0.009167, EMI = 6,547.74, total interest = 35,719.",
+    "workedExample": "Loan 200,000, annual rate 11%, tenure 3 years:\n1. Monthly rate: 0.11 / 12 = 0.009167; months = 36.\n2. EMI: 200,000 x 0.009167 x 1.009167^36 / (1.009167^36 - 1) = 6,547.74.\n3. Total paid: 6,547.74 x 36 = 235,719.\n4. Total interest: 235,719 - 200,000 = 35,719.\nShortening to 2 years would cut interest to about 23,389 with an EMI of 9,308.",
+    "benefits": [
+      "Shows the real cost of borrowing before you sign anything.",
+      "Helps you pick a tenure that balances EMI comfort with interest cost.",
+      "Instantly compares two lender offers with different rates and fees.",
+      "Private: your loan details never leave your browser."
+    ],
+    "limitations": [
+      "Ignores processing fees, GST, and insurance the lender may add.",
+      "Assumes a fixed rate and no missed or delayed payments.",
+      "Does not model prepayment charges or part-payment options.",
+      "Estimates only: the lender's sanction letter decides the final terms."
+    ],
+    "faqs": [
+      {
+        "q": "Why is the personal loan rate higher than a home loan rate?",
+        "a": "Because there is no collateral. If you default on a home loan, the lender can sell the house; on a personal loan it has no asset to recover, so it prices that risk into a higher interest rate."
+      },
+      {
+        "q": "Should I choose a longer tenure for a lower EMI?",
+        "a": "Only if you need the breathing room. A longer tenure always costs more total interest. A good rule: pick the shortest tenure whose EMI you can pay comfortably even in a bad month."
+      },
+      {
+        "q": "What is a good interest rate for a personal loan?",
+        "a": "It depends on your credit score and market. Strong scores often get 10 to 14%, average scores 14 to 18%, and weak scores higher. Compare the total interest across offers, not just the rate."
+      },
+      {
+        "q": "Does prepaying a personal loan save money?",
+        "a": "Yes, usually. Paying principal early cuts the balance that future interest is charged on. Check the prepayment or foreclosure charge first: if it exceeds the interest you would save, wait."
+      },
+      {
+        "q": "How does my credit score affect the loan?",
+        "a": "Lenders use it to price risk. A higher score means a lower offered rate and faster approval. Even a 2% lower rate on a large loan saves a meaningful amount, which is why protecting your score matters."
+      },
+      {
+        "q": "EMI vs total interest: which should I optimize?",
+        "a": "Both, in order: first make sure the EMI fits your monthly budget with margin, then minimize total interest by choosing the shortest comfortable tenure and the lowest rate you can get."
+      }
+    ],
+    "labels": {
+      "amount": "Loan amount",
+      "annualRate": "Annual interest rate (%)",
+      "years": "Tenure (years)",
+      "emi": "Monthly EMI",
+      "totalInterest": "Total interest",
+      "totalPaid": "Total repayment"
+    }
+  }
+}

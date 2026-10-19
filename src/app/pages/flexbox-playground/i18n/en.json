@@ -1,0 +1,90 @@
+{
+  "flexbox-playground": {
+    "assumptionNote": "The generated CSS uses plain class names (.container, .item-N); rename them to match your markup.",
+    "benefits": [
+      "See flex-direction, justify-content, and align-items change live — no guessing.",
+      "Click any box to override its align-self and flex-grow individually.",
+      "The generated CSS is clean and ready to paste into any stylesheet.",
+      "Gap slider replaces fiddly margin hacks with the modern gap property.",
+      "Works as a learning lab for the two-axis flexbox mental model."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "justify-content aligns items along the main axis (the flex-direction), while align-items aligns them along the cross axis. With flex-direction: row, justify-content moves items left-right and align-items moves them top-bottom.",
+        "q": "What is the difference between justify-content and align-items?"
+      },
+      {
+        "a": "Yes. Click any numbered box to select it, then set its align-self and flex-grow in the Selected item panel. The CSS output gains an .item-N rule with your overrides.",
+        "q": "Can I style one item differently?"
+      },
+      {
+        "a": "With flex-wrap: nowrap, items shrink to fit one line and may overflow. With wrap, extra items flow onto new lines. Try 8 items with nowrap versus wrap to feel the difference.",
+        "q": "What does flex-wrap change?"
+      },
+      {
+        "a": "flex-grow distributes leftover space proportionally. With two items at grow 1 and 2, the second gets twice the free space of the first. Set grow 0 to keep an item at its natural size.",
+        "q": "How does flex-grow work?"
+      },
+      {
+        "a": "space-between pushes the first item to the start and the last to the end; space-around gives each item equal space on both sides; space-evenly makes every gap — including the edges — identical.",
+        "q": "What is the difference between space-between, space-around, and space-evenly?"
+      },
+      {
+        "a": "Yes — copy the generated CSS, rename .container to your class, and add the item rule if you overrode one item. The output is plain CSS with no dependencies.",
+        "q": "Can I use the generated CSS in production?"
+      }
+    ],
+    "formula": ".container {\n  display: flex;\n  flex-direction: <row | column | ...>;\n  justify-content: <main-axis>;\n  align-items: <cross-axis>;\n  flex-wrap: <nowrap | wrap>;\n  gap: <N>px;\n}\n.item-N {\n  align-self: <override>;\n  flex-grow: <N>;\n}",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a flex-direction to set the main axis: row or column.",
+      "Choose justify-content for main-axis alignment and align-items for cross-axis.",
+      "Toggle flex-wrap and drag the gap slider.",
+      "Change the item count between 2 and 8.",
+      "Click a box to select it, override its align-self and flex-grow, then copy the CSS."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Flexbox lays out items along one main axis, with an optional cross axis.",
+      "flex-direction: row lays out left to right; column lays out top to bottom.",
+      "justify-content distributes free space along the main axis.",
+      "align-items positions items along the cross axis; stretch is the default.",
+      "gap sets spacing between items without margin hacks."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "flexbox playground, flexbox generator, css flex tester, flexbox visual guide, justify-content align-items",
+    "labels": {
+      "clickHint": "Click a numbered box to select it, then override it below.",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "gapLabel": "Gap",
+      "itemCountLabel": "Item count",
+      "itemLabel": "Item",
+      "selectedItemLabel": "Selected item"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only the most-used flexbox properties are covered — not order, flex-basis, or shrink nuances.",
+      "The preview boxes have fixed minimum sizes; real content sizes will differ.",
+      "align-self: baseline needs real text content to demonstrate properly.",
+      "Generated class names are generic; rename them for your project."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Experiment with CSS flexbox visually. Change direction, alignment, wrapping and gap, override individual items, and copy clean CSS instantly.",
+    "metaTitle": "Flexbox Playground – Free Visual CSS Flex Tester",
+    "name": "Flexbox Playground",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Flexbox is CSS's one-dimensional layout system: a container distributes its items along a main axis, with justify-content controlling main-axis alignment and align-items controlling the cross axis. This playground lets you flip every property live and copy the resulting CSS.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Flexbox preview",
+    "tagline": "Learn and test CSS flexbox visually, then copy the CSS.",
+    "workedExample": "Set flex-direction row, justify-content center, align-items center, flex-wrap wrap, gap 16 px, 4 items. Select item 3 with align-self flex-start and flex-grow 1.\n\nGenerated CSS:\n.container {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 16px;\n}\n\n.item-3 {\n  align-self: flex-start;\n  flex-grow: 1;\n}\n\nItems 1, 2, and 4 stay centered while item 3 stretches to the top and grows to take free space.",
+    "workedExampleHeading": "Worked example"
+  }
+}

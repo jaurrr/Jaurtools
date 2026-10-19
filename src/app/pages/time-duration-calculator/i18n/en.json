@@ -1,0 +1,107 @@
+{
+  "time-duration-calculator": {
+    "benefits": [
+      "Timesheets and freelance billing become one-tap math instead of mental base-60 arithmetic.",
+      "Shift workers can check night-shift lengths that cross midnight without confusion.",
+      "Video editors and cooks can add segment times precisely.",
+      "No sign-up, no app install — faster than opening a spreadsheet."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Date & Time",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Enter the start and end time in Difference mode. The tool subtracts in minutes, converts to hours and minutes, and also shows total minutes and seconds.",
+        "q": "How do I calculate hours between two times?"
+      },
+      {
+        "a": "That is handled automatically. If the end time is earlier than the start time, the tool treats the end as the next day — 22:00 to 06:00 gives 8 hours — and shows a note saying so.",
+        "q": "What if my shift crosses midnight?"
+      },
+      {
+        "a": "Yes. Switch to Add/Subtract mode, choose the minus operation, and enter the duration. The result shows the earlier clock time and any day rollback.",
+        "q": "Can I subtract time instead of adding?"
+      },
+      {
+        "a": "Because time is base-60. One and a half hours is 90 minutes, which is 1 hour plus 30 minutes — the decimal 1.5 and the clock reading 1:30 are the same amount.",
+        "q": "Why does 1.5 hours show as 1 h 30 m?"
+      },
+      {
+        "a": "No — it works on plain clock readings. If you need to convert a time between zones, use our time zone converter first, then do the arithmetic here.",
+        "q": "Does it handle timezones?"
+      },
+      {
+        "a": "No. Every calculation happens in your browser's memory. Closing the tab erases everything.",
+        "q": "Is my data stored anywhere?"
+      }
+    ],
+    "formula": "Difference:\nminutes = (endH x 60 + endM) - (startH x 60 + startM)\nif minutes < 0: minutes += 1440 (end is next day)\nhours = floor(minutes / 60), mins = minutes mod 60\n\nAdd / Subtract:\ntotalSeconds = startSeconds ± (h x 3600 + m x 60 + s)\ndayOffset = floor(totalSeconds / 86400)\nclockTime = totalSeconds mod 86400 (wrapped into 0–86399)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick Difference to measure between two times, or Add/Subtract to shift one time.",
+      "Enter the times with the time pickers (24-hour clock).",
+      "For Add/Subtract, choose + or − and type the hours, minutes, and seconds.",
+      "Read the result instantly — duration, totals, and any day rollover are all shown.",
+      "Use the totals for timesheets; copy the numbers straight into your records."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Time arithmetic is base-60, not base-100: 90 minutes is 1 hour 30 minutes, never 1.9 hours.",
+      "If the end time is earlier than the start time, the tool assumes the end falls on the next day — 22:00 to 06:00 is an 8-hour night shift.",
+      "Adding time can roll past midnight; the tool shows the resulting clock time plus how many days forward or back you landed.",
+      "All results also appear as total minutes and total seconds, which payroll and billing systems usually want.",
+      "Times are plain clock readings — the tool does not apply timezones or daylight saving."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "time duration calculator, hours between two times, time difference calculator, add hours to time",
+    "labels": {
+      "addOp": "+ Add",
+      "dayOffset": "Day change",
+      "daysWord": "days",
+      "duration": "Duration",
+      "durationToAdd": "Time to add / subtract",
+      "endTime": "End time",
+      "hours": "Hours",
+      "hoursShort": "h",
+      "invalidTime": "Please enter valid times.",
+      "minusOneDay": "−1 day",
+      "minutes": "Minutes",
+      "minutesShort": "m",
+      "mode": "Calculation mode",
+      "modeAdd": "Add / Subtract",
+      "modeDifference": "Difference",
+      "nextDayNote": "End time is earlier than start time, so it is counted on the next day.",
+      "operation": "Operation",
+      "plusOneDay": "+1 day",
+      "result": "Result",
+      "sameDay": "Same day",
+      "seconds": "Seconds",
+      "secondsShort": "s",
+      "startTime": "Start time",
+      "subOp": "− Subtract",
+      "totalMinutes": "Total minutes",
+      "totalSeconds": "Total seconds"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Works with clock times, not dates — it cannot span more than the day rollover it shows.",
+      "Does not account for timezones, daylight-saving transitions, or leap seconds.",
+      "Seconds are whole seconds; sub-second precision is not supported.",
+      "Estimates only — verify payroll-critical totals against your employer's system."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate the duration between two times or add/subtract hours, minutes and seconds from a start time. Free, instant, private — runs in your browser.",
+    "metaTitle": "Time Duration Calculator — Hours Between Two Times",
+    "name": "Time Duration Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Two modes: Difference tells you exactly how much time passes between a start and an end time — handy for shifts and billing. Add/Subtract takes a starting time and adds or removes any hours, minutes, and seconds, correctly rolling over midnight.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Time Duration Calculator results",
+    "tagline": "Find the exact time between two clock times, or add and subtract hours, minutes, and seconds from any starting time.",
+    "workedExample": "Difference: 09:30 → 17:45\nminutes = (17 x 60 + 45) - (9 x 60 + 30) = 1065 - 570 = 495\n495 minutes = 8 h 15 m = 29,700 seconds.\n\nAdd: 22:45 + 2 h 30 m\nstart = 22 x 3600 + 45 x 60 = 81,900 s; delta = 2 x 3600 + 30 x 60 = 9,000 s\ntotal = 90,900 s → 90,900 - 86,400 = 4,500 s = 01:15:00, day offset +1.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,206 @@
+<div class="tool-page fin-type-estate">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="ha-income">{{ t('labels.annualIncome') }}</label>
+        <div class="input-row">
+          <input id="ha-income" type="number" inputmode="decimal" min="0" max="50000000" step="1000"
+            [ngModel]="annualIncome()" (ngModelChange)="setAnnualIncome($event)" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ha-debts">{{ t('labels.monthlyDebts') }}</label>
+        <div class="input-row">
+          <input id="ha-debts" type="number" inputmode="decimal" min="0" max="1000000" step="10"
+            [ngModel]="monthlyDebts()" (ngModelChange)="setMonthlyDebts($event)" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ha-down">{{ t('labels.downPayment') }}</label>
+        <div class="input-row">
+          <input id="ha-down" type="number" inputmode="decimal" min="0" max="20000000" step="1000"
+            [ngModel]="downPayment()" (ngModelChange)="setDownPayment($event)" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ha-rate">{{ t('labels.annualRate') }}</label>
+        <div class="input-row fin-slider">
+          <input id="ha-rate" type="number" inputmode="decimal" min="0.5" max="15" step="0.125"
+            [ngModel]="annualRate()" (ngModelChange)="setAnnualRate($event)" />
+          <input type="range" min="0.5" max="12" step="0.125" [ngModel]="annualRate()"
+            (ngModelChange)="setAnnualRate($event)" [attr.aria-label]="t('labels.annualRate')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ha-term">{{ t('labels.termYears') }}</label>
+        <div class="input-row">
+          <input id="ha-term" type="number" inputmode="numeric" min="5" max="40" step="1"
+            [ngModel]="termYears()" (ngModelChange)="setTermYears($event)" />
+        </div>
+      </div>
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="shield-check" /> {{ t('labels.affordablePrice') }}</span>
+          <strong>{{ money().format(calc().price) }}</strong>
+          <small>{{ tp('hero.priceNote', { down: money().format(downPayment()) }) }}</small>
+        </div>
+        <div class="fin-hero-sub">
+          <div>
+            <span>{{ t('labels.maxPayment') }}</span>
+            <strong>{{ money().format(calc().maxPayment) }}</strong>
+          </div>
+          <div>
+            <span>{{ t('labels.maxLoan') }}</span>
+            <strong>{{ money().format(calc().maxLoan) }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="fin-gauge">
+        <div class="fin-gauge-track" role="img" [attr.aria-label]="tp('gauge.aria', { payment: money().format(calc().maxPayment), income: money().format(gauge().monthlyIncome) })">
+          <span class="fin-gauge-marker" [style.inset-inline-start.%]="gauge().pos"></span>
+        </div>
+        <div class="fin-gauge-labels">
+          <span>{{ money().format(0) }}</span>
+          <span>{{ money().format(gauge().half) }}</span>
+        </div>
+        <p class="fin-gauge-caption">{{ t('gauge.caption') }}</p>
+      </div>
+
+      <div class="fin-ref">
+        <h3>{{ t('budget.heading') }}</h3>
+        <ul class="fin-slabs">
+          <li>
+            <div class="fin-slab-top">
+              <span>{{ t('budget.housing') }}</span>
+              <strong>{{ money().format(gauge().capHousing) }}</strong>
+            </div>
+            <div class="fin-slab-bar" aria-hidden="true"><i [style.width.%]="gauge().housingWidth"></i></div>
+          </li>
+          <li>
+            <div class="fin-slab-top">
+              <span>{{ t('budget.debt') }}</span>
+              <strong>{{ money().format(gauge().capDebt) }}</strong>
+            </div>
+            <div class="fin-slab-bar" aria-hidden="true"><i [style.width.%]="gauge().debtWidth"></i></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { income: money().format(annualIncome()), debts: money().format(monthlyDebts()), payment: money().format(calc().maxPayment), price: money().format(calc().price) }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l2', { rule: bindingName() }) }}</span></li>
+        </ul>
+      </div>
+
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

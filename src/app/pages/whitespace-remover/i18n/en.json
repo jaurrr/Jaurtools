@@ -1,0 +1,97 @@
+{
+  "whitespace-remover": {
+    "benefits": [
+      "Cleans pasted text from PDFs and websites in one click.",
+      "Collapsing double spaces fixes the most common formatting annoyance.",
+      "Removing empty lines compacts lists without touching the words.",
+      "The character-removed counter proves exactly what changed.",
+      "Six independent toggles handle every whitespace mess precisely."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Switch on 'Remove line breaks' and every line break becomes a space, merging everything into one flowing paragraph. Combine it with 'Collapse multiple spaces' for a clean result.",
+        "q": "How do I turn many lines into one paragraph?"
+      },
+      {
+        "a": "Switch on 'Remove ALL whitespace'. Every space, tab, and line break disappears. Use it carefully - words will run together with no separators at all.",
+        "q": "How do I delete every space in my text?"
+      },
+      {
+        "a": "Yes. Each toggle is independent: trim lines, collapse spaces, remove empty lines, remove tabs, remove line breaks, and remove-all. Mix them freely and watch the result update live.",
+        "q": "Can I combine the options?"
+      },
+      {
+        "a": "Tabs are converted to a single space first, then the other rules apply. So 'Remove tabs' plus 'Collapse multiple spaces' turns tab-indented text into clean single-spaced text.",
+        "q": "What happens to tabs?"
+      },
+      {
+        "a": "No. It only touches whitespace: spaces, tabs, and line breaks. Your words, numbers, and punctuation are never altered.",
+        "q": "Will it change my actual words?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser. Nothing you paste is uploaded, stored, or seen by anyone else.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "Options apply in this order:\n\n1. Remove ALL whitespace: text with every \\s removed -> done.\n2. Remove tabs: each tab becomes one space.\n3. Remove line breaks: every run of line breaks becomes one space.\n4. Collapse multiple spaces: runs of 2+ spaces become one space.\n5. Trim each line: leading and trailing spaces removed per line.\n6. Remove empty lines: blank lines dropped.\n\ncharacters removed = input length - output length\n\nExample (trim + collapse + remove-empty):\n  input: '  hello   world  \\n\\nfoo  ' (24 chars)\n  1. collapse: ' hello world \\n\\nfoo ' (19 chars)\n  2. trim lines: 'hello world\\n\\nfoo' (16 chars)\n  3. remove empty: 'hello world\\nfoo' (15 chars)\n  removed: 24 - 15 = 9 characters",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your messy text into the input box.",
+      "Switch on the cleanups you need: trim lines, collapse spaces, remove empty lines, and more.",
+      "Watch the result and the removed-character counter update live.",
+      "Copy the cleaned text or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Whitespace means spaces, tabs, and line breaks - the invisible characters.",
+      "Trimming removes leading and trailing spaces from every line.",
+      "Collapsing turns runs of multiple spaces into a single space.",
+      "Removing empty lines deletes blank lines but keeps the rest.",
+      "Removing line breaks merges everything into one flowing paragraph.",
+      "Remove-all deletes every whitespace character, joining all words together."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "whitespace remover, remove extra spaces, clean text, remove blank lines, strip whitespace, text cleaner",
+    "labels": {
+      "clearButton": "Clear",
+      "collapseSpacesLabel": "Collapse multiple spaces",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "inputLabel": "Messy text",
+      "inputPlaceholder": "Paste text with extra spaces here...",
+      "outCharsLabel": "Characters left",
+      "outputLabel": "Cleaned text",
+      "removeAllLabel": "Remove ALL whitespace",
+      "removeEmptyLinesLabel": "Remove empty lines",
+      "removeLineBreaksLabel": "Remove line breaks",
+      "removeTabsLabel": "Remove tabs",
+      "removedLabel": "Characters removed",
+      "trimLinesLabel": "Trim each line"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only touches whitespace - it cannot fix spelling, grammar, or wrong words.",
+      "Remove-all joins words together with no separators; use it only when that is intended.",
+      "It cannot distinguish meaningful indentation (like code) from accidental spaces.",
+      "Non-breaking spaces and other exotic whitespace are treated as regular spaces by some steps."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free whitespace remover: strip extra spaces, tabs, blank lines, and line breaks from text. Six cleanup options, live counter. Private.",
+    "metaTitle": "Whitespace Remover - Clean Extra Spaces | JaurTools",
+    "name": "Whitespace Remover",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste messy text and strip the junk whitespace with six independent toggles: trim each line, collapse multiple spaces into one, remove empty lines, remove tabs, remove line breaks (merging everything into one paragraph), or remove ALL whitespace entirely. The result updates live with a counter showing exactly how many characters were removed. For example, '  hello   world  ' plus a blank line plus 'foo  ' becomes 'hello world' and 'foo' on two clean lines, with 9 characters removed.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Whitespace Remover results",
+    "tagline": "Strip extra spaces, line breaks, and junk characters from text.",
+    "workedExample": "Input (showing spaces as dots for clarity):\n..hello...world..\n\nfoo..\n\nOptions: trim lines ON, collapse spaces ON, remove empty lines ON.\n\nStep by step:\n1. Input length: 17 + 2 (line breaks) + 5 = 24 characters.\n2. Collapse multiple spaces: '..hello...world..' -> '.hello.world.'\n   Result: '.hello.world.\\n\\nfoo.' (19 chars).\n3. Trim each line: '.hello.world.' -> 'hello.world', 'foo.' -> 'foo'.\n   Result: 'hello world\\n\\nfoo' (16 chars).\n4. Remove empty lines: the blank line is dropped.\n   Result: 'hello world\\nfoo' (15 chars).\n\nCharacters removed: 24 - 15 = 9.\nFinal output:\nhello world\nfoo",
+    "workedExampleHeading": "Worked example"
+  }
+}

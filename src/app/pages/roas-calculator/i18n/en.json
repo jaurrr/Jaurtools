@@ -1,0 +1,96 @@
+{
+  "roas-calculator": {
+    "assumptionNote": "Uses only the two numbers you enter. Product costs, shipping, taxes, and staff are not included, so gross profit here is revenue minus ad spend.",
+    "benefits": [
+      "Instantly see which campaigns deserve more budget and which should be paused.",
+      "The profit-per-unit figure tells you the real margin each unit of ad spend adds.",
+      "No spreadsheets or logins - just two numbers and an answer in seconds.",
+      "Works for any currency and any ad platform: Google, Meta, TikTok, or offline ads."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on your margins and industry. As a rough rule, 2x is the minimum most businesses accept, 4x is strong, and anything above that is excellent. A business with 90% margins can thrive at 1.5x, while one with 20% margins needs much more.",
+        "q": "What is a good ROAS?"
+      },
+      {
+        "a": "ROAS divides revenue by ad spend only. ROI divides profit by total investment, including every cost. A campaign can have a great ROAS and still lose money overall if the product costs and overhead are high.",
+        "q": "What is the difference between ROAS and ROI?"
+      },
+      {
+        "a": "ROAS itself cannot be negative because revenue and spend are both zero or positive. The closest concept is a ROAS below 1.0, which means you are losing money on the ads.",
+        "q": "Can ROAS be negative?"
+      },
+      {
+        "a": "The standard definition uses gross revenue. If you want a stricter view, subtract your cost of goods sold from revenue first and you get something closer to a profit-based ROAS, which many advertisers call POAS.",
+        "q": "Should I use revenue or profit in the ROAS formula?"
+      },
+      {
+        "a": "Ad auctions, seasonality, creative fatigue, and audience saturation all move ROAS. Compare the same campaign to its own history rather than to other advertisers, and give changes at least a week to settle.",
+        "q": "Why does my ROAS change over time?"
+      },
+      {
+        "a": "Only if the ads serve another purpose, like acquiring customers who buy again later. On the ads alone, 1.0 means break-even before any other cost, so it is a loss in practice.",
+        "q": "Is a ROAS of 1.0 acceptable?"
+      }
+    ],
+    "formula": "ROAS = Revenue / Ad spend\nROAS % = (Revenue / Ad spend) x 100\nGross profit = Revenue - Ad spend\nProfit per unit of spend = (Revenue - Ad spend) / Ad spend\nExample: 2,500 / 500 = 5.0 -> 500%.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your total ad spend for the campaign or period you are measuring.",
+      "Enter the total revenue that ad spend generated. Use the same currency for both.",
+      "Your ROAS, ROAS percentage, gross profit, and profit per unit of spend appear instantly.",
+      "Check the verdict: aim to move campaigns from weak toward excellent before scaling the budget."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "ROAS (Return on Ad Spend) = revenue generated / advertising cost.",
+      "A ROAS of 1.0 is break-even on ad spend. Below 1.0 loses money, above 1.0 makes money.",
+      "ROAS is not the same as ROI. ROI includes all costs; ROAS only looks at the ad cost.",
+      "Good ROAS benchmarks vary wildly: 2x may be excellent in competitive retail and weak in digital products.",
+      "ROAS ignores product cost, shipping, taxes, and salaries - it only judges the ads, not the business.",
+      "Track ROAS per campaign and per channel, not just account-wide, to find what actually works."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "roas calculator, return on ad spend, advertising roi calculator, ad spend roi, marketing roi calculator",
+    "labels": {
+      "adSpend": "Ad spend",
+      "grossProfit": "Gross profit",
+      "profitPerUnit": "Profit per unit of spend",
+      "revenue": "Revenue",
+      "roas": "ROAS",
+      "roasPercent": "ROAS (%)",
+      "verdict": "Verdict"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ignores product costs, shipping, taxes, and overhead - a high ROAS can still mean a thin business margin.",
+      "Revenue attribution is often imperfect, especially across multiple touchpoints.",
+      "Estimates only; not financial or marketing advice. Test small before scaling spend.",
+      "Short measurement windows can mislead: returns may arrive weeks after the click."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free ROAS calculator: enter ad spend and revenue to get your return on ad spend, gross profit, and performance verdict. Instant, private, no sign-up.",
+    "metaTitle": "ROAS Calculator - Return on Ad Spend Checker | JaurTools",
+    "name": "ROAS Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "ROAS = revenue divided by ad spend. Spend 500 and earn 2,500, and your ROAS is 5.0, or 500% - every unit of spend returns five. ROAS above 1 means the campaign earns more than it costs; below 1 means it loses money. This calculator also shows gross profit and profit per unit of spend.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your ROAS results",
+    "tagline": "Find out exactly how much revenue every unit of ad spend returns.",
+    "verdicts": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "loss": "Losing money",
+      "na": "Not available",
+      "weak": "Weak"
+    },
+    "workedExample": "Ad spend 500, revenue 2,500:\n1. ROAS = 2,500 / 500 = 5.0.\n2. ROAS % = 5.0 x 100 = 500%.\n3. Gross profit = 2,500 - 500 = 2,000.\n4. Profit per unit of spend = 2,000 / 500 = 4.0.\n5. Verdict: 5.0 is above 4.0, so this campaign rates Excellent.",
+    "workedExampleHeading": "Worked example"
+  }
+}

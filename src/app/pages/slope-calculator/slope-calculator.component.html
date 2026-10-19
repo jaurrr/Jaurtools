@@ -1,0 +1,164 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="point-grid">
+        <div class="field">
+          <label for="sl-x1">{{ t('labels.x1') }}</label>
+          <input id="sl-x1" type="number" inputmode="decimal" step="any"
+            [ngModel]="x1()" (ngModelChange)="setX1($event)" />
+        </div>
+        <div class="field">
+          <label for="sl-y1">{{ t('labels.y1') }}</label>
+          <input id="sl-y1" type="number" inputmode="decimal" step="any"
+            [ngModel]="y1()" (ngModelChange)="setY1($event)" />
+        </div>
+        <div class="field">
+          <label for="sl-x2">{{ t('labels.x2') }}</label>
+          <input id="sl-x2" type="number" inputmode="decimal" step="any"
+            [ngModel]="x2()" (ngModelChange)="setX2($event)" />
+        </div>
+        <div class="field">
+          <label for="sl-y2">{{ t('labels.y2') }}</label>
+          <input id="sl-y2" type="number" inputmode="decimal" step="any"
+            [ngModel]="y2()" (ngModelChange)="setY2($event)" />
+        </div>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="ruler" /> {{ t('labels.slope') }}</span>
+          <strong>
+            @if (isVertical()) {
+              {{ t('labels.undefined') }}
+            } @else {
+              {{ fmt(slope()) }}
+            }
+          </strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.equation') }}</span>
+          <strong class="eqn">{{ equation() }}</strong>
+        </div>
+        @if (!isVertical()) {
+          <div class="result-row">
+            <span>{{ t('labels.yIntercept') }}</span>
+            <strong>{{ fmt(yIntercept()) }}</strong>
+          </div>
+        }
+        <div class="result-row">
+          <span>{{ t('labels.distance') }}</span>
+          <strong>{{ fmt(distance()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.midpoint') }}</span>
+          <strong>({{ fmt(midpoint().x) }}, {{ fmt(midpoint().y) }})</strong>
+        </div>
+        @if (!isPoint()) {
+          <div class="result-row">
+            <span>{{ t('labels.angle') }}</span>
+            <strong>{{ angleDeg().toFixed(2) }}°</strong>
+          </div>
+        }
+      </div>
+
+      @if (isVertical() && !isPoint()) {
+        <p class="note">{{ t('labels.verticalNote') }}</p>
+      }
+      @if (isPoint()) {
+        <p class="note">{{ t('labels.pointNote') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+{
+  "search": {
+    "allTools": "عرض جميع الأدوات",
+    "category": "الفئة",
+    "clearFilter": "مسح التصفية",
+    "emptyHint": "جرّب كلمة مختلفة، أو تصفح الفئات في الصفحة الرئيسية.",
+    "emptyTitle": "لم يتم العثور على أدوات",
+    "heading": "البحث عن الأدوات",
+    "metaDescription": "ابحث في جميع حاسبات ومحوّلات ومولّدات JaurTools المجانية.",
+    "metaTitle": "البحث عن الأدوات | JaurTools",
+    "resultsFor": "نتيجة",
+    "searchLabel": "ابحث عن الأدوات",
+    "searchPlaceholder": "اكتب للبحث…",
+    "clearLetter": "مسح فلتر الحرف",
+    "letter": "حرف"
+  }
+}

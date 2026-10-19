@@ -1,0 +1,166 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.modeLabel')">
+        <button type="button" [class.active]="mode() === 'wake'" (click)="setMode('wake')">
+          {{ t('labels.wakeTab') }}
+        </button>
+        <button type="button" [class.active]="mode() === 'bed'" (click)="setMode('bed')">
+          {{ t('labels.bedTab') }}
+        </button>
+      </div>
+
+      @if (mode() === 'wake') {
+        <div class="field">
+          <label for="sc-wake">{{ t('labels.wakeTimeLabel') }}</label>
+          <input id="sc-wake" type="time" [ngModel]="wakeTime()" (ngModelChange)="setWakeTime($event)" />
+        </div>
+      } @else {
+        <div class="field">
+          <label for="sc-bed">{{ t('labels.bedTimeLabel') }}</label>
+          <input id="sc-bed" type="time" [ngModel]="bedTime()" (ngModelChange)="setBedTime($event)" />
+        </div>
+      }
+
+      @if (pickedOption()) {
+        <div class="calc-night" aria-live="polite">
+          <span class="calc-hero-label" style="color: #c4b5fd">
+            <app-icon name="moon" />
+            {{ mode() === 'wake' ? t('labels.bedAtLabel') : t('labels.wakeAtLabel') }}
+          </span>
+          <div class="calc-night-num">{{ pickedOption()?.time }}</div>
+          <p class="calc-night-sub">
+            <strong>{{ pickedOption()?.cycles }} {{ t('labels.cyclesLabel') }}</strong>
+            · {{ pickedOption()?.sleepHrs }} {{ t('labels.hoursUnit') }} {{ t('labels.sleepWord') }}
+          </p>
+        </div>
+
+        <div class="calc-goals" role="group" [attr.aria-label]="t('labels.cyclesLabel')">
+          @for (o of options(); track o.cycles) {
+            <button
+              type="button"
+              class="calc-goal"
+              [class.on]="picked() === o.cycles"
+              (click)="setPicked(o.cycles)"
+              [attr.aria-pressed]="picked() === o.cycles"
+            >
+              <app-icon name="moon" /> {{ o.cycles }} {{ t('labels.cyclesShort') }} — {{ o.time }}
+            </button>
+          }
+        </div>
+
+        <div class="calc-interp">
+          <h3><app-icon name="info" /> {{ t('labels.readTitle') }}</h3>
+          <ul>
+            @for (row of list('readRows'); track $index) {
+              <li><span class="calc-interp-dot" style="background: #a78bfa" aria-hidden="true"></span><span>{{ row }}</span></li>
+            }
+          </ul>
+        </div>
+
+        <div class="calc-actions">
+          <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyTime()">
+            <app-icon [name]="copied() ? 'check' : 'copy'" />
+            <span>{{ copied() ? translate.t('common.copied') : t('labels.copyTime') }}</span>
+          </button>
+        </div>
+      } @else {
+        <p class="error" role="alert">{{ t('labels.invalidTime') }}</p>
+      }
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

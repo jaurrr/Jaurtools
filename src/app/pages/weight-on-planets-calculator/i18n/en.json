@@ -1,0 +1,103 @@
+{
+  "weight-on-planets-calculator": {
+    "name": "Weight on Planets Calculator",
+    "tagline": "See what you would weigh on every planet, the Moon, and the Sun.",
+    "metaTitle": "Weight on Planets Calculator – Moon, Mars & More | JaurTools",
+    "metaDescription": "Free weight on planets calculator. Enter your mass to see your weight in newtons on Mercury, Venus, Moon, Mars, Jupiter and more — 100% in your browser.",
+    "keywords": "weight on planets calculator, weight on moon calculator, weight on mars, gravity planets weight, how much would I weigh on Jupiter",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Your mass never changes, but your weight does: weight equals mass times local gravity. A 70 kg person weighs 686.7 N on Earth, only 113.4 N on the Moon (a scale would read 11.6 kg), and 1,735 N on Jupiter. Enter your mass to see all ten bodies instantly.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Mass (kg) is how much matter you contain — it is the same everywhere in the universe.",
+      "Weight is a force (newtons): mass × local gravity. Scales display kg by assuming Earth's 9.81 m/s².",
+      "The Moon's gravity is 1.62 m/s² — about one-sixth of Earth's, which is why astronauts bounced.",
+      "Jupiter's 24.79 m/s² would make a 70 kg person weigh as much as 177 kg on Earth.",
+      "Venus and Uranus both pull at 8.87 m/s² — you would weigh nearly the same on both.",
+      "The Sun's 274 m/s² is 28 times Earth's — purely theoretical, since you could never stand on it."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Enter your mass in kilograms (your normal Earth weight in kg).",
+      "Read the table: gravity, your weight in newtons, and what an Earth-calibrated scale would read.",
+      "Compare planets to find where you would feel lightest and heaviest.",
+      "Use the newtons column for physics homework — that is the true weight force.",
+      "Try a child's mass too — kids love seeing their Moon weight."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "Weight (N) = mass (kg) × gravity (m/s²)\nScale reading (kg) = weight ÷ 9.81\ng values: Mercury 3.7, Venus 8.87, Earth 9.81, Moon 1.62, Mars 3.71,\nJupiter 24.79, Saturn 10.44, Uranus 8.87, Neptune 11.15, Sun 274",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Mass 70 kg.\nMoon: 70 × 1.62 = 113.4 N; scale reads 113.4 ÷ 9.81 = 11.6 kg\nEarth: 70 × 9.81 = 686.7 N; scale reads 70.0 kg\nJupiter: 70 × 24.79 = 1,735.3 N; scale reads 1,735.3 ÷ 9.81 = 176.9 kg\nSo the same person is 11.6 kg on the Moon and 176.9 kg on Jupiter by Earth-scale reckoning.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Settles the mass-vs-weight confusion with real numbers.",
+      "Both newtons (physics-correct) and kg-equivalent (intuitive) shown.",
+      "Covers all planets plus the Moon and the Sun in one table.",
+      "Great for homework, quizzes, and curious kids."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Uses average surface gravity: real gravity varies slightly with location and altitude.",
+      "The Sun has no solid surface — its value is purely illustrative.",
+      "Gas giants have no walkable surface either; gravity is quoted at the cloud tops.",
+      "A fun physics tool, not a measurement device."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is the difference between mass and weight?",
+        "a": "Mass (kg) is the amount of matter in you and never changes. Weight (N) is the gravitational force on that mass, so it changes with local gravity. Bathroom scales show kg by dividing the force by 9.81."
+      },
+      {
+        "q": "How much would I weigh on the Moon?",
+        "a": "Divide your Earth weight by about 6. A 70 kg person weighs 113.4 N on the Moon — an Earth scale would read 11.6 kg."
+      },
+      {
+        "q": "Which planet would I weigh the most on?",
+        "a": "Jupiter, at 24.79 m/s² — about 2.5 times Earth's gravity. A 70 kg person would feel like 177 kg there."
+      },
+      {
+        "q": "Why are Venus and Uranus the same?",
+        "a": "Coincidence of nature: both have surface gravity of about 8.87 m/s² despite very different sizes and compositions."
+      },
+      {
+        "q": "What does the kg-equivalent column mean?",
+        "a": "What a normal bathroom scale (calibrated for Earth) would display if you stood on it there. It is intuitive but technically the scale is misreading — your mass never changed."
+      },
+      {
+        "q": "Can I really stand on Jupiter or the Sun?",
+        "a": "No — gas giants and stars have no solid surface, and the Sun would vaporize you instantly. Those rows are thought experiments using cloud-top gravity values."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your weight across the solar system",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "massLabel": "Your mass (kg)",
+      "massHint": "Your normal weight in kg as measured on Earth.",
+      "colBody": "Body",
+      "colGravity": "Gravity (m/s²)",
+      "colWeight": "Weight",
+      "colEquiv": "Scale would read",
+      "nUnit": "N",
+      "kgUnit": "kg",
+      "noteText": "Mass stays the same everywhere; only weight changes with gravity. The scale column shows what an Earth-calibrated scale would display.",
+      "bodies": [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Moon",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune",
+        "Sun"
+      ]
+    }
+  }
+}

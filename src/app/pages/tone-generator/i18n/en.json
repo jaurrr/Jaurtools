@@ -1,0 +1,105 @@
+{
+  "tone-generator": {
+    "assumptionNote": "Wavelength is calculated for sound travelling in air at 20 C (343 m/s). In other conditions, or for waves in water or metal, the wavelength differs even though the frequency stays the same.",
+    "benefits": [
+      "Test your speakers, headphones, and hearing range with precise, stable tones.",
+      "Check a room or PA system for rattles and dead spots at exact frequencies.",
+      "Generate reference pitches for tuning, ear training, or science experiments.",
+      "No downloads and no calibration needed - the tone starts in one click."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For most adults, 20 Hz to about 15,000-17,000 Hz. Newborns can hear up to 20,000 Hz, but the upper limit drops with age. If you cannot hear 15 kHz, that is completely normal for an adult - it does not mean your hearing is damaged.",
+        "q": "What frequencies can humans hear?"
+      },
+      {
+        "a": "A sine wave is the purest tone: one frequency, nothing else, like a tuning fork. A square wave adds strong odd harmonics and sounds buzzy and bright. A sawtooth adds all harmonics and sounds harsh and reedy. A triangle sits between sine and square - soft but with a little edge.",
+        "q": "What is the difference between sine, square, sawtooth, and triangle?"
+      },
+      {
+        "a": "Start at a low volume and raise it gradually. High volumes at high frequencies are especially fatiguing. Continuous exposure above 85 dB can damage hearing over time, and phone speakers can reach that. Keep it comfortable, not loud.",
+        "q": "Is it safe to play loud tones?"
+      },
+      {
+        "a": "Probably not the tone - you are hearing your speaker distort. Small phone and laptop speakers cannot reproduce deep bass or very high frequencies cleanly, so they buzz or rattle. Try headphones, lower the volume, or switch to a sine wave, which is the gentlest on speakers.",
+        "q": "Why does the tone sound distorted or buzzy?"
+      },
+      {
+        "a": "Yes - 440 Hz is the international standard tuning pitch (A4). Orchestras tune to the oboe's A at 440 Hz, and many digital tuners use it as the reference. Some ensembles use 442 Hz, which is only very slightly higher.",
+        "q": "Is 440 Hz the standard tuning pitch?"
+      },
+      {
+        "a": "Yes. A beat frequency test: play the unknown tone together with this generator, and slowly adjust this generator until the wobbling beat disappears. When the beats stop, both tones match. Subtract or add to find the unknown pitch.",
+        "q": "Can I use this to find an unknown pitch?"
+      }
+    ],
+    "formula": "Period: T = 1 / f\nWavelength in air: wavelength = v / f, with v = 343 m/s at 20 C\nExample: f = 440 Hz gives T = 1 / 440 = 0.00227 s = 2.27 ms,\nwavelength = 343 / 440 = 0.78 m.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type a frequency between 20 and 20,000 Hz, drag the slider, or tap a preset.",
+      "Choose the wave shape: sine for a pure tone, square or sawtooth for a harsher sound.",
+      "Set the volume low first, then raise it to a comfortable level.",
+      "Pick how long the tone plays - 1, 2, or 5 seconds - or continuous.",
+      "Press Play. Change the frequency while it plays to sweep through pitches."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Frequency (Hz) is the number of sound-wave cycles per second. Higher frequency means higher pitch.",
+      "Period is the time for one cycle: T = 1 / f. At 440 Hz, one cycle takes 2.27 milliseconds.",
+      "Wavelength in air: 343 m/s divided by frequency. A 440 Hz wave is 0.78 m long; a 20 Hz bass wave is over 17 m long.",
+      "Human hearing spans roughly 20 Hz to 20,000 Hz, but most adults cannot hear above 15,000-17,000 Hz.",
+      "A sine wave contains exactly one frequency; square and sawtooth waves add harmonics that make them sound brighter or harsher.",
+      "Doubling the frequency raises the pitch by one octave: 440 Hz to 880 Hz is A4 to A5."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "tone generator, frequency generator, sine wave generator, online tone generator, test tones, Hz generator",
+    "labels": {
+      "durationLabel": "Tone length",
+      "durations": {
+        "continuous": "Continuous (until stopped)",
+        "five": "5 seconds",
+        "one": "1 second",
+        "two": "2 seconds"
+      },
+      "frequencyLabel": "Frequency (20 - 20,000 Hz)",
+      "frequencyResult": "Tone frequency",
+      "periodLabel": "Wave period",
+      "playLabel": "Play tone",
+      "presetsLabel": "Presets",
+      "stopLabel": "Stop",
+      "volumeLabel": "Volume",
+      "waveformLabel": "Wave type",
+      "waveforms": {
+        "sawtooth": "Sawtooth",
+        "sine": "Sine (pure)",
+        "square": "Square",
+        "triangle": "Triangle"
+      },
+      "wavelengthLabel": "Wavelength in air"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Your device's speakers or headphones limit what you actually hear - small speakers cannot reproduce very low or very high tones.",
+      "Browser audio is not calibrated: the volume percentage is relative, not an exact decibel level.",
+      "This is a single tone at a time. It cannot play chords, melodies, or sweeps automatically.",
+      "Very high volumes can damage hearing - keep test tones comfortable."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online tone generator: play pure sine, square, sawtooth, or triangle tones from 20 to 20,000 Hz. Test speakers, hearing range, and tuning. No sign-up.",
+    "metaTitle": "Tone Generator - Play Any Frequency Online | JaurTools",
+    "name": "Tone Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type any frequency from 20 to 20,000 Hz and press Play to hear it instantly. A 440 Hz sine wave is the standard tuning pitch (A4): its wave repeats every 2.27 milliseconds, and its wavelength in air is 0.78 metres. Use sine for the purest tone, square or sawtooth for a buzzier sound, and the presets to jump to common test frequencies. Keep the volume comfortable - high test tones are fatiguing.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Tone results",
+    "tagline": "Play pure tones at any frequency from 20 Hz to 20 kHz - sine, square, sawtooth, or triangle.",
+    "workedExample": "Testing a 440 Hz tone:\n1. Set frequency to 440, wave to sine, duration to 2 seconds.\n2. Press Play. You hear the standard tuning pitch A4.\n3. Period: T = 1 / 440 = 0.00227 s = 2.27 ms - each wave cycle lasts 2.27 milliseconds.\n4. Wavelength: 343 / 440 = 0.78 m - the wave is about 78 cm long in air.\n5. Double to 880 Hz and the pitch jumps exactly one octave to A5; halve to 220 Hz for A3.",
+    "workedExampleHeading": "Worked example"
+  }
+}

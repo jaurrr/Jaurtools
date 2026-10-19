@@ -1,0 +1,91 @@
+{
+  "json-c": {
+    "benefits": [
+      "تخطّي القالب الجاهز: الصق استجابة API واحصل على أصناف قابلة للترجمة في ثوانٍ.",
+      "استنتاج ذكي للأنواع: الأعداد الصحيحة مقابل الطويلة والعشرية والمنطقية وDateTime والقوائم المتداخلة.",
+      "تسمية جيدة: تصبح المفاتيح خصائص PascalCase، والكائنات المتداخلة أصنافًا مسماة.",
+      "معالجة الحالات الحدّية: المصفوفات الفارغة وnull والمختلطة تحصل على أنواع بديلة آمنة.",
+      "يعمل بالكامل داخل متصفحك: لا تُرفع حمولات API الخاصة إلى أي مكان."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "يجوب JSON ويُخرج صنف C# لكل كائن: كل مفتاح يصبح خاصية عامة تلقائية بنوع مستنتج، والكائنات المتداخلة تصبح أصنافًا خاصة بها، والمصفوفات تصبح List<T>.",
+        "q": "كيف يعمل تحويل JSON إلى C#؟"
+      },
+      {
+        "a": "الأعداد الصحيحة تصبح int (أو long عندما تتجاوز ±2,147,483,647) والعشرية double وtrue/false تصبح bool والنص string ونصوص التاريخ ISO-8601 تصبح DateTime.",
+        "q": "كيف تُخطَّط أنواع JSON إلى أنواع C#؟"
+      },
+      {
+        "a": "يفحص العناصر: إذا كان لكل عنصر النوع المستنتج نفسه حصلت على List<ذلك>؛ وإذا اختلفت العناصر أو كانت المصفوفة فارغة حصلت على البديل الآمن List<object>.",
+        "q": "ما نوع المصفوفات؟"
+      },
+      {
+        "a": "كل كائن متداخل يصبح صنفًا خاصًا به مسمًّى باسم مفتاحه بصيغة PascalCase (أي address -> Address). وتحصل تعارضات الأسماء على لاحقة رقمية تلقائيًا.",
+        "q": "ماذا يحدث للكائنات المتداخلة؟"
+      },
+      {
+        "a": "نعم. اكتب مساحة الاسم (مثل MyApp.Models) فتُغلَّف الأصناف في كتلة namespace. واتركها فارغة بلا مساحة اسم.",
+        "q": "هل يمكنني إضافة مساحة اسم؟"
+      },
+      {
+        "a": "إنها نقطة بداية لا نموذجًا نهائيًا: أضف سمات [JsonPropertyName] أو قابلية null أو التحقق حسب ذوقك. وراجع الكود المولّد دائمًا قبل النشر.",
+        "q": "هل الكود المولّد جاهز للإنتاج؟"
+      }
+    ],
+    "formula": "القيمة -> نوع C#:\n  عدد صحيح (|v| <= 2,147,483,647) ‏-> int، والأكبر -> long\n  عشري                           -> double\n  true / false                    -> bool\n  \"text\"                          -> ‏string‏ (تاريخ ISO-8601 ‏-> DateTime)\n  null                            -> ‏object\n  [T, T, ...]                     -> ‏List<T>‏ (المختلط/الفارغ -> List<object>)\n  { ... }                         -> صنف متداخل باسم المفتاح\nالمفتاح \"created_at\" ‏-> الخاصية CreatedAt ‏(PascalCase)",
+    "formulaHeading": "تخطيط الأنواع",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "الصق JSON في مربع الإدخال — وثيقة عينة محمّلة مسبقًا.",
+      "اضبط اسم الصنف الجذر (الافتراضي: Root) واختياريًا مساحة اسم مثل MyApp.Models.",
+      "تُولَّد أصناف C# مباشرة أسفل الخيارات.",
+      "راجع الأنواع المستنتجة: اضبط اكتشاف DateTime أو قابلية null حسب الحاجة.",
+      "انسخ الكود أو نزّله كملف ‎.cs‎ وأسقطه في مشروعك."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "يحوّل JSON إلى C# أي وثيقة JSON إلى أصناف C# بخصائص تلقائية.",
+      "كل كائن يصبح صنفًا؛ وكل مفتاح يصبح خاصية عامة { get; set; } بصيغة PascalCase.",
+      "تُخطَّط الأعداد الصحيحة إلى int/long والعشرية إلى double والمنطقية إلى bool ونصوص ISO-8601 إلى DateTime.",
+      "تصبح المصفوفات List<T> مع استنتاج نوع العنصر؛ والمختلطة أو الفارغة تؤول إلى List<object>.",
+      "تصبح قيم null من نوع object؛ والكائنات المتداخلة أصنافًا مسماة مع إزالة تكرار تلقائية.",
+      "تغلّف مساحة الاسم الاختيارية المخرج؛ وتُضمَّن usings لـ System وSystem.Collections.Generic."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "JSON إلى C#, JSON إلى سي شارب, تحويل JSON إلى أصناف C#, مولد أصناف C# من JSON, JSON إلى POCO",
+    "labels": {
+      "classNameLabel": "اسم الصنف الجذر",
+      "copiedLabel": "تم النسخ!",
+      "copyLabel": "نسخ C#",
+      "downloadLabel": "تنزيل ‎.cs",
+      "inputLabel": "مدخل JSON",
+      "invalidLabel": "JSON غير صالح:",
+      "namespaceLabel": "مساحة الاسم (اختياري)",
+      "outputLabel": "أصناف C#"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "يقرأ استنتاج النوع عينة واحدة: الحقل الذي يكون نصًا أحيانًا ورقمًا أحيانًا يحتاج إصلاحًا يدويًا.",
+      "يعطي null النوع object وتبقى التواريخ الغامضة نصًا — راجع تخمينات DateTime قبل النشر.",
+      "الكود المولّد بلا سمات ([JsonPropertyName]) أو تعليقات قابلية null أو تحقق — أضف خاصتك.",
+      "الوثائق العميقة أو الضخمة جدًا تنتج أصنافًا كثيرة؛ فكّر في تقسيمها يدويًا."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "محول JSON إلى C# مجاني: الصق JSON واحصل على أصناف C# بأنواع مستنتجة وخصائص PascalCase وأصناف متداخلة ومجموعات List<T>. خاص، بدون تسجيل.",
+    "metaTitle": "محول JSON إلى C# - ولّد أصناف C# أونلاين | JaurTools",
+    "name": "JSON إلى C#",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "الصق JSON واحصل على أصناف C# جاهزة للترجمة: الأعداد الصحيحة تصبح int/long والعشرية double والمنطقية bool ونصوص ISO-8601 تصبح DateTime والمصفوفات List<T> وكل كائن متداخل صنفه الخاص بصيغة PascalCase. اضبط اسم الصنف الجذر ومساحة اسم اختيارية، ثم انسخ ملف ‎.cs‎ أو نزّله.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "نتائج JSON إلى C#",
+    "tagline": "حوّل أي JSON إلى أصناف C# — أنواع مستنتجة وأصناف متداخلة ومجموعات List<T>.",
+    "workedExampleHeading": "مثال محلول",
+    "workedExample": "المدخل:\n{\"id\": 101, \"name\": \"Asha Sharma\", \"isActive\": true, \"balance\": 1250.75,\n \"createdAt\": \"2026-10-01T10:30:00Z\", \"tags\": [\"admin\"],\n \"address\": {\"city\": \"Pune\", \"zip\": \"411001\"}}\n\nالمخرج (الجذر = Root، بلا مساحة اسم):\nusing System;\nusing System.Collections.Generic;\n\npublic class Root\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public bool IsActive { get; set; }\n    public double Balance { get; set; }\n    public DateTime CreatedAt { get; set; }\n    public List<string> Tags { get; set; }\n    public Address Address { get; set; }\n}\n\npublic class Address\n{\n    public string City { get; set; }\n    public string Zip { get; set; }\n}"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "code-formatter": {
+    "benefits": [
+      "Turns minified or sloppy code into readable, consistently indented code in one click.",
+      "String-safe tokenizing means quotes, template literals and comments are never mangled.",
+      "Switch languages and indent styles without reloading; formatting is instant and live.",
+      "Copy or download the result straight into your editor or pull request."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. It only changes whitespace and line breaks: indentation, newlines after braces and semicolons, and spacing after keywords. Your strings, comments, identifiers and logic are preserved byte for byte. Still, for production code, run your tests after formatting, as with any formatter.",
+        "q": "Does formatting change what my code does?"
+      },
+      {
+        "a": "Because the formatter masks them before touching layout. Strings, template literals, regular expressions and comments are extracted first, the code skeleton is formatted, then they are restored untouched. That is why a brace inside a string never breaks the indentation.",
+        "q": "Why are my strings and comments never broken?"
+      },
+      {
+        "a": "It is a lightweight beautifier, not a full replacement. Prettier also normalizes quotes, semicolons, operator spacing and trailing commas, and understands TypeScript, JSX and modern syntax deeply. Use this tool for quick cleanup; use Prettier for enforced team style.",
+        "q": "Is this as good as Prettier?"
+      },
+      {
+        "a": "Match your project. Two spaces is the most common for JavaScript and is this tool's default; four spaces is classic for some backends; tabs are preferred by many accessibility-minded teams because users can set their own width. Consistency inside one project matters more than the choice.",
+        "q": "Which indent style should I pick?"
+      },
+      {
+        "a": "Yes. Everything runs locally in your browser tab. Your code is never uploaded, logged or sent anywhere, which also means you can format proprietary code without worry.",
+        "q": "Is my code sent to a server?"
+      },
+      {
+        "a": "There is no hard limit, but very large files (several hundred kilobytes) may feel sluggish because formatting runs live on every keystroke. For huge files, paste, wait a beat, then copy the result. Minified bundles are fine; just expect a short pause on the first format.",
+        "q": "Is there a size limit?"
+      }
+    ],
+    "formula": "JavaScript: tokenize (strings, template literals, regex, comments masked) -> brace depth +1 on {, -1 on } -> newline after ; only when parenthesis depth = 0 -> space after if/for/while/switch/catch keywords.\nCSS: one declaration per line, space after : inside rules, nested @media blocks indented, selectors split on top-level commas.\nHTML: block elements get newline + indent, inline elements stay on the text line, script/style contents kept raw.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the language tab: JavaScript, CSS or HTML.",
+      "Paste your messy or minified code into the input box, or press Sample to try an example.",
+      "Choose 2 spaces, 4 spaces or tabs. The formatted output updates live below.",
+      "Review the output, then copy it or download it as a .js, .css or .html file.",
+      "If the output looks wrong on exotic syntax, check the Limitations section; the original is never modified."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A lightweight beautifier for JavaScript, CSS and HTML that fixes layout without touching logic.",
+      "String-aware tokenizing: quotes, template literals, regular expressions and comments are masked before formatting and restored untouched.",
+      "JavaScript: brace-aware indentation, newlines after semicolons outside for-loop parentheses, and spacing after keywords like if and for.",
+      "CSS: one declaration per line, a space after each colon inside rules, nested @media blocks indented, selectors split on top-level commas.",
+      "HTML: block elements get their own indented lines while inline elements stay on the text line; script and style contents are kept raw.",
+      "Formatting is live: every keystroke re-formats instantly, entirely in your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "code formatter, js beautifier, css formatter, html formatter, code beautifier online, javascript formatter",
+    "labels": {
+      "charsLabel": "characters",
+      "clearButton": "Clear",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy",
+      "cssTab": "CSS",
+      "downloadButton": "Download",
+      "emptyNote": "Paste code above to see it formatted here.",
+      "formatErrorLabel": "Formatting failed on this input; showing the original text.",
+      "htmlTab": "HTML",
+      "inLabel": "Input",
+      "indent2Label": "2 spaces",
+      "indent4Label": "4 spaces",
+      "indentLabel": "Indent style",
+      "indentTabLabel": "Tab",
+      "inputLabel": "Your code",
+      "inputPlaceholder": "Paste messy or minified code here...",
+      "jsTab": "JavaScript",
+      "languageLabel": "Language",
+      "linesLabel": "lines",
+      "outLabel": "Output",
+      "outputLabel": "Formatted code",
+      "sampleButton": "Sample"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Lightweight, not Prettier: it does not normalize quotes, semicolons, operator spacing or trailing commas.",
+      "Spacing around operators (+, =, =>) is left as you wrote it.",
+      "Code inside template-literal ${} expressions is not re-formatted.",
+      "Very exotic or invalid syntax may format oddly; always review the output before shipping."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online code formatter: beautify JavaScript, CSS and HTML with consistent indentation. String- and comment-safe, 100% in your browser, no sign-up.",
+    "metaTitle": "Code Formatter - Beautify JS, CSS & HTML | JaurTools",
+    "name": "Code Formatter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste messy JavaScript, CSS or HTML, pick your language and indent style, and this formatter rewrites it with consistent indentation while strings, template literals and comments stay untouched. For example, function greet(name){if(name){return \"Hello, \"+name;}} becomes a neatly indented multi-line function. It is a lightweight beautifier: it fixes layout, never your logic.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Code Formatter results",
+    "tagline": "Beautify messy JavaScript, CSS and HTML into clean, consistently indented code in one click.",
+    "workedExample": "JavaScript input:\nfunction greet(name){if(name){return \"Hello, \"+name;}return \"Hello!\";}\nOutput (2 spaces):\nfunction greet(name) {\n  if (name) {\n    return \"Hello, \"+name;\n  }\n  return \"Hello!\";\n}\nCSS input: .card{color:red;background:#fff}\nOutput:\n.card {\n  color: red;\n  background: #fff;\n}\nHTML input: <div><h1>Title</h1><p>Hello</p></div>\nOutput:\n<div>\n  <h1>Title</h1>\n  <p>Hello</p>\n</div>",
+    "workedExampleHeading": "Worked example"
+  }
+}

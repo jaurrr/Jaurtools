@@ -1,0 +1,159 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="pdfimg-file">{{ t('labels.fileLabel') }}</label>
+        <input id="pdfimg-file" type="file" accept="application/pdf,.pdf"
+          (change)="onFileSelected($event)" [attr.aria-label]="t('labels.fileLabel')" />
+        <p class="note">{{ t('labels.fileHint') }}</p>
+      </div>
+
+      @if (fileName()) {
+        <div class="field">
+          <label for="pdfimg-scale">{{ t('labels.scaleLabel') }}</label>
+          <select id="pdfimg-scale" [ngModel]="scale()" (ngModelChange)="setScale($event)">
+            <option [ngValue]="1">{{ t('labels.scale1') }}</option>
+            <option [ngValue]="1.5">{{ t('labels.scale15') }}</option>
+            <option [ngValue]="2">{{ t('labels.scale2') }}</option>
+            <option [ngValue]="2.5">{{ t('labels.scale25') }}</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="pdfimg-quality">{{ t('labels.qualityLabel') }}: {{ quality() }}%</label>
+          <div class="input-row">
+            <input id="pdfimg-quality" type="range" min="40" max="100" step="5"
+              [ngModel]="quality()" (ngModelChange)="setQuality($event)"
+              [attr.aria-label]="t('labels.qualityLabel')" />
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="renderAll()" [disabled]="busy()">
+            <app-icon name="download" /> {{ t('labels.renderButton') }}
+          </button>
+          @if (pages().length > 1) {
+            <button type="button" class="btn ghost" (click)="downloadZip()">
+              <app-icon name="database" /> {{ t('labels.zipButton') }}
+            </button>
+          }
+        </div>
+      }
+
+      @if (busy()) {
+        <p class="status" role="status"><app-icon name="refresh-cw" /> {{ t('labels.busy') }}</p>
+      }
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+      @if (status()) {
+        <p class="status" role="status"><app-icon name="check" /> {{ status() }}</p>
+      }
+
+      @if (pages().length) {
+        <div class="results">
+          <div class="result-row">
+            <span><app-icon name="file-text" /> {{ t('labels.pageCount') }}</span>
+            <strong>{{ pageCount() }}</strong>
+          </div>
+        </div>
+        <div class="thumb-grid">
+          @for (p of pages(); track p.index; let i = $index) {
+            <figure class="thumb">
+              <img [src]="p.url" [alt]="t('labels.pageAlt') + ' ' + p.index" loading="lazy" />
+              <figcaption>
+                <span>{{ t('labels.pageAlt') }} {{ p.index }}</span>
+                <button type="button" class="btn ghost small" (click)="downloadPage(p, i)">
+                  <app-icon name="download" /> {{ t('labels.downloadOne') }}
+                </button>
+              </figcaption>
+            </figure>
+          }
+        </div>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

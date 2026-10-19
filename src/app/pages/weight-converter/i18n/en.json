@@ -1,0 +1,125 @@
+{
+  "weight-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Weight Converter",
+    "tagline": "Convert between milligrams, grams, kilograms, tonnes, ounces, pounds and stone.",
+    "metaTitle": "Weight Converter — kg to lbs Online",
+    "metaDescription": "Free weight converter: mg, g, kg, tonnes, oz, lb, stone. Exact metric/imperial factors for cooking, fitness and shipping, in your browser.",
+    "keywords": "weight converter, kg to lbs, pounds to kg, ounces to grams, stone to kg, weight units",
+    "quickAnswer": "Enter the weight, pick the unit you have and the one you want. Conversion uses exact definitions — 1 lb = 453.59237 g and 1 oz = 28.349523125 g — so recipe and parcel math comes out right.",
+    "keyFacts": [
+      "The kilogram is the SI base unit of mass, now defined by the Planck constant.",
+      "One pound equals exactly 453.59237 grams by international agreement.",
+      "One ounce equals exactly 28.349523125 grams; 16 ounces make a pound.",
+      "One stone equals 14 pounds (6.35029318 kg), still used for body weight in the UK.",
+      "A metric tonne is 1,000 kg; the US ton is 907.185 kg — they differ."
+    ],
+    "howTo": [
+      "Type the weight value into the value field.",
+      "Choose the source unit from the \"From\" dropdown.",
+      "Choose the target unit from the \"To\" dropdown.",
+      "Read the converted weight instantly; swap reverses it.",
+      "Check the rate line for the exact factor used."
+    ],
+    "formula": "result = value × (from-unit in grams) ÷ (to-unit in grams)\nExample: lb = kg × 1000 ÷ 453.59237",
+    "workedExample": "Convert 70 kg to pounds.\nStep 1: 70 kg in grams = 70 × 1000 = 70000 g.\nStep 2: 1 lb = 453.59237 g.\nStep 3: 70000 ÷ 453.59237 = 154.323584.\nAnswer: 70 kg = 154.323584 lb.",
+    "benefits": [
+      "Metric and imperial weight units in one tool.",
+      "Exact international definitions — no rounding drift.",
+      "Instant, private, browser-only calculation.",
+      "Shows the exact conversion rate with every result.",
+      "Useful for recipes, gym progress, luggage and freight."
+    ],
+    "limitations": [
+      "Converts mass/weight units; it does not convert weight to volume (density needed).",
+      "Results rounded to 6 decimal places.",
+      "US tons and long tons are not included in this version.",
+      "Values beyond ±1e15 are clamped."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert kg to pounds?",
+        "a": "Multiply kg by 2.20462262. Example: 70 kg × 2.20462262 = 154.3236 lb."
+      },
+      {
+        "q": "How many grams in an ounce?",
+        "a": "Exactly 28.349523125 grams per avoirdupois ounce, the standard ounce for food and parcels."
+      },
+      {
+        "q": "What is a stone in kg?",
+        "a": "One stone = 14 pounds = 6.35029318 kg. It is still commonly used for body weight in the UK and Ireland."
+      },
+      {
+        "q": "Is a tonne the same as a ton?",
+        "a": "No. A metric tonne is 1,000 kg. A US (short) ton is 907.185 kg and a UK (long) ton is 1,016.05 kg."
+      },
+      {
+        "q": "Why does my recipe say 8 oz is 227 g?",
+        "a": "Because 8 × 28.349523125 = 226.796 g, which recipes round to 227 g. This tool shows the unrounded value."
+      },
+      {
+        "q": "Is my data sent anywhere?",
+        "a": "No. Conversion happens entirely in your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Weight conversion results",
+    "labels": {
+      "valueLabel": "Value",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "resultLabel": "Result",
+      "rateLabel": "Conversion rate",
+      "swapLabel": "Swap units"
+    },
+    "units": [
+      {
+        "id": "mg",
+        "name": "Milligram",
+        "symbol": "mg"
+      },
+      {
+        "id": "g",
+        "name": "Gram",
+        "symbol": "g"
+      },
+      {
+        "id": "kg",
+        "name": "Kilogram",
+        "symbol": "kg"
+      },
+      {
+        "id": "tonne",
+        "name": "Tonne (metric)",
+        "symbol": "t"
+      },
+      {
+        "id": "oz",
+        "name": "Ounce",
+        "symbol": "oz"
+      },
+      {
+        "id": "lb",
+        "name": "Pound",
+        "symbol": "lb"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "symbol": "st"
+      }
+    ]
+  }
+}

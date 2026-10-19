@@ -1,0 +1,93 @@
+{
+  "salary-calculator": {
+    "assumptionNote": "Assumes 52 paid weeks per year and 260 working days. Does not subtract taxes, benefits, or unpaid time off. Gross pay only.",
+    "benefits": [
+      "Converts confusing job offers - hourly vs salary - into the same language instantly.",
+      "Shows what each pay period actually pays, which helps with monthly budgeting.",
+      "Reveals the true hourly rate of a salaried job, including how overtime changes it.",
+      "Free, instant, and private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use the annual tab, enter $52,000 and 40 hours: it shows $25.00 an hour. The honest comparison also needs benefits: health insurance, retirement match, and paid time off can be worth 20 to 30% on top of salary.",
+        "q": "Is $25 an hour the same as a $52,000 salary?"
+      },
+      {
+        "a": "Multiply by 2,080 (40 hours x 52 weeks) for full-time. So $30 an hour is $62,400 a year. For part-time, use your actual hours: $30 x 25 hours x 52 weeks = $39,000.",
+        "q": "How do I convert hourly to salary quickly?"
+      },
+      {
+        "a": "Multiply the hourly rate by 2,080 (40 x 52) for a rough gross annual figure, then subtract roughly 20 to 30% for taxes depending on your bracket and state. For a real number, use the take-home paycheck calculator.",
+        "q": "How do I estimate my take-home pay?"
+      },
+      {
+        "a": "Salaried pay usually keeps coming during paid holidays and sick days, while hourly pay often stops. An hourly worker also misses pay during unpaid gaps. Over a year, a $52,000 salary can be worth noticeably more than $25 an hour with patchy hours.",
+        "q": "Does salary beat hourly at the same rate?"
+      },
+      {
+        "a": "Divide the annual salary by 2,080 for the 40-hour equivalent. $80,000 / 2,080 = $38.46 an hour. If you actually work 50 hours a week (2,600 hours a year), the real rate is $80,000 / 2,600 = $30.77 an hour - which is why hours matter.",
+        "q": "How do I find the hourly rate of a salary?"
+      },
+      {
+        "a": "No. This calculator shows gross pay before any deductions. Net (take-home) pay is always lower, sometimes much lower, depending on taxes, retirement contributions, and insurance premiums.",
+        "q": "Is this my take-home pay?"
+      }
+    ],
+    "formula": "Annual = hourly rate x hours per week x 52.\nMonthly = annual / 12. Biweekly = annual / 26. Weekly = annual / 52. Daily = annual / 260.\nHourly (from salary) = annual / (hours per week x 52).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your starting point: Hourly if you know your rate, Annual if you know your salary.",
+      "Enter your hourly rate or annual salary, plus your usual hours per week.",
+      "All six pay-period figures update instantly: hourly, daily, weekly, biweekly, monthly, annual.",
+      "Use the breakdown to compare job offers or to set a monthly budget from an hourly wage."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Full-time is usually 40 hours a week x 52 weeks = 2,080 working hours a year.",
+      "Annual pay = hourly rate x hours per week x 52.",
+      "Biweekly pay (every 2 weeks) means 26 paychecks a year; monthly pay means 12.",
+      "Daily pay here assumes 260 working days (52 weeks x 5 days).",
+      "These are gross figures - before taxes, insurance, and retirement deductions."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "salary calculator, hourly to salary calculator, salary to hourly calculator, pay period calculator, wage converter",
+    "labels": {
+      "annual": "Annual",
+      "annualSalary": "Annual salary ($)",
+      "annualTab": "Annual salary",
+      "biweekly": "Biweekly (26 pays)",
+      "daily": "Daily",
+      "hourly": "Hourly",
+      "hourlyRate": "Hourly rate ($)",
+      "hourlyTab": "Hourly wage",
+      "hoursPerWeek": "Hours per week",
+      "monthly": "Monthly",
+      "startFrom": "Start from",
+      "weekly": "Weekly"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Shows gross pay only - taxes and deductions are not included.",
+      "Assumes every week is paid; unpaid leave lowers the real annual figure.",
+      "Overtime rates (usually 1.5x) are not modeled.",
+      "Does not value benefits like insurance or retirement matching."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free salary calculator: convert hourly wage to salary and salary to hourly, with weekly, biweekly, and monthly breakdowns. Instant and private.",
+    "metaTitle": "Salary Calculator - Hourly to Salary Converter | JaurTools",
+    "name": "Salary Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "To convert hourly to salary, multiply by hours per week and 52 weeks: $25 an hour at 40 hours a week is 25 x 40 x 52 = $52,000 a year. That breaks down to $4,333.33 a month, $2,000 every two weeks, $1,000 a week, and $200 a day. To go the other way, divide the salary by (hours per week x 52): $52,000 at 40 hours is $25.00 an hour. These are gross figures, before taxes.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your pay breakdown",
+    "tagline": "Convert hourly wage to salary and back, across every pay period.",
+    "workedExample": "$25/hour, 40 hours per week:\n1. Annual = 25 x 40 x 52 = $52,000.\n2. Monthly = 52,000 / 12 = $4,333.33.\n3. Biweekly = 52,000 / 26 = $2,000.\n4. Weekly = 52,000 / 52 = $1,000.\n5. Daily = 52,000 / 260 = $200.\nReverse: $52,000 salary at 40 hours = 52,000 / (40 x 52) = $25.00/hour.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,161 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="char-grid">
+        @for (c of charList(); track c.key) {
+          <div class="char-card">
+            <span class="char-sample" aria-hidden="true">[{{ charFor(c.key) }}]</span>
+            <strong class="char-name">{{ c.name }}</strong>
+            <code class="char-code">{{ c.code }}</code>
+            <span class="char-usage">{{ c.usage }}</span>
+            <button type="button" class="btn primary" (click)="copyChar(c.key)">
+              <app-icon name="copy" />
+              {{ copiedKey() === c.key ? t('labels.copiedLabel') : t('labels.copyButton') }}
+            </button>
+          </div>
+        }
+      </div>
+
+      <div class="builder">
+        <h3>{{ t('labels.builderLabel') }}</h3>
+        <div class="input-row two">
+          <div class="field">
+            <label for="ic-char">{{ t('labels.charSelectLabel') }}</label>
+            <select id="ic-char" [ngModel]="selectedKey()" (ngModelChange)="setSelectedKey($event)">
+              @for (c of charList(); track c.key) {
+                <option [value]="c.key">{{ c.name }} ({{ c.code }})</option>
+              }
+            </select>
+          </div>
+          <div class="field">
+            <label for="ic-repeat">{{ t('labels.repeatLabel') }}: {{ repeat() }}</label>
+            <input
+              id="ic-repeat"
+              type="range"
+              min="1"
+              max="50"
+              step="1"
+              [ngModel]="repeat()"
+              (ngModelChange)="setRepeat($event)"
+            />
+          </div>
+        </div>
+        <div class="results ed-livebar">
+          <div class="result-row">
+            <span><app-icon name="copy" /> {{ t('labels.builtLabel') }}</span>
+            <strong>{{ built().length }}</strong>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn primary" (click)="copyBuilt()">
+            <app-icon name="copy" />
+            {{ copiedKey() === 'built' ? t('labels.copiedLabel') : t('labels.copyBuiltButton') }}
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

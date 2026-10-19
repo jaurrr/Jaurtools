@@ -1,0 +1,95 @@
+{
+  "html-entities-encoder-decoder": {
+    "assumptionNote": "Encoding is lossless and reversible; decoding unknown entities leaves them unchanged.",
+    "benefits": [
+      "Display raw HTML code on a page without the browser rendering it.",
+      "Basic mode escapes only the five dangerous characters; Full mode also covers Unicode.",
+      "Decoder handles named, decimal, and hex entities — including emoji code points.",
+      "Live conversion with character counts shows exactly what changed.",
+      "One click copies the result for pasting into code or CMS editors."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Switch to the Encode tab, choose Basic scope, paste your HTML, and copy the output. Paste the encoded text where the code should display as text — for example inside a <pre> block.",
+        "q": "How do I show HTML code as text on my page?"
+      },
+      {
+        "a": "The five characters are & < > \" and '. They are the only ones that can break HTML parsing or enable script injection, so escaping them is enough for safe display.",
+        "q": "Which five characters does Basic mode escape?"
+      },
+      {
+        "a": "Full mode additionally converts every character above code point 127 — accented letters, symbols, emoji — into &#x...; entities. Use it when your page encoding is uncertain or you need pure ASCII output.",
+        "q": "When should I use Full mode instead of Basic?"
+      },
+      {
+        "a": "Switch to the Decode tab and paste the entity text. Named entities like &copy;, decimal like &#169;, and hex like &#xa9; are all converted back.",
+        "q": "How do I convert entities back to normal text?"
+      },
+      {
+        "a": "Unknown entities are left unchanged so nothing is lost. Only recognized named entities (a built-in list of common ones) plus numeric forms are decoded.",
+        "q": "What happens to entities the decoder does not know?"
+      },
+      {
+        "a": "Yes — decoding is the exact inverse for anything this tool encoded, and numeric entities always round-trip. Named entities decode if they are in the built-in list.",
+        "q": "Is the conversion reversible?"
+      }
+    ],
+    "formula": "encode (basic):\n  & -> &amp;    < -> &lt;    > -> &gt;\n  \" -> &quot;    ' -> &#39;\nencode (full): basic + every char > 127 -> &#x<hex>;\ndecode:\n  &name; -> char   &#169; -> char   &#xa9; -> char",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the Encode or Decode tab.",
+      "For encoding, pick Basic or Full scope.",
+      "Paste your text into the input box.",
+      "Read the live-converted output below.",
+      "Copy the result with the copy button."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "HTML entities let you write reserved characters as text, like &lt; for <.",
+      "The five reserved characters are & < > \" and '.",
+      "Numeric entities use character codes: &#169; and &#xa9; both mean ©.",
+      "Named entities like &copy; are easier to read but fewer are standardized.",
+      "Browsers decode entities when parsing HTML into the DOM."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "html entities encoder, html escape online, unescape html, html entity decoder, encode html special chars",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "decodeTab": "Decode",
+      "encodeTab": "Encode",
+      "inputCharsLabel": "Input characters",
+      "inputLabel": "Input text",
+      "modeLabel": "Mode",
+      "outputCharsLabel": "Output characters",
+      "outputLabel": "Output",
+      "scopeBasic": "Basic (& < > \" ')",
+      "scopeFull": "Full (+ Unicode)",
+      "scopeLabel": "Encode scope"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The decoder knows common named entities; rare ones are left as-is.",
+      "Encoding does not sanitize JavaScript — it only escapes markup characters.",
+      "Full mode output is verbose; prefer Basic unless you need ASCII-only text.",
+      "Decoding cannot recover text from double-encoded entities in one pass."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Encode HTML special characters to entities or decode entities back to text. Free online HTML escape tool with basic and full Unicode modes.",
+    "metaTitle": "HTML Entities Encoder/Decoder – Free Online Tool",
+    "name": "HTML Entities Encoder/Decoder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Browsers treat < and > as markup, so showing raw HTML as text requires escaping them as entities like &lt;. This tool converts text to entities (encode) and entities back to text (decode), with a basic mode for the five reserved characters and a full mode that also encodes Unicode.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Converted text",
+    "tagline": "Escape HTML special characters — or decode entities back.",
+    "workedExample": "Encode <a href=\"x\">A&B</a> in Basic mode.\n\n< becomes &lt;, \" becomes &quot;, > becomes &gt;, & becomes &amp;.\n\nOutput:\n&lt;a href=&quot;x&quot;&gt;A&amp;B&lt;/a&gt;\n\nPaste that into a <pre> block and the page shows the literal code instead of rendering a link. Switch to Decode and paste the output to get the original back.",
+    "workedExampleHeading": "Worked example"
+  }
+}

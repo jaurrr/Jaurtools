@@ -1,0 +1,109 @@
+{
+  "schema-markup-generator": {
+    "benefits": [
+      "Valid JSON-LD in seconds - no hand-writing brackets or worrying about commas.",
+      "Covers the six schema types most sites actually need, in one place.",
+      "The live preview means you see mistakes before Google does.",
+      "Free, private, and no account."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "JSON-LD (JavaScript Object Notation for Linked Data) is Google's recommended format for structured data. It is a small script block you paste into your page's <head>, describing the content in a way search engines can parse reliably.",
+        "q": "What is JSON-LD?"
+      },
+      {
+        "a": "No. Schema markup makes you eligible for rich results, but Google decides whether to show them based on quality, relevance, and its own guidelines. Valid markup is the ticket to the draw, not a guarantee of winning.",
+        "q": "Will schema markup guarantee rich results?"
+      },
+      {
+        "a": "Paste the generated script inside the <head> of the page it describes. One page, one matching schema. A FAQPage script belongs on the page that actually shows those questions and answers - never on unrelated pages.",
+        "q": "Where do I put the JSON-LD script?"
+      },
+      {
+        "a": "Use Google's Rich Results Test: paste the URL or the code snippet and it reports errors and warnings. Fix every error before publishing; warnings are optional improvements.",
+        "q": "How do I test my schema?"
+      },
+      {
+        "a": "That violates Google's spam policies and can get your rich results removed or your site penalized. The markup must match visible content on the page. This generator only outputs what you type, so keep it honest.",
+        "q": "Can I add FAQ schema for questions not on the page?"
+      },
+      {
+        "a": "No. JSON-LD describes one specific page's content. Each page gets its own script describing its own content - a product page gets Product schema, an article page gets Article schema.",
+        "q": "Can I use one schema for my whole site?"
+      }
+    ],
+    "formula": "Every output follows this shape:\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage | Organization | Article | Product | LocalBusiness | WebSite\",\n  ...fields you entered...\n}\nEmpty fields are left out automatically.",
+    "formulaHeading": "The output shape",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the schema type that matches your page: FAQ, Organization, Article, Product, Local Business, or Web Site.",
+      "Fill in the fields. Empty fields are simply left out of the output.",
+      "Watch the JSON-LD update live in the preview box.",
+      "Copy it or download the .json file, then paste the script into your page's <head>.",
+      "Test with Google's Rich Results Test before publishing."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "Schema.org structured data helps search engines understand what your page is about.",
+      "JSON-LD is the format Google recommends: a script block in the page <head>.",
+      "This generator supports six types: FAQPage, Organization, Article, Product, LocalBusiness, WebSite.",
+      "Markup must match content visible on the page - hidden or fake markup violates Google's policies.",
+      "Rich results (stars, FAQs in search) are never guaranteed, but valid schema is required to be eligible."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "schema markup generator, json-ld generator, structured data generator, faq schema generator, rich snippet generator",
+    "labels": {
+      "address": "Address",
+      "answer": "Answer",
+      "author": "Author name",
+      "availInStock": "In stock",
+      "availOutOfStock": "Out of stock",
+      "availability": "Availability",
+      "copiedButton": "Copied!",
+      "copyButton": "Copy JSON-LD",
+      "datePublished": "Publish date",
+      "description": "Description",
+      "downloadButton": "Download .json",
+      "headline": "Headline",
+      "installNote": "Paste the script inside the <head> of the page it describes, then test with Google's Rich Results Test.",
+      "logo": "Logo URL",
+      "name": "Name",
+      "outputLabel": "Your JSON-LD",
+      "phone": "Phone",
+      "price": "Price",
+      "priceCurrency": "Currency code (e.g. USD)",
+      "question": "Question",
+      "schemaType": "Schema type",
+      "typeArticle": "Article",
+      "typeFaq": "FAQ page",
+      "typeLocalBusiness": "Local business",
+      "typeOrganization": "Organization",
+      "typeProduct": "Product",
+      "typeWebsite": "Web site",
+      "url": "Page URL"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only six schema types are supported; niche types need hand-written JSON-LD.",
+      "The generator cannot validate your facts - it outputs exactly what you type.",
+      "It does not check Google's rich-result eligibility rules for you.",
+      "Generated code still needs the Rich Results Test before publishing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free schema markup generator: build valid JSON-LD for FAQ, Organization, Article, Product, Local Business, and Web Site. Copy or download instantly.",
+    "metaTitle": "Schema Markup Generator - JSON-LD Builder | JaurTools",
+    "name": "Schema Markup Generator",
+    "privacyNote": "This generator runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Schema markup is structured data that tells search engines what your page means, in their own vocabulary (schema.org). This generator builds valid JSON-LD for six common types - FAQPage, Organization, Article, Product, LocalBusiness, and WebSite - from a simple form. Fill the fields, copy the script, paste it into your page's <head>, and test with Google's Rich Results Test. Valid markup makes you eligible for rich results like stars and FAQ dropdowns in search.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Build your schema",
+    "tagline": "Build valid JSON-LD schema markup with a simple form - no coding needed.",
+    "workedExample": "FAQ page example - enter:\nQuestion: \"What is JSON-LD?\"\nAnswer: \"Google's recommended format for structured data.\"\nURL: \"https://example.com/faq\"\nOutput:\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"url\": \"https://example.com/faq\",\n  \"mainEntity\": [{\n    \"@type\": \"Question\",\n    \"name\": \"What is JSON-LD?\",\n    \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"Google's recommended format for structured data.\" }\n  }]\n}",
+    "workedExampleHeading": "Worked example"
+  }
+}

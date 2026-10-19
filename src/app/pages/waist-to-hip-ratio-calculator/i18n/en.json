@@ -1,0 +1,102 @@
+{
+  "waist-to-hip-ratio-calculator": {
+    "assumptionNote": "Risk categories use WHO cut-offs for adults. They do not apply to children, pregnant women, or highly muscular athletes, whose body shapes read differently.",
+    "benefits": [
+      "Catches a risk BMI misses: two people with the same BMI can have very different waist-to-hip ratios.",
+      "Needs only a tape measure - no scale, no lab, no appointment.",
+      "Tracking WHR monthly shows whether exercise is trimming belly fat even when weight stalls.",
+      "The sex-specific thresholds keep the reading honest for both men and women."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "categories": {
+      "high": "High",
+      "low": "Low",
+      "moderate": "Moderate"
+    },
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Divide your waist by your hips. Below 0.90 for men and 0.85 for women is the low-risk zone by WHO standards. Between 0.90 and 0.99 (men) or 0.80 and 0.84 (women) is moderate risk, and 1.0 or above (men) or 0.85 and above (women) is high risk.",
+        "q": "What is a healthy waist-to-hip ratio?"
+      },
+      {
+        "a": "Yes - this is exactly where WHR beats BMI. Belly fat around the organs (visceral fat) raises heart-disease and diabetes risk more than fat stored on the hips and thighs. Studies repeatedly find WHR predicts cardiovascular risk better than BMI does.",
+        "q": "Is WHR better than BMI?"
+      },
+      {
+        "a": "Stand relaxed and breathe out normally. Measure the waist at the narrowest point between the ribs and the hip bones - roughly at the navel level. Measure the hips at the widest point around the buttocks. Keep the tape snug but not digging in.",
+        "q": "How do I measure my waist and hips correctly?"
+      },
+      {
+        "a": "Aim to shrink the waist while keeping the hips stable: regular brisk walking, strength training, enough sleep, and less added sugar and alcohol all target belly fat. Even a 0.03 to 0.05 drop - about 3 to 5 cm off the waist - moves many people a full risk category.",
+        "q": "How can I lower my waist-to-hip ratio?"
+      },
+      {
+        "a": "Yes, modestly. Hip circumference reflects bone structure and gluteal muscle and fat, which change slowly. That is fine - a falling ratio driven by a shrinking waist is the meaningful kind of progress.",
+        "q": "Does the hip measurement ever change?"
+      },
+      {
+        "a": "No. Children's body proportions differ, and the adult WHO cut-offs do not apply. Paediatric growth charts use waist measurements against age, not this ratio.",
+        "q": "Can children use this calculator?"
+      }
+    ],
+    "formula": "WHR = waist circumference / hip circumference.\nBoth measurements must use the same unit.\nWHO risk bands - men: below 0.90 low, 0.90-0.99 moderate, 1.00+ high.\nWomen: below 0.80 low, 0.80-0.84 moderate, 0.85+ high.\nExample: 76 / 100 = 0.76 (low risk for a woman).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your units (cm or inches) and your sex - the risk thresholds differ for men and women.",
+      "Measure your waist at its narrowest point, roughly at navel level, after breathing out.",
+      "Measure your hips at their widest point around the buttocks.",
+      "Enter both numbers. Your ratio, risk category, and the healthy threshold appear instantly.",
+      "If you land in moderate or high risk, pick one habit - a daily 30-minute walk is a strong start - and recheck monthly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "WHR = waist circumference divided by hip circumference, both in the same unit.",
+      "WHO low-risk cut-offs: below 0.90 for men, below 0.85 for women.",
+      "Belly fat (visceral fat) raises heart and diabetes risk more than fat on the hips and thighs.",
+      "Research finds WHR predicts cardiovascular risk better than BMI in many studies.",
+      "Measure the waist at the narrowest point after breathing out, and the hips at the widest point.",
+      "A tape measure reading is a screening signal, not a diagnosis - trends matter more than one reading."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "whr calculator, waist to hip ratio calculator, waist hip ratio chart, belly fat risk calculator, whr healthy range",
+    "labels": {
+      "below": "Below",
+      "female": "Female",
+      "hipImperial": "Hip (inches)",
+      "hipMetric": "Hip (cm)",
+      "imperialTab": "Imperial (in)",
+      "male": "Male",
+      "metricTab": "Metric (cm)",
+      "riskCategory": "Risk category",
+      "sex": "Sex",
+      "thresholdNote": "Healthy threshold",
+      "unitSystem": "Unit system",
+      "waistImperial": "Waist (inches)",
+      "waistMetric": "Waist (cm)",
+      "whr": "Your WHR"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "WHO cut-offs are for adults - not valid for children or teenagers.",
+      "Pregnancy and high muscle mass distort the reading.",
+      "A single tape measurement can be off by a centimetre or two; repeat it to be sure.",
+      "This is a screening estimate, not medical advice - see a doctor if you are in the high-risk band."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate your waist-to-hip ratio (WHR) and see your health-risk band with WHO cut-offs for men and women. Free, private, instant.",
+    "metaTitle": "Waist-to-Hip Ratio Calculator - Check Your WHR & Health Risk | JaurTools",
+    "name": "Waist-to-Hip Ratio Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your measurements never leave your device.",
+    "quickAnswer": "WHR = waist / hip. A woman with a 76 cm waist and 100 cm hips has a WHR of 0.76, which is low risk (healthy is below 0.85 for women and below 0.90 for men). Belly fat matters more than total weight for heart and diabetes risk, which is why WHR often beats BMI as a warning signal. Enter your numbers above for your ratio and risk category.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "WHR Calculator results",
+    "tagline": "One ratio that reveals what BMI misses.",
+    "workedExample": "Woman, waist 76 cm, hips 100 cm:\n1. Divide waist by hips: 76 / 100 = 0.76.\n2. Compare with the women's bands: low risk is below 0.80.\n3. Result: 0.76 falls in the low-risk band.\nFor a man with the same measurements, 0.76 is also low risk (men's low-risk band is below 0.90).\nA 95 cm waist on 100 cm hips would be 0.95 - moderate risk for a man, high risk for a woman.",
+    "workedExampleHeading": "Worked example"
+  }
+}

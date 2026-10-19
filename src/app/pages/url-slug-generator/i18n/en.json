@@ -1,0 +1,104 @@
+{
+  "url-slug-generator": {
+    "benefits": [
+      "Create clean, readable URLs for blog posts, products and pages in seconds.",
+      "Improve click-through: users trust URLs that describe the content.",
+      "Keep slugs consistent (lowercase, one separator) across an entire site.",
+      "Remove accented characters safely so links never break in old browsers or email clients.",
+      "Generate in bulk style — paste any title and get a publish-ready slug instantly."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A slug is the readable part of a URL, like the-10-best-tea-brands in example.com/blog/the-10-best-tea-brands. It tells both users and search engines what the page is about.",
+        "q": "What is a URL slug?"
+      },
+      {
+        "a": "Hyphens are the standard choice and the one Google recommends as word separators. Underscores work, but Google treats them as joiners (red_apple can read as redapple), so hyphens are safer for SEO.",
+        "q": "Should I use hyphens or underscores?"
+      },
+      {
+        "a": "Keep slugs under about 60 characters. Shorter URLs rank no better directly, but they get clicked and shared more often, and they never get cut off in social previews.",
+        "q": "How long should a slug be?"
+      },
+      {
+        "a": "Yes. Accented characters (é, ü, ñ) are transliterated to plain ASCII (e, u, n) using Unicode normalization, and non-Latin characters are removed so the URL always works everywhere.",
+        "q": "Does it handle accented characters?"
+      },
+      {
+        "a": "Stop words are common words (the, and, of, in) that add little meaning. Removing them shortens the slug, but keeping them keeps the slug more readable — it is a style choice, not an SEO requirement.",
+        "q": "Should I remove stop words from my slug?"
+      },
+      {
+        "a": "No. The generator runs entirely in your browser. Your titles never leave your device.",
+        "q": "Is my title uploaded anywhere?"
+      },
+      {
+        "a": "Paste the new title, copy the new slug, and set up a 301 redirect from the old URL to the new one in your CMS or hosting panel so you do not lose traffic.",
+        "q": "How do I change a slug on an existing page?"
+      }
+    ],
+    "formula": "1. NFD-normalize, strip combining marks; transliterate ß->ss, æ->ae, œ->oe, ø->o, ł->l, ñ->n ...\n2. If lowercase on: whole string -> toLowerCase()\n3. Remove everything except a-z A-Z 0-9 space hyphen\n4. Split on whitespace/hyphens; optionally drop stop words (the, a, an, and, or, of, in, on, ...)\n5. Join words with - (or _)\n6. If longer than max length: cut to max length, then trim back to the last separator (min 10 chars kept)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your page title into the title box.",
+      "Choose the separator: hyphen (-) is the SEO standard; underscore (_) is an option.",
+      "Toggle Force lowercase on (recommended) and stop-word removal as you like.",
+      "Adjust Max length — 60 characters is a good default.",
+      "Copy the generated slug, or download it as a .txt file.",
+      "Check the preview URL to see how it will look live."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A URL slug is the human-readable tail of a URL: example.com/blog/your-slug-here.",
+      "Hyphens are the recommended word separator; underscores are treated as word joiners by Google.",
+      "Accented letters are transliterated to ASCII (é -> e, ü -> u, ñ -> n) so links never break.",
+      "Stop words (the, and, of, in) can be stripped to shorten the slug.",
+      "Slugs are truncated at the max length on a word boundary, never mid-word.",
+      "This generator runs 100% in your browser — no data leaves your device."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "url slug generator, seo slug, permalink generator, url slugifier, seo friendly url",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy slug",
+      "download": "Download .txt",
+      "emptyHint": "Your slug will appear here",
+      "hyphen": "Hyphen (-)",
+      "inputLabel": "Page title",
+      "inputPlaceholder": "e.g. The 10 Best Tea Brands in India - 2026 Guide",
+      "lengthLabel": "Slug length",
+      "lowercaseLabel": "Force lowercase",
+      "maxLengthLabel": "Max length",
+      "outputLabel": "Generated slug",
+      "previewLabel": "Preview URL",
+      "separatorLabel": "Word separator",
+      "stopWordsLabel": "Remove stop words (the, and, of...)",
+      "underscore": "Underscore (_)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Stop-word removal uses an English stop-word list only; it does not apply to Hindi or Arabic titles.",
+      "Non-Latin scripts (Devanagari, Arabic, Chinese) are removed from slugs, not transliterated — a title in those scripts produces an empty slug.",
+      "Transliteration covers common Latin accents; rare characters may fall back to being removed.",
+      "The max-length trim keeps at least 10 characters before cutting at the last separator, so very short titles stay intact."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Turn any title into a clean SEO-friendly URL slug with custom separators, stop-word removal and length control. Free, 100% in your browser.",
+    "metaTitle": "URL Slug Generator: SEO-Friendly Slugs Online | JaurTools",
+    "name": "URL Slug Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your title, pick a separator and options, and a clean slug appears instantly — lowercase, hyphen-separated, with accented characters transliterated and optional stop-word removal. Copy it or download it as a .txt file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "URL slug results",
+    "tagline": "Turn titles and strings into clean, SEO-friendly URL slugs.",
+    "workedExample": "Input:  The 10 Best Tea Brands in India — 2026 Guide!\n\nStep 1: lowercase -> \"the 10 best tea brands in india — 2026 guide!\"\nStep 2: remove everything except letters, digits, spaces, hyphens -> \"the 10 best tea brands in india  2026 guide\"\nStep 3: split into words -> [the, 10, best, tea, brands, in, india, 2026, guide]\nStep 4: join with hyphens -> \"the-10-best-tea-brands-in-india-2026-guide\" (48 characters, under the 60 limit)\n\nWith stop-word removal on (the, in dropped): \"10-best-tea-brands-india-2026-guide\"\n\nPreview: https://example.com/blog/the-10-best-tea-brands-in-india-2026-guide",
+    "workedExampleHeading": "Worked example"
+  }
+}

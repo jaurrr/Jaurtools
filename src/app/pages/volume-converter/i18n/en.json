@@ -1,0 +1,140 @@
+{
+  "volume-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Volume Converter",
+    "tagline": "Convert between millilitres, litres, cubic metres, cups, pints, quarts and gallons.",
+    "metaTitle": "Volume Converter — Litres to Gallons Online",
+    "metaDescription": "Free volume converter: ml, litres, m³, tsp, tbsp, fl oz, cups, pints, quarts, gallons. Exact factors for cooking and science, in your browser.",
+    "keywords": "volume converter, litres to gallons, cups to ml, gallons to litres, ml to ounces, cooking converter",
+    "quickAnswer": "Enter the volume, pick the unit you have and the one you want. The tool converts instantly with exact definitions — 1 US gallon = 3.785411784 litres — ideal for recipes and lab work.",
+    "keyFacts": [
+      "The litre is defined as exactly one cubic decimetre (0.001 m³).",
+      "One US gallon equals exactly 3.785411784 litres; the imperial gallon is 4.54609 litres.",
+      "A US cup is 236.588 ml; a US tablespoon is 14.787 ml; a teaspoon is 4.929 ml.",
+      "One fluid ounce is 29.5735 ml; 16 fl oz make a US pint.",
+      "This tool uses US customary kitchen units, the most common in online recipes."
+    ],
+    "howTo": [
+      "Type the volume value into the value field.",
+      "Choose the source unit from the \"From\" dropdown.",
+      "Choose the target unit from the \"To\" dropdown.",
+      "Read the converted volume instantly; swap reverses it.",
+      "Check the rate line for the exact factor used."
+    ],
+    "formula": "result = value × (from-unit in litres) ÷ (to-unit in litres)\nExample: litres = gallons × 3.785411784",
+    "workedExample": "Convert 2 US gallons to litres.\nStep 1: 1 US gallon = 3.785411784 L.\nStep 2: 2 × 3.785411784 = 7.570823568.\nAnswer: 2 gallons = 7.570824 litres (rounded to 6 decimals).",
+    "benefits": [
+      "Metric and US kitchen units side by side — perfect for international recipes.",
+      "Exact definitions, not rounded recipe approximations.",
+      "Instant, private, browser-only calculation.",
+      "Shows the exact conversion rate with every result.",
+      "Useful for cooking, baking, chemistry and fuel calculations."
+    ],
+    "limitations": [
+      "Uses US customary units; imperial (UK) gallons and pints differ.",
+      "Results rounded to 6 decimal places.",
+      "Dry vs liquid measures can differ slightly in practice.",
+      "Values beyond ±1e15 are clamped."
+    ],
+    "faqs": [
+      {
+        "q": "How many litres are in a gallon?",
+        "a": "A US gallon is 3.785411784 litres. The imperial (UK) gallon is larger at 4.54609 litres — this tool uses the US gallon."
+      },
+      {
+        "q": "How many ml in a cup?",
+        "a": "A US cup is 236.588 ml. So 2 cups = 473.176 ml, about half a litre."
+      },
+      {
+        "q": "What is the difference between US and imperial gallons?",
+        "a": "The US gallon (3.785 L) is smaller than the imperial gallon (4.546 L). Always check which gallon a recipe or manual means."
+      },
+      {
+        "q": "How many teaspoons in a tablespoon?",
+        "a": "Exactly 3 teaspoons per tablespoon in US measure: 3 × 4.9289 ml = 14.7868 ml."
+      },
+      {
+        "q": "Is a litre the same as a cubic decimetre?",
+        "a": "Yes, exactly. 1 litre = 1 dm³ = 0.001 m³ by definition."
+      },
+      {
+        "q": "Is my data sent anywhere?",
+        "a": "No. Conversion happens entirely in your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Volume conversion results",
+    "labels": {
+      "valueLabel": "Value",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "resultLabel": "Result",
+      "rateLabel": "Conversion rate",
+      "swapLabel": "Swap units"
+    },
+    "units": [
+      {
+        "id": "ml",
+        "name": "Millilitre",
+        "symbol": "ml"
+      },
+      {
+        "id": "tsp",
+        "name": "Teaspoon (US)",
+        "symbol": "tsp"
+      },
+      {
+        "id": "tbsp",
+        "name": "Tablespoon (US)",
+        "symbol": "tbsp"
+      },
+      {
+        "id": "floz",
+        "name": "Fluid ounce (US)",
+        "symbol": "fl oz"
+      },
+      {
+        "id": "cup",
+        "name": "Cup (US)",
+        "symbol": "cup"
+      },
+      {
+        "id": "pint",
+        "name": "Pint (US)",
+        "symbol": "pt"
+      },
+      {
+        "id": "quart",
+        "name": "Quart (US)",
+        "symbol": "qt"
+      },
+      {
+        "id": "l",
+        "name": "Litre",
+        "symbol": "L"
+      },
+      {
+        "id": "gal",
+        "name": "Gallon (US)",
+        "symbol": "gal"
+      },
+      {
+        "id": "m3",
+        "name": "Cubic metre",
+        "symbol": "m³"
+      }
+    ]
+  }
+}

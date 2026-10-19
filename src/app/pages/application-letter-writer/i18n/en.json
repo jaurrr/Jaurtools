@@ -1,0 +1,112 @@
+{
+  "application-letter-writer": {
+    "benefits": [
+      "Correct formal structure every time: sender, date, recipient, subject, salutation and closing in the right order.",
+      "Four letter types: job application, leave application, resignation and general request, each with fitting wording.",
+      "Live preview: the letter updates as you type, so you can review the final text before copying.",
+      "Free and private: no account, no template downloads, your details never leave the browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Choose a letter type, fill in your name, the recipient and the subject, then write your points one per line. The tool assembles them into a properly structured formal letter with a salutation and closing, which you can copy or download.",
+        "q": "How does the letter writer work?"
+      },
+      {
+        "a": "Use one clear sentence per line in the points box. Each line becomes its own paragraph in the letter. Keep sentences short, factual and polite; avoid slang and abbreviations.",
+        "q": "How should I write the body points?"
+      },
+      {
+        "a": "The letter uses a standard formal structure: your name and address, the date, the recipient's title and organization, a subject line, a salutation, an opening sentence, your points, a closing sentence and a sign-off. This structure is accepted by schools, offices and government departments.",
+        "q": "Is the format acceptable for offices and schools?"
+      },
+      {
+        "a": "The wording is a solid, polite starting point written in professional English, but you should read it once and adjust the tone for your situation. For critical letters (legal matters, formal complaints), have someone experienced review the final text.",
+        "q": "Can I trust the wording as-is?"
+      },
+      {
+        "a": "Yes. The tool renders the letter in all three site languages. Professional tip: for formal letters to offices and schools, the English version is usually the safest choice; use the Hindi or Arabic version where the recipient expects it.",
+        "q": "Does it work in Hindi and Arabic?"
+      },
+      {
+        "a": "The download is a plain text file with the complete letter. Paste it into Word, Google Docs or your email, adjust the formatting, and print or send.",
+        "q": "What do I do with the downloaded file?"
+      }
+    ],
+    "formula": "Letter = sender name + address + date + recipient title/name/organization + \"Subject:\" + subject + salutation + opening sentence (by type) + body points (one paragraph each) + closing sentence (by type) + \"Yours sincerely,\" + sender name",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the letter type: job, leave, resignation or request.",
+      "Enter your name, address and the date.",
+      "Enter the recipient's role, name and organization.",
+      "Write a clear subject line.",
+      "Type your points, one per line; each becomes a paragraph.",
+      "Review the live preview, then copy or download the letter."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A formal application letter has a fixed anatomy: sender block, date, recipient block, subject line, salutation, body, closing and signature.",
+      "The subject line is the most-read part of any application letter: make it specific, e.g. \"Application for two days' leave\" rather than \"Leave\".",
+      "One idea per paragraph keeps a formal letter readable; long single paragraphs are the most common formatting mistake.",
+      "\"Yours sincerely\" is the standard sign-off when the recipient is addressed by role (\"Dear Sir/Madam\").",
+      "Dates in formal letters are written out (18 October 2026), which this tool does automatically in each language.",
+      "A letter should fit on one page: if your points need more, attach a separate sheet instead."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "application letter writer, formal letter generator, leave application letter, job application letter format, resignation letter maker",
+    "labels": {
+      "addressLabel": "Your address",
+      "closing_job": "I would be grateful for an opportunity to discuss my application in an interview. Thank you for considering my application.",
+      "closing_leave": "I will make sure my pending work is completed before I leave. I hope for your kind approval.",
+      "closing_request": "I would be grateful if you could consider my request favorably. Thank you for your time and attention.",
+      "closing_resignation": "I will do my best to ensure a smooth handover of my responsibilities during the notice period. Thank you for the opportunities I have had here.",
+      "copyButton": "Copy letter",
+      "dateLabel": "Date",
+      "downloadButton": "Download .txt",
+      "intro_job": "With reference to the above subject, I wish to apply for the position advertised. I believe my qualifications and experience make me a suitable candidate.",
+      "intro_leave": "With reference to the above subject, I respectfully request leave for the period mentioned below.",
+      "intro_request": "With reference to the above subject, I would like to bring the following matter to your kind attention.",
+      "intro_resignation": "With reference to the above subject, I hereby submit my resignation from my position. Please treat this letter as formal notice.",
+      "nameLabel": "Your full name",
+      "noteText": "This tool drafts the structure and wording; always read the letter once and adjust the tone to your situation.",
+      "organizationLabel": "Organization / school / company",
+      "outputLabel": "Your letter",
+      "pointsHint": "One point per line. Each line becomes a paragraph in the letter.",
+      "pointsLabel": "Body points",
+      "recipientLabel": "Recipient name (optional)",
+      "recipientRoleLabel": "Recipient role (e.g. The Manager, The Principal)",
+      "salutation": "Dear Sir/Madam,",
+      "sincerely": "Yours sincerely,",
+      "subjectLabel": "Subject",
+      "subjectPrefix": "Subject:",
+      "typeLabel": "Letter type",
+      "type_job": "Job application",
+      "type_leave": "Leave application",
+      "type_request": "Request letter",
+      "type_resignation": "Resignation letter"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The tool drafts standard wording; it cannot know your workplace's specific rules or notice periods.",
+      "Tone is polite but generic: sensitive letters (disputes, legal matters) need human review.",
+      "It does not check facts, dates or names: proofread everything before sending.",
+      "For legal or contractual letters, consult a professional instead of relying on a template."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Write formal application letters free: job, leave, resignation and request letters with correct structure in English, Hindi and Arabic. Copy or download.",
+    "metaTitle": "Application Letter Writer — Free Formal Letter Maker",
+    "name": "Application Letter Writer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Fill in your name, the recipient and your points, and get a properly structured formal letter (job, leave, resignation or request) that you can copy or download.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Letter results",
+    "tagline": "Write formal application letters with correct structure — job, leave, resignation, request.",
+    "workedExample": "Type: leave application. Name \"Amit Kumar\", recipient role \"The Principal\", organization \"City Public School\", subject \"Application for two days' leave\", points: \"I need leave on 20 and 21 October 2026 for a family function.\" and \"I have completed my pending school work.\" Date 18 October 2026.\nThe letter opens with the sender block and date, then \"The Principal, City Public School\", then \"Subject: Application for two days' leave\", then \"Dear Sir/Madam,\", then the leave opening sentence, then the two points as separate paragraphs, then the closing sentence asking for approval, and finally \"Yours sincerely, Amit Kumar\". Copy it into your email or print it.",
+    "workedExampleHeading": "Worked example"
+  }
+}

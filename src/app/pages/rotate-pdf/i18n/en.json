@@ -1,0 +1,97 @@
+{
+  "rotate-pdf": {
+    "benefits": [
+      "Fix sideways scans and upside-down pages in seconds.",
+      "Rotate the whole document or just the pages you pick — 1,3,5-8.",
+      "Batch-rotate several PDFs at once and get them back as one ZIP.",
+      "Rotation is written into the PDF itself, so it stays fixed in every viewer.",
+      "Nothing is uploaded; your documents never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — 90°, 180° or 270° clockwise. 270° clockwise is the same as 90° counter-clockwise, so every orientation is covered.",
+        "q": "Which angles are supported?"
+      },
+      {
+        "a": "Leave the range box empty to rotate every page, or type ranges like 1,3,5-8. Pages outside the range keep their current orientation.",
+        "q": "Can I rotate only some pages?"
+      },
+      {
+        "a": "Yes. The new rotation adds to whatever the page already had: (current + chosen) mod 360. A page already at 90° rotated by 270° ends at 0°.",
+        "q": "What happens if a page was already rotated?"
+      },
+      {
+        "a": "Yes, all three angles. The rotation is stored in the PDF's page dictionary, so Adobe Reader, browsers and phones all respect it.",
+        "q": "Does the rotation work in every PDF viewer?"
+      },
+      {
+        "a": "Each file is rotated separately and bundled into one ZIP, with the angle baked into the filename (report-rot90.pdf).",
+        "q": "What happens with multiple files?"
+      },
+      {
+        "a": "The angle is applied to each page you selected. Pages you did not select are copied through untouched, so nothing else changes.",
+        "q": "Does rotation change anything else in the file?"
+      }
+    ],
+    "formula": "new_rotation = (current_rotation + chosen_angle) mod 360\n\nAngles are stored per page in the PDF. Example: a page at 90° rotated by 270° → (90 + 270) mod 360 = 0° (upright).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload one or more PDF files (up to 50 MB each).",
+      "Pick the rotation angle: 90°, 180° or 270° clockwise.",
+      "Optionally type page ranges per file (e.g. 1,3,5-8); leave empty for all pages.",
+      "Click rotate to apply the new orientation.",
+      "Download the fixed PDF — or a ZIP when you rotated several files."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Pages rotate by 90°, 180° or 270° clockwise, applied to all pages or a chosen range.",
+      "The rotation is written into each page's /Rotate entry, so the fix is permanent in every viewer.",
+      "Multiple PDFs can be processed in one batch; several outputs are bundled into a single ZIP.",
+      "Page ranges use familiar notation: 1,3,5-8 means pages 1, 3, and 5 through 8.",
+      "Everything runs locally with pdf-lib — files up to 50 MB each, never uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "rotate pdf, rotate pdf pages, fix sideways pdf, rotate pdf 90 degrees, rotate pdf online free",
+    "labels": {
+      "angleLabel": "Rotation angle (clockwise)",
+      "busy": "Rotating pages, please wait…",
+      "downloadOne": "PDF",
+      "errParse": "{n} could not be read and was skipped.",
+      "errProcess": "Something went wrong while rotating.",
+      "errSize": "{n} is larger than 50 MB and was skipped.",
+      "errType": "{n} is not a PDF and was skipped.",
+      "filesHint": "One or more PDF files, up to 50 MB each. Files never leave your browser.",
+      "filesLabel": "PDF files",
+      "pageCount": "Pages",
+      "rangeLabel": "Pages to rotate (optional)",
+      "rangePh": "e.g. 1,3,5-8 — empty means all",
+      "removeLabel": "Remove",
+      "rotateButton": "Rotate PDF",
+      "statusDone": "Rotated {n} file(s)."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only 90° steps are possible — arbitrary angles like 37° are not supported.",
+      "Pages with existing rotation accumulate: rotating twice by 90° equals one 180° turn.",
+      "Scanned pages rotate as images; this cannot straighten a slightly skewed scan.",
+      "Password-protected PDFs that need a password prompt cannot be processed."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Rotate PDF pages online for free. Fix sideways or upside-down pages — 90°, 180°, 270°, all pages or selected ranges. 100% in your browser.",
+    "metaTitle": "Rotate PDF — Fix Page Orientation Online Free",
+    "name": "Rotate PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload one or more PDFs, pick 90°, 180° or 270° clockwise, and rotate every page or just the ranges you type (like 1,3,5-8). The new orientation is written permanently into the PDF, and multiple files come back bundled in a single ZIP.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Rotate PDF results",
+    "tagline": "Fix sideways and upside-down PDF pages in one click.",
+    "workedExample": "A 6-page scan where pages 2–3 came out sideways (already at 90°).\nYou select angle 270° and range 2-3.\nNew rotation: (90 + 270) mod 360 = 360 mod 360 = 0° — upright.\nPages 1, 4, 5, 6 are untouched. The downloaded PDF opens correctly everywhere.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "pdf-to-text": {
+    "benefits": [
+      "Copy text from PDFs without retyping — ideal for quotes, references and research notes.",
+      "The extracted text downloads as a clean .txt file you can open anywhere.",
+      "Character and word counts are computed instantly for the whole document.",
+      "Optional page separators keep the text organized page by page.",
+      "Your document never leaves your device, unlike online converter websites."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The tool reads the text layer that real PDFs store as selectable text. Scanned pages are just images, so without a text layer there is nothing to extract — OCR is not included.",
+        "q": "Does it work on scanned PDFs?"
+      },
+      {
+        "a": "pdf.js reads the same Unicode text the PDF viewer uses, so Hindi, Arabic and other scripts extract correctly as long as the PDF embeds proper font information.",
+        "q": "Can it extract Hindi or Arabic text?"
+      },
+      {
+        "a": "The raw extraction is not editable — it is the source your .txt download is built from. You can select all and copy it to any editor, or download the .txt file directly.",
+        "q": "Can I edit the text in the preview box?"
+      },
+      {
+        "a": "Line breaks and columns come from the PDF's layout, which can look messy. The tool preserves the reading order the PDF declares; heavily designed layouts may need manual cleanup.",
+        "q": "Why does the extracted text look jumbled?"
+      },
+      {
+        "a": "No. The reader library (pdf.js) is bundled with the site, so parsing, counting and downloading run fully offline in your browser.",
+        "q": "Does extraction need the internet?"
+      },
+      {
+        "a": "The first 1,200 pages are covered, which is far beyond typical documents. Longer files are truncated to protect browser memory.",
+        "q": "Is there a page limit?"
+      }
+    ],
+    "formula": "words = number of whitespace-separated tokens\ncharacters = total characters including spaces\n\nExample check: 180 + 220 = 400 words; 1,050 + 1,300 = 2,350 characters.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload your PDF file (up to 50 MB).",
+      "Extraction starts automatically — text is read page by page.",
+      "Toggle the page-number separators on or off as you prefer.",
+      "Review the live character and word counts.",
+      "Copy the text to your clipboard or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Text is extracted from the PDF's real text layer using the pdf.js engine, entirely in your browser.",
+      "Extraction preserves the PDF's declared reading order, page by page.",
+      "Optional separators mark where each page begins, which helps when quoting long documents.",
+      "Live statistics show total characters (with spaces) and total words for the whole document.",
+      "Copy to clipboard and .txt download are both one click; files up to 50 MB are supported."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pdf to text, extract text from pdf, pdf text extractor, copy text from pdf, pdf to txt online",
+    "labels": {
+      "busy": "Extracting text, please wait…",
+      "charCount": "Characters",
+      "copied": "Copied",
+      "copyButton": "Copy text",
+      "downloadButton": "Download .txt",
+      "errRender": "Could not read this PDF. It may be scanned, corrupted or password-protected.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "PDF file, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "outputLabel": "Extracted text",
+      "pageAlt": "Page",
+      "pageNumsLabel": "Show page separators",
+      "statusDone": "Text extracted from {n} page(s).",
+      "wordCount": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Scanned or image-only PDFs have no text layer, so nothing can be extracted without OCR.",
+      "Complex multi-column layouts may extract in an unexpected reading order.",
+      "Very large PDFs (100+ pages) can be slow to process and may use significant browser memory.",
+      "Password-protected PDFs that require a password prompt cannot be read."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Extract text from any PDF online for free. Copy to clipboard or download as .txt with live word counts. Runs 100% in your browser.",
+    "metaTitle": "PDF to Text — Extract Text from PDF Online Free",
+    "name": "PDF to Text",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF and its full text is pulled out page by page, right in your browser. You get live character and word counts, optional page separators, one-click copy to clipboard, and a clean .txt download — no uploads, no signups, no waiting rooms.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "PDF to Text results",
+    "tagline": "Pull the full text out of any PDF — free and private.",
+    "workedExample": "A 2-page PDF:\nPage 1 holds 180 words and 1,050 characters.\nPage 2 holds 220 words and 1,300 characters.\nTotal words: 180 + 220 = 400.\nTotal characters: 1,050 + 1,300 = 2,350.\nThe tool shows exactly these totals and downloads all 400 words as one .txt file.",
+    "workedExampleHeading": "Worked example"
+  }
+}

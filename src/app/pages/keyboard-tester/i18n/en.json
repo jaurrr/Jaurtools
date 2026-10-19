@@ -1,0 +1,108 @@
+{
+  "keyboard-tester": {
+    "benefits": [
+      "Instantly find dead, stuck, or ghosting keys before they ruin your typing.",
+      "Verify that left and right modifier keys both work, which matters for shortcuts.",
+      "Check key repeat behaviour - useful for gaming keyboards.",
+      "See the exact code your keyboard sends, handy for remapping software.",
+      "No installation, works on any desktop or laptop browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Probably, but check first. Make sure the keyboard area is focused (click it), try the key in a text editor, and check whether the OS grabbed it as a shortcut (function keys often do). If it fails everywhere, the switch or membrane under that key is likely dead.",
+        "q": "A key does not light up. Is it broken?"
+      },
+      {
+        "a": "The code (KeyA) identifies the physical key position and is consistent across layouts and languages. The keyCode (65) is an older numeric system that browsers keep for compatibility. Code is the reliable one to trust.",
+        "q": "What is the difference between KeyA and keyCode 65?"
+      },
+      {
+        "a": "Modifier keys exist twice on full keyboards. Location 1 means the left one, 2 means the right one. This matters because some shortcuts behave differently, and it proves both physical keys work.",
+        "q": "Why does the location say Left or Right?"
+      },
+      {
+        "a": "Your hardware is fine - your keyboard layout or input language is set wrong. On Windows check the language bar; on Mac check Input Sources in Settings. The tester shows what key you pressed, not what character your layout produces.",
+        "q": "My keyboard types the wrong characters but lights up fine. What is wrong?"
+      },
+      {
+        "a": "When you hold a key, the OS sends the key-down event repeatedly. The tester marks these with the repeat flag so you can confirm auto-repeat works and distinguish one press from a held key.",
+        "q": "Why do held keys show a repeat flag?"
+      },
+      {
+        "a": "The virtual layout focuses on the main key area. Numpad presses will still register their codes (like Numpad1) in the details panel, but there is no visual numpad. Location will show Numpad for those keys.",
+        "q": "Can I test the numpad with this tool?"
+      }
+    ],
+    "formula": "Key press = keydown event with a code (e.g. KeyA).\nKey release = keyup event with the same code.\nHeld keys = codes with keydown but no keyup yet.\nUnique keys tested = distinct codes seen since reset.",
+    "formulaHeading": "What this page measures",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click the keyboard area above (or the Focus button) so it captures your key presses.",
+      "Press any key on your physical keyboard. It lights up on the virtual keyboard.",
+      "Check the details panel: key name, code, location (left/right), and active modifiers.",
+      "Try combinations like Ctrl+Shift+Esc to confirm modifiers register together.",
+      "Walk through every key, including function keys F1 to F12, to find dead keys.",
+      "Press Reset to clear the history and start a fresh check."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every physical key reports a code like KeyA, Digit1, or Space, which is independent of the character it types.",
+      "A key that does not light up is either physically broken, disconnected, or intercepted by the operating system.",
+      "Modifier keys (Shift, Ctrl, Alt, Win/Cmd) each have separate left and right codes - test both sides.",
+      "The key code number is a legacy numeric value; the code string (e.g. KeyA) is the modern, reliable identifier.",
+      "Holding a key sends repeated key-down events; this tester shows the repeat flag so you can verify key repeat works.",
+      "Browser and OS shortcuts (like Alt+Tab or Cmd+Space) may never reach the page - that is normal, not a defect."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "keyboard tester, keyboard test online, test keyboard keys, key tester, check keyboard not working",
+    "labels": {
+      "clearButton": "Reset",
+      "code": "Code",
+      "focusButton": "Focus keyboard",
+      "focusHint": "Click the keyboard panel first so it captures your key presses.",
+      "keyCode": "Key code",
+      "keyboardArea": "Virtual keyboard test area",
+      "lastKey": "Last key pressed",
+      "locLeft": "Left",
+      "locNumpad": "Numpad",
+      "locRight": "Right",
+      "locStandard": "Standard",
+      "location": "Location",
+      "modAlt": "Alt",
+      "modCtrl": "Ctrl",
+      "modMeta": "Win/Cmd",
+      "modNone": "None",
+      "modShift": "Shift",
+      "modifiers": "Modifiers",
+      "no": "No",
+      "noKeyYet": "Press any key",
+      "pressedNow": "Keys held down now",
+      "repeat": "Key repeat",
+      "uniqueTested": "Unique keys tested",
+      "yes": "Yes"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "System-level shortcuts (Alt+Tab, Cmd+Space, the Windows key) may be captured by the OS and never reach the browser.",
+      "This page tests what the browser receives, not the raw hardware signal.",
+      "Numpad and media keys are not shown on this layout - use the Key Rollover test for simultaneous presses.",
+      "A key that lights up but types the wrong character is a layout/language issue, not a hardware one."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online keyboard tester: press any key to see it light up, check key codes, locations and modifiers. 100% private, works in your browser, no sign-up.",
+    "metaTitle": "Keyboard Tester - Test Every Key Online Free | JaurTools",
+    "name": "Keyboard Tester",
+    "privacyNote": "This tool runs 100% in your browser. Your key presses never leave your device.",
+    "quickAnswer": "A keyboard tester shows you a virtual keyboard and highlights every physical key you press, along with its code name, key code, left/right location, and any modifier keys held down. If a key lights up on screen, your keyboard registered it. If it does not, the key may be dead, stuck, or blocked by software.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Keyboard test results",
+    "tagline": "Press any key and watch it light up - test every key, code, and modifier on your keyboard.",
+    "workedExample": "You press the left Shift key:\n1. The page receives a keydown event with code ShiftLeft.\n2. The Shift key lights up in the left position on the virtual keyboard.\n3. The details panel shows: Key = Shift, Code = ShiftLeft, Location = Left, Modifiers = Shift.\n4. You release it: a keyup event arrives and the highlight turns off.\nIf instead nothing lights up when you press a key, that key is not reaching the browser.",
+    "workedExampleHeading": "Worked example"
+  }
+}

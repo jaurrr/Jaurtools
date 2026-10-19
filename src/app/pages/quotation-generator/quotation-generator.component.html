@@ -1,0 +1,230 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <h3 class="sub-heading">{{ t('labels.businessHeading') }}</h3>
+      <div class="field">
+        <label for="q-bname">{{ t('labels.businessName') }}</label>
+        <input id="q-bname" type="text" [ngModel]="businessName()" (ngModelChange)="businessName.set($event)" />
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="q-bphone">{{ t('labels.businessPhone') }}</label>
+          <input id="q-bphone" type="tel" dir="ltr" [ngModel]="businessPhone()" (ngModelChange)="businessPhone.set($event)" />
+        </div>
+        <div class="field">
+          <label for="q-baddr">{{ t('labels.businessAddress') }}</label>
+          <input id="q-baddr" type="text" [ngModel]="businessAddress()" (ngModelChange)="businessAddress.set($event)" />
+        </div>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.clientHeading') }}</h3>
+      <div class="two-fields">
+        <div class="field">
+          <label for="q-cname">{{ t('labels.clientName') }}</label>
+          <input id="q-cname" type="text" [ngModel]="clientName()" (ngModelChange)="clientName.set($event)" />
+        </div>
+        <div class="field">
+          <label for="q-caddr">{{ t('labels.clientAddress') }}</label>
+          <input id="q-caddr" type="text" [ngModel]="clientAddress()" (ngModelChange)="clientAddress.set($event)" />
+        </div>
+      </div>
+      <div class="three-fields">
+        <div class="field">
+          <label for="q-no">{{ t('labels.quoteNo') }}</label>
+          <input id="q-no" type="text" dir="ltr" [ngModel]="quoteNo()" (ngModelChange)="quoteNo.set($event)" />
+        </div>
+        <div class="field">
+          <label for="q-date">{{ t('labels.quoteDate') }}</label>
+          <input id="q-date" type="date" [ngModel]="quoteDate()" (ngModelChange)="quoteDate.set($event)" />
+        </div>
+        <div class="field">
+          <label for="q-valid">{{ t('labels.validDays') }}</label>
+          <input id="q-valid" type="number" inputmode="numeric" min="1" max="365" step="1"
+            [ngModel]="validDays()" (ngModelChange)="setValidDays($event)" />
+        </div>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.itemsHeading') }}</h3>
+      @for (item of items(); track $index) {
+        <fieldset class="item-row">
+          <legend>{{ t('labels.itemLabel') }} {{ $index + 1 }}</legend>
+          <div class="field">
+            <label [for]="'q-desc-' + $index">{{ t('labels.itemDesc') }}</label>
+            <input [id]="'q-desc-' + $index" type="text"
+              [ngModel]="item.desc" (ngModelChange)="updateItem($index, { desc: $event })" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label [for]="'q-qty-' + $index">{{ t('labels.qty') }}</label>
+              <input [id]="'q-qty-' + $index" type="number" inputmode="decimal" min="0" step="any"
+                [ngModel]="item.qty" (ngModelChange)="setQty($index, $event)" />
+            </div>
+            <div class="field">
+              <label [for]="'q-rate-' + $index">{{ t('labels.rate') }}</label>
+              <input [id]="'q-rate-' + $index" type="number" inputmode="decimal" min="0" step="any"
+                [ngModel]="item.rate" (ngModelChange)="setRate($index, $event)" />
+            </div>
+            <div class="field">
+              <label>{{ t('labels.amount') }}</label>
+              <p class="amount">{{ currency() }} {{ money().format(lineTotal(item)) }}</p>
+            </div>
+            <button type="button" class="btn btn-danger" (click)="removeItem($index)"
+              [attr.aria-label]="t('labels.removeItem') + ' ' + ($index + 1)">
+              <app-icon name="x" />
+            </button>
+          </div>
+        </fieldset>
+      }
+      <button type="button" class="btn" (click)="addItem()">
+        <app-icon name="check" /> {{ t('labels.addItem') }}
+      </button>
+
+      <div class="three-fields totals-inputs">
+        <div class="field">
+          <label for="q-cur">{{ t('labels.currency') }}</label>
+          <input id="q-cur" type="text" dir="ltr" maxlength="3"
+            [ngModel]="currency()" (ngModelChange)="currency.set($event)" />
+        </div>
+        <div class="field">
+          <label for="q-disc">{{ t('labels.discountPct') }}</label>
+          <input id="q-disc" type="number" inputmode="decimal" min="0" max="100" step="any"
+            [ngModel]="discountPct()" (ngModelChange)="setDiscountPct($event)" />
+        </div>
+        <div class="field">
+          <label for="q-tax">{{ t('labels.taxPct') }}</label>
+          <input id="q-tax" type="number" inputmode="decimal" min="0" max="100" step="any"
+            [ngModel]="taxPct()" (ngModelChange)="setTaxPct($event)" />
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="result-row">
+          <span>{{ t('labels.subtotal') }}</span>
+          <strong>{{ currency() }} {{ money().format(subtotal()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.discountAmt') }} ({{ discountPct() }}%)</span>
+          <strong>-{{ currency() }} {{ money().format(discountAmt()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.taxAmt') }} ({{ taxPct() }}%)</span>
+          <strong>{{ currency() }} {{ money().format(taxAmt()) }}</strong>
+        </div>
+        <div class="result-row total">
+          <span><app-icon name="banknote" /> {{ t('labels.total') }}</span>
+          <strong>{{ currency() }} {{ money().format(total()) }}</strong>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="downloadPdf()" [disabled]="generating()">
+          <app-icon name="download" /> {{ t('labels.downloadPdf') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.pdfNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

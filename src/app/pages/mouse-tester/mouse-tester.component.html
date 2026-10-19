@@ -1,0 +1,184 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <h3 class="sub">{{ t('labels.buttonsTest') }}</h3>
+      <p class="note">{{ t('labels.buttonsHint') }}</p>
+      <div class="btn-grid">
+        @for (n of [0, 1, 2, 3, 4]; track n) {
+          <button
+            type="button"
+            class="mpad"
+            [class.flash]="lastButton() === n"
+            (mousedown)="onButtonDown($event)"
+            (contextmenu)="$event.preventDefault()"
+          >
+            <span class="mpad-name">{{ buttonName(n) }}</span>
+            <strong class="mpad-count">{{ buttonCounts()[n] }}</strong>
+          </button>
+        }
+      </div>
+
+      <h3 class="sub">{{ t('labels.cpsTest') }}</h3>
+      <p class="note">{{ t('labels.cpsHint') }}</p>
+      <button
+        type="button"
+        class="cps-pad calc-testarea"
+        [class.running]="cpsRunning()"
+        (mousedown)="onCpsClick()"
+        [attr.aria-label]="t('labels.cpsPadLabel')"
+      >
+        @if (cpsRunning()) {
+          <span class="cps-timer">{{ cpsLeft().toFixed(1) }}s</span>
+          <strong class="cps-clicks">{{ cpsClicks() }}</strong>
+        } @else {
+          <span>{{ t('labels.startCps') }}</span>
+        }
+      </button>
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.clicks') }}</span>
+          <strong>{{ cpsClicks() }}</strong>
+        </div>
+        <div class="result-row total">
+          <span><app-icon name="timer" /> {{ t('labels.cps') }}</span>
+          <strong>{{ cps().toFixed(1) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.bestCps') }}</span>
+          <strong>{{ bestCps().toFixed(1) }}</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+      @if (!cpsRunning()) {
+        <button type="button" class="btn ghost small" (click)="startCps()">
+          <app-icon name="refresh-cw" /> {{ t('labels.restartCps') }}
+        </button>
+      }
+
+      <h3 class="sub">{{ t('labels.dblTest') }}</h3>
+      <button type="button" class="cps-pad dbl calc-testarea" (dblclick)="onDblClick()" [attr.aria-label]="t('labels.dblPadLabel')">
+        <span>{{ t('labels.dblHint') }}</span>
+        <strong class="cps-clicks">{{ dblCount() }}</strong>
+      </button>
+
+      <h3 class="sub">{{ t('labels.scrollTest') }}</h3>
+      <div class="scroll-pad calc-testarea" (wheel)="onWheel($event)" [attr.aria-label]="t('labels.scrollPadLabel')" tabindex="0">
+        <app-icon name="refresh-cw" />
+        <span>{{ t('labels.scrollHint') }}</span>
+      </div>
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.scrollUp') }}</span>
+          <strong>{{ scrollUp() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.scrollDown') }}</span>
+          <strong>{{ scrollDown() }}</strong>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn ghost" (click)="resetAll()">
+          <app-icon name="refresh-cw" /> {{ t('labels.reset') }}
+        </button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

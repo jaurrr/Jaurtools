@@ -1,0 +1,181 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="mic-visual" aria-hidden="true">
+        <app-icon name="mic" />
+        <span class="live-dot" [class.on]="status() === 'live'"></span>
+      </div>
+
+      <p class="status-line">
+        <span class="status-pill status-{{ status() }}">{{ statusText() }}</span>
+      </p>
+
+      @if (devices().length > 1) {
+        <div class="field">
+          <label for="mic-device">{{ t('labels.device') }}</label>
+          <select id="mic-device" [ngModel]="selectedDevice()" (ngModelChange)="setDevice($event)">
+            <option value="">{{ t('labels.defaultDevice') }}</option>
+            @for (d of devices(); track d.deviceId; let i = $index) {
+              <option [value]="d.deviceId">{{ deviceLabel(d, i) }}</option>
+            }
+          </select>
+        </div>
+      }
+
+      <div class="meter calc-testarea" role="img" [attr.aria-label]="t('labels.meterLabel')">
+        <div class="meter-zones" aria-hidden="true">
+          <span class="zone z-ok"></span><span class="zone z-warn"></span><span class="zone z-hot"></span>
+        </div>
+        <div class="meter-fill" #meterFill></div>
+        <div class="meter-peak" #peakFill></div>
+      </div>
+      <div class="meter-scale">
+        <span>{{ t('labels.silent') }}</span>
+        <span>{{ t('labels.loud') }}</span>
+      </div>
+
+      <div class="calc-interp">
+        <h3><app-icon name="info" /> {{ t('labels.readTitle') }}</h3>
+        <ul>
+          <li><span class="calc-interp-dot" style="background: #22c55e" aria-hidden="true"></span><span>{{ t('labels.zoneOk') }}</span></li>
+          <li><span class="calc-interp-dot" style="background: #f59e0b" aria-hidden="true"></span><span>{{ t('labels.zoneWarn') }}</span></li>
+          <li><span class="calc-interp-dot" style="background: #ef4444" aria-hidden="true"></span><span>{{ t('labels.zoneHot') }}</span></li>
+          <li><span class="calc-interp-dot" style="background: var(--border)" aria-hidden="true"></span><span>{{ t('labels.zoneFlat') }}</span></li>
+        </ul>
+      </div>
+
+      <div class="calc-trouble">
+        <h3><app-icon name="triangle-alert" /> {{ t('labels.troubleTitle') }}</h3>
+        <ul>
+          @for (row of list('troubleRows'); track $index) {
+            <li><app-icon name="check" /><span>{{ row }}</span></li>
+          }
+        </ul>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.peak') }}</span>
+          <strong>{{ peakLevel() }}%</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.status') }}</span>
+          <strong>{{ statusText() }}</strong>
+        </div>
+      </div>
+
+      @if (errorMsg()) {
+        <p class="error"><app-icon name="triangle-alert" /> {{ errorMsg() }}</p>
+      }
+
+      <div class="btn-row">
+        @if (status() === 'live') {
+          <button type="button" class="btn ghost" (click)="stopMic()">
+            <app-icon name="x" /> {{ t('labels.stop') }}
+          </button>
+          <button type="button" class="btn ghost" (click)="resetPeak()">
+            <app-icon name="refresh-cw" /> {{ t('labels.resetPeak') }}
+          </button>
+        } @else {
+          <button type="button" class="btn" (click)="startMic()">
+            <app-icon name="mic" /> {{ t('labels.start') }}
+          </button>
+        }
+      </div>
+
+      <p class="note">{{ t('labels.permissionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

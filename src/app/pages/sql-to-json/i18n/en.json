@@ -1,0 +1,97 @@
+{
+  "sql-to-json": {
+    "assumptionNote": "Assumes standard INSERT INTO table (columns) VALUES (...), (...); syntax. The column list is read from the first statement and applied to every row.",
+    "benefits": [
+      "Move data from SQL dumps into spreadsheets, APIs, or JavaScript without a database.",
+      "Faster than writing a throwaway script every time you need a quick conversion.",
+      "Handles the fiddly bits — NULLs, escaped quotes, commas inside strings — correctly.",
+      "Works offline and keeps sensitive data on your machine instead of a server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Standard INSERT INTO table (columns) VALUES (row), (row); statements, including several INSERT statements pasted together. The column list is read from the first statement and applied to all rows.",
+        "q": "What SQL does it understand?"
+      },
+      {
+        "a": "NULL becomes null in JSON and an empty cell in CSV. The string 'NULL' inside quotes is kept as text — only the bare keyword NULL is treated as missing data.",
+        "q": "How are NULL values handled?"
+      },
+      {
+        "a": "They are handled correctly. In CSV output the field is wrapped in double quotes (\"Ravi, Kumar\") so spreadsheet apps read it as one cell.",
+        "q": "What about commas inside text, like 'Ravi, Kumar'?"
+      },
+      {
+        "a": "Yes, for the INSERT portion. Paste just the INSERT statements — CREATE TABLE lines and other dump metadata are ignored. Very large dumps should be split into smaller chunks first.",
+        "q": "Does it work with MySQL dumps?"
+      },
+      {
+        "a": "Not directly. Run the SELECT in your database tool, export or copy the result as INSERT statements, then paste those here. Many tools (phpMyAdmin, DBeaver) can export results as INSERTs.",
+        "q": "Can I convert a SELECT query?"
+      },
+      {
+        "a": "No. All parsing happens in your browser with JavaScript. Nothing you paste ever leaves your device.",
+        "q": "Is my data sent to a server?"
+      }
+    ],
+    "formula": "Row i, column j: output[i][column_j] = parsed_value(tuple_i[j]).\nJSON: [ { col1: v1, col2: v2 }, ... ] — one object per tuple.\nCSV: header row of column names, then one row per tuple; a cell is escaped as \"...\" if it contains a comma, quote, or newline.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Copy your INSERT INTO ... VALUES statements from your database tool or SQL dump.",
+      "Paste them into the text box (or load the sample to see the expected format).",
+      "Choose JSON for an array of objects, or CSV for a spreadsheet-ready table.",
+      "Check the row and column counts, preview the output, then copy it or download the file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Reads standard SQL: INSERT INTO table (col1, col2) VALUES (v1, v2), (v3, v4); — including multiple INSERT statements.",
+      "NULL becomes JSON null and an empty CSV cell; numbers stay numbers; quoted text stays text.",
+      "SQL-escaped quotes (O''Brien) are unescaped to a single quote (O'Brien).",
+      "CSV output follows the standard rules: fields with commas, quotes, or newlines are wrapped in double quotes, and inner quotes are doubled.",
+      "The column list is read once from the first INSERT and applied to every row."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sql to json, sql to csv, insert to json converter, result set to csv, sql data converter",
+    "labels": {
+      "clear": "Clear",
+      "colsFound": "Columns",
+      "copied": "Copied!",
+      "copy": "Copy output",
+      "download": "Download",
+      "errorNoInsert": "No INSERT INTO statements were found in the text.",
+      "errorNoValues": "No value rows were found after VALUES.",
+      "formatCsv": "CSV",
+      "formatJson": "JSON",
+      "formatLabel": "Output format",
+      "inputLabel": "Paste your SQL",
+      "loadSample": "Load sample",
+      "noInput": "Paste SQL INSERT statements to see the converted result here.",
+      "outputHeading": "Converted output",
+      "placeholder": "Paste INSERT INTO statements here…",
+      "rowsFound": "Rows"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only INSERT ... VALUES statements are parsed — SELECT queries, CREATE TABLE, and stored procedures are ignored.",
+      "Exotic dialect syntax or multi-line string tricks may not parse; keep SQL standard.",
+      "Very large dumps (tens of thousands of rows) can make the browser tab slow — split them first.",
+      "Type detection is simple: it distinguishes numbers, NULL, and text, not dates or booleans specifically."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert SQL INSERT statements into clean JSON arrays free. Auto type detection for numbers, booleans and nulls — in your browser.",
+    "metaTitle": "SQL to JSON - Convert SQL Inserts to JSON | JaurTools",
+    "name": "SQL to JSON",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your INSERT INTO ... VALUES statements, pick JSON or CSV, and the tool parses the columns and rows into a clean array of objects or a proper CSV table. Three rows with id, name, city and balance become a JSON array of three objects or a CSV with a header row. NULL becomes null (or an empty cell), numbers stay numbers, and quoted commas like 'Ravi, Kumar' are handled correctly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SQL to JSON/CSV results",
+    "tagline": "Turn SQL INSERT statements into JSON.",
+    "workedExample": "SQL:\nINSERT INTO customers (id, name, city, balance) VALUES\n(1, 'Asha Verma', 'Jaipur', 1500.50),\n(2, 'Ravi, Kumar', NULL, 230),\n(3, 'O''Brien', 'Kochi', 0);\n\nJSON:\n[\n  {\"id\": 1, \"name\": \"Asha Verma\", \"city\": \"Jaipur\", \"balance\": 1500.5},\n  {\"id\": 2, \"name\": \"Ravi, Kumar\", \"city\": null, \"balance\": 230},\n  {\"id\": 3, \"name\": \"O'Brien\", \"city\": \"Kochi\", \"balance\": 0}\n]\n\nCSV:\nid,name,city,balance\n1,Asha Verma,Jaipur,1500.5\n2,\"Ravi, Kumar\",,230\n3,O'Brien,Kochi,0\n\nNote how NULL became an empty cell and the comma inside 'Ravi, Kumar' forced quotes.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "gyroscope-test": {
+    "benefits": [
+      "Verify your phone's gyroscope and accelerometer respond to movement.",
+      "Diagnose screen-rotation problems: if beta never changes, the sensor is stuck.",
+      "Check motion sensors before buying a used phone.",
+      "See raw sensor values that games and AR apps rely on.",
+      "No app to install - works on any phone browser with sensors."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "iPhones and iPads running iOS 13 or later require explicit permission before a page can read motion sensors. Press the Grant permission button. If you denied it earlier, change the setting in iOS Settings under Safari, Motion and Orientation Access.",
+        "q": "Why does it ask for permission on my iPhone?"
+      },
+      {
+        "a": "That is the standard reading when the phone lies flat and still on a table: gravity pulls straight down through the Z axis, about 9.81 m/s2. Tilt the phone and watch X and Y change as gravity shifts across them.",
+        "q": "The Z acceleration reads 9.8 when the phone is still. Is that right?"
+      },
+      {
+        "a": "It is a dead sensor or a blocked reading. Restart the phone, and make sure no power-saving mode is freezing sensors. If alpha, beta, and gamma all stay at zero in every browser, the gyroscope hardware is likely faulty.",
+        "q": "The values never change no matter how I move the phone. Why?"
+      },
+      {
+        "a": "Lay the phone flat: beta and gamma should both read near 0. If one reads several degrees off on a level surface, the sensor is miscalibrated. Some phones let you calibrate the compass and motion sensors in Settings.",
+        "q": "How do I know if my gyroscope is calibrated?"
+      },
+      {
+        "a": "Most desktop browsers do not expose motion sensors, and desktops have no gyroscope. This test is designed for phones and tablets. On a laptop you will see the not-supported message, which is expected.",
+        "q": "Why does it say not supported on my laptop?"
+      },
+      {
+        "a": "Yes. The values only exist while the page is open. Leaving the page stops the sensor listeners immediately, and nothing is recorded or uploaded.",
+        "q": "Does this drain my battery or track my movement?"
+      }
+    ],
+    "formula": "Orientation (degrees):\nalpha = compass direction the phone points (0 to 360).\nbeta = front-to-back tilt (-180 to 180). 0 = flat.\ngamma = left-to-right tilt (-90 to 90). 0 = flat.\nAcceleration (m/s2): gravity plus movement on X, Y, Z.\nFlat and still: X = 0, Y = 0, Z = 9.81.",
+    "formulaHeading": "What the readings mean",
+    "homeLabel": "Home",
+    "howTo": [
+      "Open this page on your phone or tablet.",
+      "On iPhone, press Grant permission when asked.",
+      "Tilt the phone forward, back, left, and right. Watch beta and gamma change.",
+      "Rotate the phone like a compass and watch alpha sweep 0 to 360.",
+      "Lay it flat and still: acceleration should read about 0, 0, 9.81."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Alpha is the compass heading (0 to 360 degrees); beta is front-back tilt; gamma is left-right tilt.",
+      "A phone lying flat should read beta and gamma near 0 degrees.",
+      "The accelerometer always feels gravity: at rest on a table, Z reads about 9.81 m/s2.",
+      "Values that never change mean the sensor is stuck, blocked, or missing.",
+      "iPhones need explicit permission before any page can read motion sensors.",
+      "Desktop browsers generally do not expose these sensors - this test is for phones and tablets."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gyroscope test, gyroscope test online, accelerometer test, device orientation test, phone sensor test, motion sensor check",
+    "labels": {
+      "accX": "Acceleration X (m/s2)",
+      "accY": "Acceleration Y (m/s2)",
+      "accZ": "Acceleration Z (m/s2)",
+      "alpha": "Alpha - compass (0-360)",
+      "beta": "Beta - front/back tilt",
+      "gamma": "Gamma - left/right tilt",
+      "grantPermission": "Grant sensor permission",
+      "notSupported": "This device or browser does not expose motion sensors.",
+      "permissionDenied": "Sensor permission was denied. Enable it in your browser settings and reload.",
+      "permissionHint": "iPhones require permission before a page can read motion sensors.",
+      "tiltHint": "Tilt your phone. The dot follows the tilt: forward/back moves it vertically, left/right moves it horizontally.",
+      "tiltLabel": "Tilt indicator. The dot moves as you tilt your phone."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "No sensor data on most desktops - the test simply reports not supported.",
+      "Accuracy varies by phone; cheap sensors can be noisy or drift slowly.",
+      "This page shows raw values only - it cannot recalibrate a faulty sensor.",
+      "Some browsers throttle sensor updates when the page is in the background."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online gyroscope test: check your phone's orientation and accelerometer sensors live. See alpha, beta, gamma and acceleration. 100% private.",
+    "metaTitle": "Gyroscope Test - Phone Sensor Check | JaurTools",
+    "name": "Gyroscope Test",
+    "privacyNote": "This tool runs 100% in your browser. Your sensor data never leaves your device.",
+    "quickAnswer": "A gyroscope test reads your phone's motion sensors and shows live orientation values: alpha (compass heading 0-360), beta (front-back tilt), and gamma (left-right tilt), plus acceleration on X, Y, and Z including gravity. The dot in the tilt box follows your phone's tilt. A phone lying flat should read beta and gamma near 0 and Z acceleration near 9.81. iPhones ask for permission first; desktops have no such sensors.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sensor readings",
+    "tagline": "Check your phone's gyroscope and accelerometer with live tilt and motion readings.",
+    "workedExample": "You test a phone with broken auto-rotate:\n1. You open the page and tilt the phone forward. Beta changes from 2 to 45 - the sensor works.\n2. You tilt it left. Gamma moves from -1 to -38 - also working.\n3. You lay it flat: X reads 0.02, Y reads -0.05, Z reads 9.80 - gravity is sensed correctly.\n4. Since the sensors work but the screen never rotates, the problem is a software setting, not the gyroscope.\nYou check the rotation lock and find it was on.",
+    "workedExampleHeading": "Worked example"
+  }
+}

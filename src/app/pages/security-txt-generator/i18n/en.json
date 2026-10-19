@@ -1,0 +1,106 @@
+{
+  "security-txt-generator": {
+    "benefits": [
+      "Gives security researchers a standard way to contact you — no more guessing which email to use.",
+      "Follows RFC 9116, so automated scanners and bug-bounty platforms recognize it instantly.",
+      "Expires dates keep the file fresh: researchers know the contact info is current.",
+      "Preferred-Languages tells reporters which languages you actually read.",
+      "Generated locally; your contact details never leave the browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "At https://yourdomain.com/.well-known/security.txt — the well-known URI defined by RFC 9116. Serve it as plain text over HTTPS. Researchers and scanners look there first.",
+        "q": "Where do I publish security.txt?"
+      },
+      {
+        "a": "At least one Contact line is required by RFC 9116 — without it the file is pointless. Expires is also required by the spec. Everything else (Encryption, Acknowledgments, Policy, Hiring, Canonical, Preferred-Languages) is optional.",
+        "q": "Which fields are required?"
+      },
+      {
+        "a": "Set it no more than a year in the future (the RFC recommends at most one year). When it passes, researchers should treat the file as stale. Renew it yearly — put a reminder in your calendar.",
+        "q": "How far in the future should Expires be?"
+      },
+      {
+        "a": "No. security.txt only advertises how to contact you about vulnerabilities. It doesn't scan, fix, or protect anything by itself. Pair it with an actual vulnerability disclosure policy page.",
+        "q": "Does security.txt make my site more secure?"
+      },
+      {
+        "a": "The Encryption field points to your PGP key so researchers can encrypt sensitive reports. You can link an https:// URL to the key file, or use an openpgp4fpr: fingerprint URI. Without it, reports arrive in plain email.",
+        "q": "What is the Encryption field for?"
+      },
+      {
+        "a": "If you serve security.txt from multiple locations or CDNs, Canonical declares the authoritative URL. It prevents confusion about which copy is current. Most small sites can skip it.",
+        "q": "What is the Canonical field for?"
+      }
+    ],
+    "formula": "security.txt field syntax (RFC 9116):\nContact: mailto:security@example.com     <- required, at least one\nExpires: 2026-12-31T23:59:59Z            <- required, RFC 3339 timestamp\nEncryption: https://example.com/key.txt  <- optional\nAcknowledgments: https://...             <- optional\nPolicy: https://...                      <- optional\nHiring: https://...                      <- optional\nCanonical: https://.../.well-known/security.txt  <- optional\nPreferred-Languages: en, hi              <- optional",
+    "formulaHeading": "File format",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter at least one contact: an email address, an https:// contact URL, or a tel: link — one per line.",
+      "Pick an expiry date within the next year (required by the standard).",
+      "Optionally add your PGP key URL, acknowledgments page, disclosure policy, hiring page, and canonical URL.",
+      "List the languages you read, comma separated (for example: en, hi).",
+      "Copy or download security.txt and publish it at https://yourdomain.com/.well-known/security.txt."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "security.txt is defined by RFC 9116: a standard file that tells security researchers how to report vulnerabilities.",
+      "It lives at the well-known URI /.well-known/security.txt on your domain, served over HTTPS.",
+      "Contact and Expires are the two required fields; everything else is optional.",
+      "Contact values can be mailto: emails, https:// URLs, or tel: links — this tool formats emails automatically.",
+      "Expires must be an RFC 3339 timestamp and should be at most one year in the future.",
+      "The file is advisory only — it advertises contact info, it does not secure anything by itself."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "security.txt generator, security txt file, rfc 9116 generator, vulnerability disclosure file",
+    "labels": {
+      "ackLabel": "Acknowledgments page URL (optional)",
+      "canonicalLabel": "Canonical URL (optional)",
+      "contactsHint": "One per line: email, https:// URL, or tel: link…",
+      "contactsLabel": "Contact (required)",
+      "copiedMsg": "security.txt copied to clipboard.",
+      "copyFile": "Copy file",
+      "downloadFile": "Download security.txt",
+      "encryptionLabel": "Encryption key URL (optional)",
+      "expiresHint": "Required. Rendered as end-of-day UTC in RFC 3339 format.",
+      "expiresLabel": "Expiry date",
+      "generatedFile": "Generated security.txt",
+      "hiringLabel": "Hiring page URL (optional)",
+      "languagesHint": "Comma separated language codes, e.g. en, hi.",
+      "languagesLabel": "Preferred languages (optional)",
+      "policyLabel": "Disclosure policy URL (optional)",
+      "publishAt": "Publish at",
+      "publishNote": "Serve this file over HTTPS at /.well-known/security.txt on your domain.",
+      "warnExpiresInvalid": "The expiry date is not a valid calendar date.",
+      "warnExpiresPast": "The expiry date is in the past — researchers will treat the file as stale.",
+      "warnInvalidContact": "Some contact lines were skipped because they are not a valid email, URL, or tel: link.",
+      "warnInvalidUrl": "One or more optional URLs are invalid (use full https:// URLs) and were left out.",
+      "warnNoContact": "At least one valid Contact is required — the file is currently empty.",
+      "warningsHeading": "Check before publishing"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Advisory only — it does not scan, fix, or prevent vulnerabilities.",
+      "Researchers may ignore it; publishing the file doesn't guarantee responsible disclosure.",
+      "Expires must be renewed (at most yearly) or the file is treated as stale.",
+      "This tool builds the file; serving it over HTTPS at the right path is up to you."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free security.txt generator: create an RFC 9116 security.txt contact file with expiry, encryption, and policy fields. Copy or download, 100% private.",
+    "metaTitle": "security.txt Generator - Create Your Contact File | JaurTools",
+    "name": "security.txt Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A security.txt file (RFC 9116) published at yourdomain.com/.well-known/security.txt tells security researchers how to report vulnerabilities: who to contact, until when the info is valid, and optionally your PGP key, disclosure policy, and preferred languages. At minimum it needs Contact: mailto:security@example.com and an Expires: timestamp. This generator builds the file from a simple form and validates every field.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your security.txt file",
+    "tagline": "Generate an RFC 9116 security.txt contact file for vulnerability reports.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Inputs: contact security@example.com, expiry 2026-12-31, encryption key https://example.com/pgp-key.txt, policy https://example.com/security-policy, languages en, hi.\nGenerated file:\nContact: mailto:security@example.com\nExpires: 2026-12-31T23:59:59Z\nEncryption: https://example.com/pgp-key.txt\nPolicy: https://example.com/security-policy\nPreferred-Languages: en, hi\nPublish this at https://example.com/.well-known/security.txt over HTTPS. The expiry (end of 2026) is within the one-year recommended maximum."
+  }
+}

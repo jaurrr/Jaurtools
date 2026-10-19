@@ -1,0 +1,112 @@
+{
+  "rich-text-html-editor": {
+    "name": "Rich-Text to HTML Editor",
+    "tagline": "Write formatted text and get clean, copy-ready HTML — free WYSIWYG editor in your browser.",
+    "metaTitle": "Rich Text to HTML Editor – Free WYSIWYG Tool | JaurTools",
+    "metaDescription": "Free rich-text to HTML editor. Format text visually, view the HTML source, copy or download it — 100% in your browser, no signup.",
+    "keywords": "rich text to html, wysiwyg editor online, html editor, text to html converter, online text editor",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Type or paste text, format it with the toolbar (bold, headings, lists, links), then switch to Source view to see the generated HTML. Copy it to your clipboard or download it as an .html file — everything stays on your device.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "A WYSIWYG (what you see is what you get) editor lets you format text visually while it writes the HTML tags for you.",
+      "The HTML produced is clean and standard: <strong> for bold, <em> for italic, <h1>–<h3> for headings, <ul>/<ol> for lists.",
+      "Source view shows the exact HTML at any moment — toggle back and forth without losing your work.",
+      "Pasting from Word or Google Docs works; use the clear-formatting button to strip messy imported styles.",
+      "Links you insert are real <a> tags; the tool adds https:// automatically if you forget it.",
+      "Undo and redo work with Ctrl+Z / Ctrl+Y (Cmd on Mac) inside the editor, just like any desktop word processor."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Type directly in the editor, or paste text from another document.",
+      "Select text and press toolbar buttons: B for bold, I for italic, H1–H3 for headings, list buttons for bullets or numbers.",
+      "To add a link, select text, paste the URL in the link field, and press Apply link.",
+      "Press Source to inspect or hand-edit the raw HTML, then press Visual to return to the formatted view.",
+      "Copy the HTML to your clipboard or download it as a complete .html file.",
+      "Use the quote and code buttons for testimonials or snippets — they wrap the current block in <blockquote> or <pre>."
+    ],
+    "formulaHeading": "Transformation",
+    "formula": "Bold:      text  ->  <strong>text</strong>\nItalic:    text  ->  <em>text</em>\nHeading:   line  ->  <h2>line</h2>\nList item: item  ->  <ul><li>item</li></ul>",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "You type: Sale ends Sunday\nYou select the word Sunday and press B (bold).\nThe editor now shows: Sale ends Sunday (with Sunday bold).\nPress Source. The HTML reads:\n<p>Sale ends <strong>Sunday</strong></p>\nPress Copy, and that exact HTML is on your clipboard, ready to paste into a website.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "No HTML knowledge needed — format visually, get real code.",
+      "Clean output without the bloated markup Word and Docs usually produce.",
+      "Download a complete, valid .html file in one click.",
+      "Live word and character counts while you write."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Text-focused: this version does not upload or embed images — host images separately and link to them.",
+      "Very complex layouts (tables, columns) are beyond a simple rich-text editor; use a full page builder for those.",
+      "Formatting follows your browser's built-in engine, so tiny rendering differences between browsers are possible.",
+      "Content is not saved: copy or download your work before leaving the page."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "Is my text uploaded anywhere?",
+        "a": "No. Everything happens inside your browser tab. There is no server, no account, and nothing is stored unless you copy or download it yourself."
+      },
+      {
+        "q": "Can I paste from Microsoft Word?",
+        "a": "Yes. Paste normally, then select the pasted text and press the clear-formatting button to remove Word's messy inline styles while keeping the text."
+      },
+      {
+        "q": "How do I make a heading?",
+        "a": "Place your cursor on the line (no need to select it) and press H1, H2, or H3. Press the paragraph button to turn it back into normal text."
+      },
+      {
+        "q": "Can I edit the HTML directly?",
+        "a": "Yes. Press Source to see the raw HTML, edit it by hand, then press Visual to see your changes rendered. Invalid HTML may be cleaned up by the browser."
+      },
+      {
+        "q": "Does it support Arabic or Hindi text?",
+        "a": "Yes. The editor handles right-to-left and complex scripts natively, since it uses your browser's own text engine."
+      },
+      {
+        "q": "Will my work be saved if I refresh?",
+        "a": "No. This tool keeps nothing. Always copy the HTML or download the file before closing or refreshing the page."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your editor workspace",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "toolbarLabel": "Formatting toolbar",
+      "boldLabel": "Bold",
+      "italicLabel": "Italic",
+      "underlineLabel": "Underline",
+      "strikeLabel": "Strikethrough",
+      "h1Label": "Heading 1",
+      "h2Label": "Heading 2",
+      "h3Label": "Heading 3",
+      "paraLabel": "Paragraph",
+      "ulLabel": "Bullet list",
+      "olLabel": "Numbered list",
+      "quoteLabel": "Quote",
+      "codeLabel": "Code block",
+      "clearFormatLabel": "Clear formatting",
+      "linkLabel": "Link URL",
+      "linkPlaceholder": "https://example.com",
+      "applyLinkLabel": "Apply link",
+      "unlinkLabel": "Remove link",
+      "sourceLabel": "Source",
+      "visualLabel": "Visual",
+      "copyLabel": "Copy HTML",
+      "copiedLabel": "HTML copied to clipboard.",
+      "downloadLabel": "Download .html",
+      "downloadTitle": "Rich Text Export",
+      "clearLabel": "Clear",
+      "editorLabel": "Rich text editing area",
+      "wordsLabel": "Words",
+      "charsLabel": "Characters",
+      "initialHtml": "<h2>Start writing here</h2><p>Select some text and try <strong>bold</strong>, <em>italic</em>, or a list:</p><ul><li>Everything runs in your browser</li><li>Copy or download clean HTML</li></ul>"
+    }
+  }
+}

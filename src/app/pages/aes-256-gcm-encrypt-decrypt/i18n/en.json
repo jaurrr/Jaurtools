@@ -1,0 +1,105 @@
+{
+  "aes-256-gcm-encrypt-decrypt": {
+    "benefits": [
+      "True AES-256 encryption, the same standard banks and governments use.",
+      "Authenticated encryption catches tampering automatically.",
+      "Zero servers involved, so there is no database to leak your data.",
+      "Works offline once the page has loaded.",
+      "Free with no sign-up and no limits."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. AES-256 is approved for top-secret data by governments worldwide, and GCM mode adds authentication so altered ciphertext is rejected instead of silently decrypted.",
+        "q": "Is AES-256-GCM secure?"
+      },
+      {
+        "a": "Because a fresh random salt and IV are generated each time. This is intentional and correct — it prevents attackers from spotting repeated messages. Both bundles decrypt to the same text with the same password.",
+        "q": "Why does encrypting the same text twice give different output?"
+      },
+      {
+        "a": "A long, random passphrase of at least 16 characters, ideally 4-6 random words with numbers and symbols. The tool applies PBKDF2 with 100,000 iterations, but a weak password is still the weakest link.",
+        "q": "What password should I use?"
+      },
+      {
+        "a": "No. There is no server, no account, and no backdoor — the key exists only while you type the password. If you forget it, the ciphertext cannot be decrypted by anyone.",
+        "q": "I forgot my password. Can you recover my text?"
+      },
+      {
+        "a": "Either the password differs (even one character matters), the Base64 bundle was truncated or edited, or the bundle came from a different tool with an incompatible format.",
+        "q": "Why did decryption fail with 'wrong password or corrupted data'?"
+      },
+      {
+        "a": "This page handles text only. For files, use an established file-encryption app on your own device; this tool is meant for short messages, notes, and secrets.",
+        "q": "Can I encrypt files with this tool?"
+      }
+    ],
+    "formula": "key = PBKDF2-HMAC-SHA-256(password, salt, 100000 iterations)\nciphertext = AES-256-GCM(key, IV, plaintext)\nbundle = Base64(salt || IV || ciphertext)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the Encrypt tab to lock text, or the Decrypt tab to unlock a bundle.",
+      "Type or paste your text into the input box.",
+      "Enter a strong password and remember it exactly — there is no recovery.",
+      "Press the run button and copy the Base64 result.",
+      "To decrypt, paste the bundle, enter the same password, and run Decrypt."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "AES-256-GCM is authenticated encryption: it detects any tampering with the ciphertext.",
+      "Your password is converted to a key with PBKDF2-HMAC-SHA-256 and 100,000 iterations, a standard slow hash.",
+      "A new random 16-byte salt and 12-byte IV are generated for every encryption.",
+      "The output is one Base64 bundle: salt + IV + ciphertext, easy to copy or share.",
+      "Decryption fails with a wrong password or a modified bundle, by design.",
+      "All math runs in your browser via the Web Crypto API; the password never leaves your device."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "aes 256 gcm encrypt, aes decrypt online, aes-gcm encryption tool, browser aes encryption, pbkdf2 aes online",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied",
+      "copyLabel": "Copy",
+      "decryptTab": "Decrypt",
+      "encryptTab": "Encrypt",
+      "errorBadDecrypt": "Decryption failed: wrong password or the data was modified.",
+      "errorCopy": "Copy failed. Please select the text manually.",
+      "errorEmptyInput": "Please enter some text first.",
+      "errorEmptyPassword": "Please enter a password.",
+      "inputLabelDecrypt": "Encrypted bundle to decrypt",
+      "inputLabelEncrypt": "Text to encrypt",
+      "inputPlaceholderDecrypt": "Paste the Base64 bundle here...",
+      "inputPlaceholderEncrypt": "Type the secret text here...",
+      "localNote": "Everything happens locally with the Web Crypto API. Closing this tab erases your inputs from memory.",
+      "modeLabel": "Mode",
+      "outputLabelDecrypt": "Decrypted text",
+      "outputLabelEncrypt": "Encrypted bundle",
+      "passwordHint": "Minimum 8 characters recommended. There is no password recovery.",
+      "passwordLabel": "Password",
+      "runDecrypt": "Decrypt text",
+      "runEncrypt": "Encrypt text",
+      "working": "Working..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A lost password means the data is unrecoverable, permanently.",
+      "Only as strong as your password; short or common passwords fall to guessing.",
+      "This is a text tool, not a password manager; do not use it to store credentials long-term.",
+      "Encryption protects content in transit, not a device that is already compromised."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Encrypt and decrypt text with AES-256-GCM in your browser. PBKDF2 key derivation, no server, no data leaves your device. Free online AES encryption tool.",
+    "metaTitle": "AES-256-GCM Encrypt & Decrypt Online (Free, In-Browser)",
+    "name": "AES-256-GCM Encrypt/Decrypt",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool encrypts text with AES-256 in GCM mode using your browser's built-in Web Crypto API. Your password is stretched with PBKDF2 (100,000 iterations of SHA-256) into a 256-bit key, and every encryption uses a fresh random salt and IV. Nothing is sent to any server.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "AES-256-GCM results",
+    "tagline": "Military-grade text encryption that runs entirely in your browser.",
+    "workedExample": "Encrypting the text \"Meet at noon\" with the password \"Sunset-42-River\":\n\n1. A random 16-byte salt and 12-byte IV are generated.\n2. PBKDF2 stretches the password into a 256-bit key.\n3. AES-256-GCM encrypts the text and appends a 16-byte authentication tag.\n4. You receive a Base64 bundle (about 88 characters) that decrypts back to \"Meet at noon\" only with the same password.\n\nNote: running it again gives a different bundle, because the salt and IV are fresh each time. Both decrypt to the same text.",
+    "workedExampleHeading": "Worked example"
+  }
+}

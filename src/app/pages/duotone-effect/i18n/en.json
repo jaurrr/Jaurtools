@@ -1,0 +1,101 @@
+{
+  "duotone-effect": {
+    "benefits": [
+      "The two-tone look made famous by Spotify — instant brand-style graphics with zero design skill.",
+      "High-contrast duotone images stay readable as tiny thumbnails and social avatars.",
+      "Six one-tap presets cover the most popular color moods, from sunset to noir.",
+      "The strength slider blends duotone with grayscale, so you can dial the effect from subtle to bold."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Duotone is a print-era technique where an image is reproduced with exactly two inks. Digitally, every pixel's brightness is remapped between a dark color (shadows) and a bright color (highlights). Spotify's famous artist images use dark green-black shadows with vivid green highlights.",
+        "q": "What exactly is a duotone effect?"
+      },
+      {
+        "a": "Yes — tap any preset swatch to apply its color pair instantly. You can then fine-tune the shadow and highlight colors with the color pickers.",
+        "q": "Can I use the preset color pairs?"
+      },
+      {
+        "a": "Shadows control how the darkest parts of the photo look; highlights control the brightest parts. For a classic look, pick a near-black shadow and a vivid brand color as the highlight.",
+        "q": "What is the difference between shadow and highlight colors?"
+      },
+      {
+        "a": "Lower the strength slider. At 0% the image is pure grayscale; at 100% it is full duotone. Values around 40–60% give a gentle tinted-photo look instead of a hard two-tone poster.",
+        "q": "How do I make the effect subtler?"
+      },
+      {
+        "a": "Portraits and high-contrast photos work best because the brightness map has clear darks and lights. Very flat or washed-out images produce muddy results — increase contrast first with an equalizer tool.",
+        "q": "Which photos work best for duotone?"
+      },
+      {
+        "a": "The preview is rendered at up to 1600 px on the long edge. If your original is smaller, the download matches the original size exactly — nothing is upscaled.",
+        "q": "What resolution is the download?"
+      }
+    ],
+    "formula": "gray = 0.299 x R + 0.587 x G + 0.114 x B\nt = gray / 255\nduotone = shadow + (highlight - shadow) x t\nfinal = gray + (duotone - gray) x (strength / 100)\nExample: gray = 76, shadow = (25, 20, 20), highlight = (29, 185, 84), t = 0.30\nduotone R = 25 + (29 - 25) x 0.30 = 26.2.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo from your device (up to 15 MB).",
+      "Tap a preset swatch for an instant look, or pick your own shadow and highlight colors.",
+      "Drag the strength slider to blend between grayscale and full duotone.",
+      "Check the live preview — the effect renders pixel by pixel in your browser.",
+      "Press Download to save the duotone image as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Duotone remaps every pixel's brightness between two colors: dark tones become the shadow color, bright tones become the highlight color.",
+      "The default pair (#191414 / #1DB954) recreates the iconic Spotify artist-image look.",
+      "Six curated presets: Spotify green, sunset, ocean, noir, rose, and mint.",
+      "A strength slider blends from pure grayscale (0%) to full duotone (100%).",
+      "Processing happens per pixel with the Canvas API — your photo never leaves the browser.",
+      "The download is a lossless PNG, rendered at up to 1600 px on the long edge."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "duotone effect online, spotify duotone, two tone photo effect, duotone image maker, photo color effect",
+    "labels": {
+      "downloadPng": "Download PNG",
+      "highlightColor": "Highlight color",
+      "newImage": "New image",
+      "originalSize": "Original size",
+      "presetLabel": "Preset pairs",
+      "presets": {
+        "mint": "Mint",
+        "noir": "Noir",
+        "ocean": "Ocean",
+        "rose": "Rose",
+        "spotify": "Spotify green",
+        "sunset": "Sunset"
+      },
+      "shadowColor": "Shadow color",
+      "sizeError": "That file is larger than 15 MB. Please choose a smaller image.",
+      "stageLabel": "Duotone preview",
+      "strength": "Effect strength",
+      "typeError": "That file could not be read as an image. Please choose a JPEG, PNG, WebP, GIF, or BMP file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The preview and download are capped at 1600 px on the long edge for performance.",
+      "Only two colors are used — true multi-tone or gradient-map effects are not supported.",
+      "Transparency (alpha) is preserved but not tinted by the duotone map.",
+      "Very low-contrast photos can look muddy; the tool does not auto-enhance contrast first."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Turn any photo into a striking two-tone duotone with your own colors. Free, instant, in your browser.",
+    "metaTitle": "Duotone Effect - Two-Tone Photo Effect | JaurTools",
+    "name": "Duotone Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and remap its tones between any two colors — the iconic Spotify-style duotone look. Six presets, custom shadow/highlight pickers, and a strength slider. The PNG downloads instantly and your photo never leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your duotone results",
+    "tagline": "Bold two-tone photos, your colors.",
+    "workedExample": "You upload a portrait and pick the Sunset preset (shadow #2B1055, highlight #FF9A3C).\nA mid-tone pixel with gray = 128 maps to t = 0.50, giving R = 43 + (255 - 43) x 0.50 = 149.\nAt 100% strength the portrait becomes a bold purple-and-orange two-tone image, downloaded as duotone-1600x1067.png.",
+    "workedExampleHeading": "Worked example"
+  }
+}

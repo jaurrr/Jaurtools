@@ -1,0 +1,88 @@
+{
+  "online-calculator": {
+    "benefits": [
+      "A real calculator with proper maths rules: 2 + 3 x 4 correctly gives 14, not 20.",
+      "Type on your keyboard or tap the keypad - both feed the same expression.",
+      "Percent, sign-toggle, and backspace cover the everyday jobs without a physical calculator.",
+      "No app install, no ads in the way, and your history never leaves the device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Multiplication and division run before addition and subtraction, exactly like school maths and scientific calculators. So 2 + 3 x 4 = 14. Use parentheses to force a different order: (2 + 3) x 4 = 20.",
+        "q": "Does it follow order of operations?"
+      },
+      {
+        "a": "Type % right after a number: 50% becomes 0.5. So 200 + 10% computes as 200 + 0.1 = 200.1 (note: this is the mathematical percent, not the shop-discount shortcut some calculators use).",
+        "q": "How do percentages work?"
+      },
+      {
+        "a": "Tap the +/- (plusmn) key or type a minus before the number: -5 + 3 = -2. The key flips the sign of the number you are currently typing.",
+        "q": "How do I enter negative numbers?"
+      },
+      {
+        "a": "Division by zero shows a clear error instead of a nonsense answer. Fix the expression and press = again.",
+        "q": "What happens on divide by zero?"
+      },
+      {
+        "a": "Up to 60 characters, which covers any realistic hand calculation. Very long chains are better done step by step.",
+        "q": "How long can an expression be?"
+      },
+      {
+        "a": "Yes - the box above the keypad accepts typed expressions, including parentheses. Press Enter to evaluate.",
+        "q": "Can I type instead of tapping?"
+      }
+    ],
+    "formula": "Order of operations: parentheses first, then x and /, then + and -.\nPercent: n% = n / 100\nExample: 2 + 3 x 4 = 2 + 12 = 14\nExample: (2 + 3) x 4 = 5 x 4 = 20",
+    "formulaHeading": "How it calculates",
+    "homeLabel": "Home",
+    "howTo": [
+      "Tap the keypad buttons or type directly into the expression box.",
+      "Use + - x / for the four operations, % for percent, and +/- to flip a sign.",
+      "Press = (or Enter) to evaluate. The result appears below the expression.",
+      "C clears everything; the backspace key deletes the last character."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Standard 4-function calculator: add, subtract, multiply, divide.",
+      "Follows order of operations: 2 + 3 x 4 = 14, not 20.",
+      "Parentheses supported: (2 + 3) x 4 = 20.",
+      "Percent key: 50% = 0.5, so 200 x 50% = 100.",
+      "+/- toggles the sign of the number being entered.",
+      "Division by zero shows an error instead of a wrong answer."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "basic calculator, online calculator, simple calculator, 4 function calculator, free calculator online",
+    "labels": {
+      "backspaceLabel": "Backspace",
+      "errDivZero": "Cannot divide by zero.",
+      "errInvalid": "Invalid expression - check the operators and parentheses.",
+      "expression": "Expression",
+      "keypad": "Calculator keypad",
+      "precedenceNote": "Multiplication and division are calculated before addition and subtraction, just like in school maths.",
+      "toggleSignLabel": "Toggle sign"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Basic arithmetic only: no powers, roots, trigonometry, or logarithms.",
+      "Percent is the strict mathematical kind (n% = n/100), not the shop-discount shortcut.",
+      "% must follow a number directly; it cannot follow a closing parenthesis.",
+      "Results round to 12 significant digits; extremely tiny or huge values may lose precision."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online calculator for everyday math — add, subtract, multiply, divide with parentheses and percent. Fast, private, no signup.",
+    "metaTitle": "Online Calculator - Free Basic Calculator for Everyday Math | JaurTools",
+    "name": "Online Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your calculations never leave your device.",
+    "quickAnswer": "A standard 4-function calculator with correct order of operations. 2 + 3 x 4 gives 14 (multiplication first), while (2 + 3) x 4 gives 20. Tap the keypad or type into the expression box - both work, including parentheses, percent (50% = 0.5), a sign-toggle key, and backspace. Division by zero shows a clear error instead of a wrong answer.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Calculator",
+    "tagline": "Everyday arithmetic, solved instantly in your browser.",
+    "workedExample": "Expression: 2 + 3 x 4\n1. Order of operations: multiplication before addition.\n2. First: 3 x 4 = 12.\n3. Then: 2 + 12 = 14.\nSecond check: (2 + 3) x 4\n1. Parentheses first: 2 + 3 = 5.\n2. Then: 5 x 4 = 20.",
+    "workedExampleHeading": "Worked example"
+  }
+}

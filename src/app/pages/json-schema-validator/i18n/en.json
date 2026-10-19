@@ -1,0 +1,119 @@
+{
+  "json-schema-validator": {
+    "benefits": [
+      "Catches bad API payloads before they crash your app: validate the shape, not just the syntax.",
+      "Documents your data contract: the schema is a readable specification of what is allowed.",
+      "Speeds up debugging: every violation lists its exact path and a plain-language reason.",
+      "Tests edge cases safely: try the failing sample to see all five rule types fire at once.",
+      "Runs fully in your browser: production payloads are never uploaded to a server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A JSON document that describes the allowed shape of another JSON document: which properties are required, what types they must have, and which constraints (lengths, ranges, patterns) apply.",
+        "q": "What is a JSON Schema?"
+      },
+      {
+        "a": "No - this tool implements the widely used subset: types, required, properties, additionalProperties, string/number/array constraints, enum, const, and the allOf/anyOf/oneOf/not combinators. Exotic keywords like $ref, $dynamicRef, and format assertions are not supported.",
+        "q": "Does it support the full JSON Schema specification?"
+      },
+      {
+        "a": "Yes. Both the schema and the instance must be valid JSON first. A broken schema reports its own parse error before any validation runs.",
+        "q": "Does it check that my schema itself is valid JSON?"
+      },
+      {
+        "a": "When a value has the wrong type, deeper checks are skipped to avoid noise - for example a string where a number was expected reports only the type error, not the range errors.",
+        "q": "Why do I see only one error for a wrong-typed value?"
+      },
+      {
+        "a": "Yes. required lists the properties that must exist; properties describes the allowed ones. With additionalProperties: false, any other key is rejected.",
+        "q": "Can I require some fields and forbid unknown ones?"
+      },
+      {
+        "a": "Use oneOf when exactly one alternative must match (for example circle vs rectangle), anyOf when at least one must match, and allOf when every subschema must hold at once.",
+        "q": "When do I use oneOf vs anyOf vs allOf?"
+      }
+    ],
+    "formula": "validate(value, schema, path):\n  type check      -> mismatch stops deeper checks (avoids noise)\n  enum / const    -> value must equal an allowed value\n  string          -> minLength, maxLength, pattern (regex)\n  number          -> minimum, maximum, exclusiveMinimum/Maximum, multipleOf, integer\n  array           -> minItems, maxItems, uniqueItems, items (per-index or single)\n  object          -> required, properties, patternProperties, additionalProperties\n  combinators     -> allOf (every), anyOf (>= 1), oneOf (exactly 1), not (none)",
+    "formulaHeading": "How validation works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JSON Schema into the schema box (a sample is preloaded).",
+      "Paste the JSON document to check into the instance box.",
+      "Validation runs live: a green badge means valid, a red badge lists every violation.",
+      "Each violation shows its path (like $.age) and a plain-language reason.",
+      "Use the sample buttons to toggle between a passing and a failing document."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON Schema describes the allowed shape of JSON data: types, required fields, and constraints.",
+      "This tool implements the practical subset: types, required, properties, additionalProperties, string/number/array limits, enum, const, and allOf/anyOf/oneOf/not.",
+      "Every violation reports a JSONPath-like location (for example $.address.zip) plus a readable message.",
+      "A type mismatch stops deeper checks on that value so one mistake produces one clear error.",
+      "Both the schema and the instance must be valid JSON before validation runs.",
+      "Validation messages are shown in your chosen language: English, Hindi, or Arabic."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json schema validator, validate json against schema, json schema checker, json schema tester online",
+    "labels": {
+      "instanceErrorLabel": "Instance JSON error",
+      "instanceLabel": "JSON instance to validate",
+      "invalidLabel": "Invalid",
+      "loadInvalidLabel": "Load failing example",
+      "loadValidLabel": "Load passing example",
+      "messageCol": "Reason",
+      "pathCol": "Path",
+      "schemaErrorLabel": "Schema JSON error",
+      "schemaLabel": "JSON Schema",
+      "validLabel": "Valid: the instance matches the schema."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Implements the common subset only: $ref, $dynamicRef, recursive schemas, and format assertions are not supported.",
+      "Error messages describe the first problem per value; deeply broken documents may need several fix-and-recheck rounds.",
+      "Number precision follows JavaScript doubles; huge integers may lose precision during parsing.",
+      "Very large schemas or instances may be slow since validation runs on the main thread."
+    ],
+    "limitationsHeading": "Limitations",
+    "messages": {
+      "additionalProp": "Additional property '{prop}' is not allowed.",
+      "allOf": "Value does not satisfy every allOf subschema.",
+      "anyOf": "Value does not match any of the anyOf subschemas.",
+      "const": "Value does not match the required constant.",
+      "enum": "Value is not one of the allowed enum values.",
+      "exclusiveMaximum": "Number {value} must be less than {max}.",
+      "exclusiveMinimum": "Number {value} must be greater than {min}.",
+      "falseSchema": "Value is not allowed here (schema is false).",
+      "invalidPattern": "Schema pattern '{pattern}' is not a valid regular expression.",
+      "maxItems": "Array has more than maxItems ({max}) items.",
+      "maxLength": "String is longer than maxLength {max}.",
+      "maxProperties": "Object has more than maxProperties ({max}) properties.",
+      "maximum": "Number {value} is greater than the maximum {max}.",
+      "minItems": "Array has fewer than minItems ({min}) items.",
+      "minLength": "String is shorter than minLength {min}.",
+      "minProperties": "Object has fewer than minProperties ({min}) properties.",
+      "minimum": "Number {value} is less than the minimum {min}.",
+      "multipleOf": "Number {value} is not a multiple of {base}.",
+      "not": "Value matches the forbidden 'not' subschema.",
+      "oneOf": "Value must match exactly one subschema (matched {count}).",
+      "pattern": "String does not match the required pattern.",
+      "required": "Missing required property '{prop}'.",
+      "typeMismatch": "Expected type {expected}, got {actual}.",
+      "uniqueItems": "Array items must be unique."
+    },
+    "metaDescription": "Free JSON Schema validator: check any JSON document against a JSON Schema with exact paths and plain-language reasons. Types, required, patterns, enums, combinators. Private, no sign-up.",
+    "metaTitle": "JSON Schema Validator - Validate JSON Against Schema | JaurTools",
+    "name": "JSON Schema Validator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a JSON Schema and a JSON document: the tool checks types, required fields, string lengths and patterns, number ranges, array rules, enums, and allOf/anyOf/oneOf/not combinators, then lists every violation with its exact path like $.age and a plain-language reason in your language. A green badge means the document fully matches the schema.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON Schema Validator results",
+    "tagline": "Validate any JSON document against a JSON Schema - every violation with its exact path and reason.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Schema requires name (non-empty string) and age (integer 0-150), with no extra properties.\n\nPassing instance: {\"name\":\"Asha Sharma\",\"age\":30} -> Valid.\n\nFailing instance: {\"name\":\"\",\"age\":200,\"nickname\":\"Ash\"} -> 3 violations:\n1. $.name: String is shorter than minLength 1.\n2. $.age: Number 200 is greater than the maximum 150.\n3. $: Additional property 'nickname' is not allowed."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "kindle-highlights-exporter": {
+    "benefits": [
+      "Turn a messy clippings file into a clean, searchable library in seconds.",
+      "Markdown export drops straight into Notion, Obsidian, or any notes app.",
+      "CSV export opens in Excel and Google Sheets for sorting and filtering.",
+      "Your reading highlights stay private — the file is parsed in memory only."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "On a Kindle e-reader, connect it to your computer with USB and copy the file 'documents/My Clippings.txt'. In the Kindle app, highlights sync to your Amazon account and can be copied from the notebook view on the web.",
+        "q": "Where do I find My Clippings.txt?"
+      },
+      {
+        "a": "The parser reads the standard Kindle format: a title line, a '- Your Highlight/Note/Bookmark on ...' meta line, the content, and a '==========' separator. Unrecognized blocks are skipped, never mangled.",
+        "q": "Which clippings format does the parser support?"
+      },
+      {
+        "a": "The Markdown export groups entries by book with the quote, type, page, location, and date. The CSV has one row per entry with title, author, type, page, location, date, and content columns. The JSON is the raw parsed array.",
+        "q": "What do the Markdown, CSV, and JSON exports look like?"
+      },
+      {
+        "a": "Yes. Parsing is done in your browser's memory; the file is never uploaded, stored, or logged anywhere.",
+        "q": "Is my clippings file private?"
+      },
+      {
+        "a": "The textarea and the upload both accept up to 2 MB of text (the upload is capped at 5 MB per file). That covers many years of highlights for most readers.",
+        "q": "Is there a size limit?"
+      },
+      {
+        "a": "Duplicate clippings sometimes appear if you highlight the same passage twice. The tool shows every parsed entry honestly; remove duplicates in your notes app or spreadsheet after export.",
+        "q": "My file has duplicate highlights — will they be removed?"
+      }
+    ],
+    "formula": "Block split: lines grouped by '==========' separators.\nTitle/author: 'Title (Author)' — text in the last parentheses is the author.\nMeta: '- Your {Highlight|Note|Bookmark} on [page N |] [location X |] Added on <date>'.\nContent: everything after the blank line following the meta line.\nCSV: RFC-4180 quoting ('\"' doubled, fields wrapped in quotes) with UTF-8 BOM for Excel.",
+    "formulaHeading": "The parsing rules",
+    "homeLabel": "Home",
+    "howTo": [
+      "Copy 'My Clippings.txt' from your Kindle over USB, or copy highlights from the Kindle app.",
+      "Upload the .txt file or paste its contents into the text box — or press 'Load sample' to try the demo.",
+      "Check the counts: total entries, highlights, notes, bookmarks, and books.",
+      "Browse the parsed table to verify everything was read correctly.",
+      "Download Markdown, CSV, or JSON and import it into your notes app or spreadsheet."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Parses the real Kindle 'My Clippings.txt' format: title, author, highlight/note/bookmark type, page, location, and date.",
+      "Blocks are split on the '==========' separator; unrecognized blocks are skipped safely.",
+      "Exports to Markdown (grouped by book), CSV (Excel-ready with UTF-8 BOM), and JSON.",
+      "File upload is validated: .txt only, 5 MB cap, with friendly errors.",
+      "The built-in sample uses the genuine clippings format so you can try every feature instantly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "kindle highlights exporter, my clippings txt parser, export kindle highlights, kindle notes export, kindle highlights to csv",
+    "labels": {
+      "booksLabel": "Books",
+      "clearButton": "Clear",
+      "colBook": "Book",
+      "colContent": "Content",
+      "colLocation": "Location",
+      "colType": "Type",
+      "entriesHeading": "Parsed entries",
+      "entriesLabel": "Total entries",
+      "errorFileRead": "Could not read that file. Please try again.",
+      "errorFileSize": "File is too large — please use a .txt file under 5 MB.",
+      "errorFileType": "Please choose a .txt file (your My Clippings.txt).",
+      "exportCsv": "Download CSV",
+      "exportHeading": "Export your highlights",
+      "exportJson": "Download JSON",
+      "exportMd": "Download Markdown",
+      "exportTitle": "Kindle Highlights",
+      "fileHint": "Your 'My Clippings.txt' from the Kindle documents folder. Max 5 MB.",
+      "fileLabel": "Upload My Clippings.txt",
+      "noEntriesFound": "No clippings found. Make sure the text follows the Kindle 'My Clippings.txt' format.",
+      "pasteLabel": "Or paste the clippings text",
+      "pastePlaceholder": "Paste the contents of My Clippings.txt here...",
+      "sampleButton": "Load sample"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only the classic 'My Clippings.txt' format is parsed — not Amazon's cloud JSON export.",
+      "Very old clippings with unusual date formats may lose the date field but keep the content.",
+      "Duplicate highlights are shown as-is; they are not merged.",
+      "Files over 5 MB or text over 2 MB are rejected for performance."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Kindle highlights exporter: parse My Clippings.txt in your browser and download Markdown, CSV, or JSON. Private, no signup, no upload.",
+    "metaTitle": "Kindle Highlights Exporter — Parse My Clippings.txt Free",
+    "name": "Kindle Highlights Exporter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Kindle Highlights Exporter reads your Kindle's 'My Clippings.txt' file right in your browser. Upload the file or paste its contents, and the tool parses every highlight, note, and bookmark — title, author, type, page, location, and date — then lets you download it all as Markdown, CSV, or JSON. A built-in sample in the genuine format lets you try every feature instantly, and your file never leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Kindle Highlights Exporter results",
+    "tagline": "Parse your Kindle's My Clippings.txt and export highlights as Markdown, CSV, or JSON.",
+    "typeNames": {
+      "bookmark": "Bookmark",
+      "highlight": "Highlight",
+      "note": "Note"
+    },
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Press 'Load sample' to see the parser at work. The sample contains 4 entries across 2 books. Entry 1 parses as: title 'Atomic Habits', author 'James Clear', type Highlight, page 45, location 812-813, date 'Monday, 6 October 2025 08:12:33', content 'You do not rise to the level of your goals. You fall to the level of your systems.' Entry 2 is a Note on the same page; entries 3 and 4 are a Highlight and a Bookmark from 'The Alchemist' by Paulo Coelho. The counters show 4 entries, 2 highlights, 1 note, 1 bookmark, 2 books — and the Markdown export groups them under two '##' book headings."
+  }
+}

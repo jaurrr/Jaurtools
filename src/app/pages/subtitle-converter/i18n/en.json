@@ -1,0 +1,102 @@
+{
+  "subtitle-converter": {
+    "benefits": [
+      "Converts instantly with no upload queue and no watermarks.",
+      "Auto-detects SRT or WebVTT from your pasted text or file.",
+      "Keeps cue order sorted and re-numbers SRT cues automatically.",
+      "Works offline once loaded, ideal when editing subtitles on the go."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Video & Audio",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "SRT is the classic format with numbered cues and comma milliseconds; WebVTT is the web standard with a WEBVTT header and dot milliseconds, used by HTML5 video players.",
+        "q": "What is the difference between SRT and VTT?"
+      },
+      {
+        "a": "Paste the text or upload the file and leave the direction on Auto-detect. The tool reads the format and converts accordingly.",
+        "q": "How does auto-detect work?"
+      },
+      {
+        "a": "Enter a positive or negative shift in milliseconds, for example 500 to delay every cue by half a second, or -500 to make them earlier. Times never go below zero.",
+        "q": "How do I fix subtitles that are out of sync?"
+      },
+      {
+        "a": "Yes. Enable Strip HTML tags to remove formatting like <i> and <b>, which some players cannot display.",
+        "q": "Can I remove formatting tags?"
+      },
+      {
+        "a": "The tool re-numbers cues sequentially, so gaps do not matter. Cue timings are shifted and clamped to stay valid.",
+        "q": "What if my cue numbers are not sequential?"
+      },
+      {
+        "a": "No. Subtitle text is processed entirely in your browser and is never sent anywhere.",
+        "q": "Are my subtitles uploaded?"
+      }
+    ],
+    "formula": "new_time_ms = old_time_ms + shift_ms (clamped at 0)\nSRT time:  00:00:03,500  (comma)\nVTT time:  00:00:03.500  (dot)\nVTT file = \"WEBVTT\" header + cues without sequence numbers\nSRT file = numbered cues, blank line between cues",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your subtitle text or upload an .srt / .vtt file using the file button.",
+      "Check that the detected format is correct; it appears automatically above the output.",
+      "Choose the conversion direction, or leave Auto-detect to convert SRT to VTT and VTT to SRT.",
+      "Optionally enter a timing shift in milliseconds to sync late or early subtitles, and enable tag stripping if needed.",
+      "Copy the converted subtitles or download them as a file with the correct extension."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SRT (SubRip) and WebVTT are the two most common subtitle formats on the internet.",
+      "The only timestamp difference is the millisecond separator: SRT uses a comma, WebVTT uses a dot.",
+      "WebVTT files must start with a WEBVTT header line; SRT files use sequential cue numbers instead.",
+      "The tool detects the format from your input, so you usually do not need to choose a direction manually.",
+      "Timing shifts move every cue forward or backward by the same amount in milliseconds.",
+      "All processing happens locally; subtitle text never leaves your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "subtitle converter, srt to vtt, vtt to srt, convert subtitles online, subtitle sync fix",
+    "labels": {
+      "charCountLabel": "Characters",
+      "clearBtn": "Clear",
+      "copiedBtn": "Copied",
+      "copyBtn": "Copy",
+      "cuesRow": "Cues found",
+      "detectedRow": "Detected format",
+      "dirAuto": "Auto-detect",
+      "directionLabel": "Conversion direction",
+      "downloadBtn": "Download file",
+      "errRead": "Could not read that file. Please try again.",
+      "errSize": "The file is too large. Keep subtitles under 500,000 characters.",
+      "errType": "Please upload a subtitle file (.srt, .vtt, .ass, .ssa or .txt).",
+      "fileBtn": "Upload subtitle file",
+      "inputLabel": "Subtitle text",
+      "msUnit": "ms",
+      "noteUnknown": "The input does not look like SRT or WebVTT. Make sure it contains cues with a --> timeline.",
+      "outputLabel": "Converted subtitles",
+      "pasteHint": "Paste SRT or WebVTT text here, or upload a file above.",
+      "shiftLabel": "Shift timing",
+      "stripTags": "Strip HTML tags (<i>, <b>) from text"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Supports the standard cue syntax only; advanced ASS/SSA styling is not preserved.",
+      "Very malformed files may convert partially or not at all - check the cue count before downloading.",
+      "Cues are re-numbered sequentially, so custom numbering schemes are lost.",
+      "Only one timing shift can be applied at a time; progressive drift needs a video editor."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online subtitle converter: SRT to VTT and VTT to SRT. Auto-detects format, fixes timing with ms shifts, strips HTML tags. 100% private, in-browser.",
+    "metaTitle": "Subtitle Converter: SRT to VTT and VTT to SRT | JaurTools",
+    "name": "Subtitle Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste SRT or WebVTT subtitle text, or upload a subtitle file. The tool auto-detects the format and converts SRT to WebVTT or WebVTT to SRT instantly. You can shift all timings by milliseconds to fix out-of-sync subtitles, strip HTML formatting tags, then copy or download the result.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Subtitle converter",
+    "tagline": "Convert between SRT and WebVTT subtitle formats, fix timing, and clean formatting. Instantly, in your browser.",
+    "workedExample": "Input (SRT):\n1\n00:00:03,500 --> 00:00:06,000\nHello world\n\nOutput (VTT):\nWEBVTT\n\n00:00:03.500 --> 00:00:06.000\nHello world\n\nWith a +1500 ms shift, 3,500 ms becomes 5,000 ms, so the cue starts at 00:00:05.000 instead.",
+    "workedExampleHeading": "Worked example"
+  }
+}

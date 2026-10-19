@@ -1,0 +1,91 @@
+{
+  "forex-compounding-calculator": {
+    "assumptionNote": "This is static math, not live market data. It assumes the same gain every single period with no losing periods, no spread, no commissions, and no withdrawals.",
+    "benefits": [
+      "See how small weekly gains snowball over a year - the compounding curve is eye-opening.",
+      "Test how changing your target from 2% to 1% per week changes the final balance.",
+      "Compare weekly vs monthly compounding with one tap.",
+      "Free, instant, and private - no broker account needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is honest math but a dishonest assumption. The formula compounds perfectly; real trading has losing weeks, drawdowns, spreads, and commissions. Treat the projection as the best-case ceiling, never as an expectation.",
+        "q": "Is 2% per week realistic?"
+      },
+      {
+        "a": "Compounding applies the gain to the growing balance each period, so growth accelerates. Simple interest applies the gain only to the starting balance, giving linear growth. At 2% per week for a year, compounding gives about $2,800 from $1,000 while simple interest would give only $2,040.",
+        "q": "Compounding vs simple interest - what is the difference?"
+      },
+      {
+        "a": "Because real returns are inconsistent and leverage multiplies losses too. A single -20% week needs a +25% gain just to recover. This calculator assumes zero losing periods, which is why projections look so smooth.",
+        "q": "Why do compounding plans usually fail in real trading?"
+      },
+      {
+        "a": "Yes - tap the monthly tab, enter a monthly gain percent, and set the number of months. For example 5% per month for 12 months turns $1,000 into about $1,796.",
+        "q": "Can I use monthly compounding?"
+      },
+      {
+        "a": "No. This calculator never touches your broker or any market data. It only runs the compounding formula on the numbers you type. There are no live rates here.",
+        "q": "Does this connect to my trading account?"
+      },
+      {
+        "a": "Spreads, commissions, swap fees, and taxes all eat into returns. Also withdrawals break compounding. Subtract a realistic cost estimate from your per-period gain before projecting, and treat the result as optimistic.",
+        "q": "What costs does the projection ignore?"
+      }
+    ],
+    "formula": "Balance after n periods = start balance x (1 + r)^n, with r = gain per period\nTotal profit = final balance - start balance\nTotal gain % = (final balance / start balance - 1) x 100\nWeekly and monthly modes use the same formula - only the period label changes.",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose weekly or monthly periods.",
+      "Enter your starting account balance.",
+      "Enter your target gain percent per period - be conservative.",
+      "Enter the number of periods to project.",
+      "Read the projected balance, total profit, and total gain percent."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Compounding = growth applied to the growing balance, so gains accelerate over time.",
+      "The formula is identical to bank compound interest: (1 + r)^n.",
+      "Small per-period gains produce huge long-term numbers on paper.",
+      "Real trading includes losing periods, spreads, and commissions - none of which this math includes.",
+      "This tool uses static math only; it has no live rates and connects to nothing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "forex compounding calculator, trading compounding calculator, compound interest trading, growth projection calculator",
+    "labels": {
+      "gainPerPeriod": "Gain per period (%)",
+      "monthlyTab": "Monthly",
+      "periodType": "Period type",
+      "periods": "Number of periods",
+      "projectedBalance": "Projected balance",
+      "startBalance": "Starting balance ($)",
+      "totalGainPct": "Total gain",
+      "totalProfit": "Total profit",
+      "weeklyTab": "Weekly"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant gain every period with zero losing periods - real trading never works like this.",
+      "Ignores spreads, commissions, swaps, taxes, and withdrawals.",
+      "Projects the best-case ceiling, not an expectation - most compounding plans fail in real markets.",
+      "Not financial advice. Forex and leveraged trading carry a high risk of loss."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free forex compounding calculator: project trading account growth with weekly or monthly compounding. Static math, instant results, 100% private.",
+    "metaTitle": "Forex Compounding Calculator - Trading Growth Projection | JaurTools",
+    "name": "Forex Compounding Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "$1,000 compounded at 2% per week for 52 weeks grows to about $2,800 - roughly $1,800 of profit and a 180% total gain. The math is real, but the assumption is not: it presumes zero losing weeks, no spreads, and no commissions. Treat this as the best-case ceiling for a trading plan, never as an expectation.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your compounding projection",
+    "tagline": "Project trading account growth with weekly or monthly compounding - static math, no live rates.",
+    "workedExample": "$1,000 start, 2% per week, 52 weeks:\n1. Per-period rate r = 0.02, n = 52.\n2. Growth factor (1+r)^n = 1.02^52 = about 2.80033.\n3. Final balance = $1,000 x 2.80033 = about $2,800.\n4. Total profit = $2,800 - $1,000 = about $1,800.\n5. Total gain = (2.80033 - 1) x 100 = about 180%.\nMonthly check: 5% per month for 12 months gives 1.05^12 = 1.796, so $1,000 becomes about $1,796.",
+    "workedExampleHeading": "Worked example"
+  }
+}

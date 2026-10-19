@@ -1,0 +1,92 @@
+{
+  "markdown-preview": {
+    "benefits": [
+      "Writes and previews side by side: see the rendered result as you type.",
+      "Learns Markdown fast: the preloaded sample demonstrates every feature.",
+      "Exports clean HTML: copy the rendered output for blogs and docs.",
+      "Saves your work: download the source .md or a standalone .html file.",
+      "Runs fully in your browser: documents never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A lightweight markup language for formatted text: # makes a heading, **bold** bolds, - makes list items, and [text](url) makes links. README files, docs, and many blogs use it.",
+        "q": "What is Markdown?"
+      },
+      {
+        "a": "Yes - headings, bold, italic, strikethrough, inline code, fenced code blocks, links, images, unordered/ordered/task lists with nesting, blockquotes, horizontal rules, and GFM tables with alignment.",
+        "q": "Which Markdown features are supported?"
+      },
+      {
+        "a": "Yes. Raw HTML is escaped before rendering, links are restricted to safe schemes (http, https, mailto), and javascript: URLs are blocked, so pasted Markdown cannot run scripts.",
+        "q": "Is the preview safe from malicious Markdown?"
+      },
+      {
+        "a": "Click Copy HTML to copy the rendered output, or Download .html for a standalone page and Download .md for the source. Everything is generated locally.",
+        "q": "How do I export my document?"
+      },
+      {
+        "a": "CommonMark plus GFM tables and task lists. Footnotes, definition lists, and math are not supported - they render as plain text.",
+        "q": "Which Markdown flavor is this?"
+      },
+      {
+        "a": "The word count strips code blocks and markup symbols first, so it approximates the readable words in your document.",
+        "q": "How is the word count calculated?"
+      }
+    ],
+    "formula": "# Heading 1        ## Heading 2\n**bold**  *italic*  ~~strike~~  `code`\n- bullet item        1. numbered item\n- [x] done task      - [ ] todo task\n> blockquote         --- horizontal rule\n[text](https://url)  ![alt](img.png)\n```js  ...  ```        fenced code block\n| A | B |   header row\n|---|---|   delimiter row\n| 1 | 2 |   body rows (:-- right/center align)",
+    "formulaHeading": "Syntax cheat sheet",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste Markdown in the editor - a sample document is preloaded.",
+      "Watch the rendered preview update live beside the editor.",
+      "Use the sample to learn headings, lists, tables, and task lists.",
+      "Copy the HTML for your blog or docs, or download .html/.md files.",
+      "Track words, characters, and lines with the live counters."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Markdown Preview renders Markdown to styled HTML live as you type.",
+      "Supports headings, bold/italic/strikethrough, inline and fenced code blocks.",
+      "Supports links, images, nested bullet/numbered lists, and GFM task lists.",
+      "Supports blockquotes, horizontal rules, and GFM tables with column alignment.",
+      "Raw HTML is escaped and only safe link schemes are allowed - previews cannot run scripts.",
+      "Copy the rendered HTML or download the document as .html or .md."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "markdown preview, markdown editor online, markdown to html, live markdown preview, markdown cheat sheet",
+    "labels": {
+      "charsLabel": "Characters",
+      "copiedLabel": "Copied!",
+      "copyHtmlLabel": "Copy HTML",
+      "downloadHtmlLabel": "Download .html",
+      "downloadMdLabel": "Download .md",
+      "editorLabel": "Markdown editor",
+      "linesLabel": "Lines",
+      "previewLabel": "Preview",
+      "wordsLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "CommonMark plus GFM tables and task lists only: footnotes, definition lists, and math are not supported.",
+      "Raw HTML in the source is escaped, not rendered - by design, for safety.",
+      "Deeply mixed nesting (lists inside blockquotes inside lists) may render imperfectly.",
+      "The exported .html is a plain standalone page without site styling."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Markdown preview: live Markdown editor with instant HTML preview - tables, task lists, code blocks, and export. Private, no sign-up.",
+    "metaTitle": "Markdown Preview - Live Markdown Editor Online | JaurTools",
+    "name": "Markdown Preview",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type Markdown on the left and watch styled HTML render live on the right. Supports headings, bold/italic/strikethrough, code blocks, links, images, nested lists, task lists, blockquotes, and GFM tables - with copy-HTML and .html/.md download. Raw HTML is escaped and dangerous links blocked, so previews are safe.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Markdown Preview results",
+    "tagline": "Live Markdown editor with instant preview - tables, task lists, export included.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input:\n# Shopping List\n- [x] Apples\n- [ ] Oranges\n| Item | Qty |\n| ---- | --: |\n| Apples | 4 |\n\nLive preview shows:\n- A large \"Shopping List\" heading.\n- A checked box for Apples, an empty box for Oranges.\n- A table with Item left-aligned and Qty right-aligned.\n- Word counter reads 8 words."
+  }
+}

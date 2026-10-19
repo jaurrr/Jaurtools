@@ -1,0 +1,98 @@
+{
+  "real-estate-investment-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Real Estate Investment Calculator",
+    "tagline": "Cap rate, GRM, cash-on-cash, and DSCR: the full metrics suite for property investors.",
+    "metaTitle": "Real Estate Investment Calculator - Cap Rate & ROI | JaurTools",
+    "metaDescription": "Free real estate investment calculator: cap rate, gross rent multiplier, cash-on-cash return, and DSCR for any rental property.",
+    "keywords": "real estate investment calculator, cap rate calculator, grm calculator, dscr calculator, rental roi calculator",
+    "resultsHeading": "Your investment metrics",
+    "quickAnswer": "NOI = annual rent - operating expenses; cap rate = NOI / price; cash-on-cash = cash flow / cash invested; DSCR = NOI / debt service. Example: a 5,000,000 property renting at 50,000 per month with 10,000 monthly expenses has an NOI of 480,000 and a 9.6% cap rate. With 25% down plus 250,000 closing costs and an 8.5% 20-year loan, cash-on-cash is 5.97% and DSCR is 1.23, which lenders consider acceptable.",
+    "keyFacts": [
+      "NOI (net operating income) is the property's profit before financing and income tax.",
+      "Cap rate values the property itself, independent of how you finance it.",
+      "GRM (gross rent multiplier) = price / annual rent; lower means cheaper relative to rent.",
+      "Cash-on-cash measures return on your actual cash invested, including closing costs.",
+      "DSCR (debt service coverage ratio) = NOI / annual loan payments; lenders usually want 1.2 or more.",
+      "Higher cap rates usually mean higher risk or weaker locations, not free money."
+    ],
+    "howTo": [
+      "Enter the purchase price and total closing costs.",
+      "Enter the monthly rent and monthly operating expenses.",
+      "Enter your down payment percentage, loan rate, and term.",
+      "Read NOI, cap rate, and GRM for the property itself.",
+      "Read cash-on-cash and DSCR for your financed deal, and check the verdict."
+    ],
+    "formula": "NOI = (Rent - Expenses) x 12.\nCap rate = NOI / Price x 100.\nGRM = Price / (Rent x 12).\nCash invested = Down payment + Closing costs.\nCash-on-cash = (NOI - Annual debt service) / Cash invested x 100.\nDSCR = NOI / Annual debt service.\nExample: 480,000 / 5,000,000 = 9.6% cap; 89,400 / 1,500,000 = 5.97% cash-on-cash.",
+    "workedExample": "Price 5,000,000, closing 250,000, rent 50,000/month, expenses 10,000/month, down 25%, loan 3,750,000 at 8.5% for 20 years:\n1. NOI: (50,000 - 10,000) x 12 = 480,000.\n2. Cap rate: 480,000 / 5,000,000 = 9.6%.\n3. GRM: 5,000,000 / 600,000 = 8.33.\n4. Cash invested: 1,250,000 + 250,000 = 1,500,000.\n5. Annual debt service: 32,543 x 12 = 390,520.\n6. Cash-on-cash: (480,000 - 390,600) / 1,500,000 = 5.97%.\n7. DSCR: 480,000 / 390,600 = 1.23.",
+    "benefits": [
+      "The four metrics professionals use, computed together in seconds.",
+      "Cap rate compares properties regardless of financing structure.",
+      "DSCR verdict tells you instantly whether a lender would like the deal.",
+      "Including closing costs gives an honest cash-on-cash figure."
+    ],
+    "limitations": [
+      "Uses one year's stabilized numbers; real income and expenses fluctuate.",
+      "Ignores appreciation, tax benefits, and principal paydown in total return.",
+      "Cap rate alone cannot value a property: location and condition dominate.",
+      "Not investment advice: verify rents, expenses, and title before investing."
+    ],
+    "faqs": [
+      {
+        "q": "What is a good cap rate?",
+        "a": "It varies by market: 4 to 6% is common in prime metro areas, 7 to 10% in smaller cities and riskier assets. Compare cap rates only within the same market and property type. A very high cap rate usually signals high risk, not a bargain."
+      },
+      {
+        "q": "Cap rate vs cash-on-cash: which matters?",
+        "a": "Both. Cap rate measures the property's own yield, ignoring your loan; cash-on-cash measures your personal return after financing. Use cap rate to compare properties, and cash-on-cash to compare financing choices on one property."
+      },
+      {
+        "q": "What DSCR do lenders want?",
+        "a": "Most want 1.20 to 1.25 or higher, meaning NOI covers loan payments with a 20 to 25% cushion. Below 1.0 the property cannot service its own debt, and most lenders will decline the loan."
+      },
+      {
+        "q": "What is a good GRM?",
+        "a": "Lower is better: it means you pay fewer years of rent for the property. Residential GRMs of 8 to 12 are common in many markets. GRM is a rough screen only, since it ignores expenses entirely."
+      },
+      {
+        "q": "Should closing costs count in cash invested?",
+        "a": "Yes. Stamp duty, registration, and brokerage are real cash out of your pocket that earns no return until the property performs. Including them, as this calculator does, gives the honest cash-on-cash figure."
+      },
+      {
+        "q": "Does a high cap rate mean a better investment?",
+        "a": "Not necessarily. Cap rates rise with risk: weak locations, old buildings, and unreliable tenants all push cap rates up. A high cap rate is the market's way of paying you to take that risk."
+      }
+    ],
+    "labels": {
+      "price": "Purchase price",
+      "closingCosts": "Closing costs",
+      "rent": "Monthly rent",
+      "expenses": "Monthly operating expenses",
+      "downPct": "Down payment (%)",
+      "annualRate": "Loan rate (% per year)",
+      "years": "Loan term (years)",
+      "noi": "Net operating income (NOI)",
+      "capRate": "Cap rate",
+      "grm": "Gross rent multiplier (GRM)",
+      "cashInvested": "Total cash invested",
+      "cashOnCash": "Cash-on-cash return",
+      "dscr": "DSCR (debt service coverage)",
+      "dscrGood": "DSCR of 1.2 or more: comfortably covers the loan payments.",
+      "dscrThin": "DSCR between 1.0 and 1.2: thin cushion, most lenders want more.",
+      "dscrBad": "DSCR below 1.0: rental income does not cover the loan payments."
+    }
+  }
+}

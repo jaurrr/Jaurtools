@@ -1,0 +1,91 @@
+{
+  "circle-calculator": {
+    "benefits": [
+      "Enter any one measurement - radius, diameter, circumference, or area - and get the other three.",
+      "Perfect for craft, construction, and school geometry: pipe sizes, pizza areas, wheel distances.",
+      "Shows every formula it uses, so you learn the maths while you calculate.",
+      "No unit conversion traps: use one unit throughout and read all answers in it."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Diameter = 2 x radius, so radius = diameter / 2. A 14 cm pizza has radius 7 cm. The tool does this the moment you switch the dropdown to Diameter.",
+        "q": "How do I get the radius from the diameter?"
+      },
+      {
+        "a": "Rearrange the circumference formula: r = C / (2 x pi). For a 44 cm wheel rim, r = 44 / 6.2832 = 7.0028, essentially 7 cm.",
+        "q": "How do I find the radius from the circumference?"
+      },
+      {
+        "a": "Rearrange the area formula: r = sqrt(A / pi). For a 154 cm2 circle, r = sqrt(154 / 3.14159) = sqrt(49.02) = 7.0014, essentially 7 cm.",
+        "q": "How do I find the radius from the area?"
+      },
+      {
+        "a": "Multiply the radius by 2 and by pi: C = 2 x pi x r. For r = 7, C = 43.9823. One full turn of a wheel with radius 7 cm rolls about 44 cm forward.",
+        "q": "What is the circumference formula?"
+      },
+      {
+        "a": "Yes. Enter the value in centimetres and all answers are in centimetres (area in cm2); enter inches and everything is in inches. Just never mix units in one calculation.",
+        "q": "Does it work with inches or centimetres?"
+      },
+      {
+        "a": "Pi is irrational, so the tool uses a high-precision value and displays 4 decimals. For r = 7 the area shows 153.938, true to 153.9380400... - plenty for any practical job.",
+        "q": "How accurate is pi here?"
+      }
+    ],
+    "formula": "Diameter: d = 2r\nCircumference: C = 2 x pi x r = pi x d\nArea: A = pi x r squared\nReverse: r = d / 2 = C / (2 x pi) = sqrt(A / pi)\nExample: r = 7 -> d = 14, C = 43.9823, A = 153.938",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose which measurement you know: radius, diameter, circumference, or area.",
+      "Type its value - keep one unit for everything (all cm, or all inches).",
+      "The other three measurements appear instantly, to 4 decimal places.",
+      "Switch the dropdown any time to start from a different known value."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Radius 7 gives diameter 14, circumference 43.9823, and area 153.938.",
+      "Diameter is always exactly twice the radius: d = 2r.",
+      "Circumference = 2 x pi x r. One wheel turn rolls the wheel forward by its circumference.",
+      "Area = pi x r squared. Doubling the radius quadruples the area.",
+      "Any one of the four measurements determines the other three.",
+      "Pi here is precise enough that 4-decimal answers are correct for practical work."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "circle calculator, circumference calculator, circle area calculator, radius diameter calculator, circle formulas",
+    "labels": {
+      "area": "Area",
+      "circumference": "Circumference",
+      "diameter": "Diameter",
+      "errPositive": "Enter a value greater than zero.",
+      "knownLabel": "I know the",
+      "mode_area": "Area",
+      "mode_circumference": "Circumference",
+      "mode_diameter": "Diameter",
+      "mode_radius": "Radius",
+      "radius": "Radius"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Perfect circles only - it cannot handle ellipses or irregular round shapes.",
+      "Single-unit only: mixing centimetres and inches in one entry gives wrong answers.",
+      "Display rounds to 4 decimals; survey-grade precision needs specialist tools.",
+      "It computes geometry, not material thickness - a pipe's inner and outer circles differ."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free circle calculator: enter radius, diameter, circumference, or area and instantly get the other three. Formulas included. Private, no sign-up.",
+    "metaTitle": "Circle Calculator - Radius, Diameter, Area | JaurTools",
+    "name": "Circle Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Enter any one circle measurement and get the rest instantly. With radius 7: the diameter is 14, the circumference is 43.9823 (2 x pi x 7), and the area is 153.938 (pi x 49). Start from diameter, circumference, or area instead - the tool rearranges the formulas for you, so a 44 cm circumference gives radius 7 right away.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Circle results",
+    "tagline": "Enter any one measurement - radius, diameter, circumference, or area - get all four.",
+    "workedExample": "Known: radius = 7\n1. Diameter: d = 2 x 7 = 14.\n2. Circumference: C = 2 x 3.14159 x 7 = 43.9823.\n3. Area: A = 3.14159 x 49 = 153.938.\nReverse check - known circumference 44:\n1. r = 44 / (2 x 3.14159) = 44 / 6.2832 = 7.0028.",
+    "workedExampleHeading": "Worked example"
+  }
+}

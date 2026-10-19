@@ -1,0 +1,505 @@
+<article class="tool-page container">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', tr.lang()]">{{ t('home') }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <header class="tool-head">
+    <h1>{{ t('name') }}</h1>
+    <p class="tagline">{{ t('tagline') }}</p>
+  </header>
+
+  <div class="tool-layout">
+    <div class="qr-workspace">
+      <section class="card tool-card" [attr.aria-label]="t('name')">
+        <div class="field">
+          <span class="group-label" id="qr-type-label">{{ t('ui.typeLabel') }}</span>
+          <div class="type-grid" role="group" aria-labelledby="qr-type-label">
+            @for (tp of qrTypes; track tp) {
+              <button
+                type="button"
+                class="type-btn"
+                [class.active]="qrType() === tp"
+                [attr.aria-pressed]="qrType() === tp"
+                (click)="setType(tp)"
+              >
+                <app-icon [name]="typeIcon(tp)" />
+                <span>{{ typeName(tp) }}</span>
+              </button>
+            }
+          </div>
+        </div>
+
+        @switch (qrType()) {
+          @case ('url') {
+            <div class="field">
+              <label for="qr-url">{{ t('ui.urlLabel') }}</label>
+              <input
+                id="qr-url"
+                type="url"
+                class="input"
+                inputmode="url"
+                [placeholder]="t('ui.urlPlaceholder')"
+                [ngModel]="urlText()"
+                (ngModelChange)="urlText.set($event); onField()"
+              />
+            </div>
+          }
+          @case ('text') {
+            <div class="field">
+              <label for="qr-content">{{ t('ui.contentLabel') }}</label>
+              <textarea
+                id="qr-content"
+                class="input"
+                rows="3"
+                [placeholder]="t('ui.contentPlaceholder')"
+                [ngModel]="content()"
+                (ngModelChange)="content.set($event); onField()"
+              ></textarea>
+            </div>
+          }
+          @case ('wifi') {
+            <div class="field">
+              <label for="qr-ssid">{{ t('ui.wifiSsid') }}</label>
+              <input
+                id="qr-ssid"
+                type="text"
+                class="input"
+                [placeholder]="t('ui.wifiSsidPh')"
+                [ngModel]="wifiSsid()"
+                (ngModelChange)="wifiSsid.set($event); onField()"
+              />
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="qr-wifisec">{{ t('ui.wifiSecurity') }}</label>
+                <select
+                  id="qr-wifisec"
+                  class="select"
+                  [ngModel]="wifiSecurity()"
+                  (ngModelChange)="wifiSecurity.set($event); onField()"
+                >
+                  @for (sec of wifiSecurities; track sec) {
+                    <option [value]="sec">{{ wifiSecName(sec) }}</option>
+                  }
+                </select>
+              </div>
+              <div class="field">
+                <label for="qr-wifipass">{{ t('ui.wifiPassword') }}</label>
+                <input
+                  id="qr-wifipass"
+                  type="text"
+                  class="input"
+                  autocomplete="off"
+                  [disabled]="wifiSecurity() === 'nopass'"
+                  [ngModel]="wifiPassword()"
+                  (ngModelChange)="wifiPassword.set($event); onField()"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="check-row">
+                <input
+                  type="checkbox"
+                  [ngModel]="wifiHidden()"
+                  (ngModelChange)="wifiHidden.set($event); onField()"
+                />
+                <span>{{ t('ui.wifiHidden') }}</span>
+              </label>
+            </div>
+          }
+          @case ('vcard') {
+            <div class="grid-2">
+              <div class="field">
+                <label for="qr-vcfirst">{{ t('ui.vcFirst') }}</label>
+                <input id="qr-vcfirst" type="text" class="input" [ngModel]="vcFirst()" (ngModelChange)="vcFirst.set($event); onField()" />
+              </div>
+              <div class="field">
+                <label for="qr-vclast">{{ t('ui.vcLast') }}</label>
+                <input id="qr-vclast" type="text" class="input" [ngModel]="vcLast()" (ngModelChange)="vcLast.set($event); onField()" />
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="qr-vcphone">{{ t('ui.vcPhone') }}</label>
+                <input id="qr-vcphone" type="tel" class="input" inputmode="tel" [ngModel]="vcPhone()" (ngModelChange)="vcPhone.set($event); onField()" />
+              </div>
+              <div class="field">
+                <label for="qr-vcemail">{{ t('ui.vcEmail') }}</label>
+                <input id="qr-vcemail" type="email" class="input" inputmode="email" [ngModel]="vcEmail()" (ngModelChange)="vcEmail.set($event); onField()" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="qr-vcorg">{{ t('ui.vcOrg') }}</label>
+              <input id="qr-vcorg" type="text" class="input" [ngModel]="vcOrg()" (ngModelChange)="vcOrg.set($event); onField()" />
+            </div>
+          }
+          @case ('sms') {
+            <div class="field">
+              <label for="qr-smsnum">{{ t('ui.smsNumber') }}</label>
+              <input
+                id="qr-smsnum"
+                type="tel"
+                class="input"
+                inputmode="tel"
+                [placeholder]="t('ui.smsNumberPh')"
+                [ngModel]="smsNumber()"
+                (ngModelChange)="smsNumber.set($event); onField()"
+              />
+            </div>
+            <div class="field">
+              <label for="qr-smsmsg">{{ t('ui.smsMessage') }}</label>
+              <textarea
+                id="qr-smsmsg"
+                class="input"
+                rows="2"
+                [placeholder]="t('ui.smsMessagePh')"
+                [ngModel]="smsMessage()"
+                (ngModelChange)="smsMessage.set($event); onField()"
+              ></textarea>
+            </div>
+          }
+          @case ('email') {
+            <div class="field">
+              <label for="qr-emailto">{{ t('ui.emailTo') }}</label>
+              <input
+                id="qr-emailto"
+                type="email"
+                class="input"
+                inputmode="email"
+                [ngModel]="emailTo()"
+                (ngModelChange)="emailTo.set($event); onField()"
+              />
+            </div>
+            <div class="field">
+              <label for="qr-emailsub">{{ t('ui.emailSubject') }}</label>
+              <input id="qr-emailsub" type="text" class="input" [ngModel]="emailSubject()" (ngModelChange)="emailSubject.set($event); onField()" />
+            </div>
+            <div class="field">
+              <label for="qr-emailbody">{{ t('ui.emailBody') }}</label>
+              <textarea
+                id="qr-emailbody"
+                class="input"
+                rows="3"
+                [placeholder]="t('ui.emailBodyPh')"
+                [ngModel]="emailBody()"
+                (ngModelChange)="emailBody.set($event); onField()"
+              ></textarea>
+            </div>
+          }
+          @case ('phone') {
+            <div class="field">
+              <label for="qr-phonenum">{{ t('ui.phoneNumber') }}</label>
+              <input
+                id="qr-phonenum"
+                type="tel"
+                class="input"
+                inputmode="tel"
+                [placeholder]="t('ui.phoneNumberPh')"
+                [ngModel]="phoneNumber()"
+                (ngModelChange)="phoneNumber.set($event); onField()"
+              />
+            </div>
+          }
+          @case ('location') {
+            <div class="grid-2">
+              <div class="field">
+                <label for="qr-lat">{{ t('ui.latLabel') }}</label>
+                <input
+                  id="qr-lat"
+                  type="text"
+                  class="input"
+                  inputmode="decimal"
+                  [placeholder]="t('ui.latPh')"
+                  [ngModel]="locLat()"
+                  (ngModelChange)="locLat.set($event); onField()"
+                />
+              </div>
+              <div class="field">
+                <label for="qr-lng">{{ t('ui.lngLabel') }}</label>
+                <input
+                  id="qr-lng"
+                  type="text"
+                  class="input"
+                  inputmode="decimal"
+                  [placeholder]="t('ui.lngPh')"
+                  [ngModel]="locLng()"
+                  (ngModelChange)="locLng.set($event); onField()"
+                />
+              </div>
+            </div>
+          }
+          @case ('bitcoin') {
+            <div class="field">
+              <label for="qr-btcaddr">{{ t('ui.btcAddress') }}</label>
+              <input
+                id="qr-btcaddr"
+                type="text"
+                class="input"
+                autocomplete="off"
+                spellcheck="false"
+                [placeholder]="t('ui.btcAddressPh')"
+                [ngModel]="btcAddress()"
+                (ngModelChange)="btcAddress.set($event); onField()"
+              />
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="qr-btcamt">{{ t('ui.btcAmount') }}</label>
+                <input id="qr-btcamt" type="text" class="input" inputmode="decimal" [ngModel]="btcAmount()" (ngModelChange)="btcAmount.set($event); onField()" />
+              </div>
+              <div class="field">
+                <label for="qr-btclabel">{{ t('ui.btcLabel') }}</label>
+                <input id="qr-btclabel" type="text" class="input" [ngModel]="btcLabel()" (ngModelChange)="btcLabel.set($event); onField()" />
+              </div>
+            </div>
+          }
+        }
+
+        <p class="hint live-hint"><app-icon name="zap" />{{ t('ui.liveHint') }}</p>
+
+        <div class="field">
+          <span class="group-label" id="qr-mode-label">{{ t('ui.modeLabel') }}</span>
+          <div class="segmented" role="group" aria-labelledby="qr-mode-label">
+            <button type="button" [class.active]="mode() === 'standard'" [attr.aria-pressed]="mode() === 'standard'" (click)="setMode('standard')">
+              {{ t('ui.modeStandard') }}
+            </button>
+            <button type="button" [class.active]="mode() === 'logo'" [attr.aria-pressed]="mode() === 'logo'" (click)="setMode('logo')">
+              {{ t('ui.modeLogo') }}
+            </button>
+          </div>
+        </div>
+
+        @if (mode() === 'logo') {
+          <div class="field">
+            <span class="group-label">{{ t('ui.logoLabel') }}</span>
+            @if (logoName()) {
+              <p class="logo-loaded"><app-icon name="check" />{{ logoName() }}</p>
+              <button type="button" class="btn-ghost" (click)="removeLogo()">{{ t('ui.logoRemove') }}</button>
+            } @else {
+              <label class="btn-ghost file-label" for="qr-logo">
+                <app-icon name="upload" />{{ t('ui.logoChoose') }}
+              </label>
+              <input id="qr-logo" type="file" accept="image/*" class="sr-only" (change)="onLogoFile($event)" />
+              <p class="hint">{{ t('ui.logoHint') }}</p>
+            }
+          </div>
+        }
+
+        <div class="field">
+          <span class="group-label" id="qr-style-label">{{ t('ui.styleLabel') }}</span>
+          <div class="style-picker" role="group" aria-labelledby="qr-style-label">
+            @for (st of dotStyles; track st) {
+              <button
+                type="button"
+                class="style-btn"
+                [class.active]="dotStyle() === st"
+                [attr.aria-pressed]="dotStyle() === st"
+                (click)="setDotStyle(st)"
+              >
+                <span class="dot-demo demo-{{ st }}" aria-hidden="true">
+                  @for (d of [1, 2, 3, 4, 5, 6, 7, 8, 9]; track d) {
+                    <i></i>
+                  }
+                </span>
+                <span>{{ styleName(st) }}</span>
+              </button>
+            }
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="group-label" id="qr-frame-label">{{ t('ui.frameLabel') }}</span>
+          <div class="frame-picker" role="group" aria-labelledby="qr-frame-label">
+            @for (fr of frameStyles; track fr) {
+              <button
+                type="button"
+                class="frame-btn"
+                [class.active]="frame() === fr"
+                [attr.aria-pressed]="frame() === fr"
+                (click)="setFrame(fr)"
+              >
+                <span class="frame-demo frame-{{ fr }}" aria-hidden="true"><i></i></span>
+                <span>{{ frameName(fr) }}</span>
+              </button>
+            }
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="qr-fg">{{ t('ui.fgLabel') }}</label>
+            <input
+              id="qr-fg"
+              type="color"
+              class="color-input"
+              [value]="fgColor()"
+              (input)="onFg($any($event.target).value)"
+            />
+          </div>
+          <div class="field">
+            <label for="qr-bg">{{ t('ui.bgLabel') }}</label>
+            <input
+              id="qr-bg"
+              type="color"
+              class="color-input"
+              [value]="bgColor()"
+              (input)="onBg($any($event.target).value)"
+            />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="qr-size">{{ t('ui.sizeLabel') }}</label>
+            <select id="qr-size" class="select" [ngModel]="size()" (ngModelChange)="onSize($event)">
+              @for (s of sizes; track s) {
+                <option [value]="s">{{ s }} {{ t('ui.pixels') }}</option>
+              }
+            </select>
+          </div>
+          <div class="field">
+            <label for="qr-ec">{{ t('ui.ecLabel') }}</label>
+            <select id="qr-ec" class="select" [ngModel]="ecLevel()" (ngModelChange)="onEc($event)">
+              @for (level of ecLevels; track level) {
+                <option [value]="level">{{ ecLabel(level) }}</option>
+              }
+            </select>
+          </div>
+        </div>
+
+        @if (mode() === 'logo') {
+          <p class="hint logo-note"><app-icon name="info" />{{ t('ui.logoNote') }}</p>
+        }
+
+        @if (error()) {
+          <p class="form-error" role="alert">{{ error() }}</p>
+        }
+      </section>
+
+      <aside class="card qr-preview-card" [attr.aria-label]="t('ui.previewTitle')">
+        <h2 class="preview-title">{{ t('ui.previewTitle') }}</h2>
+        <div class="qr-frame">
+          <canvas #qrCanvas width="512" height="512"></canvas>
+          @if (!hasQr()) {
+            <div class="qr-empty">
+              <app-icon name="qr-code" />
+              <p>{{ t('ui.previewEmpty') }}</p>
+            </div>
+          }
+        </div>
+        @if (hasQr()) {
+          <dl class="qr-meta">
+            <div><dt>{{ t('ui.sizeLabel') }}</dt><dd>{{ size() }} × {{ size() }} px</dd></div>
+            <div><dt>{{ t('ui.ecLabel') }}</dt><dd>{{ ecLabel(ecLevel()) }}</dd></div>
+          </dl>
+        }
+        <div class="field download-format">
+          <span class="group-label" id="qr-format-label">{{ t('ui.formatLabel') }}</span>
+          <div class="segmented segmented-3" role="group" aria-labelledby="qr-format-label">
+            @for (f of dlFormats; track f) {
+              <button
+                type="button"
+                [class.active]="dlFormat() === f"
+                [attr.aria-pressed]="dlFormat() === f"
+                (click)="setDlFormat(f)"
+              >
+                {{ f.toUpperCase() }}
+              </button>
+            }
+          </div>
+        </div>
+        <button type="button" class="btn btn-download" (click)="download()">
+          <app-icon name="download" />{{ t('ui.download') }} {{ dlFormat().toUpperCase() }}
+        </button>
+        @if (downloadError()) {
+          <p class="form-error" role="alert">{{ downloadError() }}</p>
+        }
+      </aside>
+    </div>
+    <div class="guide-side">
+      <p class="quick-answer"><strong>{{ t('quickAnswerLabel') }}.</strong> {{ t('quickAnswer') }}</p>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul class="guide-list">
+          @for (f of list('keyFacts'); track $index) {
+            <li>{{ f }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol class="guide-list">
+          @for (s of list('howTo'); track $index) {
+            <li>{{ s }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <p>{{ t('formula') }}</p>
+        <h3>{{ t('workedExampleHeading') }}</h3>
+        <p>{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('benefitsHeading') }}</h2>
+        <ul class="guide-list">
+          @for (b of list('benefits'); track $index) {
+            <li>{{ b }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('limitationsHeading') }}</h2>
+        <ul class="guide-list">
+          @for (l of list('limitations'); track $index) {
+            <li>{{ l }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('privacyHeading') }}</h2>
+        <p>{{ t('privacyNote') }}</p>
+      </section>
+
+      <section class="faq">
+        <h2>{{ t('faqsHeading') }}</h2>
+        @for (f of faqs(); track f.q) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+    </div>
+  </div>
+
+  <app-micro-rating [slug]="slug"></app-micro-rating>
+
+  <section class="related">
+    <h2>{{ t('relatedHeading') }}</h2>
+    <div class="related-grid">
+      @for (r of relatedSlugs; track r) {
+        <a class="card related-card" [routerLink]="['/', tr.lang(), r]">{{ relatedName(r) }}</a>
+      }
+    </div>
+  </section>
+
+  <p class="last-reviewed muted">{{ t('lastReviewed') }}: 2026-10-18</p>
+</article>

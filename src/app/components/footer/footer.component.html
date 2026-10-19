@@ -1,0 +1,98 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="brand" [routerLink]="['/', translate.lang()]">
+        <img
+          class="brand-logo"
+          src="assets/logo.jpg"
+          [alt]="translate.t('nav.logoAlt')"
+          width="36"
+          height="36"
+        />
+        <span class="brand-name">JaurTools</span>
+      </a>
+      <p class="tagline">{{ translate.t('footer.tagline') }}</p>
+      <a class="email-link" href="mailto:jaurazmi42@gmail.com">
+        <app-icon name="mail" aria-hidden="true"></app-icon>
+        <span dir="ltr">jaurazmi42@gmail.com</span>
+      </a>
+    </div>
+
+    <nav class="footer-nav" [attr.aria-label]="translate.t('footer.toolsHeading')">
+      <h2>{{ translate.t('footer.toolsHeading') }}</h2>
+      <ul>
+        @for (slug of visibleTools(); track slug) {
+          <li>
+            <a [routerLink]="['/', translate.lang(), slug]">{{ toolName(slug) }}</a>
+          </li>
+        }
+      </ul>
+      <button type="button" class="footer-more" (click)="toolsExpanded.set(!toolsExpanded())" [attr.aria-expanded]="toolsExpanded()">
+        {{ toolsExpanded() ? translate.t('footer.showLess') : translate.t('footer.showMore') }}
+        <app-icon [name]="toolsExpanded() ? 'chevron-up' : 'chevron-down'" aria-hidden="true"></app-icon>
+      </button>
+    </nav>
+
+    <nav class="footer-nav" [attr.aria-label]="translate.t('footer.categoriesHeading')">
+      <h2>{{ translate.t('footer.categoriesHeading') }}</h2>
+      <ul>
+        @for (c of visibleCats(); track c.id) {
+          <li>
+            <a [routerLink]="['/', translate.lang(), 'search']" [queryParams]="{ cat: c.id }">{{
+              categoryName(c)
+            }}</a>
+          </li>
+        }
+      </ul>
+      <button type="button" class="footer-more" (click)="catsExpanded.set(!catsExpanded())" [attr.aria-expanded]="catsExpanded()">
+        {{ catsExpanded() ? translate.t('footer.showLess') : translate.t('footer.showMore') }}
+        <app-icon [name]="catsExpanded() ? 'chevron-up' : 'chevron-down'" aria-hidden="true"></app-icon>
+      </button>
+    </nav>
+
+    <div class="footer-stack">
+      <nav class="footer-nav" [attr.aria-label]="translate.t('footer.companyHeading')">
+        <h2>{{ translate.t('footer.companyHeading') }}</h2>
+        <ul>
+          <li>
+            <a [routerLink]="['/', translate.lang(), 'about']">{{ translate.t('footer.about') }}</a>
+          </li>
+          <li>
+            <a [routerLink]="['/', translate.lang(), 'contact']">{{ translate.t('footer.contact') }}</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="footer-nav" [attr.aria-label]="translate.t('footer.legalHeading')">
+        <h2>{{ translate.t('footer.legalHeading') }}</h2>
+        <ul>
+          <li>
+            <a [routerLink]="['/', translate.lang(), 'privacy-policy']">{{
+              translate.t('footer.privacy')
+            }}</a>
+          </li>
+          <li>
+            <a [routerLink]="['/', translate.lang(), 'terms-of-service']">{{
+              translate.t('footer.terms')
+            }}</a>
+          </li>
+          <li>
+            <a [routerLink]="['/', translate.lang(), 'disclaimer']">{{
+              translate.t('footer.disclaimer')
+            }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="copyright">{{ translate.t('footer.copyright') }}</p>
+      <p class="trademark">{{ translate.t('footer.trademark') }}</p>
+      <button type="button" class="cookie-btn" (click)="openCookieSettings()">
+        <app-icon name="cookie" aria-hidden="true"></app-icon>
+        <span>{{ translate.t('footer.cookieSettings') }}</span>
+      </button>
+    </div>
+  </div>
+</footer>

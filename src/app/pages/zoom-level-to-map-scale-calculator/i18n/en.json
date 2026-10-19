@@ -1,0 +1,92 @@
+{
+  "zoom-level-to-map-scale-calculator": {
+    "benefits": [
+      "Translate abstract zoom numbers into real-world map scales.",
+      "Essential for cartographers, GIS users, and print map design.",
+      "Ground-resolution numbers help you pick the right zoom for detail work.",
+      "Compare how scale changes with latitude and screen DPI."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "In the Web Mercator projection used by Google Maps, OpenStreetMap, and most web maps, the world is 256 pixels wide at zoom 0 and doubles with each zoom level. Each integer zoom step halves the ground distance per pixel, so zoom 10 shows half the detail width of zoom 9 but four times the map area detail per tile.",
+        "q": "What does a zoom level actually mean?"
+      },
+      {
+        "a": "Ground resolution = 156543.03392 × cos(latitude) ÷ 2^zoom metres per pixel. At the equator (latitude 0), cos = 1, so zoom 10 gives 156543.03392 ÷ 1024 = 152.87 m/px. Multiply by pixels-per-metre on your screen (DPI ÷ 0.0254) to get the scale denominator.",
+        "q": "How is ground resolution calculated?"
+      },
+      {
+        "a": "Because Web Mercator stretches the world toward the poles, one screen pixel covers less ground as latitude increases — multiplied by cos(latitude). At 60° latitude, cos = 0.5, so everything is at half the equatorial ground resolution for the same zoom.",
+        "q": "Why does latitude change the scale?"
+      },
+      {
+        "a": "Scale 1:N means 1 unit on the map represents N units on the ground. A larger N means a smaller scale (less detail, more area). Zoom 10 at 96 DPI is about 1:578,000 — a regional map. Zoom 15 is about 1:18,000 — street level.",
+        "q": "What does 1:578,000 mean?"
+      },
+      {
+        "a": "No — only if the DPI matches. A 96 DPI desktop monitor, a 150 DPI laptop, and a 300 DPI printout all show the same zoom level at different physical scales. That is why this calculator asks for your screen DPI before computing the scale.",
+        "q": "Is the scale the same on every screen?"
+      },
+      {
+        "a": "Web maps max out around zoom 19–22 depending on the provider (Google Maps goes to about 22 in some areas). Beyond that, tiles are simply magnified, not more detailed. This calculator accepts 0–22.",
+        "q": "What is the maximum zoom level?"
+      }
+    ],
+    "formula": "Ground resolution = 156543.03392 × cos(latitude) / 2^zoom  (metres per pixel)\nMap scale denominator N = ground resolution × (DPI / 0.0254)\nScale is written 1:N. 1 inch = 0.0254 m exactly.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Drag the zoom slider to the level you want to convert (0–22).",
+      "Enter the latitude of the area — scale shrinks toward the poles.",
+      "Pick your screen DPI (96 is the common desktop default).",
+      "Read the map scale, ground resolution, and ground distance per screen centimetre."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Web Mercator maps double in detail with each integer zoom level.",
+      "At the equator, zoom 0 = 156,543 metres per pixel.",
+      "Zoom 10 at the equator and 96 DPI is about 1:578,000.",
+      "Ground resolution shrinks by cos(latitude) toward the poles.",
+      "Map scale 1:N means 1 screen unit represents N ground units.",
+      "Screen DPI changes the physical scale of the same zoom level."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zoom level to scale calculator, map scale calculator, web mercator scale, ground resolution calculator, zoom to scale conversion",
+    "labels": {
+      "dpiLabel": "Screen DPI",
+      "dpiUnit": "DPI",
+      "groundRes": "Ground resolution",
+      "latLabel": "Latitude (decimal degrees)",
+      "mPerCm": "m per screen cm",
+      "mPerPx": "m / pixel",
+      "mapScale": "Map scale",
+      "mercatorNote": "Web Mercator projection. Scale is exact along the equator and shrinks with cos(latitude) toward the poles.",
+      "screenCm": "Ground per 1 cm on screen",
+      "zoomHint": "0 = whole world, 10 = city region, 15 = streets, 20 = buildings.",
+      "zoomLabel": "Zoom level"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Web Mercator only — printed topographic maps use different projections.",
+      "Scale is a single number but Mercator distorts with latitude; the latitude input corrects for your area.",
+      "Assumes square pixels and the exact 0.0254 m inch.",
+      "Tile providers may cap detail before zoom 22 in some regions."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free zoom-to-scale calculator: convert web map zoom levels to real map scales (1:N), ground resolution, and screen scale. Web Mercator math, private, no sign-up.",
+    "metaTitle": "Zoom Level to Map Scale Calculator | JaurTools",
+    "name": "Zoom Level to Map Scale Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A web map's zoom level converts to a real map scale with Web Mercator math. At zoom 10 on the equator with a 96 DPI screen: ground resolution = 156543.03392 ÷ 2^10 = 152.87 metres per pixel, and the map scale = 152.87 × (96 ÷ 0.0254) ≈ 1:577,791. Move the slider to any zoom 0–22 and the calculator shows the scale, ground resolution, and ground distance per screen centimetre.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your map scale results",
+    "tagline": "Convert web map zoom levels to real map scales, ground resolution, and screen measurements.",
+    "workedExample": "Zoom 10, equator, 96 DPI:\n1. Ground resolution = 156543.03392 × cos(0°) / 2^10 = 156543.03392 / 1024 = 152.87 m/px.\n2. Pixels per metre on screen = 96 / 0.0254 = 3779.53.\n3. Scale denominator N = 152.87 × 3779.53 = 577,791.\n4. Map scale ≈ 1:577,791. Ground per 1 cm on screen = 152.87 × 96 / 2.54 = 5777.9 m.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "utm-builder": {
+    "benefits": [
+      "हर बार साफ, सही ढंग से एनकोड किए गए URL: विशेष अक्षर अपने आप percent-encoded हो जाते हैं।",
+      "सुसंगत नामकरण: एक जैसा फ़ील्ड लेआउट पूरी टीम को कैंपेन टैग करने का एक तरीका अपनाने पर मजबूर करता है।",
+      "तेज़ रिपोर्टिंग: सही ढंग से टैग किए गए लिंक Google Analytics और विज्ञापन प्लेटफ़ॉर्म में ट्रैफ़िक को साफ-साफ बांट देते हैं।",
+      "स्प्रेडशीट की ज़रूरत नहीं: टाइप करते ही लिंक लाइव अपडेट होता है, तुरंत कॉपी और अक्षर गिनती के साथ।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "जनरेटर",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "UTM पैरामीटर पांच छोटे क्वेरी टैग हैं (utm_source, utm_medium, utm_campaign, utm_term, utm_content) जो आप किसी URL में जोड़ते हैं। एनालिटिक्स टूल इन्हें पढ़कर बताते हैं कि हर विज़िटर कौन से लिंक, ईमेल या विज्ञापन से आया।",
+        "q": "UTM पैरामीटर क्या हैं?"
+      },
+      {
+        "a": "पांचों मौजूद हैं, लेकिन साफ रिपोर्ट के लिए केवल तीन ज़रूरी हैं: utm_source (ट्रैफ़िक कहां से आया), utm_medium (चैनल, जैसे email या cpc) और utm_campaign (कैंपेन का नाम)। utm_term और utm_content वैकल्पिक अतिरिक्त हैं।",
+        "q": "कौन से UTM पैरामीटर अनिवार्य हैं?"
+      },
+      {
+        "a": "एक ही नामकरण परंपरा रखें और उसी पर टिके रहें: लोअरकेस, स्पेस की जगह अंडरस्कोर, जैसे summer_sale। Summer-Sale, summer sale और SUMMER_SALE को मिलाने से आपकी रिपोर्ट में तीन अलग पंक्तियां बन जाती हैं।",
+        "q": "कैंपेन के नाम कैसे रखूं?"
+      },
+      {
+        "a": "utm_source रेफ़रर का नाम देता है (newsletter, facebook, google)। utm_medium चैनल का नाम देता है (email, social, cpc, referral)। उदाहरण: आपके ईमेल न्यूज़लेटर के लिंक के लिए source=newsletter, medium=email।",
+        "q": "utm_source और utm_medium में क्या अंतर है?"
+      },
+      {
+        "a": "हां। यह टूल URL में पहले से मौजूद हर चीज़ को सुरक्षित रखता है: मौजूदा क्वेरी पैरामीटर और #fragment बने रहते हैं, और UTM टैग उनके साथ जुड़ जाते हैं।",
+        "q": "क्या मैं ऐसे URL में UTM टैग जोड़ सकता हूं जिसमें पहले से पैरामीटर हैं?"
+      },
+      {
+        "a": "नहीं। UTM टैग केवल आपके अपने एनालिटिक्स के लिए विज़िट को लेबल करते हैं; वे विज़िटर को दिखने वाली चीज़ नहीं बदलते, और सर्च रैंकिंग पर इनका कोई असर नहीं होता।",
+        "q": "क्या UTM पैरामीटर SEO को नुकसान पहुंचाते हैं?"
+      }
+    ],
+    "formula": "अंतिम URL = base URL + \"?\" + \"utm_source=\" + source + \"&utm_medium=\" + medium + \"&utm_campaign=\" + campaign [+ \"&utm_term=\" + term] [+ \"&utm_content=\" + content]\nमान percent-encoded होते हैं। यदि base URL में पहले से क्वेरी स्ट्रिंग है, तो नए पैरामीटर \"&\" से जोड़े जाते हैं।",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "वेबसाइट URL फ़ील्ड में अपना डेस्टिनेशन पेज URL पेस्ट करें।",
+      "utm_source लिखें: विज़िटर कहां से आ रहा है (जैसे newsletter, facebook)।",
+      "utm_medium लिखें: चैनल (जैसे email, social, cpc)।",
+      "utm_campaign लिखें: कैंपेन का नाम (जैसे summer_sale)।",
+      "वैकल्पिक रूप से utm_term (पेड कीवर्ड) और utm_content (दो लिंक में अंतर बताने के लिए) जोड़ें।",
+      "तैयार URL कॉपी करें और अपने ईमेल, विज्ञापन या सोशल पोस्ट में उपयोग करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "UTM का अर्थ है Urchin Tracking Module, Urchin एनालिटिक्स सॉफ़्टवेयर से जिसे Google ने 2005 में खरीदा था; यह नामकरण Google Analytics में आज भी चल रहा है।",
+      "पांच मानक पैरामीटर हैं: utm_source, utm_medium, utm_campaign, utm_term और utm_content।",
+      "utm_source रेफ़रर, utm_medium मार्केटिंग चैनल और utm_campaign विशिष्ट प्रमोशन की पहचान करता है।",
+      "utm_term पेड-सर्च कीवर्ड रिकॉर्ड करता है, और utm_content एक ही URL की ओर इशारा करने वाले लिंक में अंतर करता है (जैसे एक ईमेल में दो बटन)।",
+      "एनालिटिक्स प्लेटफ़ॉर्म UTM टैग अपने आप पढ़ लेते हैं; विज़िटर को पेज पर कुछ अलग नहीं दिखता।",
+      "मानों में विशेष अक्षर percent-encoded होते हैं, इसलिए स्पेस और चिह्न कभी लिंक नहीं तोड़ते।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "UTM बिल्डर, UTM लिंक जनरेटर, utm_source utm_medium, कैंपेन URL बिल्डर, मार्केटिंग लिंक ट्रैकर",
+    "labels": {
+      "baseUrlLabel": "वेबसाइट URL",
+      "campaignLabel": "कैंपेन का नाम (utm_campaign)",
+      "contentLabel": "Content (utm_content) — वैकल्पिक",
+      "copyButton": "URL कॉपी करें",
+      "emptyError": "पहले वेबसाइट URL दर्ज करें।",
+      "invalidError": "वह URL मान्य नहीं है। स्कीम सहित लिखें, जैसे https://example.com/page।",
+      "lengthLabel": "URL की लंबाई",
+      "mediumLabel": "Medium (utm_medium)",
+      "noteText": "केवल जिन पैरामीटर का मान है, वही जोड़े जाते हैं। utm_term और utm_content वैकल्पिक हैं।",
+      "resultLabel": "आपका टैग किया गया URL",
+      "schemeError": "URL http:// या https:// से शुरू होना चाहिए।",
+      "sourceLabel": "Source (utm_source)",
+      "termLabel": "Term (utm_term) — वैकल्पिक"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "UTM टैग केवल क्लिक के बाद विज़िटर को ट्रैक करते हैं; वे इंप्रेशन या ऑफ़लाइन पहुंच को ट्रैक नहीं कर सकते।",
+      "वे केवल आपके अपने एनालिटिक्स का वर्णन करते हैं: मानों में टाइपो (Sumr_Sale) फिर भी काम करेगा लेकिन आपकी रिपोर्ट गंदी कर देगा।",
+      "आंतरिक साइट लिंक पर UTM टैग न लगाएं: वे आपकी रिपोर्ट में मूल ट्रैफ़िक स्रोत को ओवरराइट कर देते हैं।",
+      "सभी पांच पैरामीटर वाले बहुत लंबे URL कच्चे रूप में साझा करने पर भद्दे लग सकते हैं; सोशल पोस्ट के लिए शॉर्टनर पर विचार करें।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त UTM बिल्डर: utm_source, utm_medium और utm_campaign के साथ सही-एनकोडेड कैंपेन URL बनाएँ। लाइव प्रीव्यू, एक-क्लिक कॉपी।",
+    "metaTitle": "UTM बिल्डर ऑनलाइन - कैंपेन ट्रैकिंग URL मुफ्त बनाएँ | JaurTools",
+    "name": "UTM बिल्डर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "UTM बिल्डर किसी भी लिंक में ट्रैकिंग टैग (utm_source, utm_medium, utm_campaign) जोड़ता है ताकि एनालिटिक्स टूल बता सकें कि हर विज़िटर कौन से ईमेल, विज्ञापन या पोस्ट से आया। अपना विवरण दर्ज करें और तैयार URL कॉपी करें।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "UTM URL परिणाम",
+    "tagline": "साफ UTM कैंपेन URL बनाएँ — हर बार सही-एनकोडेड।",
+    "workedExample": "वेबसाइट URL: https://example.com/summer-sale\nutm_source = newsletter, utm_medium = email, utm_campaign = july_promo\nचरण 1: base URL से शुरू करें। चरण 2: \"?\" और पहला टैग जोड़ें: utm_source=newsletter। चरण 3: बाकी को \"&\" से जोड़ें: utm_medium=email, फिर utm_campaign=july_promo।\nपरिणाम: https://example.com/summer-sale?utm_source=newsletter&utm_medium=email&utm_campaign=july_promo\nयह लिंक 94 अक्षरों का है और एनालिटिक्स को बताता है: ट्रैफ़िक न्यूज़लेटर से, ईमेल के माध्यम से, July promo कैंपेन के लिए आया।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

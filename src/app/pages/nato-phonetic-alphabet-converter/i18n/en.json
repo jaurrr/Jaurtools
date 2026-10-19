@@ -1,0 +1,96 @@
+{
+  "nato-phonetic-alphabet-converter": {
+    "assumptionNote": "Only letters A–Z and digits 0–9 have NATO words. Other characters are skipped in the output.",
+    "benefits": [
+      "Instant, accurate conversion of any text up to 5,000 characters.",
+      "Prevents the classic M/N, B/D and F/S mix-ups on phone calls.",
+      "Copy output directly for emails, support tickets and forms.",
+      "No sign-up, no server — everything runs locally in your browser.",
+      "Free forever, works offline once the page is loaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is the international spelling alphabet (Alpha, Bravo, Charlie ... Zulu) created by NATO in 1956. Each of the 26 letters gets one distinctive word so spelling is never misunderstood over poor audio connections.",
+        "q": "What is the NATO phonetic alphabet?"
+      },
+      {
+        "a": "Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu.",
+        "q": "What are the NATO words for each letter?"
+      },
+      {
+        "a": "Over radio static, 'nine' can sound like the German word 'nein' (no), and 'three' can be confused with 'free'. The special pronunciations Niner and Tree were chosen for maximum clarity.",
+        "q": "Why is 9 pronounced Niner and 3 pronounced Tree?"
+      },
+      {
+        "a": "Yes. Digits 0–9 map to Zero, One, Two, Tree, Four, Five, Six, Seven, Eight and Niner. Try it with a booking reference or phone number.",
+        "q": "Can it convert numbers too?"
+      },
+      {
+        "a": "Yes — letter case is ignored. Lowercase 'a' and uppercase 'A' both convert to Alpha.",
+        "q": "Does it handle lowercase letters?"
+      },
+      {
+        "a": "Yes. The NATO, ICAO and ITU phonetic alphabets are the same word list, and militaries worldwide use it daily.",
+        "q": "Is this the same as the military phonetic alphabet?"
+      }
+    ],
+    "formula": "phonetic(text) = NATO_MAP[char] for each character\nwhere NATO_MAP = {A: Alpha, B: Bravo, ..., Z: Zulu, 0: Zero, ..., 9: Niner}\nCharacters with no mapping are skipped.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste your text into the input box — names, booking codes, passwords or full sentences.",
+      "Choose the output format: words only (Juliett) or word with the letter shown (Juliett (J)).",
+      "Pick a separator: spaces, dashes or one word per line.",
+      "Read the converted spelling from the output box, or copy it with one click.",
+      "Use the words when spelling over the phone so every character is heard correctly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The alphabet was finalized by NATO in 1956 after testing hundreds of words with speakers of 31 nationalities.",
+      "Every word was chosen to be instantly recognizable even over static and heavy accents: no two words sound alike.",
+      "Digits have special forms: 9 is pronounced Niner and 3 is Tree to avoid confusion over radio.",
+      "It is used worldwide by pilots, soldiers, emergency services, call centers and logistics teams.",
+      "The same spelling alphabet is also called the ICAO phonetic alphabet and the ITU alphabet."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "nato phonetic alphabet converter, spelling alphabet, alpha bravo charlie, phonetic spelling online, nato alphabet chart",
+    "labels": {
+      "convertedLabel": "Characters converted",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "emptyState": "Your phonetic spelling will appear here.",
+      "formatLabel": "Output format",
+      "formatWordLetter": "Word + letter",
+      "formatWords": "Words only",
+      "outputLabel": "Phonetic spelling",
+      "sepDash": "Dashes",
+      "sepNewline": "New line",
+      "sepSpace": "Spaces",
+      "separatorLabel": "Separator",
+      "textLabel": "Text to convert",
+      "textPlaceholder": "Type here — e.g. Booking code AZ-1942"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only A–Z and 0–9 have NATO words; symbols and non-Latin scripts are skipped.",
+      "It does not transcribe pronunciation — it spells letters out, nothing more.",
+      "The words are NATO standard, but some industries use local variants."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free NATO phonetic alphabet converter. Turn names, codes and passwords into Alpha-Bravo-Charlie spelling instantly. 100% browser-based, private.",
+    "metaTitle": "NATO Phonetic Alphabet Converter — Spell Text Clearly Online",
+    "name": "NATO Phonetic Alphabet Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The NATO phonetic alphabet assigns one unmistakable word to every letter — A is Alpha, B is Bravo, C is Charlie — so spelling is understood over noisy phone calls, radio and drive-through speakers. This converter translates any text into that spelling instantly, including digits (Zero through Niner), with your choice of words-only output or word-plus-letter output.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "NATO phonetic converter",
+    "tagline": "Convert any text into clear NATO phonetic spelling — Alpha, Bravo, Charlie — instantly in your browser.",
+    "workedExample": "Input: \"JX7\"\nStep 1: J -> Juliett\nStep 2: X -> X-ray\nStep 3: 7 -> Seven\nOutput (words, space separator): Juliett X-ray Seven\nOutput (word + letter): Juliett (J) X-ray (X) Seven (7)",
+    "workedExampleHeading": "Worked example"
+  }
+}

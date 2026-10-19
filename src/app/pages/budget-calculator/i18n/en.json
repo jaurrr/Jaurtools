@@ -1,0 +1,92 @@
+{
+  "budget-calculator": {
+    "assumptionNote": "Treats all figures as monthly amounts in the same currency. Irregular income and seasonal expenses are not modeled.",
+    "benefits": [
+      "Turns vague money worries into one clear surplus-or-deficit number.",
+      "Shows your savings rate, the single best predictor of financial progress.",
+      "Makes it obvious which spending category is the biggest lever.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The 50/30/20 rule suggests 50% of income for needs, 30% for wants and 20% for savings. It is a starting point, not a law; adjust the split to your income and cost of living.",
+        "q": "What is the 50/30/20 rule?"
+      },
+      {
+        "a": "Subtracting total expenses from income gives your surplus. If it is negative, you are spending more than you earn and need to cut expenses or raise income. A savings rate of 20% or more is a strong position.",
+        "q": "What is a good savings rate?"
+      },
+      {
+        "a": "Pay yourself first: move a fixed amount to savings the day income arrives, then spend what remains. This calculator shows your surplus so you can set that amount confidently.",
+        "q": "How do I actually start saving?"
+      },
+      {
+        "a": "List every fixed monthly cost first, then average variable costs over three months. Common misses are subscriptions, annual bills divided by 12, and small daily purchases that add up.",
+        "q": "How do I track expenses accurately?"
+      },
+      {
+        "a": "This simple version uses five broad categories to stay fast. Group smaller items under Other, or split a category across months if you want more detail.",
+        "q": "Why only five expense categories?"
+      },
+      {
+        "a": "Yes. Enter your average monthly freelance income and your average monthly business and personal expenses. For irregular income, use the lowest typical month to stay conservative.",
+        "q": "Can freelancers use this budget calculator?"
+      }
+    ],
+    "formula": "total_expenses = housing + food + transport + utilities + other\nsurplus = income - total_expenses\nsavings_rate = surplus / income x 100\nannual_surplus = surplus x 12",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your total monthly income after tax.",
+      "Enter your monthly spending in each of the five categories.",
+      "Read your total expenses, remaining surplus and savings rate.",
+      "If the surplus is negative, adjust categories until it turns positive.",
+      "Revisit monthly and watch the savings rate trend."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A budget compares what comes in against what goes out each month.",
+      "The surplus is income minus expenses; a negative surplus means you are spending more than you earn.",
+      "The savings rate is the share of income you keep; 20% or more is considered strong.",
+      "Housing is usually the largest expense, so it is the biggest lever for most people.",
+      "Budgets fail most often from untracked small purchases, not from big planned costs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "budget calculator, monthly budget planner, income vs expenses, savings rate calculator",
+    "labels": {
+      "annualSurplus": "Yearly surplus",
+      "food": "Food and groceries",
+      "housing": "Housing and rent",
+      "income": "Monthly income",
+      "other": "Other expenses",
+      "remaining": "Remaining each month",
+      "savingsRate": "Savings rate",
+      "totalExpenses": "Total expenses",
+      "transport": "Transport",
+      "utilities": "Utilities and bills"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Monthly averages only; irregular income is not modeled.",
+      "Five broad categories; very detailed budgets need a spreadsheet.",
+      "Ignores taxes, debt payments and investment returns.",
+      "A planning aid, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free budget calculator. Compare monthly income vs expenses, find your surplus and savings rate instantly. Simple, private, browser-only.",
+    "metaTitle": "Budget Calculator — Income vs Expenses Planner",
+    "name": "Budget Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "With $5,000 monthly income and $3,000 in expenses ($1,500 housing, $600 food, $300 transport, $200 utilities, $400 other), you keep $2,000 per month — a 40% savings rate, or $24,000 per year.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your budget results",
+    "tagline": "See where your money goes and what you keep.",
+    "workedExample": "Income $5,000 per month. Expenses: housing $1,500 + food $600 + transport $300 + utilities $200 + other $400 = $3,000 total.\n\nSurplus = 5,000 - 3,000 = $2,000 per month. Savings rate = 2,000 / 5,000 x 100 = 40%. Annual surplus = 2,000 x 12 = $24,000 per year.",
+    "workedExampleHeading": "Worked example"
+  }
+}

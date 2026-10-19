@@ -1,0 +1,90 @@
+{
+  "debt-ratio-calculator": {
+    "assumptionNote": "Assumes the payment and income figures you enter are complete and monthly.",
+    "benefits": [
+      "One number that summarizes your whole debt situation.",
+      "Takes ten seconds — no statements or paperwork needed.",
+      "The same figure lenders look at first.",
+      "Easy to track monthly and watch the trend."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Under 20% is comfortable — debt is a small slice of your income. 20–35% is manageable but leaves little slack. Above 35% is risky: one emergency can tip you over. Above 43%, most mortgage lenders will hesitate.",
+        "q": "What is a good debt ratio?"
+      },
+      {
+        "a": "This is the quick version: one total for debts, one total for income. The full DTI calculator itemizes each debt type (housing, car, cards) and shows front-end vs back-end ratios, which is what mortgage lenders actually use.",
+        "q": "How is this different from the debt-to-income ratio calculator?"
+      },
+      {
+        "a": "Lenders use gross (before tax) income, so this calculator does too — it keeps you comparable to lending standards. But run it once with take-home pay as well; if that number scares you, trust the scarier one.",
+        "q": "Should I use gross or net income?"
+      },
+      {
+        "a": "Stop new borrowing immediately, list every debt by rate, and attack the highest-rate balance first (or use the debt payoff calculator). A 45% ratio means nearly half your income is pre-spent — that is an emergency, not a lifestyle.",
+        "q": "My ratio is 45%. What now?"
+      },
+      {
+        "a": "No. Zero debt is a strength, not unused capacity. Borrow only for things that grow in value or earning power — education, a home you can afford, a business — never to fund consumption.",
+        "q": "Does a 0% ratio mean I should borrow more?"
+      },
+      {
+        "a": "Monthly, right after payday. It takes seconds, and the trend matters more than any single reading: a ratio falling 2 points a quarter means your plan is working.",
+        "q": "How often should I check my debt ratio?"
+      }
+    ],
+    "formula": "Debt ratio = (total monthly debt payments / gross monthly income) x 100.\nExample: 18,000 / 60,000 x 100 = 30%.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Add up every monthly debt payment: EMIs, card minimums, loans.",
+      "Enter your gross monthly income (before tax).",
+      "Read your ratio and the verdict instantly.",
+      "For a detailed breakdown by debt type, try the full DTI calculator."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Debt ratio = total monthly debt payments ÷ gross monthly income × 100.",
+      "It is the simplified cousin of the full debt-to-income ratio — one number, no itemizing.",
+      "Lenders watch this number closely; above 43% most mortgages get difficult.",
+      "It ignores savings, assets, and expenses — it measures debt load only.",
+      "A falling ratio over time is one of the clearest signs your finances are healing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "debt ratio calculator, debt to income ratio simple, monthly debt ratio",
+    "labels": {
+      "bands": {
+        "healthy": "Healthy",
+        "manageable": "Manageable",
+        "risky": "Risky"
+      },
+      "debtRatio": "Your debt ratio",
+      "monthlyDebtPayments": "Total monthly debt payments",
+      "monthlyIncome": "Gross monthly income",
+      "verdict": "Verdict"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Simplified by design — it lumps all debts together.",
+      "Ignores interest rates: ₹18,000 at 36% is worse than at 10%.",
+      "Says nothing about savings, assets, or job stability.",
+      "Uses gross income; take-home pay tells a tougher story."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free debt ratio calculator: divide your monthly debt payments by your income to get your debt ratio in seconds. Know where you stand.",
+    "metaTitle": "Debt Ratio Calculator - Quick Debt Check | JaurTools",
+    "name": "Debt Ratio Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "If you pay ₹18,000 a month toward debts and earn ₹60,000, your debt ratio is 30% — in the manageable zone, but with little room for new borrowing. Under 20% is comfortable, 20–35% is workable, and above 35% means debt is starting to run your budget.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your debt ratio results",
+    "tagline": "One quick number that shows how much of your income goes to debt each month.",
+    "workedExample": "Monthly debt payments ₹18,000, gross monthly income ₹60,000:\n1. Ratio = 18,000 / 60,000 = 0.30.\n2. As a percentage: 0.30 x 100 = 30%.\n3. Verdict: 30% falls in the 20–35% manageable band — okay for now, but avoid new debt until it drops under 20%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

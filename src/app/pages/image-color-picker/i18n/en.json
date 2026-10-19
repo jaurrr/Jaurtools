@@ -1,0 +1,95 @@
+{
+  "image-color-picker": {
+    "benefits": [
+      "Grabs the exact shade from any pixel - perfect for matching brand colors.",
+      "Four ready-to-copy formats (HEX, RGB, RGBA, HSL) cover every design tool.",
+      "Hover preview shows the color before you commit to it.",
+      "Touch support works on phones and tablets.",
+      "Free, instant, and nothing is uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Click any pixel to lock it in, then use the copy button next to each format. HEX works in CSS and Figma, RGB in most editors, HSL when you want to tweak lightness by hand.",
+        "q": "How do I copy the picked color?"
+      },
+      {
+        "a": "HSL separates hue (the color family), saturation (intensity), and lightness. It is much easier to build a palette - for example, keep the same hue and change lightness for shades and tints.",
+        "q": "Why does it show HSL too?"
+      },
+      {
+        "a": "Semi-transparent pixels report their blended RGB values, and RGBA shows the exact alpha from the file. So a 50 percent red over white reports as rgb(255, 128, 128) with rgba(255, 0, 0, 0.5).",
+        "q": "What does it show for transparent pixels?"
+      },
+      {
+        "a": "Yes. Pick once, then the picker keeps that color while you compare neighbours. Move the cursor to refine - the hover preview always shows the color under your pointer.",
+        "q": "Can I compare two pixels?"
+      },
+      {
+        "a": "Up to 25 MB. The image is resized to at most 800 pixels on the long edge, which is plenty for picking and keeps the page fast.",
+        "q": "How big can the image be?"
+      }
+    ],
+    "formula": "HSL from RGB:\nmax = highest of R, G, B (0-1). min = lowest. delta = max - min.\nhue = 60 x (G - B) / delta (when red is max)\nlightness = (max + min) / 2\nsaturation = delta / (1 - |2 x lightness - 1|)\nExample: RGB(255, 0, 0): max = 1, min = 0, delta = 1.\nhue = 0 deg, lightness = 0.5, saturation = 1 -> hsl(0, 100%, 50%).",
+    "formulaHeading": "HEX, RGB and HSL",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file (JPG, PNG, WebP, GIF, BMP or SVG) up to 25 MB.",
+      "Move your cursor over the image - the preview box shows the color under it.",
+      "Click (or tap) any pixel to lock it in as your picked color.",
+      "Read the HEX, RGB, RGBA and HSL values and copy any of them with one click.",
+      "Change the image any time with the Change file link."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A pixel color is three numbers: red, green and blue, each from 0 to 255.",
+      "HEX is the same value written as six hex digits, for example #FF0000 for pure red.",
+      "RGBA adds a fourth channel: alpha, the transparency from 0 (invisible) to 1 (solid).",
+      "HSL expresses the same color as hue, saturation and lightness - easier for humans to adjust.",
+      "The picker reads the raw pixel data from the image, not what your screen shows.",
+      "On touch devices, tap a pixel directly to pick it."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "image color picker, eyedropper tool online, pick color from image, hex color picker from photo, pixel color finder",
+    "labels": {
+      "canvasLabel": "Image to pick colors from. Click any pixel to lock its color.",
+      "changeFile": "Change file",
+      "chooseFile": "Choose an image file",
+      "copied": "Copied",
+      "copyLabel": "Copy",
+      "fileHint": "JPG, PNG, WebP, GIF, BMP or SVG - up to 25 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 25 MB. Please choose a smaller image.",
+      "hexLabel": "HEX",
+      "hoverHint": "Hover the image",
+      "hslLabel": "HSL",
+      "invalidFile": "That file is not an image. Please choose a JPG, PNG, WebP, GIF, BMP or SVG file.",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "noColor": "No color yet",
+      "pickedColor": "Picked color",
+      "rgbLabel": "RGB",
+      "rgbaLabel": "RGBA"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "It reads pixel data, not perceived color - screen brightness and color profiles can make the same HEX look different.",
+      "Heavily compressed JPEGs smear edges, so the pixel you click may be a blend of two colors.",
+      "Hover picking needs a mouse; touch users tap instead, which is less precise.",
+      "It cannot read colors from videos or from images on other websites directly."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online color picker: upload a photo and click any pixel to get its HEX, RGB, RGBA and HSL codes with one-click copy. 100% private, in your browser.",
+    "metaTitle": "Image Color Picker - Eyedropper HEX, RGB, HSL | JaurTools",
+    "name": "Image Color Picker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo, move your cursor over it, and click any pixel to lock its color. You get the HEX, RGB, RGBA and HSL codes with a copy button next to each. For example, clicking a pure-red pixel gives #FF0000, rgb(255, 0, 0), rgba(255, 0, 0, 1) and hsl(0, 100%, 50%). The image never leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Color picker results",
+    "tagline": "Click any pixel in a photo and get its exact HEX, RGB, RGBA and HSL codes.",
+    "workedExample": "Click a pure-red pixel (RGB values 255, 0, 0).\n1. HEX: each channel as two hex digits -> FF 00 00 -> #FF0000.\n2. RGB: rgb(255, 0, 0).\n3. RGBA: alpha 255 / 255 = 1 -> rgba(255, 0, 0, 1).\n4. HSL: max = 1 (red), min = 0, delta = 1.\n   hue = 60 x ((0 - 0) / 1) = 0 degrees.\n   lightness = (1 + 0) / 2 = 0.5 -> 50%.\n   saturation = 1 / (1 - |1 - 1|) = 1 -> 100%.\n5. Result: hsl(0, 100%, 50%).",
+    "workedExampleHeading": "Worked example"
+  }
+}

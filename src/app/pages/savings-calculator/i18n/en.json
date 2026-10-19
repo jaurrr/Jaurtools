@@ -1,0 +1,89 @@
+{
+  "savings-calculator": {
+    "assumptionNote": "Assumes interest compounds monthly at a constant rate, with deposits made at the end of each month. Taxes, fees, and inflation are not included.",
+    "benefits": [
+      "Shows the true reward of regular saving, which keeps motivation alive month after month.",
+      "Separates deposits from interest so you see exactly what compounding contributed.",
+      "Lets you compare account rates - even 1% more changes the total noticeably over a decade.",
+      "Free, instant, and private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on your goal. Emergency funds and short-term goals belong in safe, liquid accounts even at low rates. Money you will not touch for 5+ years usually grows more in investments. This calculator handles the safe-savings side of the plan.",
+        "q": "Savings account or investing?"
+      },
+      {
+        "a": "Monthly compounding is the standard for savings accounts, and this calculator uses it. The difference between monthly and daily compounding is tiny - on $10,000 at 5%, daily compounding adds about $2.30 more per year. APY already accounts for compounding frequency, so compare APYs directly.",
+        "q": "Monthly or daily compounding?"
+      },
+      {
+        "a": "APY (annual percentage yield) includes the effect of compounding; the plain interest rate does not. A 4.9% rate compounded monthly equals about 5.01% APY. When shopping for accounts, compare the APY - it is the apples-to-apples number.",
+        "q": "What is the difference between APR and APY?"
+      },
+      {
+        "a": "Yes, and this calculator includes them: the initial deposit grows with interest for the full period. A $10,000 head start at 5% for 10 years becomes about $16,470 on its own, even before monthly deposits are added.",
+        "q": "Does the initial deposit earn interest too?"
+      },
+      {
+        "a": "Automate it. Set up a transfer the day after payday so the money leaves before you can spend it. People who automate save roughly twice as much as people who rely on willpower, according to behavioral finance research.",
+        "q": "How do I actually stick to monthly deposits?"
+      },
+      {
+        "a": "Roughly 3 to 6 months of essential expenses is the standard target. Enter that as your goal in the savings-goal calculator to find out how long it takes at your monthly deposit.",
+        "q": "How big should my emergency fund be?"
+      }
+    ],
+    "formula": "Monthly rate r = annual rate / 12. Months n = years x 12.\nFuture value = P x (1 + r)^n + PMT x ((1 + r)^n - 1) / r.\nInterest earned = future value - (P + PMT x n).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your starting balance (use 0 if you are starting from scratch).",
+      "Enter how much you will deposit every month.",
+      "Enter the annual interest rate your account pays.",
+      "Enter how many years you will keep saving.",
+      "Read your future balance, total deposits, and the interest earned separately."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Future value = initial deposit grown with interest + all monthly deposits grown with interest.",
+      "The formula is: FV = P x (1 + r)^n + PMT x ((1 + r)^n - 1) / r, with r the monthly rate.",
+      "Monthly deposits do most of the work early; interest takes over later as the balance grows.",
+      "Even a 1% higher rate is worth thousands over a decade on steady deposits.",
+      "This calculator assumes deposits land at the end of each month and compound monthly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "savings calculator, savings growth calculator, compound savings calculator, monthly savings calculator, savings account interest calculator",
+    "labels": {
+      "futureValue": "Future balance",
+      "initialDeposit": "Initial deposit ($)",
+      "interestEarned": "Interest earned",
+      "interestRate": "Annual interest rate (%)",
+      "monthlyDeposit": "Monthly deposit ($)",
+      "totalDeposited": "Total deposited",
+      "years": "Years saving"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant rate; real account rates rise and fall.",
+      "Ignores taxes on interest, fees, and inflation.",
+      "Assumes you never withdraw; real life sometimes intervenes.",
+      "Estimates only - not financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free savings calculator: see how your savings grow with regular deposits and compound interest. Instant, private, no sign-up.",
+    "metaTitle": "Savings Calculator - Growth With Deposits | JaurTools",
+    "name": "Savings Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Savings grow two ways at once: your deposits add up, and interest compounds on the growing balance. For example, $5,000 upfront plus $200 a month at 5% for 10 years grows to about $39,290 - even though you only deposited $29,000. The extra $10,290 is compound interest doing its quiet work. Raise the monthly deposit and the rate, and the gap between what you put in and what you end with gets dramatically wider.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your savings growth",
+    "tagline": "Watch your savings grow with regular deposits and compound interest.",
+    "workedExample": "$5,000 initial, $200/month, 5% annual, 10 years:\n1. Monthly rate r = 0.05 / 12 = 0.004167. Months n = 10 x 12 = 120.\n2. Growth factor: (1.004167)^120 = about 1.647.\n3. Initial grows to: 5,000 x 1.647 = about $8,235.\n4. Deposits grow to: 200 x (1.647 - 1) / 0.004167 = 200 x 155.27 = about $31,055.\n5. Future balance = 8,235 + 31,055 = about $39,290.\n6. You deposited 5,000 + (200 x 120) = $29,000, so about $10,290 is interest.",
+    "workedExampleHeading": "Worked example"
+  }
+}

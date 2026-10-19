@@ -1,0 +1,106 @@
+{
+  "email-header-analyzer": {
+    "benefits": [
+      "See the true path of an email: every server it passed through, in order, with IPs and timestamps.",
+      "Verify authentication at a glance: SPF, DKIM, and DMARC pass/fail results in one table.",
+      "Spot spoofing: compare the From domain with the DKIM signing domain (d=) and the first Received IP.",
+      "Unfolded headers: long wrapped header lines are joined automatically for readable analysis.",
+      "Nothing leaves your browser — sensitive headers are never uploaded to a server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "In Gmail: open the message, click the three-dot menu, then Show original, and copy the top section down to the first blank line. In Outlook: open the message, choose File, then Properties, and copy the Internet headers. Paste that text here.",
+        "q": "How do I copy full headers from my email app?"
+      },
+      {
+        "a": "Received headers are written newest-first: the top one was added by the last server before delivery. Read bottom-up to follow the message from the sender's machine to your inbox. Hop 1 in the table is the newest hop.",
+        "q": "Which direction do I read the Received chain?"
+      },
+      {
+        "a": "Usually yes for the message itself, but headers can be forged by the sender's own server — the first one or two Received lines are written by machines the sender controls. Trust the headers added by your own provider (the top lines) most, and treat the rest as claims, not proof.",
+        "q": "Can email headers be faked?"
+      },
+      {
+        "a": "Not by itself. SPF pass only proves the sending IP was authorized for the envelope domain, which spammers can set up on their own domains. The meaningful check is alignment: the SPF/DKIM domain must match the From header domain you see. That is what DMARC enforces.",
+        "q": "Does SPF pass mean the email is legitimate?"
+      },
+      {
+        "a": "ARC (Authenticated Received Chain) headers preserve authentication results across forwarders like mailing lists. If a message was forwarded, look for arc=pass in the Authentication-Results — it means each forwarder validated the chain it received.",
+        "q": "What are ARC headers?"
+      },
+      {
+        "a": "Look at the bottom-most Received header: the IP in brackets there is usually the sender's originating machine or their provider's outbound server. Then check whether that IP and the DKIM d= domain belong to the organization the From address claims.",
+        "q": "How do I find the real sender of a suspicious email?"
+      }
+    ],
+    "formula": "Parsing rules used by this tool:\n1. Unfold: a line starting with a space or tab continues the previous header.\n2. Headers end at the first blank line; everything after is the body and is ignored.\n3. Received: from <host> ([IP]) by <host> ... ; <date> — IP taken from the first bracketed address.\n4. Authentication-Results: split on ';', each part matched as type=result.",
+    "formulaHeading": "Parsing rules",
+    "homeLabel": "Home",
+    "howTo": [
+      "Copy the full raw headers of an email (Gmail: Show original; Outlook: Message Properties).",
+      "Paste them into the box above. Folded (wrapped) lines are unfolded automatically.",
+      "Read the summary: From, To, Subject, Date, hop count, and DKIM signing domain.",
+      "Check the authentication table: SPF, DKIM, and DMARC should all show pass for legitimate mail.",
+      "Walk the Received table bottom-up to trace the message from origin to your inbox."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Email headers are the metadata stamped on a message as it travels: routing hops, authentication results, timestamps, and message IDs.",
+      "Each mail server adds a Received header at the top, so the chain reads newest-first — the bottom entry is closest to the sender.",
+      "The Authentication-Results header (added by your provider) records SPF, DKIM, DMARC, and ARC verdicts.",
+      "The DKIM-Signature header's d= tag names the domain that cryptographically signed the message; s= names the selector.",
+      "From, Reply-To, and Return-Path can all differ — and all can be forged. Only DKIM's d= is cryptographically verified.",
+      "The first blank line ends the headers. Everything below it is the message body, which this tool ignores."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "email header analyzer, parse email headers, email routing trace, authentication results checker, dkim spf checker",
+    "labels": {
+      "allHeadersHeading": "All parsed headers",
+      "authHeading": "Authentication results",
+      "clearButton": "Clear",
+      "dateLabel": "Date",
+      "dkimDomainLabel": "DKIM signature",
+      "emptyState": "Paste raw email headers above to see the routing and authentication summary.",
+      "fromLabel": "From",
+      "hopCountLabel": "Routing hops",
+      "hopsHeading": "Received chain (newest first)",
+      "hopsNote": "Hop 1 is the newest — added by the last server before delivery. Read bottom-up to trace the origin.",
+      "pasteHint": "Paste raw email headers here (down to the first blank line)…",
+      "pasteLabel": "Raw email headers",
+      "returnPathLabel": "Return-Path",
+      "subjectLabel": "Subject",
+      "thBy": "By",
+      "thDate": "Date",
+      "thDetail": "Detail",
+      "thFrom": "From",
+      "thHop": "Hop",
+      "thIp": "IP",
+      "thResult": "Result",
+      "thType": "Check",
+      "toLabel": "To"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Headers from the sender's own servers can be forged — only your provider's top headers are fully trustworthy.",
+      "A passing SPF/DKIM does not prove legitimacy, only that the sending domain authenticated; phishing uses real authenticated domains too.",
+      "Encrypted or redacted headers (common in corporate gateways) limit what can be extracted.",
+      "This tool reads headers only; it does not scan attachments or message bodies for threats."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free email header analyzer: paste raw email headers to see the routing chain, SPF/DKIM/DMARC results, and sender details. 100% private, runs in your browser.",
+    "metaTitle": "Email Header Analyzer - Trace Routing & Authentication | JaurTools",
+    "name": "Email Header Analyzer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste raw email headers and this tool unfolds them into a readable summary: the routing chain with every server hop and IP, plus the SPF, DKIM, and DMARC authentication results. For example, three Received hops ending at mx.google.com with spf=pass, dkim=pass, and dmarc=pass means the message travelled through three servers and fully authenticated as mail from example.com.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Header analysis",
+    "tagline": "Paste raw email headers and get a readable routing and authentication summary.",
+    "workedExample": "Sample headers for a message from sender@example.com:\n3 Received headers found: [203.0.113.25] via mail.example.com, [198.51.100.10] via webmail.example.com, and [192.0.2.44] as origin.\nHop count: 3. Top hop (newest): by mx.google.com — the delivering server.\nAuthentication-Results: spf=pass, dkim=pass, dmarc=pass.\nDKIM-Signature: d=example.com, s=selector1 — the signing domain matches the From domain.\nReading: the chain is short and consistent, authentication fully passes, and the signing domain aligns with From. Nothing here contradicts a legitimate message from example.com.",
+    "workedExampleHeading": "Worked example"
+  }
+}

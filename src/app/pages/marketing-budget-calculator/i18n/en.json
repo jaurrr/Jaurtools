@@ -1,0 +1,94 @@
+{
+  "marketing-budget-calculator": {
+    "assumptionNote": "Weights are normalized to shares of the total; they do not need to add to 100. Media spend only - creative and staff costs are separate.",
+    "benefits": [
+      "Turns vague budget meetings into concrete numbers in seconds.",
+      "Sliders make it easy to model what-if scenarios: what if Social gets 10 more?",
+      "Works for any budget size and any currency.",
+      "No account, no spreadsheet, no data leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. The calculator normalizes them, so 30-30-30-30 and 10-10-10-10 produce identical splits. Use whatever numbers feel natural; the proportions are what matter.",
+        "q": "Do the weights need to add up to 100?"
+      },
+      {
+        "a": "Base them on past performance: cost per acquisition and return per channel. Give proven channels their earned share, reserve 5-10% for testing new ones, and re-weight every quarter as results change.",
+        "q": "How should I decide the weights?"
+      },
+      {
+        "a": "Set a realistic floor manually. For example, if search ads need at least 2,000 to gather data, lock that in first and allocate only the remainder across the other channels with this tool.",
+        "q": "What if a channel needs a minimum spend to work?"
+      },
+      {
+        "a": "This version ships with five common channels. Map your extra channels onto the closest one (for example, treat affiliate under Influencer) and rename them in your own media plan.",
+        "q": "Can I add my own channels?"
+      },
+      {
+        "a": "No. Seasonality, launches, and performance shifts should change it. Re-run the allocation monthly or quarterly and let the weights follow the evidence.",
+        "q": "Should the split be the same every month?"
+      },
+      {
+        "a": "No, it allocates media spend only. Budget separately for creative production, tools, and team time, which often run 20-30% on top of media.",
+        "q": "Does this include creative and staff costs?"
+      }
+    ],
+    "formula": "Share_i = weight_i / sum(all weights)\nAmount_i = total budget x Share_i\nExample: budget 10,000, weights 30/25/10/20/15 (sum 100).\nSearch = 10,000 x 30/100 = 3,000.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your total marketing budget for the period.",
+      "Set a weight from 0 to 100 for each channel using the number field or slider.",
+      "Each channel's amount and percentage share update instantly below its slider.",
+      "When the split looks right, note the amounts and plug them into your media plan."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Each channel's share = its weight / total of all weights, multiplied by the total budget.",
+      "Weights are normalized, so 30-30-30-30 gives the same result as 25-25-25-25.",
+      "A channel with weight 0 gets nothing; a channel with double another's weight gets double its budget.",
+      "Re-weight quarterly: past performance should move money toward what converts.",
+      "Keep a 5-10% test budget for new channels outside the main split.",
+      "This allocator divides money; it does not decide which channels deserve it - your data does."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "marketing budget allocator, ad budget split calculator, channel budget planner, media budget allocation, marketing spend planner",
+    "labels": {
+      "allocated": "Total allocated",
+      "channels": {
+        "content": "Content marketing",
+        "email": "Email marketing",
+        "influencer": "Influencer",
+        "search": "Search ads",
+        "social": "Social media"
+      },
+      "channelsTitle": "Channel weights (0-100)",
+      "totalBudget": "Total budget",
+      "totalWeight": "Total weight",
+      "weight": "weight"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Divides money mechanically; it cannot tell you which channel deserves a bigger weight.",
+      "Ignores minimum spends: some channels need a threshold budget to work at all.",
+      "Estimates only; real plans also need timing, creative costs, and staff time.",
+      "Not financial advice - validate the split against your past channel performance."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free marketing budget calculator: enter your total budget, weight each channel, and get instant per-channel amounts and shares. Private, no sign-up.",
+    "metaTitle": "Marketing Budget Calculator - Split Spend Across Channels | JaurTools",
+    "name": "Marketing Budget Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter your total budget and give each channel a weight from 0 to 100. Each channel's amount equals the total budget multiplied by its weight divided by the sum of all weights. With a 10,000 budget and weights of 30, 25, 10, 20, 15, Search ads get 3,000, Social gets 2,500, Email gets 1,000, Content gets 2,000, and Influencer gets 1,500. Weights are normalized automatically, so they never need to add up to 100.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your budget allocation",
+    "tagline": "Split your marketing budget across channels with simple adjustable weights.",
+    "workedExample": "Budget 10,000. Weights: Search 30, Social 25, Email 10, Content 20, Influencer 15.\n1. Total weight = 30 + 25 + 10 + 20 + 15 = 100.\n2. Search = 10,000 x 30/100 = 3,000 (30%).\n3. Social = 10,000 x 25/100 = 2,500 (25%).\n4. Email = 10,000 x 10/100 = 1,000 (10%).\n5. Content = 10,000 x 20/100 = 2,000 (20%).\n6. Influencer = 10,000 x 15/100 = 1,500 (15%).\n7. Total allocated = 3,000 + 2,500 + 1,000 + 2,000 + 1,500 = 10,000.",
+    "workedExampleHeading": "Worked example"
+  }
+}

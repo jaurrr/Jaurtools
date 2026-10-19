@@ -1,0 +1,87 @@
+{
+  "pixelate-image": {
+    "benefits": [
+      "Hide faces, number plates, or private details before sharing a photo online.",
+      "Genuinely destroys the hidden detail — unlike a blur that can sometimes be reversed.",
+      "One slider controls the effect strength with an instant live preview.",
+      "Works fully offline; the original photo never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the photo and move the block-size slider. Bigger blocks mean stronger pixelation. Press Download to save the pixelated PNG or JPG.",
+        "q": "How do I pixelate a photo?"
+      },
+      {
+        "a": "Yes. Pixelation replaces whole blocks with their average color, permanently discarding the detail inside each block. It cannot be undone from the saved file.",
+        "q": "Does pixelation really hide the details?"
+      },
+      {
+        "a": "Use large blocks (32–64 px) for faces and text you must hide. Small blocks (4–10 px) only give a retro mosaic look and may still reveal shapes.",
+        "q": "How strong should the pixelation be to hide a face?"
+      },
+      {
+        "a": "The preview always shows the full-size output, so what you see is exactly what downloads, at the original resolution.",
+        "q": "Is the preview the same quality as the download?"
+      },
+      {
+        "a": "No. Everything happens on a canvas in your browser; your photo is never uploaded to any server.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "blocks_x = round(width / block_size)\nblocks_y = round(height / block_size)\nblock_color(x, y) = average color of the block_size × block_size region",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the image you want to pixelate with the file picker.",
+      "Move the block-size slider: small values give a subtle mosaic, large values give heavy censor-style blocks.",
+      "Watch the live preview update as you drag.",
+      "Choose PNG or JPG output format.",
+      "Press Download to save the pixelated image."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Pixelation shrinks the image to a tiny grid, then scales it back up without smoothing.",
+      "Each block shows the average color of its region, which permanently removes fine detail.",
+      "Block sizes range from 2 px (subtle mosaic) to 64 px (heavy censor effect).",
+      "The block count readout tells you exactly how many blocks the image is reduced to.",
+      "The output keeps the original pixel dimensions."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pixelate image, pixelation effect, censor photo, blur face photo, mosaic effect online",
+    "labels": {
+      "blockCount": "Block grid",
+      "blockSize": "Pixel block size (px)",
+      "download": "Download pixelated image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "pickOne": "Choose an image above to see the pixelation preview.",
+      "preview": "Pixelated preview",
+      "upload": "Image to pixelate"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pixelation is destructive — the hidden detail cannot be recovered from the saved file.",
+      "Very small blocks may still reveal text or faces; use large blocks for real privacy.",
+      "The effect covers the whole image; selective-area pixelation is not included.",
+      "Animated GIFs are processed as a single still frame."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Pixelate an image online for free. Hide faces and private details with adjustable censor-style mosaic blocks, preview live, and download PNG or JPG. No signup.",
+    "metaTitle": "Pixelate Image Online Free — Censor Photo Effect | JaurTools",
+    "name": "Pixelate Image",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and drag the block-size slider to turn it into a mosaic of solid color blocks. Larger blocks hide faces, plates, and text more strongly. Download the result as PNG or JPG — nothing is ever uploaded.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Pixelation results",
+    "tagline": "Turn any photo into chunky mosaic blocks — perfect for censoring private details.",
+    "workedExample": "An 800 × 600 px photo with a 20 px block size:\nblocks_x = round(800 / 20) = 40\nblocks_y = round(600 / 20) = 30\nThe image is reduced to a 40 × 30 grid (1,200 blocks) and scaled back up with hard edges. At 64 px blocks it becomes only 13 × 9 blocks — strong enough to hide any face.",
+    "workedExampleHeading": "Worked example"
+  }
+}

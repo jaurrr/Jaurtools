@@ -1,0 +1,85 @@
+{
+  "ratio-calculator": {
+    "benefits": [
+      "Simplify any ratio to its lowest terms instantly.",
+      "Scale recipes, maps and models up or down accurately.",
+      "Decimal form helps compare ratios at a glance.",
+      "Clear step-by-step inputs, no math background needed.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A ratio compares two quantities by division. The ratio 2:3 means 2 parts of one thing for every 3 parts of another, and it equals the fraction 2/3.",
+        "q": "What is a ratio?"
+      },
+      {
+        "a": "Divide both parts by their greatest common divisor. For 12:18, the GCD is 6, so the simplified ratio is 2:3.",
+        "q": "How do I simplify a ratio?"
+      },
+      {
+        "a": "Multiply or divide both parts by the same number. Doubling 2:3 gives 4:6 — the same proportion in larger amounts.",
+        "q": "How do I scale a ratio up or down?"
+      },
+      {
+        "a": "Multiply the parts out. In a 2:3 ratio, the first part is 2/5 of the total and the second is 3/5.",
+        "q": "How do I find the parts from a ratio?"
+      },
+      {
+        "a": "Not exactly. A ratio like 3:4 means 3 out of every 7 parts, which is 3/7 ≈ 42.86% — not 75%.",
+        "q": "Is a ratio the same as a percentage?"
+      }
+    ],
+    "formula": "Simplified ratio = a/GCD(a,b) : b/GCD(a,b)\nDecimal value = a / b\nScaled ratio = a×k : b×k",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the first part of the ratio.",
+      "Enter the second part of the ratio.",
+      "Read the simplified ratio and its decimal value.",
+      "Enter a scale factor to size the ratio up or down.",
+      "Use the scaled ratio for recipes, mixes or models."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A ratio a:b compares two quantities as a divided by b.",
+      "Simplifying divides both parts by their greatest common divisor.",
+      "Equivalent ratios describe the same proportion: 2:3 = 4:6 = 10:15.",
+      "The decimal value a/b lets you compare ratios numerically.",
+      "Scaling a ratio keeps the proportion identical."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ratio calculator, simplify ratio calculator, ratio to decimal, scale ratio calculator, proportion calculator",
+    "labels": {
+      "decimalLabel": "Decimal value",
+      "firstLabel": "First part (a)",
+      "invalidNote": "Enter positive whole numbers for both parts of the ratio.",
+      "scaleLabel": "Scale factor",
+      "scaledLabel": "Scaled ratio",
+      "secondLabel": "Second part (b)",
+      "simplifiedLabel": "Simplified ratio"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Whole numbers only — decimal ratios are converted.",
+      "Cannot mix different units; keep both parts in the same unit.",
+      "Scaling does not account for real-world loss or rounding.",
+      "Does not solve for an unknown part — try the rule of three for that."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free ratio calculator: simplify ratios to lowest terms, convert to decimal and scale up or down. Fully browser-based, no sign-up.",
+    "metaTitle": "Ratio Calculator — Simplify and Scale Ratios",
+    "name": "Ratio Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A ratio compares two numbers by division. To simplify, divide both parts by their greatest common divisor — 12:18 becomes 2:3. To scale, multiply both parts by the same factor. The decimal form (a divided by b) makes comparing two ratios easy.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Ratio results",
+    "tagline": "Simplify ratios and scale them to any size.",
+    "workedExample": "A recipe calls for 12 cups of flour and 18 cups of milk — ratio 12:18.\n\nGCD(12, 18) = 6.\nSimplified = 12/6 : 18/6 = 2:3.\n\nDecimal value = 12 / 18 = 0.6667.\n\nWith scale factor 2, the scaled ratio is 24:36 — the same proportion for a bigger batch.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,222 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="activity" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="wave-type">{{ t('labels.typeLabel') }}</label>
+        <select id="wave-type" [ngModel]="waveType()" (ngModelChange)="setWaveType($event)">
+          <option value="sine">{{ t('labels.waveTypes.sine') }}</option>
+          <option value="double">{{ t('labels.waveTypes.double') }}</option>
+          <option value="zigzag">{{ t('labels.waveTypes.zigzag') }}</option>
+          <option value="square">{{ t('labels.waveTypes.square') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="wave-amp">{{ t('labels.amplitudeLabel') }}</label>
+        <div class="input-row">
+          <input id="wave-amp" type="number" inputmode="numeric" min="0" max="200" step="1"
+            [ngModel]="amplitude()" (ngModelChange)="setAmplitude($event)" />
+          <input type="range" min="0" max="200" step="1" [ngModel]="amplitude()"
+            (ngModelChange)="setAmplitude($event)" [attr.aria-label]="t('labels.amplitudeLabel')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="wave-len">{{ t('labels.wavelengthLabel') }}</label>
+        <div class="input-row">
+          <input id="wave-len" type="number" inputmode="numeric" min="60" max="1440" step="10"
+            [ngModel]="wavelength()" (ngModelChange)="setWavelength($event)" />
+          <input type="range" min="60" max="1440" step="10" [ngModel]="wavelength()"
+            (ngModelChange)="setWavelength($event)" [attr.aria-label]="t('labels.wavelengthLabel')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="wave-height">{{ t('labels.heightLabel') }}</label>
+        <div class="input-row">
+          <input id="wave-height" type="number" inputmode="numeric" min="120" max="600" step="10"
+            [ngModel]="dividerHeight()" (ngModelChange)="setDividerHeight($event)" />
+          <input type="range" min="120" max="600" step="10" [ngModel]="dividerHeight()"
+            (ngModelChange)="setDividerHeight($event)" [attr.aria-label]="t('labels.heightLabel')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="wave-layers">{{ t('labels.layersLabel') }}</label>
+        <div class="input-row">
+          <input id="wave-layers" type="number" inputmode="numeric" min="1" max="3" step="1"
+            [ngModel]="layers()" (ngModelChange)="setLayers($event)" />
+          <input type="range" min="1" max="3" step="1" [ngModel]="layers()"
+            (ngModelChange)="setLayers($event)" [attr.aria-label]="t('labels.layersLabel')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.colorsLabel') }}</label>
+        <div class="color-row">
+          @for (fill of activeFills(); track $index) {
+            <label class="color-chip">
+              <span class="visually-hidden">{{ t('labels.layerColor') }} {{ $index + 1 }}</span>
+              <input type="color" [ngModel]="fill" (ngModelChange)="setColor($index, $event)"
+                [attr.aria-label]="t('labels.layerColor') + ' ' + ($index + 1)" />
+            </label>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="wave-opacity">{{ t('labels.opacityLabel') }}</label>
+        <div class="input-row">
+          <input id="wave-opacity" type="number" inputmode="numeric" min="10" max="100" step="1"
+            [ngModel]="opacity()" (ngModelChange)="setOpacity($event)" />
+          <input type="range" min="10" max="100" step="1" [ngModel]="opacity()"
+            (ngModelChange)="setOpacity($event)" [attr.aria-label]="t('labels.opacityLabel')" />
+        </div>
+      </div>
+
+      <label class="check-row">
+        <input type="checkbox" [ngModel]="flip()" (ngModelChange)="toggleFlip()" />
+        <span>{{ t('labels.flipLabel') }}</span>
+      </label>
+
+      <h3 class="sub-heading">{{ t('labels.previewHeading') }}</h3>
+      <div class="preview-scene">
+        <div class="preview-sky"></div>
+        <svg class="preview-wave" [attr.viewBox]="'0 0 1440 ' + dividerHeight()"
+          preserveAspectRatio="none" aria-hidden="true">
+          @for (layer of waveLayers(); track $index) {
+            <path [attr.d]="layer.d" [attr.fill]="layer.fill" [attr.fill-opacity]="layer.opacity" />
+          }
+        </svg>
+      </div>
+
+      <div class="field">
+        <label for="wave-code">{{ t('labels.codeLabel') }}</label>
+        <textarea id="wave-code" class="dv-term-input code" rows="8" readonly spellcheck="false"
+          [ngModel]="svgCode()"></textarea>
+      </div>
+      <p class="note">{{ t('labels.codeNote') }}</p>
+
+      <div class="btn-row">
+        <button type="button" class="btn" (click)="copyCode()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copyButton') }}
+        </button>
+        <button type="button" class="btn-ghost" (click)="downloadSvg()">
+          <app-icon name="download" /> {{ t('labels.downloadButton') }}
+        </button>
+      </div>
+
+      <div class="results">
+        <div class="result-row">
+          <span>{{ t('labels.widthLabel') }}</span>
+          <strong>1440 {{ t('labels.pxUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.heightStatLabel') }}</span>
+          <strong>{{ dividerHeight() }} {{ t('labels.pxUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.layersStatLabel') }}</span>
+          <strong>{{ layers() }}</strong>
+        </div>
+        <div class="result-row total">
+          <span>{{ t('labels.pointsLabel') }}</span>
+          <strong>{{ pointCount() }}</strong>
+        </div>
+      </div>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

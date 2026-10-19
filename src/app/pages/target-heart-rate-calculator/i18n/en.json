@@ -1,0 +1,99 @@
+{
+  "target-heart-rate-calculator": {
+    "assumptionNote": "220 - age estimates max HR; individual max varies. Not for heart patients without medical guidance.",
+    "benefits": [
+      "Stops the 'am I working hard enough?' guessing.",
+      "Personalized by your resting HR - fitter hearts get fairer zones.",
+      "Keeps easy days easy and hard days hard.",
+      "Explains the famous zones simply, with your numbers."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "60-100 bpm is the normal range; trained athletes often sit at 40-60. Lower generally means a fitter heart - unless it comes with dizziness, which needs a doctor.",
+        "q": "What is a good resting heart rate?"
+      },
+      {
+        "a": "Plain % of max ignores fitness. Two 30-year-olds share max 190, but with resting 50 vs 80 their aerobic zones differ hugely. Karvonen's reserve accounts for that.",
+        "q": "Why Karvonen instead of plain percentages of max?"
+      },
+      {
+        "a": "The 60-70% 'fat burn' zone uses the highest fat percentage - but higher zones burn more total calories and thus more total fat. For fat loss, total calories matter more than the zone name.",
+        "q": "Which zone burns the most fat?"
+      },
+      {
+        "a": "A graded exercise test in a lab is the gold standard. A field test (hard 3-minute hill effort, take the peak) gets close. Never max out alone or without warm-up.",
+        "q": "How do I find my true max HR?"
+      },
+      {
+        "a": "Watches often use % of max, not Karvonen, and estimate max from age. If your resting HR is low, Karvonen zones (like these) fit you better.",
+        "q": "My watch zones differ - which is right?"
+      },
+      {
+        "a": "Lightly. Start with perceived effort (can you talk?) and add zones once you train regularly. Zones shine for structured training, not first-month fitness.",
+        "q": "Should beginners use heart-rate zones?"
+      }
+    ],
+    "formula": "Max HR = 220 - age\nHRR = max HR - resting HR\nTarget = resting HR + HRR x intensity\n\nExample: age 30, resting 60\nMax = 220 - 30 = 190; HRR = 190 - 60 = 130\nAerobic 70-80%: 60 + 130 x 0.70 = 151 to 60 + 130 x 0.80 = 164 bpm",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your age.",
+      "Enter your resting heart rate (morning, at rest).",
+      "Your max HR, reserve, and all five zones appear instantly.",
+      "Pick the zone matching your workout goal.",
+      "Recheck yearly - max HR falls about 1 beat per year with age."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Max HR is about 220 - age (estimate; fitter people often exceed it).",
+      "Heart-rate reserve (HRR) = max HR - resting HR.",
+      "Karvonen: target = resting + HRR x intensity.",
+      "Zones: 50-60% warm-up, 60-70% fat burn, 70-80% aerobic, 80-90% anaerobic, 90-100% max.",
+      "Measure resting HR first thing in the morning, before coffee.",
+      "Beta-blockers and some medicines blunt heart rate - zones do not apply the same way."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "target heart rate calculator, karvonen formula, heart rate zones, max heart rate calculator, exercise heart rate zones",
+    "labels": {
+      "ageYears": "Age (years)",
+      "bpmUnit": "bpm",
+      "hrr": "Heart-rate reserve",
+      "maxHr": "Max heart rate",
+      "restingHr": "Resting heart rate (bpm)",
+      "tableIntensity": "Intensity",
+      "tableRange": "Target range",
+      "tableZone": "Zone",
+      "zoneNames": [
+        "Warm-up",
+        "Fat burn",
+        "Aerobic",
+        "Anaerobic",
+        "Maximum effort"
+      ],
+      "zonesLabel": "Your training zones"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "220 - age is an estimate; true max varies by about 10-15 bpm.",
+      "Wrist sensors lag and misread during intervals - chest straps are better.",
+      "Heat, dehydration, caffeine, and illness raise HR at the same effort.",
+      "Not for people with heart conditions - get medical clearance first."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Calculate your max heart rate and Karvonen training zones from age and resting HR. Train in the right zone. Free, private, no sign-up.",
+    "metaTitle": "Target Heart Rate Zones Calculator (Karvonen) | JaurTools",
+    "name": "Target Heart Rate Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Max heart rate is about 220 minus age; the Karvonen formula then scales training zones to your heart-rate reserve. At 30 with a resting 60, max is 190 and reserve is 130 - so the aerobic zone (70-80%) is 151-164 bpm. Five zones from 50% to 100% are listed below.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your heart-rate zones",
+    "tagline": "Find your exercise heart-rate zones with the Karvonen formula.",
+    "workedExample": "Age 30, resting heart rate 60 bpm:\n1. Max HR: 220 - 30 = 190 bpm.\n2. HRR: 190 - 60 = 130 bpm.\n3. Warm-up 50-60%: 60 + 65 = 125 to 60 + 78 = 138 bpm.\n4. Fat burn 60-70%: 138 to 151 bpm.\n5. Aerobic 70-80%: 151 to 164 bpm.\n6. Anaerobic 80-90%: 164 to 177 bpm.\n7. Max 90-100%: 177 to 190 bpm.",
+    "workedExampleHeading": "Worked example"
+  }
+}

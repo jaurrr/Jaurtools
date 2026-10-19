@@ -1,0 +1,112 @@
+{
+  "roi-calculator": {
+    "benefits": [
+      "Compares completely different investments on one fair scale.",
+      "The annualized figure stops a 3-year 35% gain from looking better than a 1-year 20% gain.",
+      "Shows whether an investment actually beat inflation and fees, not just its purchase price.",
+      "Free, instant, and private - no brokerage login needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For a single lump-sum investment, annualized return and CAGR are the same thing: the steady yearly rate that would grow the start value to the end value. ROI is the total gain; CAGR is that gain expressed as a per-year rate.",
+        "q": "What is the difference between ROI and CAGR?"
+      },
+      {
+        "a": "Total ROI ignores time, which is exactly why it misleads. A 50% gain over 10 years is only about 4.1% per year - less than many savings accounts pay. Always look at the annualized return when comparing investments held for different periods.",
+        "q": "Is a 50% ROI always great?"
+      },
+      {
+        "a": "Subtract all costs - brokerage fees, taxes, and any maintenance - from the final value first, then run the calculation. Fees quietly eat several percentage points off the headline ROI of actively managed investments.",
+        "q": "How do I include fees in ROI?"
+      },
+      {
+        "a": "It can be. An ROI of -30% simply means you lost 30% of what you put in. The annualized figure works the same way: if your $10,000 fell to $7,000 in 3 years, ROI is -30% and the annualized return is about -11.3% per year.",
+        "q": "Can ROI be negative?"
+      },
+      {
+        "a": "Basic ROI assumes one amount in and one amount out. If you added or removed money along the way, use an IRR or XIRR calculation instead - most spreadsheet apps have one built in.",
+        "q": "What if I added money during the investment?"
+      },
+      {
+        "a": "No. ROI tells you how much money grew, not how much risk you took to grow it. A 15% ROI from a calm index fund and a 15% ROI from a volatile crypto bet are very different propositions - risk-adjusted measures like the Sharpe ratio handle that question.",
+        "q": "Does ROI measure risk?"
+      }
+    ],
+    "formula": "ROI = (final value - initial cost) / initial cost x 100.\nAnnualized return = (final / initial)^(1 / years) - 1, expressed as a percent.\nMultiple = final / initial (e.g. 1.35x).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the total amount you originally invested, including any purchase fees.",
+      "Enter the current or sale value of the investment.",
+      "Enter how many years you held it (fractions are fine, e.g. 1.5).",
+      "Read the total ROI, the annualized return, the gain in dollars, and the multiple.",
+      "Compare the annualized return against inflation and alternative investments."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "ROI = return on investment = (gain) / (cost), usually expressed as a percentage.",
+      "It measures total profit relative to what you paid, ignoring how long it took.",
+      "Annualized return (CAGR) converts the gain into an equivalent yearly rate for fair comparisons.",
+      "A positive ROI means you made money; a negative ROI means you lost money.",
+      "ROI alone does not account for risk, taxes, or the time value of money."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "roi calculator, return on investment calculator, annualized return calculator, cagr calculator, investment return calculator",
+    "labels": {
+      "annualized": "Annualized return",
+      "finalValue": "Final value ($)",
+      "gainLoss": "Gain / loss",
+      "initialInvestment": "Initial investment ($)",
+      "multiple": "Return multiple",
+      "roi": "Total ROI",
+      "yearsHeld": "Years held"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ignores taxes and fees unless you subtract them from the final value yourself.",
+      "Does not handle deposits or withdrawals made during the holding period.",
+      "Says nothing about the risk taken to earn the return.",
+      "A single past ROI never guarantees future results."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free ROI calculator: find your return on investment percentage plus annualized return and gain. Instant, private, no sign-up.",
+    "metaTitle": "ROI Calculator - Return on Investment % | JaurTools",
+    "name": "ROI Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "ROI (return on investment) is your profit divided by what you paid, as a percentage: (final value - initial cost) / initial cost x 100. For example, $10,000 growing to $13,500 over 3 years is a 35% ROI, but the annualized return is only about 10.52% per year - the steady yearly rate that would produce the same result. Always compare the annualized figure when investments were held for different lengths of time.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your ROI results",
+    "tagline": "Find your return on investment percentage, annualized return, and total gain.",
+    "workedExample": "Invest $10,000, sell for $13,500 after 3 years:\n1. Gain = 13,500 - 10,000 = $3,500.\n2. ROI = 3,500 / 10,000 x 100 = 35%.\n3. Multiple = 13,500 / 10,000 = 1.35x.\n4. Annualized = 1.35^(1/3) - 1 = 0.1052 = 10.52% per year.\nSo the headline is 35%, but the fair yearly comparison figure is 10.52%.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "roi": "Return on investment",
+      "roiNote": "{ann}% annualized per year",
+      "gain": "Gain / loss",
+      "multiple": "Money multiple"
+    },
+    "duel": {
+      "heading": "You vs a 4% savings account",
+      "yours": "Your investment",
+      "bench": "4% savings",
+      "winner": "wins",
+      "yoursSub": "grows to {final}",
+      "benchSub": "would grow to {final}"
+    },
+    "verdict": {
+      "beat": "You beat the savings account.",
+      "miss": "The savings account wins this one."
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "{initial} became {final}: a {gain} gain ({roi}% total return).",
+      "l2": "That is {diff} percentage points above a plain 4% savings account.",
+      "l3": "That is {diff} percentage points below what a plain 4% savings account would give."
+    }
+  }
+}

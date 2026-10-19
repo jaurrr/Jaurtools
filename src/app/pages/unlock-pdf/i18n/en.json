@@ -1,0 +1,98 @@
+{
+  "unlock-pdf": {
+    "benefits": [
+      "Remove the password prompt from your own PDFs so they open instantly.",
+      "Keep every page, image and font — only the encryption wrapper is dropped.",
+      "No software to install and no file ever uploaded.",
+      "Works with the common user-password protection used by banks and offices.",
+      "The unlocked copy is a normal PDF that opens in any reader."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The tool decrypts with the password you type and re-saves the file without encryption. It cannot guess, crack or bypass passwords — you must know the correct one.",
+        "q": "Can this tool crack a PDF password?"
+      },
+      {
+        "a": "Most PDFs use a user password (needed to open) and sometimes an owner password (restricts printing or copying). If you can open the file with your password, this tool can save an unlocked copy.",
+        "q": "What is the difference between user and owner passwords?"
+      },
+      {
+        "a": "A wrong password fails the decryption step and you get a clear error — nothing is downloaded and the original file is untouched.",
+        "q": "What happens if I type the wrong password?"
+      },
+      {
+        "a": "Yes. All content streams, images and fonts are copied exactly; only the encryption dictionary is omitted when saving.",
+        "q": "Does unlocking change the document content?"
+      },
+      {
+        "a": "Some PDFs also carry editing or printing restrictions. Decrypting with the user password removes the open prompt; heavily restricted files may still need the owner password.",
+        "q": "Will it also remove printing restrictions?"
+      },
+      {
+        "a": "Yes. The password is used once, in memory, to decrypt — it is never stored, logged or sent anywhere.",
+        "q": "Is my password kept private?"
+      }
+    ],
+    "formula": "unlocked = save(decrypt(bytes, password))\n\nPDFDocument.load(bytes, { password }) decrypts every object stream with your password. save() then writes the document without an encryption dictionary, so no password is asked again. Example: 5-page statement + correct password → 5-page unlocked PDF, byte-identical content.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the password-protected PDF (up to 50 MB).",
+      "The tool checks whether the file actually needs a password.",
+      "Type the correct password you use to open the file.",
+      "Click unlock to decrypt and re-save without encryption.",
+      "Download the unlocked copy — it opens with no password prompt."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Unlocking requires the correct password — the tool decrypts; it never cracks or guesses.",
+      "The output is re-saved without an encryption dictionary, so no password prompt appears again.",
+      "All pages, text, images and fonts are preserved exactly; only encryption is removed.",
+      "Files that open without a password are reported as not locked — no password needed.",
+      "Everything runs locally with pdf-lib; the password is used once in memory and never stored."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "unlock pdf, remove pdf password, decrypt pdf, pdf password remover, unlock pdf online free",
+    "labels": {
+      "busy": "Unlocking, please wait…",
+      "errNoPassword": "Type the password for this PDF.",
+      "errParse": "Could not read this PDF. It may be corrupted.",
+      "errPassword": "Wrong password — decryption failed. Check and try again.",
+      "errProcess": "Something went wrong while unlocking.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "Password-protected PDF, up to 50 MB. The file and password never leave your browser.",
+      "fileLabel": "PDF file",
+      "lockedNote": "This PDF is password-protected. Enter the password to unlock it.",
+      "notLockedNote": "This PDF opens without a password — nothing to unlock.",
+      "pageCount": "Pages",
+      "passwordLabel": "PDF password",
+      "passwordPh": "Enter the password",
+      "statusDone": "Unlocked. Your password-free PDF has been downloaded.",
+      "unlockButton": "Unlock PDF"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "You must know the correct password — there is no way to recover a forgotten one here.",
+      "Some files use an additional owner password for restrictions; those limits may persist.",
+      "Digital-signature validation may break when a signed file is re-saved.",
+      "Password-protected PDFs that fail to parse for other reasons cannot be processed."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Remove the password from your PDFs online for free. Decrypt with your known password and save an unlocked copy. 100% in your browser.",
+    "metaTitle": "Unlock PDF — Remove PDF Password Online Free",
+    "name": "Unlock PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a password-protected PDF, type the password you use to open it, and the tool decrypts the file and saves a clean copy with no password prompt. It cannot crack unknown passwords — it only unlocks files whose password you already know.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Unlock PDF results",
+    "tagline": "Remove the password from your own PDFs — quickly and privately.",
+    "workedExample": "A 5-page bank statement protected with a user password.\nYou enter the correct password.\nPDFDocument.load(bytes, { password }) decrypts all 5 pages successfully.\nsave() writes the document with no encryption dictionary.\nResult: statement-unlocked.pdf — 5 pages, identical content, opens with no prompt.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "photo-blur": {
+    "name": "Photo Blur",
+    "tagline": "Hide what shouldn't be seen.",
+    "metaTitle": "Photo Blur - Blur & Censor Photos | JaurTools",
+    "metaDescription": "Blur faces, plates or sensitive details in any photo — adjustable strength, private in-browser processing. Free.",
+    "keywords": "blur face in photo, censor image online, pixelate photo, hide face online free, blur number plate",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a photo, choose Blur or Pixelate, then drag boxes over anything to hide — faces, number plates, addresses. Each region is processed independently: blur softens with a gaussian-style smear, pixelate reduces the region to chunky blocks (a 200 px wide region at block size 20 becomes a 10 x N mosaic). Remove or clear regions anytime, then download the PNG.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Regions are rectangles you draw by dragging on the preview — add as many as you need.",
+      "Blur mode applies a smooth smear whose radius you control with the strength slider.",
+      "Pixelate mode shrinks each region to tiny blocks then scales it back up for the mosaic look.",
+      "Every region can be removed individually, or all cleared at once.",
+      "The download is a flat PNG — the hidden pixels are truly gone, not just covered.",
+      "Journalists, sellers, and parents use this to share photos safely."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload a photo (JPG, PNG, or WebP).",
+      "Pick Blur for a soft hide or Pixelate for the classic mosaic.",
+      "Set the strength slider — higher means harder to recognize.",
+      "Click and drag on the preview to draw a box over each private detail.",
+      "Click a region's remove button if you drew a wrong box.",
+      "Click Download to save the censored photo as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Blur: each output pixel = average of neighbors within radius R (gaussian-weighted).\nPixelate with block size B:\nsmallWidth = ceil(regionWidth / B)\nThe region is drawn into a smallWidth-wide canvas, then scaled back up with smoothing off.\nExample: 200 px region, B = 20 -> 10 blocks across.",
+    "formulaHeading": "Formula",
+    "workedExample": "Region 200 x 100 px, pixelate mode, block size 20:\n1. Small width: 200 / 20 = 10 blocks across.\n2. Small height: 100 / 20 = 5 blocks down.\n3. The region collapses to a 10 x 5 thumbnail, then stretches back to 200 x 100.\n4. Result: chunky 20 x 20 px mosaic squares — a face becomes unrecognizable.\nBlur mode with radius 12 instead smears every pixel with its neighbors in a 25 px wide soft window.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Share photos publicly without exposing faces, kids, or plates.",
+      "True pixel destruction in the download — not a removable overlay.",
+      "Unlimited regions per photo for group shots and documents.",
+      "Two honest styles: soft blur or hard pixel mosaic.",
+      "Nothing is uploaded, which matters most for sensitive photos."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Censoring is permanent in the download — keep the original if you need it.",
+      "Heavy blur can still leak colors and shapes; pixelate hides more.",
+      "Rectangular regions only — no freehand or automatic face detection.",
+      "Very small regions (under ~10 px) may not hide enough detail."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "Is blur or pixelate safer for hiding a face?",
+        "a": "Pixelate is safer. Strong blur still leaks skin tone and rough shapes, and researchers have partially reversed light blurs. A chunky pixel mosaic with large blocks destroys far more information. Use the highest strength you can tolerate."
+      },
+      {
+        "q": "Can someone remove the blur from my downloaded photo?",
+        "a": "No. The download contains only the blurred pixels — the original detail is not hidden under a layer, it is gone. That is why you should keep your original file separately."
+      },
+      {
+        "q": "How do I censor a whole document?",
+        "a": "Draw one big region over the sensitive area, or several precise boxes over names and numbers. Pixelate mode at high strength is best for text, since even slight blur can leave letters readable."
+      },
+      {
+        "q": "Can it detect faces automatically?",
+        "a": "No — you draw each region by dragging on the preview. Automatic detection would need a face model downloaded to your browser; manual boxes keep the tool fast, private, and honest."
+      },
+      {
+        "q": "Why do my regions look different in the download?",
+        "a": "They should not — the preview renders the exact same processing as the download. If a region looks weak, raise the strength before downloading."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. Regions are processed on a canvas in your browser. Sensitive photos never leave your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Blur / Censor Photo results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photo",
+      "censorMode": "Censor style",
+      "modeBlur": "Blur",
+      "modePixelate": "Pixelate",
+      "strength": "Strength",
+      "regions": "Regions",
+      "remove": "Remove",
+      "clearRegions": "Clear all regions",
+      "drawHint": "Drag on the preview to draw a region over anything to hide.",
+      "noRegions": "No regions yet — drag on the preview to add one.",
+      "download": "Download image",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload a photo to start censoring."
+    }
+  }
+}

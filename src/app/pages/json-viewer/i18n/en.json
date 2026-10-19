@@ -1,0 +1,100 @@
+{
+  "json-viewer": {
+    "benefits": [
+      "Explores huge payloads: collapse everything, then open only the branch you care about.",
+      "Edits safely: change a single value in place without retyping the whole document.",
+      "Deletes precisely: remove one key or array item with a click, keeping valid JSON.",
+      "Learns structure fast: node counts, types, and depths are visible at a glance.",
+      "Runs fully in your browser: sensitive documents are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It parses JSON into an expandable tree where objects and arrays can be opened and closed. Primitive values can be edited in place and any node can be deleted, then the updated JSON is copied or downloaded.",
+        "q": "What does the JSON Tree Viewer do?"
+      },
+      {
+        "a": "Click the Edit button next to any string, number, boolean, or null. Type the new value and save. Strings are taken literally; other types must be valid JSON (for example true, 42, or null).",
+        "q": "How do I edit a value?"
+      },
+      {
+        "a": "Click the × button next to any node. For objects the key disappears; for arrays the item is removed and later items shift down. The document stays valid JSON.",
+        "q": "How do I delete a key or item?"
+      },
+      {
+        "a": "No. The tree edits the parsed document directly, so key order and whitespace are normalized when you copy the result. Use JSON Diff if you need to compare before and after.",
+        "q": "Does editing preserve my original formatting?"
+      },
+      {
+        "a": "Yes. Load any valid JSON - objects, arrays, nested mixes, or even a single primitive value at the root.",
+        "q": "Can it handle arrays at the root?"
+      },
+      {
+        "a": "Paths use JSONPath-like notation: $.store.books[0].title. Hover any row to see its full path in the tooltip.",
+        "q": "How do I know a node's path?"
+      }
+    ],
+    "formula": "parse -> build node tree:\n  object -> one child node per key\n  array  -> one child node per index ([0], [1], ...)\n  primitive -> leaf with type color (string/number/boolean/null)\nedit  -> setAtPath(clone, path, newValue)\ndelete -> removeAtPath(clone, path)   // splice for arrays\noutput -> JSON.stringify(editedDoc, null, 2)",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste JSON into the input box and click Load into tree (a sample is preloaded).",
+      "Click + / - to expand or collapse branches; use Expand all / Collapse all for the whole document.",
+      "Click Edit next to any primitive value, type the replacement, and save.",
+      "Click × to delete any node; the tree re-renders instantly and stays valid.",
+      "Copy the updated JSON or download it as edited.json."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON Tree Viewer renders any JSON document as an expandable, editable tree.",
+      "Objects and arrays collapse and expand; primitives show with type-based colors.",
+      "Any string, number, boolean, or null can be edited in place with validation.",
+      "Any node can be deleted: object keys vanish, array items splice cleanly.",
+      "Hovering a row reveals its full JSONPath, like $.store.books[0].title.",
+      "The edited document is exported as clean, formatted JSON via copy or download."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json tree viewer, json tree editor, view json as tree, edit json online, json explorer",
+    "labels": {
+      "cancelLabel": "Cancel",
+      "collapseAllLabel": "Collapse all",
+      "copiedLabel": "Copied!",
+      "copyJsonLabel": "Copy updated JSON",
+      "deleteLabel": "Delete",
+      "depthLabel": "Max depth",
+      "downloadLabel": "Download .json",
+      "editErrorLabel": "Invalid value: for numbers, booleans, or null, enter valid JSON (e.g. 42, true, null).",
+      "editHint": "Tip: click Edit on any value to change it, or × to delete a node. Copy the updated JSON when done.",
+      "editLabel": "Edit",
+      "editValueLabel": "New value",
+      "expandAllLabel": "Expand all",
+      "inputLabel": "JSON input",
+      "loadLabel": "Load into tree",
+      "nodesLabel": "Nodes",
+      "saveLabel": "Save",
+      "toggleLabel": "Toggle"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Editing normalizes formatting: the exported JSON is re-serialized, not your original text.",
+      "Only primitive values are editable in place; restructuring requires delete plus manual re-adding.",
+      "There is no undo: reload the original text if you make a mistake.",
+      "Extremely large documents (hundreds of thousands of nodes) may render slowly."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "View JSON as a collapsible tree, search keys and copy JSONPath. Free online JSON viewer — 100% in your browser, nothing uploaded.",
+    "metaTitle": "JSON Viewer - Explore JSON as a Collapsible Tree | JaurTools",
+    "name": "JSON Viewer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste JSON and explore it as an expandable tree: open only the branches you need, edit any primitive value in place, delete any node with one click, and export the result as clean formatted JSON. Hovering a row shows its full JSONPath, and node counts keep you oriented in large documents.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON Tree Viewer results",
+    "tagline": "Explore nested JSON in a collapsible tree.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input: {\"store\": {\"open\": true, \"books\": [{\"title\": \"The Guide\", \"price\": 299}]}}\n\n1. Load: the tree shows store as Object {2}, books as Array(1).\n2. Expand store, then books, then [0]: title and price appear as editable leaves.\n3. Edit: click Edit on price, type 249, save -> the value updates in place.\n4. Delete: click × on open -> the key disappears, JSON stays valid.\n5. Copy updated JSON:\n{\n  \"store\": {\n    \"books\": [\n      { \"title\": \"The Guide\", \"price\": 249 }\n    ]\n  }\n}"
+  }
+}

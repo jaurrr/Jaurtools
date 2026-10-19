@@ -1,0 +1,89 @@
+{
+  "canadian-mortgage-calculator": {
+    "assumptionNote": "Uses the Canadian convention: the quoted rate compounds semi-annually, not in advance, and payments are monthly. Excludes taxes and insurance.",
+    "benefits": [
+      "Uses the correct Canadian semi-annual compounding, which generic calculators get wrong.",
+      "Shows the effective monthly rate behind your quoted rate.",
+      "Reveals total interest over the full amortization.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "In Canada, fixed mortgage rates are quoted as semi-annual, not in advance, while payments are usually monthly. The monthly rate is (1 + rate/2)^(1/6) - 1, which is slightly lower than rate/12. This calculator applies that conversion.",
+        "q": "Why is the Canadian calculation different?"
+      },
+      {
+        "a": "For a 5.25% quoted rate, the effective monthly rate is 0.4328%, versus 0.4375% under simple monthly division. The difference is small per month but real over a 25-year amortization.",
+        "q": "How big is the difference?"
+      },
+      {
+        "a": "The amortization period is how long it would take to pay off the loan in full, often 25 years in Canada. The term is the length of your current rate contract, commonly 5 years, after which you renew.",
+        "q": "Amortization vs term: what is the difference?"
+      },
+      {
+        "a": "Canadian mortgages commonly offer monthly, semi-monthly, bi-weekly or weekly payments. Accelerated bi-weekly payments add the equivalent of one extra monthly payment per year and shorten the loan.",
+        "q": "What payment frequencies are available?"
+      },
+      {
+        "a": "Yes. Prepayment privileges let you pay extra principal each year, often 15 to 20 percent, without penalty. Extra payments cut total interest substantially because Canadian interest is front-loaded.",
+        "q": "Can I prepay a Canadian mortgage?"
+      },
+      {
+        "a": "The stress test requires borrowers to qualify at a higher benchmark rate, currently the greater of the contract rate plus 2% or a floor set by regulators. This calculator shows the payment at your actual rate, not the qualifying rate.",
+        "q": "What is the mortgage stress test?"
+      }
+    ],
+    "formula": "monthly_rate = (1 + quoted_rate / 2)^(1/6) - 1\npayment = P x monthly_rate / (1 - (1 + monthly_rate)^-n), n = years x 12\ntotal_interest = payment x n - P",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the mortgage amount you need to borrow.",
+      "Enter the quoted annual rate as a percentage.",
+      "Enter the amortization in years.",
+      "Read the monthly payment, total paid and total interest.",
+      "Note the effective monthly rate to compare against other quotes."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Canadian mortgage rates are quoted with semi-annual compounding, not in advance.",
+      "The equivalent monthly rate is (1 + rate/2) raised to 1/6, minus 1, which is slightly less than rate divided by 12.",
+      "A 5.25% quoted rate equals an effective monthly rate of 0.4328%.",
+      "The standard amortization in Canada is 25 years for insured mortgages.",
+      "Prepayment privileges let borrowers pay extra principal each year without penalty."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "Canadian mortgage calculator, Canada mortgage payment, semi-annual compounding mortgage, CMHC mortgage calculator",
+    "labels": {
+      "amount": "Mortgage amount",
+      "effectiveMonthly": "Effective monthly rate",
+      "payment": "Monthly payment",
+      "rate": "Quoted rate (%)",
+      "totalInterest": "Total interest",
+      "totalPaid": "Total paid",
+      "years": "Amortization (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Fixed rate only; variable-rate mortgages are not modeled.",
+      "Excludes property tax, insurance and CMHC premiums.",
+      "Assumes monthly payments with no prepayments.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Canadian mortgage calculator with correct semi-annual compounding. Find your monthly payment, total interest and effective rate. Private, browser-only.",
+    "metaTitle": "Canadian Mortgage Calculator — True Monthly Payment",
+    "name": "Canadian Mortgage Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Canadian rates compound semi-annually, so the monthly rate is slightly lower than rate/12. A $500,000 mortgage at 5.25% over 25 years costs about $2,979.59 per month, with total interest of about $393,877.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your mortgage results",
+    "tagline": "The correct Canadian mortgage math, semi-annual compounding.",
+    "workedExample": "Amount $500,000, quoted rate 5.25%, amortization 25 years (300 payments).\n\nSemi-annual rate = 0.0525 / 2 = 0.02625. monthly_rate = 1.02625^(1/6) - 1 = e^(ln(1.02625)/6) - 1 = e^0.00431861 - 1 = 0.00432794 = 0.432794%.\n\npayment = 500,000 x 0.00432794 / (1 - 1.00432794^-300) = 2,163.97 / 0.726252 = $2,979.59 per month.\n\nTotal paid = 2,979.59 x 300 = $893,877. Total interest = 893,877 - 500,000 = $393,877.",
+    "workedExampleHeading": "Worked example"
+  }
+}

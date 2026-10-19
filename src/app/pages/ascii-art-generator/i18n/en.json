@@ -1,0 +1,100 @@
+{
+  "ascii-art-generator": {
+    "benefits": [
+      "Turns any photo into retro text art for profiles, signatures, and comments.",
+      "Text banners work anywhere fonts and images are not allowed.",
+      "Copy-paste friendly: plain text survives email, chat, and code comments.",
+      "Invert and width controls let you tune contrast and detail.",
+      "A fun way to learn how images map to brightness levels."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes, within the character set. The text is drawn in a bold monospace font and then sampled like an image, so any character your browser can draw works, including accented letters. Very long words shrink automatically to fit.",
+        "q": "Can I use special characters in text mode?"
+      },
+      {
+        "a": "High-contrast, simple images work best: logos, silhouettes, and portraits with clear light and dark areas. Busy photos with soft gradients turn into mush. Try the invert toggle if dark and light feel swapped.",
+        "q": "Which images give the best results?"
+      },
+      {
+        "a": "Because text characters are roughly twice as tall as they are wide. The tool halves the image height before sampling so circles come out round instead of squashed. You can compensate by raising the width slider.",
+        "q": "Why does my art look squished vertically?"
+      },
+      {
+        "a": "The output is plain text, so copyright works like any image: do not turn someone else's photo or logo into ASCII art and claim it as your own. Your own photos and words are fine.",
+        "q": "Is the output copyrighted?"
+      },
+      {
+        "a": "For this tool, no. It produces plain-text art, not pixels. If you need an actual image file, screenshot the preview box or use the Logo Maker tool instead.",
+        "q": "Can I download the art as a PNG image?"
+      },
+      {
+        "a": "The file is checked in your browser: it must be an image type and under 5 MB. Your photo is drawn to a hidden canvas and converted locally; it is never uploaded to any server.",
+        "q": "Is my uploaded photo private?"
+      }
+    ],
+    "formula": "1. Draw the source (typed text or uploaded photo) onto a hidden canvas.\n2. For each cell, compute the average brightness: (R + G + B) / 3.\n3. Map brightness to a character with this ramp (dark to light):\n   '@%#*+=-:. '\n   index = floor(brightness / 255 x 10)\n4. Join characters into rows of plain text.\n\nText mode uses 10x20 px cells; image mode halves the height first so characters (taller than wide) keep the proportions right.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick Text mode for a banner or Image mode to convert a photo.",
+      "In text mode, type your word (up to 40 characters). In image mode, choose an image file under 5 MB.",
+      "Move the width slider: more characters means more detail but a wider block of text.",
+      "Try the invert switch if dark areas should be light and vice versa.",
+      "Copy the art or download it as a .txt file and paste it anywhere plain text works."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "ASCII art represents an image using only printable text characters.",
+      "Each character stands in for one block of pixels, chosen by that block's brightness.",
+      "The character ramp used here, dark to light, is: @ % # * + = - : . (space).",
+      "Dark pixels become dense characters like @; bright pixels become spaces.",
+      "Text mode draws your word in a bold monospace font, then samples it exactly like a photo.",
+      "Because characters are taller than wide, images are squashed vertically before sampling to keep shapes proportional."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ascii art generator, text art generator, image to ascii, ascii banner, text to ascii art, photo to text art",
+    "labels": {
+      "badTypeError": "Please choose an image file (JPG, PNG, GIF, WebP...).",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy art",
+      "dimsLabel": "Art size (rows x cols)",
+      "downloadButton": "Download .txt",
+      "imageHint": "JPG, PNG, GIF or WebP, max 5 MB. Processed locally, never uploaded.",
+      "imageInputLabel": "Upload an image",
+      "imageMode": "Image",
+      "invertLabel": "Invert (swap dark and light)",
+      "modeLabel": "Art mode",
+      "noImageNote": "No image yet - the preview stays empty until you upload one.",
+      "outputLabel": "Your ASCII art",
+      "textInputLabel": "Your text",
+      "textMode": "Text",
+      "textPlaceholder": "e.g. HELLO",
+      "tooBigError": "That image is over 5 MB. Please pick a smaller one.",
+      "widthLabel": "Width (characters)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Output is plain text, not an image file - you cannot download a PNG of the art.",
+      "Fine detail is lost: this is a stylised impression, not a faithful reproduction.",
+      "Very wide art may wrap badly in apps with narrow message boxes.",
+      "Text mode depends on the fonts installed on your device, so the exact look can vary slightly between devices."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free ASCII art generator: turn text into banners or photos into text art. Adjustable width, invert mode, copy or download. Private, runs in your browser.",
+    "metaTitle": "ASCII Art Generator - Text & Image to ASCII | JaurTools",
+    "name": "ASCII Art Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "ASCII art turns pictures or words into images made of text characters. Type a word to get a banner, or upload a photo (under 5 MB) to convert it. Each block of pixels is replaced by a character chosen for its brightness: dark areas become @ and %, light areas become dots and spaces. Adjust the width for more detail, flip the invert switch if needed, then copy or download the result as plain text.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "ASCII Art Generator results",
+    "tagline": "Turn text into banners and photos into retro text art.",
+    "workedExample": "Take a tiny 2x2 image with these pixel brightness values:\nRow 1: 0 (black), 85 (dark grey)\nRow 2: 170 (light grey), 255 (white)\n\nRamp (dark to light): @ % # * + = - : . (space)\nindex = floor(brightness / 255 x 10)\n\n1. Pixel 0: floor(0 / 255 x 10) = 0 -> '@'\n2. Pixel 85: floor(85 / 255 x 10) = floor(3.33) = 3 -> '*'\n3. Pixel 170: floor(170 / 255 x 10) = floor(6.67) = 6 -> '-'\n4. Pixel 255: floor(255 / 255 x 10) = floor(10) = 10 -> capped at 9 -> ' ' (space)\n\nResult:\n@*\n-  (dash followed by a space)",
+    "workedExampleHeading": "Worked example"
+  }
+}

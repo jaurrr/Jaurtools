@@ -1,0 +1,148 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <p class="note">{{ t('labels.focusHint') }}</p>
+
+      <div
+        #keyArea
+        class="key-area calc-testarea"
+        tabindex="0"
+        (keydown)="onKeyDown($event)"
+        (keyup)="onKeyUp($event)"
+        [attr.aria-label]="t('labels.keyAreaLabel')"
+      >
+        @if (heldKeys().length === 0) {
+          <p class="area-hint">{{ t('labels.areaHint') }}</p>
+        }
+        @for (code of heldKeys(); track code) {
+          <span class="chip">{{ code }}</span>
+        }
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn ghost" (click)="focusArea(keyArea)">
+          <app-icon name="key-round" /> {{ t('labels.focusButton') }}
+        </button>
+        <button type="button" class="btn ghost" (click)="releaseAll()">
+          <app-icon name="x" /> {{ t('labels.releaseAll') }}
+        </button>
+        <button type="button" class="btn ghost" (click)="resetAll()">
+          <app-icon name="refresh-cw" /> {{ t('labels.reset') }}
+        </button>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="key-round" /> {{ t('labels.heldNow') }}</span>
+          <strong>{{ heldKeys().length }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.maxSimultaneous') }}</span>
+          <strong>{{ maxSimultaneous() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.verdict') }}</span>
+          <strong><span class="verdict verdict-{{ verdict() }}">{{ t('labels.verdict' + verdict().charAt(0).toUpperCase() + verdict().slice(1)) }}</span></strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

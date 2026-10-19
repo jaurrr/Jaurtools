@@ -1,0 +1,96 @@
+{
+  "sort-list": {
+    "assumptionNote": "Empty lines are dropped from the sorted output. Sorting follows your browser's language-aware comparison rules.",
+    "benefits": [
+      "Sorts thousands of lines instantly in your browser.",
+      "A–Z and Z–A directions with one click.",
+      "Numeric-aware mode puts Item 2 before Item 10.",
+      "Case-insensitive by default — Apple sorts with apple.",
+      "Copy or download the sorted list with one click."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Enable Numeric-aware sorting. Then Item 2 sorts before Item 10, because the numbers inside the lines are compared as numbers, not as text.",
+        "q": "How do I sort Item 2 before Item 10?"
+      },
+      {
+        "a": "By default sorting ignores letter case, so apple and Apple group together. Enable the Case sensitive option for strict ASCII-style ordering.",
+        "q": "Where do capital letters sort?"
+      },
+      {
+        "a": "Yes — one click switches between A–Z and Z–A, and the list re-sorts instantly.",
+        "q": "Can I sort Z to A?"
+      },
+      {
+        "a": "The tool filters out blank lines before sorting, so the output is always a clean list.",
+        "q": "What happens to empty lines?"
+      },
+      {
+        "a": "The sort is language-aware: it uses your browser's comparison rules for the current site language, which handles accented letters correctly.",
+        "q": "Does it handle accented letters?"
+      },
+      {
+        "a": "Yes — everything is sorted locally and nothing is uploaded.",
+        "q": "Is my list private?"
+      }
+    ],
+    "formula": "sorted = lines.filter(nonEmpty).sort(collator.compare)\nif direction = desc: reverse(sorted)\ncollator: Intl.Collator(locale, { numeric, sensitivity })",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your list into the input box, one item per line.",
+      "Choose the direction: A–Z or Z–A.",
+      "Toggle Numeric-aware sorting for lists like Item 1, Item 2, Item 10.",
+      "Toggle Case sensitive only if you need strict uppercase-first ordering.",
+      "Copy the sorted list or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Sorting is alphabetical and language-aware, not plain character-code order.",
+      "Case is ignored by default; enable the option for strict case-sensitive sorting.",
+      "Numeric-aware mode compares embedded numbers as numbers.",
+      "Z–A is just the reverse of the A–Z result.",
+      "Everything runs locally; your list is never uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sort list online, alphabetical sort tool, sort lines A-Z, numeric sort list, sort text lines",
+    "labels": {
+      "ascLabel": "A to Z",
+      "caseLabel": "Case sensitive",
+      "clearButton": "Clear",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "descLabel": "Z to A",
+      "directionLabel": "Sort direction",
+      "downloadButton": "Download .txt",
+      "emptyState": "The sorted list will appear here.",
+      "linesLabel": "Lines",
+      "numericLabel": "Numeric-aware (Item 2 before Item 10)",
+      "outputLabel": "Sorted list",
+      "textLabel": "Your list",
+      "textPlaceholder": "One item per line..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Compares whole lines — it cannot sort by a specific column in a table.",
+      "Empty lines are dropped from the output.",
+      "Sort order depends on the browser's locale comparison rules."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free sort list tool. Sort lines A–Z or Z–A with numeric-aware and case-sensitive options. Copy or download, 100% private.",
+    "metaTitle": "Sort List — Alphabetical Line Sorter Online",
+    "name": "Sort List",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Sorts lines alphabetically in either direction: paste one item per line and get the sorted list back instantly. Options for numeric-aware sorting (Item 2 before Item 10) and case-sensitive ordering, with one-click copy and .txt download. Great for name lists, keywords, inventories and cleanup workflows.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sort list tool",
+    "tagline": "Alphabetical line sorting — A–Z or Z–A, numeric-aware, one click.",
+    "workedExample": "Input (3 lines):\ncherry\nbanana\nApple\n\nA–Z, case-insensitive:\nApple\nbanana\ncherry\n\nZ–A of the same list:\ncherry\nbanana\nApple\n\nNumeric-aware example:\nInput: Item 10, Item 2 -> Output: Item 2, Item 10",
+    "workedExampleHeading": "Worked example"
+  }
+}

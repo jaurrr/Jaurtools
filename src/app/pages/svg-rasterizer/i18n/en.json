@@ -1,0 +1,96 @@
+{
+  "svg-rasterizer": {
+    "benefits": [
+      "Live rendering: the PNG updates automatically as you type, with no convert button to press.",
+      "Scale from 1× to 8× for crisp exports on retina screens and in print.",
+      "Background choice: keep transparency or flatten onto white or black.",
+      "Pixel count readout tells you exactly how large the exported image is."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Rasterizing converts vector shapes into a fixed grid of pixels. The SVG's math-based shapes are drawn onto a canvas at the chosen pixel size, and the result is saved as a PNG image.",
+        "q": "What does rasterizing mean?"
+      },
+      {
+        "a": "Higher scale means more pixels, so edges and curves look smoother and the image stays sharp on high-density screens. A 4× export of a 100 px icon gives a 400 px PNG.",
+        "q": "Why would I use a higher scale?"
+      },
+      {
+        "a": "Browsers refuse to draw an SVG to canvas unless it has explicit width and height. The tool reads them from the SVG, falls back to the viewBox, and uses 300 px when nothing is set.",
+        "q": "Why does the tool set width and height on my SVG?"
+      },
+      {
+        "a": "Transparent areas stay transparent in PNG. If you choose white or black, the tool fills the background before drawing, which some platforms need for thumbnails and previews.",
+        "q": "What happens to transparency?"
+      },
+      {
+        "a": "Text inside SVG renders with the fonts available in your browser. If the SVG uses a font your device does not have, the browser substitutes another font, which can change the look.",
+        "q": "Why does my text look different after rasterizing?"
+      },
+      {
+        "a": "No. Rendering happens with the canvas API inside your browser tab.",
+        "q": "Is anything uploaded to a server?"
+      }
+    ],
+    "formula": "output width = SVG width × scale\noutput height = SVG height × scale\npixel count = output width × output height",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your SVG code into the editor box.",
+      "Move the scale slider: 1× for small icons, 4× or more for sharp exports.",
+      "Choose a background: transparent, white or black.",
+      "Wait a moment for the live preview to render automatically.",
+      "Download the PNG when it looks right."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Rasterizing turns resolution-independent vector shapes into a fixed pixel grid.",
+      "The browser draws the SVG into an <img> element and then onto a canvas element.",
+      "Width and height attributes are required for the browser to rasterize an SVG.",
+      "Scale multiplies the base dimensions: scale 4 on a 100 px SVG gives 400 px.",
+      "PNG preserves transparency; background fill is optional before export.",
+      "Rendering is debounced by 350 ms so typing stays smooth."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg rasterizer, svg to png render, rasterize svg online, svg render png",
+    "labels": {
+      "backgroundLabel": "Background",
+      "bgBlack": "Black",
+      "bgTransparent": "Transparent",
+      "bgWhite": "White",
+      "codeLabel": "SVG code",
+      "downloadButton": "Download PNG",
+      "emptyNote": "Paste valid SVG code above to see the rendered PNG.",
+      "errorInvalid": "The SVG code is not valid. The preview appears once it parses correctly.",
+      "errorRender": "Could not render the SVG. It may reference external resources.",
+      "outputSizeLabel": "Output size",
+      "pixelCountLabel": "Total pixels",
+      "previewAlt": "Rendered PNG preview",
+      "renderingNote": "Rendering…",
+      "scaleLabel": "Scale"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Text renders with locally available fonts only; custom web fonts may be substituted.",
+      "External images or fonts linked inside the SVG are blocked by browser security.",
+      "Very high scales on large SVGs can use a lot of memory.",
+      "Some advanced filters may render slightly differently than in a design app."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SVG rasterizer. Paste SVG code and get a live PNG render at 1× to 8× scale with transparent, white or black background.",
+    "metaTitle": "SVG Rasterizer — Render SVG to PNG Live at Any Scale",
+    "name": "SVG Rasterizer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An SVG rasterizer turns vector SVG code into a PNG image. Paste your SVG, choose a scale from 1× to 8× and a background, and the tool renders a live PNG preview automatically — no convert button needed. Download the PNG when it looks right.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG rasterizer results",
+    "tagline": "SVG → PNG render with live preview and adjustable scale.",
+    "workedExample": "You paste the sample circle SVG (100 × 100 via its viewBox) and set scale = 4.\n\nOutput width = 100 × 4 = 400 px; output height = 100 × 4 = 400 px.\nPixel count = 400 × 400 = 160,000 pixels.\n\nThe circle that was a 40 px radius path in vector form becomes smooth anti-aliased pixels in the PNG — sharp on a retina display where a 100 px export would look soft.",
+    "workedExampleHeading": "Worked example"
+  }
+}

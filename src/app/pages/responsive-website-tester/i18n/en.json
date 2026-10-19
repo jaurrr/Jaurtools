@@ -1,0 +1,88 @@
+{
+  "responsive-website-tester": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Responsive Website Tester",
+    "tagline": "Preview any website at common device widths.",
+    "metaTitle": "Responsive Website Tester - Preview Any Site on All Devices | JaurTools",
+    "metaDescription": "Preview any website at mobile, tablet and desktop widths instantly. Free responsive design checker — no signup.",
+    "keywords": "responsive tester, mobile view checker, website viewport tester, responsive design test, check site on mobile",
+    "resultsHeading": "Responsive test results",
+    "quickAnswer": "Enter any website URL and see how it looks at popular device widths: 390px phones, 768px tablets, 1024px laptops, and 1440px desktops. Use the presets or drag the slider for any custom width, and the page reloads live inside a resizable frame so you can spot layout breaks quickly.",
+    "keyFacts": [
+      "Responsive design means one site adapts its layout to any screen width.",
+      "The most common breakpoints cluster around 390px (phones), 768px (tablets), and 1024px+ (desktops).",
+      "This tool renders the real page in an iframe at the width you choose.",
+      "Horizontal scrolling at phone widths is the most common responsive bug.",
+      "Touch targets should be at least 44px so buttons are tappable on phones."
+    ],
+    "howTo": [
+      "Enter the full website URL starting with https://.",
+      "Pick a device preset or set a custom width with the slider.",
+      "Inspect the rendered page inside the frame.",
+      "Try several widths to catch layout breaks.",
+      "Fix issues in your CSS, then re-test the same URL."
+    ],
+    "formula": "Viewport widths tested:\nMobile: 390px | Tablet: 768px | Laptop: 1024px | Desktop: 1440px\nCustom: any width from 320px to 1920px",
+    "workedExample": "Testing https://jaurtools.com at 390px shows the mobile layout: navigation collapses, tool cards stack vertically, and text stays readable without zooming.\nAt 1440px the same page shows the full desktop grid.\nIf a table overflows at 390px, that is a responsive bug to fix with stacked cards or smaller padding.",
+    "benefits": [
+      "Spot layout breaks at real device widths in seconds.",
+      "No device lab needed: test from any computer.",
+      "Custom widths cover foldables and ultrawide screens.",
+      "Live reload of the real page, not a screenshot."
+    ],
+    "limitations": [
+      "Some sites block iframe embedding (X-Frame-Options) and show a blank frame.",
+      "The frame simulates width only, not touch input or device performance.",
+      "Login-walled pages cannot be tested without a session.",
+      "Very heavy pages may load slowly inside the frame."
+    ],
+    "faqs": [
+      {
+        "q": "Why is the frame blank for some sites?",
+        "a": "Those sites send X-Frame-Options or frame-ancestors headers that forbid embedding. It is a security choice by the site owner, not a tool bug."
+      },
+      {
+        "q": "Does this replace testing on a real phone?",
+        "a": "No. It catches most layout issues fast, but real devices also reveal touch, performance, and font-rendering differences. Test on a phone before launch."
+      },
+      {
+        "q": "Can I test localhost URLs?",
+        "a": "Only if this page can reach your machine. Public URLs work best; localhost generally does not load from a hosted page."
+      },
+      {
+        "q": "What width should I design for first?",
+        "a": "Start at 360-390px (common phones), then scale up. Mobile-first CSS with min-width breakpoints is the standard approach."
+      },
+      {
+        "q": "Is the tested URL sent anywhere?",
+        "a": "No. The URL stays in your browser; the iframe loads the site directly from your device like a normal visit."
+      }
+    ],
+    "assumptionNote": "Width simulation only: the frame cannot emulate touch input, device performance, or OS font rendering. Some sites block embedding.",
+    "labels": {
+      "urlLabel": "Website URL",
+      "urlPlaceholder": "https://example.com",
+      "invalidLabel": "Enter a valid URL starting with http:// or https://.",
+      "viewportLabel": "Viewport width",
+      "preset_mobile": "Mobile",
+      "preset_tablet": "Tablet",
+      "preset_laptop": "Laptop",
+      "preset_desktop": "Desktop",
+      "customLabel": "Custom width (px)",
+      "previewLabel": "Live preview"
+    }
+  }
+}

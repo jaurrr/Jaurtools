@@ -1,0 +1,90 @@
+{
+  "electricity-cost-calculator": {
+    "assumptionNote": "Assumes constant wattage while running and a flat per-kWh tariff.",
+    "benefits": [
+      "Reveals which appliance is secretly eating your bill.",
+      "Makes the payback of efficient appliances concrete.",
+      "Helps you compare AC temperature settings by cost.",
+      "Turns vague bills into per-device accountability."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A 1.5-ton split AC draws roughly 1,500–1,800 W while the compressor runs; inverter models throttle down once the room cools, averaging far less. A ceiling fan uses 50–75 W, an LED bulb 9–12 W, and a geyser 2,000–3,000 W. Check the star label for the honest number.",
+        "q": "How many watts does a typical AC use?"
+      },
+      {
+        "a": "One 'unit' is one kilowatt-hour (kWh) — running a 1,000 W appliance for one hour. Your bill's per-unit rate multiplied by units consumed is the energy charge; fixed charges and taxes sit on top.",
+        "q": "What is a unit of electricity?"
+      },
+      {
+        "a": "Yes, measurably. A 5-star 1.5-ton AC can use 20–30% less power than a 3-star for the same cooling. At 6 hours daily use, that is roughly ₹400–600 a month — the price premium typically pays back in 2–3 years.",
+        "q": "Does a 5-star AC really save money?"
+      },
+      {
+        "a": "Three usual suspects: slabbed tariffs (your marginal units cost more than the base rate you entered), fixed charges and taxes, and appliances you forgot — especially the geyser, water pump, and the old fridge running 24×7.",
+        "q": "Why is my bill higher than this calculator says?"
+      },
+      {
+        "a": "Attack the big loads first: raise the AC to 24–26°C, heat water only as needed, switch remaining bulbs to LED, and kill standby power with switchable strips. A 10% cut on a ₹3,000 bill is ₹3,600 a year — for zero lifestyle cost.",
+        "q": "How can I cut my electricity bill?"
+      },
+      {
+        "a": "Watts measure power (rate of use, like speed); watt-hours measure energy (total used, like distance). A 100 W bulb running 10 hours uses 1,000 watt-hours = 1 kWh. Bills charge for energy (kWh), not power (W).",
+        "q": "Watts vs watt-hours — what's the difference?"
+      }
+    ],
+    "formula": "Monthly kWh = watts x hours/day x days / 1,000.\nMonthly cost = kWh x tariff per kWh.\nYearly cost = monthly cost x 12.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Find the appliance's wattage (on its label or manual).",
+      "Enter how many hours a day it runs.",
+      "Enter days per month and your tariff per kWh.",
+      "Read the monthly units, monthly cost, and yearly cost."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Electricity is billed in kilowatt-hours (kWh): 1,000 watts for one hour.",
+      "An appliance's wattage is its maximum draw — actual use is often lower.",
+      "Heating and cooling devices (AC, geyser, heater) dominate most bills.",
+      "Standby power ('vampire loads') can add 5–10% to a home's bill.",
+      "Tariffs are often slabbed: the more you use, the higher the per-unit rate."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "electricity cost calculator, kwh calculator, appliance running cost calculator, power consumption calculator",
+    "labels": {
+      "dailyCost": "Cost per day",
+      "daysPerMonth": "Days used per month",
+      "hoursPerDay": "Hours used per day",
+      "kwhUnit": "kWh",
+      "monthlyCost": "Cost per month",
+      "monthlyKwh": "Energy used per month",
+      "ratePerKwh": "Tariff per kWh",
+      "wattage": "Appliance wattage (W)",
+      "yearlyCost": "Cost per year"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses the rated wattage; real draw varies with load and settings.",
+      "Ignores slabbed tariffs — heavy users may pay a higher rate.",
+      "Doesn't include fixed charges on your bill.",
+      "Cyclic appliances (fridge, AC compressor) don't run at full power constantly."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free electricity cost calculator: enter any appliance's wattage, daily use and your tariff to see its monthly and yearly running cost.",
+    "metaTitle": "Electricity Cost Calculator - kWh & Bill | JaurTools",
+    "name": "Electricity Cost Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A 1,500 W air conditioner running 6 hours a day for 30 days uses 270 kWh. At ₹8 per unit, that is ₹2,160 a month — ₹25,920 a year. The formula is simple: watts × hours × days ÷ 1,000 × your tariff.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your electricity cost results",
+    "tagline": "What does that appliance really cost to run? From wattage to your monthly bill.",
+    "workedExample": "1,500 W AC, 6 hours/day, 30 days, tariff ₹8/kWh:\n1. Monthly kWh = 1,500 x 6 x 30 / 1,000 = 270 kWh.\n2. Monthly cost = 270 x 8 = ₹2,160.\n3. Daily cost = 2,160 / 30 = ₹72.\n4. Yearly cost = 2,160 x 12 = ₹25,920.",
+    "workedExampleHeading": "Worked example"
+  }
+}

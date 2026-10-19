@@ -1,0 +1,105 @@
+{
+  "lead-scoring-calculator": {
+    "actions": {
+      "a": "Contact immediately.",
+      "b": "Follow up within 48 hours.",
+      "c": "Nurture with useful content.",
+      "d": "Do not pursue for now."
+    },
+    "assumptionNote": "Uses a fixed weight set (Budget 25, Authority 20, Need 20, Timeline 15, Engagement 20). Tune priorities against your own close rates.",
+    "benefits": [
+      "Stops salespeople wasting time on leads that will never buy.",
+      "Everyone scores the same way, so pipeline reviews become factual instead of political.",
+      "Grades make prioritization obvious: A leads first, D leads last.",
+      "Free and private - lead data never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Lead scoring is a method of ranking potential customers by assigning points to criteria like budget, authority, and need. The total score tells the sales team which leads to contact first.",
+        "q": "What is lead scoring?"
+      },
+      {
+        "a": "On this 0-100 scale, 80 and above (Grade A) is excellent - contact immediately. 60 to 79 (Grade B) is warm and worth a fast follow-up. Below 40 (Grade D) usually needs nurturing, not a sales call.",
+        "q": "What is a good lead score?"
+      },
+      {
+        "a": "This calculator uses a fixed, research-backed weight set so scores stay comparable. If your business consistently closes a certain lead type, you can mentally adjust: leads strong on your key criterion deserve a bump in priority.",
+        "q": "Can I change the weights?"
+      },
+      {
+        "a": "Re-score after every meaningful event: a demo, a pricing request, a budget conversation, or a long silence. A lead that was Grade C can become Grade A in one good call.",
+        "q": "How often should I re-score a lead?"
+      },
+      {
+        "a": "No. Any business with a sales process benefits: courses, real estate, agencies, and services all use it. The criteria stay the same; only what counts as a 10 changes.",
+        "q": "Is lead scoring only for B2B?"
+      },
+      {
+        "a": "No. Grade D means not now, not never. Put cold leads into a nurture sequence - email content, retargeting, occasional check-ins - and re-score them when they re-engage.",
+        "q": "Does a low score mean I should delete the lead?"
+      }
+    ],
+    "formula": "Points per criterion = (rating / 10) x weight\nScore = sum of all five weighted points\nWeights: Budget 25, Authority 20, Need 20, Timeline 15, Engagement 20\nGrades: A = 80+, B = 60-79, C = 40-59, D = below 40.",
+    "formulaHeading": "Formula",
+    "grades": {
+      "a": "A - Hot",
+      "b": "B - Warm",
+      "c": "C - Cool",
+      "d": "D - Cold"
+    },
+    "homeLabel": "Home",
+    "howTo": [
+      "Rate the lead from 0 to 10 on each of the five criteria using the sliders.",
+      "Be honest: a 10 means the criterion is fully satisfied, a 0 means it is completely absent.",
+      "Read the total score out of 100 and the A-D grade that appears instantly.",
+      "Follow the recommended action: call A leads now, nurture C leads, park D leads."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Lead scoring turns gut feeling into a number, so sales teams chase the best leads first.",
+      "The five criteria mirror BANT (Budget, Authority, Need, Timeline) plus engagement.",
+      "Weights matter more than raw ratings: budget fit counts for 25% of the score, timeline for 15%.",
+      "Grade A (80+) means contact now; Grade B (60-79) means follow up within 48 hours.",
+      "Score leads consistently over time and the grades start predicting which ones actually close.",
+      "Re-score leads after every meaningful interaction - a lead's grade changes as it warms up or cools down."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "lead scoring calculator, sales lead score, lead qualification, BANT lead scoring, lead grading tool",
+    "labels": {
+      "action": "Recommended action",
+      "criteria": {
+        "authority": "Decision authority",
+        "budget": "Budget fit",
+        "engagement": "Engagement",
+        "need": "Need / pain",
+        "timeline": "Purchase timeline"
+      },
+      "grade": "Grade",
+      "points": "points",
+      "score": "Lead score"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ratings are still subjective: two people may score the same lead differently.",
+      "The fixed weights are a starting point; tune them against your actual close rates.",
+      "Scores estimate fit and readiness, not guaranteed revenue.",
+      "Not a substitute for talking to the customer and understanding their real situation."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free lead scoring calculator: rate budget, authority, need, timeline, and engagement to get a 0-100 lead score and A-D grade. Instant, private, no sign-up.",
+    "metaTitle": "Lead Scoring Calculator - Grade Your Sales Leads | JaurTools",
+    "name": "Lead Scoring Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Each lead gets rated 0-10 on five weighted criteria: budget (25%), authority (20%), need (20%), timeline (15%), and engagement (20%). The calculator adds the weighted points into a score out of 100 and assigns a grade: A (80+) is hot and ready, D (below 40) is not worth chasing yet. Score every lead the same way and your pipeline stays honest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your lead score results",
+    "tagline": "Score every sales lead from 0 to 100 with a proven weighted model.",
+    "workedExample": "Ratings: Budget 8, Authority 6, Need 7, Timeline 5, Engagement 9.\n1. Budget: (8 / 10) x 25 = 20.0 points.\n2. Authority: (6 / 10) x 20 = 12.0 points.\n3. Need: (7 / 10) x 20 = 14.0 points.\n4. Timeline: (5 / 10) x 15 = 7.5 points.\n5. Engagement: (9 / 10) x 20 = 18.0 points.\n6. Total = 20.0 + 12.0 + 14.0 + 7.5 + 18.0 = 71.5.\nGrade B (60-79): follow up within 48 hours.",
+    "workedExampleHeading": "Worked example"
+  }
+}

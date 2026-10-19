@@ -1,0 +1,98 @@
+{
+  "date-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Date Calculator",
+    "tagline": "Add or subtract days from a date, or find the difference between two dates.",
+    "metaTitle": "Date Calculator - Add, Subtract & Date Difference | JaurTools",
+    "metaDescription": "Free date calculator with two modes: add or subtract days from any date, or find the exact difference between two dates in days, weeks and months.",
+    "keywords": "date calculator, add subtract days, date difference calculator, days between dates calculator",
+    "quickAnswer": "This calculator has two modes. In add/subtract mode, entering 90 days after 18 October 2026 gives 16 January 2027, a Saturday. In difference mode, the gap between 18 October 2026 and 1 January 2027 is 75 days - about 10 weeks and 5 days, or 2 months and 14 days.",
+    "keyFacts": [
+      "Adding or subtracting days never changes the calendar rules: month lengths and leap years apply automatically.",
+      "The difference between two dates counts whole calendar days between them, not including the end date.",
+      "Weeks are exact (7 days), but 'months' between dates is approximate because months vary in length.",
+      "Negative day entries in add/subtract mode move backwards - minus 10 days works like subtraction.",
+      "Both modes ignore time zones and work on plain calendar dates."
+    ],
+    "howTo": [
+      "Choose a mode: Add / subtract days, or Difference between dates.",
+      "In Add / subtract: pick a date, enter days (use a minus sign to go backwards), and read the new date and weekday.",
+      "In Difference: pick both dates and read the gap in days, weeks and a year/month/day breakdown.",
+      "Swap the dates freely - the difference is always reported as a positive number.",
+      "Copy the result for invoices, contracts or planning documents."
+    ],
+    "formula": "Add/subtract: new date = start date +/- N days.\nDifference: gap = |date B minus date A| in days.\nWeeks = floor(days / 7), leftover = days mod 7.\nY/M/D breakdown: full years, then full months, then days - same as the Age Difference Calculator.\nExample: 2026-10-18 + 90 days = 2027-01-16.",
+    "workedExample": "Mode: Add. Start: 18 October 2026 (Sunday). Days: 90.\n1. October: 18 + 13 = 31 October (13 days used).\n2. November: 30 more days -> 30 November (43 used).\n3. December: 31 more days -> 31 December (74 used).\n4. January: 16 more days -> 16 January 2027 (90 used).\n5. Weekday: 90 = 12 weeks + 6 days, so Sunday + 6 = Saturday.\nResult: 16 January 2027, Saturday.",
+    "benefits": [
+      "Two essential date tools in one page - no need to open a second calculator.",
+      "Perfect for 30/60/90-day payment terms, notice periods and delivery windows.",
+      "The weekday result prevents accidental weekend scheduling.",
+      "Difference mode settles duration questions for contracts and rentals."
+    ],
+    "limitations": [
+      "Business days and public holidays are not considered - this is pure calendar math.",
+      "Month and year breakdowns of a difference are calendar-based approximations.",
+      "Time zones are ignored; results are calendar dates only.",
+      "Does not validate whether a date is sensible for your purpose (for example, a past deadline)."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between this and Days Between Dates?",
+        "a": "This tool combines two jobs: shifting a date by N days, and measuring a gap. Days Between Dates focuses on precise durations between two date-times, including hours and business days."
+      },
+      {
+        "q": "Can I subtract days here?",
+        "a": "Yes - enter a negative number of days, or use the dedicated Subtract From a Date tool."
+      },
+      {
+        "q": "Does the difference include the end date?",
+        "a": "No, it counts the days strictly between the two dates. From Monday to Tuesday is 1 day."
+      },
+      {
+        "q": "Why do months in the breakdown vary?",
+        "a": "Because months are 28 to 31 days long. The breakdown counts whole calendar months first, so the same day-count can split differently depending on which months it spans."
+      },
+      {
+        "q": "Can I use it for 90-day payment terms?",
+        "a": "Yes - enter 90 days from the invoice date. Just remember payment terms sometimes mean business days, which this tool does not calculate."
+      },
+      {
+        "q": "Is the weekday always right?",
+        "a": "Yes, for any valid date. Weekday math is exact because every week is exactly 7 days."
+      }
+    ],
+    "resultsHeading": "Date Calculator results",
+    "labels": {
+      "mode": "Mode",
+      "addSubtract": "Add / subtract days",
+      "difference": "Difference between dates",
+      "date": "Date",
+      "days": "Days (use minus to go back)",
+      "firstDate": "First date",
+      "secondDate": "Second date",
+      "resultDate": "Resulting date",
+      "weekday": "Day of the week",
+      "gapDays": "Total days",
+      "gapWeeks": "Weeks",
+      "gapBreakdown": "Year / month / day breakdown",
+      "years": "years",
+      "months": "months",
+      "dayUnit": "days",
+      "weeksUnit": "weeks",
+      "daysUnit": "days"
+    }
+  }
+}

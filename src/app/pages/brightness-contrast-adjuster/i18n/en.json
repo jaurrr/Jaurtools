@@ -1,0 +1,92 @@
+{
+  "brightness-contrast-adjuster": {
+    "name": "Brightness Contrast Adjuster",
+    "tagline": "Rescue dull photos in seconds.",
+    "metaTitle": "Brightness Contrast Adjuster - Fix Dark or Flat Photos | JaurTools",
+    "metaDescription": "Fix dark or flat photos with precise brightness and contrast sliders and live preview. Free, private.",
+    "keywords": "brightness contrast editor, adjust brightness online, photo contrast slider, brighten image free",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a photo and move two sliders: brightness from -100 to +100 and contrast from -100 to +100. Each pixel is recalculated with the standard formula — output = (input - 128) x C + 128 + B. A pixel of 100 with brightness +20 and contrast +20 becomes 145. Reset anytime, download as PNG when it looks right.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Brightness shifts every pixel up or down by the same amount — like exposure compensation.",
+      "Contrast stretches or squeezes the distance of each pixel from mid-gray (128).",
+      "Both sliders run from -100 to +100 for fine, predictable control.",
+      "The math runs per pixel with the classic photo-editor formula, not a rough filter.",
+      "Adjustments apply to the original pixels every time — no quality stacking.",
+      "Reset returns the photo to its untouched original instantly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload a photo (JPG, PNG, or WebP).",
+      "Raise brightness if the photo is dark; lower it if highlights are blown out.",
+      "Raise contrast if the photo looks flat and gray; lower it if shadows are crushed.",
+      "Watch the live preview — small moves of 10 to 20 usually suffice.",
+      "Click Reset to start over, or Download to save as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "C = 1 + (contrast / 100)      B = brightness x 2.55\noutput = (input - 128) x C + 128 + B\nResult is clamped to 0..255 per channel.",
+    "formulaHeading": "Formula",
+    "workedExample": "Pixel value 100, brightness +20, contrast +20:\n1. C = 1 + 20/100 = 1.2.   B = 20 x 2.55 = 51.\n2. Distance from mid-gray: 100 - 128 = -28.\n3. Stretch: -28 x 1.2 = -33.6.\n4. Re-center and shift: -33.6 + 128 + 51 = 145.4, rounded to 145.\n5. The dark pixel brightens to 145 — lifted by brightness, pushed further from gray by contrast.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Rescue underexposed indoor shots and flat overcast photos in seconds.",
+      "Exact numeric control beats guessing with auto-enhance buttons.",
+      "Per-pixel math matches what desktop editors do — no surprises.",
+      "Non-destructive workflow: the original is reprocessed on every move.",
+      "Private editing with no uploads, accounts, or watermarks."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Cannot recover detail lost to pure black or pure white clipping.",
+      "Global adjustment only — no selective dodging, burning, or masks.",
+      "Extreme settings (+/-100) will posterize smooth gradients.",
+      "Heavy edits on JPGs can reveal compression artifacts."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "What is the difference between brightness and contrast?",
+        "a": "Brightness moves every pixel up or down equally — the whole image gets lighter or darker. Contrast changes the spread: it pushes bright pixels brighter and dark pixels darker (or squeezes them together at negative values). Dark photo? Brightness. Flat, gray photo? Contrast."
+      },
+      {
+        "q": "Will editing reduce my photo quality?",
+        "a": "Each slider move reprocesses the original pixels, so quality never stacks up. One subtle risk: 8-bit rounding can band ultra-smooth gradients after extreme moves, but normal adjustments are visually lossless."
+      },
+      {
+        "q": "Why does +100 contrast look terrible?",
+        "a": "At +100, C = 2.0, so every pixel is pushed twice as far from mid-gray — most pixels slam into pure black or white. Real photos live in the +/-10 to +/-40 range. Extremes are there for artistic posterize effects."
+      },
+      {
+        "q": "Can I fix an overexposed photo?",
+        "a": "Partly. Lowering brightness darkens the image, but pixels that clipped to pure white (255) contain no detail to recover — no editor can bring back what the sensor never recorded."
+      },
+      {
+        "q": "Does it work on transparent PNGs?",
+        "a": "Yes — only the color channels are adjusted; the alpha (transparency) channel is left untouched."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. Every pixel is recalculated in your browser. Your photo never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Brightness and Contrast results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photo",
+      "brightness": "Brightness",
+      "contrast": "Contrast",
+      "reset": "Reset",
+      "download": "Download image",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload a photo to see the live preview."
+    }
+  }
+}

@@ -1,0 +1,166 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label class="file-label" for="jf-files">
+          <app-icon name="upload" /> {{ t('labels.chooseFiles') }}
+        </label>
+        <input id="jf-files" type="file" class="file-input" multiple (change)="onFiles($event)" />
+        <p class="note">{{ t('labels.filesHint') }}</p>
+      </div>
+
+      @if (parts().length > 0) {
+        <p class="note">{{ t('labels.orderHint') }}</p>
+        <ul class="file-list">
+          @for (p of parts(); track $index) {
+            <li>
+              <span class="file-meta">
+                <strong>{{ $index + 1 }}.</strong>
+                <span class="file-name">{{ p.name }}</span>
+                <span class="file-size">{{ fmt(p.size) }}</span>
+              </span>
+              <span class="file-meta">
+                <button type="button" class="icon-btn" [disabled]="$index === 0" (click)="move($index, -1)"
+                  [attr.aria-label]="t('labels.moveUp') + ': ' + p.name">↑</button>
+                <button type="button" class="icon-btn" [disabled]="$index === parts().length - 1" (click)="move($index, 1)"
+                  [attr.aria-label]="t('labels.moveDown') + ': ' + p.name">↓</button>
+                <button type="button" class="icon-btn" (click)="removePart($index)"
+                  [attr.aria-label]="t('labels.removeFile') + ': ' + p.name">
+                  <app-icon name="x" />
+                </button>
+              </span>
+            </li>
+          }
+        </ul>
+      } @else {
+        <p class="note">{{ t('labels.emptyFiles') }}</p>
+      }
+
+      <div class="field">
+        <label for="jf-name">{{ t('labels.outNameLabel') }}</label>
+        <input id="jf-name" type="text" dir="ltr" [ngModel]="outName()" (ngModelChange)="setOutName($event)"
+          maxlength="120" autocomplete="off" />
+      </div>
+
+      @if (error()) {
+        <p class="error" role="alert">{{ error() }}</p>
+      }
+      @if (doneInfo()) {
+        <p class="success" role="status">{{ doneInfo() }}</p>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" [disabled]="!canJoin()" (click)="join()">
+          <app-icon name="copy" /> {{ t('labels.joinButton') }}
+        </button>
+        <button type="button" class="btn" [disabled]="parts().length === 0 || busy()" (click)="clearAll()">
+          {{ t('labels.clearAll') }}
+        </button>
+      </div>
+
+      <div class="results">
+        <div class="result-row">
+          <span><app-icon name="copy" /> {{ t('labels.resultParts') }}</span>
+          <strong>{{ parts().length }}</strong>
+        </div>
+        <div class="result-row total">
+          <span><app-icon name="database" /> {{ t('labels.resultTotal') }}</span>
+          <strong>{{ totalSizeLabel() }}</strong>
+        </div>
+      </div>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

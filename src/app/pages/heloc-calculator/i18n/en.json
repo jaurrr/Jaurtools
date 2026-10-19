@@ -1,0 +1,89 @@
+{
+  "heloc-calculator": {
+    "assumptionNote": "Draw-period payments are interest-only; the repayment payment assumes the drawn balance amortizes over the repayment term at a fixed rate. Real HELOCs usually have variable rates that change the payment.",
+    "benefits": [
+      "See the cheap interest-only draw payment and the real repayment payment side by side.",
+      "Watch how your payment jumps when the draw period ends - no surprises.",
+      "Check your available credit and utilization instantly.",
+      "Free, instant, and private - no bank appointment needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A HELOC (Home Equity Line of Credit) is a revolving credit line secured by your home, like a credit card with a big limit. A home equity loan gives you one lump sum with a fixed rate. HELOC rates are usually variable; home equity loan rates are usually fixed.",
+        "q": "HELOC vs home equity loan - what is the difference?"
+      },
+      {
+        "a": "Most HELOCs have two phases: a draw period (often 10 years) when you can borrow and pay interest only, then a repayment period (often 15-20 years) when you must pay principal plus interest and usually cannot draw more.",
+        "q": "What are the draw and repayment periods?"
+      },
+      {
+        "a": "Yes - that is the most common structure. During the draw period you can choose to pay interest only, which keeps payments low but leaves the balance untouched. This calculator shows both options.",
+        "q": "Are HELOC payments interest-only at first?"
+      },
+      {
+        "a": "If the rate rises, your payment rises too - that is the main risk of a variable-rate HELOC. A 2% rate increase on a $40,000 balance adds about $67 per month to the interest-only payment. This calculator uses a fixed rate for simplicity.",
+        "q": "What happens if the rate goes up?"
+      },
+      {
+        "a": "Generally only up to 80-85% of your home's value minus what you owe on the mortgage. So on a $400,000 home with a $280,000 mortgage, the maximum line is about $40,000-$60,000.",
+        "q": "How much can I borrow with a HELOC?"
+      },
+      {
+        "a": "Your home is the collateral, so missing payments can lead to foreclosure. Also the draw period ends whether you are ready or not, and the payment jump catches many borrowers off guard. Borrow only what you need.",
+        "q": "What are the risks?"
+      }
+    ],
+    "formula": "Interest-only payment = drawn balance x annual rate / 12\nRepayment payment = drawn balance x r / (1 - (1+r)^-n), with r = rate/12, n = repayment years x 12\nAvailable credit = credit limit - drawn balance",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your HELOC credit limit.",
+      "Enter how much you have drawn (or plan to draw).",
+      "Enter the interest rate and the repayment term in years.",
+      "Compare the interest-only draw payment with the full repayment payment."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "HELOC = Home Equity Line of Credit: revolving credit secured by your home.",
+      "Draw period: borrow and usually pay interest only (often 10 years).",
+      "Repayment period: pay principal plus interest (often 15-20 years).",
+      "Most HELOC rates are variable - payments can rise.",
+      "Your home is collateral, so this is not risk-free borrowing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "heloc calculator, home equity line of credit calculator, heloc payment calculator, heloc draw repayment calculator",
+    "labels": {
+      "annualRate": "Interest rate (%/yr)",
+      "available": "Available credit",
+      "creditLimit": "Credit limit ($)",
+      "drawnBalance": "Drawn balance ($)",
+      "interestOnly": "Draw-period payment (interest only)",
+      "repayPayment": "Repayment payment / month",
+      "repayYears": "Repayment term (years)",
+      "utilization": "Credit utilization"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a fixed rate - real HELOCs are usually variable.",
+      "Simplified two-phase model; real HELOC terms vary by lender.",
+      "Does not include annual fees, draw fees, or closing costs.",
+      "Not financial advice - confirm terms with your lender."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free HELOC calculator: draw-period interest-only payment vs repayment payment, available credit, and utilization. Instant, private, no sign-up.",
+    "metaTitle": "HELOC Calculator - Draw & Repayment Payments | JaurTools",
+    "name": "HELOC Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "On a $100,000 HELOC with $40,000 drawn at 8%, the interest-only draw payment is $266.67 per month. When the draw period ends, repaying the same $40,000 over 15 years costs $382.30 per month - a $115.63 jump. Available credit is $60,000 and utilization is 40%.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your HELOC results",
+    "tagline": "Compare HELOC draw-period and repayment payments instantly.",
+    "workedExample": "$100,000 limit, $40,000 drawn, 8% rate, 15-year repayment:\n1. Interest-only: $40,000 x 0.08 / 12 = $266.67 per month.\n2. Repayment: r = 0.08/12 = 0.0066667, n = 180.\n3. Payment = $40,000 x 0.0066667 / (1 - 1.0066667^-180) = $266.67 / 0.69762 = about $382.30.\n4. Payment jump = $382.30 - $266.67 = $115.63 more per month.\n5. Available credit = $100,000 - $40,000 = $60,000. Utilization = 40%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "one-rep-max-calculator": {
+    "assumptionNote": "1RM estimates are planning numbers from validated formulas - not a substitute for a supervised max test.",
+    "benefits": [
+      "Plans training loads without risky max-out attempts.",
+      "Two formulas cross-check each other - the average is steadier than either alone.",
+      "The percentage table gives every set weight in one glance.",
+      "Tracks progress: when your 8-rep weight climbs, your 1RM estimate climbs too."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Both land within a few percent for 1-10 reps. Epley runs slightly high, Brzycki slightly low at higher reps. Averaging them, as this calculator does, is the pragmatic choice most coaches use.",
+        "q": "Which formula is more accurate, Epley or Brzycki?"
+      },
+      {
+        "a": "3-8 reps to near-failure gives the best estimate. Singles are the most accurate but risky; sets past 12 reps make both formulas drift.",
+        "q": "How many reps should I use for the estimate?"
+      },
+      {
+        "a": "Strength: 85-95% for low reps. Muscle growth: 65-85%. Endurance and technique: 50-65%. The table above your result lists them all.",
+        "q": "What percentage should I train at?"
+      },
+      {
+        "a": "Formulas assume perfect efficiency. Technique, fatigue, and psychology cost real kilos on a true max. Treat the estimate as a planning number, then adjust from real sets.",
+        "q": "Why is my estimated 1RM higher than what I can actually lift?"
+      },
+      {
+        "a": "Only if your program needs it and you have a spotter, safety bars, and experience. For most lifters, the estimate plus submaximal sets is enough.",
+        "q": "Should I test my true 1RM?"
+      },
+      {
+        "a": "Yes if you add weight via a belt or vest - enter the total load including your bodyweight. Pure bodyweight estimates are rough because the formulas were built on barbell data.",
+        "q": "Does it work for bodyweight exercises?"
+      }
+    ],
+    "formula": "Epley: 1RM = W x (1 + R / 30)\nBrzycki: 1RM = W x 36 / (37 - R)\n\nExample: 80 kg x 8 reps\nEpley: 80 x (1 + 8/30) = 80 x 1.2667 = 101.3 kg\nBrzycki: 80 x 36 / (37 - 8) = 80 x 36/29 = 99.3 kg\nAverage: (101.3 + 99.3) / 2 = 100.3 kg",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the weight you lifted (bar included).",
+      "Enter the reps you did to near-failure with good form.",
+      "Your Epley, Brzycki, and averaged 1RM appear instantly.",
+      "Use the percentage table below to pick training loads.",
+      "Retest every 8-12 weeks - or just recalculate when your sets get stronger."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "1RM = the most weight you can lift once with good form.",
+      "Epley: 1RM = weight x (1 + reps / 30).",
+      "Brzycki: 1RM = weight x 36 / (37 - reps).",
+      "Formulas are most accurate for 1-10 reps; past 12 they drift.",
+      "Use 65-85% of 1RM for most muscle-building training, 85%+ for strength.",
+      "Always warm up and use a spotter before testing near your max."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "one rep max calculator, 1rm calculator, epley formula, brzycki formula, max lift calculator",
+    "labels": {
+      "averageResult": "Estimated 1RM (average)",
+      "brzyckiResult": "Brzycki",
+      "epleyResult": "Epley",
+      "kgUnit": "kg",
+      "percentTableLabel": "Training loads as % of 1RM",
+      "repsDone": "Reps performed",
+      "tableKg": "Weight",
+      "tablePct": "% of 1RM",
+      "weightLifted": "Weight lifted (kg)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates, not measurements - a real 1RM test can differ by 5-10%.",
+      "Accuracy fades past 10-12 reps.",
+      "Different lifts and body types respond differently; use per-lift numbers.",
+      "Never test a true 1RM alone - use a spotter and safety bars."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Estimate your one-rep max from weight and reps with Epley and Brzycki formulas. Get a full 50-100% training table. Free, private, no sign-up.",
+    "metaTitle": "One Rep Max Calculator - Epley & Brzycki | JaurTools",
+    "name": "One Rep Max Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Your one-rep max is roughly what you lift times a factor for your reps. Lifting 80 kg for 8 reps gives about 101.3 kg by Epley (weight x (1 + reps/30)) and 99.3 kg by Brzycki (weight x 36/(37 - reps)) - an average of about 100.3 kg. Both are estimates; a true 1RM needs a real test.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your one-rep max results",
+    "tagline": "Estimate your 1RM from any set with the Epley and Brzycki formulas - plus a full percentage table.",
+    "workedExample": "You bench 80 kg for 8 clean reps:\n1. Epley: 1 + 8/30 = 1.2667; 80 x 1.2667 = 101.3 kg.\n2. Brzycki: 37 - 8 = 29; 36/29 = 1.2414; 80 x 1.2414 = 99.3 kg.\n3. Average: (101.3 + 99.3) / 2 = 100.3 kg estimated 1RM.\n4. Training loads: 70% = 70.2 kg, 85% = 85.3 kg.",
+    "workedExampleHeading": "Worked example"
+  }
+}

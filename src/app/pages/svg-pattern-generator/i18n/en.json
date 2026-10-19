@@ -1,0 +1,100 @@
+{
+  "svg-pattern-generator": {
+    "benefits": [
+      "Seamless by construction: the tile repeats with no visible edges.",
+      "Tiny files: a full-page pattern is usually under 2 KB of SVG.",
+      "Vector sharpness: patterns stay crisp on retina screens and in print.",
+      "Three exports: full-page SVG, single tile SVG, and a PNG render."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An SVG pattern is a small tile that the browser repeats to fill any area, defined with a <pattern> element. Unlike a big background photo, the file stays tiny because only one tile is stored.",
+        "q": "What is an SVG pattern?"
+      },
+      {
+        "a": "The tile holds one centered shape on a background color. When the browser repeats the tile in a grid, the edges line up exactly, so the pattern looks continuous.",
+        "q": "Why does the pattern look seamless?"
+      },
+      {
+        "a": "The generator draws the shape centered in the tile, so rotation keeps it seamless. With the stripes shape, rotation creates diagonal stripes — a classic trick for section dividers.",
+        "q": "What happens when I rotate the shape?"
+      },
+      {
+        "a": "The tile SVG is one repeating unit, useful as a CSS background with background-repeat. The full SVG is an 800 × 600 picture already filled with the pattern, ready to use as an image.",
+        "q": "What is the difference between the tile and full SVG?"
+      },
+      {
+        "a": "Copy the full SVG into an <img> tag, inline the pattern code into your HTML, or use the tile as a data-URI background in CSS. All exports are standard SVG that works everywhere.",
+        "q": "How do I use the pattern on my website?"
+      },
+      {
+        "a": "No. Everything is generated locally in your browser.",
+        "q": "Is anything uploaded?"
+      }
+    ],
+    "formula": "shape size (px) = tile × shapeSize ÷ 100\ncircle radius = shape size ÷ 2\n\ntiles across 800 px = 800 ÷ tile  (must be seamless because each tile is identical)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a shape: circle, square, triangle, diamond or stripes.",
+      "Set the tile size and the shape size as a percentage of the tile.",
+      "Choose a background color and a shape color with good contrast.",
+      "Add rotation if you want a dynamic look, such as diagonal stripes.",
+      "Download the full SVG, the single tile, or a PNG render."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SVG patterns repeat a small tile with the <pattern> element and patternUnits=\"userSpaceOnUse\".",
+      "A centered shape inside the tile guarantees the edges line up when repeated.",
+      "Tile size controls the density of the pattern: smaller tiles look finer.",
+      "Shape size is a percentage of the tile, so patterns scale consistently.",
+      "Rotation happens around the tile center, keeping the repeat seamless.",
+      "The full-page export is an 800 × 600 SVG pre-filled with the pattern."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "svg pattern generator, pattern maker, seamless pattern svg, background pattern generator",
+    "labels": {
+      "bgLabel": "Background color",
+      "codeLabel": "SVG code",
+      "downloadFull": "Download pattern SVG",
+      "downloadPng": "Download PNG",
+      "downloadSvg": "Download pattern SVG",
+      "downloadTile": "Download tile only",
+      "rotationLabel": "Rotation",
+      "shape": {
+        "circle": "Circle",
+        "diamond": "Diamond",
+        "square": "Square",
+        "stripes": "Stripes",
+        "triangle": "Triangle"
+      },
+      "shapeColorLabel": "Shape color",
+      "shapeLabel": "Shape",
+      "shapeSizeLabel": "Shape size",
+      "tileLabel": "Tile size"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only geometric shapes are offered; there are no floral or hand-drawn motifs.",
+      "The full-page export is fixed at 800 × 600; resize it in code if you need other sizes.",
+      "Two colors only: gradients and multi-color patterns are not supported.",
+      "Very small tiles with large shapes can look crowded — keep shape size moderate."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SVG pattern generator. Build seamless geometric patterns from shapes with custom colors and sizes. Download as SVG or PNG.",
+    "metaTitle": "SVG Pattern Generator — Create Seamless Geometric Patterns",
+    "name": "SVG Pattern Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An SVG pattern generator builds seamless repeating backgrounds from simple geometric shapes. Choose a shape, tile size, colors and rotation, and the tool generates a tile that repeats without visible edges. Download the full 800 × 600 SVG, the single tile, or a PNG render for your project.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "SVG pattern generator results",
+    "tagline": "Generates SVG patterns from shapes, downloadable as SVG or image.",
+    "workedExample": "You choose the circle shape, tile = 80 px and shape size = 50%.\n\nShape size = 80 × 50 ÷ 100 = 40 px; radius = 40 ÷ 2 = 20 px.\n\nThe tile is an 80 × 80 square with a 20 px radius circle centered at (40, 40). Across the 800 px wide full export there are 800 ÷ 80 = 10 identical tiles per row, so the columns line up perfectly and no seam is visible. The whole file is under 1 KB.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "image-to-ico-converter": {
+    "benefits": [
+      "Turns any image — PNG, JPEG, WebP, GIF, BMP, even SVG — into a genuine Windows .ico file.",
+      "You choose exactly which sizes go inside: 16 px for taskbars up to 256 px for desktops.",
+      "The .ico embeds PNG-compressed images, so icons stay razor sharp at every size.",
+      "Hand-written ICO encoder with zero dependencies — no libraries, no uploads, no watermarks."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An .ico is a container holding several images at different sizes. Windows picks the best size for each context: 16 px in taskbars, 32 px in lists, 48 px in tiles, 256 px on desktops. One file covers them all.",
+        "q": "What is an .ico file?"
+      },
+      {
+        "a": "Yes. The generated file embeds PNG-compressed images (the Vista+ format), which every modern Windows, macOS, and Linux desktop reads. Very old Windows 98-era software may prefer BMP icons, but nothing current needs them.",
+        "q": "Will the .ico work on modern Windows?"
+      },
+      {
+        "a": "For app icons and shortcuts, 16/32/48 is the classic set. Add 256 for crisp desktop icons on high-DPI screens. Untick sizes you do not need to keep the file small.",
+        "q": "Which sizes should I include?"
+      },
+      {
+        "a": "The browser draws the SVG at the target size, so vector logos convert perfectly — sharp at 16 px and at 256 px alike. This is the best source format for icons.",
+        "q": "Can I convert an SVG logo?"
+      },
+      {
+        "a": "Animated GIFs contribute only their first frame — animation cannot live inside a static icon. HEIC and TIFF files cannot be decoded by browsers, so they are rejected with an honest error.",
+        "q": "What about GIF, HEIC, or TIFF files?"
+      },
+      {
+        "a": "Square sources work best. Rectangular images are cover-fit: scaled to fill the square and center-cropped, never stretched. For full control, crop to a square first.",
+        "q": "My image is not square — what happens?"
+      }
+    ],
+    "formula": "ICO file = 6-byte header + 16 bytes per directory entry + image data\nEntry: width(1) height(1) colors(1) reserved(1) planes(2) bpp(2) size(4) offset(4)\nExample: 3 sizes (16/32/48) -> header bytes 0-5, entries bytes 6-53, PNG data from byte 54.\nSize 256 is stored as 0 in the width/height byte.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload an image from your device (up to 10 MB) — PNG, JPEG, WebP, GIF, BMP, or SVG.",
+      "Tick the icon sizes you want inside the .ico (16–256 px).",
+      "Press Convert to render each size and pack them into one .ico file.",
+      "Review the per-size byte table to confirm every entry.",
+      "Press Download .ico to save the finished icon file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Converts PNG, JPEG, WebP, GIF, BMP, and SVG sources into genuine Windows .ico files.",
+      "You pick the embedded sizes: 16, 32, 48, 64, 128, and 256 px — any combination.",
+      "Each size is cover-fit rendered on canvas, then PNG-encoded and packed with a hand-written ICO encoder.",
+      "The result table shows every entry's dimensions and byte size before you download.",
+      "PNG-compressed ICO entries work on all modern Windows, macOS, and Linux desktops.",
+      "Everything runs in your browser — the image never leaves your device."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "png to ico, image to ico converter, jpg to ico, svg to ico, icon converter online, make ico file",
+    "labels": {
+      "acceptHint": "PNG, JPEG, WebP, GIF, BMP, SVG accepted. HEIC/TIFF cannot be decoded by browsers.",
+      "convert": "Convert to .ico",
+      "converting": "Converting…",
+      "decodeError": "That file could not be decoded as an image. HEIC and TIFF files are not supported by browsers.",
+      "downloadIco": "Download icon.ico",
+      "icoReady": "Icon file ready",
+      "needSizes": "Please select at least one icon size.",
+      "newImage": "New image",
+      "sizeError": "That file is larger than 10 MB. Please choose a smaller image.",
+      "sizesLabel": "Sizes inside the .ico",
+      "typeError": "That file could not be read. Please choose an image file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "HEIC and TIFF files cannot be decoded by any browser — they are rejected, not converted.",
+      "Animated GIFs contribute only their first frame; animation is lost.",
+      "The .ico uses PNG compression (Vista+ format); Windows 98-era software is not supported.",
+      "Rectangular sources are center-cropped to square — crop beforehand for full control."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Turn any image into a genuine Windows .ico file with exactly the sizes you tick, from 16 to 256px. Free, private, in-browser.",
+    "metaTitle": "Image to ICO Converter - Real Multi-Size .ico Files | JaurTools",
+    "name": "Image to ICO Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload any image to build a genuine Windows .ico file with exactly the sizes you tick — 16 to 256 px. Each size is rendered on canvas and packed with a hand-written ICO encoder. The .ico downloads instantly and your image never leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your icon results",
+    "tagline": "Any image in, a real .ico out.",
+    "workedExample": "You upload a 1000 x 1000 px PNG logo and tick 16, 32, and 48 px.\nEach size is rendered square and PNG-encoded: say 1.2 KB, 3.8 KB, and 7.1 KB.\nThe .ico = 6-byte header + 3 x 16-byte entries (bytes 6–53) + 12.1 KB of PNG data = about 12.2 KB total.\nIt downloads as icon.ico, ready for Windows.",
+    "workedExampleHeading": "Worked example"
+  }
+}

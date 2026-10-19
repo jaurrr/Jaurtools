@@ -1,0 +1,94 @@
+{
+  "xml-sitemap-generator": {
+    "benefits": [
+      "Search engines discover every page: sitemaps help crawlers find pages that few sites link to.",
+      "No manual XML writing: paste a list of URLs and get a valid sitemap.xml in one click.",
+      "Automatic cleanup: duplicates, fragments and invalid URLs are filtered out before output.",
+      "Upload-ready file: the download is a standards-compliant sitemap.xml for Google Search Console."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A sitemap.xml is a file listing all the pages of a website that you want search engines to crawl. Search engines read it to discover pages, learn update frequencies and prioritize crawling.",
+        "q": "What is a sitemap.xml?"
+      },
+      {
+        "a": "After generating it, upload sitemap.xml to the root of your website (e.g. https://example.com/sitemap.xml) and submit that URL in Google Search Console under Sitemaps. Also reference it in robots.txt.",
+        "q": "Where do I put the generated sitemap?"
+      },
+      {
+        "a": "The tool checks every line: it must be a valid http:// or https:// URL. Lines that fail are counted as invalid and skipped, and exact duplicates (ignoring URL fragments) are removed. A summary shows valid, invalid and duplicate counts.",
+        "q": "What happens to invalid or duplicate URLs?"
+      },
+      {
+        "a": "The sitemap protocol caps one file at 50,000 URLs or 50 MB uncompressed. If your site is larger, split the list and create a sitemap index file linking the parts.",
+        "q": "Is there a limit to how many URLs I can include?"
+      },
+      {
+        "a": "changefreq is only a hint to crawlers, not a promise. Use values that reflect reality: daily for news, weekly for blogs, monthly or yearly for mostly static pages. lastmod should be the real last modification date of each page.",
+        "q": "What changefreq and lastmod should I use?"
+      },
+      {
+        "a": "Yes, all of it runs in your browser. Your URL list is never uploaded anywhere, so private or unreleased pages stay private.",
+        "q": "Is my URL list private?"
+      }
+    ],
+    "formula": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://example.com/page</loc>\n    <lastmod>2026-10-18</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.5</priority>\n  </url>\n</urlset>\nOne <url> block per page. <loc> is required; the other three are optional.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your page URLs into the box, one URL per line.",
+      "Choose a changefreq hint (how often the pages change).",
+      "Set a priority between 0.0 and 1.0 (1.0 = most important).",
+      "Keep lastmod on to stamp each entry with today's date.",
+      "Copy the XML or download it as sitemap.xml, then upload it to your site root."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "sitemap.xml follows the Sitemaps protocol (sitemaps.org), supported by Google, Bing and other search engines since 2006.",
+      "A sitemap does not guarantee indexing, but it helps crawlers discover and prioritize your pages.",
+      "Each <url> entry must contain an absolute <loc>; <lastmod>, <changefreq> and <priority> are optional hints.",
+      "One sitemap file holds at most 50,000 URLs or 50 MB uncompressed.",
+      "Special characters in URLs are escaped automatically (e.g. & becomes &amp;) so the XML stays valid.",
+      "URL fragments (#section) are stripped, because search engines index the page, not the fragment."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sitemap generator, sitemap.xml maker, XML sitemap tool, generate sitemap online, free sitemap builder",
+    "labels": {
+      "changefreqLabel": "Change frequency",
+      "copyButton": "Copy XML",
+      "downloadButton": "Download sitemap.xml",
+      "duplicateLabel": "duplicates skipped",
+      "invalidLabel": "invalid skipped",
+      "lastmodLabel": "Include lastmod (today's date)",
+      "noteText": "The sitemap is generated entirely in your browser; nothing is uploaded.",
+      "priorityLabel": "Priority (0.0 - 1.0)",
+      "skippedLabel": "Skipped",
+      "statsLabel": "Valid URLs",
+      "urlsHint": "One URL per line. Only http:// and https:// URLs are included.",
+      "urlsLabel": "Page URLs"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A sitemap helps discovery but never guarantees that Google will index a page.",
+      "changefreq and priority are hints only; crawlers may ignore them.",
+      "Very large sites need multiple sitemap files plus a sitemap index; this tool makes one file at a time.",
+      "The lastmod stamp uses today's date for every entry; per-page real dates need a crawler-based generator."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Paste a list of URLs and generate a valid sitemap.xml instantly. Free XML sitemap generator with changefreq, priority and lastmod. Runs in your browser.",
+    "metaTitle": "XML Sitemap Generator — Free sitemap.xml Maker",
+    "name": "XML Sitemap Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A sitemap.xml lists your site's pages for search engines to crawl. Paste your URLs (one per line), pick changefreq and priority, and download a ready-to-upload sitemap.xml.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sitemap results",
+    "tagline": "Generate a sitemap.xml file from a pasted list of URLs.",
+    "workedExample": "Input (2 URLs):\nhttps://example.com/\nhttps://example.com/about\nSettings: changefreq = weekly, priority = 0.5, lastmod on.\nStep 1: both lines parse as valid https URLs, so valid = 2, invalid = 0, duplicates = 0. Step 2: each URL becomes a <url> block with its <loc>, today's <lastmod>, the chosen <changefreq> and <priority>.\nOutput (excerpt):\n<url>\n  <loc>https://example.com/</loc>\n  <lastmod>2026-10-18</lastmod>\n  <changefreq>weekly</changefreq>\n  <priority>0.5</priority>\n</url>\nThe second block is identical except <loc>https://example.com/about</loc>. Save the full output as sitemap.xml and upload it to your site root.",
+    "workedExampleHeading": "Worked example"
+  }
+}

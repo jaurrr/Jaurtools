@@ -1,0 +1,90 @@
+{
+  "color-inverter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Color Inverter",
+    "tagline": "One click to the exact opposite color.",
+    "metaTitle": "Color Inverter - Find Any Color's Opposite | JaurTools",
+    "metaDescription": "Invert any color to its exact opposite instantly. Free color negative tool with HEX, RGB and HSL output.",
+    "keywords": "invert color, color inverter, invert hex color, color negative, opposite color finder",
+    "quickAnswer": "Inverting a color means subtracting each RGB channel from 255. #FF5733 inverts to #00A8CC: red 255 becomes 0, green 87 becomes 168, blue 51 becomes 204. The result is the color's photographic negative. Inverted pairs have maximum RGB contrast, which makes them handy for dark-mode previews and bold accents.",
+    "keyFacts": [
+      "Color inversion flips every RGB channel: new value = 255 - old value.",
+      "Inverting twice always returns the original color: invert(invert(x)) = x.",
+      "Black (#000000) inverts to white (#FFFFFF), and white inverts to black.",
+      "An inverted pair has the highest possible RGB contrast, which is why negatives look so striking.",
+      "Inversion equals a 180-degree hue rotation plus a lightness flip - it is not the same as the complementary color on a design wheel."
+    ],
+    "howTo": [
+      "Pick a color with the color picker, or type a HEX code such as #FF5733.",
+      "The inverted color appears instantly - no button to press.",
+      "Compare the original and inverted swatches side by side.",
+      "Copy the inverted HEX, RGB or HSL value with one tap.",
+      "Try inverting twice to confirm you land back on your original color."
+    ],
+    "formula": "Inverted channel = 255 - original channel.\nExample: #FF5733 = RGB(255, 87, 51).\nR: 255 - 255 = 0 | G: 255 - 87 = 168 | B: 255 - 51 = 204.\nResult: RGB(0, 168, 204) = #00A8CC.",
+    "workedExample": "#FF5733 (a warm orange-red):\n1. Read the channels: R = 255, G = 87, B = 51.\n2. Subtract each from 255: R = 0, G = 168, B = 204.\n3. Convert back to HEX: 0 = 00, 168 = A8, 204 = CC.\n4. Result: #00A8CC - a cool teal blue, the exact negative of the input.",
+    "benefits": [
+      "Instant dark-mode check: invert light-theme colors to preview a dark theme.",
+      "Creates maximum-contrast pairs for text, buttons and calls to action.",
+      "Useful in photo editing, accessibility testing and graphic design.",
+      "One tap copies the result - no image editor required."
+    ],
+    "limitations": [
+      "Inverted colors are mathematically exact but not always visually pleasing - taste still matters.",
+      "Maximum RGB contrast does not guarantee WCAG text-contrast compliance on its own.",
+      "Inversion ignores human color perception; inverted pairs can look uneven in brightness."
+    ],
+    "faqs": [
+      {
+        "q": "What does it mean to invert a color?",
+        "a": "It means replacing every RGB channel value with 255 minus that value. The result is the color's photographic negative - the same transformation old photo negatives used."
+      },
+      {
+        "q": "Is an inverted color the same as a complementary color?",
+        "a": "Not exactly. The complementary color on an HSL wheel rotates the hue by 180 degrees but keeps lightness and saturation. Inversion also flips lightness, so the two results usually differ."
+      },
+      {
+        "q": "Why does black invert to white?",
+        "a": "Black is RGB(0, 0, 0). Subtracting each channel from 255 gives RGB(255, 255, 255), which is white. The extremes always swap."
+      },
+      {
+        "q": "If I invert twice, do I get the original color back?",
+        "a": "Yes, always. 255 - (255 - x) = x for every channel, so a double inversion is a perfect round trip with no loss."
+      },
+      {
+        "q": "Can I use an inverted color for text on my original color?",
+        "a": "The pair has maximum RGB contrast, which is a good starting point, but you should still check the WCAG contrast ratio - especially for small text - because RGB distance and perceived contrast are not the same thing."
+      },
+      {
+        "q": "Does this work with shorthand HEX like #F53?",
+        "a": "Yes. The tool expands #F53 to #FF5533 first, then inverts it to #00AACC."
+      }
+    ],
+    "resultsHeading": "Your inverted color results",
+    "labels": {
+      "colorLabel": "Color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #F53 or #FF5733.",
+      "originalLabel": "Original",
+      "invertedLabel": "Inverted",
+      "invertedHex": "Inverted HEX",
+      "invertedRgb": "Inverted RGB",
+      "invertedHsl": "Inverted HSL",
+      "copyHex": "Copy inverted HEX",
+      "copied": "Copied"
+    }
+  }
+}

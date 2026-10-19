@@ -1,0 +1,110 @@
+{
+  "macro-calculator": {
+    "assumptionNote": "Targets use the Mifflin-St Jeor equation and standard sport-nutrition protein ranges - good estimates, not medical prescriptions.",
+    "benefits": [
+      "Turns vague diet advice into exact daily numbers.",
+      "Protects muscle while losing fat by setting protein first.",
+      "Adjusts calories to your goal instead of a one-size-fits-all number.",
+      "Makes tracking apps easier: you know your three numbers before you log a single meal."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "About 0.8 g per kg covers a sedentary person. Active people do better at 1.2-1.6 g, and people dieting or building muscle at 1.6-2.2 g. This calculator sets 1.6-2.0 g by goal.",
+        "q": "How much protein do I really need?"
+      },
+      {
+        "a": "Protein 4 kcal/g, carbs 4 kcal/g, fat 9 kcal/g. Alcohol is 7 kcal/g. These are Atwater factors - averages from lab measurements.",
+        "q": "How many calories are in each macro?"
+      },
+      {
+        "a": "Fat is essential: hormones, brain, and vitamin absorption all need it. Dropping below about 0.5 g per kg risks hormone problems. Carbs fuel hard training; cut those before fat.",
+        "q": "Should I cut carbs or fat to lose weight?"
+      },
+      {
+        "a": "No. Percentages hide the absolute grams your muscles need. A 60 kg dieter and a 100 kg lifter can share 25% protein and need completely different grams. Grams first, always.",
+        "q": "Are macro percentages enough?"
+      },
+      {
+        "a": "Yes - scale them to the calories you actually eat. The gram targets stay the same; just know the kcal totals will not match the target until you eat at the target.",
+        "q": "Can I use these macros on rest days?"
+      },
+      {
+        "a": "Re-check monthly, or after a 2-3 kg weight change. As you get lighter you need fewer calories; as you get more muscular you need more protein.",
+        "q": "How often should I recalculate?"
+      }
+    ],
+    "formula": "Mifflin-St Jeor BMR:\nMen: 10 x W(kg) + 6.25 x H(cm) - 5 x Age + 5\nWomen: 10 x W(kg) + 6.25 x H(cm) - 5 x Age - 161\n\nTDEE = BMR x activity (1.2 - 1.9)\nGoal: lose -400 kcal, maintain +/-0, gain +300 kcal\n\nProtein: 2.0 / 1.8 / 1.6 g per kg (lose / maintain / gain)\nFat: 0.8 g per kg\nCarbs: (target kcal - protein x 4 - fat x 9) / 4",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter sex, age, height, and weight honestly - the BMR formula needs all four.",
+      "Pick the activity level closest to your real week, not your best week.",
+      "Choose your goal: lose fat, maintain, or gain muscle.",
+      "Your daily calorie target and protein/carb/fat grams appear instantly.",
+      "Re-check monthly or after a 2-3 kg change - your numbers move as your body does."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Macros = protein, carbs, fat: the three calorie-containing nutrients.",
+      "Protein has 4 kcal per gram, carbs 4, fat 9. That is why fat portions must stay small.",
+      "This calculator sets protein first (1.6-2.0 g/kg by goal), then fat (0.8 g/kg), then fills carbs.",
+      "BMR comes from the Mifflin-St Jeor equation - the most validated formula for adults.",
+      "TDEE multiplies BMR by activity: 1.2 sedentary to 1.9 very active.",
+      "Losing fat needs about a 400 kcal daily deficit; gaining muscle about a 300 kcal surplus."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "macro calculator, macros calculator, protein carb fat calculator, tdee calculator, iifym calculator",
+    "labels": {
+      "activities": {
+        "active": "Active (exercise 5+ days/week)",
+        "light": "Lightly active (1-3 days/week)",
+        "moderate": "Moderately active (3-5 days/week)",
+        "sedentary": "Sedentary (little exercise)",
+        "veryActive": "Very active (hard daily training)"
+      },
+      "activityLabel": "Activity level",
+      "ageYears": "Age (years)",
+      "carbsG": "Carbs",
+      "fatG": "Fat",
+      "female": "Female",
+      "gUnit": "g",
+      "goalLabel": "Goal",
+      "goals": {
+        "gain": "Gain muscle",
+        "lose": "Lose fat",
+        "maintain": "Maintain"
+      },
+      "heightCm": "Height (cm)",
+      "kcalUnit": "kcal/day",
+      "male": "Male",
+      "proteinG": "Protein",
+      "sexLabel": "Sex",
+      "targetCalories": "Daily calorie target",
+      "tdeeLabel": "Maintenance (TDEE)",
+      "weightKg": "Weight (kg)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates, not prescriptions - a dietitian personalizes for health conditions.",
+      "Activity multipliers are rough; desk workers who train hard often land between levels.",
+      "Does not account for metabolic adaptation after long diets.",
+      "Not for children, pregnant women, or people with eating disorders - seek professional guidance."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free macro calculator: get daily calories and protein/carb/fat grams for your goal using the Mifflin-St Jeor equation. 100% private, no sign-up.",
+    "metaTitle": "Macro Calculator - Protein, Carbs & Fat Targets | JaurTools",
+    "name": "Macro Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "For a 30-year-old man, 175 cm, 80 kg, moderately active, maintaining: BMR is about 1,749 kcal, TDEE about 2,711 kcal. That gives roughly 144 g protein, 390 g carbs, and 64 g fat per day - protein first (1.8 g/kg), fat at 0.8 g/kg, and carbs filling the rest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your macro results",
+    "tagline": "Daily calories and protein/carb/fat grams for your goal, from the Mifflin-St Jeor equation.",
+    "workedExample": "Man, 30 years, 175 cm, 80 kg, moderately active, maintain:\n1. BMR = 10 x 80 + 6.25 x 175 - 5 x 30 + 5 = 800 + 1093.75 - 150 + 5 = 1748.75.\n2. TDEE = 1748.75 x 1.55 = 2711 kcal.\n3. Protein = 1.8 x 80 = 144 g (576 kcal).\n4. Fat = 0.8 x 80 = 64 g (576 kcal).\n5. Carbs = (2711 - 576 - 576) / 4 = 390 g.",
+    "workedExampleHeading": "Worked example"
+  }
+}

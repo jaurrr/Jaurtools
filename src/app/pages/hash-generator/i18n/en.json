@@ -1,0 +1,95 @@
+{
+  "hash-generator": {
+    "assumptionNote": "Text is hashed as UTF-8. Files are read fully into memory; the 100 MB limit keeps the tab responsive.",
+    "benefits": [
+      "Verify file integrity: compare a download's hash with the publisher's checksum.",
+      "Five algorithms at once — no need to run separate tools.",
+      "Files never upload anywhere; hashing happens entirely on your device.",
+      "MD5 and SHA-1 use built-in implementations; SHA-2 uses the browser's WebCrypto.",
+      "Copy any digest with one click for pasting into terminals or tickets."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Type or paste text and the hashes compute instantly. For files, switch to the File tab and choose a file up to 100 MB — it is read locally and never uploaded.",
+        "q": "How do I hash text or a file?"
+      },
+      {
+        "a": "SHA-256 is the safe default today. MD5 and SHA-1 are fast but cryptographically broken — fine for checksums, never for passwords or security.",
+        "q": "Which algorithm should I use?"
+      },
+      {
+        "a": "MD5 and SHA-1 are implemented in pure TypeScript inside this page, so they work everywhere. SHA-256, SHA-384, and SHA-512 use the browser's WebCrypto API, which needs a secure context (HTTPS or localhost).",
+        "q": "How are the hashes computed?"
+      },
+      {
+        "a": "A hash function turns any input into a fixed-length fingerprint. Even a one-letter change produces a completely different digest, which is why hashes detect corruption and tampering.",
+        "q": "What is a hash, in simple terms?"
+      },
+      {
+        "a": "Yes. Pick a file and compare the SHA-256 shown here with the checksum on the download page. If they match exactly, the file arrived intact.",
+        "q": "Can I verify a downloaded file's checksum?"
+      },
+      {
+        "a": "Hashing is one-way: you cannot recover the original text from a digest. Short or common inputs can still be guessed by brute force, so never rely on a plain hash to hide secrets.",
+        "q": "Can someone reverse a hash to see my text?"
+      }
+    ],
+    "formula": "digest = Hash(UTF-8 bytes of input)\n\nOutput lengths (hex chars):\n  MD5 = 32, SHA-1 = 40, SHA-256 = 64,\n  SHA-384 = 96, SHA-512 = 128",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the Text tab for text or the File tab for a file.",
+      "Type your text, or pick a file up to 100 MB.",
+      "Tick the algorithms you want — all five are on by default.",
+      "Read each digest; hashes for text update as you type.",
+      "Copy any digest with its copy button."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A cryptographic hash maps arbitrary input to a fixed-size digest.",
+      "SHA-256 produces 64 hex characters; SHA-512 produces 128.",
+      "MD5 and SHA-1 are broken for security but still fine for simple checksums.",
+      "The same input always produces the same digest — hashes are deterministic.",
+      "Files are hashed locally; nothing is ever uploaded to a server."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "hash generator, md5 generator, sha256 online, sha1 hash, file checksum, hash calculator",
+    "labels": {
+      "algorithmsLabel": "Algorithms",
+      "computingLabel": "Computing hashes...",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "errorFileSize": "File is larger than 100 MB. Choose a smaller file.",
+      "errorSecureContext": "SHA-2 needs a secure context (HTTPS or localhost); MD5 and SHA-1 were computed.",
+      "fileHint": "Files up to 100 MB. The file never leaves your device.",
+      "fileLabel": "Choose a file",
+      "fileTab": "File",
+      "modeLabel": "Input mode",
+      "textLabel": "Text to hash",
+      "textTab": "Text"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "MD5 and SHA-1 are cryptographically broken — not for passwords or signatures.",
+      "SHA-2 algorithms need a secure context (HTTPS or localhost).",
+      "Files larger than 100 MB are rejected to protect browser memory.",
+      "A matching hash proves integrity, not authenticity — an attacker can replace both file and hash."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate MD5, SHA-1, SHA-256, SHA-384 and SHA-512 hashes for text or files. Free online hash generator with file checksum verification.",
+    "metaTitle": "Hash Generator – Free MD5, SHA-1, SHA-256 Online",
+    "name": "Hash Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A hash is a fixed-length fingerprint of data — the same input always gives the same digest, and any change gives a completely different one. Developers use hashes to verify downloads, detect corruption, and fingerprint content. This tool computes MD5, SHA-1, SHA-256, SHA-384, and SHA-512 for text or files, entirely in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Hash digests",
+    "tagline": "Compute MD5, SHA-1 and SHA-2 hashes for text or files — locally.",
+    "workedExample": "Hash the text hello with all five algorithms.\n\nMD5(hello)     = 5d41402abc4b2a76b9719d911017c592\nSHA-1(hello)   = aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d\nSHA-256(hello) = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824\nSHA-384(hello) = 59e1748777448c69de6b800d7a33bbfb9ff1b463e44354c3553bcdb9c666fa90125a3c79f90397bdf5f6a13de828684f\nSHA-512(hello) = 9b71d224bd62f3785d96d46ad3ea3d73319bfbc2890caadae2dff72519673ca72323c3d99ba5c11d7c7acc6e14b8c5da0c4663475c2e5c3adef46f73bcdec043\n\nChange one letter — Hello with a capital H — and every digest changes completely. That avalanche effect is what makes hashes useful for integrity checks.",
+    "workedExampleHeading": "Worked example"
+  }
+}

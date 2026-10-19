@@ -1,0 +1,170 @@
+<div class="tool-page persona-frame">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" appPasteDrop aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      @if (!loaded()) {
+        <label class="studio-dropzone" for="crop-file">
+          <app-icon name="upload" />
+          <span class="dz-title">{{ t('labels.uploadLabel') }}</span>
+          <input id="crop-file" type="file" accept="image/*" class="visually-hidden" (change)="onFile($event)" />
+        </label>
+        <p class="paste-hint"><app-icon name="keyboard" /> {{ t('labels.pasteHint') }}</p>
+      }
+
+      @if (errorMsg()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ errorMsg() }}</p>
+      }
+
+      @if (loaded()) {
+        <div class="file-line"><app-icon name="file-text" /> {{ fileName() }} — {{ imgW() }} × {{ imgH() }} px</div>
+
+        <div class="studio-toolbar segmented" role="group" aria-labelledby="aspect-label">
+          <span class="toolbar-label" id="aspect-label">{{ t('labels.aspectLabel') }}</span>
+          @for (a of aspects; track a) {
+            <button type="button" class="toolbar-btn" [class.active]="aspect() === a"
+              (click)="setAspect(a)" [attr.aria-pressed]="aspect() === a">
+              {{ a === 'free' ? t('labels.free') : a }}
+            </button>
+          }
+        </div>
+
+        <div class="stage-wrap">
+          <canvas #stage class="stage"
+            (pointerdown)="onPointerDown($event)"
+            (pointermove)="onPointerMove($event)"
+            (pointerup)="onPointerUp()"
+            [attr.aria-label]="t('labels.stageLabel')"></canvas>
+        </div>
+        <p class="note">{{ t('labels.dragHint') }}</p>
+
+        <div class="button-row">
+          <button type="button" class="btn btn-primary" (click)="applyCrop()">
+            <app-icon name="ruler" /> {{ t('labels.applyCrop') }}
+          </button>
+          <button type="button" class="btn-ghost" (click)="clearImage()">
+            <app-icon name="x" /> {{ t('labels.newImage') }}
+          </button>
+        </div>
+
+        <div class="results">
+          <div class="result-row">
+            <span><app-icon name="info" /> {{ t('labels.originalSize') }}</span>
+            <strong>{{ imgW() }} × {{ imgH() }} px</strong>
+          </div>
+          <div class="result-row">
+            <span><app-icon name="ruler" /> {{ t('labels.cropSize') }}</span>
+            <strong>{{ sel().w }} × {{ sel().h }} px</strong>
+          </div>
+          @if (croppedUrl()) {
+            <div class="result-row total">
+              <span><app-icon name="check" /> {{ t('labels.readyLabel') }}</span>
+              <strong>{{ cropW() }} × {{ cropH() }} px</strong>
+            </div>
+          }
+        </div>
+
+        @if (croppedUrl()) {
+          <div class="preview-frame preview-frame--checker">
+            <img [src]="croppedUrl()" [alt]="t('labels.croppedAlt')" />
+          </div>
+          <div class="button-row">
+            <button type="button" class="btn btn-primary" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadCrop') }}
+            </button>
+          </div>
+        }
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

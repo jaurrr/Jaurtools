@@ -1,0 +1,119 @@
+{
+  "loan-calculator": {
+    "benefits": [
+      "See the true cost of a loan — interest included — before you sign anything.",
+      "The yearly schedule reveals how slowly the principal falls in the early years.",
+      "Compare offers in seconds by changing the rate or the term.",
+      "Free, no sign-up, works on any device, fully private."
+    ],
+    "faqs": [
+      {
+        "a": "EMI stands for Equated Monthly Installment — the fixed amount you pay your lender every month until the loan is fully repaid. Each EMI has two parts: interest on the outstanding balance, and principal that reduces what you owe.",
+        "q": "What is an EMI?"
+      },
+      {
+        "a": "With monthly rate r = annual % ÷ 1200 and n = years × 12 payments: EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1). If the interest rate is zero, the EMI is simply the principal divided by the number of months.",
+        "q": "How is EMI calculated?"
+      },
+      {
+        "a": "Interest is charged on the outstanding balance, which is largest at the start. So the first EMIs are mostly interest with a small principal slice; as the balance shrinks, the interest slice shrinks and the principal slice grows. The yearly table shows this shift.",
+        "q": "Why is the interest higher in the early years?"
+      },
+      {
+        "a": "Your monthly EMI goes down, which feels easier — but you pay interest for many more months, so the total interest rises sharply. A 20-year loan can cost nearly double the borrowed amount in total. Shorter terms save interest if you can afford the higher EMI.",
+        "q": "What happens if I take a longer loan term?"
+      },
+      {
+        "a": "No. They are typical market rates (Home 8.5%, Personal 11%, Auto 9%) filled in for convenience. Your actual offer depends on your bank, credit score and timing — always replace the preset with the exact rate you were quoted.",
+        "q": "Are the preset interest rates exact?"
+      },
+      {
+        "a": "No. The tool computes pure EMI math: principal and interest only. Processing fees, insurance, GST/service charges and prepayment penalties are not included, so treat the result as a planning estimate and confirm the final figures with your lender.",
+        "q": "Does this include bank fees and taxes?"
+      }
+    ],
+    "formula": "With monthly rate r = annual % ÷ 1200 and n = years × 12 payments: EMI = P·r·(1+r)ⁿ ÷ ((1+r)ⁿ − 1). Total interest = EMI × n − P. When r = 0, EMI = P ÷ n.",
+    "howTo": [
+      "Pick a loan type to fill in a typical rate, or enter your own amount, rate and term.",
+      "Set the annual interest rate to the exact figure your bank quoted.",
+      "Read your monthly EMI, total interest and total payable at the top.",
+      "Scroll the yearly schedule to see how principal and interest split each year.",
+      "Try a shorter term or a lower rate to see how much interest you save."
+    ],
+    "keyFacts": [
+      "EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1), where r is the monthly rate (annual % ÷ 1200) and n is the number of monthly payments.",
+      "Early EMIs are mostly interest; later EMIs are mostly principal — the yearly table shows this shift clearly.",
+      "Loan-type presets (Home 8.5%, Personal 11%, Auto 9%) insert typical rates; always edit them to match your actual offer.",
+      "A zero interest rate is handled gracefully: EMI simply becomes principal ÷ number of months.",
+      "The yearly schedule is capped at 30 rows so it stays readable on phones.",
+      "This is a planning estimate; your bank's exact EMI can differ slightly due to rounding, fees and charges."
+    ],
+    "lastReviewed": "Last reviewed: October 18, 2026",
+    "limitations": [
+      "Estimates use the standard reducing-balance EMI formula; banks may round differently and add processing fees, insurance and taxes.",
+      "Floating-rate loans change over time — this tool assumes your rate stays fixed for the whole term.",
+      "It does not model prepayment penalties, late fees or part-payment options.",
+      "This is a planning aid, not financial advice — always confirm figures with your lender."
+    ],
+    "metaDescription": "Free loan calculator: estimate monthly EMI, total interest and total payable with a yearly principal-vs-interest schedule. No sign-up, private, runs in your browser.",
+    "metaTitle": "Free Loan Calculator — EMI, Total Interest & Repayment Schedule",
+    "name": "Loan Calculator",
+    "privacyNote": "All calculations run in your browser. Your loan figures are never uploaded, stored or shared.",
+    "quickAnswer": "Enter the loan amount, annual interest rate and loan term to instantly see your monthly EMI, total interest payable and total repayment, plus a year-by-year schedule of principal versus interest. Loan-type presets fill in typical rates, and every value stays editable.",
+    "tagline": "Estimate your monthly EMI, total interest and full repayment schedule — free, in seconds.",
+    "ui": {
+      "amount": "Loan amount",
+      "annualRate": "Annual interest rate (%)",
+      "benefitsTitle": "Why use it",
+      "colBalance": "Balance",
+      "colInterest": "Interest paid",
+      "colPrincipal": "Principal paid",
+      "colYear": "Year",
+      "emi": "Monthly EMI",
+      "empty": "—",
+      "exampleTitle": "Worked example",
+      "faqTitle": "Frequently asked questions",
+      "formulaTitle": "The EMI formula",
+      "home": "Home",
+      "howToTitle": "How to use",
+      "keyFactsTitle": "Key facts",
+      "limitationsTitle": "Limitations",
+      "loanTerm": "Loan term (years)",
+      "loanType": "Loan type",
+      "presetNote": "Preset rates are typical values — edit the rate to match your actual offer.",
+      "privacyTitle": "Privacy note",
+      "relatedTitle": "Related tools",
+      "scheduleTitle": "Yearly repayment schedule",
+      "totalInterest": "Total interest",
+      "totalPayable": "Total payable",
+      "typeAuto": "Auto loan",
+      "typeHome": "Home loan",
+      "typePersonal": "Personal loan"
+    },
+    "workedExample": "Example: 100,000 at 10% annual for 5 years. Monthly rate r = 10 ÷ 1200 = 0.008333, n = 60 payments. EMI = 100000 × 0.008333 × 1.008333^60 ÷ (1.008333^60 − 1) ≈ 2,124.70 per month. Total payable ≈ 127,482, so total interest ≈ 27,482.",
+    "hero": {
+      "note": "At {r}% for {y} years — {n} monthly payments."
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "Borrowing {p} at {r}% for {y} years.",
+      "l2": "You repay {t} in total — {i} is interest ({ip}% of every rupee repaid).",
+      "l3": "That is {e} every month for {n} months."
+    },
+    "tip": {
+      "extra": "Paying one extra EMI ({e}) every year saves {s} in interest and closes the loan {m} months early."
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "Monthly rate = annual rate ÷ 12; number of payments = years × 12.",
+      "s2": "EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1), the standard reducing-balance formula.",
+      "s3": "Total interest = (EMI × months) − principal."
+    },
+    "ref": {
+      "heading": "Quick reference",
+      "caption": "Monthly EMI at {r}% for common loan amounts.",
+      "amountCol": "Loan amount",
+      "yearSuffix": "yr"
+    }
+  }
+}

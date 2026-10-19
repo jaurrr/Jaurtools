@@ -1,0 +1,97 @@
+{
+  "gaussian-random-number-generator": {
+    "benefits": [
+      "Generate realistic test data: heights, weights, and scores follow the bell curve in real life.",
+      "The live histogram proves the distribution is correct at a glance.",
+      "Sample statistics let you verify mean and spread against your targets.",
+      "CSV download drops straight into Excel, Python, or R."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The 68-95-99.7 rule: about 68 percent of values fall within 1 standard deviation of the mean, 95 percent within 2, and 99.7 percent within 3. So with mean 100 and SD 15, expect roughly two-thirds of values between 85 and 115.",
+        "q": "What is the 68-95-99.7 rule?"
+      },
+      {
+        "a": "The Box-Muller transform converts two uniform random numbers into a standard normal value: z = sqrt(-2 ln u1) x cos(2 pi u2). Scaling by x = mean + SD x z gives any normal distribution. It is exact, not an approximation, and this tool uses it.",
+        "q": "How does the generator work?"
+      },
+      {
+        "a": "Because the bell curve is symmetric, the mean equals the median equals the mode. Extreme values are possible but rare: only about 0.3 percent fall beyond 3 standard deviations.",
+        "q": "Can the values be negative?"
+      },
+      {
+        "a": "Set the standard deviation to 0.01 and every value lands within a hair of the mean. For truly constant output, just type the number directly; randomness is the wrong tool there.",
+        "q": "How do I get nearly-constant values?"
+      },
+      {
+        "a": "Use =NORM.INV(RAND(), mean, sd) in Excel or Google Sheets, numpy.random.normal(mean, sd, n) in Python, or rnorm(n, mean, sd) in R. This tool is the no-install alternative for quick batches.",
+        "q": "What is the Excel or Python equivalent?"
+      },
+      {
+        "a": "The generator uses your browser's pseudo-random generator through the Box-Muller transform. Results differ on every run by design. For reproducible research, use Python with a fixed seed like numpy.random.seed(42).",
+        "q": "Why do I get different numbers every time?"
+      }
+    ],
+    "formula": "Box-Muller: z = sqrt(-2 ln u1) x cos(2 pi u2), with u1, u2 uniform in (0,1).\nScaled value: x = mean + SD x z.\n68-95-99.7 rule: P(|x - mean| < k x SD) = 68.3%, 95.4%, 99.7% for k = 1, 2, 3.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Set the mean (center) and standard deviation (spread) you need.",
+      "Choose how many values to generate, up to 10,000.",
+      "Click Generate. Statistics, histogram, and sample values appear.",
+      "Compare the sample mean and SD with your targets.",
+      "Download the full set as CSV for your spreadsheet or code."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "A normal (Gaussian) distribution is the bell curve: values cluster around the mean and taper symmetrically.",
+      "It is fully described by two numbers: the mean (center) and the standard deviation (spread).",
+      "The 68-95-99.7 rule: 68 percent within 1 SD, 95 percent within 2 SD, 99.7 percent within 3 SD.",
+      "Many real measurements are approximately normal: heights, weights, exam scores, measurement errors.",
+      "The Box-Muller transform turns uniform random numbers into exact normal values."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gaussian random number generator, normal distribution generator, bell curve random numbers, random normal values, box muller generator",
+    "labels": {
+      "count": "How many values",
+      "countLabel": "Values generated",
+      "downloadCsv": "Download CSV",
+      "generate": "Generate",
+      "histogramHeading": "Distribution histogram",
+      "maxVal": "Maximum",
+      "mean": "Mean",
+      "minVal": "Minimum",
+      "moreValues": "more values in the CSV",
+      "noDataYet": "Set your parameters and click Generate.",
+      "sampleMean": "Sample mean",
+      "sampleStd": "Sample std. dev.",
+      "stdDev": "Standard deviation",
+      "valuesHeading": "First 20 values",
+      "copyValues": "Copy values",
+      "copied": "Copied!"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Pseudo-random, not cryptographic. Do not use for security, gambling, or lotteries.",
+      "Results are not reproducible across runs. Use Python with a fixed seed for that.",
+      "The normal model is an approximation. Real data can be skewed or heavy-tailed.",
+      "Extreme outliers are possible by design, about 0.3 percent beyond 3 SD."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Gaussian random number generator: create bell-curve random values with any mean and standard deviation. Histogram, stats, and CSV download. Private, no sign-up.",
+    "metaTitle": "Gaussian Random Number Generator - Bell Curve Values | JaurTools",
+    "name": "Gaussian Random Number Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Set a mean and standard deviation and generate up to 10,000 random values following the normal (bell curve) distribution, using the exact Box-Muller transform. You get sample statistics, a live histogram, and a CSV download. With mean 100 and SD 15, about 68 percent of values land between 85 and 115.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your random numbers",
+    "tagline": "Generate bell-curve random values with any mean and spread. Stats, histogram, CSV.",
+    "workedExample": "Simulating exam scores with mean 100 and SD 15:\n1. Generate 1,000 values. Sample mean comes out near 100, sample SD near 15.\n2. Check the 68 percent rule: count values between 85 and 115. Expect about 680 of 1,000.\n3. Probability of scoring below 115: z = (115 - 100) / 15 = 1, so P = 84.1 percent.\n4. Top 2.5 percent threshold: mean + 2 SD = 130. About 25 of 1,000 values exceed it.\nThe histogram shows the classic bell shape, tallest at 100.",
+    "workedExampleHeading": "Worked example"
+  }
+}

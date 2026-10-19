@@ -1,0 +1,97 @@
+{
+  "award-certificate-generator": {
+    "benefits": [
+      "Professional look in seconds: a clean, bordered certificate layout with no design skills needed.",
+      "Live preview: every keystroke updates the certificate, so there are no surprises.",
+      "Print-ready and portable: print directly or download a standalone HTML file to share.",
+      "Free for every occasion: school awards, employee recognition, course completion, sports and events."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Type the recipient's name, the award title, the reason, your organization, the presenter and the date. The preview updates live. Then print it directly or download it as an HTML file you can open anywhere.",
+        "q": "How do I create a certificate?"
+      },
+      {
+        "a": "Yes. The download is a single self-contained HTML file with all styles included. Open it in any browser on any device and print or share it from there.",
+        "q": "Can I use the downloaded certificate on another device?"
+      },
+      {
+        "a": "Use the Print button and your browser's print dialog. Choose landscape orientation and enable background graphics for the best result, then print or save as PDF.",
+        "q": "How do I get the best print quality?"
+      },
+      {
+        "a": "The layout is deliberately simple so it works for any award: Employee of the Month, Best Student, course completion, sports winners, volunteer recognition and more. Adapt the award title and reason lines.",
+        "q": "What kinds of awards can I make?"
+      },
+      {
+        "a": "The download is an HTML file, which prints perfectly from any browser. A one-click image or PDF export would need extra libraries; the print-to-PDF route in your browser gives the same result with full quality.",
+        "q": "Why is the download an HTML file and not a PDF?"
+      },
+      {
+        "a": "Everything you type stays in your browser and is never uploaded. The recipient names you enter are yours alone.",
+        "q": "Are the names I enter private?"
+      }
+    ],
+    "formula": "Certificate = heading + \"This certificate is proudly presented to\" + recipient name + \"for outstanding achievement in\" + award title [+ reason line] + date + presenter + organization",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the recipient's name and the award title.",
+      "Add an optional reason line describing the achievement.",
+      "Enter your organization, the presenter (signer) and the date.",
+      "Check the live preview and fix any spelling.",
+      "Print directly, or download the HTML file to share or print later."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Recognition certificates increase motivation: public acknowledgment is one of the strongest non-monetary rewards.",
+      "A good certificate names the recipient, the specific achievement, the date and the issuing organization.",
+      "Formal certificates traditionally include a signature line; here the presenter field serves that role.",
+      "Printing on slightly thicker paper (160-200 gsm) makes a home-printed certificate feel professional.",
+      "This tool generates the certificate entirely in your browser: no account, no upload, no watermark.",
+      "The downloaded HTML file works offline and prints identically on any computer."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "certificate generator, award certificate maker, printable certificate, appreciation certificate template, free certificate creator",
+    "labels": {
+      "certDate": "Date",
+      "certFor": "for outstanding achievement in",
+      "certHeading": "Certificate of Achievement",
+      "certKicker": "This certificate is proudly presented to",
+      "certSignedBy": "Presented by",
+      "dateLabel": "Date",
+      "downloadButton": "Download HTML",
+      "noteText": "Names and details are used only to render the preview; nothing is stored or uploaded.",
+      "organizationLabel": "Organization",
+      "presenterLabel": "Presenter / signer",
+      "previewLabel": "Live preview",
+      "printButton": "Print certificate",
+      "reasonLabel": "Reason / achievement (optional)",
+      "recipientLabel": "Recipient name",
+      "titleLabel": "Award title"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The design is intentionally simple; it is not a substitute for a professionally designed diploma.",
+      "No logo upload: add your organization's logo when printing, or use the HTML file as a base.",
+      "The tool does not verify or authenticate the award; anyone can create a certificate with any name.",
+      "For legal or academic documents, use your institution's official process instead."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create beautiful award certificates free: enter a name, award title and date, preview live, then print or download. Runs in your browser, no signup.",
+    "metaTitle": "Award Certificate Generator — Free Printable Certificates",
+    "name": "Award Certificate Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type a recipient's name, award title, organization and date, and get a clean printable certificate instantly. Print it directly or download it as a file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Certificate results",
+    "tagline": "Create professional award certificates with a live preview — print or download free.",
+    "workedExample": "Example inputs: recipient \"Priya Nair\", award title \"Employee of the Month\", reason \"For exceptional customer service and mentoring new team members\", organization \"Sunrise Textiles\", presenter \"Rahul Verma, HR Manager\", date 18 October 2026.\nThe certificate reads: \"Certificate of Achievement — This certificate is proudly presented to Priya Nair — for outstanding achievement in Employee of the Month — For exceptional customer service and mentoring new team members — Date: 18 October 2026 — Presented by: Rahul Verma, HR Manager — Sunrise Textiles.\" Print it in landscape for the classic certificate look.",
+    "workedExampleHeading": "Worked example"
+  }
+}

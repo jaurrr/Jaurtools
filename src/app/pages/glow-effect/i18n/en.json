@@ -1,0 +1,92 @@
+{
+  "glow-effect": {
+    "benefits": [
+      "Adds a dreamy neon halo around any photo or logo — the gaming-thumbnail look in one click.",
+      "Works beautifully on dark backgrounds where the glow has room to bloom.",
+      "The tinted-blur technique keeps the original sharp underneath — detail is never sacrificed.",
+      "Live sliders mean you see the exact result before downloading; no guesswork."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The image is blurred, tinted with your glow color, and composited behind the sharp original using a screen blend. The blur spreads light outward (the halo), the tint colors it, and the original on top keeps everything crisp.",
+        "q": "How is the glow created?"
+      },
+      {
+        "a": "Radius controls how far the halo spreads (0 = tight edge light, 60 = wide dreamy bloom). Intensity controls how bright the halo is. Combine a wide radius with medium intensity for the classic neon look.",
+        "q": "What is the difference between radius and intensity?"
+      },
+      {
+        "a": "Any color — the glow layer is tinted with your exact pick. Neon cyan (#00E5FF), magenta (#FF2FB3), and warm amber (#FFB020) are popular; indigo (#4F46E5) matches this site's theme.",
+        "q": "Which glow color looks best?"
+      },
+      {
+        "a": "Transparent logos and PNGs with alpha glow around their actual shape, because the blur respects transparency. The effect is especially clean on stickers and emblems.",
+        "q": "Does it work on transparent PNGs?"
+      },
+      {
+        "a": "The preview is capped at 1400 px on the long edge; the PNG download matches the preview. The blur radius scales with the image, so results look the same at any size.",
+        "q": "What resolution is the download?"
+      },
+      {
+        "a": "The glow uses canvas blur filters, supported by all modern browsers. Very old browsers may render a sharper, flatter halo instead of a soft bloom.",
+        "q": "Will it work in my browser?"
+      }
+    ],
+    "formula": "glowLayer = blur(image, radius) tinted with glowColor\nscreen(a, b) = 1 - (1 - a) x (1 - b) per channel\nresult = screen(glowLayer x2 at intensity alpha) then original drawn on top\nExample: radius 24 px, intensity 60% -> tinted blur drawn twice at 0.6 alpha with screen blend.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo or logo from your device (up to 15 MB).",
+      "Pick your glow color with the color picker.",
+      "Drag the radius slider to set how far the halo spreads.",
+      "Drag the intensity slider to set how bright the glow is.",
+      "Press Download to save the glowing image as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Creates a soft neon halo by blurring a tinted copy of the image behind the sharp original.",
+      "Glow color picker with live hex readout — any color works.",
+      "Radius slider (0–60 px) controls halo spread; intensity slider (0–100%) controls brightness.",
+      "Screen-blend compositing keeps the glow luminous without washing out the image.",
+      "Respects transparency: PNG logos glow around their true shape.",
+      "The download is a lossless PNG, rendered at up to 1400 px on the long edge."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "glow effect online, neon glow photo, photo glow filter, halo effect image, glowing logo maker",
+    "labels": {
+      "downloadPng": "Download PNG",
+      "glowColor": "Glow color",
+      "intensity": "Glow intensity",
+      "newImage": "New image",
+      "originalSize": "Original size",
+      "radius": "Glow radius",
+      "sizeError": "That file is larger than 15 MB. Please choose a smaller image.",
+      "stageLabel": "Glow preview",
+      "typeError": "That file could not be read as an image. Please choose a JPEG, PNG, WebP, GIF, or BMP file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rendering is capped at 1400 px on the long edge, so huge originals are scaled down first.",
+      "Very old browsers without canvas blur filters render a flatter, sharper halo.",
+      "The glow is a photographic bloom, not a true light simulation — it cannot cast light on surroundings.",
+      "Heavy glow on busy photos can look muddy; it shines brightest on dark, simple images."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free glow effect online — add a soft neon halo to any photo or logo with custom color, radius, and intensity. Private, instant, no sign-up.",
+    "metaTitle": "Glow Effect Online — Neon Halo Photo Filter (Free)",
+    "name": "Glow Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo or logo to wrap it in a soft neon halo — pick any glow color, then tune the radius and intensity with live sliders. The tinted-blur technique keeps your original sharp underneath. The PNG downloads instantly and nothing leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your glow results",
+    "tagline": "A soft neon halo around any photo or logo.",
+    "workedExample": "You upload a logo on a dark background and pick glow color #00E5FF with radius 24 px and intensity 60%.\nThe tinted blur is drawn twice at 0.6 alpha with a screen blend, then the sharp logo on top.\nThe result downloads as glow-1400x1400.png — a cyan halo blooming around a crisp logo.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "pdf-to-html": {
+    "name": "PDF to HTML Converter",
+    "tagline": "Extract PDF text into clean, semantic HTML — ready for the web.",
+    "metaTitle": "PDF to HTML Converter — Free Online, No Signup | JaurTools",
+    "metaDescription": "Convert PDF to HTML online for free. Extracts text in reading order into clean semantic HTML with page sections. Download instantly. Private — runs in your browser.",
+    "keywords": "pdf to html, convert pdf to html, pdf to html online, extract pdf text to html",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Extract to HTML",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Upload a PDF and its text is extracted in reading order into a clean, self-contained HTML file — paragraphs, page sections, and proper document structure with built-in styling — ready to open in any browser or paste into a website.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Text is grouped into lines by vertical position, then into paragraphs by spacing.",
+      "Each PDF page becomes its own <section> with a page heading.",
+      "The output is a single self-contained .html file with inline CSS — no dependencies.",
+      "Live stats show pages, words, and characters before you download.",
+      "Direction-aware: Arabic PDFs get dir='rtl' automatically."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Upload your PDF (up to 50 MB).",
+      "Click extract and watch the per-page progress bar.",
+      "Review the stats and the text preview in the code window.",
+      "Download the .html file and open it in any browser."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "line_y = round(transform[5])          (baseline position)\nparagraph_break = empty line OR line ends with . ! ? … : ;\n\nText fragments are sorted top-to-bottom by Y, then left-to-right by X within each line. Lines ending in sentence punctuation (or separated by blank space) start a new <p>. This is a heuristic — PDFs store positioned glyphs, not paragraphs.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A 5-page product manual: extraction yields 5 <section> blocks, ~2,300 words, 14,800 characters. The downloaded HTML opens in any browser as a readable document you can restyle with your own CSS or paste into a CMS — no PDF reader needed.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Semantic HTML — real paragraphs and sections, not absolutely-positioned divs.",
+      "Self-contained file with inline styles works anywhere, offline.",
+      "Reading-order heuristic handles multi-column text sensibly.",
+      "RTL detection keeps Arabic documents correctly oriented.",
+      "Zero upload — sensitive documents never leave your device."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Text only — images, charts, and complex tables are not carried over.",
+      "Exact visual layout is not preserved; this is about readable content, not pixel fidelity.",
+      "Scanned PDFs have no text to extract — OCR is not included.",
+      "Unusual fonts or encodings can produce garbled characters."
+    ],
+    "privacyNote": "Text extraction runs entirely in your browser with pdf.js. Your document is never uploaded or stored.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "Is this the same as PDF to Text?",
+        "a": "Similar extraction, different output: PDF to Text gives plain text, while this produces structured HTML with paragraphs, page sections, and styling — ready for the web."
+      },
+      {
+        "q": "Will the HTML look like my PDF?",
+        "a": "No — and that is intentional. You get clean, readable, semantic content you can restyle, not a pixel-perfect replica. For visual fidelity, convert pages to images instead."
+      },
+      {
+        "q": "What about tables and images?",
+        "a": "Tables come through as plain text lines (structure is lost), and images are skipped. Complex layouts need manual cleanup after conversion."
+      },
+      {
+        "q": "Why is my scanned PDF empty?",
+        "a": "Scans are pictures of text with no embedded characters. This tool extracts embedded text only; scanned documents need OCR software first."
+      },
+      {
+        "q": "Can I edit the HTML afterwards?",
+        "a": "Absolutely — it's standard HTML with inline CSS. Open it in any editor, change the styles, or paste sections into your website."
+      },
+      {
+        "q": "Does it handle Arabic or Hindi text?",
+        "a": "Yes. Extracted Unicode text is preserved, and Arabic documents automatically get right-to-left direction in the output."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "fileLabel": "PDF file",
+      "fileHint": "PDF up to 50 MB · text-based PDFs only",
+      "extractButton": "Extract to HTML",
+      "downloadButton": "Download HTML",
+      "busy": "Extracting text…",
+      "pagesLabel": "Pages",
+      "wordsLabel": "Words",
+      "charsLabel": "Characters",
+      "pageLabel": "Page",
+      "statusDone": "Extracted {n} pages.",
+      "errType": "Please choose a valid PDF file.",
+      "errSize": "File is larger than 50 MB.",
+      "errExtract": "Could not extract text. The PDF may be scanned or corrupted."
+    }
+  }
+}

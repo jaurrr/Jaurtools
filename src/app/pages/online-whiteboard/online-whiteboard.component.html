@@ -1,0 +1,141 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="toolbar" role="toolbar" [attr.aria-label]="t('labels.toolbarLabel')">
+        <div class="tool-buttons" role="group" [attr.aria-label]="t('labels.toolbarLabel')">
+          <button type="button" [class.active]="drawTool() === 'pen'" [attr.aria-pressed]="drawTool() === 'pen'" (click)="setTool('pen')">{{ t('labels.toolPen') }}</button>
+          <button type="button" [class.active]="drawTool() === 'eraser'" [attr.aria-pressed]="drawTool() === 'eraser'" (click)="setTool('eraser')">{{ t('labels.toolEraser') }}</button>
+          <button type="button" [class.active]="drawTool() === 'line'" [attr.aria-pressed]="drawTool() === 'line'" (click)="setTool('line')">{{ t('labels.toolLine') }}</button>
+          <button type="button" [class.active]="drawTool() === 'rect'" [attr.aria-pressed]="drawTool() === 'rect'" (click)="setTool('rect')">{{ t('labels.toolRect') }}</button>
+          <button type="button" [class.active]="drawTool() === 'circle'" [attr.aria-pressed]="drawTool() === 'circle'" (click)="setTool('circle')">{{ t('labels.toolCircle') }}</button>
+        </div>
+
+        <div class="field inline">
+          <label for="wb-color">{{ t('labels.colorLabel') }}</label>
+          <input id="wb-color" type="color" [ngModel]="color()" (ngModelChange)="setColor($event)" />
+        </div>
+
+        <div class="field inline">
+          <label for="wb-size">{{ t('labels.sizeLabel') }}</label>
+          <div class="input-row">
+            <input id="wb-size" type="range" min="1" max="50" step="1" [ngModel]="brushSize()" (ngModelChange)="setBrushSize($event)" class="calc-range" />
+            <output>{{ brushSize() }} {{ t('labels.sizeUnit') }}</output>
+          </div>
+        </div>
+
+        <div class="tool-buttons">
+          <button type="button" (click)="undo()" [disabled]="strokes() === 0"><app-icon name="refresh-cw" /> {{ t('labels.undo') }}</button>
+          <button type="button" (click)="clearBoard()"><app-icon name="x" /> {{ t('labels.clear') }}</button>
+          <button type="button" class="primary" (click)="downloadPng()"><app-icon name="download" /> {{ t('labels.downloadPng') }}</button>
+        </div>
+      </div>
+
+      <div class="canvas-wrap calc-testarea">
+        <canvas #board class="board calc-testarea" role="img" [attr.aria-label]="t('labels.drawingArea')"
+          (pointerdown)="onPointerDown($event)" (pointermove)="onPointerMove($event)"
+          (pointerup)="onPointerUp()" (pointercancel)="onPointerUp()" (pointerleave)="onPointerUp()"></canvas>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row">
+          <span><app-icon name="sparkles" /> {{ t('labels.strokes') }}</span>
+          <strong>{{ strokes() }}</strong>
+        </div>
+      </div>
+
+      <p class="note">{{ t('labels.emptyNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

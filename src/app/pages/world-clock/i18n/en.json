@@ -1,0 +1,106 @@
+{
+  "world-clock": {
+    "benefits": [
+      "See at a glance whether colleagues are awake before you message them.",
+      "Travelers can watch the destination's time tick while packing.",
+      "Students joining foreign webinars stop converting times by hand.",
+      "The day/night icons make jet-lag planning visual instead of numerical."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Date & Time",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Every clock ticks each second from your device's own clock, converted live through the browser's timezone database. No page refresh needed.",
+        "q": "Is the world clock live?"
+      },
+      {
+        "a": "Because it is a different calendar day there. Each card shows its own local date, so a late call from New York correctly shows tomorrow's date in Sydney.",
+        "q": "Why does a city show a different date than mine?"
+      },
+      {
+        "a": "Yes — automatically. Offsets come from your browser's built-in timezone database, so summer and winter time apply correctly without any setting.",
+        "q": "Does it handle daylight saving time?"
+      },
+      {
+        "a": "You can add any of the 18 major zones and remove the ones you don't need with the × button. Smaller cities aren't listed — pick the nearest major zone.",
+        "q": "Can I add my own cities?"
+      },
+      {
+        "a": "The sun means it is currently daytime there (6:00–18:00 local); the moon means nighttime. Handy for deciding whether now is a polite hour to call.",
+        "q": "What do the sun and moon icons mean?"
+      },
+      {
+        "a": "No. Once the page loads, all conversion runs locally in your browser using the Intl API.",
+        "q": "Does it need an internet connection?"
+      }
+    ],
+    "formula": "For each zone Z, every second:\nlocalTime(Z) = Intl.DateTimeFormat(locale, { timeZone: Z, hour, minute, second })\noffset(Z) = minutes where local(Z) = UTC + offset, via formatToParts\nisDay = 6 <= localHour(Z) < 18\n\nYour card uses the device timezone directly (no conversion).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Your own local time ticks at the top for reference.",
+      "Each city card shows its live time, local date, UTC offset, and a day/night icon.",
+      "Remove a city with the × button; add more from the dropdown at the bottom.",
+      "Keep the tab open during calls — the clocks stay in sync to the second."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every clock is computed from your device's clock plus the browser's timezone database — nothing is fetched from a server.",
+      "A timezone offset is not constant: the same city can show UTC+1 in October and UTC+0 in January.",
+      "The International Date Line means it can be a different calendar day on opposite sides of the Pacific — each card shows its own date.",
+      "The sun/moon icon reflects actual local daytime (6:00–18:00) at that place right now.",
+      "All 18 zones update together every second with a single lightweight timer."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "world clock, world time, current time in cities, international clock, time in different countries",
+    "labels": {
+      "add": "Add",
+      "addCity": "Add a city",
+      "liveNote": "Clocks tick live every second from your device's clock. Daylight saving is applied automatically.",
+      "remove": "Remove",
+      "selectCity": "Choose a city…",
+      "yourTime": "Your local time",
+      "zoneNames": [
+        "UTC — Coordinated Universal Time",
+        "Kolkata, India",
+        "Dubai, UAE",
+        "Riyadh, Saudi Arabia",
+        "Karachi, Pakistan",
+        "Dhaka, Bangladesh",
+        "Singapore",
+        "Tokyo, Japan",
+        "Shanghai, China",
+        "Sydney, Australia",
+        "London, UK",
+        "Paris, France",
+        "Moscow, Russia",
+        "Cairo, Egypt",
+        "New York, USA",
+        "Chicago, USA",
+        "Los Angeles, USA",
+        "São Paulo, Brazil"
+      ]
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Shows 18 major zones — smaller cities must use the nearest listed zone.",
+      "Accuracy depends on your device's clock being correct; a wrong device clock means wrong times everywhere.",
+      "Offsets follow your browser's timezone database — keep the browser updated for the newest rule changes.",
+      "Reference only — for flight or broadcast scheduling, confirm with the official local source."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Live world clock for 18 major cities with day/night indicators and UTC offsets. Ticks every second, handles daylight saving — free and private.",
+    "metaTitle": "World Clock — Live Time in Major Cities",
+    "name": "World Clock",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Your local time ticks at the top, with live clocks for 18 major cities below — each showing local time, date, UTC offset, and a sun/moon day-night indicator. Add or remove cities freely; daylight saving is handled automatically.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "World Clock results",
+    "tagline": "Live time in 18 major cities, with day/night indicators and UTC offsets.",
+    "workedExample": "18 October 2026, 12:00 UTC →\nKolkata 17:30 (UTC+5:30)\nDubai 16:00 (UTC+4)\nRiyadh 15:00 (UTC+3)\nLondon 13:00 (UTC+1, summer time)\nNew York 08:00 (UTC-4, summer time)\nCheck: 12:00 + 5:30 = 17:30. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

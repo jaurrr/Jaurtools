@@ -1,0 +1,93 @@
+{
+  "min-max-of-a-list": {
+    "assumptionNote": "Numbers can be separated by commas, spaces or line breaks. Non-numeric entries are ignored. Positions are counted from 1.",
+    "benefits": [
+      "Instantly finds extremes in long, messy lists.",
+      "Shows exactly where the min and max sit in your list.",
+      "The range row gives the spread for free.",
+      "Works with decimals and negative numbers.",
+      "No spreadsheet needed for a quick extremes check."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Scan the list once, remembering the smallest value seen so far. Start with the first number as your candidate, then replace it whenever you find a smaller one. The final candidate is the minimum.",
+        "q": "How do you find the minimum of a list?"
+      },
+      {
+        "a": "The same way, but tracking the largest value instead. Start with the first number, replace it whenever you find a bigger one, and the final candidate is the maximum.",
+        "q": "How do you find the maximum of a list?"
+      },
+      {
+        "a": "Yes. If the smallest value appears three times, this tool reports all three positions (counted from 1), so you know every occurrence.",
+        "q": "What if the minimum appears more than once?"
+      },
+      {
+        "a": "For a single number, the minimum and maximum are that number itself, and the range is 0. The tool handles this gracefully.",
+        "q": "What are the min and max of a single number?"
+      },
+      {
+        "a": "The range is max minus min. For 7, 2, 9, 4 the range is 9 - 2 = 7. It is the simplest measure of how spread out a list is.",
+        "q": "What is the range of a list?"
+      },
+      {
+        "a": "No - this tool reports extremes only. Use the Mean, Median, Mode, Range calculator for the full statistical picture including the average.",
+        "q": "Does this also compute the average?"
+      }
+    ],
+    "formula": "minimum = smallest value in the list\nmaximum = largest value in the list\nrange = maximum - minimum\npositions: counted from 1, in list order",
+    "formulaHeading": "Definitions",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your numbers, separated by commas, spaces or line breaks.",
+      "The minimum and maximum appear instantly, with the range and count.",
+      "Check the position rows to see where each extreme occurs in your list.",
+      "For a single number, min and max are both that number.",
+      "Use the result as input for further statistics tools."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The minimum is the smallest value in the list; the maximum is the largest.",
+      "Positions are counted from 1, matching how people naturally number lists.",
+      "An extreme value can appear more than once - all positions are reported.",
+      "Range = maximum - minimum, the simplest measure of spread.",
+      "Min and max are the first step of almost every data summary.",
+      "A single-number list has min = max and range = 0."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "min max calculator, find minimum maximum, smallest largest number finder, min max of list, range of numbers calculator",
+    "labels": {
+      "countLabel": "Count",
+      "emptyLabel": "Enter at least one number to see results.",
+      "inputLabel": "Your numbers",
+      "inputPlaceholder": "Example: 7, 2, 9, 4",
+      "maxLabel": "Maximum",
+      "maxPosLabel": "Max position(s)",
+      "minLabel": "Minimum",
+      "minPosLabel": "Min position(s)",
+      "rangeLabel": "Range"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Extremes only - no mean, median or mode.",
+      "Positions count from 1, not 0, which differs from programming conventions.",
+      "Very long lists (over 50,000 characters) are truncated.",
+      "It finds values, not causes - it cannot explain why extremes occur."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free min/max finder: get the smallest and largest numbers in any list, with their positions, range and count. Paste your list for instant results.",
+    "metaTitle": "Min/Max of a List - Find Smallest & Largest Numbers | JaurTools",
+    "name": "Min/Max of a List",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "In the list 7, 2, 9, 4, the minimum is 2 (at position 2) and the maximum is 9 (at position 3). The range is 9 - 2 = 7. Paste any list of numbers - separated by commas, spaces or line breaks - and this tool finds the extremes instantly, reporting every position where they occur.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Min/max results",
+    "tagline": "Find the smallest and largest values in any list - with positions and range.",
+    "workedExample": "Find min and max of 7, 2, 9, 4:\n1. Start: candidate min = 7, candidate max = 7.\n2. See 2: smaller than 7, so min = 2.\n3. See 9: larger than 7, so max = 9.\n4. See 4: neither smaller than 2 nor larger than 9.\n5. Result: min = 2 at position 2, max = 9 at position 3, range = 7.",
+    "workedExampleHeading": "Worked example"
+  }
+}

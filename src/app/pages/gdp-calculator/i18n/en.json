@@ -1,0 +1,93 @@
+{
+  "gdp-calculator": {
+    "benefits": [
+      "Makes the abstract GDP formula concrete - you can see which component dominates.",
+      "Great for students: plug in textbook numbers and verify homework answers.",
+      "The share breakdown shows the structure of an economy at a glance.",
+      "Free, instant, and private - no data leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "C is household spending, I is business investment, G is government spending, and NX is net exports (exports minus imports). Together they add up to everything a country produces in a year. This is called the expenditure approach.",
+        "q": "What do C, I, G, and NX mean?"
+      },
+      {
+        "a": "When imports exceed exports, net exports are negative and GDP shrinks by that amount. That is normal for many countries - the US has run a trade deficit for decades. It simply means the country consumes more than it produces domestically.",
+        "q": "Can net exports be negative?"
+      },
+      {
+        "a": "Three approaches exist: expenditure (C+I+G+NX), production (value added by each industry), and income (wages + profits + taxes). In theory all three give the same GDP. This calculator uses the expenditure approach.",
+        "q": "Are there other ways to calculate GDP?"
+      },
+      {
+        "a": "Nominal GDP uses current prices; real GDP removes inflation by using a base year's prices. So nominal GDP can grow just because prices rose, while real GDP growth means the economy actually produced more.",
+        "q": "Nominal vs real GDP - what is the difference?"
+      },
+      {
+        "a": "GDP measures market production, not wellbeing. It ignores unpaid care work, the environment, inequality, and leisure time. That is why economists also look at measures like GDP per capita, health, and education alongside it.",
+        "q": "Why do economists criticize GDP?"
+      },
+      {
+        "a": "No. Real national accounts adjust for inflation, seasonal effects, and imputations like owner-occupied housing. This calculator is a learning tool for the basic formula, not a replica of official statistics.",
+        "q": "Is this how official GDP is calculated?"
+      }
+    ],
+    "formula": "GDP = C + I + G + (X - M)\nwhere C = consumption, I = investment, G = government spending,\nX = exports, M = imports, and net exports = X - M.\nShare of each component = component / GDP x 100.",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter all five values in the same unit - trillions of dollars by default.",
+      "Check that imports are entered as a positive number; the calculator subtracts them.",
+      "Read the GDP total instantly, plus net exports and each component's share.",
+      "Change any component to see how GDP and the shares move."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "GDP = C + I + G + net exports - the expenditure approach to measuring a country's output.",
+      "Consumption is usually the largest component, often around 60-70% of GDP.",
+      "Net exports can be negative when a country imports more than it exports.",
+      "All five inputs must use the same unit (for example, all in $ trillions).",
+      "This calculator is educational - official GDP statistics involve far more detail."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gdp calculator, gdp formula calculator, expenditure approach gdp, gdp components calculator",
+    "labels": {
+      "consumption": "Household consumption (C)",
+      "exports": "Exports (X)",
+      "gdp": "GDP",
+      "govSpending": "Government spending (G)",
+      "imports": "Imports (M)",
+      "investment": "Business investment (I)",
+      "netExports": "Net exports (X - M)",
+      "shareC": "Consumption share",
+      "shareG": "Government share",
+      "shareI": "Investment share",
+      "shareNX": "Net exports share",
+      "trillion": "T$",
+      "unitNote": "Enter all values in $ trillions (or any single unit)."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Educational simplification - official GDP uses the full national accounts, not just five numbers.",
+      "Ignores inflation adjustments (real vs nominal GDP).",
+      "Does not measure wellbeing, inequality, or the environment.",
+      "Estimates only - not for economic research or policy."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free GDP calculator: compute GDP from C + I + G + net exports with the expenditure approach. See each component's share. Educational and private.",
+    "metaTitle": "GDP Calculator - Expenditure Approach (C+I+G+NX) | JaurTools",
+    "name": "GDP Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "GDP = C + I + G + (X - M). With consumption 12, investment 4, government spending 3.5, exports 2.5, and imports 3.0 (all in $ trillions), GDP = 12 + 4 + 3.5 + (2.5 - 3.0) = $19.0 trillion. Consumption is 63.2% of the total, investment 21.1%, government 18.4%, and net exports -2.6%.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your GDP results",
+    "tagline": "Compute GDP from expenditure components: C + I + G + net exports.",
+    "workedExample": "C = 12, I = 4, G = 3.5, X = 2.5, M = 3.0 (all $ trillions):\n1. Net exports = 2.5 - 3.0 = -0.5.\n2. GDP = 12 + 4 + 3.5 + (-0.5) = 19.0 trillion dollars.\n3. Consumption share = 12 / 19 x 100 = 63.2%.\n4. Investment share = 4 / 19 x 100 = 21.1%.\n5. Government share = 3.5 / 19 x 100 = 18.4%.\n6. Net exports share = -0.5 / 19 x 100 = -2.6%.\nCheck: 63.2 + 21.1 + 18.4 - 2.6 = 100.1 (rounding).",
+    "workedExampleHeading": "Worked example"
+  }
+}

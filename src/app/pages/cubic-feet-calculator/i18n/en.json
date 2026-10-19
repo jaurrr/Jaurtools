@@ -1,0 +1,92 @@
+{
+  "cubic-feet-calculator": {
+    "benefits": [
+      "One input set gives five volume units at once.",
+      "Handles feet, inches, and meters without manual conversion.",
+      "Useful for soil, concrete, water tanks, and moving boxes.",
+      "Shows gallons and liters for liquid volumes.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Multiply length x width x height in feet. A 3 x 3 x 3 ft box holds 27 cubic feet — which is also exactly 1 cubic yard.",
+        "q": "How do I calculate cubic feet?"
+      },
+      {
+        "a": "Divide cubic feet by 27. There are 27 cubic feet in one cubic yard (3 x 3 x 3).",
+        "q": "How do I convert cubic feet to cubic yards?"
+      },
+      {
+        "a": "One US gallon = 231 cubic inches, so one cubic foot holds 7.48052 gallons. Multiply your cubic feet by 7.48052.",
+        "q": "How many gallons are in a cubic foot?"
+      },
+      {
+        "a": "One cubic meter = 35.3147 cubic feet. To convert the other way, multiply cubic feet by 0.0283168.",
+        "q": "How do I convert cubic feet to cubic meters?"
+      },
+      {
+        "a": "Use inches mode and enter all three dimensions in inches: the tool converts internally. Or divide each inch dimension by 12 to get feet first.",
+        "q": "My measurements are in inches. What now?"
+      }
+    ],
+    "formula": "cubic feet = length x width x height (all in feet)\ncubic yards = cubic feet / 27\ncubic meters = cubic feet x 0.0283168\ngallons (US) = cubic feet x 7.48052\nliters = cubic feet x 28.3168",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the unit your measurements are in: feet, inches, or meters.",
+      "Enter the length, width, and height.",
+      "Read cubic feet, cubic yards, cubic meters, gallons, and liters instantly.",
+      "Use cubic yards for soil, gravel, and concrete; gallons for water tanks."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Volume = length x width x height, all in the same unit.",
+      "1 cubic yard = 27 cubic feet.",
+      "1 cubic foot = 7.48052 US gallons = 28.3168 liters.",
+      "1 cubic meter = 35.3147 cubic feet.",
+      "Measure inside dimensions for tanks and boxes; outside for fill dirt.",
+      "For irregular shapes, break them into boxes and add the volumes."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cubic feet calculator, cubic yards calculator, volume calculator, cubic feet to cubic yards, gallons to cubic feet, volume converter",
+    "labels": {
+      "cfResult": "Cubic feet",
+      "cyResult": "Cubic yards",
+      "gallonsResult": "US gallons",
+      "height": "Height",
+      "length": "Length",
+      "litersResult": "Liters",
+      "m3Result": "Cubic meters",
+      "unitSystem": "Measurement unit",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rectangular boxes only; cylinders and spheres need different formulas.",
+      "Does not subtract wall thickness — measure accordingly.",
+      "Gallon figures are US gallons, not imperial gallons.",
+      "Estimates only; verify against supplier requirements before ordering."
+    ],
+    "limitationsHeading": "Limitations",
+    "unitNames": {
+      "ft": "Feet",
+      "in": "Inches",
+      "m": "Meters"
+    },
+    "metaDescription": "Calculate volume in cubic feet, cubic yards, gallons and more from simple length, width and height. Free and instant.",
+    "metaTitle": "Cubic Feet Calculator - Volume in Cubic Feet, Yards & Gallons | JaurTools",
+    "name": "Cubic Feet Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter length, width, and height in feet, inches, or meters, and this calculator instantly shows the volume in cubic feet, cubic yards, cubic meters, US gallons, and liters — handy for soil, concrete, water tanks, and moving boxes.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Volume results",
+    "tagline": "Length × width × height — volume in every unit.",
+    "workedExample": "A raised bed 3 x 3 x 3 ft:\n\n1. Cubic feet = 3 x 3 x 3 = 27.\n2. Cubic yards = 27 / 27 = 1.\n3. Cubic meters = 27 x 0.0283168 = 0.76.\n4. Gallons = 27 x 7.48052 = 201.97.\n5. Liters = 27 x 28.3168 = 764.55.\n\nOne cubic yard of soil fills it — or about 202 gallons of water.",
+    "workedExampleHeading": "Worked example"
+  }
+}

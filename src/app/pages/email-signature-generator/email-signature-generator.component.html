@@ -1,0 +1,160 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="two-fields">
+        <div class="field">
+          <label for="es-name">{{ t('labels.name') }}</label>
+          <input id="es-name" type="text" [ngModel]="name()" (ngModelChange)="name.set($event)" />
+        </div>
+        <div class="field">
+          <label for="es-title">{{ t('labels.jobTitle') }}</label>
+          <input id="es-title" type="text" [ngModel]="jobTitle()" (ngModelChange)="jobTitle.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="es-company">{{ t('labels.company') }}</label>
+        <input id="es-company" type="text" [ngModel]="company()" (ngModelChange)="company.set($event)" />
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="es-phone">{{ t('labels.phone') }}</label>
+          <input id="es-phone" type="tel" dir="ltr" [ngModel]="phone()" (ngModelChange)="phone.set($event)" />
+        </div>
+        <div class="field">
+          <label for="es-email">{{ t('labels.email') }}</label>
+          <input id="es-email" type="email" dir="ltr" [ngModel]="email()" (ngModelChange)="email.set($event)" />
+        </div>
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="es-website">{{ t('labels.website') }}</label>
+          <input id="es-website" type="url" dir="ltr" [ngModel]="website()" (ngModelChange)="website.set($event)" />
+        </div>
+        <div class="field">
+          <label for="es-accent">{{ t('labels.accentColor') }}</label>
+          <input id="es-accent" type="color" class="color-input" dir="ltr"
+            [ngModel]="accentColor()" (ngModelChange)="accentColor.set($event)" />
+        </div>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.previewHeading') }}</h3>
+      <div class="preview-box" [innerHTML]="html()"></div>
+
+      <h3 class="sub-heading">{{ t('labels.codeHeading') }}</h3>
+      <pre class="output" dir="ltr"><code>{{ html() }}</code></pre>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="copyHtml()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copy') }}
+        </button>
+        <button type="button" class="btn" (click)="downloadHtml()">
+          <app-icon name="download" /> {{ t('labels.download') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.installNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

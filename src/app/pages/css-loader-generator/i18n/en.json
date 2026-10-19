@@ -1,0 +1,96 @@
+{
+  "css-loader-generator": {
+    "assumptionNote": "The HTML and CSS below always match the current settings.",
+    "benefits": [
+      "Zero dependencies — the CSS works without frameworks, build tools, or icon fonts.",
+      "Tiny file size: each loader is under 1 KB, far lighter than an animated GIF.",
+      "GPU-friendly animations using only transform and opacity keep pages at 60 fps.",
+      "Fully customizable colors match any brand palette in seconds.",
+      "Copy-paste output drops straight into HTML, React, Vue, or Angular projects."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Copy the CSS into your stylesheet and the HTML snippet where the loader should appear. No JavaScript is needed — the animation starts automatically when the page loads.",
+        "q": "How do I add the loader to my website?"
+      },
+      {
+        "a": "Yes. Replace the hex color value (for example #4f46e5) in the generated CSS with any color you like, or regenerate here with the color picker.",
+        "q": "Can I change the color after copying the code?"
+      },
+      {
+        "a": "Browsers can animate transform and opacity on the GPU without repainting the page, which keeps the animation smooth even while the main thread is busy loading content.",
+        "q": "Why does the animation use transform and opacity only?"
+      },
+      {
+        "a": "Yes. Render the loader div conditionally — for example, show it when a fetch starts and hide it when the response arrives. The CSS itself has no JavaScript, so you control visibility with a line or two of framework code.",
+        "q": "Can I show the loader only while data is loading?"
+      },
+      {
+        "a": "The loader uses the exact color you pick, so choose a color with enough contrast against your dark background. The faint track ring is the same color at 20 percent opacity.",
+        "q": "Does the loader work in dark mode?"
+      },
+      {
+        "a": "Yes. The generated snippets are plain CSS with no license attached — use them in personal and commercial projects freely.",
+        "q": "Is the generated CSS free for commercial use?"
+      }
+    ],
+    "formula": "animation: <name> <duration>s <timing-function> infinite;\n\nExample: animation: css-loader-spin 1s linear infinite;\nBorder width = max(2, round(size / 10)) px",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a loader style: spinner, dots, bars, ring, or pulse.",
+      "Drag the size slider or type an exact pixel value between 16 and 128.",
+      "Choose the loader color with the color picker.",
+      "Set the animation speed in seconds — lower values spin faster.",
+      "Copy the generated CSS and the matching HTML snippet into your project."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The generated loaders use only CSS keyframe animations — no JavaScript and no image files are required.",
+      "Five built-in styles are included: spinner, bouncing dots, equalizer bars, expanding ring, and pulse.",
+      "Every animation runs on the compositor thread (transform and opacity), so it stays smooth even on low-end phones.",
+      "Size is adjustable from 16 to 128 pixels and speed from 0.3 to 3 seconds per loop.",
+      "The output works in every modern browser, including Chrome, Firefox, Safari, and Edge."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css loader generator, css spinner, loading animation css, css loading spinner, pure css loader",
+    "labels": {
+      "animationLabel": "Animation",
+      "colorLabel": "Color",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "previewLabel": "Loader preview",
+      "sizeLabel": "Size",
+      "speedLabel": "Speed",
+      "typeBars": "Bars",
+      "typeDots": "Dots",
+      "typeLabel": "Loader style",
+      "typePulse": "Pulse",
+      "typeRing": "Ring",
+      "typeSpinner": "Spinner"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "These are decorative looping animations — they cannot display a real loading percentage.",
+      "The preview colors assume a light or dark page that matches the site theme; test on your own background.",
+      "Very old browsers without CSS animation support will show a static shape.",
+      "For accessibility, pair loaders with an aria-live status message for screen-reader users."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create custom CSS loading spinners, dots, bars and pulse animations. Adjust size, color and speed, preview live, and copy clean CSS with zero dependencies.",
+    "metaTitle": "CSS Loader Generator – Free Animated Spinner Builder",
+    "name": "CSS Loader Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A CSS loader is a small looping animation, usually a spinning ring or bouncing dots, that tells visitors the page or request is still working. This tool generates the complete HTML and CSS for five loader styles, so you can paste them into any project without installing a library.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Loader preview",
+    "tagline": "Build lightweight, dependency-free loading animations and copy the ready-to-use CSS.",
+    "workedExample": "Choose the spinner style with size 48 px, color #4f46e5, and speed 1 second.\n\nBorder width = max(2, round(48 / 10)) = 5 px.\nThe track ring becomes rgba(79, 70, 229, 0.2) and the spinning edge takes the full #4f46e5.\n\nGenerated rule:\n.css-loader {\n  width: 48px;\n  height: 48px;\n  border: 5px solid rgba(79, 70, 229, 0.2);\n  border-top-color: #4f46e5;\n  border-radius: 50%;\n  animation: css-loader-spin 1s linear infinite;\n}\n\nPaste this CSS plus <div class=\"css-loader\"></div> into any page and the loader spins immediately.",
+    "workedExampleHeading": "Worked example"
+  }
+}

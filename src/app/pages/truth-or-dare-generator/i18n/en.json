@@ -1,0 +1,121 @@
+{
+  "truth-or-dare-generator": {
+    "benefits": [
+      "Instant party energy — no prep, no props, no explaining rules for ten minutes.",
+      "No repeats until the deck runs out, so long sessions stay fresh.",
+      "Family-friendly prompts only: safe for kids, cousins, and office parties alike.",
+      "Counts your truths and dares, so nobody can dodge their turn."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Games & Fun",
+    "dares": [
+      "Do your best impression of a famous actor for 30 seconds.",
+      "Speak in a robot voice until your next turn.",
+      "Do 10 jumping jacks right now, counting out loud.",
+      "Sing the chorus of your favourite song out loud.",
+      "Let the group style your hair using only their hands — keep it for two rounds.",
+      "Text a friend \"I owe you a pizza\" with no explanation.",
+      "Walk across the room like a crab.",
+      "Say the alphabet backwards as fast as you can.",
+      "Read your last received text message in a dramatic movie-trailer voice.",
+      "Balance a book on your head for one full minute.",
+      "Invent a brand-new handshake with the person on your left.",
+      "Pretend to be a news reporter and describe this room in 30 seconds."
+    ],
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "24 in total: 12 truths and 12 dares, freshly written for this page in English, Hindi, and Arabic. Switch the site language and the whole deck switches with it.",
+        "q": "How many truth and dare prompts are there?"
+      },
+      {
+        "a": "No — not until you have seen all 12 of that kind. The prompts are shuffled like a deck of cards and dealt one by one. Only when the deck runs out is it reshuffled, so repeats are impossible mid-session.",
+        "q": "Will I get the same prompt twice?"
+      },
+      {
+        "a": "Yes. Every prompt on this page is family-friendly — no embarrassing-personal or risky dares. It is safe for kids, family gatherings, classrooms, and office parties.",
+        "q": "Is this suitable for kids?"
+      },
+      {
+        "a": "Absolutely — that is a standard house rule. Anyone can pass on a prompt they are uncomfortable with. Tap Truth, Dare, or Surprise Me again for a fresh one. The fun stops being fun the moment someone feels pressured.",
+        "q": "Can someone skip a prompt they do not like?"
+      },
+      {
+        "a": "It picks randomly with a 50/50 chance of truth or dare, then deals from that deck. Use it when the group cannot decide and wants fate to choose.",
+        "q": "What does the Surprise Me button do?"
+      },
+      {
+        "a": "No. This generator needs no account, no sign-up, and no internet connection after the page loads. Everything happens in your browser.",
+        "q": "Do I need an account to play?"
+      }
+    ],
+    "formula": "Fisher-Yates shuffle: for i from n-1 down to 1, swap card i with a random card j where j <= i.\nEvery ordering is equally likely (n! possibilities for n cards). Each draw takes the top card; the deck is reshuffled only when empty — so no prompt repeats until all 12 of that kind have appeared.",
+    "formulaHeading": "How the shuffling works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the current player's name (optional) so the prompt card shows who is up.",
+      "Tap Truth for a question, Dare for a challenge, or Surprise Me to let fate decide.",
+      "Read the prompt out loud and complete it honestly — that is the whole game.",
+      "Keep going around the group. The counters track how many truths and dares have been done.",
+      "Press New Session to reset the decks and counters for a fresh round."
+    ],
+    "howToHeading": "How to play",
+    "keyFacts": [
+      "Truth or Dare is a classic party game: each player picks truth (answer honestly) or dare (do the challenge).",
+      "This page holds 24 original prompts — 12 truths and 12 dares — in English, Hindi, and Arabic.",
+      "Prompts are dealt from a shuffled deck, so you never see a repeat until all 12 of that kind are used.",
+      "The Surprise Me button chooses truth or dare for you with a 50/50 chance.",
+      "All prompts are family-friendly and safe for kids, classrooms, and office parties.",
+      "Built-in counters track completed truths and dares so every player takes fair turns."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "truth or dare generator, truth and dare game, truth or dare questions, dare ideas, party game online",
+    "labels": {
+      "dareButton": "Dare",
+      "dareTag": "Dare",
+      "daresDone": "Dares done",
+      "emptyPrompt": "Tap Truth, Dare, or Surprise Me to reveal your first prompt.",
+      "newSession": "New Session",
+      "playerLabel": "Player name (optional)",
+      "playerPlaceholder": "e.g. Priya",
+      "surpriseButton": "Surprise Me",
+      "truthButton": "Truth",
+      "truthTag": "Truth",
+      "truthsDone": "Truths done"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only 24 prompts per language — very long sessions will eventually cycle.",
+      "The prompts are fixed text; you cannot add your own custom ones yet.",
+      "Player names and counters reset when you reload the page.",
+      "Surprise Me is 50/50, so it cannot be tuned to favour truths or dares."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Truth or Dare generator: 24 original family-friendly prompts in English, Hindi and Arabic. No-repeat shuffled deck, player turns, no sign-up.",
+    "metaTitle": "Truth or Dare Generator - 24 Fun Prompts | JaurTools",
+    "name": "Truth or Dare Generator",
+    "privacyNote": "This generator runs 100% in your browser. Player names never leave your device.",
+    "quickAnswer": "Pick Truth for a fun question or Dare for a playful challenge — 24 original family-friendly prompts in your language. Prompts come from a shuffled deck, so nothing repeats until all 12 of a kind are used. Add player names, tap a button, and let the party begin.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Truth or Dare results",
+    "tagline": "24 original family-friendly prompts in 3 languages — shuffled fairly, no repeats, pure party fun.",
+    "truths": [
+      "What is the most embarrassing song on your playlist right now?",
+      "What is the silliest thing you believed as a child?",
+      "Which one food could you happily eat every single day?",
+      "What is a hidden talent almost nobody knows you have?",
+      "What was your most awkward moment at school or college?",
+      "If you could swap lives with anyone for one day, who would it be and why?",
+      "What is the funniest message you ever sent to the wrong person?",
+      "Which of your habits annoys your friends the most?",
+      "What is the bravest thing you have ever done?",
+      "Which movie can you quote almost line by line?",
+      "What is the weirdest dream you still remember?",
+      "What is the nicest compliment anyone has ever given you?"
+    ],
+    "workedExample": "The truth deck holds 12 prompts, shuffled into a random order.\n1. First draw: \"What is the silliest thing you believed as a child?\" — 11 cards remain.\n2. Second draw: \"Which movie can you quote almost line by line?\" — 10 remain, and it cannot repeat the first.\n3. After 12 draws the deck is empty and reshuffles into a new random order.\nThe 13th draw can repeat an old prompt, but never before all 12 have appeared once.",
+    "workedExampleHeading": "Worked example"
+  }
+}

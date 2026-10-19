@@ -1,0 +1,91 @@
+{
+  "fuel-economy-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Fuel Economy Converter",
+    "tagline": "Convert MPG (US/UK), L/100km and km/L - compare car efficiency worldwide.",
+    "metaTitle": "Fuel Economy Converter - MPG to L/100km | JaurTools",
+    "metaDescription": "Free fuel economy converter: MPG (US & UK) to litres per 100 km and km per litre. Compare car fuel efficiency across countries.",
+    "keywords": "fuel economy converter, mpg to l/100km, l/100km to mpg, km per litre calculator, fuel efficiency converter",
+    "resultsHeading": "Fuel economy conversion results",
+    "quickAnswer": "30 MPG (US) = 7.84 L/100km. The two scales run opposite: higher MPG is better, but lower L/100km is better. Enter a figure, pick US MPG, UK MPG, L/100km or km/L, and compare instantly.",
+    "keyFacts": [
+      "US gallon = 3.78541 L; UK (imperial) gallon = 4.54609 L - so US and UK MPG are different numbers.",
+      "Conversion constants: 235.214583 ÷ MPG(US) = L/100km; 282.480936 ÷ MPG(UK) = L/100km.",
+      "L/100km and km/L are reciprocals: km/L = 100 ÷ L/100km.",
+      "Europe, India and most of Asia use L/100km or km/L; the US uses MPG.",
+      "India officially rates cars in km/L (ARAI mileage figures).",
+      "Real-world mileage is typically 15-30% worse than lab figures because of traffic, AC and driving style."
+    ],
+    "howTo": [
+      "Type the fuel economy figure.",
+      "Pick the from-unit: US MPG, UK MPG, L/100km, or km/L.",
+      "Pick the to-unit.",
+      "Read the instant result; swap reverses it."
+    ],
+    "formula": "Via L/100km as the base:\nTo base: L/100km = 235.214583 ÷ MPG(US); = 282.480936 ÷ MPG(UK); = 100 ÷ km/L.\nFrom base: MPG(US) = 235.214583 ÷ L/100km; km/L = 100 ÷ L/100km.\nExample: 30 MPG(US) → 235.214583 ÷ 30 = 7.840 L/100km.",
+    "workedExample": "Convert 30 MPG (US) to L/100km:\n1. Constant: 235.214583.\n2. 235.214583 ÷ 30 = 7.8405.\n3. Result: 7.84 L/100km.\nTo km/L: 100 ÷ 7.8405 = 12.75 km/L.\nUK check: 30 MPG (UK) → 282.480936 ÷ 30 = 9.42 L/100km (worse, because the UK gallon is bigger).",
+    "benefits": [
+      "Handles US and UK gallons separately - the #1 MPG conversion mistake, avoided.",
+      "All four world units in one converter for comparing imported car specs.",
+      "Swap button for quick both-direction checks.",
+      "Useful when reading foreign car reviews or relocating."
+    ],
+    "limitations": [
+      "Converts the efficiency figure only - actual fuel cost needs local fuel prices and distance.",
+      "Lab figures differ from real driving; treat results as comparative, not promises.",
+      "Does not cover electric efficiency (kWh/100km or MPGe)."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert MPG to L/100km?",
+        "a": "For US MPG: divide 235.21 by the MPG. 30 MPG (US) = 235.21 ÷ 30 = 7.84 L/100km. For UK MPG use 282.48 instead, because the imperial gallon is larger."
+      },
+      {
+        "q": "What is the difference between US MPG and UK MPG?",
+        "a": "The gallon differs: US = 3.785 L, UK imperial = 4.546 L. So 30 MPG (UK) equals only 25 MPG (US) - the same car, two numbers. Always check which gallon a figure uses."
+      },
+      {
+        "q": "Is higher L/100km better or worse?",
+        "a": "Worse. L/100km measures consumption (fuel used), so lower is better. MPG measures economy (distance per fuel), so higher is better. They move in opposite directions."
+      },
+      {
+        "q": "How do I convert km/L to L/100km?",
+        "a": "Divide 100 by the km/L figure. 20 km/L = 100 ÷ 20 = 5 L/100km. They are exact reciprocals."
+      },
+      {
+        "q": "What is good fuel economy for a car?",
+        "a": "Roughly: petrol hatchbacks 15-20 km/L (5-6.7 L/100km) are good; 25+ km/L is excellent (usually hybrids). SUVs at 10-12 km/L are typical for their size."
+      },
+      {
+        "q": "Why is real mileage lower than the claimed figure?",
+        "a": "Claimed figures come from lab test cycles with gentle acceleration and no AC. Real traffic, idling, AC use, tyre pressure and driving style typically cut 15-30% off the claim."
+      }
+    ],
+    "labels": {
+      "value": "Value",
+      "from": "From",
+      "to": "To",
+      "swap": "Swap units",
+      "result": "Result",
+      "units": {
+        "mpg_us": "Miles per gallon (US)",
+        "mpg_uk": "Miles per gallon (UK)",
+        "l100km": "Litres per 100 km",
+        "kml": "Kilometres per litre"
+      }
+    }
+  }
+}

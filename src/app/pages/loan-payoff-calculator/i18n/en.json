@@ -1,0 +1,120 @@
+{
+  "loan-payoff-calculator": {
+    "benefits": [
+      "Makes the invisible cost of slow payoff visible in dollars and months.",
+      "Shows exactly what each extra dollar per month buys you.",
+      "Helps you pick between paying debt faster and investing the difference.",
+      "Private - your debt numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Monthly extra usually wins slightly because each dollar starts cutting interest sooner. But the bigger factor is consistency - pick the rhythm you will actually stick to.",
+        "q": "Is it better to pay extra monthly or one lump sum yearly?"
+      },
+      {
+        "a": "Paying down debt generally helps your score by lowering utilization. Closing your oldest account can shorten credit history, but the effect is usually small and temporary.",
+        "q": "Will paying off early hurt my credit score?"
+      },
+      {
+        "a": "Compare rates: paying a 12% loan is a guaranteed 12% return, which beats most investments. Below 5-6%, investing often wins mathematically - but being debt-free has value beyond math.",
+        "q": "Should I pay off debt or invest instead?"
+      },
+      {
+        "a": "Then the balance grows forever - negative amortization. The calculator warns you: you must at least cover monthly interest plus a little principal to make progress.",
+        "q": "What if my payment does not cover the interest?"
+      },
+      {
+        "a": "With most loans, yes - but some lenders apply extra to future payments instead. Call your lender and ask for extra to be applied to principal only.",
+        "q": "Do extra payments really go to principal?"
+      },
+      {
+        "a": "No. The simulation runs in your browser and nothing is stored or transmitted.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Monthly rate r = APR / 12 / 100\nEach month: interest = balance x r; principal paid = payment - interest; new balance = balance - principal paid.\nMonths to payoff is about -ln(1 - balance x r / payment) / ln(1 + r). Simulated month-by-month here.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current loan balance and APR.",
+      "Enter your regular monthly payment.",
+      "Enter any extra amount you can pay each month (0 is fine).",
+      "Compare: months to payoff, total interest, and what the extra payment saves you.",
+      "Adjust the extra payment to find a payoff date that fits your goals."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every payment splits into interest (on the remaining balance) and principal (which shrinks the balance).",
+      "Extra payments go 100% to principal, so each one also wipes out all the future interest that principal would have earned.",
+      "Paying $100 extra monthly often beats a yearly lump sum - the money starts working sooner.",
+      "Check for prepayment penalties before accelerating; most personal loans and US mortgages have none.",
+      "Attack the highest-rate debt first - a dollar of extra payment saves the most interest there.",
+      "Even rounding your payment up ($293 to $300) compounds into real savings over years."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "loan payoff calculator, early loan payoff, extra payment calculator, debt payoff calculator, loan amortization",
+    "labels": {
+      "annualRate": "APR (%)",
+      "extraPayment": "Extra monthly payment",
+      "interestSaved": "Interest saved",
+      "loanBalance": "Loan balance",
+      "monthlyPayment": "Monthly payment",
+      "monthsSaved": "Months saved",
+      "monthsToPayoff": "Months to payoff",
+      "neverPayoff": "Your payment does not cover the monthly interest, so the balance would grow forever. Increase the payment to make progress.",
+      "payoffDate": "Debt-free date",
+      "totalInterestPaid": "Total interest paid",
+      "withExtra": "with extra",
+      "withoutExtra": "without extra"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - assumes a fixed rate and no fees, penalties, or skipped payments.",
+      "Does not model variable-rate loans or changing minimums.",
+      "Ignores prepayment penalties; check your loan agreement first.",
+      "Not financial advice - consider an emergency fund before aggressive payoff."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free loan payoff calculator: compare your payoff date with and without extra payments. See months saved and interest avoided. Private, browser-based.",
+    "metaTitle": "Loan Payoff Calculator - Early Payoff and Interest Saved | JaurTools",
+    "name": "Loan Payoff Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Extra payments attack principal directly, shrinking both the payoff time and total interest. For example, on a $10,000 loan at 12% APR paying $200 a month, adding $100 extra cuts payoff from about 70 months to 41 - saving roughly 29 months and $1,706 in interest. Try your own numbers below.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your loan payoff plan",
+    "tagline": "See how fast extra payments kill your loan - months saved and interest avoided.",
+    "workedExample": "$10,000 balance, 12% APR, $200/month, +$100 extra:\n1. Monthly rate = 1%. Base payment $200, accelerated $300.\n2. Without extra: about 70 months, about $3,931 total interest.\n3. With $100 extra: about 41 months, about $2,225 total interest.\n4. You save about 29 months and about $1,706 in interest.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "debtFree": "Debt-free date",
+      "debtFreeNote": "at {months} months with the extra payment",
+      "monthsSaved": "Months saved",
+      "interestSaved": "Interest saved"
+    },
+    "duel": {
+      "base": "Minimum payments",
+      "fast": "With extra",
+      "monthsUnit": "mo",
+      "baseSub": "{interest} total interest",
+      "fastSub": "{interest} total interest"
+    },
+    "timeline": {
+      "heading": "Payoff timeline"
+    },
+    "tip": {
+      "payoff": "Tip: that {extra}/month extra wipes {months} months off your loan and saves {saved} in interest."
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "Your {balance} loan is gone by {date} — {months} months of payments."
+    },
+    "empty": {
+      "hint": "Raise the monthly or extra payment so it covers the monthly interest."
+    }
+  }
+}

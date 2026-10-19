@@ -1,0 +1,91 @@
+{
+  "round-corners": {
+    "benefits": [
+      "Give photos and screenshots soft, modern rounded corners in one click.",
+      "Transparent corners work on any background — websites, slides, thumbnails.",
+      "Optional white or custom fill blends the corners into a chosen backdrop.",
+      "The pixel readout shows the exact corner radius for consistent design."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the image, drag the radius slider (0–50% of the shorter side), choose transparent, white, or a custom corner fill, then Download the PNG or JPG.",
+        "q": "How do I round the corners of a photo?"
+      },
+      {
+        "a": "Radius is a percentage of the shorter side, so 10% on an 800 × 600 photo means 60 px corners. At 50% the image becomes a perfect circle (or stadium shape).",
+        "q": "What does the radius percentage mean?"
+      },
+      {
+        "a": "Use Transparent corners and PNG output. The corners become see-through, so the image blends into any page or app background.",
+        "q": "How do I get rounded corners on a website?"
+      },
+      {
+        "a": "Yes — set the radius to 50% with transparent corners and download the PNG. The result is a circular image.",
+        "q": "Can I make a circular profile picture?"
+      },
+      {
+        "a": "No. The mask is drawn on a canvas in your browser; the original file never leaves your device.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "radius_px = round(min(width, height) × radius_pct / 100)\ncorner arc: quarter circle of radius_px at each corner",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the photo or screenshot you want to round.",
+      "Move the radius slider and watch the corners update live.",
+      "Choose transparent corners, or fill them with white or a custom color.",
+      "Pick PNG (keeps transparency) or JPG output.",
+      "Press Download to save the rounded image."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The radius slider runs from 0% (sharp corners) to 50% (fully round).",
+      "Radius is measured against the shorter side, so it scales fairly on any image.",
+      "Transparent corners need PNG output — JPG cannot store transparency.",
+      "The pixel readout converts your percentage into the exact radius in pixels.",
+      "The output keeps the original pixel dimensions."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "round corners image, rounded corners photo, circle crop image, rounded image online, soft corners photo",
+    "labels": {
+      "bgCustom": "Custom color",
+      "bgTransparent": "Transparent",
+      "bgWhite": "White",
+      "corners": "Corner fill",
+      "download": "Download rounded image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "pickOne": "Choose an image above to round its corners.",
+      "preview": "Rounded corners preview",
+      "radius": "Corner radius (% of shorter side)",
+      "radiusPx": "Corner radius",
+      "upload": "Image to round"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "JPG output cannot keep transparency — corners become white or your fill color.",
+      "Rounding is destructive on the saved file; the original corners are cropped away.",
+      "Only uniform rounding: each corner gets the same radius.",
+      "Animated GIFs are processed as a single still frame."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Soften any photo with adjustable rounded corners — transparent or filled backgrounds. Preview live and download free.",
+    "metaTitle": "Round Corners - Soft Rounded Corners | JaurTools",
+    "name": "Round Corners",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and drag the radius slider to round its corners from subtle to fully circular. Keep corners transparent with PNG for use on any background, or fill them with white or a custom color — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Rounded corners results",
+    "tagline": "Softer edges, cleaner look.",
+    "workedExample": "An 800 × 600 px photo with a 10% radius:\nshorter side = 600 px\nradius_px = round(600 × 10 / 100) = 60 px\nEach corner is cut by a 60 px quarter-circle. At 50%, radius_px = 300 px = half the shorter side, giving fully round ends.",
+    "workedExampleHeading": "Worked example"
+  }
+}

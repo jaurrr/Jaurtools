@@ -1,0 +1,87 @@
+{
+  "random-color-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Random Color Generator",
+    "tagline": "One tap, one brand-new color - with HEX, RGB and HSL ready to copy.",
+    "metaTitle": "Random Color Generator - Get a Random HEX Color | JaurTools",
+    "metaDescription": "Free random color generator: generate random HEX colors with one tap, see RGB and HSL values, keep a history, and copy any color instantly. Private, no sign-up.",
+    "keywords": "random color generator, random hex color, random colour picker, generate random color",
+    "quickAnswer": "Every tap generates a fresh random color by picking a random 24-bit number and showing it as HEX. The number 10,744,955 becomes #A3F47B: A3 = 163 red, F4 = 244 green, 7B = 123 blue. Each of the 16,777,216 possible colors has exactly the same chance of appearing.",
+    "keyFacts": [
+      "A HEX color is a random 24-bit number: red, green and blue each get 8 random bits.",
+      "There are exactly 16,777,216 possible colors (256 x 256 x 256).",
+      "Every color has an equal chance - the generator has no favorites and no memory.",
+      "The same color can repeat; randomness has no obligation to be varied.",
+      "Your recent colors are kept in a short history so you never lose a good one."
+    ],
+    "howTo": [
+      "Tap the Generate button for a brand-new random color.",
+      "See the swatch update with its HEX, RGB and HSL values.",
+      "Tap a color in the history to copy an earlier favorite.",
+      "Copy the current HEX with one tap for your CSS or design tool.",
+      "Keep generating until something sparks an idea."
+    ],
+    "formula": "random = floor(uniform(0, 1) x 16,777,216), shown as a 6-digit HEX.\nExample: the number 10,744,955 in hex:\n10,744,955 / 65,536 = 163 remainder 62,587 -> A3\n62,587 / 256 = 244 remainder 123 -> F4\n123 -> 7B\nResult: #A3F47B = RGB(163, 244, 123).",
+    "workedExample": "Say the generator rolls 10,744,955:\n1. Red byte: floor(10,744,955 / 65,536) = 163. In hex, 163 = A3.\n2. Remainder: 10,744,955 - 163 x 65,536 = 62,587.\n3. Green byte: floor(62,587 / 256) = 244. In hex, 244 = F4.\n4. Blue byte: 62,587 - 244 x 256 = 123. In hex, 123 = 7B.\n5. Result: #A3F47B = RGB(163, 244, 123) - a bright yellow-green.",
+    "benefits": [
+      "Breaks creative blocks - a surprise color often sparks a new direction.",
+      "Fast way to explore the full color space without picking manually.",
+      "History keeps your lucky finds one tap away.",
+      "Copy-ready values drop straight into code or design tools."
+    ],
+    "limitations": [
+      "Random means random - most results will be ordinary, a few will be ugly.",
+      "No guarantee of harmony; pair random colors with a scheme tool for palettes.",
+      "Generated colors may fail accessibility contrast - check before using for text."
+    ],
+    "faqs": [
+      {
+        "q": "Is the color truly random?",
+        "a": "It uses your browser's built-in random number generator, which is uniform across all 16.7 million colors. It is not cryptographically secure, but for picking colors that does not matter."
+      },
+      {
+        "q": "Can I get the same color twice?",
+        "a": "Yes, and that is correct behavior. True randomness has no memory, so repeats are expected - just very unlikely for any specific color (1 in 16.7 million)."
+      },
+      {
+        "q": "How do I get only pastel or only dark colors?",
+        "a": "This generator covers the full space. For pastels, generate then lighten the result with the Lighten Color tool; for darks, use the Tints and Shades generator's shade side."
+      },
+      {
+        "q": "Why do I mostly get muddy colors?",
+        "a": "Most of the 16.7 million colors are mid-saturation mixes, which read as muddy. Vivid pure colors are rare in the space - that is statistics, not a bug."
+      },
+      {
+        "q": "Does the history get saved?",
+        "a": "No. The history lives only while the page is open and never leaves your browser - refresh and it starts fresh."
+      },
+      {
+        "q": "Can I lock a channel, like keep red fixed?",
+        "a": "Not in this version. Generate freely, then fine-tune promising colors with the palette or channel tools."
+      }
+    ],
+    "resultsHeading": "Your random color results",
+    "labels": {
+      "generate": "Generate",
+      "currentHex": "HEX",
+      "currentRgb": "RGB",
+      "currentHsl": "HSL",
+      "copyHex": "Copy HEX",
+      "copied": "Copied",
+      "historyLabel": "Recent colors"
+    }
+  }
+}

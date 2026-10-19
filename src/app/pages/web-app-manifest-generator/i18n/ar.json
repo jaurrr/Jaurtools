@@ -1,0 +1,115 @@
+{
+  "web-app-manifest-generator": {
+    "benefits": [
+      "يبني بيانًا كاملًا صالحًا من نموذج — دون كتابة JSON يدويًا.",
+      "يملأ مسبقًا قيمًا افتراضية معقولة (عرض standalone وأيقونتي 192/512) لتبدأ قابلًا للتثبيت.",
+      "يحذر من متطلبات قابلية التثبيت المفقودة أثناء الكتابة.",
+      "نقرة واحدة تعطيك الملف مع وسم <link> للصقه في HTML.",
+      "كل شيء يبقى في متصفحك؛ فلا تغادر تفاصيل تطبيقك الجهاز أبدًا."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "احفظه باسم manifest.webmanifest (أو manifest.json) في جذر موقعك وأشر إليه من <head> كل صفحة: ‎<link rel=\"manifest\" href=\"/manifest.webmanifest\">‎. وقدّمه بنوع MIME ‏application/manifest+json‎.",
+        "q": "أين أضع ملف البيان؟"
+      },
+      {
+        "a": "استخدم الاثنتين: فمولّد Web App Manifest يبني الملف، ثم يتحقق منه فاحص PWA Manifest مقابل متطلبات قابلية التثبيت. ولّد هنا وتحقق هناك.",
+        "q": "هل أستخدم هذا أم فاحص PWA Manifest؟"
+      },
+      {
+        "a": "الحد الأدنى لقابلية التثبيت: name (أو short_name) وstart_url ووضع display ‏standalone/fullscreen/minimal-ui‎ وأيقونتا 192px و512px. ويحذرك هذا المولّد إذا نقص شيء، ويملأ مدخلات الأيقونات مسبقًا.",
+        "q": "ما الحد الأدنى لـ PWA قابل للتثبيت؟"
+      },
+      {
+        "a": "‏start_url هو حيث يُفتح التطبيق عند إطلاقه من الشاشة الرئيسية (عادة ‎\"/\"‎). ويحد scope عناوين URL التي تُعد جزءًا من تطبيقك — فالروابط خارجه تُفتح في المتصفح. ويعرّف id التطبيق بشكل فريد؛ اضبطه صراحة لئلا تُنشئ تغييرات URL تثبيتات مكررة.",
+        "q": "ما هي start_url وscope وid؟"
+      },
+      {
+        "a": "تقص أيقونات Android التكيفية الأيقونات بأشكال، لذا يُوصى بنسخة maskable بحشوة. ويملأ هذا المولّد أيقونة 512px مسبقًا بغرض ‎\"any maskable\"‎ — فقط أشرها إلى ملف maskable الخاص بك.",
+        "q": "هل أحتاج أيقونة maskable؟"
+      },
+      {
+        "a": "نعم — الصق JSON المولَّد في فاحص PWA Manifest على هذا الموقع للتحقق منه. وتأكد أيضًا من وجود وسم <link> في HTML وتقديم الملف عبر HTTPS وتسجيل عامل خدمة.",
+        "q": "كيف أتحقق من البيان المولَّد؟"
+      }
+    ],
+    "formula": "هيكل البيان المولَّد:\n{\n  \"name\": \"…\", \"short_name\": \"…\",\n  \"start_url\": \"/\", \"scope\": \"/\", \"id\": \"/\",\n  \"display\": \"standalone | fullscreen | minimal-ui | browser\",\n  \"orientation\": \"any | natural | landscape | portrait | …\",\n  \"theme_color\": \"#…\", \"background_color\": \"#…\",\n  \"lang\": \"en\", \"dir\": \"ltr | rtl | auto\",\n  \"icons\": [{ \"src\": \"…\", \"sizes\": \"192x192\", \"type\": \"image/png\", \"purpose\": \"any maskable\" }]\n}\nتُضمَّن الحقول غير الفارغة فقط.",
+    "formulaHeading": "الهيكل المولَّد",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "املأ اسم تطبيقك والاسم المختصر (واحد منهما مطلوب على الأقل).",
+      "اضبط عنوان URL للبدء ووضع العرض ولوني السمة والخلفية.",
+      "عدّل مدخلات الأيقونات أو أضفها — فأيقونتا PNG بمقاسي 192px و512px هما الحد الأدنى لقابلية التثبيت.",
+      "راقب التحذيرات وأصلح كل ما يُعلَّم.",
+      "انسخ manifest.webmanifest أو نزّله واربطه من HTML."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "بيان تطبيق الويب ملف JSON يصف تطبيقك: الاسم والأيقونات والألوان وسلوك الإطلاق.",
+      "تشترط المتصفحات name/short_name وstart_url ووضع display صالحًا وأيقونتي 192px و512px قبل عرض التثبيت.",
+      "يعطي display: ‏standalone نافذة بمظهر التطبيق؛ ويزيل fullscreen كل واجهة المتصفح؛ ويُبقي minimal-ui عناصر تحكم أساسية.",
+      "يلوّن theme_color واجهة النظام؛ ويملأ background_color شاشة البداية أثناء الإطلاق.",
+      "يجب ربط الملف من HTML: ‎<link rel=\"manifest\" href=\"/manifest.webmanifest\">‎.",
+      "اقرنه بعامل خدمة عبر HTTPS للحصول على PWA قابل للتثبيت بالكامل."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "web app manifest generator, pwa manifest generator, manifest.json generator, create manifest.webmanifest",
+    "labels": {
+      "addIcon": "إضافة أيقونة",
+      "copiedMsg": "تم نسخ البيان إلى الحافظة.",
+      "copyFile": "نسخ البيان",
+      "downloadFile": "تنزيل manifest.webmanifest",
+      "fBgColor": "لون الخلفية",
+      "fDescription": "الوصف",
+      "fDir": "اتجاه النص (dir)",
+      "fDisplay": "وضع العرض",
+      "fId": "معرف التطبيق (id)",
+      "fLang": "اللغة (lang)",
+      "fName": "اسم التطبيق",
+      "fOrientation": "الاتجاه",
+      "fScope": "النطاق",
+      "fShortName": "الاسم المختصر",
+      "fStartUrl": "عنوان URL للبدء",
+      "fThemeColor": "لون السمة",
+      "generatedFile": "البيان المولَّد",
+      "iconPurpose": "الغرض",
+      "iconSizes": "المقاسات",
+      "iconSrc": "عنوان URL للأيقونة",
+      "iconType": "نوع MIME",
+      "iconsHeading": "الأيقونات",
+      "linkTagLabel": "أضف إلى <head> في HTML",
+      "optUnset": "غير مضبوط",
+      "removeIcon": "إزالة",
+      "serveNote": "احفظه باسم manifest.webmanifest وقدّمه بنوع MIME ‏application/manifest+json‎ عبر HTTPS واربطه من HTML.",
+      "warnBadBg": "لون الخلفية ليس لون CSS صالحًا وتم استبعاده.",
+      "warnBadTheme": "لون السمة ليس لون CSS صالحًا وتم استبعاده.",
+      "warnNo192": "لا توجد أيقونة 192x192 — مطلوبة لقابلية التثبيت.",
+      "warnNo512": "لا توجد أيقونة 512x512 — مطلوبة لقابلية التثبيت.",
+      "warnNoName": "لم يُضبط name ولا short_name — أحدهما مطلوب.",
+      "warningsHeading": "تحقق قبل النشر"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "يولّد ملف البيان فقط — فما زلت تحتاج وسم <link> وHTTPS وعامل خدمة.",
+      "لا يستطيع إنشاء صور أيقوناتك أو تغيير أحجامها — أشره إلى ملفات PNG مستضافة حقيقية.",
+      "تُتحقق مدخلات الألوان كألوان CSS، لكن الملف لا يُختبر مقابل متصفح حي هنا.",
+      "حقول البيان غير المألوفة خارج المجموعة الشائعة لا يغطيها النموذج."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "مولّد بيان تطبيق الويب مجاني: ابنِ manifest.webmanifest صالحًا من نموذج بسيط مع تحذيرات قابلية التثبيت. انسخ أو نزّل بخصوصية كاملة.",
+    "metaTitle": "Web App Manifest Generator - إنشاء manifest.webmanifest | JaurTools",
+    "name": "مولّد بيان تطبيق الويب",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "املأ النموذج وسيبني هذا المولّد بيان تطبيق ويب كاملًا: الاسم والاسم المختصر وعنوان URL للبدء ووضع العرض ولوني السمة والخلفية ومدخلات الأيقونات — وتُضمَّن الحقول غير الفارغة فقط. وتهدف الافتراضيات (عرض standalone وأيقونتا 192px و512px) إلى قابلية التثبيت، وتنبه التحذيرات الحية لكل ما ينقص. وتحصل على ملف manifest.webmanifest مع وسم <link> لـ HTML.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "البيان الخاص بك",
+    "tagline": "ابنِ بيان تطبيق ويب صالحًا من نموذج بسيط — دون JSON مكتوب يدويًا.",
+    "workedExampleHeading": "مثال محلول",
+    "workedExample": "المدخلات: الاسم Example Tools والاسم المختصر ExTools وstart_url ‏/‎ والعرض standalone ولون السمة #4f46e5 ولون الخلفية #ffffff والأيقونتان ‎/icons/icon-192.png (192x192) و/icons/icon-512.png (512x512 بغرض any maskable).\nالملف المولَّد manifest.webmanifest:\n{\n  \"name\": \"Example Tools\",\n  \"short_name\": \"ExTools\",\n  \"start_url\": \"/\",\n  \"display\": \"standalone\",\n  \"theme_color\": \"#4f46e5\",\n  \"background_color\": \"#ffffff\",\n  \"icons\": [\n    {\n      \"src\": \"/icons/icon-192.png\",\n      \"sizes\": \"192x192\",\n      \"type\": \"image/png\"\n    },\n    {\n      \"src\": \"/icons/icon-512.png\",\n      \"sizes\": \"512x512\",\n      \"type\": \"image/png\",\n      \"purpose\": \"any maskable\"\n    }\n  ]\n}\nالحقول الفارغة (description وscope وid وorientation وdir) حُذفت. لا تحذيرات — فالاسم و192px و512px كلها موجودة."
+  }
+}

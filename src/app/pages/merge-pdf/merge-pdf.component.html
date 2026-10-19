@@ -1,0 +1,176 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <span class="field-label" id="mp-file-label">{{ t('labels.filesLabel') }}</span>
+        <div class="file-drop fl-drop" role="button" tabindex="0" (click)="fileInput.click()"
+          (keydown.enter)="fileInput.click()" [attr.aria-labelledby]="'mp-file-label'"
+          [class.dragging]="fileDragging()" (dragover)="onDragOverFiles($event)"
+          (dragleave)="fileDragging.set(false)" (drop)="onDropFiles($event)">
+          <app-icon name="upload" />
+          <span>{{ t('labels.chooseFiles') }}</span>
+          <small>{{ t('labels.dropHint') }}</small>
+        </div>
+        <input #fileInput id="mp-file" type="file" accept="application/pdf,.pdf" multiple (change)="onFiles($event)" hidden />
+        <p class="note">{{ t('labels.orderNote') }}</p>
+        @for (f of files(); track f.id) {
+          <div class="list-row fl-row" draggable="true"
+            (dragstart)="dragStart(f.id)" (dragover)="dragOver($event)" (drop)="dropOn(f.id)">
+            <span class="fl-icon"><app-icon name="file-text" /></span>
+            <span class="grow fl-name">{{ f.name }}<span class="fl-meta">{{ f.pages }} {{ t('labels.pagesSuffix') }} · {{ fmtBytes(f.bytes.length) }}</span></span>
+            <button type="button" class="icon-btn flip" (click)="move(f.id, -1)" [attr.aria-label]="t('labels.moveUp')">
+              <app-icon name="chevron-down" />
+            </button>
+            <button type="button" class="icon-btn" (click)="move(f.id, 1)" [attr.aria-label]="t('labels.moveDown')">
+              <app-icon name="chevron-down" />
+            </button>
+            <button type="button" class="icon-btn" (click)="remove(f.id)" [attr.aria-label]="t('labels.removeLabel')">
+              <app-icon name="x" />
+            </button>
+          </div>
+          @if (f.pages > 0) {
+            <p class="fl-rail-label">{{ tc('pageRailLabel') }} · {{ f.pages }}</p>
+            <div class="fl-thumbrail" role="list" [attr.aria-label]="f.name">
+              @for (n of pageNums(f); track n) {
+                <div class="fl-thumb" role="listitem">
+                  <div class="fl-thumb-page" aria-hidden="true">{{ n }}</div>
+                  <div class="fl-thumb-meta"><span>{{ t('labels.pageLabel') }} {{ n }}</span></div>
+                </div>
+              }
+              @if (extraPages(f) > 0) {
+                <div class="fl-thumb" role="listitem">
+                  <div class="fl-thumb-page" aria-hidden="true">+{{ extraPages(f) }}</div>
+                  <div class="fl-thumb-meta"><span>{{ t('labels.moreLabel') }}</span></div>
+                </div>
+              }
+            </div>
+          }
+        }
+      </div>
+
+      @if (error()) {
+        <p class="error dv-status dv-status-bad" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+
+      <div class="btn-row fl-toolbar">
+        <button type="button" class="btn btn-primary" (click)="merge()" [disabled]="busy() || files().length < 2">
+          <app-icon name="copy" /> {{ busy() ? t('labels.processing') : t('labels.mergeBtn') }}
+        </button>
+        <button type="button" class="btn" (click)="reset()">
+          <app-icon name="refresh-cw" /> {{ t('labels.resetBtn') }}
+        </button>
+      </div>
+      @if (busy()) {
+        <div class="fl-progress indeterminate" role="progressbar" [attr.aria-label]="t('labels.processing')"><span></span></div>
+      }
+
+      @if (done()) {
+        <div class="results">
+          <div class="result-row total">
+            <span><app-icon name="copy" /> {{ t('labels.totalLabel') }}</span>
+            <strong class="fl-count">{{ totalPages() }}</strong>
+          </div>
+          <p class="success dv-status dv-status-ok" role="status"><app-icon name="check" /> {{ t('labels.successMsg') }}</p>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadBtn') }}
+            </button>
+          </div>
+        </div>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

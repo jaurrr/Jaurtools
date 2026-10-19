@@ -1,0 +1,88 @@
+{
+  "color-blender": {
+    "benefits": [
+      "Mix any two colors at any ratio with one slider move.",
+      "Shows the result as HEX and RGB with a large live preview.",
+      "One-click copy puts the blended color straight into your stylesheet.",
+      "A fast way to create in-between tones, hover states and gradients.",
+      "Runs entirely in your browser — private and offline."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Blending mixes the red, green and blue channels separately, which is fast and predictable. Blending in HSL or LAB can look more natural for some pairs, but RGB is the standard behavior most tools use, and its results are easy to reason about.",
+        "q": "Is RGB blending the same as mixing paint?"
+      },
+      {
+        "a": "At 50%, red (255, 0, 0) and blue (0, 0, 255) average to (127.5, 0, 127.5), which rounds to (128, 0, 128) — purple, #800080. That is the classic midpoint.",
+        "q": "What is the midpoint of red and blue?"
+      },
+      {
+        "a": "Type any valid 3- or 6-digit HEX code (like #fff or #4f46e5) in the text box, or use the color picker swatch. Invalid input is ignored so the result never breaks.",
+        "q": "Can I type a HEX code directly?"
+      },
+      {
+        "a": "Use the ratio slider: 0% gives pure color A, 100% gives pure color B, and anything in between is the weighted mix. For tint steps, use the color mixer tool instead.",
+        "q": "How do I make a color lighter with this tool?"
+      },
+      {
+        "a": "No — every calculation runs locally with JavaScript. Your colors are never sent anywhere.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "result channel = A x (1 - t) + B x t, where t = ratio/100\napplied separately to the red, green and blue channels\nt = 0 gives pure A, t = 1 gives pure B",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick color A and color B with the color pickers or type HEX codes.",
+      "Move the ratio slider toward the color you want to dominate.",
+      "Watch the large preview and read the resulting HEX and RGB values.",
+      "Click Copy to place the blended HEX code on your clipboard.",
+      "Paste it into your CSS or design tool."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Blending averages the red, green and blue channels of two colors.",
+      "A 50% ratio gives the exact midpoint between the two colors.",
+      "At 0% you get pure color A; at 100% you get pure color B.",
+      "Each channel rounds to the nearest whole number (0-255) before HEX conversion.",
+      "The result is also shown as a large live preview swatch."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "blend colors, mix two colors, color blender, color mixer online, blend hex colors",
+    "labels": {
+      "blended": "Blended color",
+      "colorA": "Color A",
+      "colorB": "Color B",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyResult": "Copy result",
+      "hexCodeA": "Color A HEX code",
+      "hexCodeB": "Color B HEX code",
+      "ratio": "Mix ratio",
+      "rgbValue": "RGB value"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Blends in RGB space only; perceptual (LAB/LCH) blending is not offered.",
+      "Only two colors at a time — for multi-step mixes use the color mixer tool.",
+      "Alpha (transparency) channels are not supported.",
+      "Rounding can shift a channel by at most 1, which is invisible to the eye."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Blend any two colors at any ratio and get the instant HEX and RGB result. Free online color mixer, no signup needed.",
+    "metaTitle": "Color Blender - Mix Two Colors Instantly | JaurTools",
+    "name": "Color Blender",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick two colors and drag the ratio slider to blend them at any proportion. The tool averages the red, green and blue channels and shows the result as HEX and RGB with a large live preview. Copy the blended color with one click and paste it straight into your CSS or design tool.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your blended color",
+    "tagline": "Mix two colors at any ratio — instant result.",
+    "workedExample": "Blend pure red #ff0000 with pure blue #0000ff at 50%.\nt = 50/100 = 0.5.\nRed channel: 255 x 0.5 + 0 x 0.5 = 127.5, rounds to 128.\nGreen channel: 0 x 0.5 + 0 x 0.5 = 0.\nBlue channel: 0 x 0.5 + 255 x 0.5 = 127.5, rounds to 128.\nResult: rgb(128, 0, 128) = #800080 — the classic purple midpoint.",
+    "workedExampleHeading": "Worked example"
+  }
+}

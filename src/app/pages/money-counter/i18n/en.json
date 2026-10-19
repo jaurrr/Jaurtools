@@ -1,0 +1,83 @@
+{
+  "money-counter": {
+    "benefits": [
+      "Faster and more accurate than mental math on a pile of cash.",
+      "Four currencies with correct real-world denominations built in.",
+      "Live subtotals make it easy to spot which stack looks wrong.",
+      "Private - your cash counts never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "By denomination, largest first, using fingertip fanning for bills and pre-counted coin rolls. This tool mirrors that method: enter each stack's count and let it do the arithmetic.",
+        "q": "How do cashiers count money fast?"
+      },
+      {
+        "a": "US Dollar, Euro, Indian Rupee, and Saudi Riyal, each with its real current bills and coins.",
+        "q": "Which currencies are supported?"
+      },
+      {
+        "a": "No - each currency tab counts only its own denominations. Pull out foreign coins first; they do not belong in the total.",
+        "q": "Can I count foreign coins mixed in?"
+      },
+      {
+        "a": "Usually a miscounted coin stack or a bill stuck to another. Recount the smallest denominations first - that is where errors hide.",
+        "q": "Why is my total off by a little?"
+      },
+      {
+        "a": "No. Counterfeit detection needs UV or magnetic checks or a bank's verification. This tool only adds up what you tell it.",
+        "q": "Does it detect fake bills?"
+      },
+      {
+        "a": "No. Counting happens entirely in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Row subtotal = denomination value x quantity\nGrand total = sum of all row subtotals\nExample: 3 x $20 = $60; 5 x $0.25 = $1.25",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your currency: USD, EUR, INR, or SAR.",
+      "Enter the quantity you have of each bill and coin.",
+      "Watch each row's subtotal and the grand total update live.",
+      "Use Reset to clear one currency and start a fresh count."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Counting by denomination is how banks and cashiers reconcile tills - it catches miscounts fast.",
+      "Count the largest bills first; they dominate the total and errors there cost the most.",
+      "Stack coins in standard rolls to count faster.",
+      "Always count twice when the total matters - once by denomination, once as a lump sum.",
+      "Worn or foreign coins slip into counts; glance at each stack before totaling."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "money counter, cash counter, count money by denomination, coin counter, bill counter",
+    "labels": {
+      "currency": "Currency",
+      "grandTotal": "Grand total",
+      "quantity": "Qty",
+      "reset": "Reset count"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A counting aid, not a counterfeit detector - check suspicious bills separately.",
+      "Denomination sets are standard current series; commemorative or withdrawn notes are not listed.",
+      "Rounding is to the cent; totals are for counting, not accounting."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free money counter: enter how many of each bill and coin you have and get the total instantly. USD, EUR, INR, SAR. Private, browser-based.",
+    "metaTitle": "Money Counter - Count Cash by Denomination | JaurTools",
+    "name": "Money Counter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type in how many of each bill and coin you have - the total adds up live. For example, 3 x $20 + 4 x $5 + 6 x $1 + 5 quarters = $87.25. Switch currency for dollars, euros, rupees, or riyals.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Cash count",
+    "tagline": "Count cash by denomination - bills and coins - in USD, EUR, INR, or SAR.",
+    "workedExample": "Evening till count (USD):\n1. Bills: 3 x $20 = $60; 4 x $5 = $20; 6 x $1 = $6 -> $86\n2. Coins: 5 quarters x $0.25 = $1.25\n3. Grand total = $86 + $1.25 = $87.25\nCount again in reverse order to verify.",
+    "workedExampleHeading": "Worked example"
+  }
+}

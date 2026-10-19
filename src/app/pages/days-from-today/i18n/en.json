@@ -1,0 +1,90 @@
+{
+  "days-from-today": {
+    "benefits": [
+      "Finds any future or past date in one step.",
+      "Shows the day of the week automatically.",
+      "Counts down to deadlines, birthdays, and events.",
+      "No calendar math or leap-year mistakes.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Add the number of days to today's date. This tool does it for you and names the weekday — for example, 90 days after 18 October 2026 is 16 January 2027, a Saturday.",
+        "q": "What date is 90 days from today?"
+      },
+      {
+        "a": "Subtract instead of adding, or switch this tool to the Past tab. For instance, 100 days before 18 October 2026 is 10 July 2026.",
+        "q": "How do I find a date in the past?"
+      },
+      {
+        "a": "Use the Days Until tab: pick the target date and the tool counts the days. Negative means the date already passed.",
+        "q": "How many days until my deadline?"
+      },
+      {
+        "a": "Yes. The calculation uses real calendar dates, so February 29 in leap years is handled correctly.",
+        "q": "Does it handle leap years?"
+      },
+      {
+        "a": "This tool counts whole calendar days between dates. A date 7 days out lands on the same weekday next week.",
+        "q": "Does it count today as day 1?"
+      }
+    ],
+    "formula": "future date = today + N days\npast date = today - N days\ndays until = target date - today (whole calendar days)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick 'Days from today' to jump forward or backward, or 'Days until' to count down.",
+      "For the first mode, enter the number of days and choose Future or Past.",
+      "For the second mode, pick the target date on the calendar.",
+      "Read the resulting date, its weekday, or the days remaining."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Adding N days to a date is how deadlines, warranties, and return windows are computed.",
+      "The weekday repeats every 7 days: 90 days out is the same weekday minus one (90 = 12x7 + 6).",
+      "Leap years add February 29, shifting dates after February by one weekday.",
+      "Counting down to a date uses whole calendar days, not 24-hour periods.",
+      "Daylight-saving changes do not affect calendar-day math.",
+      "Business-day math (excluding weekends) is a different calculation."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "days from today calculator, what date is in 30 days, days until calculator, date calculator, future date finder, countdown days",
+    "labels": {
+      "daysAway": "Days away",
+      "daysLabel": "Number of days",
+      "directionLabel": "Direction",
+      "fromTodayTab": "Days from today",
+      "futureTab": "Future",
+      "modeLabel": "Calculator mode",
+      "pastTab": "Past",
+      "resultDate": "Resulting date",
+      "targetLabel": "Target date",
+      "untilDateTab": "Days until a date",
+      "untilNote": "Negative numbers mean the date is in the past.",
+      "weekday": "Day of the week"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Counts calendar days, not business days.",
+      "Uses your device's local date and timezone.",
+      "Very distant dates (beyond year 9999) are not supported.",
+      "Does not account for holidays."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free date calculator: find the date N days from today (future or past) with the weekday, or count days until any date. No sign-up.",
+    "metaTitle": "Days From Today Calculator & Days Until Counter (Free)",
+    "name": "Days From Today",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter a number of days and choose future or past to land on the exact date with its day of the week. Or switch to the Days Until mode, pick any target date, and get the countdown in whole calendar days.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Date results",
+    "tagline": "Jump to any future or past date, or count down to one.",
+    "workedExample": "Starting from 18 October 2026 (a Sunday):\n\n1. 90 days in the future: 18 Oct + 90 days = 16 January 2027, a Saturday.\n2. 45 days in the past: 18 Oct - 45 days = 3 September 2026, a Thursday.\n3. Days until 1 January 2027: from 18 Oct 2026, that is 75 days.\n\nThe tool computes these with real calendar dates, so month lengths and the weekday are always right.",
+    "workedExampleHeading": "Worked example"
+  }
+}

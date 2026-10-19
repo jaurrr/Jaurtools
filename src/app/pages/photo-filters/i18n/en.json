@@ -1,0 +1,102 @@
+{
+  "photo-filters": {
+    "benefits": [
+      "Studio-style looks (vivid, vintage, mono) in one click - no photo editor needed.",
+      "Every slider change previews instantly on the real image.",
+      "What you see is what downloads: the preview and the file use the same render.",
+      "Fine control over brightness, contrast, saturation, hue and more.",
+      "Free, private, and works offline after the page loads."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Press Reset filters to return to the untouched original, then build your look again. The original file is never modified - only the download changes.",
+        "q": "I messed up the sliders. How do I start over?"
+      },
+      {
+        "a": "The canvas filter API is supported in Chrome, Edge, Firefox and Safari 18 and later. On older Safari the preview may ignore filters; update the browser or try another one.",
+        "q": "The preview looks unchanged on my old phone. Why?"
+      },
+      {
+        "a": "Hue-rotate spins the color wheel: reds become oranges, then yellows, greens and so on. A 180-degree rotation flips every hue to its opposite (red becomes cyan).",
+        "q": "What does hue-rotate actually do?"
+      },
+      {
+        "a": "That is the classic over-sharpened look: pushing contrast and saturation together. Back contrast to around 110 and saturation to 120 for a clean vivid look.",
+        "q": "My photo looks harsh after the vivid preset. How do I fix it?"
+      },
+      {
+        "a": "Blur runs on the whole image, so heavy blur on a 1600-pixel image can take a second on slow phones. Lower values are instant everywhere.",
+        "q": "Why does blur take a moment?"
+      }
+    ],
+    "formula": "Each pixel passes through the filter chain in order:\nbrightness: v x (b / 100)\ncontrast: (v - 128) x (c / 100) + 128\ngrayscale: mix of luminance, sepia: warm-tone matrix,\nhue-rotate: rotation in the color wheel, invert: 255 - v.\nExample: brightness 120 on pixel 100 -> 100 x 1.2 = 120.\nExample: invert 100 on pixel 100 -> 255 - 100 = 155.",
+    "formulaHeading": "What each filter does to a pixel",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file up to 50 MB - JPG, PNG, WebP, GIF, BMP or SVG.",
+      "Try a one-click preset: vivid, mono, vintage, cool or warm.",
+      "Fine-tune with the eight sliders - the preview updates live.",
+      "Reset any time to return to the untouched original.",
+      "Press Download to save the filtered image as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Eight adjustable filters: brightness, contrast, saturation, grayscale, sepia, blur, hue-rotate and invert.",
+      "Filters apply in a fixed order, so the same slider values always give the same result.",
+      "One-click presets: vivid, mono (black and white), vintage, cool and warm.",
+      "The download is a PNG rendered from the exact same pipeline as the preview.",
+      "The original file is never modified - only the downloaded copy carries the filters.",
+      "Images are rendered at up to 1600 pixels on the long edge for speed."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "photo filter online, image filters free, apply filters to photo, vintage photo filter, black and white photo converter",
+    "labels": {
+      "blur": "Blur",
+      "brightness": "Brightness",
+      "changeFile": "Change file",
+      "chooseFile": "Choose an image file",
+      "contrast": "Contrast",
+      "downloadButton": "Download filtered image",
+      "fileHint": "JPG, PNG, WebP, GIF, BMP or SVG - up to 50 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 50 MB. Please choose a smaller image.",
+      "grayscale": "Grayscale",
+      "hueRotate": "Hue rotate",
+      "invalidFile": "That file is not an image. Please choose an image file.",
+      "invert": "Invert",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "presetCool": "Cool",
+      "presetMono": "Mono",
+      "presetNone": "None",
+      "presetVintage": "Vintage",
+      "presetVivid": "Vivid",
+      "presetWarm": "Warm",
+      "presetsLabel": "Filter presets",
+      "resetButton": "Reset filters",
+      "saturate": "Saturation",
+      "sepia": "Sepia"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Canvas filters need a modern browser - very old browsers may ignore them.",
+      "Blur on large images can be slow on low-end phones.",
+      "There is no selective editing: filters apply to the whole image.",
+      "Output is PNG only - convert afterwards if you need JPEG."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Give any photo a studio look with live filters and one-click presets. Adjust intensity and download instantly — free and private.",
+    "metaTitle": "Photo Filters - Studio-Look Filters | JaurTools",
+    "name": "Photo Filters",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and style it with eight live filters: brightness, contrast, saturation, grayscale, sepia, blur, hue-rotate and invert - plus one-click presets like vivid, mono and vintage. Every slider change previews instantly, and the PNG you download is rendered by the exact same pipeline. For example, brightness 120 turns a pixel of value 100 into 120, and invert flips 100 to 155.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Image filter results",
+    "tagline": "Studio looks in one click.",
+    "workedExample": "Apply the vintage preset to a photo.\n1. Preset sets: sepia 60%, contrast 90%, brightness 105%.\n2. A mid-gray pixel (128, 128, 128) first gains a warm tone from sepia.\n3. Contrast 90 pulls values slightly toward the middle: 128 stays near 128.\n4. Brightness 105 multiplies by 1.05, lifting the whole image a touch.\n5. The result: the faded, warm, slightly soft look of an old photograph.\nExact pixel values depend on the photo, but the pipeline is identical every time.",
+    "workedExampleHeading": "Worked example"
+  }
+}

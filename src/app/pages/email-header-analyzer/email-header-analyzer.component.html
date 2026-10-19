@@ -1,0 +1,196 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="mail" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="email-headers">{{ t('labels.pasteLabel') }}</label>
+        <textarea id="email-headers" class="dv-term-input code" spellcheck="false"
+          [ngModel]="rawInput()" (ngModelChange)="setRaw($event)"
+          [attr.placeholder]="t('labels.pasteHint')" dir="ltr"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn ghost" (click)="clearInput()">
+          <app-icon name="x" /> {{ t('labels.clearButton') }}
+        </button>
+      </div>
+
+      @if (hasInput()) {
+        <div class="results">
+          <div class="result-row total">
+            <span><app-icon name="activity" /> {{ t('labels.hopCountLabel') }}</span>
+            <strong>{{ summary().hopCount }}</strong>
+          </div>
+          @if (summary().from) {
+            <div class="result-row"><span>{{ t('labels.fromLabel') }}</span><strong class="mono">{{ summary().from }}</strong></div>
+          }
+          @if (summary().to) {
+            <div class="result-row"><span>{{ t('labels.toLabel') }}</span><strong class="mono">{{ summary().to }}</strong></div>
+          }
+          @if (summary().subject) {
+            <div class="result-row"><span>{{ t('labels.subjectLabel') }}</span><strong>{{ summary().subject }}</strong></div>
+          }
+          @if (summary().date) {
+            <div class="result-row"><span>{{ t('labels.dateLabel') }}</span><strong class="mono">{{ summary().date }}</strong></div>
+          }
+          @if (dkimDomain().d) {
+            <div class="result-row"><span>{{ t('labels.dkimDomainLabel') }}</span><strong class="mono">d={{ dkimDomain().d }}; s={{ dkimDomain().s }}</strong></div>
+          }
+          @if (summary().returnPath) {
+            <div class="result-row"><span>{{ t('labels.returnPathLabel') }}</span><strong class="mono">{{ summary().returnPath }}</strong></div>
+          }
+        </div>
+
+        @if (authChecks().length > 0) {
+          <h3 class="table-title">{{ t('labels.authHeading') }}</h3>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr><th>{{ t('labels.thType') }}</th><th>{{ t('labels.thResult') }}</th><th>{{ t('labels.thDetail') }}</th></tr>
+              </thead>
+              <tbody>
+                @for (a of authChecks(); track $index) {
+                  <tr>
+                    <td class="mono" style="text-transform: uppercase">{{ a.type }}</td>
+                    <td><span class="badge" [class.pass]="a.result === 'pass'" [class.fail]="a.result === 'fail' || a.result === 'none'">{{ a.result }}</span></td>
+                    <td class="mono">{{ a.detail }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        }
+
+        @if (hops().length > 0) {
+          <h3 class="table-title">{{ t('labels.hopsHeading') }}</h3>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr><th>{{ t('labels.thHop') }}</th><th>{{ t('labels.thFrom') }}</th><th>{{ t('labels.thBy') }}</th><th>{{ t('labels.thIp') }}</th><th>{{ t('labels.thDate') }}</th></tr>
+              </thead>
+              <tbody>
+                @for (h of hops(); track $index) {
+                  <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td class="mono">{{ h.from || '—' }}</td>
+                    <td class="mono">{{ h.by || '—' }}</td>
+                    <td class="mono">{{ h.ip || '—' }}</td>
+                    <td class="mono">{{ h.date || '—' }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <p class="note">{{ t('labels.hopsNote') }}</p>
+        }
+
+        <details>
+          <summary>{{ t('labels.allHeadersHeading') }} ({{ headers().length }})</summary>
+          <div class="table-wrap">
+            <table class="tbl">
+              <tbody>
+                @for (h of headers(); track $index) {
+                  <tr><td class="mono"><strong>{{ h.name }}</strong></td><td class="mono">{{ h.value }}</td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </details>
+      } @else {
+        <p class="note">{{ t('labels.emptyState') }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

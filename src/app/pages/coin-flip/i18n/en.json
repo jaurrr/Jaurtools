@@ -1,0 +1,93 @@
+{
+  "coin-flip": {
+    "benefits": [
+      "Settle any heads-or-tails decision in one tap, with a fun animation.",
+      "The running tally shows the 50/50 split converging as you flip more.",
+      "Streak tracking makes probability feel real instead of abstract.",
+      "No ads, no sign-up, no waiting. Just flip."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes, as fair as your browser's random number generator. Each flip is independent with a 50/50 chance. Over hundreds of flips the tally converges toward half heads, half tails, which you can watch happen in the counters above.",
+        "q": "Is this coin flip really fair?"
+      },
+      {
+        "a": "That is the gambler's fallacy. The coin has no memory. After 5 heads in a row, the next flip is still 50/50. Streaks feel surprising, but in 100 flips you should expect a run of about 6 or 7 in a row somewhere.",
+        "q": "After 5 heads, is tails due next?"
+      },
+      {
+        "a": "The chance of a specific 5-flip sequence, like HHHHH, is (1/2)^5 = 1/32, about 3.1 percent. Any other exact sequence, like HTHTH, has exactly the same probability. We only notice the boring-looking ones.",
+        "q": "What are the odds of 5 heads in a row?"
+      },
+      {
+        "a": "For casual decisions with friends, absolutely. For anything with real money or legal weight, flip a physical coin where everyone can see it. A screen result is only as trustworthy as the screen owner.",
+        "q": "Can I use this to settle a bet?"
+      },
+      {
+        "a": "Pseudo-random. Browsers use a high-quality pseudo-random generator (xorshift128+ in V8) seeded from the operating system. It is unpredictable enough for games and decisions, but it is not certified for cryptography or lotteries.",
+        "q": "Is the randomness real or pseudo-random?"
+      },
+      {
+        "a": "Tap Reset next to the Flip button. It clears the result, both counters, the streak, and the history dots.",
+        "q": "How do I start over?"
+      }
+    ],
+    "formula": "P(heads) = P(tails) = 1/2.\nP(streak of n) = (1/2)^n. Example: 5 heads in a row = 1/32 = 3.125%.\nExpected heads in N flips = N / 2.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Tap Flip the coin and watch the 3D animation.",
+      "The result appears below the coin: heads or tails.",
+      "Counters track heads, tails, the heads share, and your current streak.",
+      "The last 20 flips appear as dots for a visual history.",
+      "Tap Reset to clear everything and start fresh."
+    ],
+    "howToHeading": "How to use this flipper",
+    "keyFacts": [
+      "A fair coin lands heads with probability 1/2 and tails with probability 1/2.",
+      "Each flip is independent. Past results never change the next flip's odds.",
+      "A streak of 5 heads has probability (1/2)^5 = 1/32, about 3.1 percent.",
+      "In 100 flips, expect at least one run of 6 or 7 identical results. Streaks are normal.",
+      "The gambler's fallacy is believing tails is due after several heads. It is not."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "coin flipper, flip a coin online, heads or tails, virtual coin toss, random coin flip",
+    "labels": {
+      "currentStreak": "Current streak",
+      "flip": "Flip the coin",
+      "flipping": "Flipping...",
+      "heads": "Heads",
+      "headsCount": "Heads",
+      "headsShare": "Heads share",
+      "headsShort": "H",
+      "history": "Recent flips",
+      "noFlipYet": "Tap flip to toss the coin",
+      "reset": "Reset",
+      "tails": "Tails",
+      "tailsCount": "Tails",
+      "tailsShort": "T"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "For fun and casual decisions only. Not for gambling, legal, or financial decisions.",
+      "Uses the browser's pseudo-random generator, not certified cryptographic randomness.",
+      "A screen result cannot be independently verified by the other party."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free coin flip: toss a virtual coin with 3D animation. Track heads/tails counts, streaks and history. Fair, instant, no sign-up.",
+    "metaTitle": "Coin Flip - Flip a Coin Online Free | JaurTools",
+    "name": "Coin Flip",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Tap to flip a virtual coin with a 50/50 chance of heads or tails. Counters track heads, tails, the heads share, and your current streak, with the last 20 flips as visual dots. Each flip is independent: even after 5 heads in a row, the next flip is still exactly 50/50.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your coin flips",
+    "tagline": "Flip a virtual coin — heads or tails, fair every time.",
+    "workedExample": "You flip 10 times and get 7 heads and 3 tails:\n1. Expected heads = 10 / 2 = 5.\n2. Getting 7 is completely normal: the standard deviation of 10 flips is about 1.58, so 7 is just over one deviation above average.\n3. Heads share = 7 / 10 = 70%.\n4. Flip 100 times and the share drifts back toward 50%. That pull toward the average is the law of large numbers in action.",
+    "workedExampleHeading": "Worked example"
+  }
+}

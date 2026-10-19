@@ -1,0 +1,92 @@
+{
+  "color-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Color Converter",
+    "tagline": "Convert colours between HEX, RGB and HSL with a live preview swatch.",
+    "metaTitle": "Color Converter - HEX to RGB to HSL Online | JaurTools",
+    "metaDescription": "Free color converter: turn HEX into RGB and HSL instantly, or enter RGB values to get HEX and HSL. Live preview included.",
+    "keywords": "color converter, hex to rgb, rgb to hex, hex to hsl, color code converter",
+    "resultsHeading": "Colour conversion results",
+    "quickAnswer": "Type a HEX code like #4F46E5 (the JaurTools indigo) and instantly get rgb(79, 70, 229) and hsl(243, 75%, 59%). Or flip to the RGB tab and type the three channel values to get HEX and HSL back. A live swatch shows the colour as you type.",
+    "keyFacts": [
+      "HEX is RGB written in base-16: #RRGGBB, where each pair is one channel from 00 to FF (0-255).",
+      "RGB mixes Red, Green and Blue light - the native language of screens.",
+      "HSL describes Hue (0-360°), Saturation (0-100%) and Lightness (0-100%) - closer to how humans think about colour.",
+      "3-digit HEX is shorthand: #F0A expands to #FF00AA.",
+      "HSL makes it easy to create shades: keep H and S fixed, move L up for lighter, down for darker.",
+      "The same HEX looks slightly different on different screens because displays are calibrated differently."
+    ],
+    "howTo": [
+      "Stay on the HEX tab and type a colour code like #4F46E5 or the shorthand #F0A.",
+      "RGB and HSL values appear instantly with a live preview swatch.",
+      "Switch to the RGB tab and type three values (0-255) to convert the other way.",
+      "Invalid HEX shows a warning instead of silently guessing."
+    ],
+    "formula": "HEX → RGB: split into pairs, each pair is base-16 (e.g. 4F₁₆ = 4×16 + 15 = 79).\nRGB → HSL: max/min of the three channels give Lightness = (max+min)/2; Saturation from the spread; Hue from which channel is max.\nExample: #4F46E5 → R=79, G=70, B=229 → H=243°, S=75%, L=59%.",
+    "workedExample": "Convert #4F46E5:\n1. Split: 4F | 46 | E5.\n2. To decimal: 4×16+15 = 79; 4×16+6 = 70; 14×16+5 = 229.\n3. RGB: rgb(79, 70, 229).\n4. HSL: max=229, min=70 → L = (0.898+0.275)/2 = 59%; S = 75%; hue lands on blue at 243°.\n5. Result: hsl(243, 75%, 59%).",
+    "benefits": [
+      "Two-way conversion: HEX to RGB/HSL and RGB back to HEX in one tool.",
+      "Live preview swatch removes all doubt about what the code looks like.",
+      "3-digit shorthand accepted, so pasted snippets from CSS just work.",
+      "HSL output helps designers build consistent colour palettes."
+    ],
+    "limitations": [
+      "Screens only - print (CMYK) conversion is not covered.",
+      "No alpha/opacity channel; use 8-digit HEX or RGBA in your code for transparency.",
+      "Colour appearance still varies between displays."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert HEX to RGB?",
+        "a": "Split the HEX into three pairs and convert each from base-16 to decimal. For #4F46E5: 4F = 79, 46 = 70, E5 = 229, giving rgb(79, 70, 229). This tool does it instantly."
+      },
+      {
+        "q": "What is the difference between RGB and HSL?",
+        "a": "RGB describes how much red, green and blue light to mix - great for machines. HSL describes hue (the colour angle), saturation (vividness) and lightness - great for humans picking shades and building palettes."
+      },
+      {
+        "q": "What does the # mean in a HEX colour?",
+        "a": "It is just a marker meaning \"what follows is hexadecimal\". In CSS, #4F46E5 and the function form rgb(79,70,229) describe the exact same colour."
+      },
+      {
+        "q": "Can I use 3-digit HEX codes?",
+        "a": "Yes. #F0A is shorthand for #FF00AA - each digit is doubled. This tool accepts both forms."
+      },
+      {
+        "q": "Why do my colours look different on another screen?",
+        "a": "Displays differ in calibration, brightness and colour gamut. HEX/RGB values are exact numbers, but each screen renders them slightly differently - designers calibrate monitors to minimize this."
+      },
+      {
+        "q": "How do I make a lighter or darker shade?",
+        "a": "Use the HSL values: keep hue and saturation the same and raise lightness for a lighter shade, lower it for darker. For #4F46E5 (L=59%), try L=75% for light and L=40% for dark."
+      }
+    ],
+    "labels": {
+      "mode": "Input format",
+      "hexTab": "HEX input",
+      "rgbTab": "RGB input",
+      "hexInput": "HEX colour code",
+      "red": "Red (0-255)",
+      "green": "Green (0-255)",
+      "blue": "Blue (0-255)",
+      "preview": "Colour preview",
+      "hexOut": "HEX",
+      "rgbOut": "RGB",
+      "hslOut": "HSL",
+      "invalidHex": "Not a valid HEX code. Use 3 or 6 hex digits, e.g. #F0A or #4F46E5."
+    }
+  }
+}

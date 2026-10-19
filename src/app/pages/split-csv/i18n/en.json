@@ -1,0 +1,101 @@
+{
+  "split-csv": {
+    "benefits": [
+      "Breaks huge exports into import-friendly chunks without opening a spreadsheet.",
+      "The header row is repeated in every part, so each file stands alone.",
+      "Choose rows-per-file or a fixed number of parts, whichever fits your task.",
+      "Everything runs locally, so sensitive data is never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Turn on Repeat header row and every output file starts with the header, so each part imports cleanly on its own.",
+        "q": "Does each part keep the header row?"
+      },
+      {
+        "a": "The remainder rows go into the last part. For example, 10 data rows split into 3 parts gives 4, 3 and 3 rows.",
+        "q": "What if rows do not divide evenly?"
+      },
+      {
+        "a": "They download one after another with a short pause between them, named data-part1.csv, data-part2.csv and so on. Your browser may ask permission for multiple downloads.",
+        "q": "How are the parts downloaded?"
+      },
+      {
+        "a": "Quoted fields are parsed properly, including escaped quotes and line breaks inside quotes, so no row is ever cut in the middle.",
+        "q": "Are quoted fields with line breaks handled?"
+      },
+      {
+        "a": "Yes, choose the semicolon, tab or pipe output delimiter to match whatever your import tool expects.",
+        "q": "Can I change the delimiter of the output?"
+      }
+    ],
+    "formula": "parts = ceil(data rows / rows per file)  or  rows per part = floor/ceil(data rows / parts)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your CSV, upload a .csv file, or press Sample.",
+      "Choose split by rows per file or by number of parts.",
+      "Set the rows per file or the part count, and the base file name.",
+      "Keep Repeat header row on so every part has headers.",
+      "Press Split and download each part one by one."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Splits a CSV by rows per file or by a fixed number of parts.",
+      "The header row can be repeated at the top of every part.",
+      "Proper CSV parsing means quoted fields with line breaks are never cut mid-row.",
+      "Parts download sequentially as name-part1.csv, name-part2.csv and so on.",
+      "The delimiter is auto-detected on input and selectable on output."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "split csv online, split csv file, divide csv into parts, csv splitter free, chunk csv file",
+    "labels": {
+      "clear": "Clear",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "Output delimiter",
+      "done": "Done! {n} parts downloaded one by one.",
+      "downloadNote": "Parts download one after another. Your browser may ask permission for multiple downloads.",
+      "errorSplit": "Something went wrong while splitting. Please try again.",
+      "fileBase": "Base file name",
+      "inputLabel": "CSV input",
+      "inputPh": "Paste CSV here...",
+      "modeLabel": "Split mode",
+      "modeParts": "By number of parts",
+      "modeRows": "By rows per file",
+      "partCount": "Number of parts",
+      "repeatHeader": "Repeat header row in every part",
+      "resultDataRows": "Data rows",
+      "resultParts": "Parts to create",
+      "rowsPerFile": "Rows per file",
+      "sample": "Load sample",
+      "splitButton": "Split CSV",
+      "splitting": "Splitting...",
+      "uploadCsv": "Upload CSV"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Parts download one by one; there is no single combined download.",
+      "Very large pastes (tens of MB) can make the browser tab sluggish.",
+      "Splitting is by row count, not by file size.",
+      "The delimiter choice applies to output; input is auto-detected."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Split CSV files online free. Divide by rows per file or number of parts, repeat headers, and download each part. 100% browser-based, no upload.",
+    "metaTitle": "Split CSV Online Free - Divide CSV Into Multiple Files | JaurTools",
+    "name": "Split CSV",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste or upload a CSV and split it by rows per file or by number of parts. The header row is repeated in every part, quoted fields are never cut mid-row, and parts download one after another as name-part1.csv, name-part2.csv and so on.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Split CSV results",
+    "tagline": "Divide a large CSV into smaller files by rows or parts.",
+    "workedExample": "Sample CSV: 1 header row + 10 data rows.\nSplit by rows per file = 4, header repeated.\nPart 1: header + rows 1-4 (4 data rows)\nPart 2: header + rows 5-8 (4 data rows)\nPart 3: header + rows 9-10 (2 data rows)\n\n3 parts: data-part1.csv, data-part2.csv, data-part3.csv.",
+    "workedExampleHeading": "Worked example"
+  }
+}

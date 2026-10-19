@@ -1,0 +1,96 @@
+{
+  "css-unit-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "CSS Unit Converter",
+    "tagline": "Convert px, rem, em, %, vw and vh with your own base font size and viewport.",
+    "metaTitle": "CSS Unit Converter - px to rem em vw vh | JaurTools",
+    "metaDescription": "Free CSS unit converter: px to rem, em, %, vw, vh and back. Set your base font size and viewport dimensions for exact results.",
+    "keywords": "css unit converter, px to rem, px to vw, rem to px, em to px converter",
+    "resultsHeading": "CSS unit conversion results",
+    "quickAnswer": "With the default 16 px base font, 16 px = 1 rem, and 10 vw on a 1440 px wide viewport = 144 px. Enter a value, pick from/to units, and set your real base font size and viewport dimensions below - the result recalculates instantly.",
+    "keyFacts": [
+      "rem is relative to the root (html) font size - 16 px by default in browsers.",
+      "em is relative to the parent element font size, which makes it compound in nested elements.",
+      "% for font-size is relative to the parent font size: 100% = same size.",
+      "vw/vh are relative to the viewport: 1 vw = 1% of viewport width.",
+      "px is absolute on screen but still scales with browser zoom, so layouts stay usable.",
+      "Modern best practice: rem for typography and spacing, px or rem for borders, vw/vh sparingly for full-viewport sections."
+    ],
+    "howTo": [
+      "Type the value to convert.",
+      "Choose the from-unit and the to-unit (px, rem, em, %, vw, vh).",
+      "Set your base font size (default 16) and viewport width/height to match your design.",
+      "Read the instant result; swap reverses the conversion."
+    ],
+    "formula": "px value = value × (px per from-unit) ÷ (px per to-unit).\npx per unit: px = 1; rem = base font; em = base font; % = base font ÷ 100; vw = viewport width ÷ 100; vh = viewport height ÷ 100.\nExample (base 16): 2 rem → px = 2 × 16 ÷ 1 = 32 px.",
+    "workedExample": "Convert 10 vw to px on a 1440 px wide viewport:\n1. px per vw = 1440 ÷ 100 = 14.4 px.\n2. 10 × 14.4 = 144 px.\nConvert 24 px to rem (base 16):\n1. px per rem = 16.\n2. 24 × 1 ÷ 16 = 1.5 rem.",
+    "benefits": [
+      "Context-aware: your base font and viewport, not hidden defaults, drive the math.",
+      "All six common CSS units in one converter - no tab-hopping.",
+      "Swap button is perfect for checking designs in both directions.",
+      "Great for converting designer specs (px) into accessible rem-based CSS."
+    ],
+    "limitations": [
+      "em is approximated with the base font size; true em depends on the actual parent element in your layout.",
+      "% is context-dependent in real CSS (width % vs font-size % differ) - this tool uses the font-size meaning.",
+      "Container query units (cqw, cqh) and ch/ex units are not covered."
+    ],
+    "faqs": [
+      {
+        "q": "How many px is 1 rem?",
+        "a": "By default, 1 rem = 16 px, because browsers set the root font size to 16 px. If the root font size is changed (or the user zooms), rem scales with it. This tool lets you set your own base to match your project."
+      },
+      {
+        "q": "Should I use px or rem?",
+        "a": "Use rem for font sizes, margins and padding so your site respects user font-size settings (accessibility). Use px for hairline borders or pixel-perfect decorative details. Most modern codebases default to rem."
+      },
+      {
+        "q": "What is the difference between em and rem?",
+        "a": "rem is always relative to the root font size; em is relative to the parent element font size. Nested ems compound (1.2 em inside 1.2 em = 1.44×), which surprises people - rem avoids that."
+      },
+      {
+        "q": "How do vw units work?",
+        "a": "1 vw equals 1% of the viewport (browser window) width. On a 1440 px wide window, 10 vw = 144 px. They are great for full-bleed hero sections but can make text unreadably small or huge, so pair them with clamp() for typography."
+      },
+      {
+        "q": "Why does my rem math not match the design?",
+        "a": "Usually the root font size is not 16 px - many projects set html { font-size: 62.5% } (10 px) or users zoom. Enter your actual base font size in this tool and the numbers will match."
+      },
+      {
+        "q": "Is px bad for accessibility?",
+        "a": "Not exactly - browsers scale px values when users zoom, so px text still zooms. But px ignores the user font-size preference setting, while rem respects it. For body text, rem is the safer, more respectful choice."
+      }
+    ],
+    "labels": {
+      "value": "Value",
+      "from": "From unit",
+      "to": "To unit",
+      "swap": "Swap units",
+      "result": "Result",
+      "baseFont": "Base font size (px)",
+      "viewportWidth": "Viewport width (px)",
+      "viewportHeight": "Viewport height (px)",
+      "units": {
+        "px": "Pixels (px)",
+        "rem": "rem",
+        "em": "em",
+        "percent": "Percent (%)",
+        "vw": "Viewport width (vw)",
+        "vh": "Viewport height (vh)"
+      }
+    }
+  }
+}

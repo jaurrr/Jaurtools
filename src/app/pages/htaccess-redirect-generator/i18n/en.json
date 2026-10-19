@@ -1,0 +1,101 @@
+{
+  "htaccess-redirect-generator": {
+    "benefits": [
+      "No Apache syntax to memorise. Fill the form and get a correct file in seconds.",
+      "301 redirects protect your Google rankings when you move or rename pages.",
+      "Forcing HTTPS everywhere avoids insecure mixed-content warnings for visitors.",
+      "One file handles page redirects, HTTPS, and www rules together, cleanly ordered."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use 301 for permanent moves: renamed pages, merged content, HTTP to HTTPS, or a changed domain. Search engines transfer ranking signals to the new URL. Use 302 only when the move is genuinely temporary, like a short maintenance page or an A/B test, because Google keeps ranking the old URL.",
+        "q": "When should I use 301 vs 302?"
+      },
+      {
+        "a": "Upload it to the root folder of your website (usually public_html or www) on an Apache server. The file name must be exactly .htaccess, starting with a dot. Most hosting file managers and FTP clients can show hidden dotfiles; enable that option if you cannot see it.",
+        "q": "Where do I upload the .htaccess file?"
+      },
+      {
+        "a": "A single typo in .htaccess can break the whole site with a 500 Internal Server Error, because Apache reads the file on every request. Download a backup of your current file first, change one thing at a time, and test in a private browser window after each upload.",
+        "q": "Why did my site show a 500 error after editing .htaccess?"
+      },
+      {
+        "a": "Redirect is simpler and handled by mod_alias. It matches the start of the URL path exactly. RewriteRule is more powerful and handled by mod_rewrite: it supports patterns, conditions, and query strings. For plain page-to-page moves, Redirect is enough; for HTTPS and www rules, RewriteRule is the standard choice.",
+        "q": "What is the difference between Redirect and RewriteRule?"
+      },
+      {
+        "a": "Keep important 301 redirects for at least one year. Google needs months to fully transfer signals, and old links from other sites keep sending visitors. For redirects tied to a rebrand or domain change, many site owners keep them permanently.",
+        "q": "How long should I keep a 301 redirect?"
+      },
+      {
+        "a": "Nginx does not read .htaccess at all. Equivalent redirects go in the server block of your Nginx configuration, for example: return 301 https://example.com$request_uri;. If your host uses Nginx, ask their support where to add redirect rules.",
+        "q": "Does this work on Nginx hosting?"
+      }
+    ],
+    "formula": "Redirect [301|302] /old-path https://example.com/new-path\nRewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Add one rule per moved page: the old path (for example /old-page) and the full new URL.",
+      "Pick 301 for permanent moves or 302 for temporary ones.",
+      "Optionally tick Force HTTPS and choose a www rule.",
+      "Copy the output or download it as a .htaccess file.",
+      "Back up your current .htaccess, upload the new one to your site root, and test each redirect in a private window."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "A .htaccess file is a configuration file for Apache web servers. It controls redirects, access rules, and URL rewriting per folder.",
+      "A 301 redirect means moved permanently. Browsers cache it and Google passes ranking signals to the new URL.",
+      "A 302 redirect means moved temporarily. Browsers re-check the old URL on every visit and Google keeps ranking it.",
+      "The Redirect directive matches the start of a path, so Redirect 301 /blog also catches /blog/post-1 automatically.",
+      "Forcing HTTPS with a RewriteRule protects login forms and payment pages from eavesdropping."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "htaccess redirect generator, 301 redirect htaccess, 302 redirect generator, redirect http to https htaccess, www to non www redirect",
+    "labels": {
+      "addRule": "Add rule",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "download": "Download .htaccess",
+      "forceHttps": "Force HTTPS for all pages",
+      "newUrl": "New URL",
+      "noRules": "Add at least one rule with both an old path and a new URL to generate output.",
+      "oldPath": "Old path",
+      "optionsHeading": "Options",
+      "outputHeading": "Generated .htaccess",
+      "redirectType": "Redirect type",
+      "removeRule": "Remove rule",
+      "ruleLabel": "Rule",
+      "rulesHeading": "Redirect rules",
+      "type301": "301 Permanent",
+      "type302": "302 Temporary",
+      "wwwMode": "www handling",
+      "wwwNone": "Leave as it is",
+      "wwwToNonWww": "Redirect www to non-www",
+      "wwwToWww": "Redirect non-www to www"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Apache only. Nginx, IIS, and most static hosts ignore .htaccess completely.",
+      "A syntax mistake can take your whole site down with a 500 error. Always keep a backup.",
+      "This tool cannot detect or fix redirect chains and loops. Test every redirect after uploading.",
+      "Very large redirect lists (thousands of rules) slow Apache down. Big migrations belong in the server config, not .htaccess."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free .htaccess redirect generator: build 301 and 302 rules, force HTTPS, and fix www redirects. Copy or download your file. 100% private, no sign-up.",
+    "metaTitle": ".htaccess Redirect Generator - Free 301/302 Rules | JaurTools",
+    "name": ".htaccess Redirect Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A 301 redirect means a page moved permanently; a 302 means temporarily. In .htaccess the syntax is: Redirect 301 /old-page https://example.com/new-page. This tool builds those lines from a simple form, plus optional force-HTTPS and www rules, so you can copy or download a correct .htaccess file without learning Apache syntax.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your .htaccess results",
+    "tagline": "Build correct 301 and 302 redirect rules for Apache with a simple form. No syntax to memorise.",
+    "workedExample": "You renamed /summer-sale to https://example.com/sale and want HTTPS everywhere:\n1. Old path: /summer-sale. New URL: https://example.com/sale. Type: 301.\n2. Tick Force HTTPS.\n3. The tool generates:\n   RewriteEngine On\n   RewriteCond %{HTTPS} off\n   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]\n   Redirect 301 /summer-sale https://example.com/sale\n4. Upload to your site root and test both URLs. The old page now redirects permanently.",
+    "workedExampleHeading": "Worked example"
+  }
+}

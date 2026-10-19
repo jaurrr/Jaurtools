@@ -1,0 +1,175 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="sr-text">{{ t('labels.textLabel') }}</label>
+        <textarea id="sr-text" rows="6"
+          [ngModel]="text()" (ngModelChange)="setText($event)"
+          [attr.placeholder]="t('labels.textPlaceholder')"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="sr-wpm">{{ t('labels.wpmLabel') }}</label>
+        <div class="calc-slider-wrap">
+          <span class="calc-bubble" [style.inset-inline-start.%]="bubbleLeft()">{{ oneDecimal().format(wpm()) }}</span>
+          <input id="sr-wpm" type="range" min="60" max="1000" step="10"
+            [ngModel]="wpm()" (ngModelChange)="setWpm($event)"
+            [attr.aria-label]="t('labels.wpmLabel')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="calc-stage" id="reader-stage">
+        <div class="calc-stage-bar">
+          <span class="calc-hero-label"><app-icon name="zap" /> {{ t('labels.readerLabel') }}</span>
+          <button
+            type="button"
+            class="calc-iconbtn"
+            (click)="toggleFullscreen()"
+            [attr.aria-label]="t('labels.fullscreenLabel')"
+            [title]="t('labels.fullscreenLabel')"
+          >
+            <app-icon name="display" />
+          </button>
+        </div>
+        <div class="reader" role="status" [attr.aria-label]="t('labels.readerLabel')">
+          <div class="word-display" aria-hidden="true">
+            <span class="word-left">{{ parts().left }}</span><span class="word-pivot">{{ parts().pivot }}</span><span class="word-right">{{ parts().right }}</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" [style.width.%]="progress()"></div>
+          </div>
+          <p class="reader-meta">{{ oneDecimal().format(progress()) }}% · {{ t('labels.timeLeftLabel') }}: {{ timeLeft() }}</p>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        @if (!playing()) {
+          <button type="button" class="btn-primary" (click)="play()" [disabled]="wordCount() === 0">
+            <app-icon name="zap" /> {{ t('labels.playButton') }}
+          </button>
+        } @else {
+          <button type="button" class="btn-primary" (click)="pause()">
+            <app-icon name="x" /> {{ t('labels.pauseButton') }}
+          </button>
+        }
+        <button type="button" class="btn-ghost" (click)="restart()">
+          <app-icon name="refresh-cw" /> {{ t('labels.restartButton') }}
+        </button>
+        <button type="button" class="btn-ghost" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ t('labels.sampleButton') }}
+        </button>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.wordsLabel') }}</span>
+          <strong>{{ wordCount() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.positionLabel') }}</span>
+          <strong>{{ position() }} / {{ wordCount() }}</strong>
+        </div>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+
+      <ul class="calc-shortcuts" [attr.aria-label]="t('labels.shortcutsTitle')">
+        <li><kbd class="calc-kbd">Space</kbd><span>{{ t('labels.shortcutPlay') }}</span></li>
+        <li><kbd class="calc-kbd">&#8592;</kbd><kbd class="calc-kbd">&#8594;</kbd><span>{{ t('labels.shortcutSpeed') }}</span></li>
+        <li><kbd class="calc-kbd">F</kbd><span>{{ t('labels.shortcutFullscreen') }}</span></li>
+      </ul>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+{
+  "random-number-generator": {
+    "benefits": [
+      "Cryptographically secure random values, not a weak formula.",
+      "Optional unique values for draws and lotteries.",
+      "One-tap copy of all numbers.",
+      "Built-in sum and average of the draw.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It uses the Web Crypto API (crypto.getRandomValues) with rejection sampling, so every value in the range is equally likely and the sequence is unpredictable.",
+        "q": "How random are the numbers?"
+      },
+      {
+        "a": "No. Computer-generated randomness is fine for games, draws and sampling, but regulated lotteries and cryptography have stricter requirements.",
+        "q": "Can I use it for a real lottery?"
+      },
+      {
+        "a": "Yes. Turn on 'No repeats' and every number appears at most once, like drawing names from a hat.",
+        "q": "Can I get numbers without repeats?"
+      },
+      {
+        "a": "Up to 100 numbers per draw. Set the count field to anything from 1 to 100.",
+        "q": "How many numbers can I generate at once?"
+      },
+      {
+        "a": "Turn off 'No repeats'. Then each draw is independent and duplicates are allowed.",
+        "q": "How do I allow duplicates?"
+      }
+    ],
+    "formula": "Each value is drawn uniformly from [min, max]\nusing crypto.getRandomValues with rejection sampling",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Set the minimum and maximum of the range.",
+      "Choose how many numbers to draw.",
+      "Turn 'No repeats' on for draws like raffles.",
+      "Press Generate for a fresh set.",
+      "Copy the results with one tap."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every number in the range has exactly the same chance of appearing.",
+      "Uses the Web Crypto API, stronger than a basic random function.",
+      "'No repeats' works like drawing names from a hat.",
+      "The count cannot exceed 100 per draw.",
+      "Numbers are generated on your device — nothing is sent anywhere."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "random number generator, random integer generator, lottery number picker, random draw, rng",
+    "labels": {
+      "avgLabel": "Average",
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy",
+      "countLabel": "How many numbers",
+      "invalidNote": "Check the range: min must be ≤ max, count 1–100, and unique draws cannot exceed the range size.",
+      "maxLabel": "Maximum",
+      "minLabel": "Minimum",
+      "regenerateLabel": "Generate",
+      "sumLabel": "Sum",
+      "uniqueLabel": "No repeats"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Not suitable for regulated gambling or cryptographic keys.",
+      "Only whole numbers — no random decimals.",
+      "Limited to 100 numbers per draw.",
+      "True physical randomness (like dice) cannot be guaranteed by software."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free random number generator: draw random integers in any range with secure randomness, optional no-repeats. Fully browser-based, no sign-up.",
+    "metaTitle": "Random Number Generator — Random Integers in a Range",
+    "name": "Random Number Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A random number generator picks integers where every value in your range is equally likely. Set a minimum and maximum, choose how many numbers you want, and press generate. The tool uses your browser's secure crypto random source, so the results are fair and unpredictable.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Random numbers",
+    "tagline": "Fair random integers for draws, games and decisions.",
+    "workedExample": "You need 5 raffle winners from tickets numbered 1 to 100.\n\nSet min = 1, max = 100, count = 5, and turn on 'No repeats'.\n\nPress Generate. Suppose the draw shows 12, 34, 56, 78, 90.\n\nThese are the five winning tickets — each was equally likely to appear.",
+    "workedExampleHeading": "Worked example"
+  }
+}

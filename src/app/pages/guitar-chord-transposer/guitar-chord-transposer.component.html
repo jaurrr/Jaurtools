@@ -1,0 +1,160 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="transposer-input">{{ t('labels.inputLabel') }}</label>
+        <textarea
+          id="transposer-input"
+          rows="3"
+          [ngModel]="input()"
+          (ngModelChange)="setInput($event)"
+          [attr.placeholder]="t('labels.inputPlaceholder')"
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label for="transposer-shift">{{ t('labels.semitonesLabel') }}</label>
+        <div class="shift-row">
+          <button type="button" class="nudge" (click)="nudge(-1)" [attr.aria-label]="t('labels.downLabel')">−</button>
+          <input
+            id="transposer-shift"
+            type="number"
+            inputmode="numeric"
+            min="-11"
+            max="11"
+            step="1"
+            [ngModel]="semitones()"
+            (ngModelChange)="setSemitones($event)"
+          />
+          <button type="button" class="nudge" (click)="nudge(1)" [attr.aria-label]="t('labels.upLabel')">+</button>
+        </div>
+        <div class="chip-row">
+          <button type="button" class="chip" (click)="nudge(-2)">−2</button>
+          <button type="button" class="chip" (click)="nudge(2)">+2</button>
+          <button type="button" class="chip" (click)="setSemitones(0)">{{ t('labels.resetLabel') }}</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.accidentalLabel') }}</label>
+        <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.accidentalLabel')">
+          <button type="button" [class.active]="!useFlats()" (click)="setFlats(false)">
+            {{ t('labels.sharpsOption') }}
+          </button>
+          <button type="button" [class.active]="useFlats()" (click)="setFlats(true)">
+            {{ t('labels.flatsOption') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.outputLabel') }} ({{ shiftLabel() }})</label>
+        <pre class="output" aria-live="polite">{{ output() || t('labels.emptyOutput') }}</pre>
+        <button type="button" class="copy-btn" (click)="copy()" [disabled]="!output()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}
+        </button>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="refresh-cw" /> {{ t('labels.chordsLabel') }}</span>
+          <strong>{{ chordCount() }}</strong>
+        </div>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

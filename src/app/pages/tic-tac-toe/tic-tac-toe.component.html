@@ -1,0 +1,185 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="mode-row" role="group" [attr.aria-label]="t('labels.modeLabel')">
+        <button type="button" [class.active]="mode() === 'two'" (click)="setMode('two')">
+          <app-icon name="users" /> {{ t('labels.modeTwo') }}
+        </button>
+        <button type="button" [class.active]="mode() === 'easy'" (click)="setMode('easy')">
+          <app-icon name="sparkles" /> {{ t('labels.modeEasy') }}
+        </button>
+        <button type="button" [class.active]="mode() === 'hard'" (click)="setMode('hard')">
+          <app-icon name="zap" /> {{ t('labels.modeHard') }}
+        </button>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score score-x">
+          <span class="mark-x"><app-icon name="x" /></span>
+          <span class="score-label">{{ t('labels.xWins') }}</span>
+          <strong>{{ scores().x }}</strong>
+        </div>
+        <div class="score score-draw">
+          <span class="score-label">{{ t('labels.draws') }}</span>
+          <strong>{{ scores().draw }}</strong>
+        </div>
+        <div class="score score-o">
+          <span class="mark-o">O</span>
+          <span class="score-label">{{ t('labels.oWins') }}</span>
+          <strong>{{ scores().o }}</strong>
+        </div>
+      </div>
+
+      <p class="status" [class.won]="winner() !== ''" role="status">{{ statusText() }}</p>
+
+      <div class="board calc-testarea" role="grid" [attr.aria-label]="t('labels.boardLabel')">
+        @for (cell of board(); track $index) {
+          <button type="button" role="gridcell"
+            class="cell"
+            [class.filled-x]="cell === 'X'"
+            [class.filled-o]="cell === 'O'"
+            [class.win]="winLine().includes($index)"
+            (click)="makeMove($index)"
+            [disabled]="cell !== '' || winner() !== ''"
+            [attr.aria-label]="cellAria($index)">
+            @if (cell === 'X') {
+              <app-icon name="x" />
+            } @else if (cell === 'O') {
+              <span class="o-glyph" aria-hidden="true">O</span>
+            }
+          </button>
+        }
+      </div>
+
+      @if (aiThinking()) {
+        <p class="note">{{ t('labels.aiThinking') }}</p>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn" (click)="newRound()">
+          <app-icon name="refresh-cw" /> {{ t('labels.newRound') }}
+        </button>
+        <button type="button" class="btn ghost" (click)="resetAll()">
+          {{ t('labels.resetScores') }}
+        </button>
+      </div>
+
+      @if (totalGames() > 0) {
+        <div class="calc-score" [attr.aria-label]="t('labels.winShareLabel')">
+          <div class="calc-score-top">
+            <span class="calc-score-label">{{ t('labels.winShareLabel') }}</span>
+            <span class="calc-score-num">X {{ xShare().toFixed(0) }}% · O {{ oShare().toFixed(0) }}%</span>
+          </div>
+          <div class="ttt-share" role="img" [attr.aria-label]="'X ' + xShare().toFixed(0) + '% · O ' + oShare().toFixed(0) + '%'">
+            <span class="share-x" [style.inline-size.%]="xShare()"></span>
+            <span class="share-o" [style.inline-size.%]="oShare()"></span>
+          </div>
+        </div>
+
+        <div class="calc-actions">
+          <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyResult()">
+            <app-icon [name]="copied() ? 'check' : 'copy'" />
+            <span>{{ copied() ? translate.t('common.copied') : t('labels.copyScore') }}</span>
+          </button>
+        </div>
+      }
+
+      <ul class="calc-shortcuts" [attr.aria-label]="t('labels.shortcutsTitle')">
+        <li><kbd class="calc-kbd">1–9</kbd><span>{{ t('labels.shortcutCells') }}</span></li>
+        <li><kbd class="calc-kbd">R</kbd><span>{{ t('labels.shortcutRound') }}</span></li>
+      </ul>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

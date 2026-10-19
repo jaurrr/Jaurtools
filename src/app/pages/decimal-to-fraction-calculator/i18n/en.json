@@ -1,0 +1,92 @@
+{
+  "decimal-to-fraction-calculator": {
+    "benefits": [
+      "Converts decimals to exact simplified fractions: 0.75 becomes 3/4, not 75/100.",
+      "Converts fractions to decimals too, with the simplified form shown alongside.",
+      "Mixed numbers included: 2.5 also shows as 2 1/2.",
+      "Exact string-based conversion - no floating-point surprises."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Write the decimal over the right power of 10, then simplify with the GCD: 0.75 = 75/100, and gcd(75, 100) = 25, so 75/100 = 3/4. The tool does exactly this.",
+        "q": "How is 0.75 converted to 3/4?"
+      },
+      {
+        "a": "Type it as a/b, for example 3/4. The tool shows the decimal (0.75), the simplified fraction, and the mixed number where one applies.",
+        "q": "How do I enter a fraction?"
+      },
+      {
+        "a": "Divide the numerator by the denominator and simplify: 7/8 = 0.875, already in lowest terms since gcd(7, 8) = 1.",
+        "q": "What is 7/8 as a decimal?"
+      },
+      {
+        "a": "A mixed number combines a whole part with a fraction: 2 1/2 instead of 5/2. The tool shows it whenever the value is an improper fraction.",
+        "q": "What is a mixed number?"
+      },
+      {
+        "a": "It converts exactly what you typed. 0.333 becomes 333/1000 (already simplest), while the true repeating 1/3 stays 1/3 only if you enter it as 1/3. Decimals are finite by nature.",
+        "q": "What about repeating decimals like 0.333...?"
+      },
+      {
+        "a": "Yes - up to 15 significant digits. Beyond that the numbers could exceed safe integer maths, so the tool asks for a shorter input.",
+        "q": "Is there a digit limit?"
+      }
+    ],
+    "formula": "Decimal to fraction: 0.75 = 75/100; divide top and bottom by gcd(75, 100) = 25 -> 3/4.\nFraction to decimal: a/b = a ÷ b. Example: 3/4 = 0.75.\nMixed number: 5/2 = 2 whole + 1/2 -> 2 1/2.",
+    "formulaHeading": "How conversion works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the direction: Decimal to Fraction, or Fraction to Decimal.",
+      "Type the decimal (like 0.75) or the fraction (like 3/4).",
+      "The converted value appears instantly, fully simplified.",
+      "Fractions also show the mixed-number form where it applies."
+    ],
+    "howToHeading": "How to use this converter",
+    "keyFacts": [
+      "0.75 = 75/100 = 3/4 after dividing by gcd 25.",
+      "3/4 = 0.75 exactly.",
+      "2.5 = 25/10 = 5/2 = 2 1/2 as a mixed number.",
+      "7/8 = 0.875, already in lowest terms.",
+      "Simplifying means dividing top and bottom by their greatest common divisor.",
+      "Conversion is exact for up to 15 significant digits."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "decimal to fraction, fraction to decimal, decimal fraction converter, simplify fraction, mixed number converter",
+    "labels": {
+      "decTab": "Decimal to Fraction",
+      "decimalInput": "Decimal number",
+      "decimalValue": "Decimal value",
+      "errInvalidDec": "Enter a valid decimal number (up to 15 digits).",
+      "errInvalidFrac": "Enter a fraction like 3/4 (denominator cannot be zero).",
+      "fracTab": "Fraction to Decimal",
+      "fractionHint": "3/4",
+      "fractionInput": "Fraction (a/b)",
+      "mixed": "Mixed number",
+      "modeLabel": "Conversion direction",
+      "simplified": "Simplified fraction"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Finite decimals only - repeating decimals like 1/3 must be entered as fractions.",
+      "15 significant digits maximum for exact conversion.",
+      "Fractions must be plain a/b form; no stacked or nested fractions.",
+      "No irrational numbers: pi and square roots have no exact fraction form."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert any decimal to a simplified fraction or mixed number with step-by-step working. Free, instant, no signup.",
+    "metaTitle": "Decimal to Fraction Calculator - Convert Decimals Instantly | JaurTools",
+    "name": "Decimal to Fraction Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Convert both ways, exactly. Type 0.75 and get 3/4 (75/100 simplified by dividing top and bottom by 25). Type 3/4 and get 0.75. Improper fractions also show the mixed form: 2.5 becomes 5/2, shown as 2 1/2. Conversion works on the digit strings directly, so there are no floating-point surprises, up to 15 significant digits.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Conversion results",
+    "tagline": "Decimals to clean fractions, with every step shown.",
+    "workedExample": "0.75 to fraction:\n1. Write over 100: 75/100.\n2. gcd(75, 100) = 25.\n3. Divide: 75/25 = 3, 100/25 = 4.\n4. Result: 3/4.\nReverse check - 7/8 to decimal:\n1. Divide: 7 ÷ 8 = 0.875.\n2. gcd(7, 8) = 1, so 7/8 is already simplest.",
+    "workedExampleHeading": "Worked example"
+  }
+}

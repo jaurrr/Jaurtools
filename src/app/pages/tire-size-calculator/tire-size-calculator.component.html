@@ -1,0 +1,105 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="refresh-cw" /> {{ t('resultsHeading') }}</h2>
+      <fieldset class="tire-group">
+        <legend>{{ t('labels.oldLabel') }} <span class="spec" dir="ltr">{{ oldW() }}/{{ oldA() }}R{{ oldR() }}</span></legend>
+        <div class="input-row wrap">
+          <label class="inline" for="tire-ow">{{ t('labels.widthLabel') }}</label>
+          <input id="tire-ow" type="number" inputmode="numeric" min="125" max="355" step="5"
+            [ngModel]="oldW()" (ngModelChange)="setOldW($event)" />
+          <label class="inline" for="tire-oa">{{ t('labels.aspectLabel') }}</label>
+          <input id="tire-oa" type="number" inputmode="numeric" min="20" max="85" step="5"
+            [ngModel]="oldA()" (ngModelChange)="setOldA($event)" />
+          <label class="inline" for="tire-or">{{ t('labels.rimLabel') }}</label>
+          <input id="tire-or" type="number" inputmode="numeric" min="10" max="24" step="1"
+            [ngModel]="oldR()" (ngModelChange)="setOldR($event)" />
+        </div>
+      </fieldset>
+      <div class="btn-row">
+        <button (click)="swapTires()"><app-icon name="refresh-cw" /> {{ t('labels.swapLabel') }}</button>
+      </div>
+      <fieldset class="tire-group">
+        <legend>{{ t('labels.newLabel') }} <span class="spec" dir="ltr">{{ newW() }}/{{ newA() }}R{{ newR() }}</span></legend>
+        <div class="input-row wrap">
+          <label class="inline" for="tire-nw">{{ t('labels.widthLabel') }}</label>
+          <input id="tire-nw" type="number" inputmode="numeric" min="125" max="355" step="5"
+            [ngModel]="newW()" (ngModelChange)="setNewW($event)" />
+          <label class="inline" for="tire-na">{{ t('labels.aspectLabel') }}</label>
+          <input id="tire-na" type="number" inputmode="numeric" min="20" max="85" step="5"
+            [ngModel]="newA()" (ngModelChange)="setNewA($event)" />
+          <label class="inline" for="tire-nr">{{ t('labels.rimLabel') }}</label>
+          <input id="tire-nr" type="number" inputmode="numeric" min="10" max="24" step="1"
+            [ngModel]="newR()" (ngModelChange)="setNewR($event)" />
+        </div>
+      </fieldset>
+      <p class="note">{{ t('labels.specHint') }}</p>
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.sidewallLabel') }}</span>
+          <strong>{{ fmt1().format(oldDims().sidewall) }} → {{ fmt1().format(newDims().sidewall) }} {{ t('labels.mmUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.diameterLabel') }}</span>
+          <strong>{{ fmt1().format(oldDims().diameter) }} → {{ fmt1().format(newDims().diameter) }} {{ t('labels.mmUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.revsLabel') }}</span>
+          <strong>{{ fmt1().format(oldDims().revsPerKm) }} → {{ fmt1().format(newDims().revsPerKm) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.clearanceLabel') }}</span>
+          <strong>{{ fmt1().format(clearanceChange()) }} {{ t('labels.mmUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.diffLabel') }}</span>
+          <strong>{{ fmt2().format(diffPct()) }}%</strong>
+        </div>
+        <div class="result-row total">
+          <span>{{ t('labels.speedoLabel') }}</span>
+          <strong>{{ fmt1().format(actualSpeed()) }} {{ t('labels.kmhUnit') }}</strong>
+        </div>
+        <p class="note">{{ t('labels.verdictLabel') }}: {{ verdict() }}</p>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+{
+  "business-loan-calculator": {
+    "assumptionNote": "Assumes a fixed interest rate and monthly payments. Excludes origination fees, collateral requirements and tax effects.",
+    "benefits": [
+      "Shows the exact monthly obligation before you sign a loan agreement.",
+      "Reveals total interest so you can weigh it against the expected return on the investment.",
+      "Lets you compare terms and rates in seconds.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Business loans commonly include term loans with fixed payments, SBA-backed loans with lower rates, lines of credit for flexible drawing, and equipment financing secured by the asset. This calculator models the fixed-payment term loan.",
+        "q": "What types of business loans exist?"
+      },
+      {
+        "a": "Lenders look at business revenue, time in business, credit history and collateral. A clear plan for how the borrowed money generates returns strengthens any application.",
+        "q": "How do I qualify for a business loan?"
+      },
+      {
+        "a": "Interest on business loans is generally tax-deductible as a business expense in many countries, which lowers the effective cost. Confirm the rules with a tax professional in your jurisdiction.",
+        "q": "Is business loan interest tax-deductible?"
+      },
+      {
+        "a": "Compare the loan's total interest against the profit the investment is expected to generate, and make sure monthly payments fit comfortably in cash flow even in a slow month.",
+        "q": "How do I know if a loan is worth it?"
+      },
+      {
+        "a": "Term loans are usually the cheapest for a fixed, known purchase. Lines of credit suit ongoing working-capital needs but often carry higher rates. Match the loan type to the use.",
+        "q": "Term loan or line of credit?"
+      },
+      {
+        "a": "Many business loans allow early repayment, sometimes with a prepayment penalty. Paying early saves interest, so check the agreement before you rely on it.",
+        "q": "Can I repay a business loan early?"
+      }
+    ],
+    "formula": "monthly_payment = P x r x (1 + r)^n / ((1 + r)^n - 1)\nr = annual_rate / 12, n = years x 12\ntotal_interest = payment x n - P",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the loan amount your business needs.",
+      "Enter the annual interest rate offered.",
+      "Enter the repayment term in years.",
+      "Read the monthly payment, total repaid and total interest.",
+      "Compare against the expected return from the investment."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A business term loan provides a lump sum repaid in fixed monthly installments.",
+      "Lenders price business loans on revenue, credit history, collateral and time in business.",
+      "Interest on business borrowing is often tax-deductible as a business expense.",
+      "Shorter terms mean higher payments but less total interest.",
+      "The monthly payment must fit comfortably in the business's cash flow, not just on paper."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "business loan calculator, commercial loan calculator, small business loan payment, SBA loan calculator",
+    "labels": {
+      "amount": "Loan amount",
+      "payment": "Monthly payment",
+      "rate": "Annual rate (%)",
+      "totalInterest": "Total interest",
+      "totalPaid": "Total repaid",
+      "years": "Term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Excludes origination fees, collateral and tax effects.",
+      "Fixed rate only; variable-rate loans are not modeled.",
+      "Assumes on-time payments with no extras.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free business loan calculator. Find monthly payments, total interest and total repaid for any commercial loan. Private, browser-only.",
+    "metaTitle": "Business Loan Calculator — Commercial Loan Payments",
+    "name": "Business Loan Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Borrowing $100,000 at 9% for 5 years costs about $2,075.84 per month. Over the loan you repay about $124,550 in total, including about $24,550 in interest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your business loan results",
+    "tagline": "Price any commercial loan before you sign.",
+    "workedExample": "Loan $100,000, rate 9%, term 5 years (60 months).\n\nr = 0.09/12 = 0.0075. payment = 100,000 x 0.0075 x 1.0075^60 / (1.0075^60 - 1) = 750 x 1.56568 / 0.56568 = 1,174.26 / 0.56568 = $2,075.84 per month.\n\nTotal repaid = 2,075.84 x 60 = $124,550. Total interest = 124,550 - 100,000 = $24,550.",
+    "workedExampleHeading": "Worked example"
+  }
+}

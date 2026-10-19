@@ -1,0 +1,104 @@
+{
+  "svg-to-jsx-converter": {
+    "benefits": [
+      "الصق أيقونة واحصل على كود React نظيف ومتقن في أقل من ثانية — دون إعادة تسمية الخصائص يدويًا.",
+      "المخرجات تتبع اصطلاحات React بدقة، فتُترجَم من أول مرة دون تحذيرات.",
+      "تتحول سلاسل الأنماط إلى كائنات أنماط حقيقية وتنتشر الخصائص على الجذر، فتبقى الأيقونات قابلة للتخصيص.",
+      "نزّل الملف بصيغة .tsx أو .jsx وأسقطه مباشرة في أي مشروع React أو Next.js."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "JSX هي الصيغة التي يستخدمها React للترميز. تفهم المتصفحات خصائص SVG مثل class وstroke-width، لكن React يتوقع className وstrokeWidth. تطبّق هذه الأداة كل إعادة تسمية وتحويل نيابة عنك.",
+        "q": "لماذا لا أستطيع لصق SVG مباشرة في React؟"
+      },
+      {
+        "a": "تتحقق الأداة من أن الكود يُحلَّل كـ XML صالح بجذر <svg> واحد. من الأسباب الشائعة للخطأ: وسوم غير مغلقة، أو & غير مُهرَّبة في مسار، أو لصق HTML بدل SVG.",
+        "q": "لماذا أحصل على خطأ في التحليل؟"
+      },
+      {
+        "a": "نعم. عطّل خيار التغليف في مكوّن React وستحصل على ترميز JSX المجرّد، جاهزًا للصق داخل جملة return في أي مكوّن موجود.",
+        "q": "هل يمكنني الحصول على JSX فقط دون تغليف المكوّن؟"
+      },
+      {
+        "a": "نعم — خيار TypeScript يضع نوع props كـ React.SVGProps<SVGSVGElement>، فيُفحَص نوع className وstyle وonClick وكل خاصية SVG قياسية. عطّله للحصول على مخرجات JavaScript عادية.",
+        "q": "هل المخرجات مكتوبة الأنواع لـ TypeScript؟"
+      },
+      {
+        "a": "نعم، تُترَك خصائص data-* وaria-* كما كُتبت تمامًا، لأن React يمررها إلى DOM دون تغيير.",
+        "q": "هل تُحفَظ خصائص data وaria؟"
+      },
+      {
+        "a": "لا. يُحلَّل SVG بواسطة DOMParser في متصفحك ويُحوَّل بجافاسكربت محلية. لا يُرسَل أي شيء إلى أي خادم.",
+        "q": "هل يُرفَع SVG الخاص بي إلى أي مكان؟"
+      }
+    ],
+    "formula": "إعادة تسمية الخصائص:\nclass → className, for → htmlFor\nstroke-width → strokeWidth (الأسماء ذات الواصلة تصبح camelCase)\nتبقى data-* وaria-* دون تغيير\nxlink:href → xlinkHref\n\nتتحول سلاسل الأنماط إلى كائنات:\nstyle=\"font-size:14px;fill:red\" → style={{ fontSize: '14px', fill: 'red' }}\n\nالعناصر الفارغة تُغلَق ذاتيًا: <circle … />\nيحصل الجذر على {...props} عند تفعيل خيار النشر.",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "الصق كود SVG في مربع الإدخال، أو اضغط Load sample SVG لتجربة المثال المدمج.",
+      "اكتب اسم المكوّن — أحرف وأرقام وشرطات سفلية فقط. سيصبح اسم الدالة المُصدَّرة.",
+      "اختر خياراتك: تغليف المكوّن، وأنواع TypeScript، وإزالة العرض والارتفاع، ونشر الخصائص، وتحويل الأنماط.",
+      "اقرأ المخرجات المباشرة أدناه. انسخها بنقرة واحدة أو نزّلها كملف .tsx / .jsx.",
+      "تحقق من لوحة المعاينة للتأكد من أن الأيقونة تُرسَم تمامًا كالأصل."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "يبدو JSX كـ HTML لكنه جافاسكربت: يتطلب React خصائص camelCase ‏(strokeWidth لا stroke-width) وclassName بدل class.",
+      "يحوّل المحوّل SVG الخاص بك كـ XML حقيقي عبر DOMParser في المتصفح — يُبلَّغ عن الترميز المعطوب ولا يُشوَّه بصمت.",
+      "يُعَدّ كل عنصر ويُعاد تسلسله بمسافة بادئة ثابتة من مسافتين، فتكون المخرجات مقروءة ومناسبة للمقارنة.",
+      "يُهرَّب النص مثل {الأقواس} داخل عقد SVG النصية إلى {'{'} فيُرسَم حرفيًا بدل أن يكسر المكوّن.",
+      "تعرض لوحة المعاينة SVG الأصلي بعد إزالة السكربتات ومعالجات الأحداث حفاظًا على السلامة."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "svg to jsx converter, svg to react converter, convert svg to jsx online, svg to tsx, svg react component generator",
+    "labels": {
+      "clearButton": "مسح",
+      "copied": "تم النسخ!",
+      "copyButton": "نسخ JSX",
+      "downloadButton": "تنزيل",
+      "elementsLabel": "عناصر SVG",
+      "emptyInput": "الصق كود SVG أعلاه لتحويله.",
+      "inputCharsLabel": "أحرف الإدخال",
+      "inputLabel": "كود SVG",
+      "inputPlaceholder": "<svg …>…</svg>",
+      "nameLabel": "اسم المكوّن",
+      "namePlaceholder": "Icon",
+      "notSvgError": "يجب أن يكون العنصر الجذر <svg>.",
+      "optionsHeading": "الخيارات",
+      "outputCharsLabel": "أحرف المخرجات",
+      "outputLabel": "مخرجات JSX",
+      "parseError": "تعذّر تحليل SVG. تحقق من أن الكود XML صالح بجذر <svg> واحد.",
+      "previewHeading": "معاينة",
+      "propsLabel": "نشر الخصائص على <svg> الجذر",
+      "sampleButton": "تحميل SVG تجريبي",
+      "stripLabel": "إزالة العرض والارتفاع",
+      "styleLabel": "تحويل سلاسل الأنماط إلى كائنات",
+      "tsLabel": "مخرجات TypeScript",
+      "wrapLabel": "التغليف في مكوّن React"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "تحوّل الأداة الترميز فقط — ولا تعيد كتابة منطق المكوّن أو CSS.",
+      "المراجع الخارجية (use href إلى ملف آخر، والصور الخارجية) ما زالت تحتاج تلك الملفات وقت التشغيل.",
+      "ملفات SVG الكبيرة جدًا (مئات العناصر) تُحوَّل بنجاح لكنها تنتج ملفات طويلة؛ فكّر في التحسين للرسوم الضخمة.",
+      "الرسوم المتحركة المعرّفة بوسوم SMIL ‏<animate> تُنسَخ كما هي؛ ولا يتحكم React فيها."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "محوّل SVG إلى JSX مجاني. الصق أي SVG واحصل على كود مكوّن React نظيف — className وخصائص camelCase وكائنات أنماط ودعم TypeScript. خصوصية كاملة دون تسجيل.",
+    "metaTitle": "محوّل SVG إلى JSX — أداة React مجانية | JaurTools",
+    "name": "محوّل SVG إلى JSX",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "الصق أي SVG وستحوّله هذه الأداة إلى JSX جاهز لـ React: يصبح class هو className، وstroke-width يصبح strokeWidth، وتتحول سلاسل الأنماط إلى كائنات أنماط، وتُغلَق العناصر الفارغة ذاتيًا. يمكنك تغليف النتيجة في مكوّن React مكتوب الأنواع، ونشر الخصائص على الجذر، وتنزيلها بصيغة .tsx أو .jsx. كل شيء يعمل محليًا في متصفحك.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "نتائج محوّل SVG إلى JSX",
+    "tagline": "حوّل أي SVG إلى JSX نظيف لـ React — className صحيح وخصائص camelCase وكائنات أنماط، بنقرة واحدة.",
+    "workedExample": "الإدخال:\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n  <circle class=\"dot\" cx=\"12\" cy=\"12\" r=\"10\" stroke-width=\"2\" fill=\"none\"/>\n  <text style=\"font-size:14px;fill:red\">Hi</text>\n</svg>\n\nالمخرجات (JSX مجرّد):\n<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n  <circle className=\"dot\" cx=\"12\" cy=\"12\" r=\"10\" strokeWidth=\"2\" fill=\"none\" />\n  <text style={{ fontSize: '14px', fill: 'red' }}>Hi</text>\n</svg>\n\nما الذي تغيّر: class ← className، وstroke-width ← strokeWidth، وتحوّلت سلسلة النمط إلى كائن نمط، وأُغلقت الدائرة الفارغة ذاتيًا، وبقي النص في سطر واحد.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

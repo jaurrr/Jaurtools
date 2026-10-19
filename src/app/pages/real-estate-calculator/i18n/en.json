@@ -1,0 +1,95 @@
+{
+  "real-estate-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Real Estate Calculator",
+    "tagline": "Analyze any property deal: mortgage, cash flow, and cash-on-cash return.",
+    "metaTitle": "Real Estate Calculator - Property Deal Analysis | JaurTools",
+    "metaDescription": "Free real estate calculator: analyze a property investment with mortgage payment, monthly cash flow, and cash-on-cash return.",
+    "keywords": "real estate calculator, property investment calculator, rental cash flow calculator, cash on cash return calculator",
+    "resultsHeading": "Your property analysis",
+    "quickAnswer": "Monthly cash flow = rent - mortgage payment - operating expenses; cash-on-cash = annual cash flow / down payment. Example: a 4,000,000 property with 20% down, a 9% 20-year loan, 38,000 monthly rent, and 6,500 monthly expenses has a 28,791 mortgage, 2,709 monthly cash flow, and a 4.06% cash-on-cash return. Positive cash flow from day one is the safety net every landlord wants.",
+    "keyFacts": [
+      "Cash flow is what is left each month after the mortgage and all operating expenses.",
+      "Cash-on-cash return measures the yearly cash profit against the cash you actually invested.",
+      "The 1% rule: monthly rent should be at least 1% of the purchase price for easy cash flow.",
+      "The 50% rule: roughly half the rent goes to operating expenses over time, excluding the mortgage.",
+      "Leverage magnifies both gains and losses: a small down payment boosts returns and risk together.",
+      "Vacancy, repairs, and property tax are the three expenses new landlords underestimate most."
+    ],
+    "howTo": [
+      "Enter the property purchase price.",
+      "Enter your down payment as a percentage of the price.",
+      "Enter the mortgage rate and loan term in years.",
+      "Enter the expected monthly rent and total monthly operating expenses.",
+      "Read your mortgage payment, cash flow, and cash-on-cash return."
+    ],
+    "formula": "Down payment = Price x Down % / 100.\nMortgage = Loan x i / (1 - (1 + i)^-n), with monthly rate i and n months.\nMonthly cash flow = Rent - Mortgage - Expenses.\nCash-on-cash = (Monthly cash flow x 12 / Down payment) x 100.\nExample: 38,000 - 28,791 - 6,500 = 2,709; 2,709 x 12 / 800,000 = 4.06%.",
+    "workedExample": "Price 4,000,000, down 20%, loan 3,200,000 at 9% for 20 years, rent 38,000, expenses 6,500:\n1. Down payment: 4,000,000 x 0.20 = 800,000.\n2. Mortgage: 3,200,000 x 0.0075 / (1 - 1.0075^-240) = 28,791 per month.\n3. Monthly cash flow: 38,000 - 28,791 - 6,500 = 2,709.\n4. Annual cash flow: 2,709 x 12 = 32,505.\n5. Cash-on-cash: 32,505 / 800,000 x 100 = 4.06%.\nPositive cash flow: the property pays for itself with 2,709 to spare each month.",
+    "benefits": [
+      "One screen shows whether a deal cash-flows or bleeds money.",
+      "Cash-on-cash lets you compare properties with different prices fairly.",
+      "Test higher down payments or lower rates to rescue a thin deal.",
+      "Fast enough to screen ten listings in the time of one spreadsheet."
+    ],
+    "limitations": [
+      "Ignores vacancy, which silently cuts 5 to 10% off gross rent in most markets.",
+      "Ignores closing costs, which raise the true cash invested and lower the real return.",
+      "Assumes constant rent and expenses; both move with inflation and the market.",
+      "Not investment advice: inspect the property and verify rents before committing."
+    ],
+    "faqs": [
+      {
+        "q": "What is a good cash-on-cash return?",
+        "a": "Many investors target 8 to 12% for a solid rental, and accept 5 to 8% in expensive, high-appreciation markets. Anything near 0% or negative means the property costs you money every month, which only makes sense if you are betting purely on price appreciation."
+      },
+      {
+        "q": "Should I include closing costs in the down payment?",
+        "a": "For a truer return, yes: add stamp duty, registration, and brokerage to the cash invested. This calculator uses the down payment alone for simplicity, so treat the shown return as slightly optimistic."
+      },
+      {
+        "q": "What counts as operating expenses?",
+        "a": "Property tax, insurance, maintenance and repairs, property management fees, HOA or society charges, and a vacancy allowance. A common shortcut is budgeting 1% of the property value per year for maintenance alone."
+      },
+      {
+        "q": "Does this account for the loan being paid down?",
+        "a": "Not in cash flow, which is correct: principal repayment is not an expense, it builds your equity silently. It shows up in your total return when you sell, through the smaller remaining loan balance."
+      },
+      {
+        "q": "Why is my cash flow negative?",
+        "a": "Usually because the rent is too low for the price, the rate is high, or expenses are heavy. The three fixes are a bigger down payment, a cheaper property, or higher rent. If none work, walk away from the deal."
+      },
+      {
+        "q": "How is this different from the rental property calculator?",
+        "a": "This tool is the quick deal screen: cash flow and cash-on-cash. The rental property calculator adds vacancy modeling, cap rate, and the 1% rule check for a deeper rental analysis."
+      }
+    ],
+    "labels": {
+      "price": "Purchase price",
+      "downPct": "Down payment (%)",
+      "annualRate": "Mortgage rate (% per year)",
+      "years": "Loan term (years)",
+      "rent": "Monthly rent",
+      "expenses": "Monthly operating expenses",
+      "downPayment": "Down payment",
+      "mortgage": "Monthly mortgage payment",
+      "monthlyCashFlow": "Monthly cash flow",
+      "annualCashFlow": "Annual cash flow",
+      "cashOnCash": "Cash-on-cash return",
+      "negativeNote": "Negative cash flow: this property costs you money every month.",
+      "positiveNote": "Positive cash flow: the property pays for itself."
+    }
+  }
+}

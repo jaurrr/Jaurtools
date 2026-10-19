@@ -1,0 +1,104 @@
+{
+  "open-graph-preview": {
+    "benefits": [
+      "प्रकाशित करने से पहले देखें कि शेयर होने पर आपका लिंक कैसा दिखेगा।",
+      "गायब या टूटी og:image टैग पकड़ता है — कार्ड फेल होने का सबसे आम कारण।",
+      "एक पेस्ट से X और Facebook दोनों लेआउट साथ-साथ टेस्ट करें।",
+      "मैनुअल फ़ील्ड से HTML बदले बिना शीर्षक और विवरण आज़माएं।",
+      "पूरी तरह आपके ब्राउज़र में चलता है; आपका मार्कअप कभी अपलोड नहीं होता।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "पूरा https:// URL इस्तेमाल करें — रिलेटिव पाथ कार्ड में इमेज न दिखने का नंबर एक कारण है। 5 MB से कम रखें, बड़े कार्ड के लिए आदर्श 1200x630 px। और URL सार्वजनिक पहुंच वाला होना चाहिए: क्रॉलर लॉगिन नहीं कर सकते।",
+        "q": "मेरे कार्ड की इमेज क्यों नहीं दिख रही?"
+      },
+      {
+        "a": "Open Graph (og:) टैग खुला मानक हैं जिन्हें Facebook, LinkedIn, WhatsApp, Telegram और ज़्यादातर प्लेटफॉर्म पढ़ते हैं। Twitter Cards (twitter:) टैग X पर दिखावट सुधारते हैं। दोनों सेट करें: आधार के रूप में og: टैग, X के लिए twitter:card और twitter: ओवरराइड।",
+        "q": "Open Graph और Twitter Cards में क्या अंतर है?"
+      },
+      {
+        "a": "X कार्ड को आक्रामक रूप से कैश करता है (लगभग 7 दिन)। किसी URL का कैश ताज़ा करने के लिए X का Card Validator इस्तेमाल करें। Facebook का Sharing Debugger भी दोबारा स्क्रैप करता है और दिखाता है कि Facebook क्या देखता है।",
+        "q": "टैग ठीक किए, फिर भी पुराना कार्ड दिख रहा है — क्यों?"
+      },
+      {
+        "a": "summary में टेक्स्ट के बगल में छोटा वर्ग थंबनेल दिखता है — लेखों के लिए अच्छा। summary_large_image में टेक्स्ट के ऊपर चौड़ी बैनर इमेज दिखती है — विज़ुअल कंटेंट के लिए बेहतर और आमतौर पर ज़्यादा क्लिक। यह टूल दोनों का प्रीव्यू देता है।",
+        "q": "summary या summary_large_image — कौन-सा इस्तेमाल करूं?"
+      },
+      {
+        "a": "WhatsApp और Telegram og: टैग पढ़ते हैं। WhatsApp शीर्षक और डोमेन के साथ og:image दिखाता है; तेज़ रेंडरिंग के लिए इमेज 300 KB से कम रखें। Telegram बड़ी इमेज भी संभालता है। iMessage अपने नियम लगाता है लेकिन og: टैग भी पढ़ता है।",
+        "q": "WhatsApp, Telegram और iMessage प्रीव्यू का क्या?"
+      },
+      {
+        "a": "हां, सीमाओं के साथ: यह टैग पार्स करके विश्वसनीय मॉक कार्ड रेंडर करता है, लेकिन हर प्लेटफॉर्म के बिल्कुल सही फॉन्ट, क्रॉपिंग या कैशिंग व्यवहार की नकल नहीं कर सकता। बड़े लॉन्च से पहले प्लेटफॉर्म के अपने डिबगर से पक्का करें।",
+        "q": "क्या यह प्रीव्यू बिल्कुल सटीक है?"
+      }
+    ],
+    "formula": "यह टूल जो टैग पढ़ता है (हर समूह में पहली मिली जीतती है):\nTitle: twitter:title -> og:title -> मैनुअल फ़ील्ड\nDescription: twitter:description -> og:description -> मैनुअल फ़ील्ड\nImage: twitter:image -> og:image -> मैनुअल फ़ील्ड\nURL: og:url -> मैनुअल फ़ील्ड\nCard type: twitter:card = summary_large_image -> large, वरना summary\n(भरे होने पर मैनुअल फ़ील्ड पार्स किए टैग को ओवरराइड करते हैं।)",
+    "formulaHeading": "मान कैसे निकाले जाते हैं",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपने पेज के <head> से <meta> टैग कॉपी करें (View Source) और बॉक्स में पेस्ट करें।",
+      "या आज़माने के लिए सीधे मैनुअल फ़ील्ड भरें — मैनुअल मान पार्स किए टैग को ओवरराइड करते हैं।",
+      "X कार्ड टाइप चुनें: Auto (twitter:card से), Summary या Large image।",
+      "दोनों प्रीव्यू देखें: X कार्ड और Facebook/Open Graph कार्ड।",
+      "चेतावनियां ठीक करें (गायब शीर्षक, विवरण या इमेज), पेज अपडेट करें, फिर दोबारा पेस्ट करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "सोशल प्लेटफॉर्म लिंक कार्ड आपके पेज <head> के मेटा टैग से बनाते हैं — दिख रही सामग्री से अंदाज़ा नहीं लगाते।",
+      "Open Graph टैग (og:title, og:description, og:image, og:url) साझा मानक हैं जिन्हें Facebook, LinkedIn, WhatsApp और Telegram पढ़ते हैं।",
+      "Twitter Card टैग (twitter:card, twitter:title, twitter:image) X पर कार्ड की दिखावट सुधारते हैं।",
+      "twitter:card मान: summary (छोटा थंबनेल) या summary_large_image (चौड़ी बैनर)।",
+      "og:image पूरा https:// URL होना चाहिए, आदर्श 1200x630 px और 5 MB से कम।",
+      "प्लेटफॉर्म कार्ड दिनों तक कैश करते हैं — टैग ठीक करने के बाद दोबारा स्क्रैप के लिए हर प्लेटफॉर्म का डिबगर इस्तेमाल करें।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "social card preview, open graph preview, twitter card preview, og tags checker, link preview tester",
+    "labels": {
+      "cardAuto": "Auto",
+      "cardLarge": "Large image",
+      "cardSummary": "Summary",
+      "checksHeading": "कार्ड समस्याएं",
+      "clearButton": "साफ़ करें",
+      "emptyState": "कार्ड प्रीव्यू के लिए अपने मेटा टैग पेस्ट करें या ऊपर फ़ील्ड भरें।",
+      "fCard": "X कार्ड टाइप",
+      "fDesc": "विवरण",
+      "fImage": "इमेज URL",
+      "fTitle": "शीर्षक",
+      "fUrl": "पेज URL",
+      "manualHeading": "या मान मैनुअल डालें",
+      "pasteHint": "अपने <meta> टैग यहां पेस्ट करें…",
+      "pasteLabel": "मेटा टैग",
+      "previewFb": "Facebook / Open Graph कार्ड",
+      "previewNote": "आपके ब्राउज़र में रेंडर किए गए मॉक प्रीव्यू — असली कार्ड के करीब, लेकिन प्लेटफॉर्म अपने फॉन्ट, क्रॉपिंग और कैशिंग लगाते हैं।",
+      "previewX": "X (Twitter) कार्ड",
+      "warnImageHttp": "इमेज URL https:// नहीं है — प्लेटफॉर्म को सुरक्षित इमेज URL चाहिए।",
+      "warnNoDesc": "विवरण नहीं मिला — बिना विवरण कार्ड सूने लगते हैं।",
+      "warnNoImage": "इमेज नहीं मिली — बिना इमेज वाले कार्ड को बहुत कम क्लिक मिलते हैं।",
+      "warnNoTitle": "शीर्षक नहीं मिला — कार्ड को og:title या twitter:title चाहिए।"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "सिर्फ मॉक प्रीव्यू — हर प्लेटफॉर्म के रेंडरर की बिल्कुल सटीक नकल नहीं।",
+      "जांच नहीं सकता कि इमेज URL सच में लोड होता है या साइज़ शर्तें पूरी करता है — सिर्फ URL मौजूद है या नहीं।",
+      "प्लेटफॉर्म कैशिंग की नकल नहीं करता; ठीक किए टैग लाइव प्लेटफॉर्म पर ताज़ा होने में दिन लग सकते हैं।",
+      "सिर्फ पेस्ट किए टैग पढ़ता है — आपके लाइव पेज को लाकर नहीं निकाल सकता।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "देखें कि X, Facebook और LinkedIn पर शेयर होने पर आपका लिंक कैसा दिखेगा। meta tags पेस्ट करें, कार्ड तुरंत देखें — मुफ्त।",
+    "metaTitle": "ओपन ग्राफ प्रीव्यू ऑनलाइन - अपने सोशल लिंक कार्ड टेस्ट करें | JaurTools",
+    "name": "ओपन ग्राफ प्रीव्यू",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "अपने पेज के <meta> टैग पेस्ट करें और यह टूल आपके og: व twitter: टैग से मॉक X और Facebook लिंक कार्ड रेंडर करता है। यह शीर्षक (twitter:title, फिर og:title), विवरण, इमेज और URL उसी तरह निकालता है जैसे प्लेटफॉर्म करते हैं, गायब टैग की चेतावनी देता है, और आज़माने के लिए किसी भी मान को मैनुअल ओवरराइड करने देता है। जैसे twitter:card summary_large_image वाले टैग चौड़े-बैनर वाला X कार्ड रेंडर करते हैं।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "कार्ड प्रीव्यू",
+    "tagline": "अपने X और Facebook लिंक कार्ड प्रीव्यू करें।",
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "workedExample": "नमूना पेस्ट किए टैग:\n<meta property=\"og:title\" content=\"Example — Free Browser Tools\">\n<meta property=\"og:description\" content=\"Free tools that run in your browser.\">\n<meta property=\"og:image\" content=\"https://example.com/og.png\">\n<meta property=\"og:url\" content=\"https://example.com/\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\nटूल से निकाले मान:\n1. शीर्षक: Example — Free Browser Tools (og:title से; twitter:title नहीं है)।\n2. विवरण: Free tools that run in your browser.।\n3. इमेज: https://example.com/og.png (https है, तो कोई चेतावनी नहीं)।\n4. URL/डोमेन: example.com।\n5. कार्ड टाइप: large (twitter:card = summary_large_image)।\nनतीजा: X प्रीव्यू चौड़े-बैनर लेआउट में दिखता है; Facebook प्रीव्यू मानक OG कार्ड दिखाता है। कोई चेतावनी नहीं — चारों मुख्य टैग मौजूद हैं।"
+  }
+}

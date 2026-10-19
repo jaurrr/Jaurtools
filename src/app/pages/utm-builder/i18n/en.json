@@ -1,0 +1,96 @@
+{
+  "utm-builder": {
+    "benefits": [
+      "Clean, correctly encoded URLs every time: special characters are percent-encoded automatically.",
+      "Consistent naming: the same field layout forces your whole team to tag campaigns the same way.",
+      "Faster reporting: properly tagged links split traffic cleanly in Google Analytics and ad platforms.",
+      "No spreadsheet needed: the link updates live as you type, with instant copy and character count."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "UTM parameters are five short query tags (utm_source, utm_medium, utm_campaign, utm_term, utm_content) that you add to a URL. Analytics tools read them to tell you exactly which link, email or ad brought each visitor.",
+        "q": "What are UTM parameters?"
+      },
+      {
+        "a": "All five exist, but only three are required for clean reports: utm_source (where the traffic comes from), utm_medium (the channel, e.g. email or cpc) and utm_campaign (the campaign name). utm_term and utm_content are optional extras.",
+        "q": "Which UTM parameters are required?"
+      },
+      {
+        "a": "Keep one naming convention and stick to it: lowercase, underscores instead of spaces, e.g. summer_sale. Mixing Summer-Sale, summer sale and SUMMER_SALE creates three separate rows in your reports.",
+        "q": "How should I name my campaigns?"
+      },
+      {
+        "a": "utm_source names the referrer (newsletter, facebook, google). utm_medium names the channel (email, social, cpc, referral). Example: source=newsletter, medium=email for a link in your email newsletter.",
+        "q": "What is the difference between utm_source and utm_medium?"
+      },
+      {
+        "a": "Yes. This tool preserves anything already in the URL: existing query parameters and the #fragment stay in place, and the UTM tags are added alongside them.",
+        "q": "Can I add UTM tags to a URL that already has parameters?"
+      },
+      {
+        "a": "No. UTM tags only label the visit for your own analytics; they do not change what the visitor sees, and they do not affect search rankings.",
+        "q": "Do UTM parameters hurt SEO?"
+      }
+    ],
+    "formula": "final URL = base URL + \"?\" + \"utm_source=\" + source + \"&utm_medium=\" + medium + \"&utm_campaign=\" + campaign [+ \"&utm_term=\" + term] [+ \"&utm_content=\" + content]\nValues are percent-encoded. If the base URL already has a query string, new parameters are appended with \"&\".",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your destination page URL into the Website URL field.",
+      "Type the utm_source: where the visitor comes from (e.g. newsletter, facebook).",
+      "Type the utm_medium: the channel (e.g. email, social, cpc).",
+      "Type the utm_campaign: the campaign name (e.g. summer_sale).",
+      "Optionally add utm_term (paid keyword) and utm_content (to tell two links apart).",
+      "Copy the finished URL and use it in your email, ad or social post."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "UTM stands for Urchin Tracking Module, from the Urchin analytics software Google acquired in 2005; the naming lives on in Google Analytics.",
+      "The five standard parameters are utm_source, utm_medium, utm_campaign, utm_term and utm_content.",
+      "utm_source identifies the referrer, utm_medium the marketing channel, and utm_campaign the specific promotion.",
+      "utm_term records the paid-search keyword, and utm_content distinguishes links that point to the same URL (e.g. two buttons in one email).",
+      "Analytics platforms read UTM tags automatically; visitors never see anything different on the page.",
+      "Special characters in values are percent-encoded, so spaces and symbols never break the link."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "UTM builder, UTM link generator, utm_source utm_medium, campaign URL builder, marketing link tracker, free UTM tool",
+    "labels": {
+      "baseUrlLabel": "Website URL",
+      "campaignLabel": "Campaign name (utm_campaign)",
+      "contentLabel": "Content (utm_content) — optional",
+      "copyButton": "Copy URL",
+      "emptyError": "Please enter a website URL first.",
+      "invalidError": "That URL is not valid. Include the scheme, e.g. https://example.com/page.",
+      "lengthLabel": "URL length",
+      "mediumLabel": "Medium (utm_medium)",
+      "noteText": "Only parameters with a value are added. utm_term and utm_content are optional.",
+      "resultLabel": "Your tagged URL",
+      "schemeError": "The URL must start with http:// or https://.",
+      "sourceLabel": "Source (utm_source)",
+      "termLabel": "Term (utm_term) — optional"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "UTM tags only track visitors after they click; they cannot track impressions or offline reach.",
+      "They describe your own analytics only: typos in values (Sumr_Sale) still work but pollute your reports.",
+      "Do not put UTM tags on internal site links: they overwrite the original traffic source in your reports.",
+      "Very long URLs with all five parameters can look messy when shared raw; consider a shortener for social posts."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free UTM builder: build correctly-encoded campaign URLs with utm_source, utm_medium and utm_campaign. Live preview, copy in one click.",
+    "metaTitle": "UTM Builder - Create Campaign Tracking URLs Free | JaurTools",
+    "name": "UTM Builder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A UTM builder adds tracking tags (utm_source, utm_medium, utm_campaign) to any link so analytics tools can tell exactly which email, ad or post brought each visitor. Enter your details and copy the finished URL.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "UTM URL results",
+    "tagline": "Build clean UTM campaign URLs — correctly encoded, every time.",
+    "workedExample": "Website URL: https://example.com/summer-sale\nutm_source = newsletter, utm_medium = email, utm_campaign = july_promo\nStep 1: start with the base URL. Step 2: append \"?\" and the first tag: utm_source=newsletter. Step 3: join the rest with \"&\": utm_medium=email, then utm_campaign=july_promo.\nResult: https://example.com/summer-sale?utm_source=newsletter&utm_medium=email&utm_campaign=july_promo\nThat link is 94 characters long and tells analytics: traffic came from the newsletter, through email, for the July promo campaign.",
+    "workedExampleHeading": "Worked example"
+  }
+}

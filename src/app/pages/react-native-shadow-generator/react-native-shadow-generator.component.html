@@ -1,0 +1,178 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="preview-box" [attr.aria-label]="t('labels.preview')">
+        <div class="preview-card" [style.box-shadow]="cssPreview()">
+          {{ t('labels.previewText') }}
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rs-color">{{ t('labels.shadowColor') }}</label>
+        <div class="input-row">
+          <input id="rs-color" type="color" [value]="shadowColor()"
+            (input)="setShadowColor($any($event.target).value)" />
+          <input type="text" class="full" maxlength="7" spellcheck="false" [value]="shadowColor()"
+            (input)="setShadowColor($any($event.target).value)" [attr.aria-label]="t('labels.shadowColor')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rs-ox">{{ t('labels.offsetX') }}</label>
+        <div class="input-row">
+          <input id="rs-ox" type="number" inputmode="numeric" min="-40" max="40" step="1"
+            [ngModel]="offsetX()" (ngModelChange)="setOffsetX($event)" />
+          <input type="range" min="-40" max="40" step="1" [ngModel]="offsetX()"
+            (ngModelChange)="setOffsetX($event)" [attr.aria-label]="t('labels.offsetX')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rs-oy">{{ t('labels.offsetY') }}</label>
+        <div class="input-row">
+          <input id="rs-oy" type="number" inputmode="numeric" min="-40" max="40" step="1"
+            [ngModel]="offsetY()" (ngModelChange)="setOffsetY($event)" />
+          <input type="range" min="-40" max="40" step="1" [ngModel]="offsetY()"
+            (ngModelChange)="setOffsetY($event)" [attr.aria-label]="t('labels.offsetY')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rs-radius">{{ t('labels.blurRadius') }}</label>
+        <div class="input-row">
+          <input id="rs-radius" type="number" inputmode="numeric" min="0" max="40" step="1"
+            [ngModel]="radius()" (ngModelChange)="setRadius($event)" />
+          <input type="range" min="0" max="40" step="1" [ngModel]="radius()"
+            (ngModelChange)="setRadius($event)" [attr.aria-label]="t('labels.blurRadius')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rs-opacity">{{ t('labels.opacity') }}</label>
+        <div class="input-row">
+          <input id="rs-opacity" type="number" inputmode="numeric" min="0" max="100" step="1"
+            [ngModel]="opacity()" (ngModelChange)="setOpacity($event)" />
+          <input type="range" min="0" max="100" step="1" [ngModel]="opacity()"
+            (ngModelChange)="setOpacity($event)" [attr.aria-label]="t('labels.opacity')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rs-elevation">{{ t('labels.elevation') }}</label>
+        <div class="input-row">
+          <input id="rs-elevation" type="number" inputmode="numeric" min="0" max="24" step="1"
+            [ngModel]="elevation()" (ngModelChange)="setElevation($event)" />
+          <input type="range" min="0" max="24" step="1" [ngModel]="elevation()"
+            (ngModelChange)="setElevation($event)" [attr.aria-label]="t('labels.elevation')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="code-block">
+        <pre><code>{{ stylesheetCode() }}</code></pre>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="copyCode()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copyCode') }}
+        </button>
+        <button type="button" class="btn" (click)="downloadCode()">
+          <app-icon name="download" /> {{ t('labels.downloadJs') }}
+        </button>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

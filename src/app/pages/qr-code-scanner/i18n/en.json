@@ -1,0 +1,98 @@
+{
+  "qr-code-scanner": {
+    "benefits": [
+      "Read QR codes from photos and screenshots without installing an app.",
+      "Live camera mode scans codes in real time on phones and laptops.",
+      "Decoding happens on your device. Scanned links are never uploaded.",
+      "One click copies the decoded text, link, or WiFi details."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The decoding uses your browser's built-in BarcodeDetector API, available in Chrome and Edge on desktop and Android. Safari and Firefox do not support it yet, so this tool shows a clear message there instead of failing silently.",
+        "q": "Which browsers can scan QR codes?"
+      },
+      {
+        "a": "Three common causes: the image is too blurry or small, the code is cropped so the three square finder patterns are missing, or the contrast is too low. Upload a sharper, well-lit photo with the whole code visible and a quiet margin around it.",
+        "q": "Why was no QR code found in my image?"
+      },
+      {
+        "a": "Yes, if the browser grants camera permission. Use HTTPS (this site) and tap Start camera, then allow access when asked. Point the code at the center of the frame and tap Capture. If permission was denied earlier, reset it in the browser's site settings.",
+        "q": "Can I scan with my camera?"
+      },
+      {
+        "a": "The decoded text appears in the result box. If it is a URL, copy it and paste it into your address bar. The tool never opens links automatically, which protects you from malicious QR codes.",
+        "q": "What do I do with the decoded result?"
+      },
+      {
+        "a": "A QR code can hide any link, including phishing pages. This scanner only reveals the text; it never visits the link for you. Before opening a decoded URL, check that the domain looks legitimate.",
+        "q": "Are QR codes safe to scan?"
+      },
+      {
+        "a": "The rawValue is the exact text stored in the code: a URL, plain text, a vCard, or WiFi credentials. Some codes store structured formats like WIFI:T:WPA;S:network;P:password;;, which your phone can interpret directly.",
+        "q": "What does the decoded text look like?"
+      }
+    ],
+    "formula": "Decode = find 3 finder patterns -> determine grid version -> sample modules -> Reed-Solomon error correction -> extract bytes -> decode text.\nThis tool uses the browser's native BarcodeDetector API for the whole pipeline.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo, screenshot, or image file containing a QR code.",
+      "Or tap Start camera, allow access, and tap Capture with the code in frame.",
+      "The decoded text appears in the result box.",
+      "Copy the result with one click.",
+      "If nothing is found, try a sharper image with the full code visible."
+    ],
+    "howToHeading": "How to use this scanner",
+    "keyFacts": [
+      "A QR code stores text or a URL in a square grid of black and white modules.",
+      "Decoding finds the three square finder patterns, reads the grid, and corrects errors mathematically.",
+      "This tool decodes with the browser's built-in BarcodeDetector API. No library download, no server.",
+      "It reads QR codes from uploaded images and from your live camera.",
+      "Decoded text is shown only. The tool never opens links automatically."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "qr code scanner, scan qr code online, qr reader, decode qr code from image, qr scanner camera",
+    "labels": {
+      "cameraHeading": "Scan with camera",
+      "capture": "Capture and decode",
+      "copied": "Copied!",
+      "copy": "Copy result",
+      "errorCamera": "Camera access was denied or unavailable. Check browser permissions.",
+      "errorDecode": "Could not decode the image. Try a sharper photo.",
+      "errorNotFound": "No QR code found in this image. Make sure the full code is visible.",
+      "errorSize": "Image is too large. Please use a file under 10 MB.",
+      "errorType": "Please choose an image file (PNG, JPG, or similar).",
+      "errorUnsupported": "Your browser does not support on-device QR decoding. Please use Chrome or Edge.",
+      "resultHeading": "Decoded result",
+      "scanning": "Scanning...",
+      "startCamera": "Start camera",
+      "stopCamera": "Stop camera",
+      "supportedNote": "Decoding uses your browser's built-in BarcodeDetector (Chrome and Edge). Camera requires HTTPS and your permission.",
+      "uploadHint": "PNG, JPG, or similar, up to 10 MB. The full QR code must be visible.",
+      "uploadLabel": "Upload a QR code image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Requires Chrome or Edge. Safari and Firefox cannot decode on-device yet.",
+      "Blurry, cropped, or low-contrast codes may not decode.",
+      "Camera access needs HTTPS and your explicit permission.",
+      "Only QR codes are decoded, not other barcode types."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free QR code scanner: decode QR codes from an uploaded image or your camera, fully in your browser. No app install, no uploads, fully private.",
+    "metaTitle": "QR Code Scanner - Decode from Image or Camera | JaurTools",
+    "name": "QR Code Scanner",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a QR code image or point your camera at one to decode it instantly in your browser. Decoding uses Chrome and Edge's built-in BarcodeDetector, so nothing is uploaded anywhere. The decoded text or link appears in a result box with one-click copy.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Scan a QR code",
+    "tagline": "Decode QR codes from an image or your camera. Fully in-browser, nothing uploaded.",
+    "workedExample": "A shopkeeper receives a QR code photo for payment verification:\n1. She uploads the PNG screenshot to the tool.\n2. The scanner detects the code and decodes: upi://pay?pa=shop@upi&pn=CornerStore&am=250.\n3. She copies the text and confirms the payee name matches her store.\n4. The whole check takes seconds, and the image never leaves her phone.",
+    "workedExampleHeading": "Worked example"
+  }
+}

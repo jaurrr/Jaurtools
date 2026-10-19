@@ -1,0 +1,96 @@
+{
+  "statistics-calculator": {
+    "benefits": [
+      "A complete descriptive summary — mean, median, mode, quartiles, range and spread — from one paste.",
+      "No spreadsheet formulas or statistics software to learn.",
+      "Quartiles and IQR included, so you can spot outliers properly.",
+      "Works with any list: marks, prices, measurements, survey scores.",
+      "100% private: your data never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Mean is the average (sum ÷ count). Median is the middle value when sorted. Mean reacts strongly to outliers; median does not — so report the median for skewed data like incomes.",
+        "q": "Mean vs median — which should I report?"
+      },
+      {
+        "a": "The mode is the most frequent value. A dataset can have one mode, several modes (multimodal), or no mode at all when every value appears once. This calculator lists every mode it finds.",
+        "q": "Can data have more than one mode?"
+      },
+      {
+        "a": "Quartiles split sorted data into quarters: Q1 is the 25th percentile, Q3 the 75th. The IQR (Q3 − Q1) covers the middle 50% of values and is the standard robust measure of spread.",
+        "q": "What are quartiles and the IQR?"
+      },
+      {
+        "a": "The 1.5×IQR rule: values below Q1 − 1.5×IQR or above Q3 + 1.5×IQR are flagged as outliers. It is a rule of thumb, not a proof — always look at the data too.",
+        "q": "How do I detect outliers with the IQR?"
+      },
+      {
+        "a": "Use sample SD when your data is a subset standing in for a larger group; population SD when it is the entire group. For most real datasets, sample SD is the right choice.",
+        "q": "Sample or population standard deviation?"
+      }
+    ],
+    "formula": "Mean:    x̄ = Σx / n\nMedian:  middle value of sorted data (average of two middles if n is even)\nMode:    most frequent value(s)\nRange:   max − min\nQuartiles: Q1 = 25th percentile, Q3 = 75th percentile (linear interpolation)\nIQR:     Q3 − Q1\nSample variance: s² = Σ(x − x̄)² / (n − 1)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your numbers, separated by commas, spaces or line breaks.",
+      "The full summary appears instantly — no button to press.",
+      "Read the mean, median and mode to understand the center of your data.",
+      "Check the quartiles and IQR to understand the spread.",
+      "Use the range, min and max to sanity-check for typos or outliers."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Descriptive statistics summarize a dataset's center, spread and shape in a few numbers.",
+      "The median is robust to outliers; the mean is not.",
+      "The IQR (Q3 − Q1) captures the middle 50% of the data.",
+      "Variance and SD come in sample (÷ n−1) and population (÷ n) versions.",
+      "A dataset can have zero, one, or several modes."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "statistics calculator, descriptive statistics, mean median mode calculator, quartile calculator, IQR calculator",
+    "labels": {
+      "count": "Count",
+      "emptyNote": "Enter at least one number to summarize.",
+      "ignoredNote": "Non-numeric entries ignored",
+      "inputLabel": "Your data",
+      "inputPlaceholder": "Example: 12, 15, 18, 22, 22, 25, 30",
+      "iqr": "IQR (Q3 − Q1)",
+      "max": "Max",
+      "mean": "Mean",
+      "median": "Median",
+      "min": "Min",
+      "mode": "Mode",
+      "noMode": "No mode (all values unique)",
+      "popSd": "Population SD",
+      "q1": "Q1",
+      "q3": "Q3",
+      "range": "Range",
+      "sampleSd": "Sample SD",
+      "sum": "Sum"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Summary numbers hide the shape of the data — always plot a histogram for important decisions.",
+      "Quartile methods vary slightly between textbooks; this tool uses linear interpolation.",
+      "Garbage in, garbage out: typos like an extra zero distort every statistic.",
+      "Descriptive only — this tool does not run hypothesis tests or build models."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free statistics calculator: paste any dataset for mean, median, mode, quartiles, IQR, range, variance and standard deviation — instantly.",
+    "metaTitle": "Statistics Calculator — Mean, Median, Mode & Quartiles",
+    "name": "Statistics Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste any list of numbers and instantly get the full descriptive summary: count, sum, mean, median, mode, min, max, range, quartiles Q1/Q3, IQR, and both sample and population standard deviation.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Statistics summary",
+    "tagline": "Mean, median, mode, quartiles, range and spread — one paste, full summary.",
+    "workedExample": "Data: 1, 2, 3, 4, 5  (n = 5)\nSum = 15, Mean = 15 / 5 = 3\nMedian = 3 (middle value)\nMode: none — every value appears once\nMin = 1, Max = 5, Range = 5 − 1 = 4\nQ1 = 2 (25th percentile), Q3 = 4 (75th percentile), IQR = 2\nSquared deviations from 3: 4, 1, 0, 1, 4 → sum = 10\nSample variance = 10 / 4 = 2.5, Sample SD = √2.5 ≈ 1.5811\nPopulation variance = 10 / 5 = 2, Population SD = √2 ≈ 1.4142",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "compare-pdf": {
+    "benefits": [
+      "Spot exactly what changed between two versions of a document.",
+      "Side-by-side view with removed lines in red and added lines in green.",
+      "Line counts tell you at a glance how big the difference is.",
+      "Whitespace-insensitive mode ignores trivial formatting changes.",
+      "Both documents are processed locally — nothing is uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The tool extracts the text of both PDFs and runs a longest-common-subsequence diff over their lines — the same core idea behind code diff tools, applied to document text.",
+        "q": "How does the comparison work?"
+      },
+      {
+        "a": "Tables and images have no text lines to compare, so they are skipped. If the table's text is selectable in the PDF, its words still appear in the line stream.",
+        "q": "Can it compare tables or images?"
+      },
+      {
+        "a": "Turn on the whitespace option (default). It collapses extra spaces before comparing, so re-wrapped lines do not show as changes.",
+        "q": "The files only differ in spacing. Can I ignore that?"
+      },
+      {
+        "a": "Yes — up to 1,200 lines per document are compared, which covers contracts, reports and books chapters comfortably.",
+        "q": "Is there a size limit?"
+      },
+      {
+        "a": "No. The reader library (pdf.js) is bundled with the site, so extraction and the diff algorithm run fully offline in your browser.",
+        "q": "Does comparing need the internet?"
+      },
+      {
+        "a": "Scanned PDFs have no text layer, so there is nothing to diff. Convert them with OCR first, or compare the scanned images visually.",
+        "q": "What about scanned PDFs?"
+      }
+    ],
+    "formula": "dp[i][j] = dp[i+1][j+1] + 1            if lineA[i] = lineB[j]\ndp[i][j] = max(dp[i+1][j], dp[i][j+1])  otherwise\n\nWalk the table from the top-left: equal lines are “unchanged”, otherwise follow the larger neighbor — down means a removed line, right means an added line.\nExample: A=[“Total: 500”], B=[“Total: 650”] → 1 removed + 1 added, 0 unchanged for that line.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the first (original) PDF.",
+      "Upload the second (revised) PDF.",
+      "Keep whitespace-insensitive mode on to ignore formatting noise.",
+      "Click compare and wait for both texts to be extracted.",
+      "Read the side-by-side diff: red lines were removed, green lines were added."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Both PDFs are converted to text with pdf.js, then compared line by line with an LCS diff.",
+      "The result is a two-column table: original on the left, revised on the right.",
+      "Removed lines are highlighted red, added lines green, unchanged lines stay neutral.",
+      "Summary counts show unchanged, removed and added lines at a glance.",
+      "Whitespace collapsing is optional; up to 1,200 lines per document are compared."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "compare pdf, pdf diff, compare two pdf files, pdf text comparison, find differences pdf online",
+    "labels": {
+      "added": "Lines added",
+      "busy": "Extracting and comparing, please wait…",
+      "colA": "Original",
+      "colB": "Revised",
+      "compareButton": "Compare PDFs",
+      "diffLabel": "Text differences",
+      "diffNote": "Comparison is line-based, up to 1,200 lines per document.",
+      "errRender": "Could not read one of the PDFs. Files may be scanned, corrupted or password-protected.",
+      "errSize": "{n} is larger than 50 MB and was skipped.",
+      "errType": "{n} is not a PDF and was skipped.",
+      "fileALabel": "First PDF (original)",
+      "fileBLabel": "Second PDF (revised)",
+      "ignoreWsLabel": "Ignore whitespace differences",
+      "removed": "Lines removed",
+      "statusDone": "Compared {a} vs {b} lines.",
+      "unchanged": "Lines unchanged"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only text is compared — images, charts and layout changes are invisible to the diff.",
+      "Scanned PDFs have no text layer, so they cannot be compared.",
+      "Very large PDFs (100+ pages) can be slow to process and may use significant browser memory.",
+      "Password-protected PDFs that need a password prompt cannot be read."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Compare two PDFs online for free. Side-by-side text diff shows exactly what changed — added, removed and unchanged lines. 100% in your browser.",
+    "metaTitle": "Compare PDF — Find Differences Between Two PDFs Free",
+    "name": "Compare PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload two PDFs — an original and a revised version — and get a side-by-side text diff in your browser. Removed lines show in red, added lines in green, with summary counts, all computed locally with no uploads.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Compare PDF results",
+    "tagline": "See exactly what changed between two PDFs.",
+    "workedExample": "Invoice v1 lines: [“Invoice #101”, “Total: 500”, “Thanks”].\nInvoice v2 lines: [“Invoice #101”, “Total: 650”, “Thanks”].\nLCS matches lines 1 and 3 as unchanged.\nLine 2 differs → 1 removed (“Total: 500”) + 1 added (“Total: 650”).\nSummary: unchanged 2, removed 1, added 1 — the only change is the total, 500 → 650.",
+    "workedExampleHeading": "Worked example"
+  }
+}

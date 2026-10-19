@@ -1,0 +1,92 @@
+{
+  "time-value-of-money-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Time Value of Money Calculator",
+    "tagline": "Solve any TVM variable: payment, present value, future value, rate, or term.",
+    "metaTitle": "Time Value of Money Calculator - Solve for Payment, PV, FV | JaurTools",
+    "metaDescription": "Free time value of money calculator: solve for payment, present value, future value, rate, or periods on any loan or investment. Instant, private.",
+    "keywords": "tvm payment calculator, loan payment calculator, pmt calculator, time value of money calculator, annuity payment calculator",
+    "resultsHeading": "Your payment results",
+    "quickAnswer": "Payment = PV x i / (1 - (1 + i)^-n), where i is the periodic rate and n the number of payments. Example: a 500,000 loan at 8.5% annual for 5 years, paid monthly, needs a payment of 10,258.27 per month. Total paid is 615,496, of which 115,496 is interest. Longer terms shrink the payment but grow the total interest.",
+    "keyFacts": [
+      "TVM (time value of money) says money today is worth more than the same money later.",
+      "The payment formula amortizes the loan so the balance hits exactly zero at the last payment.",
+      "Periodic rate = annual rate / payments per year; periods = years x payments per year.",
+      "Each payment splits into interest on the remaining balance plus principal repayment.",
+      "Early payments are mostly interest; late payments are mostly principal.",
+      "At 0% interest the payment is simply the amount divided by the number of payments."
+    ],
+    "howTo": [
+      "Enter the loan amount or present value.",
+      "Enter the annual interest rate as a percentage.",
+      "Enter the term in years.",
+      "Choose the payment frequency: monthly, quarterly, or yearly.",
+      "Read your periodic payment, total paid, and total interest."
+    ],
+    "formula": "Payment = PV x i / (1 - (1 + i)^-n).\nPV = present value (loan amount), i = periodic rate (annual rate / frequency), n = total payments (years x frequency).\nExample: 500,000 at 8.5% monthly for 5 years: i = 0.007083, n = 60; payment = 500,000 x 0.007083 / (1 - 1.007083^-60) = 10,258.27.",
+    "workedExample": "Loan 500,000, annual rate 8.5%, 5 years, monthly payments:\n1. Periodic rate: 0.085 / 12 = 0.007083.\n2. Number of payments: 5 x 12 = 60.\n3. Payment: 500,000 x 0.007083 / (1 - 1.007083^-60) = 3,541.67 / 0.34519 = 10,258.27 per month.\n4. Total paid: 10,258.27 x 60 = 615,496.\n5. Total interest: 615,496 - 500,000 = 115,496.",
+    "benefits": [
+      "Gives the exact amortizing payment, not a rough divide-by-months guess.",
+      "Handles monthly, quarterly, and yearly schedules in one tool.",
+      "Shows the true cost of the loan through the total-interest row.",
+      "Useful for loans, leases, and valuing any annuity."
+    ],
+    "limitations": [
+      "Assumes a fixed rate and equal payments; variable-rate loans differ.",
+      "Ignores fees, insurance, and taxes that real lenders add to payments.",
+      "Assumes payments at the end of each period (ordinary annuity).",
+      "Estimates only: your lender's amortization schedule is the final word."
+    ],
+    "faqs": [
+      {
+        "q": "What does TVM mean?",
+        "a": "Time value of money: the idea that money available now is worth more than the same amount later, because it can earn interest. All loan math, including this payment formula, is built on that principle."
+      },
+      {
+        "q": "Why is total interest so high?",
+        "a": "Because interest compounds on the unpaid balance. On a long loan you pay interest on interest for years before the principal shrinks meaningfully. Paying extra principal early cuts total interest dramatically."
+      },
+      {
+        "q": "How do I lower my payment?",
+        "a": "Borrow less, get a lower rate, or stretch the term. Stretching the term lowers the payment but raises total interest, so compare the total-paid row, not just the payment."
+      },
+      {
+        "q": "Does payment frequency matter?",
+        "a": "Slightly. More frequent payments reduce the balance faster, which trims total interest a little. The bigger factor is always the rate and the term."
+      },
+      {
+        "q": "What if the interest rate is 0%?",
+        "a": "Then the payment is simply the amount divided by the number of payments. The calculator handles this automatically: with no interest there is no compounding to solve for."
+      },
+      {
+        "q": "Can I use this for a savings goal instead of a loan?",
+        "a": "Yes. The same math values an annuity: enter your target as the present value and the expected return as the rate, and the payment tells you what to save each period to reach it, ignoring that savings usually compound forward rather than amortize backward."
+      }
+    ],
+    "labels": {
+      "presentValue": "Loan amount (present value)",
+      "annualRate": "Annual interest rate (%)",
+      "years": "Term (years)",
+      "frequency": "Payment frequency",
+      "monthlyOpt": "Monthly",
+      "quarterlyOpt": "Quarterly",
+      "yearlyOpt": "Yearly",
+      "payment": "Periodic payment",
+      "totalPaid": "Total paid",
+      "totalInterest": "Total interest"
+    }
+  }
+}

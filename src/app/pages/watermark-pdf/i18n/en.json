@@ -1,0 +1,115 @@
+{
+  "watermark-pdf": {
+    "benefits": [
+      "Stamp DRAFT, CONFIDENTIAL or your brand across every page in one pass.",
+      "Full typography control: size, color, opacity, rotation and four layouts.",
+      "Use your own logo or stamp as a transparent image watermark.",
+      "Tiled mode covers the page so the mark cannot be cropped out easily.",
+      "Your document never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Diagonal is the classic choice: one large translucent mark across the page center. Tiled repeats the mark in a grid so it survives cropping. Center is subtle; corners are discreet.",
+        "q": "Which watermark position should I use?"
+      },
+      {
+        "a": "Lower is subtler. 10–20% reads as a background mark; 40%+ becomes prominent. The tool caps opacity at 80% so text stays readable.",
+        "q": "What opacity looks professional?"
+      },
+      {
+        "a": "Yes — upload a PNG (transparency kept) or JPG logo. It is stamped with the same position, opacity and rotation controls.",
+        "q": "Can I use my logo instead of text?"
+      },
+      {
+        "a": "The watermark is drawn onto the page content, so it becomes part of the PDF. It is not easily removable without editing software.",
+        "q": "Can someone remove the watermark?"
+      },
+      {
+        "a": "On a standard A4 page, 48–72 pt suits a diagonal DRAFT mark; corners work better at 16–24 pt.",
+        "q": "What font size should I pick?"
+      },
+      {
+        "a": "Yes. The watermark is stamped on every page of the document in a single pass.",
+        "q": "Does it apply to all pages?"
+      }
+    ],
+    "formula": "tiled_cols = ceil(pageW / (textW + 140))\ntiled_rows = ceil(pageH / (size × 3.2))\n\nExample: A4 page 595.28 × 841.89 pt, “DRAFT” in 72 pt bold ≈ 243 pt wide.\ncols = ceil(595.28 / 383) = 2; rows = ceil(841.89 / 230.4) = 4.\nResult: 8 diagonal watermarks tiled across each page.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload your PDF (up to 50 MB).",
+      "Choose text or image watermark.",
+      "For text: type your words and set size, color, opacity and angle. For image: upload a PNG or JPG.",
+      "Pick a layout: diagonal, center, tiled or corners.",
+      "Click apply to stamp every page, then download the watermarked PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Text watermarks support custom wording, 16–140 pt size, four colors, 5–80% opacity and 0–90° rotation.",
+      "Four layouts: diagonal center, plain center, tiled grid, or all four corners.",
+      "Image watermarks accept PNG (transparency preserved) or JPG up to 10 MB.",
+      "The mark is drawn into the page content on every page in a single pass.",
+      "Everything runs locally with pdf-lib; files up to 50 MB never leave the browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "watermark pdf, add watermark to pdf, pdf stamp, draft watermark pdf, confidential stamp pdf online",
+    "labels": {
+      "angleLabel": "Rotation angle",
+      "applyButton": "Apply watermark",
+      "busy": "Stamping pages, please wait…",
+      "colorBlack": "Black",
+      "colorBlue": "Blue",
+      "colorGray": "Gray",
+      "colorLabel": "Color",
+      "colorRed": "Red",
+      "errImgSize": "The image is larger than 10 MB.",
+      "errImgType": "Please choose a PNG or JPG image.",
+      "errNoImage": "Upload a watermark image first.",
+      "errNoText": "Type your watermark text first.",
+      "errParse": "Could not read this PDF. It may be corrupted or password-protected.",
+      "errProcess": "Something went wrong while watermarking.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "PDF file, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "imageHint": "PNG or JPG, up to 10 MB. PNG keeps transparency.",
+      "imageLabel": "Watermark image",
+      "kindImage": "Image",
+      "kindLabel": "Watermark type",
+      "kindText": "Text",
+      "opacityLabel": "Opacity",
+      "posCenter": "Center",
+      "posCorners": "Four corners",
+      "posDiagonal": "Diagonal",
+      "posLabel": "Position",
+      "posTiled": "Tiled",
+      "sizeLabel": "Font size",
+      "statusDone": "Watermarked {n} page(s). Download started.",
+      "textLabel": "Watermark text",
+      "textPh": "e.g. CONFIDENTIAL"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A watermark is a visual mark, not copy protection — determined users can still photograph the page.",
+      "Very small text watermarks may look soft when printed large.",
+      "Image watermarks are scaled proportionally; extremely wide logos may shrink to fit.",
+      "Password-protected PDFs that need a password prompt cannot be watermarked."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Add text or image watermarks to PDFs online for free. DRAFT, CONFIDENTIAL stamps with full style control. 100% in your browser.",
+    "metaTitle": "Watermark PDF — Stamp Text or Logo Online Free",
+    "name": "Watermark PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF and stamp it with a text watermark (DRAFT, CONFIDENTIAL, your name) or your own logo image. You control size, color, opacity, rotation and layout — diagonal, center, tiled or corners — applied to every page in one pass, all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Watermark PDF results",
+    "tagline": "Stamp DRAFT, CONFIDENTIAL or your logo across every page.",
+    "workedExample": "A 3-page A4 proposal, text “DRAFT”, 72 pt bold, gray, 18% opacity, diagonal 45°.\nText width ≈ 243 pt.\nTiled grid: cols = ceil(595.28 / (243 + 140)) = ceil(1.55) = 2.\nrows = ceil(841.89 / (72 × 3.2)) = ceil(3.65) = 4.\nEach of the 3 pages gets 8 translucent DRAFT marks — 24 marks total in the downloaded PDF.",
+    "workedExampleHeading": "Worked example"
+  }
+}

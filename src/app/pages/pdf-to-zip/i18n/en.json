@@ -1,0 +1,95 @@
+{
+  "pdf-to-zip": {
+    "benefits": [
+      "Send many PDFs as one tidy download instead of a dozen attachments.",
+      "Archive project documents, invoices or study notes in a single bundle.",
+      "No compression software to install — the ZIP is built right in your browser.",
+      "ZIP is the universal archive format: it opens on Windows, Mac, Android and iPhone.",
+      "File names are kept exactly as they are, with automatic renaming for duplicates."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A ZIP archive is a single file that holds many files inside it. Recipients download once and unzip to get every PDF back with its original name.",
+        "q": "What is a ZIP file?"
+      },
+      {
+        "a": "The tool uses the stored (uncompressed) method so it runs instantly on any file. PDF files are already compressed internally, so re-compressing them would barely shrink anything anyway.",
+        "q": "Are the PDFs compressed inside the ZIP?"
+      },
+      {
+        "a": "Yes. The archive follows the standard ZIP format with correct CRC32 checksums, so Windows Explorer, macOS Archive Utility, 7-Zip and phone file managers all open it.",
+        "q": "Will the ZIP open on my phone?"
+      },
+      {
+        "a": "Just the total memory of your browser tab. Dozens of files and a few hundred megabytes work fine on a desktop; phones handle smaller bundles more comfortably.",
+        "q": "How many PDFs can I add?"
+      },
+      {
+        "a": "The bundle is named after the text you type, ending in .zip. If you leave it blank, the default name pdf-bundle.zip is used.",
+        "q": "How is the ZIP file named?"
+      },
+      {
+        "a": "The tool writes every byte of the archive locally with its own ZIP builder — no library, no server, no upload.",
+        "q": "Do you use JSZip or a similar library?"
+      }
+    ],
+    "formula": "zip_size ≈ sum(pdf_sizes) + (76 + name_length) × file_count\n\nEach file adds a ~76-byte local header plus its UTF-8 name. Because PDFs are already compressed, the stored method adds almost no size — bundling 5 PDFs of 8.0 MB total gives a ZIP of about 8.0 MB.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click the file picker and select one or more PDFs.",
+      "Review the list — remove anything you added by mistake.",
+      "Type a name for your ZIP archive (optional).",
+      "Click the bundle button to build the ZIP.",
+      "Download the single .zip file and share or archive it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Multiple PDFs are packed into one standard ZIP archive, entirely in your browser.",
+      "The archive uses the stored method: files are packed as-is with correct CRC32 integrity checksums.",
+      "Duplicate file names are renamed automatically (report (2).pdf) so nothing is overwritten.",
+      "UTF-8 file names are supported, so Hindi, Arabic and other scripts survive the round trip.",
+      "A live total shows the combined size of everything you have added before you build."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pdf to zip, bundle pdfs into zip, combine pdf files zip, zip pdf online free, archive pdf files",
+    "labels": {
+      "busy": "Building ZIP, please wait…",
+      "clearButton": "Clear all",
+      "errProcess": "Something went wrong while building the ZIP.",
+      "errSize": "{n} is larger than 50 MB and was skipped.",
+      "errType": "{n} is not a PDF and was skipped.",
+      "fileCount": "Files",
+      "filesHint": "Select one or more PDF files, up to 50 MB each. Files never leave your browser.",
+      "filesLabel": "PDF files",
+      "removeLabel": "Remove",
+      "statusDone": "Built a ZIP with {n} file(s), {s}.",
+      "totalSize": "Total size",
+      "zipButton": "Create ZIP",
+      "zipNameLabel": "ZIP file name"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Files are stored uncompressed — the ZIP will be roughly the same size as the PDFs combined.",
+      "Very large bundles (hundreds of megabytes) may strain low-memory phones.",
+      "Password-protected PDFs are packed as-is; the ZIP itself is not encrypted.",
+      "File names longer than a few hundred characters may be truncated by some unzip tools."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Bundle multiple PDFs into one ZIP archive online for free. No signup, no uploads — the ZIP is built 100% in your browser.",
+    "metaTitle": "PDF to ZIP — Bundle PDFs into a ZIP Archive Free",
+    "name": "PDF to ZIP",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Select any number of PDFs and this tool packs them into a single standard ZIP archive without uploading anything. You get a live file list with sizes, automatic renaming for duplicates, a custom archive name, and one clean .zip download that opens on every device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "PDF to ZIP results",
+    "tagline": "Pack many PDFs into one tidy ZIP archive — free and private.",
+    "workedExample": "You bundle 5 PDFs: 2.4 MB + 1.1 MB + 0.8 MB + 3.2 MB + 0.5 MB = 8.0 MB total.\nOverhead: 5 files × ~80 bytes ≈ 400 bytes.\nResulting ZIP: about 8.00 MB — the download contains all five PDFs with their original names intact.",
+    "workedExampleHeading": "Worked example"
+  }
+}

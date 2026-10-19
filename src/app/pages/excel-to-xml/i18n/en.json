@@ -1,0 +1,94 @@
+{
+  "excel-to-xml": {
+    "benefits": [
+      "Moves Excel data into XML-hungry systems: SOAP APIs, config importers and legacy software.",
+      "Custom root and row element names let the output match the schema your system requires.",
+      "Automatic escaping of &, < and > keeps every document well-formed.",
+      "Runs fully in the browser, so private spreadsheets are never uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Modern .xlsx files only. The old binary .xls format from Excel 2003 and earlier is not supported. Re-save such files as .xlsx first.",
+        "q": "Does it support old .xls files?"
+      },
+      {
+        "a": "Dates are stored as serial numbers in Excel. This tool reads the stored value, so a date may appear as a number like 45658 rather than a formatted date.",
+        "q": "Why do dates show as numbers?"
+      },
+      {
+        "a": "The tool reads the workbook's sheet list and converts one worksheet at a time. Pick the sheet you need from the dropdown.",
+        "q": "Which worksheet gets converted?"
+      },
+      {
+        "a": "Only the stored cell values are converted. Formulas, charts and images are skipped; formula cells use their last saved values.",
+        "q": "What about formulas and charts?"
+      },
+      {
+        "a": "Header text is sanitized into valid XML names: spaces become underscores and illegal characters are removed. Empty headers become field1, field2 and so on.",
+        "q": "How are messy header names handled?"
+      }
+    ],
+    "formula": "XML = <root> + for each row: <row><col1>v</col1><col2>v</col2></row> + </root>",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose file and select an .xlsx workbook from your device.",
+      "Wait while the workbook is parsed in your browser.",
+      "Pick the worksheet you want from the dropdown.",
+      "Set the root element name and the row element name.",
+      "Press Download to save the .xml file, or Copy to paste it elsewhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Reads genuine .xlsx workbooks by parsing the ZIP container and sheet XML directly.",
+      "One row element per worksheet row; field elements come from the header row.",
+      "Root and row element names are fully customizable and validated as legal XML names.",
+      "Special characters are escaped automatically, so output always parses.",
+      "Choose any worksheet from a multi-sheet workbook before converting."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "excel to xml online, convert xlsx to xml, xlsx to xml free, excel to xml converter",
+    "labels": {
+      "chooseFile": "Choose Excel file",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "download": "Download XML",
+      "emptyState": "Select an .xlsx file to see its worksheets here.",
+      "errorParse": "Could not read this file. Please make sure it is a valid modern .xlsx workbook.",
+      "fileHint": "Modern .xlsx workbooks only. Files stay on your device.",
+      "firstRowHeader": "First row is header",
+      "invalidName": "Root and row names must be valid XML names: start with a letter or underscore.",
+      "loading": "Reading workbook...",
+      "outputHeading": "XML output",
+      "resultFields": "Fields per record",
+      "resultRecords": "Records",
+      "resultSheets": "Worksheets",
+      "rootName": "Root element name",
+      "rowName": "Row element name",
+      "sheetLabel": "Worksheet"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Modern .xlsx only; legacy .xls files are not supported.",
+      "Date cells appear as Excel serial numbers, not formatted dates.",
+      "Only stored values are converted; formulas, charts and images are skipped.",
+      "Very large workbooks (hundreds of thousands of rows) may slow the browser."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert Excel to XML online free. Upload an .xlsx workbook, pick a worksheet, customize element names and download well-formed XML. 100% browser-based.",
+    "metaTitle": "Excel to XML Online Free - Convert XLSX to XML | JaurTools",
+    "name": "Excel to XML",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload an .xlsx workbook and download any worksheet as well-formed XML. Each row becomes an element with child elements named after your headers, and you can customize the root and row tag names to match the schema your system expects.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Excel to XML results",
+    "tagline": "Turn any Excel worksheet into clean, well-formed XML.",
+    "workedExample": "An .xlsx workbook has one worksheet, Products:\nA1=Item, B1=Price\nA2=Pen, B2=12.5\n\nWith root = products and row = product, the output is:\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<products>\n  <product>\n    <Item>Pen</Item>\n    <Price>12.5</Price>\n  </product>\n</products>\n\n1 worksheet, 1 record, 2 fields converted to XML.",
+    "workedExampleHeading": "Worked example"
+  }
+}

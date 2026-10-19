@@ -1,0 +1,93 @@
+{
+  "factor-calculator": {
+    "assumptionNote": "This tool works with positive whole numbers from 1 to 1,000,000. Decimal or negative inputs are rounded or clamped.",
+    "benefits": [
+      "Answers instantly - no manual trial division or mistakes.",
+      "Factor pairs show how a number breaks down, which helps with fractions and ratios.",
+      "The primality check doubles as a quick prime tester for homework and coding.",
+      "Factor counts are the first step toward GCF and LCM problems.",
+      "Works for any whole number up to a million."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A factor is a whole number that divides evenly into another number with no remainder. For example, 3 is a factor of 12 because 12 / 3 = 4 exactly. Every number's factor list always starts with 1 and ends with the number itself.",
+        "q": "What is a factor of a number?"
+      },
+      {
+        "a": "Factor pairs are two numbers that multiply to give the original number. The factor pairs of 12 are 1 x 12, 2 x 6, and 3 x 4. Pairs are useful for simplifying fractions and solving area problems like finding rectangle dimensions with a given area.",
+        "q": "What are factor pairs?"
+      },
+      {
+        "a": "Test every whole number from 1 up to the square root of the number. Each divisor d you find gives you two factors: d and n / d. You only need to check up to the square root because factors pair up - beyond the square root you are just repeating pairs you already found.",
+        "q": "How do you find all factors of a large number?"
+      },
+      {
+        "a": "Yes. Every whole number is divisible by 1, so 1 is always the first factor. But 1 itself is special: it has only one factor (itself), so it is neither prime nor composite.",
+        "q": "Is 1 a factor of every number?"
+      },
+      {
+        "a": "Factors divide INTO a number (factors of 12: 1, 2, 3, 4, 6, 12), while multiples are what you get when you multiply BY a number (multiples of 12: 12, 24, 36, ...). A number has finitely many factors but infinitely many multiples.",
+        "q": "What is the difference between factors and multiples?"
+      },
+      {
+        "a": "A prime number has exactly two factors: 1 and itself. If this calculator shows exactly two factors, your number is prime. For example, 13 shows only 1 and 13, so 13 is prime.",
+        "q": "How can I tell if a number is prime?"
+      }
+    ],
+    "formula": "d is a factor of n when n mod d = 0.\nFind all d in the range 1 to sqrt(n); each d gives the pair (d, n / d).\nPrime check: n is prime when it has exactly 2 factors.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type any whole number from 1 to 1,000,000 into the input box.",
+      "The complete list of factors appears instantly, sorted from smallest to largest.",
+      "Read the factor count, the sum of all factors, and whether the number is prime or composite.",
+      "Check the factor pairs to see how each pair multiplies back to your number.",
+      "Slide the range control for quick exploration of smaller numbers."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A factor of n is a whole number d such that n divided by d leaves a remainder of 0.",
+      "Every positive integer has at least two factors: 1 and itself. The number 1 has exactly one factor: 1.",
+      "Factors always come in pairs. If d divides n, then n / d is the matching pair factor.",
+      "You only need to test divisors up to the square root of n to find every factor.",
+      "A prime number has exactly two factors: 1 and itself. 2 is the only even prime.",
+      "Perfect numbers equal the sum of their proper factors - 6 = 1 + 2 + 3, and 28 = 1 + 2 + 4 + 7 + 14."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "factor calculator, factors of a number, find all factors, factor pairs, prime checker, divisors calculator",
+    "labels": {
+      "composite": "Composite",
+      "factorCountLabel": "Number of factors",
+      "factorsLabel": "All factors",
+      "neither": "Neither prime nor composite",
+      "numberLabel": "Number",
+      "pairsLabel": "Factor pairs",
+      "prime": "Prime",
+      "primeLabel": "Prime or composite",
+      "sumLabel": "Sum of factors"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only works with positive whole numbers - no fractions, decimals, or negatives.",
+      "Numbers above 1,000,000 are capped to keep the page fast.",
+      "It finds factors, not prime factorization. For 60 it lists 1, 2, 3, ... not 2 x 2 x 3 x 5.",
+      "Primality here is by factor counting, which is exact for this range but not a general cryptography-grade test."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free factor calculator: find all factors, factor pairs, count and sum of any number up to 1,000,000. Also checks if a number is prime. 100% private.",
+    "metaTitle": "Factor Calculator - Find All Factors of Any Number | JaurTools",
+    "name": "Factor Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A factor is a whole number that divides another number with no remainder. The factors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60 - twelve factors in total, summing to 168. Its factor pairs are 1 x 60, 2 x 30, 3 x 20, 4 x 15, 5 x 12 and 6 x 10. Because 60 has more than two factors, it is a composite number, not prime.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Factor results",
+    "tagline": "List every factor of a number instantly, with factor pairs, the count, and the sum.",
+    "workedExample": "Find all factors of 60:\n1. Test divisors 1 through sqrt(60) (about 7.75), so 1 to 7.\n2. Divisors that work: 1, 2, 3, 4, 5, 6.\n3. Pair each with 60 / d: 60, 30, 20, 15, 12, 10.\n4. Full sorted list: 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60.\n5. Count = 12 factors. Sum = 1 + 2 + 3 + 4 + 5 + 6 + 10 + 12 + 15 + 20 + 30 + 60 = 168.\n6. Twelve factors means 60 is composite, not prime.",
+    "workedExampleHeading": "Worked example"
+  }
+}

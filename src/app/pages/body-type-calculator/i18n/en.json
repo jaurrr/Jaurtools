@@ -1,0 +1,108 @@
+{
+  "body-type-calculator": {
+    "assumptionNote": "Somatotype is a rough descriptive category from the 1940s, not a medical diagnosis. Your build, muscle and training matter far more than the label.",
+    "benefits": [
+      "Explains why the same diet works differently for different builds.",
+      "Helps you pick training that suits your natural frame and recovery.",
+      "Stops unfair self-comparison: an ectomorph will never look like a mesomorph.",
+      "Gives fitness coaches a shared vocabulary for body shape."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Endomorphs tend to gain fat easily and should watch total calories; mesomorphs build muscle readily and respond well to progressive training; ectomorphs stay lean and usually need a calorie surplus to gain size.",
+        "q": "What should each body type eat and train?"
+      },
+      {
+        "a": "No. Sheldon’s original work is dated, and modern research treats somatotype as a rough description, not destiny. Training, diet and consistency reshape what your body looks like.",
+        "q": "Is body type scientifically proven?"
+      },
+      {
+        "a": "Most people are blends, like ecto-mesomorph. The calculator picks your dominant tendency from frame size and BMI, which is honest but approximate.",
+        "q": "Can I be a mix of two types?"
+      },
+      {
+        "a": "No. Body type describes your skeleton and natural fat/muscle pattern. Gender changes the frame-size cut-offs, which the calculator applies automatically.",
+        "q": "Is body type the same as gender?"
+      },
+      {
+        "a": "Measure just below the wrist bone on the side of the thumb, with the tape snug around the bare wrist. Wrist size barely changes with weight, which is why it estimates frame.",
+        "q": "How do I measure my wrist correctly?"
+      },
+      {
+        "a": "Not fully. Frame size is largely genetic, so your category is fairly stable, but muscle gain and fat loss shift where you land within it.",
+        "q": "Does my body type change over time?"
+      }
+    ],
+    "formula": "Frame ratio = height / wrist circumference (same units).\nMale: >10.4 small, 9.6-10.4 medium, <9.6 large.\nFemale: >11 small, 10.1-11 medium, <10.1 large.\nSomatotype combines frame with BMI: small frame + lean BMI leans ectomorph; large frame + higher BMI leans endomorph; the rest land mesomorph.",
+    "formulaHeading": "The formula",
+    "frames": {
+      "large": "Large frame",
+      "medium": "Medium frame",
+      "small": "Small frame"
+    },
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Male or Female and pick metric or imperial units.",
+      "Enter your height, weight and wrist circumference.",
+      "Measure the wrist just below the wrist bone, tape snug around the bare wrist.",
+      "Read your somatotype (ecto, meso or endomorph) and your frame size.",
+      "Use the guide below to see what each type means for training and food."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Somatotypes were proposed by William Sheldon in the 1940s: ectomorph (lean), mesomorph (muscular), endomorph (rounder).",
+      "Frame size is estimated from wrist circumference because the wrist changes little with weight.",
+      "Most people are a blend, with one dominant tendency rather than a pure type.",
+      "Ectomorphs typically gain muscle and fat slowly; endomorphs gain both easily.",
+      "Mesomorphs usually respond fastest to strength training.",
+      "Body type is descriptive and approximate, not a medical classification."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "body type calculator, somatotype calculator, ectomorph mesomorph endomorph, body frame size calculator",
+    "labels": {
+      "feet": "Feet",
+      "femaleOption": "Female",
+      "frameResult": "Frame size",
+      "genderLabel": "Gender",
+      "heightLabel": "Height",
+      "imperialTab": "Imperial (in / lb)",
+      "inchUnit": "in",
+      "inches": "Inches",
+      "maleOption": "Male",
+      "metricTab": "Metric (cm / kg)",
+      "somatotypeResult": "Your body type",
+      "unitSystem": "Unit system",
+      "weightLabel": "Weight",
+      "wristLabel": "Wrist circumference",
+      "wristNote": "Measure just below the wrist bone, tape snug around the bare wrist."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A rough category, not a diagnosis; modern sports science treats it skeptically.",
+      "Most people are blends, so one label always oversimplifies.",
+      "Wrist measurement error and BMI's own flaws feed into the result.",
+      "It cannot measure your actual muscle mass or body fat percentage."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free body type calculator: discover your somatotype (ectomorph, mesomorph or endomorph) from height, weight and wrist size. Plus frame size. Private, no sign-up.",
+    "metaTitle": "Body Type Calculator - Ectomorph, Mesomorph, Endomorph | JaurTools",
+    "name": "Body Type Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your measurements never leave your device.",
+    "quickAnswer": "Body type combines your frame size (from wrist circumference) with your BMI. A 178 cm man with a 17 cm wrist has a frame ratio of 10.5, a small frame; at 72 kg his BMI is 22.7, landing him in the ectomorph range - the naturally lean build that gains weight slowly.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your body type results",
+    "somatotypes": {
+      "ectomorph": "Ectomorph",
+      "endomorph": "Endomorph",
+      "mesomorph": "Mesomorph"
+    },
+    "tagline": "Find your somatotype - ectomorph, mesomorph or endomorph - from height, weight and wrist size.",
+    "workedExample": "Male, 178 cm, 72 kg, wrist 17 cm:\n1. Frame ratio = 178 / 17 = 10.47.\n2. Male cut-offs: above 10.4 = small frame.\n3. BMI = 72 / (1.78 x 1.78) = 72 / 3.1684 = 22.7.\n4. Small frame with a BMI under 23 lands in the ectomorph range: naturally lean, gains weight slowly.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

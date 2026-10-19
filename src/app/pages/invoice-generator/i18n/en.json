@@ -1,0 +1,107 @@
+{
+  "invoice-generator": {
+    "benefits": [
+      "Looks professional from the first invoice - clean layout, correct math, PDF output.",
+      "Faster than spreadsheets: totals, discount, and tax recalculate as you type.",
+      "No account, no watermark, no paywall - the PDF is yours.",
+      "Works offline once loaded; handy when billing from a client's office or a cafe."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. There is no account, no watermark, and no limit. The invoice is built entirely in your browser and the PDF is generated on your device.",
+        "q": "Is this invoice generator really free?"
+      },
+      {
+        "a": "At minimum: your business name and contact, the client's name, a unique invoice number, the issue date, itemized lines with quantities and rates, tax and discount if any, the total due, and your payment terms or due date.",
+        "q": "What should I include on an invoice?"
+      },
+      {
+        "a": "This generator applies discount first, then tax on the discounted subtotal. That is the standard practice in most countries, but if your local rules differ, adjust the numbers accordingly.",
+        "q": "Is discount applied before or after tax?"
+      },
+      {
+        "a": "The document itself is a standard commercial invoice. Whether it meets your country's tax-invoice rules (GST/VAT numbers, specific fields) depends on local law - check with an accountant for compliance.",
+        "q": "Can I use this for my small business legally?"
+      },
+      {
+        "a": "Nowhere. Everything stays in your browser's memory while the page is open. If you reload the page, the form resets - so download the PDF before closing.",
+        "q": "Where is my invoice data stored?"
+      },
+      {
+        "a": "The PDF is a final document. To change anything, edit the form and download again. For records, keep both the PDF and a note of the invoice number.",
+        "q": "Can I edit the PDF after downloading?"
+      }
+    ],
+    "formula": "Line total = quantity x rate\nSubtotal = sum of all line totals\nDiscount = subtotal x discount % / 100\nTax = (subtotal - discount) x tax % / 100\nTotal due = subtotal - discount + tax",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Fill in your business name, the client's name, an invoice number, and the date.",
+      "Add one row per item: a short description, the quantity, and the rate per unit. Use Add item for more rows.",
+      "Enter a discount percentage and a tax percentage if they apply - both default to zero.",
+      "Check the totals panel: subtotal, discount, tax, and the final amount due update live.",
+      "Click Download PDF to save a clean, print-ready invoice file to your device."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A valid invoice needs: your business name, the client's name, a unique invoice number, the date, itemized lines, and the total due.",
+      "Line-item invoices list every product or service separately with quantity and rate, so clients can verify each charge.",
+      "Discounts are usually applied before tax; this generator follows that standard order: subtotal, minus discount, then tax on the remainder.",
+      "Number your invoices sequentially (INV-001, INV-002) - it keeps your books clean and looks professional.",
+      "PDF is the standard format for invoices because it looks identical on every device and cannot be silently edited.",
+      "In most countries you must keep copies of issued invoices for several years for tax records - download and archive each one."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "invoice generator, free invoice maker, pdf invoice generator, online invoice creator, billing invoice template",
+    "labels": {
+      "addItem": "Add item",
+      "amount": "Amount",
+      "businessName": "Your business name",
+      "clientName": "Client name",
+      "currency": "Currency",
+      "description": "Description",
+      "discount": "Discount",
+      "discountRate": "Discount (%)",
+      "downloadPdf": "Download PDF",
+      "eur": "Euro (EUR)",
+      "gbp": "British Pound (GBP)",
+      "inr": "Indian Rupee (INR)",
+      "invoiceDate": "Invoice date",
+      "invoiceNo": "Invoice number",
+      "itemsHeading": "Line items",
+      "pdfNote": "The downloaded PDF is generated in English for universal compatibility.",
+      "qty": "Qty",
+      "rate": "Rate",
+      "remove": "Remove",
+      "sar": "Saudi Riyal (SAR)",
+      "subtotal": "Subtotal",
+      "tax": "Tax",
+      "taxRate": "Tax (%)",
+      "total": "Total due",
+      "usd": "US Dollar (USD)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Generates the document only - it does not send invoices, track payments, or remind late payers.",
+      "Tax rules differ by country and state; confirm the correct tax rate and invoice requirements with a local accountant.",
+      "The downloaded PDF is generated in English for universal compatibility, regardless of site language.",
+      "Not a substitute for accounting software once your billing volume grows."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free invoice generator: add line items, tax and discount, then download a clean PDF invoice. 100% browser-based, no sign-up, your data stays private.",
+    "metaTitle": "Free Invoice Generator - Create and Download PDF Invoices | JaurTools",
+    "name": "Invoice Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Add your business and client details, list each item with quantity and rate, set tax and discount percentages, and download a professional PDF invoice instantly. For example, 10 hours at $50 plus $120 hosting, minus 10% discount, plus 8% tax, gives a total of $602.64. Everything runs in your browser - nothing is uploaded anywhere.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Invoice Generator results",
+    "tagline": "Create professional line-item invoices in seconds and download them as PDF - free, no sign-up.",
+    "workedExample": "Freelancer invoice:\n1. Line 1: Web design, 10 hours x $50 = $500.00\n2. Line 2: Hosting setup, 1 x $120 = $120.00\n3. Subtotal = $620.00\n4. Discount 10% = $62.00 -> $558.00\n5. Tax 8% on $558.00 = $44.64\n6. Total due = $602.64",
+    "workedExampleHeading": "Worked example"
+  }
+}

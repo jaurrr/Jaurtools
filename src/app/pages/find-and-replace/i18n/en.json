@@ -1,0 +1,99 @@
+{
+  "find-and-replace": {
+    "benefits": [
+      "Replaces a word across a whole document in one click instead of editing each spot.",
+      "Match and replacement counters confirm exactly what changed.",
+      "Regex mode handles patterns like dates, numbers, and extra spaces.",
+      "Case-sensitive and whole-word options prevent accidental partial matches.",
+      "Bulk cleanup of pasted text: fix typos, rename terms, normalise formatting."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Switch on 'Use regular expression' and type a pattern. For example, ' +' (space, plus) matches any run of spaces, and replacing it with a single space collapses them. Invalid patterns show an error instead of breaking anything.",
+        "q": "Can I use regular expressions?"
+      },
+      {
+        "a": "Switch on 'Whole word' and 'cat' will no longer match inside 'concatenate' or 'cats'. The tool wraps your search in word boundaries (\\b) so only standalone words match.",
+        "q": "How do I avoid replacing 'cat' inside 'concatenate'?"
+      },
+      {
+        "a": "Yes. Switch off 'Replace all' and only the first match is replaced. The replacement counter then shows 1 (or 0 if nothing matched).",
+        "q": "Can I replace only the first occurrence?"
+      },
+      {
+        "a": "In the replacement box, '$&' inserts the whole match and '$1', '$2' insert regex capture groups. So finding '(\\d+)-(\\d+)' and replacing with '$2/$1' swaps two numbers around a dash.",
+        "q": "What are $1 and $& in the replacement?"
+      },
+      {
+        "a": "By default the search ignores case, so 'cat' matches 'Cat' and 'CAT'. Switch on 'Case sensitive' to match the exact capitalisation you typed.",
+        "q": "Is the search case-sensitive?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser. Nothing you paste is uploaded, stored, or seen by anyone else.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "1. Build the search pattern:\n   plain text -> escape special characters\n   regex mode -> use the pattern as typed\n   whole word -> wrap in \\b...\\b\n2. Flags: 'g' if Replace all is on; 'i' unless Case sensitive is on.\n3. matches = all non-overlapping matches of the pattern in the text.\n4. result = text with matches replaced by the replacement string.\n   (Replace all off -> only the first match is replaced.)\n\nExample:\n  text: 'cat sat on the cat'\n  find: 'cat', replace: 'dog', replace all on\n  matches: 2 -> 'dog sat on the dog'",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your text into the main box.",
+      "Type the word or phrase to find in the Find box.",
+      "Type its replacement in the Replace box.",
+      "Tune the options: case sensitive, whole word, regex, and replace-all vs first-only.",
+      "Check the match count, then copy or download the result."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Find and replace swaps every occurrence of a search term with new text.",
+      "By default the search ignores letter case; a toggle makes it exact.",
+      "Whole-word mode stops 'cat' from matching inside 'concatenate'.",
+      "Regex mode treats the search box as a pattern, unlocking advanced replacements.",
+      "Replace-all mode changes every match; first-only mode changes just the first.",
+      "The tool reports how many matches were found and replaced, so nothing changes silently."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "find and replace, text replace tool, bulk replace text, regex replace online, find replace words",
+    "labels": {
+      "caseSensitiveLabel": "Case sensitive",
+      "clearButton": "Clear",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "findLabel": "Find",
+      "invalidRegexError": "That regular expression is invalid. Check the pattern and try again.",
+      "matchesLabel": "Matches found",
+      "outputLabel": "Result",
+      "regexLabel": "Use regular expression",
+      "replaceAllLabel": "Replace all (off = first only)",
+      "replaceLabel": "Replace with",
+      "replacedLabel": "Replacements made",
+      "textLabel": "Your text",
+      "textPlaceholder": "Paste your text here...",
+      "wholeWordLabel": "Whole word"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Replacements are literal text swaps - the tool does not understand meaning or grammar.",
+      "A regex that matches nothing replaces nothing; invalid patterns show an error instead.",
+      "There is no undo history: keep a copy of the original if the change matters.",
+      "Overlapping matches are not possible - regex engines consume each match before continuing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free find and replace tool: bulk text replacement with regex, whole-word, and case options. Live match counts. Private, browser-only.",
+    "metaTitle": "Find and Replace - Bulk Text Replacement | JaurTools",
+    "name": "Find and Replace",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your text, type what to find and what to replace it with, and every match updates instantly. Options include case-sensitive search, whole-word matching (so 'cat' does not match 'concatenate'), full regular expressions, and replace-all versus first-only. The tool counts matches before replacing, so you always know what changed. For example, finding 'cat' and replacing with 'dog' in 'cat sat on the cat' gives 'dog sat on the dog' with 2 matches.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Find and Replace results",
+    "tagline": "Replace words and phrases across your whole text in one click.",
+    "workedExample": "Input text: 'cat sat on the cat'\nFind: 'cat'   Replace with: 'dog'\nOptions: replace all ON, case-insensitive, whole-word OFF\n\nStep by step:\n1. Search for 'cat' (case-insensitive): matches at position 0 and position 15.\n2. Matches found: 2.\n3. Replace each match with 'dog'.\n\nResult: 'dog sat on the dog'\nReplacements made: 2\n\nWith whole-word ON and text 'a cat concatenates':\n  'cat' matches only the standalone word -> 'a dog concatenates' (1 match).",
+    "workedExampleHeading": "Worked example"
+  }
+}

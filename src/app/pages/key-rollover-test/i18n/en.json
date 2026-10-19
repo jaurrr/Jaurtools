@@ -1,0 +1,92 @@
+{
+  "key-rollover-test": {
+    "benefits": [
+      "Find out whether your keyboard supports real N-key rollover.",
+      "Catch ghosting before it costs you a combo in a game.",
+      "Compare your old and new keyboards with a hard number.",
+      "Verify that modifier-plus-key combos register together.",
+      "Essential check for gamers, programmers, and fast typists."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Ghosting is when pressing several keys together produces a key you never pressed, or swallows one you did. It happens on cheap matrix keyboards. If phantom key codes appear in the chips while you press a cluster, your keyboard ghosts.",
+        "q": "What is keyboard ghosting?"
+      },
+      {
+        "a": "N-key rollover (NKRO) means every key you press registers, no matter how many. 6-key rollover is the USB standard for most keyboards. Basic office keyboards may manage only 2 or 3 keys in some zones. Gaming keyboards usually advertise NKRO.",
+        "q": "What is the difference between N-key rollover and 6-key rollover?"
+      },
+      {
+        "a": "It depends on the keyboard's matrix, not the browser. USB keyboards report through a standard protocol, and the browser faithfully shows what arrives. If the hardware drops a key, the browser never sees it - which is exactly what this test reveals.",
+        "q": "Does the browser limit how many keys I can press?"
+      },
+      {
+        "a": "Use keys from different rows and both hands - Q, W, E, R, T plus Shift, for example. The maximum you reach is your rollover. Then try a tight cluster like Q, W, A, S - if fewer register there, that zone has a weaker matrix.",
+        "q": "How do I run a proper rollover test?"
+      },
+      {
+        "a": "They usually share one wire in the keyboard matrix, so the controller cannot tell them apart. Try the same combo on the Key Rollover test: if the count stalls at 2 for those three keys, the matrix is the limit, not your fingers.",
+        "q": "Why do three specific keys never work together on my keyboard?"
+      }
+    ],
+    "formula": "Rollover = the largest number of keys held down at once that all register.\n10 or more = excellent (true N-key rollover likely).\n6 to 9 = standard (6-key rollover, the USB norm).\n3 to 5 = basic (fine for typing, risky for gaming).\nBelow 3 = limited (ghosting likely in key clusters).",
+    "formulaHeading": "How rollover is scored",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click the test area so it captures your key presses.",
+      "Press and hold several keys at once with both hands - for example Q, W, E, R, and Shift.",
+      "Watch the counter climb. The maximum simultaneous count is your rollover.",
+      "Release and try a tight cluster (like W, A, S, D plus Shift) to check for ghosting.",
+      "Read the verdict. 6 or more is good for gaming; 10 or more means true N-key rollover."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Key rollover is how many keys your keyboard reports correctly when pressed together.",
+      "6-key rollover is the USB standard; gaming keyboards often support unlimited (N-key).",
+      "Ghosting = phantom keys or dropped keys when a cluster is pressed.",
+      "The browser shows exactly what the keyboard sends - it cannot invent or drop keys.",
+      "Some keys share one circuit in the keyboard matrix, which limits certain combos.",
+      "Modifiers (Shift, Ctrl) count as keys too, so include them in your test."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "key rollover test, n-key rollover test, keyboard ghosting test, anti-ghosting test, simultaneous key press test",
+    "labels": {
+      "areaHint": "Press and hold several keys at once",
+      "focusButton": "Focus test area",
+      "focusHint": "Click the test area first so it captures your key presses.",
+      "heldNow": "Keys held down now",
+      "keyAreaLabel": "Key rollover test area",
+      "maxSimultaneous": "Maximum simultaneous keys",
+      "releaseAll": "Release all",
+      "reset": "Reset",
+      "verdict": "Verdict",
+      "verdictBasic": "Basic rollover",
+      "verdictExcellent": "Excellent - N-key rollover",
+      "verdictLow": "Limited rollover",
+      "verdictStandard": "Standard 6-key rollover"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This test measures what the keyboard sends; it cannot fix a weak matrix.",
+      "System shortcuts (Alt+Tab, the Windows key) may never reach the browser.",
+      "If a key-up event is missed (window loses focus), use Release all to clear stuck keys.",
+      "Laptop keyboards often have weaker rollover than desktop gaming keyboards."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online key rollover test: press many keys at once and see how many register. Check N-key rollover and ghosting. 100% private, no sign-up.",
+    "metaTitle": "Key Rollover Test - N-Key & Ghosting Check | JaurTools",
+    "name": "Key Rollover Test",
+    "privacyNote": "This tool runs 100% in your browser. Your key presses never leave your device.",
+    "quickAnswer": "Key rollover is the number of keys your keyboard reports correctly when pressed at the same time. This test counts how many keys you can hold down at once: 10 or more means excellent N-key rollover, 6 to 9 is the standard 6-key USB rollover, 3 to 5 is basic, and below 3 is limited. If pressing a tight cluster produces phantom keys or drops some, your keyboard is ghosting.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Rollover test results",
+    "tagline": "Press many keys at once - find your keyboard's true rollover limit and spot ghosting.",
+    "workedExample": "You test a keyboard before a tournament:\n1. You hold Q, W, E, R, T and left Shift. Six chips appear - all six register.\n2. You add A, S, D, F. Ten chips appear. Maximum simultaneous reads 10.\n3. Verdict: Excellent - N-key rollover.\n4. Then you try a tight cluster: W, E, R plus Shift. All four register with no phantom keys.\nThe keyboard is tournament-ready with no ghosting.",
+    "workedExampleHeading": "Worked example"
+  }
+}

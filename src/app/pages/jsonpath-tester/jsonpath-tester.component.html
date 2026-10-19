@@ -1,0 +1,162 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="jp-doc">{{ t('labels.docLabel') }}</label>
+        <textarea class="dv-term-input" id="jp-doc" dir="ltr" spellcheck="false" autocomplete="off"
+          [ngModel]="docText()" (ngModelChange)="setDoc($event)"></textarea>
+        @if (result().jsonError) {
+          <p class="alert error dv-status dv-status-bad" role="alert">
+            <strong>{{ t('labels.invalidJsonLabel') }}</strong><br />
+            <span class="mono">{{ result().jsonError }}</span>
+          </p>
+        }
+      </div>
+
+      <div class="field">
+        <label for="jp-expr">{{ t('labels.exprLabel') }}</label>
+        <input id="jp-expr" class="text-input mono" type="text" dir="ltr" spellcheck="false" autocomplete="off"
+          placeholder="$.store.book[?(@.price < 10)].title"
+          [ngModel]="expr()" (ngModelChange)="setExpr($event)" />
+        @if (result().exprError) {
+          <p class="alert error dv-status dv-status-bad" role="alert">{{ t('labels.exprErrorLabel') }}: <span class="mono">{{ result().exprError }}</span></p>
+        }
+      </div>
+
+      <div class="field">
+        <span class="field-label" id="jp-samples">{{ t('labels.samplesLabel') }}</span>
+        <div class="btn-row" role="group" aria-labelledby="jp-samples">
+          @for (s of sampleExprs; track s) {
+            <button type="button" class="btn" (click)="useSample(s)">
+              <span class="mono">{{ s }}</span>
+            </button>
+          }
+        </div>
+      </div>
+
+      @if (!result().jsonError && !result().exprError) {
+        <div class="results">
+          <div class="result-row total">
+            <span><app-icon name="zap" /> {{ t('labels.matchesLabel') }}</span>
+            <strong>{{ result().matches.length }}</strong>
+          </div>
+          @if (result().matches.length === 0) {
+            <p class="alert info dv-status">{{ t('labels.noMatchesLabel') }}</p>
+          } @else {
+            <div class="table-wrap">
+              <table class="diff-table">
+                <thead>
+                  <tr>
+                    <th scope="col">{{ t('labels.pathCol') }}</th>
+                    <th scope="col">{{ t('labels.valueCol') }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (m of result().matches; track m.path) {
+                    <tr>
+                      <td class="mono">{{ m.path }}</td>
+                      <td class="mono">{{ fmtVal(m.value) }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          }
+        </div>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

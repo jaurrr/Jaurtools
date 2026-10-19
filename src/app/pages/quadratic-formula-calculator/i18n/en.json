@@ -1,0 +1,92 @@
+{
+  "quadratic-formula-calculator": {
+    "benefits": [
+      "Real and complex roots handled correctly.",
+      "Shows the discriminant and what it means for the roots.",
+      "Vertex included — useful for graphing parabolas.",
+      "No sign-up, no data sent anywhere.",
+      "Works smoothly on phones, tablets and desktops."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A quadratic equation is a polynomial equation of degree 2, written ax² + bx + c = 0 with a not equal to zero. Its graph is a parabola.",
+        "q": "What is a quadratic equation?"
+      },
+      {
+        "a": "The discriminant is b² - 4ac. If it is positive there are two real roots; zero means one repeated root; negative means two complex roots.",
+        "q": "What is the discriminant?"
+      },
+      {
+        "a": "No. If a = 0 the equation is linear (bx + c = 0), not quadratic. The calculator shows a note asking for a non-zero a.",
+        "q": "What if a is 0?"
+      },
+      {
+        "a": "Try factoring first, or check the discriminant. If the discriminant is a perfect square, the roots are rational and easy to find by hand.",
+        "q": "How do I solve quadratics without a calculator?"
+      },
+      {
+        "a": "The vertex is the parabola's turning point: the lowest point when a > 0, the highest when a < 0. It sits at x = -b / 2a.",
+        "q": "What is the vertex of a parabola?"
+      }
+    ],
+    "formula": "x = (-b ± √(b² - 4ac)) / 2a\nDiscriminant D = b² - 4ac\nD > 0: two real roots | D = 0: one repeated root | D < 0: two complex roots",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter a, the coefficient of x² (must not be 0).",
+      "Enter b, the coefficient of x.",
+      "Enter c, the constant term.",
+      "Read the discriminant, the roots and the vertex.",
+      "Check the nature line to see whether the roots are real or complex."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A quadratic equation has the form ax² + bx + c = 0 with a ≠ 0.",
+      "Every quadratic has exactly two roots, counting multiplicity and complex numbers.",
+      "The discriminant b² - 4ac decides how many real roots exist.",
+      "The graph of a quadratic is a parabola opening up (a > 0) or down (a < 0).",
+      "The sum of the roots is -b/a and their product is c/a."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "quadratic formula calculator, solve quadratic equation, quadratic roots calculator, discriminant calculator, ax squared plus bx plus c",
+    "labels": {
+      "aLabel": "a (coefficient of x²)",
+      "bLabel": "b (coefficient of x)",
+      "cLabel": "c (constant)",
+      "discriminantLabel": "Discriminant",
+      "invalidNote": "a cannot be 0 — a quadratic equation needs an x² term.",
+      "nature": {
+        "complex": "Two complex roots",
+        "one": "One repeated real root",
+        "two": "Two distinct real roots"
+      },
+      "natureLabel": "Nature of roots",
+      "root1Label": "Root x₁",
+      "root2Label": "Root x₂",
+      "vertexLabel": "Vertex (h, k)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only quadratic equations — no cubics or higher degrees.",
+      "Decimal output is approximate, not an exact surd form.",
+      "Does not factor the expression symbolically.",
+      "Does not draw the graph."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free quadratic formula calculator: solve ax²+bx+c=0, get real or complex roots, discriminant and vertex. Fully browser-based, no sign-up.",
+    "metaTitle": "Quadratic Formula Calculator — Solve ax²+bx+c=0",
+    "name": "Quadratic Formula Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The quadratic formula finds the roots of ax² + bx + c = 0: x equals negative b plus or minus the square root of the discriminant (b² - 4ac), all divided by 2a. A positive discriminant gives two real roots, zero gives one repeated root, and a negative one gives two complex roots.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Quadratic results",
+    "tagline": "Find the real or complex roots of any quadratic.",
+    "workedExample": "Solve x² - 3x + 2 = 0, so a = 1, b = -3, c = 2.\n\nDiscriminant D = (-3)² - 4 x 1 x 2 = 9 - 8 = 1.\nx = (3 ± √1) / 2 = (3 ± 1) / 2.\n\nRoots: x₁ = 2, x₂ = 1.\nCheck: (x - 2)(x - 1) = x² - 3x + 2. Correct.",
+    "workedExampleHeading": "Worked example"
+  }
+}

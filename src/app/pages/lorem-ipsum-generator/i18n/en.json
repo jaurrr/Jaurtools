@@ -1,0 +1,95 @@
+{
+  "lorem-ipsum-generator": {
+    "benefits": [
+      "Fills mockups and wireframes with realistic-looking text in seconds.",
+      "Three styles: classic Latin, tech-flavoured, and nature-themed filler.",
+      "Generate by paragraphs, sentences, or exact word counts.",
+      "Deterministic output: the same settings always give the same text.",
+      "Copy or download the result for use in any design tool."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The generator is deterministic: sentences come from a fixed list in order, so the same count, unit, and style always produce identical text. That makes it reliable for repeatable mockups.",
+        "q": "Will the same settings give the same text twice?"
+      },
+      {
+        "a": "Classic is traditional Latin-style filler. Tech uses readable English sentences about software and the web - good when the placeholder should look like real content. Nature uses calm English sentences about landscapes.",
+        "q": "What is the difference between the three styles?"
+      },
+      {
+        "a": "Switch the unit to Words and set the count. The generator chains words from the sentence bank until it reaches your exact count, then finishes with a full stop.",
+        "q": "Can I get exactly 100 words?"
+      },
+      {
+        "a": "Yes. The text is generated from built-in sentence lists in your browser. Nothing is downloaded or tracked.",
+        "q": "Is this tool private?"
+      },
+      {
+        "a": "Real lorem ipsum is scrambled Latin from a Cicero essay, so it is meaningless by design. The Tech and Nature styles are plain English, which some designers prefer because clients try to read them - pick Classic if you want text nobody tries to read.",
+        "q": "Is lorem ipsum real Latin?"
+      }
+    ],
+    "formula": "Sentence banks (10 sentences each): classic, tech, nature.\n\nparagraphs: each paragraph = 5 sentences, cycling through the bank.\n  paragraph P = sentences[P*5 .. P*5+4] joined with spaces.\n  paragraphs joined with blank lines.\n\nsentences: first N sentences of the bank, cycling if N > 10.\n\nwords: words chained from the bank until exactly N words,\n  first letter capitalised, ends with a full stop.\n\n'Start with Lorem ipsum' forces sentence 1 of the classic bank\n('Lorem ipsum dolor sit amet, consectetur adipiscing elit.') to the front.\n\nExample: 2 sentences, classic, start-with-lorem ON:\n  1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n  2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your unit: paragraphs, sentences, or words.",
+      "Pick a style: classic Latin filler, tech English, or nature English.",
+      "Set how many you need with the slider (1 to 50).",
+      "Keep 'Start with Lorem ipsum' on for the traditional opening, or switch it off.",
+      "Copy the text or download it as a .txt file for your design tool."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Lorem ipsum is placeholder text that looks like real language but means nothing.",
+      "Designers use it to test layouts without readable content distracting reviewers.",
+      "This tool offers three styles: classic Latin-style, tech English, and nature English.",
+      "You can generate by paragraphs (5 sentences each), sentences, or exact word counts.",
+      "Output is deterministic: the same settings always produce the same text.",
+      "The classic style can start with the traditional 'Lorem ipsum dolor sit amet...' sentence."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "lorem ipsum generator, placeholder text generator, dummy text generator, filler text, lorem ipsum text",
+    "labels": {
+      "charsStatLabel": "Characters",
+      "classicOpt": "Classic",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy text",
+      "countLabel": "How many",
+      "downloadButton": "Download .txt",
+      "natureOpt": "Nature",
+      "outputLabel": "Generated text",
+      "paragraphsOpt": "Paragraphs",
+      "sentencesOpt": "Sentences",
+      "startWithLoremLabel": "Start with 'Lorem ipsum'",
+      "styleLabel": "Text style",
+      "techOpt": "Tech",
+      "unitLabel": "Generate by",
+      "wordsOpt": "Words",
+      "wordsStatLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Placeholder text is meaningless by design - never ship it in a real product.",
+      "The sentence banks are fixed at 10 sentences each, so very long outputs repeat.",
+      "Tech and Nature styles are English, which some clients will try to read.",
+      "Word counts are approximate to the bank's vocabulary, not curated prose."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free lorem ipsum generator: placeholder text by paragraphs, sentences, or words. Classic, tech, and nature styles. Copy or download.",
+    "metaTitle": "Lorem Ipsum Generator - Placeholder Text | JaurTools",
+    "name": "Lorem Ipsum Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Generate placeholder text for mockups and wireframes in seconds. Choose paragraphs (5 sentences each), sentences, or an exact word count, and pick a style: classic Latin-style filler, readable tech English, or calm nature English. For example, 2 sentences in classic style gives 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' The output is deterministic, so the same settings always give the same text.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Lorem Ipsum Generator results",
+    "tagline": "Generate placeholder text with configurable length and style.",
+    "workedExample": "Settings: 2 sentences, classic style, 'Start with Lorem ipsum' ON.\n\nStep by step:\n1. Need 2 sentences from the classic bank.\n2. Start-with-lorem forces sentence 1 to: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'\n3. Sentence 2 is the next in the bank: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'\n4. Joined with a space.\n\nResult:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nWord count check: 8 + 11 = 19 words.",
+    "workedExampleHeading": "Worked example"
+  }
+}

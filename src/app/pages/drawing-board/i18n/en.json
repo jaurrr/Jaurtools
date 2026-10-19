@@ -1,0 +1,87 @@
+{
+  "drawing-board": {
+    "benefits": [
+      "Real freehand drawing with pointer events — mouse, touch, and stylus.",
+      "Adjustable brush size and any color.",
+      "Eraser, 25-step undo, and one-tap clear.",
+      "Exports your sketch as a PNG download.",
+      "Free and private — your drawing never leaves the device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Pointer events cover mouse, touchscreens, and styluses, and touch-action is disabled on the canvas so the page does not scroll while you draw.",
+        "q": "Does it work on phones and tablets?"
+      },
+      {
+        "a": "Press the Download button. The sketch is flattened onto a white background and saved as drawing-board.png via a Blob-free data URL — no server involved.",
+        "q": "How do I save my drawing?"
+      },
+      {
+        "a": "Up to 25 strokes. Each new stroke pushes a snapshot; Undo pops the last one. Clearing the board also pushes a snapshot, so a mistaken clear is reversible.",
+        "q": "How many undo steps are there?"
+      },
+      {
+        "a": "The eraser uses destination-out compositing, which removes pixels down to transparency. Because the canvas sits on a white background, erased areas simply look white again.",
+        "q": "How does the eraser work?"
+      },
+      {
+        "a": "The canvas is fixed at 1000 x 600 internal pixels and scaled by CSS, so strokes stay sharp and downloads are a consistent size.",
+        "q": "What resolution is the export?"
+      }
+    ],
+    "formula": "stroke segment: line from (x1, y1) to (x2, y2)\nwith lineCap = round, lineJoin = round, lineWidth = brush size\neraser: globalCompositeOperation = destination-out\nundo: stack of canvas snapshots (data URLs), max 25",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a color and brush size.",
+      "Draw on the canvas with your mouse, finger, or stylus.",
+      "Toggle the eraser to remove strokes.",
+      "Use Undo to step back, or Clear to start over.",
+      "Download your sketch as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Freehand drawing uses pointerdown, pointermove, and pointerup events.",
+      "Round line caps and joins make strokes look smooth.",
+      "The canvas renders at 1000 x 600 pixels internally.",
+      "Undo keeps the last 25 snapshots as image data.",
+      "Downloads flatten the drawing onto a white background.",
+      "Touch drawing disables page scroll over the canvas (touch-action: none)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "drawing board online, sketch pad online, free drawing app, online whiteboard sketch, draw online free",
+    "labels": {
+      "brushLabel": "Brush size",
+      "canvasLabel": "Drawing canvas",
+      "clearLabel": "Clear",
+      "colorLabel": "Color",
+      "downloadLabel": "Download PNG",
+      "eraserLabel": "Eraser",
+      "touchNote": "Tip: on touch screens, draw with one finger — the page will not scroll while your finger is on the canvas.",
+      "undoLabel": "Undo"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "No layers, shapes, or text tools — it is a sketch pad, not an editor.",
+      "Undo history is lost if you reload the page.",
+      "Very fast strokes on slow devices can look segmented.",
+      "Export is a fixed 1000 x 600 PNG."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online drawing board: sketch with mouse, touch, or stylus, adjust brush and color, erase, undo, and download as PNG. No sign-up.",
+    "metaTitle": "Drawing Board: Free Online Sketch Pad (No Sign-Up)",
+    "name": "Drawing Board",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A freehand sketch canvas with color picker, brush-size slider, eraser, 25-step undo, and PNG export. It uses pointer events so mouse, touch, and stylus all work, and everything — including the download — happens locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sketch canvas",
+    "tagline": "A free sketch pad in your browser.",
+    "workedExample": "Sketching a simple house:\n\n1. Pick a dark color and a 6 px brush; draw the square walls and triangle roof in a few strokes.\n2. Switch to a 3 px brush for the door and windows.\n3. Make a wobbly line? Press Undo once — only that stroke disappears.\n4. Press Download PNG to save a 1000 x 600 image called drawing-board.png.\n\nNo account, no upload: the file is generated on your device.",
+    "workedExampleHeading": "Worked example"
+  }
+}

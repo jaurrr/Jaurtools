@@ -1,0 +1,98 @@
+{
+  "cash-back-calculator": {
+    "assumptionNote": "Assumes the full balance is paid each month so no interest offsets the rewards. Category caps and rotating bonuses are not modeled.",
+    "benefits": [
+      "Turns your real spending pattern into a concrete yearly rewards number.",
+      "Shows which card's category rates fit your spending best.",
+      "The effective rate tells you your true return across all spending.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Enter your average monthly spending per category and the cash-back rate your card pays in each. The calculator multiplies and totals them, then annualizes the result.",
+        "q": "How do I calculate my cash back?"
+      },
+      {
+        "a": "A flat 2% on everything is simple. Tiered cards pay more in bonus categories like groceries or fuel. Enter both cards' rates here and compare the annual totals for your spending pattern.",
+        "q": "Flat-rate or tiered rewards card?"
+      },
+      {
+        "a": "Yes, when the balance is paid in full every month. Carrying a balance means interest charges that almost always exceed the rewards earned. Rewards never justify debt.",
+        "q": "Is cash back really free money?"
+      },
+      {
+        "a": "Compare the annual rewards against the fee. A $95 fee needs about $95 more in rewards than a free card to break even. This calculator shows the rewards side; subtract the fee yourself.",
+        "q": "Are annual-fee cards worth it?"
+      },
+      {
+        "a": "In most countries, credit card rewards are treated as purchase discounts, not taxable income. Sign-up bonuses tied to spending usually follow the same treatment, but check local rules.",
+        "q": "Is cash back taxable?"
+      },
+      {
+        "a": "For most people the effective rate lands between 1.5% and 3%. Bonus categories can push it higher, while uncapped flat cards cluster near 2%.",
+        "q": "What is a good effective cash-back rate?"
+      }
+    ],
+    "formula": "monthly_reward = sum(spend_category x rate_category / 100)\nannual_reward = monthly_reward x 12\neffective_rate = monthly_reward / total_spend x 100",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your average monthly spending in each category.",
+      "Enter the cash-back rate your card pays per category.",
+      "Read your monthly and yearly rewards and your effective rate.",
+      "Change the rates to compare a different card.",
+      "Pick the card with the highest annual total for your pattern."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Cash-back cards return a percentage of each purchase as money, statement credit or points.",
+      "Many cards pay higher rates in bonus categories like groceries, dining and fuel.",
+      "The effective rate is your total rewards divided by your total spending.",
+      "Rewards are only worth it when the balance is paid in full each month.",
+      "Annual fees must be subtracted from rewards to find the true net benefit."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cash back calculator, credit card rewards calculator, cashback rewards estimator, best cashback card",
+    "labels": {
+      "annualReward": "Yearly rewards",
+      "dining": "Dining",
+      "diningRate": "Dining rate (%)",
+      "diningSpend": "Dining spend",
+      "effectiveRate": "Effective rate",
+      "fuel": "Fuel",
+      "fuelRate": "Fuel rate (%)",
+      "fuelSpend": "Fuel spend",
+      "groceries": "Groceries",
+      "groceriesRate": "Groceries rate (%)",
+      "groceriesSpend": "Groceries spend",
+      "monthlyReward": "Monthly rewards",
+      "other": "Everything else",
+      "otherRate": "Other rate (%)",
+      "otherSpend": "Other spend",
+      "totalSpend": "Total monthly spend"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes the balance is paid in full; interest is not modeled.",
+      "No category caps, rotating bonuses or redemption minimums.",
+      "Annual fees are not subtracted automatically.",
+      "An estimate for comparison, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free cash back calculator. Estimate yearly credit card rewards from your spending by category. Compare cards by effective rate. Private, browser-only.",
+    "metaTitle": "Cash Back Calculator — Estimate Card Rewards",
+    "name": "Cash Back Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Spending $600 on groceries at 3%, $250 on dining at 2%, $200 on fuel at 3% and $800 elsewhere at 1% earns $37 per month — $444 per year at a 2.00% effective rate.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your cash back results",
+    "tagline": "See what your spending really earns you.",
+    "workedExample": "Groceries $600 x 3% = $18. Dining $250 x 2% = $5. Fuel $200 x 3% = $6. Other $800 x 1% = $8.\n\nMonthly rewards = 18 + 5 + 6 + 8 = $37. Annual rewards = 37 x 12 = $444.\n\nTotal spend = 1,850. Effective rate = 37 / 1,850 x 100 = 2.00%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

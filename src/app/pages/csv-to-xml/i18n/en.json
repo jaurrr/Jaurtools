@@ -1,0 +1,99 @@
+{
+  "csv-to-xml": {
+    "benefits": [
+      "Feeds spreadsheet data into systems that expect XML: SOAP APIs, config importers and legacy software.",
+      "Custom root and row element names let the output match the schema your system requires.",
+      "Automatic escaping of &, < and > keeps the document well-formed every time.",
+      "Runs fully in the browser, so sensitive rows are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The output is plain UTF-8 XML with an XML declaration, one root element, and one row element per data row. Field elements use your header names, sanitized into valid XML names.",
+        "q": "What does the generated XML look like?"
+      },
+      {
+        "a": "Root and row names must be valid XML names: start with a letter or underscore, then letters, digits, underscore, dot or hyphen. The tool blocks conversion and shows a warning until both names are valid.",
+        "q": "What element names are allowed?"
+      },
+      {
+        "a": "Header text is sanitized: spaces become underscores and illegal characters are removed. A header like \"First Name\" becomes <First_Name>. Empty headers become field1, field2 and so on.",
+        "q": "How are messy header names handled?"
+      },
+      {
+        "a": "Yes, & becomes &amp;, < becomes &lt;, > becomes &gt;, and quotes become &quot; and &apos;. The document always stays well-formed.",
+        "q": "Are special characters escaped?"
+      },
+      {
+        "a": "No. All values become text content inside elements. If you need typed values or attributes, use the JSON, XML & CSV converter, which supports XML attributes.",
+        "q": "Can values become XML attributes?"
+      }
+    ],
+    "formula": "XML = <root> + for each row: <row><col1>v</col1><col2>v</col2></row> + </root>",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your CSV, upload a .csv file, or press Sample.",
+      "Leave the delimiter on Auto or pick it manually.",
+      "Set the root element name and the row element name, for example rows and row.",
+      "Keep First row is header on if your CSV has column names.",
+      "Press Download to save data.xml, or Copy to paste it elsewhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Emits a well-formed XML document with an XML declaration and UTF-8 encoding.",
+      "One row element per CSV data row; field elements come from the header row.",
+      "Root and row element names are fully customizable and validated as legal XML names.",
+      "Special characters are escaped automatically, so output always parses.",
+      "Choose pretty-printed or compact output with one toggle."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "csv to xml online, convert csv to xml, csv xml converter free, spreadsheet to xml",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "delimAuto": "Auto-detect",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "delimiter": "Delimiter",
+      "download": "Download XML",
+      "firstRowHeader": "First row is header",
+      "inputLabel": "CSV input",
+      "inputPh": "Paste CSV here...",
+      "invalidName": "Root and row names must be valid XML names: start with a letter or underscore.",
+      "outputHeading": "XML output",
+      "pretty": "Pretty print (indented)",
+      "resultFields": "Fields per record",
+      "resultRecords": "Records",
+      "rootName": "Root element name",
+      "rowName": "Row element name",
+      "sample": "Load sample",
+      "uploadCsv": "Upload CSV"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Flat structure only; nested elements are not generated.",
+      "All values are text; no type information or attributes are emitted.",
+      "Duplicate header names produce duplicate element names.",
+      "Very large inputs (tens of MB) can make the browser tab sluggish."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert CSV to XML online free. Paste or upload CSV, customize root and row element names, and download well-formed XML. 100% browser-based.",
+    "metaTitle": "CSV to XML Online Free - Convert CSV to XML Document | JaurTools",
+    "name": "CSV to XML",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste or upload a CSV and get a well-formed XML document. Each row becomes an element with child elements named after your headers, and you can customize the root and row tag names to match the schema your system expects. Download data.xml or copy it directly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "CSV to XML results",
+    "tagline": "Turn CSV rows into clean, well-formed XML.",
+    "workedExample": "Input CSV:\nname,age,city\nAarav Sharma,25,Mumbai\n\nWith root = rows and row = row, the pretty output is:\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rows>\n  <row>\n    <name>Aarav Sharma</name>\n    <age>25</age>\n    <city>Mumbai</city>\n  </row>\n</rows>\n\n1 record, 3 fields, 8 lines of XML.",
+    "workedExampleHeading": "Worked example"
+  }
+}

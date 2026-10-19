@@ -1,0 +1,97 @@
+{
+  "aadhaar-validator": {
+    "assumptionNote": "Checks only the format and checksum. It cannot verify whether the number was actually issued by UIDAI.",
+    "benefits": [
+      "Catch data-entry errors before submitting Aadhaar on forms and KYC.",
+      "Uses the real Verhoeff checksum algorithm that UIDAI itself uses.",
+      "Shows a masked preview (XXXX XXXX 1234) so you can confirm without exposing digits.",
+      "Fully private: your number never leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Aadhaar is 12 digits. Valid numbers pass the Verhoeff checksum algorithm and never start with 0 or 1. This validator checks all three rules: digit count, first digit, and checksum.",
+        "q": "What makes an Aadhaar number valid?"
+      },
+      {
+        "a": "It is a checksum algorithm that detects common typing errors - single wrong digits and swapped neighbours. UIDAI appends a Verhoeff check digit as the 12th digit of every Aadhaar number.",
+        "q": "What is the Verhoeff algorithm?"
+      },
+      {
+        "a": "Yes, the leading digit rule is real: UIDAI does not issue Aadhaar numbers starting with 0 or 1. Any 12-digit number starting with 0 or 1 fails validation here, checksum or not.",
+        "q": "Why do Aadhaar numbers never start with 0 or 1?"
+      },
+      {
+        "a": "No. A passing checksum means the number is well-formed, not that UIDAI issued it. The only real proof is a UIDAI database check, which this offline tool cannot do.",
+        "q": "Does a valid checksum mean the Aadhaar is genuine?"
+      },
+      {
+        "a": "Usually a typo: a wrong digit, a missing digit, or digits in the wrong order. Fix the entry and check again. If a printed card fails, contact UIDAI - never invent a number that passes.",
+        "q": "What should I do if a real-looking Aadhaar fails?"
+      },
+      {
+        "a": "It is a safety habit, not a legal rule. Masking (XXXX XXXX 1234) proves you entered the right number while keeping the full number off screens and out of chat logs.",
+        "q": "Why show a masked version?"
+      }
+    ],
+    "formula": "Aadhaar checks (all must pass):\n1. Exactly 12 digits (0-9 only).\n2. First digit is not 0 or 1.\n3. Verhoeff checksum: process all 12 digits right-to-left through the Verhoeff multiplication and permutation tables; the final value must be 0.",
+    "formulaHeading": "Checks",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste the 12-digit Aadhaar number. Spaces between groups are fine.",
+      "The validator checks it live: digits, length, first digit, and checksum.",
+      "A green message with a masked preview means the format is valid.",
+      "A red message tells you exactly which rule failed."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Aadhaar is a 12-digit number issued by UIDAI.",
+      "The 12th digit is a Verhoeff check digit that catches typos.",
+      "Valid Aadhaar numbers never start with 0 or 1.",
+      "Checksum validation detects single-digit errors and most swapped-digit errors.",
+      "Format validation is offline math; it never contacts UIDAI.",
+      "A valid format does not prove the number was actually issued."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "aadhaar validator, aadhaar number check, aadhaar card validation, verify aadhaar number, verhoeff checksum",
+    "labels": {
+      "aadhaarNumber": "Aadhaar number",
+      "checksum": "Verhoeff checksum",
+      "checksumPassed": "Passed",
+      "digitsEntered": "Digits entered",
+      "enterPrompt": "Enter your Aadhaar number above to check its format.",
+      "hint": "12 digits. Spaces are allowed.",
+      "masked": "Masked display",
+      "placeholder": "2345 6789 0124",
+      "validMessage": "Valid Aadhaar format (checksum passed)."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot verify against UIDAI's database; a well-formed number may never have been issued.",
+      "Only checks format and checksum, never identity or biometrics.",
+      "Do not use as the sole check for KYC or financial transactions.",
+      "Never share full Aadhaar numbers on unverified websites - use masked copies where accepted."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Aadhaar validator: check any 12-digit Aadhaar number with the real Verhoeff checksum algorithm. Instant, private, runs in your browser, no sign-up.",
+    "metaTitle": "Aadhaar Validator - Check Aadhaar Number Online | JaurTools",
+    "name": "Aadhaar Validator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A valid Aadhaar is 12 digits, never starts with 0 or 1, and passes the Verhoeff checksum. 234567890124 passes all three checks, so it is structurally valid. This check confirms the format only - it cannot tell you whether UIDAI actually issued the number, because only UIDAI's database knows that.",
+    "quickAnswerHeading": "Quick answer",
+    "reasons": {
+      "checksum": "The checksum failed - this number is not a valid Aadhaar format.",
+      "length": "Aadhaar must be exactly 12 digits.",
+      "nonDigit": "Only digits and spaces are allowed.",
+      "startsWith": "Aadhaar numbers never start with 0 or 1."
+    },
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your Aadhaar validation result",
+    "tagline": "Check any Aadhaar number with the real Verhoeff checksum algorithm.",
+    "workedExample": "Checking 234567890124:\n1. Digits: 12 digits, all numeric - correct.\n2. First digit: 2, which is allowed (not 0 or 1).\n3. Verhoeff checksum: processing all 12 digits through the multiplication and permutation tables gives a final value of 0 - checksum passes.\n4. Result: structurally valid Aadhaar format.",
+    "workedExampleHeading": "Worked example"
+  }
+}

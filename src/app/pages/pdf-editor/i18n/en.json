@@ -1,0 +1,126 @@
+{
+  "pdf-editor": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online PDF editors.",
+      "Layer new content over any PDF, including scanned and image-only pages.",
+      "Build complex edits step by step: add as many texts, images and shapes as you need.",
+      "Free and unlimited — edit as many documents as you like.",
+      "Great for quick jobs: signatures as images, “PAID” stamps, covering sensitive areas with shapes."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. This editor adds new content on top of the page — it cannot select, reflow or delete the text that is already in the PDF. For notes and highlights that stay editable, use the Annotate PDF tool.",
+        "q": "Can it edit the existing text in my PDF?"
+      },
+      {
+        "a": "Upload your signature as a PNG with a transparent background, place it with the image element, and size it with the width percentage.",
+        "q": "How do I add my signature?"
+      },
+      {
+        "a": "Draw a rectangle element over the area with a solid color that matches the background — usually white or black. Note that the original content still exists underneath the shape in the PDF file.",
+        "q": "Can I black out sensitive information?"
+      },
+      {
+        "a": "Yes. JPEG and PNG embed directly; WebP and GIF are converted to PNG in your browser first (animated GIFs keep only their first frame).",
+        "q": "Which image formats are supported?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Positions are percentages of the page size, so the same numbers land in the same relative spot on A4, Letter or any other page size in your document.",
+        "q": "My PDF has mixed page sizes. Will positions still work?"
+      }
+    ],
+    "formula": "x = (horizontal % ÷ 100) × page width\ny = (vertical % ÷ 100) × page height\nimage height = image width ÷ aspect ratio",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the document you want to edit.",
+      "Pick what to add: a text, an image, or a rectangle shape.",
+      "Set the page, the position (as percentages of the page), and the size or font.",
+      "Click “Add element” — repeat for everything you want to place on the document.",
+      "Click “Apply edits”, then download the edited PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "This is an overlay editor: it draws new content on top of pages but cannot change the PDF's original text or images.",
+      "Text uses the standard Helvetica font, which every PDF reader supports.",
+      "Images keep their aspect ratio automatically: you set the width as a percentage of the page, and the height follows.",
+      "Positions use percentages of the page size, so the same settings work on A4, Letter and mixed-size documents.",
+      "Rectangle shapes are drawn with 85% opacity, so a faint trace of covered content may remain visible."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "basic pdf editor, edit pdf online free, add image to pdf, pdf overlay editor, write on pdf",
+    "labels": {
+      "addBtn": "Add element",
+      "addedLabel": "Elements added",
+      "applyBtn": "Apply edits",
+      "chooseFile": "Choose PDF file",
+      "chooseImage": "Choose image",
+      "colorBlack": "Black",
+      "colorBlue": "Blue",
+      "colorGray": "Gray",
+      "colorGreen": "Green",
+      "colorLabel": "Color",
+      "colorRed": "Red",
+      "colorYellow": "Yellow",
+      "downloadBtn": "Download edited PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errImgTooLarge": "Images must be 20 MB or smaller.",
+      "errNoEls": "Add at least one element first.",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNoImage": "Please choose an image first.",
+      "errNoText": "Please type the text to add.",
+      "errNotImage": "Please choose a valid image file.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "hLabel": "Height % (1–100)",
+      "honestNote": "Honest note: this editor adds new content on top of pages. It cannot edit, move or delete the text and images already inside your PDF.",
+      "imageLabel": "Image",
+      "imgHint": "JPG, PNG, WebP or GIF (first frame only)",
+      "kindLabel": "Add",
+      "kind_image": "Image",
+      "kind_rect": "Rectangle",
+      "kind_text": "Text",
+      "pageLabel": "Page",
+      "pagesFound": "pages",
+      "processing": "Working…",
+      "removeLabel": "Remove element",
+      "resetBtn": "Start over",
+      "sizeLabel": "Font size (pt)",
+      "successMsg": "Edits applied. Download your PDF below.",
+      "textLabel": "Text",
+      "textPlaceholder": "Type the text to add…",
+      "wLabel": "Width % of page (1–100)",
+      "xLabel": "X % (0–100)",
+      "yLabel": "Y % (0–100)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot edit, move or delete the PDF's existing text and images — overlay only.",
+      "Only Latin characters for added text; Hindi, Arabic and other scripts may not render.",
+      "No live visual preview; placement is by percentage coordinates.",
+      "Covered content still exists underneath shapes in the PDF file — this is not secure redaction."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Edit PDFs online free: add text, images and shapes to any PDF. No signup, no watermark — everything stays in your browser.",
+    "metaTitle": "PDF Editor - Edit PDFs Free in Your Browser | JaurTools",
+    "name": "PDF Editor",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, then layer text, images and rectangles over any page using simple percentage coordinates. Apply everything at once and download the edited file — all locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Editor results",
+    "tagline": "Layer text, images and shapes over any PDF.",
+    "workedExample": "Place a signature image 30% wide on an A4 page (595.28 × 841.89 pt), at X 60%, Y 10%, with a 3:1 aspect ratio:\nimage width = 0.30 × 595.28 = 178.58 pt\nimage height = 178.58 ÷ 3 = 59.53 pt\nx = 0.60 × 595.28 = 357.17 pt from the left\ny = 0.10 × 841.89 = 84.19 pt from the bottom\nThe signature lands bottom-right, 179 × 60 pt in size.",
+    "workedExampleHeading": "Worked example"
+  }
+}

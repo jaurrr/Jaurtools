@@ -1,0 +1,189 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="wm-file">{{ t('labels.fileLabel') }}</label>
+        <input id="wm-file" type="file" accept="application/pdf,.pdf"
+          (change)="onPdfSelected($event)" [attr.aria-label]="t('labels.fileLabel')" />
+        <p class="note">{{ t('labels.fileHint') }}</p>
+      </div>
+
+      @if (fileName()) {
+        <div class="unit-toggle" role="group" [attr.aria-label]="t('labels.kindLabel')">
+          <button type="button" [class.active]="kind() === 'text'" (click)="setKind('text')">
+            <app-icon name="type" /> {{ t('labels.kindText') }}
+          </button>
+          <button type="button" [class.active]="kind() === 'image'" (click)="setKind('image')">
+            <app-icon name="sparkles" /> {{ t('labels.kindImage') }}
+          </button>
+        </div>
+
+        @if (kind() === 'text') {
+          <div class="field">
+            <label for="wm-text">{{ t('labels.textLabel') }}</label>
+            <input id="wm-text" type="text" [ngModel]="wmText()"
+              (ngModelChange)="setWmText($event)"
+              [attr.placeholder]="t('labels.textPh')" maxlength="60" />
+          </div>
+
+          <div class="field">
+            <label for="wm-size">{{ t('labels.sizeLabel') }}: {{ fontSize() }}pt</label>
+            <div class="input-row">
+              <input id="wm-size" type="range" min="16" max="140" step="2"
+                [ngModel]="fontSize()" (ngModelChange)="setFontSize($event)"
+                [attr.aria-label]="t('labels.sizeLabel')" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="wm-color">{{ t('labels.colorLabel') }}</label>
+            <select id="wm-color" [ngModel]="color()" (ngModelChange)="setColor($event)">
+              <option value="gray">{{ t('labels.colorGray') }}</option>
+              <option value="red">{{ t('labels.colorRed') }}</option>
+              <option value="blue">{{ t('labels.colorBlue') }}</option>
+              <option value="black">{{ t('labels.colorBlack') }}</option>
+            </select>
+          </div>
+        } @else {
+          <div class="field">
+            <label for="wm-image">{{ t('labels.imageLabel') }}</label>
+            <input id="wm-image" type="file" accept="image/png,image/jpeg"
+              (change)="onImageSelected($event)" [attr.aria-label]="t('labels.imageLabel')" />
+            @if (imgName()) {
+              <p class="note">{{ imgName() }}</p>
+            } @else {
+              <p class="note">{{ t('labels.imageHint') }}</p>
+            }
+          </div>
+        }
+
+        <div class="field">
+          <label for="wm-pos">{{ t('labels.posLabel') }}</label>
+          <select id="wm-pos" [ngModel]="pos()" (ngModelChange)="setPos($event)">
+            <option value="diagonal">{{ t('labels.posDiagonal') }}</option>
+            <option value="center">{{ t('labels.posCenter') }}</option>
+            <option value="tiled">{{ t('labels.posTiled') }}</option>
+            <option value="corners">{{ t('labels.posCorners') }}</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="wm-opacity">{{ t('labels.opacityLabel') }}: {{ opacity() }}%</label>
+          <div class="input-row">
+            <input id="wm-opacity" type="range" min="5" max="80" step="1"
+              [ngModel]="opacity()" (ngModelChange)="setOpacity($event)"
+              [attr.aria-label]="t('labels.opacityLabel')" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="wm-angle">{{ t('labels.angleLabel') }}: {{ angle() }}°</label>
+          <div class="input-row">
+            <input id="wm-angle" type="range" min="0" max="90" step="1"
+              [ngModel]="angle()" (ngModelChange)="setAngle($event)"
+              [attr.aria-label]="t('labels.angleLabel')" />
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="apply()" [disabled]="busy()">
+            <app-icon name="sparkles" /> {{ t('labels.applyButton') }}
+          </button>
+        </div>
+      }
+
+      @if (busy()) {
+        <p class="status" role="status"><app-icon name="refresh-cw" /> {{ t('labels.busy') }}</p>
+      }
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+      @if (status()) {
+        <p class="status" role="status"><app-icon name="check" /> {{ status() }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

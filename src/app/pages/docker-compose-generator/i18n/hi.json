@@ -1,0 +1,103 @@
+{
+  "docker-compose-generator": {
+    "assumptionNote": "कोलन, स्पेस या विशेष अक्षर वाले मान अपने आप कोट हो जाते हैं ताकि YAML वैध बना रहे।",
+    "benefits": [
+      "YAML सिंटैक्स याद रखने की ज़रूरत नहीं — फॉर्म भरें और वैध docker-compose.yml पाएं।",
+      "असीमित सर्विस जोड़ें; हर एक अपना टॉप-लेवल सर्विस ब्लॉक बनता है।",
+      "पोर्ट, एनवायरनमेंट वेरिएबल और वॉल्यूम साधारण कॉमा या लाइन सूची से पार्स होते हैं।",
+      "रिस्टार्ट पॉलिसी आधिकारिक Docker मान इस्तेमाल करती हैं, सरल भाषा के लेबल के साथ।",
+      "फाइल सीधे डाउनलोड करें या कॉपी करें — docker compose up के लिए तैयार।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "कम से कम सर्विस नाम और इमेज भरें, फिर YAML कॉपी करें या docker-compose.yml डाउनलोड करें। फाइल को प्रोजेक्ट फोल्डर में रखें और docker compose up -d चलाएं।",
+        "q": "जनरेट की गई फाइल कैसे इस्तेमाल करूं?"
+      },
+      {
+        "a": "पोर्ट host:container जोड़ों के रूप में कॉमा से अलग करके लिखें, जैसे 8080:80, 443:443। हर जोड़ा ports के नीचे एक कोटेड एंट्री बनता है।",
+        "q": "पोर्ट फील्ड कैसे लिखूं?"
+      },
+      {
+        "a": "हर लाइन पर एक KEY=value जोड़ा लिखें, जैसे पहली लाइन पर NODE_ENV=production और दूसरी पर PORT=3000। हर लाइन environment के नीचे एक सूची एंट्री बनती है।",
+        "q": "एनवायरनमेंट वेरिएबल कैसे लिखूं?"
+      },
+      {
+        "a": "host-path:container-path रूप में हर लाइन पर एक, जैसे ./data:/data या pgdata:/var/lib/postgresql/data। pgdata जैसे नेम्ड वॉल्यूम को टॉप-लेवल volumes ब्लॉक चाहिए, जो आप हाथ से जोड़ते हैं।",
+        "q": "वॉल्यूम कैसे लिखूं?"
+      },
+      {
+        "a": "unless-stopped कंटेनर को हमेशा रीस्टार्ट करता है, सिवाय जब आप खुद रोकें। always मैन्युअल स्टॉप के बाद भी रीस्टार्ट करता है। on-failure सिर्फ क्रैश के बाद रीस्टार्ट करता है। no कभी रीस्टार्ट नहीं करता।",
+        "q": "कौन सी रिस्टार्ट पॉलिसी चुनूं?"
+      },
+      {
+        "a": "यह जनरेटर आम सबसेट कवर करता है: image, ports, environment, volumes और restart। networks, depends_on, healthchecks या build सेक्शन जनरेट करने के बाद YAML में हाथ से जोड़ें।",
+        "q": "क्या यह networks और depends_on बना सकता है?"
+      }
+    ],
+    "formula": "ports:        हर कॉमा वाली एंट्री के लिए \"HOST:CONTAINER\"\nenvironment: हर लाइन के लिए \"KEY=VALUE\"\nvolumes:      हर लाइन के लिए \"HOST:CONTAINER\"\nrestart:      no | always | unless-stopped | on-failure",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपने ऐप को जितने कंटेनर चाहिए, उतनी बार Add service दबाएं।",
+      "सर्विस नाम और Docker इमेज लिखें, जैसे nginx:1.25।",
+      "पोर्ट कॉमा से अलग host:container जोड़ों में लिखें।",
+      "एनवायरनमेंट वेरिएबल और वॉल्यूम हर लाइन पर एक लिखें।",
+      "रिस्टार्ट पॉलिसी चुनें, फिर YAML कॉपी या डाउनलोड करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "docker-compose.yml एक ही YAML फाइल में मल्टी-कंटेनर ऐप घोषित करता है।",
+      "हर सर्विस को इमेज चाहिए; पोर्ट होस्ट पोर्ट को कंटेनर पोर्ट से जोड़ते हैं।",
+      "एनवायरनमेंट एंट्री हर सर्विस के नीचे KEY=value सूची फॉर्मेट में होती हैं।",
+      "रिस्टार्ट पॉलिसी तय करती है कि कंटेनर रुकने या होस्ट रीबूट होने पर Docker क्या करे।",
+      "कोलन या स्पेस वाले मान ऑटो-कोट होते हैं ताकि YAML सही पार्स हो।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "docker compose जनरेटर, docker-compose.yml बिल्डर, compose फाइल जनरेटर, docker yaml जनरेटर",
+    "labels": {
+      "addServiceLabel": "सर्विस जोड़ें",
+      "copiedLabel": "कॉपी हुआ",
+      "copyLabel": "कॉपी",
+      "downloadLabel": ".yml डाउनलोड करें",
+      "envHint": "NODE_ENV=production (हर लाइन पर एक)",
+      "envLabel": "एनवायरनमेंट वेरिएबल",
+      "imageLabel": "इमेज",
+      "nameLabel": "सर्विस नाम",
+      "portsHint": "8080:80, 443:443",
+      "portsLabel": "पोर्ट",
+      "removeLabel": "हटाएं",
+      "restartAlways": "हमेशा",
+      "restartLabel": "रिस्टार्ट पॉलिसी",
+      "restartNo": "नहीं",
+      "restartOnFailure": "फेल होने पर",
+      "restartUnlessStopped": "रोके जाने तक",
+      "serviceCountLabel": "सर्विस",
+      "serviceLabel": "सर्विस",
+      "volumesHint": "./data:/data (हर लाइन पर एक)",
+      "volumesLabel": "वॉल्यूम"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "सिर्फ आम सबसेट जनरेट होता है: image, ports, environment, volumes, restart।",
+      "नेम्ड वॉल्यूम को टॉप-लेवल volumes ब्लॉक चाहिए जो आप हाथ से जोड़ते हैं।",
+      "networks, depends_on, healthchecks और build सेक्शन जनरेट नहीं होते।",
+      "सर्विस नाम slugify होते हैं; असामान्य अक्षर डैश से बदल जाते हैं।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "विज़ुअली वैध docker-compose.yml बनाएं। इमेज, पोर्ट, एनवायरनमेंट वेरिएबल और वॉल्यूम वाली सर्विस जोड़ें, फिर मुफ्त में YAML कॉपी या डाउनलोड करें।",
+    "metaTitle": "Docker Compose जनरेटर – मुफ्त Compose YAML बिल्डर",
+    "name": "Docker Compose जनरेटर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "docker-compose.yml फाइल बताती है कि ऐप को कौन-कौन से कंटेनर चाहिए — वेब सर्वर, डेटाबेस, कैश — ताकि एक docker compose up कमांड से सब शुरू हो जाए। यह टूल साधारण फॉर्म से वह YAML बनाता है: सर्विस जोड़ें, इमेज, पोर्ट, एनवायरनमेंट वेरिएबल और वॉल्यूम लिखें, और वैध compose फाइल डाउनलोड करें।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "जनरेट की गई compose फाइल",
+    "tagline": "साधारण फॉर्म से वैध docker-compose.yml बनाएं — YAML याद रखने की ज़रूरत नहीं।",
+    "workedExample": "एक सर्विस: नाम web, इमेज nginx:1.25, पोर्ट 8080:80, एनवायरनमेंट NODE_ENV=production, रिस्टार्ट unless-stopped।\n\nजनरेट की गई docker-compose.yml:\nservices:\n  web:\n    image: \"nginx:1.25\"\n    ports:\n      - \"8080:80\"\n    environment:\n      - \"NODE_ENV=production\"\n    restart: unless-stopped\n\ndocker-compose.yml नाम से सेव करें और docker compose up -d चलाएं — nginx http://localhost:8080 पर शुरू हो जाएगा।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

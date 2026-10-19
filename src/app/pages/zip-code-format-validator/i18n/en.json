@@ -1,0 +1,120 @@
+{
+  "zip-code-format-validator": {
+    "benefits": [
+      "Catch typos in postal codes before an order ships to the wrong address.",
+      "Country-specific patterns for 13 countries in one place.",
+      "Instant feedback as you type — no form submission needed.",
+      "Honest handling of edge cases like the UAE, which uses no postal codes."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A valid format means the code matches the country's pattern — it does not prove the code exists or that mail will reach it. A six-digit Indian PIN like 999999 matches the pattern but may not be a real PIN. For existence checks, use the country's postal service lookup.",
+        "q": "Does valid mean the code really exists?"
+      },
+      {
+        "a": "The UAE has never operated a public postal-code system; mail is delivered to PO boxes instead. So any 'UAE postal code' you see in a form is either the PO box number or made up. This tool tells you that directly instead of pretending to validate it.",
+        "q": "Why does the UAE show as not used?"
+      },
+      {
+        "a": "Yes — the US ZIP+4 format (five digits, hyphen, four digits, like 90210-1234) is accepted alongside the plain five-digit ZIP. Both are official US formats.",
+        "q": "Are US ZIP+4 codes accepted?"
+      },
+      {
+        "a": "No. British postcodes mix letters and digits (for example, SW1A 1AA), so the check is case-insensitive and allows the optional space. Typing sw1a1aa is just as valid as SW1A 1AA.",
+        "q": "Do UK postcodes have to be uppercase?"
+      },
+      {
+        "a": "Yes. Indian PIN codes are six digits and the first digit is never 0 — it runs 1–9 by postal region. Codes like 012345 are rejected by this tool, matching India Post's own numbering.",
+        "q": "Why do Indian PIN codes reject a leading zero?"
+      },
+      {
+        "a": "Correct. Japan's 7-digit codes are written with a hyphen after the third digit (100-0001), and the hyphen is required here. Brazil accepts the hyphen as optional (01310100 and 01310-100 both pass).",
+        "q": "Is the hyphen required in Japanese codes?"
+      }
+    ],
+    "formula": "Validation is pattern matching with regular expressions — there is no arithmetic.\nIndia: ^[1-9][0-9]{5}$  (6 digits, first 1–9)\nUSA: ^\\d{5}(-\\d{4})?$  (ZIP or ZIP+4)\nUK: ^[A-Z]{1,2}[0-9][A-Z0-9]?\\s?[0-9][A-Z]{2}$  (case-insensitive)\nJapan: ^\\d{3}-\\d{4}$  (hyphen required)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the country from the dropdown.",
+      "Type the postal code exactly as you have it.",
+      "The verdict appears instantly: valid, invalid, or not-used.",
+      "Check the format hint and example under the box if it fails."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Postal-code formats differ by country — there is no universal pattern.",
+      "India uses 6-digit PIN codes; the first digit is never 0.",
+      "The US uses 5-digit ZIP codes, optionally ZIP+4.",
+      "The UK and Canada mix letters and digits in their codes.",
+      "The UAE has no public postal-code system at all.",
+      "This tool checks format only, not whether a code is real."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zip code validator, postal code checker, pin code validator, postcode format checker, validate zip code by country",
+    "labels": {
+      "codeLabel": "Postal code",
+      "countries": {
+        "ae": "United Arab Emirates",
+        "au": "Australia",
+        "bd": "Bangladesh",
+        "br": "Brazil",
+        "ca": "Canada",
+        "de": "Germany",
+        "fr": "France",
+        "gb": "United Kingdom",
+        "in": "India",
+        "jp": "Japan",
+        "pk": "Pakistan",
+        "sa": "Saudi Arabia",
+        "us": "United States"
+      },
+      "countryLabel": "Country",
+      "exampleLabel": "Example",
+      "formatLabel": "Required format",
+      "formats": {
+        "ae": "Not used — the UAE has no postal codes",
+        "au": "4 digits",
+        "bd": "4 digits",
+        "br": "5 digits, hyphen, 3 digits (hyphen optional)",
+        "ca": "Letter-digit-letter, digit-letter-digit",
+        "de": "5 digits",
+        "fr": "5 digits",
+        "gb": "Letters and digits, e.g. SW1A 1AA",
+        "in": "6 digits, first digit 1–9",
+        "jp": "3 digits, hyphen, 4 digits",
+        "pk": "5 digits",
+        "sa": "5 digits, optional -XXXX",
+        "us": "5 digits, optional -XXXX"
+      },
+      "idleMsg": "Type a code to check its format.",
+      "invalidMsg": "Invalid format for this country.",
+      "noPostalMsg": "The UAE does not use postal codes — mail goes to PO boxes. Leave the field blank or use the PO box number.",
+      "placeholder": "e.g. 500001",
+      "validMsg": "Valid format."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Checks format only — a well-formed code can still be non-existent.",
+      "Patterns reflect the common national format; rare special codes may differ.",
+      "Does not verify deliverability or look up addresses.",
+      "Country list covers 13 countries, not the whole world."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free postal code validator: check ZIP/PIN/postcode formats for 13 countries instantly. India, US, UK, Canada, Japan and more. Private, no sign-up.",
+    "metaTitle": "ZIP Code Format Validator - Postal Code Checker | JaurTools",
+    "name": "Zip Code Format Validator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Postal codes follow strict national patterns, and this tool checks your code against the right one. India's PIN is 6 digits starting 1–9, so 500001 is valid; the US accepts 90210 and 90210-1234; Japan needs 100-0001 with the hyphen. Pick a country, type the code, and get an instant valid/invalid verdict — including honest handling of the UAE, which has no postal codes at all.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Validation result",
+    "tagline": "Check postal-code formats for 13 countries — instant verdict, honest edge cases.",
+    "workedExample": "India, code 500001:\n1. Pattern: ^[1-9][0-9]{5}$ — 6 digits, first digit 1–9.\n2. 500001 has 6 digits and starts with 5.\n3. Verdict: valid.\nCounter-example: 050001 fails because the first digit is 0.\nUSA, code 90210-1234: matches ^\\d{5}(-\\d{4})?$ → valid (ZIP+4).",
+    "workedExampleHeading": "Worked example"
+  }
+}

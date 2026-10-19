@@ -1,0 +1,99 @@
+{
+  "finance-calculator": {
+    "assumptionNote": "Payments are assumed at the end of each month and the annual interest rate stays constant for the whole period. Taxes and fees are not included.",
+    "benefits": [
+      "One tool answers five questions: future value, present value, payment size, time needed, or required return.",
+      "Compare saving plans side by side by changing one number at a time.",
+      "Shows the split between what you put in and what compounding earned.",
+      "Free, instant, and private - no sign-up, no spreadsheet formulas to learn."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "TVM (time value of money) is the idea that money today is worth more than the same money later, because today's money can earn interest. These formulas translate between present and future amounts at a given rate.",
+        "q": "What is the time value of money?"
+      },
+      {
+        "a": "Monthly compounding is assumed. The annual rate you enter is divided by 12 to get the monthly rate, and contributions are assumed at the end of each month. For daily compounding you would need a different calculator.",
+        "q": "Is compounding monthly or yearly?"
+      },
+      {
+        "a": "Yes. Pick 'payment' in the solve-for menu and enter your goal (target future value), your starting amount, rate, and years. The calculator shows the monthly amount you must save - for example about $1,064 per month to reach $500,000 in 20 years at 8% starting from zero.",
+        "q": "Can it tell me how much to save each month?"
+      },
+      {
+        "a": "Pick 'interest rate' as the unknown, enter your start and end amounts plus the years, and it solves for the annual return - for example about 7.18% per year to double $10,000 in 10 years.",
+        "q": "How do I find the return needed to double my money?"
+      },
+      {
+        "a": "Pick 'years' as the unknown. The calculator solves how long your lump sum and monthly payments need at your rate to reach the target. Higher rates and bigger payments shorten the time dramatically.",
+        "q": "Can it tell me how many years I need?"
+      },
+      {
+        "a": "Because real returns vary and this calculator assumes a fixed rate. It is a planning tool, not a prediction. For retirement planning, re-run it with a conservative rate like 5-6% to see a safer range.",
+        "q": "Why is my real investment different from the result?"
+      }
+    ],
+    "formula": "Monthly rate r = annual rate / 12, months n = years x 12\nFV = PV x (1+r)^n + PMT x ((1+r)^n - 1) / r\nPV = (FV - PMT x ((1+r)^n - 1)/r) / (1+r)^n\nPMT = (FV - PV x (1+r)^n) x r / ((1+r)^n - 1)\nN and I/R are solved numerically (bisection) from the same equation.",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose what to solve for: future value, present value, monthly payment, years, or interest rate.",
+      "Fill in the other four values - the field for your chosen unknown disappears.",
+      "Read the answer instantly, plus total contributions and interest earned.",
+      "Change one number at a time to compare scenarios.",
+      "Use the result as a planning estimate, then confirm with a financial professional for big decisions."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "TVM = time value of money: money today is worth more than the same money later because it can earn interest.",
+      "Five variables are linked: present value, payment, interest rate, number of periods, future value - knowing any four determines the fifth.",
+      "Monthly compounding is assumed: your annual rate is divided by 12.",
+      "Payments are assumed at the end of each month (ordinary annuity).",
+      "When N or the interest rate cannot be solved with a formula, this calculator finds them numerically with bisection search."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "finance calculator, tvm calculator, time value of money solver, future value solver, interest rate solver",
+    "labels": {
+      "annualRate": "Annual interest rate (%/yr)",
+      "fvResult": "Future value",
+      "interestEarned": "Interest earned",
+      "noSolution": "No solution in range",
+      "periodicPayment": "Monthly payment ($)",
+      "presentValue": "Present value ($)",
+      "solveFor": "Solve for",
+      "solveOptionFv": "Future value",
+      "solveOptionN": "Years needed",
+      "solveOptionPmt": "Monthly payment",
+      "solveOptionPv": "Present value",
+      "solveOptionR": "Interest rate",
+      "solvedValue": "Answer",
+      "targetFv": "Target future value ($)",
+      "totalContrib": "Total contributions",
+      "years": "Years",
+      "yearsUnit": "years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a fixed rate and fixed payments for the whole period - real investments vary.",
+      "Inflation, taxes, and fees are ignored, so real purchasing power will be lower.",
+      "Solving for rate or years is limited to a reasonable range; extreme goals may show 'no solution'.",
+      "Planning tool only - not financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free TVM finance calculator: solve for future value, present value, payment, years, or interest rate. Monthly compounding, instant answers, 100% private.",
+    "metaTitle": "Finance Calculator - TVM Solver (FV, PV, PMT, Rate) | JaurTools",
+    "name": "Finance Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Put $10,000 in a lump sum plus $500 per month at 8% annual for 10 years and you get about $113,670: $70,000 of your own contributions and about $43,670 of interest. The calculator solves any of the five TVM variables - future value, present value, payment, years, or rate - from the other four, with monthly compounding.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your TVM results",
+    "tagline": "Solve any time-value-of-money problem: FV, PV, payment, years, or rate.",
+    "workedExample": "PV = $10,000, PMT = $500/month, rate = 8%/yr, n = 10 years:\n1. Monthly rate r = 0.08 / 12 = 0.0066667, n = 120 months.\n2. Growth factor (1+r)^n = 1.0066667^120 = about 2.21964.\n3. Lump-sum part: $10,000 x 2.21964 = $22,196.\n4. Payments part: $500 x (2.21964 - 1) / 0.0066667 = $500 x 182.95 = $91,474.\n5. FV = $22,196 + $91,474 = about $113,670.\n6. Contributions = $10,000 + $500 x 120 = $70,000. Interest earned = about $43,670.",
+    "workedExampleHeading": "Worked example"
+  }
+}

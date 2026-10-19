@@ -1,0 +1,90 @@
+{
+  "boat-loan-calculator": {
+    "assumptionNote": "Assumes a fixed interest rate and monthly payments. Excludes tax, registration, insurance, docking and maintenance costs.",
+    "benefits": [
+      "Shows your exact monthly payment before you talk to a marine lender.",
+      "Reveals the total interest and the boat's true all-in cost.",
+      "Lets you test larger down payments or shorter terms instantly.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Boat loans work like auto loans: fixed monthly payments over a set term, with the boat as collateral. Terms often run longer, up to 10 to 20 years, and down payments of 10 to 20 percent are common.",
+        "q": "How does a boat loan work?"
+      },
+      {
+        "a": "Rates are usually a little higher than auto loan rates because boats are considered luxury collateral that depreciates. Your credit score, down payment and loan term all affect the rate you are offered.",
+        "q": "Are boat loan rates higher than car loans?"
+      },
+      {
+        "a": "A bigger down payment lowers the amount financed, which cuts the monthly payment and total interest. Marine lenders often require at least 10 percent down.",
+        "q": "How much should I put down on a boat?"
+      },
+      {
+        "a": "Yes, marine loans often allow terms of 10, 15 or even 20 years. Longer terms lower the payment but raise total interest a lot; boats also depreciate, so long terms risk owing more than the boat is worth.",
+        "q": "Can I get a 20-year boat loan?"
+      },
+      {
+        "a": "Beyond the loan payment, budget for insurance, docking or storage, fuel and maintenance, which together often run 10 percent of the boat's value per year. This calculator covers the financing side only.",
+        "q": "What does boat ownership really cost?"
+      },
+      {
+        "a": "Many marine lenders allow extra principal payments with no penalty, which shortens the loan and saves interest. Check your loan agreement for prepayment terms before relying on it.",
+        "q": "Can I pay off a boat loan early?"
+      }
+    ],
+    "formula": "down_payment = price x down_pct / 100\nloan = price - down_payment\nmonthly_payment = loan x r x (1 + r)^n / ((1 + r)^n - 1), r = rate / 12\ntotal_interest = payment x n - loan",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the boat's purchase price.",
+      "Enter your down payment as a percentage of the price.",
+      "Enter the annual interest rate.",
+      "Enter the loan term in years.",
+      "Read the monthly payment, total interest and the boat's true total cost."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A boat loan is a secured installment loan: the boat itself is the collateral.",
+      "Marine loan terms commonly run 10 to 20 years, longer than most car loans.",
+      "Down payments of 10 to 20 percent are typical for boat financing.",
+      "Boat loan rates usually run slightly higher than auto loan rates.",
+      "Longer terms lower the monthly payment but can leave you owing more than the boat is worth."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "boat loan calculator, marine loan calculator, yacht financing calculator, boat payment calculator",
+    "labels": {
+      "downPct": "Down payment (%)",
+      "loan": "Amount financed",
+      "payment": "Monthly payment",
+      "price": "Boat price",
+      "rate": "Annual rate (%)",
+      "totalCost": "Total cost of boat",
+      "totalInterest": "Total interest",
+      "years": "Term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Excludes tax, registration, insurance, docking and maintenance.",
+      "Fixed rate only; variable-rate marine loans are not modeled.",
+      "Assumes on-time payments with no extras.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free boat loan calculator. Find your monthly boat payment, total interest and true total cost. Works for yachts and marine financing. Private, browser-only.",
+    "metaTitle": "Boat Loan Calculator — Monthly Boat Payment",
+    "name": "Boat Loan Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A $60,000 boat with 20% down at 8.5% for 10 years means financing $48,000 at about $595 per month. You pay about $23,416 in total interest, so the boat's true financed cost is about $83,416 before insurance and docking.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your boat loan results",
+    "tagline": "Know your real monthly boat payment before you buy.",
+    "workedExample": "Price $60,000, down payment 20%, rate 8.5%, term 10 years (120 months).\n\nDown = 60,000 x 0.20 = $12,000. Loan = 60,000 - 12,000 = $48,000. r = 0.085/12 = 0.0070833. payment = 48,000 x 0.0070833 x 1.0070833^120 / (1.0070833^120 - 1) = 340 x 2.3326 / 1.3326 = $595.13 per month.\n\nTotal interest = 595.13 x 120 - 48,000 = $23,416. Total cost = 595.13 x 120 + 12,000 = $83,416.",
+    "workedExampleHeading": "Worked example"
+  }
+}

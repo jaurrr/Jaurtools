@@ -1,0 +1,173 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.instrumentLabel')">
+        @for (k of instrumentKeys; track k) {
+          <button type="button" [class.active]="instrument() === k" (click)="selectInstrument(k)">
+            {{ t('labels.instruments.' + k) }}
+          </button>
+        }
+      </div>
+
+      <div class="tuner-display" [class.on]="playing()" aria-live="polite">
+        <span class="calc-hero-label"><app-icon name="mic" /> {{ t('labels.currentNote') }}</span>
+        <div class="tuner-note">{{ currentString().name }}</div>
+        <div class="tuner-freq">{{ twoDec().format(currentString().freq) }} Hz</div>
+        <span class="status-badge" [class.on]="playing()">
+          {{ playing() ? t('labels.statusPlaying') : t('labels.statusIdle') }}
+        </span>
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.stringLabel') }}</label>
+        <div class="string-grid">
+          @for (s of strings(); track s.name) {
+            <button
+              type="button"
+              class="string-btn"
+              [class.active]="stringIdx() === $index && playing()"
+              (click)="playString($index)"
+            >
+              <span class="note">{{ s.name }}</span>
+              <span class="freq">{{ twoDec().format(s.freq) }} Hz</span>
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tuner-wave">{{ t('labels.waveformLabel') }}</label>
+        <select id="tuner-wave" [ngModel]="wave()" (ngModelChange)="setWave($event)">
+          <option value="sine">{{ t('labels.waveforms.sine') }}</option>
+          <option value="triangle">{{ t('labels.waveforms.triangle') }}</option>
+          <option value="square">{{ t('labels.waveforms.square') }}</option>
+          <option value="sawtooth">{{ t('labels.waveforms.sawtooth') }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tuner-vol">{{ t('labels.volumeLabel') }}</label>
+        <div class="calc-slider-wrap">
+          <span class="calc-bubble" [style.inset-inline-start.%]="volBubbleLeft()">{{ volume() }}%</span>
+          <input
+            id="tuner-vol"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            [ngModel]="volume()"
+            (ngModelChange)="setVolume($event)"
+            [attr.aria-label]="t('labels.volumeLabel')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field checkbox-row">
+        <input id="tuner-sustain" type="checkbox" [ngModel]="sustain()" (ngModelChange)="setSustain($event)" />
+        <label for="tuner-sustain">{{ t('labels.sustainLabel') }}</label>
+      </div>
+
+      <button type="button" class="stop-btn" (click)="stopTone()" [disabled]="!playing()">
+        <app-icon name="x" /> {{ t('labels.stopLabel') }}
+      </button>
+
+      <ul class="calc-shortcuts" [attr.aria-label]="t('labels.shortcutsTitle')">
+        <li><kbd class="calc-kbd">1–6</kbd><span>{{ t('labels.shortcutStrings') }}</span></li>
+        <li><kbd class="calc-kbd">Space</kbd><span>{{ t('labels.shortcutStop') }}</span></li>
+      </ul>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

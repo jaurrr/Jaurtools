@@ -1,0 +1,104 @@
+{
+  "biodata-maker": {
+    "benefits": [
+      "A clean, complete biodata in minutes instead of hours of Word formatting.",
+      "The structured sections prompt you so you forget nothing important.",
+      "PDF output looks professional on any phone or computer.",
+      "Your personal details stay in your browser. Nothing is uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Biodata is used for marriage proposals in India and focuses on personal and family details: age, height, education, family background, and partner expectations. A resume is for jobs and focuses on skills, work experience, and achievements. They serve different purposes, so do not swap them.",
+        "q": "What is the difference between biodata and a resume?"
+      },
+      {
+        "a": "Include: full name, date of birth, height, marital status, education, occupation, income, parents' names, address, phone, a short self-description, and partner expectations. Skip sensitive data like Aadhaar numbers, bank details, or exact salary slips. Share those only later, directly with trusted people.",
+        "q": "What details should a marriage biodata include?"
+      },
+      {
+        "a": "Yes. The PDF uses the built-in Latin font, so Hindi and Arabic script will not render correctly in the file. Type names and details in English (Roman script) for the PDF. You can still read and write everything in Hindi or Arabic on this page; only the downloaded PDF needs English text.",
+        "q": "Can I write my biodata in Hindi or Arabic?"
+      },
+      {
+        "a": "Both are fine. Phone is fastest for sharing on WhatsApp, and it is the traditional choice. A photo is common but optional. If you add one, use a recent, modest, well-lit photo.",
+        "q": "Should I add a photo and phone number?"
+      },
+      {
+        "a": "Yes. PDF is the safest format for sharing: it looks the same on every device and cannot be edited casually. This tool generates the PDF entirely in your browser.",
+        "q": "Is PDF the best format for sharing biodata?"
+      },
+      {
+        "a": "No account, no server, no database. Everything you type stays in your browser tab and disappears when you close it. Only the PDF you download leaves the page, and only to your own device.",
+        "q": "Is my personal data safe here?"
+      }
+    ],
+    "formula": "A complete biodata = Identity (name, birth date, height) + Background (education, work, income) + Family (parents, address) + Contact (phone, email) + About + Partner expectations.\nPDF layout: A4 page, 50pt margins, sections with wrapped text.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Fill the form: personal details, family, contact, and the two short paragraphs.",
+      "Watch the live preview card update as you type.",
+      "Check spelling of names, phone number, and dates carefully.",
+      "Click Download PDF to save your biodata.",
+      "Share the PDF on WhatsApp or email, or print it."
+    ],
+    "howToHeading": "How to use this maker",
+    "keyFacts": [
+      "Biodata (short for biographical data) is a personal profile used mainly for marriage proposals in India.",
+      "A good biodata fits on one page and covers six areas: identity, background, family, contact, about self, and expectations.",
+      "Honesty matters more than decoration. Families verify details, so write facts, not marketing.",
+      "Keep the tone simple and respectful. Avoid slang, jokes, and exaggerated claims.",
+      "A photo is traditional but optional. If included, it should be recent and modest."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "biodata maker, marriage biodata maker, biodata pdf generator, free biodata maker online, biodata format pdf",
+    "labels": {
+      "aboutHeading": "About me",
+      "address": "Address",
+      "annualIncome": "Annual income",
+      "contactHeading": "Contact",
+      "dateOfBirth": "Date of birth",
+      "downloadPdf": "Download PDF",
+      "education": "Education",
+      "email": "Email",
+      "expectationsHeading": "Partner expectations",
+      "familyHeading": "Family",
+      "fatherName": "Father's name",
+      "fullName": "Full name",
+      "height": "Height",
+      "maritalStatus": "Marital status",
+      "motherName": "Mother's name",
+      "occupation": "Occupation",
+      "pdfNote": "The PDF uses the built-in Latin font, so type names in English (Roman script) for correct rendering.",
+      "personalHeading": "Personal details",
+      "phone": "Phone",
+      "previewHeading": "Live preview",
+      "statusMarried": "Married",
+      "statusSingle": "Single"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The PDF uses the built-in Latin font, so Hindi and Arabic script will not render in the file. Use English text.",
+      "One fixed layout. No photo upload and no design themes in this version.",
+      "No spell-checking. Proofread names, numbers, and dates before sharing.",
+      "Not legal or professional advice. Verify important details independently."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free biodata maker: fill a simple form and download a clean marriage biodata as PDF. Works 100% in your browser. No sign-up, fully private.",
+    "metaTitle": "Biodata Maker - Free Marriage Biodata PDF | JaurTools",
+    "name": "Biodata Maker",
+    "pdfTitle": "Biodata",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Fill one form with your personal, family, and contact details plus short paragraphs about yourself and your partner expectations, and download a clean one-page biodata as PDF. The preview updates live as you type. Everything stays in your browser; nothing is uploaded.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your biodata",
+    "tagline": "Fill a form, get a clean marriage biodata as PDF. Live preview, fully private.",
+    "workedExample": "Aarav fills the form:\n1. Name: Aarav Sharma. Born: 1998-05-14. Height: 5 ft 9 in. Status: Single.\n2. Education: B.Com, Delhi University. Occupation: Accountant. Income: INR 6,00,000.\n3. Father: Rajesh Sharma. Mother: Sunita Sharma. Address: New Delhi, India.\n4. Phone and email added. About: one honest paragraph. Expectations: one clear paragraph.\n5. Download PDF: a one-page A4 biodata with three sections and both paragraphs, ready to share on WhatsApp.",
+    "workedExampleHeading": "Worked example"
+  }
+}

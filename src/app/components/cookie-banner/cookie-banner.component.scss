@@ -1,0 +1,91 @@
+:host {
+  display: block;
+}
+
+.cookie-banner {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 80;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.cookie-card {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 42rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.18);
+  animation: rise 0.25s ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.cookie-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.cookie-card > p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.toggles {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.toggle {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.toggle input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 0.15rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.toggle-text {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.toggle-text small {
+  color: var(--muted);
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.cookie-actions .btn,
+.cookie-actions .btn-ghost {
+  flex: 1 1 9rem;
+}

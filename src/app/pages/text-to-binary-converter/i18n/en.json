@@ -1,0 +1,106 @@
+{
+  "text-to-binary-converter": {
+    "assumptionNote": "Text is encoded as UTF-8 bytes. Decoding needs clean 8-bit groups — spaces and commas between groups are allowed and ignored.",
+    "benefits": [
+      "Encodes text to binary and decodes binary back to text.",
+      "UTF-8 aware — handles emoji and Hindi/Arabic text correctly.",
+      "Clear error messages for malformed binary input.",
+      "Separators: spaces, new lines or none.",
+      "Copy or download results with one click."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "errors": {
+      "invalidChars": "Invalid binary: only 0 and 1 are allowed (spaces and commas between groups are fine).",
+      "invalidUtf8": "Invalid binary: the bytes do not form valid UTF-8 text.",
+      "notMultipleOf8": "Invalid binary: the number of bits must be a multiple of 8."
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Type your text, choose a separator, and the tool converts every UTF-8 byte into its 8-bit binary form instantly.",
+        "q": "How do I convert text to binary?"
+      },
+      {
+        "a": "Switch to Decode mode and paste the binary. Spaces, commas and line breaks between byte groups are ignored automatically.",
+        "q": "How do I convert binary back to text?"
+      },
+      {
+        "a": "Computers store text as bytes, and each byte is 8 bits. So every character becomes one or more 8-bit groups — ASCII letters need one group, emoji need four.",
+        "q": "Why 8 bits per group?"
+      },
+      {
+        "a": "Yes. The tool uses UTF-8, so Hindi, Arabic, Chinese and emoji all encode and decode correctly.",
+        "q": "Does it work with emoji and Hindi text?"
+      },
+      {
+        "a": "The decoder needs complete 8-bit groups. Check that no bits are missing and that the input contains only 0s and 1s.",
+        "q": "Why do I get a multiple-of-8 error?"
+      },
+      {
+        "a": "Yes — everything runs locally in your browser.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "encode: for each UTF-8 byte -> 8-bit binary string\ndecode: clean input -> split into 8-bit groups -> bytes -> UTF-8 text\nbits = bytes x 8",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Encode (text to binary) or Decode (binary to text).",
+      "Type or paste your input into the box.",
+      "For encoding, pick a separator: spaces, new lines or none.",
+      "Read the result live in the output box.",
+      "Copy it or download it as a text file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Text is encoded as UTF-8 bytes before conversion to binary.",
+      "Every byte becomes exactly 8 binary digits.",
+      "ASCII letters need 8 bits; emoji need 32 bits.",
+      "Decoding accepts spaces, commas and line breaks between groups.",
+      "Malformed input shows a specific, friendly error message."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "text to binary converter, binary to text decoder, binary code translator, string to binary online, binary translator",
+    "labels": {
+      "binaryLabel": "Binary to decode",
+      "binaryPlaceholder": "01001000 01101001",
+      "bitsLabel": "Bits",
+      "charsLabel": "Characters",
+      "clearButton": "Clear",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "decodeLabel": "Binary to text",
+      "downloadButton": "Download .txt",
+      "emptyState": "Result will appear here.",
+      "encodeLabel": "Text to binary",
+      "modeLabel": "Mode",
+      "outputLabel": "Result",
+      "sepNewline": "New line",
+      "sepNone": "None",
+      "sepSpace": "Space",
+      "separatorLabel": "Separator",
+      "textLabel": "Text to encode",
+      "textPlaceholder": "Type here..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This is an encoding, not encryption — anyone can decode it.",
+      "Very long inputs produce very long binary strings.",
+      "Decoding requires complete 8-bit groups of valid UTF-8."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free text to binary converter: translate words and letters into binary code instantly. UTF-8 support, separator options, one-click copy.",
+    "metaTitle": "Text to Binary Converter - Translate Text to 0s & 1s Free | JaurTools",
+    "name": "Text to Binary Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Converts text into binary strings and binary back into text: every UTF-8 byte becomes an 8-bit group. Encode mode offers space, newline or no separators; decode mode ignores spaces and commas and reports clear errors for malformed input. Handles emoji and non-Latin scripts correctly, with bit and character counts plus one-click copy and download.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Binary converter",
+    "tagline": "Translate text into binary code — live, with one-click copy.",
+    "workedExample": "Encode \"Hi\":\nH = code 72 -> binary 01001000\n i = code 105 -> binary 01101001\nOutput (space separator): 01001000 01101001\nBits: 2 bytes x 8 = 16\n\nDecode \"01001000 01101001\":\nGroups: [01001000, 01101001] -> bytes [72, 105] -> UTF-8 text \"Hi\"",
+    "workedExampleHeading": "Worked example"
+  }
+}

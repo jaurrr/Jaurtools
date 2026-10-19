@@ -1,0 +1,115 @@
+{
+  "web-app-manifest-generator": {
+    "benefits": [
+      "Builds a complete, valid manifest from a form — no hand-writing JSON.",
+      "Pre-fills sensible defaults (standalone display, 192/512 icons) so you start installable.",
+      "Warns about missing installability requirements as you type.",
+      "One click gives you the file plus the <link> tag to paste in your HTML.",
+      "Everything stays in your browser; your app details never leave the device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Save it as manifest.webmanifest (or manifest.json) in your site root and reference it from every page's <head>: <link rel=\"manifest\" href=\"/manifest.webmanifest\">. Serve it with the MIME type application/manifest+json.",
+        "q": "Where do I put the manifest file?"
+      },
+      {
+        "a": "Use both: the Web App Manifest Generator builds the file, then the PWA Manifest Checker validates it against installability requirements. Generate here, verify there.",
+        "q": "Should I use this or the PWA Manifest Checker?"
+      },
+      {
+        "a": "The installability minimum: name (or short_name), start_url, display standalone/fullscreen/minimal-ui, and 192px + 512px icons. This generator warns you if any are missing, and pre-fills the icon entries.",
+        "q": "What is the minimum for an installable PWA?"
+      },
+      {
+        "a": "start_url is where the app opens when launched from the home screen (usually \"/\"). scope limits which URLs count as part of your app — links outside it open in the browser. id uniquely identifies the app; set it explicitly so URL changes don't create duplicate installs.",
+        "q": "What are start_url, scope, and id?"
+      },
+      {
+        "a": "Android adaptive icons crop icons into shapes, so a maskable variant with padding is recommended. This generator pre-fills the 512px icon with purpose \"any maskable\" — just point it at your maskable file.",
+        "q": "Do I need a maskable icon?"
+      },
+      {
+        "a": "Yes — paste the generated JSON into the PWA Manifest Checker on this site to validate it. Also confirm the <link> tag is in your HTML, the file is served over HTTPS, and you have a registered service worker.",
+        "q": "How do I verify the generated manifest?"
+      }
+    ],
+    "formula": "Generated manifest structure:\n{\n  \"name\": \"…\", \"short_name\": \"…\",\n  \"start_url\": \"/\", \"scope\": \"/\", \"id\": \"/\",\n  \"display\": \"standalone | fullscreen | minimal-ui | browser\",\n  \"orientation\": \"any | natural | landscape | portrait | …\",\n  \"theme_color\": \"#…\", \"background_color\": \"#…\",\n  \"lang\": \"en\", \"dir\": \"ltr | rtl | auto\",\n  \"icons\": [{ \"src\": \"…\", \"sizes\": \"192x192\", \"type\": \"image/png\", \"purpose\": \"any maskable\" }]\n}\nOnly non-empty fields are included.",
+    "formulaHeading": "Generated structure",
+    "homeLabel": "Home",
+    "howTo": [
+      "Fill in your app name and short name (at least one is required).",
+      "Set the start URL, display mode, theme and background colors.",
+      "Adjust or add icon entries — 192px and 512px PNGs are the installability minimum.",
+      "Watch the warnings and fix anything flagged.",
+      "Copy or download manifest.webmanifest and link it from your HTML."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A Web App Manifest is a JSON file describing your app: name, icons, colors, and launch behavior.",
+      "Browsers need name/short_name, start_url, a valid display mode, and 192px + 512px icons before offering installation.",
+      "display: standalone gives an app-like window; fullscreen removes all browser UI; minimal-ui keeps basic controls.",
+      "theme_color tints the OS UI; background_color fills the splash screen during launch.",
+      "The file must be linked from your HTML: <link rel=\"manifest\" href=\"/manifest.webmanifest\">.",
+      "Pair with a service worker over HTTPS for a fully installable PWA."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "web app manifest generator, pwa manifest generator, manifest.json generator, create manifest.webmanifest",
+    "labels": {
+      "addIcon": "Add icon",
+      "copiedMsg": "Manifest copied to clipboard.",
+      "copyFile": "Copy manifest",
+      "downloadFile": "Download manifest.webmanifest",
+      "fBgColor": "Background color",
+      "fDescription": "Description",
+      "fDir": "Text direction (dir)",
+      "fDisplay": "Display mode",
+      "fId": "App ID (id)",
+      "fLang": "Language (lang)",
+      "fName": "App name",
+      "fOrientation": "Orientation",
+      "fScope": "Scope",
+      "fShortName": "Short name",
+      "fStartUrl": "Start URL",
+      "fThemeColor": "Theme color",
+      "generatedFile": "Generated manifest",
+      "iconPurpose": "Purpose",
+      "iconSizes": "Sizes",
+      "iconSrc": "Icon URL",
+      "iconType": "MIME type",
+      "iconsHeading": "Icons",
+      "linkTagLabel": "Add to your HTML <head>",
+      "optUnset": "Not set",
+      "removeIcon": "Remove",
+      "serveNote": "Save as manifest.webmanifest, serve with MIME type application/manifest+json over HTTPS, and link it from your HTML.",
+      "warnBadBg": "The background color is not a valid CSS color and was left out.",
+      "warnBadTheme": "The theme color is not a valid CSS color and was left out.",
+      "warnNo192": "No 192x192 icon — required for installability.",
+      "warnNo512": "No 512x512 icon — required for installability.",
+      "warnNoName": "Neither name nor short_name is set — one is required.",
+      "warningsHeading": "Check before publishing"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Generates the manifest file only — you still need the <link> tag, HTTPS, and a service worker.",
+      "Cannot create or resize your icon images — point it at real hosted PNG files.",
+      "Color inputs are validated as CSS colors, but the file isn't tested against a live browser here.",
+      "Unusual manifest fields beyond the common set aren't covered by the form."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Web App Manifest generator: build a valid manifest.webmanifest from a simple form with installability warnings. Copy or download, 100% private.",
+    "metaTitle": "Web App Manifest Generator - Create manifest.webmanifest | JaurTools",
+    "name": "Web App Manifest Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Fill in the form and this generator builds a complete Web App Manifest: name, short name, start URL, display mode, theme and background colors, and icon entries — only non-empty fields are included. Defaults (standalone display, 192px and 512px icons) aim for installability, and live warnings flag anything missing. You get the manifest.webmanifest file plus the <link> tag for your HTML.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your manifest",
+    "tagline": "Build a valid Web App Manifest from a simple form — no hand-written JSON.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Inputs: name Example Tools, short_name ExTools, start_url /, display standalone, theme_color #4f46e5, background_color #ffffff, icons /icons/icon-192.png (192x192) and /icons/icon-512.png (512x512, purpose any maskable).\nGenerated manifest.webmanifest:\n{\n  \"name\": \"Example Tools\",\n  \"short_name\": \"ExTools\",\n  \"start_url\": \"/\",\n  \"display\": \"standalone\",\n  \"theme_color\": \"#4f46e5\",\n  \"background_color\": \"#ffffff\",\n  \"icons\": [\n    {\n      \"src\": \"/icons/icon-192.png\",\n      \"sizes\": \"192x192\",\n      \"type\": \"image/png\"\n    },\n    {\n      \"src\": \"/icons/icon-512.png\",\n      \"sizes\": \"512x512\",\n      \"type\": \"image/png\",\n      \"purpose\": \"any maskable\"\n    }\n  ]\n}\nEmpty fields (description, scope, id, orientation, dir) are omitted. No warnings — name, 192px, and 512px are all present."
+  }
+}

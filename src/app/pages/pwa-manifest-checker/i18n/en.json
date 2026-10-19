@@ -1,0 +1,136 @@
+{
+  "pwa-manifest-checker": {
+    "benefits": [
+      "Catches the small mistakes (a missing 512px icon, a typo in display) that silently break installability.",
+      "Checks icon sizes, colors, and enums against the real spec — not guesswork.",
+      "Runs instantly in your browser; no upload of your app's manifest to any server.",
+      "Clear pass/warn/fail verdicts tell you exactly what to fix and what is merely recommended.",
+      "Pairs with the Web App Manifest Generator to build, then verify, in one flow."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The installability bar: at minimum name (or short_name), start_url, display set to standalone/fullscreen/minimal-ui, and icons including 192px and 512px PNGs, served over HTTPS with a service worker. This checker verifies the manifest half of that list.",
+        "q": "What makes a PWA installable?"
+      },
+      {
+        "a": "Android adaptive icons mask the icon into shapes (circle, squircle). A maskable icon includes safe padding so nothing important is cropped. Without one, Android may awkwardly crop your icon — hence the warning, not a failure.",
+        "q": "Why does the checker want a maskable icon?"
+      },
+      {
+        "a": "theme_color colors the browser toolbar and task switcher to match your brand; background_color is the splash-screen background shown while the app launches. Both should be valid CSS colors.",
+        "q": "What are theme_color and background_color for?"
+      },
+      {
+        "a": "Older manifests may omit id; modern browsers default it to start_url. An explicit id is recommended because changing start_url later would otherwise make the browser treat your app as a brand-new install, losing the old one.",
+        "q": "Do I need the id field?"
+      },
+      {
+        "a": "scope limits which URLs belong to your app — links outside it open in the browser instead. If omitted it defaults to the manifest's directory. Set it explicitly (usually \"/\") so navigation behaves predictably.",
+        "q": "What does scope do?"
+      },
+      {
+        "a": "This checker validates the manifest document itself. For the full picture, also confirm the manifest is linked from your HTML (<link rel=\"manifest\">), served with the right MIME type, over HTTPS, with a registered service worker — those are outside this tool's reach by design.",
+        "q": "My manifest passes — is my PWA guaranteed installable?"
+      }
+    ],
+    "formula": "Installability checklist verified here:\n1. name OR short_name present\n2. start_url present\n3. display in {fullscreen, standalone, minimal-ui, browser}\n4. icons[] non-empty, with 192x192 and 512x512 entries\n5. theme_color and background_color are valid CSS colors\n6. Recommended: scope, id, description, maskable icon\nVerdict: pass = required and valid, warn = recommended but missing, fail = required and missing/invalid.",
+    "formulaHeading": "What is checked",
+    "homeLabel": "Home",
+    "howTo": [
+      "Open your manifest file (usually manifest.webmanifest or manifest.json) and copy its full contents.",
+      "Paste the JSON into the box above. Validation runs instantly — nothing is uploaded.",
+      "Read the counts: passes, warnings, and failures.",
+      "Work through failures first — those block installability — then warnings.",
+      "Fix the issues in your manifest, paste again, and confirm everything passes."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A Web App Manifest is a JSON file that tells the browser your app's name, icons, colors, and how it should launch.",
+      "Browsers require specific fields before offering an install prompt: name/short_name, start_url, a valid display mode, and 192px + 512px icons.",
+      "The display field controls the app window: fullscreen, standalone (app-like, no browser UI), minimal-ui, or browser.",
+      "Icons should be PNG; a maskable purpose variant is recommended so Android adaptive icons don't crop your artwork.",
+      "theme_color tints the OS task switcher and browser UI; background_color fills the splash screen during launch.",
+      "The manifest must be linked from your HTML with <link rel=\"manifest\" href=\"/manifest.webmanifest\"> to take effect."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pwa manifest checker, web app manifest validator, manifest.json checker, pwa installability test",
+    "labels": {
+      "badge_fail": "Fail",
+      "badge_pass": "Pass",
+      "badge_warn": "Warn",
+      "checkBg": "background_color",
+      "checkDesc": "description",
+      "checkDisplay": "display",
+      "checkIcon192": "192px icon",
+      "checkIcon512": "512px icon",
+      "checkIcons": "icons array",
+      "checkId": "id",
+      "checkMaskable": "maskable icon",
+      "checkName": "name / short_name",
+      "checkOrientation": "orientation",
+      "checkScope": "scope",
+      "checkStartUrl": "start_url",
+      "checkTheme": "theme_color",
+      "clearButton": "Clear",
+      "dBgFail": "\"{v}\" is not a valid CSS color.",
+      "dBgMissing": "Missing — splash screen falls back to white.",
+      "dBgOk": "\"{v}\" is a valid CSS color.",
+      "dDescOk": "Description present.",
+      "dDescWarn": "Missing — recommended for install dialogs and app listings.",
+      "dDisplayFail": "\"{v}\" is not a valid display mode. Use fullscreen, standalone, minimal-ui, or browser.",
+      "dDisplayMissing": "Missing — browsers default to browser, which is not installable.",
+      "dDisplayOk": "\"{v}\" is a valid installable display mode.",
+      "dIcon192Fail": "No 192x192 icon found — required for installability.",
+      "dIcon192Ok": "192x192 icon present.",
+      "dIcon512Fail": "No 512x512 icon found — required for installability.",
+      "dIcon512Ok": "512x512 icon present.",
+      "dIconsFail": "The icons array is missing or empty.",
+      "dIconsOk": "{v} icon(s) declared.",
+      "dIdOk": "id \"{v}\" present.",
+      "dIdWarn": "Missing — id defaults to start_url; set it explicitly to survive URL changes.",
+      "dMaskableOk": "A maskable icon is declared.",
+      "dMaskableWarn": "No maskable icon — recommended so Android adaptive icons don't crop your artwork.",
+      "dNameFail": "Neither name nor short_name is present.",
+      "dNameOk": "Using \"{v}\".",
+      "dOrientationFail": "\"{v}\" is not a valid orientation value.",
+      "dOrientationOk": "\"{v}\" is valid.",
+      "dScopeOk": "Scope \"{v}\".",
+      "dScopeWarn": "Missing — defaults to the manifest directory; set it explicitly (usually \"/\").",
+      "dStartUrlFail": "start_url is missing.",
+      "dStartUrlOk": "start_url is \"{v}\".",
+      "dThemeFail": "\"{v}\" is not a valid CSS color.",
+      "dThemeMissing": "Missing — browser UI falls back to default colors.",
+      "dThemeOk": "\"{v}\" is a valid CSS color.",
+      "emptyState": "Paste your Web App Manifest JSON above to validate it.",
+      "parseError": "This is not valid JSON. Check for trailing commas, missing quotes, or truncated content.",
+      "pasteHint": "Paste your manifest.webmanifest JSON here…",
+      "pasteLabel": "Web App Manifest JSON",
+      "summaryFail": "Failed",
+      "summaryPass": "Passed",
+      "summaryWarn": "Warnings"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Validates the manifest document only — not the <link rel=\"manifest\"> tag, MIME type, HTTPS, or service worker.",
+      "Cannot fetch your icon files to confirm the sizes actually match the declared sizes.",
+      "Color validation uses the browser's CSS parser, so results can vary slightly by browser.",
+      "Very unusual but valid manifest extensions may be ignored by this checker."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free PWA manifest checker: paste your Web App Manifest JSON and validate icons, display mode, colors, and installability requirements. 100% private.",
+    "metaTitle": "PWA Manifest Checker - Validate Your Web App Manifest | JaurTools",
+    "name": "PWA Manifest Checker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your Web App Manifest JSON and this checker validates it against installability requirements: name, start_url, display mode, 192px and 512px icons, theme and background colors, plus recommended fields like scope, id, and a maskable icon. Each check gets a pass, warn, or fail verdict with a plain-language explanation of what to fix.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Manifest validation",
+    "tagline": "Validate a Web App Manifest against PWA installability requirements.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Sample manifest: name Example Tools, short_name ExTools, start_url /, display standalone, theme_color #4f46e5, background_color #ffffff, description present, two icons (192x192 and 512x512 PNG, one with purpose any maskable). No scope, no id.\nChecks traced by the tool:\n1. name/short_name: pass — using Example Tools.\n2. start_url: pass — /.\n3. display: pass — standalone is installable.\n4. icons: pass — 2 declared. 192px: pass. 512px: pass. maskable: pass.\n5. theme_color #4f46e5: pass — valid CSS color. background_color #ffffff: pass.\n6. scope: warn — missing. id: warn — missing. description: pass.\nTotals: 10 passed, 2 warnings, 0 failed. The manifest is installable; adding scope and id removes the warnings."
+  }
+}

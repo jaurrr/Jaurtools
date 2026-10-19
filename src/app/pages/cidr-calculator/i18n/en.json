@@ -1,0 +1,106 @@
+{
+  "cidr-calculator": {
+    "benefits": [
+      "Reads any CIDR string at a glance: paste 10.0.0.0/8 and immediately see the full address range.",
+      "Plans subnetting visually: splitting a /24 into four /26 blocks shows exact boundaries with no overlap.",
+      "Prevents overlap mistakes: every generated subnet is mathematically guaranteed to be disjoint.",
+      "Speeds up cloud configs: VPC subnets, security groups, and route tables all use CIDR notation.",
+      "Works offline in your browser: internal ranges are never transmitted anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Classless Inter-Domain Routing. It is the compact way to describe a block of IP addresses: the address followed by a slash and the number of network bits, for example 192.168.0.0/24.",
+        "q": "What does CIDR mean?"
+      },
+      {
+        "a": "You can type an address with host bits set, for example 192.168.0.77/24. The tool normalizes it to the true network address (192.168.0.0/24) and tells you it did so.",
+        "q": "Do I have to enter the exact network address?"
+      },
+      {
+        "a": "It means the address block is divided into smaller equal blocks. Each extra prefix bit doubles the number of subnets and halves their size: a /24 split into /26 gives 4 subnets of 64 addresses each.",
+        "q": "What does splitting a subnet mean?"
+      },
+      {
+        "a": "Yes - it accepts any prefix from /0 (the entire IPv4 space) to /32 (a single host). Very large splits are capped at 256 displayed rows so the page stays fast.",
+        "q": "Can it handle very large blocks like /8?"
+      },
+      {
+        "a": "They are the same math presented differently. This tool starts from CIDR notation and adds subnet splitting; the IP Subnet Calculator starts from an address plus a prefix slider.",
+        "q": "How is this different from the IP Subnet Calculator?"
+      },
+      {
+        "a": "Cloud VPCs, Docker networks, VPN tunnels, firewall rules, and Kubernetes pod CIDRs all use this notation. Anywhere you see a slash after an IP address, this tool decodes it.",
+        "q": "Where is CIDR notation used in real life?"
+      }
+    ],
+    "formula": "addresses in block = 2^(32 - prefix)\nsubnets when splitting /P into /Q = 2^(Q - P)\nsize of each new subnet = 2^(32 - Q)\nExample: splitting /24 into /26 -> 2^(26-24) = 4 subnets, each 2^(32-26) = 64 addresses.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type a CIDR block such as 192.168.0.0/24 - an IPv4 address, a slash, and a prefix from 0 to 32.",
+      "Read the decoded block: network, broadcast, mask, wildcard, and first/last usable host.",
+      "If the address had host bits set, the tool normalizes it to the true network address automatically.",
+      "To split the block, choose a longer new prefix - each extra bit doubles the subnet count.",
+      "Scan the generated subnet list for exact boundaries before pasting them into your configs."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "CIDR notation = an IP address, a slash, and a prefix length: 192.168.0.0/24 means the first 24 bits are the network.",
+      "A /P block always contains exactly 2^(32-P) addresses: /24 = 256, /16 = 65,536, /8 = 16,777,216.",
+      "Splitting a /P block into /Q subnets yields 2^(Q-P) subnets, each with 2^(32-Q) addresses.",
+      "The host portion of the entered address is ignored for the math - only the network bits define the block.",
+      "Common blocks: /32 single host, /31 point-to-point link, /30 four addresses, /24 a classic LAN, /16 a large site.",
+      "CIDR replaced classful A/B/C addressing in 1993; classes are historical reference only."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ipv4 cidr calculator, cidr notation calculator, cidr subnet calculator, split subnet calculator, cidr range calculator",
+    "labels": {
+      "broadcastLabel": "Broadcast address",
+      "cidrLabel": "CIDR notation (e.g. 192.168.0.0/24)",
+      "classLabel": "IP class",
+      "firstHostLabel": "First usable host",
+      "invalidCidr": "Please enter valid CIDR notation, for example 192.168.0.0/24.",
+      "lastHostLabel": "Last usable host",
+      "maskLabel": "Subnet mask",
+      "networkLabel": "Network address",
+      "newPrefixLabel": "Split into subnets of prefix",
+      "normalizedNote": "The address had host bits set, so it was normalized to the true network address.",
+      "privateScope": "Private (RFC 1918)",
+      "publicScope": "Public",
+      "rangeCol": "Usable range",
+      "rangeLabel": "Address range",
+      "scopeLabel": "Address scope",
+      "splitHeading": "Split this block into subnets",
+      "subnetCol": "Subnet",
+      "subnetCountNote": "Number of subnets",
+      "totalLabel": "Total addresses",
+      "truncatedNote": "Large split: showing the first 256 subnets only.",
+      "usableCol": "Usable hosts",
+      "usableLabel": "Usable hosts",
+      "wildcardLabel": "Wildcard mask"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "IPv4 only. IPv6 CIDR (for example 2001:db8::/32) uses 128-bit math this tool does not implement.",
+      "Splitting is limited to 256 displayed subnets; enormous splits show the first 256.",
+      "It computes address boundaries, not routing: overlapping with existing routes is still your responsibility to check.",
+      "Normalization silently drops host bits - double-check the block matches what you intended before deploying."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Enter any CIDR block like 192.168.1.0/24 and get network, broadcast, mask, wildcard and usable hosts — free and instant.",
+    "metaTitle": "CIDR Calculator - IP Range, Mask & Host Count | JaurTools",
+    "name": "CIDR Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "192.168.0.0/24 covers 192.168.0.0 to 192.168.0.255 - 256 addresses, 254 usable, mask 255.255.255.0. Split into /26 and you get 4 subnets of 64 addresses each: 192.168.0.0/26, .64/26, .128/26, and .192/26, with no overlaps and no gaps.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "IPv4 CIDR Calculator results",
+    "tagline": "Decode any CIDR block in seconds.",
+    "workedExample": "Input: 192.168.0.0/24, split into /26.\n1. Block math: 2^(32-24) = 256 total addresses, 254 usable (192.168.0.1 to 192.168.0.254).\n2. Split count: 2^(26-24) = 4 subnets.\n3. Subnet size: 2^(32-26) = 64 addresses each, 62 usable.\n4. Subnet 1: 192.168.0.0/26, usable 192.168.0.1 - 192.168.0.62.\n5. Subnet 2: 192.168.0.64/26, usable 192.168.0.65 - 192.168.0.126.\n6. Subnet 3: 192.168.0.128/26, usable 192.168.0.129 - 192.168.0.190.\n7. Subnet 4: 192.168.0.192/26, usable 192.168.0.193 - 192.168.0.254.\nFour blocks of 64 cover the original 256 exactly - no overlaps, no gaps.",
+    "workedExampleHeading": "Worked example"
+  }
+}

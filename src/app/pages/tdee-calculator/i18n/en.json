@@ -1,0 +1,114 @@
+{
+  "tdee-calculator": {
+    "activities": {
+      "active": "Active - hard exercise 6-7 days/week",
+      "extra": "Very active - physical job or twice-daily training",
+      "light": "Light - exercise 1-3 days/week",
+      "moderate": "Moderate - exercise 3-5 days/week",
+      "sedentary": "Sedentary - little or no exercise"
+    },
+    "assumptionNote": "TDEE is an estimate; real burn varies with tracking error, muscle mass and day-to-day life. Recalculate every few kilograms of change and adjust from real weight trends.",
+    "benefits": [
+      "Ends guesswork: your maintenance calories come from your body and your life, not an average.",
+      "Goal targets turn lose/maintain/gain into one concrete daily number.",
+      "Shows exactly how much your activity level changes the equation.",
+      "The weekly pace estimate keeps expectations realistic."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A 500 kcal daily deficit loses about 0.45 kg per week. Larger deficits work faster but cost more muscle and are harder to sustain. Most people do best at 300-500 kcal.",
+        "q": "What calorie deficit is best for weight loss?"
+      },
+      {
+        "a": "Roughly 1 kg of body fat holds about 7,700 kcal, so a 500 kcal daily deficit predicts about 0.45 kg per week. Real loss varies with water shifts and muscle changes.",
+        "q": "How fast will I lose weight?"
+      },
+      {
+        "a": "Add 250-300 kcal above maintenance with progressive strength training. Faster surpluses mostly add fat, not muscle.",
+        "q": "How should I eat to gain muscle?"
+      },
+      {
+        "a": "Yes, but pick one: eat at maintenance while training hard (slow body recomposition) or alternate short gaining and cutting phases. Doing both at full speed is not realistic.",
+        "q": "Can I lose fat and gain muscle at once?"
+      },
+      {
+        "a": "BMR falls with weight, activity often drops unconsciously, and water retention masks fat loss. Recalculate TDEE, track honestly for two weeks, and only then adjust.",
+        "q": "Why did my weight loss stall?"
+      },
+      {
+        "a": "No. The formula is validated for adults. Children and teenagers need pediatric equations and a clinician's guidance.",
+        "q": "Does TDEE work for teenagers?"
+      }
+    ],
+    "formula": "TDEE = BMR x activity factor.\nBMR (Mifflin-St Jeor, male) = 10 x kg + 6.25 x cm - 5 x age + 5.\nActivity factors: 1.2 sedentary, 1.375 light, 1.55 moderate, 1.725 active, 1.9 very active.\nGoal target = TDEE - 500 (lose), TDEE (maintain), TDEE + 500 (gain).",
+    "formulaHeading": "The formula",
+    "goals": {
+      "gain": "Gain weight (+500 kcal)",
+      "lose": "Lose weight (-500 kcal)",
+      "maintain": "Maintain weight"
+    },
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Male or Female and pick metric (cm/kg) or imperial (ft/in, lb).",
+      "Enter your age, height and weight.",
+      "Choose the activity level that best describes your typical week.",
+      "Pick your goal: lose, maintain or gain weight.",
+      "Read your TDEE, your daily calorie target and your expected weekly pace."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "TDEE (Total Daily Energy Expenditure) is all the calories you burn in 24 hours.",
+      "It has four parts: BMR (60-70%), food digestion (about 10%), exercise and daily movement.",
+      "Activity factors multiply BMR: 1.2 for sedentary up to 1.9 for very active.",
+      "A 500 kcal daily deficit or surplus moves weight about 0.45 kg per week.",
+      "Weight change is driven by average intake over weeks, not single days.",
+      "A 30-year-old man at 70 kg, 175 cm, moderately active, burns about 2,556 kcal per day."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "tdee calculator, total daily energy expenditure, maintenance calories calculator, calorie deficit calculator",
+    "labels": {
+      "activityLabel": "Activity level",
+      "ageLabel": "Age (years)",
+      "feet": "Feet",
+      "femaleOption": "Female",
+      "genderLabel": "Gender",
+      "goalLabel": "Your goal",
+      "goalTarget": "Daily target for your goal",
+      "heightLabel": "Height",
+      "imperialTab": "Imperial (ft / lb)",
+      "inchUnit": "in",
+      "inches": "Inches",
+      "kcalUnit": "kcal/day",
+      "kgUnit": "kg/week",
+      "maleOption": "Male",
+      "metricTab": "Metric (cm / kg)",
+      "tdeeResult": "Your TDEE (maintenance)",
+      "unitSystem": "Unit system",
+      "weeklyPace": "Expected weekly change",
+      "weightLabel": "Weight"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Activity levels are self-reported and usually overestimated.",
+      "Cannot see muscle mass, so it underestimates muscular people.",
+      "Food labels and portion estimates add 10-20% error to real intake.",
+      "An estimate for planning, not a medical prescription."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free TDEE calculator: find your total daily energy expenditure and your calorie target to lose, maintain or gain weight. Based on Mifflin-St Jeor. Private, no sign-up.",
+    "metaTitle": "TDEE Calculator - Daily Calorie Needs & Goals | JaurTools",
+    "name": "TDEE Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "TDEE is everything you burn in a day: BMR times an activity factor. A 30-year-old man at 70 kg and 175 cm, moderately active, has a TDEE of about 2,556 kcal/day. To lose weight at a steady 0.45 kg per week, the target is 2,056 kcal/day; to gain, 3,056 kcal/day.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your TDEE results",
+    "tagline": "Find your daily calorie needs - and your exact target to lose, maintain or gain weight.",
+    "workedExample": "Male, 30 years, 70 kg, 175 cm, moderate activity, goal: lose weight:\n1. BMR = 10 x 70 + 6.25 x 175 - 5 x 30 + 5 = 1,649 kcal.\n2. TDEE = 1,649 x 1.55 = 2,555.95, about 2,556 kcal/day.\n3. Lose goal: 2,556 - 500 = 2,056 kcal/day.\n4. Expected pace: 500 x 7 / 7,700 = 0.45 kg lost per week.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

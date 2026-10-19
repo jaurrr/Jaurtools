@@ -1,0 +1,267 @@
+<div class="tool-page fin-type-compare">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="cb-price">{{ t('labels.price') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(price()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(price()) }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="cb-price" type="number" inputmode="decimal" min="0" max="10000000" step="500"
+            [ngModel]="price()" (ngModelChange)="setPrice($event)" />
+          <input type="range" min="0" max="100000" step="500" [ngModel]="price()"
+            (ngModelChange)="setPrice($event)" [attr.aria-label]="t('labels.price')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="cb-rebate">{{ t('labels.cashBack') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(cashBack()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(cashBack()) }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="cb-rebate" type="number" inputmode="decimal" min="0" [attr.max]="price()" step="100"
+            [ngModel]="cashBack()" (ngModelChange)="setCashBack($event)" />
+          <input type="range" min="0" [attr.max]="price()" step="100" [ngModel]="cashBack()"
+            (ngModelChange)="setCashBack($event)" [attr.aria-label]="t('labels.cashBack')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="cb-apr-high">{{ t('labels.aprWithCashBack') }}</label>
+          <span class="fin-live-chip">{{ aprCashBack() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ aprCashBack() }}%</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="cb-apr-high" type="number" inputmode="decimal" min="0" max="30" step="0.1"
+            [ngModel]="aprCashBack()" (ngModelChange)="setAprCashBack($event)" />
+          <input type="range" min="0" max="30" step="0.1" [ngModel]="aprCashBack()"
+            (ngModelChange)="setAprCashBack($event)" [attr.aria-label]="t('labels.aprWithCashBack')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="cb-apr-low">{{ t('labels.aprLow') }}</label>
+          <span class="fin-live-chip">{{ aprLow() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ aprLow() }}%</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="cb-apr-low" type="number" inputmode="decimal" min="0" max="30" step="0.1"
+            [ngModel]="aprLow()" (ngModelChange)="setAprLow($event)" />
+          <input type="range" min="0" max="30" step="0.1" [ngModel]="aprLow()"
+            (ngModelChange)="setAprLow($event)" [attr.aria-label]="t('labels.aprLow')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="cb-term">{{ t('labels.termMonths') }}</label>
+          <span class="fin-live-chip">{{ term() }}</span>
+        </div>
+          <span class="fin-live-chip">{{ term() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="cb-term" type="number" inputmode="numeric" min="12" max="84" step="6"
+            [ngModel]="term()" (ngModelChange)="setTerm($event)" />
+          <input type="range" min="12" max="84" step="6" [ngModel]="term()"
+            (ngModelChange)="setTerm($event)" [attr.aria-label]="t('labels.termMonths')" />
+        </div>
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-duel">
+        <div class="fin-duel-card">
+          <span>{{ t('labels.optionCashBack') }}</span>
+          <strong>{{ moneyFmt().format(totalA()) }}</strong>
+          <small>{{ tp('duel.subA', { pay: moneyFmt().format(payA()), interest: moneyFmt().format(interestA()) }) }}</small>
+        </div>
+        <div class="fin-duel-card">
+          <span>{{ t('labels.optionLowApr') }}</span>
+          <strong>{{ moneyFmt().format(totalB()) }}</strong>
+          <small>{{ tp('duel.subB', { pay: moneyFmt().format(payB()), interest: moneyFmt().format(interestB()) }) }}</small>
+        </div>
+      </div>
+      <div class="fin-verdict">
+        <app-icon name="check" />
+        <p>@if (winner() === 'cashback') { {{ t('labels.recommendationCashBack') }} } @else { {{ t('labels.recommendationLowApr') }} } {{ tp('duel.verdictSave', { s: moneyFmt().format(savings()) }) }}</p>
+      </div>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { a: moneyFmt().format(totalA()), b: moneyFmt().format(totalB()), d: moneyFmt().format(savings()) }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l2', { w: winner() === 'cashback' ? t('labels.optionCashBack') : t('labels.optionLowApr') }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.switch', { d: moneyFmt().format(savings()) }) }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+
+
+      <div class="fin-duel">
+        <div class="fin-duel-card">
+          <span>{{ t('labels.optionCashBack') }}</span>
+          <strong>{{ moneyFmt().format(totalA()) }}</strong>
+          <small>{{ tp('duel.subA', { pay: moneyFmt().format(payA()), interest: moneyFmt().format(interestA()) }) }}</small>
+        </div>
+        <div class="fin-duel-card">
+          <span>{{ t('labels.optionLowApr') }}</span>
+          <strong>{{ moneyFmt().format(totalB()) }}</strong>
+          <small>{{ tp('duel.subB', { pay: moneyFmt().format(payB()), interest: moneyFmt().format(interestB()) }) }}</small>
+        </div>
+      </div>
+      <div class="fin-verdict">
+        <app-icon name="check" />
+        <p>@if (winner() === 'cashback') { {{ t('labels.recommendationCashBack') }} } @else { {{ t('labels.recommendationLowApr') }} } {{ tp('duel.verdictSave', { s: moneyFmt().format(savings()) }) }}</p>
+      </div>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { a: moneyFmt().format(totalA()), b: moneyFmt().format(totalB()), d: moneyFmt().format(savings()) }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l2', { w: winner() === 'cashback' ? t('labels.optionCashBack') : t('labels.optionLowApr') }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.switch', { d: moneyFmt().format(savings()) }) }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+        
+        
+        
+        
+        
+        
+        
+      
+    
+      
+    
+      </div>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

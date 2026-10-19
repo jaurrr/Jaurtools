@@ -1,0 +1,245 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="schema-type">{{ t('labels.schemaType') }}</label>
+        <select id="schema-type" [ngModel]="schemaType()" (ngModelChange)="setSchemaType($event)">
+          <option value="FAQPage">{{ t('labels.typeFaq') }}</option>
+          <option value="Organization">{{ t('labels.typeOrganization') }}</option>
+          <option value="Article">{{ t('labels.typeArticle') }}</option>
+          <option value="Product">{{ t('labels.typeProduct') }}</option>
+          <option value="LocalBusiness">{{ t('labels.typeLocalBusiness') }}</option>
+          <option value="WebSite">{{ t('labels.typeWebsite') }}</option>
+        </select>
+      </div>
+
+      @if (schemaType() === 'FAQPage') {
+        <div class="field">
+          <label for="schema-question">{{ t('labels.question') }}</label>
+          <input id="schema-question" type="text" [ngModel]="question()" (ngModelChange)="setQuestion($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-answer">{{ t('labels.answer') }}</label>
+          <textarea class="dv-term-input" id="schema-answer" rows="3" [ngModel]="answer()" (ngModelChange)="setAnswer($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="schema-url-faq">{{ t('labels.url') }}</label>
+          <input id="schema-url-faq" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+      }
+
+      @if (schemaType() === 'Organization') {
+        <div class="field">
+          <label for="schema-name-org">{{ t('labels.name') }}</label>
+          <input id="schema-name-org" type="text" [ngModel]="name()" (ngModelChange)="setName($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-desc-org">{{ t('labels.description') }}</label>
+          <textarea class="dv-term-input" id="schema-desc-org" rows="3" [ngModel]="description()" (ngModelChange)="setDescription($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="schema-url-org">{{ t('labels.url') }}</label>
+          <input id="schema-url-org" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-logo">{{ t('labels.logo') }}</label>
+          <input id="schema-logo" type="url" inputmode="url" dir="ltr" [ngModel]="logo()" (ngModelChange)="setLogo($event)" />
+        </div>
+      }
+
+      @if (schemaType() === 'Article') {
+        <div class="field">
+          <label for="schema-headline">{{ t('labels.headline') }}</label>
+          <input id="schema-headline" type="text" [ngModel]="name()" (ngModelChange)="setName($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-author">{{ t('labels.author') }}</label>
+          <input id="schema-author" type="text" [ngModel]="author()" (ngModelChange)="setAuthor($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-date">{{ t('labels.datePublished') }}</label>
+          <input id="schema-date" type="date" [ngModel]="datePublished()" (ngModelChange)="setDatePublished($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-desc-art">{{ t('labels.description') }}</label>
+          <textarea class="dv-term-input" id="schema-desc-art" rows="3" [ngModel]="description()" (ngModelChange)="setDescription($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="schema-url-art">{{ t('labels.url') }}</label>
+          <input id="schema-url-art" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+      }
+
+      @if (schemaType() === 'Product') {
+        <div class="field">
+          <label for="schema-name-prod">{{ t('labels.name') }}</label>
+          <input id="schema-name-prod" type="text" [ngModel]="name()" (ngModelChange)="setName($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-desc-prod">{{ t('labels.description') }}</label>
+          <textarea class="dv-term-input" id="schema-desc-prod" rows="3" [ngModel]="description()" (ngModelChange)="setDescription($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="schema-price">{{ t('labels.price') }}</label>
+          <input id="schema-price" type="text" inputmode="decimal" [ngModel]="price()" (ngModelChange)="setPrice($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-currency">{{ t('labels.priceCurrency') }}</label>
+          <input id="schema-currency" type="text" dir="ltr" maxlength="3" [ngModel]="priceCurrency()" (ngModelChange)="setPriceCurrency($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-avail">{{ t('labels.availability') }}</label>
+          <select id="schema-avail" [ngModel]="availability()" (ngModelChange)="setAvailability($event)">
+            <option value="in">{{ t('labels.availInStock') }}</option>
+            <option value="out">{{ t('labels.availOutOfStock') }}</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="schema-url-prod">{{ t('labels.url') }}</label>
+          <input id="schema-url-prod" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+      }
+
+      @if (schemaType() === 'LocalBusiness') {
+        <div class="field">
+          <label for="schema-name-lb">{{ t('labels.name') }}</label>
+          <input id="schema-name-lb" type="text" [ngModel]="name()" (ngModelChange)="setName($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-desc-lb">{{ t('labels.description') }}</label>
+          <textarea class="dv-term-input" id="schema-desc-lb" rows="3" [ngModel]="description()" (ngModelChange)="setDescription($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="schema-phone">{{ t('labels.phone') }}</label>
+          <input id="schema-phone" type="tel" inputmode="tel" dir="ltr" [ngModel]="phone()" (ngModelChange)="setPhone($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-address">{{ t('labels.address') }}</label>
+          <input id="schema-address" type="text" [ngModel]="address()" (ngModelChange)="setAddress($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-url-lb">{{ t('labels.url') }}</label>
+          <input id="schema-url-lb" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+      }
+
+      @if (schemaType() === 'WebSite') {
+        <div class="field">
+          <label for="schema-name-ws">{{ t('labels.name') }}</label>
+          <input id="schema-name-ws" type="text" [ngModel]="name()" (ngModelChange)="setName($event)" />
+        </div>
+        <div class="field">
+          <label for="schema-url-ws">{{ t('labels.url') }}</label>
+          <input id="schema-url-ws" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+      }
+
+      <h3 class="output-heading">{{ t('labels.outputLabel') }}</h3>
+      <pre class="output-box code-preview" dir="ltr">{{ jsonLd() }}</pre>
+
+      <div class="btn-row">
+        <button type="button" class="btn" (click)="copyJson()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedButton') : t('labels.copyButton') }}
+        </button>
+        <button type="button" class="btn ghost" (click)="downloadJson()">
+          <app-icon name="download" /> {{ t('labels.downloadButton') }}
+        </button>
+      </div>
+
+      <p class="note">{{ t('labels.installNote') }}</p>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

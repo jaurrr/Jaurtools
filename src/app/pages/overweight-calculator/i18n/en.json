@@ -1,0 +1,106 @@
+{
+  "overweight-calculator": {
+    "assumptionNote": "Severity classes follow WHO adult BMI cut-offs. They screen risk; they do not diagnose disease.",
+    "benefits": [
+      "Turns an abstract BMI into a concrete kilo target.",
+      "Severity classes show honestly where you stand.",
+      "The timeline math makes the goal feel achievable.",
+      "Free and private - no app asking for your email."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on your height. At 170 cm, 10 kg over the healthy ceiling is roughly 3.5 BMI points into overweight or obesity class I. This calculator converts your exact excess into BMI points.",
+        "q": "How overweight is 10 kg over?"
+      },
+      {
+        "a": "The 'obesity paradox' is mostly a statistical artifact - illness causes weight loss, not the reverse. For most adults, the healthy range (18.5-24.9) carries the lowest risk.",
+        "q": "Is it better to be slightly overweight?"
+      },
+      {
+        "a": "About 0.5 kg per week through a modest deficit. Faster loss usually costs muscle and rebounds. At that pace, 13 kg takes about 6 months.",
+        "q": "How fast should I lose the excess?"
+      },
+      {
+        "a": "Then BMI overstates your risk. Muscular people often land in 'overweight' while lean. Use body-fat percentage instead.",
+        "q": "What if I am muscular?"
+      },
+      {
+        "a": "Yes - belly fat drives most of the risk. Two people at BMI 29 can have very different risk if one carries it at the waist.",
+        "q": "Does where I carry weight matter?"
+      },
+      {
+        "a": "At BMI 30+, or with symptoms like breathlessness, joint pain, or high blood pressure. A doctor can check blood sugar and lipids and rule out thyroid or medication causes.",
+        "q": "When should I see a doctor?"
+      }
+    ],
+    "formula": "BMI = weight(kg) / height(m) squared\nHealthy ceiling = 24.9 x height(m) squared\nExcess = weight - healthy ceiling (if above)\n\nExample: 170 cm, 85 kg\nBMI = 85 / (1.70 x 1.70) = 85 / 2.89 = 29.4\nCeiling = 24.9 x 2.89 = 72.0 kg\nExcess = 85 - 72.0 = 13.0 kg",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick Metric or Imperial and enter your height and weight.",
+      "Your BMI and severity category appear instantly.",
+      "Read your healthy-weight ceiling and the exact excess to lose.",
+      "Set a target inside the healthy range, not at its edge.",
+      "Recheck monthly - a falling trend beats any single number."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Overweight = BMI 25-29.9. Obesity starts at 30: class I (30-34.9), class II (35-39.9), class III (40+).",
+      "Health risks climb with each class: blood pressure, diabetes, and joint load all rise.",
+      "Even a 5-10% weight loss measurably improves blood pressure and blood sugar.",
+      "Waist matters too: above 102 cm (men) or 88 cm (women) adds risk at any BMI.",
+      "Muscle can push BMI up unfairly - athletes should check body fat instead.",
+      "Children use percentile charts, not these adult cut-offs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "overweight calculator, how overweight am i, obesity calculator, bmi overweight chart, weight to lose calculator",
+    "labels": {
+      "bmi": "Your BMI",
+      "categories": {
+        "healthy": "Healthy",
+        "obese1": "Obesity class I",
+        "obese2": "Obesity class II",
+        "obese3": "Obesity class III",
+        "overweight": "Overweight",
+        "underweight": "Underweight"
+      },
+      "category": "Category",
+      "excessWeight": "Excess to lose",
+      "feet": "Feet",
+      "healthyCeiling": "Healthy weight ceiling",
+      "heightImperial": "Height (feet + inches)",
+      "heightMetric": "Height (cm)",
+      "imperialTab": "Imperial (ft / lb)",
+      "inches": "Inches",
+      "metricTab": "Metric (cm / kg)",
+      "unitSystem": "Unit system",
+      "weightImperial": "Weight (lb)",
+      "weightMetric": "Weight (kg)",
+      "weightUnitImperial": "lb",
+      "weightUnitMetric": "kg"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "BMI cannot tell fat from muscle - check the lean-body-mass calculator if you train.",
+      "The same BMI can mean different risks at different ages and ethnicities.",
+      "It does not measure belly fat, the riskiest kind.",
+      "Not for children or pregnant women without a doctor."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Check your overweight severity: BMI, category, and the exact kilos to lose for a healthy range. Free, instant, 100% private.",
+    "metaTitle": "Overweight Calculator - How Overweight Am I? | JaurTools",
+    "name": "Overweight Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "At 170 cm and 85 kg your BMI is 29.4 - overweight, just under the obesity line of 30. Your healthy ceiling is 72.0 kg, so about 13.0 kg stands between you and the healthy range. A steady loss of 0.5 kg per week closes that gap in roughly 6 months.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your overweight assessment",
+    "tagline": "See how far your BMI is from the healthy range - and exactly how much weight that means.",
+    "workedExample": "Height 170 cm, weight 85 kg:\n1. Height squared: 1.70 x 1.70 = 2.89.\n2. BMI: 85 / 2.89 = 29.4 - Overweight (25-29.9).\n3. Healthy ceiling: 24.9 x 2.89 = 72.0 kg.\n4. Excess: 85 - 72.0 = 13.0 kg to reach the healthy range.\n5. At 0.5 kg per week: 13 / 0.5 = 26 weeks, about 6 months.",
+    "workedExampleHeading": "Worked example"
+  }
+}

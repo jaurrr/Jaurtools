@@ -1,0 +1,91 @@
+{
+  "hex-to-rgba-converter": {
+    "benefits": [
+      "Convert any HEX code to RGBA with an opacity slider.",
+      "Outputs both rgba() CSS and 8-digit HEX — the two modern transparency formats.",
+      "A checkerboard preview shows exactly how transparent the color is.",
+      "If you paste an 8-digit HEX, the tool reads the alpha from the code itself.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The last two digits of an 8-digit HEX are the alpha channel in base 16. 80 hex = 128 decimal, and 128/255 = 0.50, so the color is 50% opaque. FF is fully opaque, 00 is fully transparent.",
+        "q": "How does 8-digit HEX store transparency?"
+      },
+      {
+        "a": "Use rgba() when you need the widest compatibility and readable code. Use 8-digit HEX when you want compact values, for example in design tokens. They describe the same color.",
+        "q": "Should I use rgba() or 8-digit HEX?"
+      },
+      {
+        "a": "Yes — paste codes like #4f46e580. The tool detects the 8-digit form and reads the alpha from the last two digits; the opacity slider is then ignored because the code already defines transparency.",
+        "q": "Can I paste an 8-digit HEX as input?"
+      },
+      {
+        "a": "At 0% the color is fully transparent — invisible on the checkerboard, which is correct behavior. The rgba() and 8-digit HEX values are still valid and copyable.",
+        "q": "What happens at 0% opacity?"
+      },
+      {
+        "a": "No — the conversion math runs locally in JavaScript. Nothing leaves your device.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "alpha = opacity / 100\nrgba(R, G, B, alpha)\n8-digit HEX = RRGGBB + round(alpha x 255) in base 16\n(if input is already 8-digit, alpha is read from its last two digits)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste a HEX code (3, 6 or 8 digits).",
+      "Move the opacity slider to set transparency (0-100%).",
+      "Read the rgba() value and the 8-digit HEX.",
+      "Check the checkerboard preview to see the transparency.",
+      "Click a copy button to use the value in your CSS."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "RGBA adds an alpha channel (0 to 1) to any RGB color.",
+      "8-digit HEX stores alpha in its last two base-16 digits.",
+      "100% opacity means fully opaque; 0% means fully transparent.",
+      "The checkerboard background is the standard way to preview transparency.",
+      "Pasting an 8-digit HEX lets the code itself define the alpha."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "hex to rgba, hex to rgb with opacity, 8 digit hex, rgba converter, hex transparency",
+    "labels": {
+      "alphaValue": "Alpha value",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyLabel": "Copy",
+      "hex8Out": "8-digit HEX",
+      "hexHint": "Accepted: #fff, #ffffff, or #ffffffff (8-digit sets its own alpha).",
+      "hexLabel": "HEX color",
+      "hexPlaceholder": "#4f46e5",
+      "invalidInput": "That does not look like a valid HEX code. Try #4f46e5.",
+      "opacity": "Opacity",
+      "opacityHint": "Ignored when the input is already an 8-digit HEX code.",
+      "previewAlt": "Transparency preview on a checkerboard",
+      "rgbaOut": "RGBA"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The preview is approximate — real rendering depends on what is behind the element.",
+      "Very old browsers may not support 8-digit HEX; rgba() is safer there.",
+      "Alpha is rounded to two decimals in rgba() output.",
+      "Only HEX input is accepted; for other formats use the color code converter."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free HEX to RGBA converter: add opacity to any HEX color. Get rgba() and 8-digit HEX instantly with a transparency preview.",
+    "metaTitle": "HEX to RGBA Converter | JaurTools",
+    "name": "HEX to RGBA Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type any HEX code and drag the opacity slider to convert it to RGBA. The tool outputs both the rgba() CSS value and the 8-digit HEX form, with a checkerboard preview showing exactly how transparent the color is. Paste an 8-digit HEX and the tool reads the alpha from the code itself.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your RGBA conversion",
+    "tagline": "Add opacity to any HEX color — rgba() and 8-digit HEX, with a live preview.",
+    "workedExample": "Convert #4f46e5 at 50% opacity.\nHEX pairs: 4f = 79, 46 = 70, e5 = 229.\nAlpha = 50/100 = 0.50.\nrgba() result: rgba(79, 70, 229, 0.5).\n8-digit HEX: round(0.50 x 255) = round(127.5) = 128 = 0x80, so #4f46e580.\nBoth values describe the same semi-transparent indigo.",
+    "workedExampleHeading": "Worked example"
+  }
+}

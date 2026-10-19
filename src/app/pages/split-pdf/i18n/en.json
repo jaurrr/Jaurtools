@@ -1,0 +1,104 @@
+{
+  "split-pdf": {
+    "benefits": [
+      "Break a long PDF into chapters, sections or single pages.",
+      "Pull out just the pages you need instead of sharing the whole file.",
+      "Every output is a clean, standalone PDF that opens anywhere.",
+      "Batch mode packs many outputs into one ZIP download.",
+      "Nothing is uploaded — splitting happens on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Ranges mode: type 1-4,5-8,9-12 and you get three PDFs — pages 1–4, 5–8 and 9–12. Each comma-separated group becomes its own file.",
+        "q": "How do I split a PDF into chapters?"
+      },
+      {
+        "a": "Extract mode: type the page numbers, e.g. 2,7,11, and the tool builds one PDF containing exactly those pages in that order.",
+        "q": "How do I pull out specific pages?"
+      },
+      {
+        "a": "Yes — everything is copied with pdf-lib, including vector text, images and fonts, so quality is identical to the original.",
+        "q": "Do the split pages keep their quality?"
+      },
+      {
+        "a": "A single output downloads directly as a PDF. Multiple outputs are bundled into one ZIP so you get everything in a single download.",
+        "q": "How do I download the results?"
+      },
+      {
+        "a": "Overlapping or repeated pages are allowed — each group is built independently, so page 3 can appear in two different outputs if you ask for it.",
+        "q": "Can ranges overlap?"
+      },
+      {
+        "a": "The tool reads the page count from the PDF itself and ignores numbers outside 1…N, so invalid entries are skipped rather than crashing.",
+        "q": "What if I type a wrong page number?"
+      }
+    ],
+    "formula": "outputs = number of comma-separated groups\ngroup_pages = every page p with lo ≤ p ≤ hi\n\nExample: a 12-page PDF with ranges “1-4,5-8,9-12” → 3 outputs of 4 pages each. Extract mode “2,7,11” → 1 output with 3 pages.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload your PDF (up to 50 MB) and see its page count.",
+      "Choose a mode: every page separately, custom ranges, or extract specific pages.",
+      "For ranges, type groups like 1-4,5-8,9-12; for extract, type pages like 2,7,11.",
+      "Click split to build the new PDFs.",
+      "Download the single PDF, or the ZIP containing all outputs."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Three split modes: every page as its own PDF, custom page ranges, or extracting hand-picked pages.",
+      "Ranges use familiar notation — 1-4 means pages 1 through 4, and commas separate groups.",
+      "Each output is a real standalone PDF built with pdf-lib, preserving text, images and fonts.",
+      "Multiple outputs are packed into a single ZIP archive for one convenient download.",
+      "Page numbers outside the document's range are ignored safely; files up to 50 MB are supported."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "split pdf, split pdf pages, extract pages from pdf, divide pdf, pdf splitter online free",
+    "labels": {
+      "busy": "Splitting PDF, please wait…",
+      "downloadOne": "PDF",
+      "errParse": "Could not read this PDF. It may be corrupted or password-protected.",
+      "errProcess": "Something went wrong while splitting.",
+      "errRanges": "Type at least one valid page or range.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "extractHint": "One PDF is built containing exactly these pages, in this order.",
+      "extractLabel": "Pages to extract",
+      "extractPh": "e.g. 2,7,11",
+      "fileHint": "PDF file, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "modeAll": "Every page",
+      "modeExtract": "Extract pages",
+      "modeLabel": "Split mode",
+      "modeRanges": "Page ranges",
+      "rangesHint": "Each group becomes its own PDF file.",
+      "rangesLabel": "Page ranges",
+      "rangesPh": "e.g. 1-4,5-8,9-12",
+      "splitButton": "Split PDF",
+      "statusDone": "Created {n} PDF file(s).",
+      "statusLoaded": "This PDF has {n} page(s)."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Bookmarks and links that span the split point are not carried into the new files.",
+      "Interactive form fields are copied with the pages but may behave differently outside the original.",
+      "Password-protected PDFs that need a password prompt cannot be split.",
+      "Very large PDFs split into hundreds of single pages may take a while on phones."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Split PDFs online for free. Break into chapters, extract specific pages, or save every page separately. Runs 100% in your browser.",
+    "metaTitle": "Split PDF — Extract Pages & Split into Chapters Free",
+    "name": "Split PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF and split it three ways: every page as its own file, custom ranges like 1-4,5-8,9-12 for chapters, or hand-picked pages like 2,7,11 extracted into one PDF. Multiple outputs arrive bundled in a single ZIP — all processed locally, nothing uploaded.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Split PDF results",
+    "tagline": "Break PDFs into chapters or pull out the pages you need.",
+    "workedExample": "A 12-page ebook, ranges mode, input “1-4,5-8,9-12”:\nGroup 1: pages 1–4 → ebook-pages-1-4.pdf (4 pages).\nGroup 2: pages 5–8 → ebook-pages-5-8.pdf (4 pages).\nGroup 3: pages 9–12 → ebook-pages-9-12.pdf (4 pages).\nOutputs: 3 files, bundled as ebook-split.zip.\nExtract mode with “2,7,11” instead → 1 file with exactly 3 pages.",
+    "workedExampleHeading": "Worked example"
+  }
+}

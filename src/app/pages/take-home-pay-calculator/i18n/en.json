@@ -1,0 +1,111 @@
+{
+  "take-home-pay-calculator": {
+    "assumptionNote": "Applies one flat effective tax rate to taxable income (gross minus pre-tax deductions), then subtracts other deductions. Real tax systems are progressive and vary by location. An estimate for planning only.",
+    "benefits": [
+      "Replaces paycheck guesswork with a concrete number before you sign an offer.",
+      "Shows how much pre-tax deductions (like retirement savings) actually save you in tax.",
+      "Makes pay frequencies comparable - monthly vs biweekly is not the same paycheck.",
+      "Free, instant, and private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use your effective rate, not your marginal bracket: total tax paid divided by total income. If you paid $12,000 on $60,000, your effective rate is 20% - even if your top dollars were taxed at 22%. Your pay stub or last tax return shows the real number.",
+        "q": "What tax rate should I enter?"
+      },
+      {
+        "a": "Pre-tax deductions - 401(k) contributions, HSA contributions, some insurance premiums - come out before tax is calculated, so they shrink your taxable income. A $3,000 pre-tax deduction at an 18% rate saves you $540 in tax, on top of the $3,000 itself.",
+        "q": "How do pre-tax deductions help?"
+      },
+      {
+        "a": "Marginal rate is the tax on your next dollar; effective rate is your average across all dollars. Progressive systems tax the first dollars at low rates and only the top slice at your bracket rate. This calculator uses one effective rate, which is why it is an estimate.",
+        "q": "Marginal vs effective tax rate?"
+      },
+      {
+        "a": "Withholding is often slightly off - too much and you get a refund, too little and you owe. This calculator estimates your true liability; if your actual withholding differs a lot, adjust your W-4 (US) or the equivalent form in your country.",
+        "q": "Why does my paycheck differ from this?"
+      },
+      {
+        "a": "Roughly 20 to 30% of gross for a typical middle-income earner in the US, depending on state and benefits. Enter your real effective rate from last year's return for the honest number.",
+        "q": "How much of my paycheck goes to taxes?"
+      },
+      {
+        "a": "No. This shows gross-to-net on the tax and deduction side only. Overtime, bonuses, and commissions raise the gross - enter your expected total annual gross including them for the full picture.",
+        "q": "Does this include overtime and bonuses?"
+      }
+    ],
+    "formula": "Taxable income = gross - pre-tax deductions.\nTax = taxable income x (effective rate / 100).\nNet annual = gross - tax - other deductions.\nPer paycheck = net annual / paychecks per year (12, 26, or 52).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your gross annual salary before any deductions.",
+      "Enter your effective tax rate as a percentage (total tax / total income).",
+      "Enter pre-tax deductions like retirement or HSA contributions.",
+      "Enter other annual deductions like insurance premiums.",
+      "Pick your pay frequency and read your take-home per paycheck."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Take-home pay = gross pay minus taxes minus deductions.",
+      "Pre-tax deductions shrink taxable income, so they save you tax at your effective rate.",
+      "Effective tax rate = total tax / total income - use this, not your marginal bracket.",
+      "Monthly = 12 paychecks, biweekly = 26, weekly = 52.",
+      "A flat-rate estimate cannot capture progressive brackets exactly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "take home pay calculator, paycheck calculator, net pay calculator, salary after tax calculator, gross to net calculator",
+    "labels": {
+      "annualGross": "Gross annual salary ($)",
+      "estimatedTax": "Estimated tax",
+      "freqBiweekly": "Biweekly (26 pays)",
+      "freqMonthly": "Monthly (12 pays)",
+      "freqWeekly": "Weekly (52 pays)",
+      "netAnnual": "Net annual pay",
+      "otherDeductions": "Other annual deductions ($)",
+      "payFrequency": "Pay frequency",
+      "perPaycheck": "Take-home per paycheck",
+      "preTax": "Pre-tax deductions ($)",
+      "taxRate": "Effective tax rate (%)",
+      "taxableIncome": "Taxable income"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses one flat rate; real systems are progressive with brackets.",
+      "Does not know your state, city, or country tax rules.",
+      "Ignores overtime, bonuses, and mid-year changes.",
+      "An estimate for planning, not tax advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free take-home pay calculator: find your net paycheck after taxes and deductions, for any pay frequency. Instant and private.",
+    "metaTitle": "Take-Home Pay Calculator - Net Paycheck | JaurTools",
+    "name": "Take-Home Pay Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Take-home pay is what survives taxes and deductions: net = gross - tax - deductions, where tax applies to taxable income (gross minus pre-tax deductions). For example, a $60,000 salary with an 18% effective rate, $3,000 in pre-tax deductions, and $1,200 in other deductions gives taxable income of $57,000, tax of $10,260, and net annual pay of $48,540 - which is $4,045.00 a month, $1,866.92 biweekly, or $933.46 weekly. Pre-tax deductions do double duty: they save for retirement and shrink your tax bill.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your take-home pay",
+    "tagline": "Net pay after taxes and deductions, for any pay frequency.",
+    "workedExample": "$60,000 gross, 18% effective rate, $3,000 pre-tax, $1,200 other deductions:\n1. Taxable income = 60,000 - 3,000 = $57,000.\n2. Tax = 57,000 x 0.18 = $10,260.\n3. Net annual = 60,000 - 10,260 - 1,200 = $48,540.\n4. Monthly = 48,540 / 12 = $4,045.00.\n5. Biweekly = 48,540 / 26 = $1,866.92.\n6. Weekly = 48,540 / 52 = $933.46.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "perPaycheck": "Take-home per paycheck",
+      "netAnnual": "Net annual",
+      "grossAnnual": "Gross annual",
+      "freqNote": "paid {freq}"
+    },
+    "payslip": {
+      "heading": "Your payslip",
+      "preTax": "Pre-tax deductions",
+      "other": "Other deductions",
+      "perCheck": "Per paycheck"
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "Each {freq} paycheck starts at {gross}; after {tax} tax and {deduct} deductions, you keep {net}.",
+      "l2": "You keep {pct}% of every dollar you earn."
+    }
+  }
+}

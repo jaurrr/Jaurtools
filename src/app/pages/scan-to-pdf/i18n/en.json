@@ -1,0 +1,104 @@
+{
+  "scan-to-pdf": {
+    "benefits": [
+      "Turn paper documents into PDFs with your phone camera — no scanner needed.",
+      "Capture many pages, reorder them, then build one clean PDF.",
+      "No scanner app to install and no document ever uploaded.",
+      "Each page is fitted neatly onto A4 with margins, ready to print or share.",
+      "Prefer files? Upload existing photos instead of using the camera."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Hold the phone steady above the page, fill the frame, and tap capture in good light. The tool grabs the video frame as a JPEG at your camera's resolution.",
+        "q": "How do I get a good scan?"
+      },
+      {
+        "a": "Camera access needs a secure page (HTTPS) and your permission. If the browser blocks it, use the upload option with photos from your camera app instead.",
+        "q": "Why is my camera not working?"
+      },
+      {
+        "a": "Yes. Capture pages in any order, then use the move-up buttons to reorder the thumbnails before building the PDF.",
+        "q": "Can I reorder the pages?"
+      },
+      {
+        "a": "This is a camera-to-PDF tool, not OCR software — the pages stay as images. Text stays readable when you scan at good resolution, but it is not selectable.",
+        "q": "Is the text in the PDF selectable?"
+      },
+      {
+        "a": "JPEG at 92% quality keeps photos crisp while staying compact. A typical phone photo becomes a few hundred kilobytes per PDF page.",
+        "q": "What quality are the scans?"
+      },
+      {
+        "a": "No. The stream goes from your camera straight to the page preview; frames are captured locally and never transmitted.",
+        "q": "Is my camera feed recorded anywhere?"
+      }
+    ],
+    "formula": "scale = min((A4W − 2×margin) / imgWpt, (A4H − 2×margin) / imgHpt, 1)\nimgWpt = pixels × 72 / 96\n\nExample: a 4032×3024 px photo → 3024 × 2268 pt.\nscale = min(523.28/3024, 769.89/2268) = min(0.173, 0.339) = 0.173.\nPlaced: 523.3 × 392.4 pt, centered at x=36, y=224.7 on the A4 page.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose camera mode and allow camera access when asked.",
+      "Point at the document and tap capture for each page.",
+      "Or switch to upload mode and pick existing photos.",
+      "Reorder thumbnails with the move buttons; remove mistakes.",
+      "Click create to build the PDF and download it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Camera mode uses getUserMedia to stream your device camera and capture full-resolution frames.",
+      "Upload mode accepts PNG and JPG images up to 15 MB each as an alternative to the camera.",
+      "Captured pages can be reordered and removed before the PDF is built.",
+      "Each image is centered on an A4 page with 36 pt margins, scaled to fit without distortion.",
+      "The PDF is assembled locally with pdf-lib; nothing is ever uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "scan to pdf, camera to pdf, photo to pdf, mobile scanner pdf, scan documents phone free",
+    "labels": {
+      "busy": "Building PDF, please wait…",
+      "cameraHint": "Camera works on HTTPS pages. Photos stay on your device.",
+      "captureButton": "Capture page",
+      "createButton": "Create PDF",
+      "errCameraDenied": "Camera access was denied. Allow it in the browser, or use upload mode.",
+      "errImgSize": "{n} is larger than 15 MB and was skipped.",
+      "errImgType": "{n} is not a PNG or JPG and was skipped.",
+      "errNoCamera": "This browser does not support camera access. Use upload mode instead.",
+      "errProcess": "Something went wrong while building the PDF.",
+      "imagesHint": "PNG or JPG, up to 15 MB each. Files never leave your browser.",
+      "imagesLabel": "Photos",
+      "moveUp": "Move up",
+      "removeLabel": "Remove page",
+      "shotAlt": "Page",
+      "sourceCamera": "Camera",
+      "sourceLabel": "Page source",
+      "sourceUpload": "Upload photos",
+      "startButton": "Start camera",
+      "statusDone": "PDF created with {n} page(s).",
+      "statusShot": "Captured page {n}.",
+      "stopButton": "Stop camera",
+      "videoLabel": "Camera preview"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Camera access requires HTTPS and your explicit permission; some browsers block it entirely.",
+      "This tool does not do OCR — scanned pages are images, not selectable text.",
+      "Very high-resolution photos make large PDFs; quality is fixed at JPEG 92%.",
+      "Low light or shaky hands produce blurry scans — retake the photo instead."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Scan documents to PDF with your phone camera for free. Capture pages, reorder them, and build a clean A4 PDF. 100% in your browser.",
+    "metaTitle": "Scan to PDF — Phone Camera Scanner Online Free",
+    "name": "Scan to PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Point your phone camera at a document, capture each page, reorder the thumbnails, and build a clean A4 PDF — all in your browser with nothing uploaded. Prefer existing photos? Upload PNG or JPG files instead and get the same one-click PDF.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Scan to PDF results",
+    "tagline": "Turn your phone into a document scanner.",
+    "workedExample": "You scan 3 receipt photos at 4032×3024 px.\nEach converts to 3024 × 2268 pt (×72/96).\nFit scale: min(523.28/3024, 769.89/2268) = 0.173.\nEach page: image 523.3 × 392.4 pt centered on A4 (x=36, y=224.7).\nResult: scanned-document.pdf with 3 crisp A4 pages, a few hundred KB each.",
+    "workedExampleHeading": "Worked example"
+  }
+}

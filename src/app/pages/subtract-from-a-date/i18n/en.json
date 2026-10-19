@@ -1,0 +1,92 @@
+{
+  "subtract-from-a-date": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Subtract From a Date",
+    "tagline": "Go backwards in time: subtract days, weeks, months or years from any date.",
+    "metaTitle": "Subtract From a Date Calculator - Past Date Finder | JaurTools",
+    "metaDescription": "Subtract days, weeks, months or years from any date with this free calculator. Find the exact past date, weekday and ISO format. Private, no sign-up.",
+    "keywords": "subtract days from date, past date calculator, date minus days, subtract months from date",
+    "quickAnswer": "Going backwards is calendar arithmetic in reverse: move back from the start date by the chosen days, weeks, months or years. For example, 90 days before 18 October 2026 is 20 July 2026, a Monday. Month subtraction keeps the same day number where possible - 1 month before 31 March lands on 3 March (2 March in a leap year), because February has no 31st.",
+    "keyFacts": [
+      "Subtracting days is exact: the calendar moves back one day at a time, so 90 days before 18 October 2026 is 20 July 2026.",
+      "Subtracting months keeps the same day number when the target month has that day. 1 month before 31 May is 30 April, because April has only 30 days.",
+      "Subtracting years keeps the same month and day. 1 year before 29 February 2024 is 28 February 2023.",
+      "Weeks are exact groups of 7 days, so subtracting weeks never changes the weekday: 3 weeks before a Monday is always a Monday.",
+      "Leap years are handled automatically in reverse too."
+    ],
+    "howTo": [
+      "Pick your start date using the date picker.",
+      "Enter how much time you want to subtract, as a whole number.",
+      "Choose the unit: days, weeks, months or years.",
+      "Read the resulting past date, its weekday and its ISO (YYYY-MM-DD) form instantly.",
+      "Use the days-ago figure to see how far in the past the result lies."
+    ],
+    "formula": "Result = start date - N units.\nDays: result = start date - N days.\nWeeks: result = start date - (N x 7) days.\nMonths: result month = start month - N (day kept when valid).\nYears: result year = start year - N (same month and day).\nExample: 2026-10-18 - 90 days = 2026-07-20.",
+    "workedExample": "Start date: 18 October 2026 (a Sunday). Amount: 90, unit: days.\n1. October: 18 - 17 = 1 October (17 days used).\n2. September: 30 more days -> 1 September (47 used).\n3. August: 31 more days -> 1 August (78 used).\n4. July: 12 more days -> 20 July 2026 (90 used).\n5. Weekday: 90 = 12 weeks + 6 days back, so Sunday - 6 = Monday.\nResult: 20 July 2026, Monday. ISO: 2026-07-20.",
+    "benefits": [
+      "Find past deadlines, anniversaries and historical dates in one click.",
+      "Month-end and leap-year edge cases handled automatically in reverse.",
+      "The weekday is shown with every result - great for 'what day was...' questions.",
+      "Runs fully in your browser - no account, no tracking, works offline."
+    ],
+    "limitations": [
+      "Month arithmetic follows standard calendar rollover; legal or contract definitions of 'a month ago' may differ.",
+      "Public holidays and business days are not considered - this is pure calendar math.",
+      "Time zones are ignored - the output is a calendar date, not a timestamp.",
+      "Extremely large subtractions can exceed calendar support."
+    ],
+    "faqs": [
+      {
+        "q": "What happens when I subtract 1 month from 31 March?",
+        "a": "You land on 3 March in non-leap years (2 March in leap years). The calendar rolls the invalid 31 February back into March - the mirror image of adding a month to 31 January."
+      },
+      {
+        "q": "Does subtracting weeks change the weekday?",
+        "a": "Never. A week is exactly 7 days in either direction, so 6 weeks before a Wednesday is always a Wednesday."
+      },
+      {
+        "q": "How are leap years handled in reverse?",
+        "a": "Automatically. Subtracting 1 year from 29 February 2024 gives 28 February 2023, and subtracting 4 years gives 29 February 2020."
+      },
+      {
+        "q": "Can I go forward with this tool?",
+        "a": "This tool only moves backwards. To go forward in time, use the Add to a Date tool."
+      },
+      {
+        "q": "What does 'days ago' mean in the results?",
+        "a": "How many days the resulting date lies in the past relative to today - handy for 'how long ago was that?' questions."
+      },
+      {
+        "q": "Is this the same as using a negative number in the Date Calculator?",
+        "a": "Effectively yes for days. This dedicated page also supports weeks, months and years with the same one-click simplicity."
+      }
+    ],
+    "resultsHeading": "Your past date results",
+    "labels": {
+      "startDate": "Start date",
+      "amount": "Amount to subtract",
+      "unit": "Unit",
+      "days": "Days",
+      "weeks": "Weeks",
+      "months": "Months",
+      "years": "Years",
+      "resultDate": "Resulting date",
+      "weekday": "Day of the week",
+      "isoDate": "ISO date (YYYY-MM-DD)",
+      "daysAgo": "Days ago"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "roman-numeral-converter": {
+    "benefits": [
+      "Converts both ways: numbers to Roman and Roman to numbers.",
+      "Validates Roman input — no wrong answers from typos.",
+      "Shows the value breakdown for learning.",
+      "Handles the full standard range 1 to 3999.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Roman numerals are the ancient Roman number system: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. They are still used on clocks, book chapters and movie sequels.",
+        "q": "What are Roman numerals?"
+      },
+      {
+        "a": "Subtractive pairs avoid repeating a symbol four times: 4 is IV (not IIII) and 900 is CM (not DCCCC). Smaller-before-larger means subtract.",
+        "q": "Why is 4 written as IV?"
+      },
+      {
+        "a": "The standard form tops out at 3999 (MMMCMXCIX) because there is no standard symbol above M=1000 in common use. Larger numbers used overlines, which keyboards cannot type.",
+        "q": "Why does the converter stop at 3999?"
+      },
+      {
+        "a": "Only in the standard form. Ancient Romans and modern clock faces sometimes used IIII for 4 — the converter accepts only the standard IV.",
+        "q": "Is IIII ever correct for 4?"
+      },
+      {
+        "a": "No. Roman numerals have no symbol for zero and no negative numbers — they were designed for counting physical things.",
+        "q": "Did Romans have a zero?"
+      }
+    ],
+    "formula": "I=1  V=5  X=10  L=50  C=100  D=500  M=1000\nGreedy: take the largest symbol that fits, repeat until done\nSmaller-before-larger subtracts: IV=4, IX=9, XL=40, XC=90, CD=400, CM=900",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Number → Roman or Roman → Number.",
+      "Enter your value.",
+      "The conversion appears instantly.",
+      "Read the breakdown to see how each part adds up.",
+      "Invalid Roman input shows a helpful note instead of a wrong answer."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Seven symbols: I, V, X, L, C, D, M.",
+      "Symbols are written from largest to smallest, left to right.",
+      "A smaller symbol before a larger one subtracts: IV = 4.",
+      "No symbol may repeat more than three times in a row.",
+      "The standard range is 1 to 3999."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "roman numeral converter, number to roman numerals, roman numerals to numbers, roman numeral chart, convert to roman",
+    "labels": {
+      "invalidNote": "Enter a whole number from 1 to 3999, or valid Roman numerals.",
+      "mode": {
+        "numToRoman": "Number → Roman",
+        "romanToNum": "Roman → Number"
+      },
+      "modeLabel": "Conversion direction",
+      "numberLabel": "Number (1–3999)",
+      "resultLabel": "Result",
+      "romanLabel": "Roman numerals"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Standard range only: 1 to 3999.",
+      "No zero, no negatives, no fractions in Roman numerals.",
+      "Non-standard forms like IIII are rejected.",
+      "Input is uppercased automatically — lowercase is accepted."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Roman numeral converter: numbers to Roman numerals and back, 1–3999, with validation. Fully browser-based, no sign-up.",
+    "metaTitle": "Roman Numeral Converter — Numbers ↔ Roman",
+    "name": "Roman Numeral Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Roman numerals use seven letters: I(1), V(5), X(10), L(50), C(100), D(500), M(1000). To convert, take the largest symbol that fits and repeat — 2024 becomes MMXXIV. A smaller symbol before a larger one subtracts, so IV is 4 and CM is 900.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Conversion result",
+    "tagline": "Convert between numbers and Roman numerals.",
+    "workedExample": "Convert 2024 to Roman numerals.\n\n2000 = MM (2 × 1000).\n20 = XX (2 × 10).\n4 = IV.\n\n2024 = MM + XX + IV = MMXXIV.\n\nReading back: MMXXIV = 1000 + 1000 + 10 + 10 + 4 = 2024. Correct.",
+    "workedExampleHeading": "Worked example"
+  }
+}

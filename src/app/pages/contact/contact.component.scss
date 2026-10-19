@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.contact-page {
+  max-width: 44rem;
+  margin-inline: auto;
+  padding: 2.5rem 1rem 1rem;
+}
+
+.contact-page h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  letter-spacing: -0.01em;
+}
+
+.contact-page p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.contact-page p:first-of-type {
+  color: var(--text);
+}
+
+.email-link {
+  margin-top: 1.25rem;
+  word-break: break-all;
+}

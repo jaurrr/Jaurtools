@@ -1,0 +1,91 @@
+{
+  "payback-period-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Payback Period Calculator",
+    "tagline": "Find how many years it takes for an investment to pay for itself, simple and discounted.",
+    "metaTitle": "Payback Period Calculator - Simple & Discounted | JaurTools",
+    "metaDescription": "Free payback period calculator: find simple and discounted payback periods plus NPV for any investment with steady cash inflows.",
+    "keywords": "payback period calculator, discounted payback calculator, investment payback calculator, npv calculator",
+    "resultsHeading": "Your payback results",
+    "quickAnswer": "Simple payback = initial cost / annual cash inflow. Discounted payback does the same with each year's inflow reduced by the discount rate, so it is always longer. Example: a 500,000 investment earning 150,000 per year pays back in 3.33 years simply, but 4.26 years at a 10% discount rate. Discounted payback is the honest number when money has a time value.",
+    "keyFacts": [
+      "The payback period is the time needed for cumulative cash inflows to equal the initial investment.",
+      "Simple payback ignores the time value of money; discounted payback discounts each future inflow.",
+      "Discounted payback is always equal to or longer than simple payback.",
+      "Shorter payback means lower risk: your money is exposed for less time.",
+      "Payback ignores all cash flows after the payback point, which is its biggest weakness.",
+      "Pair payback with NPV: payback for risk, NPV for total value created."
+    ],
+    "howTo": [
+      "Enter the total initial investment cost.",
+      "Enter the expected annual cash inflow (use a realistic average).",
+      "Enter your discount rate: your cost of capital or required return.",
+      "Enter the project's expected life in years for the NPV calculation.",
+      "Compare simple vs discounted payback, and check that NPV is positive."
+    ],
+    "formula": "Simple payback = Initial cost / Annual cash inflow.\nDiscounted payback: the smallest T where the sum of (Cash inflow / (1 + r)^t) for t = 1..T reaches the initial cost.\nNPV = sum of discounted inflows over project life - Initial cost.\nExample: 500,000 / 150,000 = 3.33 years simple; discounted at 10% = 4.26 years.",
+    "workedExample": "Cost 500,000, inflow 150,000 per year, discount rate 10%:\n1. Simple payback: 500,000 / 150,000 = 3.33 years.\n2. Discounted inflows: year 1 = 136,364; year 2 = 123,967; year 3 = 112,697; year 4 = 102,452.\n3. Cumulative after 4 years: 475,479, still short of 500,000.\n4. Year 5 inflow = 93,138; need 24,521 more, which is 24,521 / 93,138 = 0.26 of year 5.\n5. Discounted payback = 4.26 years.\nThe discount rate adds almost a full year versus the simple figure.",
+    "benefits": [
+      "Answers the first question every investor asks: when do I get my money back?",
+      "Discounted version respects the time value of money, unlike the simple rule.",
+      "NPV row tells you whether the project creates value at all.",
+      "Simple enough to sanity-check any business case in seconds."
+    ],
+    "limitations": [
+      "Assumes constant annual inflows; real projects are lumpy.",
+      "Payback ignores everything earned after the payback point.",
+      "The discount rate is a judgment call and changes the answer.",
+      "Not investment advice: do full due diligence before committing capital."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between simple and discounted payback?",
+        "a": "Simple payback divides cost by annual inflow and ignores that future money is worth less than money today. Discounted payback first reduces each year's inflow by the discount rate, then accumulates. The discounted figure is always longer and is the more honest measure."
+      },
+      {
+        "q": "What is a good payback period?",
+        "a": "It depends on the industry and risk. Many small businesses want payback within 2 to 3 years; equipment investments often accept 3 to 5 years; infrastructure projects can run 10 years or more. Shorter is safer, but never judge on payback alone."
+      },
+      {
+        "q": "Why show NPV too?",
+        "a": "Because payback stops counting the moment you break even. A project that pays back in 4 years then earns nothing for 20 years looks identical on payback to one that pays back in 4 years then earns millions. NPV counts the whole life, so the two together give risk and value."
+      },
+      {
+        "q": "What discount rate should I use?",
+        "a": "Use your cost of capital or your required rate of return: what the money could earn elsewhere at similar risk. Common choices are 8 to 12% for business projects. A higher rate punishes distant cash flows and lengthens discounted payback."
+      },
+      {
+        "q": "What if it never pays back?",
+        "a": "The tool reports that it never pays back. That happens when annual inflows are zero, or when the discount rate is so high that discounted inflows never reach the cost. Either way, the project destroys value at that discount rate."
+      },
+      {
+        "q": "Can I use this for a rental property?",
+        "a": "Yes, as a rough screen: enter the purchase price as the cost and the expected annual net cash flow as the inflow. For a full property analysis, use the rental property calculator, which handles financing, vacancy, and cap rate properly."
+      }
+    ],
+    "labels": {
+      "cost": "Initial investment cost",
+      "annualInflow": "Annual cash inflow",
+      "discountRate": "Discount rate (% per year)",
+      "projectLife": "Project life (years)",
+      "simplePayback": "Simple payback period",
+      "discountedPayback": "Discounted payback period",
+      "npv": "Net present value (NPV)",
+      "yearsUnit": "years",
+      "neverPaysBack": "Never pays back"
+    }
+  }
+}

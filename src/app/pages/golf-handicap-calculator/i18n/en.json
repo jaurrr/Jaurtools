@@ -1,0 +1,93 @@
+{
+  "golf-handicap-calculator": {
+    "assumptionNote": "Uses the World Handicap System (WHS) method: score differentials from your last rounds, adjusted by the course and slope ratings of each round. Official handicaps require membership in a golf association; this is a close estimate for casual play.",
+    "benefits": [
+      "Track improvement over time. A falling index is proof your practice is working.",
+      "Play fairly against golfers of any level: handicaps level the match.",
+      "Know which of your recent rounds count toward the index.",
+      "Get a number comparable to official WHS handicaps."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "At least 3 to compute anything, and 20 for a full index. This calculator accepts 3 to 20 scores and follows the WHS table for how many of your best differentials count.",
+        "q": "How many scores do I need?"
+      },
+      {
+        "a": "If everyone has an index, you usually get one stroke per round equal to your index, applied on the hardest holes. Course Handicap = Handicap Index x Slope / 113 + (Course Rating - Par).",
+        "q": "How do I use my index in a match?"
+      },
+      {
+        "a": "Your course handicap. Take your handicap index, multiply by the slope rating, and divide by 113. A higher slope means you get more strokes.",
+        "q": "What is the difference between handicap index and course handicap?"
+      },
+      {
+        "a": "Roughly yes. A lower index means a better golfer. Scratch golfers are near 0. Bogey golfers sit around 18 to 22. Beginners often start at 30 or higher.",
+        "q": "Is a lower handicap always better?"
+      },
+      {
+        "a": "Enter each round as gross adjusted score, separated by commas, spaces, or line breaks. Example: 92, 88, 95, 90, 87. Up to 20 scores - newest rounds are the most meaningful.",
+        "q": "How do I enter my scores?"
+      },
+      {
+        "a": "Most scorecards print the Course Rating (like 71.5) and Slope Rating (like 128) for each tee. Check your club's website too. If you cannot find them, use par for rating and 113 for slope as a rough stand-in.",
+        "q": "Where do I find course and slope ratings?"
+      }
+    ],
+    "formula": "Step 1: Score Differential = (Adjusted Gross Score - Course Rating) x 113 / Slope Rating\nStep 2: Sort differentials, take your best N of the last 20 rounds (WHS table: 3 rounds -> 1, 6 -> 2, 9 -> 3, 12 -> 4, 15 -> 6, 17 -> 7, 19 -> 9, 20 -> 8).\nStep 3: Handicap Index = average of those differentials, minus an adjustment for fewer than 6 rounds (3 rounds: -2, 4 rounds: -1, 6 rounds: -1), rounded to one decimal.\n\nNo 0.96 bonus factor under the 2020 World Handicap System - it is a straight average of your best 8 of 20.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the Course Rating and Slope Rating from your scorecard (for example 71.5 and 128).",
+      "Type 3 to 20 of your recent gross scores, separated by commas or line breaks.",
+      "Your handicap index appears instantly, along with which differentials counted.",
+      "For a course handicap, use: Index x Slope / 113. Try different tees to see the effect."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The World Handicap System (WHS) unified handicap rules worldwide in 2020.",
+      "Handicap Index = the average of your best 8 of the last 20 score differentials.",
+      "Score Differential = (score - course rating) x 113 / slope rating.",
+      "A differential measures how you played relative to that course's difficulty.",
+      "With fewer than 20 rounds, the WHS counts fewer best scores: 3 rounds -> 1, 6 -> 2, 9 -> 3, 12 -> 4, 15 -> 6, 17 -> 7, 19 -> 9.",
+      "An adjustment is subtracted with very few rounds: -2 for 3 rounds, -1 for 4 or 6 rounds.",
+      "A lower index means a better player. Scratch golfers are near 0, beginners often above 30.",
+      "Course Handicap = Index x Slope / 113, which tells you how many strokes you get on that course."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "golf handicap calculator, handicap index calculator, WHS handicap, score differential calculator, golf handicap formula",
+    "labels": {
+      "bestDifferentials": "Best differentials used",
+      "courseRating": "Course Rating",
+      "handicapIndex": "Handicap Index",
+      "invalidInput": "Enter 3 to 20 scores (40-150), a rating of 55-80, and a slope of 55-155.",
+      "roundsUsed": "Best rounds counted",
+      "scores": "Recent gross scores",
+      "scoresEntered": "score(s) entered",
+      "scoresPlaceholder": "e.g. 92, 88, 95, 90, 87",
+      "slopeRating": "Slope Rating"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Not an official handicap. Real ones need a golf association and peer-reviewed rounds.",
+      "Adjusted gross scores cap very high holes (net double bogey); this calculator takes your numbers as-is.",
+      "Weather, tees, and formats like match play are not factored in.",
+      "It estimates your potential from recent scores - one great round does not rewrite the index."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free golf handicap calculator: enter up to 20 scores with course and slope ratings to get your WHS handicap index instantly. Private, no sign-up.",
+    "metaTitle": "Golf Handicap Calculator - WHS Index Calculator | JaurTools",
+    "name": "Golf Handicap Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Your handicap index is the average of your best 8 of your last 20 score differentials. A differential is (score - course rating) x 113 / slope rating. With fewer than 20 rounds, the WHS counts fewer best scores - for example, with 5 rounds only the best 1 counts. Enter your scores, course rating, and slope rating above to see your index instantly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your handicap results",
+    "tagline": "Enter up to 20 recent scores with course and slope ratings to get your WHS handicap index.",
+    "workedExample": "Scores: 92, 88, 95, 90, 87. Course rating 71.5, slope 128.\n1. Differentials: (92-71.5) x 113 / 128 = 18.1; (88-71.5) x 113 / 128 = 14.6; (95-71.5) x 113 / 128 = 20.7; (90-71.5) x 113 / 128 = 16.3; (87-71.5) x 113 / 128 = 13.7.\n2. Sorted: 13.7, 14.6, 16.3, 18.1, 20.7.\n3. With 5 rounds, the WHS counts the best 1, no adjustment.\n4. Handicap Index = 13.7.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "credit-card-payoff-calculator": {
+    "assumptionNote": "Assumes a fixed APR, no new purchases, no fees, and the same payment every month.",
+    "benefits": [
+      "Shows your real debt-free date, not a vague someday.",
+      "Reveals how much of each payment is just interest.",
+      "Proves that small extra payments create huge savings.",
+      "Motivates action — a date on the calendar beats guilt."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It depends on your balance, APR, and monthly payment. A ₹50,000 balance at 36% APR takes 24 months at ₹3,000/month but 47 months at ₹2,000/month. Enter your numbers above for your exact timeline.",
+        "q": "How long will it take to pay off my credit card?"
+      },
+      {
+        "a": "Because at 36% APR, a ₹50,000 balance accrues ₹1,500 in interest each month. If your minimum is ₹1,800, only ₹300 attacks the principal. Minimums are designed to maximize the bank's interest, not your freedom.",
+        "q": "Why does the minimum payment barely reduce my balance?"
+      },
+      {
+        "a": "Both help, but timing matters: extra money paid today saves more interest than the same amount paid next year, because it stops compounding sooner. If you get a bonus, throwing it at the card beats almost any investment return.",
+        "q": "Is it better to pay more monthly or make a lump-sum payment?"
+      },
+      {
+        "a": "Often yes, if the loan rate is far lower — say 12% versus 36%. You swap expensive revolving debt for cheaper fixed debt. The trap: running the card balance back up afterward, which leaves you with both debts. Freeze the card first.",
+        "q": "Should I take a personal loan to clear card debt?"
+      },
+      {
+        "a": "Usually yes. A zero balance lowers your credit utilization ratio, which is a big scoring factor. Keep the card open — length of history helps — but paid off. Closing it can actually hurt your score.",
+        "q": "Does paying off my card improve my credit score?"
+      },
+      {
+        "a": "Then the balance grows forever — you will never pay it off. The calculator warns you in that case. You need a payment above the monthly interest (balance x APR / 12), plus something extra toward the principal.",
+        "q": "What if my payment doesn't cover the monthly interest?"
+      }
+    ],
+    "formula": "Each month: interest = balance x APR/12; new balance = balance + interest - payment.\nRepeat until the balance reaches zero.\nTotal interest = total paid - starting balance.\nIf payment <= monthly interest, the balance never falls — the debt is never repaid.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current card balance.",
+      "Enter the card's annual APR (find it on your statement).",
+      "Enter the fixed amount you will pay every month.",
+      "Read your payoff time, total paid, and total interest."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Credit card APRs of 36–42% are normal in India — among the costliest debt you can carry.",
+      "Interest compounds monthly, so a balance grows even while you pay the minimum.",
+      "Your payment first covers the month's interest; only the rest reduces the balance.",
+      "Paying more than the minimum attacks the principal directly and collapses the timeline.",
+      "Once the balance hits zero, the same monthly amount becomes powerful savings."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "credit card payoff calculator, credit card debt calculator, pay off credit card calculator",
+    "labels": {
+      "andUnit": "and",
+      "apr": "Annual APR (%)",
+      "cardBalance": "Card balance",
+      "monthlyPayment": "Monthly payment",
+      "monthsToPayoff": "Time to become debt-free",
+      "monthsUnit": "months",
+      "payoffWarning": "Your payment does not cover the monthly interest, so this balance would never be paid off. Increase the payment above the monthly interest charge.",
+      "totalInterest": "Total interest paid",
+      "totalPaid": "Total you will pay",
+      "yearsUnit": "years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes no new spending on the card — new purchases restart the clock.",
+      "Ignores late fees, annual fees, and penalty APRs.",
+      "Assumes the APR never changes; most cards are variable-rate.",
+      "Estimates only — your statement's exact terms apply."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free credit card payoff calculator: enter your balance, APR and monthly payment to see your debt-free date, total paid and interest.",
+    "metaTitle": "Credit Card Payoff Calculator - Debt-Free Date | JaurTools",
+    "name": "Credit Card Payoff Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A ₹50,000 balance at 36% APR with ₹3,000 monthly payments takes 24 months to clear and costs ₹70,360 in total — ₹20,360 of that is pure interest. Paying ₹4,000 a month instead would clear it in 16 months and save about ₹6,750 in interest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your credit card payoff plan",
+    "tagline": "Find out how long your credit card balance will take to clear — and what it really costs you.",
+    "workedExample": "Balance ₹50,000, APR 36%, payment ₹3,000/month:\n1. Monthly rate = 0.36 / 12 = 0.03 (3%).\n2. Month 1: interest = 50,000 x 0.03 = ₹1,500; balance = 50,000 + 1,500 - 3,000 = ₹48,500.\n3. Repeating monthly, the balance reaches zero in month 24.\n4. Total paid = ₹70,360.29; interest = 70,360.29 - 50,000 = ₹20,360.29.",
+    "workedExampleHeading": "Worked example"
+  }
+}

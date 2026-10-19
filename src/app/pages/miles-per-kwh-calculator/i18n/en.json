@@ -1,0 +1,96 @@
+{
+  "miles-per-kwh-calculator": {
+    "assumptionNote": "Based on the energy you enter. Home charging adds about 8 to 15% charging loss, so the dashboard number and the wall-meter number differ slightly.",
+    "benefits": [
+      "Compare EVs fairly: the same 4.0 mi/kWh benchmark works across every model.",
+      "Track battery health: a steady drop in efficiency can signal tire, brake, or battery issues.",
+      "Estimate trip cost: multiply kWh used by your electricity rate for the exact charging cost.",
+      "Find your most efficient driving style by testing different speeds and routes."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Miles per kWh = miles driven divided by kWh used. It is the EV version of miles per gallon. Higher is better.",
+        "q": "How do you calculate miles per kWh?"
+      },
+      {
+        "a": "Most efficient EVs get 3.5 to 4.5 mi/kWh. Average drivers see 3.0 to 4.0. Below 2.5 usually means fast highway driving, heavy loads, cold weather, or a very large vehicle.",
+        "q": "What is a good miles per kWh?"
+      },
+      {
+        "a": "Wh per mile = 1000 / mi/kWh. So 4.0 mi/kWh equals 250 Wh/mi. Tesla and many EV dashboards show Wh/mi; this calculator shows both.",
+        "q": "How do I convert mi/kWh to Wh per mile?"
+      },
+      {
+        "a": "Multiply mi/kWh by 1.60934 to get km/kWh. This calculator shows that conversion automatically.",
+        "q": "How do I convert to km per kWh?"
+      },
+      {
+        "a": "Cold air is denser, tire pressure drops, cabin heating uses battery power, and batteries are less efficient when cold. Winter can cut efficiency by 20 to 40 percent.",
+        "q": "Why does my EV lose efficiency in winter?"
+      },
+      {
+        "a": "Roughly: MPGe = mi/kWh x 33.7. So 4.0 mi/kWh is about 135 MPGe. MPGe compares EVs to gasoline cars using the energy in a gallon of gas.",
+        "q": "What is the difference between mi/kWh and MPGe?"
+      }
+    ],
+    "formula": "Miles per kWh = Miles driven / kWh used\n\nWh per mile = (kWh / Miles) x 1000 = 1000 / (mi/kWh)\nkm per kWh = mi/kWh x 1.60934\nMPGe = mi/kWh x 33.7\n\nExample: 300 miles / 75 kWh = 4.0 mi/kWh = 250 Wh/mi = 6.44 km/kWh.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the miles you drove.",
+      "Enter the kWh used for those miles (from your charger or the car's trip meter).",
+      "Read your miles per kWh, Wh per mile, and km per kWh.",
+      "Compare against the efficiency rating to see how your EV is doing."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Miles per kWh is the EV equivalent of miles per gallon. Higher is better.",
+      "Wh per mile is the same information flipped: 1000 / (mi/kWh).",
+      "Typical EVs: 3.0 to 4.5 mi/kWh. Hypermilers reach 5+; towing or fast highways drop under 2.5.",
+      "Speed is the biggest lever: aerodynamic drag grows with the square of speed.",
+      "Cold weather cuts efficiency 20 to 40% through heating, denser air, and battery chemistry.",
+      "Charging losses mean the wall meter reads 8 to 15% more than the battery received.",
+      "1 kWh = 3.6 megajoules. An efficient EV uses about 0.15 kWh per km.",
+      "Regenerative braking recovers energy in stop-and-go traffic, boosting city efficiency."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "miles per kwh calculator, ev efficiency calculator, wh per mile calculator, electric car efficiency, kwh per mile",
+    "labels": {
+      "efficiencyRating": "Efficiency rating",
+      "kmPerKwh": "Kilometers per kWh",
+      "kwhUsed": "Energy used (kWh)",
+      "milesDriven": "Miles driven",
+      "milesPerKwh": "Miles per kWh",
+      "whPerMile": "Wh per mile"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Based on your entered numbers. Trip meters and chargers can disagree by a few percent.",
+      "Does not include charging losses unless your kWh number comes from the wall meter.",
+      "Driving conditions - weather, hills, load - swing the number a lot.",
+      "Not a range predictor on its own. Range needs battery capacity too."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free miles per kWh calculator: measure your EV's real efficiency from miles driven and kWh used. See Wh per mile and km per kWh too. Private, no sign-up.",
+    "metaTitle": "Miles Per kWh Calculator - EV Efficiency | JaurTools",
+    "name": "Miles Per kWh Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Miles per kWh = miles driven / kWh used. Driving 300 miles on 75 kWh is 4.0 mi/kWh, or 250 Wh per mile - excellent efficiency. Most EVs land between 3.0 and 4.5 mi/kWh. Higher is better, just like MPG in a gasoline car.",
+    "quickAnswerHeading": "Quick answer",
+    "ratings": {
+      "average": "Average",
+      "efficient": "Efficient",
+      "superb": "Superb",
+      "thirsty": "Thirsty"
+    },
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your EV efficiency results",
+    "tagline": "Measure your electric vehicle's real efficiency from miles driven and energy used.",
+    "workedExample": "300 miles driven, 75 kWh used.\n1. mi/kWh = 300 / 75 = 4.0.\n2. Wh/mi = 1000 / 4.0 = 250.\n3. km/kWh = 4.0 x 1.60934 = 6.44.\n4. Rating: 4.0 falls in the Efficient band. Excellent result.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "average-calculator": {
+    "benefits": [
+      "Averages a whole column of numbers in one paste - no spreadsheet needed.",
+      "Instantly answers everyday questions: average bill, average score, average speed.",
+      "Shows the count and total alongside, so you can sanity-check your data.",
+      "Works with decimals, negatives, and numbers pasted straight from Excel."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The mean is the sum divided by the count: the ordinary average. The median is the middle value when sorted. For 2, 4, 100 the mean is 35.3 but the median is 4. Use the median when a few extreme values would drag the mean away from the typical value.",
+        "q": "What is the difference between mean and median?"
+      },
+      {
+        "a": "Yes. Negative numbers are included normally: the average of -5 and 15 is 5. That is why the mean of profits and losses over several months is meaningful.",
+        "q": "Can the numbers be negative?"
+      },
+      {
+        "a": "The mean is sensitive to outliers. One huge bill in a list of small ones pulls the average up. If your data has extreme values, also check the median on our Average of a List tool for the fuller picture.",
+        "q": "When is the average misleading?"
+      },
+      {
+        "a": "Up to a few thousand numbers paste and compute instantly in your browser. Beyond that, very long lists may slow older phones - split them into chunks if needed.",
+        "q": "How many numbers can I enter?"
+      },
+      {
+        "a": "Average = total / number of months. 12 months of 50,000 spending = 600,000 total, average 50,000 per month. Enter the 12 monthly figures above to check it in one step.",
+        "q": "How do I average my monthly spending?"
+      },
+      {
+        "a": "Not always. The arithmetic mean answers 'what is typical per item'. For growth rates, investment returns, or speeds over equal distances, other averages (geometric or harmonic mean) are the correct choice.",
+        "q": "Is the mean always the right average?"
+      }
+    ],
+    "formula": "Mean = (x1 + x2 + ... + xn) / n\nExample: (12 + 15 + 20 + 25) / 4 = 72 / 4 = 18",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your numbers into the box, separated by commas, spaces, or new lines.",
+      "The mean, count, and total update live as you type - nothing to submit.",
+      "Decimals and negative numbers are accepted; anything that is not a number is ignored.",
+      "Press Clear to start over with a fresh list."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The mean (average) = sum of all values divided by how many values there are.",
+      "The average of 12, 15, 20, 25 is 18: the total is 72 and 72 / 4 = 18.",
+      "Order does not matter. 25, 12, 20, 15 gives the same average of 18.",
+      "Decimals are fine: the average of 1.5, 2.5, 3.0 is 2.3333.",
+      "Negative values count normally: the average of -10 and 30 is 10.",
+      "Non-numeric text is skipped, so pasting a messy column still works."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "average calculator, mean calculator, average of numbers, calculate mean online, average finder",
+    "labels": {
+      "clear": "Clear",
+      "count": "Count of numbers",
+      "mean": "Average (mean)",
+      "noNumbers": "Enter at least one number to see the average.",
+      "numbersHint": "12, 15, 20, 25",
+      "numbersInput": "Your numbers",
+      "sum": "Total (sum)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The mean hides spread: 0 and 100 average to 50, the same as 49 and 51.",
+      "Outliers pull the mean strongly. One billionaire in a room makes the 'average' wealth meaningless.",
+      "It says nothing about the trend - rising and falling series can share one average.",
+      "For growth rates or ratios, the arithmetic mean is the wrong tool; use a geometric mean."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free average calculator: paste any list of numbers and get the mean, count, and total instantly. Handles decimals and negatives. 100% private, no sign-up.",
+    "metaTitle": "Average Calculator - Mean of Any Number List | JaurTools",
+    "name": "Average Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "The average (mean) is the total divided by the count. For 12, 15, 20, and 25: add them to get 72, divide by 4, and the average is 18. Paste any list of numbers - separated by commas, spaces, or line breaks - and this calculator shows the mean, the count, and the total instantly, including support for decimals and negative numbers.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Average Calculator results",
+    "tagline": "Paste any list of numbers and get the mean instantly, with count and total.",
+    "workedExample": "Numbers: 12, 15, 20, 25\n1. Count the values: n = 4.\n2. Add them: 12 + 15 + 20 + 25 = 72.\n3. Divide by the count: 72 / 4 = 18.\n4. The average (mean) is 18.",
+    "workedExampleHeading": "Worked example"
+  }
+}

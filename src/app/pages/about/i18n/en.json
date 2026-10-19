@@ -1,0 +1,163 @@
+{
+  "about": {
+    "emailLabel": "Email us",
+    "foundedLabel": "Founded",
+    "foundedValue": "2026",
+    "heading": "About JaurTools",
+    "intro1": "JaurTools started in 2026 with a simple idea: useful online tools should be free for everyone — the richest and the poorest alike — without signups, downloads, or hidden costs.",
+    "intro2": "Every tool on this site runs 100% in your browser. There is no backend, no database, and nothing you type ever leaves your device. That keeps the tools fast, private, and free to run.",
+    "locationLabel": "Based in",
+    "locationValue": "Hyderabad, Ameerpet, Telangana, India",
+    "members": {
+      "bilal": {
+        "name": "Bilal Shah",
+        "role": "Data Science — charts & Power BI"
+      },
+      "hassan": {
+        "name": "Hassan",
+        "role": "Full Stack Developer"
+      },
+      "jauhar": {
+        "name": "Jauhar Ayyub",
+        "role": "Software Engineer"
+      },
+      "obaidullah": {
+        "name": "Obaidullah",
+        "role": "AI Engineer"
+      }
+    },
+    "metaDescription": "JaurTools is a small team building free online tools that run entirely in your browser — no signup, no servers, no data collected.",
+    "metaTitle": "About us | JaurTools",
+    "mission": "Free tools for everyone — no database, no backend, no money spent — built so that anyone, anywhere, can use them.",
+    "missionHeading": "Our mission",
+    "portfolioLabel": "Jauhar's portfolio",
+    "teamHeading": "The team",
+    "benefits": {
+      "b1": "Everything in one place — one bookmark for 630 tools.",
+      "b2": "Nothing to install — works on any phone, tablet or computer with a browser.",
+      "b3": "No accounts, no upsells — every tool is fully free.",
+      "b4": "Your files stay yours — most tools never send anything to a server."
+    },
+    "benefitsEyebrow": "Benefits",
+    "benefitsHeading": "Why people keep coming back",
+    "examples": {
+      "image": {
+        "linkLabel": "Open Image Converter",
+        "text": "Need a JPG as PNG for a form? Open the Image Converter, drop the file in, and download the result — the file never leaves your computer.",
+        "title": "Convert an image"
+      },
+      "loan": {
+        "linkLabel": "Open Loan EMI Calculator",
+        "text": "Thinking about a bike or home loan? Open the Loan EMI Calculator, enter the amount, rate and months, and see the monthly payment instantly.",
+        "title": "Check a loan payment"
+      }
+    },
+    "examplesEyebrow": "Try it in seconds",
+    "examplesHeading": "A real example",
+    "examplesIntro": "Here is what a typical visit looks like:",
+    "facts": {
+      "browser": {
+        "label": "Runs",
+        "value": "100% in your browser"
+      },
+      "cost": {
+        "label": "Cost",
+        "value": "Free, no catch"
+      },
+      "languages": {
+        "label": "Languages",
+        "value": "English, Hindi, Arabic"
+      },
+      "signup": {
+        "label": "Signup",
+        "value": "Never required"
+      },
+      "tools": {
+        "label": "Free tools",
+        "value": "630+ and counting"
+      }
+    },
+    "factsEyebrow": "Key facts",
+    "factsHeading": "JaurTools at a glance",
+    "faqEyebrow": "Questions, answered",
+    "faqHeading": "Frequently asked questions",
+    "faqs": {
+      "f1": {
+        "a": "Yes. Every tool on this site is free to use, with no signups, no trial periods and no paywalled features.",
+        "q": "Is JaurTools really free?"
+      },
+      "f2": {
+        "a": "No. There are no accounts on JaurTools at all — open a tool and use it.",
+        "q": "Do I need an account?"
+      },
+      "f3": {
+        "a": "Nowhere. Most tools run 100% in your browser, so whatever you type or upload stays on your own device.",
+        "q": "Where does my data go?"
+      },
+      "f4": {
+        "a": "English, Hindi and Arabic. Switch languages from the navbar — the whole site, including every tool, changes with it.",
+        "q": "Which languages does it support?"
+      },
+      "f5": {
+        "a": "Email us your idea through the Contact page. If it fits — free, browser-only, genuinely useful — it goes on the list.",
+        "q": "How do I suggest a new tool?"
+      }
+    },
+    "how": {
+      "s1": {
+        "text": "The homepage highlights popular tools — from calculators to converters — so the most-used ones are one click away.",
+        "title": "Start with featured tools"
+      },
+      "s2": {
+        "text": "Open the tools page to see the complete catalogue, organised by category. 630 tools and counting.",
+        "title": "Browse the full directory"
+      },
+      "s3": {
+        "text": "Type what you need — 'emi', 'pdf', 'qr' — and search finds the right tool instantly, in English, Hindi or Arabic.",
+        "title": "Or just search"
+      }
+    },
+    "howEyebrow": "Getting started",
+    "howHeading": "How to use it",
+    "limits": {
+      "l1": "Each tool has its own limits — supported file formats, maximum file sizes and calculation ranges are shown on the tool's own page.",
+      "l2": "Results are only as accurate as the inputs you provide — double-check important numbers before acting on them.",
+      "l3": "We focus on everyday utility tools. We do not offer video downloaders, AI tools, or a blog — if you see such a claim anywhere, tell us.",
+      "l4": "This site is a collection of tools, not an encyclopedia — each tool's page explains how that tool works."
+    },
+    "limitsEyebrow": "Honest notes",
+    "limitsHeading": "Good to know",
+    "privacy1": "Most JaurTools tools run entirely in your browser. The file or text you put in is processed on your own device and never uploaded to our servers — because there is no server processing your data in the first place.",
+    "privacy2": "That means your documents, numbers and text stay private by design. We do not ask you to create an account, so we do not collect personal details just to let you use a tool. See our Privacy Policy for the full details.",
+    "privacyEyebrow": "Privacy",
+    "privacyHeading": "Privacy and your data",
+    "privacyLinkLabel": "Read the Privacy Policy",
+    "quickEyebrow": "Quick answer",
+    "quickHeading": "What is JaurTools?",
+    "quickText": "JaurTools is a free collection of online utilities for the small everyday jobs: converting an image, resizing a photo, cleaning up text, checking a website, or working out a number. Pick a tool, use it right in your browser, and move on — nothing to install, nothing to sign up for.",
+    "story1": "JaurTools started in 2026 with a simple idea: useful online tools should be free for everyone — the richest and the poorest alike — without signups, downloads, or hidden costs.",
+    "story2": "We are a small four-person team based in Hyderabad, India. Every tool we build has to pass the same test: it must be genuinely useful, run entirely in the browser, and stay free forever. No logins, no waiting rooms, no locked features.",
+    "storyEyebrow": "Who we are",
+    "storyHeading": "Our story",
+    "teamEyebrow": "The team",
+    "teamIntro": "Four people, one mission: free tools for everyone.",
+    "teamPhotoAlt": "The JaurTools team working together in their office",
+    "teamPhotoCaption": "The JaurTools team at work",
+    "useCases": {
+      "calc": {
+        "text": "EMI, BMI, age, percentages, unit conversions — the small math that comes up in daily life.",
+        "title": "Everyday calculations"
+      },
+      "files": {
+        "text": "Merge PDFs, compress images, convert between formats — right in the browser, without uploading anything.",
+        "title": "Converting and editing files"
+      },
+      "text": {
+        "text": "Word counters, case converters, text cleaners — quick fixes for students, writers and office work.",
+        "title": "Text utilities"
+      }
+    },
+    "useEyebrow": "Common use cases",
+    "useHeading": "What people use it for"
+  }
+}

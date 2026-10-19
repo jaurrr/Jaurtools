@@ -1,0 +1,100 @@
+{
+  "sun-position-calculator": {
+    "benefits": [
+      "Know exactly how high the sun is for any moment and place.",
+      "Essential for sizing solar panels and planning panel tilt.",
+      "Photographers can time golden hour and blue hour precisely.",
+      "Prayer-time and shadow-length calculations start from the zenith angle."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "dayState": {
+      "astronomicalTwilight": "Astronomical twilight",
+      "civilTwilight": "Civil twilight",
+      "day": "Daytime",
+      "nauticalTwilight": "Nautical twilight",
+      "night": "Night"
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The zenith angle is measured from the point directly overhead (the zenith) down to the sun. Elevation is measured from the horizon up to the sun. They always add to 90 degrees: a zenith angle of 28 degrees means a solar elevation of 62 degrees.",
+        "q": "What is the difference between zenith angle and solar elevation?"
+      },
+      {
+        "a": "At the equator on an equinox at solar noon, the sun is directly overhead: zenith angle 0°, elevation 90°. More generally at solar noon the zenith angle equals the absolute difference between your latitude and the sun's declination.",
+        "q": "When is the zenith angle zero?"
+      },
+      {
+        "a": "Yes, at the poles. In polar summer the sun circles the sky without setting (midnight sun); in polar winter it never rises. The calculator handles this: elevation stays positive or negative for the whole day.",
+        "q": "Can the sun stay up all day?"
+      },
+      {
+        "a": "The NOAA solar equations used here are accurate to about ±0.01° for the years 2000–6000, ignoring atmospheric refraction. Near the horizon, refraction lifts the sun's apparent position by about 0.57°, which this calculator does not correct for.",
+        "q": "How accurate is this calculation?"
+      },
+      {
+        "a": "This calculator uses the mean solar position from date, time, and coordinates — pure astronomy, no weather data. Cloud cover, haze, and local obstructions are not modelled. For panel output estimates, combine the zenith angle with local irradiance data.",
+        "q": "Does it account for clouds?"
+      },
+      {
+        "a": "Solar noon is when the sun crosses your meridian (its highest point for the day), which rarely matches 12:00 on the clock because of your longitude, time zone, and the equation of time. This calculator finds it automatically — it is the moment the zenith angle is smallest.",
+        "q": "What is solar noon and why is it not 12:00?"
+      }
+    ],
+    "formula": "cos(zenith) = sin(φ)·sin(δ) + cos(φ)·cos(δ)·cos(H)\nφ = latitude, δ = solar declination, H = hour angle.\nSolar elevation = 90° − zenith.\nδ and H come from the NOAA solar equations (day of year, equation of time).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick the date and the local time you care about.",
+      "Enter your time zone as a UTC offset (for example, 5.5 for India, 3 for Saudi Arabia).",
+      "Enter your latitude and longitude in decimal degrees.",
+      "Read the zenith angle, solar elevation, declination, and day/night state."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The solar zenith angle is measured from directly overhead down to the sun.",
+      "Zenith angle + solar elevation always equals 90 degrees.",
+      "At solar noon, zenith = |latitude − solar declination|.",
+      "Solar declination swings between +23.44° and −23.44° through the year.",
+      "The calculation uses the NOAA solar position equations — pure static math.",
+      "Twilight is classified by elevation: civil (−6°), nautical (−12°), astronomical (−18°)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "solar zenith angle calculator, sun elevation calculator, solar position calculator, sun angle by location, solar noon calculator",
+    "labels": {
+      "dateLabel": "Date",
+      "dayStateLabel": "Sky state",
+      "declination": "Solar declination",
+      "elevation": "Solar elevation",
+      "invalidInput": "Please enter a valid date and time.",
+      "latLabel": "Latitude (decimal degrees)",
+      "lonLabel": "Longitude (decimal degrees)",
+      "skyState": "Sky state",
+      "timeLabel": "Local time",
+      "utcOffsetHint": "Hours ahead of UTC: India 5.5, Saudi Arabia 3, UK 0 (winter) / 1 (summer).",
+      "utcOffsetLabel": "UTC offset (hours)",
+      "zenith": "Solar zenith angle"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ignores atmospheric refraction, which lifts the sun ~0.57° near the horizon.",
+      "No weather, clouds, or terrain — it is pure astronomy.",
+      "A spherical Earth is assumed; the error is negligible for this purpose.",
+      "Results depend on correct time-zone input — double-check daylight saving."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Find the sun's position for any date, time and location — zenith angle, elevation, azimuth and twilight state. Free, computed in your browser.",
+    "metaTitle": "Sun Position Calculator - Sun Angle, Elevation & Twilight | JaurTools",
+    "name": "Sun Position Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The solar zenith angle measures how far the sun is from directly overhead: 0° means the sun is at the zenith, 90° means it is on the horizon. On 21 June at 12:00 UTC in London (51.5° N), the zenith angle is about 28.1° — because at solar noon it equals |latitude − declination| = |51.5 − 23.44|. Enter any date, time, and coordinates to get the zenith angle, elevation, and twilight state.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your solar position results",
+    "tagline": "Where exactly is the sun? For any place, any moment.",
+    "workedExample": "London (51.5° N, 0°), 21 June, 12:00 UTC:\n1. Day of year 172 → solar declination δ ≈ +23.44°.\n2. At solar noon the hour angle H ≈ 0°.\n3. Zenith = |51.5 − 23.44| = 28.06°.\n4. Solar elevation = 90 − 28.06 = 61.94°.\n5. Elevation > 0°, so the sky state is Daytime.",
+    "workedExampleHeading": "Worked example"
+  }
+}

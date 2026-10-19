@@ -1,0 +1,118 @@
+{
+  "rent-vs-buy-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Rent vs. Buy Calculator",
+    "tagline": "Compare the true cost of renting versus buying over any time horizon.",
+    "metaTitle": "Rent vs Buy Calculator - True Cost Comparison | JaurTools",
+    "metaDescription": "Free rent vs buy calculator: compare total renting cost against net buying cost with mortgage, appreciation, and ownership costs.",
+    "keywords": "rent vs buy calculator, renting vs buying calculator, should i rent or buy calculator, buy vs rent comparison",
+    "resultsHeading": "Your rent vs buy results",
+    "quickAnswer": "Renting costs the cumulative rent with annual growth; buying costs down payment, closing costs, mortgage payments, and ownership costs, minus the equity you build. Example: a 5,000,000 home with 20% down, 2% closing costs, a 9% 20-year loan, and 25,000 monthly rent growing at 5% costs 2,564,733 to rent over 7 years versus a net buying cost of 1,672,658, so renting costs 892,075 more. Buying usually wins on longer horizons and loses on short ones.",
+    "keyFacts": [
+      "The fair comparison is total renting cost versus net buying cost (all costs minus equity built).",
+      "Buying starts expensive: down payment, closing costs, and early mortgage payments are mostly interest.",
+      "Renting starts cheap but rent compounds upward every year.",
+      "The break-even horizon is usually 5 to 10 years in most markets.",
+      "Ownership costs (tax, insurance, maintenance) run about 2 to 4% of the home value per year.",
+      "Appreciation is the swing factor: small changes in the assumed rate flip the answer."
+    ],
+    "howTo": [
+      "Enter the home price, down payment, and closing costs as percentages.",
+      "Enter the mortgage rate and loan term.",
+      "Enter the monthly rent for a comparable home and its expected yearly growth.",
+      "Enter expected home appreciation and yearly ownership costs as a percent of price.",
+      "Set your time horizon and read which option costs less."
+    ],
+    "formula": "Total rent = Monthly rent x 12 x sum of (1 + rent growth)^t for t = 1..horizon.\nTotal buying paid = Down + Closing + Mortgage x months + Ownership % x price x sum of (1 + appreciation)^t.\nEquity = Home value - Remaining loan balance.\nNet buying cost = Total buying paid - Equity.\nExample: 2,564,733 rent vs 1,672,658 net buy over 7 years: buying wins by 892,075.",
+    "workedExample": "Price 5,000,000, down 20%, closing 2%, loan 4,000,000 at 9% for 20 years, rent 25,000 growing 5%, appreciation 5%, ownership 3%, horizon 7 years:\n1. Rent cost: 25,000 x 12 x 8.5491 (growth sum) = 2,564,733.\n2. Buying paid: 1,100,000 upfront + 3,023,080 mortgage (35,989.04 x 84) + 1,282,365 ownership = 5,405,446.\n3. Home value: 5,000,000 x 1.05^7 = 7,035,502; loan balance = 3,302,715; equity = 3,732,787.\n4. Net buying cost: 5,405,446 - 3,732,787 = 1,672,658.\n5. Difference: 2,564,733 - 1,672,658 = 892,075 in favor of buying.",
+    "benefits": [
+      "Compares true all-in costs instead of just rent versus EMI.",
+      "Shows how the answer flips with the time horizon you actually plan.",
+      "Equity row makes the forced-savings benefit of buying visible.",
+      "Test optimistic and pessimistic appreciation to see how sensitive the call is."
+    ],
+    "limitations": [
+      "Simplified model: ignores taxes, deductions, and rent-vs-buy investment of the down payment.",
+      "Appreciation and rent growth are guesses; the answer is only as good as them.",
+      "Ignores moving costs, selling costs, and the hassle factor of ownership.",
+      "Not financial advice: lifestyle, job mobility, and family plans matter as much as math."
+    ],
+    "faqs": [
+      {
+        "q": "Is renting just throwing money away?",
+        "a": "No. Rent buys you housing and flexibility with zero maintenance risk. The fair question is not whether rent is wasted but whether renting plus investing the difference beats buying. This calculator answers the cost half of that question."
+      },
+      {
+        "q": "What is the 5% rule?",
+        "a": "A shortcut: unrecoverable buying costs (interest, tax, maintenance) run about 5% of the home price per year. If 5% of the price exceeds the annual rent, renting is likely cheaper. This calculator does the fuller version of that math."
+      },
+      {
+        "q": "How long should I stay for buying to win?",
+        "a": "Typically 5 to 10 years, because closing costs and early interest-heavy payments need time to be overtaken by equity and appreciation. Raise the horizon slider and watch the difference flip from renting to buying."
+      },
+      {
+        "q": "Why does appreciation matter so much?",
+        "a": "Because it applies to the whole home value while you only put down a fraction. At 5% on a 5,000,000 home, the first year's 250,000 gain is a 25% return on your 1,000,000 down payment, before costs. Leverage cuts both ways when prices fall."
+      },
+      {
+        "q": "Should I include the down payment's investment return if I rent?",
+        "a": "A full analysis would: renting lets you invest the down payment elsewhere. This simplified calculator skips that to stay transparent; mentally add it as a point in renting's favor, especially at high market returns."
+      },
+      {
+        "q": "What ownership costs should I assume?",
+        "a": "Property tax, insurance, and maintenance together typically run 2 to 4% of the home's value per year. Older homes and flats with high society charges sit at the top of that range."
+      }
+    ],
+    "labels": {
+      "price": "Home price",
+      "downPct": "Down payment (%)",
+      "closingPct": "Closing costs (% of price)",
+      "annualRate": "Mortgage rate (% per year)",
+      "years": "Loan term (years)",
+      "rent": "Monthly rent (comparable home)",
+      "rentGrowth": "Annual rent growth (%)",
+      "appreciation": "Annual home appreciation (%)",
+      "ownCostPct": "Yearly ownership costs (% of price)",
+      "horizon": "Comparison horizon (years)",
+      "totalRentCost": "Total cost of renting",
+      "netBuyCost": "Net cost of buying",
+      "equityBuilt": "Equity built",
+      "difference": "Difference (rent - buy)",
+      "buyWins": "Buying wins: it costs less than renting over this horizon.",
+      "rentWins": "Renting wins: it costs less than buying over this horizon.",
+      "tie": "Dead even: both options cost the same over this horizon."
+    },
+    "duel": {
+      "rent": "Renting",
+      "buy": "Buying",
+      "winner": "cheaper",
+      "rentSub": "total rent paid over {years} years",
+      "buySub": "net cost after {equity} of equity"
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "Renting for {years} years costs {rent}; buying costs {buy} after {equity} of equity.",
+      "l2": "Buying wins by {diff} — but only if you stay the full {years} years.",
+      "l3": "Renting wins by {diff} — the flexibility is worth real money here.",
+      "tie": "It is a dead heat — decide on lifestyle, not money."
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "Rent cost grows every year at your rent-growth rate; buy cost = mortgage payments + ownership costs.",
+      "s2": "Net buy cost subtracts the equity you own, because that money comes back to you when you sell."
+    }
+  }
+}

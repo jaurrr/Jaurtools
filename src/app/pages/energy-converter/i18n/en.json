@@ -1,0 +1,94 @@
+{
+  "energy-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Energy Converter",
+    "tagline": "Convert energy units — joules, calories, kWh, BTU and more.",
+    "metaTitle": "Energy Converter - Convert Joules, Calories, kWh & More | JaurTools",
+    "metaDescription": "Free energy converter: switch between joules, calories, kWh, BTU and more instantly. Accurate unit conversion in your browser, no sign-up.",
+    "keywords": "energy converter, joules to calories, btu to kwh, kcal to joules, energy unit converter",
+    "resultsHeading": "Energy conversion results",
+    "quickAnswer": "1 kilocalorie (food \"Calorie\") = 4,184 joules exactly. So a 500 kcal meal holds about 2,092,000 joules, and 1 kWh = 3,600,000 joules - the unit on your electricity bill. Pick any pair of the 7 units and the result appears instantly.",
+    "keyFacts": [
+      "The joule (J) is the SI unit of energy: 1 J ≈ the energy to lift an apple 1 metre.",
+      "Food \"Calories\" are kilocalories: 1 kcal = 4,184 J exactly.",
+      "1 kWh = 3,600,000 J (3.6 MJ) - the billing unit for electricity worldwide.",
+      "1 BTU (British Thermal Unit) = 1,055.05585 J; it is the standard for air-conditioner capacity.",
+      "1 Wh = 3,600 J; phone batteries are often rated in Wh.",
+      "Einstein E=mc² shows mass and energy are interchangeable, but everyday conversions only need these factors."
+    ],
+    "howTo": [
+      "Type the energy value.",
+      "Pick the from-unit (J, kJ, cal, kcal, Wh, kWh, BTU).",
+      "Pick the to-unit.",
+      "Read the instant result; swap reverses it."
+    ],
+    "formula": "result = value × (joules per from-unit) ÷ (joules per to-unit).\nJoules per unit: J 1, kJ 1,000, cal 4.184, kcal 4,184, Wh 3,600, kWh 3,600,000, BTU 1,055.05585.\nExample: 1 kWh → J = 1 × 3,600,000 ÷ 1 = 3,600,000 J.",
+    "workedExample": "Convert 500 kcal (a meal) to joules:\n1. Factor: 4,184 J per kcal.\n2. 500 × 4,184 = 2,092,000 J.\n3. In kWh: 2,092,000 ÷ 3,600,000 = 0.581 kWh - about half a unit of electricity.\nConvert 12,000 BTU (1-ton AC per hour) to kWh:\n1. 12,000 × 1,055.05585 = 12,660,670 J.\n2. ÷ 3,600,000 = 3.517 kWh of cooling energy moved.",
+    "benefits": [
+      "Covers nutrition (kcal), electricity bills (kWh), and appliances (BTU) in one tool.",
+      "Exact defined factors - no rounded approximations.",
+      "Swap button for quick bill-to-science comparisons.",
+      "Useful for students, engineers, and anyone reading appliance labels."
+    ],
+    "limitations": [
+      "Converts energy units only - it does not compute power over time or efficiency losses.",
+      "BTU has several historical definitions; this tool uses the International Table BTU (1,055.05585 J).",
+      "Food energy is metabolizable energy, an estimate - individual bodies vary."
+    ],
+    "faqs": [
+      {
+        "q": "How many joules are in one calorie?",
+        "a": "One small calorie (cal) = 4.184 joules exactly. One food Calorie (kcal, with capital C) = 4,184 joules. The factor 4.184 is exact by definition."
+      },
+      {
+        "q": "What is the difference between cal and kcal?",
+        "a": "1 kcal = 1,000 cal. Food labels in most countries write \"Calories\" (capital C) but mean kilocalories. A 500 \"Calorie\" meal is 500 kcal = 500,000 small calories."
+      },
+      {
+        "q": "How many kWh is 1 BTU?",
+        "a": "1 BTU = 0.000293071 kWh. So 12,000 BTU (a 1-ton AC running one hour of cooling) moves about 3.517 kWh of heat energy."
+      },
+      {
+        "q": "What is a joule in simple terms?",
+        "a": "Roughly the energy needed to lift a small apple (100 g) one metre against gravity. A phone battery holding 15 Wh stores 54,000 joules."
+      },
+      {
+        "q": "Why is electricity billed in kWh?",
+        "a": "Because the joule is too small for household scale - a home might use 10,000,000+ joules a day. The kilowatt-hour (3.6 million joules) gives comfortable numbers like \"250 kWh this month\"."
+      },
+      {
+        "q": "How do I convert watts to kWh?",
+        "a": "Watts are power (rate); kWh is energy (total). Multiply watts × hours ÷ 1,000. A 100 W bulb for 10 hours = 100 × 10 ÷ 1,000 = 1 kWh."
+      }
+    ],
+    "labels": {
+      "value": "Value",
+      "from": "From",
+      "to": "To",
+      "swap": "Swap units",
+      "result": "Result",
+      "units": {
+        "J": "Joule (J)",
+        "kJ": "Kilojoule (kJ)",
+        "cal": "Calorie (cal)",
+        "kcal": "Kilocalorie (kcal)",
+        "Wh": "Watt-hour (Wh)",
+        "kWh": "Kilowatt-hour (kWh)",
+        "BTU": "British Thermal Unit (BTU)"
+      }
+    }
+  }
+}

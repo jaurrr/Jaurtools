@@ -1,0 +1,91 @@
+{
+  "marriage-tax-calculator": {
+    "benefits": [
+      "See your marriage bonus or penalty in dollars, not theory.",
+      "Plan around raises and bonuses that could push you into a penalty.",
+      "Decide whether itemizing or adjusting withholding is worth exploring.",
+      "Private - income numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "When two similar earners marry, their combined income can push more dollars into higher tax brackets than if they stayed single - so the couple pays more. It mostly affects dual high-income couples.",
+        "q": "What is the marriage penalty?"
+      },
+      {
+        "a": "When one spouse earns most of the income, joint filing lets the couple use the lower earner's unused low brackets - cutting the total bill. Single-earner families often save thousands.",
+        "q": "What is the marriage bonus?"
+      },
+      {
+        "a": "Jointly wins for most couples because of the doubled standard deduction and wider brackets. Separately can win in specific cases (like income-based student loan payments or large medical deductions) - run both scenarios with a tax pro.",
+        "q": "Should we file jointly or separately?"
+      },
+      {
+        "a": "Yes, sometimes a lot. This calculator covers federal tax only. Some states have their own marriage penalties or bonuses on top.",
+        "q": "Do state taxes change the answer?"
+      },
+      {
+        "a": "2024 federal brackets and standard deduction. The IRS adjusts them yearly for inflation, so treat this as a close estimate and verify with the current year's figures.",
+        "q": "Are these 2024 or current-year numbers?"
+      },
+      {
+        "a": "No. The comparison runs entirely in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Taxable = income - standard deduction (2024: $29,200 joint, $14,600 single)\nTax = sum over brackets of (income in bracket x rate)\n2024 MFJ brackets: 10% to $23,200; 12% to $94,300; 22% to $201,050; 24% to $383,900; 32% to $487,450; 35% to $731,200; 37% above.\nMarriage effect = single-filers total - joint total.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter each spouse's annual gross income.",
+      "Read the federal tax for married filing jointly (combined income).",
+      "Compare with the total if you both filed as single.",
+      "A positive difference is your marriage bonus; negative is the penalty.",
+      "Re-run with different incomes to plan raises, bonuses, or retirement timing."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The marriage bonus happens when one spouse earns most of the income - joint brackets pull income into lower rates.",
+      "The marriage penalty hits two similar high earners - combined income pushes more dollars into higher brackets.",
+      "This tool uses 2024 federal brackets and the standard deduction ($29,200 joint / $14,600 single).",
+      "About half of married couples get a bonus, a smaller share face a penalty, the rest are roughly neutral.",
+      "State taxes, credits (like child tax credit), and itemized deductions can change the answer.",
+      "Filing status is chosen yearly - you are not locked into last year's choice."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "marriage tax calculator, marriage penalty calculator, married filing jointly vs separately, marriage bonus tax, joint tax calculator",
+    "labels": {
+      "assumptionNote": "Uses 2024 US federal brackets and the standard deduction ($14,600 single / $29,200 joint). State taxes, credits, and itemized deductions are not included - estimates only.",
+      "difference": "Difference (bonus / penalty)",
+      "jointTax": "Married filing jointly",
+      "separateTax": "As two single filers",
+      "spouse1Income": "Spouse 1 income",
+      "spouse2Income": "Spouse 2 income",
+      "verdictPenalty": "Marriage penalty - filing jointly costs about",
+      "verdictSame": "Both options cost about the same.",
+      "verdictSaves": "Marriage bonus - filing jointly saves about"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - 2024 federal brackets and standard deduction; state taxes excluded.",
+      "Ignores credits, itemized deductions, AMT, and special situations.",
+      "Not tax advice - a CPA or tax preparer should review real filing decisions.",
+      "Brackets and deductions change yearly; recheck with current IRS figures."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free marriage tax calculator: compare married-filing-jointly vs two single filers using 2024 federal brackets. See your marriage bonus or penalty instantly.",
+    "metaTitle": "Marriage Tax Calculator - Joint vs Single Filing Compared | JaurTools",
+    "name": "Marriage Tax Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Marriage can cut your tax bill (bonus) or raise it (penalty) depending on how incomes split. For example, spouses earning $120,000 and $20,000 pay about $14,482 filing jointly vs $18,879 as two singles - a $4,397 marriage bonus. Enter both incomes to see yours.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Marriage tax comparison",
+    "tagline": "Compare US federal tax for married filing jointly vs two single filers - find your marriage bonus or penalty.",
+    "workedExample": "Spouse A $120,000, spouse B $20,000:\n1. Joint: taxable = 140,000 - 29,200 = $110,800. Tax = 2,320 + 8,532 + 3,630 = $14,482.\n2. Singles: A taxable $105,400 -> tax $18,338.50; B taxable $5,400 -> tax $540. Total = $18,878.50.\n3. Difference = 18,878.50 - 14,482 = $4,396.50 marriage bonus.\nJoint filing wins because the lower earner's unused low brackets absorb the higher earner's income.",
+    "workedExampleHeading": "Worked example"
+  }
+}

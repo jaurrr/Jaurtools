@@ -1,0 +1,94 @@
+{
+  "epoch-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Epoch Converter",
+    "tagline": "Convert Unix timestamps to dates and back — auto-detects units.",
+    "metaTitle": "Epoch Converter - Unix Timestamp to Date & Back Free | JaurTools",
+    "metaDescription": "Free epoch converter: turn Unix timestamps into readable dates or dates back into epoch. Auto-detects seconds, ms, µs — in your browser.",
+    "keywords": "epoch converter, unix timestamp converter, timestamp to date, epoch to date, date to epoch",
+    "resultsHeading": "Timestamp conversion results",
+    "quickAnswer": "Unix time counts seconds since 1 January 1970 (UTC). For example, epoch 1700000000 = Tuesday, 14 November 2023, 22:13:20 UTC. Paste a timestamp and pick seconds or milliseconds to see the UTC, local and ISO forms - or flip to the date tab to convert a calendar date back to epoch.",
+    "keyFacts": [
+      "Unix epoch = seconds elapsed since 1970-01-01 00:00:00 UTC, ignoring leap seconds.",
+      "JavaScript Date.now() returns milliseconds; most APIs and databases use seconds - mixing them up is the #1 timestamp bug.",
+      "1,000 ms = 1 s. A 13-digit number is milliseconds; a 10-digit number is seconds (until the year 2286).",
+      "The year-2038 problem: 32-bit signed epoch overflows on 19 January 2038; 64-bit systems are fine.",
+      "UTC is the same everywhere; your \"local\" result depends on the device timezone.",
+      "ISO 8601 (e.g. 2023-11-14T22:13:20.000Z) is the unambiguous format for storing and exchanging dates."
+    ],
+    "howTo": [
+      "Stay on the \"To date\" tab and paste your epoch number.",
+      "Choose Seconds or Milliseconds to match your number.",
+      "Read the UTC, local-time and ISO results instantly.",
+      "Switch to the \"To epoch\" tab, pick a date and time, and get epoch seconds and milliseconds back."
+    ],
+    "formula": "To date: date = 1970-01-01T00:00:00Z + (epoch × 1 second).\nMilliseconds: divide the timestamp by 1,000 first.\nTo epoch: epoch = (date − 1970-01-01T00:00:00Z) in seconds.\nExample: 1,700,000,000 s after 1970-01-01 = 2023-11-14T22:13:20Z.",
+    "workedExample": "Convert epoch 1700000000 (seconds):\n1. Add 1,700,000,000 seconds to 1970-01-01 00:00:00 UTC.\n2. UTC result: Tue, 14 Nov 2023 22:13:20 GMT.\n3. ISO: 2023-11-14T22:13:20.000Z.\n4. Reverse: 2023-11-14T22:13:20Z → 1,700,000,000 s = 1,700,000,000,000 ms.",
+    "benefits": [
+      "Handles both seconds and milliseconds - catches the most common timestamp bug before it ships.",
+      "Shows UTC, local and ISO together so timezone confusion disappears.",
+      "Two-way: timestamp → date and date → timestamp in one tool.",
+      "\"Use current time\" button for quick now-checks while debugging."
+    ],
+    "limitations": [
+      "Assumes Unix epoch (1970-01-01 UTC); other epochs (e.g. GPS, .NET ticks) are not covered.",
+      "Dates before 1970 or far in the future may behave oddly in some browsers.",
+      "Local time comes from your device timezone setting - verify it if results look off."
+    ],
+    "faqs": [
+      {
+        "q": "What is Unix epoch time?",
+        "a": "The number of seconds since 00:00:00 UTC on 1 January 1970, not counting leap seconds. It is the standard way computers store points in time because a single number is easy to compare and sort."
+      },
+      {
+        "q": "How do I know if my timestamp is seconds or milliseconds?",
+        "a": "Count the digits. Around now (2026), seconds are 10 digits (e.g. 1700000000) and milliseconds are 13 digits (e.g. 1700000000000). If your date lands in 1970, you fed milliseconds where seconds were expected - or vice versa."
+      },
+      {
+        "q": "Why does my date show 1970?",
+        "a": "Almost always a seconds/milliseconds mix-up. Feeding milliseconds (1,700,000,000,000) into a seconds field gives a date 53,000 years in the future; feeding seconds where milliseconds are expected gives January 1970. Switch the unit toggle."
+      },
+      {
+        "q": "What is the difference between UTC and local time?",
+        "a": "UTC is the global reference time with no timezone offset. Local time is UTC plus your timezone offset (e.g. IST = UTC+5:30). The same epoch instant reads 22:13 UTC but 03:43 IST the next day."
+      },
+      {
+        "q": "What is the year 2038 problem?",
+        "a": "On systems storing epoch in a signed 32-bit integer, time overflows on 19 January 2038 and wraps to 1901. Modern 64-bit systems and languages are unaffected, but old embedded devices and file formats can still bite."
+      },
+      {
+        "q": "How do I get the current epoch in JavaScript?",
+        "a": "Math.floor(Date.now() / 1000) gives seconds; Date.now() gives milliseconds. In Python: int(time.time()) for seconds."
+      }
+    ],
+    "labels": {
+      "mode": "Conversion direction",
+      "toDateTab": "Timestamp → date",
+      "toEpochTab": "Date → timestamp",
+      "epochInput": "Epoch timestamp",
+      "epochUnit": "Timestamp unit",
+      "seconds": "Seconds",
+      "milliseconds": "Milliseconds",
+      "useNow": "Use current time",
+      "utc": "UTC",
+      "local": "Your local time",
+      "iso": "ISO 8601",
+      "dateInput": "Date and time",
+      "epochSeconds": "Epoch (seconds)",
+      "epochMs": "Epoch (milliseconds)"
+    }
+  }
+}

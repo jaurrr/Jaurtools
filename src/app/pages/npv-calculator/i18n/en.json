@@ -1,0 +1,94 @@
+{
+  "npv-calculator": {
+    "assumptionNote": "Cash flows are assumed to arrive at each year-end and the discount rate stays constant. Real projects have uneven timing and changing risk - treat this as a first-pass screen, not a final investment decision.",
+    "benefits": [
+      "The gold-standard project screen: positive NPV means the project creates value.",
+      "Forces you to think about the discount rate, i.e. what your money could earn elsewhere.",
+      "Discounted year-by-year values show exactly when the project pays back.",
+      "Compare two projects side by side by running the numbers twice."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A dollar today is worth more than a dollar next year because you could invest it. Discounting shrinks future cash flows to their equivalent value today, so you can compare money arriving at different times fairly. The discount rate is usually your cost of capital or minimum acceptable return.",
+        "q": "Why discount future cash flows?"
+      },
+      {
+        "a": "Your weighted average cost of capital (WACC) is the textbook answer. In practice, many people use their expected investment return (say 8-10%) or the interest rate on their debt. A higher discount rate punishes distant cash flows more, so conservative analysts use higher rates.",
+        "q": "What discount rate should I use?"
+      },
+      {
+        "a": "They are two sides of the same coin. NPV gives you a dollar amount of value created; IRR/XIRR gives you the percentage return. A project can have a high IRR but tiny NPV (small project) or vice versa. Use NPV for how much value, IRR for the rate of return.",
+        "q": "NPV vs IRR - which is better?"
+      },
+      {
+        "a": "It means the project is expected to destroy value at your discount rate - you would do better investing the money elsewhere at that rate. Either find a higher-return project, lower the investment cost, or walk away.",
+        "q": "What does a negative NPV mean?"
+      },
+      {
+        "a": "No - NPV ignores project size, risk differences, and strategic value. A slightly negative-NPV project that opens a new market might still be worth doing. NPV is a screen, not a verdict; pair it with payback period and qualitative judgment.",
+        "q": "Should I always reject negative-NPV projects?"
+      },
+      {
+        "a": "Yes - money received earlier is discounted less, so front-loaded cash flows always raise NPV. That is why payback speed matters: a project returning cash in year 1 is worth more than the same cash in year 4, even before considering risk.",
+        "q": "Do earlier cash flows help NPV?"
+      }
+    ],
+    "formula": "PV of year t = CF_t / (1 + r)^t.\nNPV = PV_1 + PV_2 + ... + PV_n - initial investment.\nDecision rule: NPV > 0 -> accept; NPV < 0 -> reject.\nExample: 15,000/1.08 + 18,000/1.08^2 + 20,000/1.08^3 + 22,000/1.08^4 - 50,000 = 11,368.29.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the upfront investment (as a positive number).",
+      "Set your discount rate - your cost of capital or target return.",
+      "Enter the expected cash flow for each of the 4 years (negative in a loss year).",
+      "Read the NPV and the verdict: positive means value created.",
+      "Try a higher discount rate to stress-test the project against tougher assumptions."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "NPV = present value of future cash flows minus the initial investment.",
+      "Positive NPV means the project earns more than your required return; negative means it destroys value.",
+      "Money today is worth more than money tomorrow - that is the whole idea of discounting.",
+      "The discount rate is usually the cost of capital or the return you could earn elsewhere.",
+      "NPV and IRR are linked: IRR is the discount rate where NPV equals exactly zero.",
+      "Year-end cash flow timing is the standard convention in NPV calculations."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "NPV calculator, net present value calculator, discounted cash flow calculator, project valuation calculator",
+    "labels": {
+      "discountRate": "Discount rate (%)",
+      "initialInvestment": "Initial investment",
+      "npvResult": "Net present value",
+      "pvSuffix": "present value",
+      "verdictLabel": "Verdict",
+      "yearLabel": "Year"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only as good as your cash-flow forecasts, which are always guesses.",
+      "Ignores project size, risk differences, and strategic or option value.",
+      "Assumes year-end timing and a constant discount rate.",
+      "A screen for decisions, not a substitute for full financial analysis."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free NPV calculator: net present value of 4 years of cash flows at your discount rate. Positive or negative verdict included.",
+    "metaTitle": "NPV Calculator - Net Present Value of Cash Flows | JaurTools",
+    "name": "NPV Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "NPV discounts future cash flows to today's money and subtracts the investment. Invest $50,000, receive $15,000, $18,000, $20,000, $22,000 over 4 years at 8%: NPV is $11,368.29 - positive, so the project creates value above an 8% return. Negative NPV means walk away at that discount rate.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your NPV results",
+    "tagline": "Is this project worth it? Discount the cash flows and get a verdict.",
+    "verdicts": {
+      "negative": "Negative - destroys value at this rate",
+      "positive": "Positive - creates value",
+      "zero": "Break-even - exactly zero"
+    },
+    "workedExample": "Invest $50,000; cash flows $15,000, $18,000, $20,000, $22,000; discount rate 8%:\n1. PV year 1 = 15,000 / 1.08 = $13,888.89.\n2. PV year 2 = 18,000 / 1.08^2 = $15,432.10.\n3. PV year 3 = 20,000 / 1.08^3 = $15,876.64.\n4. PV year 4 = 22,000 / 1.08^4 = $16,170.67.\n5. Sum of PVs = $61,368.30. NPV = 61,368.30 - 50,000 = $11,368.29.\nPositive, so the project beats an 8% hurdle.",
+    "workedExampleHeading": "Worked example"
+  }
+}

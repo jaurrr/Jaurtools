@@ -1,0 +1,88 @@
+{
+  "xirr-calculator": {
+    "assumptionNote": "XIRR needs at least one outflow and one inflow with valid dates to converge. Cash flows on the same day or all-positive/all-negative series have no solution, and the tool will say so honestly instead of inventing a number.",
+    "benefits": [
+      "The right return metric for real portfolios: SIPs, lumpy investments, and business cash flows.",
+      "Matches what Excel's XIRR function gives, without opening a spreadsheet.",
+      "Shows your true annualised return including the timing of every deposit.",
+      "Instant - paste in dates and amounts and get an answer."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Simple returns ignore timing; XIRR does not. Two investors can both double their money, but the one who did it in 3 years earned far more per year than the one who took 10. XIRR annualises each cash flow by its exact date, so it is the only fair comparison across irregular investments.",
+        "q": "Why not just use total return percentage?"
+      },
+      {
+        "a": "IRR assumes regular, evenly spaced cash flows (like annual payments). XIRR handles real-world irregular dates - monthly SIPs, random top-ups, partial withdrawals. If your cash flows are perfectly annual, both give the same answer.",
+        "q": "XIRR vs IRR - what is the difference?"
+      },
+      {
+        "a": "Enter outflows (money you invested) as negative and inflows (withdrawals, maturity payouts) as positive. The sign convention is what makes the maths work: the solver finds the rate where discounted inflows exactly balance discounted outflows.",
+        "q": "Negative or positive - which sign do I use?"
+      },
+      {
+        "a": "Excel's XIRR uses the same Newton-style solving on the same formula, so results match to the decimal. Tiny differences can appear from day-count conventions (Excel uses 365-day years too) or convergence tolerance.",
+        "q": "Does this match Excel's XIRR?"
+      },
+      {
+        "a": "It can. XIRR assumes interim cash flows are reinvested at the XIRR rate itself, which may be unrealistic. For comparing two investments with similar cash-flow patterns it is excellent; for a single project with wild cash flows, also look at NPV and payback period.",
+        "q": "Can XIRR be misleading?"
+      },
+      {
+        "a": "The solver needs at least one negative and one positive cash flow on different dates. Check that your dates are valid, amounts are non-zero, and signs follow the outflow-negative / inflow-positive convention. Also try adding or removing a row - extreme values can break convergence.",
+        "q": "Why does it say it could not converge?"
+      }
+    ],
+    "formula": "XNPV(r) = sum of CF_i / (1 + r)^((d_i - d_0) / 365).\nXIRR is the rate r where XNPV(r) = 0.\nSolved here with Newton-Raphson iteration from a 10% starting guess.\nExample: -10,000 on 2024-01-01, +11,000 on 2025-01-01 -> r ~ 9.97%.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter each cash flow's date and amount: investments as negative, returns as positive.",
+      "Leave unused rows blank - rows with a zero amount are ignored.",
+      "Make sure you have at least one negative and one positive cash flow.",
+      "Your XIRR appears instantly as an annualised percentage.",
+      "Change any date or amount to see how timing affects your true return."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "XIRR = Extended Internal Rate of Return: the annualised return for irregularly dated cash flows.",
+      "It is the discount rate that makes the net present value of all cash flows exactly zero.",
+      "Outflows are negative, inflows are positive - the sign convention is essential.",
+      "Excel's XIRR function uses the same maths, so this matches spreadsheet results.",
+      "XIRR accounts for the exact timing of every cash flow, unlike simple total return.",
+      "It needs at least one inflow and one outflow; otherwise no solution exists."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "XIRR calculator, extended internal rate of return, irregular cash flow return, annualised return calculator, excel xirr online",
+    "labels": {
+      "amountLabel": "Amount",
+      "cashFlowsUsed": "Cash flows used",
+      "dateLabel": "Date",
+      "notConverged": "Could not converge: enter at least one investment (negative) and one return (positive) on different dates.",
+      "xirrResult": "Your XIRR"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes interim cash flows reinvest at the XIRR rate, which may be unrealistic.",
+      "A single XIRR can hide very different risk profiles between investments.",
+      "Extreme or same-day cash flows may not converge - the tool reports this honestly.",
+      "For investment decisions, use alongside NPV, fees, and risk measures."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free XIRR calculator: annualised return for irregular cash flows like SIPs and business investments. Matches Excel. Private, no sign-up.",
+    "metaTitle": "XIRR Calculator - Return on Irregular Cash Flows | JaurTools",
+    "name": "XIRR Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "XIRR is the annualised return that makes the present value of all your cash flows equal zero. Invest $10,000 on 2024-01-01 and receive $11,000 on 2025-01-01: XIRR is about 9.97% (slightly under 10% because 2024 is a leap year with 366 days). Enter investments as negative amounts and returns as positive.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your XIRR results",
+    "tagline": "The true annualised return on irregular cash flows - solved, not guessed.",
+    "workedExample": "-10,000 on 2024-01-01, +11,000 on 2025-01-01:\n1. XNPV(r) = -10,000 + 11,000 / (1 + r)^(366/365).\n2. Set XNPV = 0: 11,000 / (1 + r)^(366/365) = 10,000.\n3. (1 + r)^(366/365) = 1.1, so 1 + r = 1.1^(365/366).\n4. r = 0.099714, i.e. XIRR = 9.97%.\nWhy not exactly 10%? 2024 is a leap year, so the money was invested for 366 days, slightly more than one year.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "instrument-tuner": {
+    "assumptionNote": "All reference pitches use concert pitch A4 = 440 Hz. If your ensemble tunes to a different reference (such as 442 Hz), every tone here will be slightly off from theirs.",
+    "benefits": [
+      "Trains your ear instead of your eyes - the skill every good musician eventually needs.",
+      "Works for four instruments in one place, with correct standard tunings built in.",
+      "No microphone permission and no app install - just press a button and listen.",
+      "Sustain mode holds the tone as long as you need while you adjust the peg."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Standard tuning, from the thickest to the thinnest string, is E A D G B E. In frequencies: E2 82.41 Hz, A2 110 Hz, D3 146.83 Hz, G3 196 Hz, B3 246.94 Hz, E4 329.63 Hz. A handy memory phrase is Eddie Ate Dynamite, Good Bye Eddie.",
+        "q": "What is the standard tuning for a guitar?"
+      },
+      {
+        "a": "Listen for beats - a rhythmic wobble between the reference tone and your string. Tighten or loosen the peg and the wobble gets slower. When the wobble stops completely and you hear one smooth blended sound, the string is in tune.",
+        "q": "How do I know when the string is in tune by ear?"
+      },
+      {
+        "a": "Always tune up to the pitch. If the string is sharp (too high), loosen it below the target first, then tighten up into it. Tuning upward keeps the string tension pulling the peg firmly, so the tuning holds longer.",
+        "q": "Should I tune up or down to the pitch?"
+      },
+      {
+        "a": "New strings stretch and need a day or two to settle - gently pull each string away from the fretboard and retune a few times. Also check that the string is wound neatly on the peg and that the nut slots are not pinching. Big temperature changes affect tuning too.",
+        "q": "Why does my guitar go out of tune right after tuning?"
+      },
+      {
+        "a": "Standard ukulele tuning is G4 C4 E4 A4, sometimes written gCEA. The G string is tuned high (above the C), which is called re-entrant tuning and gives the ukulele its distinctive bright sound.",
+        "q": "What tuning does a ukulele use?"
+      },
+      {
+        "a": "Yes, for any instrument with the same open notes - the tone generator covers any frequency if you know the target pitch. But dedicated tunings like drop D or open G are not included; only the four standard tunings listed are built in.",
+        "q": "Can I use this tuner for other instruments?"
+      }
+    ],
+    "formula": "Reference pitch: A4 = 440 Hz (concert pitch).\nAny note: f = 440 x 2^((midi - 69) / 12)\nBeat frequency: f_beat = |f_string - f_reference|\nIn tune when f_beat = 0 Hz.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your instrument: guitar, bass guitar, ukulele, or violin.",
+      "Tap a string button to hear its reference tone. It plays continuously until you stop it.",
+      "Pluck the matching string on your instrument while the tone plays.",
+      "Turn the tuning peg slowly until the wobbling beat disappears and the two sounds blend into one.",
+      "Work from the lowest string to the highest, then repeat once - tightening one string can pull the others slightly flat."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Standard guitar tuning (low to high): E A D G B E, at 82.41, 110.00, 146.83, 196.00, 246.94, and 329.63 Hz.",
+      "Bass guitar tunes one octave below guitar: E1 A1 D1 G1, starting at just 41.20 Hz.",
+      "Ukulele standard tuning is G4 C4 E4 A4 - the high G string gives it that bright, cheerful sound.",
+      "Violin tunes in perfect fifths: G3 D4 A4 E4, and the A string (440 Hz) is the orchestra's reference pitch.",
+      "When two pitches are almost but not quite the same, you hear beats - a pulsing wobble. No beats means in tune.",
+      "Always tune UP to the pitch, never down. Tuning up keeps the string seated firmly and holds tuning longer."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "instrument tuner, guitar tuner, ukulele tuner, violin tuner, bass tuner, tune by ear, reference tones",
+    "labels": {
+      "currentNote": "Reference tone",
+      "instrumentLabel": "Instrument",
+      "instruments": {
+        "bass": "Bass guitar",
+        "guitar": "Guitar",
+        "ukulele": "Ukulele",
+        "violin": "Violin"
+      },
+      "statusIdle": "Idle",
+      "statusLabel": "Status",
+      "statusPlaying": "Playing",
+      "stopLabel": "Stop tone",
+      "stringLabel": "Tap a string to hear its reference tone",
+      "sustainLabel": "Hold the tone continuously (uncheck for a 3-second tone)",
+      "volumeLabel": "Volume",
+      "waveformLabel": "Tone type",
+      "waveforms": {
+        "sawtooth": "Sawtooth (rich)",
+        "sine": "Sine (pure)",
+        "square": "Square (bright)",
+        "triangle": "Triangle (soft)"
+      }
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This is a reference-tone tuner: it plays the correct pitch, but your ear (not the tool) judges the match.",
+      "It does not listen through your microphone, so it cannot tell you how far off you are.",
+      "All pitches assume concert pitch A4 = 440 Hz. Orchestras or bands tuning to 442 Hz will differ slightly.",
+      "Very old or damaged strings may not hold pitch even when tuned correctly - replace them."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online instrument tuner with reference tones for guitar, bass, ukulele, and violin. Play each string's pitch and tune by ear. No app, no sign-up.",
+    "metaTitle": "Instrument Tuner - Guitar, Bass, Ukulele, Violin | JaurTools",
+    "name": "Instrument Tuner",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Tap any string to hear its exact reference pitch: standard guitar tuning is E2 82.41 Hz, A2 110 Hz, D3 146.83 Hz, G3 196 Hz, B3 246.94 Hz, and E4 329.63 Hz. Play the tone, pluck the matching string, and turn the tuning peg until the two pitches merge into one with no wobble. If you hear a slow beating pulse, you are close - the slower the beat, the closer you are.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Tuner results",
+    "tagline": "Play perfect reference tones for guitar, bass, ukulele, and violin - then tune each string by ear.",
+    "workedExample": "Tuning the guitar's low E string:\n1. Select Guitar and tap the E2 button. You hear a steady 82.41 Hz tone.\n2. Pluck your low E string. You hear a fast wobble - the string is at about 79 Hz, so beats = |79 - 82.41| = 3.41 pulses per second.\n3. Turn the peg to tighten. The wobble slows: 2 pulses, 1 pulse per second...\n4. The wobble disappears. Your string now matches 82.41 Hz - it is in tune.\n5. Repeat for A2, D3, G3, B3, and E4.",
+    "workedExampleHeading": "Worked example"
+  }
+}

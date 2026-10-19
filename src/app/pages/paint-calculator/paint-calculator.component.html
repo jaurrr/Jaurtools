@@ -1,0 +1,177 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="pc-length">{{ t('labels.roomLength') }}</label>
+        <input id="pc-length" type="number" inputmode="decimal" min="0.5" max="100" step="0.5"
+          [ngModel]="roomLength()" (ngModelChange)="setRoomLength($event)" />
+      </div>
+
+      <div class="field">
+        <label for="pc-width">{{ t('labels.roomWidth') }}</label>
+        <input id="pc-width" type="number" inputmode="decimal" min="0.5" max="100" step="0.5"
+          [ngModel]="roomWidth()" (ngModelChange)="setRoomWidth($event)" />
+      </div>
+
+      <div class="field">
+        <label for="pc-height">{{ t('labels.roomHeight') }}</label>
+        <input id="pc-height" type="number" inputmode="decimal" min="0.5" max="20" step="0.5"
+          [ngModel]="roomHeight()" (ngModelChange)="setRoomHeight($event)" />
+      </div>
+
+      <div class="two-inputs">
+        <div class="field">
+          <label for="pc-doors">{{ t('labels.doors') }}</label>
+          <input id="pc-doors" type="number" inputmode="numeric" min="0" max="20" step="1"
+            [ngModel]="doors()" (ngModelChange)="setDoors($event)" />
+          <p class="hint">{{ t('labels.doorHint') }}</p>
+        </div>
+        <div class="field">
+          <label for="pc-windows">{{ t('labels.windows') }}</label>
+          <input id="pc-windows" type="number" inputmode="numeric" min="0" max="20" step="1"
+            [ngModel]="windows()" (ngModelChange)="setWindows($event)" />
+          <p class="hint">{{ t('labels.windowHint') }}</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pc-coats">{{ t('labels.coats') }}</label>
+        <input id="pc-coats" type="number" inputmode="numeric" min="1" max="5" step="1"
+          [ngModel]="coats()" (ngModelChange)="setCoats($event)" />
+      </div>
+
+      <div class="field">
+        <label for="pc-coverage">{{ t('labels.coverage') }}</label>
+        <input id="pc-coverage" type="number" inputmode="decimal" min="1" max="30" step="0.5"
+          [ngModel]="coverage()" (ngModelChange)="setCoverage($event)" />
+        <p class="hint">{{ t('labels.coverageHint') }}</p>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row">
+          <span><app-icon name="calculator" /> {{ t('labels.wallArea') }}</span>
+          <strong>{{ twoDecimal().format(wallArea()) }} {{ t('labels.m2Unit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.paintableArea') }}</span>
+          <strong>{{ twoDecimal().format(paintableArea()) }} {{ t('labels.m2Unit') }}</strong>
+        </div>
+        <div class="result-row total">
+          <span>{{ t('labels.litresNeeded') }}</span>
+          <strong>{{ twoDecimal().format(litresNeeded()) }} {{ t('labels.lUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.cansTitle') }}</span>
+          <strong>
+            @for (c of cans(); track c.size) {
+              <span class="can">{{ c.count }} × {{ c.size }}{{ t('labels.lUnit') }}</span>
+            }
+            @if (cans().length === 0) {
+              <span>—</span>
+            }
+          </strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <p class="note">{{ t('labels.wastageNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

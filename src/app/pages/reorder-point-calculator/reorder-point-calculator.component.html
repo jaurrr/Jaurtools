@@ -1,0 +1,101 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="database" /> {{ t('resultsHeading') }}</h2>
+      <div class="field">
+        <label for="rop-demand">{{ t('labels.demandLabel') }}</label>
+        <div class="input-row">
+          <input id="rop-demand" type="number" inputmode="decimal" min="0.1" max="1000000" step="1"
+            [ngModel]="demand()" (ngModelChange)="setDemand($event)" />
+          <input type="range" min="1" max="500" step="1" [ngModel]="demand()" (ngModelChange)="setDemand($event)"
+            [attr.aria-label]="t('labels.demandLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.demandHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="rop-lead">{{ t('labels.leadLabel') }}</label>
+        <div class="input-row">
+          <input id="rop-lead" type="number" inputmode="decimal" min="0.5" max="365" step="0.5"
+            [ngModel]="leadTime()" (ngModelChange)="setLeadTime($event)" />
+          <input type="range" min="1" max="60" step="1" [ngModel]="leadTime()" (ngModelChange)="setLeadTime($event)"
+            [attr.aria-label]="t('labels.leadLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.leadHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="rop-safety">{{ t('labels.safetyLabel') }}</label>
+        <div class="input-row">
+          <input id="rop-safety" type="number" inputmode="decimal" min="0" max="1000000" step="10"
+            [ngModel]="safety()" (ngModelChange)="setSafety($event)" />
+          <input type="range" min="0" max="1000" step="10" [ngModel]="safety()" (ngModelChange)="setSafety($event)"
+            [attr.aria-label]="t('labels.safetyLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.safetyHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="rop-stock">{{ t('labels.stockLabel') }}</label>
+        <div class="input-row">
+          <input id="rop-stock" type="number" inputmode="decimal" min="0" max="10000000" step="10"
+            [ngModel]="stock()" (ngModelChange)="setStock($event)" />
+          <input type="range" min="0" max="2000" step="10" [ngModel]="stock()" (ngModelChange)="setStock($event)"
+            [attr.aria-label]="t('labels.stockLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.stockHint') }}</p>
+      </div>
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.demandDuringLeadLabel') }}</span>
+          <strong>{{ fmt0().format(demandDuringLead()) }} {{ t('labels.unitLabel') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.daysUntilLabel') }}</span>
+          <strong>{{ fmt1().format(daysUntilReorder()) }} {{ t('labels.daysLabel') }}</strong>
+        </div>
+        <div class="result-row total">
+          <span>{{ t('labels.ropLabel') }}</span>
+          <strong>{{ fmt0().format(rop()) }} {{ t('labels.unitLabel') }}</strong>
+        </div>
+        <p class="note">{{ recommendation() }}</p>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

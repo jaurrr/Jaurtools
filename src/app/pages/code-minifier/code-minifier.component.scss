@@ -1,0 +1,78 @@
+@import '../bmi-calculator/bmi-calculator.component.scss';
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.field-label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: 0.5rem;
+}
+
+.code-area {
+  inline-size: 100%;
+  min-block-size: 44px;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  resize: vertical;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block-end: 1.25rem;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-block-size: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  &.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      filter: brightness(1.08);
+    }
+  }
+}
+
+.results .total strong {
+  font-size: 1.75rem;
+}
+
+.note.error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .note.error {
+  color: #fca5a5;
+}

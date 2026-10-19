@@ -1,0 +1,99 @@
+{
+  "handwriting-to-font-converter": {
+    "benefits": [
+      "Turn your handwriting into a reusable digital alphabet you can type with.",
+      "Draw each letter once, then preview whole words and sentences instantly.",
+      "Export your alphabet as a PNG image or a vector SVG sheet.",
+      "Undo, per-letter clear, and full reset keep experimenting risk-free.",
+      "Great for signatures, invitations, and personal design projects."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Honestly: no. A true installable font file (.otf/.ttf) needs font-compiling software that runs on a desktop. This tool stores your handwriting as stroke paths and lets you type with it and export PNG/SVG artwork - which covers most real uses like signatures and designs.",
+        "q": "Does this create a real OTF font file I can install?"
+      },
+      {
+        "a": "69 characters: A-Z, a-z, 0-9, and the punctuation . , ! ? ' -. The preview renders any character you drew; anything you skipped falls back to a plain grey letter so you can see what is missing.",
+        "q": "Which characters can I draw?"
+      },
+      {
+        "a": "Each letter is drawn on the same 280x280 pad and rendered at the same size, so letters look consistent. Draw on the baseline guide (the dashed line) to keep letters aligned in the preview.",
+        "q": "How do I keep my letters the same size?"
+      },
+      {
+        "a": "Click the letter in the grid, then press Clear letter. The preview updates immediately and the letter falls back to the grey system letter until you redraw it.",
+        "q": "I messed up a letter. How do I redo it?"
+      },
+      {
+        "a": "The SVG export is a vector sheet of your drawn strokes - it scales forever without getting blurry, unlike PNG. Open it in any vector editor or browser.",
+        "q": "What is the SVG export good for?"
+      },
+      {
+        "a": "No. Your strokes live only in this browser tab's memory. Refreshing or closing the page erases them, so export your PNG/SVG before you leave.",
+        "q": "Is my handwriting saved anywhere?"
+      }
+    ],
+    "formula": "Each glyph is stored as a list of pen strokes.\nEach stroke is a list of points (x, y), normalised to 0..1 across the drawing pad.\n\nPreview rendering for a typed character C at font size F:\n  for each stroke S of C:\n    draw polyline through points (originX + x*F, originY + y*F)\n  advance originX by F * 0.72\n\nUndrawn characters fall back to a grey system letter.\nSVG export writes each stroke as a <polyline> in a labelled grid.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a letter in the character grid - start with capitals A to Z.",
+      "Draw the letter on the pad with your mouse, touch, or stylus. Each drag is one stroke.",
+      "Use Undo or Clear letter if a stroke goes wrong; the preview updates live.",
+      "Type any text in the preview box to see it rendered in your handwriting.",
+      "Export the preview as a PNG image or your whole alphabet as an SVG sheet."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "You draw each character once on a guided pad; the tool stores your pen strokes.",
+      "Every stroke is saved as a list of points, so letters redraw crisply at any size.",
+      "The preview typesets your text by replaying the stored strokes for each character.",
+      "Characters you have not drawn yet appear as grey system letters.",
+      "69 characters are supported: A-Z, a-z, 0-9, and . , ! ? ' -.",
+      "PNG export captures the preview; SVG export captures your whole drawn alphabet as vectors."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "handwriting to font, handwriting font maker, draw your own font, handwriting alphabet, signature maker, custom handwriting",
+    "labels": {
+      "clearAllButton": "Clear all",
+      "clearGlyphButton": "Clear letter",
+      "drawnCountLabel": "Letters drawn",
+      "exportPngButton": "Export preview PNG",
+      "exportSvgButton": "Export alphabet SVG",
+      "glyphAria": "Draw character",
+      "glyphLabel": "1. Choose a character to draw",
+      "padHint": "Draw with mouse, touch, or stylus. Each drag is one stroke.",
+      "padLabel": "2. Draw it here",
+      "penColorLabel": "Pen colour",
+      "penWidthLabel": "Pen width",
+      "previewSizeLabel": "Preview size",
+      "previewTextLabel": "4. Type to preview your handwriting",
+      "redrawButton": "Redraw",
+      "selectGlyphHint": "A green dot marks characters you have already drawn.",
+      "undoButton": "Undo stroke"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Does NOT produce an installable .otf/.ttf font file - that needs desktop font software.",
+      "Your drawings live only in this tab's memory; refreshing the page erases them.",
+      "Letter spacing is fixed, not kerned, so some letter pairs may look slightly uneven.",
+      "Only the 69 listed characters are supported; other scripts and symbols fall back to grey letters."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free handwriting to font tool: draw your alphabet on a pad, preview text in your handwriting, export PNG or SVG. Honest, private, browser-only.",
+    "metaTitle": "Handwriting to Font Converter - Draw Your Alphabet | JaurTools",
+    "name": "Handwriting to Font Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Draw each letter of the alphabet on a guided pad and this tool stores your pen strokes as a reusable digital alphabet. Type any text to see it rendered in your own handwriting, then export the preview as a PNG image or your whole alphabet as a vector SVG sheet. Honest note: it does not create an installable .otf font file - that needs desktop font software - but for signatures, invitations, and designs, the PNG/SVG exports cover the real need. Your strokes never leave your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Handwriting to Font Converter results",
+    "tagline": "Draw your alphabet and use your own handwriting as a digital typeface.",
+    "workedExample": "Drawing the letter 'A':\n1. Select 'A' in the character grid.\n2. Drag once for the left diagonal: points (0.3, 0.8) -> (0.5, 0.2).\n3. Drag again for the right diagonal: points (0.7, 0.8) -> (0.5, 0.2).\n4. Drag a third time for the crossbar: points (0.38, 0.55) -> (0.62, 0.55).\n\nStored: 3 strokes, each a list of normalised (x, y) points.\n\nPreviewing 'A' at size 56:\n  Each stroke is replayed as a polyline scaled by 56 px.\n  Stroke 1 renders from (16.8, 44.8) to (28, 11.2).\n  Undrawn letters (say 'B') appear as grey system letters until you draw them.\n\nExport: the PNG captures this preview; the SVG writes all 3 strokes as <polyline> elements.",
+    "workedExampleHeading": "Worked example"
+  }
+}

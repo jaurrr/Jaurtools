@@ -1,0 +1,90 @@
+{
+  "dice-roller": {
+    "benefits": [
+      "Roll any standard die: d4, d6, d8, d10, d12, d20, or d100, up to 6 dice at once.",
+      "Instant total with the possible range and expected value shown beside it.",
+      "The last 20 rolls stay visible, handy for board games and RPG sessions.",
+      "No physical dice to lose under the sofa."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "d stands for die, and the number is the side count. d6 is the classic cube, d20 is the 20-sided die of role-playing games, and d100 gives a 1 to 100 percentile roll. Pick the die your game asks for.",
+        "q": "What does d6 or d20 mean?"
+      },
+      {
+        "a": "Every face has the same 1-in-n chance. There is no memory and no pattern. Over many rolls each number appears about equally often, which is exactly what a fair physical die does.",
+        "q": "Are the rolls really random?"
+      },
+      {
+        "a": "For 2d6 there are 36 equally likely pairs. Six of them total 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1). So P(7) = 6/36 = 1/6, about 16.7 percent. Only (6,6) totals 12, so P(12) = 1/36, about 2.8 percent.",
+        "q": "Why is 7 the most common total on 2d6?"
+      },
+      {
+        "a": "The expected value of one die is (1 + n) / 2. For a d20 that is 10.5, for 3d6 it is 3 x 3.5 = 10.5. The tool shows the expected total under every roll.",
+        "q": "What is the average roll?"
+      },
+      {
+        "a": "For casual games with friends, yes. For tournaments or money games, use physical dice everyone can see. A screen result cannot be verified by the other players.",
+        "q": "Can I use this for a real game night?"
+      },
+      {
+        "a": "The d100 (percentile die) covers that: it returns 1 to 100 uniformly. Two d10 dice, one for tens and one for units, is the classic physical method; a single d100 does the same job here.",
+        "q": "How do I roll a percentage (1-100)?"
+      }
+    ],
+    "formula": "P(face k) = 1 / n for a fair n-sided die.\nExpected value of one die = (1 + n) / 2.\nTotal range for c dice = [c, c x n].",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose how many dice to roll: 1 to 6.",
+      "Pick the die type: d4, d6, d8, d10, d12, d20, or d100.",
+      "Tap Roll. The dice animate and the values appear.",
+      "Read the total, the possible range, and the expected value.",
+      "Scroll the history to review your last 20 rolls."
+    ],
+    "howToHeading": "How to use this roller",
+    "keyFacts": [
+      "A fair n-sided die lands on each face with probability 1/n.",
+      "The classic d6 has expected value 3.5. Every die's average is (1 + n) / 2.",
+      "Two dice do not give a flat distribution: on 2d6, 7 is six times more likely than 2 or 12.",
+      "The d20 is the signature die of tabletop role-playing games like Dungeons and Dragons.",
+      "A d100 roll is called a percentile roll and is used for percentage chances."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "dice roller, virtual dice roller, d20 roller, roll dice online, dnd dice roller",
+    "labels": {
+      "clear": "Clear",
+      "diceCount": "Number of dice",
+      "expected": "Expected value",
+      "history": "Roll history",
+      "noRollYet": "Choose your dice and tap Roll.",
+      "range": "Possible range",
+      "roll": "Roll",
+      "rolling": "Rolling...",
+      "sides": "Die type",
+      "total": "Total"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "For games and fun only. Not for gambling or decisions with real stakes.",
+      "Uses the browser's pseudo-random generator, not certified randomness.",
+      "Other players cannot independently verify a screen result."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free dice roller: roll d4, d6, d8, d10, d12, d20 or d100, up to 6 dice at once. See totals, range, and roll history. No sign-up, fully private.",
+    "metaTitle": "Dice Roller - Free Virtual d4 to d100 Dice | JaurTools",
+    "name": "Dice Roller",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Roll 1 to 6 dice of any standard type: d4, d6, d8, d10, d12, d20, or d100. Each roll shows the individual dice, the total, the possible range, and the expected value, with your last 20 rolls kept as history. Every face is equally likely on every roll.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your dice rolls",
+    "tagline": "Roll d4 to d100 dice with animation. Totals, range, and history included.",
+    "workedExample": "Rolling 2d6:\n1. Range: 2 to 12. Expected total: 2 x 3.5 = 7.\n2. You roll 4 and 5: total 9.\n3. How likely was that? Pairs totalling 9: (3,6), (4,5), (5,4), (6,3) = 4 out of 36, so P(9) = 4/36 = 1/9, about 11.1 percent.\n4. Compare: P(7) = 6/36 = 1/6 (16.7%), P(12) = 1/36 (2.8%). Middle totals are always more likely than extremes.",
+    "workedExampleHeading": "Worked example"
+  }
+}

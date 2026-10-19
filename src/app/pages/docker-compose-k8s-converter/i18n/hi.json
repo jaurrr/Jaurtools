@@ -1,0 +1,90 @@
+{
+  "docker-compose-k8s-converter": {
+    "assumptionNote": "सिर्फ image, ports, environment और restart कन्वर्ट होते हैं; compose फाइल की बाकी हर चीज़ अनदेखी की जाती है।",
+    "benefits": [
+      "compose-आधारित ऐप को हाथ से मैनिफेस्ट लिखे बिना Kubernetes की ओर ले जाता है।",
+      "हर सर्विस मिलते-जुलते लेबल के साथ Deployment और ClusterIP Service बनती है।",
+      "पोर्ट मैपिंग containerPort और Service port/targetPort जोड़ों में बदल जाती हैं।",
+      "एनवायरनमेंट वेरिएबल कंटेनर स्पेक में सही env एंट्री बन जाते हैं।",
+      "रिस्टार्ट पॉलिसी निकटतम Kubernetes restartPolicy से जुड़ जाती हैं।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "अपना docker-compose.yml इनपुट बॉक्स में पेस्ट करें। टूल services ब्लॉक पार्स करके हर सर्विस के लिए एक Deployment और एक Service बनाता है। YAML डाउनलोड करें और kubectl apply -f k8s-manifests.yaml से लगाएं।",
+        "q": "जनरेट किए मैनिफेस्ट कैसे डिप्लॉय करूं?"
+      },
+      {
+        "a": "unless-stopped और always बनते हैं restartPolicy: Always, on-failure बनता है OnFailure, और no बनता है Never। ध्यान रहे Deployment में व्यवहारतः हमेशा Always रहता है; Pod या Job बनाएं तो पॉलिसी बदलें।",
+        "q": "रिस्टार्ट पॉलिसी कैसे अनुवादित होती हैं?"
+      },
+      {
+        "a": "Service port मैपिंग का होस्ट पक्ष होता है और targetPort कंटेनर पक्ष। 8080:80 के लिए Service 8080 पर सुनती है और कंटेनर पोर्ट 80 पर भेजती है।",
+        "q": "पोर्ट मैपिंग कैसे बदलती हैं?"
+      },
+      {
+        "a": "- NODE_ENV=production जैसी सूची एंट्री env name/value जोड़े बन जाती हैं। मैप-स्टाइल environment ब्लॉक भी चलते हैं। सीक्रेट नहीं बनते — संवेदनशील मान हाथ से Kubernetes Secrets में डालें।",
+        "q": "एनवायरनमेंट वेरिएबल का क्या होता है?"
+      },
+      {
+        "a": "नहीं। वॉल्यूम जानबूझकर छोड़े जाते हैं क्योंकि होस्ट पाथ क्लस्टर नोड पर शायद ही होते हैं। अपने डेटा के लिए PersistentVolumeClaim बनाएं और जनरेट किए Deployment से जोड़ें।",
+        "q": "क्या वॉल्यूम कन्वर्ट होते हैं?"
+      },
+      {
+        "a": "हां, बशर्ते वह आम सबसेट इस्तेमाल करे: image, ports, environment और restart वाली services। असामान्य keys पार्स तोड़े बिना अनदेखी की जाती हैं।",
+        "q": "क्या यह मेरी असली compose फाइल संभालेगा?"
+      }
+    ],
+    "formula": "compose service  ->  Deployment + Service\n  image: X        ->  containers[0].image: X\n  ports \"H:C\"     ->  containerPort: C, Service port: H, targetPort: C\n  environment     ->  env: [{name, value}]\n  restart         ->  restartPolicy (Always / OnFailure / Never)",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपना docker-compose.yml इनपुट बॉक्स में पेस्ट करें।",
+      "पार्स किया सारांश जांचें: सर्विस गिनती और जनरेट किए रिसोर्स।",
+      "जनरेट किए Deployment और Service मैनिफेस्ट देखें।",
+      "आउटपुट कॉपी करें या k8s-manifests.yaml डाउनलोड करें।",
+      "kubectl apply -f k8s-manifests.yaml से लगाएं और ज़रूरत अनुसार बदलें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "Kubernetes Deployment आपकी कंटेनर इमेज चलाने वाले एक जैसे Pod का सेट संभालता है।",
+      "Service उन Pod को क्लस्टर के अंदर स्थिर नेटवर्क पहचान देती है।",
+      "containerPort बताता है कंटेनर किस पोर्ट पर सुनता है; Service port वह है जिसे दूसरे कॉल करते हैं।",
+      "एनवायरनमेंट एंट्री कंटेनर स्पेक में env name/value जोड़ों से एक-एक जुड़ती हैं।",
+      "पार्सर आम compose सबसेट संभालता है: image, ports, environment, restart।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "docker compose से kubernetes, compose से k8s कन्वर्टर, kompose ऑनलाइन, docker से kubernetes yaml",
+    "labels": {
+      "copiedLabel": "कॉपी हुआ",
+      "copyLabel": "कॉपी",
+      "downloadLabel": ".yaml डाउनलोड करें",
+      "errorInvalid": "वैध compose फाइल पार्स नहीं हो सकी। YAML जांचें और दोबारा कोशिश करें।",
+      "inputLabel": "docker-compose.yml",
+      "resourcesLabel": "K8s रिसोर्स",
+      "servicesLabel": "सर्विस"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "वॉल्यूम कन्वर्ट नहीं होते — होस्ट पाथ क्लस्टर नोड पर नहीं होते।",
+      "build:, depends_on:, networks: और healthchecks अनदेखी की जाती हैं।",
+      "सीक्रेट कभी जनरेट नहीं होते; संवेदनशील env मान Kubernetes Secrets में डालें।",
+      "YAML पार्सर आम सबसेट कवर करता है, पूरी compose स्पेसिफिकेशन नहीं।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "docker-compose.yml को ऑनलाइन Kubernetes मैनिफेस्ट में बदलें। अपनी compose फाइल पेस्ट करें और हर सर्विस के लिए Deployment व Service YAML मुफ्त में पाएं।",
+    "metaTitle": "Compose से Kubernetes कन्वर्टर – मुफ्त K8s YAML टूल",
+    "name": "Docker Compose से K8s कन्वर्टर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "Kubernetes पर जाते समय टीमें docker compose से आगे बढ़ जाती हैं, लेकिन हर सर्विस को हाथ से मैनिफेस्ट के रूप में दोबारा लिखना उबाऊ है। यह टूल आपकी compose फाइल पार्स करके हर सर्विस के लिए Deployment और ClusterIP Service बनाता है — इमेज, पोर्ट मैपिंग, एनवायरनमेंट वेरिएबल और रिस्टार्ट पॉलिसी समेत।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "जनरेट किए Kubernetes मैनिफेस्ट",
+    "tagline": "docker-compose.yml को Kubernetes Deployment और Service में बदलें।",
+    "workedExample": "इनपुट:\nservices:\n  web:\n    image: nginx:1.25\n    ports:\n      - \"8080:80\"\n    environment:\n      - NODE_ENV=production\n    restart: unless-stopped\n\nआउटपुट (k8s-manifests.yaml):\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: web\nspec:\n  replicas: 1\n  selector:\n    matchLabels:\n      app: web\n  template:\n    metadata:\n      labels:\n        app: web\n    spec:\n      restartPolicy: Always\n      containers:\n        - name: web\n          image: nginx:1.25\n          ports:\n            - containerPort: 80\n          env:\n            - name: NODE_ENV\n              value: \"production\"\n---\napiVersion: v1\nkind: Service\nmetadata:\n  name: web\nspec:\n  selector:\n    app: web\n  type: ClusterIP\n  ports:\n    - protocol: TCP\n      port: 8080\n      targetPort: 80\n\nkubectl apply -f k8s-manifests.yaml से लगाएं।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

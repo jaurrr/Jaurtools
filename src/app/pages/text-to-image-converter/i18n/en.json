@@ -1,0 +1,102 @@
+{
+  "text-to-image-converter": {
+    "benefits": [
+      "No design app needed: quotes, headings and labels become images in seconds.",
+      "Exact canvas sizing: the image is trimmed to the text plus your padding.",
+      "Transparent backgrounds for overlays, watermarks and stickers.",
+      "PNG for crisp text or JPEG for smaller photo-style files."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Text on a web page is selectable and searchable, but an image of text works anywhere: social posts, video thumbnails, document headers and anywhere fonts might be missing.",
+        "q": "Why turn text into an image?"
+      },
+      {
+        "a": "The canvas measures the widest line with measureText and sets the image width to that plus twice the padding. Height is lines × font size × line height plus twice the padding.",
+        "q": "How is the image size calculated?"
+      },
+      {
+        "a": "The tool uses fonts installed on the viewer's device (Arial, Georgia, Courier New and others). Web fonts you loaded on another site are not available to the canvas.",
+        "q": "Can I use any font?"
+      },
+      {
+        "a": "Yes. PNG keeps the background transparent, which is ideal for watermarks, stickers and overlays on photos or videos.",
+        "q": "Can the background be transparent?"
+      },
+      {
+        "a": "Emoji render with the device's color emoji font and usually look fine. Very new emoji may fall back to monochrome on older devices.",
+        "q": "Do emoji work?"
+      },
+      {
+        "a": "No. The canvas drawing API runs locally in your browser.",
+        "q": "Is my text uploaded anywhere?"
+      }
+    ],
+    "formula": "canvas width = widest line width + 2 × padding\ncanvas height = lines × font size × line height + 2 × padding\n\nExample: 64 px font, line height 1.4, padding 24, one line ≈ 154 px wide\nwidth ≈ 154 + 48 = 202 px; height ≈ 64 × 1.4 + 48 ≈ 138 px",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type your text; press Enter for multiple lines.",
+      "Choose a font, size, bold or italic styling.",
+      "Pick the text color and a background color (or transparent).",
+      "Adjust padding, alignment and line height to taste.",
+      "Preview the image, choose PNG or JPEG, and download it."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The canvas API draws text with fillText using any installed system font.",
+      "measureText() returns the exact pixel width of each line for sizing.",
+      "The image is trimmed to the text plus padding — no wasted space.",
+      "Line breaks come from the Enter key; there is no automatic word wrap.",
+      "PNG supports transparency; JPEG is smaller but always opaque.",
+      "Everything renders locally; the text never leaves the browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "text to image, text to png, render text image, quote image maker",
+    "labels": {
+      "alignCenter": "Center",
+      "alignLabel": "Alignment",
+      "alignLeft": "Left",
+      "alignRight": "Right",
+      "bgColorLabel": "Background color",
+      "boldLabel": "Bold",
+      "downloadButton": "Download image",
+      "emptyNote": "Type some text above to render it as an image.",
+      "fontLabel": "Font",
+      "fontUsedLabel": "Font used",
+      "formatLabel": "Format",
+      "italicLabel": "Italic",
+      "lineHeightLabel": "Line height",
+      "outputSizeLabel": "Image size",
+      "paddingLabel": "Padding",
+      "previewAlt": "Rendered text image preview",
+      "sizeLabel": "Font size",
+      "textColorLabel": "Text color",
+      "textLabel": "Your text",
+      "transparentLabel": "Transparent background"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only system fonts are available; custom web fonts cannot be loaded.",
+      "No automatic word wrap — very long lines make very wide images.",
+      "Text effects like shadows, outlines and gradients are not supported.",
+      "Emoji rendering depends on the device's emoji font."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Render typed text into a downloadable image — pick font, size, colors and padding. Perfect for quotes and posts — free online.",
+    "metaTitle": "Text to Image Converter - Turn Text Into Images | JaurTools",
+    "name": "Text to Image Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This tool renders typed text into a downloadable image using the canvas API. Type your text, choose a font, size, colors and padding, and the image is sized exactly to fit. Download it as PNG (with optional transparency) or JPEG.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Text to image results",
+    "tagline": "Words become shareable images.",
+    "workedExample": "You type \"Sale\" on one line with 64 px bold Arial, line height 1.4 and padding 24.\n\nThe canvas measures the line at about 154 px wide.\nCanvas width = 154 + 2 × 24 = 202 px.\nCanvas height = 1 × 64 × 1.4 + 2 × 24 = 89.6 + 48 = 137.6 → 138 px.\n\nThe result is a crisp 202 × 138 PNG with the word centered — ready to use as a banner label. (Exact pixel widths vary slightly by device font.)",
+    "workedExampleHeading": "Worked example"
+  }
+}

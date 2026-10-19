@@ -1,0 +1,114 @@
+{
+  "time-zone-converter": {
+    "benefits": [
+      "Schedule meetings across continents without the mental UTC gymnastics.",
+      "Travelers can check what time they will land in local time before booking.",
+      "Remote teams see everyone's working hours overlap at a glance.",
+      "Freelancers can quote deadlines in the client's timezone and avoid missed handoffs."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Date & Time",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — automatically. Offsets are computed with your browser's built-in timezone database for the exact date you enter, so a meeting in July uses summer time and one in January uses winter time, with no manual adjustment.",
+        "q": "Does it handle daylight saving time?"
+      },
+      {
+        "a": "Offsets come from the timezone database built into your browser (the IANA database), the same source operating systems use. It is updated with your browser, so keep your browser current for the newest rule changes.",
+        "q": "Where do the timezone offsets come from?"
+      },
+      {
+        "a": "Enter the meeting time in the organizer's zone as the source and your zone as the target. The converter shows the exact local time plus how many hours ahead or behind you are — the number to remember for next time.",
+        "q": "How do I schedule a meeting across timezones?"
+      },
+      {
+        "a": "Yes. Pick the same date in both zones and read the difference row: it tells you, for example, that Tokyo is 3 h 30 m ahead of Dubai on that date, including any DST in force.",
+        "q": "Can I compare two zones without a specific time?"
+      },
+      {
+        "a": "The tool converts a moment in time. The calendar date can shift — an evening call in New York can easily be morning the next day in Sydney. Both the date and the time are shown so nothing is ambiguous.",
+        "q": "Why did the date change after converting?"
+      },
+      {
+        "a": "No. The conversion math runs entirely in your browser using the Intl API. No request is sent anywhere.",
+        "q": "Is an internet connection needed?"
+      }
+    ],
+    "formula": "For a wall time (y, m, d, h, min) in source zone S:\n1. guess = Date.UTC(y, m-1, d, h, min)\n2. offset = minutes such that local(S) = UTC + offset, read from Intl for that instant\n3. utcMs = Date.UTC(y, m-1, d, h, min) - offset x 60000\n4. repeat steps 2–3 twice more (settles DST edge cases)\n5. target wall time = format utcMs with Intl in zone T\n\ndifference = offset(T) - offset(S) at that instant",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the date and the time in the source timezone.",
+      "Choose the source zone (where the time is) and the target zone (where you want it).",
+      "The converted date and time appear instantly, with both UTC offsets.",
+      "Use the swap button to flip the direction in one tap.",
+      "For a recurring meeting, note the difference row — that gap stays constant while DST rules hold."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A timezone is not a fixed offset — most zones shift twice a year for daylight saving, so the date you convert on matters.",
+      "UTC never observes daylight saving; it is the reference every conversion passes through.",
+      "The difference between two zones can change through the year: New York is 9 h 30 m behind Kolkata in October but the gap to London swings between 4 and 5 hours.",
+      "Half-hour and 45-minute zones exist — India (+5:30), Nepal (+5:45), and parts of Australia (+9:30) are common examples.",
+      "This tool reads offsets from your browser's built-in IANA timezone database, so DST transitions are handled for the exact date you enter."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "time zone converter, convert time between time zones, world time converter, timezone difference calculator",
+    "labels": {
+      "ahead": "ahead",
+      "behind": "behind",
+      "date": "Date",
+      "difference": "Time difference",
+      "dstNote": "Daylight saving is applied automatically from your browser's timezone database for the date you enter.",
+      "fromZone": "From (source timezone)",
+      "hoursShort": "h",
+      "invalidInput": "Please enter a valid date, time, and zones.",
+      "minutesShort": "m",
+      "sameOffset": "Same time — no difference",
+      "swap": "Swap zones",
+      "time": "Time",
+      "toZone": "To (target timezone)",
+      "zoneNames": [
+        "UTC — Coordinated Universal Time",
+        "Kolkata, India",
+        "Dubai, UAE",
+        "Riyadh, Saudi Arabia",
+        "Karachi, Pakistan",
+        "Dhaka, Bangladesh",
+        "Singapore",
+        "Tokyo, Japan",
+        "Shanghai, China",
+        "Sydney, Australia",
+        "London, UK",
+        "Paris, France",
+        "Moscow, Russia",
+        "Cairo, Egypt",
+        "New York, USA",
+        "Chicago, USA",
+        "Los Angeles, USA",
+        "São Paulo, Brazil"
+      ]
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Covers 18 major zones — smaller or historical zones are not in the list.",
+      "Offsets depend on your browser's timezone database; very old or far-future dates follow the latest known rules.",
+      "Converts clock times, not durations — a 90-minute meeting length still needs the duration calculator.",
+      "Estimates only — for flight-critical planning, confirm with the airline's stated local times."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert any date and time between 18 world timezones with automatic daylight-saving handling. Free, instant, private — runs in your browser.",
+    "metaTitle": "Time Zone Converter — Convert Time Between Zones",
+    "name": "Time Zone Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type a date and time, pick the source timezone and the target timezone, and the exact converted time appears instantly — with both UTC offsets and the hour difference. Daylight saving is handled automatically for the date you enter, all inside your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Time Zone Converter results",
+    "tagline": "Convert any date and time between world timezones — with automatic daylight-saving handling.",
+    "workedExample": "18 October 2026, 12:00 in Asia/Kolkata → America/New_York:\n12:00 IST = 06:30 UTC (Kolkata is UTC+5:30)\n06:30 UTC = 02:30 EDT in New York (UTC-4 in October)\nDifference: New York is 9 h 30 m behind Kolkata.\nCheck: 12:00 minus 9:30 = 02:30. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "pension-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Pension Calculator",
+    "tagline": "Project your retirement corpus and the monthly pension it can pay.",
+    "metaTitle": "Pension Calculator - Retirement Income Projection | JaurTools",
+    "metaDescription": "Free pension calculator: project your retirement corpus from savings and monthly contributions, then see the monthly pension it can pay.",
+    "keywords": "pension calculator, retirement corpus calculator, retirement income calculator, monthly pension calculator",
+    "resultsHeading": "Your pension results",
+    "quickAnswer": "Your corpus grows from today's savings plus monthly contributions, compounded to retirement age; the monthly pension is the annuity that corpus can pay over your payout years. Example: at 30 with 500,000 saved and 20,000 per month at 10% return, retiring at 60 builds a corpus of about 53,934,460, which pays roughly 520,479 per month for 20 years. Of that corpus, 46,234,460 is pure growth.",
+    "keyFacts": [
+      "A pension corpus has two engines: what you contribute and how long compounding works on it.",
+      "Starting 10 years earlier can matter more than saving 50% more each month.",
+      "Monthly pension = annuity payment the corpus sustains over your chosen payout years.",
+      "Inflation shrinks future purchasing power: plan in today's money too, not just future money.",
+      "A common rule of thumb is needing 25x your annual expenses saved (the 4% rule).",
+      "Employer plans, government pensions, and personal savings stack: add them all up."
+    ],
+    "howTo": [
+      "Enter your current age and the age you plan to retire.",
+      "Enter savings already set aside for retirement.",
+      "Enter how much you can contribute every month.",
+      "Enter a realistic expected annual return (7 to 10% for equity-heavy plans).",
+      "Set how many years the pension must last, and read your corpus and monthly pension."
+    ],
+    "formula": "Corpus = Savings x (1 + i)^(12 x years) + Monthly x (((1 + i)^(12 x years) - 1) / i), with monthly rate i = annual return / 12.\nMonthly pension = Corpus x i / (1 - (1 + i)^-n), with n = payout months.\nExample: 500,000 x 1.1^30 = 8,724,700 from savings alone; 20,000 monthly at 10% for 30 years = 45,209,800; corpus = 53,934,460.",
+    "workedExample": "Age 30, retire at 60, savings 500,000, monthly 20,000, return 10%, payout 20 years:\n1. Years to retirement: 30.\n2. Savings grow to: 500,000 x (1 + 0.10/12)^360 = 8,724,700.\n3. Monthly contributions grow to: 20,000 x ((1.008333^360 - 1) / 0.008333) = 45,209,800.\n4. Corpus: 8,724,700 + 45,209,800 = 53,934,460.\n5. Monthly pension over 240 months at 10%: 53,934,460 x 0.008333 / (1 - 1.008333^-240) = 520,479.\n6. Total contributed: 7,700,000, so growth = 46,234,460.",
+    "benefits": [
+      "Translates a monthly savings habit into a concrete retirement paycheck.",
+      "Shows how much of the corpus is growth versus your own contributions.",
+      "Lets you test retiring earlier or later with one number change.",
+      "Motivates early action: watch the corpus jump when you lower your current age."
+    ],
+    "limitations": [
+      "Projections are not guarantees: returns vary and are never constant.",
+      "Ignores inflation, taxes on withdrawals, and fees.",
+      "Assumes you never miss a contribution and never withdraw early.",
+      "Not retirement advice: consult a licensed financial planner for your situation."
+    ],
+    "faqs": [
+      {
+        "q": "How much do I need to retire?",
+        "a": "A popular starting point is 25 times your annual expenses, which supports a 4% yearly withdrawal. Enter your target monthly pension here and work backward: raise the monthly contribution until the pension row matches your goal."
+      },
+      {
+        "q": "What return should I assume?",
+        "a": "Match it to your asset mix. Equity-heavy portfolios have historically returned 10 to 12% long-term in India, balanced plans 8 to 9%, and conservative debt 6 to 7%. Using a lower, conservative figure keeps the plan honest."
+      },
+      {
+        "q": "Is it better to save more or start earlier?",
+        "a": "Usually, starting earlier. Compounding needs time more than it needs money. A 25-year-old saving 10,000 a month often beats a 35-year-old saving 20,000 a month at the same return. Do both if you can."
+      },
+      {
+        "q": "Why does inflation matter if my corpus looks huge?",
+        "a": "Because 53,934,460 in 30 years buys far less than it does today. At 6% inflation, prices roughly multiply by 5.7 over 30 years, so that corpus spends like about 9.4 million today. Always sanity-check the monthly pension against today's expenses grown by inflation."
+      },
+      {
+        "q": "What if I retire earlier than planned?",
+        "a": "Two things shrink at once: fewer compounding years and fewer contributions. Try lowering the retirement age in the tool and watch the corpus fall. That gap is exactly what working a few more years buys you."
+      },
+      {
+        "q": "Should the payout return equal the growth return?",
+        "a": "Ideally the payout phase uses a lower, safer return, since retirees usually shift to conservative assets. This calculator keeps one rate for simplicity, so treat the pension as slightly optimistic if you plan to de-risk after retiring."
+      }
+    ],
+    "labels": {
+      "currentAge": "Current age",
+      "retireAge": "Retirement age",
+      "savings": "Savings already set aside",
+      "monthly": "Monthly contribution",
+      "annualReturn": "Expected annual return (%)",
+      "payoutYears": "Pension payout years",
+      "totalContributed": "Total you contribute",
+      "growth": "Growth from compounding",
+      "corpus": "Corpus at retirement",
+      "monthlyPension": "Monthly pension"
+    }
+  }
+}

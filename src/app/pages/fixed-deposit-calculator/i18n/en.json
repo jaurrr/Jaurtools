@@ -1,0 +1,94 @@
+{
+  "fixed-deposit-calculator": {
+    "assumptionNote": "Assumes a fixed rate, no withdrawals or additions during the tenure, and no tax deducted.",
+    "benefits": [
+      "Shows the real maturity value, not just the advertised rate.",
+      "Reveals how compounding frequency quietly boosts returns.",
+      "Helps compare FD offers from different banks in seconds.",
+      "Makes the cost of breaking an FD early visible."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The quoted rate is the nominal annual rate. Because interest is added to your balance each quarter and then earns interest itself, the effective annual yield is higher — 7.19% in our example versus the quoted 7%. The calculator shows both.",
+        "q": "What is the difference between the FD rate and the effective yield?"
+      },
+      {
+        "a": "Slightly. More frequent compounding means interest starts earning interest sooner. On a 5-year deposit the difference between monthly and quarterly compounding is small — usually a fraction of a percent — but it is real money on large deposits.",
+        "q": "Is monthly compounding better than quarterly?"
+      },
+      {
+        "a": "Banks typically pay the rate for the period the money actually stayed, minus a penalty of about 1%. You also lose the compounding benefit of the full tenure. Use the calculator to compare the maturity value against what you would get by breaking it.",
+        "q": "What happens if I break my FD early?"
+      },
+      {
+        "a": "Yes. In India FD interest is added to your income and taxed at your slab rate, and banks deduct TDS above a threshold. The maturity value shown here is before tax.",
+        "q": "Are FD returns taxable?"
+      },
+      {
+        "a": "For the same rate and tenure, a lump-sum FD grows more because the full amount compounds from day one. A recurring deposit builds up gradually, so less money earns interest for less time. Choose an FD if you have the lump sum ready.",
+        "q": "FD or recurring deposit — which grows more?"
+      },
+      {
+        "a": "Your principal is safe up to the deposit insurance limit (₹5 lakh per depositor per bank in India). The real risk is inflation: if prices rise faster than your FD rate, your purchasing power shrinks even as the balance grows.",
+        "q": "Can I lose money in a fixed deposit?"
+      }
+    ],
+    "formula": "Maturity A = P x (1 + r/n)^(n x t), where P = principal, r = annual rate (decimal), n = compounding periods per year, t = years.\nInterest earned = A - P.\nEffective annual yield = (1 + r/n)^n - 1.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the amount you want to deposit.",
+      "Enter the annual interest rate offered by your bank.",
+      "Choose the tenure in years and the compounding frequency.",
+      "Read the maturity value, total interest, and effective annual yield instantly."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A fixed deposit locks your money for a fixed tenure at a fixed interest rate.",
+      "Interest is usually compounded quarterly in India, which lifts the effective yield above the quoted rate.",
+      "Longer tenures and higher rates both increase the maturity value, but the rate matters more.",
+      "Breaking an FD early usually costs a penalty of around 1% on the rate, plus the lost compounding.",
+      "FD interest is taxable as income in most countries, including India."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "fixed deposit calculator, fd calculator, fd maturity calculator, fixed deposit interest calculator",
+    "labels": {
+      "annualRate": "Annual interest rate (%)",
+      "compounding": "Compounding frequency",
+      "effectiveYield": "Effective annual yield",
+      "freqOptions": {
+        "halfYearly": "Half-yearly",
+        "monthly": "Monthly",
+        "quarterly": "Quarterly",
+        "yearly": "Yearly"
+      },
+      "interestEarned": "Interest earned",
+      "maturityValue": "Maturity value",
+      "principal": "Deposit amount",
+      "tenureYears": "Tenure (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Ignores tax on interest, which reduces your actual return.",
+      "Assumes the rate stays fixed; floating-rate deposits can differ.",
+      "Does not include premature-withdrawal penalties.",
+      "Inflation can eat into the real return — nominal gain is not purchasing power."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free fixed deposit calculator: enter your deposit, interest rate, tenure and compounding frequency to see the maturity value and total interest earned.",
+    "metaTitle": "Fixed Deposit Calculator - FD Maturity & Interest | JaurTools",
+    "name": "Fixed Deposit Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A ₹100,000 fixed deposit at 7% per year, compounded quarterly for 5 years, matures to ₹141,478. You earn ₹41,478 in interest, and the effective annual yield is 7.19%. Compounding more often than once a year always beats the quoted rate — that is the power of compounding.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your fixed deposit results",
+    "tagline": "See how your fixed deposit grows with compounding — maturity value, interest earned, and effective yield.",
+    "workedExample": "Principal ₹100,000, 7% annual rate, compounded quarterly (n = 4), 5 years:\n1. Quarterly rate = 0.07 / 4 = 0.0175.\n2. Periods = 4 x 5 = 20.\n3. A = 100,000 x (1.0175)^20 = 100,000 x 1.41478 = ₹141,477.82.\n4. Interest = 141,477.82 - 100,000 = ₹41,477.82.\n5. Effective yield = (1.0175)^4 - 1 = 7.19% per year.",
+    "workedExampleHeading": "Worked example"
+  }
+}

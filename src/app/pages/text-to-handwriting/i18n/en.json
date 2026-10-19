@@ -1,0 +1,97 @@
+{
+  "text-to-handwriting": {
+    "assumptionNote": "Handwriting uses your device's built-in script fonts, so the exact look varies between phones and computers.",
+    "benefits": [
+      "Turns typed text into a handwritten-style note instantly.",
+      "3 handwriting styles: classic, casual and elegant script.",
+      "Blue, black, red and green ink plus custom color picker.",
+      "Ruled notebook paper with a red margin line, or plain.",
+      "Download the result as a PNG image with one click."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Type your text, pick a handwriting style, ink color and size, and the tool renders it on a notebook-style page in the live preview. Press Download to save it as a PNG image.",
+        "q": "How do I make a handwriting image?"
+      },
+      {
+        "a": "Blue, black, red and green ink swatches, plus a color picker for any custom ink color.",
+        "q": "What ink colors are available?"
+      },
+      {
+        "a": "Classic is a flowing script, Casual is a relaxed marker style, and Elegant is a formal roundhand style.",
+        "q": "What is the difference between the styles?"
+      },
+      {
+        "a": "It uses your device's built-in handwriting fonts, so the exact style depends on your phone or computer. This is also why it works offline with no font downloads.",
+        "q": "Why does it look different on my phone?"
+      },
+      {
+        "a": "Use the size slider (24px–96px). Larger text makes longer notes, smaller text fits more on the page.",
+        "q": "How do I change the text size?"
+      },
+      {
+        "a": "Yes — the Download button saves the rendered page as a PNG image you can share anywhere.",
+        "q": "Can I share the result as an image?"
+      }
+    ],
+    "formula": "lineHeight = fontSize x 1.7\ncanvasHeight = padding x 2 + lines x lineHeight\nwords wrapped by canvas.measureText to fit the page width",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste your text into the box.",
+      "Choose a handwriting style: classic, casual or elegant.",
+      "Pick an ink color and adjust the text size.",
+      "Toggle ruled notebook paper on or off.",
+      "Press Download to save your note as a PNG image."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Text is rendered on a canvas with your device's script fonts.",
+      "The page looks like a notebook: cream paper, blue lines, red margin.",
+      "Long text wraps automatically and the page grows taller.",
+      "The PNG downloads at full canvas resolution.",
+      "Everything runs locally; no text is uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "text to handwriting converter, handwriting font generator, handwritten text image, handwriting maker online, text to handwriting png",
+    "labels": {
+      "downloadButton": "Download PNG",
+      "inkBlack": "Black ink",
+      "inkBlue": "Blue ink",
+      "inkGreen": "Green ink",
+      "inkLabel": "Ink color",
+      "inkRed": "Red ink",
+      "previewLabel": "Preview",
+      "ruledLabel": "Ruled notebook paper",
+      "sizeLabel": "Text size",
+      "styleCasual": "Casual",
+      "styleClassic": "Classic",
+      "styleElegant": "Elegant",
+      "styleLabel": "Handwriting style",
+      "textLabel": "Your text",
+      "textPlaceholder": "Type something to turn into handwriting..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses device fonts only — no licensed premium handwriting fonts.",
+      "The exact look varies between devices and operating systems.",
+      "Very long text makes a very tall image."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free text to handwriting converter. Render text in handwriting styles on notebook paper and download as PNG. 100% browser-based.",
+    "metaTitle": "Text to Handwriting — Handwriting Image Generator Online",
+    "name": "Text to Handwriting",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Renders your text in handwriting-style script fonts on a notebook page — cream paper, blue ruled lines and a red margin — and lets you download it as a PNG image. Three styles (classic, casual, elegant), ink colors, adjustable size and ruled/plain paper toggle. Uses your device's built-in fonts, so it works offline with no downloads.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Handwriting generator",
+    "tagline": "Type text, get a handwritten note on notebook paper — download as PNG.",
+    "workedExample": "Input: \"Hello World\"\nStyle: Classic, ink: blue (#1e3a8a), size: 48px, ruled paper ON.\nStep 1: line height = 48 x 1.7 = 81.6 -> 82px\nStep 2: \"Hello World\" fits on one wrapped line\nStep 3: page height = 120 + 1 x 82 + 20 = 222px (1240px wide)\nStep 4: cream background, blue ruled lines and red margin are drawn, then the text in blue script font\nDownload -> handwriting.png shows the handwritten note.",
+    "workedExampleHeading": "Worked example"
+  }
+}

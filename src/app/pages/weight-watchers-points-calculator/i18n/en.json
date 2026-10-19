@@ -1,0 +1,91 @@
+{
+  "weight-watchers-points-calculator": {
+    "assumptionNote": "This is an independent educational estimate of the classic (pre-2010) Points formula. It is not affiliated with, endorsed by, or sponsored by any commercial diet program.",
+    "benefits": [
+      "Turns any nutrition label into a single comparable number in seconds.",
+      "Shows the full breakdown, so you see exactly how calories, fat, and fiber move the result.",
+      "Helps you compare snacks side by side - the lower-points option is usually the smarter pick.",
+      "Free and private: no account, no app, no tracking of what you eat."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Points = calories/50 + fat/12 - fiber/5, with fiber capped at 4 grams, rounded to the nearest whole number. The original system assigned each person a daily Points target based on weight and activity, and dieters stayed within it. This calculator only computes the food's value, not your personal budget.",
+        "q": "How did the classic Points system work?"
+      },
+      {
+        "a": "Fat is calorie-dense - about 9 kcal per gram versus 4 for protein and carbohydrates - so the formula penalizes it harder than raw calories alone would. Two foods with the same calories can have different Points if one is much fattier.",
+        "q": "Why does fat count extra on top of calories?"
+      },
+      {
+        "a": "Yes. Fiber beyond 4 grams no longer lowers the value - the cap is baked into the classic formula. A bowl with 8 g of fiber gets the same credit as one with 4 g. Enter any number; the calculator applies the cap automatically.",
+        "q": "Is there a limit to the fiber credit?"
+      },
+      {
+        "a": "Not exactly. PointsPlus (2010) and later SmartPoints and Points systems use completely different formulas based on protein, carbs, sugar, and saturated fat. This calculator covers only the classic formula, which is still the one most old cookbooks and charts reference.",
+        "q": "Is this the same as today's commercial points programs?"
+      },
+      {
+        "a": "A banana (105 kcal, 0.4 g fat, 3.1 g fiber) is about 2 Points: 2.10 + 0.03 - 0.62 = 1.51, rounding to 2. A 300 kcal muffin with 12 g fat and 1 g fiber is 6 + 1 - 0.2 = 6.8, rounding to 7.",
+        "q": "What is an example of high and low Points food?"
+      },
+      {
+        "a": "Rounding moves borderline values: 2.51 becomes 3, 2.49 becomes 2. That is how the classic system worked - fractions were never tracked. The breakdown section shows the unrounded value so you can see how close a food sits to the edge.",
+        "q": "Does rounding change the result much?"
+      }
+    ],
+    "formula": "Points = calories/50 + fat(g)/12 - fiber(g)/5.\nFiber is capped at 4 g for the credit.\nThe result is rounded to the nearest whole number (minimum 0).\nExample: 300 kcal, 10 g fat, 5 g fiber -> 6 + 0.83 - 0.80 = 6.03 -> 6 points.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the calories (kcal) from the nutrition label or recipe.",
+      "Enter total fat in grams.",
+      "Enter dietary fiber in grams. The calculator caps the fiber credit at 4 g automatically.",
+      "Read the Points value instantly, with a breakdown of how each nutrient contributed.",
+      "Compare foods before you eat: for similar calories, the one with less fat and more fiber usually scores lower."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Classic Points = calories/50 + fat/12 - fiber/5, rounded to the nearest whole number.",
+      "Only the first 4 grams of fiber count toward the fiber credit.",
+      "Fat is penalized extra because it packs about 9 kcal per gram - more than double protein or carbs.",
+      "The classic system is the pre-2010 formula; newer commercial points programs use different formulas.",
+      "Points measure energy density for comparison, not complete nutrition - vitamins and minerals do not enter the formula.",
+      "This tool is an unofficial, independent estimate."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "weight loss points calculator, ww points calculator, food points estimator, classic points formula, calories to points",
+    "labels": {
+      "calories": "Calories (kcal)",
+      "fat": "Total fat (g)",
+      "fiber": "Dietary fiber (g)",
+      "fromCalories": "From calories",
+      "fromFat": "From fat",
+      "fromFiber": "Fiber credit",
+      "points": "Points value",
+      "unrounded": "Unrounded value"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Unofficial, independent estimate of the classic formula.",
+      "Modern commercial points programs (PointsPlus, SmartPoints, current Points) use different formulas this tool does not cover.",
+      "Nutrition labels can legally vary about 20% from lab values, so the input itself is approximate.",
+      "Points are a comparison aid, not medical or dietary advice - talk to a dietitian for a real plan."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Estimate classic food Points from calories, fat, and fiber with the original formula. See the full breakdown. Free, private, no sign-up.",
+    "metaTitle": "Weight Loss Points Calculator (Classic Formula) | JaurTools",
+    "name": "Weight Loss Points Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Classic Points = calories/50 + fat/12 - fiber/5 (fiber capped at 4 g), rounded to the nearest whole. A 300 kcal food with 10 g fat and 5 g fiber scores 6.03, so 6 Points: the fiber beyond 4 g earns no extra credit. Enter your food's numbers above to get its Points value instantly, with a full breakdown of how each nutrient contributed.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Weight Loss Points Calculator results",
+    "tagline": "Turn any nutrition label into classic-style Points with the original calories-fat-fiber formula.",
+    "workedExample": "300 kcal, 10 g fat, 5 g fiber:\n1. From calories: 300 / 50 = 6.00.\n2. From fat: 10 / 12 = 0.83.\n3. Fiber credit: fiber is capped at 4 g, so 4 / 5 = 0.80 credit.\n4. Unrounded total: 6.00 + 0.83 - 0.80 = 6.03.\n5. Rounded to the nearest whole number: 6 Points.\nNote: entering 8 g of fiber would give the same result, because the 4 g cap applies.",
+    "workedExampleHeading": "Worked example"
+  }
+}

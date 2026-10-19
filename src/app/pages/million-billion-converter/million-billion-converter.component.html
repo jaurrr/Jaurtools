@@ -1,0 +1,223 @@
+<div class="tool-page fin-type-quick">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="mbc-amount">{{ t('labels.amount') }}</label>
+          <span class="fin-live-chip">{{ fullFmt().format(amount()) }}</span>
+        </div>
+        <input id="mbc-amount" type="number" inputmode="decimal" min="0" step="any"
+          [ngModel]="amount()" (ngModelChange)="setAmount($event)" />
+      </div>
+
+      <div class="unit-toggle" role="group" [attr.aria-label]="t('labels.fromUnit')">
+        <button type="button" [class.active]="fromUnit() === 'thousand'" (click)="setFromUnit('thousand')">
+          {{ t('labels.thousand') }}
+        </button>
+        <button type="button" [class.active]="fromUnit() === 'million'" (click)="setFromUnit('million')">
+          {{ t('labels.million') }}
+        </button>
+        <button type="button" [class.active]="fromUnit() === 'billion'" (click)="setFromUnit('billion')">
+          {{ t('labels.billion') }}
+        </button>
+        <button type="button" [class.active]="fromUnit() === 'trillion'" (click)="setFromUnit('trillion')">
+          {{ t('labels.trillion') }}
+        </button>
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="scale" /> {{ t('labels.fullNumber') }}</span>
+          <strong>{{ fullFmt().format(base()) }}</strong>
+          <small>{{ t('hero.note') }}</small>
+        </div>
+      </div>
+      <ul class="fin-split">
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.thousand') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inThousand()) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.million') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inMillion()) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.billion') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inBillion()) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.trillion') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inTrillion()) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.lakh') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inLakh()) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.crore') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inCrore()) }}</span>
+        </li>
+      </ul>
+
+        
+        
+        
+        
+        
+        
+        
+      
+      <div class="fin-split-cards">
+        <div class="fin-split-card fin-highlight">
+          <span>{{ t('labels.thousand') }}</span>
+          <strong>{{ unitFmt().format(inThousand()) }}</strong>
+        </div>
+        <div class="fin-split-card">
+          <span>{{ t('labels.million') }}</span>
+          <strong>{{ unitFmt().format(inMillion()) }}</strong>
+        </div>
+        <div class="fin-split-card">
+          <span>{{ t('labels.billion') }}</span>
+          <strong>{{ unitFmt().format(inBillion()) }}</strong>
+        </div>
+      </div>
+      <ul class="fin-split">
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.trillion') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inTrillion()) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.lakh') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inLakh()) }}</span>
+        </li>
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.crore') }}</span>
+          <span class="fin-val">{{ unitFmt().format(inCrore()) }}</span>
+        </li>
+      </ul>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { p: fullFmt().format(amount()), t: fullFmt().format(base()) }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ t('tip.sanity') }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+    
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

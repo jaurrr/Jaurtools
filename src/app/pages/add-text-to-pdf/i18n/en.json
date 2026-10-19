@@ -1,0 +1,124 @@
+{
+  "add-text-to-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online PDF editors.",
+      "Works on any PDF, including scanned and image-only pages, because the text is drawn on top.",
+      "Nine preset positions plus exact custom placement as a percentage of the page.",
+      "Free and unlimited — stamp as many documents as you need.",
+      "Rotated text support makes diagonal watermarks like “DRAFT” easy."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The tool uses the standard Helvetica font with Latin characters. Text in Devanagari, Arabic or other scripts may not render — use the Basic PDF Editor approach or convert the text to an image first if you need those scripts.",
+        "q": "Can I add text in Hindi or Arabic?"
+      },
+      {
+        "a": "No. Stamping draws new text on top of the page; the existing content underneath stays exactly as it was.",
+        "q": "Will the stamped text change my original content?"
+      },
+      {
+        "a": "Not with this tool — the stamped text is baked into the pages when the new PDF is saved. Keep a copy of your original file if you might want a clean version later.",
+        "q": "Can I edit or remove the text afterwards?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Type something like “DRAFT”, pick the middle-center position, set the rotation to 45 degrees, choose a large font size and a light gray color.",
+        "q": "How do I add a diagonal “DRAFT” watermark?"
+      },
+      {
+        "a": "Use the custom position option and enter the X and Y coordinates as percentages of the page width and height. X 50 / Y 50 is the exact center of the page.",
+        "q": "How do I place text at an exact spot?"
+      }
+    ],
+    "formula": "x = (horizontal % ÷ 100) × page width − text width ÷ 2\ny = (vertical % ÷ 100) × page height\n(preset spots subtract a 36 pt margin from the matching edge)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the document you want to stamp.",
+      "Type the text — a name, a “DRAFT” watermark, a signature line, anything up to 500 characters.",
+      "Choose whether the text goes on every page or on one specific page.",
+      "Pick one of the nine preset positions, or use the custom option for exact placement.",
+      "Set the font size, color and rotation, then click “Add text” and download the result."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The text is drawn directly into the page content with the standard Helvetica font, so it looks identical in every PDF reader.",
+      "PDF pages use a point-based grid: an A4 page is 595.28 × 841.89 points, with (0, 0) at the bottom-left corner.",
+      "Preset positions measure a 36-point (half-inch) margin from the matching page edges.",
+      "Custom placement uses percentages of the page size, so the same settings work on A4, Letter and mixed-size documents.",
+      "Rotation is measured in degrees around the text start point: 45 gives a classic diagonal watermark."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "add text to pdf, write on pdf online, stamp text on pdf, pdf text overlay, free pdf stamper",
+    "labels": {
+      "chooseFile": "Choose PDF file",
+      "colorBlack": "Black",
+      "colorBlue": "Blue",
+      "colorGray": "Gray",
+      "colorGreen": "Green",
+      "colorLabel": "Color",
+      "colorRed": "Red",
+      "downloadBtn": "Download stamped PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNoText": "Please type the text you want to add.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "modeAll": "All pages",
+      "modeOne": "One page",
+      "pageNumLabel": "Page number",
+      "pagesFound": "pages",
+      "pagesModeLabel": "Apply to",
+      "pos_bc": "Bottom center",
+      "pos_bl": "Bottom left",
+      "pos_br": "Bottom right",
+      "pos_custom": "Custom",
+      "pos_mc": "Middle center",
+      "pos_ml": "Middle left",
+      "pos_mr": "Middle right",
+      "pos_tc": "Top center",
+      "pos_tl": "Top left",
+      "pos_tr": "Top right",
+      "positionLabel": "Position",
+      "previewNote": "Tip: positions are calculated from the page edges. Download the result and check the placement — adjust the custom percentages if needed.",
+      "processing": "Working…",
+      "resetBtn": "Start over",
+      "rotationLabel": "Rotation (degrees)",
+      "sizeLabel": "Font size (pt)",
+      "stampBtn": "Add text",
+      "successMsg": "Text added. Download your PDF below.",
+      "textLabel": "Text to add",
+      "textPlaceholder": "e.g. DRAFT, Approved, your name…",
+      "xLabel": "Horizontal % (0–100)",
+      "yLabel": "Vertical % (0–100)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only Latin characters are supported — Hindi, Arabic and other scripts may not render correctly.",
+      "There is no live visual preview; placement is by preset or percentage coordinates.",
+      "The stamped text is permanent once saved and cannot be edited as text later.",
+      "It cannot change or delete the PDF's existing text — it only adds new text on top."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Add text to any PDF free in your browser — watermarks, stamps, labels. Nine positions, custom placement, rotation. No upload, no signup.",
+    "metaTitle": "Add Text to PDF Free — Stamp Text on Any PDF Online",
+    "name": "Add Text to PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, type the text you want to add — a “DRAFT” watermark, an approval stamp, a name — pick one of nine positions or exact custom coordinates, and download the stamped file. Everything runs locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Add text results",
+    "tagline": "Stamp watermarks, labels and notes onto any PDF — right in your browser.",
+    "workedExample": "Stamp “DRAFT” at middle-center of an A4 page (595.28 × 841.89 pt), 48 pt, rotated 0°:\ntext width ≈ 5 characters × 24 pt ≈ 120 pt\nx = (595.28 − 120) ÷ 2 = 237.64 pt from the left edge\ny = 841.89 ÷ 2 = 420.95 pt from the bottom edge\nThe word lands perfectly centered on the page.",
+    "workedExampleHeading": "Worked example"
+  }
+}

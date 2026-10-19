@@ -1,0 +1,94 @@
+{
+  "interest-rate-calculator": {
+    "assumptionNote": "The rate is solved numerically (bisection) and assumes a constant rate for the whole period. Monthly mode shows a nominal annual rate (monthly rate x 12). Taxes and fees are not included.",
+    "benefits": [
+      "Find the exact return your plan needs - no guessing.",
+      "Compare investments: which rate gets you to your goal on time?",
+      "The doubling-years row shows the Rule of 72 working live.",
+      "Free, instant, and private - no data leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For a lump sum with no payments: rate = (FV/PV)^(1/years) - 1. With payments, there is no closed formula, so this calculator solves the full TVM equation numerically with bisection search.",
+        "q": "How is the interest rate calculated?"
+      },
+      {
+        "a": "Annual compounding applies the rate once per year; monthly compounding applies one-twelfth of the rate each month, which grows slightly faster. With monthly payments selected, monthly mode matches how most savings plans actually work.",
+        "q": "Annual vs monthly compounding?"
+      },
+      {
+        "a": "It solves the same equation for the rate with PV set to 0, your monthly payment, and your target. For example, $500/month for 20 years to reach $500,000 needs about 7.55% annual.",
+        "q": "Can I find the rate for a savings plan?"
+      },
+      {
+        "a": "The Rule of 72: divide 72 by the rate to estimate doubling years. At 7.18%, money doubles in about 10 years. The calculator shows this estimate live under your answer.",
+        "q": "What is the Rule of 72?"
+      },
+      {
+        "a": "That means the goal is impossible at those inputs with a constant rate - for example a future value below the present value with no payments would need a negative rate, or the target is unreachable even at 200% per period.",
+        "q": "Why does it say no solution?"
+      },
+      {
+        "a": "Nominal APR (monthly rate x 12) is what lenders and plans usually quote; effective annual rate ((1 + monthly)^12 - 1) is slightly higher. At small rates the difference is tiny; this calculator reports the nominal APR.",
+        "q": "Nominal APR vs effective rate?"
+      }
+    ],
+    "formula": "FV = PV x (1+r)^n + PMT x ((1+r)^n - 1)/r\nWith PMT = 0: r = (FV/PV)^(1/n) - 1\nWith payments, r is solved numerically (bisection) from the same equation.\nRule of 72: doubling years ~ 72 / annual rate %.",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose annual or monthly compounding.",
+      "Enter the present value (starting amount).",
+      "Enter the future value (your goal).",
+      "Enter any regular payment per period (0 for a lump sum only).",
+      "Enter the years and read the required annual rate."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The interest rate is the missing TVM variable when PV, payments, time, and target are known.",
+      "With no payments, r = (FV/PV)^(1/n) - 1 is exact.",
+      "With payments, the rate must be solved numerically - this tool uses bisection.",
+      "The Rule of 72 estimates doubling years: 72 divided by the rate.",
+      "Monthly mode reports a nominal annual rate (monthly rate x 12)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "interest rate calculator, solve for interest rate, required return calculator, rate of return solver, rule of 72 calculator",
+    "labels": {
+      "annualTab": "Annual",
+      "doublingYears": "Years to double (Rule of 72)",
+      "frequency": "Compounding frequency",
+      "futureValue": "Future value ($)",
+      "monthlyTab": "Monthly",
+      "noSolution": "No solution in range",
+      "payment": "Payment per period ($)",
+      "paymentNote": "Enter 0 for a lump sum with no regular payments.",
+      "presentValue": "Present value ($)",
+      "solvedRate": "Required annual rate",
+      "years": "Years",
+      "yearsUnit": "years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant rate for the whole period - real returns vary.",
+      "Solved numerically; extreme inputs may show no solution.",
+      "Ignores inflation, taxes, and fees.",
+      "Planning tool only - not financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free interest rate calculator: solve for the required rate given present value, future value, and payments. Rule of 72 included. Private, no sign-up.",
+    "metaTitle": "Interest Rate Calculator - Solve for Required Return | JaurTools",
+    "name": "Interest Rate Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "To grow $10,000 into $20,000 in 10 years with annual compounding and no payments, you need a rate of 7.18% per year: (20,000/10,000)^(1/10) - 1. At that rate, money doubles every 10 years by the Rule of 72 (72 / 7.18 = 10.03).",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your interest rate results",
+    "tagline": "Solve for the rate your lump sum or savings plan needs.",
+    "workedExample": "$10,000 to $20,000, 10 years, annual compounding, no payments:\n1. Formula: r = (FV/PV)^(1/n) - 1.\n2. r = (20,000/10,000)^(1/10) - 1 = 2^0.1 - 1.\n3. 2^0.1 = about 1.071773, so r = about 7.18% per year.\n4. Check: $10,000 x 1.071773^10 = $10,000 x 2.0 = $20,000. Matches.\n5. Doubling years = 72 / 7.18 = about 10.0 years.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "dmarc-record-generator": {
+    "benefits": [
+      "Stops exact-domain phishing: receivers reject or quarantine mail that spoofs your domain.",
+      "Aggregate reports reveal every server sending mail as your domain — including services you forgot about.",
+      "Rolling out with pct= avoids accidentally blocking legitimate mail while you tune the setup.",
+      "Correct syntax every time — a single misplaced semicolon can silently invalidate a hand-written record.",
+      "Everything stays in your browser; your domain and report addresses are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "As a TXT record at the DNS hostname _dmarc.yourdomain.com — for example _dmarc.example.com. Add it in your DNS provider's panel (Cloudflare, Route53, your registrar). Do not put it on the bare domain; receivers only look under the _dmarc subdomain.",
+        "q": "Where do I publish the DMARC record?"
+      },
+      {
+        "a": "Start with p=none for two to four weeks and read the aggregate reports. Fix every legitimate sender that shows up as failing (usually a missing SPF include or unsigned DKIM). Then move to p=quarantine, watch for another week or two, and only then go to p=reject. Jumping straight to reject is the most common cause of lost mail.",
+        "q": "Should I start with p=none, quarantine, or reject?"
+      },
+      {
+        "a": "rua= addresses get aggregate reports: daily XML summaries from providers like Google and Microsoft showing volumes, pass/fail counts, and sending IPs. ruf= addresses get forensic reports: redacted samples of individual failed messages. Aggregate reports are essential; forensic reports are optional and can be very noisy.",
+        "q": "What is the difference between rua and ruf?"
+      },
+      {
+        "a": "Relaxed (r) alignment allows the SPF or DKIM domain to be a subdomain of the From domain — mail.example.com can authenticate mail from example.com. Strict (s) requires an exact match. Relaxed is the default and suits most setups; choose strict only if you control every sending subdomain precisely.",
+        "q": "What does strict versus relaxed alignment mean?"
+      },
+      {
+        "a": "DNS propagation usually takes minutes to a few hours. Receivers start enforcing your policy as soon as they see the record. Aggregate reports typically arrive within 24 to 48 hours of publishing, sent once per day per reporting provider.",
+        "q": "How long until DMARC starts working?"
+      },
+      {
+        "a": "No. Only one DMARC TXT record may exist at _dmarc.yourdomain.com. If a receiver finds two, the result is undefined and most receivers ignore both. Keep a single record and put all your options in it.",
+        "q": "Can I have more than one DMARC record?"
+      }
+    ],
+    "formula": "v=DMARC1; p={none|quarantine|reject}; [sp=...;] [pct=0-100;] [adkim=r|s;] [aspf=r|s;] [rua=mailto:...;] [ruf=mailto:...;] [fo=0|1|d|s;] [rf=afrf|iodef;] [ri=seconds;]\nTags in square brackets are optional. Defaults when omitted: adkim=r, aspf=r, fo=0, rf=afrf, ri=86400.",
+    "formulaHeading": "Record syntax",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your domain and choose a policy. If DMARC is new for you, start with none (monitor only).",
+      "Set the subdomain policy, the enforcement percentage, and DKIM/SPF alignment to match how your mail is actually sent.",
+      "Add a rua= mailbox to receive aggregate reports — without it you are flying blind and will never know what to fix.",
+      "Optionally add ruf= for forensic reports, fo= to control when they are sent, and ri= to change the report interval.",
+      "Copy the record or download the .txt file, then publish it as a TXT record at _dmarc.yourdomain.com in your DNS panel. Expect the first reports within 24 to 48 hours."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "DMARC builds on SPF and DKIM: a message passes DMARC only when SPF or DKIM passes AND the authenticated domain aligns with the From header domain.",
+      "The record lives at the DNS name _dmarc.example.com as a TXT record. There can be only one DMARC record per domain — two records invalidate each other.",
+      "p=none means take no action, only report. It is the safe starting point while you discover all your legitimate senders.",
+      "p=quarantine sends failing mail to spam; p=reject blocks it outright. Move up this ladder only after monitoring reports.",
+      "rua= addresses receive daily aggregate XML reports from mailbox providers; ruf= addresses receive forensic failure samples.",
+      "Alignment can be relaxed (r, the default: subdomains allowed) or strict (s: exact domain match), set separately for DKIM (adkim) and SPF (aspf).",
+      "pct= lets you roll out enforcement gradually — for example pct=25 applies the policy to 25 percent of failing mail."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "dmarc record generator, dmarc txt record, dmarc dns record, dmarc policy generator, dmarc rua ruf",
+    "labels": {
+      "adkim": "DKIM alignment (adkim=)",
+      "aspf": "SPF alignment (aspf=)",
+      "copiedMsg": "Record copied to clipboard.",
+      "copyRecord": "Copy record",
+      "dnsNote": "Publish this as a TXT record at the hostname shown above. DNS changes usually take effect within a few hours.",
+      "domain": "Domain",
+      "downloadRecord": "Download .txt",
+      "fo": "Forensic options (fo=)",
+      "generatedRecord": "Generated DMARC record",
+      "optAfrf": "afrf — standard format",
+      "optFo0": "0 — report when all checks fail",
+      "optFo1": "1 — report when any check fails",
+      "optFoD": "d — report on DKIM failure",
+      "optFoS": "s — report on SPF failure",
+      "optInherit": "inherit — use main policy",
+      "optIodef": "iodef — incident format",
+      "optNone": "none — monitor only, take no action",
+      "optQuarantine": "quarantine — send failures to spam",
+      "optReject": "reject — block failures",
+      "optRelaxed": "relaxed (r)",
+      "optStrict": "strict (s)",
+      "pct": "Enforcement percentage (pct=)",
+      "pctHint": "100 applies the policy to all failing mail. Lower it to roll out gradually.",
+      "policy": "Policy (p=)",
+      "recordHost": "DNS hostname",
+      "recordLength": "Record length",
+      "rf": "Report format (rf=)",
+      "ri": "Report interval in seconds (ri=)",
+      "rua": "Aggregate report mailbox (rua=)",
+      "ruaHint": "Where daily XML reports are sent. Strongly recommended.",
+      "ruf": "Forensic report mailbox (ruf=)",
+      "rufHint": "Optional. Receives samples of individual failed messages.",
+      "subPolicy": "Subdomain policy (sp=)",
+      "warnInvalidRua": "The rua= address does not look like a valid email address.",
+      "warnInvalidRuf": "The ruf= address does not look like a valid email address.",
+      "warnNoRua": "No rua= mailbox: you will receive no aggregate reports and will not see who sends as your domain.",
+      "warnPolicyNone": "p=none only monitors — it does not stop spoofed mail. Move to quarantine or reject after monitoring.",
+      "warningsHeading": "Check before publishing"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "DMARC protects only your exact domain and chosen subdomains — lookalike domains such as examp1e.com are unaffected.",
+      "It cannot fix missing SPF or DKIM: at least one must pass with alignment for DMARC to pass.",
+      "Report mailboxes can receive large volumes of XML — use a dedicated mailbox or a report-processing service.",
+      "This tool builds the record text; it does not publish DNS for you and cannot check propagation."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free DMARC record generator: build a valid DMARC DNS TXT record with policy, alignment, and reporting options. Copy or download the record for your DNS zone. 100% private.",
+    "metaTitle": "DMARC Record Generator - Build a DMARC DNS TXT Record | JaurTools",
+    "name": "DMARC Record Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A DMARC record is a DNS TXT record published at _dmarc.yourdomain.com that tells mail receivers what to do with messages that fail authentication. For example, v=DMARC1; p=reject; rua=mailto:dmarc@example.com; rejects forged mail and sends you daily aggregate reports. Start with p=none to monitor safely, then move to quarantine and finally reject.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your DMARC record",
+    "tagline": "Build a correct DMARC DNS TXT record from your policy choices — no syntax mistakes.",
+    "workedExample": "Domain example.com, policy reject, subdomain policy quarantine, relaxed alignment (defaults, so adkim/aspf are omitted), aggregate reports to dmarc@example.com, forensic reports to forensic@example.com, forensic option fo=1:\nGenerated record:\nv=DMARC1; p=reject; sp=quarantine; rua=mailto:dmarc@example.com; ruf=mailto:forensic@example.com; fo=1;\nPublish as a TXT record at: _dmarc.example.com\nLength: 103 characters — comfortably under the 255-character single-string DNS limit.",
+    "workedExampleHeading": "Worked example"
+  }
+}

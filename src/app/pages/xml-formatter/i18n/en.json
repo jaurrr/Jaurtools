@@ -1,0 +1,87 @@
+{
+  "xml-formatter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "XML Formatter",
+    "tagline": "Pretty-print and validate XML with clean indentation.",
+    "metaTitle": "XML Formatter - Pretty Print & Validate XML Free Online",
+    "metaDescription": "Format XML with clean indentation and validate it instantly. Adjustable indent, error messages, copy or download. Free, no signup, in your browser.",
+    "keywords": "xml formatter, pretty print xml, xml validator, format xml online, beautify xml",
+    "resultsHeading": "XML formatter results",
+    "quickAnswer": "Paste XML and this tool validates it with the browser XML parser, then reprints it with clean, consistent indentation you control. Malformed XML shows the exact parser error so you can fix it. Copy the formatted result or download it as a file.",
+    "keyFacts": [
+      "XML requires strict well-formedness: every tag must close and nest correctly.",
+      "The browser built-in XML parser validates structure before formatting begins.",
+      "Indentation is cosmetic; it never changes the data or meaning of the XML.",
+      "Comments and CDATA sections are preserved in the formatted output.",
+      "An XML declaration (<?xml ...?>) is kept at the top when present."
+    ],
+    "howTo": [
+      "Paste your XML into the editor.",
+      "Set the indent size (1 to 8 spaces).",
+      "Read any validation error and fix the XML if needed.",
+      "Copy the formatted XML or download it as formatted.xml.",
+      "Use the sample button to see formatting in action."
+    ],
+    "formula": "Input:  <a><b>x</b><c>y</c></a>\nOutput:\n<a>\n  <b>x</b>\n  <c>y</c>\n</a>\nRule: each nested level adds one indent unit; text-only elements stay on one line.",
+    "workedExample": "Input:\n<catalog><book id=\"bk101\"><title>XML Guide</title><price>29.99</price></book></catalog>\nOutput with 2-space indent:\n<catalog>\n  <book id=\"bk101\">\n    <title>XML Guide</title>\n    <price>29.99</price>\n  </book>\n</catalog>\nAttributes stay on the opening tag; text-only elements stay on one line.",
+    "benefits": [
+      "Readable XML is far easier to debug and review.",
+      "Instant validation pinpoints malformed markup.",
+      "Adjustable indent matches your team style.",
+      "Everything runs locally; sensitive XML stays private."
+    ],
+    "limitations": [
+      "Validates well-formedness only, not against an XSD or DTD schema.",
+      "External entities and DTDs are not resolved.",
+      "Very large documents (over ~50KB of text) may format slowly.",
+      "Namespace prefixes are preserved but not validated."
+    ],
+    "faqs": [
+      {
+        "q": "What does \"not well-formed\" mean?",
+        "a": "The XML breaks basic rules: an unclosed tag, mismatched nesting, or a stray character. The error message names the line and column to fix."
+      },
+      {
+        "q": "Does formatting change my data?",
+        "a": "No. Only whitespace between elements changes. Text content, attributes, comments, and CDATA are preserved exactly."
+      },
+      {
+        "q": "Can it validate against my XSD?",
+        "a": "No. This tool checks well-formedness (correct syntax), not schema validity. For XSD validation you need a dedicated validator."
+      },
+      {
+        "q": "Are comments kept?",
+        "a": "Yes. XML comments and CDATA sections are preserved in the formatted output."
+      },
+      {
+        "q": "Is my XML uploaded?",
+        "a": "No. Parsing and formatting run entirely in your browser."
+      }
+    ],
+    "labels": {
+      "xmlLabel": "XML input",
+      "indentLabel": "Indent size (spaces)",
+      "sampleLabel": "Load sample",
+      "clearLabel": "Clear",
+      "outputLabel": "Formatted XML",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied",
+      "downloadLabel": "Download .xml",
+      "sizeLabel": "Output size (chars)",
+      "parseErrorLabel": "Could not parse the XML."
+    }
+  }
+}

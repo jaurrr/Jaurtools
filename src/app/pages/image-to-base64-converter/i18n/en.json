@@ -1,0 +1,97 @@
+{
+  "image-to-base64-converter": {
+    "benefits": [
+      "Embeds images directly in HTML, CSS and JSON - no separate file to host.",
+      "The data-URI prefix option gives you a ready-to-paste <img> src.",
+      "Shows the exact size overhead so you know the cost before using it.",
+      "Decodes back to a live preview, proving the string is valid.",
+      "Free, instant and fully private - the file never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Keep the prefix when pasting into an <img> src, a CSS url() or anywhere a data URI is expected. Untick it when your framework adds the prefix itself, or when you need the raw string for an API.",
+        "q": "Do I need the data-URI prefix?"
+      },
+      {
+        "a": "Very small images (icons, tiny logos) embed well and save an HTTP request. Photos are usually a bad idea: a 2 MB photo becomes 2.7 MB of text that cannot be cached separately.",
+        "q": "When should I embed instead of linking a file?"
+      },
+      {
+        "a": "Base64 uses 4 characters for every 3 bytes, so the output is always about 33 percent larger than the file. That overhead is the price of making binary data text-safe.",
+        "q": "Why is the output bigger than my file?"
+      },
+      {
+        "a": "Yes - up to 20 MB. Large files produce very long strings that can freeze weak devices when copied, so prefer smaller images for embedding.",
+        "q": "Can I encode a large photo?"
+      },
+      {
+        "a": "The preview is decoded from the exact string shown above. If the string copies correctly, the image you see is the image your code will show.",
+        "q": "How do I know the string is valid?"
+      }
+    ],
+    "formula": "output length = ceil(file bytes / 3) x 4\nsize overhead = (base64 length - file bytes) / file bytes x 100\nData URI: data:<mime>;base64,<base64 string>\nExample: 3,000 bytes -> ceil(3000 / 3) x 4 = 4,000 characters,\noverhead = (4000 - 3000) / 3000 x 100 = 33.3%.",
+    "formulaHeading": "How Base64 encoding works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file up to 20 MB - PNG, JPG, GIF or SVG.",
+      "The tool encodes it instantly and shows the Base64 string.",
+      "Tick or untick the data-URI prefix depending on where you will paste it.",
+      "Copy the string with one click, or download it as a .txt file.",
+      "Paste it into your <img> src, CSS url(), or JSON payload."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Base64 turns binary image data into plain ASCII text that survives in HTML, CSS and JSON.",
+      "The encoding is reversible: decoding the string reproduces your exact image.",
+      "A data URI (data:image/png;base64,...) lets browsers render the image with no separate file.",
+      "Output is always about 33 percent larger than the original file.",
+      "The preview below the output is decoded from the string itself, proving it is valid.",
+      "Works with PNG, JPEG, GIF, SVG and WebP inputs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "image to base64, convert image to base64 online, base64 image encoder, data uri generator, image to base64 string free",
+    "labels": {
+      "base64Length": "Base64 length (chars)",
+      "changeFile": "Change file",
+      "chooseFile": "Choose an image file",
+      "copied": "Copied",
+      "copyButton": "Copy Base64",
+      "downloadButton": "Download as .txt",
+      "encodeFailed": "Could not encode that image. Please try a different file.",
+      "fileHint": "PNG, JPG, GIF, SVG or WebP - up to 20 MB. Never uploaded.",
+      "fileTooBig": "That file is larger than 20 MB. Please choose a smaller image.",
+      "includePrefix": "Include data-URI prefix",
+      "invalidFile": "That file is not an image. Please choose an image file.",
+      "mimeType": "MIME type",
+      "originalSize": "Original size",
+      "outputLabel": "Base64 output",
+      "prefixHint": "With the prefix the string works directly as an <img> src or CSS url().",
+      "previewAlt": "Preview decoded from the Base64 string",
+      "processing": "Encoding...",
+      "sizeOverhead": "Size overhead"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Output is ~33 percent larger than the file - do not embed large photos.",
+      "Very long strings can be slow to copy on low-end devices.",
+      "Base64 is encoding, not encryption: anyone can decode it back.",
+      "Line breaks are not added - some old systems expect 76-character lines."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Turn any image into a Base64 data URI, copy-ready for HTML, CSS and JSON. Free, private, in-browser.",
+    "metaTitle": "Image to Base64 Converter - Copy-Ready Data URIs | JaurTools",
+    "name": "Image to Base64 Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload an image and get its Base64 string instantly - with or without the data:image/png;base64, prefix. A 3,000-byte file becomes exactly 4,000 characters (33.3 percent overhead), since Base64 uses 4 characters per 3 bytes. Copy the string with one click or download it as a .txt file, and a live preview proves it decodes correctly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Base64 encoding results",
+    "tagline": "Images as text, ready to paste.",
+    "workedExample": "Encode a 3,000-byte PNG.\n1. Base64 processes 3 bytes at a time into 4 characters.\n2. Groups: 3000 / 3 = 1000 groups.\n3. Characters: 1000 x 4 = 4,000.\n4. Overhead: (4000 - 3000) / 3000 x 100 = 33.3%.\n5. With prefix: data:image/png;base64,iVBORw0KGgo... (the first bytes of any PNG encode to iVBORw0KGgo).\nThat is the exact math this tool applies to your file.",
+    "workedExampleHeading": "Worked example"
+  }
+}

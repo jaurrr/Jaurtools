@@ -1,0 +1,104 @@
+{
+  "sign-pdf": {
+    "benefits": [
+      "Sign PDFs without printing, signing by hand and scanning again.",
+      "Draw with mouse, finger or stylus — or type your name in a script style.",
+      "Place the signature exactly where you want it: any page, any position, any size.",
+      "Your signature image never leaves your device.",
+      "The signed PDF opens normally in every reader; no special software needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It overlays your signature as an image on the page you choose. That is a visible self-signature — convenient and widely accepted for everyday documents, but it is not a cryptographic digital signature.",
+        "q": "Is this a legally binding digital signature?"
+      },
+      {
+        "a": "No. The tool draws a visible signature image. Certified digital signatures with identity verification are a different technology and are not included.",
+        "q": "Does it add a certified digital signature?"
+      },
+      {
+        "a": "Yes — pick the page number, then drag the X/Y sliders to move the signature and the width slider to resize it. The preview shows your signature artwork.",
+        "q": "Can I choose where the signature goes?"
+      },
+      {
+        "a": "Your drawing is kept as a transparent PNG, so it sits cleanly over text and lines without a white box around it.",
+        "q": "Will the signature have a white background?"
+      },
+      {
+        "a": "The signature is embedded at the size you set. On a typical A4 page at 30% width it prints clearly; very small sizes may look soft when printed large.",
+        "q": "Will my signature look sharp when printed?"
+      },
+      {
+        "a": "The tool only places new signatures. To remove one, use a PDF editor, or re-download the original unsigned file and sign again.",
+        "q": "Can I remove a signature I placed?"
+      }
+    ],
+    "formula": "sigW = (wPct / 100) × pageW\nsigH = sigW × (imgH / imgW)\nx = clamp(cx − sigW/2, 0, pageW − sigW)\ny = clamp(pageH − cyTop − sigH/2, 0, pageH − sigH)\n\nPDF coordinates start at the bottom-left, so Y is measured from the top and converted. The signature keeps its drawn aspect ratio.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the PDF you want to sign (up to 50 MB).",
+      "Draw your signature on the pad, or switch to type mode and enter your name.",
+      "Clear and retry until it looks right — the preview updates live.",
+      "Pick the page number and position the signature with the X, Y and width sliders.",
+      "Click to place the signature and download your signed PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Two signature styles: freehand drawing on a signature pad, or a typed name rendered in script lettering.",
+      "The signature is embedded as a transparent PNG, so it overlays cleanly without a white box.",
+      "Placement is fully controllable: page number, horizontal and vertical position, and width as a percentage of the page.",
+      "Aspect ratio is preserved automatically — resizing never stretches the signature.",
+      "Everything runs locally; the signature artwork never leaves your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sign pdf, sign pdf online, electronic signature pdf, draw signature on pdf, self sign pdf free",
+    "labels": {
+      "busy": "Placing signature, please wait…",
+      "canvasLabel": "Signature pad — draw here",
+      "clearButton": "Clear",
+      "errEmpty": "Draw or type your signature first.",
+      "errParse": "Could not read this PDF. It may be corrupted or password-protected.",
+      "errProcess": "Something went wrong while signing.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "PDF file, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "modeDraw": "Draw",
+      "modeType": "Type",
+      "pageLabel": "Page number",
+      "placeButton": "Place signature and download",
+      "previewLabel": "Signature preview",
+      "sigModeLabel": "Signature style",
+      "statusDone": "Signature placed on page {p}. Download started.",
+      "typePh": "Your full name",
+      "typedLabel": "Type your name",
+      "wLabel": "Signature width",
+      "xLabel": "Horizontal position",
+      "yLabel": "Vertical position (from top)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This is a visible self-signature, not a cryptographic digital signature with identity verification.",
+      "Some institutions require certified signatures; check before relying on a self-signed document.",
+      "The typed style uses system script fonts, which vary slightly between devices.",
+      "Password-protected PDFs that need a password prompt cannot be signed."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Sign PDFs online for free. Draw or type your signature and place it on any page. Self-sign in seconds, 100% in your browser.",
+    "metaTitle": "Sign PDF — Add Your Signature Online Free",
+    "name": "Sign PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF, draw your signature on the pad (or type your name in script style), then position it on any page with simple sliders. Your signature is embedded as a transparent image and the signed PDF downloads instantly — no printing, no scanning, no accounts.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sign PDF results",
+    "tagline": "Draw or type your signature and stamp it on any PDF.",
+    "workedExample": "An A4 page is 595.28 pt wide and 841.89 pt tall. Your drawing pad is 600 × 220 px.\nWidth 30% → sigW = 0.30 × 595.28 = 178.58 pt.\nHeight keeps aspect: sigH = 178.58 × (220/600) = 65.48 pt.\nX 50% → cx = 297.64 → x = 297.64 − 89.29 = 208.35 pt.\nY 80% from top → cyTop = 673.51 → y = 841.89 − 673.51 − 32.74 = 135.64 pt.\nThe signature lands centered horizontally, near the bottom of the page.",
+    "workedExampleHeading": "Worked example"
+  }
+}

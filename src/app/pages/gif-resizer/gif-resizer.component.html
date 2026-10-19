@@ -1,0 +1,163 @@
+<div class="tool-page persona-fit">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" appPasteDrop aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="settings" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <input type="file" id="gr-file" class="sr-only" accept="image/gif,.gif"
+          (change)="onFile($event)" />
+        <label class="file-btn" for="gr-file"><app-icon name="upload" /> {{ t('labels.chooseFile') }}</label>
+        <p class="note">{{ t('labels.fileHint') }}</p>
+        @if (fileName()) {
+          <p class="file-name"><app-icon name="check" [size]="16" /> {{ fileName() }}</p>
+        }
+      </div>
+
+      @if (loaded()) {
+        <div class="field">
+          <label id="gr-orig-label">{{ t('labels.originalTitle') }}</label>
+          <img class="gif-preview" [src]="origUrl()" [alt]="t('name')" aria-labelledby="gr-orig-label" />
+          <div class="results tight">
+            <div class="result-row"><span>{{ t('labels.dimsRow') }}</span><strong>{{ srcWidth() }} × {{ srcHeight() }}</strong></div>
+            <div class="result-row"><span>{{ t('labels.framesRow') }}</span><strong>{{ frameCount() }}</strong></div>
+            <div class="result-row"><span>{{ t('labels.durationRow') }}</span><strong>{{ srcDurationText() }}</strong></div>
+            <div class="result-row"><span>{{ t('labels.inputSizeRow') }}</span><strong>{{ inputSizeText() }}</strong></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="gr-width">{{ t('labels.widthLabel') }} ({{ t('labels.pxUnit') }})</label>
+          <div class="input-row">
+            <input type="number" id="gr-width" [ngModel]="outWidth()" (ngModelChange)="setOutWidth($event)"
+              inputmode="numeric" min="16" max="1200" step="1" />
+            <span class="note">→ {{ outWidth() }} × {{ outHeight() }}</span>
+          </div>
+        </div>
+
+        <div class="field check-row">
+          <input type="checkbox" id="gr-crop" [checked]="cropOn()" (change)="toggleCrop()" />
+          <label for="gr-crop">{{ t('labels.cropLabel') }}</label>
+        </div>
+        @if (cropOn()) {
+          <div class="field">
+            <div class="crop-grid">
+              <div><label for="gr-cx">{{ t('labels.cropX') }}</label>
+                <input type="number" id="gr-cx" [ngModel]="cropX()" (ngModelChange)="setCropX($event)" inputmode="numeric" min="0" [max]="srcWidth() - 2" /></div>
+              <div><label for="gr-cy">{{ t('labels.cropY') }}</label>
+                <input type="number" id="gr-cy" [ngModel]="cropY()" (ngModelChange)="setCropY($event)" inputmode="numeric" min="0" [max]="srcHeight() - 2" /></div>
+              <div><label for="gr-cw">{{ t('labels.cropW') }}</label>
+                <input type="number" id="gr-cw" [ngModel]="cropW()" (ngModelChange)="setCropW($event)" inputmode="numeric" min="2" [max]="srcWidth() - cropX()" /></div>
+              <div><label for="gr-ch">{{ t('labels.cropH') }}</label>
+                <input type="number" id="gr-ch" [ngModel]="cropH()" (ngModelChange)="setCropH($event)" inputmode="numeric" min="2" [max]="srcHeight() - cropY()" /></div>
+            </div>
+          </div>
+        }
+
+        <div class="field">
+          <label id="gr-speed-label">{{ t('labels.speedLabel') }}</label>
+          <div class="chip-row" role="group" aria-labelledby="gr-speed-label">
+            @for (o of speedOptions; track o) {
+              <button type="button" class="chip" [class.active]="speed() === o" (click)="setSpeed(o)">{{ o }}×</button>
+            }
+          </div>
+        </div>
+
+        <div class="field">
+          <label id="gr-colors-label">{{ t('labels.colorsLabel') }}</label>
+          <div class="chip-row" role="group" aria-labelledby="gr-colors-label">
+            <button type="button" class="chip" [class.active]="colors() === 256" (click)="setColors(256)">{{ t('labels.colors256') }}</button>
+            <button type="button" class="chip" [class.active]="colors() === 128" (click)="setColors(128)">{{ t('labels.colors128') }}</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label id="gr-loop-label">{{ t('labels.loopLabel') }}</label>
+          <div class="chip-row" role="group" aria-labelledby="gr-loop-label">
+            <button type="button" class="chip" [class.active]="loopMode() === 'infinite'" (click)="setLoopMode('infinite')">{{ t('labels.loopInfinite') }}</button>
+            <button type="button" class="chip" [class.active]="loopMode() === 'count'" (click)="setLoopMode('count')">{{ t('labels.loopCount') }}</button>
+          </div>
+          @if (loopMode() === 'count') {
+            <div class="input-row" style="margin-block-start: 0.75rem;">
+              <input type="number" id="gr-loops" [ngModel]="loopCount()" (ngModelChange)="setLoopCount($event)"
+                inputmode="numeric" min="1" max="100" step="1" [attr.aria-label]="t('labels.loopCount')" />
+            </div>
+          }
+        </div>
+
+        @if (!working() && !resultUrl()) {
+          <button type="button" class="btn-primary" (click)="apply()">
+            <app-icon name="zap" /> {{ t('labels.applyBtn') }}
+          </button>
+        }
+        @if (working()) {
+          <div class="progress-wrap">
+            <div class="progress" role="progressbar" [attr.aria-valuenow]="progress()" aria-valuemin="0" aria-valuemax="100"
+              [attr.aria-label]="t('labels.progressLabel')">
+              <div class="bar" [style.width.%]="progress()"></div>
+            </div>
+            <p class="note">{{ t('labels.workingBtn') }} — {{ progress() }}%</p>
+            <button type="button" class="btn-ghost" (click)="cancel()">{{ t('labels.cancelBtn') }}</button>
+          </div>
+        }
+      }
+
+      @if (resultUrl()) {
+        <div class="results">
+          <h3>{{ t('labels.resultTitle') }}</h3>
+          <img class="gif-preview" [src]="resultUrl()" [alt]="t('labels.resultTitle')" />
+          <div class="result-row"><span>{{ t('labels.dimsRow') }}</span><strong>{{ resultDims() }}</strong></div>
+          <div class="result-row"><span>{{ t('labels.outputSizeRow') }}</span><strong>{{ resultSizeText() }}</strong></div>
+          <div class="result-row total"><span>{{ t('labels.changeRow') }}</span><strong>{{ sizeChangePct() }}%</strong></div>
+          <div class="btn-row">
+            <a class="btn-primary" [href]="resultUrl()" download="jaurtools-resized.gif">
+              <app-icon name="download" /> {{ t('labels.downloadBtn') }}
+            </a>
+            <button type="button" class="btn-ghost" (click)="again()">
+              <app-icon name="refresh-cw" /> {{ t('labels.againBtn') }}
+            </button>
+          </div>
+        </div>
+      }
+
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" [size]="16" /> {{ error() }}</p>
+      }
+      @if (loaded() && !resultUrl() && !working() && !error()) {
+        <p class="note ok"><app-icon name="check" [size]="16" /> {{ t('labels.readyNote') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

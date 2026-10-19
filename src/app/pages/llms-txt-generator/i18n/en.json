@@ -1,0 +1,104 @@
+{
+  "llms-txt-generator": {
+    "benefits": [
+      "Gives AI assistants a clean map of your site, so answers about your content are accurate.",
+      "One small text file — no JavaScript, no build step, no maintenance burden.",
+      "You choose exactly which pages are highlighted and how each is described.",
+      "Follows the llmstxt.org convention that AI crawlers are starting to look for.",
+      "Generated locally; your site structure is never sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload it to the root of your website so it is served at https://yourdomain.com/llms.txt. It is a plain text file — any static host works. Some sites also add a link to it from robots.txt.",
+        "q": "Where do I put the llms.txt file?"
+      },
+      {
+        "a": "There is no official standard yet, but major AI crawlers (including GPTBot and others) are documented to look for /llms.txt. At worst it is a harmless, useful sitemap-style file; at best it shapes how AI describes your site.",
+        "q": "Do AI crawlers actually read llms.txt?"
+      },
+      {
+        "a": "Keep it focused: your most important guides, docs, and reference pages — typically 10 to 50 links. It is a curated highlight reel, not a full sitemap. Put the pages you want AI to cite first.",
+        "q": "How many links should I include?"
+      },
+      {
+        "a": "No. llms.txt is a hint, not access control. Anything listed must already be public. Never list private URLs, admin pages, or anything behind a login — crawlers that read it will simply visit them.",
+        "q": "Does llms.txt control what AI can access?"
+      },
+      {
+        "a": "Yes. Publish one file per site at that site's root. Each file describes only its own site. If you run docs in multiple languages, either one file with sections per language or one file per locale works.",
+        "q": "Can I have llms.txt for multiple sites or languages?"
+      },
+      {
+        "a": "Treat it like your navigation: update it when you add or remove important pages. A quarterly review is plenty for most sites. Stale links in llms.txt teach AI about pages that no longer exist.",
+        "q": "How often should I update it?"
+      }
+    ],
+    "formula": "# {Site Name}            <- exactly one H1: the site name\n\n> {One or two sentence summary}   <- blockquote: what the site is\n\n## {Section}             <- H2 sections group related pages\n\n- [{Title}]({https://...}): {optional one-line description}\n\nRules: one H1 only, every link needs a title and an https:// URL, sections group related links.",
+    "formulaHeading": "File structure",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your site name, URL, and a one or two sentence summary of what the site offers.",
+      "Add an optional contact line (email or contact page URL).",
+      "Add your key pages: a section name (like Guides or API), the page title, its full https:// URL, and a one-line description.",
+      "Links missing a title or a valid URL are skipped automatically — check the warning box.",
+      "Copy the file or download llms.txt, then publish it at the root of your site (https://yourdomain.com/llms.txt)."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "llms.txt is a proposed convention (llmstxt.org): a markdown file at /llms.txt that helps AI crawlers understand a website.",
+      "The file has exactly one H1 with the site name, a blockquote summary, then H2 sections of markdown links.",
+      "Each link is written as - [Title](https://url): one-line description — compact enough for a model's context window.",
+      "It complements robots.txt and sitemaps: robots.txt controls crawling, sitemaps list everything, llms.txt curates what matters.",
+      "Only public pages belong in it. It grants no access and hides nothing — it is purely advisory.",
+      "This generator validates every URL and skips incomplete entries so the file is always well-formed."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "llms.txt generator, llms txt file, ai crawler file, llmstxt.org, generate llms.txt",
+    "labels": {
+      "addLink": "Add link",
+      "contact": "Contact (optional)",
+      "copiedMsg": "llms.txt copied to clipboard.",
+      "copyFile": "Copy file",
+      "downloadFile": "Download llms.txt",
+      "generatedFile": "Generated llms.txt",
+      "linkDesc": "One-line description",
+      "linkDescHint": "What this page covers…",
+      "linkSection": "Section",
+      "linkTitle": "Page title",
+      "linkUrl": "Page URL",
+      "linksHeading": "Key pages",
+      "linksSkipped": "Some links were skipped",
+      "linksSkippedNote": "Links without a title or a valid https:// URL are left out of the file. Fix or remove them above.",
+      "publishAt": "Publish at",
+      "publishNote": "Upload this file to your website root so it is served at https://yourdomain.com/llms.txt.",
+      "removeLink": "Remove",
+      "siteName": "Site name",
+      "siteUrl": "Site URL",
+      "summary": "Summary",
+      "summaryHint": "One or two sentences describing what the site offers…"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "llms.txt is a proposal, not a web standard — crawler support varies and may change.",
+      "It cannot grant or restrict access; only public pages should be listed.",
+      "Very large link lists defeat the purpose — it is meant to be a curated shortlist.",
+      "This tool builds the file; publishing it to your web server is up to you."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free llms.txt generator: create a well-formed llms.txt file that guides AI crawlers to your key pages. Copy or download, 100% private.",
+    "metaTitle": "llms.txt Generator - Guide AI Crawlers to Your Site | JaurTools",
+    "name": "llms.txt Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An llms.txt file is a small markdown document published at yourdomain.com/llms.txt that tells AI crawlers what your site is and which pages matter most. It has one H1 with your site name, a blockquote summary, and H2 sections of links like - [Getting Started](https://docs.example.com/start): setup guide. This generator builds the file from your inputs, validates every URL, and lets you copy or download it.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your llms.txt file",
+    "tagline": "Generate an llms.txt file that guides AI crawlers to your key pages.",
+    "workedExample": "Inputs: site name Example Docs, summary Official documentation for Example Tools., two links — Getting Started (https://docs.example.com/start, section Guides, Install and set up in five minutes.) and Reference (https://docs.example.com/api, section API, Complete endpoint reference.).\nGenerated file:\n# Example Docs\n\n> Official documentation for Example Tools.\n\n## Guides\n\n- [Getting Started](https://docs.example.com/start): Install and set up in five minutes.\n\n## API\n\n- [Reference](https://docs.example.com/api): Complete endpoint reference.\nPublish this at https://docs.example.com/llms.txt so crawlers can find it at the standard location.",
+    "workedExampleHeading": "Worked example"
+  }
+}

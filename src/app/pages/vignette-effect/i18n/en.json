@@ -1,0 +1,96 @@
+{
+  "vignette-effect": {
+    "benefits": [
+      "Adds a professional, focused look to portraits and product photos in seconds.",
+      "Fully adjustable — intensity, softness and shape, with a live preview.",
+      "No sign-up, no watermark, no upload: your photo never leaves the browser.",
+      "Free unlimited use, and the PNG download keeps full quality.",
+      "Works on phones, tablets and desktops — everything runs locally."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. Your original file is never touched. The vignette is drawn on a copy in memory, and you download a brand-new PNG.",
+        "q": "Will this change my original photo?"
+      },
+      {
+        "a": "Intensity sets how dark the corners become; softness (feathering) sets how far the darkness reaches toward the center. High intensity with high softness gives a gentle, dreamy falloff.",
+        "q": "What is the difference between intensity and softness?"
+      },
+      {
+        "a": "An ellipse follows the shape of a rectangular photo, so the corners darken evenly. A circle suits square crops and gives a stronger, more vintage look.",
+        "q": "Should I use an ellipse or a circle?"
+      },
+      {
+        "a": "It works on the visible pixels, but the darkening is drawn with opaque black, so transparent areas will pick up a dark tint at the corners.",
+        "q": "Does the vignette work on transparent PNGs?"
+      },
+      {
+        "a": "Yes — 25 MB. Very large photos are also processed at their original resolution, which can take a moment on older phones.",
+        "q": "Is there a file size limit?"
+      },
+      {
+        "a": "Yes. The output is your own edited photo, and you are free to use it anywhere.",
+        "q": "Can I use the result commercially?"
+      }
+    ],
+    "formula": "corner_factor = 1 - intensity x (distance / max_distance)^2\nnew_pixel = old_pixel x corner_factor — applied to the red, green and blue channels of every pixel.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a photo from your device — JPG, PNG or WebP up to 25 MB.",
+      "Move the intensity slider until the corners darken to your taste; start near 45 for a natural look.",
+      "Adjust softness to make the fade gentle or dramatic, and pick an ellipse or circle shape.",
+      "Check the live preview, then press Download PNG to save the finished photo.",
+      "Use Reset settings to return to the defaults and try again."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A vignette is a gradual darkening of a photo's edges and corners that pulls the viewer's eye toward the center.",
+      "The effect comes from old camera lenses, which naturally delivered less light to the corners of the film.",
+      "Digital vignettes use a radial gradient: fully transparent in the middle, fading to a dark tone at the corners.",
+      "Intensity controls how dark the corners get; softness (feathering) controls how gradually the darkness fades in.",
+      "Your uploaded photo is never modified — the vignette is applied to a copy, and you download a fresh PNG."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "vignette effect, vignette photo editor, darkened corners photo, vignette maker online, free vignette tool",
+    "labels": {
+      "chooseFile": "Choose photo",
+      "circleLabel": "Circle",
+      "downloadLabel": "Download PNG",
+      "ellipseLabel": "Ellipse",
+      "errLoad": "Could not read that image. Try a different photo.",
+      "errSize": "That file is larger than 25 MB. Please choose a smaller photo.",
+      "errType": "That file is not an image. Please choose a JPG, PNG or WebP photo.",
+      "featherLabel": "Edge softness",
+      "fileHint": "JPG, PNG or WebP, up to 25 MB. Your original photo is never changed.",
+      "intensityLabel": "Vignette intensity",
+      "previewLabel": "Preview",
+      "resetLabel": "Reset settings",
+      "shapeLabel": "Vignette shape",
+      "uploadLabel": "Photo"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This tool adds vignettes only — it cannot remove a vignette baked into an existing photo.",
+      "Very high intensity can crush shadow detail in the corners beyond recovery; preview before downloading.",
+      "Photos with important content near the edges (text, faces) may lose readability after darkening.",
+      "The download is a PNG render of your photo at its original pixel size."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online vignette tool. Upload a photo, adjust intensity, feather and shape, and download the result. No sign-up, no watermark — everything runs in your browser.",
+    "metaTitle": "Vignette Effect — Add Darkened Corners to Photos Online",
+    "name": "Vignette Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and this tool darkens its corners with a smooth, adjustable radial fade. Set the intensity, edge softness and shape, preview the result live, and download it as a PNG. Free, private and unlimited.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Vignette results",
+    "tagline": "Add a soft darkened-corner vignette to any photo in seconds.",
+    "workedExample": "Take a white corner pixel (255, 255, 255) with the intensity at 80% (0.8). The corner factor is 1 - 0.8 x 1 = 0.2, so the pixel becomes (51, 51, 51). A pixel halfway in (distance ratio 0.5) gets a factor of 1 - 0.8 x 0.25 = 0.8, becoming (204, 204, 204). The very center (ratio 0) is left completely unchanged.",
+    "workedExampleHeading": "Worked example"
+  }
+}

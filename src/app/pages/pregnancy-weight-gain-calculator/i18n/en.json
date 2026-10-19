@@ -1,0 +1,97 @@
+{
+  "pregnancy-weight-gain-calculator": {
+    "assumptionNote": "IOM guidelines for singleton pregnancies. Twins, teens, and short stature need a doctor's adjusted targets.",
+    "benefits": [
+      "Replaces guesswork with the IOM ranges doctors actually use.",
+      "Shows both kg and lb - readable anywhere in the world.",
+      "Sets expectations: slow start, steady middle, no crash dieting.",
+      "A concrete range to discuss at your first prenatal visit."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The recommended range is smaller (7-11.5 kg) but still positive - the baby needs growth. Focus on nutrient quality rather than restriction, and let your doctor set the pace.",
+        "q": "What if I am already overweight?"
+      },
+      {
+        "a": "Not without medical supervision. Intentional weight loss can deprive the baby. If your BMI is high, doctors aim for the low end of the range, not below it.",
+        "q": "Can I lose weight while pregnant?"
+      },
+      {
+        "a": "About 1-2 kg total in the first trimester, then roughly 0.4-0.5 kg per week (less if overweight). Steady beats spurts.",
+        "q": "How fast should I gain?"
+      },
+      {
+        "a": "Tell your doctor. Sudden jumps can signal fluid retention or blood-pressure issues. They will check you before adjusting anything.",
+        "q": "What if I gain too much too fast?"
+      },
+      {
+        "a": "No - only about 300 extra kcal per day in trimesters 2-3, roughly a healthy snack. Quality matters far more than quantity.",
+        "q": "Do I need to eat for two?"
+      },
+      {
+        "a": "Ranges are higher: about 16.5-24.5 kg for a healthy starting BMI. Twin pregnancies need closer monitoring - use this calculator as background, not guidance.",
+        "q": "What about twins?"
+      }
+    ],
+    "formula": "BMI = pre-pregnancy weight(kg) / height(m) squared\n\nIOM ranges (total gain):\nBMI < 18.5: 12.5 - 18 kg\nBMI 18.5 - 24.9: 11.5 - 16 kg\nBMI 25 - 29.9: 7 - 11.5 kg\nBMI 30+: 5 - 9 kg\n\nExample: 165 cm, 60 kg\nBMI = 60 / (1.65 x 1.65) = 60 / 2.7225 = 22.0 -> 11.5 - 16 kg",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your height and your weight from just before pregnancy.",
+      "Your pre-pregnancy BMI and category appear with the recommended gain range.",
+      "Read the range in kg and lb.",
+      "Track your gain at prenatal visits against this range, not a single number.",
+      "Discuss your personal target with your doctor or midwife - they adjust for twins and conditions."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The Institute of Medicine (IOM) sets gain ranges by pre-pregnancy BMI.",
+      "Underweight (<18.5): 12.5-18 kg. Healthy (18.5-24.9): 11.5-16 kg.",
+      "Overweight (25-29.9): 7-11.5 kg. Obesity (30+): 5-9 kg.",
+      "Only 1-2 kg is expected in the first trimester; the rest spreads over trimesters 2-3.",
+      "The gain is not just the baby: placenta, fluids, blood volume, uterus, and maternal stores.",
+      "Twins need more: roughly 16.5-24.5 kg for a healthy starting BMI - ask your doctor."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pregnancy weight gain calculator, how much weight gain pregnancy, iom pregnancy weight chart, healthy pregnancy weight",
+    "labels": {
+      "categories": {
+        "healthy": "Healthy",
+        "obese": "Obese",
+        "overweight": "Overweight",
+        "underweight": "Underweight"
+      },
+      "category": "Category",
+      "gainLb": "Recommended gain (lb)",
+      "heightCm": "Height (cm)",
+      "kgUnit": "kg",
+      "lbUnit": "lb",
+      "preBmi": "Pre-pregnancy BMI",
+      "preWeightKg": "Pre-pregnancy weight (kg)",
+      "recommendedGain": "Recommended total gain"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "General guidelines - your doctor personalizes for twins, diabetes, or hypertension.",
+      "Based on pre-pregnancy weight; early-pregnancy weight is a rough substitute.",
+      "BMI is less meaningful for very muscular women.",
+      "Never diet to lose weight during pregnancy without medical supervision."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "How much weight should you gain in pregnancy? Get your IOM-recommended range from pre-pregnancy BMI. Free, private, no sign-up.",
+    "metaTitle": "Pregnancy Weight Gain Calculator | JaurTools",
+    "name": "Pregnancy Weight Gain Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Healthy gain depends on your starting BMI. At 165 cm and 60 kg pre-pregnancy (BMI 22.0), the recommended total is 11.5-16 kg (25-35 lb). Underweight mothers need 12.5-18 kg, overweight mothers 7-11.5 kg, and mothers with obesity 5-9 kg. Gain is slowest in the first trimester - most comes later.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your recommended weight gain",
+    "tagline": "Find your healthy pregnancy weight-gain range from your pre-pregnancy BMI (IOM guidelines).",
+    "workedExample": "Height 165 cm, pre-pregnancy weight 60 kg:\n1. Height squared: 1.65 x 1.65 = 2.7225.\n2. BMI: 60 / 2.7225 = 22.0 - healthy range.\n3. Recommended total gain: 11.5 to 16 kg.\n4. In pounds: 11.5 x 2.205 = 25.4 lb to 16 x 2.205 = 35.3 lb.\n5. Pace: about 1-2 kg in trimester 1, then roughly 0.4 kg per week after.",
+    "workedExampleHeading": "Worked example"
+  }
+}

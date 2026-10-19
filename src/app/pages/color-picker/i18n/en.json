@@ -1,0 +1,96 @@
+{
+  "color-picker": {
+    "benefits": [
+      "Pick colors three ways: spectrum canvas, RGB sliders, or sampling from an uploaded image.",
+      "Outputs HEX, RGB, HSL, HSV and CMYK — every format with a copy button.",
+      "The spectrum canvas shows the full hue/saturation field at your current lightness.",
+      "Image sampling reads the exact pixel you click — a real eyedropper.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Click any color in the spectrum to set its hue and saturation; the lightness slider then controls brightness. The RGB sliders below give exact channel control, and the image sampler reads real pixels from a photo you upload.",
+        "q": "How do the three picking methods work together?"
+      },
+      {
+        "a": "The spectrum is drawn at 50% lightness by default so every hue shows at full strength. Move the lightness slider after picking to darken or brighten the result — the picked hue and saturation are preserved.",
+        "q": "Why does the spectrum look brighter than my picked color?"
+      },
+      {
+        "a": "Yes — upload any image (up to 10 MB) and click anywhere on it. The tool reads that exact pixel's color. It is a genuine eyedropper implemented with canvas pixel sampling.",
+        "q": "Can I pick a color from a photo?"
+      },
+      {
+        "a": "The EyeDropper browser API exists but is not supported everywhere, so this tool uses canvas-based picking instead, which works in every modern browser without special permissions.",
+        "q": "Why not use the browser's built-in eyedropper?"
+      },
+      {
+        "a": "No — images are read into browser memory and pixels are sampled locally. Nothing is uploaded anywhere.",
+        "q": "Is my uploaded image sent anywhere?"
+      }
+    ],
+    "formula": "Spectrum pixel: hsl(x/width x 360, 1 - y/height, current lightness)\nRGB sliders set channels directly (0-255)\nImage click: readImageData(x, y) -> exact pixel RGB\nall other formats derived from RGB via standard conversions",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click anywhere on the spectrum canvas to pick a hue and saturation.",
+      "Use the lightness slider to darken or brighten the picked color.",
+      "Fine-tune with the red, green and blue sliders for exact channels.",
+      "Optionally upload an image and click it to sample a real pixel.",
+      "Copy the HEX, RGB, HSL, HSV or CMYK value you need."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The spectrum maps hue horizontally (0-360 degrees) and saturation vertically.",
+      "The lightness slider applies to spectrum picks without changing hue or saturation.",
+      "RGB sliders cover the full 0-255 range per channel.",
+      "Image sampling reads the exact clicked pixel via canvas getImageData.",
+      "All five output formats are recomputed from the current RGB on every change."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "color picker, eyedropper online, pick color from image, spectrum color picker, rgb hsl picker",
+    "labels": {
+      "blue": "Blue",
+      "cmykOut": "CMYK",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyValue": "Copy this value",
+      "errorSize": "The file is larger than 10 MB. Please choose a smaller image.",
+      "errorType": "Please choose an image file (JPG, PNG, WebP).",
+      "green": "Green",
+      "hexOut": "HEX",
+      "hslOut": "HSL",
+      "hsvOut": "HSV",
+      "imageLabel": "Uploaded image — click to sample a color",
+      "lightness": "Lightness",
+      "red": "Red",
+      "rgbOut": "RGB",
+      "sampleHint": "Click anywhere on the image to sample that pixel's color.",
+      "spectrumLabel": "Color spectrum — click to pick",
+      "uploadImage": "Upload an image to sample from"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The spectrum is drawn at fixed lightness steps; very dark or bright picks need the slider.",
+      "Image sampling reads one pixel — noisy JPEG edges may vary by a channel or two.",
+      "No alpha/transparency picking; output is always opaque.",
+      "Canvas color picking uses the sRGB space only."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free color picker: pick from a spectrum canvas, fine-tune RGB sliders, or sample any pixel from an uploaded image. HEX, RGB, HSL, HSV, CMYK output.",
+    "metaTitle": "Color Picker with Eyedropper | JaurTools",
+    "name": "Color Picker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick colors three ways: click the spectrum canvas for hue and saturation, fine-tune with RGB sliders and a lightness control, or upload an image and click any pixel to sample its exact color like a real eyedropper. Every change instantly updates the HEX, RGB, HSL, HSV and CMYK values, each with a copy button — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your picked color",
+    "tagline": "Pick from a spectrum, tune RGB sliders, or sample any pixel from your own image.",
+    "workedExample": "The default color is #4f46e5.\nRGB: the hex pairs 4f, 46, e5 are 79, 70, 229 -> rgb(79, 70, 229).\nHSL: hue ~243 degrees, saturation ~75%, lightness ~59% -> hsl(243, 75%, 59%).\nHSV: value = 229/255 = 90%, saturation = (229-70)/229 = 69% -> hsv(243, 69%, 90%).\nCMYK: K = 1 - 0.898 = 10%, C = 66%, M = 69%, Y = 0%.\nClicking the spectrum at the same hue/saturation with 59% lightness reproduces this exact color.",
+    "workedExampleHeading": "Worked example"
+  }
+}

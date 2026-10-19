@@ -1,0 +1,93 @@
+{
+  "code-to-image": {
+    "name": "Code to Image",
+    "tagline": "Turn code snippets into beautiful shareable images with syntax highlighting and themes.",
+    "metaTitle": "Code to Image - Beautiful Code Screenshots Free | JaurTools",
+    "metaDescription": "Convert code to beautiful images online for free. Syntax highlighting, dark/light themes, line numbers. Download PNG for posts and docs. No sign-up.",
+    "keywords": "code to image, code screenshot generator, beautiful code snippet image, syntax highlight image",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Paste your code, pick dark or light theme, and the tool renders it as a styled image: macOS-style header dots, language label, line numbers, and syntax highlighting for keywords, strings, comments, and numbers. A 12-line snippet at 16 px font renders roughly 760 x 430 px. Download the PNG for Twitter, blogs, and docs.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Syntax highlighting covers keywords, strings, comments, numbers, and function calls.",
+      "Two themes: dark editor (like VS Code) and clean light paper.",
+      "Line numbers are optional and sit in a subtle gutter.",
+      "The canvas sizes itself to your code — no wasted empty space.",
+      "Monospace font keeps columns aligned exactly like your editor.",
+      "Output PNG is crisp at 2x-style rendering for retina screens."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Paste or type your code in the text box.",
+      "Type the language name for the header label (e.g. TypeScript).",
+      "Choose the dark or light theme and set the font size.",
+      "Toggle line numbers on or off.",
+      "Check the preview, then click Download to save the PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "lineHeight = fontSize x 1.5\ncanvasWidth = maxLineWidth + gutter + 2 x padding\ncanvasHeight = headerHeight + lines x lineHeight + 2 x padding\nExample: 12 lines at 16 px -> lineHeight 24; height = 64 + 288 + 64 = 416 px plus padding.",
+    "formulaHeading": "Formula",
+    "workedExample": "12 lines, longest line 60 chars, font 16 px, dark theme:\n1. lineHeight = 16 x 1.5 = 24 px.\n2. Text width: 60 chars x ~9.6 px = ~576 px; gutter 48 + padding 2x32 = 112 -> canvas ~688 px wide.\n3. Height: header 56 + 12 x 24 = 288 + padding 64 = ~408 px.\n4. Result: a ~688 x 408 PNG that looks like a polished editor screenshot.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Share code on social media without ugly plain-text screenshots.",
+      "Consistent branding: same theme across all your snippets.",
+      "No editor setup or extensions needed — paste and download.",
+      "Light theme prints beautifully in documents and PDFs.",
+      "Your code never leaves the browser — private snippets stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Highlighting is regex-based, not a full parser — exotic syntax may mis-color.",
+      "One snippet per image; multi-file diffs are not supported.",
+      "Font is fixed monospace; custom font upload is not available.",
+      "Very long lines scroll visually — keep lines under ~80 chars for best results."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "Which languages are supported?",
+        "a": "The highlighter recognizes common keywords, strings, comments, and numbers across C-like languages (JavaScript, TypeScript, Java, C#, Python, and more). The language label in the header is free text, so any language name works there."
+      },
+      {
+        "q": "Can I change the colors?",
+        "a": "The two built-in themes (dark and light) have fixed palettes tuned for readability. Custom palettes are not available in this version — pick the theme that matches where you will post the image."
+      },
+      {
+        "q": "Why does my long line get cut off?",
+        "a": "The canvas grows to fit your longest line, so nothing is cut — but very long lines make the image very wide. Wrap lines around 80 characters for images that read well on phones."
+      },
+      {
+        "q": "Is this better than a screenshot?",
+        "a": "Usually yes: no window chrome, no inconsistent fonts, no background clutter, and consistent padding and colors every time. Plus the PNG is generated at high resolution so text stays sharp."
+      },
+      {
+        "q": "Can I hide the line numbers?",
+        "a": "Yes — toggle them off for a cleaner look, especially for short snippets shared on social media."
+      },
+      {
+        "q": "Is my code uploaded to a server?",
+        "a": "No. Rendering happens entirely in your browser. Proprietary code never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Code to Image results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "codeLabel": "Your code",
+      "languageLabel": "Language label",
+      "theme": "Theme",
+      "themeDark": "Dark",
+      "themeLight": "Light",
+      "fontSize": "Font size (px)",
+      "lineNumbers": "Show line numbers",
+      "download": "Download image",
+      "lines": "Lines",
+      "chars": "Characters"
+    }
+  }
+}

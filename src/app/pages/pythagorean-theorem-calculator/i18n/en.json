@@ -1,0 +1,88 @@
+{
+  "pythagorean-theorem-calculator": {
+    "benefits": [
+      "Solve for any side — hypotenuse or a leg — in one tool.",
+      "Instant answers with clean decimal output.",
+      "Guard rails prevent impossible triangles.",
+      "Perfect for geometry homework and DIY measurements.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A right triangle has one 90-degree angle. The side opposite it is the hypotenuse — always the longest side. The other two sides are the legs.",
+        "q": "What is a right triangle?"
+      },
+      {
+        "a": "Yes. If a² + b² equals c² exactly, the triangle is a right triangle. This is the converse of the theorem.",
+        "q": "Can I check whether a triangle is right-angled?"
+      },
+      {
+        "a": "Solve for a leg. For example, with hypotenuse 10 and one leg 6: a = √(100 - 36) = √64 = 8.",
+        "q": "How do I find a leg when I know the hypotenuse?"
+      },
+      {
+        "a": "The 3-4-5 triangle is the most famous: 3² + 4² = 9 + 16 = 25 = 5². Others include 5-12-13 and 8-15-17.",
+        "q": "What are common Pythagorean triples?"
+      },
+      {
+        "a": "The theorem only applies to right triangles. For other triangles, use the law of cosines instead.",
+        "q": "Does it work for all triangles?"
+      }
+    ],
+    "formula": "a² + b² = c²\nc = √(a² + b²)\na = √(c² - b²)\nb = √(c² - a²)\n(c is the hypotenuse)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose which side to solve for: a, b, or the hypotenuse c.",
+      "Enter the two sides you know.",
+      "The calculator finds the missing side instantly.",
+      "If you pick a leg, the hypotenuse must be the longest side.",
+      "Use the result for construction, navigation or homework."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "In a right triangle, the square of the hypotenuse equals the sum of the squares of the legs.",
+      "The hypotenuse is always the longest side.",
+      "Side c must be longer than either leg, or no triangle exists.",
+      "The 3-4-5 triangle is the classic whole-number example.",
+      "The theorem works in reverse: if a² + b² = c², the triangle is right-angled."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pythagorean theorem calculator, right triangle calculator, hypotenuse calculator, a squared plus b squared, find missing side triangle",
+    "labels": {
+      "invalidNote": "Enter positive sides, and make sure the hypotenuse is the longest side.",
+      "sideALabel": "Side a (leg)",
+      "sideBLabel": "Side b (leg)",
+      "sideCLabel": "Side c (hypotenuse)",
+      "solve": {
+        "a": "Side a",
+        "b": "Side b",
+        "c": "Hypotenuse"
+      },
+      "solveForLabel": "Solve for"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only valid for right triangles, not all triangles.",
+      "Sides must be positive and the hypotenuse the longest.",
+      "Results are decimal approximations, not exact surds.",
+      "Cannot solve angles — use the right triangle calculator for that."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Pythagorean theorem calculator: solve a²+b²=c² for any side — hypotenuse or leg. Fully browser-based, no sign-up.",
+    "metaTitle": "Pythagorean Theorem Calculator — Solve a²+b²=c²",
+    "name": "Pythagorean Theorem Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The Pythagorean theorem links the three sides of a right triangle: a² + b² = c². To find the hypotenuse, square the two legs, add them, and take the square root. To find a leg, square the hypotenuse, subtract the square of the other leg, and take the square root.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Triangle results",
+    "tagline": "Solve a²+b²=c² for any missing side.",
+    "workedExample": "A ladder leans against a wall: the base is 3 m from the wall and the top reaches 4 m high.\n\nThese are the legs, so solve for the hypotenuse:\nc = √(3² + 4²) = √(9 + 16) = √25 = 5.\n\nThe ladder is 5 m long — the classic 3-4-5 right triangle.",
+    "workedExampleHeading": "Worked example"
+  }
+}

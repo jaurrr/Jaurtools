@@ -1,0 +1,157 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="ss-conf">{{ t('labels.confLevel') }}</label>
+        <select id="ss-conf" [ngModel]="confLevel()" (ngModelChange)="setConfLevel($event)">
+          <option value="90">90%</option>
+          <option value="95">95%</option>
+          <option value="99">99%</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="ss-margin">{{ t('labels.marginError') }}</label>
+        <div class="input-row">
+          <input id="ss-margin" type="number" inputmode="decimal" min="0.1" max="50" step="0.5"
+            [ngModel]="margin()" (ngModelChange)="setMargin($event)" />
+          <span class="suffix">%</span>
+          <input type="range" min="0.5" max="10" step="0.5" [ngModel]="margin()"
+            (ngModelChange)="setMargin($event)" [attr.aria-label]="t('labels.marginError')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ss-prop">{{ t('labels.proportion') }}</label>
+        <div class="input-row">
+          <input id="ss-prop" type="number" inputmode="decimal" min="1" max="99" step="1"
+            [ngModel]="prop()" (ngModelChange)="setProp($event)" />
+          <span class="suffix">%</span>
+          <input type="range" min="1" max="99" step="1" [ngModel]="prop()"
+            (ngModelChange)="setProp($event)" [attr.aria-label]="t('labels.proportion')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ss-pop">{{ t('labels.population') }}</label>
+        <input id="ss-pop" type="text" inputmode="numeric" [placeholder]="t('labels.populationPlaceholder')"
+          [ngModel]="population()" (ngModelChange)="setPopulation($event)" class="wide-input" />
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="users" /> {{ t('labels.requiredSize') }}</span>
+          <strong>{{ intFmt().format(requiredSize()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.baseSize') }}</span>
+          <strong>{{ intFmt().format(baseSize()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.zUsed') }}</span>
+          <strong>{{ z().toFixed(3) }}</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <p class="note">{{ t('labels.infiniteNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

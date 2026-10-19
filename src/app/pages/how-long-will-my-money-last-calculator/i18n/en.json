@@ -1,0 +1,89 @@
+{
+  "how-long-will-my-money-last-calculator": {
+    "benefits": [
+      "Turns an abstract fear (will I run out?) into a concrete number of years.",
+      "Shows the trade-off between spending today and security tomorrow.",
+      "Tests inflation scenarios most calculators ignore.",
+      "Private - retirement fears stay in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Withdraw 4% of your portfolio in year one, then adjust for inflation yearly. Historically this lasted 30 years for a 50/50 stock-bond mix. It is a rule of thumb, not a guarantee - many planners now suggest 3.5-4%.",
+        "q": "What is the 4% rule?"
+      },
+      {
+        "a": "Spend less, earn more return (with more risk), delay retirement to save longer, or add income (part-time work, rental). Cutting spending 10% often adds more years than chasing 1% extra return.",
+        "q": "How can I make my money last longer?"
+      },
+      {
+        "a": "Yes. At 3% inflation, $40,000 of spending becomes $72,000 in 20 years. Money that ignores inflation runs out years earlier than a no-inflation scenario.",
+        "q": "Does inflation really matter that much?"
+      },
+      {
+        "a": "Then you are spending principal. That is normal in retirement - the question is only whether the principal lasts as long as you need. This calculator answers exactly that.",
+        "q": "What if my withdrawal exceeds my return?"
+      },
+      {
+        "a": "When your yearly withdrawal is smaller than what your savings earn (after inflation), the balance grows forever on paper. Real markets still vary, so treat it as comfortable, not certain.",
+        "q": "Why does it say indefinite?"
+      },
+      {
+        "a": "No. The simulation runs entirely in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Each year: balance = balance x (1 + r) - withdrawal; withdrawal grows by inflation i.\nClosed form (no inflation): n = -ln(1 - P x r / W) / ln(1 + r)\nP = savings, r = return, W = yearly withdrawal. Simulated year-by-year here.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current savings or retirement nest egg.",
+      "Set a realistic expected annual return after fees (4-6% is common for balanced portfolios).",
+      "Enter what you plan to spend per year.",
+      "Add expected inflation for spending growth.",
+      "Read how many years your money lasts - and what you would withdraw in total."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Money lasts n years where n is about -ln(1 - savings x r / withdrawal) / ln(1 + r).",
+      "Withdrawals above the annual return eat principal - and shrinking principal earns less each year.",
+      "Inflation is the silent killer: 3% inflation doubles your spending need every 24 years.",
+      "The famous 4% rule: withdrawing 4% yearly (adjusted for inflation) historically lasted 30 years.",
+      "Sequence risk: bad returns in the first years of retirement hurt far more than bad returns later.",
+      "Cutting spending 10% can add years to your money - small leaks sink the longest retirements."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "how long will my money last, retirement drawdown calculator, savings lifespan calculator, retirement spending calculator",
+    "labels": {
+      "annualReturn": "Expected annual return (%)",
+      "annualWithdrawal": "Yearly spending",
+      "currentSavings": "Current savings",
+      "indefiniteNote": "At these numbers your money grows faster than you spend it - it could last indefinitely. (Real markets still vary.)",
+      "inflationRate": "Inflation (%)",
+      "totalWithdrawn": "Total withdrawn",
+      "yearsLasts": "Money lasts (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - assumes a smooth fixed return; real markets bounce around.",
+      "Ignores taxes, fees, Social Security or pensions, and uneven spending.",
+      "Not financial advice - a retirement planner can model your full picture.",
+      "Sequence-of-returns risk is not modeled; early bad years hurt more than shown."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free calculator: enter your savings, expected returns, and yearly spending to see how many years your money lasts in retirement. Private, browser-based.",
+    "metaTitle": "How Long Will My Money Last Calculator - Retirement Savings Check | JaurTools",
+    "name": "How Long Will My Money Last Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "$500,000 earning 5% with $40,000 withdrawn yearly lasts about 20 years - paying out roughly $800,000 total before running dry. Enter your savings, expected return, yearly spending, and inflation to see your number.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your money lifespan",
+    "tagline": "Answer the big retirement question: how many years will your savings last?",
+    "workedExample": "$500,000 savings, 5% return, $40,000/year, 0% inflation:\n1. Year 1: 500,000 x 1.05 - 40,000 = $485,000\n2. Repeating yearly, the balance hits zero during year 21.\n3. Money lasts about 20 full years.\n4. Total withdrawn is about 20 x $40,000 = $800,000 - far more than the $500,000 saved, thanks to growth.",
+    "workedExampleHeading": "Worked example"
+  }
+}

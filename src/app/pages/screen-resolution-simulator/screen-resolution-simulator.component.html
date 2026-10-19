@@ -1,0 +1,117 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="globe" /> {{ t('resultsHeading') }}</h2>
+      <div class="field">
+        <label for="sim-url">{{ t('labels.urlLabel') }}</label>
+        <div class="url-row">
+          <input id="sim-url" type="url" inputmode="url" dir="ltr" [placeholder]="t('labels.urlPlaceholder')"
+            [ngModel]="urlInput()" (ngModelChange)="setUrlInput($event)" (keyup.enter)="go()" />
+          <button class="primary" (click)="go()">{{ t('labels.goLabel') }}</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>{{ t('labels.presetsLabel') }}</label>
+        <div class="btn-row">
+          @for (p of presets(); track p.name) {
+            <button [class.active]="width() === p.w && height() === p.h" (click)="applyPreset(p)">
+              {{ p.name }} <small>{{ p.w }}×{{ p.h }}</small>
+            </button>
+          }
+        </div>
+      </div>
+      <div class="field">
+        <label>{{ t('labels.customLabel') }}</label>
+        <div class="input-row wrap">
+          <label class="inline" for="sim-w">{{ t('labels.widthLabel') }}</label>
+          <input id="sim-w" type="number" inputmode="numeric" min="200" max="4096" step="1"
+            [ngModel]="width()" (ngModelChange)="setWidth($event)" />
+          <label class="inline" for="sim-h">{{ t('labels.heightLabel') }}</label>
+          <input id="sim-h" type="number" inputmode="numeric" min="200" max="4096" step="1"
+            [ngModel]="height()" (ngModelChange)="setHeight($event)" />
+          <button (click)="rotate()" [attr.aria-label]="t('labels.rotateLabel')" [attr.title]="t('labels.rotateLabel')">
+            <app-icon name="refresh-cw" />
+          </button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="sim-zoom">{{ t('labels.zoomLabel') }}</label>
+        <select id="sim-zoom" [ngModel]="zoom()" (ngModelChange)="setZoom($event)">
+          <option [ngValue]="0.5">50%</option>
+          <option [ngValue]="0.75">75%</option>
+          <option [ngValue]="1">100%</option>
+          <option [ngValue]="1.5">150%</option>
+        </select>
+      </div>
+      <div class="stage-wrap">
+        <div class="stage calc-testarea" [style.width.px]="width()" [style.height.px]="height()"
+          [style.transform]="'scale(' + zoom() + ')'">
+          <iframe id="sim-frame" [src]="safeUrl()" [title]="t('labels.frameLabel')"
+            sandbox="allow-scripts allow-same-origin allow-forms" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button (click)="reload()"><app-icon name="refresh-cw" /> {{ t('labels.reloadLabel') }}</button>
+        <button (click)="openTab()">{{ t('labels.openTabLabel') }} <app-icon name="external-link" /></button>
+      </div>
+      <p class="note">{{ t('labels.frameNote') }}</p>
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.viewportLabel') }}</span>
+          <strong>{{ width() }} × {{ height() }} {{ t('labels.pxUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.aspectLabel') }}</span>
+          <strong>{{ aspect() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.diagonalLabel') }}</span>
+          <strong>{{ diagonal() }} {{ t('labels.pxUnit') }}</strong>
+        </div>
+        <div class="result-row total">
+          <span>{{ t('labels.categoryLabel') }}</span>
+          <strong>{{ category() }}</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+{
+  "exponent-calculator": {
+    "benefits": [
+      "Computes any power: whole, negative, and fractional exponents.",
+      "Bonus readouts: square, cube, square root, and reciprocal of the base.",
+      "Handles the edge cases honestly instead of showing NaN or Infinity.",
+      "Great for compound growth, physics, and algebra homework."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A negative exponent means one over the positive power: 2^-3 = 1 / 2^3 = 1/8 = 0.125. So 10^-2 = 0.01.",
+        "q": "What does a negative exponent mean?"
+      },
+      {
+        "a": "A fractional exponent is a root: x^(1/2) is the square root, x^(1/3) the cube root. So 9^0.5 = 3 and 27^(1/3) = 3.",
+        "q": "What does a fractional exponent mean?"
+      },
+      {
+        "a": "Anything to the power 0 is 1 (including 0^0 in most practical contexts, which this tool treats as 1). Anything to the power 1 is itself.",
+        "q": "What is anything to the power 0?"
+      },
+      {
+        "a": "Real-number powers of a negative base only exist for integer exponents: (-2)^3 = -8 works, but (-2)^0.5 has no real answer. The tool says so instead of guessing.",
+        "q": "Why does a negative base sometimes fail?"
+      },
+      {
+        "a": "It uses the browser's double-precision maths, exact for everyday values. For thousands of digits of precision, use the Big Number Calculator.",
+        "q": "How precise are the results?"
+      },
+      {
+        "a": "Square root is x^(1/2): the number which, multiplied by itself, gives x. The tool shows it alongside every power calculation.",
+        "q": "What is a square root, exactly?"
+      }
+    ],
+    "formula": "x^y = x multiplied by itself y times (for whole y)\nx^-n = 1 / x^n\nx^(1/n) = the nth root of x\nExample: 2^10 = 1024; 2^-3 = 0.125; 9^0.5 = 3",
+    "formulaHeading": "The rules",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the base (the big number, x).",
+      "Enter the exponent (the power, y) - whole, negative, or fractional.",
+      "The power appears instantly, with square, cube, root, and reciprocal below.",
+      "Watch for the honest message when a result is not a real number."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "2^10 = 1024.",
+      "2^-3 = 1/8 = 0.125.",
+      "9^0.5 = 3 (square root).",
+      "x^0 = 1 for any x; x^1 = x.",
+      "Negative bases need integer exponents for a real answer.",
+      "Square = x^2, cube = x^3, reciprocal = 1/x."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "exponent calculator, power calculator, nth power, square root calculator, fractional exponent calculator",
+    "labels": {
+      "base": "Base (x)",
+      "cube": "Cube (x^3)",
+      "domainNote": "Negative bases with fractional exponents have no real-number answer.",
+      "errDomain": "Not a real number",
+      "exponent": "Exponent (y)",
+      "power": "Result (x^y)",
+      "reciprocal": "Reciprocal (1/x)",
+      "sqrt": "Square root",
+      "square": "Square (x^2)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Real numbers only: no complex results like the square root of -1.",
+      "Double-precision maths - not for thousands of digits of precision.",
+      "Extremely large powers overflow to an honest error, not Infinity.",
+      "0^0 is treated as 1, the practical convention."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free exponent calculator: powers, negative and fractional exponents, plus square, cube, square root, and reciprocal. Exact everyday maths. Private, no sign-up.",
+    "metaTitle": "Exponent Calculator - Powers & Roots | JaurTools",
+    "name": "Exponent Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Raise any base to any power. 2^10 = 1024. Negative exponents flip to fractions: 2^-3 = 1/8 = 0.125. Fractional exponents are roots: 9^0.5 = 3. Every calculation also shows the square (4), cube (8), square root (1.4142), and reciprocal (0.5) of the base. Edge cases like a negative base with a fractional exponent get an honest message instead of a wrong number.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Power results",
+    "tagline": "Powers, roots, and reciprocals - whole, negative, and fractional exponents.",
+    "workedExample": "Base 2, exponent 10:\n1. Multiply: 2 x 2 x ... x 2 (ten times).\n2. 2^5 = 32; 2^10 = 32 x 32 = 1024.\nSecond check - base 2, exponent -3:\n1. Rule: 2^-3 = 1 / 2^3.\n2. 2^3 = 8, so 1/8 = 0.125.",
+    "workedExampleHeading": "Worked example"
+  }
+}

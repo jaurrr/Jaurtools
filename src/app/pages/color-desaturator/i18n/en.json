@@ -1,0 +1,90 @@
+{
+  "color-desaturator": {
+    "benefits": [
+      "Convert any color to its exact greyscale equivalent with one click.",
+      "Three honest methods: luminosity (perceptual), average, and lightness.",
+      "Shows the grey as HEX and RGB with a before/after preview.",
+      "One-click copy for direct use in CSS or design tools.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Luminosity weights channels by how bright humans perceive them (green 71%, red 21%, blue 7%) — the most realistic grey. Average treats all channels equally. Lightness (HSL) averages the brightest and darkest channels. For photos and UI, luminosity is the standard choice.",
+        "q": "Which greyscale method should I use?"
+      },
+      {
+        "a": "No — it removes chroma only. The result is a neutral grey with the same perceived brightness as the original. Hue information is gone, so the conversion cannot be reversed.",
+        "q": "Is greyscaling the same as darkening?"
+      },
+      {
+        "a": "For #4f46e5 = rgb(79, 70, 229): luminosity gives 0.2126x79 + 0.7152x70 + 0.0722x229 = 83.4 -> #535353. Average gives (79+70+229)/3 = 126 -> #7e7e7e. Lightness gives (229+70)/2 = 149.5 -> #969696.",
+        "q": "What grey does #4f46e5 become?"
+      },
+      {
+        "a": "Yes — type any 3- or 6-digit HEX code in the text box, or use the color picker swatch. Invalid input is ignored so the result never breaks.",
+        "q": "Can I type a HEX code directly?"
+      },
+      {
+        "a": "No — the conversion math runs locally in JavaScript. Nothing leaves your device.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "luminosity: grey = 0.2126 x R + 0.7152 x G + 0.0722 x B\naverage: grey = (R + G + B) / 3\nlightness: grey = (max(R,G,B) + min(R,G,B)) / 2\nresult = rgb(grey, grey, grey)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your base color or type its HEX code.",
+      "Choose the conversion method: luminosity, average or lightness.",
+      "Read the resulting grey as HEX and RGB.",
+      "Click Copy to place the grey HEX on your clipboard.",
+      "Use it in your CSS, print layout or design tool."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Greyscaling removes chroma while keeping perceived brightness.",
+      "Luminosity is the perceptual standard: 0.2126R + 0.7152G + 0.0722B.",
+      "Average treats all three channels equally.",
+      "Lightness averages the brightest and darkest channels.",
+      "The result is always a neutral grey: R = G = B."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "greyscale color, desaturate color, color to grey, grayscale converter, remove color online",
+    "labels": {
+      "baseColor": "Base color",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyResult": "Copy result",
+      "hexCode": "HEX code",
+      "methodAverage": "Average",
+      "methodHint": "Luminosity matches human perception best; average and lightness are simpler alternatives.",
+      "methodLabel": "Conversion method",
+      "methodLightness": "Lightness",
+      "methodLuminosity": "Luminosity",
+      "result": "Greyscale result",
+      "rgbValue": "RGB value"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Conversion is one-way — the original hue cannot be recovered from the grey.",
+      "The three methods can disagree noticeably on saturated blues and greens.",
+      "Only one color at a time; images are not processed.",
+      "Alpha/transparency is not supported."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Remove color from any shade and get its exact grey with three methods. Free online, instant HEX output.",
+    "metaTitle": "Color Desaturator - Convert Any Color to Grey | JaurTools",
+    "name": "Color Desaturator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter any color and convert it to its exact greyscale equivalent. Choose from three honest methods — luminosity (perceptual, the standard), average, or lightness — and get the grey as HEX and RGB with a before/after preview. One click copies the result into your CSS or design tool.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your greyscale result",
+    "tagline": "Strip the color — get the exact grey.",
+    "workedExample": "Take #4f46e5 = rgb(79, 70, 229).\nLuminosity: 0.2126 x 79 = 16.795; 0.7152 x 70 = 50.064; 0.0722 x 229 = 16.534; sum = 83.39, rounds to 83 -> rgb(83, 83, 83) = #535353.\nAverage: (79 + 70 + 229) / 3 = 378 / 3 = 126 -> #7e7e7e.\nLightness: (229 + 70) / 2 = 149.5, rounds to 150 -> #969696.\nSame color, three defensible greys — luminosity (#535353) best matches how bright the color looks.",
+    "workedExampleHeading": "Worked example"
+  }
+}

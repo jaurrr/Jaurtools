@@ -1,0 +1,101 @@
+{
+  "bmi-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "assumptionNote": "BMI is a screening measure, not a medical diagnosis. It does not account for muscle mass, bone density, pregnancy, or age. Talk to a doctor before acting on the result.",
+    "benefits": [
+      "Takes 10 seconds and flags whether your weight may be affecting your health.",
+      "The healthy weight range gives you a concrete, realistic target.",
+      "Checking monthly shows whether your habits are moving the needle."
+    ],
+    "benefitsHeading": "Benefits",
+    "categories": {
+      "healthy": "Healthy",
+      "obese": "Obese",
+      "overweight": "Overweight",
+      "underweight": "Underweight"
+    },
+    "category": "Health",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For adults, the widely used healthy range is 18.5 to 24.9. Below 18.5 is underweight, 25 to 29.9 is overweight, and 30 or above is obese. These cut-offs come from the World Health Organization.",
+        "q": "What is a good BMI?"
+      },
+      {
+        "a": "It is good for screening, not perfect for judging individuals. It correctly flags most people whose weight raises health risks, but it cannot tell fat from muscle and it ignores where fat is stored. Use it as a starting point, not the final word.",
+        "q": "Is BMI accurate?"
+      },
+      {
+        "a": "That is the classic BMI blind spot. Muscle is denser than fat, so athletes and very active people often score as overweight or even obese while being very fit. If you train regularly, body-fat percentage is a better measure than BMI.",
+        "q": "Why am I overweight by BMI but fit?"
+      },
+      {
+        "a": "Aim for slow and steady: about 0.5 kg per week through a modest calorie deficit and regular movement. Crash diets almost always backfire. And recheck this calculator monthly - a falling trend matters more than any single number.",
+        "q": "How do I reach a healthy BMI safely?"
+      },
+      {
+        "a": "No. For children and teenagers, BMI is read against age-and-sex percentile charts, not the adult cut-offs. A paediatrician or school health chart interprets those percentiles. This calculator is designed for adults.",
+        "q": "Does BMI work for children?"
+      },
+      {
+        "a": "The healthy range shown above your result is a good start - it is the weight band where your BMI falls between 18.5 and 24.9. Anywhere inside that band is fine. Pick a target that feels sustainable and focus on habits, not a single magic number.",
+        "q": "What should my ideal weight be?"
+      }
+    ],
+    "formula": "Metric: BMI = weight (kg) / height (m) squared.\nImperial: BMI = 703 x weight (lb) / height (in) squared.\nExample: 65 / (1.70 x 1.70) = 65 / 2.89 = 22.5.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your unit system: Metric (cm / kg) or Imperial (feet + inches / pounds).",
+      "Enter your height and weight honestly. Morning weight, before food, is the most consistent.",
+      "Your BMI, category, and healthy weight range for your height appear instantly.",
+      "If your BMI sits outside the healthy range, pick one small sustainable change - like a daily 30-minute walk - and recheck monthly."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "BMI (Body Mass Index) = weight in kg divided by (height in metres) squared.",
+      "WHO categories: under 18.5 underweight, 18.5 to 24.9 healthy, 25 to 29.9 overweight, 30 and above obese.",
+      "BMI does not measure body fat. Muscle, bone, pregnancy, and age all change what the number means.",
+      "Waist circumference is a useful companion check. Above 102 cm for men or 88 cm for women signals extra risk.",
+      "For children and teens, BMI is read against age-and-sex growth charts, not these adult cut-offs.",
+      "If you are an athlete, use body-fat percentage instead of BMI to judge your fitness."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bmi calculator, body mass index calculator, ideal weight calculator, bmi chart, healthy weight calculator",
+    "labels": {
+      "bmi": "Your BMI",
+      "category": "Category",
+      "feet": "Feet",
+      "healthyRange": "Healthy weight range",
+      "heightImperial": "Height (feet + inches)",
+      "heightMetric": "Height (cm)",
+      "imperialTab": "Imperial (ft / lb)",
+      "inches": "Inches",
+      "metricTab": "Metric (cm / kg)",
+      "unitSystem": "Unit system",
+      "weightImperial": "Weight (lb)",
+      "weightMetric": "Weight (kg)",
+      "weightUnitImperial": "lb",
+      "weightUnitMetric": "kg"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot tell fat from muscle. Athletes often score as overweight unfairly.",
+      "The same BMI can mean different health risks at different ages and ethnicities.",
+      "It says nothing about where fat sits. Belly fat is riskier than fat on the hips.",
+      "Not for children, pregnant women, or the elderly without a doctor's interpretation."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free BMI calculator: check your Body Mass Index in seconds with metric or imperial units. See your category and healthy weight range. 100% private, no sign-up.",
+    "metaTitle": "BMI Calculator - Check Your Body Mass Index | JaurTools",
+    "name": "BMI Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "BMI is your weight in kg divided by your height in metres squared. At 170 cm and 65 kg, your BMI is 22.5, which falls in the healthy range (18.5 to 24.9). Your healthy weight for 170 cm is 53.5 to 72.0 kg. Note: BMI is a screening tool, not a diagnosis. Muscular athletes can read as overweight while being very fit.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your BMI results",
+    "tagline": "Check your Body Mass Index in seconds - metric or imperial, with your healthy weight range.",
+    "workedExample": "Height 170 cm, weight 65 kg:\n1. Convert height to metres: 1.70 m.\n2. Square it: 1.70 x 1.70 = 2.89.\n3. Divide: 65 / 2.89 = 22.5.\n4. Compare: 22.5 falls between 18.5 and 24.9, so the category is Healthy.\nHealthy range: 18.5 x 2.89 = 53.5 kg up to 24.9 x 2.89 = 72.0 kg.",
+    "workedExampleHeading": "Worked example"
+  }
+}

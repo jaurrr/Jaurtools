@@ -1,0 +1,95 @@
+{
+  "dew-point-calculator": {
+    "benefits": [
+      "Uses the Magnus formula, the standard in meteorology.",
+      "Works in Celsius or Fahrenheit.",
+      "Adds a plain-language comfort rating.",
+      "Predicts condensation and mold risk.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "comfort": {
+      "comfortable": "Comfortable",
+      "dry": "Dry",
+      "humid": "Humid",
+      "oppressive": "Oppressive",
+      "slightlyHumid": "Slightly humid"
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The temperature at which air becomes saturated and water vapor condenses into dew. When surfaces cool below it overnight, you get morning dew — or fog, or frost.",
+        "q": "What is the dew point?"
+      },
+      {
+        "a": "Because the dew point measures absolute moisture, while relative humidity depends on temperature. A dew point above about 18 C (65 F) feels muggy no matter what the RH says.",
+        "q": "Why does dew point matter more than humidity?"
+      },
+      {
+        "a": "Condensation forms on any surface colder than the dew point: cold pipes, windows, and walls. Keep indoor surfaces warmer, ventilate, or run a dehumidifier.",
+        "q": "How do I stop condensation on windows?"
+      },
+      {
+        "a": "Roughly: below 10 C feels dry, 10-16 C comfortable, 16-18 C slightly sticky, 18-21 C humid, above 21 C oppressive.",
+        "q": "What is a comfortable dew point?"
+      },
+      {
+        "a": "Sustained indoor dew points above about 16-18 C (60-65 F) let mold grow on cool surfaces. Ventilate bathrooms and kitchens and keep indoor RH under 60%.",
+        "q": "What dew point causes mold?"
+      }
+    ],
+    "formula": "Magnus formula (b = 17.625, c = 243.04):\ny = ln(RH/100) + (b x T) / (c + T)\ndew point = (c x y) / (b - y)   [T in Celsius]",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Celsius or Fahrenheit.",
+      "Enter the air temperature.",
+      "Enter the relative humidity as a percentage.",
+      "Read the dew point and the comfort rating.",
+      "Compare surfaces in your home against the dew point to spot condensation risk."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Dew point is the temperature at which air saturates and water condenses.",
+      "It measures absolute moisture, unlike relative humidity.",
+      "High dew points (above ~18 C) feel muggy and sticky.",
+      "Condensation forms on surfaces colder than the dew point.",
+      "Indoor dew points above ~16 C encourage mold on cool surfaces.",
+      "The Magnus formula is accurate within about 0.5 C for normal weather."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "dew point calculator, dewpoint formula, humidity dew point, condensation calculator, magnus formula calculator",
+    "labels": {
+      "celsiusTab": "Celsius",
+      "comfortResult": "Comfort level",
+      "dewPointF": "Dew point (°F)",
+      "dewPointResult": "Dew point",
+      "fahrenheitTab": "Fahrenheit",
+      "humidityLabel": "Relative humidity",
+      "magnusNote": "Computed with the Magnus formula (b = 17.625, c = 243.04), accurate to about 0.5 C in normal conditions.",
+      "tempLabel": "Air temperature",
+      "unitSystem": "Temperature unit"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Approximation, not a laboratory measurement.",
+      "Assumes standard atmospheric pressure.",
+      "Comfort ratings are subjective and vary by person.",
+      "Does not predict frost depth or exact condensation timing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free dew point calculator: enter temperature and humidity to get the dew point via the Magnus formula, plus a comfort rating. Celsius and Fahrenheit. No sign-up.",
+    "metaTitle": "Dew Point Calculator (Magnus Formula, Free)",
+    "name": "Dew Point Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter the air temperature and relative humidity, and this calculator returns the dew point using the Magnus formula — the same equation meteorologists use — plus a comfort rating from dry to oppressive. It works in Celsius or Fahrenheit.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Dew point results",
+    "tagline": "When will the air give up its moisture?",
+    "workedExample": "Air at 25 C with 60% relative humidity:\n\n1. y = ln(0.60) + (17.625 x 25) / (243.04 + 25) = -0.5108 + 1.6438 = 1.1329.\n2. Dew point = (243.04 x 1.1329) / (17.625 - 1.1329) = 275.35 / 16.493 = 16.7 C (62.1 F).\n3. Comfort rating: 16.7 C falls in the slightly-humid band.\n\nAny surface colder than 16.7 C — a cold drink, an AC vent — will collect condensation.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "web-app-manifest-generator": {
+    "benefits": [
+      "फॉर्म से पूरा, सही मैनिफेस्ट बनाता है — हाथ से JSON लिखने की ज़रूरत नहीं।",
+      "समझदार डिफ़ॉल्ट पहले से भरता है (standalone display, 192/512 आइकन) ताकि शुरुआत इंस्टॉलेबल हो।",
+      "टाइप करते ही गायब इंस्टॉलेबिलिटी शर्तों की चेतावनी देता है।",
+      "एक क्लिक में फ़ाइल और HTML में पेस्ट करने वाला <link> टैग दोनों मिलते हैं।",
+      "सब कुछ आपके ब्राउज़र में रहता है; आपके ऐप का ब्योरा डिवाइस से बाहर नहीं जाता।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "इसे साइट रूट में manifest.webmanifest (या manifest.json) के रूप में सेव करें और हर पेज के <head> से संदर्भ दें: <link rel=\"manifest\" href=\"/manifest.webmanifest\">। इसे MIME टाइप application/manifest+json के साथ सर्व करें।",
+        "q": "मैनिफेस्ट फ़ाइल कहां रखूं?"
+      },
+      {
+        "a": "दोनों इस्तेमाल करें: Web App Manifest Generator फ़ाइल बनाता है, फिर PWA Manifest Checker उसे इंस्टॉलेबिलिटी शर्तों पर मान्य करता है। यहां बनाएं, वहां सत्यापित करें।",
+        "q": "यह इस्तेमाल करूं या PWA Manifest Checker?"
+      },
+      {
+        "a": "इंस्टॉलेबिलिटी की न्यूनतम शर्तें: name (या short_name), start_url, display standalone/fullscreen/minimal-ui, और 192px + 512px आइकन। यह जनरेटर कोई कमी होने पर चेतावनी देता है, और आइकन एंट्री पहले से भरता है।",
+        "q": "इंस्टॉलेबल PWA की न्यूनतम शर्तें क्या हैं?"
+      },
+      {
+        "a": "start_url वह जगह है जहां होम स्क्रीन से लॉन्च होने पर ऐप खुलता है (आमतौर पर \"/\")। scope तय करता है कि कौन-से URL आपके ऐप का हिस्सा हैं — इसके बाहर के लिंक ब्राउज़र में खुलते हैं। id ऐप की अनूठी पहचान है; इसे स्पष्ट सेट करें ताकि URL बदलने पर डुप्लिकेट इंस्टॉल न बनें।",
+        "q": "start_url, scope और id क्या हैं?"
+      },
+      {
+        "a": "Android एडैप्टिव आइकन को आकृतियों में काटता है, इसलिए पैडिंग वाला maskable वेरिएंट सिफारिश है। यह जनरेटर 512px आइकन को purpose \"any maskable\" के साथ पहले से भरता है — बस उसे अपनी maskable फ़ाइल की ओर इशारा करें।",
+        "q": "क्या maskable आइकन चाहिए?"
+      },
+      {
+        "a": "हां — बने JSON को इस साइट के PWA Manifest Checker में पेस्ट करके मान्य करें। यह भी पक्का करें कि <link> टैग आपके HTML में है, फ़ाइल HTTPS पर सर्व हो रही है, और सर्विस वर्कर रजिस्टर्ड है।",
+        "q": "बने मैनिफेस्ट को सत्यापित कैसे करूं?"
+      }
+    ],
+    "formula": "बनी मैनिफेस्ट संरचना:\n{\n  \"name\": \"…\", \"short_name\": \"…\",\n  \"start_url\": \"/\", \"scope\": \"/\", \"id\": \"/\",\n  \"display\": \"standalone | fullscreen | minimal-ui | browser\",\n  \"orientation\": \"any | natural | landscape | portrait | …\",\n  \"theme_color\": \"#…\", \"background_color\": \"#…\",\n  \"lang\": \"en\", \"dir\": \"ltr | rtl | auto\",\n  \"icons\": [{ \"src\": \"…\", \"sizes\": \"192x192\", \"type\": \"image/png\", \"purpose\": \"any maskable\" }]\n}\nसिर्फ गैर-खाली फ़ील्ड शामिल होते हैं।",
+    "formulaHeading": "बनी संरचना",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपने ऐप का नाम और छोटा नाम भरें (कम से कम एक ज़रूरी है)।",
+      "स्टार्ट URL, display मोड, थीम व बैकग्राउंड रंग सेट करें।",
+      "आइकन एंट्री समायोजित करें या जोड़ें — 192px और 512px PNG इंस्टॉलेबिलिटी की न्यूनतम शर्त हैं।",
+      "चेतावनियां देखें और फ्लैग हुई हर चीज़ ठीक करें।",
+      "manifest.webmanifest कॉपी या डाउनलोड करें और अपने HTML से लिंक करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "Web App Manifest एक JSON फ़ाइल है जो आपके ऐप का वर्णन करती है: नाम, आइकन, रंग और लॉन्च व्यवहार।",
+      "इंस्टॉलेशन देने से पहले ब्राउज़र को चाहिए: name/short_name, start_url, सही display मोड, और 192px + 512px आइकन।",
+      "display: standalone ऐप जैसी विंडो देता है; fullscreen सारा ब्राउज़र UI हटा देता है; minimal-ui बुनियादी कंट्रोल रखता है।",
+      "theme_color OS UI को रंगता है; background_color लॉन्च के दौरान स्प्लैश स्क्रीन भरता है।",
+      "फ़ाइल आपके HTML से लिंक होनी चाहिए: <link rel=\"manifest\" href=\"/manifest.webmanifest\">।",
+      "पूरी तरह इंस्टॉलेबल PWA के लिए HTTPS पर सर्विस वर्कर के साथ जोड़ें।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "web app manifest generator, pwa manifest generator, manifest.json generator, create manifest.webmanifest",
+    "labels": {
+      "addIcon": "आइकन जोड़ें",
+      "copiedMsg": "मैनिफेस्ट क्लिपबोर्ड पर कॉपी हो गया।",
+      "copyFile": "मैनिफेस्ट कॉपी करें",
+      "downloadFile": "manifest.webmanifest डाउनलोड करें",
+      "fBgColor": "बैकग्राउंड रंग",
+      "fDescription": "विवरण",
+      "fDir": "टेक्स्ट दिशा (dir)",
+      "fDisplay": "Display मोड",
+      "fId": "ऐप ID (id)",
+      "fLang": "भाषा (lang)",
+      "fName": "ऐप का नाम",
+      "fOrientation": "Orientation",
+      "fScope": "Scope",
+      "fShortName": "छोटा नाम",
+      "fStartUrl": "स्टार्ट URL",
+      "fThemeColor": "थीम रंग",
+      "generatedFile": "बना मैनिफेस्ट",
+      "iconPurpose": "Purpose",
+      "iconSizes": "Sizes",
+      "iconSrc": "आइकन URL",
+      "iconType": "MIME टाइप",
+      "iconsHeading": "आइकन",
+      "linkTagLabel": "अपने HTML <head> में जोड़ें",
+      "optUnset": "सेट नहीं",
+      "removeIcon": "हटाएं",
+      "serveNote": "manifest.webmanifest के रूप में सेव करें, HTTPS पर MIME टाइप application/manifest+json के साथ सर्व करें, और अपने HTML से लिंक करें।",
+      "warnBadBg": "बैकग्राउंड रंग सही CSS रंग नहीं है और छोड़ दिया गया।",
+      "warnBadTheme": "थीम रंग सही CSS रंग नहीं है और छोड़ दिया गया।",
+      "warnNo192": "192x192 आइकन नहीं — इंस्टॉलेबिलिटी के लिए ज़रूरी है।",
+      "warnNo512": "512x512 आइकन नहीं — इंस्टॉलेबिलिटी के लिए ज़रूरी है।",
+      "warnNoName": "name और short_name दोनों सेट नहीं — एक ज़रूरी है।",
+      "warningsHeading": "प्रकाशित करने से पहले जांचें"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "सिर्फ मैनिफेस्ट फ़ाइल बनाता है — <link> टैग, HTTPS और सर्विस वर्कर अब भी चाहिए।",
+      "आपकी आइकन इमेज बना या रीसाइज़ नहीं कर सकता — असली होस्ट की गई PNG फ़ाइलों की ओर इशारा करें।",
+      "रंग इनपुट CSS रंग के रूप में मान्य होते हैं, लेकिन फ़ाइल यहां लाइव ब्राउज़र पर टेस्ट नहीं होती।",
+      "आम सेट से परे असामान्य मैनिफेस्ट फ़ील्ड फॉर्म में कवर नहीं हैं।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त Web App Manifest जनरेटर: इंस्टॉलेबिलिटी चेतावनियों के साथ आसान फॉर्म से सही manifest.webmanifest बनाएं। कॉपी या डाउनलोड करें, 100% निजी।",
+    "metaTitle": "Web App Manifest Generator - manifest.webmanifest बनाएं | JaurTools",
+    "name": "Web App Manifest जनरेटर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "फॉर्म भरें और यह जनरेटर पूरा Web App Manifest बनाता है: नाम, छोटा नाम, स्टार्ट URL, display मोड, थीम व बैकग्राउंड रंग, और आइकन एंट्री — सिर्फ गैर-खाली फ़ील्ड शामिल होते हैं। डिफ़ॉल्ट (standalone display, 192px और 512px आइकन) इंस्टॉलेबिलिटी के लिए हैं, और लाइव चेतावनियां गायब चीज़ों को फ्लैग करती हैं। आपको manifest.webmanifest फ़ाइल और HTML के लिए <link> टैग मिलता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "आपका मैनिफेस्ट",
+    "tagline": "आसान फॉर्म से सही Web App Manifest बनाएं — हाथ से JSON नहीं।",
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "workedExample": "इनपुट: name Example Tools, short_name ExTools, start_url /, display standalone, theme_color #4f46e5, background_color #ffffff, आइकन /icons/icon-192.png (192x192) और /icons/icon-512.png (512x512, purpose any maskable)।\nबना manifest.webmanifest:\n{\n  \"name\": \"Example Tools\",\n  \"short_name\": \"ExTools\",\n  \"start_url\": \"/\",\n  \"display\": \"standalone\",\n  \"theme_color\": \"#4f46e5\",\n  \"background_color\": \"#ffffff\",\n  \"icons\": [\n    {\n      \"src\": \"/icons/icon-192.png\",\n      \"sizes\": \"192x192\",\n      \"type\": \"image/png\"\n    },\n    {\n      \"src\": \"/icons/icon-512.png\",\n      \"sizes\": \"512x512\",\n      \"type\": \"image/png\",\n      \"purpose\": \"any maskable\"\n    }\n  ]\n}\nखाली फ़ील्ड (description, scope, id, orientation, dir) छोड़े गए। कोई चेतावनी नहीं — name, 192px और 512px तीनों मौजूद हैं।"
+  }
+}

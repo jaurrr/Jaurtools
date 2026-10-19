@@ -1,0 +1,158 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="rot-files">{{ t('labels.filesLabel') }}</label>
+        <input id="rot-files" type="file" accept="application/pdf,.pdf" multiple
+          (change)="onFilesSelected($event)" [attr.aria-label]="t('labels.filesLabel')" />
+        <p class="note">{{ t('labels.filesHint') }}</p>
+      </div>
+
+      @if (hasFiles()) {
+        <div class="field">
+          <label>{{ t('labels.angleLabel') }}</label>
+          <div class="unit-toggle" role="group" [attr.aria-label]="t('labels.angleLabel')">
+            <button type="button" [class.active]="angle() === 90" (click)="setAngle(90)">90°</button>
+            <button type="button" [class.active]="angle() === 180" (click)="setAngle(180)">180°</button>
+            <button type="button" [class.active]="angle() === 270" (click)="setAngle(270)">270°</button>
+          </div>
+        </div>
+
+        <ul class="file-list">
+          @for (f of files(); track $index; let i = $index) {
+            <li>
+              <div class="file-head">
+                <span class="fname"><app-icon name="file-text" /> {{ f.name }}</span>
+                <button type="button" class="icon-btn" (click)="removeFile(i)"
+                  [attr.aria-label]="t('labels.removeLabel') + ': ' + f.name">
+                  <app-icon name="x" />
+                </button>
+              </div>
+              <div class="file-meta">
+                <span>{{ t('labels.pageCount') }}: {{ f.pages }}</span>
+              </div>
+              <div class="field range-field">
+                <label [for]="'rot-range' + i">{{ t('labels.rangeLabel') }}</label>
+                <input [id]="'rot-range' + i" type="text" [ngModel]="f.range"
+                  (ngModelChange)="setRange(i, $event)"
+                  [attr.placeholder]="t('labels.rangePh')" />
+              </div>
+            </li>
+          }
+        </ul>
+
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="rotate()" [disabled]="busy()">
+            <app-icon name="refresh-cw" /> {{ t('labels.rotateButton') }}
+          </button>
+        </div>
+      }
+
+      @if (busy()) {
+        <p class="status" role="status"><app-icon name="refresh-cw" /> {{ t('labels.busy') }}</p>
+      }
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+      @if (status()) {
+        <p class="status" role="status"><app-icon name="check" /> {{ status() }}</p>
+      }
+
+      @if (outputs().length > 1) {
+        <ul class="file-list">
+          @for (o of outputs(); track o.name) {
+            <li>
+              <span class="fname"><app-icon name="check" /> {{ o.name }}</span>
+              <button type="button" class="btn ghost small" (click)="downloadOne(o)">
+                <app-icon name="download" /> {{ t('labels.downloadOne') }}
+              </button>
+            </li>
+          }
+        </ul>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

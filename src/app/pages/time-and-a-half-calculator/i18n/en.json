@@ -1,0 +1,90 @@
+{
+  "time-and-a-half-calculator": {
+    "assumptionNote": "This calculator assumes the standard 40-hour work week. Some states, countries, and union contracts use different overtime thresholds or daily-overtime rules - check your local rules.",
+    "benefits": [
+      "Check your payslip in seconds and catch underpaid overtime before it costs you.",
+      "Shows your true overtime rate, which many people never calculate correctly.",
+      "Useful for negotiating hours with a manager when you know the exact cost of each extra hour.",
+      "Works for any hourly job: retail, hospitality, warehouse, healthcare shifts, and freelancing."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Divide your gross pay by your total hours worked: total pay / (regular hours + overtime hours). Because overtime hours are paid at 1.5x, the effective hourly rate always lands above your base rate. For example, $950 for 45 hours gives an effective rate of $21.11 per hour.",
+        "q": "What is my effective hourly rate with overtime?"
+      },
+      {
+        "a": "No. The calculator gives gross overtime pay before any deductions. Income tax, Social Security or equivalent contributions, and other withholdings still come out of the total. Your net pay will be lower than the result shown.",
+        "q": "Does this include taxes?"
+      },
+      {
+        "a": "Double-time means 2x your hourly rate, usually for working a seventh consecutive day, very long shifts, or public holidays in some contracts. If your contract pays double-time for certain hours, calculate those hours at 2x and add them to the total separately.",
+        "q": "What about double-time pay?"
+      },
+      {
+        "a": "Under the US Fair Labor Standards Act, non-exempt employees must receive at least 1.5x their regular rate for hours worked beyond 40 in a work week. Salaried exempt workers are generally not entitled to overtime. Rules vary by country and state, so check your local labour law.",
+        "q": "Who is legally entitled to time-and-a-half?"
+      },
+      {
+        "a": "Most employers set the threshold at 40 hours per week. Some places use daily overtime (8+ hours per day) or count holiday hours differently. This calculator lets you set your own regular-hours threshold, so you can match whatever your employer uses.",
+        "q": "Is overtime always after 40 hours?"
+      },
+      {
+        "a": "Yes for many salaried non-exempt workers in the US: the FLSA looks at actual hours worked, not how you are paid. Your regular rate is salary / hours worked, and overtime is 1.5x that rate. Check with your HR department if you are unsure about your classification.",
+        "q": "Do salaried workers get overtime?"
+      }
+    ],
+    "formula": "Overtime rate = hourly rate x 1.5.\nRegular pay = hourly rate x regular hours.\nOvertime pay = overtime rate x overtime hours.\nTotal pay = regular pay + overtime pay.\nExample: $20 x 1.5 = $30/hour overtime.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your normal hourly pay rate.",
+      "Enter your regular hours (usually 40 per week).",
+      "Enter how many extra overtime hours you worked.",
+      "Your overtime rate, overtime pay, and total pay appear instantly.",
+      "Compare the result with your payslip to make sure every overtime hour was paid."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Time-and-a-half = 1.5 times your normal hourly rate for overtime hours.",
+      "Under US federal law, non-exempt employees earn time-and-a-half for hours beyond 40 per week.",
+      "The overtime premium is the extra 0.5x on top of your normal rate, so overtime pay adds up faster than people expect.",
+      "Some contracts also pay double-time (2x) for holidays or seventh consecutive days.",
+      "Salaried workers classified as non-exempt are also entitled to overtime in many cases.",
+      "Keep your own record of overtime hours - payslip mistakes are more common than you think."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "time and a half calculator, overtime pay calculator, overtime rate calculator, 1.5x pay calculator, overtime wage calculator",
+    "labels": {
+      "hourlyRate": "Hourly rate",
+      "overtimeHours": "Overtime hours",
+      "overtimePay": "Overtime pay",
+      "overtimeRate": "Overtime rate (1.5x)",
+      "regularHours": "Regular hours",
+      "regularPay": "Regular pay",
+      "totalPay": "Total pay"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Result is gross pay only. Taxes and deductions are not subtracted.",
+      "Assumes a single overtime rate - it does not handle double-time or mixed rates.",
+      "Does not account for daily-overtime rules used in some states and countries.",
+      "This is a wage estimate, not legal advice. Check your local labour law for entitlements."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free time-and-a-half calculator: enter your hourly rate and overtime hours to get your overtime pay and total wages instantly. Private, no sign-up.",
+    "metaTitle": "Time-and-a-Half Calculator - Overtime Pay at 1.5x | JaurTools",
+    "name": "Time-and-a-Half Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Time-and-a-half means your overtime rate is 1.5 times your normal hourly rate. At $20/hour with 5 overtime hours: regular pay is $800, overtime pay is 5 x $30 = $150, total $950. US federal law requires non-exempt employees to receive time-and-a-half for hours worked beyond 40 per week.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your overtime pay results",
+    "tagline": "Work out overtime pay at 1.5x your hourly rate in seconds.",
+    "workedExample": "Hourly rate $20, 40 regular hours, 5 overtime hours:\n1. Overtime rate = 20 x 1.5 = $30/hour.\n2. Regular pay = 20 x 40 = $800.\n3. Overtime pay = 30 x 5 = $150.\n4. Total pay = 800 + 150 = $950 (gross, before tax).\nEffective hourly rate = 950 / 45 = $21.11/hour.",
+    "workedExampleHeading": "Worked example"
+  }
+}

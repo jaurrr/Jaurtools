@@ -1,0 +1,92 @@
+{
+  "slope-calculator": {
+    "benefits": [
+      "Instantly finds slope, equation, intercept, distance, midpoint and angle from any two points.",
+      "Handles vertical lines and identical points gracefully instead of crashing or showing NaN.",
+      "Perfect for students checking algebra and geometry homework.",
+      "Shows the full line equation in proper y = mx + b form.",
+      "Runs entirely in your browser — no data ever leaves your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A vertical line has x2 − x1 = 0, and division by zero is undefined in mathematics. The calculator detects this and reports the slope as undefined, giving the equation in x = a form instead.",
+        "q": "Why is the slope of a vertical line undefined?"
+      },
+      {
+        "a": "A positive slope means the line rises left to right; negative means it falls. A slope of 2 means y increases by 2 for every 1 unit x increases. A slope of 0 means the line is perfectly horizontal.",
+        "q": "What does the slope value actually tell me?"
+      },
+      {
+        "a": "If the slope is m and the line passes through (x1, y1), the intercept is b = y1 − m·x1. The calculator shows it automatically — for y = 2x + 3 the y-intercept is 3.",
+        "q": "How do I find the y-intercept from the slope?"
+      },
+      {
+        "a": "Check whether the line rises or falls, whether the two points are distinct, and whether you subtracted in the same order top and bottom: (y2 − y1)/(x2 − x1). Mixing up the order is the most common mistake.",
+        "q": "My textbook answer differs — what should I check?"
+      },
+      {
+        "a": "Yes — the distance uses the Pythagorean theorem on the differences in x and y, which is the same formula as the distance between any two points in the plane.",
+        "q": "Is the distance just the Pythagorean theorem?"
+      }
+    ],
+    "formula": "Slope:  m = (y2 − y1) / (x2 − x1)\n\nLine equation:  y = mx + b,  where b = y1 − m·x1 (y-intercept)\nVertical line (x1 = x2):  x = x1   (slope undefined)\n\nDistance:  d = √((x2 − x1)² + (y2 − y1)²)\nMidpoint:  ((x1 + x2)/2, (y1 + y2)/2)\nAngle with x-axis:  θ = atan2(y2 − y1, x2 − x1)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the coordinates of the first point (x1, y1).",
+      "Enter the coordinates of the second point (x2, y2).",
+      "Read the slope — the headline result — at the top of the results.",
+      "Check the full line equation, y-intercept, distance, midpoint and angle below.",
+      "If the points form a vertical line, the tool reports the slope as undefined with the equation x = a."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Slope is rise over run: m = (y2 − y1) / (x2 − x1).",
+      "A vertical line (x1 = x2) has an undefined slope — division by zero.",
+      "A zero slope means a perfectly horizontal line, y = constant.",
+      "Parallel lines share the same slope; perpendicular lines have slopes whose product is −1.",
+      "The distance between the points comes from the Pythagorean theorem applied to Δx and Δy."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "slope calculator, slope from two points, line equation calculator, rise over run, y intercept calculator",
+    "labels": {
+      "angle": "Angle with x-axis",
+      "distance": "Distance between points",
+      "equation": "Line equation",
+      "midpoint": "Midpoint",
+      "pointNote": "Both points are identical — there is no line, only a single point.",
+      "samePoint": "Single point (no line)",
+      "slope": "Slope (m)",
+      "undefined": "Undefined",
+      "verticalNote": "Vertical line: the slope is undefined because x2 − x1 = 0.",
+      "x1": "x1",
+      "x2": "x2",
+      "y1": "y1",
+      "y2": "y2",
+      "yIntercept": "Y-intercept (b)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only works with straight lines — it cannot fit curves or find tangents.",
+      "Results are rounded for display; very long decimals may lose the last digits.",
+      "Coordinates are limited to ±1,000,000 to keep the arithmetic safe.",
+      "This finds the line through two points; it does not do regression through many points."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free slope calculator: enter two points to get the slope, line equation, y-intercept, distance, midpoint and angle. Handles vertical lines.",
+    "metaTitle": "Slope Calculator — Slope & Line Equation from Two Points",
+    "name": "Slope Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter two points — for example (1, 2) and (4, 8) — and get the slope m = 2, the line equation y = 2x, the distance ≈ 6.708, the midpoint (2.5, 5) and the angle ≈ 63.43°. Vertical lines are reported as undefined slope.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Line results",
+    "tagline": "Slope, line equation, intercept, distance and midpoint from two points.",
+    "workedExample": "Points (1, 2) and (4, 8):\nm = (8 − 2) / (4 − 1) = 6 / 3 = 2\nb = 2 − 2 × 1 = 0\nEquation: y = 2x\nDistance: √((4−1)² + (8−2)²) = √(9 + 36) = √45 ≈ 6.708\nMidpoint: ((1+4)/2, (2+8)/2) = (2.5, 5)\nAngle: atan2(6, 3) ≈ 63.43°",
+    "workedExampleHeading": "Worked example"
+  }
+}

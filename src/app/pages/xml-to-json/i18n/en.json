@@ -1,0 +1,87 @@
+{
+  "xml-to-json": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "XML to JSON",
+    "tagline": "Convert XML documents to JSON instantly.",
+    "metaTitle": "XML to JSON Converter - Free Online with Live Preview",
+    "metaDescription": "Convert XML to JSON instantly in your browser. Attributes, nested elements, and repeated tags handled correctly. Free, no signup.",
+    "keywords": "xml to json, xml to json converter, convert xml online, xml json transform",
+    "resultsHeading": "XML to JSON results",
+    "quickAnswer": "Paste XML and this tool converts it to JSON on the spot: attributes become @-prefixed keys, nested elements become nested objects, repeated sibling tags become arrays, and mixed text lands in a #text key. The result is valid, pretty-printed JSON you can copy or download.",
+    "keyFacts": [
+      "XML and JSON both describe structured data but with different syntax rules.",
+      "XML attributes have no direct JSON equivalent, so this tool prefixes them with @.",
+      "Repeated sibling elements (like multiple <book> tags) naturally become JSON arrays.",
+      "Text mixed with child elements is kept under the #text key so nothing is lost.",
+      "Conversion is structural only; it does not change the meaning of your data."
+    ],
+    "howTo": [
+      "Paste your XML document into the editor.",
+      "Watch the JSON output update instantly.",
+      "Check that repeated elements became arrays as expected.",
+      "Copy the JSON or download it as converted.json.",
+      "Use the sample button to see the mapping rules in action."
+    ],
+    "formula": "Mapping rules:\n<tag attr=\"v\">text</tag>  ->  { \"tag\": { \"@attr\": \"v\", \"#text\": \"text\" } }\n<items><i>a</i><i>b</i></items>  ->  { \"items\": { \"i\": [\"a\", \"b\"] } }",
+    "workedExample": "Input:\n<catalog><book id=\"bk101\"><title>XML Guide</title><price>29.99</price></book></catalog>\nOutput:\n{\n  \"catalog\": {\n    \"book\": {\n      \"@id\": \"bk101\",\n      \"title\": \"XML Guide\",\n      \"price\": \"29.99\"\n    }\n  }\n}\nTwo <book> siblings would produce \"book\": [ {...}, {...} ] instead.",
+    "benefits": [
+      "Instant conversion with no uploads or waiting.",
+      "Attributes, arrays, and mixed content handled sensibly.",
+      "Output is valid JSON with clean 2-space indentation.",
+      "Runs fully offline in your browser."
+    ],
+    "limitations": [
+      "Values stay strings: \"29.99\" is not auto-converted to a number.",
+      "Namespaces are kept as literal prefixes, not resolved.",
+      "Comments and processing instructions are dropped.",
+      "CDATA is treated as plain text."
+    ],
+    "faqs": [
+      {
+        "q": "How are XML attributes represented?",
+        "a": "With an @ prefix: id=\"bk101\" becomes \"@id\": \"bk101\". This is a common convention that keeps attributes distinct from child elements."
+      },
+      {
+        "q": "What happens with repeated tags?",
+        "a": "Two or more siblings with the same tag name become a JSON array. A single child stays a plain object."
+      },
+      {
+        "q": "Is the JSON valid?",
+        "a": "Yes. The output is built with JSON.stringify, so it always parses with JSON.parse in any language."
+      },
+      {
+        "q": "Why are numbers quoted as strings?",
+        "a": "XML has no type information, so the converter keeps everything as strings. Convert types in your own code after parsing."
+      },
+      {
+        "q": "Can I convert JSON back to XML?",
+        "a": "This tool is one-way. For the reverse direction, build XML from your JSON with a small script or a dedicated converter."
+      }
+    ],
+    "assumptionNote": "Mapping: attributes use the @ prefix, mixed text uses #text, repeated siblings become arrays. Values stay strings.",
+    "labels": {
+      "xmlLabel": "XML input",
+      "sampleLabel": "Load sample",
+      "clearLabel": "Clear",
+      "outputLabel": "JSON output",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied",
+      "downloadLabel": "Download .json",
+      "sizeLabel": "Output size (chars)",
+      "parseErrorLabel": "Could not parse the XML."
+    }
+  }
+}

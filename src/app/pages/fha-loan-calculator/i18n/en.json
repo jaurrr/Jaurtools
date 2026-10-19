@@ -1,0 +1,93 @@
+{
+  "fha-loan-calculator": {
+    "assumptionNote": "Annual MIP is simplified at 0.55% per year of the financed loan balance. Property tax and homeowner's insurance are not included, so your real payment will be higher.",
+    "benefits": [
+      "See your true monthly cost before a lender runs the numbers, with both MIP premiums included.",
+      "Compare down-payment sizes instantly to find a balance between savings and monthly payment.",
+      "Understand exactly how much the two MIP charges add to your payment each month.",
+      "Free, instant, and private - no lender calls, no paperwork, no credit check."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The minimum is 3.5% if your credit score is 580 or higher. Scores between 500 and 579 require 10% down. These are national FHA rules; individual lenders may ask for more.",
+        "q": "What is the minimum down payment for an FHA loan?"
+      },
+      {
+        "a": "MIP (Mortgage Insurance Premium) is the FHA's version of private mortgage insurance. FHA charges two parts: an upfront MIP of 1.75% of the loan (usually rolled into the balance) and an annual MIP, about 0.55% per year for most 30-year loans, split into monthly payments.",
+        "q": "What is FHA MIP?"
+      },
+      {
+        "a": "Yes - in fact that is the norm. The 1.75% upfront MIP is almost always rolled into the loan balance, which is why this calculator adds it to the amount you borrow instead of asking you to pay it in cash.",
+        "q": "Is the upfront MIP paid in cash?"
+      },
+      {
+        "a": "It depends on your down payment. Put down less than 10% and MIP stays for the life of the loan. Put down 10% or more and MIP is removed after 11 years. You can also refinance into a conventional loan later to drop it.",
+        "q": "Can I remove MIP later?"
+      },
+      {
+        "a": "Yes, FHA sets county loan limits that vary by area and change yearly. If the home price is above your county's limit, the loan cannot be an FHA loan. Check the current FHA limits for your county before house hunting.",
+        "q": "Do FHA loans have limits?"
+      },
+      {
+        "a": "The two MIP charges. A conventional loan with 20% down has no mortgage insurance at all, so its monthly payment is lower for the same home. FHA wins when your savings or credit score cannot support a conventional loan - it is a trade-off, not a discount.",
+        "q": "Why is FHA sometimes more expensive than conventional?"
+      }
+    ],
+    "formula": "Base loan = home price - down payment\nUpfront MIP = 1.75% x base loan (added to the balance)\nMonthly P&I = total loan x r / (1 - (1 + r)^-n), with r = annual rate/12, n = years x 12\nMonthly MIP = 0.55% x total loan / 12\nTotal monthly payment = P&I + MIP",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the home price you are considering.",
+      "Set your down payment percent - 3.5% is the FHA minimum with a credit score of 580 or higher.",
+      "Enter the quoted interest rate and the loan term in years.",
+      "Read the breakdown: principal and interest, monthly MIP, and the total monthly payment.",
+      "Compare scenarios by changing the down payment or rate before you talk to a lender."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "FHA loans are insured by the Federal Housing Administration and allow down payments as low as 3.5%.",
+      "Upfront MIP is 1.75% of the base loan and is usually rolled into the loan balance.",
+      "Annual MIP (about 0.55% for most 30-year loans) is split into 12 monthly payments.",
+      "With less than 10% down, MIP stays for the life of the loan; with 10% or more it drops off after 11 years.",
+      "FHA loans have county loan limits and require the home to be your primary residence."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "fha loan calculator, fha mortgage payment calculator, fha mip calculator, fha loan monthly payment",
+    "labels": {
+      "baseLoan": "Base loan amount",
+      "downPayment": "Down payment",
+      "downPct": "Down payment (%)",
+      "homePrice": "Home price ($)",
+      "interestRate": "Interest rate (%/yr)",
+      "monthlyMip": "Monthly MIP (0.55%/yr)",
+      "monthlyPI": "Principal & interest / month",
+      "termYears": "Loan term (years)",
+      "totalLoan": "Total loan (with MIP)",
+      "totalMonthly": "Total monthly payment",
+      "upfrontMip": "Upfront MIP (1.75%, financed)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - your lender's final payment may differ slightly.",
+      "Property tax and homeowner's insurance are not included, so real payments will be higher.",
+      "Annual MIP is simplified at 0.55%; your actual rate depends on loan amount, term, and loan-to-value.",
+      "Not financial advice - FHA rules, limits, and rates change; confirm with a licensed lender."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free FHA loan calculator: monthly payment with upfront MIP financed and annual MIP added. Try 3.5% down scenarios instantly. Private, no sign-up.",
+    "metaTitle": "FHA Loan Calculator - Mortgage Payment with MIP | JaurTools",
+    "name": "FHA Loan Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An FHA loan of $343,661 (a $350,000 home, 3.5% down, 1.75% upfront MIP financed) at 6.5% for 30 years costs about $2,330 per month: roughly $2,173 of principal and interest plus $158 of monthly MIP. FHA loans allow down payments as low as 3.5%, but add both an upfront and an annual mortgage insurance premium that raise the monthly payment.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your FHA loan results",
+    "tagline": "Estimate FHA mortgage payments with upfront and annual MIP included.",
+    "workedExample": "Home $350,000, 3.5% down, 6.5% rate, 30 years:\n1. Down payment: $350,000 x 3.5% = $12,250. Base loan = $337,750.\n2. Upfront MIP: 1.75% x $337,750 = $5,910.63. Total loan = $343,660.63.\n3. Monthly rate r = 0.065 / 12 = 0.0054167, n = 360 payments.\n4. P&I = $343,660.63 x 0.0054167 / (1 - 1.0054167^-360) = about $2,173.\n5. Monthly MIP = 0.55% x $343,660.63 / 12 = about $158.\n6. Total monthly payment = about $2,330.",
+    "workedExampleHeading": "Worked example"
+  }
+}

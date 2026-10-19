@@ -1,0 +1,92 @@
+{
+  "auto-lease-calculator": {
+    "assumptionNote": "Excludes taxes, title and registration fees, acquisition and disposition fees, and mileage or wear charges.",
+    "benefits": [
+      "Breaks the lease payment into depreciation and rent charge so you see what you pay for.",
+      "Converts the cryptic money factor into an equivalent APR you can compare.",
+      "Shows the total lease cost, not just the monthly number dealers advertise.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The money factor is the lease's interest rate expressed as a small decimal. Multiply it by 2,400 to get the equivalent APR: a money factor of 0.002 equals about 4.8% APR. This calculator shows the conversion automatically.",
+        "q": "What is a money factor?"
+      },
+      {
+        "a": "The residual value is what the leasing company expects the car to be worth at the end of the lease, expressed as a percentage of its price. A higher residual means less depreciation, which means a lower monthly payment.",
+        "q": "What is residual value?"
+      },
+      {
+        "a": "Leasing usually means lower monthly payments and a new car every few years, but you never own the car and mileage is limited. Buying costs more per month but the car is yours at the end. Compare the total lease cost here against the total cost of a loan.",
+        "q": "Is leasing cheaper than buying?"
+      },
+      {
+        "a": "You usually can, by paying the residual value plus any purchase-option fee stated in the contract. Check the contract for the exact buyout price and fees.",
+        "q": "Can I buy the car at the end of the lease?"
+      },
+      {
+        "a": "Most leases allow 10,000 to 15,000 miles per year. Exceeding the limit triggers a per-mile charge, often 15 to 25 cents per mile. Estimate your driving honestly before signing.",
+        "q": "What happens if I exceed the mileage limit?"
+      },
+      {
+        "a": "A larger down payment (capitalized cost reduction) lowers the monthly payment but is risky: if the car is totaled early, that upfront money is usually lost. Many advisors suggest minimal money down on a lease.",
+        "q": "Should I put money down on a lease?"
+      }
+    ],
+    "formula": "adjusted_cap = cap_cost - down_payment\ndepreciation = (adjusted_cap - residual) / term\nrent_charge = (adjusted_cap + residual) x money_factor\nmonthly_payment = depreciation + rent_charge\nequivalent_APR = money_factor x 2400",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the vehicle's capitalized cost (the agreed price).",
+      "Enter any down payment or capitalized cost reduction.",
+      "Enter the residual value as a percentage of the price.",
+      "Enter the money factor from the lease quote.",
+      "Enter the lease term in months, then read the payment breakdown and total cost."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A car lease payment has two parts: depreciation (the value the car loses) and the rent charge (the financing cost).",
+      "The money factor is the lease's interest rate in decimal form; multiplying it by 2,400 gives the equivalent APR.",
+      "The residual value is the car's predicted worth at lease end; a higher residual lowers the monthly payment.",
+      "You pay depreciation only on the difference between the adjusted price and the residual, not on the whole car.",
+      "Leases usually limit annual mileage and charge per-mile fees for going over."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "auto lease calculator, car lease payment calculator, money factor calculator, lease vs buy",
+    "labels": {
+      "capCost": "Capitalized cost",
+      "depreciation": "Depreciation part",
+      "downPayment": "Down payment",
+      "equivApr": "Equivalent APR",
+      "moneyFactor": "Money factor",
+      "payment": "Monthly payment",
+      "rentCharge": "Rent charge part",
+      "residualPct": "Residual value (%)",
+      "term": "Term (months)",
+      "totalLeaseCost": "Total lease cost"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Excludes taxes, fees, insurance and mileage overage charges.",
+      "Assumes a fixed money factor and residual for the whole term.",
+      "Does not compare against buying the same car.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free auto lease calculator. Compute monthly lease payment from cap cost, residual and money factor. See depreciation, rent charge and APR. Private, browser-only.",
+    "metaTitle": "Auto Lease Calculator — Monthly Lease Payment",
+    "name": "Auto Lease Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A lease payment combines depreciation and a rent charge. On a $30,000 car with $2,000 down, 55% residual, 0.002 money factor and a 36-month term, the monthly payment is about $408 — $319 depreciation plus $89 rent charge — with a total lease cost of about $16,704.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your lease results",
+    "tagline": "Decode any car lease: payment, money factor, total cost.",
+    "workedExample": "Cap cost $30,000, down payment $2,000, residual 55%, money factor 0.002, term 36 months.\n\nAdjusted cap = 30,000 - 2,000 = $28,000. Residual = 30,000 x 0.55 = $16,500.\n\nDepreciation = (28,000 - 16,500) / 36 = 11,500 / 36 = $319.44. Rent charge = (28,000 + 16,500) x 0.002 = 44,500 x 0.002 = $89.00. Monthly payment = 319.44 + 89.00 = $408.44.\n\nTotal lease cost = 408.44 x 36 + 2,000 = $16,704. Equivalent APR = 0.002 x 2400 = 4.80%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,56 @@
+@if (visible()) {
+  <div class="cookie-banner" role="dialog" aria-modal="false" [attr.aria-label]="translate.t('cookie.title')">
+    <div class="cookie-card">
+      <h2>{{ translate.t('cookie.title') }}</h2>
+      <p class="muted">{{ translate.t('cookie.text') }}</p>
+
+      @if (customizing()) {
+        <div class="toggles">
+          <label class="toggle">
+            <input type="checkbox" checked disabled />
+            <span class="toggle-text">
+              <strong>{{ translate.t('cookie.necessary') }}</strong>
+              <small>{{ translate.t('cookie.necessaryDesc') }}</small>
+            </span>
+          </label>
+          <label class="toggle">
+            <input
+              type="checkbox"
+              [checked]="preferences()"
+              (change)="preferences.set($any($event.target).checked)"
+            />
+            <span class="toggle-text">
+              <strong>{{ translate.t('cookie.preferences') }}</strong>
+              <small>{{ translate.t('cookie.preferencesDesc') }}</small>
+            </span>
+          </label>
+          <label class="toggle">
+            <input
+              type="checkbox"
+              [checked]="analytics()"
+              (change)="analytics.set($any($event.target).checked)"
+            />
+            <span class="toggle-text">
+              <strong>{{ translate.t('cookie.analytics') }}</strong>
+              <small>{{ translate.t('cookie.analyticsDesc') }}</small>
+            </span>
+          </label>
+        </div>
+      }
+
+      <div class="cookie-actions">
+        <button type="button" class="btn" (click)="acceptAll()">{{ translate.t('cookie.accept') }}</button>
+        <button type="button" class="btn" (click)="rejectAll()">{{ translate.t('cookie.reject') }}</button>
+        @if (customizing()) {
+          <button type="button" class="btn-ghost" (click)="saveChoices()">
+            {{ translate.t('cookie.save') }}
+          </button>
+        } @else {
+          <button type="button" class="btn-ghost" (click)="customizing.set(true)">
+            {{ translate.t('cookie.customize') }}
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+}

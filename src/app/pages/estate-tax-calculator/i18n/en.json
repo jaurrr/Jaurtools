@@ -1,0 +1,88 @@
+{
+  "estate-tax-calculator": {
+    "assumptionNote": "Uses a flat 40% on the taxable amount (the real schedule is graduated below $1M of taxable estate), the 2026 $15M federal exemption default, and ignores state estate taxes.",
+    "benefits": [
+      "Shows in seconds whether the tax even applies to you.",
+      "Makes the 'only the excess is taxed' rule concrete.",
+      "Helps frame conversations with an estate planner.",
+      "The adjustable exemption keeps it useful as law changes."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No — fewer than 0.1% of US estates owe any federal estate tax. With a $15 million per-person exemption in 2026, the tax touches only very large estates. If your total assets are under the exemption, your federal bill is zero and no return is even required.",
+        "q": "Do most people pay estate tax?"
+      },
+      {
+        "a": "Yes, under current law. The 2025 One Big Beautiful Bill Act replaced the temporary doubled exemption with a permanent $15 million base starting 2026, indexed for inflation from 2027. A future Congress could always change it, but no sunset is scheduled.",
+        "q": "Is the $15 million exemption permanent?"
+      },
+      {
+        "a": "Nearly everything you own at death: real estate, investments, bank accounts, business interests, personal property — and life insurance proceeds if you owned the policy. Debts, funeral costs, and transfers to a spouse or charity are deductible before the exemption applies.",
+        "q": "What counts in my gross estate?"
+      },
+      {
+        "a": "No — the estate pays it before anything is distributed. Heirs receive what's left. (Separately, about a dozen states impose their own estate or inheritance taxes, and a few tax the heirs directly on inheritances.)",
+        "q": "Do heirs pay the estate tax?"
+      },
+      {
+        "a": "Yes, with proper planning. Each spouse gets a $15 million exemption, and portability lets a surviving spouse use the deceased spouse's unused portion. Credit-shelter trusts achieve the same. Without portability or trust planning, the second $15M can be wasted.",
+        "q": "Can a married couple shield $30 million?"
+      },
+      {
+        "a": "Common tools: annual tax-free gifts ($19,000 per recipient in 2026), irrevocable life insurance trusts, charitable trusts, family limited partnerships, and lifetime use of the exemption. All require advance planning with an estate attorney — this calculator just sizes the problem.",
+        "q": "How can large estates reduce the tax?"
+      }
+    ],
+    "formula": "Taxable estate = gross estate - exemption - deductions (never below zero).\nEstimated tax = taxable estate x 40%.\nExample: (20,000,000 - 15,000,000) x 40% = $2,000,000.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the total estate value (all assets at fair market value).",
+      "Check the exemption — $15M per person for 2026, adjustable.",
+      "Enter deductible debts and expenses, if any.",
+      "Read the taxable estate and estimated federal tax."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The 2026 federal exemption is $15 million per individual ($30M per couple with portability).",
+      "Only the amount above the exemption is taxed — never the whole estate.",
+      "The top federal rate is 40% on the taxable amount.",
+      "The exemption is now permanent (2025 law), indexed for inflation from 2027.",
+      "About a dozen states add their own estate or inheritance taxes with lower thresholds."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "estate tax calculator, federal estate tax calculator, estate tax exemption 2026",
+    "labels": {
+      "deductions": "Deductible debts & expenses",
+      "effectiveRate": "Effective rate on estate",
+      "estateValue": "Total estate value (USD)",
+      "estimatedTax": "Estimated federal estate tax",
+      "exemptionAmount": "Federal exemption (USD)",
+      "noTaxNote": "Below the exemption — no federal estate tax is owed.",
+      "taxableEstate": "Taxable estate"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Simplifies to a flat 40% — the real schedule is graduated below $1M taxable.",
+      "Ignores state estate and inheritance taxes entirely.",
+      "Not legal or tax advice — estate planning needs a professional.",
+      "Exemption and rates change with legislation; verify current law."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free US estate tax calculator: enter your estate value and the 2026 $15M exemption to estimate federal estate tax at the 40% top rate.",
+    "metaTitle": "Estate Tax Calculator - US Federal Estimate | JaurTools",
+    "name": "Estate Tax Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "In 2026, the federal estate tax exemption is $15 million per person. A $20 million estate with no deductions has a $5 million taxable estate, taxed at 40% = $2 million. Below the exemption, the federal bill is zero — and fewer than 0.1% of estates ever owe it.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your estate tax estimate",
+    "tagline": "Estimate US federal estate tax — exemption, taxable estate, and the 40% top rate.",
+    "workedExample": "Estate $20,000,000, exemption $15,000,000, deductions $0:\n1. Taxable estate = 20,000,000 - 15,000,000 - 0 = $5,000,000.\n2. Estimated tax = 5,000,000 x 40% = $2,000,000.\n3. Effective rate on the whole estate = 2,000,000 / 20,000,000 = 10%.\n4. An estate of $14M would owe $0 — below the exemption.",
+    "workedExampleHeading": "Worked example"
+  }
+}

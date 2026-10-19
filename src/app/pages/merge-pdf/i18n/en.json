@@ -1,0 +1,100 @@
+{
+  "merge-pdf": {
+    "benefits": [
+      "Completely private — your PDFs never leave your device, unlike online mergers.",
+      "Pages are copied, not re-rendered — quality stays exactly as in the originals.",
+      "Drag-and-drop or arrow buttons to set the exact file order.",
+      "Each file's page count is shown before merging, so there are no surprises.",
+      "Free and unlimited — merge as many documents as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Add each file separately — the same document can appear multiple times in the list, and its pages are copied once per entry.",
+        "q": "Can I merge the same PDF twice?"
+      },
+      {
+        "a": "Drag a row onto another row, or use the up/down arrow buttons. The merged PDF follows the list order top to bottom.",
+        "q": "How do I change the file order?"
+      },
+      {
+        "a": "No — pages are copied as-is from each source, keeping their original sizes, fonts and images.",
+        "q": "Does merging change quality or page sizes?"
+      },
+      {
+        "a": "Mixed sizes are fine — each page keeps its own dimensions in the merged file.",
+        "q": "Can I merge PDFs with different page sizes?"
+      },
+      {
+        "a": "Yes, at least two files are needed. There is no upper limit besides your browser's memory (50 MB per file).",
+        "q": "Is there a limit on the number of files?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your documents never leave your device.",
+        "q": "Are my files uploaded to a server?"
+      }
+    ],
+    "formula": "total pages = pages(file 1) + pages(file 2) + …\nmerged order = list order, top to bottom",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF files” and select two or more PDFs.",
+      "Drag the rows (or use the arrow buttons) into the order you want.",
+      "Remove any file you added by mistake.",
+      "Click “Merge PDFs” and wait for the pages to be combined.",
+      "Download the merged PDF and check the page order."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Merging copies page objects from each source into a new document — nothing is re-rendered or flattened.",
+      "The merged file's page order is exactly the list order, top to bottom.",
+      "Each source page keeps its own size, so A4 and Letter pages can mix freely.",
+      "Bookmarks from source files are not carried over — only the pages are merged.",
+      "The result is saved with object streams for a compact file."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "merge pdf, combine pdf online free, join pdf files, pdf merger free",
+    "labels": {
+      "chooseFiles": "Choose PDF files",
+      "downloadBtn": "Download merged PDF",
+      "dropHint": "PDF files up to 50 MB each",
+      "errNeedTwo": "Please add at least two PDF files to merge.",
+      "errNotPdf": "Please choose valid PDF files (.pdf).",
+      "errProcess": "Something went wrong while merging. A file may be corrupted or password-protected.",
+      "errTooLarge": "Each file must be 50 MB or smaller — browsers run out of memory on very large PDFs.",
+      "filesLabel": "PDF files to merge",
+      "mergeBtn": "Merge PDFs",
+      "moveDown": "Move down",
+      "moveUp": "Move up",
+      "orderNote": "Drag rows to reorder, or use the arrow buttons. The merged PDF follows this order.",
+      "pagesSuffix": "pages",
+      "processing": "Merging…",
+      "removeLabel": "Remove file",
+      "resetBtn": "Start over",
+      "successMsg": "PDFs merged. Download the combined file below.",
+      "totalLabel": "Total pages"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "At least two files are required to merge.",
+      "Interactive form fields and bookmarks from sources are not preserved.",
+      "Each file is limited to 50 MB to protect browser memory.",
+      "Password-protected PDFs must be unlocked before merging."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Merge PDFs free in your browser — combine multiple files in any order with drag-and-drop. No upload, no signup.",
+    "metaTitle": "Merge PDF Free — Combine PDF Files Online",
+    "name": "Merge PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Add two or more PDFs, drag them into order, and download one combined file — pages copied losslessly, in your chosen order, all locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Merge results",
+    "tagline": "Combine multiple PDFs into one — right in your browser.",
+    "workedExample": "Three PDFs with 4, 7 and 2 pages, merged in that order:\ntotal = 4 + 7 + 2 = 13 pages\nThe merged file starts with the 4 pages of the first file, then the 7 of the second, then the 2 of the third.",
+    "workedExampleHeading": "Worked example"
+  }
+}

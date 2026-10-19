@@ -1,0 +1,92 @@
+{
+  "hue-shifter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Hue Shifter",
+    "tagline": "Spin any hue by exact degrees.",
+    "metaTitle": "Hue Shifter - Rotate Colors Around the Wheel | JaurTools",
+    "metaDescription": "Rotate any color around the color wheel by exact degrees. Keep the mood, change the family — free and instant.",
+    "keywords": "shift hue, hue rotation, rotate hue, change color hue, hue shifter",
+    "quickAnswer": "Shifting hue adds degrees to the color's HSL hue angle and wraps around 360. #FF5733 sits at hue 11 degrees; shifting by +120 gives hue 131, which converts to #33FF58 - the orange-red becomes a vivid green. Saturation (100%) and lightness (60%) stay untouched, so the color keeps its intensity and brightness.",
+    "keyFacts": [
+      "Hue is an angle on the color wheel: 0 = red, 120 = green, 240 = blue.",
+      "Shifting wraps around: 350 + 30 = 20 degrees (mod 360).",
+      "+180 degrees gives the complementary hue; +120 and +240 give the triadic hues.",
+      "Saturation and lightness are preserved - only the color family changes.",
+      "Negative shifts rotate the other way: -120 from green lands on red."
+    ],
+    "howTo": [
+      "Pick a color with the picker or type a HEX code like #FF5733.",
+      "Drag the slider or type degrees from -360 to 360.",
+      "Watch the shifted swatch and its new hue update live.",
+      "Copy the new HEX, RGB or HSL with one tap.",
+      "Try +120 and +240 to walk the triadic harmony around your color."
+    ],
+    "formula": "New hue = (old hue + shift) mod 360; saturation and lightness unchanged.\nExample: #FF5733 -> HSL(11, 100%, 60%), shift +120.\nNew hue: (11 + 120) mod 360 = 131.\nHSL(131, 100%, 60%) = RGB(51, 255, 88) = #33FF58.",
+    "workedExample": "#FF5733 shifted by +120 degrees:\n1. Convert to HSL: hue 11, saturation 100%, lightness 60%.\n2. Add the shift: 11 + 120 = 131 degrees.\n3. Rebuild the color: HSL(131, 100%, 60%).\n4. Chroma math: RGB(51, 255, 88).\n5. In HEX: 51 = 33, 255 = FF, 88 = 58 -> #33FF58.\n6. Result: the warm orange-red is now a vivid green with the same punch.",
+    "benefits": [
+      "Recolor brand assets while keeping their exact intensity and brightness.",
+      "Explore harmonies: +180 for complementary, +120/+240 for triadic.",
+      "Live preview makes hue hunting fast and visual.",
+      "One tap copies the result into your workflow."
+    ],
+    "limitations": [
+      "Grays and near-grays barely change - they have almost no hue to shift.",
+      "Large shifts can land on colors that clash with the rest of your design.",
+      "Rounding to whole RGB values can nudge the result by one step."
+    ],
+    "faqs": [
+      {
+        "q": "What is hue, exactly?",
+        "a": "Hue is the 'color name' part of a color - red vs green vs blue - measured as an angle from 0 to 360 degrees on the color wheel. Saturation is intensity, lightness is brightness."
+      },
+      {
+        "q": "Why does shifting wrap at 360?",
+        "a": "The color wheel is a circle: 360 degrees brings you back to 0 (red). So 350 + 30 = 380, minus 360 = 20 degrees - just past red toward orange."
+      },
+      {
+        "q": "Can I shift by more than 360?",
+        "a": "The tool accepts -360 to 360. Shifting by 360 (or -360) is a full lap and returns the original color exactly."
+      },
+      {
+        "q": "Does shifting change how bright the color looks?",
+        "a": "Lightness is preserved, so perceived brightness stays very close. Hue itself slightly affects perceived brightness, but the change is small."
+      },
+      {
+        "q": "Why didn't my gray change?",
+        "a": "Grays have near-zero saturation, meaning almost no hue information. Shifting the hue angle of a color with no hue does nothing visible."
+      },
+      {
+        "q": "Is this how photo apps change colors?",
+        "a": "Essentially yes - hue-rotation sliders in photo editors do exactly this math on every pixel."
+      }
+    ],
+    "resultsHeading": "Your shifted color results",
+    "labels": {
+      "colorLabel": "Color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #F53 or #FF5733.",
+      "degreesLabel": "Hue shift (degrees)",
+      "originalLabel": "Original",
+      "shiftedLabel": "Shifted",
+      "newHex": "New HEX",
+      "newRgb": "New RGB",
+      "newHsl": "New HSL",
+      "oldHsl": "Original HSL",
+      "copyHex": "Copy new HEX",
+      "copied": "Copied"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "paint-calculator": {
+    "benefits": [
+      "Buy the right amount — no wasted tins, no mid-job shop runs.",
+      "Doors and windows are subtracted automatically.",
+      "The can breakdown tells you exactly what to ask for at the store.",
+      "Adjust coats and coverage to match your paint brand's label."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Most interior wall paints cover 8–12 m² per litre per coat — 10 is a safe average for the calculator's default. Check your tin's label: premium paints often claim 12–14 m²/L on smooth, primed walls, while textured walls can drop to 6–8 m²/L.",
+        "q": "What coverage value should I use?"
+      },
+      {
+        "a": "Usually two. One coat over a similar colour can work, but colour changes, new plaster, and patches need two coats for an even finish. Dark-to-light changes sometimes need a primer plus two coats.",
+        "q": "How many coats do I need?"
+      },
+      {
+        "a": "The 10% covers roller absorption, cutting-in, and spillage. On very textured or porous surfaces, bump it to 15–20% by lowering the coverage value instead — that models the extra paint more honestly.",
+        "q": "Why add 10% wastage?"
+      },
+      {
+        "a": "Only the wall area: 2 × (length + width) × height, minus doors and windows. Ceilings need a separate calculation (length × width) and usually flat white paint, so they are excluded here.",
+        "q": "Does this include the ceiling?"
+      },
+      {
+        "a": "Use the coverage hint on your primer's tin — primers often cover more (12–15 m²/L). Calculate the primer as one coat with its own coverage, then the topcoat separately with this calculator.",
+        "q": "How do I calculate primer too?"
+      },
+      {
+        "a": "The greedy breakdown (20L, 10L, 4L, 1L) gives the fewest tins, but shops may not stock every size and bulk tins are cheaper per litre. Treat the suggestion as a starting point and adjust to what your store sells.",
+        "q": "Should I buy exactly the suggested cans?"
+      }
+    ],
+    "formula": "Wall area = 2 × (length + width) × height\nPaintable area = wall area − (doors × 2.0 m²) − (windows × 1.5 m²)\nLitres = paintable area × coats / coverage × 1.10 (10% wastage)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your room's length, width, and wall height in metres.",
+      "Enter the number of doors and windows to subtract.",
+      "Set the number of coats (2 is standard).",
+      "Set the paint coverage from your tin's label (default 10 m²/L).",
+      "Read the litres needed and the suggested can breakdown."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Wall area = 2 × (length + width) × height.",
+      "A standard door counts as 2.0 m² and a window as 1.5 m².",
+      "Most wall paints cover 8–12 m² per litre per coat.",
+      "Two coats is the standard for an even finish.",
+      "The calculator adds 10% wastage automatically.",
+      "Results are in litres, with a practical can-size breakdown."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "paint calculator, how much paint do i need, wall paint estimator, paint litres calculator, room paint calculator",
+    "labels": {
+      "cansTitle": "Suggested cans",
+      "coats": "Number of coats",
+      "coverage": "Paint coverage (m² per litre)",
+      "coverageHint": "From your tin's label — 10 is a safe average.",
+      "doorHint": "Counted as 2.0 m² each",
+      "doors": "Doors",
+      "lUnit": "L",
+      "litresNeeded": "Paint needed (with wastage)",
+      "m2Unit": "m²",
+      "paintableArea": "Paintable area",
+      "roomHeight": "Wall height (m)",
+      "roomLength": "Room length (m)",
+      "roomWidth": "Room width (m)",
+      "wallArea": "Total wall area",
+      "wastageNote": "Includes 10% extra for roller absorption, cutting-in, and spillage.",
+      "windowHint": "Counted as 1.5 m² each",
+      "windows": "Windows"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only — textured or porous walls drink more paint.",
+      "Assumes standard door/window sizes; measure yours for precision.",
+      "Ceilings, trim, and primer are not included.",
+      "Can sizes vary by brand and country; adjust to your store's stock."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free paint calculator: find how many litres of paint your room needs from wall area, doors, windows, and coats. Includes can breakdown. Private, no sign-up.",
+    "metaTitle": "Paint Calculator - How Much Paint Do I Need? | JaurTools",
+    "name": "Paint Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A 4 m × 3 m room with 3 m walls has 42 m² of wall; minus one door (2 m²) that is 40 m² to paint. At 2 coats and 10 m²/L coverage: 40 × 2 ÷ 10 = 8 litres, plus 10% wastage = 8.8 litres — so buy a 10 L can, or 2 × 4 L cans. Enter your own room dimensions and the calculator does the rest, including the can breakdown.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your paint estimate",
+    "tagline": "How many litres of paint does your room need? Wall area, coats, and can sizes — solved.",
+    "workedExample": "Room 4 m × 3 m, walls 3 m high, 1 door, 2 coats, coverage 10 m²/L:\n1. Wall area = 2 × (4 + 3) × 3 = 42 m².\n2. Minus door: 42 − 2.0 = 40 m² paintable.\n3. Litres = 40 × 2 / 10 = 8 L.\n4. With 10% wastage: 8 × 1.10 = 8.8 L.\n5. Cans: round 8.8 up to 9 L → 2 × 4 L + 1 × 1 L (a single 10 L can also works and is often cheaper per litre).",
+    "workedExampleHeading": "Worked example"
+  }
+}

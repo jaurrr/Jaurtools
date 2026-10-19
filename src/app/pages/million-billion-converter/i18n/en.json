@@ -1,0 +1,88 @@
+{
+  "million-billion-converter": {
+    "benefits": [
+      "Never drop a zero reading market caps, budgets, or populations again.",
+      "Lakh and crore included - built for Indian as well as global numbers.",
+      "Full digit string with commas for copy-paste confidence.",
+      "Private - runs entirely in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "1,000. A billion is a thousand million (10^9) in the short scale used worldwide today.",
+        "q": "How many millions are in a billion?"
+      },
+      {
+        "a": "100. Since 1 crore = 10 million, divide: 1,000 million / 10 = 100 crore.",
+        "q": "How many crores are in a billion?"
+      },
+      {
+        "a": "A billion. 1 billion = 100 crore, so a billion is a hundred times bigger than a crore.",
+        "q": "What is bigger: a billion or a crore?"
+      },
+      {
+        "a": "The Indian numbering system groups digits differently (after the first three, in pairs: 1,00,000). It is the standard in India, Pakistan, Bangladesh, Nepal, and Sri Lanka.",
+        "q": "Why do Indians use lakh and crore?"
+      },
+      {
+        "a": "Yes, in the short scale: 1 trillion = 1,000 billion = 10^12.",
+        "q": "Is a trillion a thousand billion?"
+      },
+      {
+        "a": "No. Conversion happens in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "base = amount x unit multiplier\nthousand = base / 1,000\nmillion = base / 1,000,000\nbillion = base / 1,000,000,000\ntrillion = base / 1,000,000,000,000\nlakh = base / 100,000; crore = base / 10,000,000",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the number.",
+      "Pick its unit: thousand, million, billion, or trillion.",
+      "Read every scale instantly, including the full number with commas.",
+      "Use lakh and crore rows when reading Indian budgets, salaries, or news."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "1 million = 1,000 thousand. 1 billion = 1,000 million. 1 trillion = 1,000 billion - each step is x1,000.",
+      "The short scale (used in the US, UK, and most of the world) defines billion as 10^9 and trillion as 10^12.",
+      "India uses lakh (10^5) and crore (10^7): 1 crore = 10 million, 1 billion = 100 crore.",
+      "Most big-number mistakes are dropped or added zeros - always sanity-check the full digit string.",
+      "In finance, MM means million and B means billion; k means thousand."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "million to billion converter, billion to million, trillion converter, lakh crore converter, large number converter",
+    "labels": {
+      "amount": "Amount",
+      "billion": "Billion",
+      "crore": "Crore (Indian)",
+      "fromUnit": "Unit",
+      "fullNumber": "Full number",
+      "lakh": "Lakh (Indian)",
+      "million": "Million",
+      "thousand": "Thousand",
+      "trillion": "Trillion"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Displays up to 2 decimal places; extremely large values are approximate.",
+      "Uses the short scale (billion = 10^9); some older British texts used the long scale.",
+      "A converter, not financial advice - verify critical figures at the source."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free million-billion converter: convert between thousand, million, billion, trillion, lakh and crore instantly. See the full number with commas.",
+    "metaTitle": "Million to Billion Converter - Large Number Scale | JaurTools",
+    "name": "Million to Billion Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type a number, pick its unit, and see it in every scale at once. 2.5 billion = 2,500 million = 2,500,000,000 = 250 crore. One input, zero dropped zeros.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Scale conversions",
+    "tagline": "Jump between thousand, million, billion, trillion - plus lakh and crore - without losing a zero.",
+    "workedExample": "2.5 billion:\n1. Full number = 2,500,000,000\n2. = 2,500,000 thousand\n3. = 2,500 million\n4. = 0.0025 trillion\n5. Indian system: 250 crore = 25,000 lakh\nCheck: 250 crore x 10,000,000 = 2,500,000,000. Matches.",
+    "workedExampleHeading": "Worked example"
+  }
+}

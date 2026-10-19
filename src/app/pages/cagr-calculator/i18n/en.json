@@ -1,0 +1,87 @@
+{
+  "cagr-calculator": {
+    "assumptionNote": "Assumes smooth compounding over the whole period. Irregular cash flows in or out are not modeled.",
+    "benefits": [
+      "Reduces bumpy multi-year growth to one comparable annual rate.",
+      "Lets you compare investments, businesses or savings over different time spans.",
+      "Separates steady compounding from one-off jumps in value.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "CAGR stands for compound annual growth rate. It is the constant yearly rate that would grow a starting value to an ending value over a given number of years, smoothing out all the ups and downs in between.",
+        "q": "What is CAGR?"
+      },
+      {
+        "a": "An investment that grows from 10,000 to 18,000 in 5 years has a total gain of 80%, but its CAGR is only 12.47% per year. Total gain ignores time; CAGR accounts for it.",
+        "q": "CAGR vs total return: which is better?"
+      },
+      {
+        "a": "No. CAGR smooths the path, so two investments with the same CAGR can have very different volatility. It also says nothing about the risk taken to achieve the growth.",
+        "q": "Does a high CAGR mean a good investment?"
+      },
+      {
+        "a": "Yes, when the start value, end value and period are known. That is exactly the calculation here: the growth rate implied by those three numbers.",
+        "q": "Can CAGR compare a stock to a business?"
+      },
+      {
+        "a": "CAGR assumes compounding and smooth growth, which fits investments. For simple year-on-year percentage changes, the average of annual rates can differ from CAGR when values fluctuate.",
+        "q": "CAGR vs average annual return?"
+      },
+      {
+        "a": "Yes. Take the starting and ending population, GDP or revenue and the number of years, and the same formula gives the average annual growth rate.",
+        "q": "Can I use CAGR for non-money values?"
+      }
+    ],
+    "formula": "CAGR = (end_value / start_value)^(1 / years) - 1\ntotal_growth = (end_value - start_value) / start_value",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the starting value of the investment or metric.",
+      "Enter the ending value.",
+      "Enter the number of years between them.",
+      "Read the compound annual growth rate and the total growth.",
+      "Compare different investments by their CAGR, not their raw totals."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "CAGR is the constant annual rate that compounds a start value into an end value.",
+      "It smooths out volatility, giving one number that summarizes multi-year growth.",
+      "A 10,000 investment growing to 18,000 in 5 years has a CAGR of 12.47%, even though the total gain is 80%.",
+      "CAGR makes investments over different time periods directly comparable.",
+      "It says nothing about the path taken: two investments can share a CAGR with very different risk."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "CAGR calculator, compound annual growth rate calculator, investment growth rate, annual return calculator",
+    "labels": {
+      "cagr": "CAGR",
+      "end": "Ending value",
+      "start": "Starting value",
+      "totalGrowth": "Total growth",
+      "years": "Years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Smooths over volatility; the actual path may be bumpy.",
+      "Ignores cash flows, dividends and fees during the period.",
+      "Needs a positive starting value and a known period.",
+      "A descriptive measure, not professional investment advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free CAGR calculator. Find the compound annual growth rate between any start and end values. Compare investments fairly. Private, browser-only.",
+    "metaTitle": "CAGR Calculator — Compound Annual Growth Rate",
+    "name": "CAGR Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "CAGR is the steady yearly rate behind multi-year growth. Growing from 10,000 to 18,000 in 5 years is an 80% total gain but only a 12.47% compound annual growth rate.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your CAGR results",
+    "tagline": "Turn start and end values into one yearly rate.",
+    "workedExample": "Start value 10,000, end value 18,000, period 5 years.\n\nRatio = 18,000 / 10,000 = 1.8. CAGR = 1.8^(1/5) - 1 = e^(ln(1.8)/5) - 1 = e^0.1175573 - 1 = 1.124742 - 1 = 12.47%.\n\nTotal growth = (18,000 - 10,000) / 10,000 = 80%. Check: 10,000 x 1.124742^5 = 10,000 x 1.8 = 18,000.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "css-clip-path-generator": {
+    "benefits": [
+      "Twelve ready-made shapes with hand-tuned coordinates — no polygon math required.",
+      "Percentage-based points scale perfectly: the same clip works on a 100px badge or a full-width hero.",
+      "Crisp vector edges at every resolution, unlike image masks that pixelate.",
+      "One-line output drops into any stylesheet, component, or utility class.",
+      "Live preview on a resizable box shows exactly how the shape crops your element."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "polygon() takes a list of x/y point pairs that the browser connects in order to form the clipping region. Points use percentages of the element's own width and height, so polygon(50% 0%, 0% 100%, 100% 100%) draws a triangle: top-center, bottom-left, bottom-right. Everything outside the polygon is clipped away.",
+        "q": "How does clip-path: polygon() work?"
+      },
+      {
+        "a": "clip-path clips the element's rendered box — backgrounds, borders, and content all get cut to the shape. If you want a visible border around a clipped shape, use filter: drop-shadow() instead of box-shadow, because drop-shadow follows the clipped outline while box-shadow is clipped away with the box.",
+        "q": "Why does my border disappear when I apply clip-path?"
+      },
+      {
+        "a": "The classic hexagon points are: 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%. These give flat top and bottom edges with pointed left and right sides. Rotate the point order by 90 degrees (starting at 50% 0%) for a pointy-top hexagon instead.",
+        "q": "What are the polygon points for a hexagon?"
+      },
+      {
+        "a": "Yes — the star preset here is a single five-pointed star drawn with ten polygon points (five outer tips, five inner valleys). Multi-star patterns need either several elements or an SVG, but one star per element is a single line of CSS.",
+        "q": "Can I make a star with clip-path?"
+      },
+      {
+        "a": "Mostly yes: polygon(), circle(), ellipse(), and inset() are supported in all modern browsers. The older url() form referencing SVG clipPath elements has spottier support. Stick to the basic shapes this tool generates and you are safe everywhere modern.",
+        "q": "Is clip-path supported in all browsers?"
+      },
+      {
+        "a": "Clipping is purely visual — the element still occupies its original rectangular box in the layout, and screen readers still see the full content. Do not use clip-path to hide sensitive content, and keep enough visible text for the shape to make sense to all users.",
+        "q": "Does clip-path affect accessibility or layout?"
+      }
+    ],
+    "formula": "clip-path: polygon(<x1> <y1>, <x2> <y2>, <x3> <y3>, ...);\n\nPoints are % of the element's width (x) and height (y), connected in order.\nclip-path: circle(50% at 50% 50%);     /* perfect circle */\nclip-path: ellipse(50% 35% at 50% 50%); /* wide ellipse */\nclip-path: inset(10% 20% round 8px);    /* rounded inner cut */",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick one of the twelve shapes — triangles, polygons, star, arrow, speech bubble, circle, or ellipse.",
+      "Choose a fill color and resize the demo box to see how the shape scales.",
+      "Copy the generated clip-path declaration.",
+      "Paste it onto any element in your stylesheet — images, divs, and sections all work.",
+      "If you need an outline around the shape, use filter: drop-shadow() instead of box-shadow."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "clip-path clips an element's visible region to a shape: polygon(), circle(), ellipse(), or inset().",
+      "polygon() points are percentages of the element's own width and height, connected in order.",
+      "Clipped-away regions are transparent and do not receive pointer events — clicks pass through.",
+      "Unlike border-radius, clip-path can produce any polygonal shape: stars, arrows, chevrons, speech bubbles.",
+      "box-shadow is clipped away with the box; filter: drop-shadow() follows the clipped outline instead.",
+      "The element keeps its original rectangular layout box — clipping is visual only and does not reflow the page."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "clip path generator, css clip-path, polygon generator css, css shapes, clip-path circle, css star shape",
+    "labels": {
+      "copiedMessage": "Copied",
+      "copyButton": "Copy CSS",
+      "cssOutputLabel": "Your CSS",
+      "demoSizeLabel": "Demo box size",
+      "downloadButton": "Download .css",
+      "fillColorLabel": "Shape color",
+      "shapeLabel": "Shape"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Fixed preset coordinates only — freehand point editing is not included in this version.",
+      "Clipping is visual: the element's layout box stays rectangular, which can surprise flex and grid layouts.",
+      "Very old browsers (Internet Explorer) do not support clip-path at all.",
+      "Text clipped by a shape can become unreadable — keep text content inside safe shapes like rounded insets."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate CSS clip-path shapes visually: triangles, hexagons, stars, arrows, circles and more. Live preview, copy-ready polygon CSS. Free online tool.",
+    "metaTitle": "CSS Clip-Path Generator — Free Online Tool",
+    "name": "CSS Clip-Path Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick from twelve hand-tuned clip-path shapes — triangles, diamonds, pentagons, hexagons, stars, arrows, speech bubbles, circles, and more — preview them live on a resizable box, then copy the one-line clip-path CSS. No polygon math, no image masks.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Clip-path results",
+    "shapes": {
+      "arrow": "Arrow",
+      "circle": "Circle",
+      "diamond": "Diamond",
+      "ellipse": "Ellipse",
+      "hexagon": "Hexagon",
+      "octagon": "Octagon",
+      "parallelogram": "Parallelogram",
+      "pentagon": "Pentagon",
+      "rightTriangle": "Right triangle",
+      "speechBubble": "Speech bubble",
+      "star": "Star",
+      "triangle": "Triangle"
+    },
+    "tagline": "Triangles, stars, hexagons — pure CSS shapes.",
+    "workedExample": "Shape: Diamond.\nGenerated CSS:\nclip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);\nReading the points: start at top-center (50% 0%), go to middle-right (100% 50%), then bottom-center (50% 100%), then middle-left (0% 50%), and the polygon closes back at the start. On a 200×200px box, top-center lands exactly at pixel (100, 0).",
+    "workedExampleHeading": "Worked example"
+  }
+}

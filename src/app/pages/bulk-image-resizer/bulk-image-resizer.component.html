@@ -1,0 +1,200 @@
+<div class="tool-page persona-fit">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" appPasteDrop aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label class="file-label" for="bulk-file">
+          <app-icon name="upload" />
+          {{ t('labels.uploadLabel') }}
+          <input id="bulk-file" type="file" accept="image/*" multiple (change)="onFilesSelected($event)" />
+        </label>
+      </div>
+
+      @if (fileError()) {
+        <p class="error" role="alert">{{ fileError() }}</p>
+      }
+
+      <div class="field">
+        <label for="bulk-mode">{{ t('labels.resizeMode') }}</label>
+        <select id="bulk-mode" [ngModel]="mode()" (ngModelChange)="setMode($event)">
+          <option value="percent">{{ modeLabel('percent') }}</option>
+          <option value="maxwidth">{{ modeLabel('maxwidth') }}</option>
+          <option value="maxheight">{{ modeLabel('maxheight') }}</option>
+          <option value="exact">{{ modeLabel('exact') }}</option>
+        </select>
+      </div>
+
+      @if (mode() === 'percent') {
+        <div class="field">
+          <label for="bulk-percent">{{ t('labels.percent') }}</label>
+          <div class="input-row">
+            <input id="bulk-percent" type="number" inputmode="numeric" min="1" max="100" step="1"
+              [ngModel]="percent()" (ngModelChange)="setPercent($event)" />
+            <input type="range" min="1" max="100" step="1" [ngModel]="percent()"
+              (ngModelChange)="setPercent($event)" [attr.aria-label]="t('labels.percent')" />
+          </div>
+        </div>
+      }
+      @if (mode() === 'maxwidth') {
+        <div class="field">
+          <label for="bulk-maxw">{{ t('labels.maxWidth') }}</label>
+          <input id="bulk-maxw" type="number" inputmode="numeric" min="16" max="8000" step="1"
+            [ngModel]="maxW()" (ngModelChange)="setMaxW($event)" />
+        </div>
+      }
+      @if (mode() === 'maxheight') {
+        <div class="field">
+          <label for="bulk-maxh">{{ t('labels.maxHeight') }}</label>
+          <input id="bulk-maxh" type="number" inputmode="numeric" min="16" max="8000" step="1"
+            [ngModel]="maxH()" (ngModelChange)="setMaxH($event)" />
+        </div>
+      }
+      @if (mode() === 'exact') {
+        <div class="field">
+          <label for="bulk-exactw">{{ t('labels.exactWidth') }}</label>
+          <input id="bulk-exactw" type="number" inputmode="numeric" min="16" max="8000" step="1"
+            [ngModel]="exactW()" (ngModelChange)="setExactW($event)" />
+        </div>
+        <div class="field">
+          <label for="bulk-exacth">{{ t('labels.exactHeight') }}</label>
+          <input id="bulk-exacth" type="number" inputmode="numeric" min="16" max="8000" step="1"
+            [ngModel]="exactH()" (ngModelChange)="setExactH($event)" />
+        </div>
+      }
+
+      <div class="field">
+        <label for="bulk-format">{{ t('labels.format') }}</label>
+        <select id="bulk-format" [ngModel]="format()" (ngModelChange)="setFormat($event)">
+          <option value="keep">{{ t('labels.formatKeep') }}</option>
+          <option value="png">{{ t('labels.formatPng') }}</option>
+          <option value="jpeg">{{ t('labels.formatJpeg') }}</option>
+        </select>
+      </div>
+
+      @if (items().length) {
+        <ul class="file-cards">
+          @for (it of items(); track $index) {
+            <li class="file-card">
+              <img [src]="it.dataUrl" [alt]="it.name" loading="lazy" />
+              <div class="file-card__body">
+                <div class="file-card__name">{{ it.name }}</div>
+                <div class="file-card__meta">{{ it.w }} x {{ it.h }} px - {{ it.sizeKB }} KB</div>
+              </div>
+              <button type="button" class="btn-secondary" (click)="downloadItem($index)">
+                <app-icon name="download" /> {{ t('labels.downloadOne') }}
+              </button>
+            </li>
+          }
+        </ul>
+
+        <div class="results">
+          <div class="result-row">
+            <span>{{ t('labels.processed') }}</span>
+            <strong>{{ count() }}</strong>
+          </div>
+          <div class="result-row total">
+            <span><app-icon name="ruler" /> {{ t('labels.totalSize') }}</span>
+            <strong>{{ totalKB() }} KB</strong>
+          </div>
+        </div>
+
+        <button type="button" class="btn" (click)="downloadAll()">
+          <app-icon name="download" /> {{ t('labels.downloadAll') }}
+        </button>
+      } @else {
+        <p class="hint">{{ t('labels.noFiles') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

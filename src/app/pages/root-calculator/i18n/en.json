@@ -1,0 +1,88 @@
+{
+  "root-calculator": {
+    "benefits": [
+      "Any root from 2 to 100, not just square and cube.",
+      "Correct real cube roots of negative numbers.",
+      "One-tap square and cube root presets.",
+      "Shows the power check so you can verify.",
+      "No sign-up, no data sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The nth root of x is the number which, multiplied by itself n times, gives x. So the cube root of 27 is 3 because 3 × 3 × 3 = 27.",
+        "q": "What is an nth root?"
+      },
+      {
+        "a": "Yes — odd roots of negatives are real. The cube root of -27 is -3. Even roots of negatives are not real numbers, so the calculator shows a note.",
+        "q": "Can I take the root of a negative number?"
+      },
+      {
+        "a": "Use the check row: raising the result to the power n should return the original number. The calculator does this for you automatically.",
+        "q": "How do I verify the answer?"
+      },
+      {
+        "a": "It is approximately 1.41421. Squared, it gives 2. It appears everywhere in geometry, from diagonal of a square to standard paper sizes.",
+        "q": "What is the square root of 2?"
+      },
+      {
+        "a": "Yes, up to 6 decimal places. Results like the cube root of 10 (about 2.154434) are shown with full precision.",
+        "q": "Does it show decimal answers?"
+      }
+    ],
+    "formula": "nth root of x = x^(1/n)\nx ≥ 0: always defined\nx < 0 and n odd: -((-x)^(1/n))\nx < 0 and n even: not a real number",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the number x.",
+      "Enter the root degree n (2 to 100), or tap a preset.",
+      "The root appears instantly.",
+      "Check the verification row to confirm.",
+      "Try negative x with an odd n to see the real negative root."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The nth root undoes raising to the nth power.",
+      "The square root (n=2) and cube root (n=3) are the most common.",
+      "Odd roots of negative numbers are real: ∛(-27) = -3.",
+      "Even roots of negatives are not real numbers.",
+      "The verification row raises the answer back to power n."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "root calculator, nth root calculator, square root calculator, cube root calculator, find roots of numbers",
+    "labels": {
+      "checkLabel": "Verification",
+      "invalidNote": "Enter a number x and an integer n from 2 to 100. Even roots of negative x are not real.",
+      "nLabel": "Root degree n",
+      "preset": {
+        "cube": "Cube root",
+        "square": "Square root"
+      },
+      "presetLabel": "Quick presets",
+      "resultLabel": "Root",
+      "xLabel": "Number x"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Even roots of negative numbers have no real answer.",
+      "Degree n limited to 100.",
+      "Results are decimal approximations, not exact surd forms.",
+      "Does not handle complex (imaginary) roots."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free root calculator: square, cube and nth roots of any number, with verification. Fully browser-based, no sign-up.",
+    "metaTitle": "Root Calculator — Square, Cube and nth Roots",
+    "name": "Root Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The nth root of x is the number that gives x when multiplied by itself n times: x^(1/n). The square root of 16 is 4, and the cube root of 27 is 3. Negative numbers have real odd roots — the cube root of -27 is -3 — but no real even roots.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Root results",
+    "tagline": "Square, cube and any nth root, verified.",
+    "workedExample": "Find the cube root of 27.\n\nn = 3, x = 27.\n∛27 = 27^(1/3) = 3.\n\nVerification: 3³ = 27. Correct.\n\nNow try x = -27 with n = 3:\n∛(-27) = -3, because (-3)³ = -27. The calculator handles the sign correctly.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "password-strength-checker": {
+    "assumptionNote": "Entropy is estimated from character variety and length. It assumes random-ish characters. Dictionary words, names, and patterns are much weaker than their entropy suggests.",
+    "benefits": [
+      "Check any password instantly without sending it anywhere - it never leaves this tab.",
+      "Learn what actually makes passwords strong: length beats complexity.",
+      "Get a concrete crack-time estimate to understand the risk.",
+      "Use the checklist to fix weak spots in seconds."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "checks": {
+      "digit": "Contains a digit",
+      "length12": "At least 12 characters",
+      "length16": "At least 16 characters",
+      "lower": "Contains a lowercase letter",
+      "symbol": "Contains a symbol",
+      "upper": "Contains an uppercase letter"
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Entropy in bits = length x log2(character set size). A 12-character password using all 94 printable characters has about 78.7 bits. Every extra bit doubles the guesses needed.",
+        "q": "What is password entropy?"
+      },
+      {
+        "a": "Mostly length. A 16-character lowercase-only password (75 bits) beats an 8-character mixed one (52 bits) and is easier to type. The best password is long and unique.",
+        "q": "Is length or complexity more important?"
+      },
+      {
+        "a": "A random 8-character password has about 52 bits: crackable in hours on fast hardware. It survives only against slow online guessing with lockouts. Never reuse it anywhere important.",
+        "q": "Is an 8-character password enough?"
+      },
+      {
+        "a": "No. Entropy math assumes random characters. 'Password123!' looks complex but falls to dictionary attacks in seconds. Use random or passphrase-style passwords instead.",
+        "q": "Does Password123! count as strong?"
+      },
+      {
+        "a": "It is a rough order-of-magnitude estimate assuming 10 billion guesses per second (fast offline hardware). Real attacks vary hugely: slow salted hashes resist far longer, leaked unsalted hashes far less.",
+        "q": "How accurate is the crack-time estimate?"
+      },
+      {
+        "a": "The strongest practical option: a long random string from a password manager, unique per site, plus two-factor authentication. Passphrases of 5+ random words are a good memorable alternative.",
+        "q": "What is the strongest password type?"
+      }
+    ],
+    "formula": "Entropy (bits) = Length x log2(Charset size)\n\nCharset sizes: lowercase 26, uppercase 26, digits 10, symbols 32.\nMixed example: 26 + 26 + 10 + 32 = 94.\n\nCrack time = 2^bits / guesses-per-second (assumes 10 billion/sec).\n\nExample: \"Tr7!kq#9xZm\" = 10 chars x log2(94) = 10 x 6.55 = 65.5 bits -> Good.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type a password into the box. Nothing is sent anywhere.",
+      "Read the strength tier, entropy bits, and estimated crack time.",
+      "Work through the checklist: each green check makes the password stronger.",
+      "Aim for at least 12 characters with mixed types, or 16+ for important accounts."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Password strength = entropy: how many guesses an attacker needs on average.",
+      "Entropy = length x log2(character set size).",
+      "Each extra bit doubles the work for the attacker.",
+      "Tiers here: under 40 bits very weak, 40-60 weak, 60-80 good, 80-100 strong, 100+ excellent.",
+      "A 12-character all-type password has about 78.7 bits.",
+      "Dictionary words and patterns are far weaker than the math suggests.",
+      "Reusing one password everywhere is the biggest real-world risk.",
+      "A password manager plus two-factor authentication beats any memorized password."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "password strength checker, password entropy calculator, how strong is my password, password security test, crack time estimator",
+    "labels": {
+      "bits": "bits",
+      "charsetSize": "Character set size",
+      "checklist": "Strength checklist",
+      "crackTime": "Estimated crack time",
+      "entropy": "Entropy",
+      "password": "Password to check",
+      "passwordPlaceholder": "Type a password to analyze",
+      "privateNote": "Your password never leaves this browser tab. Nothing is sent or stored.",
+      "strength": "Strength"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Entropy assumes random-ish characters. 'Password123!' scores better than it deserves.",
+      "Crack time is a rough estimate at 10 billion guesses per second.",
+      "Cannot check if your password leaked in a data breach.",
+      "Strength is only one factor. Reuse and phishing matter more in practice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free password strength checker: analyze entropy, crack time, and strength of any password. 100% private - nothing leaves your browser. No sign-up.",
+    "metaTitle": "Password Strength Checker - Entropy & Crack Time | JaurTools",
+    "name": "Password Strength Checker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Password strength is measured in entropy bits: length x log2(character set size). A random 10-character password with all character types has about 65.5 bits (Good). Each extra bit doubles attacker work. Type any password above to see its tier, entropy, and estimated crack time - nothing ever leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your password results",
+    "tagline": "Analyze any password's entropy, crack time, and strength - completely privately.",
+    "tiers": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "none": "",
+      "strong": "Strong",
+      "very-weak": "Very weak",
+      "weak": "Weak"
+    },
+    "time": {
+      "days": "days",
+      "hours": "hours",
+      "millionYears": "million years",
+      "minute": "minute",
+      "minutes": "minutes",
+      "years": "years"
+    },
+    "workedExample": "Password: \"Tr7!kq#9xZm\" (10 characters).\n1. Character types: lowercase, uppercase, digits, symbols all present.\n2. Charset = 26 + 26 + 10 + 32 = 94.\n3. Entropy = 10 x log2(94) = 10 x 6.55 = 65.5 bits.\n4. Tier: 60-80 bits = Good.\n5. Crack time: 2^65.5 / 10^10 seconds = about 171 years.\n\nCompare: an 8-character lowercase-only password has 8 x 4.7 = 37.6 bits (Very weak).",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,149 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="sub-start">{{ t('labels.startDate') }}</label>
+        <input id="sub-start" type="date" [ngModel]="startDate()" (ngModelChange)="setStartDate($event)" />
+      </div>
+
+      <div class="field">
+        <label for="sub-amount">{{ t('labels.amount') }}</label>
+        <div class="input-row">
+          <input id="sub-amount" type="number" inputmode="numeric" min="0" max="100000" step="1"
+            [ngModel]="amount()" (ngModelChange)="setAmount($event)" />
+          <input type="range" min="0" max="365" step="1" [ngModel]="amount()"
+            (ngModelChange)="setAmount($event)" [attr.aria-label]="t('labels.amount')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="sub-unit">{{ t('labels.unit') }}</label>
+        <select id="sub-unit" [ngModel]="unit()" (ngModelChange)="setUnit($event)">
+          <option value="days">{{ t('labels.days') }}</option>
+          <option value="weeks">{{ t('labels.weeks') }}</option>
+          <option value="months">{{ t('labels.months') }}</option>
+          <option value="years">{{ t('labels.years') }}</option>
+        </select>
+      </div>
+
+      @if (result()) {
+        <div class="results calc-results">
+          <div class="result-row total">
+            <span><app-icon name="calendar" /> {{ t('labels.resultDate') }}</span>
+            <strong>{{ resultText() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.weekday') }}</span>
+            <strong>{{ weekdayText() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.isoDate') }}</span>
+            <strong>{{ isoText() }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.daysAgo') }}</span>
+            <strong>{{ daysAgo() }}</strong>
+          </div>
+        </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

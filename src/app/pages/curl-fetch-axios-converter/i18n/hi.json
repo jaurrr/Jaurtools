@@ -1,0 +1,95 @@
+{
+  "curl-fetch-axios-converter": {
+    "assumptionNote": "सिर्फ आम curl फ्लैग कन्वर्ट होते हैं; असमर्थित फ्लैग चुपचाप हटाने के बजाय सारांश के नीचे सूचीबद्ध होते हैं।",
+    "benefits": [
+      "टर्मिनल में टेस्ट किए API कॉल सेकंडों में फ्रंटएंड कोड बन जाते हैं — हाथ से दोबारा लिखने की ज़रूरत नहीं।",
+      "असली curl पार्स करता है: कोटेड हेडर, JSON बॉडी, फॉर्म डेटा, बेसिक ऑथ और टाइमआउट।",
+      "fetch और axios दोनों आउटपुट बनाता है, इसलिए किसी भी प्रोजेक्ट स्टैक में फिट होता है।",
+      "ब्राउज़र-निषिद्ध हेडर (User-Agent, Cookie) को टूटे कोड के बजाय ईमानदार टिप्पणी के साथ दिखाता है।",
+      "Postman या टर्मिनल प्रयोगों को वेब ऐप में लाने के लिए बढ़िया।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "कन्वर्टर हर फ्लैग को उसके समतुल्य से जोड़ता है: -X मेथड सेट करता है, -H हेडर जोड़ता है, -d बॉडी सेट करता है, -u Authorization हेडर या axios auth बनता है, और -m AbortSignal.timeout या axios timeout विकल्प बनता है।",
+        "q": "curl फ्लैग fetch विकल्पों से कैसे जुड़ते हैं?"
+      },
+      {
+        "a": "हां। -F name=value formData.append कॉल बन जाता है, और -F file=@path.pdf टिप्पणी के साथ कन्वर्ट होता है जो बताती है कि अपना फाइल इनपुट कहां लगाएं।",
+        "q": "क्या यह मल्टीपार्ट फॉर्म अपलोड (-F) संभालता है?"
+      },
+      {
+        "a": "Axios टैब axios({ method, url, headers, data }) कॉन्फिग ऑब्जेक्ट बनाता है। अपने प्रोजेक्ट में npm install axios से axios लगाएं, फिर स्निपेट को async फंक्शन के अंदर पेस्ट करें।",
+        "q": "Axios आउटपुट कैसे इस्तेमाल करूं?"
+      },
+      {
+        "a": "हां। Chrome DevTools (Copy as cURL) या टर्मिनल से कॉपी किए मल्टी-लाइन कमांड पेस्ट करें — बैकस्लैश लाइन कंटिन्यूएशन अपने आप संभल जाते हैं।",
+        "q": "क्या मल्टी-लाइन curl कमांड पेस्ट कर सकता हूं?"
+      },
+      {
+        "a": "इसके बजाय आउटपुट में टिप्पणी जोड़ी जाती है, क्योंकि ब्राउज़र User-Agent हेडर ब्लॉक करते हैं। यह हेडर सिर्फ Node.js में काम करता है, जहां आप इसे हाथ से सेट कर सकते हैं।",
+        "q": "मेरे -A यूज़र एजेंट हेडर के बजाय टिप्पणी क्यों है?"
+      },
+      {
+        "a": "असमर्थित फ्लैग सारांश के नीचे सूचीबद्ध होते हैं ताकि कुछ भी चुपचाप न छूटे। आम कमियां: --proxy सेटिंग्स, क्लाइंट सर्टिफिकेट (--cert), और --http2 prior knowledge।",
+        "q": "कन्वर्टर न समझे फ्लैग का क्या होता है?"
+      }
+    ],
+    "formula": "fetch मैपिंग:\n  -X METHOD   -> method: 'METHOD'\n  -H \"N: V\"    -> headers: { 'N': 'V' }\n  -d BODY      -> body: JSON.stringify({...}) या body: '...'\n  -u U:P       -> 'Authorization': 'Basic ' + btoa('U:P')\n  -m SEC       -> signal: AbortSignal.timeout(SEC * 1000)\n  -F N=V       -> FormData append कॉल",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "अपना curl कमांड इनपुट बॉक्स में पेस्ट करें — मल्टी-लाइन कमांड चलते हैं।",
+      "पार्स किया सारांश जांचें: मेथड, URL और हेडर गिनती।",
+      "हर आउटपुट का प्रीव्यू देखने के लिए Fetch और Axios टैब बदलें।",
+      "कॉपी बटन से जनरेट किया कोड कॉपी करें।",
+      "इसे async फंक्शन के अंदर अपने प्रोजेक्ट में पेस्ट करें और ज़रूरत अनुसार बदलें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "curl कमांड सिंगल कोट, डबल कोट और बैकस्लैश एस्केप का सम्मान करते हुए टोकनाइज़ होते हैं।",
+      "-d बॉडी मिलने पर मेथड अपने आप GET से POST हो जाता है, बिल्कुल curl जैसा व्यवहार।",
+      "JSON बॉडी पहचानी जाती है और pretty-printed JSON.stringify कॉल के रूप में दोबारा लिखी जाती है।",
+      "-G डेटा पैरामीटर को बॉडी के बजाय URL क्वेरी स्ट्रिंग में डाल देता है।",
+      "--data-urlencode मानों को बिल्कुल curl जैसा परसेंट-एनकोड करता है।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "curl से fetch कन्वर्टर, curl से axios, curl को javascript में बदलें, curl से fetch ऑनलाइन",
+    "labels": {
+      "axiosTab": "Axios",
+      "copiedLabel": "कॉपी हुआ",
+      "copyLabel": "कॉपी",
+      "errorNoUrl": "कोई URL नहीं मिला। URL सहित पूरा curl कमांड पेस्ट करें।",
+      "fetchTab": "Fetch",
+      "headersLabel": "हेडर",
+      "inputLabel": "Curl कमांड",
+      "inputPlaceholder": "curl -X POST https://api.example.com/users -H \"Content-Type: application/json\" -d '{\"name\":\"Asha\"}'",
+      "methodLabel": "मेथड",
+      "outputLabel": "आउटपुट फॉर्मेट",
+      "unsupportedLabel": "कन्वर्ट न हुए फ्लैग",
+      "urlLabel": "URL"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "ब्राउज़र User-Agent, Referer और Cookie हेडर ब्लॉक करते हैं — ये काम करने वाले कोड के बजाय टिप्पणी बन जाते हैं।",
+      "curl --insecure का कोई ब्राउज़र समतुल्य नहीं; fetch और axios हमेशा TLS वैलिडेट करते हैं।",
+      "प्रॉक्सी सेटिंग्स, क्लाइंट सर्टिफिकेट और कस्टम CA बंडल अनुवादित नहीं हो सकते।",
+      "बहुत असामान्य कोटिंग या शेल-विशिष्ट सिंटैक्स सही टोकनाइज़ न हो सके।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "curl कमांड को तुरंत JavaScript fetch या axios कोड में बदलें। कोई भी curl कमांड पेस्ट करें, पार्स की गई रिक्वेस्ट का प्रीव्यू देखें, और मुफ्त में साफ काम करने वाला कोड कॉपी करें।",
+    "metaTitle": "Curl से Fetch/Axios कन्वर्टर – मुफ्त ऑनलाइन टूल",
+    "name": "Curl से Fetch/Axios कन्वर्टर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "डेवलपर अक्सर टर्मिनल में curl से API टेस्ट करते हैं, फिर वही रिक्वेस्ट JavaScript में चाहिए होती है। यह टूल curl कमांड को पार्स करता है — मेथड, हेडर, बॉडी, ऑथ और टाइमआउट — और समतुल्य fetch() या axios कोड बनाता है जिसे आप सीधे अपने प्रोजेक्ट में पेस्ट कर सकते हैं।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "कन्वर्ट किया कोड",
+    "tagline": "curl कमांड पेस्ट करें, तुरंत साफ fetch या axios JavaScript पाएं।",
+    "workedExample": "इनपुट:\ncurl -X POST https://api.example.com/users \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"name\":\"Asha\",\"age\":28}'\n\nपार्स हुआ: मेथड POST, 1 हेडर, JSON बॉडी पहचानी गई।\n\nFetch आउटपुट:\nconst response = await fetch('https://api.example.com/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n    \"name\": \"Asha\",\n    \"age\": 28\n  }),\n});\n\nconst data = await response.json();\nconsole.log(data);\n\nAxios आउटपुट:\nconst response = await axios({\n  method: 'post',\n  url: 'https://api.example.com/users',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  data: {\n    \"name\": \"Asha\",\n    \"age\": 28\n  },\n});\n\nconsole.log(response.data);",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

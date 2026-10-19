@@ -1,0 +1,192 @@
+<div class="tool-page fin-type-quick">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      @for (m of metrics(); track m.key) {
+        <div class="field">
+          <label [for]="'eng-' + m.key">{{ t('labels.metrics.' + m.key) }}</label>
+          <div class="input-row">
+            <input [id]="'eng-' + m.key" type="number" inputmode="numeric" min="0" max="1000000000" step="1"
+              [ngModel]="m.value"
+              (ngModelChange)="m.key === 'likes' ? setLikes($event) : m.key === 'comments' ? setComments($event) : m.key === 'shares' ? setShares($event) : setSaves($event)" />
+          </div>
+        </div>
+      }
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="eng-followers">{{ t('labels.followers') }}</label>
+          <span class="fin-live-chip">{{ followers() }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="eng-followers" type="number" inputmode="numeric" min="0" max="1000000000" step="100"
+            [ngModel]="followers()" (ngModelChange)="setFollowers($event)" />
+            <input type="range" min="0" max="1000000000" step="100" [ngModel]="followers()" (ngModelChange)="setFollowers($event)" [attr.aria-label]="t('labels.followers')" />
+        </div>
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="activity" /> {{ t('labels.engagementRate') }}</span>
+          <strong>{{ twoDecimal().format(engagementRate()) }}%</strong>
+          <small>{{ tp('hero.note', { u: followers() }) }}</small>
+        </div>
+        <div class="fin-hero-sub">
+          <div>
+            <span>{{ t('labels.totalInteractions') }}</span>
+            <strong>{{ zeroDecimal().format(totalInteractions()) }}</strong>
+          </div>
+          <div>
+            <span>{{ t('name') }}</span>
+            <strong>{{ twoDecimal().format(engagementRate()) }}%</strong>
+          </div>
+        </div>
+      </div>
+      <ul class="fin-split">
+        <li>
+          <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+          <span class="fin-lab">{{ t('labels.verdict') }}</span>
+          <span class="fin-val"><span class="verdict-badge verdict-{{ verdict() }}">{{ t('verdicts.' + verdict()) }}</span></span>
+        </li>
+      </ul>
+
+        
+        
+        @for (m of metrics(); track m.key) {
+          
+        }
+        
+      
+      <div class="fin-split-cards">
+        <div class="fin-split-card fin-highlight">
+          <span>{{ t('labels.totalInteractions') }}</span>
+          <strong>{{ zeroDecimal().format(totalInteractions()) }}</strong>
+        </div>
+        <div class="fin-split-card">
+          <span>{{ t('name') }}</span>
+          <strong>{{ twoDecimal().format(engagementRate()) }}%</strong>
+        </div>
+        <div class="fin-split-card">
+          <span>{{ t('labels.verdict') }}</span>
+          <strong><span class="verdict-badge verdict-{{ verdict() }}">{{ t('verdicts.' + verdict()) }}</span></strong>
+        </div>
+      </div>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { t: twoDecimal().format(engagementRate()) }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l2', { r: '—' }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ t('tip.trim') }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+    
+      </div>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+{
+  "log-calculator": {
+    "assumptionNote": "The value must be positive and the base must be positive and not equal to 1. Logs of non-positive numbers are undefined in real arithmetic.",
+    "benefits": [
+      "Any base works - not just 10 and e like basic calculators.",
+      "One-tap presets for log2, log10 and ln save typing.",
+      "The check line verifies the answer by raising the base to it.",
+      "Handles the change-of-base formula behind the scenes.",
+      "Decimal values and fractional results are fully supported."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A logarithm answers: to what power must the base be raised to get this number? log2(32) = 5 because 2^5 = 32. It is the inverse operation of raising to a power.",
+        "q": "What is a logarithm?"
+      },
+      {
+        "a": "log10 is base 10, the common logarithm used in science and engineering scales like pH and decibels. ln is base e (about 2.718), the natural logarithm used in calculus, growth and decay models.",
+        "q": "What is the difference between log10 and ln?"
+      },
+      {
+        "a": "Use the change-of-base formula: log_b(x) = ln(x) / ln(b). This calculator applies it automatically, so any positive base except 1 works.",
+        "q": "How do you calculate a log with an unusual base?"
+      },
+      {
+        "a": "No. In real-number arithmetic, logs are only defined for positive values, because no real power of a positive base gives zero or a negative number. This calculator shows an error for invalid inputs.",
+        "q": "Can you take the log of zero or a negative number?"
+      },
+      {
+        "a": "Because no power of the base gives 1 except the zeroth power. If base 1 were allowed, 1^x = 1 for every x, so the answer would be undefined - every exponent works, which means none is the answer.",
+        "q": "Why can the base not be 1?"
+      },
+      {
+        "a": "Yes. The log of a product is the sum of the logs: log(1000) = log(100 x 10) = log(100) + log(10) = 2 + 1 = 3. That is exactly how slide rules multiplied numbers before electronic calculators.",
+        "q": "How do logs turn multiplication into addition?"
+      }
+    ],
+    "formula": "log_b(x) = y means b^y = x.\nChange of base: log_b(x) = ln(x) / ln(b).\nRules: log(xy) = log x + log y | log(x/y) = log x - log y | log(x^n) = n log x.",
+    "formulaHeading": "Formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the value you want the logarithm of (must be positive).",
+      "Enter the base (any positive number except 1), or tap a preset for log2, log10 or ln.",
+      "The logarithm appears instantly, with a verification line underneath.",
+      "Read the check line: it raises the base to your answer and should return the value.",
+      "For powers of the base, expect clean whole-number answers like 5."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "log_b(x) asks: to what power must b be raised to get x?",
+      "The value must be positive; the base must be positive and not 1.",
+      "log10 is base 10, ln is base e (2.718...), log2 is base 2.",
+      "Change of base: log_b(x) = ln(x) / ln(b) - any base reduces to natural logs.",
+      "log(xy) = log x + log y: logs turn multiplication into addition.",
+      "Logarithms power the Richter scale, pH, decibels, and algorithm complexity (big-O)."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "log calculator, logarithm calculator, log base 2 calculator, natural log calculator, ln calculator, log10 calculator, change of base",
+    "labels": {
+      "baseLabel": "Base",
+      "checkLabel": "Verify",
+      "errorLabel": "Enter a positive value and a positive base other than 1.",
+      "presetLabel": "Quick bases",
+      "resultLabel": "Result",
+      "valueLabel": "Value"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Real-valued logs only - no complex numbers.",
+      "Values must be positive; the base must be positive and not 1.",
+      "Floating-point rounding can show 4.99999999 instead of 5 for exact powers.",
+      "This computes logs; it does not graph functions or solve log equations."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free log calculator: logarithms in any base, with ln, log10 and log2 presets. Change-of-base handled automatically, with answer verification.",
+    "metaTitle": "Log Calculator - Logarithms in Any Base (ln, log10) | JaurTools",
+    "name": "Log Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "log2(32) = 5, because 2 raised to the power 5 equals 32. A logarithm asks which exponent produces your number from the base. This calculator handles any positive base except 1 - use the presets for log2, log10 and ln, or type your own base. The verification line raises the base to the answer to prove it is correct.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Logarithm results",
+    "tagline": "Logarithms in any base - with ln, log10 and log2 presets and answer checks.",
+    "workedExample": "Compute log2(32):\n1. Ask: 2 raised to what power gives 32?\n2. Try powers: 2^1 = 2, 2^2 = 4, 2^3 = 8, 2^4 = 16, 2^5 = 32.\n3. So log2(32) = 5.\n4. Change-of-base check: ln(32) / ln(2) = 3.4657 / 0.6931 = 5.\n5. Verify: 2^5 = 32.",
+    "workedExampleHeading": "Worked example"
+  }
+}

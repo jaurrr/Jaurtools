@@ -1,0 +1,95 @@
+{
+  "css-gradient-generator": {
+    "benefits": [
+      "Build linear or radial gradients with 2 to 6 color stops.",
+      "Live preview updates as you drag stops, colors and the angle.",
+      "Copy-paste-ready CSS output with one click.",
+      "Four curated presets for instant professional gradients.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "90deg points right, 180deg points down, 270deg points left, and 0deg/360deg points up. The default 135deg runs diagonally from top-left to bottom-right, a popular choice for hero sections.",
+        "q": "What do the angle degrees mean?"
+      },
+      {
+        "a": "Yes — keep at least two stops, and you can add up to six. Click the remove button on any stop to delete it. Stops are automatically sorted by position in the CSS output.",
+        "q": "Can I add more than two colors?"
+      },
+      {
+        "a": "Use two stops of the same color with different positions, for example #4f46e5 0%, #4f46e5 40%, #ec4899 60%, #ec4899 100% — the middle jump creates a hard edge instead of a blend.",
+        "q": "How do I make a hard color stop?"
+      },
+      {
+        "a": "The output uses the standard linear-gradient() and radial-gradient() functions, which work in every modern browser. No prefixes are needed in 2026.",
+        "q": "Will this CSS work in all browsers?"
+      },
+      {
+        "a": "No — everything is generated locally in JavaScript. Nothing leaves your device.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "linear: background: linear-gradient(angle deg, color1 pos1%, color2 pos2%, ...)\nradial: background: radial-gradient(circle, color1 pos1%, color2 pos2%, ...)\nstops are sorted by position before output",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose linear or radial gradient type.",
+      "For linear gradients, set the angle with the slider.",
+      "Adjust each stop's color and position; add or remove stops as needed.",
+      "Watch the live preview update instantly.",
+      "Click Copy to place the CSS in your clipboard, then paste it into your stylesheet."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Linear gradients run along an angle; radial gradients spread from a center.",
+      "You can use 2 to 6 color stops.",
+      "Stop positions are percentages from 0 to 100.",
+      "The output is standard CSS — linear-gradient() or radial-gradient().",
+      "Stops are sorted by position so the CSS is always valid."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css gradient generator, linear gradient css, radial gradient generator, gradient maker online, css background gradient",
+    "labels": {
+      "addStop": "Add stop",
+      "angle": "Angle",
+      "copied": "Copied",
+      "copy": "Copy",
+      "cssOutput": "CSS output",
+      "linearType": "Linear",
+      "presetA": "Indigo to pink preset",
+      "presetB": "Sky to cyan preset",
+      "presetC": "Amber to red preset",
+      "presetD": "Emerald to blue preset",
+      "presets": "Presets",
+      "radialType": "Radial",
+      "removeStop": "Remove",
+      "stopColor": "Stop color",
+      "stopLabel": "Stop",
+      "stopPos": "Stop position (%)",
+      "typeLabel": "Gradient type"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only linear and radial gradients — no conic gradients.",
+      "Maximum 6 stops per gradient.",
+      "Radial gradients are always centered circles; ellipse or positioned variants are not offered.",
+      "The CSS uses modern syntax; very old browsers may need prefixes."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free CSS gradient generator: build linear and radial gradients with up to 6 color stops. Live preview, presets, one-click CSS copy.",
+    "metaTitle": "CSS Gradient Generator | JaurTools",
+    "name": "CSS Gradient Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Build linear or radial gradients with 2 to 6 color stops. Drag colors, positions and the angle while a live preview updates instantly. The tool outputs copy-paste-ready CSS — standard linear-gradient() or radial-gradient() syntax — plus four curated presets for professional results in one click.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your gradient CSS",
+    "tagline": "Build beautiful linear and radial gradients — live preview, copy-paste CSS.",
+    "workedExample": "The default gradient is:\nbackground: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);\n135deg points diagonally from top-left to bottom-right.\nThe first stop #4f46e5 (indigo) covers the 0% position, the second stop #ec4899 (pink) covers 100%, and the browser blends smoothly between them.\nAdd a middle stop like #7c3aed 50% to deepen the transition.",
+    "workedExampleHeading": "Worked example"
+  }
+}

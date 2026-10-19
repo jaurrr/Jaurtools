@@ -1,0 +1,95 @@
+{
+  "square-footage-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Square Footage Calculator",
+    "tagline": "Measure room areas for flooring and tiling - add rooms, get totals plus waste allowance.",
+    "metaTitle": "Square Footage Calculator - Room Area for Flooring | JaurTools",
+    "metaDescription": "Calculate square footage for flooring and tiling. Add multiple rooms in feet or meters, get total area and material needed with waste allowance. Free & private.",
+    "keywords": "square footage calculator, room area calculator, flooring calculator, tile calculator, sq ft calculator",
+    "quickAnswer": "Area = length x width. A 12 ft by 10 ft room is 120 sq ft. Add all your rooms and the tool totals them - three rooms of 120, 96 and 80 sq ft give 296 sq ft - then adds your waste allowance: 10% extra means buying 326 sq ft of flooring.",
+    "keyFacts": [
+      "Area of a rectangle = length x width, measured in the same unit both ways.",
+      "1 square meter = 10.764 square feet; 1 square foot = 0.0929 square meters.",
+      "Total project area is the simple sum of every room's area - measure each room separately.",
+      "The waste allowance (typically 5-15%) covers cutting losses, pattern matching and spare pieces.",
+      "Odd shapes: split them into rectangles, measure each, and add the areas."
+    ],
+    "howTo": [
+      "Choose feet or meters.",
+      "Enter a room name, its length and width, then press Add room.",
+      "Repeat for every room in the project.",
+      "Set the waste allowance percentage (10% is a safe default).",
+      "Read the total area in both units and the material quantity to buy."
+    ],
+    "formula": "Room area = length x width.\nTotal area = sum of all room areas.\nMaterial to buy = total x (1 + waste / 100).\nConversions: sq m = sq ft x 0.09290304; sq ft = sq m / 0.09290304.\nExample: (120 + 96 + 80) x 1.10 = 296 x 1.10 = 325.6 -> 326 sq ft.",
+    "workedExample": "Three rooms in feet:\n1. Living room: 12 x 10 = 120 sq ft.\n2. Bedroom: 12 x 8 = 96 sq ft.\n3. Kitchen: 10 x 8 = 80 sq ft.\n4. Total: 120 + 96 + 80 = 296 sq ft (= 27.5 sq m).\n5. Waste 10%: 296 x 1.10 = 325.6 sq ft.\n6. Buy 326 sq ft of flooring.",
+    "benefits": [
+      "Buy the right amount - no expensive shortfall, no wasted surplus.",
+      "Both sq ft and sq m shown, so supplier quotes in either unit work.",
+      "Waste allowance built in, so cutting losses are already covered.",
+      "Room-by-room list doubles as a measurement checklist."
+    ],
+    "limitations": [
+      "Rectangles only - L-shaped or curved rooms must be split into rectangles first.",
+      "Waste percentage is a rule of thumb; intricate patterns may need more.",
+      "Does not account for doorways, closets or fixtures - subtract those areas yourself.",
+      "Material is reported in square feet; convert for suppliers who sell per box or per square meter."
+    ],
+    "faqs": [
+      {
+        "q": "How much waste allowance should I add?",
+        "a": "10% is the safe default for straight-lay flooring. Use 15% for diagonal layouts or patterned tiles, and 5% only for simple large open areas."
+      },
+      {
+        "q": "How do I measure an L-shaped room?",
+        "a": "Split it into two rectangles, measure length x width for each, and add the two areas. The tool totals them when you add both as rooms."
+      },
+      {
+        "q": "Should I subtract doorways?",
+        "a": "For large openings, yes - measure the doorway area and mentally subtract it, or add the room and reduce the waste percentage slightly."
+      },
+      {
+        "q": "Can I mix feet and meters?",
+        "a": "The unit toggle applies to all rooms. Convert your measurements to one unit first for a consistent total."
+      },
+      {
+        "q": "What is the difference between sq ft and sq m?",
+        "a": "Both are area units: 1 sq m = 10.764 sq ft. The tool shows both totals so you can match any supplier's quote."
+      },
+      {
+        "q": "Does it estimate cost?",
+        "a": "No - it gives you the quantity to buy. Multiply by your supplier's per-unit price for the cost."
+      }
+    ],
+    "resultsHeading": "Area results",
+    "labels": {
+      "unitSystem": "Unit system",
+      "feetTab": "Feet",
+      "metersTab": "Meters",
+      "roomName": "Room name",
+      "length": "Length",
+      "width": "Width",
+      "addRoom": "Add room",
+      "remove": "Remove room",
+      "totalArea": "Total area",
+      "wastePercent": "Waste allowance (%)",
+      "materialNeeded": "Material to buy",
+      "noRooms": "No rooms yet - add your first room above.",
+      "sqft": "sq ft",
+      "sqm": "sq m"
+    }
+  }
+}

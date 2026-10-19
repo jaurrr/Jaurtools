@@ -1,0 +1,328 @@
+<div class="tool-page fin-type-quick">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle" role="group" [attr.aria-label]="t('labels.methodLabel')">
+        <button type="button" [class.active]="method() === 'snowball'" (click)="setMethod('snowball')">
+          {{ t('labels.snowball') }}
+        </button>
+        <button type="button" [class.active]="method() === 'avalanche'" (click)="setMethod('avalanche')">
+          {{ t('labels.avalanche') }}
+        </button>
+      </div>
+
+      <div class="debt-block">
+        <h3>{{ t('labels.debt1') }}</h3>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-bal1">{{ t('labels.balance') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(bal1()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(bal1()) }}</span>
+        </div>
+          <input id="dp-bal1" type="number" inputmode="decimal" min="0" max="100000000" step="1000"
+            [ngModel]="bal1()" (ngModelChange)="setBal1($event)" />
+            <input type="range" min="0" max="100000000" step="1000" [ngModel]="bal1()" (ngModelChange)="setBal1($event)" [attr.aria-label]="t('labels.balance')" />
+        </div>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-apr1">{{ t('labels.apr') }}</label>
+          <span class="fin-live-chip">{{ apr1() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ apr1() }}%</span>
+        </div>
+          <input id="dp-apr1" type="number" inputmode="decimal" min="0" max="60" step="0.5"
+            [ngModel]="apr1()" (ngModelChange)="setApr1($event)" />
+            <input type="range" min="0" max="60" step="0.5" [ngModel]="apr1()" (ngModelChange)="setApr1($event)" [attr.aria-label]="t('labels.apr')" />
+        </div>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-min1">{{ t('labels.minPayment') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(min1()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(min1()) }}</span>
+        </div>
+          <input id="dp-min1" type="number" inputmode="decimal" min="0" max="1000000" step="100"
+            [ngModel]="min1()" (ngModelChange)="setMin1($event)" />
+            <input type="range" min="0" max="1000000" step="100" [ngModel]="min1()" (ngModelChange)="setMin1($event)" [attr.aria-label]="t('labels.minPayment')" />
+        </div>
+      </div>
+
+      <div class="debt-block">
+        <h3>{{ t('labels.debt2') }}</h3>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-bal2">{{ t('labels.balance') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(bal2()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(bal2()) }}</span>
+        </div>
+          <input id="dp-bal2" type="number" inputmode="decimal" min="0" max="100000000" step="1000"
+            [ngModel]="bal2()" (ngModelChange)="setBal2($event)" />
+            <input type="range" min="0" max="100000000" step="1000" [ngModel]="bal2()" (ngModelChange)="setBal2($event)" [attr.aria-label]="t('labels.balance')" />
+        </div>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-apr2">{{ t('labels.apr') }}</label>
+          <span class="fin-live-chip">{{ apr2() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ apr2() }}%</span>
+        </div>
+          <input id="dp-apr2" type="number" inputmode="decimal" min="0" max="60" step="0.5"
+            [ngModel]="apr2()" (ngModelChange)="setApr2($event)" />
+            <input type="range" min="0" max="60" step="0.5" [ngModel]="apr2()" (ngModelChange)="setApr2($event)" [attr.aria-label]="t('labels.apr')" />
+        </div>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-min2">{{ t('labels.minPayment') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(min2()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(min2()) }}</span>
+        </div>
+          <input id="dp-min2" type="number" inputmode="decimal" min="0" max="1000000" step="100"
+            [ngModel]="min2()" (ngModelChange)="setMin2($event)" />
+            <input type="range" min="0" max="1000000" step="100" [ngModel]="min2()" (ngModelChange)="setMin2($event)" [attr.aria-label]="t('labels.minPayment')" />
+        </div>
+      </div>
+
+      <div class="debt-block">
+        <h3>{{ t('labels.debt3') }}</h3>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-bal3">{{ t('labels.balance') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(bal3()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(bal3()) }}</span>
+        </div>
+          <input id="dp-bal3" type="number" inputmode="decimal" min="0" max="100000000" step="1000"
+            [ngModel]="bal3()" (ngModelChange)="setBal3($event)" />
+            <input type="range" min="0" max="100000000" step="1000" [ngModel]="bal3()" (ngModelChange)="setBal3($event)" [attr.aria-label]="t('labels.balance')" />
+        </div>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-apr3">{{ t('labels.apr') }}</label>
+          <span class="fin-live-chip">{{ apr3() }}%</span>
+        </div>
+          <span class="fin-live-chip">{{ apr3() }}%</span>
+        </div>
+          <input id="dp-apr3" type="number" inputmode="decimal" min="0" max="60" step="0.5"
+            [ngModel]="apr3()" (ngModelChange)="setApr3($event)" />
+            <input type="range" min="0" max="60" step="0.5" [ngModel]="apr3()" (ngModelChange)="setApr3($event)" [attr.aria-label]="t('labels.apr')" />
+        </div>
+        <div class="field">
+          <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-min3">{{ t('labels.minPayment') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(min3()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(min3()) }}</span>
+        </div>
+          <input id="dp-min3" type="number" inputmode="decimal" min="0" max="1000000" step="100"
+            [ngModel]="min3()" (ngModelChange)="setMin3($event)" />
+            <input type="range" min="0" max="1000000" step="100" [ngModel]="min3()" (ngModelChange)="setMin3($event)" [attr.aria-label]="t('labels.minPayment')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <div class="fin-label-row">
+          <label for="dp-extra">{{ t('labels.extraPayment') }}</label>
+          <span class="fin-live-chip">{{ moneyFmt().format(extra()) }}</span>
+        </div>
+          <span class="fin-live-chip">{{ moneyFmt().format(extra()) }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="dp-extra" type="number" inputmode="decimal" min="0" max="1000000" step="500"
+            [ngModel]="extra()" (ngModelChange)="setExtra($event)" />
+          <input type="range" min="0" max="50000" step="500" [ngModel]="extra()"
+            (ngModelChange)="setExtra($event)" [attr.aria-label]="t('labels.extraPayment')" />
+        </div>
+      </div>
+
+      <div class="results fin-results">
+
+
+      <div class="fin-duel">
+        <div class="fin-duel-card">
+          <span>{{ t('labels.' + method()) }}</span>
+          <strong>{{ result().months }} {{ t('labels.monthsUnit') }}</strong>
+          <small>{{ tp('duel.subMethod', { interest: moneyFmt().format(result().interest), order: orderText() }) }}</small>
+        </div>
+        <div class="fin-duel-card">
+          <span>{{ altMethodName() }}</span>
+          <strong>{{ altResult().months }} {{ t('labels.monthsUnit') }}</strong>
+          <small>{{ tp('duel.subAlt', { interest: moneyFmt().format(altResult().interest) }) }}</small>
+        </div>
+      </div>
+      <div class="fin-verdict">
+        <app-icon name="check" />
+        <p>{{ tp('duel.verdictDebt', { m: result().months, interest: moneyFmt().format(result().interest) }) }}</p>
+      </div>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { a: result().months, b: altResult().months, d: moneyFmt().format(result().interest) }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.switch', { d: moneyFmt().format(result().interest > altResult().interest ? result().interest - altResult().interest : altResult().interest - result().interest) }) }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+
+
+      <div class="fin-duel">
+        <div class="fin-duel-card">
+          <span>{{ t('labels.' + method()) }}</span>
+          <strong>{{ result().months }} {{ t('labels.monthsUnit') }}</strong>
+          <small>{{ tp('duel.subMethod', { interest: moneyFmt().format(result().interest), order: orderText() }) }}</small>
+        </div>
+        <div class="fin-duel-card">
+          <span>{{ altMethodName() }}</span>
+          <strong>{{ altResult().months }} {{ t('labels.monthsUnit') }}</strong>
+          <small>{{ tp('duel.subAlt', { interest: moneyFmt().format(altResult().interest) }) }}</small>
+        </div>
+      </div>
+      <div class="fin-verdict">
+        <app-icon name="check" />
+        <p>{{ tp('duel.verdictDebt', { m: result().months, interest: moneyFmt().format(result().interest) }) }}</p>
+      </div>
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { a: result().months, b: altResult().months, d: moneyFmt().format(result().interest) }) }}</span></li>
+        </ul>
+      </div>
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.switch', { d: moneyFmt().format(result().interest > altResult().interest ? result().interest - altResult().interest : altResult().interest - result().interest) }) }}</p>
+      </div>
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+        </ol>
+      </div>
+
+        
+        
+        
+      
+    
+      
+    
+      </div>
+
+      <p class="note fin-note">{{ t('labels.comparePrefix') }} {{ altMethodName() }}: {{ altResult().months }} {{ t('labels.monthsUnit') }}, {{ t('labels.totalInterest') }} {{ moneyFmt().format(altResult().interest) }}.</p>
+
+      <p class="note fin-note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

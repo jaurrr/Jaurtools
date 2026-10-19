@@ -1,0 +1,93 @@
+{
+  "markdown-table-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Markdown Table Generator",
+    "tagline": "Build clean Markdown tables visually, then copy or download the result.",
+    "metaTitle": "Markdown Table Generator - Create Tables Online Free",
+    "metaDescription": "Generate Markdown tables visually: set rows and columns, edit cells, control alignment, then copy or download. Free, no signup, runs in your browser.",
+    "keywords": "markdown table generator, create markdown table, markdown table maker, md table builder, github table generator",
+    "resultsHeading": "Markdown Table Generator results",
+    "quickAnswer": "A Markdown table is plain text where pipes (|) separate columns and a row of dashes under the header defines alignment. This tool builds that text for you: choose rows and columns, type into the cells, pick left, center, or right alignment, then copy the result into GitHub, Notion, or any Markdown editor.",
+    "keyFacts": [
+      "Markdown tables need a header row, a separator row with dashes, and matching pipe counts on every row.",
+      "The separator row controls alignment: :--- left-aligns, :---: centers, and ---: right-aligns a column.",
+      "A pipe character inside a cell must be escaped as backslash-pipe so it is not treated as a column boundary.",
+      "GitHub, GitLab, Notion, and most Markdown editors render pipe tables; very basic viewers may show raw text.",
+      "Tables work best for small datasets; wide tables become hard to read in raw text form."
+    ],
+    "howTo": [
+      "Set the number of rows and columns with the number fields or sliders (up to 10 rows and 8 columns).",
+      "Toggle the header row on or off and choose column alignment: left, center, or right.",
+      "Click any cell and type your content; pipes inside cells are escaped automatically.",
+      "Watch the generated Markdown update below the grid as you type.",
+      "Copy the result to your clipboard or download it as a .md file."
+    ],
+    "formula": "| Header 1 | Header 2 |\n| :--- | ---: |\n| Cell A   | Cell B   |",
+    "workedExample": "With 3 rows, 3 columns, header on, and left alignment, typing Name, Role, City in the header and one data row produces:\n| Name  | Role      | City   |\n| :---- | :-------- | :----- |\n| Aarav | Developer | Mumbai |\nPaste this into a GitHub README and it renders as a clean table with left-aligned text.",
+    "benefits": [
+      "No need to count pipes or dashes by hand; the syntax is always valid.",
+      "Live preview shows exactly what you will paste.",
+      "One click copies the table or downloads it as a file.",
+      "Alignment control keeps numeric columns tidy."
+    ],
+    "limitations": [
+      "Merging cells (colspan or rowspan) is not supported by standard Markdown tables.",
+      "Very wide tables may overflow on small screens in some renderers.",
+      "Cell content is plain text; nested tables inside cells are unreliable.",
+      "The tool generates syntax only; rendering depends on your Markdown viewer."
+    ],
+    "faqs": [
+      {
+        "q": "Why is my table not rendering?",
+        "a": "Check that every row has the same number of pipes and that the separator row sits directly under the header. Blank lines between rows can also break rendering in strict parsers."
+      },
+      {
+        "q": "How do I center-align a column?",
+        "a": "Use :---: in the separator row for that column. In this tool, choose Center in the alignment control and the separator is generated for you."
+      },
+      {
+        "q": "Can I put a pipe character inside a cell?",
+        "a": "Yes, but it must be escaped as backslash-pipe. The generator does this automatically for any pipe you type into a cell."
+      },
+      {
+        "q": "Do Markdown tables support merged cells?",
+        "a": "No. Standard Markdown tables have no colspan or rowspan. If you need merged cells, use an HTML table inside your Markdown document instead."
+      },
+      {
+        "q": "Where can I paste the generated table?",
+        "a": "Anywhere Markdown is supported: GitHub READMEs and issues, GitLab, Notion, Obsidian, Stack Overflow answers, and most static-site generators."
+      }
+    ],
+    "labels": {
+      "rowsLabel": "Rows",
+      "colsLabel": "Columns",
+      "alignLabel": "Alignment",
+      "alignLeft": "Left",
+      "alignCenter": "Center",
+      "alignRight": "Right",
+      "headerRow": "Header row",
+      "onLabel": "On",
+      "offLabel": "Off",
+      "fillSample": "Fill sample data",
+      "editCells": "Edit cells",
+      "cellLabel": "Cell",
+      "outputLabel": "Markdown output",
+      "copyLabel": "Copy",
+      "copiedLabel": "Copied",
+      "downloadLabel": "Download .md"
+    }
+  }
+}

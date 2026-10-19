@@ -1,0 +1,105 @@
+{
+  "bcrypt-hash-generator": {
+    "assumptionNote": "Hashes are generated with the bcryptjs library using cryptographically random salts. Cost 10 is the default, matching common server frameworks.",
+    "benefits": [
+      "Real bcrypt algorithm running in your browser — hashes match what server-side libraries produce.",
+      "Adjustable cost factor lets you balance security against hashing time for your project.",
+      "Built-in verifier behaves exactly like a login check, ideal for debugging authentication code.",
+      "No signup, no server, no logs — the page even works offline once loaded.",
+      "Hash anatomy display (version, cost, salt) makes it a great learning tool for developers."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Bcrypt is a password-hashing function designed in 1999 for securely storing passwords. Unlike fast hashes such as MD5 or SHA-256, bcrypt is intentionally slow and includes a built-in salt and an adjustable cost factor, which makes brute-force and rainbow-table attacks impractical.",
+        "q": "What is bcrypt?"
+      },
+      {
+        "a": "The cost factor controls how much work bcrypt does: the number of iterations equals 2 raised to the cost. Cost 10 means 1024 iterations, cost 12 means 4096, and so on. Each increment roughly doubles hashing time, so higher costs are stronger against attackers but slower for legitimate logins. Cost 10–12 is the common range today.",
+        "q": "What does the cost factor (rounds) mean?"
+      },
+      {
+        "a": "Because a fresh random 22-character salt is generated every time. The salt is stored inside the hash itself, so verification can re-derive it. Different-looking hashes of the same password all verify correctly — this is a security feature, not a bug.",
+        "q": "Why do two hashes of the same password look different?"
+      },
+      {
+        "a": "The algorithm is real bcrypt, so the output is cryptographically identical to server-side hashes. This page runs entirely offline in your browser with no network calls. Still, treat it as a development utility: in production, hash passwords on your own trusted server, and never paste real user passwords into any web page.",
+        "q": "Is hashing a password in the browser safe?"
+      },
+      {
+        "a": "Bcrypt only processes the first 72 bytes of input; anything beyond that is silently ignored. This is a quirk of the original algorithm. If your users type passphrases longer than that, consider pre-hashing with SHA-256 before bcrypt, a pattern many frameworks use.",
+        "q": "What is the maximum password length?"
+      },
+      {
+        "a": "It is the bcrypt version identifier. $2a$ was the original, $2b$ fixed a minor wrapping bug in some implementations, and $2y$ is used by crypt_blowfish to mark correct handling. All three verify the same way; $2b$ is the modern default you will see most often.",
+        "q": "What does $2b$ mean in the hash?"
+      }
+    ],
+    "formula": "hash = bcrypt(password, random_salt, cost)\n\nHash format:  $2b$ + cost (2 digits) + $ + 22-char salt + 31-char hash\nIterations = 2 ^ cost   (cost 10 means 1024 key-expansion rounds)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the password you want to hash into the password field. Nothing is sent anywhere; it stays in your browser.",
+      "Choose the cost factor with the slider. 10 is the common default; higher numbers are stronger but slower.",
+      "Click Generate hash and wait a moment — real bcrypt work is intentionally slow.",
+      "Copy the resulting 60-character hash with the copy button, or download it as a text file.",
+      "To verify, paste an existing hash and type the candidate password in the verify section, then click Verify."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Bcrypt was designed by Niels Provos and David Mazieres in 1999 specifically for password storage, based on the Blowfish cipher.",
+      "Every hash is 60 characters long and carries its own version, cost factor, and 22-character salt, so no separate salt column is needed.",
+      "The cost factor (rounds) is adaptive: raising it by 1 roughly doubles hashing time, letting hashes stay strong as hardware gets faster.",
+      "A fresh random salt is generated for every hash, so hashing the same password twice produces two completely different strings.",
+      "Bcrypt is one-way: a hash cannot be reversed back into the password. Verification works by hashing the candidate password with the stored salt and comparing.",
+      "Bcrypt truncates passwords at 72 bytes, so extremely long passphrases get silently cut — a known quirk every developer should be aware of."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bcrypt hash, bcrypt generator, bcrypt online, hash password, bcrypt verifier, password hashing, bcryptjs",
+    "labels": {
+      "copiedMessage": "Copied",
+      "copyButton": "Copy",
+      "costLabel": "Cost factor",
+      "downloadButton": "Download",
+      "errorEmptyPassword": "Please type a password first.",
+      "errorGeneric": "Hashing failed. Please try again.",
+      "generateButton": "Generate hash",
+      "hashLabel": "Your bcrypt hash",
+      "hashPlaceholder": "Paste a $2b$… hash",
+      "hashToVerifyLabel": "Existing bcrypt hash",
+      "matchError": "Could not verify. Check that the hash is a valid bcrypt string.",
+      "matchNo": "Password does NOT match the hash.",
+      "matchYes": "Password matches the hash.",
+      "passwordLabel": "Password to hash",
+      "passwordPlaceholder": "Type a password…",
+      "passwordToVerifyLabel": "Password to check",
+      "roundsHint": "Higher cost = stronger but slower. 10 is the standard default.",
+      "roundsLabel": "Cost factor (rounds)",
+      "verifyButton": "Verify",
+      "verifyTitle": "Verify a password",
+      "versionLabel": "Version"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates and demonstrations only — always re-hash on your own server in production rather than trusting a browser page.",
+      "Never paste a real production password into any website, including this one, no matter how it claims to handle data.",
+      "Bcrypt truncates input at 72 bytes; very long passphrases are silently shortened before hashing.",
+      "High cost factors (13–14) take seconds on slower devices — this is normal and by design."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate secure bcrypt password hashes with adjustable cost factor, or verify passwords against existing hashes — free, in your browser.",
+    "metaTitle": "Bcrypt Hash Generator - Secure Password Hashing | JaurTools",
+    "name": "Bcrypt Hash Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Bcrypt is a password-hashing algorithm designed to be deliberately slow and resistant to brute-force attacks. Type a password, choose a cost factor (rounds), and this tool produces a genuine $2b$ bcrypt hash you can store in your database. It can also verify a password against an existing hash, exactly like your server would.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Bcrypt hash results",
+    "tagline": "Hash and verify passwords with bcrypt.",
+    "workedExample": "Password: MySecret123, cost factor: 10.\nGenerated hash: $2b$10$G5cGqYjlwu/rWdwlEu6fFuVUPERhY6fRq1qmoc/yvyDCsN9CAZkni\nReading it: $2b$ is the version, 10 is the cost (2^10 = 1024 iterations), and the remaining 53 characters are the salt plus the hash. Run the same input again and the salt — hence the whole string — will be different, yet both hashes will verify against the same password.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,128 @@
+<header class="navbar" [class.scrolled]="scrolled()">
+  <div class="navbar-inner">
+    <a
+      class="brand"
+      [routerLink]="['/', translate.lang()]"
+      [attr.aria-label]="translate.t('nav.home')"
+    >
+      <img
+        class="brand-logo"
+        src="assets/logo.jpg"
+        [alt]="translate.t('nav.logoAlt')"
+        width="40"
+        height="40"
+      />
+      <span class="brand-name">JaurTools</span>
+    </a>
+
+    <nav class="desktop-nav" [attr.aria-label]="translate.t('nav.primaryNav')">
+      <a
+        [routerLink]="['/', translate.lang()]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >{{ translate.t('nav.home') }}</a
+      >
+      <a [routerLink]="['/', translate.lang(), 'about']" routerLinkActive="active">{{
+        translate.t('nav.about')
+      }}</a>
+      <a [routerLink]="['/', translate.lang(), 'contact']" routerLinkActive="active">{{
+        translate.t('nav.contact')
+      }}</a>
+    </nav>
+
+    <div class="actions">
+      <div class="lang-dropdown" [class.open]="langOpen()">
+        <button
+          type="button"
+          class="icon-btn lang-btn"
+          (click)="toggleLang()"
+          [attr.aria-expanded]="langOpen()"
+          aria-haspopup="true"
+          [attr.aria-label]="translate.t('nav.language')"
+          [attr.title]="translate.t('nav.language')"
+        >
+          <app-icon name="globe" aria-hidden="true"></app-icon>
+        </button>
+        @if (langOpen()) {
+          <ul class="lang-menu" role="menu" [attr.aria-label]="translate.t('nav.language')">
+            @for (l of langs; track l.code) {
+              <li role="none">
+                <button
+                  type="button"
+                  role="menuitemradio"
+                  [class.active]="translate.lang() === l.code"
+                  [attr.aria-checked]="translate.lang() === l.code"
+                  (click)="switchLang(l.code)"
+                >
+                  <span class="lang-label">{{ translate.t(l.key) }}</span>
+                  @if (translate.lang() === l.code) {
+                    <app-icon class="lang-check" name="check" aria-hidden="true"></app-icon>
+                  }
+                </button>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+
+      <button
+        type="button"
+        class="icon-btn"
+        (click)="translate.toggleTheme()"
+        [attr.aria-label]="translate.t('nav.toggleTheme')"
+        [attr.title]="translate.t('nav.toggleTheme')"
+      >
+        <app-icon [name]="translate.theme() === 'dark' ? 'sun' : 'moon'"></app-icon>
+      </button>
+
+      <button
+        type="button"
+        class="icon-btn menu-btn"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? translate.t('nav.close') : translate.t('nav.menu')"
+      >
+        <app-icon [name]="menuOpen() ? 'x' : 'menu'"></app-icon>
+      </button>
+    </div>
+  </div>
+
+  @if (menuOpen()) {
+    <nav class="mobile-menu" [attr.aria-label]="translate.t('nav.primaryNav')">
+      <a
+        [routerLink]="['/', translate.lang()]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >{{ translate.t('nav.home') }}</a
+      >
+      <a [routerLink]="['/', translate.lang(), 'about']" routerLinkActive="active" (click)="closeMenu()">{{
+        translate.t('nav.about')
+      }}</a>
+      <a [routerLink]="['/', translate.lang(), 'contact']" routerLinkActive="active" (click)="closeMenu()">{{
+        translate.t('nav.contact')
+      }}</a>
+
+      <div class="mobile-lang" role="group" [attr.aria-label]="translate.t('nav.language')">
+        @for (l of langs; track l.code) {
+          <button
+            type="button"
+            [class.active]="translate.lang() === l.code"
+            [attr.aria-pressed]="translate.lang() === l.code"
+            (click)="switchLang(l.code)"
+          >
+            <span class="lang-label">{{ translate.t(l.key) }}</span>
+            @if (translate.lang() === l.code) {
+              <app-icon class="lang-check" name="check" aria-hidden="true"></app-icon>
+            }
+          </button>
+        }
+      </div>
+
+      <button type="button" class="mobile-theme" (click)="translate.toggleTheme()">
+        <app-icon [name]="translate.theme() === 'dark' ? 'sun' : 'moon'" aria-hidden="true"></app-icon>
+        <span>{{ translate.t('nav.toggleTheme') }}</span>
+      </button>
+    </nav>
+  }
+</header>

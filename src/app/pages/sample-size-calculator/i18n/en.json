@@ -1,0 +1,91 @@
+{
+  "sample-size-calculator": {
+    "benefits": [
+      "Instant, accurate sample sizing for any survey without statistics software.",
+      "Prevents under-powered studies and wasted money on over-sampling.",
+      "Uses the peer-reviewed Cochran formula trusted in academic research.",
+      "Explains every input in plain language — no statistics background needed.",
+      "Runs fully in your browser; your survey plans stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For general-population surveys, 385 responses at 95% confidence and 5% margin of error is the standard benchmark when the population is unknown or very large. If you know your population is small, enter it above and the correction will lower the number.",
+        "q": "What is a good sample size for a survey?"
+      },
+      {
+        "a": "5% is the standard choice for most surveys. Use 3% when decisions are high-stakes and you can afford the much larger sample; use 10% only for quick exploratory polls where rough direction is enough.",
+        "q": "What margin of error should I use?"
+      },
+      {
+        "a": "The term p x (1 - p) in the formula — the variance — reaches its maximum at p = 0.5. Using 50% is the conservative, safest choice when you have no prior estimate of the true proportion.",
+        "q": "Why does a 50% proportion give the biggest sample size?"
+      },
+      {
+        "a": "Only when your sample would be more than about 5% of the total population. For populations above roughly 20,000 it changes almost nothing, so you can leave the population field blank.",
+        "q": "When do I need the finite population correction?"
+      },
+      {
+        "a": "You can, but your real margin of error grows — the results become less precise. It is better to collect the minimum shown, and to invite extra people to cover non-response.",
+        "q": "Can I collect fewer responses than the calculator says?"
+      },
+      {
+        "a": "No. A/B tests need a power calculator that accounts for baseline conversion rate and minimum detectable effect. This tool is designed for proportion-based surveys.",
+        "q": "Does this work for A/B tests?"
+      }
+    ],
+    "formula": "n0 = Z^2 x p x (1 - p) / E^2\nn = n0 / (1 + (n0 - 1) / N)   (finite-population correction)\n\nZ = z-score for the confidence level, p = proportion, E = margin of error, N = population size.\nAlways round the result UP to the next whole respondent.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your confidence level: 95% is the standard for most surveys, 99% for high-stakes research.",
+      "Enter your margin of error — 5% is typical; smaller values demand far more responses.",
+      "Enter the expected population proportion, or keep 50% when you have no prior estimate (it gives the safest result).",
+      "Optionally enter your total population size to apply the finite-population correction; leave it blank for unknown or very large populations.",
+      "Read the required sample size — that is the minimum number of complete responses to collect."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The classic research setup — 95% confidence with a 5% margin of error — needs 385 respondents for an unknown or very large population.",
+      "A 50% population proportion (p = 0.5) produces the largest and safest sample size; use it when you have no prior estimate.",
+      "Shrinking the margin of error from 5% to 3% roughly triples the required sample, because error sits in the denominator squared.",
+      "For small known populations the finite-population correction lowers the requirement: a population of 500 needs only 218 responses at 95% confidence and 5% error.",
+      "Z-scores used by this tool: 1.645 for 90%, 1.96 for 95%, and 2.576 for 99% confidence."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sample size calculator, survey sample size, how many respondents, margin of error calculator, confidence level sample size",
+    "labels": {
+      "baseSize": "For unknown / infinite population",
+      "confLevel": "Confidence level",
+      "infiniteNote": "Leave the population blank when it is unknown or very large — the standard Cochran formula is used.",
+      "marginError": "Margin of error",
+      "population": "Population size (optional)",
+      "populationPlaceholder": "Leave blank for unknown / very large",
+      "proportion": "Population proportion (use 50% if unsure)",
+      "requiredSize": "Required sample size",
+      "zUsed": "Z-score used"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes simple random sampling; convenience or snowball sampling needs different methods.",
+      "Non-response is real — invite more people than the minimum to end up with enough completes.",
+      "Subgroups you want to analyze separately each need their own adequate sample.",
+      "This is an estimate for planning, not a substitute for a statistician on complex designs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free sample size calculator: enter your confidence level, margin of error and population to get the exact number of survey responses you need.",
+    "metaTitle": "Sample Size Calculator — How Many Responses You Need",
+    "name": "Sample Size Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "For a 95% confidence level and a 5% margin of error you need 385 responses when the population is unknown or very large. Enter your own confidence level, margin of error and population size above and this calculator applies the standard Cochran formula with the finite-population correction to give the exact minimum sample size.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Sample size results",
+    "tagline": "Find out exactly how many survey responses you need for trustworthy results.",
+    "workedExample": "95% confidence (Z = 1.96), 5% margin of error (E = 0.05), proportion 50% (p = 0.5), population unknown:\nn0 = 1.96^2 x 0.5 x 0.5 / 0.05^2 = 3.8416 x 0.25 / 0.0025 = 0.9604 / 0.0025 = 384.16\nRound UP: 385 respondents.\n\nWith a known population of 10,000:\nn = 384.16 / (1 + 383.16 / 10000) = 384.16 / 1.038316 = 369.98\nRound UP: 370 respondents.",
+    "workedExampleHeading": "Worked example"
+  }
+}

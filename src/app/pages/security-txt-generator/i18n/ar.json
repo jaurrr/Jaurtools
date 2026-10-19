@@ -1,0 +1,106 @@
+{
+  "security-txt-generator": {
+    "benefits": [
+      "يمنح باحثي الأمن طريقة معيارية للتواصل معك — دون تخمين أي بريد يستخدمون.",
+      "يتبع RFC 9116 فيتعرف عليه الماسحون الآليون ومنصات مكافآت الثغرات فورًا.",
+      "تواريخ الانتهاء تُبقي الملف حديثًا: فيعرف الباحثون أن معلومات التواصل سارية.",
+      "يخبر Preferred-Languages المُبلِّغين باللغات التي تقرؤها فعلًا.",
+      "يُولَّد محليًا؛ فلا تغادر بيانات تواصلك المتصفح أبدًا."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "على https://yourdomain.com/.well-known/security.txt — عنوان URI المعروف المعرف في RFC 9116. قدّمه كنص عادي عبر HTTPS. فالباحثون والماسحون ينظرون هناك أولًا.",
+        "q": "أين أنشر security.txt؟"
+      },
+      {
+        "a": "سطر Contact واحد على الأقل مطلوب بموجب RFC 9116 — فبدونه لا فائدة من الملف. وحقل Expires مطلوب أيضًا بموجب المواصفة. وكل ما عداهما (Encryption وAcknowledgments وPolicy وHiring وCanonical وPreferred-Languages) اختياري.",
+        "q": "ما الحقول المطلوبة؟"
+      },
+      {
+        "a": "اضبطه خلال سنة قادمة كحد أقصى (يوصي RFC بسنة واحدة كحد أقصى). وعند تجاوزه يجب أن يعامل الباحثون الملف كقديم. جدّده سنويًا — وضع تذكيرًا في تقويمك.",
+        "q": "إلى أي مدى في المستقبل يجب أن يكون Expires؟"
+      },
+      {
+        "a": "لا. فملف security.txt يعلن فقط كيف يتواصل معك بشأن الثغرات. ولا يفحص شيئًا ولا يصلحه ولا يحمي شيئًا بنفسه. اقرنه بصفحة سياسة إفصاح عن الثغرات فعلية.",
+        "q": "هل يجعل security.txt موقعي أكثر أمانًا؟"
+      },
+      {
+        "a": "يشير حقل Encryption إلى مفتاح PGP الخاص بك ليشفّر الباحثون التقارير الحساسة. ويمكنك ربط عنوان URL بصيغة https:// لملف المفتاح أو استخدام URI بصمة openpgp4fpr:. وبدونه تصل التقارير ببريد عادي.",
+        "q": "ما فائدة حقل Encryption؟"
+      },
+      {
+        "a": "إذا قدمت security.txt من مواقع متعددة أو شبكات CDN فيعلن Canonical عنوان URL المرجعي. ويمنع ذلك الالتباس حول أي نسخة هي السارية. ومعظم المواقع الصغيرة تستطيع تخطيه.",
+        "q": "ما فائدة حقل Canonical؟"
+      }
+    ],
+    "formula": "صياغة حقول security.txt ‏(RFC 9116):\nContact: mailto:security@example.com     <- مطلوب، واحد على الأقل\nExpires: 2026-12-31T23:59:59Z            <- مطلوب، طابع زمني بصيغة RFC 3339\nEncryption: https://example.com/key.txt  <- اختياري\nAcknowledgments: https://...             <- اختياري\nPolicy: https://...                      <- اختياري\nHiring: https://...                      <- اختياري\nCanonical: https://.../.well-known/security.txt  <- اختياري\nPreferred-Languages: en, hi              <- اختياري",
+    "formulaHeading": "صيغة الملف",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "أدخل جهة تواصل واحدة على الأقل: عنوان بريد إلكتروني أو عنوان URL بصيغة https:// للتواصل أو رابط tel: — واحد في كل سطر.",
+      "اختر تاريخ انتهاء خلال السنة القادمة (مطلوب بموجب المعيار).",
+      "اختياريًا أضف عنوان URL لمفتاح PGP وصفحة الشكر وسياسة الإفصاح وصفحة التوظيف وعنوان URL المرجعي.",
+      "اسرد اللغات التي تقرؤها مفصولة بفاصلة (مثل: en, hi).",
+      "انسخ security.txt أو نزّله وانشره على https://yourdomain.com/.well-known/security.txt."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "يُعرَّف security.txt في RFC 9116: ملف معياري يخبر باحثي الأمن كيف يبلغون عن الثغرات.",
+      "يعيش على عنوان URI المعروف ‎/.well-known/security.txt‎ في نطاقك ويُقدَّم عبر HTTPS.",
+      "الحقلان المطلوبان هما Contact وExpires؛ وكل ما عداهما اختياري.",
+      "يمكن أن تكون قيم Contact عناوين mailto: أو عناوين https:// أو روابط tel: — وتنسق هذه الأداة رسائل البريد تلقائيًا.",
+      "يجب أن يكون Expires طابعًا زمنيًا بصيغة RFC 3339 وبحد أقصى سنة واحدة في المستقبل.",
+      "الملف استشاري فقط — يعلن معلومات التواصل ولا يؤمّن شيئًا بنفسه."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "security.txt generator, security txt file, rfc 9116 generator, vulnerability disclosure file",
+    "labels": {
+      "ackLabel": "عنوان URL لصفحة الشكر (اختياري)",
+      "canonicalLabel": "عنوان URL المرجعي (اختياري)",
+      "contactsHint": "واحد في كل سطر: بريد إلكتروني أو عنوان URL بصيغة https:// أو رابط tel:…",
+      "contactsLabel": "التواصل (مطلوب)",
+      "copiedMsg": "تم نسخ security.txt إلى الحافظة.",
+      "copyFile": "نسخ الملف",
+      "downloadFile": "تنزيل security.txt",
+      "encryptionLabel": "عنوان URL لمفتاح التشفير (اختياري)",
+      "expiresHint": "مطلوب. يُعرض كنهاية اليوم بتوقيت UTC بصيغة RFC 3339.",
+      "expiresLabel": "تاريخ الانتهاء",
+      "generatedFile": "ملف security.txt المُولَّد",
+      "hiringLabel": "عنوان URL لصفحة التوظيف (اختياري)",
+      "languagesHint": "رموز اللغات مفصولة بفاصلة، مثل en, hi.",
+      "languagesLabel": "اللغات المفضلة (اختياري)",
+      "policyLabel": "عنوان URL لسياسة الإفصاح (اختياري)",
+      "publishAt": "انشر على",
+      "publishNote": "قدّم هذا الملف عبر HTTPS على ‎/.well-known/security.txt‎ في نطاقك.",
+      "warnExpiresInvalid": "تاريخ الانتهاء ليس تاريخًا تقويميًا صالحًا.",
+      "warnExpiresPast": "تاريخ الانتهاء في الماضي — سيعامل الباحثون الملف كقديم.",
+      "warnInvalidContact": "تم تخطي بعض سطور التواصل لأنها ليست بريدًا إلكترونيًا أو عنوان URL أو رابط tel: صالحًا.",
+      "warnInvalidUrl": "عنوان URL اختياري واحد أو أكثر غير صالح (استخدم عناوين https:// كاملة) وتم استبعاده.",
+      "warnNoContact": "يلزم جهة تواصل واحدة صالحة على الأقل — الملف فارغ حاليًا.",
+      "warningsHeading": "تحقق قبل النشر"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "استشاري فقط — لا يفحص الثغرات ولا يصلحها ولا يمنعها.",
+      "قد يتجاهله الباحثون؛ فنشر الملف لا يضمن إفصاحًا مسؤولًا.",
+      "يجب تجديد Expires (سنويًا كحد أقصى) وإلا عُد الملف قديمًا.",
+      "تبني هذه الأداة الملف؛ وتقديمه عبر HTTPS على المسار الصحيح مهمتك أنت."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "مولّد security.txt مجاني: أنشئ ملف تواصل security.txt بموجب RFC 9116 مع الانتهاء والتشفير وحقول السياسة. انسخ أو نزّل بخصوصية كاملة.",
+    "metaTitle": "security.txt Generator - أنشئ ملف التواصل | JaurTools",
+    "name": "مولّد security.txt",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "ملف security.txt ‏(RFC 9116) المنشور على yourdomain.com/.well-known/security.txt يخبر باحثي الأمن كيف يبلغون عن الثغرات: بمن يتصلون وحتى متى تكون المعلومات صالحة، واختياريًا مفتاح PGP وسياسة الإفصاح واللغات المفضلة. ويحتاج كحد أدنى Contact: mailto:security@example.com وطابع Expires:. ويبني هذا المولّد الملف من نموذج بسيط ويتحقق من كل حقل.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "ملف security.txt الخاص بك",
+    "tagline": "ولّد ملف تواصل security.txt بموجب RFC 9116 لتقارير الثغرات.",
+    "workedExampleHeading": "مثال محلول",
+    "workedExample": "المدخلات: التواصل security@example.com والانتهاء 2026-12-31 ومفتاح التشفير https://example.com/pgp-key.txt والسياسة https://example.com/security-policy واللغات en, hi.\nالملف المولَّد:\nContact: mailto:security@example.com\nExpires: 2026-12-31T23:59:59Z\nEncryption: https://example.com/pgp-key.txt\nPolicy: https://example.com/security-policy\nPreferred-Languages: en, hi\nانشر هذا على https://example.com/.well-known/security.txt عبر HTTPS. فالانتهاء (نهاية 2026) ضمن الحد الأقصى الموصى به وهو سنة واحدة."
+  }
+}

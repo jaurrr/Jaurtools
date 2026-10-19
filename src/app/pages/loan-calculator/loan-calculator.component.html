@@ -1,0 +1,259 @@
+<div class="tool-page fin-type-loan">
+  <nav class="breadcrumb" [attr.aria-label]="t('ui.home')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('ui.home') }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('name')">
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="lc-type">{{ t('ui.loanType') }}</label>
+        </div>
+        <div class="fin-modes" role="tablist" [attr.aria-label]="t('ui.loanType')">
+          @for (lt of loanTypes; track lt) {
+            <button type="button" role="tab" [attr.aria-selected]="loanType() === lt"
+              [class.active]="loanType() === lt" (click)="onTypeChange(lt)">
+              {{ t('ui.type' + lt[0].toUpperCase() + lt.slice(1)) }}
+            </button>
+          }
+        </div>
+        <p class="hint">{{ t('ui.presetNote') }}</p>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="lc-amount">{{ t('ui.amount') }}</label>
+          <span class="fin-live-chip">{{ fmt().format(amount()) }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="lc-amount" type="number" inputmode="decimal" min="10000" max="100000000" step="10000"
+            [ngModel]="amount()" (ngModelChange)="setAmount($event)" />
+          <input type="range" min="10000" max="10000000" step="50000" [ngModel]="amount()"
+            (ngModelChange)="setAmount($event)" [attr.aria-label]="t('ui.amount')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="lc-rate">{{ t('ui.annualRate') }}</label>
+          <span class="fin-live-chip">{{ rate() }}%</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="lc-rate" type="number" inputmode="decimal" min="0" max="30" step="0.1"
+            [ngModel]="rate()" (ngModelChange)="setRate($event)" />
+          <input type="range" min="0" max="20" step="0.1" [ngModel]="rate()"
+            (ngModelChange)="setRate($event)" [attr.aria-label]="t('ui.annualRate')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="fin-label-row">
+          <label for="lc-years">{{ t('ui.loanTerm') }}</label>
+          <span class="fin-live-chip">{{ years() }} {{ t('ref.yearSuffix') }}</span>
+        </div>
+        <div class="input-row fin-slider">
+          <input id="lc-years" type="number" inputmode="numeric" min="1" max="30"
+            [ngModel]="years()" (ngModelChange)="setYears($event)" />
+          <input type="range" min="1" max="30" step="1" [ngModel]="years()"
+            (ngModelChange)="setYears($event)" [attr.aria-label]="t('ui.loanTerm')" />
+        </div>
+      </div>
+
+      <div class="fin-hero">
+        <div class="fin-hero-main">
+          <span><app-icon name="calendar" /> {{ t('ui.emi') }}</span>
+          <strong>{{ fmt().format(emi()) }}</strong>
+          <small>{{ tp('hero.note', { r: rate(), y: years(), n: payMonths() }) }}</small>
+        </div>
+        <div class="fin-hero-sub">
+          <div>
+            <span>{{ t('ui.totalInterest') }}</span>
+            <strong class="fin-cost">{{ fmt().format(totals().interest) }}</strong>
+          </div>
+          <div>
+            <span>{{ t('ui.totalPayable') }}</span>
+            <strong>{{ fmt().format(totals().payable) }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="fin-breakdown">
+        <div class="fin-donut" role="img"
+          [style.--fin-a]="totals().interest"
+          [style.--fin-total]="totals().payable"
+          [attr.aria-label]="t('ui.amount') + ': ' + fmt().format(amount()) + '; ' + t('ui.totalInterest') + ': ' + fmt().format(totals().interest)">
+          <span class="fin-donut-center">
+            <strong>{{ (totals().interest / totals().payable * 100).toFixed(0) }}%</strong>
+            <small>{{ t('ui.totalInterest') }}</small>
+          </span>
+        </div>
+        <ul class="fin-split">
+          <li>
+            <i class="fin-dot" style="--fin-dot: var(--accent)" aria-hidden="true"></i>
+            <span class="fin-lab">{{ t('ui.amount') }}</span>
+            <span class="fin-val">{{ fmt().format(amount()) }}</span>
+          </li>
+          <li>
+            <i class="fin-dot" style="--fin-dot: var(--danger)" aria-hidden="true"></i>
+            <span class="fin-lab">{{ t('ui.totalInterest') }}</span>
+            <span class="fin-val fin-cost">{{ fmt().format(totals().interest) }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="fin-meaning">
+        <h3><app-icon name="info" /> {{ t('meaning.heading') }}</h3>
+        <ul>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l1', { p: fmt().format(amount()), y: years(), r: rate() }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l2', { t: fmt().format(totals().payable), i: fmt().format(totals().interest), ip: (totals().interest / totals().payable * 100).toFixed(0) }) }}</span></li>
+          <li><span aria-hidden="true">•</span><span>{{ tp('meaning.l3', { e: fmt().format(emi()), n: payMonths() }) }}</span></li>
+        </ul>
+      </div>
+
+      <div class="fin-tip">
+        <app-icon name="zap" />
+        <p>{{ tp('tip.extra', { e: fmt().format(emi()), s: fmt().format(extraPayoff().saved), m: extraPayoff().months }) }}</p>
+      </div>
+
+      <div class="fin-howcalc">
+        <h3><app-icon name="calculator" /> {{ t('howcalc.heading') }}</h3>
+        <ol>
+          <li>{{ t('howcalc.s1') }}</li>
+          <li>{{ t('howcalc.s2') }}</li>
+          <li>{{ t('howcalc.s3') }}</li>
+        </ol>
+      </div>
+
+      <div class="fin-ref">
+        <h3>{{ t('ref.heading') }}</h3>
+        <p>{{ tp('ref.caption', { r: 8.5 }) }}</p>
+        <div class="fin-table-wrap">
+          <table class="fin-table">
+            <thead>
+              <tr>
+                <th scope="col">{{ t('ref.amountCol') }}</th>
+                @for (y of refGrid().tenures; track y) {
+                  <th scope="col">{{ y }} {{ t('ref.yearSuffix') }}</th>
+                }
+              </tr>
+            </thead>
+            <tbody>
+              @for (amt of refGrid().amounts; track amt; let i = $index) {
+                <tr>
+                  <th scope="row">{{ fmt().format(amt) }}</th>
+                  @for (cell of refGrid().cells[i]; track cell) {
+                    <td>{{ cell }}</td>
+                  }
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      @if (schedule().length > 0) {
+        <h3 class="schedule-title">{{ t('ui.scheduleTitle') }}</h3>
+        <div class="schedule-wrap">
+          <table class="fin-table schedule-table">
+            <thead>
+              <tr>
+                <th scope="col">{{ t('ui.colYear') }}</th>
+                <th scope="col">{{ t('ui.colPrincipal') }}</th>
+                <th scope="col">{{ t('ui.colInterest') }}</th>
+                <th scope="col">{{ t('ui.colBalance') }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (row of schedule(); track row.year) {
+                <tr>
+                  <td>{{ row.year }}</td>
+                  <td>{{ fmt().format(row.principal) }}</td>
+                  <td>{{ fmt().format(row.interest) }}</td>
+                  <td>{{ fmt().format(row.balance) }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </section>
+
+    <div class="guide-col">
+      <p class="quick">{{ t('quickAnswer') }}</p>
+
+      <section class="card">
+        <h2>{{ t('ui.keyFactsTitle') }}</h2>
+        <ul class="check-list">
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>{{ t('ui.howToTitle') }}</h2>
+        <ol class="steps">
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>{{ t('ui.formulaTitle') }}</h2>
+        <p>{{ t('formula') }}</p>
+      </section>
+
+      <section class="card">
+        <h2>{{ t('ui.exampleTitle') }}</h2>
+        <p>{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="card pros-cons">
+        <div>
+          <h2>{{ t('ui.benefitsTitle') }}</h2>
+          <ul class="check-list">
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('ui.limitationsTitle') }}</h2>
+          <ul class="warn-list">
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <section class="card faq">
+        <h2>{{ t('ui.faqTitle') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+    </div>
+  </div>
+
+  <section class="card related">
+    <h2>{{ t('ui.relatedTitle') }}</h2>
+    <div class="related-grid">
+      @for (rel of related; track rel) {
+        <a class="related-card" [routerLink]="['/', translate.lang(), rel]">
+          <span>{{ rel }}</span>
+          <app-icon name="arrow-right"></app-icon>
+        </a>
+      }
+    </div>
+  </section>
+</div>

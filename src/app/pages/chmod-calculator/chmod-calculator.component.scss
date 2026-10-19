@@ -1,0 +1,105 @@
+@import '../bmi-calculator/bmi-calculator.component.scss';
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.perm-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-block-end: 1.25rem;
+}
+
+.perm-row {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.75rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  background: var(--bg);
+
+  legend {
+    font-weight: 700;
+    padding-inline: 0.5rem;
+  }
+}
+
+.perm-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-block-size: 44px;
+  cursor: pointer;
+  font-weight: 500;
+
+  input[type='checkbox'] {
+    inline-size: 1.375rem;
+    block-size: 1.375rem;
+    accent-color: var(--accent);
+    flex: none;
+    cursor: pointer;
+  }
+}
+
+.check-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+.field-label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: 0.5rem;
+}
+
+input[type='text'] {
+  min-block-size: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  inline-size: 100%;
+  min-inline-size: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-block-size: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex: none;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.results .total strong {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.note.error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .note.error {
+  color: #fca5a5;
+}

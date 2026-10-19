@@ -1,0 +1,93 @@
+{
+  "spin-the-bottle": {
+    "benefits": [
+      "Settles every 'who goes first' argument in three seconds flat.",
+      "Truly random picks — nobody can claim the spinner played favourites.",
+      "No bottle needed, no floor space needed — perfect for video calls and classrooms.",
+      "The tally shows at a glance who has been picked most and least."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Games & Fun",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. The winner is chosen first with Math.random(), giving every player an exactly equal 1/n chance. Only then is the bottle animation aimed at that winner. The spin you watch is theatre — the draw itself is pure, unbiased randomness.",
+        "q": "Is the pick really random?"
+      },
+      {
+        "a": "Minimum 2 players (one player would be a strange game), maximum 12 so the circle stays readable. With 12 players each chip gets exactly 30 degrees of the circle.",
+        "q": "How many players can join?"
+      },
+      {
+        "a": "Yes, duplicates are allowed — the game does not judge your friend group. But identical names make the tally confusing, so adding a surname or nickname helps.",
+        "q": "Can two players have the same name?"
+      },
+      {
+        "a": "Press Reset Tally. It zeroes every player's count and clears the current selection, without removing anyone from the circle. To remove a player entirely, use the x on their chip.",
+        "q": "How do I reset the scores?"
+      },
+      {
+        "a": "Remove them with the x on their chip before the next spin. The circle re-balances automatically and every remaining player keeps an exactly equal chance.",
+        "q": "What if someone leaves mid-game?"
+      },
+      {
+        "a": "No. Add names, spin, and play — no account, no sign-up, no data sent anywhere. Player names live only in your browser tab.",
+        "q": "Do I need an account?"
+      }
+    ],
+    "formula": "Player i sits at angle i x (360° ÷ n), measured clockwise from the top.\nWinner: index = floor(random() x n) — every player has exactly a 1/n chance.\nAnimation: final rotation = current angle + (5 to 7) x 360° + the offset that aims the bottle mouth at the winner's angle.",
+    "formulaHeading": "How the spin works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type each player's name and press Add (or hit Enter). Add 2 to 12 players.",
+      "Remove anyone with the x on their chip — the circle re-balances itself.",
+      "Press Spin the Bottle and watch the bottle whirl 5 to 7 full turns before landing.",
+      "The bottle stops pointing at the winner, whose chip lights up and whose tally grows by one.",
+      "Press Reset Tally anytime to zero the counts without removing players."
+    ],
+    "howToHeading": "How to play",
+    "keyFacts": [
+      "Spin the Bottle picks one player at random from a circle of 2 to 12 names.",
+      "Every player has an exactly equal chance: 1 divided by the number of players.",
+      "The winner is drawn first with a random number; the bottle animation is then aimed at that winner.",
+      "The bottle spins 5 to 7 full turns with a smooth slow-down before it lands.",
+      "Players sit evenly around the circle at angles of i x (360° ÷ n).",
+      "A tally tracks how many times each player has been picked."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "spin the bottle, spin the bottle online, random picker, bottle spin game, who goes first picker",
+    "labels": {
+      "addButton": "Add",
+      "addPlayerLabel": "Add players (2 to 12)",
+      "minPlayersMsg": "Add at least 2 players to spin.",
+      "namePlaceholder": "Player name",
+      "readyMsg": "Press Spin when everyone is ready.",
+      "removeAria": "Remove",
+      "resetSpins": "Reset Tally",
+      "selectedMsg": "The bottle points to",
+      "spinButton": "Spin the Bottle",
+      "spinningMsg": "Spinning…",
+      "stageAria": "Bottle spin area"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The tally lives only in this browser tab and resets on reload.",
+      "Maximum 12 players — bigger groups need a second round.",
+      "The animation needs JavaScript and a modern browser.",
+      "It picks fairly, but it cannot settle what the winner has to do — that is your group's job."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Spin the Bottle game online: add up to 12 players, watch the animated bottle spin, and get a truly random pick. No sign-up, 100% private.",
+    "metaTitle": "Spin the Bottle Online - Fair Random Picker | JaurTools",
+    "name": "Spin the Bottle",
+    "privacyNote": "This game runs 100% in your browser. Player names never leave your device.",
+    "quickAnswer": "Type in 2 to 12 player names and press Spin. The bottle whirls for a few seconds and stops pointing at one player — chosen by a truly random, equal-chance draw. A tally keeps count of how many times each player has been picked.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Spin the Bottle results",
+    "tagline": "Add your players, spin the bottle, and let fate decide — fair, fast, and fun.",
+    "workedExample": "6 players sit at 0°, 60°, 120°, 180°, 240°, 300°.\n1. random() returns 0.72 → index = floor(0.72 x 6) = 4 → the 5th player.\n2. Target angle = 4 x 60° = 240°. The bottle sits at 0° and spins 6 full turns.\n3. Final rotation = 0 + 6 x 360 + 240 = 2400°. 2400 mod 360 = 240° — the mouth points exactly at player 5, whose tally becomes 1.",
+    "workedExampleHeading": "Worked example"
+  }
+}

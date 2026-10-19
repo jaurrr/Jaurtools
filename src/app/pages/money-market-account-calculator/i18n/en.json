@@ -1,0 +1,88 @@
+{
+  "money-market-account-calculator": {
+    "benefits": [
+      "See what your emergency fund or short-term savings can really earn.",
+      "Compare banks' APYs in dollars, not just percentages.",
+      "Shows how much monthly contributions add vs interest alone.",
+      "Private - your savings numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An interest-bearing deposit account that usually pays more than regular savings while keeping your money liquid. In the US, bank MMAs are FDIC-insured; money market funds (a different product) are not.",
+        "q": "What is a money market account?"
+      },
+      {
+        "a": "APY includes the effect of compounding over a year; APR is the simple rate before compounding. For comparing savings accounts, APY is the number that matters.",
+        "q": "APY vs APR - what is the difference?"
+      },
+      {
+        "a": "At an insured bank, deposits are protected up to the insurance limit ($250,000 per depositor in the US). The main risk is inflation eroding purchasing power, not losing principal.",
+        "q": "Is a money market account safe?"
+      },
+      {
+        "a": "Most MMAs compound daily and credit monthly. This calculator compounds monthly, which is within a few dollars of daily compounding for typical balances.",
+        "q": "How often does interest compound?"
+      },
+      {
+        "a": "MMAs keep money liquid with a variable rate; CDs lock a fixed rate for a term with early-withdrawal penalties. For emergency funds, MMA liquidity usually wins.",
+        "q": "Money market account vs CD - which is better?"
+      },
+      {
+        "a": "No. The projection runs entirely in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Monthly rate r = APY / 12 / 100; months n = years x 12\nFuture value = deposit x (1 + r)^n + monthly x (((1 + r)^n - 1) / r)\nInterest earned = future value - total contributions",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your initial deposit.",
+      "Enter any monthly contribution (0 if none).",
+      "Enter the APY as a percentage.",
+      "Choose the number of years.",
+      "Read your projected balance, total contributions, and interest earned."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A money market account (MMA) is an interest-bearing deposit account, usually paying more than regular savings.",
+      "MMA interest typically compounds daily or monthly - this calculator compounds monthly at APY/12.",
+      "APY (annual percentage yield) already includes compounding; APR does not.",
+      "In the US, MMAs at banks are FDIC-insured up to $250,000 per depositor.",
+      "Rates are variable - banks can change your APY any time, so treat projections as scenarios.",
+      "Monthly contributions matter more than rate-chasing: $200/month beats a 1% better APY on a small balance."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "money market account calculator, mma interest calculator, money market savings calculator, apy calculator",
+    "labels": {
+      "apy": "APY (%)",
+      "futureValue": "Future value",
+      "initialDeposit": "Initial deposit",
+      "interestEarned": "Interest earned",
+      "monthlyContribution": "Monthly contribution",
+      "totalContributions": "Total contributions",
+      "years": "Years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - MMA rates are variable and change with the market.",
+      "Ignores taxes on interest, fees, and withdrawal limits.",
+      "Not financial advice; rates and terms differ by bank and country."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free money market account calculator: project your MMA balance with APY, monthly contributions, and compounding. Private, browser-based.",
+    "metaTitle": "Money Market Account Calculator - MMA Interest Growth | JaurTools",
+    "name": "Money Market Account Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Money market accounts compound monthly at the stated APY. $10,000 plus $200 a month at 4% APY grows to about $25,472 in 5 years - $3,472 of it interest. Enter your numbers to project yours.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your MMA projection",
+    "tagline": "Project MMA growth with monthly compounding - deposits, contributions, and interest earned.",
+    "workedExample": "$10,000 deposit, $200/month, 4% APY, 5 years:\n1. Monthly rate = 0.3333%, n = 60 months. Growth factor = 1.003333^60 = 1.22102.\n2. Deposit grows to 10,000 x 1.22102 = $12,210.23\n3. Contributions grow to 200 x (0.22102 / 0.0033333) = $13,261.36\n4. Future value = $25,471.59; you contributed $22,000, so interest earned = $3,471.59.",
+    "workedExampleHeading": "Worked example"
+  }
+}

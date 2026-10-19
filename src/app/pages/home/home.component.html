@@ -1,0 +1,202 @@
+<div class="home">
+  <section class="hero">
+    <div class="hero-deco" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+      @for (icon of heroIcons; track icon; let i = $index) {
+        <app-icon class="float-icon fi-{{ i }}" [name]="icon" [size]="30"></app-icon>
+      }
+    </div>
+
+    <div class="hero-inner">
+      <p class="eyebrow">{{ translate.t('home.heroEyebrow') }}</p>
+      <h1>{{ translate.t('home.heroTitle') }}</h1>
+      <p class="hero-sub">{{ translate.t('home.heroSub') }}</p>
+
+      <form class="hero-search" role="search" (submit)="onSearchSubmit($event)">
+        <label class="sr-only" for="home-search">{{ translate.t('home.searchLabel') }}</label>
+        <app-icon class="search-icon" name="search" aria-hidden="true"></app-icon>
+        <input
+          #searchBox
+          id="home-search"
+          type="search"
+          autocomplete="off"
+          [placeholder]="translate.t('home.searchPlaceholder')"
+          [value]="query()"
+          (input)="query.set($any($event.target).value)"
+        />
+        @if (voiceSupported()) {
+          <button
+            type="button"
+            class="icon-btn mic-btn"
+            [class.listening]="listening()"
+            (click)="startVoice()"
+            [attr.aria-label]="translate.t('home.voiceSearch')"
+            [attr.title]="translate.t('home.voiceSearch')"
+          >
+            <app-icon name="mic"></app-icon>
+          </button>
+        }
+        <button type="submit" class="btn btn-primary">{{ translate.t('home.searchButton') }}</button>
+      </form>
+
+      <p class="search-hint">
+        <kbd>/</kbd>
+        <span>{{ translate.t('home.searchHint') }}</span>
+      </p>
+
+      <ul class="trust-line" [attr.aria-label]="translate.t('home.trustHeading')">
+        @for (b of trustBadges; track b.icon) {
+          <li>
+            <app-icon [name]="b.icon" aria-hidden="true"></app-icon>
+            <span>{{ translate.t(b.label) }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+
+  @if (recentTools().length > 0) {
+    <section class="section recent">
+      <div class="section-head-row">
+        <div>
+          <h2>{{ translate.t('home.recentHeading') }}</h2>
+          <p class="muted section-sub">{{ translate.t('home.recentSub') }}</p>
+        </div>
+        <button type="button" class="btn-ghost" (click)="clearRecent()">
+          <app-icon name="x" aria-hidden="true"></app-icon>
+          <span>{{ translate.t('home.recentClear') }}</span>
+        </button>
+      </div>
+      <div class="tool-grid">
+        @for (tool of recentTools(); track tool.slug) {
+          <a class="tool-card" [routerLink]="['/', translate.lang(), tool.slug]">
+            <span class="tool-icon">
+              <app-icon [name]="tool.icon" aria-hidden="true"></app-icon>
+            </span>
+            <span class="tool-meta">
+              <span class="tool-name">{{ toolName(tool.slug) }}</span>
+              <span class="tool-desc">{{ toolDesc(tool.slug) }}</span>
+            </span>
+          </a>
+        }
+      </div>
+    </section>
+  }
+
+  <section class="section az">
+    <div class="section-head">
+      <h2>{{ translate.t('home.azHeading') }}</h2>
+      <p class="muted section-sub">{{ translate.t('home.azSub') }}</p>
+    </div>
+    <div class="az-pills">
+      @for (letter of letters; track letter) {
+        <a
+          class="az-pill"
+          [routerLink]="['/', translate.lang(), 'search']"
+          [queryParams]="{ letter }"
+          [attr.aria-label]="letter"
+        >
+          {{ letter }}
+        </a>
+      }
+      <a class="az-pill az-all" [routerLink]="['/', translate.lang(), 'search']">
+        {{ translate.t('home.azAll') }}
+      </a>
+    </div>
+  </section>
+
+  <section class="section trending">
+    <div class="section-head">
+      <h2>{{ translate.t('home.trendingHeading') }}</h2>
+      <p class="muted section-sub">{{ translate.t('home.trendingSub') }}</p>
+    </div>
+    <div class="tool-grid">
+      @for (tool of trendingTools; track tool.slug) {
+        <a class="tool-card" [routerLink]="['/', translate.lang(), tool.slug]">
+          <span class="tool-icon">
+            <app-icon [name]="tool.icon" aria-hidden="true"></app-icon>
+          </span>
+          <span class="tool-meta">
+            <span class="tool-name">{{ toolName(tool.slug) }}</span>
+            <span class="tool-desc">{{ toolDesc(tool.slug) }}</span>
+          </span>
+        </a>
+      }
+    </div>
+  </section>
+
+  <section class="section categories">
+    <div class="section-head">
+      <h2>{{ translate.t('home.categoriesHeading') }}</h2>
+      <p class="muted section-sub">{{ translate.t('home.categoriesSub') }}</p>
+    </div>
+    <div class="category-grid">
+      @for (c of categories; track c.id) {
+        <a
+          class="category-card"
+          [routerLink]="['/', translate.lang(), 'search']"
+          [queryParams]="{ cat: c.id }"
+        >
+          <span class="cat-icon">
+            <app-icon [name]="c.icon" aria-hidden="true"></app-icon>
+          </span>
+          <span class="cat-meta">
+            <span class="cat-name">{{ translate.t(c.label) }}</span>
+            <span class="cat-count">{{ toolCount(c.id) }} {{ translate.t('home.toolsCount') }}</span>
+          </span>
+          <app-icon class="cat-arrow" name="arrow-right" aria-hidden="true"></app-icon>
+        </a>
+      }
+    </div>
+  </section>
+
+
+
+
+
+  <section class="section how">
+    <div class="section-head">
+      <h2>{{ translate.t('home.howHeading') }}</h2>
+      <p class="muted section-sub">{{ translate.t('home.howSub') }}</p>
+    </div>
+    <ol class="steps-grid">
+      @for (step of steps; track step.title; let i = $index) {
+        <li class="step-card">
+          <span class="step-num" aria-hidden="true">{{ i + 1 }}</span>
+          <h3>{{ translate.t(step.title) }}</h3>
+          <p class="muted">{{ translate.t(step.text) }}</p>
+        </li>
+      }
+    </ol>
+  </section>
+
+  <section class="section why">
+    <div class="section-head">
+      <h2>{{ translate.t('home.whyHeading') }}</h2>
+      <p class="muted section-sub">{{ translate.t('home.whySub') }}</p>
+    </div>
+    <div class="why-grid">
+      @for (item of whyItems; track item.title) {
+        <article class="why-card">
+          <span class="why-icon">
+            <app-icon [name]="item.icon" aria-hidden="true"></app-icon>
+          </span>
+          <h3>{{ translate.t(item.title) }}</h3>
+          <p class="muted">{{ translate.t(item.text) }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-inner">
+      <h2>{{ translate.t('home.ctaTitle') }}</h2>
+      <p>{{ translate.t('home.ctaText') }}</p>
+      <a class="btn btn-light" [routerLink]="['/', translate.lang(), 'search']">
+        {{ translate.t('home.ctaButton') }}
+      </a>
+    </div>
+  </section>
+</div>

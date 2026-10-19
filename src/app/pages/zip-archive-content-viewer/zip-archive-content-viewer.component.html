@@ -1,0 +1,157 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="zv-file" class="file-label">
+          <app-icon name="upload" /> {{ fileName() || t('labels.chooseFile') }}
+        </label>
+        <input id="zv-file" type="file" accept=".zip,application/zip" (change)="onFileSelected($event)" />
+        <p class="hint">{{ t('labels.dropHint') }}</p>
+      </div>
+
+      @if (loading()) {
+        <p class="note" role="status">{{ t('labels.reading') }}</p>
+      }
+
+      @if (errorKey()) {
+        <p class="error-box" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.' + errorKey()) }}</p>
+      }
+
+      @if (entries().length > 0) {
+        <div class="results calc-results">
+          <div class="result-row">
+            <span><app-icon name="database" /> {{ t('labels.totalFiles') }}</span>
+            <strong>{{ whole().format(fileCount()) }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.totalDirs') }}</span>
+            <strong>{{ whole().format(dirCount()) }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.totalSize') }}</span>
+            <strong>{{ formatBytes(totalUncompressed()) }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.totalPacked') }}</span>
+            <strong>{{ formatBytes(totalCompressed()) }} ({{ oneDecimal().format(overallRatio()) }}% {{ t('labels.saved') }})</strong>
+          </div>
+        </div>
+
+        <h3 class="list-heading">{{ t('labels.entriesHeading') }}</h3>
+        <div class="entry-list" role="table" [attr.aria-label]="t('labels.entriesHeading')">
+          @for (e of entries(); track $index) {
+            <div class="entry" role="row">
+              <div class="entry-name" role="cell" dir="ltr" [title]="e.name">
+                <app-icon [name]="e.isDir ? 'database' : 'file-text'" /> {{ e.name }}
+                @if (e.encrypted) {
+                  <span class="enc-badge"><app-icon name="lock" /> {{ t('labels.encryptedYes') }}</span>
+                }
+              </div>
+              <div class="entry-meta" role="cell">
+                <span>{{ e.isDir ? t('labels.dirLabel') : formatBytes(e.uncompressed) }}</span>
+                <span>{{ methodOf(e) }}</span>
+                @if (!e.isDir) {
+                  <span>{{ ratioOf(e) }} {{ t('labels.saved') }}</span>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      } @else if (!loading() && !errorKey() && fileName()) {
+        <p class="note">{{ t('labels.emptyZip') }}</p>
+      }
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

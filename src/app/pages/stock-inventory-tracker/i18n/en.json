@@ -1,0 +1,104 @@
+{
+  "stock-inventory-tracker": {
+    "benefits": [
+      "Know your exact stock value and potential profit at a glance.",
+      "Low-stock alerts stop you from running out of fast-moving items.",
+      "Saved automatically in your browser — close the tab and your data is still there.",
+      "CSV export gives you a spreadsheet for your accountant or supplier."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Your items are saved to your browser's local storage on your own device, so they survive closing the tab. They are not synced to any server — clearing browser data will remove them.",
+        "q": "Is my stock data saved?"
+      },
+      {
+        "a": "The reorder level is the quantity at which you want a warning. When an item's quantity falls to or below this level, it appears in the low-stock alerts list.",
+        "q": "What is the reorder level?"
+      },
+      {
+        "a": "Stock value = quantity x unit cost (what your stock cost you). Potential revenue = quantity x unit price (what you will earn selling it all). Potential profit = revenue minus value.",
+        "q": "How are stock value, revenue, and profit calculated?"
+      },
+      {
+        "a": "Yes — the CSV download opens in Excel and Google Sheets with columns for name, quantity, unit cost, unit price, reorder level, and stock value.",
+        "q": "Can I export my inventory to Excel?"
+      },
+      {
+        "a": "Not between devices — storage is per browser on one device. Use the CSV export to move your data to another device.",
+        "q": "Can I access my inventory on another device?"
+      },
+      {
+        "a": "Yes. Export a CSV first as a backup, then delete rows one by one with the remove button. Remember: clearing browser data also erases the saved inventory.",
+        "q": "How do I back up or reset my inventory?"
+      }
+    ],
+    "formula": "Stock value = quantity x unit cost\nPotential revenue = quantity x unit price\nPotential profit = potential revenue - stock value\nLow stock = quantity <= reorder level\nTotals = sum across all items",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the item name, quantity, unit cost, unit selling price, and a reorder warning level.",
+      "Press 'Add item'. The item appears in your table and the totals update instantly.",
+      "Watch the low-stock alerts list — any item at or below its reorder level shows up there.",
+      "Delete sold-out or discontinued items with the remove button.",
+      "Download the CSV anytime for your records or your accountant."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Tracks name, quantity, unit cost, unit price, and a reorder warning level per item.",
+      "Stock value is what your inventory cost you; potential profit is what you earn selling it all.",
+      "Items at or below their reorder level are flagged in a dedicated low-stock alerts list.",
+      "Everything is saved automatically in your browser's local storage — no account needed.",
+      "One-click CSV export opens directly in Excel or Google Sheets."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "stock inventory tracker, inventory management free, stock register online, small business inventory, stock value calculator",
+    "labels": {
+      "addButton": "Add item",
+      "colActions": "Actions",
+      "colName": "Item",
+      "colQty": "Qty",
+      "colValue": "Stock value",
+      "costLabel": "Unit cost",
+      "currency": "₹",
+      "deleteLabel": "Remove",
+      "emptyNote": "No items yet. Add your first item above to start tracking.",
+      "errorName": "Please enter an item name first.",
+      "exportButton": "Download CSV",
+      "itemNameLabel": "Item name",
+      "itemNamePlaceholder": "e.g. Rice 5kg bag",
+      "itemsLabel": "Items tracked",
+      "lowStockHeading": "Low stock alerts",
+      "priceLabel": "Unit selling price",
+      "profitLabel": "Potential profit",
+      "qtyLabel": "Quantity",
+      "reorderLabel": "Reorder level",
+      "revenueLabel": "Potential revenue",
+      "stockValueLabel": "Total stock value",
+      "storageNote": "Your inventory is saved only in this browser on your device — nothing is uploaded.",
+      "tableHeading": "Your inventory"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Data lives in one browser only — no sync between devices.",
+      "Clearing browser data permanently erases the saved inventory.",
+      "Designed for simple stock lists, not barcode scanning or multi-warehouse systems.",
+      "Currency is a display symbol only; no currency conversion is performed."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free stock inventory tracker: add items, track quantities, costs and prices, get stock value, profit and low-stock alerts. Saved in your browser, no signup.",
+    "metaTitle": "Free Stock Inventory Tracker for Small Business",
+    "name": "Stock Inventory Tracker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Stock Inventory Tracker keeps a simple, honest record of your shop's stock. Add each item with its quantity, unit cost, selling price, and a reorder warning level, and the tool instantly shows total stock value, potential revenue, potential profit, and a low-stock alerts list. Everything is saved automatically in your browser, a CSV export opens in Excel, and no signup is ever needed.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Stock Inventory Tracker results",
+    "tagline": "Track shop stock, costs, prices, and low-stock alerts — saved in your browser.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A kirana shop owner adds two items. 'Rice 5kg': quantity 40, unit cost 200, unit price 260, reorder level 10. 'Sugar 1kg': quantity 100, unit cost 45, unit price 55, reorder level 20. Stock value = (40 x 200) + (100 x 45) = 8000 + 4500 = 12,500. Potential revenue = (40 x 260) + (100 x 55) = 10,400 + 5,500 = 15,900. Potential profit = 15,900 - 12,500 = 3,400. Neither item is at its reorder level yet, so the low-stock list stays empty — until rice drops to 10 bags, when the alert appears."
+  }
+}

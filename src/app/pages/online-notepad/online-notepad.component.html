@@ -1,0 +1,205 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <button type="button" class="btn-primary new-note-btn" (click)="newNote()">
+        <app-icon name="type" /> {{ t('labels.newNoteButton') }}
+      </button>
+
+      <div class="notes-layout">
+        <div class="notes-list" role="listbox" [attr.aria-label]="t('labels.notesHeading')">
+          @if (sortedNotes().length === 0) {
+            <p class="note">{{ t('labels.emptyNote') }}</p>
+          }
+          @for (n of sortedNotes(); track n.id) {
+            <div class="note-item" role="option" [attr.aria-selected]="activeId() === n.id"
+              [class.active]="activeId() === n.id">
+              <button type="button" class="note-select" (click)="selectNote(n.id)">
+                <span class="note-title">{{ noteTitle(n) }}</span>
+                <span class="note-date">{{ dateFmt().format(n.updated) }}</span>
+              </button>
+              <button type="button" class="icon-btn" (click)="deleteNote(n.id)"
+                [attr.aria-label]="t('labels.deleteLabel') + ': ' + noteTitle(n)">
+                <app-icon name="x" />
+              </button>
+            </div>
+          }
+        </div>
+
+        <div class="editor">
+          @if (activeId() !== null) {
+            <div class="field">
+              <label for="nt-title">{{ t('labels.titleLabel') }}</label>
+              <input id="nt-title" type="text" maxlength="200"
+                [ngModel]="editingTitle()" (ngModelChange)="setTitle($event)"
+                [attr.placeholder]="t('labels.titlePlaceholder')" />
+            </div>
+            <div class="field">
+              <label for="nt-body">{{ t('labels.bodyLabel') }}</label>
+              <textarea id="nt-body" rows="12" maxlength="200000"
+                [ngModel]="editingBody()" (ngModelChange)="setBody($event)"
+                [attr.placeholder]="t('labels.bodyPlaceholder')"></textarea>
+            </div>
+            <div class="calc-chips" aria-live="polite">
+              <span class="calc-chip"><app-icon name="type" /> {{ t('labels.wordsLabel') }} <strong>{{ wordCount() }}</strong></span>
+              <span class="calc-chip"><app-icon name="hash" /> {{ t('labels.charsLabel') }} <strong>{{ charCount() }}</strong></span>
+              <span class="calc-chip"><app-icon name="clock" /> {{ t('labels.readingLabel') }} <strong>{{ readingTime() }} {{ t('labels.minUnit') }}</strong></span>
+              @if (goal()) {
+                <span class="calc-chip"><app-icon name="target" /> {{ t('labels.goalLabel') }} <strong>{{ goalProgress().toFixed(0) }}%</strong></span>
+              }
+            </div>
+            @if (goal()) {
+              <div class="calc-score" [attr.aria-label]="t('labels.goalLabel')">
+                <div class="calc-score-track" role="progressbar" [attr.aria-valuenow]="goalProgress()" aria-valuemin="0" aria-valuemax="100">
+                  <div class="calc-score-fill" [style.inline-size.%]="goalProgress()"></div>
+                </div>
+              </div>
+            }
+            <div class="calc-goals" role="group" [attr.aria-label]="t('labels.goalsLabel')">
+              @for (p of goalPresets(); track p.key) {
+                <button type="button" class="calc-goal" [class.on]="goal() === p.chars" (click)="setGoal(goal() === p.chars ? null : p.chars)">
+                  <app-icon name="target" /> {{ t('labels.goal_' + p.key) }} · {{ p.chars }}
+                </button>
+              }
+            </div>
+            <div class="btn-row">
+              <button type="button" class="btn-ghost" (click)="exportMarkdown()">
+                <app-icon name="download" /> {{ t('labels.exportButton') }}
+              </button>
+              <button type="button" class="btn-ghost" (click)="printNote()">
+                <app-icon name="file-text" /> {{ t('labels.printButton') }}
+              </button>
+            </div>
+          } @else {
+            <p class="note">{{ t('labels.selectNoteHint') }}</p>
+          }
+        </div>
+      </div>
+
+      @if (activeId() !== null) {
+        <section class="note-print" [attr.aria-label]="t('labels.printButton')">
+          <h3>{{ editingTitle() || t('labels.untitledLabel') }}</h3>
+          <p class="print-date">{{ dateFmt().format(printedAt()) }}</p>
+          <p class="print-body">{{ editingBody() }}</p>
+        </section>
+      }
+
+      <p class="note">{{ t('labels.storageNote') }}</p>
+
+      <table class="calc-compare">
+        <caption>{{ t('labels.compareTitle') }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{{ t('labels.compareTool') }}</th>
+            <th scope="col">{{ t('labels.compareWhen') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ t('name') }}</th>
+            <td>{{ t('labels.compareNotepad') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'rich-text-html-editor']">{{ relatedName('rich-text-html-editor') }}</a></th>
+            <td>{{ t('labels.compareRichText') }}</td>
+          </tr>
+          <tr>
+            <th scope="row"><a [routerLink]="['/', translate.lang(), 'online-html-editor']">{{ relatedName('online-html-editor') }}</a></th>
+            <td>{{ t('labels.compareHtml') }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

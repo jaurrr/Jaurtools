@@ -1,0 +1,84 @@
+{
+  "byte-size-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Byte Size Calculator",
+    "tagline": "Enter bytes and see every unit side by side - decimal (KB/MB/GB) vs binary (KiB/MiB/GiB).",
+    "metaTitle": "Byte Size Calculator - Bytes to KB MB GB Converter | JaurTools",
+    "metaDescription": "Free byte size calculator. Enter bytes and instantly see KB, MB, GB, TB plus binary KiB, MiB, GiB, TiB. SI vs binary explained.",
+    "keywords": "byte size calculator, bytes to mb, kb to bytes, mib vs mb, kibibyte vs kilobyte",
+    "resultsHeading": "Byte size breakdown",
+    "quickAnswer": "Type a byte count and this tool shows it in every common unit at once. Decimal units use powers of 1,000 (1 KB = 1,000 bytes) while binary units use powers of 1,024 (1 KiB = 1,024 bytes). Example: 1,048,576 bytes = 1.048576 MB but exactly 1 MiB.",
+    "keyFacts": [
+      "SI/decimal units (KB, MB, GB) use powers of 1,000. They are the standard for storage makers and networks.",
+      "Binary units (KiB, MiB, GiB) use powers of 1,024 and are the standard for RAM and most operating systems.",
+      "This 1,000 vs 1,024 split is why a \"1 TB\" drive shows as about 931 GiB in your OS.",
+      "1 byte = 8 bits. Network speeds in Mbps (megabits) are 8× the MB/s (megabytes) download figure.",
+      "The KiB/MiB/GiB names were standardized by the IEC in 1998 to end the confusion.",
+      "Petabyte scale: 1 PB = 1,000 TB = 1,000,000 GB in decimal units."
+    ],
+    "howTo": [
+      "Type the number of bytes in the input box.",
+      "The decimal table (KB, MB, GB, TB, PB) updates instantly.",
+      "The binary table (KiB, MiB, GiB, TiB, PiB) updates at the same time.",
+      "Compare the two columns to see exactly where the 1,000 vs 1,024 difference bites."
+    ],
+    "formula": "Decimal: value ÷ 1,000ⁿ (n = 1 for KB, 2 for MB, 3 for GB...).\nBinary: value ÷ 1,024ⁿ (n = 1 for KiB, 2 for MiB, 3 for GiB...).\nExample: 1,048,576 ÷ 1,000² = 1.048576 MB; 1,048,576 ÷ 1,024² = 1 MiB.",
+    "workedExample": "Convert 1,048,576 bytes:\n1. Decimal MB: 1,048,576 ÷ 1,000,000 = 1.048576 MB.\n2. Binary MiB: 1,048,576 ÷ 1,048,576 = 1 MiB exactly.\n3. Decimal GB: 1,048,576 ÷ 1,000,000,000 = 0.001048576 GB.\n4. Binary GiB: 1,048,576 ÷ 1,073,741,824 = 0.0009765625 GiB.",
+    "benefits": [
+      "Both unit systems side by side - the confusion explained, not just converted.",
+      "Settles \"missing storage\" arguments: see why your 1 TB drive shows 931 GiB.",
+      "Handy for developers sizing buffers, uploads, and database fields.",
+      "No sign-up, instant results, works offline."
+    ],
+    "limitations": [
+      "Input is bytes only - use the Data Storage Converter to convert between other unit pairs.",
+      "Negative values are treated as zero; sizes cannot be negative.",
+      "Extremely large values beyond petabytes are not shown."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between MB and MiB?",
+        "a": "MB (megabyte) is decimal: 1,000,000 bytes. MiB (mebibyte) is binary: 1,048,576 bytes (1,024²). Storage makers advertise in MB/GB; operating systems usually display MiB/GiB, which is why capacities look smaller than advertised."
+      },
+      {
+        "q": "Why does my 1 TB hard drive show as 931 GB?",
+        "a": "The maker counts 1 TB as 1,000,000,000,000 bytes. Your OS divides by 1,024³ (1,073,741,824), giving 931.3 GiB, which it labels \"GB\". Nothing is missing - it is just two different units sharing one name."
+      },
+      {
+        "q": "How many bytes are in a kilobyte?",
+        "a": "It depends: 1,000 bytes in the decimal/SI kilobyte (KB), 1,024 bytes in the binary kibibyte (KiB). In everyday speech \"kilobyte\" usually means 1,024 bytes, but storage and networking standards use 1,000."
+      },
+      {
+        "q": "Is a bit the same as a byte?",
+        "a": "No. A bit is one binary digit (0 or 1); a byte is 8 bits. Internet speeds are sold in megabits per second (Mbps), so divide by 8 to get the megabytes-per-second download figure you actually feel."
+      },
+      {
+        "q": "What comes after terabyte?",
+        "a": "Petabyte (PB): 1,000 TB decimal or 1,024 TiB binary. Then exabyte (EB), zettabyte (ZB), and yottabyte (YB) - each 1,000× the last in decimal."
+      },
+      {
+        "q": "Which unit should I use in my app?",
+        "a": "Follow your platform: file sizes and disk space in decimal (KB/MB/GB) match what storage makers print; memory/RAM figures in binary (KiB/MiB/GiB) match what operating systems report. Label them clearly either way."
+      }
+    ],
+    "labels": {
+      "bytes": "Bytes",
+      "siTitle": "Decimal (SI) - powers of 1,000",
+      "binaryTitle": "Binary (IEC) - powers of 1,024",
+      "note": "Storage makers use decimal; operating systems usually display binary. That is why capacities look \"smaller\" than advertised."
+    }
+  }
+}

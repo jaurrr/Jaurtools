@@ -1,0 +1,36 @@
+{
+  "disclaimer": {
+    "availability": {
+      "body": "We aim to keep the site available at all times but do not guarantee uninterrupted access.",
+      "title": "Availability"
+    },
+    "contact": {
+      "body": "Questions? Email jaurazmi42@gmail.com.",
+      "title": "Contact"
+    },
+    "estimates": {
+      "body": "Calculators show estimates based on the numbers you enter and standard formulas. Real-world outcomes may differ.",
+      "title": "Estimates"
+    },
+    "external": {
+      "body": "We are not responsible for the content of external sites or advertisements shown on JaurTools.",
+      "title": "External links and ads"
+    },
+    "general": {
+      "body": "Content on JaurTools is provided for general information only. While we work hard to keep every tool accurate, we make no guarantees of completeness or correctness.",
+      "title": "General information"
+    },
+    "heading": "Disclaimer",
+    "inputStays": {
+      "body": "Everything you enter is processed in your browser and never sent to us. We cannot see, recover or verify your inputs.",
+      "title": "Your input stays yours"
+    },
+    "metaDescription": "JaurTools disclaimer: general information only, no professional advice, estimates and external links.",
+    "metaTitle": "Disclaimer | JaurTools",
+    "noAdvice": {
+      "body": "Nothing on this site is financial, medical, legal or tax advice. Always consult a qualified professional before acting on tool results.",
+      "title": "No professional advice"
+    },
+    "updated": "Last updated: October 2026"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "docker-compose-generator": {
+    "assumptionNote": "تُقتبَس القيم التي تحتوي على نقطتين أو مسافات أو أحرف خاصة تلقائيًا ليبقى YAML صالحًا.",
+    "benefits": [
+      "لا حاجة لحفظ صياغة YAML — املأ النماذج واحصل على ملف docker-compose.yml صالح.",
+      "أضف خدمات غير محدودة؛ كل واحدة تصبح كتلة خدمة مستقلة.",
+      "تُحلَّل المنافذ ومتغيرات البيئة والأحجام من قوائم بسيطة بفواصل أو أسطر.",
+      "تستخدم سياسات إعادة التشغيل قيم Docker الرسمية مع تسميات بلغة واضحة.",
+      "نزّل الملف مباشرة أو انسخه — جاهز لأمر docker compose up."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "املأ اسم الخدمة والصورة على الأقل، ثم انسخ YAML أو نزّل docker-compose.yml. ضع الملف في مجلد مشروعك وشغّل docker compose up -d.",
+        "q": "كيف أستخدم الملف المولّد؟"
+      },
+      {
+        "a": "اكتب المنافذ كأزواج host:container مفصولة بفواصل، مثل 8080:80, 443:443. كل زوج يصبح إدخالًا مقتبسًا تحت ports.",
+        "q": "كيف أكتب حقل المنافذ؟"
+      },
+      {
+        "a": "ضع زوج KEY=value واحدًا في كل سطر، مثل NODE_ENV=production في السطر الأول وPORT=3000 في الثاني. كل سطر يصبح إدخال قائمة تحت environment.",
+        "q": "كيف أكتب متغيرات البيئة؟"
+      },
+      {
+        "a": "واحد في كل سطر بصيغة host-path:container-path مثل ./data:/data أو pgdata:/var/lib/postgresql/data. الأحجام المسماة مثل pgdata تحتاج كتلة volumes علوية تضيفها يدويًا.",
+        "q": "كيف أكتب الأحجام؟"
+      },
+      {
+        "a": "unless-stopped يعيد تشغيل الحاوية دائمًا إلا عندما توقفها بنفسك. وalways يعيد التشغيل حتى بعد الإيقاف اليدوي. وon-failure يعيد التشغيل بعد التعطل فقط. وno لا يعيد التشغيل أبدًا.",
+        "q": "أي سياسة إعادة تشغيل أختار؟"
+      },
+      {
+        "a": "يغطي هذا المولّد المجموعة الشائعة: image وports وenvironment وvolumes وrestart. لأقسام networks وdepends_on وhealthchecks وbuild أضفها يدويًا إلى YAML بعد التوليد.",
+        "q": "هل يمكنه توليد networks وdepends_on؟"
+      }
+    ],
+    "formula": "ports:        \"HOST:CONTAINER\" لكل إدخال مفصول بفاصلة\nenvironment: \"KEY=VALUE\" لكل سطر\nvolumes:      \"HOST:CONTAINER\" لكل سطر\nrestart:      no | always | unless-stopped | on-failure",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "انقر إضافة خدمة لكل حاوية يحتاجها تطبيقك.",
+      "أدخل اسم الخدمة وصورة Docker مثل nginx:1.25.",
+      "أضف المنافذ كأزواج host:container مفصولة بفواصل.",
+      "أضف متغيرات البيئة والأحجام، واحدًا في كل سطر.",
+      "اختر سياسة إعادة التشغيل ثم انسخ YAML أو نزّله."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "يُعلن ملف docker-compose.yml عن تطبيقات متعددة الحاويات في ملف YAML واحد.",
+      "كل خدمة تحتاج صورة؛ وتربط المنافذ منافذ المضيف بمنافذ الحاوية.",
+      "تستخدم إدخالات البيئة صيغة قائمة KEY=value تحت كل خدمة.",
+      "تتحكم سياسات إعادة التشغيل فيما يفعله Docker عند توقف الحاوية أو إعادة تشغيل المضيف.",
+      "تُقتبَس القيم ذات النقطتين أو المسافات تلقائيًا ليُحلَّل YAML بشكل صحيح."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "مولد docker compose, باني docker-compose.yml, مولد ملف compose, مولد yaml لدوكر",
+    "labels": {
+      "addServiceLabel": "إضافة خدمة",
+      "copiedLabel": "تم النسخ",
+      "copyLabel": "نسخ",
+      "downloadLabel": "تنزيل .yml",
+      "envHint": "NODE_ENV=production (واحد في كل سطر)",
+      "envLabel": "متغيرات البيئة",
+      "imageLabel": "الصورة",
+      "nameLabel": "اسم الخدمة",
+      "portsHint": "8080:80, 443:443",
+      "portsLabel": "المنافذ",
+      "removeLabel": "إزالة",
+      "restartAlways": "دائمًا",
+      "restartLabel": "سياسة إعادة التشغيل",
+      "restartNo": "لا",
+      "restartOnFailure": "عند الفشل",
+      "restartUnlessStopped": "ما لم يُوقَف",
+      "serviceCountLabel": "الخدمات",
+      "serviceLabel": "الخدمة",
+      "volumesHint": "./data:/data (واحد في كل سطر)",
+      "volumesLabel": "الأحجام"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "تُولَّد المجموعة الشائعة فقط: image وports وenvironment وvolumes وrestart.",
+      "تحتاج الأحجام المسماة كتلة volumes علوية تضيفها يدويًا.",
+      "لا تُولَّد أقسام networks وdepends_on وhealthchecks وbuild.",
+      "تُطبَّق slugify على أسماء الخدمات؛ وتُستبدَل الأحرف الغريبة بشرطات."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "ابنِ ملف docker-compose.yml صالحًا بصريًا. أضف خدمات بصور ومنافذ ومتغيرات بيئة وأحجام، ثم انسخ YAML أو نزّله مجانًا.",
+    "metaTitle": "مولد Docker Compose – باني YAML مجاني",
+    "name": "مولد Docker Compose",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "يصف ملف docker-compose.yml جميع الحاويات التي يحتاجها التطبيق — خادم الويب وقاعدة البيانات والذاكرة المؤقتة — فيبدأ أمر docker compose up واحد كل شيء. تبني هذه الأداة ذلك الـ YAML من نماذج بسيطة: أضف الخدمات، واكتب الصور والمنافذ ومتغيرات البيئة والأحجام، ونزّل ملف compose صالحًا.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "ملف compose المولّد",
+    "tagline": "ابنِ ملف docker-compose.yml صالحًا من نماذج بسيطة — دون حفظ YAML.",
+    "workedExample": "خدمة واحدة باسم web بالصورة nginx:1.25 والمنفذ 8080:80 والبيئة NODE_ENV=production وإعادة التشغيل unless-stopped.\n\nملف docker-compose.yml المولّد:\nservices:\n  web:\n    image: \"nginx:1.25\"\n    ports:\n      - \"8080:80\"\n    environment:\n      - \"NODE_ENV=production\"\n    restart: unless-stopped\n\nاحفظه باسم docker-compose.yml وشغّل docker compose up -d ليبدأ nginx على http://localhost:8080.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

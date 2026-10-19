@@ -1,0 +1,99 @@
+{
+  "zero-width-character-remover": {
+    "benefits": [
+      "Find invisible characters that break search, sorting and string matching.",
+      "Clean text pasted from PDFs, web pages and chat apps before publishing.",
+      "Fix mysterious layout bugs caused by stray zero-width spaces.",
+      "Prepare clean input for code, CSV imports and form validation.",
+      "Instant and private — analysis happens entirely in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "They are invisible Unicode characters (U+200B, U+200C, U+200D, U+FEFF) that take up no visible space. They sneak in when copying text from PDFs, websites and chat apps, and they can break search, sorting and password matching.",
+        "q": "What are zero-width characters?"
+      },
+      {
+        "a": "Four are handled: zero-width space (U+200B), zero-width non-joiner (U+200C), zero-width joiner (U+200D) and the byte order mark (U+FEFF). Each can be toggled on or off.",
+        "q": "Which invisible characters does the tool remove?"
+      },
+      {
+        "a": "Yes. Zero-width joiner (U+200D) is a legitimate part of many emoji sequences (like family emojis) and some scripts. If your text uses those, turn off the ZWJ toggle to keep them.",
+        "q": "Could removing these characters break my emojis?"
+      },
+      {
+        "a": "The byte order mark (U+FEFF) at the start of a file or text can confuse CSV importers and some programming tools. Removing it is the standard fix.",
+        "q": "What is the byte order mark and why remove it?"
+      },
+      {
+        "a": "The tool counts every invisible character per type before removing them, so you can see exactly how dirty the input was.",
+        "q": "How do I know how many were found?"
+      },
+      {
+        "a": "No. Everything runs locally in JavaScript. Your text never leaves your device.",
+        "q": "Is my text uploaded anywhere?"
+      },
+      {
+        "a": "They are invisible by definition, so you cannot see them with your eyes. Paste the text into this tool and the counts will reveal them.",
+        "q": "How can I check my own text for them?"
+      }
+    ],
+    "formula": "For each enabled character class (ZWSP U+200B, ZWNJ U+200C, ZWJ U+200D, BOM U+FEFF):\n  found[class] = count of occurrences in input\n  output = input with every occurrence of each enabled class deleted\nremoved = input.length - output.length",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your text into the input box.",
+      "Toggle which invisible characters to target — all four are on by default.",
+      "The tool counts each invisible character type found in your text.",
+      "The cleaned text appears instantly in the result box.",
+      "Copy the cleaned text or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Four invisible characters are handled: U+200B (ZWSP), U+200C (ZWNJ), U+200D (ZWJ), U+FEFF (BOM).",
+      "Each character type can be toggled individually.",
+      "The tool reports how many of each type were found before cleaning.",
+      "Zero-width joiner (U+200D) also joins emoji sequences — disabling its toggle protects emojis.",
+      "Removal is instant and runs 100% in your browser."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zero width character remover, remove invisible characters, zwsp remover, unicode cleaner, invisible text remover",
+    "labels": {
+      "bomLabel": "Byte order mark (U+FEFF)",
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy cleaned text",
+      "download": "Download .txt",
+      "foundLabel": "Characters found in input",
+      "inputLabel": "Text to clean",
+      "inputPlaceholder": "Paste text that may contain invisible characters...",
+      "outputLabel": "Cleaned text",
+      "removedLabel": "Characters removed",
+      "zwjLabel": "Zero-width joiner (U+200D)",
+      "zwnjLabel": "Zero-width non-joiner (U+200C)",
+      "zwspLabel": "Zero-width space (U+200B)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Zero-width joiner (U+200D) is legitimate inside emoji sequences — keep its toggle off if your text contains such emojis.",
+      "The tool only targets the four listed characters; other invisible characters (like soft hyphens U+00AD) are left alone.",
+      "Removing the byte order mark changes file semantics for some legacy tools that expect it.",
+      "Counts are per character type, not per position — you cannot see where in the text they were."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Find and strip invisible zero-width characters (ZWSP, ZWNJ, ZWJ, BOM) from your text. Free, instant, 100% private in-browser cleaning.",
+    "metaTitle": "Zero-Width Character Remover Online | JaurTools",
+    "name": "Zero-Width Character Remover",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your text and the tool instantly finds and strips invisible zero-width characters — zero-width space, non-joiner, joiner and byte order mark — showing a count per type. Copy the cleaned text or download it as a .txt file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Zero-width remover results",
+    "tagline": "Strip invisible zero-width Unicode characters from text.",
+    "workedExample": "Demo input (4 hidden characters): \"he\" + ZWNJ + \"l\" + ZWNJ + \"lo, wor\" + ZWJ + \"ld\" + BOM\n\nStep 1: scan input -> ZWSP (U+200B): 0, ZWNJ (U+200C): 2, ZWJ (U+200D): 1, BOM (U+FEFF): 1\nStep 2: all four toggles are on, so delete every occurrence of each enabled class\nStep 3: input length 16 (12 visible + 4 hidden) - output length 12 = 4 characters removed\n\nOutput: \"hello, world\"\n\nIf the ZWJ toggle were off, the zero-width joiner would stay and only 3 characters would be removed.",
+    "workedExampleHeading": "Worked example"
+  }
+}

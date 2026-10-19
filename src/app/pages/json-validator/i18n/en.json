@@ -1,0 +1,110 @@
+{
+  "json-validator": {
+    "benefits": [
+      "Pinpoints syntax errors: the exact line, column, and parser message for every failure.",
+      "Finds duplicate keys: silently dangerous repeats are listed with path and line number.",
+      "Catches JSONC habits: trailing commas and comments are flagged, not just rejected.",
+      "Confirms document shape: byte size, key count, depth, and top-level type at a glance.",
+      "Runs fully in your browser: production payloads are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It checks whether text follows the JSON grammar exactly. Beyond parse success or failure, it also scans for duplicate keys, trailing commas, comments, and byte-order marks, and reports document statistics.",
+        "q": "What does the JSON Validator check?"
+      },
+      {
+        "a": "Yes - technically the last value wins and parsers accept it. But it is almost always a copy-paste bug, and it makes documents confusing. The validator flags every repeat with its path and line.",
+        "q": "Are duplicate keys actually a problem?"
+      },
+      {
+        "a": "No. Despite being common in config files (JSONC), comments are not part of the JSON specification and strict parsers reject them. The validator flags them explicitly.",
+        "q": "Are comments allowed in JSON?"
+      },
+      {
+        "a": "No. Trailing commas are a JavaScript convenience, not valid JSON. Every strict parser rejects them. Remove the comma before the closing bracket or brace.",
+        "q": "Is a trailing comma valid JSON?"
+      },
+      {
+        "a": "The tool reports the character position from the parser and converts it to line and column. The most common causes: missing quotes, trailing commas, single quotes, and unquoted keys.",
+        "q": "How do I find the exact error location?"
+      },
+      {
+        "a": "A BOM (byte-order mark) is an invisible character some editors add at the start of a file. It breaks strict JSON parsers, so the validator flags it when present.",
+        "q": "What is a byte-order mark (BOM)?"
+      }
+    ],
+    "formula": "strict parse:  JSON.parse(text)  -> ok, or error with position -> line/column\nduplicate keys: scan raw text, track each object's key set -> repeats listed\ntrailing comma:  , followed by } or ]  (outside strings)\ncomments:  // or /* */ outside strings  -> flagged\nBOM:  first char U+FEFF  -> flagged\nAll scans are string-aware: braces inside \"...\" are ignored.",
+    "formulaHeading": "How validation works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JSON into the input box - a valid sample is preloaded.",
+      "The verdict appears instantly: green for valid, red with the exact error location for invalid.",
+      "Read the five checks: strict parse, duplicate keys, trailing commas, comments, BOM.",
+      "Expand the duplicate-keys section for each repeat's path and line number.",
+      "Try the invalid sample to see all four problem types detected at once."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON Validator checks strict JSON syntax plus four common problem patterns.",
+      "Duplicate object keys are flagged with their JSONPath and line number - parsers silently keep the last value.",
+      "Trailing commas and comments (JSONC habits) are detected, not just rejected.",
+      "A byte-order mark (BOM) at the start of the file is flagged because it breaks strict parsers.",
+      "Errors report the parser's character position converted to line and column.",
+      "Document statistics show bytes, total keys, nesting depth, and top-level type."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json validator, validate json online, json syntax checker, json lint, check json valid, duplicate keys json",
+    "labels": {
+      "check_bom": "No byte-order mark (BOM)",
+      "check_comments": "No comments",
+      "check_duplicates": "No duplicate keys",
+      "check_parse": "Strict JSON parse",
+      "check_trailing": "No trailing commas",
+      "checksHeading": "Validation checks",
+      "depthLabel": "Max depth",
+      "dupCountLabel": "Duplicates found",
+      "dupHeading": "Duplicate keys",
+      "dupMessage": "Duplicate key \"{key}\" at {path} (line {line})",
+      "errorAtLabel": "Error at line",
+      "failLabel": "Fail",
+      "inputLabel": "JSON input",
+      "invalidLabel": "Invalid JSON:",
+      "keysLabel": "Total keys",
+      "loadInvalidLabel": "Load invalid sample",
+      "loadValidLabel": "Load valid sample",
+      "passLabel": "Pass",
+      "sizeLabel": "Bytes",
+      "topTypeLabel": "Top-level type",
+      "type_array": "array",
+      "type_boolean": "boolean",
+      "type_null": "null",
+      "type_number": "number",
+      "type_object": "object",
+      "type_string": "string",
+      "validLabel": "Valid JSON."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only strict JSON is accepted: the checks explain rejections but cannot fix non-standard input.",
+      "Duplicate detection is textual: keys that differ only by Unicode normalization may be missed.",
+      "Number precision follows JavaScript doubles; very long numbers may lose precision when parsed.",
+      "Extremely large documents may be slow since all scans run on the main thread."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JSON validator: check JSON syntax online with exact error locations, duplicate-key detection, trailing-comma and comment scans. Private, no sign-up.",
+    "metaTitle": "JSON Validator - Validate JSON Syntax Online | JaurTools",
+    "name": "JSON Validator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste JSON and get an instant verdict: valid gets a green badge with byte size, key count, depth, and type; invalid gets the exact line, column, and parser message. Five checks run every time - strict parse, duplicate keys (with path and line), trailing commas, comments, and BOM - so silent problems never slip through.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON Validator results",
+    "tagline": "Validate JSON syntax strictly - with duplicate-key detection and exact error locations.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Invalid sample:\n{\n  // user record\n  \"name\": \"Asha\",\n  \"name\": \"Asha Sharma\",\n  \"age\": 30,\n}\n\nResult: Invalid JSON. Checks report:\n- Strict parse: Fail - the parser rejects the // comment on line 2 (the exact message is shown live).\n- Duplicate keys: Fail - Duplicate key \"name\" at $ (line 4).\n- Trailing commas: Fail - comma before the closing brace on line 5.\n- Comments: Fail - // comment on line 2.\n- BOM: Pass.\n\nFix all four, and the document validates cleanly."
+  }
+}

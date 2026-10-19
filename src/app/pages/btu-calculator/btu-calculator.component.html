@@ -1,0 +1,177 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.unitSystem')">
+        <button type="button" [class.active]="unit() === 'ft'" (click)="setUnit('ft')">
+          {{ t('labels.imperialTab') }}
+        </button>
+        <button type="button" [class.active]="unit() === 'm'" (click)="setUnit('m')">
+          {{ t('labels.metricTab') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="btu-length"><app-icon name="ruler" /> {{ t('labels.length') }} ({{ unit() === 'ft' ? t('labels.ftUnit') : t('labels.mUnit') }})</label>
+        <div class="input-row">
+          <input id="btu-length" type="number" inputmode="decimal" min="1" step="0.5"
+            [ngModel]="length()" (ngModelChange)="setLength($event)" />
+          <input type="range" min="5" max="100" step="0.5" [ngModel]="length()"
+            (ngModelChange)="setLength($event)" [attr.aria-label]="t('labels.length')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="btu-width">{{ t('labels.width') }} ({{ unit() === 'ft' ? t('labels.ftUnit') : t('labels.mUnit') }})</label>
+        <div class="input-row">
+          <input id="btu-width" type="number" inputmode="decimal" min="1" step="0.5"
+            [ngModel]="width()" (ngModelChange)="setWidth($event)" />
+          <input type="range" min="5" max="100" step="0.5" [ngModel]="width()"
+            (ngModelChange)="setWidth($event)" [attr.aria-label]="t('labels.width')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="btu-ceiling">{{ t('labels.ceiling') }} ({{ unit() === 'ft' ? t('labels.ftUnit') : t('labels.mUnit') }})</label>
+        <div class="input-row">
+          <input id="btu-ceiling" type="number" inputmode="decimal" min="5" max="30" step="0.5"
+            [ngModel]="ceiling()" (ngModelChange)="setCeiling($event)" />
+          <input type="range" min="6" max="20" step="0.5" [ngModel]="ceiling()"
+            (ngModelChange)="setCeiling($event)" [attr.aria-label]="t('labels.ceiling')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="btu-insulation"><app-icon name="shield-check" /> {{ t('labels.insulation') }}</label>
+        <select id="btu-insulation" [ngModel]="insulation()" (ngModelChange)="setInsulation($event)">
+          @for (i of insulations; track i) {
+            <option [value]="i">{{ t('insulationLevels.' + i) }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="btu-climate"><app-icon name="sun" /> {{ t('labels.climate') }}</label>
+        <select id="btu-climate" [ngModel]="climate()" (ngModelChange)="setClimate($event)">
+          @for (c of climates; track c) {
+            <option [value]="c">{{ t('climateZones.' + c) }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="zap" /> {{ t('labels.btuResult') }}</span>
+          <strong>{{ noDecimal().format(btu()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.areaResult') }}</span>
+          <strong>{{ noDecimal().format(area()) }} {{ t('labels.sqftUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.tonsResult') }}</span>
+          <strong>{{ twoDecimal().format(tonsOfCooling()) }}</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <p class="note">{{ t('labels.ruleNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+{
+  "emergency-contact-card-maker": {
+    "benefits": [
+      "Critical medical facts reach first responders even if you cannot speak.",
+      "Two emergency contacts in one place, readable at a glance.",
+      "Prints cleanly to wallet size on any home printer.",
+      "Your health details stay in your browser. Nothing is uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "ICE stands for In Case of Emergency. Paramedics and hospital staff are trained to look for ICE contacts on phones and cards. A printed card works when your phone is locked, dead, or missing.",
+        "q": "What does ICE mean on an emergency card?"
+      },
+      {
+        "a": "Yes. Print at 100 percent scale, then cut along the card border. It fits a standard wallet slot. For durability, laminate it or slip it into a transparent card sleeve.",
+        "q": "Will it fit in my wallet?"
+      },
+      {
+        "a": "Review it every 6 months or whenever something changes: new phone number, new medication, new allergy, or a new doctor. An outdated card can mislead responders, which is worse than no card.",
+        "q": "How often should I update the card?"
+      },
+      {
+        "a": "Include serious allergies (especially drugs, food, insect stings), chronic conditions (asthma, diabetes, epilepsy, heart disease), and current medications with doses if space allows. Skip minor issues; the card must stay scannable in seconds.",
+        "q": "Which medical details matter most?"
+      },
+      {
+        "a": "Blood group helps responders prepare, but hospitals always re-test before transfusion. Never rely on the card alone for transfusion decisions. The card speeds things up; the lab test decides.",
+        "q": "Is the blood group on the card enough for a transfusion?"
+      },
+      {
+        "a": "It is a good backup, but a locked phone hides it. The printed card needs no battery, no signal, and no unlock. Carry both.",
+        "q": "My phone already has emergency info. Is the card still useful?"
+      }
+    ],
+    "formula": "Emergency card = identity (name) + medical facts (blood group, allergies, conditions, medications) + 2 contacts (name, relation, phone) + doctor + notes.\nKeep it to one card: responders read it in under 30 seconds.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Fill your name, blood group, allergies, conditions, and medications.",
+      "Add two emergency contacts with their relation and phone numbers.",
+      "Optionally add your doctor and any extra notes.",
+      "Check the live card preview for typos, especially phone numbers.",
+      "Click Print card and cut it to wallet size. Keep it in your wallet."
+    ],
+    "howToHeading": "How to use this maker",
+    "keyFacts": [
+      "An emergency contact card carries the facts responders need when you cannot speak for yourself.",
+      "The essentials: name, blood group, serious allergies, chronic conditions, current medications.",
+      "List two contacts. If the first does not answer, responders try the second.",
+      "Blood group on a card helps preparation, but hospitals always re-test before transfusion.",
+      "A printed card works with no battery, no signal, and no phone unlock."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "emergency contact card, ICE card maker, medical emergency card, printable emergency card, in case of emergency card",
+    "labels": {
+      "allergies": "Allergies",
+      "bloodGroup": "Blood group",
+      "cName": "Name",
+      "cPhone": "Phone",
+      "cRelation": "Relation",
+      "cardTitle": "Emergency Contact",
+      "conditions": "Medical conditions",
+      "contact1Heading": "Emergency contact 1",
+      "contact2Heading": "Emergency contact 2",
+      "doctorName": "Doctor's name",
+      "doctorPhone": "Doctor's phone",
+      "fullName": "Full name",
+      "medications": "Current medications",
+      "notes": "Extra notes (optional)",
+      "previewHeading": "Card preview",
+      "print": "Print card",
+      "printNote": "Printing shows only the card. Cut along the border for wallet size."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A card aids responders but never replaces professional medical judgment.",
+      "Hospitals re-test blood group before transfusion. The card alone is not enough.",
+      "An outdated card can mislead. Review details every 6 months.",
+      "Only share what you are comfortable carrying in your wallet."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free emergency contact card maker: create a printable ICE card with blood group, allergies, and emergency contacts. Print wallet-size. Private, no sign-up.",
+    "metaTitle": "Emergency Contact Card Maker - Free ICE Card | JaurTools",
+    "name": "Emergency Contact Card Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Fill a short form with your blood group, allergies, conditions, medications, and two emergency contacts, and get a clean wallet-size card to print. Paramedics look for exactly this information when a patient cannot speak. Printing shows only the card itself.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your emergency card",
+    "tagline": "Create a printable wallet-size emergency (ICE) card. Print, cut, carry.",
+    "workedExample": "Aarav makes his card:\n1. Name: Aarav Sharma. Blood group: O+. Allergies: Peanuts. Conditions: Asthma. Medications: Inhaler.\n2. Contact 1: Rajesh Sharma (Father), +91 98765 43210.\n3. Contact 2: Sunita Sharma (Mother), +91 91234 56780.\n4. Doctor: Dr. Mehta, +91 99887 76655.\n5. He clicks Print card, cuts along the border, and keeps it behind his driving licence.\nA responder now sees his peanut allergy and asthma in seconds.",
+    "workedExampleHeading": "Worked example"
+  }
+}

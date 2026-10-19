@@ -1,0 +1,94 @@
+{
+  "email-signature-generator": {
+    "benefits": [
+      "A professional signature makes every email look credible, especially to new clients.",
+      "Clickable phone, email, and website links save recipients a copy-paste step.",
+      "Email-safe HTML with tables and inline styles renders correctly in Gmail, Outlook, and Apple Mail.",
+      "Your details never leave the browser. No account needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "In Gmail: Settings > See all settings > Signature, then paste the copied HTML into the signature editor. In Outlook: Settings > Mail > Compose and reply, paste into the signature box. In Apple Mail: Settings > Signatures, paste into the signature area. Send yourself a test email to check the result.",
+        "q": "How do I install the signature in Gmail or Outlook?"
+      },
+      {
+        "a": "Because email clients are stuck in 1999. Gmail strips <style> blocks, Outlook uses Word's rendering engine, and every client handles CSS differently. Tables plus inline styles are the only combination that works everywhere, which is exactly what this tool generates.",
+        "q": "Why does the code use tables instead of modern CSS?"
+      },
+      {
+        "a": "Yes, up to a point. Keep it under about 600 px wide, test in both light and dark mode, and avoid background images. Some clients invert colors in dark mode, so strong contrast text survives best.",
+        "q": "Will my signature look right on mobile?"
+      },
+      {
+        "a": "Deliberately not. Most email clients block images by default, so a logo shows as a broken box to many recipients. Text-only signatures always render and never trigger spam filters. Add your website link instead; interested people will click through.",
+        "q": "Why is there no logo or photo option?"
+      },
+      {
+        "a": "Usually the signature was pasted as plain text instead of HTML. Copy with the Copy button (not by selecting the preview), then paste into the signature editor using its paste or HTML option. If your client only accepts plain text, it cannot show styled signatures.",
+        "q": "My signature pasted as plain text. What went wrong?"
+      },
+      {
+        "a": "Keep it to 4 or 5 lines: name, role and company, then one line of contact links. Long signatures with quotes, disclaimers, and banners annoy recipients and get clipped by Gmail on long threads.",
+        "q": "How long should an email signature be?"
+      }
+    ],
+    "formula": "Signature = identity block (name + role + company) + contact block (phone | email | website).\nEmail-safe rules: <table> layout + inline styles only + system fonts + max width 600px.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type your name, job title, company, phone, email, and website.",
+      "Pick an accent color that matches your brand.",
+      "Check the live preview.",
+      "Click Copy, then paste into your email client's signature settings.",
+      "Send yourself a test email and check it on phone and desktop."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "An email signature is the block of contact details appended to your outgoing emails.",
+      "Professional signatures use HTML, but email-safe HTML: tables for layout and inline styles only.",
+      "Gmail removes <style> blocks and Outlook renders with Word's engine, so modern CSS layouts break.",
+      "Keep signatures short: name, title, company, and one line of contact links is enough.",
+      "Images are blocked by default in most clients, so text-only signatures are the reliable choice."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "email signature generator, html email signature, free email signature maker, gmail signature generator, professional email signature",
+    "labels": {
+      "accentColor": "Accent color",
+      "codeHeading": "Signature HTML",
+      "company": "Company",
+      "copied": "Copied!",
+      "copy": "Copy HTML",
+      "download": "Download .html",
+      "email": "Email",
+      "installNote": "Paste the copied HTML into your email client's signature settings (Gmail: Settings > Signature).",
+      "jobTitle": "Job title",
+      "name": "Full name",
+      "phone": "Phone",
+      "previewHeading": "Preview",
+      "website": "Website"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "No logo or photo upload: images are blocked by default in most email clients.",
+      "Dark mode in some clients may restyle colors. Test before relying on exact branding.",
+      "Very old email clients may still render tables slightly differently.",
+      "This tool cannot install the signature for you; that step is manual in each client."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free email signature generator: design a professional HTML signature with live preview. Copy or download email-safe code for Gmail and Outlook. Private, no sign-up.",
+    "metaTitle": "Email Signature Generator - Free HTML Signatures | JaurTools",
+    "name": "Email Signature Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type your details, pick an accent color, and get a professional HTML email signature with live preview. The code uses email-safe tables and inline styles so it renders correctly in Gmail, Outlook, and Apple Mail. Copy the HTML and paste it into your client's signature settings.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your email signature",
+    "tagline": "Design a professional HTML email signature with live preview. Copy or download.",
+    "workedExample": "Jauhar creates his signature:\n1. Name: Jauhar Ayyub. Title: Frontend Developer. Company: Digital Transformation Factory.\n2. Phone, email, and website filled in. Accent color: indigo #4f46e5.\n3. Preview shows his name in indigo, role and company below, and a contact line with clickable links.\n4. He clicks Copy, pastes into Gmail Settings > Signature, and sends a test email.\n5. The test arrives with clickable phone, email, and website links on both phone and desktop.",
+    "workedExampleHeading": "Worked example"
+  }
+}

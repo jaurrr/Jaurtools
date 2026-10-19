@@ -1,0 +1,87 @@
+{
+  "rmd-calculator": {
+    "assumptionNote": "Uses the IRS Uniform Lifetime Table (single life expectancy divisor per age). If your spouse is more than 10 years younger, the Joint Life Table applies instead and gives smaller RMDs. Not tax advice.",
+    "benefits": [
+      "Gives you the exact minimum to withdraw so you avoid the steep penalty for missing an RMD.",
+      "Shows how the required percentage rises with age, which helps with multi-year tax planning.",
+      "Converts an intimidating IRS table into one simple number.",
+      "Free and instant, with no account or sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Under the SECURE 2.0 Act, RMDs begin at age 73 for people born in 1951 or later (age 72 for those born 1950 or earlier, and 75 starting in 2033). This calculator uses age 73 as the starting point, but check the rule that applies to your birth year.",
+        "q": "At what age do RMDs start?"
+      },
+      {
+        "a": "Missing an RMD - or withdrawing less than required - triggers an excise tax of 25% of the amount you should have taken (10% if corrected quickly). The IRS takes this seriously, so calendar the December 31 deadline.",
+        "q": "What is the penalty for missing an RMD?"
+      },
+      {
+        "a": "Yes. You can always withdraw more than the minimum; the RMD is just a floor. Anything extra is simply taxable income like the RMD itself, so many retirees take more in low-tax years on purpose.",
+        "q": "Can I withdraw more than the RMD?"
+      },
+      {
+        "a": "RMDs apply to traditional IRAs, 401(k)s, 403(b)s, and similar pre-tax accounts. Roth IRAs have no RMDs during the owner's lifetime. If you have several traditional IRAs, you can total the RMDs and take the sum from one account.",
+        "q": "Which accounts need RMDs?"
+      },
+      {
+        "a": "The factor is the IRS's estimate of your remaining life expectancy at that age. At 73 it is 26.5, meaning the IRS assumes about 26.5 more years. It falls each year because your expected remaining lifetime shrinks, which is why the required percentage rises as you age.",
+        "q": "Why does the divisor shrink as I get older?"
+      },
+      {
+        "a": "Your first RMD can be delayed until April 1 of the year after you turn 73, but then you would take two RMDs in one calendar year, which usually means more tax. Most people just take it by December 31 of the year they turn 73.",
+        "q": "When is the deadline each year?"
+      }
+    ],
+    "formula": "RMD = account balance on December 31 of the previous year / IRS life-expectancy divisor for your age.\nDivisor examples: 73 -> 26.5, 75 -> 24.6, 80 -> 20.2, 85 -> 16.0, 90 -> 12.2.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your age at the end of the current year. RMDs apply from age 73 for most people.",
+      "Enter the December 31 balance of the account from last year.",
+      "The calculator looks up your IRS life-expectancy divisor and divides the balance by it.",
+      "The result is the minimum you must withdraw this year. Take at least this much by December 31."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "RMD = required minimum distribution: the smallest amount US tax law forces you to withdraw from pre-tax retirement accounts each year.",
+      "It is computed as: prior-year-end balance divided by the IRS life-expectancy divisor for your age.",
+      "The Uniform Lifetime Table divisor at age 73 is 26.5, at 75 it is 24.6, and at 80 it is 20.2.",
+      "RMDs start at age 73 for people born in 1951 or later, under the SECURE 2.0 Act.",
+      "Missing an RMD can trigger a 25% penalty on the amount you failed to withdraw.",
+      "Withdrawals are taxed as ordinary income, so the RMD often drives retirees' tax bills."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "rmd calculator, required minimum distribution calculator, rmd table calculator, ira rmd calculator, minimum distribution age 73",
+    "labels": {
+      "age": "Your age at year-end",
+      "balance": "Account balance on Dec 31 ($)",
+      "lifeExpectancyFactor": "Life-expectancy factor",
+      "requiredWithdrawal": "Required minimum distribution",
+      "rmdPercent": "Required withdrawal rate"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses the Uniform Lifetime Table only. Spouses more than 10 years apart use a different table.",
+      "Does not compute taxes on the withdrawal; consult the IRS tables for your bracket.",
+      "Covers US rules only. Other countries have their own minimum-withdrawal systems.",
+      "This is an estimate for planning, not tax or legal advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free RMD calculator: compute your required minimum distribution from the IRS Uniform Lifetime Table. Instant, private, no sign-up.",
+    "metaTitle": "RMD Calculator - Required Minimum Distribution | JaurTools",
+    "name": "RMD Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "A required minimum distribution (RMD) is the smallest amount US law forces you to withdraw each year from pre-tax retirement accounts, starting at age 73. It equals your prior-year-end balance divided by the IRS life-expectancy divisor for your age. For example, at age 75 with a $500,000 balance, the divisor is 24.6, so your RMD is $500,000 / 24.6 = $20,325.20 - about 4.1% of the account.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your RMD",
+    "tagline": "Find your required minimum distribution from the IRS life-expectancy table.",
+    "workedExample": "Age 75, balance $500,000 on last December 31:\n1. Look up the Uniform Lifetime Table divisor for age 75: 24.6.\n2. RMD = 500,000 / 24.6.\n3. 24.6 x 20,000 = 492,000. Remainder 8,000 / 24.6 = 325.20.\n4. RMD = $20,325.20.\n5. That is 20,325.20 / 500,000 = 4.07% of the account balance.",
+    "workedExampleHeading": "Worked example"
+  }
+}

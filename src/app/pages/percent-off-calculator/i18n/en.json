@@ -1,0 +1,83 @@
+{
+  "percent-off-calculator": {
+    "benefits": [
+      "Instantly verify sale prices while you shop, online or in store.",
+      "Shows both the savings and the final price in one view.",
+      "The discount slider makes it fun to try different offers.",
+      "No sign-up, no data sent anywhere.",
+      "Works smoothly on phones, tablets and desktops."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Subtract the sale price from the original price, divide the result by the original price, and multiply by 100. For example, a $60 sale on an $80 item is a 25% discount.",
+        "q": "How do I find the discount percentage from a sale price?"
+      },
+      {
+        "a": "Yes. Enter 20 as the discount, note the new price, then apply another 20% discount to that price on the same calculator. Two 20% discounts equal a 36% total discount, not 40%.",
+        "q": "Can I chain two discounts with this calculator?"
+      },
+      {
+        "a": "No, the calculator is generic. Enter the price in your own currency and read the result in the same currency.",
+        "q": "Does it support my currency?"
+      },
+      {
+        "a": "Discount is the percentage or amount taken off a price. Markdown is the same idea seen from the retailer's side — the amount by which the original price was reduced.",
+        "q": "What is the difference between discount and markdown?"
+      },
+      {
+        "a": "Yes, this calculator works for any monetary amount — rent, fees, invoices or shopping totals.",
+        "q": "Can I use it for non-shopping calculations?"
+      }
+    ],
+    "formula": "Discount amount = price x discount% / 100\nFinal price = price - discount amount",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the original price in the first field.",
+      "Set the discount percentage with the slider or type it directly.",
+      "Read how much you save and the final price instantly.",
+      "Try different discounts to compare offers.",
+      "Use the final price to check your bill at checkout."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A percent-off sale reduces the original price by a fixed percentage.",
+      "The discount amount is always calculated on the original price, not on the reduced price.",
+      "Two stacked discounts multiply, they do not add — two 20% discounts equal 36% off.",
+      "A 100% discount means the item is free; 0% means no discount.",
+      "The final price can never go below zero."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "percent off calculator, discount calculator, sale price calculator, percentage off, price after discount",
+    "labels": {
+      "discountLabel": "Discount (%)",
+      "finalPriceLabel": "Final price",
+      "originalLabel": "Original price",
+      "priceLabel": "Original price",
+      "youSaveLabel": "You save"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "It does not add sales tax or shipping — those must be applied separately.",
+      "Stacked coupons need to be entered one at a time, in the right order.",
+      "Rounding may differ by a cent from store systems.",
+      "It cannot judge whether a deal is genuinely good value."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free percent-off calculator: enter a price and discount % to see your savings and the final sale price. Fully browser-based, no sign-up.",
+    "metaTitle": "Percent Off Calculator — Sale Price After Discount",
+    "name": "Percent Off Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A percent-off calculator finds the sale price in seconds. Multiply the original price by the discount percentage, divide by 100 to get the savings, then subtract that from the original price. The result is what you actually pay.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Discount results",
+    "tagline": "Find the sale price and your savings in seconds.",
+    "workedExample": "A jacket costs $80 and is on sale at 25% off.\n\nDiscount amount = 80 x 25 / 100 = $20.\nFinal price = 80 - 20 = $60.\n\nYou save $20 and pay $60 — a genuine quarter off the original price.",
+    "workedExampleHeading": "Worked example"
+  }
+}

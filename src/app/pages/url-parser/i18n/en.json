@@ -1,0 +1,95 @@
+{
+  "url-parser": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "URL Parser",
+    "tagline": "Parse, inspect, and edit URLs and query parameters.",
+    "metaTitle": "URL Parser - Parse & Edit Query Parameters Free Online",
+    "metaDescription": "Parse any URL into protocol, host, path, and query params. Edit parameters visually and rebuild the URL. Free, no signup, runs in your browser.",
+    "keywords": "url parser, parse url online, query parameter editor, url decoder, inspect url parts",
+    "resultsHeading": "URL parser results",
+    "quickAnswer": "Paste any URL and this tool breaks it into its parts: protocol, host, port, path, hash, and every query parameter. You can edit parameter names and values directly, add or remove parameters, then rebuild a clean, properly encoded URL with one click.",
+    "keyFacts": [
+      "A URL has the structure scheme://host:port/path?query#fragment, defined by RFC 3986.",
+      "Query parameters are key=value pairs separated by & after the ? character.",
+      "Special characters in parameters are percent-encoded, for example a space becomes %20.",
+      "The fragment (after #) is never sent to the server; it is handled by the browser.",
+      "Editing parameters here re-encodes them automatically, so the rebuilt URL is always valid."
+    ],
+    "howTo": [
+      "Paste a URL into the input field.",
+      "Click Parse to split it into parts and parameters.",
+      "Edit any parameter name or value inline.",
+      "Add new parameters or remove ones you do not need.",
+      "Click Rebuild URL to get the updated, encoded URL, then copy it."
+    ],
+    "formula": "URL = scheme \"://\" host [\":\" port] path [\"?\" query] [\"#\" fragment]\nExample: https://shop.example.com:443/search?q=shoes&color=red#top\nprotocol=https host=shop.example.com port=443 path=/search params={q: shoes, color: red} hash=top",
+    "workedExample": "Parsing https://jaurtools.com/en/url-parser?tool=url&utm_source=google#features gives:\nprotocol: https, host: jaurtools.com, port: (none), path: /en/url-parser, hash: features\nparameters: tool=url, utm_source=google\nChanging utm_source to newsletter and clicking Rebuild produces:\nhttps://jaurtools.com/en/url-parser?tool=url&utm_source=newsletter#features",
+    "benefits": [
+      "See every part of a URL at a glance, no manual splitting.",
+      "Edit query strings visually without encoding mistakes.",
+      "Rebuild produces correctly percent-encoded URLs.",
+      "Useful for debugging tracking parameters and API calls."
+    ],
+    "limitations": [
+      "Only absolute URLs with a scheme (http/https) can be parsed.",
+      "Very long URLs over 2000 characters are truncated.",
+      "The tool validates structure, not whether the URL actually exists.",
+      "Internationalized domain names are shown in punycode form."
+    ],
+    "faqs": [
+      {
+        "q": "What is a query parameter?",
+        "a": "A key=value pair in the part of the URL after the ? mark. Servers and apps read these to customize the response, like ?page=2 or ?lang=ar."
+      },
+      {
+        "q": "Why do I see %20 in URLs?",
+        "a": "That is percent-encoding: characters unsafe in URLs are replaced with % plus their hex code. A space becomes %20. The rebuild step applies this automatically."
+      },
+      {
+        "q": "Can I parse a URL without https://?",
+        "a": "No. The parser needs an absolute URL with a scheme. Add https:// in front of domain-only input before parsing."
+      },
+      {
+        "q": "Is the fragment sent to the server?",
+        "a": "No. Everything after # stays in the browser and is never included in the HTTP request."
+      },
+      {
+        "q": "Does editing parameters encode special characters?",
+        "a": "Yes. Rebuild uses the standard URL encoding rules, so characters like & and = inside values are safely escaped."
+      }
+    ],
+    "labels": {
+      "urlLabel": "URL to parse",
+      "urlPlaceholder": "https://example.com/path?key=value",
+      "parseLabel": "Parse",
+      "copyLabel": "Copy URL",
+      "copiedLabel": "Copied",
+      "invalidLabel": "That does not look like a valid absolute URL. It must start with http:// or https://.",
+      "emptyLabel": "Please enter a URL first.",
+      "protocolLabel": "Protocol",
+      "hostLabel": "Host",
+      "portLabel": "Port",
+      "pathLabel": "Path",
+      "hashLabel": "Fragment",
+      "paramsLabel": "Query parameters",
+      "keyLabel": "Key",
+      "valueLabel": "Value",
+      "removeLabel": "Remove parameter",
+      "addLabel": "Add parameter",
+      "rebuildLabel": "Rebuild URL"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "utm-builder": {
+    "benefits": [
+      "روابط نظيفة ومشفّرة بشكل صحيح في كل مرة: تُشفَّر الأحرف الخاصة تلقائيًا بالنسبة المئوية.",
+      "تسمية متسقة: نفس تخطيط الحقول يجبر فريقك كله على وسم الحملات بالطريقة نفسها.",
+      "تقارير أسرع: الروابط الموسومة بشكل صحيح تقسّم الزيارات بوضوح في Google Analytics ومنصات الإعلانات.",
+      "لا حاجة لجدول بيانات: يُحدَّث الرابط مباشرة أثناء الكتابة، مع نسخ فوري وعدّ للأحرف."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "المولدات",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "معاملات UTM هي خمسة وسوم استعلام قصيرة (utm_source وutm_medium وutm_campaign وutm_term وutm_content) تُضاف إلى الرابط. تقرأها أدوات التحليل لتخبرك بالضبط أي رابط أو بريد أو إعلان جلب كل زائر.",
+        "q": "ما هي معاملات UTM؟"
+      },
+      {
+        "a": "الخمسة موجودة، لكن ثلاثة فقط مطلوبة لتقارير نظيفة: utm_source (من أين جاءت الزيارة)، وutm_medium (القناة، مثل email أو cpc)، وutm_campaign (اسم الحملة). أما utm_term وutm_content فإضافيان اختياريان.",
+        "q": "أي معاملات UTM مطلوبة؟"
+      },
+      {
+        "a": "التزم باتفاقية تسمية واحدة: أحرف صغيرة وشرطات سفلية بدل المسافات، مثل summer_sale. خلط Summer-Sale وsummer sale وSUMMER_SALE ينتج ثلاثة صفوف منفصلة في تقاريرك.",
+        "q": "كيف أسمّي حملاتي؟"
+      },
+      {
+        "a": "يُسمّي utm_source المُحيل (newsletter أو facebook أو google). ويُسمّي utm_medium القناة (email أو social أو cpc أو referral). مثال: source=newsletter وmedium=email لرابط في نشرتك البريدية.",
+        "q": "ما الفرق بين utm_source وutm_medium؟"
+      },
+      {
+        "a": "نعم. تحافظ هذه الأداة على كل ما في الرابط أصلًا: تبقى معاملات الاستعلام الموجودة وجزء #fragment كما هما، وتُضاف وسوم UTM بجانبها.",
+        "q": "هل يمكنني إضافة وسوم UTM إلى رابط فيه معاملات أصلًا؟"
+      },
+      {
+        "a": "لا. تُسمّي وسوم UTM الزيارة لأغراض تحليلك أنت فقط؛ ولا تغيّر ما يراه الزائر، ولا تؤثر على ترتيب البحث.",
+        "q": "هل تضر معاملات UTM بتحسين محركات البحث؟"
+      }
+    ],
+    "formula": "الرابط النهائي = الرابط الأساسي + \"?\" + \"utm_source=\" + source + \"&utm_medium=\" + medium + \"&utm_campaign=\" + campaign [+ \"&utm_term=\" + term] [+ \"&utm_content=\" + content]\nتُشفَّر القيم بالنسبة المئوية. إذا كان الرابط الأساسي يحتوي سلسلة استعلام أصلًا، تُلحَق المعاملات الجديدة بـ \"&\".",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "الصق رابط صفحة الوجهة في حقل رابط الموقع.",
+      "اكتب utm_source: من أين يأتي الزائر (مثل newsletter أو facebook).",
+      "اكتب utm_medium: القناة (مثل email أو social أو cpc).",
+      "اكتب utm_campaign: اسم الحملة (مثل summer_sale).",
+      "أضف اختياريًا utm_term (الكلمة المفتاحية المدفوعة) وutm_content (للتمييز بين رابطين).",
+      "انسخ الرابط النهائي واستخدمه في بريدك أو إعلانك أو منشورك."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "UTM اختصار Urchin Tracking Module، من برنامج Urchin للتحليل الذي استحوذت عليه Google عام 2005؛ وبقيت التسمية في Google Analytics.",
+      "المعاملات الخمسة القياسية هي utm_source وutm_medium وutm_campaign وutm_term وutm_content.",
+      "يحدد utm_source المُحيل، وutm_medium قناة التسويق، وutm_campaign الترويج المحدد.",
+      "يسجّل utm_term الكلمة المفتاحية المدفوعة، ويميّز utm_content بين روابط تشير إلى الرابط نفسه (مثل زرين في بريد واحد).",
+      "تقرأ منصات التحليل وسوم UTM تلقائيًا؛ ولا يرى الزوار أي شيء مختلف في الصفحة.",
+      "تُشفَّر الأحرف الخاصة في القيم بالنسبة المئوية، فلا تكسر المسافات والرموز الرابط أبدًا."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "منشئ UTM, مولد روابط UTM, utm_source utm_medium, منشئ روابط الحملات, متتبع روابط التسويق",
+    "labels": {
+      "baseUrlLabel": "رابط الموقع",
+      "campaignLabel": "اسم الحملة (utm_campaign)",
+      "contentLabel": "المحتوى (utm_content) — اختياري",
+      "copyButton": "نسخ الرابط",
+      "emptyError": "أدخل رابط الموقع أولًا.",
+      "invalidError": "هذا الرابط غير صالح. اذكر البروتوكول، مثل https://example.com/page.",
+      "lengthLabel": "طول الرابط",
+      "mediumLabel": "الوسيط (utm_medium)",
+      "noteText": "تُضاف فقط المعاملات التي لها قيمة. utm_term وutm_content اختياريان.",
+      "resultLabel": "رابطك الموسوم",
+      "schemeError": "يجب أن يبدأ الرابط بـ http:// أو https://.",
+      "sourceLabel": "المصدر (utm_source)",
+      "termLabel": "المصطلح (utm_term) — اختياري"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "تتتبع وسوم UTM الزوار بعد النقر فقط؛ ولا يمكنها تتبع المشاهدات أو الوصول خارج الإنترنت.",
+      "وتصف تحليلك أنت فقط: الأخطاء الإملائية في القيم (Sumr_Sale) تعمل لكنها تلوث تقاريرك.",
+      "لا تضع وسوم UTM على روابط موقعك الداخلية: فهي تستبدل مصدر الزيارة الأصلي في تقاريرك.",
+      "الروابط الطويلة جدًا بكل المعاملات الخمسة تبدو فوضوية عند مشاركتها خامًا؛ فكّر في مختصر روابط للمنشورات الاجتماعية."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "منشئ UTM المجاني: أنشئ روابط حملات مشفرة بشكل صحيح مع utm_source وutm_medium وutm_campaign. معاينة حية ونسخ بنقرة واحدة.",
+    "metaTitle": "منشئ UTM أونلاين - أنشئ روابط تتبع الحملات مجانًا | JaurTools",
+    "name": "منشئ UTM",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "يضيف منشئ UTM وسوم تتبع (utm_source وutm_medium وutm_campaign) إلى أي رابط لتخبرك أدوات التحليل بالضبط أي بريد أو إعلان أو منشور جلب كل زائر. أدخل بياناتك وانسخ الرابط النهائي.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "نتائج رابط UTM",
+    "tagline": "أنشئ روابط حملات UTM نظيفة — مشفرة بشكل صحيح في كل مرة.",
+    "workedExample": "رابط الموقع: https://example.com/summer-sale\nutm_source = newsletter وutm_medium = email وutm_campaign = july_promo\nالخطوة 1: ابدأ بالرابط الأساسي. الخطوة 2: ألحق «?» والوسم الأول: utm_source=newsletter. الخطوة 3: اربط البقية بـ «&»: utm_medium=email ثم utm_campaign=july_promo.\nالنتيجة: https://example.com/summer-sale?utm_source=newsletter&utm_medium=email&utm_campaign=july_promo\nهذا الرابط طوله 94 حرفًاًا ويخبر التحليل: جاءت الزيارة من النشرة البريدية، عبر البريد، لحملة ترويج يوليو.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

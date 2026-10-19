@@ -1,0 +1,92 @@
+{
+  "online-html-editor": {
+    "assumptionNote": "The preview runs in a sandboxed frame: your JavaScript works, but features needing the same origin (like reading localStorage or fetching other pages) are restricted. That keeps the editor safe.",
+    "benefits": [
+      "Test HTML, CSS, and JavaScript instantly without installing anything.",
+      "Prototype landing pages, email templates, and widgets in seconds.",
+      "Learn web development by changing code and seeing the result immediately.",
+      "Keep a scratchpad for snippets you will paste into a real project later."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes, including CSS inside <style> tags and inline styles. The preview renders exactly like a browser tab because it is one, inside a safe sandboxed frame.",
+        "q": "Does it support CSS?"
+      },
+      {
+        "a": "Yes. Your inline <script> code runs in the preview. The frame is sandboxed, so scripts cannot touch this page or your storage. It is your own code running in your own browser.",
+        "q": "Does my JavaScript run in the preview?"
+      },
+      {
+        "a": "Nothing. Your code stays in this browser tab. If you download the file, it saves to your device. There is no server and no upload.",
+        "q": "Where does my code go?"
+      },
+      {
+        "a": "Click Download HTML to save your work as page.html. Copy puts it on the clipboard. Do both if you want a backup.",
+        "q": "How do I save my work?"
+      },
+      {
+        "a": "The editor starts with a sample page. Click Reset sample anytime to bring it back, or Clear to start from a blank page.",
+        "q": "What is the sample code?"
+      },
+      {
+        "a": "Yes, it works on phones and tablets too. The code area and preview stack vertically on small screens. For long coding sessions, a laptop keyboard is more comfortable.",
+        "q": "Does it work on mobile?"
+      }
+    ],
+    "formula": "No math - this is a code tool. The editor works like this:\n\n1. You type HTML (with optional <style> and <script>).\n2. The page sets it as the iframe preview's source document.\n3. The browser renders it instantly, re-rendering on every keystroke.\n\nDownload: the same text becomes a .html file via a Blob download.",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste HTML into the code area. A sample page is loaded to start.",
+      "Watch the preview update live as you type.",
+      "Add <style> for CSS and <script> for JavaScript inside your HTML.",
+      "Click Copy to copy the code, or Download HTML to save it as a file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A live HTML editor shows a real browser render of your code as you type.",
+      "HTML is the structure of a page: headings, paragraphs, links, images, forms.",
+      "CSS goes in <style> tags and controls colors, layout, and fonts.",
+      "JavaScript goes in <script> tags and makes pages interactive.",
+      "The preview here is sandboxed: scripts run, but they cannot read your storage or this page.",
+      "Downloading gives you a real .html file you can open anywhere or host on any static host.",
+      "Character and line counts below the preview help with size limits, like email templates."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "html editor, live html editor, online html editor, html preview, test html online, html playground",
+    "labels": {
+      "characters": "Characters",
+      "clear": "Clear",
+      "copied": "Copied",
+      "copyCode": "Copy code",
+      "downloadHtml": "Download HTML",
+      "htmlCode": "HTML code",
+      "lines": "Lines",
+      "preview": "Live preview",
+      "resetSample": "Reset sample"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The preview cannot load local files by path or read localStorage - the sandbox blocks same-origin features.",
+      "No backend, so forms cannot really submit anywhere and server languages like PHP do not run.",
+      "Very large pages may make the live preview slower on old devices.",
+      "Your code is not saved automatically. Download or copy before closing the tab."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Type HTML, CSS and JavaScript and watch a live preview update as you type. Free online HTML editor — no signup, nothing to install.",
+    "metaTitle": "Online HTML Editor - Write HTML, CSS & JS with Live Preview | JaurTools",
+    "name": "Online HTML Editor",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This is a live HTML playground. Type HTML with CSS and JavaScript on the left, and a real browser preview updates on the right as you type. Nothing is uploaded anywhere. You can copy the code or download it as a .html file when you are done.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your editor",
+    "tagline": "Code on the left, live page on the right.",
+    "workedExample": "Try it now:\n1. Click Clear, then type: <h1>Sale ends today</h1><p>Use code <b>FESTIVE10</b></p>.\n2. The preview instantly shows a big heading and a paragraph.\n3. Add a style block: <style>h1{color:#4f46e5}</style> - the heading turns indigo.\n4. Click Download HTML to save your page as page.html and open it in any browser.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "barcode-generator": {
+    "benefits": [
+      "Print real, scannable barcodes for inventory, assets, and ID labels without buying software.",
+      "Vector SVG output stays sharp at any print size, from a sticker to a warehouse label.",
+      "Works fully offline in the browser. Sensitive product codes never leave your device.",
+      "The automatic ITF check digit means scanners accept your barcodes on the first read."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "In most cases, yes. Modern phone cameras and handheld scanners read barcodes from screens reliably. For warehouse or retail use, a printed label is still more dependable: print at 100 percent scale on matte paper and test with your actual scanner.",
+        "q": "Will scanners read a barcode shown on a screen?"
+      },
+      {
+        "a": "Code 39 handles letters and digits, so it suits asset tags, IDs, and internal labels. Interleaved 2 of 5 is digits-only but denser, which suits cartons and shipping labels. For retail products sold in stores you need EAN-13 or UPC-A, which this tool does not generate.",
+        "q": "Which symbology should I choose?"
+      },
+      {
+        "a": "Code 39 encodes 43 characters: A-Z, 0-9, space, and - . $ / + %. Lowercase letters are converted to uppercase automatically. Anything outside this set shows a validation error.",
+        "q": "Which characters can Code 39 encode?"
+      },
+      {
+        "a": "Three usual causes: the barcode is too small (keep the narrow bar at least 0.25 mm when printed), there is no quiet zone (this tool adds one automatically), or the contrast is poor (always black on white, never reversed or on a photo background).",
+        "q": "Why won't my scanner read the barcode?"
+      },
+      {
+        "a": "No. Retail point-of-sale systems expect EAN-13 (India, Europe, Gulf) or UPC-A (USA). This tool generates Code 39 and Interleaved 2 of 5, which are for internal tracking, logistics, and asset labels.",
+        "q": "Can I use this for retail product barcodes?"
+      },
+      {
+        "a": "Not normally. Code 39 is self-checking and works without one. ITF does need one, so this tool computes and appends the standard mod-10 check digit for you automatically.",
+        "q": "Does my barcode need a check digit?"
+      }
+    ],
+    "formula": "Code 39: symbol = * + data + * ; each character = 9 elements (5 bars, 4 spaces), exactly 3 wide.\nITF check digit: sum = digits x 3,1,3,1... from the right; check = (10 - sum mod 10) mod 10.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the text to encode. Keep it short: Code 39 gets wide quickly.",
+      "Pick Code 39 for letters and digits, or Interleaved 2 of 5 for digits only.",
+      "Toggle the human-readable text under the bars if you want it printed.",
+      "Download the SVG and print at 100 percent scale on plain white paper.",
+      "Test with your scanner app or hardware before printing a full batch."
+    ],
+    "howToHeading": "How to use this generator",
+    "keyFacts": [
+      "A barcode stores data in the widths of printed bars and spaces. A scanner reads the pattern of wide and narrow elements.",
+      "Code 39 encodes 43 characters (A-Z, 0-9, space, - . $ / + %). Each character uses 9 elements: 5 bars and 4 spaces, exactly 3 of them wide.",
+      "Every Code 39 symbol starts and ends with *, so the scanner knows the direction and boundaries.",
+      "Interleaved 2 of 5 encodes digit pairs: bars carry one digit, spaces carry the next. It needs an even digit count and a mod-10 check digit.",
+      "The blank margin on each side is the quiet zone. Scanners need it; this tool adds 10 narrow modules automatically."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "barcode generator, code 39 generator, code39 barcode maker, interleaved 2 of 5 generator, free barcode generator svg",
+    "labels": {
+      "download": "Download SVG",
+      "encodedAs": "Encoded as",
+      "errorChars": "Code 39 supports A-Z, 0-9, space and - . $ / + % only.",
+      "errorDigits": "Interleaved 2 of 5 supports digits only.",
+      "errorEmpty": "Type something to encode.",
+      "noteCheck": "Interleaved 2 of 5: the mod-10 check digit is computed and added automatically.",
+      "showText": "Show text below the bars",
+      "symCode39": "Code 39 (letters + digits)",
+      "symItf": "Interleaved 2 of 5 (digits only)",
+      "symbologyLabel": "Symbology",
+      "textLabel": "Text to encode"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "No EAN-13 or UPC-A, so it cannot make retail product barcodes for stores.",
+      "Code 39 is not dense: long text makes very wide barcodes.",
+      "Interleaved 2 of 5 encodes digits only.",
+      "Screen scanning usually works, but a printed label is more reliable for daily use."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free barcode generator: create scannable Code 39 and Interleaved 2 of 5 barcodes in your browser. Download as crisp SVG. No sign-up, fully private.",
+    "metaTitle": "Barcode Generator - Free Code 39 & ITF Barcodes | JaurTools",
+    "name": "Barcode Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type text, pick Code 39 (letters and digits) or Interleaved 2 of 5 (digits only), and get a real scannable barcode as a sharp SVG. Every symbol follows the published spec: Code 39 wraps your text in * start/stop characters, and ITF gets an automatic mod-10 check digit. Download and print at 100 percent scale.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your barcode",
+    "tagline": "Create real, scannable Code 39 and Interleaved 2 of 5 barcodes. Download as crisp SVG.",
+    "workedExample": "Code 39 for the text A1:\n1. Wrap with start/stop: * A 1 * (4 characters).\n2. Each character is 9 elements. * = 13 narrow units, A = 15, 1 = 13.\n3. Add 3 inter-character gaps: 13 + 1 + 15 + 1 + 13 + 1 + 13 = 57 units.\n4. Add the quiet zones (10 units each side): 77 units wide in total.\nInterleaved 2 of 5 for 1234:\n1. Check digit: 4x3 + 3x1 + 2x3 + 1x1 = 22; (10 - 2) mod 10 = 8, giving 12348.\n2. Odd length, so pad: 012348, encoded as pairs (0,1) (2,3) (4,8).",
+    "workedExampleHeading": "Worked example"
+  }
+}

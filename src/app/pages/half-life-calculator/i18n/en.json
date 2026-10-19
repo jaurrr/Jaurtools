@@ -1,0 +1,97 @@
+{
+  "half-life-calculator": {
+    "assumptionNote": "Half-life and elapsed time are in the same unit. Decay is assumed to follow exact exponential decay with no other processes.",
+    "benefits": [
+      "Answers instantly - no manual powers of one-half.",
+      "Shows the number of elapsed half-lives, the heart of the concept.",
+      "Decayed-vs-remaining split makes conservation obvious.",
+      "Useful for radioactivity, pharmacology, and environmental studies alike.",
+      "Any time unit works, from seconds to years."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A half-life is the time needed for half of a substance to decay or disappear. After one half-life, 50% remains; after two, 25%; after three, 12.5%. The amount never truly hits zero - it halves forever.",
+        "q": "What is a half-life?"
+      },
+      {
+        "a": "Carbon-14 has a half-life of about 5,730 years. Measuring how much C-14 remains in an ancient sample tells archaeologists how many half-lives have passed, and therefore how old the sample is.",
+        "q": "How is half-life used in carbon dating?"
+      },
+      {
+        "a": "No. Half-life assumes a constant decay rate. Real systems can have multiple decay paths, environmental effects, or changing conditions. It is an excellent model for ideal exponential decay, not a guarantee about the real world.",
+        "q": "Is everything with a half-life perfectly predictable?"
+      },
+      {
+        "a": "Divide the elapsed time by the half-life: n = t / t(1/2). For 15 hours elapsed and a 5-hour half-life, n = 3 half-lives. The remaining amount is then the initial amount times (1/2)^n.",
+        "q": "How do I find the number of half-lives?"
+      },
+      {
+        "a": "They never do, in theory. Halving 1 gives 0.5, then 0.25, then 0.125, and so on - always some tiny amount left. In practice, scientists treat amounts below detection limits as zero.",
+        "q": "Does the amount ever reach zero?"
+      },
+      {
+        "a": "No. The half-life is a property of the process, not the amount. Whether you start with 100 grams or 1 gram, half disappears in one half-life. That is what makes the concept so powerful.",
+        "q": "Does starting with more change the half-life?"
+      }
+    ],
+    "formula": "Remaining = initial x (1/2)^(elapsed / half-life)\nNumber of half-lives n = elapsed / half-life.\nDecayed = initial - remaining.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the starting amount of your substance.",
+      "Enter its half-life and pick the time unit (seconds to years).",
+      "Enter how much time has passed, in the same unit.",
+      "Read the remaining amount, the decayed amount, and how many half-lives passed.",
+      "Try the carbon-14 example: half-life 5,730 years, to date ancient samples."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A half-life is the time for exactly half of a quantity to decay.",
+      "After n half-lives, the remaining fraction is (1/2)^n of the original.",
+      "Decay is exponential: the rate of loss is proportional to the amount present.",
+      "The half-life does not depend on the starting amount.",
+      "Common half-lives: carbon-14 is 5,730 years, uranium-238 is 4.5 billion years, technetium-99m is 6 hours.",
+      "The formula also describes drug elimination, capacitor discharge, and population decline."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "half life calculator, radioactive decay calculator, exponential decay calculator, carbon dating calculator, half life formula",
+    "labels": {
+      "decayedLabel": "Decayed amount",
+      "elapsedLabel": "Time elapsed",
+      "halfLifeLabel": "Half-life",
+      "halfLivesLabel": "Half-lives elapsed",
+      "initialLabel": "Initial amount",
+      "percentLabel": "Percent remaining",
+      "remainingLabel": "Remaining amount",
+      "unitLabel": "Time unit",
+      "unit_days": "days",
+      "unit_hours": "hours",
+      "unit_minutes": "minutes",
+      "unit_seconds": "seconds",
+      "unit_years": "years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes pure exponential decay with a single constant half-life.",
+      "Real systems may have multiple decay paths or changing conditions.",
+      "Not for medical dosing decisions - consult a pharmacist or doctor.",
+      "Extremely long time spans are illustrative, not laboratory-verified."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free half-life calculator: compute remaining amount after exponential decay. Enter initial amount, half-life and elapsed time. Shows decayed amount and half-lives.",
+    "metaTitle": "Half-Life Calculator - Exponential Decay Made Simple | JaurTools",
+    "name": "Half-Life Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Starting with 100 grams of a substance whose half-life is 5 hours, after 15 hours exactly 3 half-lives have passed. Each half-life cuts the amount in half: 100 to 50 to 25 to 12.5 grams. So 12.5 grams remain and 87.5 grams have decayed. The formula is: remaining = initial x (1/2)^(elapsed / half-life).",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Half-life results",
+    "tagline": "Compute what remains after exponential decay - any substance, any time unit.",
+    "workedExample": "100 grams, half-life 5 hours, elapsed 15 hours:\n1. Number of half-lives: n = 15 / 5 = 3.\n2. Remaining fraction: (1/2)^3 = 1/8 = 0.125.\n3. Remaining: 100 x 0.125 = 12.5 grams.\n4. Decayed: 100 - 12.5 = 87.5 grams.\n5. Percent remaining: 12.5%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

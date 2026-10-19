@@ -1,0 +1,89 @@
+{
+  "overtime-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Overtime Calculator",
+    "tagline": "Convert overtime hours to pay with any rate and multiplier.",
+    "metaTitle": "Overtime Calculator - OT Pay Calculator | JaurTools",
+    "metaDescription": "Calculate overtime pay instantly. Enter your hourly rate, regular and overtime hours and the OT multiplier (e.g. 1.5x) to get gross pay. Free & private.",
+    "keywords": "overtime calculator, ot pay calculator, overtime pay, time and a half calculator",
+    "quickAnswer": "Overtime pay = overtime hours x hourly rate x multiplier. For example, at $20/hour with 5 overtime hours at 1.5x: regular pay is 40 x 20 = $800, overtime is 5 x 20 x 1.5 = $150, and gross pay is $950. Change the multiplier for double-time or custom rules.",
+    "keyFacts": [
+      "Overtime pay rewards hours beyond the standard schedule at a premium rate, commonly 1.5x ('time and a half').",
+      "The multiplier is set by contract or law: 1.5x is typical, 2x ('double time') applies on some holidays.",
+      "Regular pay and overtime pay are calculated separately, then added for gross pay.",
+      "This tool works in any currency - enter your rate in whatever currency you are paid.",
+      "Gross pay here is before tax and deductions; take-home pay is always lower."
+    ],
+    "howTo": [
+      "Enter your hourly rate in your currency.",
+      "Enter your regular hours for the period (often 40 per week).",
+      "Enter your overtime hours.",
+      "Set the multiplier - 1.5 for time-and-a-half, 2 for double time.",
+      "Read your regular pay, overtime pay and gross pay instantly."
+    ],
+    "formula": "Regular pay = regular hours x hourly rate.\nOvertime rate = hourly rate x multiplier.\nOvertime pay = overtime hours x overtime rate.\nGross pay = regular pay + overtime pay.\nExample: 40 x 20 = 800; 5 x (20 x 1.5) = 150; total = 950.",
+    "workedExample": "Rate $20/h, 40 regular hours, 5 OT hours, 1.5x multiplier.\n1. Regular: 40 x 20 = $800.\n2. OT rate: 20 x 1.5 = $30/h.\n3. Overtime: 5 x 30 = $150.\n4. Gross: 800 + 150 = $950.\nWith double time (2x): overtime = 5 x 40 = $200, gross = $1,000.",
+    "benefits": [
+      "Verify your payslip in seconds - know exactly what you should earn.",
+      "Compare job offers with different overtime rules on equal terms.",
+      "Handles any multiplier, from 1.25x weekend rates to 3x holiday rates.",
+      "Private: salary numbers never leave your browser."
+    ],
+    "limitations": [
+      "Gross pay is before tax, insurance and other deductions - not take-home pay.",
+      "No currency is assumed; make sure your rate matches the currency you expect.",
+      "Does not model tiered rules (for example, 1.5x for the first 2 hours then 2x) - use the blended multiplier.",
+      "This is an estimate, not legal or payroll advice; your employer's rules decide."
+    ],
+    "faqs": [
+      {
+        "q": "What does 1.5x (time and a half) mean?",
+        "a": "You earn your normal hourly rate plus half again for each overtime hour. At $20/hour, overtime pays $30/hour."
+      },
+      {
+        "q": "When is double time (2x) used?",
+        "a": "Often on public holidays or after very long shifts, depending on contract or law. Set the multiplier to 2 to model it."
+      },
+      {
+        "q": "Which currency does it use?",
+        "a": "None specifically - it is currency-agnostic. Enter your rate in dollars, rupees, riyals or anything else and read the result in the same currency."
+      },
+      {
+        "q": "Is this my take-home pay?",
+        "a": "No. Gross pay is before income tax, social contributions and deductions. Your payslip's net figure will be lower."
+      },
+      {
+        "q": "Can I use weekly or monthly hours?",
+        "a": "Yes - the math is period-agnostic. Just keep regular hours, overtime hours and rate in the same period."
+      },
+      {
+        "q": "What if my overtime has two different rates?",
+        "a": "Run the tool twice - once per rate - and add the two overtime amounts together."
+      }
+    ],
+    "resultsHeading": "Overtime pay results",
+    "labels": {
+      "hourlyRate": "Hourly rate",
+      "regularHours": "Regular hours",
+      "overtimeHours": "Overtime hours",
+      "multiplier": "Overtime multiplier (e.g. 1.5)",
+      "regularPay": "Regular pay",
+      "overtimePay": "Overtime pay",
+      "grossPay": "Gross pay",
+      "otRate": "Overtime hourly rate"
+    }
+  }
+}

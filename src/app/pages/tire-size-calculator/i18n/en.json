@@ -1,0 +1,99 @@
+{
+  "tire-size-calculator": {
+    "name": "Tire Size Calculator",
+    "tagline": "Compare two tire sizes: diameter, circumference, revs/km, and speedometer error.",
+    "metaTitle": "Tire Size Calculator – Diameter & Speedometer Error | JaurTools",
+    "metaDescription": "Free tire size calculator. Compare old vs new tire sizes (205/55R16 etc.) for diameter, circumference and speedometer error — 100% in your browser.",
+    "keywords": "tire size calculator, tyre size comparison, speedometer error calculator, tire diameter calculator, 205/55R16 vs 215/60R16",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Enter your current and proposed tire sizes in width/aspect/rim format. The tool computes sidewall height, overall diameter, circumference, and revolutions per km for both, then shows the percentage difference and the real speed when your speedometer reads 100. Keep the diameter change within ±3% to avoid gearing, ABS, and clearance problems.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "In 205/55R16: 205 is the tread width in mm, 55 is the sidewall as a percentage of width, R16 is a 16-inch rim.",
+      "Sidewall height = width × aspect ÷ 100; overall diameter = rim inches × 25.4 + 2 × sidewall.",
+      "Speedometer error equals the circumference difference: a 5% larger tire reads 100 while you actually do 105.",
+      "A larger diameter raises ground clearance by half the diameter change and lowers engine rpm at a given speed.",
+      "The ±3% rule: most manufacturers consider diameter changes within 3% safe for ABS, gearing, and wheel-well clearance."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Enter your current tire size (from the sidewall, e.g. 205/55R16).",
+      "Enter the new size you are considering.",
+      "Compare sidewall, diameter, circumference, and revs per km for both.",
+      "Read the speedometer effect: real speed when the dial shows 100.",
+      "Check the verdict: within ±3% is generally safe; beyond that, reconsider."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "Sidewall = width × aspect ÷ 100 (mm)\nDiameter = rim × 25.4 + 2 × sidewall (mm)\nCircumference = π × diameter\nDifference % = (new − old) ÷ old × 100\nActual speed = 100 × new ÷ old",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Old 205/55R16 vs new 215/60R16.\nOld: sidewall = 205 × 55 ÷ 100 = 112.75 mm; diameter = 16 × 25.4 + 2 × 112.75 = 631.9 mm\nNew: sidewall = 215 × 60 ÷ 100 = 129 mm; diameter = 406.4 + 258 = 664.4 mm\nCircumference: 1,985 mm → 2,087 mm; difference = +5.14%\nSpeedo 100 → actual 105.1 km/h. Clearance +16.3 mm.\nVerdict: 5.14% exceeds ±3% — not recommended.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Prevents speeding tickets from an optimistic speedometer after upsizing.",
+      "Catches clearance and gearing problems before you buy.",
+      "Revs-per-km comparison helps fuel-economy thinkers.",
+      "Instant side-by-side numbers with no app install."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "A geometry comparison only: it cannot check whether the tire physically fits your wheel wells, suspension, or brake calipers.",
+      "Real rolling diameter shrinks slightly under vehicle load — calculations use the unloaded theoretical size.",
+      "The ±3% guideline is industry practice, not law; your insurer or local rules may differ.",
+      "Always confirm load index and speed rating with a tire professional before changing sizes."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What does 205/55R16 mean?",
+        "a": "205 mm tread width, sidewall height 55% of the width (112.75 mm), radial construction, fitting a 16-inch rim."
+      },
+      {
+        "q": "Why does my speedometer change with tire size?",
+        "a": "The speedometer counts wheel revolutions and assumes the factory tire circumference. A larger tire travels farther per revolution, so the car moves faster than the dial shows."
+      },
+      {
+        "q": "What is the 3% rule?",
+        "a": "Keep the overall diameter within ±3% of stock. Beyond that, gearing, ABS calibration, odometer accuracy, and wheel-well clearance can all be affected."
+      },
+      {
+        "q": "Will bigger tires improve fuel economy?",
+        "a": "Slightly lower rpm at cruise can help, but wider, heavier tires usually increase rolling resistance and aerodynamic drag — net effect is often worse economy."
+      },
+      {
+        "q": "Does width affect the speedometer?",
+        "a": "Only indirectly: width changes the sidewall height (width × aspect%), which changes diameter. Same width and aspect on a bigger rim changes diameter directly."
+      },
+      {
+        "q": "Can I trust the clearance number?",
+        "a": "It is the theoretical change at the tire's top. Suspension compression, steering lock, and wheel-well shape need a physical fitment check."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your tire comparison",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "oldLabel": "Current tire",
+      "newLabel": "New tire",
+      "widthLabel": "Width (mm)",
+      "aspectLabel": "Aspect (%)",
+      "rimLabel": "Rim (in)",
+      "specHint": "Read the size from your tire sidewall, e.g. 205/55R16.",
+      "swapLabel": "Swap",
+      "sidewallLabel": "Sidewall height",
+      "diameterLabel": "Overall diameter",
+      "revsLabel": "Revs per km",
+      "clearanceLabel": "Clearance change",
+      "diffLabel": "Circumference difference",
+      "speedoLabel": "Actual speed at speedo 100",
+      "verdictLabel": "Verdict",
+      "okLabel": "Within ±3% — generally safe.",
+      "warnLabel": "Exceeds ±3% — gearing, ABS and clearance may be affected.",
+      "mmUnit": "mm",
+      "kmhUnit": "km/h"
+    }
+  }
+}

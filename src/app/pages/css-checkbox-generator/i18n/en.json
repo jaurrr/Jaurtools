@@ -1,0 +1,99 @@
+{
+  "css-checkbox-generator": {
+    "benefits": [
+      "The preview renders your exact generated CSS, so what you see is what you paste.",
+      "Accessible by default: the real checkbox input stays in the DOM with a visible focus ring.",
+      "Switch mode included, so toggle-style controls need no second tool.",
+      "Checkmark, colors, and corners all scale automatically with the size slider — no manual math.",
+      "Copy-paste HTML and CSS drop into any project with zero dependencies and zero JavaScript."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The technique hides the native checkbox visually (opacity: 0) but keeps it in the DOM, then styles a sibling span as the visible box. The :checked + .box selector changes the box's appearance when the input is toggled, and ::after draws the checkmark. Because the real input remains, keyboard and screen-reader users get full native behavior.",
+        "q": "How does a CSS-only custom checkbox work?"
+      },
+      {
+        "a": "Yes. The generated CSS uses inline-flex layout with align-items: center, so the box and the label text stay vertically centered at any size. The label text is a plain span, so it wraps naturally on small screens.",
+        "q": "Does the label stay aligned with the box?"
+      },
+      {
+        "a": "For a switch, the sliding knob's travel distance equals the track width minus the knob width minus the padding (4px total). If you edit the generated CSS by hand, keep travel = track width − knob width − 4px, or the knob will overflow the track.",
+        "q": "How is the switch knob travel distance calculated?"
+      },
+      {
+        "a": "The focus-visible outline is baked into the generated CSS, giving keyboard users a clear ring when they tab to the control. Always keep a visible focus indicator — removing outlines is one of the most common accessibility mistakes in custom form controls.",
+        "q": "Is the generated checkbox keyboard-accessible?"
+      },
+      {
+        "a": "In most cases yes — wrap the output in your framework's component and bind the checked state to your own variable. The markup is plain HTML and the styling is plain CSS, so React, Vue, Angular, or Svelte can all use it without changes.",
+        "q": "Can I use this output in React, Vue, or Angular?"
+      },
+      {
+        "a": "Increase the size slider: the box, border, checkmark, and switch track all scale from the single size value. The default 20px box matches common design systems; 24px or larger is friendlier for touch screens.",
+        "q": "How do I make the checkbox bigger for touch screens?"
+      }
+    ],
+    "formula": ".fancy-check input { position: absolute; opacity: 0; }   /* real input stays in DOM */\n.fancy-check .box { width: S; height: S; border: W solid BC; border-radius: S × corner%; }\n.fancy-check input:checked + .box { background: ACCENT; border-color: ACCENT; }\n.fancy-check .box::after { /* checkmark */ border-width: 0 W W 0; transform: rotate(45deg); }\n\nSwitch: track width = 2 × S, knob = S − 4, travel = track − knob − 4",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Checkbox or Switch mode at the top of the tool card.",
+      "Drag the size slider and pick your accent and border colors; the live preview updates instantly.",
+      "For checkboxes, fine-tune the border width and corner roundness.",
+      "Type the label text you want next to the control.",
+      "Copy the HTML and the CSS, paste both into your project, and rename the classes if you like."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Native checkboxes look different in every browser and OS, which is why designers restyle them with CSS.",
+      "The standard technique keeps the real input in the DOM (visually hidden) and styles a sibling element, preserving keyboard and screen-reader support.",
+      "The :checked pseudo-class combined with the adjacent-sibling selector (+) is what flips the styled box between states.",
+      "The checkmark is drawn with a rotated bordered box via ::after — no image or icon font needed.",
+      "Switches are the same idea with a wider track and a sliding knob moved by translateX.",
+      "A visible :focus-visible outline is essential so keyboard users can see which control is active."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "css checkbox generator, custom checkbox css, css toggle switch, styled checkbox, switch css generator",
+    "labels": {
+      "accentColorLabel": "Accent color (checked state)",
+      "borderColorLabel": "Border / track color",
+      "borderWidthLabel": "Border width",
+      "checkboxTab": "Checkbox",
+      "copiedMessage": "Copied",
+      "copyCssButton": "Copy CSS",
+      "copyHtmlButton": "Copy HTML",
+      "cornerRadiusLabel": "Corner roundness",
+      "cssOutputLabel": "Your CSS",
+      "downloadButton": "Download bundle",
+      "htmlOutputLabel": "Your HTML",
+      "labelTextLabel": "Label text",
+      "previewHint": "Live preview — this is your exact generated CSS at work. Click it to toggle.",
+      "sizeLabel": "Control size",
+      "styleLabel": "Control style",
+      "switchTab": "Switch"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "One control per output — groups of checkboxes or radio buttons must be duplicated by hand.",
+      "The switch knob slides left-to-right; in right-to-left layouts you may want to mirror the translateX direction.",
+      "Label text is HTML-escaped in the output, so inline markup inside labels is not supported.",
+      "Output assumes a light page background for the unchecked box; adjust the background color for dark themes."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate accessible custom CSS checkboxes and toggle switches with live preview. Size, colors, corners, copy-ready HTML + CSS. Free online tool.",
+    "metaTitle": "CSS Checkbox Generator — Free Online Tool",
+    "name": "CSS Checkbox Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Design custom CSS checkboxes and toggle switches visually — size, accent color, border, corner roundness, and label text — with a live preview that runs your exact generated CSS. Copy the matching HTML and CSS and drop them into any project, no JavaScript needed.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Checkbox results",
+    "tagline": "Custom checkboxes and switches, styled your way.",
+    "workedExample": "Settings: checkbox, size 20px, accent #4f46e5, border #94a3b8, border width 2px, corner roundness 25%.\nGenerated box CSS (excerpt):\n.fancy-check .box {\n  width: 20px;\n  height: 20px;\n  border: 2px solid #94a3b8;\n  border-radius: 5px;   /* 20 × 25% = 5 */\n}\n.fancy-check input:checked + .box {\n  background: #4f46e5;\n  border-color: #4f46e5;\n}\nThe checkmark inside scales automatically (5×9px at this size), and switching to Switch mode would produce a 40px-wide track with a 16px knob traveling 20px.",
+    "workedExampleHeading": "Worked example"
+  }
+}

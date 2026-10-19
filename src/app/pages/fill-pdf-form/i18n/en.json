@@ -1,0 +1,115 @@
+{
+  "fill-pdf-form": {
+    "benefits": [
+      "No printing, handwriting or scanning — fill forms digitally in seconds.",
+      "Works with forms from governments, banks and employers that use the AcroForm standard.",
+      "Create professional fillable forms for surveys, applications and registrations without paid software.",
+      "Your documents never leave your device, so sensitive forms stay private.",
+      "The downloaded PDF opens correctly in every major PDF reader."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is a PDF that contains interactive AcroForm fields — text boxes, checkboxes, dropdown lists and radio buttons — that you can click and type into, instead of printing the page and writing by hand.",
+        "q": "What is a fillable PDF form?"
+      },
+      {
+        "a": "The file probably has no AcroForm fields. Scanned pages and flat PDFs contain only images or drawn text, so there is nothing to detect. XFA-based dynamic forms are also unsupported.",
+        "q": "Why does my PDF show no fields?"
+      },
+      {
+        "a": "Yes. The downloaded copy contains your values written into the form fields, with regenerated appearance streams so the answers display in any PDF reader.",
+        "q": "Are my filled answers saved permanently?"
+      },
+      {
+        "a": "Yes, the fields stay editable unless you flatten the PDF elsewhere. Anyone opening the file in a PDF reader can change the values.",
+        "q": "Can I edit the answers after downloading?"
+      },
+      {
+        "a": "No hard limit. In Create mode the tool adds new A4 pages automatically — 8 fields fit per page at default spacing — so a 100-field form simply becomes a 13-page PDF.",
+        "q": "Is there a limit on the number of fields?"
+      },
+      {
+        "a": "Only to load this page. The form engine is bundled with the site, so filling and creating work fully offline afterwards, and no file is ever uploaded.",
+        "q": "Does this tool need an internet connection?"
+      }
+    ],
+    "formula": "pages_needed = ceil(total_fields / 8)\n\nAt the default layout each A4 page fits 8 fields (76 pt spacing, 660 pt of usable height).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a mode: Fill an existing form, or Create a new fillable PDF.",
+      "To fill: upload your PDF. The tool lists every detected field with its name and type.",
+      "Enter your answers — type into text fields, tick checkboxes, pick dropdown options.",
+      "Click the fill button to bake your answers into the file and download the completed PDF.",
+      "To create: add rows for each field you need, pick text, checkbox or dropdown, name them, then build and download your new fillable PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A fillable PDF uses the AcroForm standard: interactive field objects stored inside the PDF file itself, not just drawn text.",
+      "This tool auto-detects five field kinds: text fields, checkboxes, dropdowns, radio groups and option lists.",
+      "After filling, field appearance streams are regenerated so your answers show correctly in Adobe Reader, browsers and mobile viewers.",
+      "In Create mode each A4 page holds up to 8 fields at the default 76-point spacing before a new page starts.",
+      "Everything runs locally with the pdf-lib engine — files are never uploaded anywhere. The practical limit is 50 MB per file."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pdf forms, fill pdf form online, create fillable pdf, pdf form filler, fillable pdf creator, acroform",
+    "labels": {
+      "addRow": "Add field",
+      "applyButton": "Fill and download",
+      "buildButton": "Build fillable PDF",
+      "busy": "Working, please wait…",
+      "createHint": "Add one row per field. Dropdown options are comma-separated.",
+      "errNoFields": "Add at least one named field before building.",
+      "errParse": "Could not read this PDF. It may be corrupted or use XFA forms.",
+      "errProcess": "Something went wrong while processing the PDF.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "PDF with form fields, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "kind_check": "checkbox",
+      "kind_dropdown": "dropdown",
+      "kind_other": "field",
+      "kind_radio": "radio group",
+      "kind_text": "text field",
+      "modeCreate": "Create a form",
+      "modeFill": "Fill a form",
+      "modeLabel": "Mode",
+      "noFieldsNote": "No AcroForm fields were found in this PDF. It may be a scanned or flat document.",
+      "removeRow": "Remove field",
+      "rowLabel": "Field",
+      "rowLabelPh": "e.g. Full name",
+      "rowOptions": "Options",
+      "rowOptionsPh": "Yes, No, Maybe",
+      "rowType": "Type",
+      "statusDone": "Done — your PDF has been downloaded.",
+      "statusLoaded": "Detected {n} field(s). Fill them below.",
+      "typeCheck": "Checkbox",
+      "typeDropdown": "Dropdown",
+      "typeText": "Text field",
+      "unsupportedField": "Not editable here"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "XFA (XML Forms Architecture) forms are not supported — only classic AcroForm fields are detected.",
+      "Password-protected PDFs may fail to parse unless the password is removed first.",
+      "This tool fills form fields; it cannot add or remove digital signatures or flatten scanned images into fields.",
+      "Field appearances are regenerated generically, so fonts may look slightly different from the original authoring software."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Fill existing PDF forms or create new fillable PDFs right in your browser. Free, private, no signup needed.",
+    "metaTitle": "Fill PDF Form - Complete PDF Forms Online Free | JaurTools",
+    "name": "Fill PDF Form",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF that contains form fields and every field is detected automatically — text boxes, checkboxes, dropdowns and radio buttons. Type your answers, then download a completed copy. You can also build a brand-new fillable PDF from scratch by adding exactly the fields you need.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "PDF Forms results",
+    "tagline": "Fill forms or create fillable PDFs in your browser.",
+    "workedExample": "You design a job application form with 20 fields.\nUsable height per A4 page: 790 - 130 = 660 pt.\nFields per page: floor(660 / 76) = 8.\nPages needed: ceil(20 / 8) = ceil(2.5) = 3 pages.\nThe tool generates a 3-page PDF: 8 fields on page 1, 8 on page 2, 4 on page 3.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,98 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="wifi-ssid">{{ t('labels.ssidLabel') }}</label>
+        <input id="wifi-ssid" type="text" autocomplete="off"
+          [ngModel]="ssid()" (ngModelChange)="ssid.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="wifi-security">{{ t('labels.securityLabel') }}</label>
+        <select id="wifi-security" [ngModel]="security()" (ngModelChange)="security.set($event)">
+          <option value="WPA">{{ t('labels.securityWpa') }}</option>
+          <option value="WEP">{{ t('labels.securityWep') }}</option>
+          <option value="nopass">{{ t('labels.securityNone') }}</option>
+        </select>
+      </div>
+
+      @if (security() !== 'nopass') {
+        <div class="field">
+          <label for="wifi-password">{{ t('labels.passwordLabel') }}</label>
+          <input id="wifi-password" type="text" autocomplete="off"
+            [ngModel]="password()" (ngModelChange)="password.set($event)" />
+        </div>
+      }
+
+      <label class="check-row">
+        <input type="checkbox" [ngModel]="hidden()" (ngModelChange)="hidden.set($event)" />
+        {{ t('labels.hiddenLabel') }}
+      </label>
+
+      <div class="results" aria-live="polite">
+        @if (qrUrl()) {
+          <div class="qr-wrap">
+            <img [src]="qrUrl()" [alt]="t('labels.qrAlt')" width="256" height="256" />
+          </div>
+          <p class="payload-label">{{ t('labels.payloadLabel') }}</p>
+          <p class="output-box mono" dir="ltr">{{ payload() }}</p>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadButton') }}
+            </button>
+          </div>
+        } @else {
+          <p class="note">{{ t('labels.emptyHint') }}</p>
+        }
+      </div>
+
+      <p class="note">{{ t('labels.noteText') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

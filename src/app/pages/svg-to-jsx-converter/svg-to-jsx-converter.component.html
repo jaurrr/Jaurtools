@@ -1,0 +1,186 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="refresh-cw" /> {{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="svg-input">{{ t('labels.inputLabel') }}</label>
+        <textarea id="svg-input" class="dv-term-input code" rows="8" spellcheck="false"
+          [ngModel]="svgInput()" (ngModelChange)="svgInput.set($event)"
+          [attr.placeholder]="t('labels.inputPlaceholder')"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn-ghost" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ t('labels.sampleButton') }}
+        </button>
+        <button type="button" class="btn-ghost" (click)="clearAll()">
+          {{ t('labels.clearButton') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="svg-name">{{ t('labels.nameLabel') }}</label>
+        <input id="svg-name" type="text" maxlength="60"
+          [ngModel]="componentName()" (ngModelChange)="setComponentName($event)"
+          [attr.placeholder]="t('labels.namePlaceholder')" />
+      </div>
+
+      <fieldset class="options">
+        <legend>{{ t('labels.optionsHeading') }}</legend>
+        <label class="check-row">
+          <input type="checkbox" [ngModel]="wrapComponent()" (ngModelChange)="wrapComponent.set($event)" />
+          <span>{{ t('labels.wrapLabel') }}</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" [ngModel]="useTypeScript()" (ngModelChange)="useTypeScript.set($event)" />
+          <span>{{ t('labels.tsLabel') }}</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" [ngModel]="stripDimensions()" (ngModelChange)="stripDimensions.set($event)" />
+          <span>{{ t('labels.stripLabel') }}</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" [ngModel]="spreadProps()" (ngModelChange)="spreadProps.set($event)" />
+          <span>{{ t('labels.propsLabel') }}</span>
+        </label>
+        <label class="check-row">
+          <input type="checkbox" [ngModel]="convertStyle()" (ngModelChange)="convertStyle.set($event)" />
+          <span>{{ t('labels.styleLabel') }}</span>
+        </label>
+      </fieldset>
+
+      @if (output().error === 'parse') {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.parseError') }}</p>
+      } @else if (output().error === 'notSvg') {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.notSvgError') }}</p>
+      } @else if (output().error === 'empty') {
+        <p class="note">{{ t('labels.emptyInput') }}</p>
+      } @else {
+        <div class="field">
+          <label for="svg-output">{{ t('labels.outputLabel') }}</label>
+          <textarea id="svg-output" class="dv-term-input code" rows="12" readonly spellcheck="false"
+            [ngModel]="output().jsx"></textarea>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="copyOutput()">
+            <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copyButton') }}
+          </button>
+          <button type="button" class="btn-ghost" (click)="downloadFile()">
+            <app-icon name="download" /> {{ t('labels.downloadButton') }} ({{ fileName() }})
+          </button>
+        </div>
+
+        <div class="results">
+          <div class="result-row">
+            <span>{{ t('labels.elementsLabel') }}</span>
+            <strong>{{ output().elements }}</strong>
+          </div>
+          <div class="result-row">
+            <span>{{ t('labels.inputCharsLabel') }}</span>
+            <strong>{{ svgInput().length }}</strong>
+          </div>
+          <div class="result-row total">
+            <span>{{ t('labels.outputCharsLabel') }}</span>
+            <strong>{{ output().jsx.length }}</strong>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">{{ t('labels.previewHeading') }}</h3>
+        <div class="preview-box" [innerHTML]="previewHtml()"></div>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

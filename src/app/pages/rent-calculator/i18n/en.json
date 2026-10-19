@@ -1,0 +1,90 @@
+{
+  "rent-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use this calculator",
+    "formulaHeading": "The formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "category": "Finance",
+    "name": "Rent Calculator",
+    "tagline": "Find the maximum rent you can comfortably afford from your income.",
+    "metaTitle": "Rent Calculator - How Much Rent Can I Afford? | JaurTools",
+    "metaDescription": "Free rent affordability calculator: find your maximum affordable rent from income using the 30% rule, plus a conservative 25% target.",
+    "keywords": "rent calculator, how much rent can i afford, rent affordability calculator, 30 percent rule rent",
+    "resultsHeading": "Your rent affordability",
+    "quickAnswer": "The 30% rule says rent should not exceed 30% of gross income: max rent = annual income x 0.30 / 12. Example: on 1,200,000 annual income you can afford up to 30,000 per month, with a conservative 25,000 target at the 25% rule. If your current 25,000 rent is 25% of your monthly income, you are in the comfortable zone.",
+    "keyFacts": [
+      "The 30% rule: spend no more than 30% of gross income on rent.",
+      "The 25% rule is the conservative version that leaves more room for savings.",
+      "Landlords often use the 40x rule: annual income should be 40x the monthly rent (same math as 30%).",
+      "Rent burden above 30% is called cost-burdened; above 50% is severely burdened.",
+      "These rules use gross income; your take-home budget is tighter.",
+      "High-cost cities force many renters above 30%: then cut other costs or earn more, not wishful math."
+    ],
+    "howTo": [
+      "Enter your gross annual income.",
+      "Optionally enter your current or quoted monthly rent.",
+      "Read your maximum affordable rent under the 30% rule.",
+      "Use the 25% figure as your comfort target when house-hunting.",
+      "Check the verdict: it grades your current rent against your income."
+    ],
+    "formula": "Max monthly rent (30% rule) = Annual income x 0.30 / 12.\nConservative rent (25% rule) = Annual income x 0.25 / 12.\nRent burden = (Monthly rent / Monthly income) x 100.\nExample: 1,200,000 x 0.30 / 12 = 30,000; burden of 25,000 rent = 25%.",
+    "workedExample": "Annual income 1,200,000, current rent 25,000:\n1. Max rent: 1,200,000 x 0.30 / 12 = 30,000 per month.\n2. Conservative target: 1,200,000 x 0.25 / 12 = 25,000 per month.\n3. Monthly income: 1,200,000 / 12 = 100,000.\n4. Rent burden: 25,000 / 100,000 x 100 = 25%.\n5. Verdict: 25% is at or under 30%, so this rent is affordable with room to save.",
+    "benefits": [
+      "Stops you from falling in love with a flat your budget cannot keep.",
+      "Gives landlords' own 40x rule back to you as a negotiating fact.",
+      "The conservative target protects your savings rate while renting.",
+      "The burden verdict grades any listing against your income in one glance."
+    ],
+    "limitations": [
+      "Rules of thumb, not personal finance advice: your debts and goals matter too.",
+      "Uses gross income; taxes and deductions shrink what is truly available.",
+      "Ignores utilities, maintenance, and commuting costs that add to housing cost.",
+      "In very high or low cost cities the 30% rule fits poorly; adjust with judgment."
+    ],
+    "faqs": [
+      {
+        "q": "Why 30%?",
+        "a": "It is the long-standing housing affordability standard used by governments and lenders: at 30% most households can still cover food, transport, savings, and debt. It is a ceiling, not a target; spending less is always better."
+      },
+      {
+        "q": "What is the 40x rent rule?",
+        "a": "Landlords often require annual income of 40 times the monthly rent. It is the same math as the 30% rule: 12 / 0.30 = 40. If a landlord quotes it, you now know exactly where the number comes from."
+      },
+      {
+        "q": "Should I use gross or net income?",
+        "a": "These rules are defined on gross income, so enter gross for the standard answer. For your real budget, repeat the math on take-home pay: that number is the one your bank account feels."
+      },
+      {
+        "q": "My rent is 40% of my income. What now?",
+        "a": "First, verify with net income, since gross flatters the ratio. Then either raise income, find a cheaper place or roommates, or cut other spending deliberately. Do not just hope it works out: a 40% burden leaves almost no margin for emergencies."
+      },
+      {
+        "q": "Does this include utilities and maintenance?",
+        "a": "No. The 30% rule covers rent alone in its classic form. Add your expected utilities, society charges, and commuting cost to the rent before judging affordability honestly."
+      },
+      {
+        "q": "Is renting at 25% always better than 30%?",
+        "a": "For your savings rate, yes: that 5% difference compounds into real wealth over the years. But do not pick a terrible location just to hit 25%; commute time and safety have value too."
+      }
+    ],
+    "labels": {
+      "annualIncome": "Gross annual income",
+      "currentRent": "Current monthly rent (optional)",
+      "maxRent": "Max affordable rent (30% rule)",
+      "conservativeRent": "Comfortable target (25% rule)",
+      "rentBurden": "Your rent burden",
+      "burdenOk": "At or under 30%: this rent is affordable with room to save.",
+      "burdenHigh": "Between 30% and 40%: tight, consider cheaper options or higher income.",
+      "burdenSevere": "Above 40%: severely burdened, this rent strains your budget."
+    }
+  }
+}

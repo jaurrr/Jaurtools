@@ -1,0 +1,94 @@
+{
+  "generate-list-of-numbers": {
+    "assumptionNote": "Lists are capped at 5,000 numbers to keep the page fast. A zero step produces no list.",
+    "benefits": [
+      "Creates long sequences instantly - no typing them one by one.",
+      "Countdown lists are just a negative step away.",
+      "Copy or download the list straight into spreadsheets or code.",
+      "Even steps make perfect multiples lists for tables and drills.",
+      "The count readout tells you list size before you use it."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The step is added to the current value repeatedly. A step of 2 from 1 gives 1, 3, 5, 7, ... A step of 0.5 gives 1, 1.5, 2, 2.5, ... The step can be any non-zero number, including decimals.",
+        "q": "What does the step value mean?"
+      },
+      {
+        "a": "Yes. Enter a start larger than the end and a negative step. For example, start 10, end 1, step -1 gives 10, 9, 8, ..., 1.",
+        "q": "Can I make a countdown list?"
+      },
+      {
+        "a": "The count is floor((end - start) / step) + 1 when the step points toward the end. For start 1, end 10, step 2: (10 - 1) / 2 = 4.5, floored to 4, plus 1 = 5 numbers.",
+        "q": "How many numbers will my list have?"
+      },
+      {
+        "a": "Tap the download button to save the list as a plain text file (number-list.txt), one number per line. Or use the copy button to grab a comma-separated version.",
+        "q": "Can I save the list to a file?"
+      },
+      {
+        "a": "It generates up to 5,000 numbers per run and shows a note when the range would produce more. That keeps the browser fast and the page light.",
+        "q": "Is there a limit on list size?"
+      },
+      {
+        "a": "No. A zero step would repeat the start forever, which is not a list. Enter a non-zero step, positive or negative.",
+        "q": "Why does a step of 0 give nothing?"
+      }
+    ],
+    "formula": "With step s > 0: start, start+s, start+2s, ... up to the last value <= end.\nCount = floor((end - start) / s) + 1.\nWith step s < 0: values descend from start to the last value >= end.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the starting number of your list.",
+      "Enter the ending number (it can be smaller than the start).",
+      "Enter the step - how much to add each time (negative steps count down).",
+      "The full list and its count appear instantly.",
+      "Copy the list or download it as a text file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A number list is an arithmetic sequence: each term adds the same step to the previous one.",
+      "The step can be positive, negative, a whole number or a decimal - but never zero.",
+      "A positive step with start above end (or negative step with start below end) produces an empty list.",
+      "Count = floor((end - start) / step) + 1, which this tool computes for you.",
+      "Lists are capped at 5,000 items to protect browser performance.",
+      "The download saves one number per line, ready for Excel or code."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "generate list of numbers, number sequence generator, sequential number list, make number list, countdown list generator, arithmetic sequence generator",
+    "labels": {
+      "copiedLabel": "Copied",
+      "copyLabel": "Copy list",
+      "countLabel": "Numbers in list",
+      "downloadLabel": "Download .txt",
+      "endLabel": "End",
+      "listLabel": "The list",
+      "noneLabel": "No numbers - check your step",
+      "startLabel": "Start",
+      "stepLabel": "Step",
+      "truncatedNote": "This range would exceed 5,000 numbers, so only the first 5,000 are shown."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Capped at 5,000 numbers per run - longer ranges are truncated.",
+      "Floating-point steps can show tiny rounding; values are rounded to 6 decimals.",
+      "It generates arithmetic sequences only - not geometric or Fibonacci sequences.",
+      "The download is plain text, not an Excel or CSV file with formatting."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free number list generator: create sequential number lists with any start, end and step. Copy or download the list as text. 100% private.",
+    "metaTitle": "Generate List of Numbers - Sequential Number List Maker | JaurTools",
+    "name": "Generate List of Numbers",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Start 1, end 10, step 2 produces 1, 3, 5, 7, 9 - five numbers. This tool builds any arithmetic sequence: pick a start, an end and a step, and the full list appears with its count. Negative steps count down, decimal steps are fine, and lists are capped at 5,000 numbers. Copy the result or download it as a text file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Number list results",
+    "tagline": "Build sequential number lists with any start, end and step - then copy or download.",
+    "workedExample": "Generate from 1 to 10 with step 2:\n1. Start at 1.\n2. Add the step: 1 + 2 = 3, then 5, 7, 9.\n3. Next would be 11, which is past the end (10), so stop.\n4. List: 1, 3, 5, 7, 9.\n5. Count = floor((10 - 1) / 2) + 1 = floor(4.5) + 1 = 5 numbers.",
+    "workedExampleHeading": "Worked example"
+  }
+}

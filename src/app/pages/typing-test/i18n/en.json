@@ -1,0 +1,101 @@
+{
+  "typing-test": {
+    "benefits": [
+      "Measure your real typing speed with the standard WPM formula.",
+      "Live accuracy feedback trains you to slow down where it counts.",
+      "Works in English, Hindi, and Arabic — the test text follows your language.",
+      "No account or leaderboard pressure — just honest numbers."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "WPM (words per minute) = (correct characters ÷ 5) ÷ minutes. The '5' is the standard word length used by typing tests worldwide. Only correct characters count, so accuracy directly affects your score.",
+        "q": "How is WPM calculated?"
+      },
+      {
+        "a": "30–40 WPM is average for casual typists, 50–60 is solid for office work, and 80+ is genuinely fast. Professional transcriptionists often exceed 100 WPM. Consistency matters more than peak speed — steady, accurate typing beats bursts with errors.",
+        "q": "What is a good typing speed?"
+      },
+      {
+        "a": "Yes, deliberately. Correcting errors with backspace costs time and teaches your fingers the right motion. Tests that forbid backspace reward sloppy typing; this one rewards getting it right, which is what real work needs.",
+        "q": "Why does backspace count against my speed?"
+      },
+      {
+        "a": "Practice in short daily sessions rather than one long grind. Keep your eyes on the text, not the keyboard. Slow down until accuracy passes 95%, then speed follows naturally. Touch-typing courses build the muscle memory fastest.",
+        "q": "How can I type faster?"
+      },
+      {
+        "a": "Mostly, but punctuation and capitalisation differ. Arabic and Hindi tests use their own scripts and sample texts, and the WPM formula still applies. Right-to-left text renders correctly in the test area.",
+        "q": "Does it work for Hindi and Arabic?"
+      },
+      {
+        "a": "For most people, 95%+. Below 90%, you are trading speed for sloppiness — slow down. Above 98%, you probably have headroom to push speed. The best typists hold 97–99% at full speed.",
+        "q": "What accuracy should I aim for?"
+      }
+    ],
+    "formula": "WPM = (correct characters ÷ 5) ÷ minutes elapsed\nAccuracy = (keystrokes − errors) ÷ keystrokes × 100\nBackspace deletes the last character but the error already counted stays counted.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a test duration: 15, 30, 60, or 120 seconds.",
+      "Click inside the text area and start typing — the timer starts on your first key.",
+      "Type the highlighted text; backspace fixes mistakes.",
+      "Watch live WPM and accuracy, or wait for the final score when time runs out.",
+      "Try New text for a fresh passage, or Restart to retry the same one."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Typing speed is measured in WPM — words per minute.",
+      "One standard 'word' = 5 characters, including spaces.",
+      "Accuracy = correct keystrokes ÷ total keystrokes × 100.",
+      "The timer starts on your first keystroke, not on page load.",
+      "Backspace is allowed; errors still count against accuracy.",
+      "Sample texts change with the site language."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "typing test online, wpm test, typing speed test, qwerty typing test, check typing speed",
+    "labels": {
+      "accuracyLabel": "Accuracy",
+      "arenaLabel": "Typing area. Click here and start typing the text shown.",
+      "correctChars": "Correct characters",
+      "durationLabel": "Test duration",
+      "finalAcc": "Final accuracy",
+      "finalWpm": "Your speed",
+      "focusHint": "Click the text area, then just start typing — the timer begins on your first key.",
+      "keystrokes": "Total keystrokes",
+      "liveAcc": "Accuracy",
+      "liveWpm": "WPM",
+      "newText": "New text",
+      "restart": "Restart",
+      "samples": [
+        "The quick brown fox jumps over the lazy dog, and the five boxing wizards jump quickly. Pack my box with five dozen liquor jugs before the crazy kangaroo arrives at dawn.",
+        "Technology moves fast, but good habits move faster. Practice a little every day, keep your wrists relaxed, and let your fingers learn the keyboard by themselves.",
+        "A calm mind types well. Breathe slowly, sit straight, and read one word ahead of your fingers. Speed is a side effect of accuracy, not the other way around."
+      ],
+      "secUnit": "s",
+      "timeLeft": "Time left"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Short tests are noisy — one stumble skews a 15-second score.",
+      "Memorised passages inflate scores; use New text for honest numbers.",
+      "Keyboard layout and device change results; compare like with like.",
+      "Measures transcription, not composition — thinking time is not tested."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online typing test with live WPM and accuracy in English, Hindi and Arabic. See how fast you really type — no signup.",
+    "metaTitle": "Typing Test - Check Your Typing Speed (WPM) Free | JaurTools",
+    "name": "Typing Test",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type the passage and get your words-per-minute and accuracy. WPM = (correct characters ÷ 5) ÷ minutes, so 300 correct characters in one minute = 60 WPM. The timer starts on your first keystroke, backspace is allowed, and sample texts follow the site language — English, Hindi, or Arabic. Aim for 95%+ accuracy; speed follows accuracy, not the other way round.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your typing results",
+    "tagline": "Live WPM and accuracy — in English, Hindi, and Arabic.",
+    "workedExample": "60-second test, 300 correct characters, 315 keystrokes, 15 errors:\n1. WPM = (300 ÷ 5) ÷ 1 = 60 WPM.\n2. Accuracy = (315 − 15) ÷ 315 × 100 = 95.2%.\n3. Verdict: solid office speed with good accuracy — push for 65 WPM next.",
+    "workedExampleHeading": "Worked example"
+  }
+}

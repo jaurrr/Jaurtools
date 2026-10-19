@@ -1,0 +1,195 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="vo-shape">{{ t('labels.shape') }}</label>
+        <select id="vo-shape" [ngModel]="shape()" (ngModelChange)="setShape($event)">
+          <option value="cube">{{ t('labels.shapeCube') }}</option>
+          <option value="cuboid">{{ t('labels.shapeCuboid') }}</option>
+          <option value="sphere">{{ t('labels.shapeSphere') }}</option>
+          <option value="cylinder">{{ t('labels.shapeCylinder') }}</option>
+          <option value="cone">{{ t('labels.shapeCone') }}</option>
+          <option value="pyramid">{{ t('labels.shapePyramid') }}</option>
+        </select>
+      </div>
+
+      @if (shape() === 'cube') {
+        <div class="field">
+          <label for="vo-a">{{ t('labels.side') }} ({{ unit() }})</label>
+          <input id="vo-a" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="a()" (ngModelChange)="setA($event)" />
+        </div>
+      }
+      @if (shape() === 'cuboid') {
+        <div class="field">
+          <label for="vo-a2">{{ t('labels.length') }} ({{ unit() }})</label>
+          <input id="vo-a2" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="a()" (ngModelChange)="setA($event)" />
+        </div>
+        <div class="field">
+          <label for="vo-b2">{{ t('labels.width') }} ({{ unit() }})</label>
+          <input id="vo-b2" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="b()" (ngModelChange)="setB($event)" />
+        </div>
+        <div class="field">
+          <label for="vo-c2">{{ t('labels.height') }} ({{ unit() }})</label>
+          <input id="vo-c2" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="c()" (ngModelChange)="setC($event)" />
+        </div>
+      }
+      @if (shape() === 'sphere') {
+        <div class="field">
+          <label for="vo-a3">{{ t('labels.radius') }} ({{ unit() }})</label>
+          <input id="vo-a3" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="a()" (ngModelChange)="setA($event)" />
+        </div>
+      }
+      @if (shape() === 'cylinder' || shape() === 'cone') {
+        <div class="field">
+          <label for="vo-a4">{{ t('labels.radius') }} ({{ unit() }})</label>
+          <input id="vo-a4" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="a()" (ngModelChange)="setA($event)" />
+        </div>
+        <div class="field">
+          <label for="vo-b4">{{ t('labels.height') }} ({{ unit() }})</label>
+          <input id="vo-b4" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="b()" (ngModelChange)="setB($event)" />
+        </div>
+      }
+      @if (shape() === 'pyramid') {
+        <div class="field">
+          <label for="vo-a5">{{ t('labels.baseSide') }} ({{ unit() }})</label>
+          <input id="vo-a5" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="a()" (ngModelChange)="setA($event)" />
+        </div>
+        <div class="field">
+          <label for="vo-b5">{{ t('labels.height') }} ({{ unit() }})</label>
+          <input id="vo-b5" type="number" inputmode="decimal" min="0" step="any"
+            [ngModel]="b()" (ngModelChange)="setB($event)" />
+        </div>
+      }
+
+      <div class="field">
+        <label for="vo-unit">{{ t('labels.unit') }}</label>
+        <select id="vo-unit" [ngModel]="unit()" (ngModelChange)="setUnit($event)">
+          <option value="mm">mm</option>
+          <option value="cm">cm</option>
+          <option value="m">m</option>
+          <option value="in">in</option>
+          <option value="ft">ft</option>
+        </select>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="database" /> {{ t('labels.volume') }}</span>
+          <strong>{{ fmt(volume()) }} {{ unit() }}³</strong>
+        </div>
+        @if (detail()) {
+          <div class="result-row">
+            <span>{{ detail()?.label }}</span>
+            <strong>{{ detail()?.value }} {{ unit() }}²</strong>
+          </div>
+        }
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

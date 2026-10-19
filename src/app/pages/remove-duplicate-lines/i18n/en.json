@@ -1,0 +1,95 @@
+{
+  "remove-duplicate-lines": {
+    "assumptionNote": "Empty lines are dropped from the output. Turn off Trim whitespace if leading spaces are meaningful in your list.",
+    "benefits": [
+      "Cleans mailing lists, keyword lists and data exports in seconds.",
+      "Keeps the original order — the first occurrence always wins.",
+      "Optional case-insensitive mode catches Apple vs apple.",
+      "Trim mode treats lines with stray spaces as duplicates.",
+      "Copy or download the cleaned list with one click."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — paste your comma list after converting commas to line breaks, dedupe it, then copy it back. The Sort List tool pairs well with this workflow.",
+        "q": "Can I dedupe a comma-separated list?"
+      },
+      {
+        "a": "By default, yes — the first occurrence of each line is kept and later repeats are removed, so the original order never changes.",
+        "q": "Does it keep the original order?"
+      },
+      {
+        "a": "Whitespace trimming is on by default and drops empty lines. Turn it off if leading or trailing spaces are significant in your data.",
+        "q": "What happens to empty lines?"
+      },
+      {
+        "a": "Enable the Ignore case option. Then Apple, APPLE and apple all count as the same line.",
+        "q": "How do I remove Apple and apple as duplicates?"
+      },
+      {
+        "a": "Yes — the tool processes the whole list instantly in your browser and handles hundreds of thousands of lines without uploading anything.",
+        "q": "Can it handle large lists?"
+      },
+      {
+        "a": "No — it compares whole lines. Two lines with different wording stay separate even if they mean the same thing.",
+        "q": "Does it find near-duplicate or similar lines?"
+      }
+    ],
+    "formula": "for each line in input:\n  key = trim(line) if trim else line\n  key = lowercase(key) if ignoreCase else key\n  keep the line only if key was not seen before\nremoved = totalLines - uniqueLines",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your list into the input box, one item per line.",
+      "Choose options: Ignore case and Trim whitespace (both on is the common setup).",
+      "Watch the counts update — total lines, unique lines and lines removed.",
+      "Review the cleaned list in the output box.",
+      "Copy it to the clipboard or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Duplicates are found by comparing whole lines, not words.",
+      "The first occurrence is always kept; later repeats are removed.",
+      "Whitespace trimming is enabled by default so 'apple' and 'apple ' match.",
+      "Case sensitivity is a choice — exact match is the default.",
+      "Everything runs locally; no list of yours is ever uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "remove duplicate lines, delete duplicate lines online, dedupe list, unique lines tool, remove duplicates text",
+    "labels": {
+      "clearButton": "Clear",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "emptyState": "Unique lines will appear here.",
+      "ignoreCase": "Ignore case (Apple = apple)",
+      "outputLabel": "Unique lines",
+      "removedLabel": "Duplicates removed",
+      "textLabel": "Your list",
+      "textPlaceholder": "One item per line...",
+      "totalLabel": "Total lines",
+      "trimWhitespace": "Trim whitespace",
+      "uniqueLabel": "Unique lines"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Compares exact lines only — near-duplicates with different wording stay separate.",
+      "Empty lines are dropped when trimming is on.",
+      "Unicode case folding is limited to basic lowercase conversion."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free tool to remove duplicate lines from any list. Keeps order, optional case-insensitive mode, copy or download results. Private.",
+    "metaTitle": "Remove Duplicate Lines — Dedupe Any List Instantly",
+    "name": "Remove Duplicate Lines",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Removes duplicate lines from any list instantly: paste one item per line and get back only the unique lines, keeping the original order. Options for case-insensitive matching and whitespace trimming, with live counts of total, unique and removed lines, plus one-click copy and .txt download.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Duplicate line remover",
+    "tagline": "Paste a list, get back only the unique lines — order kept, one click.",
+    "workedExample": "Input (4 lines):\napple\nBanana\napple\n  Banana  \n\nWith trim ON, ignore case OFF:\n- Line 1 \"apple\" kept\n- Line 2 \"Banana\" kept\n- Line 3 \"apple\" is a duplicate -> removed\n- Line 4 trims to \"Banana\" -> duplicate -> removed\nResult: 4 total, 2 unique, 2 removed\nOutput:\napple\nBanana",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,10 @@
+<div class="legal-page">
+  <h1>{{ translate.t('disclaimer.heading') }}</h1>
+  <p class="muted updated">{{ translate.t('disclaimer.updated') }}</p>
+  @for (s of sections; track s) {
+    <section>
+      <h2>{{ translate.t('disclaimer.' + s + '.title') }}</h2>
+      <p>{{ translate.t('disclaimer.' + s + '.body') }}</p>
+    </section>
+  }
+</div>

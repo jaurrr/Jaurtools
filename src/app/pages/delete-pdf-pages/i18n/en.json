@@ -1,0 +1,107 @@
+{
+  "delete-pdf-pages": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online page removers.",
+      "Two ways to select: tap page tiles or type a range like “1,3,5-8”.",
+      "Pages are removed in descending order, so numbering never shifts mid-operation.",
+      "Bookmarks and structure of kept pages are preserved in the new file.",
+      "Free and unlimited — trim as many PDFs as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — tick the pages you want gone on the tile grid, or type their numbers as a range like “2,4-6”. Then click “Delete pages”.",
+        "q": "Can I delete specific pages only?"
+      },
+      {
+        "a": "Ranges are inclusive and forgiving: “5-7” deletes pages 5, 6 and 7. You can mix singles and ranges: “1,3,5-8”. Out-of-range numbers show an error instead of guessing.",
+        "q": "How do range expressions work?"
+      },
+      {
+        "a": "Keep a copy of your original file — the downloaded PDF permanently drops the deleted pages.",
+        "q": "Can I undo a deletion?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Yes. The new file contains only the pages you kept, so it is usually smaller — especially if you removed image-heavy pages.",
+        "q": "Does the file get smaller?"
+      },
+      {
+        "a": "The tool refuses to delete every page — at least one page must remain in the document.",
+        "q": "Can I delete all pages?"
+      }
+    ],
+    "formula": "remaining pages = total pages − deleted pages\n(ranges like 5-7 expand to 5, 6, 7 — each counted once)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the PDF you want to trim.",
+      "Tap the page tiles you want to remove, or type a range like “1,3,5-8” and click “Apply”.",
+      "Check the selection count, then click “Delete pages”.",
+      "Review the remaining page count.",
+      "Download the trimmed PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Pages are numbered from 1 in the tool, matching what you see in PDF readers.",
+      "A range like “5-8” expands to pages 5, 6, 7 and 8 — ranges are inclusive on both ends.",
+      "Duplicate entries are counted once: “3,3,5” deletes pages 3 and 5 only.",
+      "Pages are removed from the highest number downwards, so earlier page numbers never shift during deletion.",
+      "The downloaded PDF is rebuilt with only the kept pages, in their original order."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "delete pdf pages, remove pages from pdf online free, pdf page remover, drop pdf pages",
+    "labels": {
+      "applyRangeBtn": "Apply",
+      "chooseFile": "Choose PDF file",
+      "clearBtn": "Clear",
+      "deleteBtn": "Delete pages",
+      "downloadBtn": "Download trimmed PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errBadRange": "That range is not valid. Use numbers and dashes like “1,3,5-8”.",
+      "errDeleteAll": "At least one page must remain — you cannot delete every page.",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNoSelection": "Select at least one page to delete.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "pagePrefix": "Page",
+      "pagesFound": "pages",
+      "processing": "Working…",
+      "rangeLabel": "Or type a page range",
+      "rangePlaceholder": "e.g. 1,3,5-8",
+      "remainingLabel": "Pages remaining",
+      "resetBtn": "Start over",
+      "selectAllBtn": "Select all",
+      "selectedSuffix": "selected",
+      "successMsg": "Pages deleted. Download your PDF below.",
+      "tapLabel": "Tap pages to delete"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Deletion is permanent in the downloaded file — keep your original.",
+      "You cannot delete every page; at least one must remain.",
+      "Very large PDFs (50 MB+) are not accepted to protect browser memory.",
+      "Password-protected PDFs must be unlocked before editing."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Delete pages from any PDF free in your browser — tap pages or type ranges like 1,3,5-8. No upload, no signup.",
+    "metaTitle": "Delete PDF Pages Free — Remove Pages from PDF Online",
+    "name": "Delete PDF Pages",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, tap the pages to remove — or type a range like “1,3,5-8” — and download the trimmed file. Deletion happens locally in your browser, and you see the exact remaining page count.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Delete pages results",
+    "tagline": "Remove unwanted pages from any PDF — right in your browser.",
+    "workedExample": "A 12-page PDF, delete “2,5-7”:\n“5-7” expands to pages 5, 6, 7 — plus page 2, that is 4 pages removed\nremaining = 12 − 4 = 8 pages\nThe downloaded PDF contains pages 1, 3, 4, 8, 9, 10, 11 and 12, in order.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "list-randomizer": {
+    "benefits": [
+      "Shuffle names, tasks, or teams fairly in one click.",
+      "Name-picker mode draws winners without repeats or arguments.",
+      "Fisher-Yates shuffling gives every ordering an equal chance.",
+      "Your list stays in the browser. Raffle entries and student names stay private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The Fisher-Yates algorithm walks the list from the end, swapping each item with a random earlier one. Every one of the n! possible orders is equally likely. Naive shuffles, like sorting by random keys, bias toward some orders; Fisher-Yates has no such bias.",
+        "q": "How does the shuffle work?"
+      },
+      {
+        "a": "Yes. Each name has exactly the same chance on every draw, and picked names are removed from the pool so nobody wins twice. For a public raffle, do the draw on a screen everyone can see.",
+        "q": "Is the name picker fair for a raffle?"
+      },
+      {
+        "a": "Yes. Shuffle mode reorders the whole list. A common trick for teams: shuffle the names, then take them in chunks, first 5 are team A, next 5 team B, and so on. Everyone is assigned with zero bias.",
+        "q": "Can I use this to split teams?"
+      },
+      {
+        "a": "The picker draws without replacement within one draw, so no name repeats. If you draw again, the pool resets. For multi-round draws where winners stay out, remove winners from the input list between rounds.",
+        "q": "Can the same name be picked twice?"
+      },
+      {
+        "a": "Thousands of lines work fine; shuffling is instant even for very long lists. The page stays responsive because everything runs locally in your browser.",
+        "q": "How long a list can I shuffle?"
+      },
+      {
+        "a": "Blank lines are skipped automatically, and leading or trailing spaces are trimmed. Duplicate names are treated as separate entries, so remove exact duplicates yourself if each person should appear once.",
+        "q": "What happens to blank lines and duplicates?"
+      }
+    ],
+    "formula": "Fisher-Yates: for i from n-1 down to 1: j = random integer in [0, i]; swap a[i], a[j].\nEvery permutation equally likely: P(any order) = 1 / n!.\nName picker: shuffle, then take the first k.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your list: one name or item per line.",
+      "Choose Shuffle list or Pick names.",
+      "For picking, set how many names to draw.",
+      "Click the button. The result appears instantly.",
+      "Copy the result to share it anywhere."
+    ],
+    "howToHeading": "How to use this randomizer",
+    "keyFacts": [
+      "Shuffling reorders a list so every possible order is equally likely.",
+      "This tool uses the Fisher-Yates algorithm, the standard unbiased shuffle.",
+      "Name-picker mode draws k unique names: a fair draw with no repeats.",
+      "Blank lines are ignored and surrounding spaces are trimmed automatically.",
+      "All processing happens locally. Lists of names never leave your device."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "list randomizer, random list shuffler, random name picker, shuffle names online, raffle name picker",
+    "labels": {
+      "copied": "Copied!",
+      "copy": "Copy result",
+      "emptyNote": "Your shuffled list or picked names will appear here.",
+      "inputLabel": "One item per line",
+      "lineCount": "Items detected",
+      "modeLabel": "Mode",
+      "modePick": "Pick names",
+      "modeShuffle": "Shuffle list",
+      "pick": "Pick names",
+      "pickCount": "How many to pick",
+      "resultHeading": "Result",
+      "shuffle": "Shuffle"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses the browser's pseudo-random generator, not certified lottery randomness.",
+      "For public draws, fairness is only as verifiable as the screen showing it.",
+      "Duplicates in the input count as separate entries; clean your list first."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free list randomizer: shuffle any list or pick random names with the unbiased Fisher-Yates shuffle. Perfect for raffles, teams, and classrooms. Private, no sign-up.",
+    "metaTitle": "List Randomizer & Name Picker - Free Shuffle Tool | JaurTools",
+    "name": "List Randomizer",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste one item per line, then shuffle the whole list or pick k random names with no repeats. The Fisher-Yates algorithm gives every ordering an equal chance, so draws are fair. Blank lines are skipped automatically and the result copies with one click.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your randomized list",
+    "tagline": "Shuffle any list or pick random names fairly. Fisher-Yates, no repeats.",
+    "workedExample": "A teacher picks 2 students from 6 for a quiz:\n1. She pastes 6 names: Aarav, Diya, Kabir, Meera, Rohan, Sara.\n2. Mode: Pick names. Count: 2.\n3. Result: Meera, Kabir.\n4. Why fair? After shuffling, every pair is equally likely: there are C(6,2) = 15 possible pairs, so P(any specific pair) = 1/15, about 6.7 percent.\n5. She copies the result into her attendance sheet.",
+    "workedExampleHeading": "Worked example"
+  }
+}

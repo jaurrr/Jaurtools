@@ -1,0 +1,109 @@
+{
+  "speed-calculator": {
+    "name": "Speed Calculator",
+    "tagline": "Solve any speed, distance, or time problem — with unit conversions and running pace.",
+    "metaTitle": "Speed Calculator – Distance, Time & Pace Solver | JaurTools",
+    "metaDescription": "Free speed calculator. Solve for speed, distance or time, with km/h, m/s, mph conversions and min/km pace — 100% in your browser.",
+    "keywords": "speed calculator, distance time speed solver, pace calculator, kmh to mph, average speed calculator",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Pick what to solve for, enter the other two values, and the tool computes the third instantly. Speed equals distance divided by time: 100 km in 1.5 hours is 66.67 km/h, which is also 18.52 m/s, 41.43 mph, or a 0:54 min/km running pace.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "The speed–distance–time triangle: cover the value you want — speed = distance ÷ time, distance = speed × time, time = distance ÷ speed.",
+      "1 m/s equals 3.6 km/h; 1 km/h equals 0.621371 mph.",
+      "Running pace is the inverse of speed: minutes per kilometer instead of kilometers per hour.",
+      "Average speed over a trip can hide variation — traffic jams and rest stops lower the average below your cruising speed.",
+      "Unit consistency matters: 100 km in 90 minutes is 66.67 km/h only after converting 90 minutes to 1.5 hours.",
+      "A knot — used in aviation and shipping — equals 1.852 km/h; 100 km/h is about 54 knots."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Choose whether to solve for speed, distance, or time.",
+      "Enter the two values you know — distance in km, time in hours, or speed in km/h.",
+      "Read the solved value highlighted at the top of the results.",
+      "Check the conversions: m/s, mph, total minutes, miles, and running pace.",
+      "Switch modes to answer the reverse question without retyping everything.",
+      "Use the pace readout to plan race splits: a 60-minute 10K needs a 6:00 min/km pace."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "Speed    = Distance ÷ Time\nDistance = Speed × Time\nTime     = Distance ÷ Speed\nm/s = km/h ÷ 3.6 | mph = km/h × 0.621371 | pace = 60 ÷ km/h (min/km)",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Distance 100 km, time 1.5 hours, solving for speed.\nSpeed = 100 ÷ 1.5 = 66.67 km/h\nIn m/s: 66.67 ÷ 3.6 = 18.52 m/s\nIn mph: 66.67 × 0.621371 = 41.43 mph\nPace: 60 ÷ 66.67 = 0.9 min/km = 0:54 per km\nDistance in miles: 100 × 0.621371 = 62.14 miles",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Answers all three question types in one tool — no separate converters needed.",
+      "Running pace included, so runners can plan splits directly.",
+      "Instant results as you drag the sliders — great for what-if planning.",
+      "Honest unit math with no rounding tricks hidden."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Computes average speed only — it cannot account for acceleration, stops, or traffic within the trip.",
+      "Assumes consistent units as labeled; mixing miles with km/h-style inputs will give wrong answers.",
+      "Not for navigation: real travel time depends on roads, traffic, and rest stops.",
+      "Extreme inputs (zero time) are guarded to zero rather than producing infinity."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is the speed distance time triangle?",
+        "a": "Write D over S×T in a triangle. Cover the unknown: D alone on top means S = D÷T; S×T side by side on the bottom means D = S×T; T = D÷S. This tool applies it for you."
+      },
+      {
+        "q": "How do I convert km/h to mph?",
+        "a": "Multiply by 0.621371. So 100 km/h is 62.14 mph. To go back, divide mph by 0.621371 (or multiply by 1.60934)."
+      },
+      {
+        "q": "What is running pace and how is it calculated?",
+        "a": "Pace is minutes per kilometer — the inverse of speed. Divide 60 by your km/h speed: 12 km/h gives a 5:00 min/km pace."
+      },
+      {
+        "q": "Why is my average speed lower than my cruising speed?",
+        "a": "Average speed divides total distance by total time, including stops and slow sections. Cruising speed ignores them, so the average is always lower on real trips."
+      },
+      {
+        "q": "Can I enter time in minutes?",
+        "a": "Enter time in hours using decimals: 90 minutes is 1.5 hours, 45 minutes is 0.75 hours. The results also show total minutes for convenience."
+      },
+      {
+        "q": "Does this account for acceleration?",
+        "a": "No. It assumes the average over the whole trip. For physics problems with acceleration, use the kinematic equations instead."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your speed results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "modeLabel": "Solve for",
+      "modeSpeed": "Speed",
+      "modeDistance": "Distance",
+      "modeTime": "Time",
+      "distanceLabel": "Distance (km)",
+      "distanceHint": "Total distance travelled.",
+      "timeLabel": "Time (hours)",
+      "timeHint": "Total time, e.g. 1.5 for 90 minutes.",
+      "speedLabel": "Speed (km/h)",
+      "speedHint": "Steady travel speed.",
+      "speedResultLabel": "Speed",
+      "distanceResultLabel": "Distance",
+      "timeResultLabel": "Time",
+      "kmhUnit": "km/h",
+      "msLabel": "Meters per second",
+      "msUnit": "m/s",
+      "mphLabel": "Miles per hour",
+      "mphUnit": "mph",
+      "paceLabel": "Running pace",
+      "paceUnit": "min/km",
+      "milesLabel": "Distance in miles",
+      "milesUnit": "mi",
+      "kmUnit": "km",
+      "minsLabel": "Total minutes",
+      "minsUnit": "min",
+      "hoursUnit": "h"
+    }
+  }
+}

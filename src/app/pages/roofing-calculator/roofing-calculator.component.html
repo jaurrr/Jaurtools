@@ -1,0 +1,119 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2><app-icon name="ruler" /> {{ t('resultsHeading') }}</h2>
+      <div class="field">
+        <label for="roof-length">{{ t('labels.lengthLabel') }}</label>
+        <div class="input-row">
+          <input id="roof-length" type="number" inputmode="decimal" min="1" max="200" step="0.5"
+            [ngModel]="length()" (ngModelChange)="setLength($event)" />
+          <input type="range" min="3" max="40" step="0.5" [ngModel]="length()" (ngModelChange)="setLength($event)"
+            [attr.aria-label]="t('labels.lengthLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.lengthHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="roof-width">{{ t('labels.widthLabel') }}</label>
+        <div class="input-row">
+          <input id="roof-width" type="number" inputmode="decimal" min="1" max="200" step="0.5"
+            [ngModel]="width()" (ngModelChange)="setWidth($event)" />
+          <input type="range" min="3" max="40" step="0.5" [ngModel]="width()" (ngModelChange)="setWidth($event)"
+            [attr.aria-label]="t('labels.widthLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.widthHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="roof-pitch">{{ t('labels.pitchLabel') }}</label>
+        <div class="input-row">
+          <input id="roof-pitch" type="number" inputmode="decimal" min="0" max="24" step="0.5"
+            [ngModel]="pitch()" (ngModelChange)="setPitch($event)" />
+          <input type="range" min="0" max="18" step="0.5" [ngModel]="pitch()" (ngModelChange)="setPitch($event)"
+            [attr.aria-label]="t('labels.pitchLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.pitchHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="roof-overhang">{{ t('labels.overhangLabel') }}</label>
+        <div class="input-row">
+          <input id="roof-overhang" type="number" inputmode="decimal" min="0" max="3" step="0.1"
+            [ngModel]="overhang()" (ngModelChange)="setOverhang($event)" />
+          <input type="range" min="0" max="2" step="0.1" [ngModel]="overhang()" (ngModelChange)="setOverhang($event)"
+            [attr.aria-label]="t('labels.overhangLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.overhangHint') }}</p>
+      </div>
+      <div class="field">
+        <label for="roof-waste">{{ t('labels.wasteLabel') }}</label>
+        <div class="input-row">
+          <input id="roof-waste" type="number" inputmode="decimal" min="0" max="50" step="1"
+            [ngModel]="waste()" (ngModelChange)="setWaste($event)" />
+          <input type="range" min="0" max="30" step="1" [ngModel]="waste()" (ngModelChange)="setWaste($event)"
+            [attr.aria-label]="t('labels.wasteLabel')" class="calc-range" />
+        </div>
+        <p class="note">{{ t('labels.wasteHint') }}</p>
+      </div>
+      <div class="results calc-results">
+        <div class="result-row">
+          <span>{{ t('labels.slopeLabel') }}</span>
+          <strong>{{ fmt2().format(slopeFactor()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.areaLabel') }}</span>
+          <strong>{{ fmt1().format(roofArea()) }} {{ t('labels.areaUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.squaresLabel') }}</span>
+          <strong>{{ squaresToOrder() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.feltLabel') }}</span>
+          <strong>{{ feltRolls() }}</strong>
+        </div>
+        <div class="result-row total">
+          <span>{{ t('labels.bundlesLabel') }}</span>
+          <strong>{{ bundles() }}</strong>
+        </div>
+        <p class="note">{{ t('labels.roundNote') }}</p>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

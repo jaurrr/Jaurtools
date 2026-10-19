@@ -1,0 +1,101 @@
+{
+  "json-formatter": {
+    "benefits": [
+      "Reads minified payloads: one-line API responses become scannable in one click.",
+      "Finds syntax errors fast: the exact line and column of the problem are highlighted.",
+      "Shrinks payloads: minify removes every unnecessary byte before sending data over the wire.",
+      "Normalizes key order: sorted keys make diffs and reviews predictable.",
+      "Runs fully in your browser: production data is never uploaded to a server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Beautify (pretty-print) adds indentation and line breaks so humans can read the structure. Minify removes all unnecessary whitespace so the payload is as small as possible for transfer.",
+        "q": "What is the difference between beautify and minify?"
+      },
+      {
+        "a": "Yes. Both operations parse the JSON first, and any syntax error is reported with its line and column before output is produced.",
+        "q": "Does it validate before formatting?"
+      },
+      {
+        "a": "Usually 2 spaces. 4 spaces suits deeply nested documents, and tabs suit developers whose editors render tabs at a custom width. The choice never changes the data.",
+        "q": "Which indent size should I choose?"
+      },
+      {
+        "a": "It reorders object keys alphabetically at every nesting level. Values never change. It is useful for stable diffs and deterministic output.",
+        "q": "What does sort keys do?"
+      },
+      {
+        "a": "Yes - formatting never changes values, only whitespace and key order. The parsed data before and after is identical.",
+        "q": "Is formatting lossless?"
+      },
+      {
+        "a": "The tool reports the character position from the parser and converts it to a line and column. Common culprits: trailing commas, single quotes, unquoted keys, and comments - none of which are valid JSON.",
+        "q": "How do I find the exact error location?"
+      }
+    ],
+    "formula": "pretty:  JSON.stringify(value, null, gap)     // gap = 2 spaces, 4 spaces, or tab\nminify:  JSON.stringify(value)                 // no whitespace at all\nsort:    recursively reorder object keys A-Z before stringifying\nNote: JSON numbers, strings, booleans, null, arrays, and objects are the only valid values.",
+    "formulaHeading": "How formatting works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JSON into the input box - minified, messy, or broken.",
+      "Pick an indent style: 2 spaces, 4 spaces, or tab. Optionally enable sort keys.",
+      "Click Beautify for readable output or Minify for the smallest possible payload.",
+      "If the JSON is invalid, read the reported line and column, fix it, and the output updates live.",
+      "Copy the result or download it as a .json file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON Formatter parses, validates, beautifies, and minifies JSON documents.",
+      "Beautify adds indentation and line breaks; minify strips all unnecessary whitespace.",
+      "Syntax errors are reported with line and column numbers derived from the parser position.",
+      "Optional key sorting reorders object keys alphabetically at every level without changing values.",
+      "Statistics show total bytes, total key count, and maximum nesting depth.",
+      "Formatting is lossless: values are never modified, only whitespace and key order."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json formatter, json beautifier, json minifier, format json online, json pretty print, validate json",
+    "labels": {
+      "copiedLabel": "Copied!",
+      "copyLabel": "Copy output",
+      "depthLabel": "Max depth",
+      "downloadLabel": "Download .json",
+      "errorAtLabel": "Error at line",
+      "formatLabel": "Beautify",
+      "indent2": "2 spaces",
+      "indent4": "4 spaces",
+      "indentLabel": "Indent style",
+      "indentTab": "Tab",
+      "inputLabel": "JSON input",
+      "invalidLabel": "Invalid JSON:",
+      "keysLabel": "Total keys",
+      "minifyLabel": "Minify",
+      "outputLabel": "Formatted output",
+      "sizeLabel": "Bytes",
+      "sortKeysLabel": "Sort object keys (A-Z)",
+      "validLabel": "Valid JSON."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only strict JSON is accepted: trailing commas, comments, single quotes, and unquoted keys are errors.",
+      "Duplicate object keys are silently resolved by the parser (last value wins) - see JSON Validator to detect them.",
+      "Extremely deep or huge documents may be slow; formatting runs on the main thread.",
+      "Number precision follows JavaScript doubles: very long numbers may lose precision when parsed."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JSON formatter: beautify, validate, and minify JSON online with indent options, key sorting, and exact error locations. Private, no sign-up.",
+    "metaTitle": "JSON Formatter - Beautify, Validate & Minify JSON | JaurTools",
+    "name": "JSON Formatter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste any JSON and the tool validates it, then beautifies it with your chosen indent (2 spaces, 4 spaces, or tab) or minifies it to the smallest possible form. Syntax errors are pinpointed with line and column numbers, and you get byte size, key count, and nesting depth alongside the output.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON Formatter results",
+    "tagline": "Beautify, validate, and minify JSON - with indent styles, key sorting, and exact error locations.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input (minified):\n{\"name\":\"Asha Sharma\",\"age\":30,\"tags\":[\"admin\",\"editor\"]}\n\nBeautify with 2-space indent:\n{\n  \"name\": \"Asha Sharma\",\n  \"age\": 30,\n  \"tags\": [\n    \"admin\",\n    \"editor\"\n  ]\n}\n\nMinify returns the input unchanged (it was already minimal).\nStats: 57 bytes, 3 keys, max depth 3 (root = 1)."
+  }
+}

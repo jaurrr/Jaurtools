@@ -1,0 +1,93 @@
+{
+  "zero-coupon-bond-calculator": {
+    "assumptionNote": "Assumes annual compounding and a constant yield to maturity, with the bond held to maturity. Market prices move with interest rates, so the fair price today may differ from the price you can actually trade at.",
+    "benefits": [
+      "Price any zero-coupon bond in seconds from face value, yield, and maturity.",
+      "Work backwards: find the yield a market price is really offering you.",
+      "Understand the discount: see exactly how much less than face value you pay.",
+      "The cleanest way to learn bond maths - no coupon complications."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A bond that pays no periodic interest. You buy it below face value and receive the full face value at maturity. The difference is your return. US Treasury STRIPS and many government savings bonds work this way.",
+        "q": "What is a zero-coupon bond?"
+      },
+      {
+        "a": "Because there are no coupons to cushion the blow, zero-coupon bonds are the most interest-rate-sensitive bonds. When market yields rise, their prices fall hard; when yields fall, they rise hard. Longer maturities amplify the effect.",
+        "q": "Why are zero prices so sensitive to rates?"
+      },
+      {
+        "a": "Yield to maturity is the annualised return you earn if you buy at the market price and hold to maturity. Solve: yield = (face value / price)^(1/years) - 1. This calculator's yield mode does it for you.",
+        "q": "What is yield to maturity?"
+      },
+      {
+        "a": "Often yes for taxes: many countries tax the imputed annual interest on zero-coupon bonds even though you receive no cash until maturity (phantom income). Check your local tax rules before buying - the tax treatment can surprise first-time buyers.",
+        "q": "Are zeros taxed before maturity?"
+      },
+      {
+        "a": "Holding to maturity locks in the yield you calculated. Selling early exposes you to market price swings: if rates rose, you get less than the fair hold-to-maturity value. Zeros suit investors with a known future cash need, like tuition in 10 years.",
+        "q": "Should I hold to maturity or trade?"
+      },
+      {
+        "a": "Reinvestment risk - the risk that coupon payments must be reinvested at lower rates - disappears, because there are no coupons. That makes zeros the purest play on a future interest rate: what you see is what you get if you hold to maturity.",
+        "q": "Do zeros have reinvestment risk?"
+      }
+    ],
+    "formula": "Price = face value / (1 + yield)^years.\nYield = (face value / price)^(1 / years) - 1.\nDiscount = face value - price.\nExample: 1,000 / 1.05^10 = 613.91; yield from 613.91 = 5.00%.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Price mode (you know the yield) or Yield mode (you know the market price).",
+      "Enter the face value paid at maturity.",
+      "In Price mode enter the annual yield; in Yield mode enter the market price.",
+      "Enter years to maturity.",
+      "Read the fair price or the yield to maturity, plus the discount from face value."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Zero-coupon bonds pay no interest; profit comes from buying below face value.",
+      "Price = face value discounted at the yield for the years to maturity.",
+      "Longer maturity and higher yield both mean a deeper discount and lower price.",
+      "They are the most interest-rate-sensitive bonds because there are no coupons.",
+      "US Treasury STRIPS are the classic example of zero-coupon bonds.",
+      "Yield mode reveals the true annualised return hidden in any market price."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zero coupon bond calculator, bond price calculator, yield to maturity calculator, discount bond calculator",
+    "labels": {
+      "annualYield": "Annual yield (%)",
+      "bondPrice": "Fair bond price",
+      "discountLabel": "Discount from face value",
+      "faceValue": "Face value at maturity",
+      "marketPrice": "Current market price",
+      "modeLabel": "Calculation mode",
+      "priceMode": "Find price",
+      "yearsToMaturity": "Years to maturity",
+      "yieldMode": "Find yield",
+      "yieldToMaturity": "Yield to maturity"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes annual compounding; some markets quote semi-annual yields.",
+      "Ignores credit risk, taxes, and bid-ask spreads in real trading.",
+      "Constant-yield assumption; real yield curves are rarely flat.",
+      "Educational pricing, not a trading quote."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free zero-coupon bond calculator: fair price from yield, or yield to maturity from market price. Instant, private, no sign-up.",
+    "metaTitle": "Zero-Coupon Bond Calculator - Price & Yield | JaurTools",
+    "name": "Zero-Coupon Bond Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "A $1,000 zero-coupon bond maturing in 10 years at a 5% yield is worth $613.91 today (1,000 / 1.05^10). The $386.09 discount is your total return if held to maturity. Seen a $613.91 market price? Yield mode shows it offers exactly 5.00% annualised.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your bond results",
+    "tagline": "Price a zero-coupon bond - or reveal the yield hiding in its price.",
+    "workedExample": "Face value $1,000, 10 years, 5% yield:\n1. Price = 1,000 / (1 + 0.05)^10.\n2. 1.05^10 = 1.628895.\n3. Price = 1,000 / 1.628895 = $613.91.\n4. Discount = 1,000 - 613.91 = $386.09 - your total gain at maturity.\nReverse: yield = (1,000 / 613.91)^(1/10) - 1 = 5.00%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

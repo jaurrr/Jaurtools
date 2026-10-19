@@ -1,0 +1,101 @@
+{
+  "guitar-capo-calculator": {
+    "assumptionNote": "The capo raises pitch by exactly one semitone per fret and the guitar is in standard tuning. Chord names use sharp spellings, and only major, minor, and dominant-7th qualities are supported - extensions like maj7 or sus4 are not calculated.",
+    "benefits": [
+      "Play in any key using easy open shapes - no hard barre chords required.",
+      "Find the perfect capo spot for your voice without trial and error.",
+      "See all 12 capo positions for your shape at a glance in the map.",
+      "Work backwards too: pick a target key and learn which shape to play."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Each fret raises the pitch by one semitone. A capo on fret 2 makes every open string sound two semitones higher, so a G shape (G-B-D) sounds as A (A-C#-E). Your fingers play the easy shape while the capo does the transposing.",
+        "q": "How does a capo change the chord?"
+      },
+      {
+        "a": "Put the capo just behind the fret wire (on the headstock side), not in the middle of the fret space. Press it firmly and evenly across all six strings, then check your tuning - capos often pull strings slightly sharp, so retune after clamping.",
+        "q": "Where exactly do I place the capo?"
+      },
+      {
+        "a": "No - the capo cannot lower pitch, only raise it. If the song is too high for you, either play without a capo in a lower key or use the chord transposer to rewrite the progression down.",
+        "q": "Can a capo lower the key of a song?"
+      },
+      {
+        "a": "Three reasons: it lets you use ringing open strings in any key, open shapes are easier than barre chords, and the shorter string length gives a brighter, jangly tone that suits folk and pop. Many famous songs were written around a capo'd open shape.",
+        "q": "Why do guitarists use a capo instead of barre chords?"
+      },
+      {
+        "a": "Two practical limits: above fret 5 or 6 the frets get cramped and the tone gets thin, and a capo only raises pitch - it can never lower it. Most players keep the capo between frets 1 and 5.",
+        "q": "Are there downsides to using a capo?"
+      },
+      {
+        "a": "Work backwards: decide the key you want to hear and the capo fret that suits your voice, then subtract. Want to sound in A with the capo on 2? Play the G shape (A minus 2 semitones = G). Use the Target key mode above - it does this subtraction for you.",
+        "q": "How do I choose which shape to play with a capo?"
+      }
+    ],
+    "formula": "Sounding chord = shape transposed UP by the capo fret\nShape to play = target key transposed DOWN by the capo fret\nEach fret = 1 semitone.\nExample: G shape + capo 2 = (7 + 2) mod 12 = 9 = A.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a direction: shape-to-actual (what does this shape sound like?) or target-key (what shape do I play?).",
+      "For shape-to-actual: pick the chord shape your fingers play and set the capo fret.",
+      "Read the actual sounding chord - that is what the audience hears.",
+      "For target-key: pick the key you want to hear and the capo fret.",
+      "Read which shape to play - your fingers play that, the capo makes it sound in the target key."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A capo on fret N raises every note by exactly N semitones.",
+      "Playing a G shape with the capo on 2 sounds an A chord: (7 + 2) mod 12 = 9 = A.",
+      "To sound in a target key, subtract the capo fret: for A with capo 2, play the G shape.",
+      "Open strings ring out under a capo, which is why capo'd chords sound brighter than barre chords.",
+      "Most players keep the capo between frets 1 and 5; higher gets cramped and thin.",
+      "Always retune after clamping a capo - it usually pulls strings slightly sharp."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "capo calculator, guitar capo chart, capo transposer, what chord with capo, capo key chart",
+    "labels": {
+      "actualLabel": "Actual sounding chord",
+      "capoAt": "capo",
+      "capoLabel": "Capo fret (0 - 11)",
+      "capoMapLabel": "Capo map for",
+      "modeLabel": "Calculator direction",
+      "modeShape": "Shape to actual chord",
+      "modeTarget": "Target key to shape",
+      "playThisLabel": "Play this shape",
+      "shapeQualLabel": "Shape quality",
+      "shapeRootLabel": "Chord shape your fingers play",
+      "soundsLikeLabel": "Sounds like",
+      "targetQualLabel": "Target quality",
+      "targetRootLabel": "Key you want to hear",
+      "qualities": {
+        "maj": "Major",
+        "min": "Minor",
+        "dom7": "Dominant 7th"
+      }
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only major, minor, and dominant-7th shapes are supported - no maj7, sus, or extended chords.",
+      "Chord names use sharps only; flat spellings are not shown.",
+      "Assumes standard tuning; alternate tunings change every answer.",
+      "A capo only raises pitch - it can never lower a song's key."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free guitar capo calculator: see what chord your shape sounds with a capo, or find which shape to play for any target key. Full capo map for frets 0-11. No sign-up.",
+    "metaTitle": "Guitar Capo Calculator - Capo Chord Chart | JaurTools",
+    "name": "Guitar Capo Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A capo on fret 2 raises everything by 2 semitones: play a G shape and the audience hears A. Going the other way, if you want to sound in A with the capo on 2, play the G shape (9 - 2 = 7 = G). The full capo map shows all 12 frets for your shape at a glance, so you can pick the sweet spot for your voice without guessing.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Capo results",
+    "tagline": "See what your chord shape really sounds like with a capo - or find the shape for any target key.",
+    "workedExample": "Capo on fret 4, playing a C shape:\n1. C is index 0. Capo fret = 4.\n2. (0 + 4) mod 12 = 4 = E.\n3. Your fingers play the easy open C shape, but the audience hears E major.\nReverse - target key E, capo on 4:\n1. E is index 4. Subtract the capo: (4 - 4) mod 12 = 0 = C.\n2. Play the C shape; the capo transposes it up to E.",
+    "workedExampleHeading": "Worked example"
+  }
+}

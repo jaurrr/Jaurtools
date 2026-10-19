@@ -1,0 +1,92 @@
+{
+  "frequency-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Frequency Converter",
+    "tagline": "Convert frequency units — Hz, kHz, MHz, GHz, RPM and more.",
+    "metaTitle": "Frequency Converter - Convert Hz, kHz, MHz, GHz Free | JaurTools",
+    "metaDescription": "Free frequency converter: convert hertz, kilohertz, megahertz and gigahertz instantly. Fast, accurate, private — runs in your browser.",
+    "keywords": "frequency converter, hz to khz, mhz to ghz, ghz to mhz, frequency unit converter",
+    "resultsHeading": "Frequency conversion results",
+    "quickAnswer": "1 MHz = 1,000 kHz = 1,000,000 Hz. So a 2.4 GHz Wi-Fi band is 2,400 MHz, and human hearing tops out around 0.02 MHz (20 kHz). Pick any from/to pair across Hz to THz and the result appears instantly.",
+    "keyFacts": [
+      "Hertz (Hz) = cycles per second. Named after Heinrich Hertz.",
+      "Each step up multiplies by 1,000: Hz → kHz → MHz → GHz → THz.",
+      "Human hearing: ~20 Hz to 20 kHz. Mains power: 50/60 Hz.",
+      "FM radio: 88-108 MHz. Wi-Fi: 2.4 GHz and 5 GHz bands.",
+      "CPU clocks: a 3.5 GHz processor ticks 3.5 billion times per second.",
+      "Period and frequency are inverses: period (s) = 1 ÷ frequency (Hz)."
+    ],
+    "howTo": [
+      "Type the frequency value.",
+      "Pick the from-unit (Hz, kHz, MHz, GHz, THz).",
+      "Pick the to-unit.",
+      "Read the instant result; swap reverses it."
+    ],
+    "formula": "result = value × (Hz per from-unit) ÷ (Hz per to-unit).\nHz per unit: Hz 1, kHz 1,000, MHz 10⁶, GHz 10⁹, THz 10¹².\nExample: 2.4 GHz → MHz = 2.4 × 10⁹ ÷ 10⁶ = 2,400 MHz.",
+    "workedExample": "Convert 2.4 GHz (Wi-Fi) to MHz:\n1. Factor: 1 GHz = 1,000,000,000 Hz.\n2. 2.4 × 1,000,000,000 = 2,400,000,000 Hz.\n3. ÷ 1,000,000 = 2,400 MHz.\nConvert 20 kHz (hearing limit) to Hz:\n1. 20 × 1,000 = 20,000 Hz.",
+    "benefits": [
+      "Covers the full everyday range: audio, radio, Wi-Fi, CPUs.",
+      "Exact ×1,000 steps - no rounding surprises.",
+      "Swap button for quick reverse checks.",
+      "Useful for students, makers, and RF hobbyists."
+    ],
+    "limitations": [
+      "Frequency only - wavelength conversion needs the wave speed (e.g. speed of light) as extra input.",
+      "Angular frequency (rad/s) is not covered: ω = 2πf.",
+      "Does not model bandwidth, modulation, or signal quality."
+    ],
+    "faqs": [
+      {
+        "q": "How many Hz are in 1 MHz?",
+        "a": "1,000,000 Hz. Each metric step is ×1,000: 1 kHz = 1,000 Hz, 1 MHz = 1,000 kHz, 1 GHz = 1,000 MHz."
+      },
+      {
+        "q": "What frequency is Wi-Fi?",
+        "a": "Common Wi-Fi bands are 2.4 GHz (2,400 MHz) and 5 GHz (5,000 MHz), with 6 GHz (6,000 MHz) on newer Wi-Fi 6E/7 routers."
+      },
+      {
+        "q": "What is the range of human hearing in Hz?",
+        "a": "Roughly 20 Hz to 20,000 Hz (20 kHz) for young healthy ears. The upper limit falls with age - many adults top out near 15-17 kHz."
+      },
+      {
+        "q": "How do I convert frequency to wavelength?",
+        "a": "Wavelength = wave speed ÷ frequency. For radio waves (speed of light ≈ 300,000,000 m/s), a 100 MHz signal has wavelength 300,000,000 ÷ 100,000,000 = 3 metres."
+      },
+      {
+        "q": "What does GHz mean for a processor?",
+        "a": "Clock speed: billions of cycles per second. But GHz alone does not determine speed - architecture, core count and instructions-per-cycle matter as much or more."
+      },
+      {
+        "q": "What is the difference between Hz and kHz?",
+        "a": "Just scale: 1 kHz = 1,000 Hz. Audio gear uses Hz/kHz, radio uses MHz, and processors and microwaves use GHz."
+      }
+    ],
+    "labels": {
+      "value": "Value",
+      "from": "From",
+      "to": "To",
+      "swap": "Swap units",
+      "result": "Result",
+      "units": {
+        "Hz": "Hertz (Hz)",
+        "kHz": "Kilohertz (kHz)",
+        "MHz": "Megahertz (MHz)",
+        "GHz": "Gigahertz (GHz)",
+        "THz": "Terahertz (THz)"
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "solarize-effect": {
+    "benefits": [
+      "Create dramatic Sabattier-style solarized art with one slider.",
+      "The threshold control moves the effect from subtle tone shifts to full inversion.",
+      "Perfect for psychedelic posters, album covers, and experimental photography.",
+      "Runs fully offline; your photos never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the photo and drag the threshold slider. Bright areas above the threshold invert while dark areas stay put, creating the classic solarized look. Press Download to save.",
+        "q": "How do I solarize a photo?"
+      },
+      {
+        "a": "Threshold 128 inverts the brighter half of tones — the classic look. Lower thresholds invert more of the image; higher thresholds invert only the brightest highlights.",
+        "q": "What threshold should I use?"
+      },
+      {
+        "a": "It is inspired by the Sabattier effect from film photography, where partially developed prints were re-exposed to light. The digital version inverts tones above a threshold for a similar surreal feel.",
+        "q": "What is the Sabattier effect?"
+      },
+      {
+        "a": "No. PNG is lossless and JPG uses high quality (92%). The inverted tones are a style choice, not damage.",
+        "q": "Does solarizing damage the photo?"
+      },
+      {
+        "a": "No. The effect is computed pixel-by-pixel in your browser; the photo is never uploaded anywhere.",
+        "q": "Is my photo uploaded anywhere?"
+      }
+    ],
+    "formula": "for each channel v:\n  out = 255 − v   if v > threshold\n  out = v         otherwise\nthreshold 0–255",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload the photo you want to solarize.",
+      "Drag the threshold slider and watch bright areas invert live.",
+      "Find the threshold that gives the most striking surreal look.",
+      "Choose PNG or JPG output format.",
+      "Press Download to save the solarized image."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Solarization inverts every channel value above your threshold (v → 255 − v).",
+      "Values at or below the threshold are left completely untouched.",
+      "A mid threshold of 128 inverts roughly the brighter half of the image.",
+      "Threshold 0 inverts almost everything; threshold 255 inverts nothing.",
+      "The preview updates live as you drag the slider."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "solarize effect, solarize image, sabattier effect, invert photo effect, psychedelic photo filter",
+    "labels": {
+      "download": "Download solarized image",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "format": "Download format",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "pickOne": "Choose an image above to solarize it.",
+      "preview": "Solarized preview",
+      "threshold": "Inversion threshold",
+      "upload": "Image to solarize"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Solarization is a stylistic effect — results are surreal by design, not natural.",
+      "The threshold applies equally to all three channels; per-channel control is not included.",
+      "Very dark photos show almost no change until the threshold drops very low.",
+      "Animated GIFs are processed as a single still frame."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Solarize an image online for free. Apply the Sabattier inversion effect with an adjustable threshold slider, live preview, and PNG/JPG download. No signup.",
+    "metaTitle": "Solarize Effect Online Free — Sabattier Photo Filter | JaurTools",
+    "name": "Solarize Effect",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and drag the threshold slider to invert its bright tones Sabattier-style. Dark areas stay natural while highlights flip into surreal negatives. Download the PNG or JPG — all in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Solarize results",
+    "tagline": "Flip bright tones into surreal negatives with the classic Sabattier effect.",
+    "workedExample": "Threshold 128 on two channel values:\nvalue 200 > 128 → 255 − 200 = 55 (inverted)\nvalue 100 ≤ 128 → stays 100 (untouched)\nSo a bright sky pixel (210, 220, 230) becomes the dark surreal (45, 35, 25), while shadow pixels below 128 keep their natural color.",
+    "workedExampleHeading": "Worked example"
+  }
+}

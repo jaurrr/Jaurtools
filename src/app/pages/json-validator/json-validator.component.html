@@ -1,0 +1,171 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+      <p class="dv-example">
+        <button type="button" class="dv-example-btn" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ tc('tryExample') }}
+        </button>
+      </p>
+
+
+      <div class="field">
+        <label for="jv-input">{{ t('labels.inputLabel') }}</label>
+        <textarea class="dv-term-input" id="jv-input" dir="ltr" spellcheck="false" autocomplete="off"
+          [ngModel]="input()" (ngModelChange)="setInput($event)"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn" (click)="loadValid()">{{ t('labels.loadValidLabel') }}</button>
+        <button type="button" class="btn" (click)="loadInvalid()">{{ t('labels.loadInvalidLabel') }}</button>
+      </div>
+
+      @if (!analysis().empty) {
+        <div class="results">
+          @if (!analysis().error) {
+            <p class="alert success dv-status dv-status-ok"><app-icon name="check" /> {{ t('labels.validLabel') }}</p>
+          } @else {
+            <p class="alert error dv-status dv-status-bad" role="alert">
+              <strong>{{ t('labels.invalidLabel') }}</strong><br />
+              @if (analysis().line > 0) {
+                {{ t('labels.errorAtLabel') }} {{ analysis().line }}, {{ analysis().col }}<br />
+              }
+              <span class="mono">{{ analysis().error }}</span>
+            </p>
+          }
+
+          <h3 class="split-heading">{{ t('labels.checksHeading') }}</h3>
+          <table class="kv-table">
+            <tbody>
+              @for (c of checks(); track c.id) {
+                <tr>
+                  <th scope="row">{{ t('labels.check_' + c.id) }}</th>
+                  <td>
+                    <span class="badge {{ c.ok ? 'ok' : 'bad' }}">
+                      {{ c.ok ? t('labels.passLabel') : t('labels.failLabel') }}
+                    </span>
+                    @if (c.id === 'parse' && c.detail) {
+                      <div class="mono small">{{ c.detail }}</div>
+                    }
+                    @if (c.id === 'duplicates' && c.detail) {
+                      <div>{{ t('labels.dupCountLabel') }}: {{ c.detail }}</div>
+                    }
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+
+          @if (analysis().dups.length > 0) {
+            <h3 class="split-heading">{{ t('labels.dupHeading') }}</h3>
+            <ul>
+              @for (d of analysis().dups; track d.key + d.line) {
+                <li class="mono">{{ dupMessage(d) }}</li>
+              }
+            </ul>
+          }
+
+          @if (stats(); as s) {
+            <div class="stat-grid">
+              <div class="stat"><strong>{{ fmt(s.bytes) }}</strong><span>{{ t('labels.sizeLabel') }}</span></div>
+              <div class="stat"><strong>{{ fmt(s.keys) }}</strong><span>{{ t('labels.keysLabel') }}</span></div>
+              <div class="stat"><strong>{{ s.depth }}</strong><span>{{ t('labels.depthLabel') }}</span></div>
+              <div class="stat"><strong class="mono">{{ t('labels.type_' + s.type) }}</strong><span>{{ t('labels.topTypeLabel') }}</span></div>
+            </div>
+          }
+        </div>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

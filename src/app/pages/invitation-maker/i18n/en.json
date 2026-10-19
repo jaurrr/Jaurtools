@@ -1,0 +1,96 @@
+{
+  "invitation-maker": {
+    "benefits": [
+      "A polished invitation in about a minute — ideal when the event is this weekend.",
+      "Three distinct styles cover formal, modern, and premium events.",
+      "No watermark, so the card is genuinely shareable on WhatsApp and printable.",
+      "Guest and venue details stay private on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes — the templates, live preview, and unlimited PNG downloads are free with no account and no watermark.",
+        "q": "Is the Invitation Maker free?"
+      },
+      {
+        "a": "1200 by 900 pixels (4:3 landscape). It looks crisp on WhatsApp and social media, and prints cleanly up to A4.",
+        "q": "What size is the invitation image?"
+      },
+      {
+        "a": "No. The PNG contains only your invitation design — nothing is stamped onto it.",
+        "q": "Is there a watermark?"
+      },
+      {
+        "a": "Yes. Your names, dates, and venue are your own content, and the file is yours to share or print.",
+        "q": "Can I share it on WhatsApp or print it for guests?"
+      },
+      {
+        "a": "Any script your device keyboard supports — Hindi, Arabic, English — renders on the card exactly as you type it.",
+        "q": "Can I write the invitation in Hindi or Arabic?"
+      },
+      {
+        "a": "No. The card draws with your browser's built-in canvas, so it works even offline after the page loads.",
+        "q": "Do I need to install an app?"
+      }
+    ],
+    "formula": "Canvas: 1200 x 900 px (4:3 landscape).\nEvent title: up to 96 px, wrapped to a 900–920 px column, auto-centered.\nDate/time block sits one line-height below the title; venue and message stack beneath.\nExport: PNG via canvas.toDataURL, one file per click.",
+    "formulaHeading": "Design specs",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a style: Classic for weddings and formal events, Modern for parties, Elegant for premium occasions.",
+      "Type the event name, host, date, time, venue, and a short personal message.",
+      "Watch the live preview rebuild with every keystroke.",
+      "Press Download PNG when it looks right.",
+      "Send the PNG on WhatsApp or print it for physical invitations."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every invitation renders on a 1200 x 900 px landscape canvas — sharp for WhatsApp, status updates, and A4 prints.",
+      "Three styles: Classic (cream with gold serif borders), Modern (indigo gradient with a date chip), and Elegant (dark slate with gold accents).",
+      "Six fields — event, host, date, time, venue, message — are laid out automatically with balanced spacing.",
+      "Text wraps automatically inside a safe 900 px column, so nothing overflows the borders.",
+      "The whole tool is client-side canvas drawing: no signup, no upload, no watermark on your card."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "invitation maker, free invitation card maker, wedding invitation maker online, birthday invitation card, digital invitation maker",
+    "labels": {
+      "dateLabel": "Date",
+      "downloadButton": "Download PNG",
+      "eventLabel": "Event name",
+      "hostLabel": "Hosted by",
+      "messageLabel": "Personal message",
+      "previewLabel": "Live preview",
+      "sizeNote": "Exports at 1200 x 900 px — sharp for WhatsApp and A4 prints.",
+      "templateLabel": "Choose a style",
+      "timeLabel": "Time",
+      "venueLabel": "Venue"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Three fixed styles only — no drag-and-drop layout editing.",
+      "Serif and system fonts only; no decorative or script typography.",
+      "PNG export only — no editable file format.",
+      "No photo or logo upload; these are text-and-shape designs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create beautiful invitations free in your browser: 3 card styles, your event details, instant PNG download. No signup, no watermark, no upload.",
+    "metaTitle": "Free Invitation Maker — Wedding & Birthday Cards Online",
+    "name": "Invitation Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Invitation Maker designs a complete invitation card from your event details in under a minute. Pick Classic, Modern, or Elegant, type the event name, host, date, time, venue, and message, watch the 1200 by 900 card preview update live, then download it as a PNG. Free, no signup, no watermark, and nothing you type leaves your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Invitation Maker results",
+    "tagline": "Create elegant invitation cards in your browser — pick a style, add your event details, download the PNG.",
+    "templates": {
+      "classic": "Classic",
+      "elegant": "Elegant",
+      "modern": "Modern"
+    },
+    "workedExample": "A family is planning a birthday party. They choose the Modern style and type 'Aarav's Birthday Party' as the event (20 characters, wraps to one line at 96 px), 'Hosted by the Sharma family', 'Sunday, 25 October 2026' and '6:00 PM onwards', the venue 'Green View Banquet Hall, MG Road', and the message 'Join us for cake, music, and celebration!'. The tool centers the title at 330 px, places the gold date chip one line-height below it, stacks the venue and message beneath, and exports a 1200 x 900 PNG — ready to send to the family WhatsApp group in about a minute.",
+    "workedExampleHeading": "Worked example"
+  }
+}

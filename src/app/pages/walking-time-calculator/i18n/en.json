@@ -1,0 +1,112 @@
+{
+  "walking-time-calculator": {
+    "assumptionNote": "Pace categories and age ranges use published averages for comfortable walking speeds. Terrain, fitness, and stride length shift them in real life.",
+    "benefits": [
+      "Gives you a realistic target for the classic one-mile walking test used by many fitness programmes.",
+      "Knowing your pace helps you plan routes - a 30-minute walk at 5 km/h covers about 1.55 miles.",
+      "Tracking your mile time over weeks shows fitness gains that a scale never will.",
+      "The age comparison tells you honestly where you stand, without judgment."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "categories": {
+      "brisk": "Brisk",
+      "easy": "Easy",
+      "fast": "Fast",
+      "moderate": "Moderate",
+      "slow": "Slow"
+    },
+    "category": "Health & Fitness",
+    "comparisons": {
+      "above": "Above typical",
+      "below": "Below typical",
+      "within": "Within typical range"
+    },
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For most adults, 4.8 to 6.4 km/h (3 to 4 mph) is a solid moderate pace - that is roughly a 19 to 25 minute mile. Health guidelines count anything around 100 steps per minute as moderate intensity. If you can talk but not sing while walking, your pace is about right.",
+        "q": "What is a good walking pace?"
+      },
+      {
+        "a": "Most adults take 15 to 25 minutes. A brisk walker does it in about 15 to 17 minutes, an average walker in 19 to 22 minutes, and a relaxed walker in 25 minutes or more. Anything under 20 minutes is a good everyday pace.",
+        "q": "How long should it take to walk a mile?"
+      },
+      {
+        "a": "On average, yes - comfortable walking speed peaks around the 40s and declines gradually after 60, dropping more noticeably past 75. But the range within any age group is wide, and regular walking slows that decline considerably.",
+        "q": "Is walking speed really slower with age?"
+      },
+      {
+        "a": "Walk a known distance - most maps or a 400 m running track work - and time yourself with a phone stopwatch. Divide distance by time in hours. For example, 1 km in 12 minutes is 5 km/h.",
+        "q": "How do I measure my walking speed without a tracker?"
+      },
+      {
+        "a": "Speed is distance per time (km/h or mph) - higher means faster. Pace is time per distance (min/km or min/mi) - lower means faster. Runners and walkers usually talk in pace, so this tool shows you both.",
+        "q": "What is the difference between pace and speed?"
+      },
+      {
+        "a": "Yes, roughly in proportion to speed. A 70 kg person burns about 240 kcal per hour at 5 km/h and about 350 kcal per hour at 6.5 km/h. Covering the same mile faster also takes less time, so per-mile the difference is smaller than per-hour.",
+        "q": "Does walking faster burn more calories?"
+      }
+    ],
+    "formula": "Metric: minutes = 1.609344 / speed(km/h) x 60.\nImperial: minutes = 60 / speed(mph).\nPace per km (min/km) = 60 / speed(km/h).\nPace per mile (min/mi) = 60 / speed(mph).\nExample: at 5 km/h -> 1.609344 / 5 x 60 = 19.31 minutes = 19 min 19 s.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your units: metric (km/h) or imperial (mph).",
+      "Enter your steady walking speed. Not sure? Walk a known distance, time it, and divide distance by time.",
+      "Enter your age so the tool can compare your pace with the typical range for your age group.",
+      "Read your mile time, your pace per kilometre or per mile, and your speed category instantly.",
+      "If your pace falls below the typical range, build up gradually - add five minutes to your daily walk each week."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "One mile equals 1.609344 km. Your mile time in minutes is 60 divided by your speed in mph, or (1.609344 / speed in km/h) x 60.",
+      "A pace of 12:00 min/km equals 19:19 min/mi - the pace of a 5 km/h walker.",
+      "Typical comfortable walking speeds for adults sit around 4.5 to 5.1 km/h, declining gradually after about age 60.",
+      "Brisk walking - roughly 6 km/h or about 100 steps per minute - is the intensity tied to most health benefits in research.",
+      "Treadmill speeds and outdoor speeds feel different: wind, hills, and surface all change your real pace.",
+      "Fitness trackers and phones usually measure distance well but can be off by 5 to 10% on pace, so time your walk if you want a precise number."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "walk a mile time, mile walking time estimator, walking pace calculator, minutes per mile, walking speed by age, pace calculator",
+    "labels": {
+      "age": "Age (years)",
+      "ageComparison": "Compared to your age group",
+      "imperialTab": "Imperial (mph)",
+      "kmUnit": "km",
+      "kmhUnit": "km/h",
+      "metricTab": "Metric (km/h)",
+      "mileUnit": "mi",
+      "minUnit": "min",
+      "mphUnit": "mph",
+      "paceKm": "Pace (per kilometre)",
+      "paceMile": "Pace (per mile)",
+      "secUnit": "s",
+      "speedCategory": "Speed category",
+      "speedImperial": "Walking speed (mph)",
+      "speedMetric": "Walking speed (km/h)",
+      "timeMile": "Time to walk one mile",
+      "unitSystem": "Unit system"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "It is an estimate, not a stopwatch reading. Hills, heat, footwear, and how fresh you feel all change the real time.",
+      "The typical-by-age ranges are published averages for comfortable walking - individuals vary widely.",
+      "The speed categories are practical labels, not medical thresholds.",
+      "This is not medical advice. If walking leaves you unusually breathless or in pain, see a doctor."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "How long will it take you to walk a mile — or any distance? Enter your speed and age for an instant, honest estimate. Free.",
+    "metaTitle": "Walking Time Calculator - How Long Will Your Walk Take? | JaurTools",
+    "name": "Walking Time Calculator",
+    "privacyNote": "This estimator runs 100% in your browser. Your inputs never leave your device.",
+    "quickAnswer": "At 5 km/h (3.1 mph) you walk one mile in about 19 minutes 19 seconds - a 12:00 min/km or 19:19 min/mi pace. Speeds from 4.8 to 6.4 km/h count as moderate walking; above 6.4 km/h is brisk. Enter your speed below and this tool converts it into an exact mile time, then compares your pace with typical comfortable walking speeds for your age group.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Walk-a-Mile Time Estimator results",
+    "tagline": "Your walking time for any distance, honestly estimated.",
+    "workedExample": "Speed 5 km/h, age 30:\n1. Divide the mile by your speed: 1.609344 / 5 = 0.32187 hours.\n2. Convert to minutes: 0.32187 x 60 = 19.31 minutes, i.e. 19 min 19 s.\n3. Pace per kilometre: 60 / 5 = 12.00 min/km (12:00).\n4. Convert speed to mph: 5 / 1.609344 = 3.1069 mph.\n5. Pace per mile: 60 / 3.1069 = 19.31 min/mi (19:19).\n6. Category: 5 km/h is moderate walking. The typical comfortable range for ages 30-39 is 4.8-5.1 km/h, so this pace sits right inside it.",
+    "workedExampleHeading": "Worked example"
+  }
+}

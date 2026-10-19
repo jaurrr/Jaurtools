@@ -1,0 +1,91 @@
+{
+  "quick-ratio-calculator": {
+    "assumptionNote": "Uses balance-sheet figures as entered - the ratio is only as fresh as your books. Seasonal businesses should compare the same quarter year over year, not adjacent quarters.",
+    "benefits": [
+      "Lenders and investors check this first - know your number before they ask.",
+      "Stricter than the current ratio: it ignores inventory, which is the hardest asset to turn into cash.",
+      "Early warning: a falling quick ratio flags cash trouble months before it bites.",
+      "Free liquidity check for your own business or any company you research."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The current ratio includes inventory; the quick ratio excludes it. Inventory can be slow or impossible to sell at book value in a crisis, so the quick ratio is the stricter, more honest test of whether a company can pay its bills.",
+        "q": "Quick ratio vs current ratio?"
+      },
+      {
+        "a": "Generally 1.0 or higher: the company can cover short-term liabilities without selling inventory. Below 0.5 is a red flag. But norms vary by industry - retailers live with lower ratios than manufacturers, so compare within the industry.",
+        "q": "What is a good quick ratio?"
+      },
+      {
+        "a": "Collect receivables faster, trim inventory, delay payables within terms, or raise cash. The fastest honest fix is usually tightening credit control - unpaid invoices are the most common reason for a weak quick ratio in small businesses.",
+        "q": "How can a business improve its quick ratio?"
+      },
+      {
+        "a": "Yes - cash-rich companies like Apple historically run quick ratios above 1.5. It can mean missed opportunities (idle cash earning little), but it is rarely dangerous. A very low ratio is the real problem.",
+        "q": "Can the quick ratio be too high?"
+      },
+      {
+        "a": "A company can have a weak quick ratio yet healthy cash flow if it collects cash daily (like a restaurant). Conversely, a good ratio built on slow-paying receivables is fragile. Always read the ratio alongside the cash-flow statement.",
+        "q": "Does a low quick ratio always mean trouble?"
+      }
+    ],
+    "formula": "Quick assets = current assets - inventory.\nQuick ratio = quick assets / current liabilities.\nExample: (250,000 - 80,000) / 120,000 = 170,000 / 120,000 = 1.42.\nRule of thumb: >= 1.0 is healthy.",
+    "formulaHeading": "The formula",
+    "health": {
+      "healthy": "Healthy - can cover short-term bills",
+      "none": "Enter current liabilities to assess",
+      "watch": "Watch - thin liquidity cushion",
+      "weak": "Weak - may struggle to pay bills"
+    },
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter total current assets from the balance sheet (cash, receivables, inventory, etc.).",
+      "Enter the inventory value - this gets excluded as the least liquid asset.",
+      "Enter total current liabilities (due within 12 months).",
+      "Read your quick ratio and the plain-English health assessment.",
+      "Track it quarterly: the trend matters more than one reading."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Quick ratio = (current assets - inventory) / current liabilities.",
+      "It measures whether a company can pay short-term bills without selling inventory.",
+      "A ratio of 1.0 means liquid assets exactly cover short-term liabilities.",
+      "Also called the acid-test ratio - the toughest standard liquidity test.",
+      "Lenders watch it closely when deciding on loans and credit lines.",
+      "Compare within the same industry; healthy levels differ by sector."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "quick ratio calculator, acid test ratio calculator, liquidity ratio calculator, current assets liabilities ratio",
+    "labels": {
+      "currentAssets": "Current assets",
+      "currentLiabilities": "Current liabilities",
+      "healthLabel": "Assessment",
+      "inventory": "Inventory",
+      "quickAssets": "Quick assets (excl. inventory)",
+      "quickRatio": "Quick ratio"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A snapshot - it says nothing about the timing of cash flows within the year.",
+      "Receivables quality matters: uncollectable invoices inflate the ratio.",
+      "Industry norms differ; a single number without context misleads.",
+      "Needs the full financial statements for a real credit assessment."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free quick ratio calculator: (current assets - inventory) / current liabilities with a plain-English health check. Private, no sign-up.",
+    "metaTitle": "Quick Ratio Calculator - Liquidity & Acid-Test Ratio | JaurTools",
+    "name": "Quick Ratio Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Quick ratio = (current assets - inventory) / current liabilities. With $250,000 current assets, $80,000 inventory, and $120,000 current liabilities: quick assets are $170,000 and the ratio is 1.42 - healthy, since it is above 1.0. Below 0.5 is a red flag for paying short-term bills.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your quick ratio results",
+    "tagline": "Can the business pay its bills without selling inventory? Find out.",
+    "workedExample": "Current assets $250,000, inventory $80,000, current liabilities $120,000:\n1. Quick assets = 250,000 - 80,000 = $170,000.\n2. Quick ratio = 170,000 / 120,000 = 1.42.\n3. Assessment: 1.42 >= 1.0, so healthy - liquid assets cover short-term bills 1.42 times over.\nFor every $1 of bills due within a year, the business holds $1.42 of cash-like assets.",
+    "workedExampleHeading": "Worked example"
+  }
+}

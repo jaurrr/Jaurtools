@@ -1,0 +1,107 @@
+{
+  "ssl-certificate-decoder": {
+    "benefits": [
+      "openssl इंस्टॉल किए बिना कोई भी X.509 सर्टिफिकेट पढ़ें — पेस्ट करें और सब देखें।",
+      "समाप्ति और बचे दिन एक नज़र में, ताकि नवीनीकरण कभी चौंकाए नहीं।",
+      "एक्सटेंशन (SAN, key usage, constraints) डिकोड करता है जो कच्चे openssl आउटपुट में शोर में दब जाते हैं।",
+      "पिनिंग या तुलना के लिए SHA-256 फिंगरप्रिंट गिनता है।",
+      "प्राइवेट कुंजी का कोई लेना-देना नहीं — और आपका सर्टिफिकेट ब्राउज़र से बाहर नहीं जाता।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "ज़्यादातर पैनल में: आपका होस्टिंग या CDN डैशबोर्ड सर्टिफिकेट दिखाता है, जिसमें PEM देखने/डाउनलोड का विकल्प होता है। अपने सर्वर पर: openssl s_client -connect example.com:443 -showcerts, फिर -----BEGIN CERTIFICATE----- ब्लॉक कॉपी करें। वह ब्लॉक यहां पेस्ट करें।",
+        "q": "PEM फॉर्मेट में सर्टिफिकेट कैसे लाऊं?"
+      },
+      {
+        "a": "PEM हेडर लाइनों वाला base64-एन्कोडेड DER है -----BEGIN CERTIFICATE----- — वह टेक्स्ट फॉर्मेट जो यह टूल पढ़ता है। DER उसी डेटा का कच्चा बाइनरी रूप है। अगर .der/.cer बाइनरी फ़ाइल है, तो बदलें: openssl x509 -inform DER -in cert.cer -out cert.pem।",
+        "q": "PEM और DER में क्या अंतर है?"
+      },
+      {
+        "a": "सेल्फ-साइन्ड सर्टिफिकेट पब्लिक CA के बजाय अपनी कुंजी से साइन होता है। ब्राउज़र उस पर भरोसा नहीं करते, इसलिए विज़िटर को चेतावनियां दिखती हैं। लोकल डेवलपमेंट और अंदरूनी टूल के लिए ठीक है, लेकिन पब्लिक साइट को CA-जारी सर्टिफिकेट चाहिए (Let's Encrypt मुफ्त है)।",
+        "q": "सेल्फ-साइन्ड का क्या मतलब है?"
+      },
+      {
+        "a": "Subject Alternative Name सूची: वे सभी होस्टनेम जिनके लिए सर्टिफिकेट मान्य है। आधुनिक ब्राउज़र CN फ़ील्ड को नज़रअंदाज़ करके सिर्फ SAN जांचते हैं, इसलिए अगर आपका डोमेन वहां सूचीबद्ध नहीं है, तो सही सर्टिफिकेट पर भी नाम-बेमेल error मिलता है।",
+        "q": "SAN सूची क्या है?"
+      },
+      {
+        "a": "SHA-256 फिंगरप्रिंट पूरे सर्टिफिकेट का हैश है, जो अक्सर सर्टिफिकेट पिनिंग या सर्वरों पर सर्टिफिकेट तुलना के लिए इस्तेमाल होता है। एक जैसे फिंगरप्रिंट वाले दो सर्टिफिकेट बाइट-दर-बाइट एक जैसे होते हैं।",
+        "q": "SHA-256 फिंगरप्रिंट किस लिए है?"
+      },
+      {
+        "a": "तीन चीज़ें जांचें: notAfter तारीख (क्या एक्सपायर हुआ?), SAN सूची (क्या आपका डोमेन है?), और जारीकर्ता (क्या भरोसेमंद CA है या सेल्फ-साइन्ड?)। यह टूल तीनों तुरंत दिखाता है।",
+        "q": "मेरी साइट सर्टिफिकेट error दिखा रही है — क्या जांचूं?"
+      }
+    ],
+    "formula": "इस टूल के डिकोडिंग चरण:\n1. -----BEGIN CERTIFICATE----- मार्कर के बीच का base64 निकालकर DER बाइट में डिकोड करें।\n2. ASN.1 DER पार्स करें: Certificate = SEQUENCE { tbsCertificate, signatureAlgorithm, signatureValue }।\n3. tbsCertificate से पढ़ें: version, serialNumber, signature OID, issuer Name, validity (UTCTime/GeneralizedTime), subject Name, subjectPublicKeyInfo, extensions।\n4. OID को नामों से मैप करें (सिग्नेचर एल्गोरिदम, कुंजी टाइप, कर्व, एक्सटेंशन)।\n5. SHA-256 फिंगरप्रिंट = hex( SHA256(DER bytes) )।",
+    "formulaHeading": "डिकोडिंग कैसे काम करती है",
+    "homeLabel": "होम",
+    "howTo": [
+      "PEM फॉर्मेट में सर्टिफिकेट लाएं (-----BEGIN CERTIFICATE----- टेक्स्ट ब्लॉक)।",
+      "पूरा ब्लॉक ऊपर वाले बॉक्स में पेस्ट करें — डिकोडिंग तुरंत शुरू होती है।",
+      "सारांश पढ़ें: subject, issuer, वैधता तारीखें, बचे दिन और कुंजी ब्योरा।",
+      "जांचें कि SAN सूची में आपका डोमेन है और जारीकर्ता भरोसेमंद CA है।",
+      "SHA-256 फिंगरप्रिंट की तुलना सर्वर या CA के बताए फिंगरप्रिंट से करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "X.509 सर्टिफिकेट ASN.1 DER-एन्कोडेड दस्तावेज़ होते हैं; PEM सिर्फ हेडर लाइनों वाला base64 DER है।",
+      "हर सर्टिफिकेट में होता है: subject, issuer, सीरियल नंबर, वैधता विंडो, पब्लिक कुंजी, हस्ताक्षर और एक्सटेंशन।",
+      "वैधता विंडो (notBefore/notAfter) तय करती है कि ब्राउज़र सर्टिफिकेट कब स्वीकार करें।",
+      "SAN (Subject Alternative Name) एक्सटेंशन उन होस्टनेम की सूची देता है जिनके लिए सर्टिफिकेट मान्य है — ब्राउज़र CN नहीं, यही जांचते हैं।",
+      "Basic Constraints, Key Usage और Extended Key Usage जैसे एक्सटेंशन सर्टिफिकेट के उपयोग की सीमा तय करते हैं।",
+      "SHA-256 फिंगरप्रिंट सर्टिफिकेट बाइट की अनूठी पहचान है — एक जैसा फिंगरप्रिंट मतलब एक जैसे सर्टिफिकेट।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "ssl certificate decoder, x509 decoder, pem decoder, certificate expiry checker, decode crt online",
+    "labels": {
+      "clearButton": "साफ़ करें",
+      "daysLeftLabel": "बचे दिन",
+      "emptyState": "डिकोड करने के लिए ऊपर PEM सर्टिफिकेट पेस्ट करें।",
+      "expiredLabel": "एक्सपायर",
+      "extHeading": "एक्सटेंशन",
+      "fingerprintLabel": "SHA-256 फिंगरप्रिंट",
+      "issuerLabel": "जारीकर्ता",
+      "noLabel": "नहीं",
+      "parseError": "यह सही PEM सर्टिफिकेट जैसा नहीं लग रहा। BEGIN/END लाइनें और base64 पूरा है, यह जांचें।",
+      "pasteHint": "-----BEGIN CERTIFICATE----- ब्लॉक यहां पेस्ट करें…",
+      "pasteLabel": "PEM सर्टिफिकेट",
+      "pubkeyLabel": "पब्लिक कुंजी",
+      "sanHeading": "Subject Alternative Names",
+      "selfSignedLabel": "सेल्फ-साइन्ड",
+      "selfSignedYes": "हां — ब्राउज़र भरोसा नहीं करते",
+      "serialLabel": "सीरियल नंबर",
+      "sigAlgLabel": "सिग्नेचर एल्गोरिदम",
+      "subjectLabel": "Subject",
+      "thCritical": "Critical",
+      "thDetail": "मान",
+      "thExt": "एक्सटेंशन",
+      "validFromLabel": "कब से मान्य",
+      "validToLabel": "कब तक मान्य",
+      "yesLabel": "हां"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "आपका पेस्ट किया सर्टिफिकेट डिकोड करता है — लाइव सर्वर का सर्टिफिकेट खुद नहीं ला सकता।",
+      "ट्रस्ट चेन मान्य नहीं करता; डिकोड हो सकने वाला सर्टिफिकेट भी अविश्वसनीय हो सकता है।",
+      "सर्टिफिकेट का दावा दिखाता है; रद्दीकरण (CRL/OCSP) स्थिति जांची नहीं जाती।",
+      "असामान्य या मालिकाना एक्सटेंशन OID के साथ सूचीबद्ध होते हैं, बिना डिकोडेड मान के।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "मुफ्त SSL सर्टिफिकेट डिकोडर: PEM सर्टिफिकेट पेस्ट करें और subject, issuer, समाप्ति, SAN व एक्सटेंशन डिकोड करें। 100% निजी, ब्राउज़र में चलता है।",
+    "metaTitle": "SSL Certificate Decoder - X.509 PEM सर्टिफिकेट डिकोड करें | JaurTools",
+    "name": "SSL सर्टिफिकेट डिकोडर",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "PEM सर्टिफिकेट पेस्ट करें और यह टूल आपके ब्राउज़र में X.509 संरचना डिकोड करता है: subject व issuer नाम, सीरियल नंबर, सिग्नेचर एल्गोरिदम, बचे दिनों के साथ वैधता तारीखें, पब्लिक कुंजी टाइप व साइज़, SHA-256 फिंगरप्रिंट, SAN होस्टनेम, और key usage व basic constraints जैसे एक्सटेंशन। जैसे example.com के सेल्फ-साइन्ड RSA-2048 सर्टिफिकेट में issuer = subject, sha256WithRSAEncryption, और SAN example.com व www.example.com दिखते हैं।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "सर्टिफिकेट ब्योरा",
+    "tagline": "PEM सर्टिफिकेट को पठनीय फ़ील्ड में डिकोड करें — openssl की ज़रूरत नहीं।",
+    "workedExampleHeading": "हल सहित उदाहरण",
+    "workedExample": "नमूना: example.com का सेल्फ-साइन्ड टेस्ट सर्टिफिकेट, टूल से डिकोड किया:\n1. Subject: CN=example.com, OU=Engineering, O=Example Tools Pvt Ltd, L=Mumbai, ST=Maharashtra, C=IN।\n2. Issuer: subject जैसा ही — सेल्फ-साइन्ड फ्लैग (ब्राउज़र भरोसा नहीं करेंगे)।\n3. Serial: 4C:E4:39:A9:0D:3C:DA:74:B1:CC:34:E5:79:74:4A:E9:D3:D6:97:39।\n4. सिग्नेचर एल्गोरिदम: sha256WithRSAEncryption। पब्लिक कुंजी: RSA 2048-bit।\n5. 2026-10-18 07:03:33 UTC से 2029-01-20 07:03:33 UTC तक मान्य — लगभग 824 दिन बचे।\n6. SAN: example.com, www.example.com।\n7. एक्सटेंशन: Subject Key Identifier, Authority Key Identifier, Basic Constraints CA:FALSE, Key Usage Digital Signature + Key Encipherment, Extended Key Usage TLS Web Server Authentication।\nनिष्कर्ष: तारीखें और SAN सही हैं, लेकिन सेल्फ-साइन्ड है — टेस्टिंग के लिए ठीक, पब्लिक साइट के लिए नहीं।"
+  }
+}

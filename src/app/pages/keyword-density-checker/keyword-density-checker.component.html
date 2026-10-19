@@ -1,0 +1,186 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="kd-text">{{ t('labels.textLabel') }}</label>
+        <textarea id="kd-text" rows="8" maxlength="50000"
+          [ngModel]="text()" (ngModelChange)="setText($event)"
+          [attr.placeholder]="t('labels.textPlaceholder')"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="kd-keyword">{{ t('labels.keywordLabel') }}</label>
+        <input id="kd-keyword" type="text" maxlength="60"
+          [ngModel]="keyword()" (ngModelChange)="setKeyword($event)"
+          [attr.placeholder]="t('labels.keywordPlaceholder')" />
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="search" /> {{ t('labels.densityLabel') }}</span>
+          <strong>{{ twoDecimals().format(density()) }}%</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.keywordCountLabel') }}</span>
+          <strong>{{ keywordCount() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.totalWordsLabel') }}</span>
+          <strong>{{ totalWords() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.charsLabel') }}</span>
+          <strong>{{ totalChars() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.sentencesLabel') }}</span>
+          <strong>{{ sentences() }}</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      @if (topWords().length > 0) {
+        <h3 class="table-heading">{{ t('labels.topWordsHeading') }}</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">{{ t('labels.wordCol') }}</th>
+              <th scope="col">{{ t('labels.countCol') }}</th>
+              <th scope="col">{{ t('labels.densityCol') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (w of topWords(); track w.word) {
+              <tr>
+                <td>{{ w.word }}</td>
+                <td>{{ w.count }}</td>
+                <td>{{ twoDecimals().format(w.density) }}%</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+
+      @if (topPhrases().length > 0) {
+        <h3 class="table-heading">{{ t('labels.topPhrasesHeading') }}</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">{{ t('labels.phraseCol') }}</th>
+              <th scope="col">{{ t('labels.countCol') }}</th>
+              <th scope="col">{{ t('labels.densityCol') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (p of topPhrases(); track p.word) {
+              <tr>
+                <td>{{ p.word }}</td>
+                <td>{{ p.count }}</td>
+                <td>{{ twoDecimals().format(p.density) }}%</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

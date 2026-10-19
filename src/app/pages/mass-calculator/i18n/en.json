@@ -1,0 +1,93 @@
+{
+  "mass-calculator": {
+    "assumptionNote": "Assumes uniform density through the whole object. Real materials can have voids, mixtures, or temperature-dependent density that change the true mass.",
+    "benefits": [
+      "Estimate material needs before buying: concrete, sand, steel, water.",
+      "Convert between metric and imperial mass units in one step.",
+      "Check shipping weights from a product's dimensions and material.",
+      "Quick lab math: find the mass of a liquid from its volume and density."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Mass = density x volume. Enter the material's density and the object's volume above, and the calculator does the unit conversion for you.",
+        "q": "How do I calculate mass from density and volume?"
+      },
+      {
+        "a": "Water is 1 g/cm3, which is 1000 kg/m3. So 1 liter of water weighs exactly 1 kg, and 1 cubic centimeter weighs 1 gram.",
+        "q": "What is the density of water?"
+      },
+      {
+        "a": "Air is about 1.225 kg/m3 at sea level. Steel is about 7850 kg/m3. Concrete is 2400 kg/m3. Wood ranges from 300 to 900 kg/m3 depending on species.",
+        "q": "What are some common densities?"
+      },
+      {
+        "a": "Density can change with temperature and pressure. Metals expand when hot, so their density drops slightly. Gases change a lot. Liquids change a little. Use values for your actual conditions.",
+        "q": "Does density change with temperature?"
+      },
+      {
+        "a": "Yes - 1 g/cm3 is the same as 1 g/mL because 1 cubic centimeter equals 1 milliliter. They are interchangeable in every calculation.",
+        "q": "Is g/cm3 the same as g/mL?"
+      },
+      {
+        "a": "Make sure your units match. If density is in g/cm3, volume must be in cm3 (or let this calculator convert). Mixing kg/m3 with liters without converting is the classic mistake.",
+        "q": "Why is my answer off by 1000?"
+      }
+    ],
+    "formula": "Mass = Density x Volume\n\nWith units: convert density to kg/m3 and volume to m3 first, then multiply.\n\nDensity conversions: 1 g/cm3 = 1000 kg/m3, 1 g/L = 1 kg/m3, 1 lb/ft3 = 16.0185 kg/m3.\nVolume conversions: 1 L = 0.001 m3, 1 cm3 = 0.000001 m3, 1 ft3 = 0.0283168 m3, 1 US gal = 0.00378541 m3.\n\nExample: water 1 g/cm3 x 2 L = 1000 kg/m3 x 0.002 m3 = 2 kg.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the density of your material and pick its unit.",
+      "Enter the volume and pick its unit.",
+      "The mass appears instantly in kg, grams, pounds, ounces, and tonnes.",
+      "Double-check that you used the material's real density - results are only as good as the input."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Mass = density x volume. Density is mass per unit volume.",
+      "SI units: density in kg/m3, volume in m3, mass in kg.",
+      "Water: 1 g/cm3 = 1000 kg/m3 = 1 kg per liter.",
+      "1 g/cm3 equals 1 g/mL exactly.",
+      "Steel is about 7850 kg/m3 - nearly 8 times denser than water.",
+      "Air at sea level is about 1.225 kg/m3, so it does have mass.",
+      "Mass and weight differ: mass is matter (kg), weight is gravity's pull (newtons).",
+      "Density of most solids changes slightly with temperature; gases change a lot."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "mass calculator, mass from density and volume, density mass volume calculator, weight of material calculator",
+    "labels": {
+      "density": "Density",
+      "densityUnit": "Density unit",
+      "inGrams": "In grams",
+      "inOunces": "In ounces",
+      "inPounds": "In pounds",
+      "inTonnes": "In tonnes",
+      "mass": "Mass",
+      "volume": "Volume",
+      "volumeUnit": "Volume unit"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes perfectly uniform density. Mixtures, voids, and moisture change real mass.",
+      "Density values depend on temperature and purity. Handbook values are approximate.",
+      "Very small or very large numbers may lose precision in the conversion.",
+      "This is for bulk materials, not for objects with complex hollow shapes unless you know the true volume."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free mass calculator: find mass from density and volume with metric and imperial units. Results in kg, grams, pounds, ounces, and tonnes. Private, no sign-up.",
+    "metaTitle": "Mass Calculator - Mass from Density and Volume | JaurTools",
+    "name": "Mass Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Mass = density x volume. With density in kg/m3 and volume in m3, multiply them for mass in kg. For example, 2 liters of water (density 1 g/cm3 = 1000 kg/m3) weighs 1000 x 0.002 = 2 kg. This calculator converts all units for you and shows the result in kg, grams, pounds, ounces, and tonnes.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your mass results",
+    "tagline": "Enter density and volume to find mass - with automatic metric and imperial conversion.",
+    "workedExample": "Water: density 1 g/cm3, volume 2 L.\n1. Convert density: 1 g/cm3 = 1000 kg/m3.\n2. Convert volume: 2 L = 0.002 m3.\n3. Mass = 1000 x 0.002 = 2 kg.\n4. In other units: 2000 g, 4.41 lb, 70.55 oz, 0.002 t.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "edit-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online PDF editors.",
+      "Four editing tools in one: text, images, outline rectangles and a freehand drawing pad.",
+      "Freehand ink is captured on a real canvas and embedded into the page as a crisp image.",
+      "Layer new content over any PDF, including scanned and image-only pages.",
+      "Free and unlimited — edit as many documents as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No. This tool adds new content on top of pages — it cannot select, reflow or delete the text already in the PDF. That is a hard limit of browser-only editing.",
+        "q": "Can it edit the existing text in my PDF?"
+      },
+      {
+        "a": "Pick the freehand tool, draw your signature on the pad with your mouse or finger, position it with the X/Y percentages and apply. For best results, draw large and let the tool scale it down.",
+        "q": "How do I add my signature?"
+      },
+      {
+        "a": "The drawing is captured as a PNG at the pad's resolution (600 × 220) and embedded into the page, keeping your strokes sharp.",
+        "q": "What quality is the freehand drawing?"
+      },
+      {
+        "a": "Yes. JPEG and PNG embed directly; WebP and GIF are converted to PNG in your browser first (animated GIFs keep only their first frame).",
+        "q": "Which image formats are supported?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Positions are percentages of the page size, so the same numbers land in the same relative spot on A4, Letter or any other page size in your document.",
+        "q": "My PDF has mixed page sizes. Will positions still work?"
+      }
+    ],
+    "formula": "x = (horizontal % ÷ 100) × page width\ny = (vertical % ÷ 100) × page height\ndrawing height = drawing width ÷ canvas aspect ratio",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the document you want to edit.",
+      "Pick a tool: text, image, rectangle, or freehand drawing.",
+      "For freehand, draw on the pad with your mouse or finger, then clear and redraw if needed.",
+      "Set the page, position and size for each element, and click “Add element” to queue it.",
+      "Click “Apply edits”, then download the edited PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Freehand strokes are drawn on an HTML canvas with pointer events, then exported as a transparent PNG.",
+      "The canvas is 600 × 220 pixels; your drawing is scaled to the width percentage you choose on the page.",
+      "Text uses the standard Helvetica font, which every PDF reader supports.",
+      "Rectangle elements are outlines only — they frame an area without covering it.",
+      "All elements are queued first and applied to the PDF in one pass when you click “Apply edits”."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "edit pdf online free, write on pdf, sign pdf online, freehand pdf editor, pdf markup tool",
+    "labels": {
+      "addBtn": "Add element",
+      "addedLabel": "Elements added",
+      "applyBtn": "Apply edits",
+      "chooseFile": "Choose PDF file",
+      "chooseImage": "Choose image",
+      "clearPadBtn": "Clear pad",
+      "colorBlack": "Black",
+      "colorBlue": "Blue",
+      "colorGray": "Gray",
+      "colorGreen": "Green",
+      "colorLabel": "Color",
+      "colorRed": "Red",
+      "downloadBtn": "Download edited PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errImgTooLarge": "Images must be 20 MB or smaller.",
+      "errNoEls": "Add at least one element first.",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNoImage": "Please choose an image first.",
+      "errNoInk": "Draw something on the pad first.",
+      "errNoText": "Please type the text to add.",
+      "errNotImage": "Please choose a valid image file.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "hLabel": "Height % (1–100)",
+      "honestNote": "Honest note: this tool adds new content on top of pages. It cannot edit, move or delete the text and images already inside your PDF.",
+      "imageLabel": "Image",
+      "imgHint": "JPG, PNG, WebP or GIF (first frame only)",
+      "kindLabel": "Editing tool",
+      "kind_image": "Image",
+      "kind_ink": "Freehand",
+      "kind_rect": "Rectangle",
+      "kind_text": "Text",
+      "padLabel": "Drawing pad — draw with mouse or finger",
+      "pageLabel": "Page",
+      "pagesFound": "pages",
+      "processing": "Working…",
+      "removeLabel": "Remove element",
+      "resetBtn": "Start over",
+      "sizeLabel": "Font size (pt)",
+      "successMsg": "Edits applied. Download your PDF below.",
+      "textLabel": "Text",
+      "textPlaceholder": "Type the text to add…",
+      "wLabel": "Width % of page (1–100)",
+      "xLabel": "X % (0–100)",
+      "yLabel": "Y % (0–100)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot edit, move or delete the PDF's existing text and images — new content only.",
+      "Only Latin characters for added text; Hindi, Arabic and other scripts may not render.",
+      "No live preview of placement on the actual page — positions are percentage-based.",
+      "The drawing pad has a fixed resolution; very large scalings may look soft."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Edit any PDF free in your browser — add text, images, rectangles and freehand drawings. No upload, no signup.",
+    "metaTitle": "Edit PDF Free — Write, Draw & Sign PDF Online",
+    "name": "Edit PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, then add text, images, outline rectangles — or draw freehand on a real drawing pad — at any position. Queue everything, apply in one pass, and download the edited file, all locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Edit results",
+    "tagline": "Write, draw and sign on any PDF — right in your browser.",
+    "workedExample": "Draw a signature on the 600 × 220 pad and place it 25% wide on an A4 page (595.28 pt) at X 65%, Y 8%:\ndrawing width = 0.25 × 595.28 = 148.82 pt\ndrawing height = 148.82 ÷ (600 ÷ 220) = 148.82 ÷ 2.7272 = 54.57 pt\nx = 0.65 × 595.28 = 386.93 pt from the left\ny = 0.08 × 841.89 = 67.35 pt from the bottom\nThe signature lands bottom-right at about 149 × 55 pt.",
+    "workedExampleHeading": "Worked example"
+  }
+}

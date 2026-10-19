@@ -1,0 +1,95 @@
+{
+  "css-box-shadow-generator": {
+    "benefits": [
+      "Sliders make shadow design visual — you dial in depth and softness instead of guessing numbers.",
+      "Inset mode is one click away, so pressed and inner-glow effects need no extra research.",
+      "RGBA color with opacity control produces soft, realistic shadows that match modern design systems.",
+      "Copy-ready one-line declaration drops straight into any stylesheet or component.",
+      "Live preview on a neutral card shows exactly how the shadow behaves at different offsets."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The order is: horizontal offset, vertical offset, blur radius, spread radius, then color. An optional inset keyword at the start turns it into an inner shadow. Offsets can be negative to push the shadow left or up; blur and spread must be zero or positive (spread can be negative to shrink the shadow).",
+        "q": "What is the order of box-shadow values?"
+      },
+      {
+        "a": "Blur controls how soft the shadow's edge is — 0 gives a hard edge, larger values fade it out. Spread grows or shrinks the shadow's size: positive spread makes it bigger, negative spread makes it smaller. Together they decide whether a shadow looks crisp, soft, or diffused.",
+        "q": "What is the difference between blur and spread?"
+      },
+      {
+        "a": "Yes — separate multiple shadows with commas: box-shadow: 2px 2px 4px rgba(0,0,0,.2), -2px -2px 4px rgba(255,255,255,.8). Designers stack them to build neumorphic effects and layered depth. This generator produces one shadow at a time; paste two outputs with a comma to layer them.",
+        "q": "Can an element have multiple box-shadows?"
+      },
+      {
+        "a": "Add the inset keyword at the beginning: box-shadow: inset 0 2px 8px rgba(0,0,0,.3). Inset shadows are drawn inside the element's border box, which is perfect for pressed buttons, sunken panels, and inner glows. Toggle the inset checkbox in this tool to preview it.",
+        "q": "How do I make an inner (inset) shadow?"
+      },
+      {
+        "a": "box-shadow follows the element's border-radius automatically, so rounded corners get rounded shadows. If the shadow looks square on a round button, the radius is probably applied to a child or the shadow is on a different element than the radius.",
+        "q": "Why does my shadow ignore border-radius?"
+      },
+      {
+        "a": "Shadows are painted by the GPU and are usually cheap, but large blurred shadows on many animated elements can hurt scrolling performance on low-end phones. Prefer small, subtle shadows, and avoid animating box-shadow itself — animate transform and opacity instead.",
+        "q": "Do box-shadows hurt performance?"
+      }
+    ],
+    "formula": "box-shadow: [inset] <offset-x> <offset-y> <blur> <spread> <color>;\n\nExample: box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);\n- offset-x / offset-y: shadow position (can be negative)\n- blur: softness of the edge (0 = hard edge)\n- spread: grows (+) or shrinks (−) the shadow\n- color: any CSS color; rgba with low alpha looks most natural",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Set the horizontal and vertical offsets to position the shadow; positive Y drops it below the element.",
+      "Increase the blur radius for a softer, more diffused shadow, or keep it at 0 for a hard edge.",
+      "Use spread to grow or shrink the shadow; negative values tighten it.",
+      "Pick a shadow color and lower the opacity for a subtle, realistic effect.",
+      "Toggle inset for an inner shadow, then copy the CSS and paste it into your project."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "box-shadow takes offset-x, offset-y, blur radius, spread radius, and color — in that order.",
+      "The optional inset keyword moves the shadow inside the element, creating pressed or sunken effects.",
+      "Multiple shadows can be layered with commas, which is how neumorphic and multi-depth designs are built.",
+      "RGBA colors with low opacity (10–30%) produce the soft, natural shadows used in modern design systems.",
+      "Shadows automatically follow the element's border-radius, so rounded corners get rounded shadows.",
+      "Large blurred shadows are GPU-painted and can cost performance on low-end devices when overused."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "box shadow generator, css box-shadow, css shadow generator, inset shadow, drop shadow css",
+    "labels": {
+      "blurLabel": "Blur radius",
+      "colorLabel": "Shadow color",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy CSS",
+      "cssOutputLabel": "Your CSS",
+      "downloadButton": "Download .css",
+      "insetLabel": "Inset (inner shadow)",
+      "offsetXLabel": "Horizontal offset",
+      "offsetYLabel": "Vertical offset",
+      "opacityLabel": "Opacity",
+      "previewLabel": "Live shadow preview",
+      "spreadLabel": "Spread radius"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Generates one shadow per output; layered multi-shadow designs must be combined manually with commas.",
+      "The preview card is a fixed neutral surface — shadows may look different on your real background colors.",
+      "Very large blur values are scaled for preview; the CSS value itself is always exact.",
+      "Output uses rgba() color; if your project needs hex with alpha, convert it after copying."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Design CSS box-shadows visually: offsets, blur, spread, color, opacity, and inset mode with live preview. Copy-ready CSS. Free online tool.",
+    "metaTitle": "CSS Box-Shadow Generator — Free Online Tool",
+    "name": "CSS Box-Shadow Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Build the perfect CSS box-shadow with sliders — horizontal and vertical offset, blur, spread, color, opacity, plus an inset toggle for inner shadows. Watch it live on the preview card, then copy the one-line CSS straight into your project.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Box-shadow results",
+    "tagline": "Beautiful CSS shadows, designed with sliders.",
+    "workedExample": "Settings: offset-x 0px, offset-y 8px, blur 24px, spread 0px, color #000000, opacity 25%.\nGenerated CSS:\nbox-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);\nReading it: the shadow sits 8px below the element, fades over a 24px blur, keeps its original size (0 spread), and uses black at 25% opacity for a soft floating-card effect. Raising the blur to 48px would double the softness.",
+    "workedExampleHeading": "Worked example"
+  }
+}

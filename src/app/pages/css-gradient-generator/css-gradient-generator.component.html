@@ -1,0 +1,167 @@
+<div class="tool-page persona-lab">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <span class="field-label" id="grad-kind-label">{{ t('labels.typeLabel') }}</span>
+        <div class="segmented" role="group" aria-labelledby="grad-kind-label">
+          <button type="button" [class.active]="kind() === 'linear'" (click)="setKind('linear')">
+            {{ t('labels.linearType') }}
+          </button>
+          <button type="button" [class.active]="kind() === 'radial'" (click)="setKind('radial')">
+            {{ t('labels.radialType') }}
+          </button>
+        </div>
+      </div>
+
+      @if (kind() === 'linear') {
+        <div class="field">
+          <label for="grad-angle">{{ t('labels.angle') }}: {{ angle() }}°</label>
+          <input id="grad-angle" type="range" min="0" max="360" step="1"
+            [ngModel]="angle()" (ngModelChange)="setAngle($event)" />
+        </div>
+      }
+
+      @for (s of stops(); track $index; let i = $index) {
+        <div class="field">
+          <label [for]="'grad-stop-' + i">{{ t('labels.stopLabel') }} {{ i + 1 }}</label>
+          <div class="input-row">
+            <input [id]="'grad-stop-' + i" type="color" [ngModel]="s.color"
+              (ngModelChange)="setStopColor(i, $event)" [attr.aria-label]="t('labels.stopColor')" />
+            <input type="number" inputmode="numeric" min="0" max="100" step="1"
+              [ngModel]="s.pos" (ngModelChange)="setStopPos(i, $event)" [attr.aria-label]="t('labels.stopPos')" />
+            <button type="button" class="copy-btn" (click)="removeStop(i)" [disabled]="stops().length <= 2"
+              [attr.aria-label]="t('labels.removeStop')">
+              <app-icon name="x" /> {{ t('labels.removeStop') }}
+            </button>
+          </div>
+        </div>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn-ghost" (click)="addStop()" [disabled]="stops().length >= 6">
+          <app-icon name="check" /> {{ t('labels.addStop') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <span class="field-label">{{ t('labels.presets') }}</span>
+        <div class="swatches preset-row">
+          <button type="button" class="swatch preset" (click)="usePreset('#4f46e5', '#ec4899')"
+            [style.background]="'linear-gradient(135deg,#4f46e5,#ec4899)'" [attr.aria-label]="t('labels.presetA')"></button>
+          <button type="button" class="swatch preset" (click)="usePreset('#0ea5e9', '#22d3ee')"
+            [style.background]="'linear-gradient(135deg,#0ea5e9,#22d3ee)'" [attr.aria-label]="t('labels.presetB')"></button>
+          <button type="button" class="swatch preset" (click)="usePreset('#f59e0b', '#ef4444')"
+            [style.background]="'linear-gradient(135deg,#f59e0b,#ef4444)'" [attr.aria-label]="t('labels.presetC')"></button>
+          <button type="button" class="swatch preset" (click)="usePreset('#10b981', '#3b82f6')"
+            [style.background]="'linear-gradient(135deg,#10b981,#3b82f6)'" [attr.aria-label]="t('labels.presetD')"></button>
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="result-row total">
+          <span><app-icon name="copy" /> {{ t('labels.cssOutput') }}</span>
+          <strong>
+            <button type="button" class="copy-btn" (click)="copyText(cssText())">
+              <app-icon name="copy" /> {{ copied() === cssText() ? t('labels.copied') : t('labels.copy') }}
+            </button>
+          </strong>
+        </div>
+      </div>
+
+      <pre class="code-block"><code>{{ cssText() }}</code></pre>
+      <div class="preview-box gradient-preview" [style.background]="previewStyle()"></div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

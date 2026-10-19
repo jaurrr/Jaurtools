@@ -1,0 +1,87 @@
+{
+  "regex-tester": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Regex Tester",
+    "tagline": "Test regular expressions live with match highlighting.",
+    "metaTitle": "Regex Tester - Test Regular Expressions Online Free",
+    "metaDescription": "Test JavaScript regex live: see all matches, capture groups, and highlighted text as you type. Free, no signup, runs in your browser.",
+    "keywords": "regex tester, regular expression tester, test regex online, javascript regex, regex match",
+    "resultsHeading": "Regex test results",
+    "quickAnswer": "Type a regular expression and test text, and this tool instantly shows every match: the matched text, its position, and any capture groups. Matches are highlighted in the text, flags like case-insensitive or multiline can be toggled, and invalid patterns show a clear error message.",
+    "keyFacts": [
+      "Regular expressions describe text patterns; this tool uses the JavaScript regex engine.",
+      "The g flag is always on, so every match in the text is found, not just the first.",
+      "Parentheses create capture groups whose matched parts are listed separately.",
+      "An invalid pattern shows the exact engine error instead of failing silently.",
+      "Matching runs locally on every keystroke with no delay or server round-trip."
+    ],
+    "howTo": [
+      "Type your pattern in the pattern field (for example, \\d+ for digits).",
+      "Toggle flags: i for case-insensitive, m for multiline, s for dot-all, u for unicode.",
+      "Paste or type the text to test in the test area.",
+      "Read the match count, highlighted matches, and capture group details.",
+      "Refine the pattern until it matches exactly what you want."
+    ],
+    "formula": "Pattern: \\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b  (email, case-insensitive)\nTest: \"mail me at test@example.com\"\nMatch #1: test@example.com at index 11",
+    "workedExample": "Pattern: \\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b with the i flag\nTest text: \"Contact support@jaurtools.com or sales@jaurtools.com.\"\nResult: 2 matches — support@jaurtools.com at index 8 and sales@jaurtools.com at index 32.\n\"not-an-email\" does not match because it has no @ and domain part.",
+    "benefits": [
+      "Instant feedback while you build complex patterns.",
+      "Capture groups listed per match for debugging.",
+      "Clear error messages for invalid patterns.",
+      "No data leaves the browser; test sensitive text safely."
+    ],
+    "limitations": [
+      "Uses the JavaScript regex engine; PCRE-only features like lookbehind limits differ.",
+      "Catastrophic backtracking on huge inputs can freeze the tab briefly.",
+      "Maximum 200 matches are listed to keep the page responsive.",
+      "Empty matches are marked but do not advance highlighting visually."
+    ],
+    "faqs": [
+      {
+        "q": "Which regex flavor is used?",
+        "a": "JavaScript (ECMAScript). Most common syntax works the same, but some PCRE features like atomic groups are not supported."
+      },
+      {
+        "q": "How do I match case-insensitively?",
+        "a": "Toggle the i flag. With it on, [a-z] also matches A-Z, and literal text ignores case."
+      },
+      {
+        "q": "What are capture groups?",
+        "a": "Parts of the pattern in parentheses. Each match lists what each group captured, useful for extracting pieces like area codes from phone numbers."
+      },
+      {
+        "q": "Why does my pattern show an error?",
+        "a": "Unbalanced parentheses or brackets, a trailing backslash, or an invalid quantifier cause engine errors. The message names the exact problem."
+      },
+      {
+        "q": "Can I test multiline text?",
+        "a": "Yes. Paste multiline text and toggle the m flag so ^ and $ match line starts and ends instead of the whole text."
+      }
+    ],
+    "labels": {
+      "patternLabel": "Regular expression",
+      "patternPlaceholder": "e.g. \\d{3}-\\d{4}",
+      "flagsLabel": "Flags",
+      "flagsHint": "g (global) is always on. Toggle i, m, s, u as needed.",
+      "testLabel": "Test text",
+      "matchesLabel": "Matches found",
+      "highlightLabel": "Highlighted matches",
+      "detailLabel": "Match details",
+      "indexLabel": "Index",
+      "groupsLabel": "Groups"
+    }
+  }
+}

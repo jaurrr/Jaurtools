@@ -1,0 +1,100 @@
+{
+  "csv-formatter": {
+    "benefits": [
+      "Fixes messy exports from Excel, banks and CRMs in seconds, without opening a spreadsheet app.",
+      "Delimiter auto-detection handles comma, semicolon, tab and pipe files with one click.",
+      "Everything runs locally, so sensitive business data is never sent anywhere.",
+      "Converts between delimiter styles, handy when moving data between regions that use different separators."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Choose the input delimiter manually from the dropdown. Auto-detect scores comma, semicolon, tab and pipe by consistency across the first lines; unusual files can fool it, so manual selection is the reliable fallback.",
+        "q": "Auto-detect picked the wrong delimiter. What now?"
+      },
+      {
+        "a": "The parser follows the standard quoting rules: fields wrapped in double quotes may contain delimiters, line breaks and escaped quotes (\"\"). It also tolerates missing closing quotes by treating the rest as one field.",
+        "q": "Does it handle quoted fields with commas or line breaks inside?"
+      },
+      {
+        "a": "Trimming removes spaces and tabs from the start and end of each field. Turn it off if your data intentionally contains leading or trailing spaces, for example fixed-width codes.",
+        "q": "Will trimming spaces damage my data?"
+      },
+      {
+        "a": "Yes. Rows are padded with empty cells so every row has the same column count, which is what spreadsheet apps and databases expect.",
+        "q": "Can it fix rows with missing columns?"
+      },
+      {
+        "a": "It keeps them. Fields that need quotes because they contain the delimiter, quotes or line breaks are always quoted, even with minimal quoting selected.",
+        "q": "Does it remove quotes from fields that need them?"
+      }
+    ],
+    "formula": "clean CSV = parse(text, delimiter) → trim fields → drop blank rows → pad short rows → re-emit with consistent quoting",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your CSV into the box, upload a .csv file, or press Sample to try a messy example.",
+      "Leave the input delimiter on Auto, or pick comma, semicolon, tab or pipe manually.",
+      "Choose the output delimiter and toggle trimming, blank-row removal and quote style.",
+      "Check the live preview table to confirm the data looks right.",
+      "Press Download to save formatted.csv, or Copy to paste it elsewhere."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Parses CSV with proper quote handling, including escaped quotes and line breaks inside quoted fields.",
+      "Auto-detects comma, semicolon, tab and pipe delimiters by checking consistency across the first rows.",
+      "Trims stray spaces, removes blank rows, and pads short rows so every row has equal columns.",
+      "Re-emits with minimal quoting by default, or quotes every field when you enable Quote all.",
+      "Live preview shows the first 8 parsed rows before you download anything."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "csv formatter online, tidy csv, format csv file, csv cleaner, fix csv delimiter",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy",
+      "delimAuto": "Auto-detect",
+      "delimComma": "Comma (,)",
+      "delimPipe": "Pipe (|)",
+      "delimSemi": "Semicolon (;)",
+      "delimTab": "Tab",
+      "download": "Download CSV",
+      "inDelim": "Input delimiter",
+      "inputLabel": "CSV input",
+      "inputPh": "Paste CSV here...",
+      "outDelim": "Output delimiter",
+      "previewHeading": "Preview",
+      "quoteAll": "Quote every field",
+      "removeBlank": "Remove blank rows",
+      "resultCols": "Columns",
+      "resultRows": "Rows",
+      "resultSize": "Characters (in → out)",
+      "sample": "Load sample",
+      "sizeNote": "Character counts count every character including delimiters and quotes.",
+      "trimFields": "Trim spaces from fields",
+      "uploadCsv": "Upload CSV"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Auto-detection only considers comma, semicolon, tab and pipe delimiters.",
+      "Very large pastes (tens of megabytes) can slow the browser tab.",
+      "It does not validate data types; a date written as text stays text.",
+      "Header names are treated as ordinary data, not renamed or validated."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Format and clean CSV files online free. Auto-detect delimiters, trim spaces, remove blank rows, fix quoting. Paste or upload, preview, download.",
+    "metaTitle": "CSV Formatter Online Free - Clean & Tidy CSV Files | JaurTools",
+    "name": "CSV Formatter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste or upload a messy CSV, let the tool auto-detect the delimiter, and get a clean, consistently quoted file back. It trims stray spaces, drops blank rows, pads short rows and can convert between comma, semicolon, tab and pipe delimiters.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "CSV Formatter results",
+    "tagline": "Clean up messy CSV files: fix delimiters, quoting and blank rows.",
+    "workedExample": "Input (semicolons, stray spaces, one blank row):\nname; age; city\n\"Aarav Sharma\" ;25; Mumbai\n\nPriya Verma; 30 ;Delhi\n\nWith Auto-detect, Trim on and Remove blank rows on, the output is:\nname,age,city\nAarav Sharma,25,Mumbai\nPriya Verma,30,Delhi\n\n3 rows, 3 columns, 0 blank rows, 58 characters.",
+    "workedExampleHeading": "Worked example"
+  }
+}

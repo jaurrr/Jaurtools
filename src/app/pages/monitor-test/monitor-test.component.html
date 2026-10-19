@@ -1,0 +1,154 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="results calc-results">
+        <div class="result-row">
+          <span><app-icon name="activity" /> {{ t('labels.resolution') }}</span>
+          <strong>{{ resolution() }}</strong>
+        </div>
+        <div class="result-row">
+          <span><app-icon name="info" /> {{ t('labels.pixelRatio') }}</span>
+          <strong>{{ dpr() }}x</strong>
+        </div>
+        <div class="result-row">
+          <span><app-icon name="info" /> {{ t('labels.colorDepth') }}</span>
+          <strong>{{ colorDepth() }}-bit</strong>
+        </div>
+        @if (orientation()) {
+          <div class="result-row">
+            <span><app-icon name="info" /> {{ t('labels.orientation') }}</span>
+            <strong>{{ orientation() }}</strong>
+          </div>
+        }
+        <div class="result-row">
+          <span><app-icon name="timer" /> {{ t('labels.refreshRate') }}</span>
+          <strong>{{ fpsText() }}</strong>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button type="button" (click)="measureFps()" [disabled]="measuring()">
+          <app-icon name="timer" />
+          {{ measuring() ? t('labels.measuring') : t('labels.measureFps') }}
+        </button>
+        <button type="button" class="primary" (click)="startTest()">
+          <app-icon name="activity" /> {{ t('labels.startTest') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.fpsNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>
+
+@if (running()) {
+  <div class="test-screen" [style.background]="currentSlide().css" role="dialog" [attr.aria-label]="t('labels.testAria')">
+    <div class="hud hud-top">
+      <span>{{ slideName(currentSlide().key) }}</span>
+      <span>{{ slideIndex() + 1 }} / {{ slides().length }}</span>
+    </div>
+    <p class="hud-hint">{{ t('labels.hint') }}</p>
+    <div class="hud hud-bottom">
+      <button type="button" (click)="prevSlide()" [attr.aria-label]="t('labels.prev')">
+        <app-icon name="arrow-right" /> <span class="flip">{{ t('labels.prev') }}</span>
+      </button>
+      <button type="button" class="exit" (click)="exitTest()">
+        <app-icon name="x" /> {{ t('labels.exit') }}
+      </button>
+      <button type="button" (click)="nextSlide()" [attr.aria-label]="t('labels.next')">
+        {{ t('labels.next') }} <app-icon name="arrow-right" />
+      </button>
+    </div>
+  </div>
+}

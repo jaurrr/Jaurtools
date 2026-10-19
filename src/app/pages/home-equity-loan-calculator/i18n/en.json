@@ -1,0 +1,91 @@
+{
+  "home-equity-loan-calculator": {
+    "assumptionNote": "Lenders typically let you borrow up to 80% of the home's value minus the mortgage balance; the payment is capped at that maximum and assumes a fixed rate.",
+    "benefits": [
+      "Find out exactly how much equity you can borrow against before calling a bank.",
+      "See the real monthly payment for any loan amount and term.",
+      "The LTV check warns you before you request more than lenders allow.",
+      "Free, instant, and private - no bank appointment needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Equity is the part of your home you truly own: home value minus mortgage balance. On a $400,000 home with a $280,000 mortgage, your equity is $120,000.",
+        "q": "What is home equity?"
+      },
+      {
+        "a": "Most lenders cap total borrowing at 80-85% of the home's value. So max loan = 80% x home value - mortgage balance. On a $400,000 home with a $280,000 mortgage, the maximum is $40,000.",
+        "q": "How much can I borrow against my equity?"
+      },
+      {
+        "a": "A home equity loan gives one lump sum at a fixed rate and term - predictable payments. A HELOC is a revolving credit line with a variable rate. Pick the loan for a fixed project cost, the HELOC for ongoing or uncertain needs.",
+        "q": "Home equity loan vs HELOC - which is better?"
+      },
+      {
+        "a": "The same amortization formula as any loan: payment = loan x r / (1 - (1+r)^-n). Borrowing $40,000 at 8% for 15 years gives $382.30 per month.",
+        "q": "How is the monthly payment calculated?"
+      },
+      {
+        "a": "It can be lower than credit cards or personal loans because the loan is secured by your home. But it is still debt against your house - and rates are higher than first-mortgage rates.",
+        "q": "Is the rate lower than a personal loan?"
+      },
+      {
+        "a": "Yes. Your home is the collateral, so missed payments can lead to foreclosure. This is often called a second mortgage for a reason: treat it with the same seriousness as your first.",
+        "q": "Can I lose my home with a home equity loan?"
+      }
+    ],
+    "formula": "Equity = home value - mortgage balance\nMax loan = 80% x home value - mortgage balance (lender cap)\nMonthly payment = loan x r / (1 - (1+r)^-n), with r = annual rate/12, n = years x 12\nLTV after = (mortgage balance + loan) / home value x 100",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your home's current value.",
+      "Enter what you still owe on the mortgage.",
+      "Enter the loan amount you want.",
+      "Enter the rate and term in years.",
+      "Read the payment, your equity, the maximum loan, and the resulting LTV."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Home equity = home value minus mortgage balance.",
+      "Lenders usually cap borrowing at 80% of value minus the mortgage.",
+      "A home equity loan is a fixed lump sum with a fixed rate and term.",
+      "It is a second mortgage: your home is the collateral.",
+      "Longer terms lower the payment but raise total interest."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "home equity loan calculator, home equity payment calculator, second mortgage calculator, borrow against home calculator",
+    "labels": {
+      "annualRate": "Interest rate (%/yr)",
+      "equity": "Your equity",
+      "homeValue": "Home value ($)",
+      "loanAmount": "Loan amount you want ($)",
+      "ltv": "Loan-to-value after",
+      "maxLoan": "Maximum loan (80% rule)",
+      "monthlyPayment": "Monthly payment",
+      "mortgageOwed": "Mortgage balance owed ($)",
+      "termYears": "Loan term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The 80% rule is typical but varies by lender and program.",
+      "Assumes a fixed rate and home value; both can change.",
+      "Does not include closing costs or fees.",
+      "Not financial advice - confirm with your lender."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free home equity loan calculator: max borrowable amount, monthly payment, equity, and LTV. Instant, private, no sign-up.",
+    "metaTitle": "Home Equity Loan Calculator - Payment & Max Loan | JaurTools",
+    "name": "Home Equity Loan Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "On a $400,000 home with a $280,000 mortgage, your equity is $120,000 and the maximum home equity loan is $40,000 (80% of value minus the mortgage). Borrowing that $40,000 at 8% for 15 years costs $382.30 per month, and the resulting loan-to-value is 80%.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your home equity loan results",
+    "tagline": "Monthly payments on home equity loans, with max-loan and LTV checks.",
+    "workedExample": "$400,000 home, $280,000 mortgage, $40,000 loan, 8%, 15 years:\n1. Equity = $400,000 - $280,000 = $120,000.\n2. Max loan = 80% x $400,000 - $280,000 = $320,000 - $280,000 = $40,000.\n3. r = 0.08/12 = 0.0066667, n = 180.\n4. Payment = $40,000 x 0.0066667 / (1 - 1.0066667^-180) = about $382.30.\n5. LTV after = ($280,000 + $40,000) / $400,000 x 100 = 80%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

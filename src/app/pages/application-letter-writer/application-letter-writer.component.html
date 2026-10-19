@@ -1,0 +1,122 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="letter-type">{{ t('labels.typeLabel') }}</label>
+        <select id="letter-type" [ngModel]="letterType()" (ngModelChange)="letterType.set($event)">
+          @for (lt of letterTypes; track lt) {
+            <option [value]="lt">{{ t('labels.type_' + lt) }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="letter-name">{{ t('labels.nameLabel') }}</label>
+        <input id="letter-name" type="text" autocomplete="name"
+          [ngModel]="fullName()" (ngModelChange)="fullName.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="letter-address">{{ t('labels.addressLabel') }}</label>
+        <input id="letter-address" type="text" autocomplete="street-address"
+          [ngModel]="address()" (ngModelChange)="address.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="letter-role">{{ t('labels.recipientRoleLabel') }}</label>
+        <input id="letter-role" type="text" autocomplete="off"
+          [ngModel]="recipientRole()" (ngModelChange)="recipientRole.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="letter-recipient">{{ t('labels.recipientLabel') }}</label>
+        <input id="letter-recipient" type="text" autocomplete="off"
+          [ngModel]="recipientName()" (ngModelChange)="recipientName.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="letter-org">{{ t('labels.organizationLabel') }}</label>
+        <input id="letter-org" type="text" autocomplete="organization"
+          [ngModel]="organization()" (ngModelChange)="organization.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="letter-subject">{{ t('labels.subjectLabel') }}</label>
+        <input id="letter-subject" type="text" autocomplete="off"
+          [ngModel]="subject()" (ngModelChange)="subject.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="letter-points">{{ t('labels.pointsLabel') }}</label>
+        <textarea id="letter-points" rows="4"
+          [ngModel]="points()" (ngModelChange)="points.set($event)"></textarea>
+        <p class="note">{{ t('labels.pointsHint') }}</p>
+      </div>
+
+      <div class="field">
+        <label for="letter-date">{{ t('labels.dateLabel') }}</label>
+        <input id="letter-date" type="date" [ngModel]="letterDate()" (ngModelChange)="letterDate.set($event)" />
+      </div>
+
+      <h3 class="preview-title">{{ t('labels.outputLabel') }}</h3>
+      <pre class="letter-output" aria-live="polite">{{ letter() }}</pre>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="copy()">
+          <app-icon name="{{ copied() ? 'check' : 'copy' }}" /> {{ t('labels.copyButton') }}
+        </button>
+        <button type="button" class="btn" (click)="download()">
+          <app-icon name="download" /> {{ t('labels.downloadButton') }}
+        </button>
+      </div>
+
+      <p class="note">{{ t('labels.noteText') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

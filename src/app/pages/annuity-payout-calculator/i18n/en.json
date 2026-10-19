@@ -1,0 +1,89 @@
+{
+  "annuity-payout-calculator": {
+    "assumptionNote": "Assumes annual payouts at the end of each year and a constant annual return on the remaining balance.",
+    "benefits": [
+      "Turns a lump sum into a concrete yearly and monthly income figure.",
+      "Shows how much of your payout stream is interest versus your own principal.",
+      "Helps you compare different payout horizons before committing.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "This calculator assumes a systematic withdrawal from an invested lump sum at a constant return. A real annuity contract from an insurer may guarantee the payout but includes fees and profit margins, so its payouts are usually lower than this model.",
+        "q": "Is this the same as buying an annuity?"
+      },
+      {
+        "a": "The classic 4% rule suggests withdrawing 4% of a retirement portfolio in the first year, adjusted for inflation, to make it last about 30 years. This calculator shows the exact sustainable payout for any horizon and return you choose.",
+        "q": "What is the 4% rule?"
+      },
+      {
+        "a": "A higher return supports a larger payout, but counting on high returns is risky. Use a conservative return, and remember this model assumes the rate never varies.",
+        "q": "Should I use a high return to get a bigger payout?"
+      },
+      {
+        "a": "Inflation erodes purchasing power, so a fixed nominal payout buys less each year. Real annuity contracts sometimes offer inflation-adjusted payouts at a lower starting amount; this tool models fixed nominal payouts.",
+        "q": "Does this account for inflation?"
+      },
+      {
+        "a": "Longer horizons mean smaller annual payouts from the same lump sum, because the money must stretch further. Try 20 versus 30 years to see the trade-off.",
+        "q": "How does the payout period affect the payment?"
+      },
+      {
+        "a": "Payouts from tax-deferred accounts are generally taxed as ordinary income. The tax treatment depends on your country and account type, which this calculator does not model.",
+        "q": "Are annuity payouts taxed?"
+      }
+    ],
+    "formula": "annual_payout = PV x r / (1 - (1 + r)^-n)\nmonthly_payout = annual_payout / 12\ntotal_received = annual_payout x n",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the lump sum you want to convert into income.",
+      "Enter the expected annual return on the remaining balance.",
+      "Enter how many years the payouts should last.",
+      "Read your annual and monthly payout, the total received and the interest portion.",
+      "Adjust the horizon or return to compare scenarios."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "An annuity payout converts a lump sum into a steady stream of payments over a chosen period.",
+      "Each payout partly returns your principal and partly pays out interest earned on the balance that is still invested.",
+      "A higher assumed return or a shorter payout period produces a larger annual payment.",
+      "The total you receive always exceeds the lump sum when the return is positive, because the unpaid balance keeps earning.",
+      "This is the reverse of the annuity savings calculation: instead of building a balance, you are drawing one down."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "annuity payout calculator, lump sum to income, retirement income calculator, pension payout calculator",
+    "labels": {
+      "annualPayout": "Annual payout",
+      "interestPortion": "Paid from interest",
+      "lumpSum": "Lump sum",
+      "monthlyPayout": "Monthly payout",
+      "rate": "Annual return (%)",
+      "totalPayout": "Total received",
+      "years": "Payout years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Constant return assumed; markets do not deliver steady rates.",
+      "No inflation adjustment on the payouts.",
+      "Ignores taxes, fees and annuity contract costs.",
+      "An estimate for planning, not professional financial advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free annuity payout calculator. Convert a lump sum into yearly and monthly income at any return. See total received vs interest. Private, browser-only.",
+    "metaTitle": "Annuity Payout Calculator — Lump Sum to Income",
+    "name": "Annuity Payout Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An annuity payout calculator converts a lump sum into steady income. A $500,000 lump sum at 5% annual return paid out over 20 years gives about $40,121 per year ($3,343 per month) — $802,426 total, of which $302,426 comes from interest.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your annuity payout results",
+    "tagline": "Turn a lump sum into a steady income stream.",
+    "workedExample": "Lump sum $500,000, return 5%, payouts over 20 years.\n\n(1.05)^20 = 2.653298. Factor = 1 - 1/2.653298 = 0.623111. annual_payout = 500,000 x 0.05 / 0.623111 = 25,000 / 0.623111 = $40,121 per year, or $3,343 per month.\n\nTotal received = 40,121.29 x 20 = $802,426. Interest portion = 802,426 - 500,000 = $302,426.",
+    "workedExampleHeading": "Worked example"
+  }
+}

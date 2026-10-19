@@ -1,0 +1,94 @@
+{
+  "zakat-calculator": {
+    "assumptionNote": "Zakat rules vary between schools of thought and scholars. This calculator uses the widely applied 2.5% on net zakatable wealth above nisab held for one lunar year. When in doubt, consult a scholar you trust.",
+    "benefits": [
+      "Work out your Zakat accurately every Ramadan in minutes, not hours.",
+      "The nisab check is built in, so you never pay on wealth below the threshold.",
+      "Covers all common asset types: cash, gold, silver, shares, and business stock.",
+      "Private by design - your financial details never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Nisab is the minimum wealth threshold above which Zakat becomes due: 87.48 grams of gold or 612.36 grams of silver. Many scholars recommend using the silver nisab (the lower value), which makes more people eligible and is the default in this calculator - update it with the current silver price in your currency.",
+        "q": "What is nisab?"
+      },
+      {
+        "a": "Yes. Gold jewellery is zakatable at its current market value, regardless of whether it is worn daily. Personal-use items like your home, car, and clothing are exempt. Enter the resale value of your gold in the gold field above.",
+        "q": "Is gold jewellery zakatable?"
+      },
+      {
+        "a": "Subtract short-term debts that are due within the year. Long-term debts like a 25-year mortgage are treated differently by different scholars: some deduct only the next 12 months of payments, others deduct nothing from zakatable wealth. This calculator subtracts whatever debt figure you enter, so follow your scholar's guidance.",
+        "q": "Which debts can I deduct?"
+      },
+      {
+        "a": "Zakat is due on wealth held for one lunar year (hawl). In practice, most people pick a Zakat date (often in Ramadan) and pay on whatever they hold that day. If you received new money mid-year, many scholars allow paying on the full amount at your Zakat date for simplicity.",
+        "q": "What if I held the money for less than a year?"
+      },
+      {
+        "a": "Shares and funds are zakatable at their market value. If the company holds significant non-zakatable assets, some scholars allow deducting a portion - ask a scholar for your specific holdings. Business stock is valued at current wholesale price.",
+        "q": "Are shares and mutual funds zakatable?"
+      },
+      {
+        "a": "Zakat al-Mal (2.5% on wealth) is the annual obligation this calculator covers. Zakat al-Fitr is a separate fixed amount paid before Eid al-Fitr for every household member - it is not a percentage of wealth.",
+        "q": "Zakat al-Mal vs Zakat al-Fitr - what is the difference?"
+      }
+    ],
+    "formula": "Net zakatable wealth = cash + gold + silver + investments + business stock - debts.\nIf net wealth >= nisab: Zakat = net wealth x 2.5 / 100.\nIf net wealth < nisab: no Zakat due.\nExample: 16,200 x 2.5 / 100 = 405.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the current market value of your cash, bank balances, gold, and silver.",
+      "Add the market value of shares, funds, and any business stock.",
+      "Enter debts due within the year.",
+      "Set the nisab value in your currency (silver nisab is the cautious default).",
+      "Your Zakat due appears instantly - pay it to eligible recipients with a clear intention."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Zakat is 2.5% of net zakatable wealth held for one lunar year, one of the Five Pillars of Islam.",
+      "Nisab: 87.48g of gold or 612.36g of silver; below nisab, no Zakat is due.",
+      "Zakatable assets: cash, gold, silver, shares, business stock, and money owed to you.",
+      "Not zakatable: your home, car, furniture, and personal items you use.",
+      "Debts due within the year are subtracted before calculating.",
+      "The silver nisab is lower, so more people qualify - most scholars recommend using it."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zakat calculator, zakat al mal calculator, nisab calculator, zakat on gold, how to calculate zakat",
+    "labels": {
+      "belowNisab": "Your net wealth is below nisab - no Zakat is due this year.",
+      "businessStock": "Business stock (wholesale value)",
+      "cash": "Cash and bank balances",
+      "debts": "Debts due this year",
+      "gold": "Gold (market value)",
+      "investments": "Shares and investments (market value)",
+      "netWealth": "Net zakatable wealth",
+      "nisabValue": "Nisab value (your currency)",
+      "silver": "Silver (market value)",
+      "totalAssets": "Total zakatable assets",
+      "zakatDue": "Zakat due (2.5%)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Uses 2.5% on net wealth; some assets (livestock, crops, minerals) have different rates not covered here.",
+      "Does not handle the lunar-year (hawl) timing in detail - it assumes your Zakat date.",
+      "Nisab values move with metal prices; update the default with current prices.",
+      "Religious guidance, not a fatwa - confirm with a scholar you trust."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Zakat calculator: 2.5% Zakat on cash, gold, silver, shares and business stock with automatic nisab check. Private, accurate, no sign-up.",
+    "metaTitle": "Zakat Calculator - 2.5% Zakat With Nisab Check | JaurTools",
+    "name": "Zakat Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "Zakat is 2.5% of your net zakatable wealth above nisab. With $5,000 cash, $3,000 gold, $200 silver, $10,000 investments, and $2,000 debts: net wealth is $16,200, so Zakat due is $405. If your net wealth is below nisab (about the value of 612g of silver), no Zakat is due.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your Zakat results",
+    "tagline": "Work out 2.5% Zakat on cash, gold, silver, and investments - with nisab check.",
+    "workedExample": "Cash $5,000, gold $3,000, silver $200, investments $10,000, debts $2,000:\n1. Total assets = 5,000 + 3,000 + 200 + 10,000 = $18,200.\n2. Net wealth = 18,200 - 2,000 = $16,200.\n3. Compare with nisab ($560 silver nisab): 16,200 > 560, so Zakat is due.\n4. Zakat = 16,200 x 2.5 / 100 = $405.",
+    "workedExampleHeading": "Worked example"
+  }
+}

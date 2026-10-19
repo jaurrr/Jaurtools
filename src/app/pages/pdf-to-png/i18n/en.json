@@ -1,0 +1,98 @@
+{
+  "pdf-to-png": {
+    "name": "PDF to PNG Converter",
+    "tagline": "Turn every PDF page into a crisp, lossless PNG image — right in your browser.",
+    "metaTitle": "PDF to PNG Converter — Free Online, No Signup | JaurTools",
+    "metaDescription": "Convert PDF pages to PNG images online for free. Choose 1x, 2x or 3x resolution, preview every page, and download individually or as a ZIP. 100% private — files never leave your device.",
+    "keywords": "pdf to png, convert pdf to png, pdf to png online, pdf pages to images, free pdf to png converter",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Conversion results",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Upload a PDF, pick a render scale (1x for speed, 2x for sharp detail, 3x for print), and every page is drawn as a lossless PNG image you can preview, download one by one, or grab as a single ZIP — all without uploading your file anywhere.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Each page is rasterized with pdf.js at your chosen scale, so 2x gives roughly four times the pixels of 1x.",
+      "PNG is lossless, which keeps text edges sharp — ideal for screenshots, slides, and documentation.",
+      "Transparent regions in the PDF become opaque in PNG; pick JPG output instead if you want smaller files.",
+      "You can convert PDFs up to 50 MB; very long documents render page by page with a live progress bar.",
+      "Every PNG is generated locally — no account, no watermark, no upload queue."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Upload your PDF file (up to 50 MB) using the drop zone.",
+      "Choose a render scale: 1x for quick previews, 2x for crisp screens, 3x for print quality.",
+      "Click the convert button and watch the live progress bar as each page renders.",
+      "Preview every page in the filmstrip with its exact file size shown.",
+      "Download pages individually, or press the ZIP button to download all pages at once."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "pixel_width = pdf_width_pt × scale\npixel_height = pdf_height_pt × scale\n\nA PDF point is 1/72 inch: an A4 page is 595.28 × 841.89 pt, so at 2x it becomes 1190 × 1684 px. PNG file size grows with pixel count and image complexity — flat text compresses well, photos less so.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A 10-page A4 report at 2x scale renders each page at about 1190 × 1684 pixels. Flat text pages come out around 150–300 KB each, so the full set is roughly 2–3 MB — small enough to attach to an email, sharp enough to read comfortably on any screen.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Lossless PNG output keeps text and line art razor-sharp at any zoom level.",
+      "Three resolution scales cover quick previews, screen use, and print in one tool.",
+      "Live per-page file sizes help you decide what to download before you commit.",
+      "One-click ZIP download bundles every page for easy sharing.",
+      "No uploads, no watermarks, no sign-ups — conversion happens on your device."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "PNG files are larger than JPEGs; use PDF to JPG if file size matters more than sharpness.",
+      "Only the visual appearance is converted — text is baked into pixels and is no longer selectable.",
+      "Password-protected PDFs that need a password to open cannot be processed.",
+      "Very complex pages at 3x can use a lot of memory on older phones; convert in smaller batches if needed."
+    ],
+    "privacyNote": "Your PDF is rendered entirely in your browser with pdf.js. Nothing is uploaded to any server, and generated images exist only as temporary browser data until you download them.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "How does PDF to PNG conversion work?",
+        "a": "Each PDF page is drawn onto a canvas at your chosen scale using the pdf.js rendering engine, then encoded as a PNG image. Think of it as taking a high-resolution screenshot of every page."
+      },
+      {
+        "q": "Which scale should I choose?",
+        "a": "1x matches the PDF base resolution and is fastest — fine for quick previews. 2x quadruples the pixels and looks crisp on screens. 3x is best when the image will be printed or zoomed deeply."
+      },
+      {
+        "q": "Why are my PNG files so large?",
+        "a": "PNG is lossless: it preserves every pixel exactly, which is great for text but inefficient for photographic content. Lower the scale to 1x, or convert photographic PDFs with the PDF to JPG tool for much smaller files."
+      },
+      {
+        "q": "Can I convert only some pages?",
+        "a": "The tool renders every page, but you can download just the ones you need — each page has its own download button with its file size shown."
+      },
+      {
+        "q": "Does it work offline?",
+        "a": "After the page loads, the pdf.js engine is already in your browser, so conversion works without any further network use. Your file is never sent anywhere."
+      },
+      {
+        "q": "Is there a watermark?",
+        "a": "No. Output images are clean, with no watermark, no branding, and no usage limits."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "fileLabel": "PDF file",
+      "fileHint": "PDF up to 50 MB · processed on your device",
+      "scaleLabel": "Render scale",
+      "scaleHint": "Higher scale = sharper image, bigger file",
+      "renderButton": "Convert to PNG",
+      "zipButton": "Download all as ZIP",
+      "busy": "Rendering pages…",
+      "pageCount": "Pages",
+      "totalSize": "Total size",
+      "formatLabel": "Format",
+      "pageAlt": "Page",
+      "downloadOne": "Download",
+      "statusDone": "Converted {n} pages.",
+      "errType": "Please choose a valid PDF file.",
+      "errSize": "File is larger than 50 MB.",
+      "errRender": "Could not render this PDF. It may be corrupted or password-protected."
+    }
+  }
+}

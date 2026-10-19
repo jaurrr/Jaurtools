@@ -1,0 +1,92 @@
+{
+  "gcf-calculator": {
+    "assumptionNote": "Inputs are whole numbers from 0 to 1,000,000. Decimals are rounded down.",
+    "benefits": [
+      "Answers instantly with the full Euclidean working shown.",
+      "The step-by-step breakdown teaches the classic algorithm, not just the answer.",
+      "Coprime detection tells you when a fraction cannot be simplified further.",
+      "Essential groundwork for simplifying fractions and solving ratio problems.",
+      "Handles numbers up to a million without breaking a sweat."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The GCF (also called GCD, greatest common divisor) is the largest whole number that divides two or more numbers evenly. For 48 and 180, the GCF is 12, because 12 is the biggest number dividing both.",
+        "q": "What is the greatest common factor?"
+      },
+      {
+        "a": "GCF and GCD mean the same thing: greatest common factor and greatest common divisor. Both describe the largest number dividing two numbers evenly. HCF (highest common factor) is a third name for the same idea.",
+        "q": "What is the difference between GCF and GCD?"
+      },
+      {
+        "a": "Replace the larger number with the remainder of larger / smaller, and repeat until the remainder is zero. The last non-zero remainder is the GCF. This is over 2,000 years old and still the fastest method known.",
+        "q": "How does the Euclidean algorithm work?"
+      },
+      {
+        "a": "Coprime (or relatively prime) numbers have a GCF of 1 - they share no factor besides 1. For example, 8 and 15 are coprime. When a fraction's numerator and denominator are coprime, the fraction is fully simplified.",
+        "q": "What does coprime mean?"
+      },
+      {
+        "a": "Use GCF when splitting things into the largest equal groups, like cutting 48 apples and 180 oranges into identical gift bags. Use LCM when aligning repeating cycles, like two buses arriving at different intervals.",
+        "q": "When do I use GCF instead of LCM?"
+      },
+      {
+        "a": "Yes. If one number is 0, the GCF is the other number, because every number divides 0. This calculator handles zero inputs correctly.",
+        "q": "Can the GCF involve zero?"
+      }
+    ],
+    "formula": "GCF(a, b) = last non-zero remainder of repeated division.\nEuclid: replace (a, b) with (b, a mod b) until a mod b = 0.\nGCD(a, b) x LCM(a, b) = a x b.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your two whole numbers in the input boxes.",
+      "The GCF appears instantly, calculated with the Euclidean algorithm.",
+      "Read the step-by-step division chain to see how the answer was reached.",
+      "If the numbers are coprime, the tool says so - the GCF is 1.",
+      "Try fraction pairs like 48 and 180 to see fraction simplification in action."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The GCF is the largest whole number dividing two (or more) numbers with no remainder.",
+      "GCF, GCD and HCF are three names for exactly the same concept.",
+      "The Euclidean algorithm finds the GCF by repeated division with remainders.",
+      "When the GCF is 1, the numbers are coprime - they share no factor besides 1.",
+      "GCF x LCM always equals the product of the two numbers.",
+      "Dividing both numbers by their GCF gives the simplest form of their ratio."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gcf calculator, greatest common factor calculator, gcd calculator, hcf calculator, euclidean algorithm, coprime checker",
+    "labels": {
+      "coprimeLabel": "Coprime check",
+      "coprimeYes": "Coprime (GCF = 1)",
+      "firstLabel": "First number",
+      "gcfLabel": "Greatest common factor",
+      "secondLabel": "Second number",
+      "stepAnswer": "GCF",
+      "stepZero": "One input is zero, so the GCF is the other number.",
+      "stepsLabel": "Euclidean algorithm steps"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Two numbers only - for three or more, take the GCF of the first two, then of that result and the third.",
+      "Whole numbers only; decimals are rounded down first.",
+      "Results above 1,000,000 are clamped to keep calculations exact.",
+      "This is a math tool, not a tutor - it computes but does not explain why number theory works."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free GCF calculator with step-by-step Euclidean algorithm working. Find the greatest common factor (GCD/HCF) of any two numbers and check coprimality.",
+    "metaTitle": "GCF Calculator - Greatest Common Factor with Steps | JaurTools",
+    "name": "GCF Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "The greatest common factor of 48 and 180 is 12. The Euclidean algorithm shows why: 180 = 48 x 3 + 36, then 48 = 36 x 1 + 12, then 36 = 12 x 3 + 0. The last non-zero remainder, 12, is the GCF. This calculator runs that process instantly for any two whole numbers up to a million and tells you when numbers are coprime.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "GCF results",
+    "tagline": "Find the greatest common factor of two numbers with full Euclidean working.",
+    "workedExample": "Find GCF(48, 180):\n1. 180 = 48 x 3 + 36 (because 48 x 3 = 144, and 180 - 144 = 36).\n2. 48 = 36 x 1 + 12 (because 48 - 36 = 12).\n3. 36 = 12 x 3 + 0 (because 12 x 3 = 36 exactly).\n4. The remainder is 0, so the last non-zero remainder, 12, is the GCF.\n5. Check: 48 / 12 = 4 and 180 / 12 = 15, and 4 and 15 share no further factor, so 12 is the greatest one.",
+    "workedExampleHeading": "Worked example"
+  }
+}

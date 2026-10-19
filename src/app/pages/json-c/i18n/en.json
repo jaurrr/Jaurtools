@@ -1,0 +1,91 @@
+{
+  "json-c": {
+    "benefits": [
+      "Skips boilerplate: paste an API response and get compilable classes in seconds.",
+      "Infers smart types: integers vs longs, doubles, booleans, DateTime, and nested Lists.",
+      "Names things well: keys become PascalCase properties, nested objects become named classes.",
+      "Handles edge cases: empty arrays, nulls, and mixed arrays get safe fallback types.",
+      "Runs fully in your browser: proprietary API payloads are never uploaded anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It walks your JSON and emits one C# class per object: each key becomes a public auto-property with an inferred type, nested objects become their own classes, and arrays become List<T>.",
+        "q": "How does JSON to C# work?"
+      },
+      {
+        "a": "Whole numbers become int (or long beyond ±2,147,483,647), decimals become double, true/false becomes bool, text becomes string, and ISO-8601 date strings become DateTime.",
+        "q": "How are JSON types mapped to C# types?"
+      },
+      {
+        "a": "It inspects the items: if every item has the same inferred type you get List<that>; if items differ or the array is empty you get the safe fallback List<object>.",
+        "q": "What type do arrays get?"
+      },
+      {
+        "a": "Each nested object becomes its own class named after its key in PascalCase (address -> Address). Name clashes get a numeric suffix automatically.",
+        "q": "What happens to nested objects?"
+      },
+      {
+        "a": "Yes. Type the namespace (for example MyApp.Models) and the classes are wrapped in a namespace block. Leave it empty for no namespace.",
+        "q": "Can I add a namespace?"
+      },
+      {
+        "a": "It is a starting point, not a finished model: add [JsonPropertyName] attributes, nullability, or validation to taste. Always review generated code before shipping.",
+        "q": "Is the generated code production-ready?"
+      }
+    ],
+    "formula": "value -> C# type:\n  integer (|v| <= 2,147,483,647) -> int, larger -> long\n  decimal                        -> double\n  true / false                   -> bool\n  \"text\"                         -> string (ISO-8601 date -> DateTime)\n  null                           -> object\n  [T, T, ...]                    -> List<T>  (mixed/empty -> List<object>)\n  { ... }                        -> nested class named after the key\nkey \"created_at\" -> property CreatedAt (PascalCase)",
+    "formulaHeading": "Type mapping",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JSON into the input box - a sample document is preloaded.",
+      "Set the root class name (default: Root) and optionally a namespace like MyApp.Models.",
+      "The C# classes generate live below the options.",
+      "Review the inferred types: adjust DateTime detection or nullability as needed.",
+      "Copy the code or download it as a .cs file and drop it into your project."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON to C# converts any JSON document into C# classes with auto-properties.",
+      "Every object becomes a class; every key becomes a public { get; set; } property in PascalCase.",
+      "Integers map to int/long, decimals to double, booleans to bool, ISO-8601 strings to DateTime.",
+      "Arrays become List<T> with the item type inferred; mixed or empty arrays fall back to List<object>.",
+      "Null values become object; nested objects become named classes with automatic de-duplication.",
+      "An optional namespace wraps the output; usings for System and System.Collections.Generic are included."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json to c#, json to csharp, convert json to c# classes, json c# class generator, json to poco",
+    "labels": {
+      "classNameLabel": "Root class name",
+      "copiedLabel": "Copied!",
+      "copyLabel": "Copy C#",
+      "downloadLabel": "Download .cs",
+      "inputLabel": "JSON input",
+      "invalidLabel": "Invalid JSON:",
+      "namespaceLabel": "Namespace (optional)",
+      "outputLabel": "C# classes"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Type inference reads one sample: a field that is sometimes a string and sometimes a number needs manual fixing.",
+      "Null gives object and ambiguous dates stay string - review DateTime guesses before shipping.",
+      "Generated code has no attributes ([JsonPropertyName]), nullability annotations, or validation - add your own.",
+      "Very deep or huge documents produce many classes; consider splitting them manually."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JSON to C# converter: paste JSON and get C# classes with inferred types, PascalCase properties, nested classes, and List<T> collections. Private, no sign-up.",
+    "metaTitle": "JSON to C# Converter - Generate C# Classes Online | JaurTools",
+    "name": "JSON to C#",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste JSON and get ready-to-compile C# classes: integers become int/long, decimals double, booleans bool, ISO-8601 strings DateTime, arrays List<T>, and every nested object its own PascalCase class. Set the root class name and an optional namespace, then copy or download the .cs file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON to C# results",
+    "tagline": "Turn any JSON into C# classes - inferred types, nested classes, List<T> collections.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input:\n{\"id\": 101, \"name\": \"Asha Sharma\", \"isActive\": true, \"balance\": 1250.75,\n \"createdAt\": \"2026-10-01T10:30:00Z\", \"tags\": [\"admin\"],\n \"address\": {\"city\": \"Pune\", \"zip\": \"411001\"}}\n\nOutput (root = Root, no namespace):\nusing System;\nusing System.Collections.Generic;\n\npublic class Root\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public bool IsActive { get; set; }\n    public double Balance { get; set; }\n    public DateTime CreatedAt { get; set; }\n    public List<string> Tags { get; set; }\n    public Address Address { get; set; }\n}\n\npublic class Address\n{\n    public string City { get; set; }\n    public string Zip { get; set; }\n}"
+  }
+}

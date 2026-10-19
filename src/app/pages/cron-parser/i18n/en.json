@@ -1,0 +1,143 @@
+{
+  "cron-parser": {
+    "benefits": [
+      "Instantly decode any cron expression into a field-by-field table with plain meanings.",
+      "See the next 5 actual run times, so timezone and schedule mistakes surface before deploy.",
+      "Per-field validation pinpoints exactly which field is wrong and why.",
+      "Works as the perfect companion to the Cron Builder: build there, verify here."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Five fields: minute (0-59), hour (0-23), day of month (1-31), month (1-12), day of week (0-6, where both 0 and 7 mean Sunday). * means every value, */n means every nth value, 1-5 is a range, and 1,15 is a list.",
+        "q": "What do the five cron fields mean?"
+      },
+      {
+        "a": "*/15 in the minute field. The parser reads it as every 15 minutes (0, 15, 30, 45) and the next-run preview confirms the spacing. Combine with an hour range like 9-17 to limit it to working hours.",
+        "q": "What does */15 mean?"
+      },
+      {
+        "a": "When both are restricted, cron treats them as OR: the job runs when either matches. 0 0 1 * 0 runs at midnight on the 1st of the month AND every Sunday. The field table shows each field's meaning so this stops being surprising.",
+        "q": "Why does my job run on unexpected days?"
+      },
+      {
+        "a": "Both 0 and 7 mean Sunday. This parser accepts 7 and shows it as Sunday in the meaning column. Some systems only accept 0-6, so prefer 0 for maximum portability.",
+        "q": "Is Sunday 0 or 7?"
+      },
+      {
+        "a": "Classic 5-field cron has minute precision and no seconds field. If your expression has six fields (seconds first), it is probably Quartz or a Node scheduler format, which this parser does not read. Remove the seconds field to parse the rest.",
+        "q": "My expression has 6 fields. Why does it fail?"
+      },
+      {
+        "a": "The preview is computed in your browser's timezone. Servers usually run on UTC, so a job that looks like 09:00 here may run at a different local hour there. Compare against your server's date output when scheduling across timezones.",
+        "q": "The next runs look off by a few hours. Why?"
+      }
+    ],
+    "formula": "* * * * *\n| | | | |\n| | | | +-- day of week (0-6, 0 and 7 = Sunday)\n| | | +---- month (1-12)\n| | +------ day of month (1-31)\n| +-------- hour (0-23)\n+---------- minute (0-59)\n\n* = every value, */n = every nth value, a-b = range, a,b = list.\nNext runs are found by stepping minute-by-minute from now and testing\nall five fields (day of month OR day of week when both are restricted).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste any 5-field cron expression into the input box.",
+      "Each field is decoded instantly into a table row: field name, raw value, plain meaning.",
+      "Read the one-line description and check the next 5 run times in your local time.",
+      "If a field is invalid, the error list names the exact field to fix.",
+      "Press Sample to see a complex expression decoded, or Clear to start over."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A cron parser turns cryptic expressions into a field-by-field table of plain meanings.",
+      "It validates all five fields and names exactly which one is wrong.",
+      "The next-5-runs preview is computed live by stepping minute-by-minute from now.",
+      "Day of month and day of week combine with OR when both are restricted.",
+      "Both 0 and 7 are accepted for Sunday.",
+      "The preview uses your browser's timezone, which may differ from your server's."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cron parser, cron expression parser, crontab checker, cron explained, cron next run, decode cron",
+    "labels": {
+      "clearButton": "Clear",
+      "colFieldLabel": "Field",
+      "colMeaningLabel": "Meaning",
+      "colValueLabel": "Value",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy",
+      "dayNames": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "descCustom": "Runs on the schedule {expr}.",
+      "descDailyAt": "Every day at {t}.",
+      "descEveryMinute": "Every minute.",
+      "descEveryNMinutes": "Every {n} minutes.",
+      "descHourlyAt": "At minute {m} past every hour.",
+      "descMonthlyAt": "On day {d} of every month at {t}.",
+      "descWeeklyAt": "Every {days} at {t}.",
+      "descYearlyAt": "Every year on {d} {mon} at {t}.",
+      "descriptionLabel": "What this means",
+      "emptyNote": "Paste a cron expression above to decode it here.",
+      "errorCountLabel": "A cron expression needs exactly 5 fields separated by spaces.",
+      "errorFieldLabel": "invalid value. Check the allowed range for this field.",
+      "field_dayOfMonth": "Day of month",
+      "field_dayOfWeek": "Day of week",
+      "field_hour": "Hour",
+      "field_minute": "Minute",
+      "field_month": "Month",
+      "inputLabel": "Cron expression",
+      "inputPlaceholder": "e.g. 0 9 * * 1",
+      "meaningAt": "at",
+      "meaningEveryN": "every {n}",
+      "meaningFromTo": "{a} to {b}",
+      "meaningInvalid": "invalid",
+      "meaningStar": "every possible value",
+      "monthNames": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "nextRunsLabel": "Next 5 runs (your local time)",
+      "sampleButton": "Sample",
+      "tableCaptionLabel": "Field-by-field breakdown",
+      "unit_dayOfMonth_plural": "days of the month",
+      "unit_dayOfWeek_plural": "days of the week",
+      "unit_hour_plural": "hours",
+      "unit_minute_plural": "minutes",
+      "unit_month_plural": "months"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Classic 5-field cron only: six-field (Quartz) expressions are rejected.",
+      "Next-run preview uses your browser's timezone, not your server's.",
+      "Special strings like @daily or @reboot are not parsed.",
+      "The preview searches about one year ahead; extremely rare schedules may show fewer runs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free cron parser: paste any cron expression to see a field-by-field breakdown, plain-English description and the next 5 run times. Instant, private, no sign-up.",
+    "metaTitle": "Cron Parser - Decode Cron Expressions | JaurTools",
+    "name": "Cron Parser",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste any 5-field cron expression and this parser decodes it into a field-by-field table with plain meanings, a one-line description and the next 5 run times. For example, */15 9-17 * * 1-5 means every 15 minutes, hours 9 to 17, every day of the month, every month, Monday to Friday. Invalid fields are flagged by name so you know exactly what to fix.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Cron Parser results",
+    "tagline": "Decode any cron expression into plain English, with a next-run preview.",
+    "workedExample": "Input: */15 9-17 * * 1-5\nField breakdown:\n1. Minute: */15 -> every 15 minutes (0, 15, 30, 45).\n2. Hour: 9-17 -> 9 to 17.\n3. Day of month: * -> every possible value.\n4. Month: * -> every possible value.\n5. Day of week: 1-5 -> Monday to Friday.\nDescription: runs on the schedule */15 9-17 * * 1-5.\nMeaning: every 15 minutes between 09:00 and 17:45, Monday to Friday.\nThe next-5-runs preview then lists the actual upcoming timestamps.",
+    "workedExampleHeading": "Worked example"
+  }
+}

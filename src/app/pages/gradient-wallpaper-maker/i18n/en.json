@@ -1,0 +1,93 @@
+{
+  "gradient-wallpaper-maker": {
+    "benefits": [
+      "Creates smooth, professional gradient wallpapers in seconds.",
+      "Copy-ready CSS drops straight into any website or app.",
+      "Angle and stop controls give precise creative control.",
+      "Five common sizes cover desktops, phones and social posts.",
+      "Free, instant and works fully offline."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Linear blends colors along a straight line at your chosen angle; radial blends them outward from the center in a circle. Linear suits banners and headers, radial suits glows and vignettes.",
+        "q": "Linear or radial - which should I use?"
+      },
+      {
+        "a": "Angle is the direction of the blend in degrees: 90 goes left to right, 180 goes top to bottom, 135 runs diagonally from top-left to bottom-right. Drag the slider and watch the preview.",
+        "q": "What does the angle control?"
+      },
+      {
+        "a": "No. The CSS snippet only creates the smooth mathematical gradient. For photos or textured wallpapers you need a real image - this tool makes clean, flat gradients.",
+        "q": "Can I make a photo wallpaper with this?"
+      },
+      {
+        "a": "Add a stop and drag its position slider toward one end. The color holds solid until the next stop begins, giving you a hard edge or a wide flat band.",
+        "q": "How do I make a hard color band instead of a smooth blend?"
+      },
+      {
+        "a": "The CSS is standard linear-gradient and radial-gradient syntax, supported by every modern browser. Just paste the line into your stylesheet.",
+        "q": "Will the CSS work in all browsers?"
+      }
+    ],
+    "formula": "linear-gradient(angle, color1 pos1%, color2 pos2%, ...)\nradial-gradient(circle, color1 pos1%, color2 pos2%, ...)\nCanvas render: the line (or circle) spans the full diagonal so the blend\ncovers every pixel. For a 1920 x 1080 image the diagonal is\nsqrt(1920^2 + 1080^2) = 2203 pixels.\nExample: linear-gradient(135deg, #4F46E5 0%, #9333EA 100%).",
+    "formulaHeading": "The CSS behind it",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick linear (directional blend) or radial (center-out blend).",
+      "For linear, drag the angle slider to set the blend direction.",
+      "Add up to five color stops; drag each stop's slider to position it.",
+      "Choose an output size: desktop, phone or square.",
+      "Copy the CSS snippet for your website, or download the PNG wallpaper."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Two gradient types: linear (straight-line blend) and radial (circle from the center).",
+      "Up to five color stops, each with its own color and position from 0 to 100 percent.",
+      "Angle controls the blend direction for linear gradients, from 0 to 360 degrees.",
+      "The copy-ready CSS uses standard gradient syntax that works in all modern browsers.",
+      "PNG downloads render at up to 1920 by 1080 pixels.",
+      "The preview you see is exactly the CSS that gets copied."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "gradient generator, linear gradient maker, radial gradient wallpaper, css gradient generator, gradient background maker",
+    "labels": {
+      "addStop": "Add color stop",
+      "angle": "Angle",
+      "copied": "Copied",
+      "copyCss": "Copy CSS",
+      "downloadButton": "Download PNG",
+      "previewLabel": "Gradient preview",
+      "removeStop": "Remove color stop",
+      "sizeLabel": "Output size",
+      "stopColor": "Stop color",
+      "stopPosition": "Stop position",
+      "stopsLabel": "Color stops",
+      "typeLabel": "Gradient type",
+      "typeLinear": "Linear",
+      "typeRadial": "Radial"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only flat color blends - no textures, photos or patterns.",
+      "Radial gradients are always centered circles; off-center or elliptical shapes are not supported.",
+      "Maximum five color stops per gradient.",
+      "The PNG is a flat render - it cannot be edited as vector layers later."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Design smooth linear and radial gradient wallpapers with up to five color stops — copy the CSS or download the PNG. Free.",
+    "metaTitle": "Gradient Wallpaper Maker - Beautiful Gradient Wallpapers | JaurTools",
+    "name": "Gradient Wallpaper Maker",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Design a smooth color-blend wallpaper: pick linear or radial, set up to five color stops with exact positions, and tune the angle for linear blends. You get copy-ready CSS like linear-gradient(135deg, #4F46E5 0%, #9333EA 100%) plus a PNG download in sizes up to 1920 by 1080. The blend covers the full image diagonal - 2,203 pixels for a 1920 by 1080 wallpaper.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Gradient generator results",
+    "tagline": "Wallpapers that blend beautifully.",
+    "workedExample": "Build a two-color diagonal wallpaper, 1920 x 1080.\n1. Type: linear, angle 135 degrees, stops: #4F46E5 at 0%, #9333EA at 100%.\n2. CSS: linear-gradient(135deg, #4F46E5 0%, #9333EA 100%).\n3. Diagonal length = sqrt(1920^2 + 1080^2) = sqrt(3,686,400 + 1,166,400) = sqrt(4,852,800) = 2203 pixels.\n4. The canvas draws the blend along that 2203-pixel line, so every pixel is covered smoothly.\n5. Download gradient-1920x1080.png - a crisp wallpaper with no banding at these sizes.",
+    "workedExampleHeading": "Worked example"
+  }
+}

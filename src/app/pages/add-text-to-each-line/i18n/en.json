@@ -1,0 +1,97 @@
+{
+  "add-text-to-each-line": {
+    "benefits": [
+      "Turns a plain list into a finished bullet or numbered list in seconds.",
+      "Prepares code: add quotes, commas, or indentation to dozens of lines at once.",
+      "Formats CSV and data rows by wrapping each line with quotes or brackets.",
+      "Reversible workflow: change the prefix once and the whole list updates.",
+      "No spreadsheet formulas or scripts needed for a simple repetitive edit."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Put your suffix text in the suffix box and leave the prefix empty. For example, a suffix of ',' adds a comma to the end of every line, which is handy when building arrays or CSV rows.",
+        "q": "Can I add text only at the end of each line?"
+      },
+      {
+        "a": "Turn on the 'Skip empty lines' option. Blank lines are then left untouched, so your paragraph spacing stays intact while the real lines get the prefix and suffix.",
+        "q": "How do I keep blank lines unchanged?"
+      },
+      {
+        "a": "Add the line number manually as the prefix for the first line, then the pattern is visible. For automatic numbering (1., 2., 3.), use a dedicated numbering tool, because this one adds the exact same text to every line.",
+        "q": "Can I add line numbers with this tool?"
+      },
+      {
+        "a": "Yes. Type any characters, including emojis typed from your keyboard, spaces, or punctuation, into the prefix or suffix box. They are added to each line exactly as typed.",
+        "q": "Can the prefix contain special characters or spaces?"
+      },
+      {
+        "a": "Yes, within reason. Browsers handle tens of thousands of lines smoothly. For extremely large files (hundreds of thousands of lines), splitting the text into smaller parts keeps the page responsive.",
+        "q": "Is there a limit on how many lines I can process?"
+      },
+      {
+        "a": "Yes. The result box is read-only so you cannot break it by accident, but the Copy button puts the finished text on your clipboard and the Download button saves it as a .txt file.",
+        "q": "How do I get the result out of the tool?"
+      }
+    ],
+    "formula": "For every line L in your text:\noutput line = prefix + L + suffix\n\nExample: prefix '- ', suffix '!', line 'apple' -> '- apple!'\nWith 'Skip empty lines' switched on, blank lines pass through unchanged.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your text into the input box, one item per line.",
+      "Type the text to add before each line in the Prefix box (for example '- ' or '> ').",
+      "Type the text to add after each line in the Suffix box (for example ',' or '!'). Leave either box empty if you only need one side.",
+      "Keep 'Skip empty lines' on if you want blank lines left alone.",
+      "Copy the finished text or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A prefix is text added to the START of every line; a suffix is text added to the END of every line.",
+      "The same prefix and suffix are applied to all lines - this tool does not do per-line customisation.",
+      "Empty lines can be skipped automatically so paragraph breaks survive the edit.",
+      "Common uses: bullet lists ('- '), quoted CSV rows ('\"' ... '\",'), HTML list items ('<li>' ... '</li>'), and code indentation.",
+      "The result updates live as you type - there is no submit button.",
+      "Processing happens fully in your browser; pasted text is never uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "add text to each line, prefix each line, suffix each line, add prefix to lines, bulk line prefix, line suffix tool",
+    "labels": {
+      "charsLabel": "Characters in result",
+      "clearButton": "Clear",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "inputLabel": "Your text (one item per line)",
+      "inputPlaceholder": "apple\nbanana\ncherry",
+      "linesLabel": "Lines processed",
+      "outputLabel": "Result",
+      "prefixLabel": "Prefix (added before each line)",
+      "prefixPlaceholder": "e.g. -",
+      "skipEmptyLabel": "Skip empty lines",
+      "suffixLabel": "Suffix (added after each line)",
+      "suffixPlaceholder": "e.g. !"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Adds the identical prefix and suffix to every line - it cannot number lines or vary text per line.",
+      "It works strictly line by line; it cannot add text only around a selected word inside a line.",
+      "Very large inputs (hundreds of thousands of lines) may slow the browser; split them if needed.",
+      "It does not validate code or HTML - wrapping lines in tags does not check that the result is valid."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online tool to add a prefix or suffix to every line of text. Great for bullet lists, code, and CSV rows. 100% private, runs in your browser.",
+    "metaTitle": "Add Text to Each Line - Prefix & Suffix Tool | JaurTools",
+    "name": "Add Text to Each Line",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type or paste your text, enter a prefix (added before each line) and a suffix (added after each line), and every line updates instantly. For example, adding the prefix '- ' to the lines 'apple' and 'banana' produces '- apple' and '- banana'. Empty lines can be skipped automatically. The tool runs entirely in your browser, so your text is never uploaded anywhere.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Add Text to Each Line results",
+    "tagline": "Add a prefix or suffix to every line of your text in one click.",
+    "workedExample": "Input text:\napple\nbanana\ncherry\n\nPrefix: '- '   Suffix: '!'\n\nStep by step:\n1. Line 1: '- ' + 'apple' + '!' = '- apple!'\n2. Line 2: '- ' + 'banana' + '!' = '- banana!'\n3. Line 3: '- ' + 'cherry' + '!' = '- cherry!'\n\nFinal output:\n- apple!\n- banana!\n- cherry!",
+    "workedExampleHeading": "Worked example"
+  }
+}

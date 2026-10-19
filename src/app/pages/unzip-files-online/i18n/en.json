@@ -1,0 +1,102 @@
+{
+  "unzip-files-online": {
+    "benefits": [
+      "Extract ZIP files without installing any software.",
+      "Pick exactly the files you need — skip the rest.",
+      "Encrypted and unsupported files are clearly marked, never silently broken.",
+      "Everything happens on your device; the archive is never uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Most ZIPs use two methods: Stored (no compression) and Deflated (standard compression). This tool handles both natively in your browser. Rare methods like BZIP2 or LZMA need desktop software — those files are marked as unsupported.",
+        "q": "Which ZIP files can it extract?"
+      },
+      {
+        "a": "No. The extractor cannot decrypt password-protected entries and deliberately does not try. Encrypted files are marked and skipped. Use desktop software with the password for those.",
+        "q": "Can it open password-protected ZIPs?"
+      },
+      {
+        "a": "The browser's built-in DecompressionStream handles raw deflate data — the same algorithm desktop tools use. Extraction is byte-exact: the downloaded file matches the original that was zipped.",
+        "q": "Is the extraction accurate?"
+      },
+      {
+        "a": "Because browsers block silent multi-file downloads, each selected file downloads individually and your browser may ask permission for multiple downloads — click Allow. Large selections download one after another with a short pause.",
+        "q": "Why do files download one by one?"
+      },
+      {
+        "a": "The 500 MB cap on total uncompressed size guards against zip bombs — tiny archives that expand into gigabytes and freeze the browser. The 200 MB input cap keeps the tab responsive on phones.",
+        "q": "Why are there size limits?"
+      },
+      {
+        "a": "Use the ZIP Archive Content Viewer — its companion tool — to list and inspect the archive first, then come back here to extract exactly what you need.",
+        "q": "Can I preview the archive before extracting?"
+      }
+    ],
+    "formula": "Extraction is decompression, not arithmetic.\nStored entries: bytes are copied as-is from the archive.\nDeflated entries: decompressed with the browser's DecompressionStream('deflate-raw').\nLocal file data starts at: local header offset + 30 + name length + extra length.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click Choose file and pick a .zip from your device.",
+      "Tick the files you want (or Select all).",
+      "Click Download selected — each file downloads individually.",
+      "Or download files one by one with each row's button."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "ZIP entries are either Stored (uncompressed) or Deflated (compressed).",
+      "File data lives at each entry's local header offset in the archive.",
+      "Decompression uses the browser's built-in inflate engine.",
+      "Encrypted entries cannot be extracted — they are skipped honestly.",
+      "Downloads use the original file names from the archive.",
+      "Total uncompressed size is capped at 500 MB as a zip-bomb guard."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "extract zip online, unzip files online, zip extractor, open zip in browser, unzip without software",
+    "labels": {
+      "byteUnit": "B",
+      "chooseFile": "Choose a ZIP file",
+      "downloadOne": "Download",
+      "downloadSelected": "Download selected",
+      "downloaded": "Downloaded",
+      "dropHint": "Max 200 MB. Files are extracted in your browser — nothing is uploaded.",
+      "entriesHeading": "Files in this archive",
+      "errorBomb": "The archive would expand beyond 500 MB. Extraction is blocked as a safety measure.",
+      "errorParse": "This file could not be read as a ZIP archive. Multi-disk and ZIP64 archives over 4 GB are not supported.",
+      "errorTooBig": "The file is larger than 200 MB. Please use a smaller archive.",
+      "failed": "Failed — try desktop software",
+      "kbUnit": "KB",
+      "mbUnit": "MB",
+      "multiNote": "Browsers download selected files one by one; allow multiple downloads if your browser asks.",
+      "reading": "Reading archive...",
+      "selectAll": "Select all",
+      "selectNone": "Select none",
+      "skipBrowser": "Your browser cannot decompress ZIP data (DecompressionStream is unavailable). Please use a modern browser.",
+      "skipEncrypted": "Encrypted — skipped",
+      "skipMethod": "Unsupported method — skipped",
+      "working": "Working..."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot extract password-protected (encrypted) entries.",
+      "Rare compression methods (BZIP2, LZMA, etc.) are not supported.",
+      "No support for multi-disk or ZIP64-over-4GB archives.",
+      "200 MB input cap and 500 MB uncompressed cap for safety."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Unzip files online: pull files out of any ZIP right in your browser — selective, private, no install. Your files never leave your device.",
+    "metaTitle": "Unzip Files Online - Extract ZIP Files Free in Browser | JaurTools",
+    "name": "Unzip Files Online",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Choose a ZIP file and extract exactly the files you want — no software install, no upload. The tool reads the archive's index, decompresses Stored and Deflated entries with the browser's own engine, and downloads each file with its original name. Encrypted entries and exotic compression methods are clearly marked and skipped. A 200 MB input cap and 500 MB expansion cap keep things safe.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Extraction",
+    "tagline": "Open any ZIP and grab just the files you need.",
+    "workedExample": "A ZIP containing photos/img1.jpg (deflated, 800 KB → 2.1 MB) and readme.txt (stored, 2 KB):\n1. Tick both files and click Download selected.\n2. img1.jpg is inflated with DecompressionStream('deflate-raw') back to 2.1 MB.\n3. readme.txt bytes are copied as-is (2 KB).\n4. Both download with their original names: img1.jpg, readme.txt.",
+    "workedExampleHeading": "Worked example"
+  }
+}

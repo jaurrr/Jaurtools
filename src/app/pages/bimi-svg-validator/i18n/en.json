@@ -1,0 +1,96 @@
+{
+  "bimi-svg-validator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "BIMI SVG Validator",
+    "tagline": "Check that an SVG logo meets BIMI email requirements.",
+    "metaTitle": "BIMI SVG Validator - Check Logo for BIMI Free Online",
+    "metaDescription": "Validate an SVG logo against BIMI requirements: square canvas, under 32KB, title element, no scripts or external refs. Paste or upload. Free, no signup.",
+    "keywords": "bimi svg validator, bimi logo requirements, svg bimi check, brand indicators message identification",
+    "resultsHeading": "BIMI validation results",
+    "quickAnswer": "BIMI (Brand Indicators for Message Identification) lets verified brands show their logo in email inboxes, but the SVG logo must follow strict rules. Paste your SVG or upload the file and this tool checks every rule locally: well-formed XML, square viewBox, a title element, no scripts, no event handlers, no external references, and size under 32KB.",
+    "keyFacts": [
+      "BIMI displays brand logos next to authenticated emails in supporting inboxes like Gmail and Apple Mail.",
+      "The logo must be SVG Tiny 1.2 (Tiny-PS): a restricted, secure SVG profile.",
+      "BIMI requires a square canvas and recommends keeping the file under 32KB.",
+      "A <title> element is required; it provides the accessible name of the logo.",
+      "Scripts, event handlers, external references, and embedded fonts are all forbidden."
+    ],
+    "howTo": [
+      "Paste your SVG markup or upload the .svg file.",
+      "Read the pass/fail result for each BIMI rule.",
+      "Fix any failing rule in your SVG editor.",
+      "Re-paste and re-check until all checks pass.",
+      "Only then publish the SVG at your BIMI record URL."
+    ],
+    "formula": "BIMI SVG rules checked:\n1. Well-formed XML, root <svg>\n2. viewBox present and square (1:1 ratio)\n3. <title> element present\n4. No <script>, no on* handlers, no <foreignObject>\n5. No external href or url() references\n6. File size <= 32KB (32768 bytes)",
+    "workedExample": "The sample logo validates as:\nwell-formed XML: pass\nroot <svg>: pass (svg)\nviewBox: pass (0 0 100 100)\nsquare canvas: pass (100x100)\n<title> present: pass\nno scripts: pass\nno event handlers: pass\nno external references: pass\nsize: pass (312 bytes)\nResult: 10/10 checks passed. Adding onclick=\"...\" to any element would flip the event-handler check to fail.",
+    "benefits": [
+      "Catch BIMI rejections before you publish your logo.",
+      "Every rule explained with a clear pass or fail.",
+      "Upload or paste; the file never leaves your browser.",
+      "Sample logo shows what a passing file looks like."
+    ],
+    "limitations": [
+      "Checks the published rule set, not mailbox-provider rendering quirks.",
+      "Does not validate the BIMI DNS record or the Verified Mark Certificate.",
+      "SVG Tiny 1.2 profile conformance beyond these rules is not fully checked.",
+      "A passing SVG still needs proper BIMI DNS setup to display in inboxes."
+    ],
+    "faqs": [
+      {
+        "q": "What is BIMI?",
+        "a": "Brand Indicators for Message Identification: a standard that lets authenticated brands display their logo beside emails in supporting inboxes."
+      },
+      {
+        "q": "Why must the logo be square?",
+        "a": "Inbox providers render BIMI logos in square slots. A non-square logo would be cropped or distorted, so the spec requires a 1:1 canvas."
+      },
+      {
+        "q": "Why are scripts forbidden?",
+        "a": "Email clients must never execute code from a logo. Scripts, event handlers, and external references are attack vectors, so BIMI bans them."
+      },
+      {
+        "q": "What is the 32KB limit?",
+        "a": "BIMI guidance recommends keeping the SVG under 32KB so it loads fast and cannot hide malicious payloads. Larger files risk rejection."
+      },
+      {
+        "q": "Does passing here guarantee my logo shows?",
+        "a": "No. You also need DMARC enforcement, a published BIMI DNS record, and (for Gmail) a Verified Mark Certificate. This tool only validates the SVG file."
+      }
+    ],
+    "labels": {
+      "svgLabel": "SVG markup",
+      "svgPlaceholder": "Paste SVG code here...",
+      "uploadLabel": "Upload .svg",
+      "sampleLabel": "Load sample",
+      "clearLabel": "Clear",
+      "passedLabel": "checks passed",
+      "emptyHintLabel": "Paste SVG markup or upload a file to run the BIMI checks.",
+      "fileTooBigLabel": "File is too large. Only files up to 200KB are accepted for checking.",
+      "fileReadErrorLabel": "Could not read the file.",
+      "check_wellformed": "Well-formed XML",
+      "check_rootSvg": "Root element is <svg>",
+      "check_viewBox": "viewBox present",
+      "check_square": "Square canvas (1:1)",
+      "check_hasTitle": "<title> element present",
+      "check_noScript": "No <script> elements",
+      "check_noForeign": "No <foreignObject>",
+      "check_noHandlers": "No event handlers (on*)",
+      "check_noExternal": "No external references",
+      "check_size": "Size under 32KB"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.unitSystem')">
+        <button type="button" [class.active]="unit() === 'cm'" (click)="setUnit('cm')">
+          {{ t('labels.cmTab') }}
+        </button>
+        <button type="button" [class.active]="unit() === 'm'" (click)="setUnit('m')">
+          {{ t('labels.mTab') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="cbm-length"><app-icon name="ruler" /> {{ t('labels.length') }} ({{ unit() }})</label>
+        <input id="cbm-length" type="number" inputmode="decimal" min="0.1" step="1" class="full"
+          [ngModel]="length()" (ngModelChange)="setLength($event)" />
+      </div>
+
+      <div class="field">
+        <label for="cbm-width">{{ t('labels.width') }} ({{ unit() }})</label>
+        <input id="cbm-width" type="number" inputmode="decimal" min="0.1" step="1" class="full"
+          [ngModel]="width()" (ngModelChange)="setWidth($event)" />
+      </div>
+
+      <div class="field">
+        <label for="cbm-height">{{ t('labels.height') }} ({{ unit() }})</label>
+        <input id="cbm-height" type="number" inputmode="decimal" min="0.1" step="1" class="full"
+          [ngModel]="height()" (ngModelChange)="setHeight($event)" />
+      </div>
+
+      <div class="field">
+        <label for="cbm-qty">{{ t('labels.quantity') }}</label>
+        <input id="cbm-qty" type="number" inputmode="numeric" min="1" step="1" class="full"
+          [ngModel]="quantity()" (ngModelChange)="setQuantity($event)" />
+      </div>
+
+      <div class="field">
+        <label for="cbm-weight">{{ t('labels.weightPerPiece') }} (kg)</label>
+        <input id="cbm-weight" type="number" inputmode="decimal" min="0" step="0.5" class="full"
+          [ngModel]="weight()" (ngModelChange)="setWeight($event)" />
+      </div>
+
+      <div class="field">
+        <label>{{ t('labels.shipMode') }}</label>
+        <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.shipMode')">
+          <button type="button" [class.active]="mode() === 'air'" (click)="setMode('air')">
+            {{ t('labels.airTab') }}
+          </button>
+          <button type="button" [class.active]="mode() === 'sea'" (click)="setMode('sea')">
+            {{ t('labels.seaTab') }}
+          </button>
+        </div>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="calculator" /> {{ t('labels.totalCbm') }}</span>
+          <strong>{{ threeDecimal().format(totalCbm()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.cbmPerPiece') }}</span>
+          <strong>{{ threeDecimal().format(cbmPerPiece()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.volumetricWeight') }}</span>
+          <strong>{{ oneDecimal().format(volumetricKg()) }} kg</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.actualWeight') }}</span>
+          <strong>{{ oneDecimal().format(actualKg()) }} kg</strong>
+        </div>
+        <div class="result-row">
+          <span><app-icon name="scale" /> {{ t('labels.chargeableWeight') }}</span>
+          <strong>{{ oneDecimal().format(chargeableKg()) }} kg</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <p class="note">{{ t('labels.factorNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

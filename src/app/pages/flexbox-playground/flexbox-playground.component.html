@@ -1,0 +1,207 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="preview-area">
+        <div class="flex-preview"
+          [style.display]="'flex'"
+          [style.flex-direction]="direction()"
+          [style.justify-content]="justify()"
+          [style.align-items]="alignItems()"
+          [style.flex-wrap]="wrap()"
+          [style.gap.px]="gap()">
+          @for (i of items(); track i) {
+            <button type="button" class="flex-item" [class.selected]="i === selectedItem()"
+              [style.align-self]="i === selectedItem() ? itemAlignSelf() : 'auto'"
+              [style.flex-grow]="i === selectedItem() ? itemGrow() : 0"
+              (click)="setSelectedItem(i)"
+              [attr.aria-pressed]="i === selectedItem()"
+              [attr.aria-label]="t('labels.itemLabel') + ' ' + i">{{ i }}</button>
+          }
+        </div>
+        <p class="note">{{ t('labels.clickHint') }}</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label" id="flex-dir-label" dir="ltr">flex-direction</span>
+        <div class="unit-toggle" role="group" aria-labelledby="flex-dir-label">
+          @for (d of directions; track d) {
+            <button type="button" dir="ltr" [class.active]="direction() === d" (click)="setDirection(d)">{{ d }}</button>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="flex-justify" dir="ltr">justify-content</label>
+        <select id="flex-justify" class="text-input" dir="ltr" [ngModel]="justify()" (ngModelChange)="setJustify($event)">
+          @for (j of justifies; track j) {
+            <option [value]="j">{{ j }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="flex-align" dir="ltr">align-items</label>
+        <select id="flex-align" class="text-input" dir="ltr" [ngModel]="alignItems()" (ngModelChange)="setAlignItems($event)">
+          @for (a of aligns; track a) {
+            <option [value]="a">{{ a }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <span class="field-label" id="flex-wrap-label" dir="ltr">flex-wrap</span>
+        <div class="unit-toggle" role="group" aria-labelledby="flex-wrap-label">
+          @for (w of wraps; track w) {
+            <button type="button" dir="ltr" [class.active]="wrap() === w" (click)="setWrap(w)">{{ w }}</button>
+          }
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="flex-gap">{{ t('labels.gapLabel') }} (px)</label>
+        <div class="input-row">
+          <input id="flex-gap" type="number" inputmode="decimal" min="0" max="48" step="1"
+            [ngModel]="gap()" (ngModelChange)="setGap($event)" />
+          <input type="range" min="0" max="48" step="1" [ngModel]="gap()"
+            (ngModelChange)="setGap($event)" [attr.aria-label]="t('labels.gapLabel')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="flex-count">{{ t('labels.itemCountLabel') }}</label>
+        <div class="input-row">
+          <input id="flex-count" type="number" inputmode="decimal" min="2" max="8" step="1"
+            [ngModel]="itemCount()" (ngModelChange)="setItemCount($event)" />
+          <input type="range" min="2" max="8" step="1" [ngModel]="itemCount()"
+            (ngModelChange)="setItemCount($event)" [attr.aria-label]="t('labels.itemCountLabel')" />
+        </div>
+      </div>
+
+      <fieldset class="item-group">
+        <legend>{{ t('labels.selectedItemLabel') }}: {{ selectedItem() }}</legend>
+        <div class="field">
+          <label [for]="'flex-self'" dir="ltr">align-self</label>
+          <select id="flex-self" class="text-input" dir="ltr" [ngModel]="itemAlignSelf()" (ngModelChange)="setItemAlignSelf($event)">
+            @for (s of selfAligns; track s) {
+              <option [value]="s">{{ s }}</option>
+            }
+          </select>
+        </div>
+        <div class="field">
+          <label [for]="'flex-grow'" dir="ltr">flex-grow</label>
+          <div class="input-row">
+            <input id="flex-grow" type="number" inputmode="decimal" min="0" max="3" step="1"
+              [ngModel]="itemGrow()" (ngModelChange)="setItemGrow($event)" />
+            <input type="range" min="0" max="3" step="1" [ngModel]="itemGrow()"
+              (ngModelChange)="setItemGrow($event)" aria-label="flex-grow" />
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="output-block">
+        <div class="output-head">
+          <h3>CSS</h3>
+          <button type="button" class="copy-btn" (click)="copyText(css())">
+            <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}
+          </button>
+        </div>
+        <pre dir="ltr"><code>{{ css() }}</code></pre>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

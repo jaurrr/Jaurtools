@@ -1,0 +1,158 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="led-bulbs">{{ t('labels.numberOfBulbs') }}</label>
+        <input id="led-bulbs" class="full" type="number" inputmode="numeric" min="1" max="500" step="1"
+          [ngModel]="bulbs()" (ngModelChange)="setBulbs($event)" />
+      </div>
+
+      <div class="field">
+        <label for="led-old">{{ t('labels.oldWattage') }}</label>
+        <input id="led-old" class="full" type="number" inputmode="numeric" min="1" max="500" step="1"
+          [ngModel]="oldWatts()" (ngModelChange)="setOldWatts($event)" />
+      </div>
+
+      <div class="field">
+        <label for="led-new">{{ t('labels.newWattage') }}</label>
+        <input id="led-new" class="full" type="number" inputmode="numeric" min="1" max="500" step="1"
+          [ngModel]="newWatts()" (ngModelChange)="setNewWatts($event)" />
+      </div>
+
+      <div class="field">
+        <label for="led-hours">{{ t('labels.hoursPerDay') }}</label>
+        <div class="input-row">
+          <input id="led-hours" type="number" inputmode="decimal" min="0" max="24" step="0.5"
+            [ngModel]="hoursPerDay()" (ngModelChange)="setHoursPerDay($event)" />
+          <input type="range" min="0" max="24" step="0.5" [ngModel]="hoursPerDay()"
+            (ngModelChange)="setHoursPerDay($event)" [attr.aria-label]="t('labels.hoursPerDay')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="led-rate">{{ t('labels.costPerKwh') }}</label>
+        <input id="led-rate" class="full" type="number" inputmode="decimal" min="0" max="5" step="0.01"
+          [ngModel]="costPerKwh()" (ngModelChange)="setCostPerKwh($event)" />
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="sparkles" /> {{ t('labels.moneySavedYear') }}</span>
+          <strong>{{ twoDecimal().format(moneySavedYear()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.kwhSavedYear') }}</span>
+          <strong>{{ twoDecimal().format(kwhSavedYear()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.percentSaved') }}</span>
+          <strong>{{ twoDecimal().format(percentSaved()) }}%</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.co2Saved') }}</span>
+          <strong>{{ twoDecimal().format(co2SavedKg()) }} {{ t('labels.kg') }}</strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

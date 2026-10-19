@@ -1,0 +1,94 @@
+{
+  "mortgage-payoff-calculator": {
+    "benefits": [
+      "See your exact mortgage-free date - a powerful motivator.",
+      "Quantifies every extra dollar in years and interest saved.",
+      "Tests lump sums (bonus, tax refund) before you commit them.",
+      "Private - your mortgage details never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is a guaranteed return equal to your rate (6.5% = 6.5% risk-free). It makes sense if your rate is high or you value being debt-free; investing may win mathematically at low rates. Keep an emergency fund first either way.",
+        "q": "Is it smart to pay off my mortgage early?"
+      },
+      {
+        "a": "With most mortgages, extra principal shortens the term - your required payment stays the same but you finish years earlier. Recasting (a separate lender process) is what lowers the payment.",
+        "q": "Do extra payments shorten the loan or lower the payment?"
+      },
+      {
+        "a": "Start early - dollars added in year 2 kill far more interest than dollars added in year 20. Automate a fixed extra amount monthly rather than relying on willpower.",
+        "q": "What is the best extra-payment strategy?"
+      },
+      {
+        "a": "Most do automatically, but some apply it to future payments. Specify principal only in writing or online, and verify on your next statement.",
+        "q": "Will my lender apply extra to principal?"
+      },
+      {
+        "a": "A lump sum today beats the same total spread monthly, because it starts killing interest immediately. But monthly extra is easier to sustain - the best strategy is the one you will keep.",
+        "q": "What about a lump sum vs monthly extra?"
+      },
+      {
+        "a": "No. The simulation runs entirely in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Monthly rate r = APR / 12 / 100\nLump sum reduces the balance first, then each month: interest = balance x r; principal = payment - interest.\nMonths is about -ln(1 - balance x r / payment) / ln(1 + r). Simulated month-by-month here.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your remaining mortgage balance and interest rate.",
+      "Enter your current monthly principal-and-interest payment.",
+      "Add an extra monthly amount and/or a one-time lump sum.",
+      "Compare payoff dates, total interest, and your savings."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Extra mortgage payments go straight to principal, skipping you ahead in the amortization schedule.",
+      "Early in a 30-year loan, extra dollars kill the most interest - later, less.",
+      "One extra payment per year cuts about 4-5 years off a 30-year mortgage.",
+      "A lump sum (bonus, inheritance) at the start beats the same total spread over years.",
+      "Most US conventional mortgages have no prepayment penalty - but check yours.",
+      "Biweekly payments equal 13 monthly payments a year - an effortless extra payment."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "mortgage payoff calculator, pay off mortgage early calculator, extra mortgage payment calculator, mortgage interest saved",
+    "labels": {
+      "annualRate": "Interest rate (%)",
+      "extraMonthly": "Extra monthly payment",
+      "interestSaved": "Interest saved",
+      "loanBalance": "Remaining balance",
+      "lumpSum": "One-time lump sum",
+      "monthlyPayment": "Monthly payment (P&I)",
+      "monthsRemaining": "Months remaining",
+      "monthsSaved": "Months saved",
+      "neverPayoff": "Your payment does not cover the monthly interest, so the balance would grow forever. Increase the payment to make progress.",
+      "payoffDate": "Mortgage-free date",
+      "totalInterest": "Total interest",
+      "withExtra": "with extra",
+      "withoutExtra": "without extra"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Principal and interest only - taxes, insurance, and PMI continue regardless.",
+      "Estimates only - assumes a fixed rate and no missed payments or penalties.",
+      "Ignores prepayment penalties; verify your loan terms first.",
+      "Not financial advice - weigh investing vs payoff with an adviser."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free mortgage payoff calculator: add extra monthly payments or a lump sum to see your new payoff date, years saved, and interest saved.",
+    "metaTitle": "Mortgage Payoff Calculator - Pay Off Early, Save Interest | JaurTools",
+    "name": "Mortgage Payoff Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "On a $280,000 mortgage at 6.5% with a $1,770 payment, adding $300 extra a month cuts payoff from 30 years to about 20.4 - saving roughly 9.6 years and $130,000 in interest. Enter your loan to find your mortgage-free date.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your mortgage payoff plan",
+    "tagline": "See your mortgage-free date - and how extra payments slash years and interest.",
+    "workedExample": "$280,000 balance, 6.5% APR, $1,770/month, +$300 extra:\n1. Monthly rate = 0.541667%. Base payment $1,770, accelerated $2,070.\n2. Without extra: about 360 months (30 years), about $357,200 total interest.\n3. With $300 extra: about 245 months (20.4 years), about $227,150 total interest.\n4. You save about 115 months (9.6 years) and about $130,000 in interest.",
+    "workedExampleHeading": "Worked example"
+  }
+}

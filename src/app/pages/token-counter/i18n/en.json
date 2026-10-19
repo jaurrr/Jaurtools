@@ -1,0 +1,89 @@
+{
+  "token-counter": {
+    "assumptionNote": "Estimates are a heuristic for English text on GPT-style tokenizers. Exact counts need the model's own tokenizer.",
+    "benefits": [
+      "Instant token estimates for any prompt before you send it.",
+      "Helps you stay inside a model's context window.",
+      "Plan and trim long prompts without guesswork.",
+      "Compare prompt sizes across drafts at a glance.",
+      "Private — your prompt text never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A token is the unit a language model reads and writes — roughly 3/4 of an English word. Models charge per token and have a maximum context window measured in tokens.",
+        "q": "What is a token?"
+      },
+      {
+        "a": "Roughly 1 token per 4 characters of English text, or about 0.75 words. This tool averages the character-based and word-based estimates for a stable number.",
+        "q": "How many tokens is one word?"
+      },
+      {
+        "a": "The tool uses a published heuristic (about 4 characters per token) and blends it with a word-based estimate. Real tokenizers split text slightly differently, so treat the result as an estimate within about 10 percent.",
+        "q": "How accurate is this estimate?"
+      },
+      {
+        "a": "No. It runs fully in your browser and uses only arithmetic on your text. The 128k reference is just a familiar example of a large context window.",
+        "q": "Does it use the official OpenAI tokenizer?"
+      },
+      {
+        "a": "Tokenizers differ by model, but the 4-characters-per-token heuristic works as a rough guide for most English text across GPT, Claude, Gemini and Llama-style models.",
+        "q": "Does it work for Claude and Gemini too?"
+      },
+      {
+        "a": "Yes — everything is computed locally. Your prompts are never uploaded or logged.",
+        "q": "Is my prompt text private?"
+      }
+    ],
+    "formula": "tokens ≈ average(chars ÷ 4, words × 1.33)\ncontext% = tokens ÷ 128000 × 100",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your prompt into the text box.",
+      "Read the estimated token count instantly.",
+      "Check the context percentage to see how much of a 128k window your prompt fills.",
+      "Trim or split the prompt if it approaches the model's limit.",
+      "Rewrite and re-paste to compare drafts."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Language models read text as tokens, not characters or words.",
+      "About 100 tokens is roughly 75 English words.",
+      "Token counts decide both cost and whether a prompt fits the context window.",
+      "Tokenizers merge common words into single tokens and split rare words into pieces.",
+      "Non-English scripts and code can use noticeably more tokens per character."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "prompt token counter, token counter online, count tokens gpt, llm token estimator, prompt size checker",
+    "labels": {
+      "charsLabel": "Characters",
+      "clearButton": "Clear",
+      "contextLabel": "Of 128k context window",
+      "textLabel": "Your prompt",
+      "textPlaceholder": "Paste your prompt here...",
+      "tokensLabel": "Estimated tokens",
+      "wordsLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A heuristic, not an exact tokenizer — real counts can differ by ~10%.",
+      "Calibrated for English; other languages may tokenize differently.",
+      "The 128k window is only an example — check your model's actual limit."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free token counter: estimate LLM tokens for any prompt instantly. Cost planning, context limits — client-side, private, free.",
+    "metaTitle": "Token Counter - Count LLM Tokens for Any Prompt Free | JaurTools",
+    "name": "Token Counter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Estimates how many tokens your prompt will use in a large language model, using a standard client-side heuristic (about 4 characters per token, blended with a word-based estimate). Shows character and word counts too, plus what fraction of a 128k context window the prompt fills — handy before sending long prompts to ChatGPT, Claude or Gemini.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Token estimate",
+    "tagline": "Estimate LLM tokens for any prompt — instant and private.",
+    "workedExample": "Text: \"The quick brown fox jumps over the lazy dog\"\nCharacters: 43\nWords: 9\nToken estimate: average(43 ÷ 4 = 10.75, 9 × 1.33 = 11.97) ≈ 11 tokens\nContext: 11 ÷ 128000 × 100 ≈ 0.01% of a 128k window",
+    "workedExampleHeading": "Worked example"
+  }
+}

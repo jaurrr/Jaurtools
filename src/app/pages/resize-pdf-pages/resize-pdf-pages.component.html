@@ -1,0 +1,177 @@
+<div class="tool-page resize-tool">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card blueprint" [attr.aria-label]="t('resultsHeading')">
+      <h2><app-icon name="scale" /> {{ t('resultsHeading') }}</h2>
+
+      <label class="dropzone" for="rsz-file">
+        <app-icon name="upload" />
+        <span class="dz-title">{{ t('labels.fileLabel') }}</span>
+        <span class="dz-hint">{{ t('labels.fileHint') }}</span>
+        <input id="rsz-file" type="file" accept="application/pdf,.pdf"
+          (change)="onFileSelected($event)" [attr.aria-label]="t('labels.fileLabel')" />
+      </label>
+
+      @if (fileName()) {
+        <div class="file-meta">
+          <app-icon name="file-text" />
+          <span class="fname">{{ fileName() }}</span>
+          <span class="fsize">{{ pageCount() }} {{ t('labels.pagesLabel') }} · {{ srcSize() }}</span>
+        </div>
+
+        <div class="field">
+          <span class="field-label" id="rsz-target-label">{{ t('labels.targetLabel') }}</span>
+          <div class="size-cards" role="group" aria-labelledby="rsz-target-label">
+            @for (s of ['a4', 'letter', 'legal', 'a5', 'custom']; track s) {
+              <button type="button" class="size-card" [class.active]="target() === s" (click)="pickTarget(s)">
+                <span class="size-glyph" [class.g-a4]="s === 'a4'" [class.g-letter]="s === 'letter'"
+                  [class.g-legal]="s === 'legal'" [class.g-a5]="s === 'a5'" [class.g-custom]="s === 'custom'"></span>
+                <strong>{{ t('labels.size' + s.charAt(0).toUpperCase() + s.slice(1)) }}</strong>
+              </button>
+            }
+          </div>
+        </div>
+
+        @if (target() === 'custom') {
+          <div class="opt-row">
+            <div class="field">
+              <label for="rsz-w">{{ t('labels.customW') }} (mm)</label>
+              <input id="rsz-w" type="number" min="10" max="1200" [ngModel]="customW()" (ngModelChange)="setCustomW($event)" />
+            </div>
+            <div class="field">
+              <label for="rsz-h">{{ t('labels.customH') }} (mm)</label>
+              <input id="rsz-h" type="number" min="10" max="1200" [ngModel]="customH()" (ngModelChange)="setCustomH($event)" />
+            </div>
+          </div>
+        }
+
+        <div class="target-readout">
+          <app-icon name="ruler" />
+          <span>{{ t('labels.targetReadout') }}: <strong>{{ targetLabel() }}</strong></span>
+        </div>
+
+        <div class="field">
+          <span class="field-label" id="rsz-mode-label">{{ t('labels.modeLabel') }}</span>
+          <div class="mode-cards" role="group" aria-labelledby="rsz-mode-label">
+            <button type="button" class="mode-card" [class.active]="mode() === 'fit'" (click)="setMode('fit')">
+              <span class="mode-glyph fit"></span>
+              <strong>{{ t('labels.modeFit') }}</strong>
+              <small>{{ t('labels.modeFitHint') }}</small>
+            </button>
+            <button type="button" class="mode-card" [class.active]="mode() === 'fill'" (click)="setMode('fill')">
+              <span class="mode-glyph fill"></span>
+              <strong>{{ t('labels.modeFill') }}</strong>
+              <small>{{ t('labels.modeFillHint') }}</small>
+            </button>
+            <button type="button" class="mode-card" [class.active]="mode() === 'stretch'" (click)="setMode('stretch')">
+              <span class="mode-glyph stretch"></span>
+              <strong>{{ t('labels.modeStretch') }}</strong>
+              <small>{{ t('labels.modeStretchHint') }}</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="build()" [disabled]="busy()">
+            <app-icon name="scale" /> {{ t('labels.buildButton') }}
+          </button>
+          @if (outSize() > 0) {
+            <button type="button" class="btn ghost" (click)="download()">
+              <app-icon name="download" /> {{ t('labels.downloadButton') }} ({{ fmt(outSize()) }})
+            </button>
+          }
+        </div>
+      }
+
+      @if (busy()) {
+        <p class="status" role="status"><app-icon name="refresh-cw" /> {{ t('labels.busy') }}</p>
+      }
+      @if (error()) {
+        <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ error() }}</p>
+      }
+      @if (status()) {
+        <p class="status" role="status"><app-icon name="check" /> {{ status() }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

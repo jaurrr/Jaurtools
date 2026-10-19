@@ -1,0 +1,91 @@
+{
+  "json-to-xml": {
+    "benefits": [
+      "Feeds legacy systems: SOAP services, sitemaps, RSS, and office documents all speak XML.",
+      "Keeps attributes intact: @id becomes a real XML attribute, not a nested element.",
+      "Handles edge cases: &, <, > are escaped and invalid element names are sanitized automatically.",
+      "Produces valid XML: optional declaration, proper nesting, and self-closing empty elements.",
+      "Runs fully in your browser: your data is never uploaded to a server."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Objects become elements named after their keys, arrays become repeated elements with the same name, strings and numbers become text content, and null becomes a self-closing element like <note/>.",
+        "q": "How is JSON mapped to XML?"
+      },
+      {
+        "a": "Prefix the key with @: {\"order\": {\"@id\": \"A1023\"}} produces <order id=\"A1023\">. The @ is a widely used convention for attributes.",
+        "q": "How do I create XML attributes?"
+      },
+      {
+        "a": "Use the #text key: {\"p\": {\"#text\": \"Hello\", \"@class\": \"hi\"}} produces <p class=\"hi\">Hello</p>. It mixes text with attributes cleanly.",
+        "q": "How do I mix text and attributes in one element?"
+      },
+      {
+        "a": "They are sanitized: spaces and special characters become underscores, and a leading digit gets an underscore prefix, so the output is always well-formed.",
+        "q": "What happens to keys with spaces or special characters?"
+      },
+      {
+        "a": "Yes - & becomes &amp;, < becomes &lt;, > becomes &gt;, and \" becomes &quot; in both text and attribute values.",
+        "q": "Are special characters escaped?"
+      },
+      {
+        "a": "No. JSON and XML model data differently (attributes, mixed content, namespaces), so conversion is a practical mapping, not a perfect round-trip.",
+        "q": "Is the conversion reversible?"
+      }
+    ],
+    "formula": "object  -> <key>...children...</key>\narray   -> one <key> element per item (name repeats)\nstring/number/boolean -> <key>text</key>\nnull    -> <key/>\n\"@name\" key -> attribute name=\"value\"\n\"#text\" key -> text content of the element\ninvalid chars in names -> replaced with _",
+    "formulaHeading": "Mapping rules",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your JSON into the input box - a sample order is preloaded.",
+      "Set the root element name (default: root). Leave the XML declaration enabled for standalone files.",
+      "Prefix any key with @ to turn it into an XML attribute; use #text for mixed text content.",
+      "The XML output updates live below the options.",
+      "Copy the result or download it as converted.xml."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "JSON to XML converts any JSON document into well-formed XML entirely in your browser.",
+      "Objects become elements, arrays become repeated elements, null becomes a self-closing element.",
+      "Keys starting with @ become XML attributes; the #text key sets an element's text content.",
+      "Element names are sanitized (invalid characters become _) so output is always well-formed.",
+      "Special characters (&, <, >, \") are escaped in text and attribute values.",
+      "An optional XML declaration (<?xml version=\"1.0\" encoding=\"UTF-8\"?>) heads the output."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "json to xml, convert json to xml online, json xml converter, json to xml free",
+    "labels": {
+      "copiedLabel": "Copied!",
+      "copyLabel": "Copy XML",
+      "declarationLabel": "Include XML declaration",
+      "downloadLabel": "Download .xml",
+      "inputLabel": "JSON input",
+      "invalidLabel": "Invalid JSON:",
+      "outputLabel": "XML output",
+      "rootLabel": "Root element name"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "JSON and XML model data differently, so conversion is a practical mapping - not a guaranteed round-trip.",
+      "Duplicate object keys keep only the last value, since JSON parsing resolves them silently.",
+      "Very deep documents may produce deeply nested XML that is hard to read.",
+      "Namespaces (xmlns) are not generated; add them manually if your target schema needs them."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free JSON to XML converter: turn any JSON into well-formed XML online with attribute support (@key), text nodes, and proper escaping. Private, no sign-up.",
+    "metaTitle": "JSON to XML Converter - Convert JSON to XML Online | JaurTools",
+    "name": "JSON to XML",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste JSON and get well-formed XML instantly: objects become elements, arrays become repeated elements, null becomes a self-closing tag, keys starting with @ become attributes, and #text sets element text. Special characters are escaped and invalid names sanitized, so the output always parses.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "JSON to XML results",
+    "tagline": "Convert any JSON document to well-formed XML - with attributes, text nodes, and proper escaping.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Input:\n{\"order\": {\"@id\": \"A1023\", \"customer\": \"Asha Sharma\", \"paid\": true, \"note\": null}}\n\nOutput (root = \"root\"):\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<root>\n  <order id=\"A1023\">\n    <customer>Asha Sharma</customer>\n    <paid>true</paid>\n    <note/>\n  </order>\n</root>\n\n@id became the id attribute, \"paid\" became text, and null became the self-closing <note/>."
+  }
+}

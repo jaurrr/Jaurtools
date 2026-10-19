@@ -1,0 +1,103 @@
+{
+  "png-to-pdf": {
+    "name": "PNG to PDF Converter",
+    "tagline": "Combine PNG images into a clean, print-ready PDF — reorder pages with one click.",
+    "metaTitle": "PNG to PDF Converter — Free Online, No Signup | JaurTools",
+    "metaDescription": "Turn PNG images into a PDF online for free. Reorder pages, choose Fit, A4 or Letter page size, set margins, and download instantly. Private — everything runs in your browser.",
+    "keywords": "png to pdf, convert png to pdf, images to pdf, png to pdf online, free png to pdf",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Build your PDF",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Add your PNG files, put them in order with the up/down controls, pick a page size (Fit to image, A4, or Letter), and build a real PDF document where every image sits centered on its own page — no upload, no watermark.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Each PNG becomes one full PDF page, in the exact order shown in the queue.",
+      "\"Fit to image\" makes every page exactly the size of its image — perfect for screenshots.",
+      "A4 and Letter modes center each image with an adjustable margin (0–40 mm).",
+      "Images are embedded losslessly — PNG pixels are stored without recompression.",
+      "Up to 10 MB per image; add as many images as your device memory allows."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Add one or more PNG files (each up to 10 MB).",
+      "Reorder pages with the up/down arrows, or remove images you do not need.",
+      "Choose page size: Fit to image, A4, or Letter, plus orientation and margin.",
+      "Click \"Build PDF\" and review the output size shown on the download button.",
+      "Download your PDF instantly."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "page_width_pt = image_width_px × (72 / 96)\nscale_to_fit = min(avail_w / img_w, avail_h / img_h)\n\nBrowsers treat images at 96 DPI, while a PDF point is 1/72 inch — so a 1920 px wide screenshot is 1440 pt wide on a Fit page. In A4/Letter mode the image is scaled to the largest size that fits inside the margins, keeping its aspect ratio.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Three phone screenshots (1170 × 2532 px each) with \"Fit to image\" produce a 3-page PDF where each page is exactly 877.5 × 1899 pt. Switch to A4 portrait with 10 mm margins and each screenshot is centered at about 539 × 1166 pt on a standard A4 sheet — ready to print or email.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "True PDF output — a real document structure, not a renamed image file.",
+      "Visual page queue with numbered badges makes ordering mistakes obvious.",
+      "Fit/A4/Letter covers screenshots, documents, and print in one place.",
+      "Lossless embedding keeps screenshots pixel-perfect.",
+      "Runs fully offline after load; no account or upload needed."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Only PNG images are accepted — convert JPGs with the JPG to PDF tool.",
+      "Output pages are image-only; text inside images is not selectable or searchable.",
+      "Very large image sets can exhaust mobile browser memory.",
+      "No OCR: scanned text stays as pictures of text."
+    ],
+    "privacyNote": "Your images are assembled into a PDF entirely on your device using pdf-lib. No file is uploaded, and nothing is retained after you close the page.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "Will my PNG lose quality in the PDF?",
+        "a": "No. PNG data is embedded without recompression, so pixels are preserved exactly. The only change is the page-size math that positions the image."
+      },
+      {
+        "q": "What does \"Fit to image\" do?",
+        "a": "It makes each PDF page exactly the pixel dimensions of its image (at 96 DPI), so a screenshot fills its page edge to edge with no white borders."
+      },
+      {
+        "q": "How do I reorder pages?",
+        "a": "Use the up and down arrow buttons on each queue item. The numbered badges always show the final page order."
+      },
+      {
+        "q": "Can I mix portrait and landscape images?",
+        "a": "Yes. In Fit mode each page matches its own image. In A4/Letter mode choose one orientation and every image is centered on that sheet."
+      },
+      {
+        "q": "Why is my PDF bigger than the PNGs?",
+        "a": "PDF adds document structure around the images. With lossless PNG embedding the overhead is small — usually a few kilobytes per page."
+      },
+      {
+        "q": "Can I add a JPG too?",
+        "a": "This tool accepts PNG only, to keep its behavior predictable. Use the JPG to PDF tool for JPEG images."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "fileLabel": "PNG images",
+      "fileHint": "PNG files up to 10 MB each · add as many as you need",
+      "queueLabel": "Pages in order",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "remove": "Remove",
+      "clearAll": "Clear all",
+      "sizeLabel": "Page size",
+      "sizeFit": "Fit to image",
+      "orientLabel": "Orientation",
+      "orientPortrait": "Portrait",
+      "orientLandscape": "Landscape",
+      "marginLabel": "Margin",
+      "buildButton": "Build PDF",
+      "downloadButton": "Download PDF",
+      "busy": "Building PDF…",
+      "statusAdded": "Added {n} image(s).",
+      "statusDone": "PDF ready with {n} pages.",
+      "errType": "Only PNG files are accepted.",
+      "errSize": "Each image must be under 10 MB.",
+      "errBuild": "Could not build the PDF. One of the images may be corrupted."
+    }
+  }
+}

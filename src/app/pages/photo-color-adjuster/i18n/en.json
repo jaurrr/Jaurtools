@@ -1,0 +1,97 @@
+{
+  "photo-color-adjuster": {
+    "benefits": [
+      "Instant live preview — every slider updates the image immediately.",
+      "Eight professional parameters in one place: hue, saturation, vibrance, exposure, gamma and three channels.",
+      "Completely private: your photo never leaves your browser.",
+      "No account, no watermark, no cost — the downloaded PNG is clean.",
+      "Works on any device with a modern browser, including phones."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Saturation raises the intensity of every color equally. Vibrance is smarter: it boosts dull, muted colors more and leaves already-saturated colors (like skin tones) mostly alone, so photos look natural instead of overcooked.",
+        "q": "What is the difference between saturation and vibrance?"
+      },
+      {
+        "a": "Gamma applies a power curve to brightness. Values below 1.0 lift the midtones (the photo looks brighter without blowing out highlights), and values above 1.0 push midtones darker. 1.0 means no change.",
+        "q": "What does the gamma slider do?"
+      },
+      {
+        "a": "No. The file is read into your browser's memory and every adjustment runs on your device with canvas pixel math. Nothing is sent anywhere.",
+        "q": "Is my photo uploaded to a server?"
+      },
+      {
+        "a": "Any image format your browser can display — JPG, PNG, WebP, GIF and more — up to 10 MB. The download is always a PNG.",
+        "q": "Which image formats can I upload?"
+      },
+      {
+        "a": "Per-pixel adjustments on a 40-megapixel photo would freeze most phones. The tool caps the long edge at 1600 px so sliders stay smooth; the download matches that size.",
+        "q": "Why does a huge photo get resized?"
+      },
+      {
+        "a": "Yes — move the slider back, tick the compare box to check the original, or press Reset all to return every control to neutral in one click.",
+        "q": "Can I undo an adjustment?"
+      }
+    ],
+    "formula": "Exposure: v x 2^stops\nGamma: 255 x (v/255)^gamma\nHue: (h + shift) mod 360\nSaturation: s x (amount/100)\nVibrance: s x (1 + v x (1 - s)), where v = (vibrance - 100)/100",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose an image file (JPG, PNG, WebP up to 10 MB) from your device.",
+      "Move any slider — hue, saturation, vibrance, exposure, gamma or a color channel — and watch the live preview update.",
+      "Tick the compare box at any time to view the untouched original.",
+      "Use Reset all to return every slider to its neutral position.",
+      "Click Download PNG to save the adjusted photo to your device."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Exposure works in stops: +1 stop doubles brightness, -1 stop halves it.",
+      "Gamma below 1.0 brightens midtones, above 1.0 darkens them; 1.0 leaves the image unchanged.",
+      "Vibrance raises the saturation of dull colors first and protects already-saturated colors, which is why it is safer for skin tones than plain saturation.",
+      "Channel gains scale the red, green or blue channel independently from 0% to 200%.",
+      "Hue shift rotates every color around the color wheel from -180 to +180 degrees."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "photo adjust, hsl adjuster, photo saturation tool, exposure adjuster, gamma correction online, rgb channel mixer, photo editor online free",
+    "labels": {
+      "channelBlue": "Blue channel",
+      "channelGreen": "Green channel",
+      "channelRed": "Red channel",
+      "chooseImage": "Choose an image",
+      "downloadPng": "Download PNG",
+      "errorSize": "The file is larger than 10 MB. Please choose a smaller image.",
+      "errorType": "Please choose an image file (JPG, PNG, WebP).",
+      "exposure": "Exposure (stops)",
+      "gamma": "Gamma",
+      "hueShift": "Hue shift",
+      "noImageYet": "No image yet — choose a file above to start adjusting.",
+      "resetAll": "Reset all",
+      "saturation": "Saturation",
+      "showOriginal": "Show original (compare)",
+      "vibrance": "Vibrance"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This is a color adjuster, not a full editor — there is no crop, rotate or filter support.",
+      "Very large photos are downscaled to a maximum of 1600 px on the long edge for performance.",
+      "The gamma slider applies a pure power curve (v^gamma); it does not do display-profile gamma.",
+      "Adjustments are destructive on download — keep your original file if you may need it again."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Fine-tune hue, saturation, vibrance, exposure, gamma and RGB channels of any photo with live sliders. Free, private, in your browser.",
+    "metaTitle": "Photo Color Adjuster - Adjust Hue, Saturation & Exposure Free | JaurTools",
+    "name": "Photo Color Adjuster",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo and use the sliders to adjust hue, saturation, vibrance, exposure, gamma and the red, green and blue channels. Every change applies instantly to a live preview. Tick the compare box to see the original, then download the adjusted photo as a PNG. Nothing is uploaded — all processing happens on your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your photo adjustment results",
+    "tagline": "Pro-level photo color controls — live in your browser.",
+    "workedExample": "Take a mid-grey pixel at (128, 128, 128).\nWith exposure +1: each channel is multiplied by 2^1 = 2, so 128 x 2 = 256, which clamps to 255.\nWith gamma 2.0 instead: (128/255)^2 x 255 = 0.2519 x 255 = 64.2, which rounds to 64.\nSo the same grey pixel becomes near-white at +1 exposure, or a dark grey of 64 at gamma 2.0 — the math behind the sliders you see above.",
+    "workedExampleHeading": "Worked example"
+  }
+}

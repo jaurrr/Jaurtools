@@ -1,0 +1,104 @@
+{
+  "open-graph-preview": {
+    "benefits": [
+      "See exactly how your link will look when shared — before you publish.",
+      "Catches missing or broken og:image tags, the most common card failure.",
+      "Test both X and Facebook layouts side by side from one paste.",
+      "Manual fields let you experiment with titles and descriptions without editing HTML.",
+      "Runs entirely in your browser; your markup is never uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Use an absolute https:// URL — relative paths are the number one reason cards show no image. Keep it under 5 MB, ideally 1200x630 px for large cards. And the URL must be publicly reachable: crawlers can't log in.",
+        "q": "Why is my card image not showing?"
+      },
+      {
+        "a": "Open Graph (og:) tags are the open standard that Facebook, LinkedIn, WhatsApp, Telegram, and most platforms read. Twitter Cards (twitter:) tags refine the display on X. Set both: og: tags as the base, twitter:card and twitter: overrides for X.",
+        "q": "What is the difference between Open Graph and Twitter Cards?"
+      },
+      {
+        "a": "X caches cards aggressively (about 7 days). Use X's Card Validator to refresh the cache for a URL. Facebook's Sharing Debugger similarly rescrapes and shows you what Facebook sees.",
+        "q": "I fixed my tags but the old card still shows — why?"
+      },
+      {
+        "a": "summary shows a small square thumbnail beside the text — good for articles. summary_large_image shows a wide banner image above the text — better for visual content and usually higher click-through. This tool previews both.",
+        "q": "summary vs summary_large_image — which should I use?"
+      },
+      {
+        "a": "WhatsApp and Telegram read og: tags. WhatsApp shows the og:image with title and domain; keep images under 300 KB for fast rendering. Telegram additionally supports larger images. iMessage uses its own heuristics but also reads og: tags.",
+        "q": "What about WhatsApp, Telegram, and iMessage previews?"
+      },
+      {
+        "a": "Yes, with limits: it parses the tags and renders faithful mock cards, but it can't replicate each platform's exact fonts, cropping, or caching behavior. Always confirm with the platform's own debugger before a big launch.",
+        "q": "Is this preview pixel-perfect?"
+      }
+    ],
+    "formula": "Tags this tool reads (first match wins per group):\nTitle: twitter:title -> og:title -> manual field\nDescription: twitter:description -> og:description -> manual field\nImage: twitter:image -> og:image -> manual field\nURL: og:url -> manual field\nCard type: twitter:card = summary_large_image -> large, otherwise summary\n(Manual fields override parsed tags when filled.)",
+    "formulaHeading": "How values are resolved",
+    "homeLabel": "Home",
+    "howTo": [
+      "Copy the <meta> tags from your page's <head> (View Source) and paste them into the box.",
+      "Or fill the manual fields directly to experiment — manual values override parsed tags.",
+      "Choose the X card type: Auto (from twitter:card), Summary, or Large image.",
+      "Review both previews: the X card and the Facebook/Open Graph card.",
+      "Fix any warnings (missing title, description, or image), update your page, then re-paste."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Social platforms build link cards from meta tags in your page <head> — they don't guess from visible content.",
+      "Open Graph tags (og:title, og:description, og:image, og:url) are the shared standard read by Facebook, LinkedIn, WhatsApp, and Telegram.",
+      "Twitter Card tags (twitter:card, twitter:title, twitter:image) fine-tune how the card looks on X.",
+      "twitter:card values: summary (small thumbnail) or summary_large_image (wide banner).",
+      "og:image should be an absolute https:// URL, ideally 1200x630 px and under 5 MB.",
+      "Platforms cache cards for days — after fixing tags, use each platform's debugger to force a re-scrape."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "social card preview, open graph preview, twitter card preview, og tags checker, link preview tester",
+    "labels": {
+      "cardAuto": "Auto",
+      "cardLarge": "Large image",
+      "cardSummary": "Summary",
+      "checksHeading": "Card issues",
+      "clearButton": "Clear",
+      "emptyState": "Paste your meta tags or fill the fields above to preview the cards.",
+      "fCard": "X card type",
+      "fDesc": "Description",
+      "fImage": "Image URL",
+      "fTitle": "Title",
+      "fUrl": "Page URL",
+      "manualHeading": "Or enter values manually",
+      "pasteHint": "Paste your <meta> tags here…",
+      "pasteLabel": "Meta tags",
+      "previewFb": "Facebook / Open Graph card",
+      "previewNote": "Mock previews rendered in your browser — close to the real cards, but platforms apply their own fonts, cropping, and caching.",
+      "previewX": "X (Twitter) card",
+      "warnImageHttp": "The image URL is not https:// — platforms require secure image URLs.",
+      "warnNoDesc": "No description found — cards look bare without one.",
+      "warnNoImage": "No image found — cards without images get far fewer clicks.",
+      "warnNoTitle": "No title found — a card needs og:title or twitter:title."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Mock previews only — not pixel-perfect replicas of each platform's renderer.",
+      "Cannot check whether the image URL actually loads or meets size requirements — only that a URL is present.",
+      "Doesn't replicate platform caching; fixed tags may take days to refresh on the live platform.",
+      "Reads pasted tags only — it can't fetch your live page to extract them."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Preview how your link looks when shared on X, Facebook and LinkedIn. Paste meta tags, see the cards instantly — free.",
+    "metaTitle": "Open Graph Preview - Test Your Social Link Cards | JaurTools",
+    "name": "Open Graph Preview",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your page's <meta> tags and this tool renders mock X and Facebook link cards from your og: and twitter: tags. It resolves the title (twitter:title, then og:title), description, image, and URL the same way platforms do, flags missing tags, and lets you override any value manually to experiment. For example, tags with twitter:card set to summary_large_image render the wide-banner X card.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Card previews",
+    "tagline": "Preview your X and Facebook link cards.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Sample pasted tags:\n<meta property=\"og:title\" content=\"Example — Free Browser Tools\">\n<meta property=\"og:description\" content=\"Free tools that run in your browser.\">\n<meta property=\"og:image\" content=\"https://example.com/og.png\">\n<meta property=\"og:url\" content=\"https://example.com/\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\nResolved by the tool:\n1. Title: Example — Free Browser Tools (from og:title; no twitter:title present).\n2. Description: Free tools that run in your browser.\n3. Image: https://example.com/og.png (https, so no warning).\n4. URL/domain: example.com.\n5. Card type: large (twitter:card = summary_large_image).\nResult: the X preview shows the wide-banner layout; the Facebook preview shows the standard OG card. No warnings — all four core tags are present."
+  }
+}

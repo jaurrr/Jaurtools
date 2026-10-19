@@ -1,0 +1,108 @@
+{
+  "crop-pdf": {
+    "benefits": [
+      "Completely private — the PDF never leaves your device, unlike online cropping tools.",
+      "Percent-based margins work on any page size, including mixed-size documents.",
+      "Crop all pages at once or just a page range you choose.",
+      "One-click reset restores the original page boxes if you change your mind.",
+      "Free and unlimited — crop as many PDFs as you like."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The cropped area still exists in the PDF's content stream — readers just don't display it. For true removal of content, delete the pages or rebuild the PDF.",
+        "q": "Does cropping delete the hidden content?"
+      },
+      {
+        "a": "Yes — choose the page range option and enter the first and last page numbers. Only those pages are cropped.",
+        "q": "Can I crop only some pages?"
+      },
+      {
+        "a": "Tick “Restore original page size” and apply — it resets every page's crop box back to its full media box.",
+        "q": "How do I undo a crop?"
+      },
+      {
+        "a": "No. The entire process happens locally in your browser. Your document never leaves your device.",
+        "q": "Is my file uploaded to a server?"
+      },
+      {
+        "a": "Start with 5–10% per side for typical scanner borders. You can always re-crop with larger values.",
+        "q": "How much should I crop?"
+      },
+      {
+        "a": "Yes — percentages are relative to each page, so a 10% crop adapts to every page size in a mixed document.",
+        "q": "My PDF has mixed page sizes. Will it still work?"
+      }
+    ],
+    "formula": "new x = left % × page width\nnew y = bottom % × page height\nnew width = page width × (1 − left % − right %)\nnew height = page height × (1 − top % − bottom %)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Click “Choose PDF file” and select the PDF you want to crop.",
+      "Enter how much to trim from each edge as a percentage (0–40%).",
+      "Choose whether to crop all pages or a specific page range.",
+      "Click “Crop PDF” and check the before/after dimensions.",
+      "Download the cropped PDF."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Cropping sets each page's CropBox — the rectangle that tells readers which part of the page to display.",
+      "The CropBox is measured in points from the bottom-left corner: an A4 page is 595.28 × 841.89 points.",
+      "Percent margins adapt automatically: 10% trims the same relative border on A4, Letter and custom sizes.",
+      "Cropping never deletes content — it only changes the visible window, and the reset option restores it fully.",
+      "Page ranges are inclusive: from 3 to 5 crops pages 3, 4 and 5."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "crop pdf, trim pdf margins, pdf crop pages online free, remove white margins pdf",
+    "labels": {
+      "afterLabel": "After crop",
+      "beforeLabel": "Before crop",
+      "bottomLabel": "Bottom % (0–40)",
+      "chooseFile": "Choose PDF file",
+      "cropBtn": "Crop PDF",
+      "downloadBtn": "Download cropped PDF",
+      "dropHint": "PDF files up to 50 MB",
+      "errNoCrop": "Enter at least one margin above 0%, or tick the reset option.",
+      "errNoFile": "Please choose a PDF file first.",
+      "errNotPdf": "Please choose a valid PDF file (.pdf).",
+      "errProcess": "Something went wrong while processing the PDF. The file may be corrupted or password-protected.",
+      "errTooLarge": "This file is larger than 50 MB. Please choose a smaller file — browsers run out of memory on very large PDFs.",
+      "fileLabel": "PDF file",
+      "fromLabel": "From page",
+      "leftLabel": "Left % (0–40)",
+      "pagesFound": "pages",
+      "processing": "Working…",
+      "resetBtn": "Start over",
+      "resetCropLabel": "Restore original page size (undo crop)",
+      "rightLabel": "Right % (0–40)",
+      "scopeAll": "All pages",
+      "scopeLabel": "Apply to",
+      "scopeRange": "Page range",
+      "successMsg": "Crop applied. Download your PDF below.",
+      "toLabel": "To page",
+      "topLabel": "Top % (0–40)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cropping hides content but does not delete it from the file.",
+      "No visual preview — margins are set as percentages, so check the result after downloading.",
+      "Very uneven margins across pages need separate range passes.",
+      "Password-protected PDFs must be unlocked before cropping."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Crop any PDF free in your browser — trim margins by percentage, all pages or a range. Undo included. No upload, no signup.",
+    "metaTitle": "Crop PDF Free — Trim PDF Margins Online",
+    "name": "Crop PDF",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload your PDF, trim any edge by percentage (0–40%), apply to all pages or a page range, and download the cropped file. A one-click reset restores the original page size — everything runs locally in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Crop results",
+    "tagline": "Trim margins off any PDF — right in your browser.",
+    "workedExample": "Crop 10% from every edge of an A4 page (595.28 × 841.89 pt):\nnew width = 595.28 × (1 − 0.10 − 0.10) = 595.28 × 0.8 = 476.22 pt\nnew height = 841.89 × (1 − 0.10 − 0.10) = 841.89 × 0.8 = 673.51 pt\nThe visible page shrinks from A4 to 476 × 674 pt, centered on the original.",
+    "workedExampleHeading": "Worked example"
+  }
+}

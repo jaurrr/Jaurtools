@@ -1,0 +1,94 @@
+{
+  "surface-area-calculator": {
+    "benefits": [
+      "Covers the five most-used 3D shapes: cube, cuboid, sphere, cylinder and cone.",
+      "Shows the exact formula result with full precision — no rounding surprises.",
+      "Bonus details like slant height and lateral area are computed automatically.",
+      "Works with any unit: mm, cm, m, in or ft.",
+      "Runs entirely in your browser; nothing is uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Surface area is the total area of all outer faces of a 3D shape, measured in square units (cm², m²...). Volume, by contrast, measures the space inside, in cubic units.",
+        "q": "What is the difference between surface area and volume?"
+      },
+      {
+        "a": "Because the curved surface unwraps into a rectangle of width 2πr (the circumference) and height h, plus the two circular bases: 2πr² + 2πrh = 2πr(r + h).",
+        "q": "Why is the cylinder formula 2πr(r + h)?"
+      },
+      {
+        "a": "The slant height l = √(r² + h²) is the distance from the tip to the base edge along the slope. The lateral (side) area is πrl, and adding the base πr² gives πr(r + l).",
+        "q": "What is the slant height of a cone?"
+      },
+      {
+        "a": "A cube has 6 identical square faces, each of area a², so the total is 6a². A cuboid's faces come in three different pairs, hence 2(lw + lh + wh).",
+        "q": "Why is a cube 6a² but a cuboid 2(lw + lh + wh)?"
+      },
+      {
+        "a": "Yes — the unit selector changes only the label on the result. It does not convert between units; enter all dimensions in the same unit you select.",
+        "q": "Can I use inches or feet instead of cm?"
+      }
+    ],
+    "formula": "Cube:     SA = 6a²\nCuboid:   SA = 2(lw + lh + wh)\nSphere:   SA = 4πr²\nCylinder: SA = 2πr² + 2πrh = 2πr(r + h)\nCone:     SA = πr² + πrl = πr(r + l),  where l = √(r² + h²) is the slant height",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose the 3D shape from the dropdown.",
+      "Enter its dimensions — every value in the same unit.",
+      "Pick the unit label (mm, cm, m, in, ft) for the result.",
+      "Read the total surface area, shown in square units.",
+      "Check the bonus row for face area, lateral area or slant height where available."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Surface area is always measured in square units (cm², m², in²...).",
+      "A sphere has the smallest surface area of any shape enclosing a given volume.",
+      "Doubling every dimension quadruples the surface area (the square-cube scaling).",
+      "The cone's slant height comes from Pythagoras: l = √(r² + h²).",
+      "Paint, wrapping paper and material estimates all start from surface area."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "surface area calculator, sphere surface area, cylinder surface area, cone surface area, cube surface area",
+    "labels": {
+      "detailFaceArea": "One face area",
+      "detailLateralArea": "Lateral (side) area",
+      "detailSlantHeight": "Slant height",
+      "height": "Height",
+      "length": "Length",
+      "radius": "Radius",
+      "shape": "Shape",
+      "shapeCone": "Cone",
+      "shapeCube": "Cube",
+      "shapeCuboid": "Cuboid (rectangular box)",
+      "shapeCylinder": "Cylinder",
+      "shapeSphere": "Sphere",
+      "side": "Side length",
+      "surfaceArea": "Surface area",
+      "unit": "Unit",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only the five listed shapes are supported — irregular shapes need numerical methods.",
+      "All dimensions must use the same unit; the tool does not convert between units.",
+      "Results assume perfect geometric shapes; real objects have seams and thickness.",
+      "Display rounds to 8 significant digits; the underlying math uses full precision."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free surface area calculator for cube, cuboid, sphere, cylinder and cone. Enter dimensions, get exact surface area in any unit.",
+    "metaTitle": "Surface Area Calculator — Cube, Sphere, Cylinder, Cone",
+    "name": "Surface Area Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick a shape and enter its dimensions — for example a sphere of radius 3 cm gives 4π × 9 = 113.097 cm². Cube, cuboid, cylinder and cone are supported, in mm, cm, m, in or ft.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Surface area results",
+    "tagline": "Surface areas of cubes, cuboids, spheres, cylinders and cones.",
+    "workedExample": "Sphere with radius r = 3 cm:\nSA = 4πr² = 4 × π × 3² = 4 × π × 9 = 36π ≈ 113.097 cm²\n\nCylinder with r = 2 cm, h = 5 cm:\nSA = 2πr(r + h) = 2 × π × 2 × (2 + 5) = 4π × 7 = 28π ≈ 87.965 cm²\nLateral area = 2πrh = 2 × π × 2 × 5 = 20π ≈ 62.832 cm²",
+    "workedExampleHeading": "Worked example"
+  }
+}

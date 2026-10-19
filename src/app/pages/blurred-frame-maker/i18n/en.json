@@ -1,0 +1,98 @@
+{
+  "blurred-frame-maker": {
+    "name": "Blurred Frame Maker",
+    "tagline": "The Instagram square look, no cropping.",
+    "metaTitle": "Blurred Frame Maker - Square Photos Without Cropping | JaurTools",
+    "metaDescription": "Fit any photo into a square with a soft blurred background — the classic Instagram look. Free, no crop.",
+    "keywords": "blurred frame image, blur background photo, square crop instagram, whatsapp dp maker, blurred border photo",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a landscape or portrait photo and pick a target ratio — 1:1 for Instagram posts, 9:16 for stories and WhatsApp status. The tool builds a canvas at that ratio, fills it with a blurred, stretched copy of your photo, then centers the sharp original on top. A 1200 x 800 photo at 1:1 becomes a 1080 x 1080 image with the sharp 1080 x 720 photo floating over blurred bands.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "The background is your own photo, blurred and stretched to cover the whole canvas — no awkward empty bars.",
+      "Four ratios: 1:1 (posts), 4:5 (portrait posts), 3:4, 9:16 (stories/status), 16:9 (covers).",
+      "Blur radius 0 to 60 px controls how dreamy the background looks.",
+      "The dim slider darkens the background so the sharp photo pops forward.",
+      "The sharp layer is never cropped or stretched — it fits fully inside the frame.",
+      "Output is a PNG sized for crisp social uploads."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload any photo — landscape, portrait, or square.",
+      "Choose the target ratio for where you will post it.",
+      "Drag the blur slider until the background looks smooth and stylish.",
+      "Use the dim slider if the background competes with your photo.",
+      "Click Download to save the framed image as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Canvas: side = 1080 px base, scaled by ratio.\nFor ratio a:b: canvasWidth = 1080 x a / max(a,b), canvasHeight = 1080 x b / max(a,b).\nBackground: the photo drawn stretched to cover the full canvas, then blurred with radius R.\nForeground: the photo scaled to fit inside the canvas (contain), centered.\nExample: 1:1 -> 1080 x 1080 canvas.",
+    "formulaHeading": "Formula",
+    "workedExample": "Photo 1200 x 800, ratio 1:1, blur 25:\n1. Canvas: 1080 x 1080.\n2. Background: the 1200 x 800 photo stretched to cover 1080 x 1080, then blurred with radius 25.\n3. Foreground: the photo scaled by 1080/1200 = 0.9 to 1080 x 720, centered vertically.\n4. Result: sharp 1080 x 720 photo with 180 px tall blurred bands above and below — no black bars, no cropping.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Post landscape shots as square posts without cropping anything out.",
+      "Blurred fills look far more professional than black or white bars.",
+      "One tool covers Instagram, WhatsApp status, and story formats.",
+      "Dim control keeps busy backgrounds from stealing attention.",
+      "No account, no watermark — the PNG is clean and yours."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "The background is a blurred copy — it cannot show anything the photo does not contain.",
+      "Output is capped at 1080 px on the long side for fast processing.",
+      "Very dark photos make dim backgrounds nearly invisible; raise blur instead.",
+      "Square photos gain nothing from 1:1 mode — pick 9:16 or 4:5 for a visible effect."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "Why not just crop my photo to a square?",
+        "a": "Cropping a landscape photo to a square throws away the left and right thirds. The blurred frame keeps 100 percent of your photo visible and fills the leftover space with a stylish blurred extension of itself."
+      },
+      {
+        "q": "Which ratio should I pick?",
+        "a": "1:1 for Instagram feed posts and profile pictures, 4:5 for taller feed posts, 9:16 for Instagram/Facebook stories and WhatsApp status, 16:9 for YouTube thumbnails and cover photos."
+      },
+      {
+        "q": "Will the sharp photo be stretched?",
+        "a": "Never. The sharp layer uses contain scaling, which preserves the exact aspect ratio. Only the blurred background copy is stretched, and blur hides the stretch."
+      },
+      {
+        "q": "What blur radius looks best?",
+        "a": "20 to 35 px suits most photos — enough to hide the stretch but still show colors and shapes. Below 10 the background can look like a printing error; above 45 it melts into pure color wash."
+      },
+      {
+        "q": "Can I use this for a WhatsApp DP?",
+        "a": "Yes — WhatsApp crops profile pictures to a square, so generate at 1:1 and your whole photo survives inside the DP circle instead of being cropped."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. The frame is composited on a canvas in your browser. Your photo never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Blurred Frame Images Generator results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photo",
+      "ratio": "Target ratio",
+      "ratio11": "1:1 Square (posts, DP)",
+      "ratio45": "4:5 Portrait post",
+      "ratio34": "3:4 Portrait",
+      "ratio916": "9:16 Story / Status",
+      "ratio169": "16:9 Wide (covers)",
+      "blurRadius": "Background blur",
+      "dimAmount": "Background dim",
+      "download": "Download image",
+      "outSize": "Output size",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload a photo to see the live preview."
+    }
+  }
+}

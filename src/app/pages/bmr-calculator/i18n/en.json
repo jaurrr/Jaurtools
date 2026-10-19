@@ -1,0 +1,107 @@
+{
+  "bmr-calculator": {
+    "activities": {
+      "active": "Active - hard exercise 6-7 days/week",
+      "extra": "Very active - physical job or twice-daily training",
+      "light": "Light - exercise 1-3 days/week",
+      "moderate": "Moderate - exercise 3-5 days/week",
+      "sedentary": "Sedentary - little or no exercise"
+    },
+    "assumptionNote": "Mifflin-St Jeor is an estimate for adults. Athletes, pregnant women and people with medical conditions should treat the result as a starting point and consult a professional.",
+    "benefits": [
+      "Tells you the calorie floor your body needs before any activity is added.",
+      "Prevents crash diets: eating far below BMR backfires for most people.",
+      "The activity breakdown shows exactly where your daily burn comes from.",
+      "Rechecking after weight change keeps your calorie targets honest."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "BMR is what you burn at complete rest, keeping your organs running. TDEE adds everything else: work, walking, exercise and fidgeting. You lose weight by eating below TDEE, not below BMR.",
+        "q": "What is the difference between BMR and TDEE?"
+      },
+      {
+        "a": "For most adults the Mifflin-St Jeor formula lands within about 10% of measured resting metabolism. Katch-McArdle, which uses body fat percentage, is slightly better for very muscular or very lean people.",
+        "q": "How accurate is the Mifflin-St Jeor formula?"
+      },
+      {
+        "a": "A moderate, sustainable deficit is 300 to 500 kcal per day below your maintenance calories, which loses roughly 0.25 to 0.5 kg per week. Avoid dropping below about 1,200 kcal (women) or 1,500 kcal (men) without medical supervision.",
+        "q": "How many calories should I eat to lose weight?"
+      },
+      {
+        "a": "BMR falls as you lose weight, because a smaller body costs less to run. That is why plateaus happen and why calorie targets need recalculating every few kilograms.",
+        "q": "Why does my BMR drop when I lose weight?"
+      },
+      {
+        "a": "The formula assumes adults roughly 18 and older. Children's metabolisms follow different equations (such as Schofield), so do not use this result for a child.",
+        "q": "Does BMR work for children?"
+      },
+      {
+        "a": "Yes. Muscle tissue burns more at rest than fat tissue, so two people of the same weight can have BMRs that differ by hundreds of calories. This is the formula's biggest blind spot.",
+        "q": "Does muscle mass change BMR?"
+      }
+    ],
+    "formula": "Mifflin-St Jeor:\nMale: BMR = 10 x weight(kg) + 6.25 x height(cm) - 5 x age + 5\nFemale: BMR = 10 x weight(kg) + 6.25 x height(cm) - 5 x age - 161\nDaily burn = BMR x activity factor (1.2 sedentary to 1.9 very active).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Male or Female and pick metric (cm/kg) or imperial (ft/in, lb).",
+      "Enter your age, height and weight honestly.",
+      "Choose the activity level that best describes your typical week.",
+      "Read your BMR, the extra calories your activity adds, and your total daily burn.",
+      "Use the total daily burn as your maintenance-calorie starting point."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "BMR is the energy your body burns at complete rest in 24 hours, just to keep you alive.",
+      "The Mifflin-St Jeor equation (1990) is the most widely validated BMR formula in clinical use.",
+      "Men average a higher BMR than women of the same size, mostly due to more muscle mass.",
+      "BMR typically falls 1-2% per decade after age 20 as muscle mass declines.",
+      "Activity factors range from 1.2 (sedentary) to 1.9 (very active), multiplying BMR into daily burn.",
+      "A 30-year-old man at 70 kg and 175 cm has a BMR of about 1,649 kcal per day."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bmr calculator, basal metabolic rate calculator, resting calorie calculator, mifflin st jeor calculator",
+    "labels": {
+      "activityCalories": "Activity calories",
+      "activityLabel": "Activity level",
+      "ageLabel": "Age (years)",
+      "bmrResult": "Your BMR",
+      "dailyBurn": "Total daily burn",
+      "feet": "Feet",
+      "femaleOption": "Female",
+      "genderLabel": "Gender",
+      "heightLabel": "Height",
+      "imperialTab": "Imperial (ft / lb)",
+      "inchUnit": "in",
+      "inches": "Inches",
+      "kcalUnit": "kcal/day",
+      "maleOption": "Male",
+      "metricTab": "Metric (cm / kg)",
+      "unitSystem": "Unit system",
+      "weightLabel": "Weight"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Cannot see muscle versus fat, so it underestimates athletes and overestimates the very sedentary.",
+      "Activity factors are self-reported guesses and are the biggest source of error.",
+      "Not validated for children, pregnancy, or serious illness.",
+      "It is an energy estimate, not a diet prescription or medical advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free BMR calculator using the Mifflin-St Jeor formula. Find your basal metabolic rate plus activity calories and total daily burn. Private, no sign-up.",
+    "metaTitle": "BMR Calculator - Basal Metabolic Rate & Daily Burn | JaurTools",
+    "name": "BMR Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "BMR is the calories your body burns at complete rest. A 30-year-old man weighing 70 kg at 175 cm has a BMR of about 1,649 kcal/day by the Mifflin-St Jeor formula. With moderate exercise 3-5 days a week (factor 1.55), activity adds about 907 kcal, for a total daily burn of roughly 2,556 kcal - your maintenance-calorie starting point.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your BMR results",
+    "tagline": "Find your basal metabolic rate plus activity calories - the starting point for any calorie plan.",
+    "workedExample": "Male, 30 years, 70 kg, 175 cm, moderate activity:\n1. 10 x 70 = 700.\n2. 6.25 x 175 = 1,093.75.\n3. 5 x 30 = 150; male adds 5.\n4. BMR = 700 + 1,093.75 - 150 + 5 = 1,648.75, about 1,649 kcal/day.\n5. Moderate activity x1.55: 1,649 x 0.55 = 907 kcal from activity.\n6. Total daily burn = 1,649 + 907 = 2,556 kcal/day.",
+    "workedExampleHeading": "Worked example",
+    "relatedHeading": "Related tools"
+  }
+}

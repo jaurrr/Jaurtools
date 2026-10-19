@@ -1,0 +1,90 @@
+{
+  "flexbox-playground": {
+    "assumptionNote": "जनरेट किया CSS सादे क्लास नाम (.container, .item-N) इस्तेमाल करता है; अपने मार्कअप से मेल खाने के लिए इनका नाम बदलें।",
+    "benefits": [
+      "flex-direction, justify-content और align-items को लाइव बदलते देखें — अंदाज़ा लगाने की ज़रूरत नहीं।",
+      "किसी भी बॉक्स पर क्लिक करके उसका align-self और flex-grow अलग से सेट करें।",
+      "जनरेट किया CSS साफ है और किसी भी स्टाइलशीट में पेस्ट करने लायक।",
+      "Gap स्लाइडर उलझे मार्जिन हैक की जगह आधुनिक gap प्रॉपर्टी देता है।",
+      "टू-एक्सिस flexbox मानसिक मॉडल सीखने की लैब के रूप में काम करता है।"
+    ],
+    "benefitsHeading": "फायदे",
+    "breadcrumbLabel": "ब्रेडक्रम्ब",
+    "category": "वेब और डेव टूल्स",
+    "faqHeading": "अक्सर पूछे जाने वाले प्रश्न",
+    "faqs": [
+      {
+        "a": "justify-content आइटम को मुख्य अक्ष (flex-direction) पर संरेखित करता है, जबकि align-items उन्हें क्रॉस अक्ष पर संरेखित करता है। flex-direction: row में justify-content आइटम को बाएं-दाएं और align-items ऊपर-नीचे ले जाता है।",
+        "q": "justify-content और align-items में क्या अंतर है?"
+      },
+      {
+        "a": "हां। किसी भी नंबर वाले बॉक्स पर क्लिक करके उसे चुनें, फिर Selected item पैनल में उसका align-self और flex-grow सेट करें। CSS आउटपुट में आपके ओवरराइड वाला .item-N नियम जुड़ जाता है।",
+        "q": "क्या एक आइटम को अलग स्टाइल कर सकता हूं?"
+      },
+      {
+        "a": "flex-wrap: nowrap में आइटम एक लाइन में फिट होने के लिए सिकुड़ते हैं और ओवरफ्लो कर सकते हैं। wrap में अतिरिक्त आइटम नई लाइनों पर चले जाते हैं। अंतर महसूस करने के लिए 8 आइटम के साथ nowrap बनाम wrap आज़माएं।",
+        "q": "flex-wrap क्या बदलता है?"
+      },
+      {
+        "a": "flex-grow बची जगह को अनुपात में बांटता है। grow 1 और 2 वाले दो आइटम में दूसरे को पहले से दोगुनी खाली जगह मिलती है। आइटम को प्राकृतिक साइज़ पर रखने के लिए grow 0 सेट करें।",
+        "q": "flex-grow कैसे काम करता है?"
+      },
+      {
+        "a": "space-between पहले आइटम को शुरू और आखिरी को अंत में धकेलता है; space-around हर आइटम को दोनों ओर बराबर जगह देता है; space-evenly किनारों समेत हर गैप को एक जैसा बनाता है।",
+        "q": "space-between, space-around और space-evenly में क्या अंतर है?"
+      },
+      {
+        "a": "हां — जनरेट किया CSS कॉपी करें, .container का नाम अपनी क्लास से बदलें, और एक आइटम ओवरराइड किया हो तो item नियम जोड़ें। आउटपुट बिना डिपेंडेंसी वाला सादा CSS है।",
+        "q": "क्या जनरेट किया CSS प्रोडक्शन में इस्तेमाल कर सकता हूं?"
+      }
+    ],
+    "formula": ".container {\n  display: flex;\n  flex-direction: <row | column | ...>;\n  justify-content: <मुख्य-अक्ष>;\n  align-items: <क्रॉस-अक्ष>;\n  flex-wrap: <nowrap | wrap>;\n  gap: <N>px;\n}\n.item-N {\n  align-self: <ओवरराइड>;\n  flex-grow: <N>;\n}",
+    "formulaHeading": "सूत्र",
+    "homeLabel": "होम",
+    "howTo": [
+      "मुख्य अक्ष सेट करने के लिए flex-direction चुनें: row या column।",
+      "मुख्य-अक्ष संरेखण के लिए justify-content और क्रॉस-अक्ष के लिए align-items चुनें।",
+      "flex-wrap टॉगल करें और gap स्लाइडर घुमाएं।",
+      "आइटम गिनती 2 से 8 के बीच बदलें।",
+      "बॉक्स पर क्लिक करके उसे चुनें, उसका align-self और flex-grow ओवरराइड करें, फिर CSS कॉपी करें।"
+    ],
+    "howToHeading": "कैसे उपयोग करें",
+    "keyFacts": [
+      "Flexbox आइटम को एक मुख्य अक्ष पर रखता है, वैकल्पिक क्रॉस अक्ष के साथ।",
+      "flex-direction: row बाएं से दाएं रखता है; column ऊपर से नीचे।",
+      "justify-content मुख्य अक्ष पर खाली जगह बांटता है।",
+      "align-items आइटम को क्रॉस अक्ष पर रखता है; डिफॉल्ट stretch है।",
+      "gap मार्जिन हैक के बिना आइटम के बीच दूरी सेट करता है।"
+    ],
+    "keyFactsHeading": "मुख्य तथ्य",
+    "keywords": "flexbox प्लेग्राउंड, flexbox जनरेटर, css flex टेस्टर, flexbox विज़ुअल गाइड, justify-content align-items",
+    "labels": {
+      "clickHint": "बॉक्स चुनने के लिए नंबर वाले बॉक्स पर क्लिक करें, फिर नीचे ओवरराइड करें।",
+      "copiedLabel": "कॉपी हुआ",
+      "copyLabel": "कॉपी",
+      "gapLabel": "गैप",
+      "itemCountLabel": "आइटम गिनती",
+      "itemLabel": "आइटम",
+      "selectedItemLabel": "चुना आइटम"
+    },
+    "lastReviewedLabel": "अंतिम समीक्षा",
+    "limitations": [
+      "सिर्फ सबसे इस्तेमाल होने वाली flexbox प्रॉपर्टी कवर हैं — order, flex-basis या shrink बारीकियां नहीं।",
+      "प्रीव्यू बॉक्स के निश्चित न्यूनतम साइज़ हैं; असली कंटेंट साइज़ अलग होंगे।",
+      "align-self: baseline को सही दिखाने के लिए असली टेक्स्ट कंटेंट चाहिए।",
+      "जनरेट किए क्लास नाम जेनेरिक हैं; अपने प्रोजेक्ट के लिए नाम बदलें।"
+    ],
+    "limitationsHeading": "सीमाएं",
+    "metaDescription": "CSS flexbox को विज़ुअली आज़माएं। दिशा, संरेखण, रैपिंग और गैप बदलें, अलग-अलग आइटम ओवरराइड करें, और तुरंत साफ CSS कॉपी करें।",
+    "metaTitle": "Flexbox प्लेग्राउंड – मुफ्त विज़ुअल CSS Flex टेस्टर",
+    "name": "Flexbox प्लेग्राउंड",
+    "privacyNote": "यह टूल 100% आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
+    "quickAnswer": "Flexbox CSS का एक-आयामी लेआउट सिस्टम है: कंटेनर अपने आइटम को मुख्य अक्ष पर बांटता है, जिसमें justify-content मुख्य-अक्ष संरेखण और align-items क्रॉस अक्ष नियंत्रित करता है। यह प्लेग्राउंड हर प्रॉपर्टी को लाइव पलटने और नतीजा CSS कॉपी करने देता है।",
+    "quickAnswerHeading": "संक्षिप्त उत्तर",
+    "relatedHeading": "संबंधित टूल",
+    "resultsHeading": "Flexbox प्रीव्यू",
+    "tagline": "CSS flexbox को विज़ुअली सीखें और टेस्ट करें, फिर CSS कॉपी करें।",
+    "workedExample": "flex-direction row, justify-content center, align-items center, flex-wrap wrap, gap 16 px, 4 आइटम सेट करें। आइटम 3 चुनें: align-self flex-start, flex-grow 1।\n\nजनरेट किया CSS:\n.container {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 16px;\n}\n\n.item-3 {\n  align-self: flex-start;\n  flex-grow: 1;\n}\n\nआइटम 1, 2 और 4 केंद्र में रहते हैं जबकि आइटम 3 ऊपर खिंचता है और खाली जगह लेकर बढ़ता है।",
+    "workedExampleHeading": "हल सहित उदाहरण"
+  }
+}

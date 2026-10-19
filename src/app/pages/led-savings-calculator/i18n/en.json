@@ -1,0 +1,95 @@
+{
+  "led-savings-calculator": {
+    "assumptionNote": "CO2 savings use a rough grid average of 0.4 kg per kWh; your country's grid may differ. Savings assume bulbs run the same hours before and after the upgrade.",
+    "benefits": [
+      "A typical 10-bulb home saves over $100 a year with a one-time bulb swap.",
+      "LEDs last 15,000 to 25,000 hours versus about 1,000 for incandescents - fewer ladder trips.",
+      "Less wasted heat: LEDs stay cool, which also cuts summer cooling load slightly.",
+      "Lower electricity use means a smaller carbon footprint from your lighting.",
+      "The math pays for the bulbs in months, then keeps paying you every year."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "An LED uses roughly 80 to 90 percent less power for the same brightness. A 60 W incandescent is replaced by a 9 W LED, an 100 W by a 15 W LED. Same light, one-tenth of the energy.",
+        "q": "How much less power does an LED use?"
+      },
+      {
+        "a": "The wattage is printed on the old bulb, often near the base. Common incandescent sizes: 40, 60, 75, and 100 W. If you are unsure, 60 W is a safe guess for a standard room bulb.",
+        "q": "How do I find my old bulb's wattage?"
+      },
+      {
+        "a": "Wattage measures power use; lumens measure brightness. Match lumens when buying: an 800-lumen LED gives about the same light as a 60 W incandescent. The bulb box shows both.",
+        "q": "What is the difference between watts and lumens?"
+      },
+      {
+        "a": "Often not, at typical electricity prices. LEDs cost more per bulb but pay back in months through energy savings, then save money for their whole 15,000-plus-hour life.",
+        "q": "Are LEDs really cheaper overall?"
+      },
+      {
+        "a": "Check your electricity bill or your utility's website. US homes average around $0.15 to $0.20 per kWh, India around 6 to 10 rupees per kWh. Enter your own rate for an accurate result.",
+        "q": "What electricity rate should I use?"
+      },
+      {
+        "a": "Multiply your annual savings by 5, 10, or 15 years. Ten 60 W to 9 W bulbs at 5 hours a day and $0.15 per kWh save about $140 a year - over $2,000 across 15 years.",
+        "q": "How do I estimate 10-year savings?"
+      }
+    ],
+    "formula": "Yearly kWh saved = (Old watts - New watts) / 1000 x Bulbs x Hours per day x 365\nYearly money saved = kWh saved x Cost per kWh\nPercent saved = (Old watts - New watts) / Old watts x 100\n\nExample: (60 - 9) / 1000 x 10 x 5 x 365 = 930.75 kWh per year.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter how many bulbs you are replacing.",
+      "Enter the wattage of an old bulb and the wattage of the new LED.",
+      "Enter hours per day the lights are on, and your electricity cost per kWh.",
+      "Read your yearly kWh savings, money savings, and CO2 reduction."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A 60 W incandescent replaced by a 9 W LED saves 85% of the lighting energy.",
+      "Lighting is about 10 to 15% of a typical home's electricity use.",
+      "LEDs last 15,000 to 25,000 hours. Incandescents last about 1,000 hours.",
+      "CFLs sit in the middle: a 14 W CFL replaces a 60 W bulb but contains mercury.",
+      "Match lumens, not watts: 800 lumens is roughly a 60 W incandescent's brightness.",
+      "LEDs produce very little heat, so they do not warm your rooms like old bulbs.",
+      "Dimmable LEDs need a compatible dimmer switch. Old dimmers often flicker with LEDs.",
+      "Payback: an LED usually pays for itself in a few months of normal use."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "led savings calculator, led vs incandescent savings, bulb energy savings calculator, led payback calculator, lighting cost calculator",
+    "labels": {
+      "co2Saved": "CO2 avoided per year",
+      "costPerKwh": "Electricity cost per kWh",
+      "hoursPerDay": "Hours on per day",
+      "kg": "kg",
+      "kwhSavedYear": "kWh saved per year",
+      "moneySavedYear": "Money saved per year",
+      "newWattage": "New bulb wattage (W)",
+      "numberOfBulbs": "Number of bulbs",
+      "oldWattage": "Old bulb wattage (W)",
+      "percentSaved": "Energy saved"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Electricity rates and taxes change. Your bill may not match exactly.",
+      "Assumes identical usage hours before and after the upgrade.",
+      "Bulb purchase cost is not subtracted. Add it yourself for net payback time.",
+      "CO2 uses a rough global grid average of 0.4 kg per kWh."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free LED savings calculator: see how much money, energy, and CO2 you save by switching bulbs to LED. Enter watts, hours, and electricity rate. Private, no sign-up.",
+    "metaTitle": "LED Savings Calculator - Bulb Upgrade Savings | JaurTools",
+    "name": "LED Savings Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Switching 10 bulbs from 60 W to 9 W LEDs, used 5 hours a day at $0.15 per kWh, saves about 931 kWh and $139.61 per year - an 85% cut in lighting energy. Enter your own numbers above for your exact savings.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your LED savings results",
+    "tagline": "See exactly how much money, energy, and CO2 you save by switching to LED bulbs.",
+    "workedExample": "10 bulbs, 60 W to 9 W, 5 hours per day, $0.15 per kWh.\n1. Watts saved per bulb: 60 - 9 = 51 W. Total: 510 W = 0.51 kW.\n2. Hours per year: 5 x 365 = 1825.\n3. kWh saved: 0.51 x 1825 = 930.75 kWh per year.\n4. Money saved: 930.75 x 0.15 = $139.61 per year.\n5. Percent saved: 51 / 60 = 85%. CO2 avoided: 930.75 x 0.4 = 372.3 kg per year.",
+    "workedExampleHeading": "Worked example"
+  }
+}

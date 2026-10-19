@@ -1,0 +1,99 @@
+{
+  "roofing-calculator": {
+    "name": "Roofing Calculator",
+    "tagline": "Estimate roof area, shingle squares, bundles, and underlayment rolls for any pitched roof.",
+    "metaTitle": "Roofing Calculator – Shingle & Material Estimator | JaurTools",
+    "metaDescription": "Free roofing calculator. Enter building size and roof pitch to estimate roof area, shingle squares, bundles and felt rolls — 100% in your browser.",
+    "keywords": "roofing calculator, roof shingle calculator, roofing material estimator, roof area calculator, shingle bundle calculator",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Everyday & Utility",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Roof area equals the building footprint plus overhangs, multiplied by the slope factor for your roof pitch. Divide by 9.29 m² to get roofing squares (100 sq ft each), then multiply squares by 3 for shingle bundles. Add 10% waste for cutting and hips.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "A roofing square is 100 square feet (9.29 m²) — the standard unit shingles are sold in.",
+      "Roof pitch is written as rise over a 12-unit run: 6/12 means the roof rises 6 units for every 12 units of horizontal run.",
+      "The slope factor converts flat footprint area into true sloped roof area: √(1 + (pitch/12)²).",
+      "One square of shingles usually needs 3 bundles of standard 3-tab shingles.",
+      "Underlayment (felt) rolls typically cover about 400 sq ft (37.16 m²) each.",
+      "Waste allowance of 10% is standard for simple gable roofs; complex roofs with hips and valleys need 15%."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Enter the building's length and width in meters (the wall footprint, not the roof).",
+      "Enter the roof pitch as rise per 12 (for example 6 for a 6/12 roof; 0 for a flat roof).",
+      "Enter the eave overhang — how far the roof extends past the walls, typically 0.3 to 0.6 m.",
+      "Set the waste percentage: 10% for simple roofs, more for cut-up roofs.",
+      "Read the roof area, squares to order, shingle bundles, and felt rolls — all rounded up."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "Slope factor = √(1 + (pitch/12)²)\nRoof area = (L + 2×overhang) × (W + 2×overhang) × slope factor\nSquares = roof area ÷ 9.2903 m²\nBundles = squares × 3 (rounded up)",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Building 10 m × 8 m, pitch 6/12, overhang 0.5 m, waste 10%.\nSlope factor = √(1 + (6/12)²) = √1.25 = 1.118\nFootprint with overhang = 11 × 9 = 99 m²\nRoof area = 99 × 1.118 = 110.7 m²\nSquares = 110.7 ÷ 9.2903 = 11.91 → with 10% waste = 13.11 → order 14 squares\nBundles = 14 × 3 = 42 bundles\nFelt rolls = 110.7 ÷ 37.16 = 2.98 → 3 rolls",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Prevents expensive under-ordering that stalls a roofing job mid-way.",
+      "Stops over-ordering: shingles are heavy, bulky, and often non-returnable.",
+      "Handles pitch math automatically — no manual trigonometry.",
+      "Works in metric with internationally standard square/bundle conversions."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Estimates a simple gable/hip footprint: dormers, skylights, and chimneys are not subtracted — measure and deduct large openings manually.",
+      "Bundle counts assume standard 3-tab shingles (3 bundles per square); architectural shingles often pack 4–5 bundles per square — check your product.",
+      "Does not include ridge caps, nails, flashing, or drip edge.",
+      "A planning estimate, not a contractor's quote: get a professional measurement before purchasing."
+    ],
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is a roofing square?",
+        "a": "A square is 100 square feet (9.29 m²) of roof area. Shingles, underlayment, and roofing labor are commonly priced per square."
+      },
+      {
+        "q": "What does 6/12 pitch mean?",
+        "a": "For every 12 units of horizontal distance, the roof rises 6 units. Higher pitch means a steeper roof and a larger slope factor, so more material."
+      },
+      {
+        "q": "How many bundles are in a square?",
+        "a": "For standard 3-tab shingles, 3 bundles cover one square. Architectural (laminated) shingles vary — many need 4 bundles per square, so check the packaging."
+      },
+      {
+        "q": "Why add waste percentage?",
+        "a": "Cutting shingles around edges, valleys, and hips creates offcuts. 10% covers simple roofs; complex roofs with many valleys need up to 15%."
+      },
+      {
+        "q": "Does this work for flat roofs?",
+        "a": "Set pitch to 0 and the slope factor becomes 1, giving the flat area plus overhangs. Material types differ for flat roofs, but the area math is correct."
+      },
+      {
+        "q": "Should I subtract skylights?",
+        "a": "Small skylights can be ignored (the waste allowance covers them). For large dormers or chimneys, subtract their footprint area from the roof area manually."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your roofing estimate",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "lengthLabel": "Building length (m)",
+      "lengthHint": "Wall-to-wall length of the building.",
+      "widthLabel": "Building width (m)",
+      "widthHint": "Wall-to-wall width of the building.",
+      "pitchLabel": "Roof pitch (rise per 12)",
+      "pitchHint": "E.g. 6 for a 6/12 roof; 0 for flat.",
+      "overhangLabel": "Eave overhang (m)",
+      "overhangHint": "How far the roof extends past walls.",
+      "wasteLabel": "Waste allowance (%)",
+      "wasteHint": "10% for simple roofs, 15% for complex.",
+      "slopeLabel": "Slope factor",
+      "areaLabel": "Roof area",
+      "areaUnit": "m²",
+      "squaresLabel": "Squares to order",
+      "feltLabel": "Underlayment rolls",
+      "bundlesLabel": "Shingle bundles",
+      "roundNote": "Order quantities are rounded up; waste is included in squares and bundles."
+    }
+  }
+}

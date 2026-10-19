@@ -1,0 +1,91 @@
+{
+  "docker-run-compose-converter": {
+    "assumptionNote": "تُحوَّل أعلام التشغيل الشائعة فقط؛ ويصبح -d خيار docker compose up -d بدل مفتاح compose.",
+    "benefits": [
+      "يحوّل أمر docker run العامل إلى ملف compose قابل للتكرار في ثوانٍ.",
+      "يُحلِّل الأوامر الحقيقية: القيم المقتبسة، وصيغة --flag=value، والأعلام القصيرة المدمجة.",
+      "كل علم مكرر من -p و-e و-v يصبح إدخال قائمة YAML صحيحًا.",
+      "يأتي اسم الخدمة من --name أو يُشتَق من اسم الصورة.",
+      "تُترجَم --env-file و--workdir و--user و--network أيضًا."
+    ],
+    "benefitsHeading": "المزايا",
+    "breadcrumbLabel": "مسار التنقل",
+    "category": "أدوات الويب والمطورين",
+    "faqHeading": "الأسئلة الشائعة",
+    "faqs": [
+      {
+        "a": "الصق الأمر في مربع الإدخال. يرمّز الأداة الأمر ويستخرج الأعلام ويبني كتلة services. انسخ YAML أو نزّل docker-compose.yml ثم شغّل docker compose up -d.",
+        "q": "كيف أحوّل أمر docker run الخاص بي؟"
+      },
+      {
+        "a": "يصبح اسم الخدمة. وإذا حذفت --name اشتقّت الأداة الاسم من الصورة — مثلًا node:20-alpine تصبح الخدمة node.",
+        "q": "ماذا يصبح --name؟"
+      },
+      {
+        "a": "تُتخطَّى أعلام وقت التشغيل فقط مثل -it و--rm و--privileged لعدم وجود مكافئ لها في compose. ويصبح الوضع المنفصل (-d) هو docker compose up -d عند تشغيل الملف.",
+        "q": "ماذا يحدث لـ -it و--rm؟"
+      },
+      {
+        "a": "نعم. كل ما بعد اسم الصورة يُعامَل كأمر الحاوية ويُصدَر كمفتاح command:، فيصبح docker run ubuntu bash هو command: bash.",
+        "q": "هل يتعامل مع الأمر بعد الصورة؟"
+      },
+      {
+        "a": "يحترم المُرمِّز علامات الاقتباس المفردة والمزدوجة وشرطات الهروب، فيبقى -e \"API_KEY=abc 123\" بمسافته. وقد تفشل صياغة الصدفة غير المعتادة جدًا.",
+        "q": "هل يتعامل مع القيم المقتبسة ذات المسافات؟"
+      },
+      {
+        "a": "كل -e يصبح إدخال قائمة environment وكل --env-file يصبح إدخال env_file. ويمكن استخدام الاثنين معًا في الأمر نفسه.",
+        "q": "ما الفرق في معالجة -e و--env-file؟"
+      }
+    ],
+    "formula": "docker run [flags] IMAGE [CMD]\n  --name N      ->  services: { N: }\n  -p H:C        ->  ports: [\"H:C\"]\n  -e K=V        ->  environment: [\"K=V\"]\n  -v H:C        ->  volumes: [\"H:C\"]\n  --restart R   ->  restart: R\n  CMD بعد الصورة -> command: CMD",
+    "formulaHeading": "المعادلة",
+    "homeLabel": "الرئيسية",
+    "howTo": [
+      "الصق أمر docker run في مربع الإدخال.",
+      "تحقق من الملخص المُحلَّل: اسم الخدمة والصورة وعدد الأعلام.",
+      "راجع ملف compose YAML المولّد.",
+      "انسخ المخرجات أو نزّل docker-compose.yml.",
+      "شغّل docker compose up -d مع الملف."
+    ],
+    "howToHeading": "كيفية الاستخدام",
+    "keyFacts": [
+      "تُربَط أعلام docker run واحدًا لواحد تقريبًا بمفاتيح خدمة compose.",
+      "يصبح -p هو ports، و-e هو environment، و-v هو volumes.",
+      "كل ما بعد اسم الصورة هو أمر الحاوية.",
+      "يضبط --name اسم خدمة compose؛ وبدونه يُستخدَم اسم الصورة.",
+      "تُعالَج الأوامر متعددة الأسطر باستمرارات الشرطة المائلة تلقائيًا."
+    ],
+    "keyFactsHeading": "حقائق أساسية",
+    "keywords": "docker run إلى compose, docker run إلى docker-compose.yml, تحويل أمر docker run, docker compose من run",
+    "labels": {
+      "copiedLabel": "تم النسخ",
+      "copyLabel": "نسخ",
+      "downloadLabel": "تنزيل .yml",
+      "errorInvalid": "تعذّر تحليل أمر docker run. تحقق من الأمر وحاول مجددًا.",
+      "flagsLabel": "الأعلام المحوَّلة",
+      "imageLabel": "الصورة",
+      "inputLabel": "أمر docker run",
+      "serviceLabel": "اسم الخدمة"
+    },
+    "lastReviewedLabel": "آخر مراجعة",
+    "limitations": [
+      "أعلام وقت التشغيل فقط (-it و--rm و--privileged) بلا مكافئ في compose فتُتخطَّى.",
+      "تُتجاهَل حاليًا --hostname و--ip و--mac-address.",
+      "أعلام البناء لا تنطبق على أوامر التشغيل ولا تُعالَج.",
+      "لا تُقيَّم توسعات الصدفة غير المعتادة مثل $(...)."
+    ],
+    "limitationsHeading": "القيود",
+    "metaDescription": "حوّل أوامر docker run إلى docker-compose.yml أونلاين. الصق أي أمر docker run واحصل على ملف compose صالح بالمنافذ ومتغيرات البيئة والأحجام.",
+    "metaTitle": "محول Docker Run إلى Compose – أداة مجانية أونلاين",
+    "name": "محول Docker Run إلى Compose",
+    "privacyNote": "تعمل هذه الأداة بالكامل داخل متصفحك. لا تغادر بياناتك جهازك أبدًا.",
+    "quickAnswer": "يُنمذج المطورون بأوامر docker run طويلة، ثم يحتاجون الإعداد نفسه محفوظًا كملف compose للفريق. تُحلِّل هذه الأداة أمر التشغيل — الاسم والمنافذ والبيئة والأحجام وسياسة إعادة التشغيل والأمر اللاحق — وتُنشئ ملف docker-compose.yml المكافئ.",
+    "quickAnswerHeading": "إجابة سريعة",
+    "relatedHeading": "أدوات ذات صلة",
+    "resultsHeading": "ملف compose المولّد",
+    "tagline": "الصق أمر docker run واحصل على ملف docker-compose.yml جاهز.",
+    "workedExample": "الإدخال:\ndocker run -d --name web -p 8080:80 -e NODE_ENV=production -v /data:/data --restart unless-stopped nginx:1.25\n\nالمُحلَّل: الخدمة web، الصورة nginx:1.25، منفذ واحد، متغير بيئة واحد، حجم واحد، إعادة التشغيل unless-stopped.\n\nالمخرجات (docker-compose.yml):\nservices:\n  web:\n    image: \"nginx:1.25\"\n    ports:\n      - \"8080:80\"\n    environment:\n      - \"NODE_ENV=production\"\n    volumes:\n      - \"/data:/data\"\n    restart: unless-stopped\n\nاحفظ وشغّل docker compose up -d — ويصبح العلم -d خيار أمر up.",
+    "workedExampleHeading": "مثال محلول"
+  }
+}

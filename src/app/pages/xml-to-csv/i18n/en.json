@@ -1,0 +1,100 @@
+{
+  "xml-to-csv": {
+    "assumptionNote": "Assumes your XML has repeating sibling elements (records) with flat child elements (columns). Nested elements and attributes are skipped.",
+    "benefits": [
+      "Move XML data — feeds, exports, configs — into spreadsheets in seconds.",
+      "No need to write a one-off Python or XSLT script for a simple conversion.",
+      "Automatic record detection handles most real-world XML without configuration.",
+      "Files under 5 MB parse instantly, entirely on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "File & Data",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It looks for the most common repeating element. If your XML is <catalog> with many <book> children, each <book> becomes a row. For deeper structures it picks the tag name that repeats most.",
+        "q": "How does it find my records?"
+      },
+      {
+        "a": "They are ignored — only element text becomes CSV cells. If your data lives in attributes (like <book title=\"...\">), restructure it to child elements first.",
+        "q": "What happens to XML attributes?"
+      },
+      {
+        "a": "Only direct leaf child elements become columns. Nested elements (a child that itself contains elements) are skipped, and so are attributes. Flatten your XML one level if you need that data.",
+        "q": "Why are some columns missing?"
+      },
+      {
+        "a": "Yes — use the upload button for any .xml file up to 5 MB. The content is read locally and never sent anywhere.",
+        "q": "Can I upload an XML file instead of pasting?"
+      },
+      {
+        "a": "Yes. The CSV uses standard quoting and UTF-8 encoding with a BOM so Excel detects it automatically. If characters still look wrong, open it in Excel via Data > From Text/CSV and pick UTF-8.",
+        "q": "Will Excel open the CSV correctly?"
+      },
+      {
+        "a": "No. Parsing is done by your browser's built-in XML parser. Your data never leaves your device.",
+        "q": "Is my XML uploaded to a server?"
+      }
+    ],
+    "formula": "records = all elements with the most common repeating tag (e.g. <book>).\ncolumns = union of leaf child tag names across records, in first-seen order.\ncell(record, column) = text of the matching child, trimmed.\nCSV cell escaping: if the value contains a comma, quote, or newline -> wrap in \"...\" and double inner quotes.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your XML into the text box, upload an .xml file, or load the sample.",
+      "The tool parses the XML and shows how many records and columns it found, plus the record element name.",
+      "Preview the first rows, toggle the header row on or off if you need to.",
+      "Copy the CSV or download it as a .csv file and open it in Excel or Google Sheets."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Records are detected automatically: the tool finds the repeating element (like <book> or <item>) and treats each occurrence as one row.",
+      "Columns come from the child elements of each record — <title>, <author>, <price> become the CSV headers.",
+      "CSV follows the standard: commas, quotes, and newlines inside values are escaped with double quotes.",
+      "Namespaces are stripped from tag names, so <ns:title> becomes the column 'title'.",
+      "Only leaf elements become columns; nested structures are skipped to keep the table flat."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "xml to csv, xml to csv converter online, convert xml to spreadsheet, xml parser csv",
+    "labels": {
+      "clear": "Clear",
+      "columnsFound": "Columns",
+      "copied": "Copied!",
+      "copy": "Copy CSV",
+      "download": "Download CSV",
+      "errorInvalidXml": "The XML could not be parsed. Check for unclosed tags or special characters.",
+      "errorNoRecords": "No repeating record elements were found in this XML.",
+      "errorRead": "Could not read this file. Try pasting the XML instead.",
+      "errorTooLarge": "File is larger than 5 MB.",
+      "includeHeader": "Include header row",
+      "inputLabel": "Paste your XML",
+      "loadSample": "Load sample",
+      "noInput": "Paste XML or upload a file to see the CSV here.",
+      "outputHeading": "CSV output",
+      "placeholder": "Paste XML here…",
+      "previewHeading": "Preview (first 5 rows)",
+      "recordTag": "Record element",
+      "recordsFound": "Records",
+      "uploadLabel": "Or upload an XML file"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Deeply nested XML is flattened poorly — only one level of child elements becomes columns; deeper nesting is skipped.",
+      "XML attributes are ignored; only element text becomes CSV data.",
+      "Huge XML files (over 5 MB) are not accepted to keep the browser responsive.",
+      "Invalid XML (unclosed tags, stray & characters) will not parse — fix it with an XML validator first."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free XML to CSV converter. Paste XML or upload a file and download a clean CSV table. Detects records and columns automatically. 100% private, browser-only.",
+    "metaTitle": "XML to CSV Converter Online - Free, No Sign-up | JaurTools",
+    "name": "XML to CSV",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste your XML (or upload an .xml file) and the tool finds the repeating elements — for example the <book> entries inside <catalog> — treats each one as a row, and turns their child elements (<title>, <author>, <price>) into CSV columns. Two books become a header row plus two data rows you can open in Excel or Google Sheets.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "XML to CSV results",
+    "tagline": "Turn XML data into a clean CSV table — paste XML or upload a file, download the spreadsheet-ready result.",
+    "workedExample": "XML:\n<catalog>\n  <book><title>Atomic Habits</title><author>James Clear</author><price>499</price></book>\n  <book><title>Deep Work</title><author>Cal Newport</author><price>450</price></book>\n</catalog>\n\n1. Repeating element: <book> appears twice -> 2 records.\n2. Leaf children: title, author, price -> 3 columns.\n3. CSV output:\ntitle,author,price\nAtomic Habits,James Clear,499\nDeep Work,Cal Newport,450",
+    "workedExampleHeading": "Worked example"
+  }
+}

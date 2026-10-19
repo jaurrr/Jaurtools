@@ -1,0 +1,90 @@
+{
+  "triadic-tetradic-color-generator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Triadic & Tetradic Color Generator",
+    "tagline": "Evenly spaced hues, vibrant palettes.",
+    "metaTitle": "Triadic & Tetradic Color Generator - Geometric Color Harmonies | JaurTools",
+    "metaDescription": "Generate vibrant triadic, tetradic and square color harmonies from any base color. Free palette tool.",
+    "keywords": "triadic color scheme, tetradic colors, square color scheme, color harmony generator",
+    "quickAnswer": "These schemes place hues at equal steps around the wheel. From #FF5733 (hue 11): triadic adds 120 and 240 -> #33FF58 and #5833FF; square adds 90, 180, 270 for four colors; tetradic (rectangular) adds 60, 180, 240. Equal spacing is why they feel balanced even when the colors are bold.",
+    "keyFacts": [
+      "Triadic = 3 hues at 0, 120, 240 degrees: the classic vibrant-but-balanced trio.",
+      "Square = 4 hues at 0, 90, 180, 270: even energy in every direction.",
+      "Tetradic (rectangular) = 0, 60, 180, 240: two close pairs, rich and complex.",
+      "Equal spacing is what makes geometric schemes feel intentional.",
+      "With 3-4 strong hues, always crown one as dominant (60%+) or the design fights itself."
+    ],
+    "howTo": [
+      "Enter your base color with the picker or a HEX code like #FF5733.",
+      "Choose Triadic, Tetradic or Square.",
+      "The scheme appears instantly with hue labels and HEX codes.",
+      "Tap any swatch to copy its HEX.",
+      "Pick one color as dominant and use the rest as accents."
+    ],
+    "formula": "Scheme color = HSL((base hue + offset) mod 360, S, L).\nTriadic offsets: 0, 120, 240. Square offsets: 0, 90, 180, 270. Tetradic offsets: 0, 60, 180, 240.\nExample: #FF5733 -> HSL(11, 100%, 60%), triadic:\n+120 -> HSL(131, 100%, 60%) = RGB(51, 255, 88) = #33FF58.\n+240 -> HSL(251, 100%, 60%) = RGB(88, 51, 255) = #5833FF.",
+    "workedExample": "#FF5733 = HSL(11, 100%, 60%), triadic scheme:\n1. Offsets are 0, 120 and 240 degrees.\n2. +120: hue 131 -> HSL(131, 100%, 60%) -> RGB(51, 255, 88) -> #33FF58 (vivid green).\n3. +240: hue 251 -> HSL(251, 100%, 60%) -> RGB(88, 51, 255) -> #5833FF (electric violet).\n4. Final trio: orange-red #FF5733, green #33FF58, violet #5833FF - three hues an equal 120 degrees apart.",
+    "benefits": [
+      "Three geometric schemes from one color in a single tap.",
+      "Equal hue spacing guarantees a balanced, intentional feel.",
+      "Ideal for illustrations, games and brands that want energy.",
+      "Hue labels teach you the wheel geometry as you use it."
+    ],
+    "limitations": [
+      "Bold by construction - these schemes are rarely subtle.",
+      "Four-color schemes need strict hierarchy or they feel chaotic.",
+      "Equal spacing does not fix contrast - check text pairs separately."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between tetradic and square?",
+        "a": "Both have four colors. Square spaces them evenly at 90 degrees (0, 90, 180, 270). Tetradic uses a rectangle: 0, 60, 180, 240 - two close pairs opposite each other, which feels richer but needs more careful balancing."
+      },
+      {
+        "q": "Which scheme is best for beginners?",
+        "a": "Triadic. Three colors is manageable, and the 120-degree spacing is forgiving - it is the scheme behind countless logos and illustrations."
+      },
+      {
+        "q": "How do I stop four colors from clashing?",
+        "a": "Give one color 60-70% of the space, a second 20-30%, and use the remaining two as small accents. Hierarchy tames even the boldest scheme."
+      },
+      {
+        "q": "Can I use these for data charts?",
+        "a": "Triadic works well for 3-series charts. For more series, take the scheme hues and vary lightness to create distinguishable-but-related colors."
+      },
+      {
+        "q": "Why do the schemes keep my saturation and lightness?",
+        "a": "Fixed saturation and lightness keep every color in the same intensity family, so the geometry of the hues is what you see - not random brightness jumps."
+      },
+      {
+        "q": "Do these work in dark mode?",
+        "a": "The hue relationships hold in any mode. For dark mode, lower the lightness of the dominant color's usage as background and keep one hue bright for accents."
+      }
+    ],
+    "resultsHeading": "Your color scheme results",
+    "labels": {
+      "colorLabel": "Base color",
+      "hexLabel": "HEX code",
+      "invalidHex": "That HEX code is not valid. Use 3 or 6 hex digits, like #F53 or #FF5733.",
+      "modeLabel": "Scheme",
+      "modeTriadic": "Triadic",
+      "modeTetradic": "Tetradic",
+      "modeSquare": "Square",
+      "colorsInScheme": "Colors in scheme",
+      "copyHex": "Copy HEX",
+      "copied": "Copied"
+    }
+  }
+}

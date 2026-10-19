@@ -1,0 +1,154 @@
+<div class="tool-page persona-canvas">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="blob-preview">
+        <div [innerHTML]="preview()"></div>
+      </div>
+
+      <div class="field">
+        <label for="blob-points">{{ t('labels.pointsLabel') }}: {{ points() }}</label>
+        <input id="blob-points" type="range" min="5" max="14" step="1"
+          [ngModel]="points()" (ngModelChange)="setPoints($event)" />
+      </div>
+
+      <div class="field">
+        <label for="blob-irr">{{ t('labels.irregularityLabel') }}: {{ irregularity() }}%</label>
+        <input id="blob-irr" type="range" min="0" max="80" step="1"
+          [ngModel]="irregularity()" (ngModelChange)="setIrregularity($event)" />
+      </div>
+
+      <div class="field">
+        <label for="blob-smooth">{{ t('labels.smoothnessLabel') }}: {{ smoothness() }}%</label>
+        <input id="blob-smooth" type="range" min="0" max="100" step="1"
+          [ngModel]="smoothness()" (ngModelChange)="setSmoothness($event)" />
+      </div>
+
+      <div class="field">
+        <label for="blob-size">{{ t('labels.sizeLabel') }}: {{ size() }} px</label>
+        <input id="blob-size" type="range" min="100" max="800" step="10"
+          [ngModel]="size()" (ngModelChange)="setSize($event)" />
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="blob-fill">{{ t('labels.fillLabel') }}</label>
+          <input id="blob-fill" type="color" [ngModel]="fill()" (ngModelChange)="setFill($event)" />
+        </div>
+        <div class="field">
+          <label for="blob-rot">{{ t('labels.rotationLabel') }}: {{ rotation() }}°</label>
+          <input id="blob-rot" type="range" min="0" max="360" step="1"
+            [ngModel]="rotation()" (ngModelChange)="setRotation($event)" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="randomize()">
+          <app-icon name="refresh-cw" /> {{ t('labels.randomize') }}
+        </button>
+        <button type="button" class="btn" (click)="downloadSvg()">
+          <app-icon name="download" /> {{ t('labels.downloadSvg') }}
+        </button>
+        <button type="button" class="btn" (click)="copySvg()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copySvg') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="blob-code">{{ t('labels.codeLabel') }}</label>
+        <textarea id="blob-code" readonly rows="6">{{ svgCode() }}</textarea>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

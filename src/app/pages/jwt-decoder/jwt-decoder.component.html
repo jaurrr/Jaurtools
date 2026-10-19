@@ -1,0 +1,260 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="tabs" role="tablist" [attr.aria-label]="t('resultsHeading')">
+        <button type="button" role="tab" [class.active]="tab() === 'decode'" [attr.aria-selected]="tab() === 'decode'" (click)="setTab('decode')">
+          {{ t('labels.decodeTab') }}
+        </button>
+        <button type="button" role="tab" [class.active]="tab() === 'verify'" [attr.aria-selected]="tab() === 'verify'" (click)="setTab('verify')">
+          {{ t('labels.verifyTab') }}
+        </button>
+        <button type="button" role="tab" [class.active]="tab() === 'create'" [attr.aria-selected]="tab() === 'create'" (click)="setTab('create')">
+          {{ t('labels.createTab') }}
+        </button>
+      </div>
+
+      @if (tab() === 'decode') {
+        <p class="dv-example">
+          <button type="button" class="dv-example-btn" (click)="loadSample()">
+            <app-icon name="sparkles" /> {{ tc('tryExample') }}
+          </button>
+          @if (restored()) {
+            <span class="dv-autosave"><app-icon name="refresh-cw" /> {{ tc('restoredNote') }}</span>
+          }
+        </p>
+
+        <div class="field">
+          <label for="jwt-token">{{ t('labels.tokenLabel') }}</label>
+          <div class="dv-codeblock">
+            <div class="dv-codeblock-head"><span class="dv-codeblock-title">token.jwt</span></div>
+            <textarea class="dv-term-input single" id="jwt-token" dir="ltr" spellcheck="false" autocomplete="off"
+              [ngModel]="token()" (ngModelChange)="setToken($event)"></textarea>
+          </div>
+        </div>
+
+        @if (tokenSegments()) {
+          <div class="dv-jwt" role="group" [attr.aria-label]="t('labels.tokenLabel')">
+            <button type="button" class="dv-seg dv-seg-h" (click)="focusSegment('h')"
+              [attr.aria-label]="t('labels.segHeaderLabel')">{{ tokenSegments()!.h }}</button><span class="dv-seg-dot">.</span><button
+              type="button" class="dv-seg dv-seg-p" (click)="focusSegment('p')"
+              [attr.aria-label]="t('labels.segPayloadLabel')">{{ tokenSegments()!.p }}</button><span class="dv-seg-dot">.</span><button
+              type="button" class="dv-seg dv-seg-s" (click)="focusSegment('s')"
+              [attr.aria-label]="t('labels.segSigLabel')">{{ tokenSegments()!.s }}</button>
+          </div>
+          <div class="dv-seg-legend">
+            <span><i style="background:#f472b6"></i>{{ t('labels.segHeaderLabel') }}</span>
+            <span><i style="background:#a78bfa"></i>{{ t('labels.segPayloadLabel') }}</span>
+            <span><i style="background:#2dd4bf"></i>{{ t('labels.segSigLabel') }}</span>
+          </div>
+          <p class="note">{{ t('labels.segHint') }}</p>
+        }
+
+        <p class="alert info dv-status"><app-icon name="shield-check" /> {{ t('labels.tokenWarning') }}</p>
+
+        @if (decoded().ok) {
+          <div class="results">
+            <p>
+              <span class="badge ok dv-pill ok"><app-icon name="check" /> {{ t('labels.structOkLabel') }}</span>
+              @if (expiry().state === 'expired') {
+                <span class="badge bad dv-pill bad">{{ t('labels.expiredLabel') }}: {{ expiry().date }}</span>
+              } @else if (expiry().state === 'active') {
+                <span class="badge ok dv-pill ok">{{ t('labels.activeLabel') }}: {{ expiry().date }}</span>
+              } @else {
+                <span class="badge warn dv-pill warn">{{ t('labels.noExpLabel') }}</span>
+              }
+            </p>
+            <div class="field" id="jwt-seg-header" [class.seg-focus]="focusSeg() === 'h'">
+              <label for="jwt-header"><span class="dv-seg-h">{{ t('labels.headerLabel') }}</span> <span class="mono">({{ decoded().alg || '?' }})</span></label>
+              <pre id="jwt-header" class="code-output dv-term" dir="ltr" tabindex="0">{{ pretty(decoded().header) }}</pre>
+            </div>
+            <div class="field" id="jwt-seg-payload" [class.seg-focus]="focusSeg() === 'p'">
+              <label for="jwt-payload"><span class="dv-seg-p">{{ t('labels.payloadLabel') }}</span></label>
+              <pre id="jwt-payload" class="code-output dv-term" dir="ltr" tabindex="0">{{ pretty(decoded().payload) }}</pre>
+            </div>
+            <div class="field" id="jwt-seg-signature" [class.seg-focus]="focusSeg() === 's'">
+              <span class="field-label"><span class="dv-seg-s">{{ t('labels.signatureLabel') }}</span></span>
+              <p class="mono small">{{ decoded().sig.slice(0, 16) }}... <span class="note">{{ t('labels.sigNote') }}</span></p>
+            </div>
+            <h3 class="split-heading">{{ t('labels.claimsHeading') }}</h3>
+            <table class="kv-table">
+              <tbody>
+                @for (c of claims(); track c.key) {
+                  <tr>
+                    <th scope="row" class="mono">{{ c.key }}</th>
+                    <td class="mono">{{ c.display }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        } @else {
+          <p class="alert error dv-status dv-status-bad" role="alert">{{ t('labels.structBadLabel') }}</p>
+        }
+      }
+
+      @if (tab() === 'verify') {
+        <div class="field">
+          <label for="jwt-token-v">{{ t('labels.tokenLabel') }}</label>
+          <textarea class="dv-term-input" id="jwt-token-v" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="token()" (ngModelChange)="setToken($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="jwt-secret">{{ t('labels.secretLabel') }}</label>
+          <input id="jwt-secret" class="text-input mono" type="text" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="secret()" (ngModelChange)="secret.set($event)" />
+        </div>
+        <p class="note">{{ t('labels.algLabel') }}: <strong class="mono">{{ decoded().alg || '?' }}</strong></p>
+        <div class="btn-row">
+          <button type="button" class="btn primary" (click)="verifySignature()" [disabled]="verifyState() === 'checking'">
+            <app-icon name="key-round" /> {{ t('labels.verifyButton') }}
+          </button>
+        </div>
+        @if (verifyState() === 'checking') {
+          <p class="alert info dv-status">{{ t('labels.checkingLabel') }}</p>
+        }
+        @if (verifyState() === 'valid') {
+          <p class="alert success dv-status dv-status-ok" role="status"><app-icon name="check" /> {{ t('labels.validSigLabel') }}</p>
+        }
+        @if (verifyState() === 'invalid') {
+          <p class="alert error dv-status dv-status-bad" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.invalidSigLabel') }}</p>
+        }
+        @if (verifyState() === 'unsupported') {
+          <p class="alert info dv-status">{{ t('labels.unsupportedAlgLabel') }}</p>
+        }
+        @if (verifyState() === 'error') {
+          <p class="alert error dv-status dv-status-bad" role="alert">{{ t('labels.verifyErrorLabel') }}</p>
+        }
+      }
+
+      @if (tab() === 'create') {
+        <div class="field">
+          <label for="jwt-ch">{{ t('labels.createHeaderLabel') }}</label>
+          <textarea class="dv-term-input" id="jwt-ch" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="createHeader()" (ngModelChange)="createHeader.set($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="jwt-cp">{{ t('labels.createPayloadLabel') }}</label>
+          <textarea class="dv-term-input" id="jwt-cp" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="createPayload()" (ngModelChange)="createPayload.set($event)"></textarea>
+        </div>
+        <div class="field">
+          <label for="jwt-cs">{{ t('labels.createSecretLabel') }}</label>
+          <input id="jwt-cs" class="text-input mono" type="text" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="createSecret()" (ngModelChange)="createSecret.set($event)" />
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn primary" (click)="createToken()">
+            <app-icon name="key-round" /> {{ t('labels.createButton') }}
+          </button>
+        </div>
+        @if (createError()) {
+          <p class="alert error dv-status dv-status-bad" role="alert">{{ createError() }}</p>
+        }
+        @if (createdToken()) {
+          <div class="field">
+            <label for="jwt-ct">{{ t('labels.createdLabel') }}</label>
+            <pre id="jwt-ct" class="code-output dv-term" dir="ltr" tabindex="0">{{ createdToken() }}</pre>
+          </div>
+          <div class="btn-row">
+            <button type="button" class="btn primary" (click)="copyCreated()">
+              <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}
+            </button>
+          </div>
+        }
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

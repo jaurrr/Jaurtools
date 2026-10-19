@@ -1,0 +1,86 @@
+{
+  "z-score-calculator": {
+    "benefits": [
+      "Converts any raw score into a universal z-score in one step.",
+      "Shows the percentile and both tail probabilities automatically.",
+      "No z-table lookup needed — the normal CDF is computed precisely.",
+      "Ideal for exam scores, quality control and standardized testing.",
+      "Runs fully in your browser; your data stays private."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A z-score measures how many standard deviations a value sits from the mean: z = (x − μ) / σ. A z of 0 means exactly average; +2 means two standard deviations above the mean.",
+        "q": "What is a z-score?"
+      },
+      {
+        "a": "Roughly speaking, yes for bell-shaped data: about 68% of values have |z| < 1, 95% have |z| < 2, and 99.7% have |z| < 3. A z beyond ±3 is genuinely unusual.",
+        "q": "Is a z-score of 2 unusual?"
+      },
+      {
+        "a": "The percentile is Φ(z) × 100 — the percentage of a normal distribution at or below your value. A z of 1.5 gives the 93.32nd percentile: about 93.3% of values fall below.",
+        "q": "What does the percentile mean?"
+      },
+      {
+        "a": "They can, but the percentile interpretation assumes a normal distribution. For heavily skewed data the z-score is still a valid standardized distance, but percentiles should be read from the data itself.",
+        "q": "Can I use z-scores on non-normal data?"
+      },
+      {
+        "a": "Yes. A negative z-score simply means the value is below the mean — for example z = −1.2 means 1.2 standard deviations below average.",
+        "q": "Can z-scores be negative?"
+      }
+    ],
+    "formula": "z = (x − μ) / σ\n\nx = your value, μ = mean, σ = standard deviation\n\nPercentile = Φ(z) × 100, where Φ is the standard normal CDF:\nΦ(z) = (1 / √(2π)) ∫₋∞ᵗ e^(−t²/2) dt\n\nThe tool evaluates Φ with a high-precision rational approximation\n(error below 7.5 × 10⁻⁸), so no table lookup is needed.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your value x — the score you want to standardize.",
+      "Enter the mean μ of the distribution it comes from.",
+      "Enter the standard deviation σ (it must be greater than zero).",
+      "Read the z-score: positive means above average, negative below.",
+      "Check the percentile and the probabilities of scoring below or above x."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A z-score counts standard deviations from the mean: z = (x − μ) / σ.",
+      "Z-scores are unitless, so scores from different tests become comparable.",
+      "The percentile Φ(z) × 100 tells you what share of values fall below yours.",
+      "For normal data, |z| > 3 happens only about 0.3% of the time.",
+      "Standard deviation must be positive — with σ = 0 every value equals the mean."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "z-score calculator, standard score calculator, z score to percentile, normal distribution calculator",
+    "labels": {
+      "invalidNote": "Standard deviation must be greater than zero.",
+      "mean": "Mean (μ)",
+      "percentile": "Percentile",
+      "probAbove": "P(X > x)",
+      "probBelow": "P(X ≤ x)",
+      "stdDev": "Standard deviation (σ)",
+      "value": "Value (x)",
+      "zScore": "Z-score (z)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Percentiles assume a normal (bell-shaped) distribution — check this for your data.",
+      "The z-score cannot fix bad data: garbage inputs give precise-looking garbage.",
+      "σ = 0 is rejected; a constant dataset has no meaningful z-scores.",
+      "The normal CDF is approximated (error < 7.5×10⁻⁸) — exact enough for all practical use."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free z-score calculator: enter a value, mean and standard deviation to get the z-score, percentile and normal probabilities — instantly.",
+    "metaTitle": "Z-Score Calculator — Standard Score & Percentile",
+    "name": "Z-Score Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter a value, mean and standard deviation — for example x = 85, μ = 70, σ = 10 gives z = 1.5, the 93.32nd percentile, P(X ≤ 85) ≈ 0.9332 and P(X > 85) ≈ 0.0668.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Z-score results",
+    "tagline": "Standard score, percentile and normal probabilities from any value.",
+    "workedExample": "Exam score x = 85, class mean μ = 70, SD σ = 10:\nz = (85 − 70) / 10 = 15 / 10 = 1.5\n\nThe score is 1.5 standard deviations above the mean.\nΦ(1.5) ≈ 0.9332 → 93.32nd percentile\nP(X ≤ 85) ≈ 0.9332 — about 93.3% of students scored 85 or less\nP(X > 85) ≈ 0.0668 — about 6.7% scored higher",
+    "workedExampleHeading": "Worked example"
+  }
+}

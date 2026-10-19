@@ -1,0 +1,102 @@
+{
+  "line-joiner": {
+    "benefits": [
+      "Turns a vertical list into a one-line comma-separated list for spreadsheets and code.",
+      "Quote-wrapping builds ready-to-paste arrays and SQL IN lists.",
+      "Custom delimiters handle pipes, semicolons, tabs, and anything else.",
+      "Skipping empty lines keeps stray blanks from creating empty items.",
+      "Live preview means you see the joined result as you type."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Choose the Custom preset and type your delimiter - it can be several characters long, like ' | ' or ' <-> '. Anything you type, including tabs, is used exactly as typed.",
+        "q": "Can I join with a custom delimiter?"
+      },
+      {
+        "a": "Switch on 'Wrap each line in quotes'. Each line gets double quotes (existing quotes inside lines are escaped), so 'apple' and 'banana' become '\"apple\", \"banana\"' - ready for code arrays and SQL.",
+        "q": "How do I make a quoted list for code?"
+      },
+      {
+        "a": "Keep 'Skip empty lines' switched on (the default). Blank lines are then dropped before joining, so you never get doubled delimiters like 'a,, b'.",
+        "q": "My list has blank lines. Will they create empty items?"
+      },
+      {
+        "a": "Choose the Newline preset... actually, joining with a newline is the same as your original text. To split one line into many, you need the opposite operation - joining won't help there.",
+        "q": "Can I split one line into many lines?"
+      },
+      {
+        "a": "Choose the Space preset. Lines are joined with a single space, which is exactly what paragraph tools expect.",
+        "q": "How do I merge lines into one paragraph?"
+      },
+      {
+        "a": "Yes. Everything runs in your browser. Nothing you paste is uploaded, stored, or seen by anyone else.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "1. Split the input on line breaks into lines.\n2. If 'Skip empty lines' is on, drop lines that are blank.\n3. If 'Wrap each line in quotes' is on, wrap every line in double quotes\n   (existing \" inside a line becomes \\\").\n4. Join the lines with the chosen delimiter.\n\nExample:\n  lines: 'apple', 'banana', 'cherry'\n  delimiter: ', ' -> 'apple, banana, cherry'\n  delimiter: ', ' + quotes -> '\"apple\", \"banana\", \"cherry\"'",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your list into the input box, one item per line.",
+      "Pick a delimiter preset: comma, space, semicolon, pipe, newline, or your own custom one.",
+      "Keep 'Skip empty lines' on to drop stray blank lines.",
+      "Switch on 'Wrap each line in quotes' if you need a code-ready list.",
+      "Copy the joined line or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A delimiter is the text placed between each line when they are joined.",
+      "Comma (', ') is the classic choice for CSV rows and readable lists.",
+      "Pipe (' | ') and semicolon ('; ') are common in data files and filters.",
+      "Wrapping lines in quotes produces ready-to-paste code arrays like '\"a\", \"b\"'.",
+      "Empty lines are skipped by default so they cannot create empty items.",
+      "The result updates live as you type - there is no submit button."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "line joiner, join lines, merge lines, comma separated list, join lines with delimiter, lines to comma separated",
+    "labels": {
+      "charsLabel": "Characters in result",
+      "clearButton": "Clear",
+      "commaPreset": "Comma ,",
+      "copiedLabel": "Copied",
+      "copyButton": "Copy result",
+      "customDelimiterLabel": "Your delimiter",
+      "customPreset": "Custom",
+      "delimiterLabel": "Delimiter",
+      "downloadButton": "Download .txt",
+      "inputLabel": "Your lines (one item per line)",
+      "inputPlaceholder": "apple\nbanana\ncherry",
+      "linesLabel": "Lines joined",
+      "newlinePreset": "Newline",
+      "outputLabel": "Joined result",
+      "pipePreset": "Pipe |",
+      "quoteLinesLabel": "Wrap each line in quotes",
+      "semicolonPreset": "Semicolon ;",
+      "skipEmptyLabel": "Skip empty lines",
+      "spacePreset": "Space"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "It joins lines only - it cannot split one line into many (the reverse operation).",
+      "Quote-wrapping uses double quotes only; single-quote or backtick styles are not offered.",
+      "The newline 'delimiter' returns your text unchanged - it is included for completeness.",
+      "Extremely long single-line results may be hard to read in narrow text boxes."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free line joiner: merge lines with a comma, space, pipe, or custom delimiter. Quote-wrapping for code lists. Private, browser-only.",
+    "metaTitle": "Line Joiner - Merge Lines with Any Delimiter | JaurTools",
+    "name": "Line Joiner",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Paste a list with one item per line, pick a delimiter, and get a single joined line. Presets include comma (', '), space, semicolon, pipe (' | '), and a custom delimiter of your choice. For example, the lines 'apple', 'banana', 'cherry' joined with ', ' become 'apple, banana, cherry'. Switch on quote-wrapping to get '\"apple\", \"banana\", \"cherry\"' - ready to paste into code or SQL. Empty lines are skipped automatically.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Line Joiner results",
+    "tagline": "Join lines into one line with any delimiter you choose.",
+    "workedExample": "Input:\napple\nbanana\ncherry\n\nDelimiter: ', ' (comma preset), skip empty ON, quotes OFF\n\nStep by step:\n1. Split into lines: ['apple', 'banana', 'cherry'].\n2. No empty lines to skip.\n3. Join with ', ': 'apple' + ', ' + 'banana' + ', ' + 'cherry'.\n\nResult: apple, banana, cherry\n\nWith 'Wrap each line in quotes' ON:\n  Each line becomes '\"apple\"', '\"banana\"', '\"cherry\"'.\n  Joined: \"apple\", \"banana\", \"cherry\"\n  (Paste straight into JavaScript: ['apple', 'banana', 'cherry'] minus the brackets.)",
+    "workedExampleHeading": "Worked example"
+  }
+}

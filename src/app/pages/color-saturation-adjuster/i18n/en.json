@@ -1,0 +1,87 @@
+{
+  "color-saturation-adjuster": {
+    "benefits": [
+      "Raise or lower any color's saturation with a single slider.",
+      "Shows the result as HEX and HSL with a before/after gradient preview.",
+      "One-click copy for direct use in CSS or design tools.",
+      "Great for building muted or vivid variations of brand colors.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "At -100% the saturation multiplier becomes zero, so the color loses all chroma and turns into a neutral grey with the same lightness. It is a quick way to preview the greyscale version of any color.",
+        "q": "What happens at -100%?"
+      },
+      {
+        "a": "The multiplier caps saturation at 100% of the HSL scale — a color that is already fully saturated cannot get more saturated, so +100% leaves it unchanged. On a muted color, +100% doubles its current saturation.",
+        "q": "What happens at +100%?"
+      },
+      {
+        "a": "No — only saturation changes. Hue and lightness are preserved exactly, so a blue stays the same blue, just more or less vivid.",
+        "q": "Does this change the hue or brightness?"
+      },
+      {
+        "a": "For subtle pastel tints use the shades generator (which also raises lightness). This tool is best for muting loud colors or punching up dull ones while keeping brightness constant.",
+        "q": "How do I make a soft pastel color?"
+      },
+      {
+        "a": "No — all conversion math runs locally in JavaScript. Nothing leaves your device.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "new saturation = clamp(old saturation x (1 + amount/100), 0, 1)\nhue and lightness are unchanged\namount ranges from -100% to +100%",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your base color or type its HEX code.",
+      "Move the slider left to desaturate (toward grey) or right to saturate (toward vivid).",
+      "Watch the before/after gradient and read the new HEX and HSL values.",
+      "Click Copy to place the result on your clipboard.",
+      "Use it in your CSS, presentation or design tool."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Saturation controls how vivid or muted a color looks.",
+      "The slider ranges from -100% (fully grey) to +100% (double saturation).",
+      "At 0% the color is completely unchanged.",
+      "Hue and lightness are preserved — only saturation moves.",
+      "Result saturation is clamped to the valid 0-100% HSL range."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "change color saturation, saturate color, desaturate color, color saturation tool, adjust saturation online",
+    "labels": {
+      "amount": "Saturation change",
+      "baseColor": "Base color",
+      "copied": "Copied",
+      "copy": "Copy",
+      "copyResult": "Copy result",
+      "hexCode": "HEX code",
+      "hslValue": "HSL value",
+      "result": "Result",
+      "scaleHint": "-100% = fully desaturated (grey), 0% = unchanged, +100% = double saturation."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Saturation caps at 100% — already-vivid colors cannot go further.",
+      "Only one color at a time; batch processing is not supported.",
+      "Very dark or very light colors show little visible change because HSL saturation has less effect near the extremes.",
+      "Works in HSL space, not perceptual LAB space."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Raise or lower any color's saturation with a live preview. Get vivid or muted HEX and HSL codes instantly, free.",
+    "metaTitle": "Color Saturation Adjuster - Make Colors Vivid or Muted | JaurTools",
+    "name": "Color Saturation Adjuster",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick any color and drag the slider from -100% to +100% to desaturate it toward grey or push it toward full vividness. Hue and lightness stay exactly the same — only saturation changes. The tool shows the new HEX and HSL values with a before/after preview, ready to copy into your designs.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your saturation result",
+    "tagline": "From vivid to muted — tune any color's saturation.",
+    "workedExample": "Take #4f46e5, which is hsl(243, 75%, 59%).\nAt -100%: new saturation = 0.75 x (1 - 1) = 0, so the result is hsl(243, 0%, 59%).\nWith zero saturation every channel equals the lightness: 0.59 x 255 = 150.45, rounds to 150.\nResult: rgb(150, 150, 150) = #969696 — the exact grey version of the original color.",
+    "workedExampleHeading": "Worked example"
+  }
+}

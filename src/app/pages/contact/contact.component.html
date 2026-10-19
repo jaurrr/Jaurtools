@@ -1,0 +1,9 @@
+<div class="contact-page">
+  <h1>{{ translate.t('contact.heading') }}</h1>
+  <p>{{ translate.t('contact.text1') }}</p>
+  <p class="muted">{{ translate.t('contact.text2') }}</p>
+  <a class="btn email-link" [href]="'mailto:' + email">
+    <app-icon name="mail" aria-hidden="true"></app-icon>
+    <span>{{ translate.t('contact.emailLabel') }}: {{ email }}</span>
+  </a>
+</div>

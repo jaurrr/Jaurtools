@@ -1,0 +1,116 @@
+{
+  "home-affordability-calculator": {
+    "assumptionNote": "Uses the 28/36 rule common in US mortgage lending. Property tax and homeowner's insurance are excluded, so they reduce how much house the payment actually covers.",
+    "benefits": [
+      "Get a realistic price ceiling before you fall in love with a listing.",
+      "See which rule limits you: the housing ratio or your existing debts.",
+      "Test how paying down debt or saving a bigger down payment changes your budget.",
+      "Free, instant, and private - no pre-approval paperwork needed."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Lenders use two caps: housing costs should be at most 28% of gross monthly income, and all debts including housing at most 36%. Your maximum payment is the lower of the two. So on $10,000/month income with $500 of debts, the caps are $2,800 and $3,100 - the $2,800 housing cap wins.",
+        "q": "What is the 28/36 rule?"
+      },
+      {
+        "a": "Debts eat the 36% side of the rule. Every $500 of monthly debt cuts roughly $80,000-$100,000 off your affordable price at typical rates, because the debt cap becomes the binding limit.",
+        "q": "How do my debts affect affordability?"
+      },
+      {
+        "a": "Both help, but a bigger down payment raises the price ceiling dollar-for-dollar, while paying down debt can raise it more if debts are the binding limit. Test both in the calculator to see which moves your number further.",
+        "q": "Bigger down payment or paying off debt first?"
+      },
+      {
+        "a": "No - and that is the honest catch. Property tax and insurance can add 20-40% on top of principal and interest. This calculator gives the price before those costs, so treat it as the ceiling, not the exact budget.",
+        "q": "Does this include property tax and insurance?"
+      },
+      {
+        "a": "Roughly 20% of the home price is the classic advice, because it avoids mortgage insurance (PMI) on conventional loans. Less is fine with FHA (3.5%) or other programs, but 20% also lowers your monthly payment directly.",
+        "q": "How much down payment do I need?"
+      },
+      {
+        "a": "It is a planning estimate based on the industry-standard 28/36 rule, not a lender's approval. Lenders weigh credit score, employment history, and more. Use this to set your search budget, then get pre-approved for the real number.",
+        "q": "Is this the same as pre-approval?"
+      }
+    ],
+    "formula": "Monthly income = annual income / 12\nHousing cap = 28% x monthly income\nDebt cap = 36% x monthly income - monthly debts\nMax payment = min(housing cap, debt cap)\nMax loan = max payment / (r / (1 - (1+r)^-n)), r = rate/12, n = years x 12\nAffordable price = max loan + down payment",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your gross annual household income.",
+      "Enter your total monthly debt payments (car loans, cards, student loans).",
+      "Enter your saved down payment.",
+      "Enter the mortgage rate and term you expect.",
+      "Read your affordable price, max payment, max loan, and which rule limits you."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The 28/36 rule is the industry standard for how much house income can support.",
+      "Housing costs should be at most 28% of gross monthly income.",
+      "All debts including housing should be at most 36%.",
+      "The lower of the two caps sets your maximum payment.",
+      "Property tax and insurance are extra - this price is before them."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "house affordability calculator, how much house can i afford, home affordability calculator, mortgage affordability calculator",
+    "labels": {
+      "affordablePrice": "Affordable home price",
+      "annualIncome": "Gross annual income ($)",
+      "annualRate": "Mortgage rate (%/yr)",
+      "bindingRule": "Limiting rule",
+      "debtRule": "36% debt rule",
+      "downPayment": "Down payment saved ($)",
+      "downPctOfPrice": "Down payment % of price",
+      "housingRule": "28% housing rule",
+      "maxLoan": "Maximum loan",
+      "maxPayment": "Max monthly payment",
+      "monthlyDebts": "Monthly debt payments ($)",
+      "termYears": "Loan term (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Based on the 28/36 guideline, not an actual lender's underwriting.",
+      "Excludes property tax, insurance, and HOA fees - real budgets must include them.",
+      "Ignores credit score, which changes both approval and rate.",
+      "Planning estimate only - not a pre-approval."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free home affordability calculator: max home price from income, debts, and down payment using the 28/36 rule. Instant, private, no sign-up.",
+    "metaTitle": "Home Affordability Calculator - How Much Home Can You Afford? | JaurTools",
+    "name": "Home Affordability Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "With $120,000 annual income, $500 of monthly debts, a $50,000 down payment, and a 6.5% 30-year mortgage: monthly income is $10,000, so the 28% cap gives $2,800 and the 36% debt cap gives $3,100. The $2,800 housing cap wins. It supports a loan of about $442,900, so the affordable price is about $492,900.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your affordability results",
+    "tagline": "Find the max home price your income, debts, and down payment support.",
+    "workedExample": "$120,000 income, $500 debts, $50,000 down, 6.5%, 30 years:\n1. Monthly income = $120,000 / 12 = $10,000.\n2. Housing cap = 28% x $10,000 = $2,800. Debt cap = 36% x $10,000 - $500 = $3,100.\n3. Max payment = min($2,800, $3,100) = $2,800 (28% rule binds).\n4. Payment factor at 6.5%/30yr = 0.0063212 per $1 borrowed.\n5. Max loan = $2,800 / 0.0063212 = about $442,900.\n6. Affordable price = $442,900 + $50,000 = about $492,900.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "priceNote": "with {down} down payment"
+    },
+    "gauge": {
+      "caption": "Lenders like housing costs under 28% of income — the green zone.",
+      "aria": "Allowed payment {payment} against monthly income {income}"
+    },
+    "budget": {
+      "heading": "Your two limits",
+      "housing": "Housing rule (28%)",
+      "debt": "Debt rule (36% minus debts)"
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "On {income}/year with {debts}/month in debts, lenders allow about {payment}/month for housing — that buys a {price} home with your down payment.",
+      "l2": "The {rule} is your limit right now."
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "The 28% rule caps housing at 28% of gross monthly income.",
+      "s2": "The 36% rule caps all debt (housing + other) at 36% of income; the lower of the two wins."
+    }
+  }
+}

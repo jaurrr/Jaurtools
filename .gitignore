@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+# build output
+/dist
+
+# misc
+/.angular/cache
+.DS_Store

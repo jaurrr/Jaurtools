@@ -1,0 +1,170 @@
+<div class="tool-page persona-fx">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="rb-cols">{{ t('labels.grid') }}</label>
+        <div class="input-row">
+          <input id="rb-cols" type="number" inputmode="numeric" min="4" max="128" step="1"
+            [ngModel]="cols()" (ngModelChange)="setCols($event)" [attr.aria-label]="t('labels.columns')" />
+          <input id="rb-rows" type="number" inputmode="numeric" min="4" max="128" step="1"
+            [ngModel]="rows()" (ngModelChange)="setRows($event)" [attr.aria-label]="t('labels.rows')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rb-cell">{{ t('labels.cellSize') }}</label>
+        <div class="input-row">
+          <input id="rb-cell" type="number" inputmode="numeric" min="2" max="32" step="1"
+            [ngModel]="cellSize()" (ngModelChange)="setCellSize($event)" />
+          <input type="range" min="2" max="32" step="1" [ngModel]="cellSize()"
+            (ngModelChange)="setCellSize($event)" [attr.aria-label]="t('labels.cellSize')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rb-ca">{{ t('labels.colorA') }}</label>
+        <input id="rb-ca" type="color" [ngModel]="colorA()" (ngModelChange)="setColorA($event)" />
+      </div>
+
+      <div class="field">
+        <label for="rb-cb">{{ t('labels.colorB') }}</label>
+        <input id="rb-cb" type="color" [ngModel]="colorB()" (ngModelChange)="setColorB($event)" />
+      </div>
+
+      <div class="field">
+        <button type="button" class="btn btn-secondary" (click)="randomizeColors()">
+          <app-icon name="refresh-cw" /> {{ t('labels.randomColors') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="rb-density">{{ t('labels.density') }}</label>
+        <div class="input-row">
+          <input id="rb-density" type="number" inputmode="numeric" min="5" max="95" step="1"
+            [ngModel]="density()" (ngModelChange)="setDensity($event)" />
+          <input type="range" min="5" max="95" step="1" [ngModel]="density()"
+            (ngModelChange)="setDensity($event)" [attr.aria-label]="t('labels.density')" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rb-sym">{{ t('labels.symmetry') }}</label>
+        <select id="rb-sym" [ngModel]="symmetry()" (ngModelChange)="setSymmetry($event)">
+          @for (s of symmetries; track s) {
+            <option [value]="s">{{ t('symmetries.' + s) }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="preview-frame">
+        <canvas #bitmapCanvas aria-label="{{ t('labels.preview') }}"></canvas>
+      </div>
+
+      <div class="results">
+        <div class="result-row">
+          <span><app-icon name="zap" /> {{ t('labels.canvasSize') }}</span>
+          <strong>{{ canvasSize().width }} × {{ canvasSize().height }}</strong>
+        </div>
+      </div>
+
+      <button type="button" class="btn" (click)="regenerate()">
+        <app-icon name="refresh-cw" /> {{ t('labels.regenerate') }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="download()">
+        <app-icon name="download" /> {{ t('labels.download') }}
+      </button>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

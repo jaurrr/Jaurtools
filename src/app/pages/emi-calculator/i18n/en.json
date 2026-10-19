@@ -1,0 +1,115 @@
+{
+  "emi-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "assumptionNote": "Assumes a fixed interest rate for the whole tenure with monthly compounding. Processing fees, insurance, and GST are not included.",
+    "benefits": [
+      "Budget with confidence. You know the exact monthly outflow before you sign anything.",
+      "Compare loan offers from different lenders in seconds.",
+      "See the true cost. The total interest often surprises borrowers.",
+      "Test prepayment ideas to find how quickly you can become debt-free."
+    ],
+    "benefitsHeading": "Benefits",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "EMI means Equated Monthly Instalment. It is the fixed amount you pay every month to repay a loan. Each EMI has two parts: one pays down your loan amount (principal) and the other pays the lender's interest.",
+        "q": "What is an EMI?"
+      },
+      {
+        "a": "Three honest levers: borrow less (bigger down payment), choose a shorter tenure, or find a lower interest rate. Prepaying a lump sum early in the tenure cuts interest the most, because interest is charged on the remaining balance.",
+        "q": "How can I reduce my EMI or my interest?"
+      },
+      {
+        "a": "Because interest is charged on the outstanding balance. In the beginning the balance is at its highest, so most of your payment goes to interest. As the balance shrinks, a bigger share of each EMI goes toward the principal. This shift is called amortisation.",
+        "q": "Why does my early EMI pay mostly interest?"
+      },
+      {
+        "a": "A longer tenure lowers your monthly EMI but raises the total interest a lot. If you can afford the higher monthly payment, a shorter tenure saves you serious money. Use the tenure slider above and watch the total interest change.",
+        "q": "Should I pick a longer tenure for a smaller EMI?"
+      },
+      {
+        "a": "Yes, especially early on. Since interest is charged on what you still owe, paying extra in the first few years removes the most expensive part of the loan. Even one extra EMI per year can shave months or years off a long loan.",
+        "q": "Does prepayment really help?"
+      },
+      {
+        "a": "No. The flat rate looks smaller because it is calculated on the original loan amount for the whole tenure. The reducing-balance rate is charged only on what you still owe. Always compare loans on the reducing-balance rate, which is what this calculator uses.",
+        "q": "Is the lender's flat rate the same as the reducing-balance rate?"
+      }
+    ],
+    "formula": "EMI = P x r x (1 + r)^n / ((1 + r)^n - 1)\nP = loan amount, r = monthly rate (annual rate / 12 / 100), n = total months.\nWith 0% interest, EMI = P / n.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the loan amount (principal), for example Rs. 5,00,000.",
+      "Enter the annual interest rate exactly as the lender quotes it, for example 9%.",
+      "Choose the loan tenure in years.",
+      "See your EMI, total interest, and total payable instantly.",
+      "Try a shorter tenure or a bigger down payment and watch how much interest you save."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "EMI means Equated Monthly Instalment - a fixed monthly payment that covers both principal and interest.",
+      "Early EMIs pay mostly interest, while later EMIs pay mostly principal. This gradual shift is called amortisation.",
+      "This calculator uses monthly compounding at the monthly interest rate (annual rate / 12).",
+      "On floating-rate loans, the lender can change your EMI or your tenure when rates are revised.",
+      "Processing fees, insurance, and GST are not included. Ask your lender for the full cost.",
+      "Prepayments cut interest the most when they are made early in the loan tenure."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "emi calculator, loan emi calculator, home loan emi calculator, car loan emi calculator, monthly emi calculator",
+    "labels": {
+      "emi": "Monthly EMI",
+      "interest": "Total interest",
+      "principal": "Loan amount (Rs.)",
+      "rate": "Annual interest rate (%)",
+      "total": "Total payable",
+      "years": "Loan tenure (years)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Floating rates, processing fees, and insurance are not included in the result.",
+      "Assumes the interest rate stays constant for the entire tenure.",
+      "Does not show the month-by-month amortisation schedule.",
+      "A lower EMI from a longer tenure costs far more interest overall."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free EMI calculator: find your exact monthly loan payment before you borrow. Enter loan amount, interest rate and tenure for instant results. 100% private, no sign-up.",
+    "metaTitle": "EMI Calculator - Know Your Exact Monthly Loan Payment | JaurTools",
+    "name": "EMI Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "An EMI calculator shows your fixed monthly loan payment. For a Rs. 5,00,000 loan at 9% annual interest for 5 years, your EMI is about Rs. 10,379 per month. You would pay roughly Rs. 1,22,751 in total interest, making the total payable Rs. 6,22,751.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your EMI results",
+    "tagline": "Know your exact monthly loan payment before you borrow. No surprises.",
+    "workedExample": "Rs. 5,00,000 loan, 9% annual interest, 5 years:\n1. Monthly rate r = 0.09 / 12 = 0.0075; total months n = 60.\n2. (1.0075)^60 = 1.565681.\n3. Numerator: 5,00,000 x 0.0075 x 1.565681 = 5,871.30.\n4. Denominator: 1.565681 - 1 = 0.565681.\n5. EMI = 5,871.30 / 0.565681 = Rs. 10,379.18.\n6. Total payable = 10,379.18 x 60 = Rs. 6,22,751; total interest = Rs. 1,22,751.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "emi": "Monthly EMI",
+      "interest": "Total interest",
+      "total": "Total payable",
+      "emiNote": "for {years} years at {rate}%"
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "You borrow {principal} and pay back {total} — the bank keeps {interest} as interest.",
+      "l2": "{pct}% of everything you pay is interest, not your loan.",
+      "l3": "That is {emi} every month for {months} months."
+    },
+    "tip": {
+      "extra": "Tip: paying one extra EMI every year saves {saved} in interest and closes your loan {months} months early."
+    },
+    "ref": {
+      "heading": "Quick reference: EMI at 9% interest",
+      "caption": "Monthly EMI for common loan amounts and tenures.",
+      "amountCol": "Loan amount",
+      "yearSuffix": "yrs"
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "Monthly rate = annual rate ÷ 12, compounded monthly.",
+      "s2": "EMI = P × r × (1+r)^n / ((1+r)^n − 1), where n is the number of months."
+    }
+  }
+}

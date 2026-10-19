@@ -1,0 +1,100 @@
+{
+  "period-pregnancy-tracker": {
+    "assumptionNote": "All dates are estimates from average cycle timing. Cycles vary, so treat predictions as a planning aid and confirm pregnancy care with a clinician.",
+    "benefits": [
+      "One tool for both questions: when is my period due, and when is the baby due.",
+      "The fertile window helps with both family planning and understanding your cycle.",
+      "Current week and trimester update automatically from your last period date.",
+      "Private: nothing is stored or sent anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Average cycle length is 28 days, but anything from 21 to 35 days is normal. If your cycles vary a lot, track 3-6 months and use the average.",
+        "q": "What is a normal cycle length?"
+      },
+      {
+        "a": "Light bleeding around ovulation, stress, illness, weight change and perimenopause can all shift timing. If your period is more than a week late and pregnancy is possible, take a test.",
+        "q": "Why is my period late but I am not pregnant?"
+      },
+      {
+        "a": "Pregnancy tests detect hCG, which is usually reliable from the first day of a missed period. Testing earlier can give false negatives.",
+        "q": "When can I take a pregnancy test?"
+      },
+      {
+        "a": "Count the first day of bleeding as day 1. The cycle ends the day before the next period starts. Cycle length is the number of days between day 1s.",
+        "q": "How do I count cycle length?"
+      },
+      {
+        "a": "Yes. Switch to pregnancy mode and the calculator shows the due date, your current week and day, and the trimester from the same last period date.",
+        "q": "Can I use the same date for pregnancy mode?"
+      },
+      {
+        "a": "The fertile window is ovulation day plus the 4-5 days before it, when sperm can survive. It is an estimate, not a contraception method.",
+        "q": "What exactly is the fertile window?"
+      }
+    ],
+    "formula": "Next period = LMP + cycle length days.\nOvulation = LMP + (cycle length - 14) days.\nFertile window = ovulation - 4 to ovulation + 4 days.\nDue date (Naegele) = LMP + 280 days. Trimester: weeks 1-13, 14-27, 28-40.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick Period mode or Pregnancy mode at the top.",
+      "Enter the first day of your last menstrual period.",
+      "In period mode, enter your usual cycle length in days.",
+      "Read your next period, ovulation and fertile window - or your due date, current week and trimester.",
+      "Track a few months and use your average cycle length for the best predictions."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The menstrual cycle is counted from day 1 of bleeding to the day before the next period.",
+      "Average cycle length is 28 days; 21-35 days is the normal range.",
+      "Ovulation happens about 14 days before the next period, not after the last one.",
+      "Naegele's rule gives the due date: last period plus 280 days.",
+      "Pregnancy trimesters are weeks 1-13, 14-27 and 28-40.",
+      "With a last period of 15 Sep 2026 and a 28-day cycle, the next period is 13 Oct 2026 and the due date is 22 Jun 2027."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "period calculator, pregnancy calculator, due date calculator, ovulation calculator, fertile window tracker, pregnancy week calculator",
+    "labels": {
+      "cycleLabel": "Usual cycle length (days)",
+      "daysUnit": "d",
+      "dueResult": "Estimated due date",
+      "fertileResult": "Fertile window",
+      "futureLmp": "That date is in the future - pregnancy week shows once it passes.",
+      "invalidDate": "Please enter a valid date.",
+      "lmpLabel": "First day of last period",
+      "lmpNote": "The first day of your most recent menstrual period.",
+      "modeLabel": "Tracker mode",
+      "nextPeriodResult": "Next period",
+      "ovulationResult": "Estimated ovulation",
+      "periodTab": "Period",
+      "pregnancyTab": "Pregnancy",
+      "previousResult": "Previous period",
+      "trimesterResult": "Trimester",
+      "weekResult": "Pregnancy week",
+      "weeksUnit": "w"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Predictions assume regular cycles; irregular cycles reduce accuracy.",
+      "Cannot diagnose pregnancy, cycle disorders or anything medical.",
+      "The fertile window is an estimate, never a contraception method.",
+      "Confirm important dates with a clinician or ultrasound."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free period and pregnancy tracker: predict your next period, ovulation and fertile window, or get your due date, pregnancy week and trimester. Private, no sign-up.",
+    "metaTitle": "Period & Pregnancy Tracker - Due Date & Ovulation | JaurTools",
+    "name": "Period & Pregnancy Tracker",
+    "privacyNote": "This tracker runs 100% in your browser. Your dates never leave your device.",
+    "quickAnswer": "Enter your last period and the tracker predicts both sides of the calendar. With a last period of 15 September 2026 and a 28-day cycle: next period 13 October 2026, ovulation around 29 September, fertile window 25 September to 3 October - and in pregnancy mode, a due date of 22 June 2027 with the current week counted automatically.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your tracker results",
+    "tagline": "Predict your next period and fertile window - or track your due date, week and trimester.",
+    "workedExample": "LMP 15 Sep 2026, 28-day cycle, period mode:\n1. Next period = 15 Sep + 28 days = 13 Oct 2026.\n2. Ovulation = 15 Sep + (28 - 14) = 29 Sep 2026.\n3. Fertile window = 29 Sep - 4 to + 4 = 25 Sep to 3 Oct 2026.\n4. Previous period = 15 Sep - 28 = 18 Aug 2026.\nPregnancy mode: due date = 15 Sep + 280 days = 22 Jun 2027.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

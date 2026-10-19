@@ -1,0 +1,100 @@
+{
+  "zalgo-text-generator": {
+    "benefits": [
+      "Create glitch and cursed text for memes, usernames and stream titles in one click.",
+      "Tune the chaos: level 1 is a subtle shiver, level 10 is full corruption.",
+      "Choose where marks go — above, through, or below the letters.",
+      "Same input and settings always produce the same output, so results are reproducible.",
+      "Copy or download the result — it is plain Unicode text that works anywhere."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Zalgo text stacks Unicode combining diacritical marks (U+0300-U+036F) on top of normal letters. Each mark merges with the letter before it, which creates the corrupted, glitchy look.",
+        "q": "What is zalgo text?"
+      },
+      {
+        "a": "These marks are standard Unicode characters, so they render in most apps and browsers. Some platforms (a few games, old systems) strip combining marks, in which case the text shows up normal.",
+        "q": "Will zalgo text work on Discord, Instagram and WhatsApp?"
+      },
+      {
+        "a": "The generator uses a seeded random number generator: the same text, level and direction settings always pick the same marks. Change any setting and you get a new variation.",
+        "q": "Why does the same input always give the same output?"
+      },
+      {
+        "a": "Input is capped at 300 characters. At high levels each letter gets up to 30 marks, and extremely long outputs can lag phones and get rejected by chat apps.",
+        "q": "Is there a character limit?"
+      },
+      {
+        "a": "Yes — both the input and the output stay in your browser. Nothing is sent to any server.",
+        "q": "Is this private?"
+      },
+      {
+        "a": "Combining marks can confuse screen readers, so avoid zalgo in anything important like names, addresses or instructions. Use it for fun, not for information.",
+        "q": "Is zalgo text accessible?"
+      },
+      {
+        "a": "Many games and platforms reject usernames with combining marks. If a name is rejected, try a lower level with only above or below marks — or keep the name plain.",
+        "q": "Can I use it as a username?"
+      }
+    ],
+    "formula": "seed = FNV-1a(input) XOR (level x 7919) XOR direction flags   (seeded PRNG: mulberry32)\nfor each character c in input:\n  output += c\n  if c is whitespace: continue\n  if above on:  append `level` random marks from the 52-char UP set (U+0300-U+036F)\n  if through on: append `level` random marks from the 15-char MID set\n  if below on:  append `level` random marks from the 40-char DOWN set\nmarks added = letters x level x (directions on)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type or paste your text (up to 300 characters).",
+      "Set the chaos level from 1 (subtle) to 10 (extreme).",
+      "Toggle marks above, through and below the letters.",
+      "The glitched text appears instantly in the preview box.",
+      "Copy it to your clipboard or download it as a .txt file.",
+      "Paste it into your post, username or chat."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Zalgo adds Unicode combining marks (U+0300-U+036F) to each letter.",
+      "Chaos level 1-10 controls how many marks stack on every letter.",
+      "Marks can be added above, through (middle), or below the letters.",
+      "Output is deterministic: same text + same settings = same result every time.",
+      "The result is plain Unicode text — copy and paste it anywhere.",
+      "Input is capped at 300 characters to protect performance."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zalgo text generator, glitch text, cursed text generator, creepy text, zalgo generator",
+    "labels": {
+      "clear": "Clear",
+      "copied": "Copied!",
+      "copy": "Copy zalgo text",
+      "downLabel": "Marks below letters",
+      "download": "Download .txt",
+      "inputLabel": "Your text",
+      "inputPlaceholder": "Type something spooky...",
+      "levelLabel": "Chaos level",
+      "marksLabel": "Diacritic marks added",
+      "midLabel": "Marks through letters",
+      "outputLabel": "Zalgo result",
+      "upLabel": "Marks above letters"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Zalgo text is hard for screen readers and should never be used for important information.",
+      "Some platforms strip or reject combining marks — usernames and form fields often fail.",
+      "Very high levels on long text can lag older phones; input is capped at 300 characters.",
+      "The look varies by font: the same text renders differently on Android, iOS and desktop."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Create zalgo glitch text with combining Unicode marks. Control the chaos level, then copy or download. Free, runs fully in your browser.",
+    "metaTitle": "Zalgo Text Generator: Glitch & Cursed Text | JaurTools",
+    "name": "Zalgo Text Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type your text, set the chaos level from 1 to 10, and choose whether marks stack above, through or below the letters. The glitched text updates instantly — copy it or download it as a .txt file.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Zalgo text results",
+    "tagline": "Add combining Unicode marks for cursed, glitchy text.",
+    "workedExample": "Input: \"hi\" | Chaos level: 2 | All directions on\n\nStep 1: input has 2 letters (h, i), no spaces.\nStep 2: marks per letter = 2 above + 2 through + 2 below = 6.\nStep 3: total marks = 2 letters x 6 = 12 combining marks.\nStep 4: output length = 2 base letters + 12 marks = 14 code units.\n\nSo \"hi\" becomes h + 6 marks + i + 6 marks — the exact marks are picked by the seeded generator, so the same settings always reproduce the same glitch.\n\nAt level 10 with all directions on, one letter collects 30 marks: 10 above + 10 through + 10 below.",
+    "workedExampleHeading": "Worked example"
+  }
+}

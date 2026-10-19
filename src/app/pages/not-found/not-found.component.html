@@ -1,0 +1,7 @@
+<div class="not-found">
+  <app-icon name="search" aria-hidden="true"></app-icon>
+  <p class="code">{{ translate.t('notfound.code') }}</p>
+  <h1>{{ translate.t('notfound.title') }}</h1>
+  <p class="muted">{{ translate.t('notfound.text') }}</p>
+  <a class="btn" [routerLink]="['/', translate.lang()]">{{ translate.t('notfound.homeLink') }}</a>
+</div>

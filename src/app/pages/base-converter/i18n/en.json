@@ -1,0 +1,88 @@
+{
+  "base-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Base Converter",
+    "tagline": "Convert numbers between any bases 2–36 — binary to hex and beyond.",
+    "metaTitle": "Base Converter - Convert Numbers Between Any Base 2-36 | JaurTools",
+    "metaDescription": "Free base converter: convert numbers between binary, octal, decimal, hex and any base from 2 to 36. Instant, accurate, private.",
+    "keywords": "base converter, hex to decimal, decimal to hex, binary to decimal, number base converter",
+    "resultsHeading": "Base conversion results",
+    "quickAnswer": "Type a number, pick the from-base and to-base (2 to 36), and get the converted value instantly. FF in base 16 = 255 in base 10; 255 in base 10 = 11111111 in base 2. Digits that do not belong to the chosen base show a clear error.",
+    "keyFacts": [
+      "Base = how many distinct digits: binary 2, octal 8, decimal 10, hex 16.",
+      "Digits go 0-9 then A-Z, so base 36 uses all letters.",
+      "Computers store everything in binary (base 2); hex is its compact shorthand.",
+      "Colour codes (#FF0000), memory addresses and Unicode code points are all hex.",
+      "Octal (base 8) survives in Unix file permissions like 755.",
+      "Leading zeros are fine: 0FF₁₆ and FF₁₆ are the same number."
+    ],
+    "howTo": [
+      "Type the number to convert.",
+      "Choose the base it is written in (2-36).",
+      "Choose the base you want.",
+      "Read the converted result plus its decimal value instantly."
+    ],
+    "formula": "To decimal: sum of digit × base^position (positions from the right, starting at 0).\nFrom decimal: repeated division by the target base, reading remainders bottom-up.\nExample: FF₁₆ = 15×16¹ + 15×16⁰ = 240 + 15 = 255.",
+    "workedExample": "Convert FF (hex) to decimal:\n1. From-base 16, digits F=15, F=15.\n2. 15 × 16 + 15 = 240 + 15 = 255.\nConvert 255 (decimal) to binary:\n1. Repeated ÷2: 255→127 r1, 127→63 r1, 63→31 r1, 31→15 r1, 15→7 r1, 7→3 r1, 3→1 r1, 1→0 r1.\n2. Read remainders upward: 11111111₂.",
+    "benefits": [
+      "Any base 2-36 - far beyond the usual binary/hex-only tools.",
+      "Validates digits against the chosen base instead of silently misreading them.",
+      "Shows the decimal value alongside for easy sanity checks.",
+      "Swap button flips the conversion direction instantly."
+    ],
+    "limitations": [
+      "Whole numbers only - no fractional parts or negative exponents.",
+      "Values beyond JavaScript safe integers (about 9 × 10¹⁵) may lose precision.",
+      "Letters are case-insensitive; both ff and FF work."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert hex to decimal?",
+        "a": "Multiply each hex digit by 16^position and add. FF = 15×16 + 15 = 255. Or type it here: number FF, from-base 16, to-base 10."
+      },
+      {
+        "q": "How do I convert decimal to binary?",
+        "a": "Repeatedly divide by 2 and record remainders, then read them bottom-up. 13 → 1101. This tool does it instantly for any base 2-36."
+      },
+      {
+        "q": "What bases do computers use?",
+        "a": "Binary (2) for storage and logic, hexadecimal (16) as its readable shorthand, and octal (8) in niches like Unix permissions. Decimal (10) is for humans."
+      },
+      {
+        "q": "Why is my conversion showing an error?",
+        "a": "A digit does not belong to the from-base - e.g. \"2\" in binary, or \"G\" in hex. Check the from-base matches how your number is actually written."
+      },
+      {
+        "q": "What is base 36 used for?",
+        "a": "Compact human-readable IDs: 0-9 plus A-Z gives short strings. URL shorteners and some ticket/serial systems use base-36 or similar encodings."
+      },
+      {
+        "q": "Is 0xFF the same as FF?",
+        "a": "Yes - 0x is just a prefix meaning \"hex follows\". Type the number with or without it here; both convert identically."
+      }
+    ],
+    "labels": {
+      "numberInput": "Number",
+      "fromBase": "From base",
+      "toBase": "To base",
+      "basePrefix": "Base ",
+      "swap": "Swap bases",
+      "result": "Converted value",
+      "decimalValue": "Decimal value",
+      "invalidNumber": "Invalid number for the selected base. Check the digits."
+    }
+  }
+}

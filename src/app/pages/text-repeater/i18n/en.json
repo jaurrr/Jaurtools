@@ -1,0 +1,98 @@
+{
+  "text-repeater": {
+    "benefits": [
+      "Repeats text up to 100,000 times instantly.",
+      "Separators: new lines, spaces, commas or nothing.",
+      "Great for placeholder text, test data and dividers.",
+      "Copy or download the result with one click.",
+      "Private — your text never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Type your text, set how many times it should repeat (1 to 100,000), pick a separator, and the result appears instantly.",
+        "q": "How do I repeat text?"
+      },
+      {
+        "a": "Choose from new line, space, comma or no separator. New line is the default.",
+        "q": "What separators are available?"
+      },
+      {
+        "a": "Yes — repeat counts are capped at 100,000 and the output at 1,000,000 characters to keep your browser responsive. A note appears if the result is truncated.",
+        "q": "Is there a limit?"
+      },
+      {
+        "a": "Yes — use the Download button to save the full repeated text as a .txt file.",
+        "q": "Can I download the result?"
+      },
+      {
+        "a": "The slider covers 1–1000 for convenience; type any number up to 100,000 directly in the number box.",
+        "q": "The slider only goes to 1000?"
+      },
+      {
+        "a": "Yes — everything is generated locally in your browser.",
+        "q": "Is my text private?"
+      }
+    ],
+    "formula": "output = text joined (count) times with separator\ntotalChars = count x textLength + (count - 1) x sepLength\ncapped so totalChars <= 1,000,000",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Type the text you want to repeat.",
+      "Enter how many times it should repeat (1–100,000).",
+      "Pick a separator: new line, space, comma or none.",
+      "Read the result in the output box — total characters shown live.",
+      "Copy it or download it as a .txt file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Text can be repeated from 1 to 100,000 times.",
+      "Four separators: newline, space, comma, or none.",
+      "Output is capped at 1,000,000 characters to protect browser performance.",
+      "A note appears whenever the result is truncated by the cap.",
+      "Everything runs locally; no text is uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "text repeater, repeat text online, repeat text n times, text repetition tool, duplicate text generator",
+    "labels": {
+      "charsLabel": "Total characters",
+      "clearButton": "Clear",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "countLabel": "Repeat count",
+      "downloadButton": "Download .txt",
+      "emptyState": "Repeated text will appear here.",
+      "outputLabel": "Repeated text",
+      "repeatsLabel": "Actual repeats",
+      "sepComma": "Comma",
+      "sepNewline": "New line",
+      "sepNone": "None",
+      "sepSpace": "Space",
+      "separatorLabel": "Separator",
+      "textLabel": "Text to repeat",
+      "textPlaceholder": "Type here...",
+      "truncatedNote": "Result truncated to 1,000,000 characters to keep your browser responsive."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Repeat count capped at 100,000; output capped at 1,000,000 characters.",
+      "Very long outputs may be slow to copy on older devices.",
+      "No per-repeat numbering or variation — exact copies only."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free text repeater: repeat any text, emoji or phrase up to 100,000 times. Custom separators, live count, copy or download instantly.",
+    "metaTitle": "Text Repeater - Repeat Text Any Number of Times Free | JaurTools",
+    "name": "Text Repeater",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Repeats any text as many times as you want — from once to 100,000 times — with your choice of separator (new line, space, comma or none). Live total-character count, automatic safety cap at 1,000,000 characters, and one-click copy or .txt download. Handy for placeholder text, test data and decorative dividers.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Text repetition tool",
+    "tagline": "Repeat any text up to 100,000 times — separators, live count.",
+    "workedExample": "Text: \"ha\", count: 3, separator: new line\nOutput: \"ha\" + \"\\n\" + \"ha\" + \"\\n\" + \"ha\"\nResult:\nha\nha\nha\nTotal characters: 3 x 2 + 2 x 1 = 8\nActual repeats: 3 (under the cap, nothing truncated)",
+    "workedExampleHeading": "Worked example"
+  }
+}

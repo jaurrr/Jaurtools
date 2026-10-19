@@ -1,0 +1,113 @@
+{
+  "spf-record-generator": {
+    "benefits": [
+      "Lists exactly who may send mail as your domain — the foundation DMARC builds on.",
+      "Counts DNS lookups live, so you never ship a record that breaks the 10-lookup limit.",
+      "Validates every IP and hostname as you type — typos are caught before they reach DNS.",
+      "Warns against dangerous choices like +all before you publish them.",
+      "Runs entirely in your browser; your mail setup is never uploaded."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "As a TXT record on your bare domain (example.com), not a subdomain. Add it in your DNS provider's panel. There must be only one SPF record per domain — two records invalidate each other.",
+        "q": "Where do I publish the SPF record?"
+      },
+      {
+        "a": "Receivers stop evaluating after 10 DNS-querying mechanisms (include, a, mx, ptr, exists, redirect) and return permerror — which usually fails closed. ip4/ip6 don't count. This tool counts them for you; nested includes inside a provider's record also count, so leave headroom.",
+        "q": "What is the 10 DNS lookup limit?"
+      },
+      {
+        "a": "-all (fail) tells receivers to reject non-matching mail — the strict, recommended ending once everything works. ~all (softfail) marks it suspicious but usually still delivers — the safe choice while testing. ?all is neutral (no policy) and +all passes everything, which defeats the purpose.",
+        "q": "Should I end with -all, ~all, ?all, or +all?"
+      },
+      {
+        "a": "No — that's exactly what include: is for. Your marketing platform publishes its own SPF record (like _spf.google.com); you include it and they maintain their IPs. Never copy someone's IP list into ip4: entries — it goes stale.",
+        "q": "Should I list my provider's IPs directly?"
+      },
+      {
+        "a": "redirect= replaces your entire record with another domain's SPF record — useful when a provider manages SPF for you. When redirect is set, no other mechanisms are allowed in the record. Most setups don't need it; include: covers the common cases.",
+        "q": "What is redirect= for?"
+      },
+      {
+        "a": "They're unrelated mechanisms that happen to share a name: SPF (Sender Policy Framework) authorizes sending IPs for email, while sunscreen SPF measures UV protection. Your mail server does not need sunscreen.",
+        "q": "Is email SPF related to sunscreen SPF?"
+      }
+    ],
+    "formula": "v=spf1 [mx] [a] [ip4:addr ...] [ip6:addr ...] [include:host ...] { -all | ~all | ?all | +all }\nor: v=spf1 redirect=other.example\n\nLookup budget (max 10): mx=1, a=1, each include:=1, redirect=1. ip4:/ip6: cost nothing.\nRecord should fit in 255 characters (one DNS string).",
+    "formulaHeading": "Record syntax",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your domain and tick mx if your own mail server sends directly.",
+      "Add your sending IPs (ip4/ip6), one per line — CIDR ranges like 203.0.113.0/24 work too.",
+      "Add one include: per email provider (Google, Microsoft 365, your marketing platform).",
+      "Choose the all qualifier: ~all while testing, -all when everything works.",
+      "Watch the lookup counter stay at or under 10, then copy the record and publish it as a TXT record on your domain."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "SPF (Sender Policy Framework) is a DNS TXT record listing which IPs may send mail for your domain.",
+      "Receivers check the envelope sender's IP against your record; mismatches fail SPF.",
+      "Mechanisms: mx (your mail servers), a (your web server), ip4:/ip6: (explicit addresses), include: (a provider's record).",
+      "The record ends with an all mechanism: -all (fail), ~all (softfail), ?all (neutral), +all (pass).",
+      "SPF has a hard 10 DNS lookup limit — exceeding it causes permerror and failed checks.",
+      "SPF alone only checks the envelope domain; DMARC adds alignment with the visible From header."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "spf record generator, spf txt record, spf dns record, sender policy framework generator",
+    "labels": {
+      "allQualifier": "Default action (all)",
+      "copiedMsg": "Record copied to clipboard.",
+      "copyRecord": "Copy record",
+      "dnsNote": "Publish this as a TXT record on your bare domain (not a subdomain). DNS changes usually take effect within a few hours.",
+      "domain": "Domain",
+      "downloadRecord": "Download .txt",
+      "generatedRecord": "Generated SPF record",
+      "includes": "Provider includes",
+      "includesHint": "One hostname per line, e.g. _spf.google.com. Each include costs one DNS lookup.",
+      "ip4": "IPv4 addresses",
+      "ip6": "IPv6 addresses",
+      "lookupCount": "DNS lookups used",
+      "optFail": "-all — fail (reject others)",
+      "optNeutral": "?all — neutral",
+      "optPass": "+all — pass everyone (not recommended)",
+      "optSoftfail": "~all — softfail (mark suspicious)",
+      "recordHost": "DNS hostname",
+      "recordLength": "Record length",
+      "redirect": "redirect= (optional)",
+      "redirectHint": "Replaces the whole record with another domain's SPF. Leave empty for normal setups.",
+      "useA": "a — authorize the domain's A record",
+      "useAHint": "Authorizes the IP your domain resolves to (your web server).",
+      "useMx": "mx — authorize my mail servers",
+      "useMxHint": "Authorizes the IPs of your domain's MX records.",
+      "warnInvalidHost": "Some include/redirect hostnames are invalid and were left out.",
+      "warnInvalidIp": "Some IP addresses are invalid and were left out of the record.",
+      "warnPlusAll": "+all passes every sender in the world — it defeats the purpose of SPF. Use -all or ~all.",
+      "warnRecordTooLong": "The record exceeds 255 characters and may need splitting across multiple DNS strings.",
+      "warnTooManyLookups": "Over the 10 DNS lookup limit — receivers will return permerror. Remove includes or replace them with ip4 entries.",
+      "warningsHeading": "Check before publishing"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only authorizes IPs — it says nothing about message content or legitimacy.",
+      "Checks the envelope domain, not the visible From address; DMARC alignment closes that gap.",
+      "Forwarding can break SPF (the forwarder's IP isn't listed) — SRS or DKIM-based DMARC handles that.",
+      "Nested includes inside a provider's record also consume your 10-lookup budget — leave headroom."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SPF record generator: build a valid SPF DNS TXT record from your mail setup with live DNS-lookup counting. Copy or download, 100% private.",
+    "metaTitle": "SPF Record Generator - Build Your SPF DNS Record | JaurTools",
+    "name": "SPF Record Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "An SPF record is a DNS TXT record on your domain listing which servers may send mail as you. For example, v=spf1 mx ip4:203.0.113.10 include:_spf.google.com ~all authorizes your mail servers, one IP, and Google's servers, while ~all softly fails everything else. Receivers allow only 10 DNS lookups per check — this generator counts them live so your record never breaks the limit.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your SPF record",
+    "tagline": "Build an SPF DNS TXT record from your mail setup — with live lookup counting.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Domain example.com: mx ticked, ip4 203.0.113.10, include _spf.google.com, qualifier ~all.\nGenerated record:\nv=spf1 mx ip4:203.0.113.10 include:_spf.google.com ~all\nChecks traced by the tool:\n1. Mechanisms: mx + ip4:203.0.113.10 (valid IPv4) + include:_spf.google.com (valid hostname).\n2. DNS lookups: mx (1) + include (1) = 2 of 10 — safely under the limit. ip4: costs nothing.\n3. Length: 55 characters — well under the 255-character single-string limit.\n4. Qualifier ~all: safe while testing; switch to -all once mail flows correctly.\nPublish as a TXT record on example.com."
+  }
+}

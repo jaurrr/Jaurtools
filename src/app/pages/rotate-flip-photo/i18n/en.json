@@ -1,0 +1,96 @@
+{
+  "rotate-flip-photo": {
+    "benefits": [
+      "Fixes sideways phone photos in one tap — 90° rotation with zero quality loss.",
+      "Flips mirror selfies and scanned documents that came out backwards.",
+      "Transforms stack: rotate and flip combine, so any orientation is two taps away.",
+      "Lossless 90° steps never resample — pixels are only rearranged, never blurred."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "No — 90° rotations and flips only rearrange pixels; no resampling or interpolation happens. The download is a lossless PNG, so quality is identical to the source.",
+        "q": "Does rotating reduce image quality?"
+      },
+      {
+        "a": "Tap Rotate 90° twice, or use the dedicated 180° button. Four 90° taps (or two 180° taps) return to the original.",
+        "q": "How do I rotate 180 degrees?"
+      },
+      {
+        "a": "Yes — flip horizontal mirrors the image left-to-right (fixes mirror selfies), and flip vertical mirrors top-to-bottom. They combine with rotations in any order.",
+        "q": "Can I mirror an image?"
+      },
+      {
+        "a": "The preview and download are capped at 1600 px on the long edge for performance. If your original is smaller, the download matches the original exactly.",
+        "q": "What resolution is the download?"
+      },
+      {
+        "a": "The EXIF orientation tag is applied when your browser decodes the image, so what you see is what you get. The download is saved with pixels already rotated and no orientation tag.",
+        "q": "What happens to the EXIF orientation tag?"
+      },
+      {
+        "a": "No — only 90° steps are offered, because arbitrary angles would require resampling (which softens the image) and cropping corners. For angled rotation, use a photo editor.",
+        "q": "Can I rotate by a custom angle like 37 degrees?"
+      }
+    ],
+    "formula": "After r quarter-turns clockwise:\noutputW = (r odd) ? height : width\noutputH = (r odd) ? width : height\nExample: 800 x 600 px, one 90° clockwise turn -> 600 x 800 px.\nFlip horizontal: pixel (x, y) -> (width - 1 - x, y).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo from your device (up to 15 MB).",
+      "Tap Rotate 90° (either direction) or 180° to fix the orientation.",
+      "Use Flip horizontal or vertical to mirror the image.",
+      "Combine transforms freely — the preview updates instantly.",
+      "Press Download to save the transformed image as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Rotates images in exact 90° steps clockwise, counter-clockwise, or 180° — no resampling, no blur.",
+      "Flips images horizontally (left-right mirror) and vertically (top-bottom mirror).",
+      "Transforms stack in any order and the live canvas preview shows the combined result.",
+      "Rotating 90° or 270° swaps width and height; the new dimensions are shown live.",
+      "Computed with the Canvas API in your browser — the photo never leaves your device.",
+      "The download is a lossless PNG, rendered at up to 1600 px on the long edge."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "rotate image online, flip image online, mirror image, rotate photo 90 degrees, flip photo horizontal",
+    "labels": {
+      "currentSize": "Current size",
+      "downloadPng": "Download PNG",
+      "flipH": "Flip horizontal",
+      "flipV": "Flip vertical",
+      "newImage": "New image",
+      "originalSize": "Original size",
+      "reset": "Reset",
+      "rotate180": "Rotate 180°",
+      "rotateCcw": "Rotate 90° left",
+      "rotateCw": "Rotate 90° right",
+      "sizeError": "That file is larger than 15 MB. Please choose a smaller image.",
+      "stageLabel": "Transformed image preview",
+      "typeError": "That file could not be read as an image. Please choose a JPEG, PNG, WebP, GIF, or BMP file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only 90° steps and flips — arbitrary angles are not supported (they would need resampling).",
+      "Rendering is capped at 1600 px on the long edge, so huge originals are scaled down first.",
+      "EXIF metadata (camera info, GPS) is stripped from the re-encoded download.",
+      "Animated images use their first frame only."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Fix sideways photos with lossless 90° rotations and mirror flips. Correct orientation in one click — free, instant, in your browser.",
+    "metaTitle": "Rotate & Flip Photo - Fix Sideways Photos | JaurTools",
+    "name": "Rotate & Flip Photo",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo to rotate it in exact 90° steps or mirror it horizontally and vertically — perfect for fixing sideways phone shots. Transforms stack freely with a live preview. The PNG downloads instantly and your photo never leaves your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your transform results",
+    "tagline": "Straighten any photo in one click.",
+    "workedExample": "You upload an 800 x 600 px photo taken sideways.\nOne tap of Rotate 90° right gives a 600 x 800 px portrait — width and height swap.\nThe PNG downloads as rotated-600x800.png with every pixel intact, just rearranged.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "image-resizer": {
+    "benefits": [
+      "Shrink huge camera photos for fast web uploads and sharing.",
+      "High-quality resampling keeps resized photos sharp and clean.",
+      "Percentage mode is perfect for quick halves, quarters, or doubles.",
+      "Aspect-lock prevents the stretched, squashed look of mismatched dimensions.",
+      "Bulk mode resizes up to 20 photos in one go and packs them into a single ZIP — no repetitive one-by-one work.",
+      "Target file-size mode hits exact KB limits for job portals, forms, and email attachments.",
+      "Nothing is ever uploaded: private photos, ID scans, and client work stay on your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Upload the image, choose exact pixels or a percentage, keep the aspect lock on unless you want to stretch, pick a resampling quality, and press Download.",
+        "q": "How do I resize an image?"
+      },
+      {
+        "a": "Use percentage mode: 50% gives exactly half the width and height (a quarter of the pixels). Pixels mode with the lock on gives the same result via exact numbers.",
+        "q": "How do I make an image exactly half size?"
+      },
+      {
+        "a": "Downscaling always loses some detail — that is unavoidable. High-quality mode uses the best resampling the browser offers, so the loss is minimal and clean.",
+        "q": "Will resizing reduce quality?"
+      },
+      {
+        "a": "Upscaling beyond 100% invents no new detail; it just makes pixels bigger and softer. For best results, resize down, not up.",
+        "q": "Can I enlarge a small image?"
+      },
+      {
+        "a": "Yes — leave the aspect lock on. The height updates automatically from the width (and vice versa), so circles stay circular.",
+        "q": "How do I avoid stretching the photo?"
+      },
+      {
+        "a": "No. Resizing is done on a canvas in your browser; the original file never leaves your device.",
+        "q": "Is my photo uploaded anywhere?"
+      },
+      {
+        "a": "Yes — drop up to 20 images at once. One click resizes the whole batch, and you can download each image or all of them together as a single ZIP file.",
+        "q": "Can I resize many images at once?"
+      },
+      {
+        "a": "Switch to the Target file size mode and type 100. The tool automatically tunes JPEG/WebP quality — and shrinks dimensions if needed — until the file lands at or under 100 KB.",
+        "q": "How do I get a photo under 100 KB for a form upload?"
+      }
+    ],
+    "formula": "pixels mode:  new_w, new_h as entered\npercent mode: new_w = round(w × p/100),  new_h = round(h × p/100)\naspect lock:  new_h = round(new_w × h / w)\nlongest side: s = L / max(w, h);  new_w = round(w × s),  new_h = round(h × s)\nfile-size mode: binary-search JPEG/WebP quality q in 10–95 for size ≤ target;\nshrink dimensions ×0.85 and retry if no quality fits",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Drop up to 20 images onto the upload area, or browse your files.",
+      "Pick a resize mode: pixels, percent, longest side, a social preset, or a target file size.",
+      "Choose the output format — JPG, PNG, WebP, or keep the original — and set the quality.",
+      "Watch the live before/after preview update as you change settings.",
+      "Press the resize button to process the whole batch.",
+      "Download images one by one, or all together as a single ZIP."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Two modes: exact pixel dimensions, or a percentage of the original size.",
+      "The aspect-ratio lock keeps width and height proportional as you type.",
+      "Resampling quality maps to the browser's image smoothing levels: high, medium, low.",
+      "Percentage mode accepts 1% to 400% — both shrinking and enlarging.",
+      "The live preview shows the exact output size before you download.",
+      "Batch mode resizes up to 20 images at once and packs them into one ZIP download.",
+      "Target file-size mode auto-tunes quality and dimensions until each file fits your KB limit.",
+      "Social presets cover Instagram, Facebook, YouTube, X, and LinkedIn with one tap."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "resize image, bulk image resizer, resize photo online, resize multiple images, image resizer no upload, reduce image size kb, target file size image, social media image sizes, shrink photo online",
+    "labels": {
+      "addMore": "Add more images",
+      "after": "After",
+      "ariaRemove": "Remove image",
+      "batchHeading": "Your images",
+      "before": "Before",
+      "browse": "Browse files",
+      "compareHint": "Select an image to see the before and after.",
+      "download": "Download resized image",
+      "downloadZip": "Download all as ZIP",
+      "dropActive": "Drop them — the images will be added",
+      "dropHint": "PNG · JPG · WebP · GIF — up to 15 MB each, 20 images max. Your files never leave your browser.",
+      "dropTitle": "Drop images here, or browse",
+      "fileTooLarge": "That file is larger than 15 MB. Please choose a smaller image.",
+      "fitExact": "Exact (may stretch)",
+      "fitInside": "Fit inside (keeps ratio)",
+      "format": "Download format",
+      "formatKeep": "Keep original",
+      "gifNote": "GIFs are resized from their first frame only.",
+      "height": "Height (px)",
+      "imageCount": "{n} images",
+      "invalidType": "Please choose a valid image file (PNG, JPG, WebP, GIF).",
+      "loadFailed": "Could not read that image. Please try a different file.",
+      "lockAspect": "Lock aspect ratio",
+      "longestSideLabel": "Longest side (px)",
+      "mode": "Resize mode",
+      "modeFilesize": "Target size",
+      "modeLongest": "Longest side",
+      "modePercent": "Percent",
+      "modePixels": "Pixels",
+      "modePreset": "Preset",
+      "newSize": "New size",
+      "noImages": "No images yet — drop some above to start.",
+      "noUpscale": "Don't enlarge smaller images",
+      "percent": "Scale (%)",
+      "pickOne": "Choose an image above to resize it.",
+      "presetFitLabel": "Preset fit",
+      "presetLabel": "Choose a preset",
+      "presets": {
+        "facebook": "Facebook · 1200 × 630",
+        "ig-post": "Instagram Post · 1080 × 1080",
+        "ig-story": "Instagram Story · 1080 × 1920",
+        "linkedin": "LinkedIn · 1200 × 627",
+        "x": "X (Twitter) · 1200 × 675",
+        "youtube": "YouTube thumbnail · 1280 × 720"
+      },
+      "preview": "Resized preview",
+      "previewHeading": "Live preview",
+      "privacyBadge": "100% private — everything is processed on your device, nothing is uploaded",
+      "processBtn": "Resize {n} images",
+      "processing": "Resizing…",
+      "quality": "Output quality (JPG/WebP)",
+      "remove": "Remove",
+      "removeAll": "Remove all",
+      "savedPct": "{n}% smaller",
+      "scaleFactor": "Scale factor",
+      "settingsHeading": "Resize settings",
+      "status": {
+        "busy": "Working…",
+        "done": "Done",
+        "error": "Error",
+        "ready": "Ready"
+      },
+      "targetSizeHint": "We tune quality and dimensions automatically until the file fits (JPG/WebP).",
+      "targetSizeLabel": "Target size (KB)",
+      "tooMany": "You can add up to 20 images at a time. Extra files were skipped.",
+      "upload": "Image to resize",
+      "width": "Width (px)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Downscaling discards pixels permanently — detail lost cannot be recovered.",
+      "Upscaling past 100% softens the image; no new detail is created.",
+      "Dimensions are capped at 12000 px per side to protect browser memory.",
+      "EXIF metadata from the original is not carried into the resized file.",
+      "Target file-size mode cannot shrink forever — extremely small targets will visibly reduce dimensions.",
+      "Converting transparency (PNG/WebP) to JPG fills transparent areas with white."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Resize images by exact pixels, percent or target file size — with social presets. Free, private, bulk-ready.",
+    "metaTitle": "Image Resizer - Resize by Pixels or Percent | JaurTools",
+    "name": "Image Resizer",
+    "privacyNote": "This tool runs 100% in your browser. Your photos are never uploaded, stored, or seen by anyone — not even us.",
+    "qualities": {
+      "high": "High (best quality)",
+      "low": "Low (fastest)",
+      "medium": "Medium"
+    },
+    "quickAnswer": "Drop up to 20 photos and resize them all at once — by exact pixels, percentage, longest side, a social-media preset, or a target file size in KB. Everything runs in your browser, so your photos are never uploaded anywhere. Download each image, or grab them all as one ZIP.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Resize images",
+    "tagline": "Exact sizes for every platform.",
+    "workedExample": "A 4000 × 3000 px photo (12,000,000 pixels) at 50%:\nnew_w = round(4000 × 0.5) = 2000 px\nnew_h = round(3000 × 0.5) = 1500 px\npixels = 2000 × 1500 = 3,000,000 — exactly one quarter of the original.\nIn pixels mode with the lock on, typing width 2000 auto-fills height = round(2000 × 3000 / 4000) = 1500.\n\nTarget 200 KB: the photo encodes at quality 92 → 1.4 MB (too big) → quality 60 → 380 KB → quality 45 → 190 KB ✓. If even quality 10 is too big, dimensions shrink 15% and the search repeats.",
+    "workedExampleHeading": "Worked example"
+  }
+}

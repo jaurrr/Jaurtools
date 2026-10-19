@@ -1,0 +1,209 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="cg-style">{{ t('labels.styleLabel') }}</label>
+        <select id="cg-style" [ngModel]="style()" (ngModelChange)="setStyle($event)">
+          <option value="apa">{{ t('labels.apaOpt') }}</option>
+          <option value="mla">{{ t('labels.mlaOpt') }}</option>
+          <option value="chicago">{{ t('labels.chicagoOpt') }}</option>
+        </select>
+      </div>
+
+      <div class="unit-toggle" role="group" [attr.aria-label]="t('labels.typeLabel')">
+        <button type="button" [class.active]="sourceType() === 'book'" (click)="setSourceType('book')">
+          {{ t('labels.bookOpt') }}
+        </button>
+        <button type="button" [class.active]="sourceType() === 'journal'" (click)="setSourceType('journal')">
+          {{ t('labels.journalOpt') }}
+        </button>
+        <button type="button" [class.active]="sourceType() === 'website'" (click)="setSourceType('website')">
+          {{ t('labels.websiteOpt') }}
+        </button>
+      </div>
+
+      <div class="field">
+        <label for="cg-authors">{{ t('labels.authorsLabel') }}</label>
+        <input
+          id="cg-authors"
+          type="text"
+          [ngModel]="authors()"
+          (ngModelChange)="setAuthors($event)"
+          placeholder="{{ t('labels.authorsPlaceholder') }}"
+        />
+        <p class="note">{{ t('labels.authorsHint') }}</p>
+      </div>
+
+      <div class="input-row two">
+        <div class="field">
+          <label for="cg-year">{{ t('labels.yearLabel') }}</label>
+          <input id="cg-year" type="text" inputmode="numeric" maxlength="4" [ngModel]="year()" (ngModelChange)="setYear($event)" />
+        </div>
+        <div class="field">
+          <label for="cg-title">{{ t('labels.titleLabel') }}</label>
+          <input id="cg-title" type="text" [ngModel]="title()" (ngModelChange)="setTitle($event)" />
+        </div>
+      </div>
+
+      @if (sourceType() === 'book') {
+        <div class="field">
+          <label for="cg-publisher">{{ t('labels.publisherLabel') }}</label>
+          <input id="cg-publisher" type="text" [ngModel]="publisher()" (ngModelChange)="setPublisher($event)" />
+        </div>
+      }
+
+      @if (sourceType() === 'journal') {
+        <div class="field">
+          <label for="cg-journal">{{ t('labels.journalLabel') }}</label>
+          <input id="cg-journal" type="text" [ngModel]="journal()" (ngModelChange)="setJournal($event)" />
+        </div>
+        <div class="input-row three">
+          <div class="field">
+            <label for="cg-volume">{{ t('labels.volumeLabel') }}</label>
+            <input id="cg-volume" type="text" inputmode="numeric" [ngModel]="volume()" (ngModelChange)="setVolume($event)" />
+          </div>
+          <div class="field">
+            <label for="cg-issue">{{ t('labels.issueLabel') }}</label>
+            <input id="cg-issue" type="text" inputmode="numeric" [ngModel]="issue()" (ngModelChange)="setIssue($event)" />
+          </div>
+          <div class="field">
+            <label for="cg-pages">{{ t('labels.pagesLabel') }}</label>
+            <input id="cg-pages" type="text" [ngModel]="pages()" (ngModelChange)="setPages($event)" />
+          </div>
+        </div>
+      }
+
+      @if (sourceType() === 'website') {
+        <div class="field">
+          <label for="cg-site">{{ t('labels.siteNameLabel') }}</label>
+          <input id="cg-site" type="text" [ngModel]="siteName()" (ngModelChange)="setSiteName($event)" />
+        </div>
+        <div class="field">
+          <label for="cg-url">{{ t('labels.urlLabel') }}</label>
+          <input id="cg-url" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+      }
+
+      @if (sourceType() === 'journal') {
+        <div class="field">
+          <label for="cg-doi">{{ t('labels.urlLabel') }}</label>
+          <input id="cg-doi" type="url" inputmode="url" dir="ltr" [ngModel]="url()" (ngModelChange)="setUrl($event)" />
+        </div>
+      }
+
+      <div class="field">
+        <span class="output-title" id="cg-out-label">{{ t('labels.outputLabel') }}</span>
+        <p class="citation ed-output" aria-labelledby="cg-out-label">{{ output() || t('labels.emptyNote') }}</p>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn primary" (click)="copy()" [disabled]="!output()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyButton') }}
+        </button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

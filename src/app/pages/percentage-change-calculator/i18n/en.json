@@ -1,0 +1,88 @@
+{
+  "percentage-change-calculator": {
+    "benefits": [
+      "Track growth or decline in prices, sales, followers or scores instantly.",
+      "The direction label removes any doubt about increase vs decrease.",
+      "Handles negative starting values correctly.",
+      "No sign-up, no data sent anywhere.",
+      "Works smoothly on phones, tablets and desktops."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Percent change compares two measured values to show how much one grew or shrank relative to the other. Percent error compares a measurement against a known true value to judge accuracy.",
+        "q": "What is the difference between percent change and percent error?"
+      },
+      {
+        "a": "Yes. The calculator keeps the correct sign and uses the absolute value of the old number in the denominator, so the direction stays meaningful.",
+        "q": "Can the old value be negative?"
+      },
+      {
+        "a": "No. Dividing by zero is undefined, so the calculator shows a note instead of a result when the old value is zero.",
+        "q": "Can the old value be zero?"
+      },
+      {
+        "a": "Subtract the smaller from the larger, divide by the original (old) value, and multiply by 100. For a $50 to $75 rise: (75 - 50) / 50 x 100 = 50%.",
+        "q": "How do I calculate percent increase by hand?"
+      },
+      {
+        "a": "Because the new value is smaller than the old value. Percent decrease is just a negative percent change, for example -20%.",
+        "q": "Why is my result negative?"
+      }
+    ],
+    "formula": "Percent change = (new - old) / |old| x 100\nPositive result = increase, negative result = decrease",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the original (old) value in the first field.",
+      "Enter the latest (new) value in the second field.",
+      "The calculator shows the change instantly, with increase or decrease labeled.",
+      "A positive percentage means growth; a negative one means decline.",
+      "Use the difference row to see the raw change in the original units."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Percent change shows the relative difference between two values as a percentage.",
+      "A positive result means an increase; a negative result means a decrease.",
+      "100% change means the value doubled; -50% means it halved.",
+      "The old (original) value is always the reference — it cannot be zero.",
+      "It is used everywhere: price rises, exam scores, investments, follower counts."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "percentage change calculator, percent increase calculator, percent decrease calculator, growth rate calculator, change percentage",
+    "labels": {
+      "changeLabel": "Percent change",
+      "differenceLabel": "Difference",
+      "direction": {
+        "decrease": "decrease",
+        "increase": "increase",
+        "same": "no change"
+      },
+      "newLabel": "New value",
+      "oldLabel": "Old value",
+      "zeroNote": "The old value cannot be zero — percent change is undefined there."
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Meaningless when the old value is zero.",
+      "Tells you the size of the change, not why it happened.",
+      "Large percentages can mislead when starting from tiny values.",
+      "Not a forecast — past change does not predict the future."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free percentage change calculator: compare old and new values to get percent increase or decrease instantly. Fully browser-based, no sign-up.",
+    "metaTitle": "Percentage Change Calculator — % Increase / Decrease",
+    "name": "Percentage Change Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Percentage change shows how much a value grew or shrank compared to where it started. Subtract the old value from the new value, divide by the absolute old value, and multiply by 100. Positive means increase, negative means decrease.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Percent change results",
+    "tagline": "Measure growth and decline as a percentage.",
+    "workedExample": "Your monthly sales rose from $120 to $150.\n\nPercent change = (150 - 120) / |120| x 100 = 30 / 120 x 100 = 25%.\n\nThe result is a 25% increase — sales grew by a quarter compared to the original month.",
+    "workedExampleHeading": "Worked example"
+  }
+}

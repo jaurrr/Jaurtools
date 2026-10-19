@@ -1,0 +1,230 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="two-fields">
+        <div class="field">
+          <label for="ec-name">{{ t('labels.fullName') }}</label>
+          <input id="ec-name" type="text" [ngModel]="fullName()" (ngModelChange)="fullName.set($event)" />
+        </div>
+        <div class="field">
+          <label for="ec-blood">{{ t('labels.bloodGroup') }}</label>
+          <select id="ec-blood" dir="ltr" [ngModel]="bloodGroup()" (ngModelChange)="bloodGroup.set($event)">
+            @for (b of bloodGroups; track b) {
+              <option [value]="b">{{ b }}</option>
+            }
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ec-allergies">{{ t('labels.allergies') }}</label>
+        <input id="ec-allergies" type="text" [ngModel]="allergies()" (ngModelChange)="allergies.set($event)" />
+      </div>
+      <div class="two-fields">
+        <div class="field">
+          <label for="ec-conditions">{{ t('labels.conditions') }}</label>
+          <input id="ec-conditions" type="text" [ngModel]="conditions()" (ngModelChange)="conditions.set($event)" />
+        </div>
+        <div class="field">
+          <label for="ec-meds">{{ t('labels.medications') }}</label>
+          <input id="ec-meds" type="text" [ngModel]="medications()" (ngModelChange)="medications.set($event)" />
+        </div>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.contact1Heading') }}</h3>
+      <div class="two-fields">
+        <div class="field">
+          <label for="ec-c1name">{{ t('labels.cName') }}</label>
+          <input id="ec-c1name" type="text" [ngModel]="contact1Name()" (ngModelChange)="contact1Name.set($event)" />
+        </div>
+        <div class="field">
+          <label for="ec-c1rel">{{ t('labels.cRelation') }}</label>
+          <input id="ec-c1rel" type="text" [ngModel]="contact1Relation()" (ngModelChange)="contact1Relation.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="ec-c1phone">{{ t('labels.cPhone') }}</label>
+        <input id="ec-c1phone" type="tel" dir="ltr" [ngModel]="contact1Phone()" (ngModelChange)="contact1Phone.set($event)" />
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.contact2Heading') }}</h3>
+      <div class="two-fields">
+        <div class="field">
+          <label for="ec-c2name">{{ t('labels.cName') }}</label>
+          <input id="ec-c2name" type="text" [ngModel]="contact2Name()" (ngModelChange)="contact2Name.set($event)" />
+        </div>
+        <div class="field">
+          <label for="ec-c2rel">{{ t('labels.cRelation') }}</label>
+          <input id="ec-c2rel" type="text" [ngModel]="contact2Relation()" (ngModelChange)="contact2Relation.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="ec-c2phone">{{ t('labels.cPhone') }}</label>
+        <input id="ec-c2phone" type="tel" dir="ltr" [ngModel]="contact2Phone()" (ngModelChange)="contact2Phone.set($event)" />
+      </div>
+
+      <div class="two-fields">
+        <div class="field">
+          <label for="ec-doc">{{ t('labels.doctorName') }}</label>
+          <input id="ec-doc" type="text" [ngModel]="doctorName()" (ngModelChange)="doctorName.set($event)" />
+        </div>
+        <div class="field">
+          <label for="ec-docphone">{{ t('labels.doctorPhone') }}</label>
+          <input id="ec-docphone" type="tel" dir="ltr" [ngModel]="doctorPhone()" (ngModelChange)="doctorPhone.set($event)" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="ec-notes">{{ t('labels.notes') }}</label>
+        <textarea id="ec-notes" rows="2" [ngModel]="notes()" (ngModelChange)="notes.set($event)"></textarea>
+      </div>
+
+      <h3 class="sub-heading">{{ t('labels.previewHeading') }}</h3>
+      <div class="card-wrap">
+        <div class="id-card" id="print-card">
+          <div class="id-header">
+            <app-icon name="heart-pulse" />
+            <strong>{{ t('labels.cardTitle') }}</strong>
+          </div>
+          <p class="id-name">{{ fullName() }}</p>
+          <dl>
+            <div><dt>{{ t('labels.bloodGroup') }}</dt><dd dir="ltr">{{ bloodGroup() }}</dd></div>
+            @if (allergies().trim()) {
+              <div><dt>{{ t('labels.allergies') }}</dt><dd>{{ allergies() }}</dd></div>
+            }
+            @if (conditions().trim()) {
+              <div><dt>{{ t('labels.conditions') }}</dt><dd>{{ conditions() }}</dd></div>
+            }
+            @if (medications().trim()) {
+              <div><dt>{{ t('labels.medications') }}</dt><dd>{{ medications() }}</dd></div>
+            }
+          </dl>
+          <div class="id-contacts">
+            <div>
+              <strong>{{ t('labels.contact1Heading') }}</strong>
+              <p>{{ contact1Name() }} ({{ contact1Relation() }})<br><span dir="ltr">{{ contact1Phone() }}</span></p>
+            </div>
+            <div>
+              <strong>{{ t('labels.contact2Heading') }}</strong>
+              <p>{{ contact2Name() }} ({{ contact2Relation() }})<br><span dir="ltr">{{ contact2Phone() }}</span></p>
+            </div>
+          </div>
+          @if (doctorName().trim() || doctorPhone().trim()) {
+            <p class="id-doctor">{{ t('labels.doctorName') }}: {{ doctorName() }} <span dir="ltr">{{ doctorPhone() }}</span></p>
+          }
+          @if (notes().trim()) {
+            <p class="id-notes">{{ notes() }}</p>
+          }
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="print()">
+          <app-icon name="download" /> {{ t('labels.print') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.printNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

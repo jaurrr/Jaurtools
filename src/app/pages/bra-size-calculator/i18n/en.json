@@ -1,0 +1,94 @@
+{
+  "bra-size-calculator": {
+    "assumptionNote": "This calculator gives a starting size. Brands fit differently, so always check the fit: the band should be snug on the loosest hook and the centre gore should sit flat.",
+    "benefits": [
+      "A correct band size carries about 80% of the support, not the straps.",
+      "Takes two minutes at home with a soft tape measure.",
+      "Gives you a confident starting size before ordering online.",
+      "Explains sister sizes so you can adjust between brands."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Band: around your ribcage directly under the bust, snug, after a normal exhale. Bust: around the fullest part of the bust, wearing a light non-padded bra, tape level all the way round.",
+        "q": "How do I take the two measurements?"
+      },
+      {
+        "a": "Sister sizes keep the same cup volume on a different band: go up one band and down one cup (34C = 36B = 32D). Useful when your exact size is out of stock.",
+        "q": "What are sister sizes?"
+      },
+      {
+        "a": "Most adults change band or cup within a few years of weight change, pregnancy or aging. If the band rides up or the cups gap or spill, re-measure.",
+        "q": "How often should I re-measure?"
+      },
+      {
+        "a": "Straps digging in usually means the band is too loose, so the straps are doing the band's job. A snugger band fixes most strap problems.",
+        "q": "Why do my straps dig in?"
+      },
+      {
+        "a": "The band should sit level, snug on the loosest hook, and the centre gore should lie flat against your chest. Spillage over the cups means the cup is too small.",
+        "q": "How do I know the fit is right?"
+      },
+      {
+        "a": "UK and US sizing mostly match up to DD, then diverge (UK uses FF, G, GG while the US uses DDD/F, G). EU sizing uses centimetre-based bands. Always check the brand's chart.",
+        "q": "Do UK, US and EU sizes match?"
+      }
+    ],
+    "formula": "Band = underbust rounded to the nearest even inch.\nCup = bust minus band, in inches: 1 = A, 2 = B, 3 = C, 4 = D, 5 = DD/E, 6 = DDD/F, 7 = G.\nBra size = band + cup letter (for example 34C).",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick metric (cm) or imperial (inches) units.",
+      "Measure your bust at its fullest point with a soft tape, wearing a light non-padded bra.",
+      "Measure your underbust snugly around the ribcage, right under the bust.",
+      "Enter both measurements; your band, cup and full bra size appear instantly.",
+      "Try the size on and use the fit check in the FAQ if anything feels off."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "A bra size has two parts: the band number (ribcage) and the cup letter (bust minus band).",
+      "About 80% of breast support should come from the band, not the straps.",
+      "Cup letters are relative: a 34D cup is smaller in volume than a 38D cup.",
+      "The band is rounded to the nearest even inch in the standard US/UK method.",
+      "Around 70-80% of women wear the wrong bra size, most often a band that is too loose.",
+      "Sister sizes (for example 34C, 36B, 32D) hold the same cup volume on different bands."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bra size calculator, bra size chart, cup size calculator, how to measure bra size, band size calculator",
+    "labels": {
+      "bandResult": "Band size",
+      "braSizeResult": "Your bra size",
+      "bustLabel": "Bust",
+      "bustNote": "Around the fullest part of the bust, wearing a light non-padded bra.",
+      "cupResult": "Cup size",
+      "imperialTab": "Imperial (in)",
+      "inchUnit": "in",
+      "metricTab": "Metric (cm)",
+      "underbustLabel": "Underbust",
+      "underbustNote": "Snugly around the ribcage, directly under the bust.",
+      "unitSystem": "Unit system"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A starting size, not a guarantee: brands and styles fit differently.",
+      "Cannot account for breast shape, which changes which styles suit you.",
+      "Asymmetry is normal; most people fit to the larger side.",
+      "Does not cover sports bras or maternity sizing, which follow their own rules."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free bra size calculator: measure your bust and underbust to find your band size, cup size and full bra size. Works in cm and inches. Private, no sign-up.",
+    "metaTitle": "Bra Size Calculator - Find Your Band & Cup Size | JaurTools",
+    "name": "Bra Size Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your measurements never leave your device.",
+    "quickAnswer": "Bra size comes from two measurements: the underbust gives the band, and bust minus band gives the cup. A 36-inch bust with a 31.5-inch underbust rounds to a 32 band, and the 4-inch difference is a D cup - size 32D. The band should do about 80% of the support work, not the straps.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your bra size results",
+    "tagline": "Find your band size, cup size and full bra size from two simple measurements.",
+    "workedExample": "Bust 36 in, underbust 31.5 in:\n1. Band: 31.5 rounds to the nearest even number = 32.\n2. Difference: 36 - 32 = 4 inches.\n3. Cup scale: 1 = A, 2 = B, 3 = C, 4 = D.\n4. Bra size = 32D.\nSister sizes with the same cup volume: 34C and 36B.",
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

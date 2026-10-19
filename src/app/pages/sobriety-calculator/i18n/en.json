@@ -1,0 +1,103 @@
+{
+  "sobriety-calculator": {
+    "assumptionNote": "Counts full days between your quit date and today. For medical detox or withdrawal, seek professional help - do not go it alone.",
+    "benefits": [
+      "Makes progress visible on the hard days.",
+      "Money saved turns an abstract win into a concrete number.",
+      "Milestones give you the next small goal to aim for.",
+      "Private - no account, no group, just your number."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The first full day you stayed sober. If you quit at noon on 1 January, most people count 2 January as day one - but the convention that matters is the one your program uses. Pick it and stay consistent.",
+        "q": "What counts as my sobriety date?"
+      },
+      {
+        "a": "Traditionally yes - the counter tracks continuous sobriety. But a slip does not erase your progress or your worth. Many people come back stronger. If you are struggling, contact a support group or helpline.",
+        "q": "I relapsed. Do I reset?"
+      },
+      {
+        "a": "Because addiction had a price tag, and seeing the number grow reframes every craving as cash kept. It is one of the most motivating numbers in early recovery.",
+        "q": "Why track money saved?"
+      },
+      {
+        "a": "24 hours, 1 week, 30/60/90 days, 6 months, 1 year, then each year. Programs often give chips or coins at these marks.",
+        "q": "What are the big milestones?"
+      },
+      {
+        "a": "Research on self-monitoring says yes - visible streaks strengthen commitment. It works best combined with real support: meetings, therapy, or a sponsor.",
+        "q": "Does counting days really help?"
+      },
+      {
+        "a": "Screenshot it and share anywhere. Nothing here leaves your device, so your date stays private until you choose to share it.",
+        "q": "Can I share my counter?"
+      }
+    ],
+    "formula": "Days sober = today - quit date (in days)\nWeeks = days / 7\nMonths = days / 30.44\nYears = days / 365.25\nMoney saved = days x daily spend\n\nExample: quit 1 Jan 2025, today 18 Oct 2026\nDays = 655; weeks = 655 / 7 = 93.6\nMoney at 200/day = 655 x 200 = 131,000",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your quit date (the first day you stayed sober).",
+      "Optionally enter what you spent per day - the savings add up fast.",
+      "Your days, weeks, months, and years appear instantly.",
+      "Watch milestones flip from upcoming to reached.",
+      "Screenshot your milestones on big days - you earned them."
+    ],
+    "howToHeading": "How to use this counter",
+    "keyFacts": [
+      "Sobriety date = the first full day without the substance.",
+      "Common milestones: 24 hours, 1 week, 30 days, 90 days, 6 months, 1 year, then yearly.",
+      "Tracking days is a core tool in AA, NA, and SMART Recovery programs.",
+      "Money saved is a powerful motivator: daily spend x days sober.",
+      "Cravings peak early and fade: most people report far fewer after 90 days.",
+      "One day at a time is not a slogan - it is the only unit that ever needs managing."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sobriety calculator, days sober counter, quit drinking tracker, sobriety milestones, sober anniversary calculator",
+    "labels": {
+      "dailySpendLabel": "Daily spend (optional)",
+      "daysSober": "Days sober",
+      "daysToGo": "days to go",
+      "futureDate": "Your quit date is in the future. Enter a date in the past.",
+      "invalidDate": "Please enter a valid quit date.",
+      "milestoneNames": [
+        "1 week",
+        "1 month",
+        "100 days",
+        "1 year",
+        "1000 days"
+      ],
+      "milestonesLabel": "Milestones",
+      "moneySaved": "Money saved",
+      "monthsSober": "Months",
+      "quitDateLabel": "Quit date",
+      "reachedLabel": "Reached",
+      "statusLabel": "Status",
+      "weeksSober": "Weeks",
+      "yearsSober": "Years"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "A counter supports recovery; it is not treatment.",
+      "Dates depend on honest input - the tool cannot verify.",
+      "Money saved ignores inflation and interest - it is motivational, not financial advice.",
+      "If you relapse, the date resets. That is normal - most recoveries include slips. Reach out for help."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Track days sober from your quit date, see milestones, and calculate money saved. A small daily reminder of a big achievement. Free, private.",
+    "metaTitle": "Sobriety Calculator - Days Sober Counter | JaurTools",
+    "name": "Sobriety Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter your quit date and this counter does the rest. Quit on 1 January 2025 and by 18 October 2026 you are 655 days sober - 93.6 weeks, about 1.8 years. At 200 a day, that is 131,000 kept in your pocket. Milestones like 100 days and 1 year mark themselves automatically.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your sobriety counter",
+    "tagline": "Count your days, weeks, and years sober - and the money you kept.",
+    "workedExample": "Quit date 1 January 2025, checked 18 October 2026, spent 200/day:\n1. Days between: 365 (all of 2025) + 290 (Jan 1 to Oct 18 2026) = 655 days.\n2. Weeks: 655 / 7 = 93.6.\n3. Years: 655 / 365.25 = 1.79.\n4. Money saved: 655 x 200 = 131,000.\n5. Milestones reached: 1 week, 1 month, 100 days, 1 year. Next: 1000 days (345 to go).",
+    "workedExampleHeading": "Worked example"
+  }
+}

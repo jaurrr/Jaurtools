@@ -1,0 +1,175 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="toolbar" role="toolbar" [attr.aria-label]="t('labels.toolbarLabel')">
+        <button type="button" class="tbtn bold" (click)="format('bold')" [attr.aria-label]="t('labels.bold')">B</button>
+        <button type="button" class="tbtn italic" (click)="format('italic')" [attr.aria-label]="t('labels.italic')">I</button>
+        <button type="button" class="tbtn underline" (click)="format('underline')" [attr.aria-label]="t('labels.underline')">U</button>
+        <button type="button" class="tbtn strike" (click)="format('strikeThrough')" [attr.aria-label]="t('labels.strike')">S</button>
+        <span class="tsep" aria-hidden="true"></span>
+        <button type="button" class="tbtn" (click)="format('formatBlock', 'h1')" [attr.aria-label]="t('labels.h1')">H1</button>
+        <button type="button" class="tbtn" (click)="format('formatBlock', 'h2')" [attr.aria-label]="t('labels.h2')">H2</button>
+        <button type="button" class="tbtn" (click)="format('formatBlock', 'p')" [attr.aria-label]="t('labels.paragraph')">P</button>
+        <span class="tsep" aria-hidden="true"></span>
+        <button type="button" class="tbtn" (click)="format('insertUnorderedList')" [attr.aria-label]="t('labels.bullets')">&bull;</button>
+        <button type="button" class="tbtn" (click)="format('insertOrderedList')" [attr.aria-label]="t('labels.numbered')">1.</button>
+        <span class="tsep" aria-hidden="true"></span>
+        <button type="button" class="tbtn" (click)="format('justifyLeft')" [attr.aria-label]="t('labels.alignLeft')">&lArr;</button>
+        <button type="button" class="tbtn" (click)="format('justifyCenter')" [attr.aria-label]="t('labels.alignCenter')">&uArr;</button>
+        <button type="button" class="tbtn" (click)="format('justifyRight')" [attr.aria-label]="t('labels.alignRight')">&rArr;</button>
+        <span class="tsep" aria-hidden="true"></span>
+        <select [ngModel]="fontSize()" (ngModelChange)="setFontSize($event)" [attr.aria-label]="t('labels.fontSize')">
+          <option value="1">XS</option>
+          <option value="3">{{ t('labels.sizeNormal') }}</option>
+          <option value="5">{{ t('labels.sizeLarge') }}</option>
+          <option value="7">XL</option>
+        </select>
+        <input type="color" [ngModel]="textColor()" (ngModelChange)="setTextColor($event)" [attr.aria-label]="t('labels.textColor')" />
+        <button type="button" class="tbtn" (click)="clearFormatting()" [attr.aria-label]="t('labels.clearFormatting')">
+          <app-icon name="x" />
+        </button>
+      </div>
+
+      <div class="field">
+        <label id="editor-label">{{ t('labels.documentLabel') }}</label>
+        <div #editor id="rich-editor" class="editor" contenteditable="true" role="textbox"
+          aria-labelledby="editor-label" (input)="onInput()" spellcheck="true">
+          <p><br /></p>
+        </div>
+      </div>
+
+      <div class="results ed-livebar">
+        <div class="result-row">
+          <span><app-icon name="type" /> {{ t('labels.wordsLabel') }}</span>
+          <strong>{{ words() }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.charsLabel') }}</span>
+          <strong>{{ chars() }}</strong>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="downloadHtml()">
+          <app-icon name="download" /> {{ t('labels.downloadButton') }}
+        </button>
+        <button type="button" class="btn" (click)="copyHtml()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedNote') : t('labels.copyButton') }}
+        </button>
+      </div>
+
+      <div class="status-line" aria-live="polite">
+        @if (savedAt() !== null) {
+          <span class="status-pill ok"><app-icon name="check"></app-icon>{{ savedAt() }}</span>
+        } @else {
+          <span class="status-pill"><app-icon name="hard-drive"></app-icon>{{ t('labels.autosaveNote') }}</span>
+        }
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

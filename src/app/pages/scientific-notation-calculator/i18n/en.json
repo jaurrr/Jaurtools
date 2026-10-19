@@ -1,0 +1,95 @@
+{
+  "scientific-notation-calculator": {
+    "benefits": [
+      "Converts unwieldy numbers into compact scientific form in one step.",
+      "Shows e-notation and engineering notation too — the formats programmers and engineers actually use.",
+      "Adjustable significant figures give you control over precision.",
+      "Reverse mode turns 4.526 × 10^-4 back into 0.0004526 instantly.",
+      "Runs fully in your browser with no data leaving your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Scientific notation writes a number as a × 10^n, where 1 ≤ |a| < 10. It is the standard way to express very large or very small quantities in science, for example the speed of light as 2.99792458 × 10^8 m/s.",
+        "q": "What is scientific notation?"
+      },
+      {
+        "a": "E-notation (like 4.526e-4) is how computers and calculators write scientific notation — e-4 means × 10^-4. Engineering notation restricts the exponent to multiples of 3, matching metric prefixes: 452.6 × 10^-6 is 452.6 micrometers if the unit is meters.",
+        "q": "What is the difference between e-notation and engineering notation?"
+      },
+      {
+        "a": "Count every digit starting from the first non-zero digit. In 0.0004526 the significant figures are 4, 5, 2, 6 — four of them. Leading zeros are never significant; trailing zeros after a decimal point are.",
+        "q": "How do I count significant figures?"
+      },
+      {
+        "a": "Yes. Switch to the “Notation to number” mode, enter the mantissa (4.526) and the exponent (−4), and the calculator shows 0.0004526.",
+        "q": "Can I convert scientific notation back to a normal number?"
+      },
+      {
+        "a": "For most school and lab work 3–6 significant figures are plenty. Engineering drawings often use 3; scientific constants may need 10 or more.",
+        "q": "How many significant figures should I use?"
+      },
+      {
+        "a": "The calculator handles values from about 10^-308 to 10^308 — the full range of JavaScript doubles. Beyond that it reports the number as out of range rather than guessing.",
+        "q": "How large or small a number can it convert?"
+      }
+    ],
+    "formula": "Scientific form:  x = a × 10^n,  where 1 ≤ |a| < 10 and n is an integer.\n\nn = floor(log10(|x|)),   a = x / 10^n\n\nEngineering form: same idea, but n is rounded DOWN to a multiple of 3,\nso the number reads naturally with metric prefixes (kilo, milli, micro...).\n\nE-notation: a × 10^n is written as aEn  (example: 4.526e-4).",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Keep the “Number to notation” mode and type any decimal number into the first field.",
+      "Choose how many significant figures you want — 6 is a good default.",
+      "Read the scientific form, the e-notation form, and the engineering form in the results.",
+      "To go the other way, switch to “Notation to number”, enter the mantissa and exponent separately.",
+      "The decimal value appears instantly below."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Any non-zero number x can be written as a × 10^n with 1 ≤ |a| < 10 — that is the definition of normalized scientific notation.",
+      "The exponent n is simply floor(log10(|x|)): for 0.0004526, log10 ≈ −3.34, so n = −4.",
+      "Engineering notation forces the exponent to a multiple of 3, lining up with kilo-, milli- and micro- prefixes.",
+      "E-notation (4.526e-4) means exactly the same as 4.526 × 10^-4 — it is just the computer-friendly spelling.",
+      "Zero is a special case: it is written as 0 × 10^0."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "scientific notation calculator, e notation converter, engineering notation, standard form calculator",
+    "labels": {
+      "decimalNumber": "Decimal number",
+      "decimalResult": "Decimal value",
+      "eNotation": "E-notation",
+      "engNotation": "Engineering notation",
+      "exponent": "Exponent (power of 10)",
+      "invalidNumber": "Please enter a valid number.",
+      "invalidParts": "Please enter a valid mantissa and exponent.",
+      "mantissa": "Mantissa (a)",
+      "mode": "Conversion direction",
+      "modeToNum": "Notation to number",
+      "modeToSci": "Number to notation",
+      "sciNotation": "Scientific notation",
+      "sigFigs": "Significant figures"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The mantissa is rounded to your chosen significant figures — rounding can shift the last digit.",
+      "Extremely large or small values beyond about 10^308 cannot be represented and are flagged as out of range.",
+      "The tool converts formats; it does not track measurement uncertainty through calculations.",
+      "Binary floating-point display may show artifacts like 0.30000000000000004 for some inputs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free scientific notation calculator: convert any number to a × 10^n form, e-notation and engineering notation, or convert back. Adjustable significant figures.",
+    "metaTitle": "Scientific Notation Calculator — Convert to a × 10^n",
+    "name": "Scientific Notation Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Type any number — for example 0.0004526 — and instantly get 4.526 × 10^-4, the e-notation form 4.526e-4, and the engineering form 452.6 × 10^-6. Switch modes to convert notation back into a plain decimal number.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Notation results",
+    "tagline": "Convert any number to scientific, e-notation and engineering form — or back again.",
+    "workedExample": "Convert 0.0004526:\nlog10(0.0004526) ≈ −3.344, so n = floor(−3.344) = −4\na = 0.0004526 / 10^-4 = 0.0004526 / 0.0001 = 4.526\n\nScientific: 4.526 × 10^-4\nE-notation: 4.526e-4\nEngineering: exponent −4 rounds down to −6, so 452.6 × 10^-6\n\nReverse: 2.99792458 × 10^8 → 299,792,458 (speed of light in m/s).",
+    "workedExampleHeading": "Worked example"
+  }
+}

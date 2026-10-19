@@ -1,0 +1,105 @@
+{
+  "psd-to-jpg-converter": {
+    "benefits": [
+      "Open a Photoshop file without Photoshop installed — no subscription needed.",
+      "Preview the flattened artwork instantly, right in your browser.",
+      "One click converts to PNG for quality or JPG for small file size.",
+      "Your PSD never leaves your device; parsing is 100% local."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Choose your .psd or .psb file. The tool reads the embedded flattened preview inside the file, shows it, and lets you download it as PNG or JPG.",
+        "q": "How do I convert a PSD to JPG?"
+      },
+      {
+        "a": "The flattened (merged) preview that Photoshop embeds in the file. Layers, masks, and effects are baked into that preview, so the conversion matches what Photoshop would show.",
+        "q": "Does it keep the layers?"
+      },
+      {
+        "a": "No. This is a viewer-and-converter: it extracts the preview Photoshop saved inside the file. It cannot rebuild or export individual layers.",
+        "q": "Can I edit the PSD layers here?"
+      },
+      {
+        "a": "Only if they were saved with the Maximize Compatibility option (the default). Files saved without a composite preview cannot be converted — the tool will tell you.",
+        "q": "Why does my PSD fail to convert?"
+      },
+      {
+        "a": "The JPG quality slider (10–100) controls the trade-off between file size and fidelity. PNG download is always lossless.",
+        "q": "What does the quality slider do?"
+      },
+      {
+        "a": "No. The file is parsed with JavaScript in your browser; it is never uploaded to any server.",
+        "q": "Is my PSD uploaded anywhere?"
+      }
+    ],
+    "formula": "raw_size = width × height × channels   (bytes, uncompressed)\nRLE: each channel stores height row-lengths + PackBits-coded rows\npixel(i) = planes RGB(A) or Gray(A) → RGBA for display",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose your .psd (or .psb) file with the file picker.",
+      "Wait a moment while the tool parses the embedded preview image.",
+      "Check the dimensions, color mode, and compression shown in the results.",
+      "Set the JPG quality if you plan to download JPG.",
+      "Press Download PNG or Download JPG to save the converted image."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A PSD stores a flattened composite preview of the artwork at the end of the file — that is what this tool reads.",
+      "Both raw (uncompressed) and RLE-compressed previews are supported.",
+      "8-bit RGB and grayscale files are supported, including files with an alpha channel.",
+      "The .psb (large document) format shares the same header structure and is also accepted.",
+      "Parsing happens entirely in your browser with no libraries or uploads."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "psd to jpg, psd to png, convert psd online, open psd without photoshop, psd viewer, psb to jpg",
+    "labels": {
+      "colorMode": "Color mode",
+      "compRaw": "Raw (uncompressed)",
+      "compRle": "RLE compressed",
+      "compression": "Preview compression",
+      "dimensions": "Dimensions",
+      "downloadJpg": "Download JPG",
+      "downloadPng": "Download PNG",
+      "fileTooLarge": "That file is larger than 50 MB. Please choose a smaller PSD.",
+      "invalidType": "Please choose a .psd or .psb file.",
+      "loadFailed": "Could not read that file. Please try a different one.",
+      "modeGray": "Grayscale",
+      "modeRgb": "RGB",
+      "noComposite": "This PSD has no embedded preview image. Re-save it from Photoshop with Maximize Compatibility turned on.",
+      "notPsd": "This is not a valid Photoshop file.",
+      "parseFailed": "Could not parse this file. It may be corrupt or use an unsupported feature.",
+      "parsing": "Parsing your PSD…",
+      "pickOne": "Choose a .psd file above to preview and convert it.",
+      "preview": "PSD preview",
+      "quality": "JPG quality (%)",
+      "tooBig": "This image is too large to process in the browser.",
+      "unsupportedCompression": "This file uses an unsupported compression method.",
+      "unsupportedDepth": "Only 8-bit PSD files are supported.",
+      "unsupportedMode": "Only RGB and grayscale color modes are supported.",
+      "upload": "Photoshop file (.psd / .psb)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only files saved with Maximize Compatibility (embedded preview) can be converted.",
+      "Layers are not extracted — you get the flattened preview only.",
+      "16-bit, 32-bit, CMYK, and Lab files are not supported.",
+      "Very large PSDs (over 50 MB) are rejected to protect your browser's memory."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Open Photoshop files without Photoshop — preview layers and convert to JPG or PNG. Free, private, right in your browser.",
+    "metaTitle": "PSD to JPG Converter - Open PSDs Without Photoshop | JaurTools",
+    "name": "PSD to JPG Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Choose a .psd or .psb file and the tool reads the flattened preview Photoshop embedded inside it, showing the artwork instantly. Download it as a lossless PNG or a compact JPG with adjustable quality — no Photoshop, no upload, no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "PSD conversion results",
+    "tagline": "No Photoshop? No problem.",
+    "workedExample": "A 1920 × 1080 px, 3-channel RGB PSD stored uncompressed:\nraw bytes = 1920 × 1080 × 3 = 6,220,800 bytes (≈ 5.9 MB)\nThe tool skips the header, color data, resources, and layer sections, then reads those 6,220,800 bytes as three planes (red, green, blue) and rebuilds the full-color image pixel by pixel.",
+    "workedExampleHeading": "Worked example"
+  }
+}

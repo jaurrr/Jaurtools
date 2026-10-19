@@ -1,0 +1,109 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="utm-base">{{ t('labels.baseUrlLabel') }}</label>
+        <input id="utm-base" type="url" inputmode="url" autocomplete="url"
+          [ngModel]="baseUrl()" (ngModelChange)="baseUrl.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="utm-source">{{ t('labels.sourceLabel') }}</label>
+        <input id="utm-source" type="text" autocomplete="off"
+          [ngModel]="source()" (ngModelChange)="source.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="utm-medium">{{ t('labels.mediumLabel') }}</label>
+        <input id="utm-medium" type="text" autocomplete="off"
+          [ngModel]="medium()" (ngModelChange)="medium.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="utm-campaign">{{ t('labels.campaignLabel') }}</label>
+        <input id="utm-campaign" type="text" autocomplete="off"
+          [ngModel]="campaign()" (ngModelChange)="campaign.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="utm-term">{{ t('labels.termLabel') }}</label>
+        <input id="utm-term" type="text" autocomplete="off"
+          [ngModel]="term()" (ngModelChange)="term.set($event)" />
+      </div>
+
+      <div class="field">
+        <label for="utm-content">{{ t('labels.contentLabel') }}</label>
+        <input id="utm-content" type="text" autocomplete="off"
+          [ngModel]="content()" (ngModelChange)="content.set($event)" />
+      </div>
+
+      <div class="results">
+        @if (built().error) {
+          <p class="error" role="alert"><app-icon name="triangle-alert" /> {{ t('labels.' + built().error + 'Error') }}</p>
+        } @else {
+          <div class="result-row total">
+            <span><app-icon name="external-link" /> {{ t('labels.resultLabel') }}</span>
+          </div>
+          <p class="output-box mono" aria-live="polite">{{ built().url }}</p>
+          <div class="result-row">
+            <span>{{ t('labels.lengthLabel') }}</span>
+            <strong>{{ charCount() }}</strong>
+          </div>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary" (click)="copy()">
+              <app-icon name="{{ copied() ? 'check' : 'copy' }}" /> {{ t('labels.copyButton') }}
+            </button>
+          </div>
+        }
+      </div>
+
+      <p class="note">{{ t('labels.noteText') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2><p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section><h2>{{ t('keyFactsHeading') }}</h2><ul>@for (fact of list('keyFacts'); track $index) { <li>{{ fact }}</li> } </ul></section>
+      <section><h2>{{ t('howToHeading') }}</h2><ol>@for (step of list('howTo'); track $index) { <li>{{ step }}</li> } </ol></section>
+      <section><h2>{{ t('formulaHeading') }}</h2><pre><code>{{ t('formula') }}</code></pre></section>
+      <section><h2>{{ t('workedExampleHeading') }}</h2><p class="worked-example">{{ t('workedExample') }}</p></section>
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div><h2>{{ t('benefitsHeading') }}</h2><ul>@for (b of list('benefits'); track $index) { <li>{{ b }}</li> } </ul></div>
+        <div><h2>{{ t('limitationsHeading') }}</h2><ul>@for (l of list('limitations'); track $index) { <li>{{ l }}</li> } </ul></div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section><h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) { <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details> }
+      </section>
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section><h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">@for (s of relatedSlugs; track s) {
+          <li><a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a></li> }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

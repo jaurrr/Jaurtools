@@ -1,0 +1,97 @@
+{
+  "text-on-photo": {
+    "name": "Text on Photo",
+    "tagline": "Captions, quotes and titles on any photo.",
+    "metaTitle": "Text on Photo - Add Captions & Titles | JaurTools",
+    "metaDescription": "Overlay captions, quotes and titles on photos with full control of font, size, color and position. Free.",
+    "keywords": "add text to image, text on photo online, caption image maker, photo text editor, meme text generator",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a photo, type your text, and set the font size, color, and position with sliders. Position is measured in percent, so x=50, y=85 centers the text near the bottom — the classic meme-caption spot. A soft shadow is drawn behind the text so it stays readable on any background. Download as PNG.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Text position uses percent of the image, so captions stay put on any photo size.",
+      "A subtle dark shadow sits behind every letter for readability on busy backgrounds.",
+      "Font size is in pixels relative to the original photo, not the screen preview.",
+      "Seven clean system fonts are included — no web-font downloads needed.",
+      "Bold toggle thickens the text for punchy headlines and meme captions.",
+      "The output PNG keeps text edges sharp at any zoom level."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload a photo (JPG, PNG, or WebP).",
+      "Type your caption in the text box — one or two short lines read best.",
+      "Choose a font, drag the size slider, and pick a text color.",
+      "Move the X and Y sliders to place the text; watch the live preview.",
+      "Toggle bold for extra punch if the text needs to shout.",
+      "Click Download to save the captioned photo as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Text anchor position:\ntextX = imageWidth x (xPercent / 100)\ntextY = imageHeight x (yPercent / 100)\nThe text is center-aligned on (textX, textY).\nReadability shadow: a 4 px blurred black shadow at 50% opacity is drawn first, then the colored text on top.",
+    "formulaHeading": "Formula",
+    "workedExample": "Photo 1200 x 800, text size 64 px, x=50, y=90:\n1. textX = 1200 x 0.50 = 600 px from the left.\n2. textY = 800 x 0.90 = 720 px from the top.\n3. The caption is drawn centered on (600, 720) — near the bottom middle.\n4. With 64 px letters, the caption occupies roughly the bottom 10% of the photo, the classic meme band.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Make memes, quote cards, and thumbnails without opening an editor.",
+      "Percent positioning means the same settings work on portrait and landscape photos.",
+      "The auto shadow keeps white text readable even on bright skies.",
+      "System fonts render instantly with zero loading delay.",
+      "Private by design — personal photos never leave the browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Single-line styling only — every line shares the same font, size, and color.",
+      "No curved text, outlines beyond the soft shadow, or letter-spacing control.",
+      "Very long text may overflow the photo edges at large sizes.",
+      "Only system fonts are available; custom font upload is not supported."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "How do I make classic meme text?",
+        "a": "Type your caption, pick a bold sans font like Arial Black style (use the bold toggle with Arial), set color to white, and place it at y=8 for top text or y=90 for bottom text. The built-in shadow gives the readable pop that meme text needs."
+      },
+      {
+        "q": "Can I add multiple text lines in different styles?",
+        "a": "Each download bakes one text block. For two styles, add the first text, download, then upload that result and add the second text. Two passes give you full control of each line."
+      },
+      {
+        "q": "Why does my text look small on a big photo?",
+        "a": "Font size is in pixels of the original photo. On a 4000 px wide photo, 64 px text looks small — raise the size to 150 to 250 px for the same visual weight you see on smaller images."
+      },
+      {
+        "q": "Can I use my own fonts?",
+        "a": "Not currently. The tool uses seven widely available system fonts so the image renders identically on any device without downloading font files."
+      },
+      {
+        "q": "Does the text stay editable after download?",
+        "a": "No. The download is a flat PNG with the text baked into the pixels. Keep your settings in mind (or a screenshot) if you plan to redo it later."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. The text is drawn on a canvas in your browser. Your photo never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Add Text to An Image results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photo",
+      "textLabel": "Your text",
+      "fontSize": "Font size (px)",
+      "textColor": "Text color",
+      "fontFamily": "Font",
+      "bold": "Bold",
+      "posX": "Horizontal position (%)",
+      "posY": "Vertical position (%)",
+      "download": "Download image",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload a photo to see the live preview."
+    }
+  }
+}

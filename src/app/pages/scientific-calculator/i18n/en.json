@@ -1,0 +1,93 @@
+{
+  "scientific-calculator": {
+    "benefits": [
+      "A complete scientific calculator that works offline in any browser, no app install needed.",
+      "Handles nested parentheses, powers, roots, trigonometry, logarithms and factorials correctly.",
+      "DEG/RAD toggle makes it useful for both school geometry and engineering work.",
+      "Calculation history lets you reuse previous answers with one tap.",
+      "Free, private, and instant — no account, no data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Tap the RAD button above the display. In degree mode sin(30) = 0.5; in radian mode the same input computes sin(30 radians). Always check the mode before trigonometry.",
+        "q": "How do I switch between degrees and radians?"
+      },
+      {
+        "a": "Type 5 then press the x! key. Factorials are supported for whole numbers from 0 to 170 (170! is the largest that fits in a double).",
+        "q": "How do I calculate a factorial?"
+      },
+      {
+        "a": "Yes. Use the xʸ key: type 2, press xʸ, type 10, then =. The calculator also supports fractional exponents, so 9^(1/2) gives 3.",
+        "q": "Can I calculate powers like 2 to the power of 10?"
+      },
+      {
+        "a": "Type the number, press ln(, close the parenthesis and press =. Example: ln(20) = 2.9957. Use the log key for base-10 logarithms: log(1000) = 3.",
+        "q": "How do I calculate the natural logarithm?"
+      },
+      {
+        "a": "Yes — parentheses nest as deep as you like, and the parser also inserts implied multiplication, so 2(3+4) and 2π both work.",
+        "q": "Does it support nested parentheses?"
+      },
+      {
+        "a": "No. Your expressions are evaluated locally by JavaScript in your browser and are never transmitted anywhere.",
+        "q": "Is my calculation history sent anywhere?"
+      }
+    ],
+    "formula": "Order of operations (PEMDAS/BODMAS):\n1. Parentheses and functions: sin, cos, tan, ln, log, √\n2. Powers: xʸ (right-associative: 2^3^2 = 2^(3^2))\n3. Multiplication and division: ×, ÷\n4. Addition and subtraction: +, −\n\nFactorial: n! = 1 × 2 × ... × n  (whole numbers 0–170)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Tap the digit and operator keys to build your expression — it appears live above the result.",
+      "Use ( and ) to group parts of the expression; you can nest them.",
+      "Tap a function key (sin, cos, ln, √, ...) then type the value and close the parenthesis.",
+      "Switch between DEG and RAD above the display before doing trigonometry.",
+      "Press = to evaluate. Tap any history entry to reuse that calculation."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The calculator evaluates expressions with correct order of operations — 2+3×4 gives 14, not 20.",
+      "Trigonometric functions work in both degrees and radians; DEG is the default.",
+      "Implicit multiplication is supported: 2(3+4), 2π and 3(2)^2 all evaluate correctly.",
+      "Powers are right-associative: 2^3^2 means 2^(3^2) = 512.",
+      "The Ans key inserts the previous answer so you can chain calculations without retyping."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "scientific calculator, online calculator, trigonometry calculator, log calculator, factorial calculator",
+    "labels": {
+      "angleMode": "Angle mode",
+      "ans": "Answer",
+      "backspace": "Backspace",
+      "clear": "Clear",
+      "clearHistory": "Clear",
+      "deg": "DEG",
+      "error": "Error",
+      "history": "History",
+      "keypad": "Calculator keypad",
+      "rad": "RAD",
+      "reuse": "Reuse this calculation"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Results are limited by double-precision floating point — e.g. 0.1+0.2 shows as 0.30000000000000004 before display rounding.",
+      "Factorials only work for whole numbers 0–170; larger values overflow.",
+      "Very large or tiny results may display in rounded form; up to 10 significant digits are shown.",
+      "This is a calculator, not a symbolic algebra system — it cannot solve equations or simplify expressions."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online scientific calculator with trigonometry, logarithms, powers, roots, factorials and parentheses. Works in your browser, no install.",
+    "metaTitle": "Scientific Calculator — Free Online with Trig & Logs",
+    "name": "Scientific Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "This is a full scientific calculator that runs in your browser: tap the keys to enter any expression with parentheses, powers, roots, sin/cos/tan, logarithms and factorials, then press = for the instant result. Use the DEG/RAD toggle before trigonometry.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Calculator",
+    "tagline": "A complete scientific calculator with trig, logs, powers and parentheses — free in your browser.",
+    "workedExample": "sin(30°) in DEG mode:\nType sin(30) and press = → 0.5\n\nCompound expression:\n(2+3)^2 × √(144) ÷ 4\n= 25 × 12 ÷ 4 = 75\n\nPowers and factorials:\n2^10 = 1024\n5! = 5 × 4 × 3 × 2 × 1 = 120\n\nLogarithms:\nlog(1000) = 3,  ln(e^2) = 2",
+    "workedExampleHeading": "Worked example"
+  }
+}

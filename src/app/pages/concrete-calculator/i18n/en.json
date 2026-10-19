@@ -1,0 +1,97 @@
+{
+  "concrete-calculator": {
+    "benefits": [
+      "Tells you exactly how much to order from the plant or the store.",
+      "Bag counts for 80, 60, and 40 lb bags in one view.",
+      "Adjustable waste allowance covers spills and uneven subgrade.",
+      "Works in feet/inches or meters/centimeters.",
+      "Free and private, no sign-up."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Length x width x thickness, all in feet, divided by 27. A 10 x 10 ft slab at 4 inches: 10 x 10 x (4/12) = 33.3 cubic feet = 1.23 cubic yards, plus waste.",
+        "q": "How do I calculate cubic yards of concrete?"
+      },
+      {
+        "a": "An 80 lb bag yields about 0.6 cubic feet, a 60 lb bag about 0.45, and a 40 lb bag about 0.3. Divide your total cubic feet by the yield and round up.",
+        "q": "How many bags of concrete do I need?"
+      },
+      {
+        "a": "Walkways and patios: 4 inches. Driveways: 4-6 inches (6 for heavy vehicles). Footings: 8-12 inches or per local code. Always check your local building code.",
+        "q": "How thick should a concrete slab be?"
+      },
+      {
+        "a": "Ready-mix is economical above about 1 cubic yard and gives consistent quality. Below that, bagged mix avoids the plant's minimum-load fees.",
+        "q": "Ready-mix or bagged concrete?"
+      },
+      {
+        "a": "Concrete shrinks slightly as it cures and some is always lost to spills, form leaks, and uneven ground. A 5-10% allowance means you will not run short mid-pour.",
+        "q": "Why add a waste allowance?"
+      }
+    ],
+    "formula": "volume (cu ft) = length x width x (thickness in inches / 12)\ncubic yards = volume (cu ft) / 27\nwith waste = cubic yards x (1 + waste%)\nbags = ceil(volume with waste (cu ft) / bag yield)\nbag yields: 80 lb = 0.6 cu ft, 60 lb = 0.45 cu ft, 40 lb = 0.3 cu ft",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose feet/inches or meters/centimeters.",
+      "Enter the slab's length and width.",
+      "Enter the thickness (4 inches is standard for patios and walkways).",
+      "Set a waste allowance — 10% is a safe default.",
+      "Read cubic yards for ready-mix orders, or bag counts for bagged mix."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Ready-mix concrete is ordered in cubic yards (27 cubic feet each).",
+      "Bagged concrete is sold by bag weight: 80, 60, and 40 lb are standard.",
+      "An 80 lb bag makes about 0.6 cubic feet of concrete.",
+      "Typical slab thickness: 4 inches for patios, 4-6 for driveways.",
+      "Always add 5-10% waste for spills, form leaks, and uneven ground.",
+      "Concrete weighs about 150 lb per cubic foot when wet."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "concrete calculator, cubic yards of concrete, concrete bag calculator, slab concrete calculator, how much concrete do i need",
+    "labels": {
+      "bagNote": "Bag yields: 80 lb = 0.6 cu ft, 60 lb = 0.45 cu ft, 40 lb = 0.3 cu ft. Counts rounded up, waste included.",
+      "bags40": "40 lb bags needed",
+      "bags60": "60 lb bags needed",
+      "bags80": "80 lb bags needed",
+      "cfResult": "Cubic feet (with waste)",
+      "cmUnit": "cm",
+      "cyResult": "Cubic yards needed",
+      "ftUnit": "ft",
+      "imperialTab": "Feet / Inches",
+      "inUnit": "in",
+      "length": "Length",
+      "m3Result": "Cubic meters (with waste)",
+      "mUnit": "m",
+      "metricTab": "Meters / cm",
+      "thickness": "Thickness",
+      "unitSystem": "Unit system",
+      "waste": "Waste allowance",
+      "width": "Width"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rectangular slabs only; footings, columns, and stairs need separate math.",
+      "Does not subtract for rebar, mesh, or embedded pipes (usually negligible).",
+      "Bag yields vary slightly by brand and mix design.",
+      "Structural work should follow an engineer's specification, not just volume math."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free concrete calculator: cubic yards, cubic meters, and bag counts (80/60/40 lb) for slabs and footings. Adjustable waste allowance. No sign-up.",
+    "metaTitle": "Concrete Calculator: Yards & Bags for Slabs (Free)",
+    "name": "Concrete Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Enter the slab's length, width, and thickness, and this calculator returns cubic yards for ready-mix orders plus bag counts for 80, 60, and 40 lb bags — all with an adjustable waste allowance. It also shows cubic feet and cubic meters.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Concrete volume results",
+    "tagline": "Cubic yards and bag counts for your slab or footing.",
+    "workedExample": "A 10 x 10 ft patio slab, 4 inches thick, 10% waste:\n\n1. Volume = 10 x 10 x (4 / 12) = 33.33 cubic feet.\n2. Cubic yards = 33.33 / 27 = 1.23 cy; with 10% waste = 1.36 cy.\n3. 80 lb bags = ceil(36.67 / 0.6) = 62 bags.\n4. 60 lb bags = ceil(36.67 / 0.45) = 82 bags.\n5. 40 lb bags = ceil(36.67 / 0.3) = 123 bags.\n\nOrder 1.5 cubic yards ready-mix (plants round up), or 62 eighty-pound bags.",
+    "workedExampleHeading": "Worked example"
+  }
+}

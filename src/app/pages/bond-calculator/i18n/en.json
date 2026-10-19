@@ -1,0 +1,94 @@
+{
+  "bond-calculator": {
+    "assumptionNote": "Prices a plain fixed-coupon bond held to maturity. No call options, credit risk or tax effects are modeled.",
+    "benefits": [
+      "Prices any fixed-coupon bond instantly from its coupon, maturity and market yield.",
+      "Shows current yield and whether the bond trades at a premium or discount.",
+      "Annual and semi-annual coupon frequencies match real market conventions.",
+      "Runs fully in your browser with no sign-up or data collection."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A bond's price is the present value of its future coupon payments plus its face value at maturity, discounted at the market yield. When market yields rise above the coupon rate, the price falls below face value.",
+        "q": "How is a bond priced?"
+      },
+      {
+        "a": "The coupon rate is fixed when the bond is issued and sets the dollar payments. The current yield is the annual coupon divided by the current market price, so it changes as the price moves. Yield to maturity adds the gain or loss to face value at maturity.",
+        "q": "Coupon rate vs current yield vs yield to maturity?"
+      },
+      {
+        "a": "Yes, inversely. A bond paying 5% when new bonds pay 6% must sell at a discount so its total return competes. That is why this calculator's price drops when you raise the yield input.",
+        "q": "Do bond prices fall when interest rates rise?"
+      },
+      {
+        "a": "A premium means the price is above face value, which happens when the coupon rate exceeds the market yield. You pay extra upfront but receive above-market coupons; held to maturity the premium amortizes away.",
+        "q": "What does it mean to buy at a premium?"
+      },
+      {
+        "a": "Accrued interest is the coupon earned since the last payment date, which the buyer pays the seller when a bond trades between coupon dates. This calculator prices bonds on a coupon date, so accrued interest is zero.",
+        "q": "What is accrued interest?"
+      },
+      {
+        "a": "This tool assumes the issuer always pays. In reality, corporate and some government bonds carry default risk, which is why their yields exceed those of the safest government bonds.",
+        "q": "Does this account for default risk?"
+      }
+    ],
+    "formula": "coupon_payment = face x coupon_rate / frequency\nprice = coupon_payment x (1 - (1 + y)^-n) / y + face / (1 + y)^n\ny = yield / frequency, n = years x frequency\ncurrent_yield = annual_coupon / price",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the bond's face (par) value.",
+      "Enter the annual coupon rate as a percentage.",
+      "Enter the years remaining to maturity.",
+      "Enter the current market yield as a percentage.",
+      "Choose annual or semi-annual coupons, then read the fair price, current yield and premium or discount."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A bond is a loan to an issuer that pays fixed coupons and returns the face value at maturity.",
+      "The price is the present value of all future coupons plus the face value, discounted at the market yield.",
+      "When the market yield is above the coupon rate, the bond trades at a discount; when below, at a premium.",
+      "Current yield is the annual coupon divided by the market price.",
+      "Longer maturities make prices more sensitive to yield changes, a concept called duration."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "bond calculator, bond price calculator, bond yield calculator, current yield calculator",
+    "labels": {
+      "coupon": "Coupon rate (%)",
+      "couponPayment": "Coupon payment",
+      "currentYield": "Current yield",
+      "discount": "Discount to face",
+      "face": "Face value",
+      "freqAnnual": "Annual coupons",
+      "freqSemi": "Semi-annual coupons",
+      "frequency": "Coupon frequency",
+      "premium": "Premium over face",
+      "price": "Fair price",
+      "years": "Years to maturity",
+      "yieldPct": "Market yield (%)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Plain fixed-coupon bonds only; no callable, floating or convertible bonds.",
+      "No credit or default risk modeling.",
+      "No taxes, fees or accrued interest between coupon dates.",
+      "An estimate for learning, not professional investment advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free bond calculator. Price any fixed-coupon bond from coupon, maturity and market yield. See current yield, premium and discount. Private, browser-only.",
+    "metaTitle": "Bond Calculator — Price, Yield & Accrued Value",
+    "name": "Bond Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A bond's fair price is the present value of its coupons plus face value at the market yield. A $1,000 bond with a 5% coupon, 10 years to maturity and a 6% market yield is worth about $926.40 — a $73.60 discount with a 5.40% current yield.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your bond results",
+    "tagline": "Price any bond and see its true yield.",
+    "workedExample": "Face $1,000, coupon 5% annual, 10 years to maturity, market yield 6%.\n\nCoupon = 1,000 x 0.05 = $50. y = 0.06, n = 10. PV of coupons = 50 x (1 - 1.06^-10) / 0.06 = 50 x 7.360087 = $368.00. PV of face = 1,000 / 1.06^10 = $558.39. Price = 368.00 + 558.39 = $926.40.\n\nDiscount = 1,000 - 926.40 = $73.60. Current yield = 50 / 926.40 = 5.40%.",
+    "workedExampleHeading": "Worked example"
+  }
+}

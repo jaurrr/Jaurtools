@@ -1,0 +1,92 @@
+{
+  "fuel-cost-calculator": {
+    "benefits": [
+      "Know the exact fuel budget before a road trip - no surprises at the pump.",
+      "Trip mode adds tolls, food, and stay so you see the full journey cost.",
+      "Compare cars by entering different mileages and watching the cost change.",
+      "Free, instant, and private - works offline in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Fuel cost = distance divided by efficiency, multiplied by fuel price. For a 500 km trip at 15 km per litre with fuel at Rs 100 per litre: 500 / 15 = 33.33 litres, times Rs 100 = Rs 3,333.",
+        "q": "How is fuel cost calculated?"
+      },
+      {
+        "a": "Your dashboard shows an average, which is a good starting point. Real highway driving is usually better than city driving, so highway mileage can be 10-20% higher. Adjust the number if you know your car well.",
+        "q": "Should I use my car's claimed mileage?"
+      },
+      {
+        "a": "Yes - switch to the Trip mode tab. It adds fuel cost plus tolls, food, and stay to give one total trip budget, plus the cost per kilometre so you can compare with trains or flights.",
+        "q": "Does it estimate the full trip cost?"
+      },
+      {
+        "a": "Divide your trip distance by 100 and multiply by your car's litres-per-100km figure. Or take any fill-up: litres filled divided by kilometres driven since the last fill-up, times 100, gives your real-world figure.",
+        "q": "How do I find my real km-per-litre?"
+      },
+      {
+        "a": "Yes, it works for petrol, diesel, or CNG - the math is identical. Just enter the price per litre (or per kg for CNG) of whatever fuel you use. For EVs, convert your efficiency to km per kWh and use your electricity rate instead.",
+        "q": "Does it work for diesel, CNG, or EVs?"
+      }
+    ],
+    "formula": "Fuel needed (litres) = distance (km) / efficiency (km per litre)\nFuel cost = fuel needed x price per litre\nTrip total = fuel cost + tolls + food + stay\nCost per km = trip total / distance",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the total trip distance in kilometres.",
+      "Enter your vehicle's fuel efficiency in km per litre.",
+      "Enter the current fuel price per litre at your pump.",
+      "Read the fuel needed and the fuel cost instantly.",
+      "Switch to Trip mode to add tolls, food, and stay for the full journey budget."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Fuel cost depends on three numbers: distance, efficiency, and fuel price.",
+      "Efficiency varies a lot between city and highway driving.",
+      "Trip mode estimates the whole journey: fuel plus tolls, food, and stay.",
+      "The per-km cost lets you compare driving with trains, buses, or flights.",
+      "All calculation happens on your device - nothing is sent anywhere."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "fuel cost calculator, trip cost calculator, road trip cost estimator, petrol cost calculator, mileage cost calculator",
+    "labels": {
+      "distanceKm": "Trip distance (km)",
+      "efficiency": "Fuel efficiency (km/l)",
+      "extras": "Tolls + food + stay",
+      "food": "Food cost",
+      "fuelCost": "Fuel cost",
+      "fuelNeeded": "Fuel needed",
+      "fuelPrice": "Fuel price (per litre)",
+      "fuelTab": "Fuel only",
+      "litres": "L",
+      "mode": "Calculator mode",
+      "perKm": "Cost per km",
+      "stay": "Stay cost",
+      "toll": "Tolls",
+      "tripTab": "Full trip",
+      "tripTotal": "Total trip cost"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - real mileage varies with traffic, load, AC, and driving style.",
+      "Fuel prices change; the result is only as current as the price you enter.",
+      "Does not include vehicle wear, servicing, or depreciation.",
+      "Currency shown is rupees; it does not convert to other currencies."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free fuel cost calculator with full trip-cost mode: fuel, tolls, food, and stay. Estimate any road trip budget instantly. Private, no sign-up.",
+    "metaTitle": "Fuel Cost Calculator + Trip Cost Estimator | JaurTools",
+    "name": "Fuel Cost Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A 500 km trip at 15 km per litre with fuel at Rs 100 per litre needs 33.33 litres and costs Rs 3,333 in fuel. Switch to Trip mode and add Rs 800 tolls, Rs 1,200 food, and Rs 2,000 stay, and the full journey budget is Rs 7,333 - about Rs 14.67 per kilometre.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your fuel cost results",
+    "tagline": "Estimate trip fuel cost, or switch to Trip mode for fuel + tolls + food + stay.",
+    "workedExample": "500 km trip, 15 km/l, Rs 100/l:\n1. Fuel needed = 500 / 15 = 33.33 litres.\n2. Fuel cost = 33.33 x Rs 100 = Rs 3,333.33.\nTrip mode adds:\n3. Extras = Rs 800 tolls + Rs 1,200 food + Rs 2,000 stay = Rs 4,000.\n4. Trip total = Rs 3,333.33 + Rs 4,000 = Rs 7,333.33.\n5. Cost per km = Rs 7,333.33 / 500 = Rs 14.67.",
+    "workedExampleHeading": "Worked example"
+  }
+}

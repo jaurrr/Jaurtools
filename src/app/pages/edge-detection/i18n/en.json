@@ -1,0 +1,95 @@
+{
+  "edge-detection": {
+    "benefits": [
+      "Turns any photo into a clean line drawing — great for sketch-style art and coloring pages.",
+      "The Enhance mode sharpens soft photos by reinforcing outlines without harsh halos.",
+      "A real Sobel operator, not a fake filter — the same math used in computer-vision research.",
+      "Threshold and invert controls let you isolate faint pencil lines or bold ink strokes separately."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Image Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Edge detection finds places where brightness changes sharply — outlines, textures, text. It uses the Sobel operator: two 3x3 filters that measure horizontal and vertical change, combined into an edge strength per pixel. Pixels stronger than your threshold become lines.",
+        "q": "How does edge detection actually work?"
+      },
+      {
+        "a": "Detect draws a pure black-and-white (or inverted) edge map — a line drawing of your photo. Enhance blends those detected edges back into the original photo at your chosen strength, which visually sharpens outlines.",
+        "q": "What is the difference between Detect and Enhance modes?"
+      },
+      {
+        "a": "Raise the threshold. Low values (20–60) keep faint texture and noise as lines; high values (150–220) keep only the strongest outlines. The live preview updates as you drag.",
+        "q": "How do I remove noisy speckles from the result?"
+      },
+      {
+        "a": "Invert swaps black and white, giving white lines on a black background — the classic 'blueprint' look. In Enhance mode it blends dark lines instead of light ones.",
+        "q": "What does the invert option do?"
+      },
+      {
+        "a": "The preview is capped at 1400 px on the long edge for speed; the download matches that preview exactly. Very large originals are scaled down first.",
+        "q": "Why is the download smaller than my original?"
+      },
+      {
+        "a": "Soft, low-contrast images produce weak, broken edges. Photos with crisp lighting and clear outlines give the cleanest line drawings.",
+        "q": "Which photos give the best edge maps?"
+      }
+    ],
+    "formula": "Gx = [-1 0 +1; -2 0 +2; -1 0 +1] * gray\nGy = [-1 -2 -1;  0  0  0; +1 +2 +1] * gray\nmagnitude = sqrt(Gx^2 + Gy^2)\nedge pixel = 255 if magnitude >= threshold, else 0\nEnhance: out = original + (edge - original) x min(1, strength x (magnitude/255) x 2)",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload a photo from your device (up to 15 MB).",
+      "Choose Detect for a pure line-drawing edge map, or Enhance to sharpen the original photo.",
+      "Drag the threshold slider until the lines look right — low for detail, high for bold outlines.",
+      "Optionally invert for white-on-black lines, or adjust the Enhance strength.",
+      "Press Download to save the result as a PNG."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Uses the Sobel operator — the industry-standard edge detector from computer vision — computed per pixel in your browser.",
+      "Detect mode outputs a clean black-and-white (or inverted) outline map of the photo.",
+      "Enhance mode blends detected edges back into the original image with an adjustable strength slider.",
+      "Threshold slider (0–255) controls how strong a brightness change must be to count as an edge.",
+      "Invert toggle gives white lines on black for the classic blueprint look.",
+      "The download is a lossless PNG rendered at up to 1400 px on the long edge."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "edge detection online, sobel filter, photo to line drawing, outline filter, edge enhancement, sketch effect",
+    "labels": {
+      "detectMode": "Detect edges",
+      "downloadPng": "Download PNG",
+      "enhanceMode": "Enhance photo",
+      "invert": "Invert (white lines on black)",
+      "modeLabel": "Mode",
+      "newImage": "New image",
+      "originalSize": "Original size",
+      "sizeError": "That file is larger than 15 MB. Please choose a smaller image.",
+      "stageLabel": "Edge detection preview",
+      "strength": "Enhance strength",
+      "threshold": "Edge threshold",
+      "typeError": "That file could not be read as an image. Please choose a JPEG, PNG, WebP, GIF, or BMP file.",
+      "uploadLabel": "Choose an image"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Rendering is capped at 1400 px on the long edge, so huge originals are scaled down first.",
+      "Only the Sobel operator is offered — no Canny, Prewitt, or Laplacian variants.",
+      "Noisy or heavily compressed JPEGs produce speckled edge maps; denoise first for cleaner lines.",
+      "Enhance mode is an artistic sharpening effect, not a true deconvolution or AI upscaler."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Turn photos into real Sobel-operator line drawings or sharpen edges for detail. Free, instant, private.",
+    "metaTitle": "Edge Detection - Sobel Edge Outlines | JaurTools",
+    "name": "Edge Detection",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a photo to get a real Sobel-operator edge map — a clean line drawing of the image — or use Enhance mode to sharpen outlines in the original photo. Threshold, invert, and strength controls included. Free, private, instant PNG download.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your edge results",
+    "tagline": "Line drawings from any photo.",
+    "workedExample": "You upload a 1200 x 800 px portrait and choose Detect with threshold 100.\nA pixel on the jawline has Gx = 180, Gy = 60, so magnitude = sqrt(180^2 + 60^2) = 189.7 >= 100: it becomes a white line pixel.\nA smooth cheek pixel with magnitude 24 stays black. The result downloads as edges-1200x800.png.",
+    "workedExampleHeading": "Worked example"
+  }
+}

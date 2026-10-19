@@ -1,0 +1,109 @@
+{
+  "chmod-calculator": {
+    "benefits": [
+      "See octal and symbolic values side by side while you tick boxes, so the mapping clicks in minutes.",
+      "Special bits are included, so modes like 4755 or 1755 stop looking like magic numbers.",
+      "Paste an existing octal or symbolic mode to decode it back into plain read, write and execute ticks.",
+      "Copy the exact chmod command, ready to paste into your terminal."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It means the owner can read, write and execute (4+2+1 = 7), while group and others can read and execute (4+1 = 5). It is the standard mode for directories and executable scripts: everyone can enter and run, but only the owner can modify.",
+        "q": "What does chmod 755 mean?"
+      },
+      {
+        "a": "The only difference is the execute bit. 644 is rw-r--r-- (read and write for the owner, read-only for everyone else) and suits plain files. 755 is rwxr-xr-x, which adds execute permission, so it suits scripts and directories you want people to enter or run.",
+        "q": "What is the difference between 644 and 755?"
+      },
+      {
+        "a": "Read it as three groups of three letters: owner, group, others. r means read, w means write, x means execute, and - means the permission is missing. So rwxr-xr-x is read-write-execute for the owner, read-execute for the group, and read-execute for others, which is exactly octal 755.",
+        "q": "How do I read rwxr-xr-x?"
+      },
+      {
+        "a": "They are the special bits, shown as a fourth leading octal digit. Setuid (4) lets a program run with the owner's privileges, setgid (2) lets it run with the group's privileges and makes new files in a directory inherit its group, and the sticky bit (1) on a directory means only a file's owner can delete it, as in /tmp.",
+        "q": "What are setuid, setgid and the sticky bit?"
+      },
+      {
+        "a": "Run the generated command in your terminal, for example chmod 755 deploy.sh, or the symbolic form chmod u=rwx,g=rx,o=rx deploy.sh. You must own the file or use sudo. Add -R to apply recursively to a directory tree, but be careful: recursive chmod on system folders can break things.",
+        "q": "How do I apply these permissions on my server?"
+      },
+      {
+        "a": "Usually the file is owned by another user, a parent directory blocks traversal, an ACL overrides the mode, or the filesystem is mounted read-only or with noexec. Check ownership with ls -l, the parent path with namei -l, and the mount options before changing the mode again.",
+        "q": "Why do I still get Permission denied after chmod?"
+      }
+    ],
+    "formula": "Octal digit per class = read (4) + write (2) + execute (1).\nrwx = 4 + 2 + 1 = 7\nr-x = 4 + 0 + 1 = 5\nr-- = 4 + 0 + 0 = 4\nFull mode = owner | group | other, e.g. 7 | 5 | 5 = 755.\nSpecial bits add a leading digit: setuid 4, setgid 2, sticky 1.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Tick read, write and execute for owner, group and others. The octal, symbolic and chmod command update instantly.",
+      "Toggle setuid, setgid or the sticky bit if you need a four-digit mode such as 4755 or 1755.",
+      "Copy the generated chmod command and run it in your terminal against your file or directory.",
+      "To decode an existing mode, paste the octal value (e.g. 640) or the symbolic value (e.g. rw-r-----) and press Apply.",
+      "If a value will not parse, check that it is 3 or 4 octal digits, or exactly 9 symbolic characters."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every Linux file has three permission classes: owner (u), group (g) and others (o).",
+      "Each class gets three bits: read (r = 4), write (w = 2) and execute (x = 1).",
+      "One octal digit per class: add the values, e.g. rwx = 4+2+1 = 7. The full mode is three digits, e.g. 755.",
+      "The symbolic form shows the same nine bits as letters: rwxr-xr-x means exactly 755.",
+      "A fourth leading digit holds the special bits: setuid (4), setgid (2) and sticky (1), e.g. 4755.",
+      "Common defaults: 644 (rw-r--r--) for regular files, 755 (rwxr-xr-x) for directories and scripts."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "chmod calculator, linux file permissions, octal permissions, symbolic permissions, chmod 755, chmod 644",
+    "labels": {
+      "applyButton": "Apply",
+      "bitLabel": "Permission bit",
+      "commandLabel": "Shell command",
+      "copiedMessage": "Copied",
+      "copyButton": "Copy",
+      "executeLabel": "Execute",
+      "filePlaceholder": "filename",
+      "groupLabel": "Group",
+      "invalidOctal": "Enter 3 or 4 octal digits (0-7), e.g. 755.",
+      "invalidSymbolic": "Enter exactly 9 symbolic characters, e.g. rwxr-xr-x.",
+      "manualOctalLabel": "Decode an octal value",
+      "manualSymbolicLabel": "Decode a symbolic value",
+      "octalLabel": "Octal",
+      "otherLabel": "Others",
+      "ownerLabel": "Owner",
+      "permGridLabel": "Permission checkboxes",
+      "rLabel": "Read",
+      "readLabel": "Read",
+      "setgidLabel": "setgid (2)",
+      "setuidLabel": "setuid (4)",
+      "specialBitsLabel": "Special bits",
+      "stickyLabel": "sticky (1)",
+      "symbolicLabel": "Symbolic",
+      "verboseLabel": "Symbolic assignment",
+      "wLabel": "Write",
+      "writeLabel": "Write",
+      "xLabel": "Execute"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This is a calculator, not a file manager: it cannot change permissions on real files.",
+      "It uses a simplified model and does not cover ACLs, extended attributes or SELinux contexts.",
+      "The symbolic decoder reads basic 9-character forms; unusual ls output may not parse.",
+      "Umask defaults and recursive (-R) behaviour are shell topics this tool does not compute."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free chmod calculator: tick read, write and execute boxes to get octal (755) and symbolic (rwxr-xr-x) permissions instantly. Includes setuid, setgid and sticky bits.",
+    "metaTitle": "Chmod Calculator - Octal & Symbolic Permissions | JaurTools",
+    "name": "Chmod Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Tick the read, write and execute boxes for owner, group and others and this tool instantly shows the matching octal and symbolic permission. Owner rwx, group r-x and other r-x means 4+2+1 = 7, 4+1 = 5, 4+1 = 5, so the mode is octal 755 and symbolic rwxr-xr-x. You can also paste an octal or symbolic value to decode it back into ticks.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Chmod Calculator results",
+    "tagline": "Compute Linux file-permission octal and symbolic values interactively - no terminal needed.",
+    "workedExample": "Goal: a deploy script the owner can edit and everyone can run.\n1. Owner: read + write + execute = 4 + 2 + 1 = 7.\n2. Group: read + execute = 4 + 0 + 1 = 5.\n3. Other: read + execute = 4 + 0 + 1 = 5.\n4. Octal = 755; symbolic = rwx|r-x|r-x = rwxr-xr-x.\n5. Shell command: chmod 755 deploy.sh.\nWith the sticky bit on a shared directory: 1|755 = 1755, symbolic rwxr-xr-t.",
+    "workedExampleHeading": "Worked example"
+  }
+}

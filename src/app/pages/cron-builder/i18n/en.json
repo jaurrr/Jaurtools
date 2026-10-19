@@ -1,0 +1,140 @@
+{
+  "cron-builder": {
+    "benefits": [
+      "See the expression, the plain-English meaning and the next 5 run times together as you build.",
+      "Nine one-click presets cover the schedules most people actually need.",
+      "Field-level validation catches mistakes like month 13 or minute 70 before they reach production.",
+      "Copy a verified expression straight into crontab, Kubernetes CronJob or any scheduler."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Web & Dev Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Five fields: minute (0-59), hour (0-23), day of month (1-31), month (1-12), day of week (0-6, where both 0 and 7 mean Sunday). * means every value, */n means every nth value, 1-5 is a range, and 1,15 is a list.",
+        "q": "What do the five cron fields mean?"
+      },
+      {
+        "a": "Use a step: */5 in the minute field means every 5 minutes. */2 in the hour field means every 2 hours. Steps also work on ranges, e.g. 9-17/2 means every 2 hours between 9:00 and 17:00.",
+        "q": "How do I run something every 5 minutes?"
+      },
+      {
+        "a": "Put 0 in minute and 9 in hour with everything else *: 0 9 * * *. For weekdays only, set day of week to 1-5: 0 9 * * 1-5. Note this uses the server's local timezone unless your scheduler says otherwise.",
+        "q": "How do I schedule a daily 9 AM job?"
+      },
+      {
+        "a": "When both are restricted, cron treats them as OR: the job runs when either matches. 0 0 1 * 0 runs at midnight on the 1st of the month AND every Sunday. To run only on the 1st, leave day of week as *.",
+        "q": "What happens if I set both day of month and day of week?"
+      },
+      {
+        "a": "Standard cron has no seconds field; the smallest unit is one minute. Some systems (Quartz, some Node schedulers) use six or seven fields with seconds first. This builder uses classic 5-field cron, which crontab, Kubernetes CronJobs and most Linux schedulers expect.",
+        "q": "Why is there no seconds field?"
+      },
+      {
+        "a": "Usually a timezone mismatch (cron runs in the server's timezone, often UTC), a crontab syntax the system rejects silently, or the cron daemon not running. Check the next-run preview in this builder against your server's date output to spot timezone gaps.",
+        "q": "My cron job never runs. What should I check?"
+      }
+    ],
+    "formula": "* * * * *\n| | | | |\n| | | | +-- day of week (0-6, 0 and 7 = Sunday)\n| | | +---- month (1-12)\n| | +------ day of month (1-31)\n| +-------- hour (0-23)\n+---------- minute (0-59)\n\n* = every value, */n = every nth value, a-b = range, a,b = list.\nWhen day of month AND day of week are both restricted, the job runs when EITHER matches.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a preset for a common schedule, or tweak any field to build a custom expression.",
+      "Per field choose: Every (*), Every N (*/n), Specific values (list like 0,15,30), or Range (9-17).",
+      "Watch the expression, the plain-English description and the next 5 run times update live.",
+      "If a field shows an error, fix the value: each field has strict min/max limits.",
+      "Copy the verified expression into your crontab or scheduler configuration."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Cron schedules are five fields: minute, hour, day of month, month, day of week.",
+      "* means every possible value; */15 means every 15 units; 9-17 is a range; 1,15 is a list.",
+      "Both 0 and 7 mean Sunday in the day-of-week field.",
+      "Day of month and day of week combine with OR when both are restricted, not AND.",
+      "Cron has minute precision: there is no seconds field in classic 5-field cron.",
+      "Jobs run in the scheduler's timezone, which is often UTC on servers, not your local time."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "cron builder, cron expression generator, crontab generator, cron schedule builder, cron job scheduler",
+    "labels": {
+      "copiedMessage": "Copied",
+      "copyButton": "Copy",
+      "customLabel": "Custom",
+      "dayNames": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "descCustom": "Runs on the schedule {expr}.",
+      "descDailyAt": "Every day at {t}.",
+      "descEveryMinute": "Every minute.",
+      "descEveryNMinutes": "Every {n} minutes.",
+      "descHourlyAt": "At minute {m} past every hour.",
+      "descMonthlyAt": "On day {d} of every month at {t}.",
+      "descWeeklyAt": "Every {days} at {t}.",
+      "descYearlyAt": "Every year on {d} {mon} at {t}.",
+      "descriptionLabel": "What this means",
+      "expressionLabel": "Cron expression",
+      "fieldErrorLabel": "Invalid value for this field. Check the allowed range.",
+      "field_dayOfMonth": "Day of month",
+      "field_dayOfWeek": "Day of week",
+      "field_hour": "Hour",
+      "field_minute": "Minute",
+      "field_month": "Month",
+      "invalidLabel": "Fix the highlighted fields to preview this schedule.",
+      "mode_every": "Every",
+      "mode_list": "Specific values",
+      "mode_range": "Range",
+      "mode_step": "Every N",
+      "monthNames": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "nextRunsLabel": "Next 5 runs (your local time)",
+      "preset_dailyMidnight": "Daily midnight",
+      "preset_dailyNoon": "Daily noon",
+      "preset_every5min": "Every 5 min",
+      "preset_everyMinute": "Every minute",
+      "preset_hourly": "Hourly",
+      "preset_monthly": "Monthly",
+      "preset_weekdays": "Weekdays 9 AM",
+      "preset_weeklyMon": "Weekly Monday",
+      "preset_yearly": "Yearly",
+      "presetsLabel": "Presets"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Classic 5-field cron only: no seconds field and no year field.",
+      "Next-run preview is computed in your browser's timezone, not your server's.",
+      "Special strings like @daily or @reboot are not built here.",
+      "The preview searches about one year ahead; extremely rare schedules may show fewer runs."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free visual cron builder: pick presets or customize each field to generate a valid cron expression, with plain-English description and next 5 run times. No sign-up.",
+    "metaTitle": "Cron Builder - Visual Cron Expression Generator | JaurTools",
+    "name": "Cron Builder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick a preset or customize each of the five fields (minute, hour, day of month, month, day of week) and this builder produces a valid cron expression with a plain-English description and the next 5 run times. For example, minute 0, hour 9, day of week Monday gives 0 9 * * 1, which means every Monday at 09:00. Field-level validation catches out-of-range values instantly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Cron Builder results",
+    "tagline": "Build valid cron expressions visually, with a plain-English description and next-run preview.",
+    "workedExample": "Goal: run a backup every Monday at 09:00.\n1. Preset: pick Weekly Monday, or set fields manually.\n2. Minute: specific value 0. Hour: specific value 9.\n3. Day of month: every (*). Month: every (*). Day of week: specific value 1 (Monday).\n4. Expression: 0 9 * * 1.\n5. Description: Every Monday at 09:00.\n6. Next runs preview lists the coming Mondays at 09:00 in your local time.\nEvery 5 minutes would be: minute */5, everything else * -> */5 * * * *.",
+    "workedExampleHeading": "Worked example"
+  }
+}

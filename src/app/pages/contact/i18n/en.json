@@ -1,0 +1,10 @@
+{
+  "contact": {
+    "emailLabel": "Email us at",
+    "heading": "Contact us",
+    "metaDescription": "Get in touch with the JaurTools team — feedback, tool ideas, or reporting a problem.",
+    "metaTitle": "Contact us | JaurTools",
+    "text1": "Have feedback, a tool idea, or found something broken? We would love to hear from you. Just send us an email — we read everything.",
+    "text2": "There is no contact form on purpose: no backend means no form to submit. Email keeps it simple and private."
+  }
+}

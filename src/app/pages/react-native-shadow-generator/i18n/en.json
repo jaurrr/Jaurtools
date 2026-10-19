@@ -1,0 +1,95 @@
+{
+  "react-native-shadow-generator": {
+    "assumptionNote": "The web preview uses CSS box-shadow, which renders slightly differently from native iOS shadows. iOS renders shadowColor/shadowOffset/shadowOpacity/shadowRadius; Android renders only elevation. Test on a real device.",
+    "benefits": [
+      "Get correct iOS and Android shadow code in one place - no more guessing the props.",
+      "Preview the shadow visually before writing a single line.",
+      "Copy a ready StyleSheet snippet straight into your component.",
+      "Tune elevation for Android and shadow props for iOS independently."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "iOS uses shadowColor, shadowOffset ({width, height}), shadowOpacity (0-1), and shadowRadius. Android ignores all of those and uses only elevation (a number). This generator outputs both.",
+        "q": "Why do iOS and Android shadows need different code?"
+      },
+      {
+        "a": "Yes, but elevation is a rough approximation. It produces a Material-style shadow based on the view's z-depth, not your color or blur. For pixel control on Android, use a custom shadow library or an SVG.",
+        "q": "Does elevation match the iOS shadow exactly?"
+      },
+      {
+        "a": "The most common mistake: the shadow is clipped because the parent has overflow: 'hidden', or the backgroundColor is on the wrong view. Also, on iOS, shadows need a backgroundColor on the shadowed view.",
+        "q": "Why is my shadow not showing?"
+      },
+      {
+        "a": "Use small offsets (0-4), moderate blur (4-10), and low opacity (0.1-0.3). Harsh dark shadows look cheap. Subtle shadows read as premium.",
+        "q": "What makes a shadow look good?"
+      },
+      {
+        "a": "The web preview uses CSS box-shadow, which is close but not identical to native rendering. It is a guide. Always check the final look on a real device or simulator.",
+        "q": "Is the preview pixel-identical to native?"
+      },
+      {
+        "a": "Often, yes. Libraries like react-native-shadow-2 give you blur and color control on Android, which elevation cannot. But for most cards and buttons, elevation plus the iOS props is enough.",
+        "q": "Do I need a shadow library for Android?"
+      }
+    ],
+    "formula": "No math - this is a code generator. How the pieces map:\n\niOS (UIView shadow):\nshadowColor: '#000000'        <- your picked color\nshadowOffset: { width: 0, height: 4 }  <- offset X / Y\nshadowOpacity: 0.25          <- opacity / 100\nshadowRadius: 6              <- blur radius\n\nAndroid (Material elevation):\nelevation: 4                 <- separate slider, 0-24\n\nWeb preview equivalent: box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25).",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick a shadow color and adjust offset X/Y, blur radius, and opacity.",
+      "Set the Android elevation separately.",
+      "Watch the live preview update.",
+      "Copy the StyleSheet code or download it as a .js file, then paste it into your component."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "React Native shadows differ by platform: iOS uses shadow* props, Android uses elevation.",
+      "iOS: shadowColor, shadowOffset {width, height}, shadowOpacity (0 to 1), shadowRadius.",
+      "Android: elevation (0 to 24+). Color and blur are not supported natively.",
+      "shadowOpacity expects 0-1, not 0-100. A common bug is passing 25 instead of 0.25.",
+      "On iOS, the shadowed view needs a backgroundColor or the shadow may not render.",
+      "Parent views with overflow: 'hidden' clip shadows. Watch out in lists and cards.",
+      "Elevation also affects draw order on Android: higher elevation draws on top.",
+      "The web preview is CSS box-shadow: close, but not pixel-identical to native."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "react native shadow generator, rn box shadow, ios shadow react native, android elevation generator, react native stylesheet shadow",
+    "labels": {
+      "blurRadius": "Blur radius",
+      "copied": "Copied",
+      "copyCode": "Copy code",
+      "downloadJs": "Download .js",
+      "elevation": "Android elevation",
+      "offsetX": "Offset X",
+      "offsetY": "Offset Y",
+      "opacity": "Opacity (%)",
+      "preview": "Shadow preview",
+      "previewText": "Card",
+      "shadowColor": "Shadow color"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Android elevation is approximate. No native color or blur control on Android.",
+      "The web preview is a guide, not pixel-identical to native rendering.",
+      "Does not handle animated shadows or pressed-state shadows.",
+      "For advanced Android shadows, use a dedicated library like react-native-shadow-2."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free React Native shadow generator: design iOS shadows and Android elevation visually, then copy the StyleSheet code. Live preview, no sign-up.",
+    "metaTitle": "React Native Shadow Generator - iOS & Android | JaurTools",
+    "name": "React Native Shadow Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "React Native needs different shadow code per platform: iOS uses shadowColor, shadowOffset, shadowOpacity, and shadowRadius, while Android uses only elevation. Design both visually above, then copy the generated StyleSheet snippet into your component. The live preview shows a close web approximation of the native result.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your shadow code",
+    "tagline": "Design React Native shadows visually - iOS props plus Android elevation, copy-ready.",
+    "workedExample": "Card style with the defaults:\n1. Set: color #000000, offset (0, 4), radius 6, opacity 25%, elevation 4.\n2. iOS output: shadowColor '#000000', shadowOffset {width: 0, height: 4}, shadowOpacity 0.25, shadowRadius 6.\n3. Android output: elevation 4.\n4. Paste the StyleSheet snippet into your component and apply style={styles.card}.",
+    "workedExampleHeading": "Worked example"
+  }
+}

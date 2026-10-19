@@ -1,0 +1,109 @@
+{
+  "resize-pdf-pages": {
+    "name": "Resize PDF Pages",
+    "tagline": "Change every page to A4, Letter, Legal, A5 or a custom size — fit, fill or stretch.",
+    "metaTitle": "Resize PDF Pages — Change PDF Page Size Online Free | JaurTools",
+    "metaDescription": "Resize PDF pages online for free: convert to A4, Letter, Legal, A5 or custom size with Fit, Fill or Stretch modes. Vector content stays sharp. Private in-browser tool.",
+    "keywords": "resize pdf pages, change pdf page size, pdf to a4, pdf page size converter, pdf letter to a4",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Resize pages",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Upload a PDF, pick a target page size (A4, Letter, Legal, A5, or your own width × height), choose how content adapts — Fit keeps everything visible, Fill crops to the edges, Stretch reshapes — and download a new PDF at the new size.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "Page sizes are measured in points (1/72 inch): A4 = 595.28 × 841.89 pt.",
+      "Fit scales content to the largest size that shows everything — nothing is cut off.",
+      "Fill scales to cover the whole page — edges may crop, like a photo wallpaper.",
+      "Stretch reshapes content exactly to the page — proportions change.",
+      "Content stays vector: text and lines remain sharp at the new size."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Upload your PDF (up to 50 MB).",
+      "Pick A4, Letter, Legal, A5 — or Custom and type width × height in mm.",
+      "Choose Fit, Fill, or Stretch and read the on-screen hint for each.",
+      "Check the target readout (e.g. 210 × 297 mm).",
+      "Build and download the resized PDF."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "fit:     s = min(target_w / page_w, target_h / page_h)\nfill:    s = max(target_w / page_w, target_h / page_h)\nstretch: sx = target_w / page_w,  sy = target_h / page_h\nnew_x = (target_w − page_w × s) / 2   (centered)\n\nFit and Fill use one uniform scale so nothing distorts; Stretch uses separate X/Y scales so the page exactly matches the target rectangle.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A US Letter document (215.9 × 279.4 mm) resized to A4 (210 × 297 mm) in Fit mode: the scale is min(210/215.9, 297/279.4) ≈ 0.973, so content shrinks slightly and centers with small side margins — everything stays visible and proportions are untouched.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Convert between US and international paper sizes in one click.",
+      "Three honest modes — you choose the tradeoff, the tool never distorts silently.",
+      "Custom sizes for labels, booklets, and print shops.",
+      "Vector content stays razor-sharp at any size.",
+      "Local processing — your documents never leave the browser."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Fill mode crops content at the edges — check important margins first.",
+      "Stretch mode distorts proportions (circles become ellipses).",
+      "Annotations and form fields may shift relative to resized content.",
+      "Pages with rotation metadata can resize unexpectedly — verify the output."
+    ],
+    "privacyNote": "Resizing is done entirely on your device with pdf-lib. No upload, no account, no trace.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is the difference between Fit, Fill and Stretch?",
+        "a": "Fit shrinks or grows the page so all content stays visible (margins may appear). Fill scales until the page is covered edge to edge (some content may crop). Stretch forces content exactly into the new size, changing proportions."
+      },
+      {
+        "q": "Will text stay sharp?",
+        "a": "Yes. Pages are re-placed as vector content, not re-rendered as images, so text and lines stay crisp at the new size."
+      },
+      {
+        "q": "Can I convert Letter to A4?",
+        "a": "That is the most common use: pick A4 with Fit mode and a Letter document is cleanly converted with everything visible."
+      },
+      {
+        "q": "What custom sizes are allowed?",
+        "a": "Any width and height from 10 mm to 1200 mm — useful for labels, posters, and print-shop specs."
+      },
+      {
+        "q": "Does it change the file size much?",
+        "a": "Slightly — the tool rebuilds the PDF structure, but content is reused, so size stays close to the original."
+      },
+      {
+        "q": "Why do my pages look shifted?",
+        "a": "Content is centered on the new page. If the aspect ratios differ a lot, Fit mode adds margins on two sides — that is expected, not an error."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "fileLabel": "PDF file",
+      "fileHint": "PDF up to 50 MB",
+      "pagesLabel": "pages",
+      "targetLabel": "Target page size",
+      "sizeA4": "A4",
+      "sizeLetter": "Letter",
+      "sizeLegal": "Legal",
+      "sizeA5": "A5",
+      "sizeCustom": "Custom",
+      "customW": "Width",
+      "customH": "Height",
+      "targetReadout": "Target size",
+      "modeLabel": "Content mode",
+      "modeFit": "Fit",
+      "modeFitHint": "Show everything, keep proportions",
+      "modeFill": "Fill",
+      "modeFillHint": "Cover the page, may crop edges",
+      "modeStretch": "Stretch",
+      "modeStretchHint": "Exact size, changes proportions",
+      "buildButton": "Resize pages",
+      "downloadButton": "Download PDF",
+      "busy": "Resizing…",
+      "statusDone": "Resized {n} pages to {t}.",
+      "errType": "Please choose a valid PDF file.",
+      "errSize": "File is larger than 50 MB.",
+      "errRead": "Could not read this PDF.",
+      "errBuild": "Could not resize the PDF."
+    }
+  }
+}

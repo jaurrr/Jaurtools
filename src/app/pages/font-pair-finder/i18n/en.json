@@ -1,0 +1,92 @@
+{
+  "font-pair-finder": {
+    "benefits": [
+      "Nine curated Google Font pairings across modern, classic, friendly, bold and editorial styles.",
+      "Live preview renders each pair in the real fonts — loaded free from Google Fonts.",
+      "One-click copy gives you the exact font-family CSS for headings and body.",
+      "Direct link to each font's Google Fonts page for weights and licensing.",
+      "Runs entirely in your browser — no uploads, no accounts."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Color & Design",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A good pair contrasts without clashing: typically a distinctive display font for headings and a highly readable text font for body. Serif + sans-serif is the classic safe combination, which is why most pairs here follow it.",
+        "q": "What makes a good font pairing?"
+      },
+      {
+        "a": "Yes — every font listed is from Google Fonts and licensed under the SIL Open Font License, which allows free use in personal and commercial projects, including client websites.",
+        "q": "Are these fonts free for commercial use?"
+      },
+      {
+        "a": "The preview loads the real fonts from Google Fonts' CDN when you open this page. The copy button gives you the CSS — to use the fonts on your own site, also add the Google Fonts <link> or @import for the families you choose.",
+        "q": "How do I use a pair on my own website?"
+      },
+      {
+        "a": "Filter by style: modern (Poppins + Roboto), classic (Merriweather + Open Sans), friendly (Montserrat + Lato), bold (Oswald + Source Sans 3) or editorial (Playfair Display + Inter).",
+        "q": "Which pair should I pick for my project?"
+      },
+      {
+        "a": "No — the page loads font files from Google's CDN for the preview, but your choices are never sent anywhere.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "heading font: distinctive display face (serif or bold sans)\nbody font: highly readable text face (neutral sans or book serif)\ncontrast in style, harmony in x-height and weight range",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Filter the pairs by style — modern, classic, friendly, bold or editorial.",
+      "Read the live preview rendered in the actual fonts.",
+      "Note the heading and body font names on each card.",
+      "Click Copy CSS to get the font-family declarations.",
+      "Paste the CSS into your stylesheet and load the fonts from Google Fonts."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Each pair combines a heading font with a body font.",
+      "Pairs are grouped into five styles: modern, classic, friendly, bold, editorial.",
+      "Previews load the real fonts from the Google Fonts CDN.",
+      "All listed fonts use the SIL Open Font License — free for commercial use.",
+      "The copy button outputs ready-to-paste font-family CSS."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "font pair finder, google fonts pairing, heading body font combination, best font pairs, typography pairing",
+    "labels": {
+      "bodyFont": "Body",
+      "catAll": "All",
+      "catBold": "Bold",
+      "catClassic": "Classic",
+      "catEditorial": "Editorial",
+      "catFriendly": "Friendly",
+      "catModern": "Modern",
+      "copied": "Copied",
+      "copyCss": "Copy CSS",
+      "filterLabel": "Filter by style",
+      "headingFont": "Heading",
+      "sampleBody": "Good typography makes reading effortless. The quick brown fox jumps over the lazy dog, and every paragraph stays comfortable at any size.",
+      "sampleHeading": "Design that speaks",
+      "viewOnGoogle": "View on Google Fonts"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Only nine curated pairs — the Google Fonts catalog has thousands more.",
+      "Previews need an internet connection to load font files from Google's CDN.",
+      "Font names stay in Latin script in all languages.",
+      "Licensing is per Google Fonts terms; always verify before redistribution."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free font pair finder: nine curated Google Font heading/body pairings with live previews. Copy the CSS, filter by style, use commercially.",
+    "metaTitle": "Font Pair Finder — Google Fonts Pairings | JaurTools",
+    "name": "Font Pair Finder",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Browse nine curated Google Font pairings — a heading font matched with a body font — across modern, classic, friendly, bold and editorial styles. Each card shows a live preview in the real fonts, a one-click copy of the font-family CSS, and a link to the font's Google Fonts page. All fonts are free for commercial use.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Font pairings",
+    "tagline": "Curated Google Font heading/body pairings — live previews, copy-ready CSS.",
+    "workedExample": "Pair 1: Playfair Display (headings) + Inter (body).\nHeadings get an elegant high-contrast serif: font-family: 'Playfair Display', serif;\nBody text gets a neutral, highly readable sans: font-family: 'Inter', sans-serif;\nThis editorial combination is used by magazines and blogs because the serif adds character while Inter keeps long paragraphs effortless to read.\nCopy the CSS from the card and load both families from Google Fonts.",
+    "workedExampleHeading": "Worked example"
+  }
+}

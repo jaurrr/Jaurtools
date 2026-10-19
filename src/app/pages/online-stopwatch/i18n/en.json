@@ -1,0 +1,90 @@
+{
+  "online-stopwatch": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Date & Time",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Online Stopwatch",
+    "tagline": "Count up with precision — laps, splits, and shortcuts.",
+    "metaTitle": "Online Stopwatch - Free Stopwatch with Laps & Splits | JaurTools",
+    "metaDescription": "Free online stopwatch with lap and split times, keyboard shortcuts and full-screen mode. Precise to the hundredth of a second.",
+    "keywords": "stopwatch, online stopwatch, stopwatch with laps, timer, lap timer",
+    "quickAnswer": "Press start and the stopwatch counts up with centisecond precision. Hit lap to record split times without stopping - each lap shows its own duration and the running total, and the fastest and slowest laps are highlighted automatically.",
+    "keyFacts": [
+      "A stopwatch counts up from zero; a timer counts down to zero - this tool is the former.",
+      "Centisecond precision (1/100th of a second) is plenty for sports, cooking and experiments.",
+      "A lap records a split time without stopping the main clock, so you can time segments of one run.",
+      "Browser intervals tick roughly every 10 ms; the display is precise but not laboratory-grade.",
+      "Fastest and slowest laps are highlighted so patterns jump out at a glance."
+    ],
+    "howTo": [
+      "Press Start to begin counting.",
+      "Press Lap anytime to record a split without stopping.",
+      "Press Pause to freeze the clock; Resume continues from the same point.",
+      "Press Reset to clear the time and all laps.",
+      "Compare lap rows - green marks the fastest, red the slowest."
+    ],
+    "formula": "Elapsed = number of 10 ms ticks x 10 ms.\nLap time = lap total minus previous lap total.\nDisplay = MM:SS.CS (minutes, seconds, centiseconds).\nExample: 90.25 s -> 01:30.25.",
+    "workedExample": "Timing a run with 3 laps:\n1. Start -> run -> Lap at 01:30.25 (lap 1 = 90.25 s, total 90.25 s).\n2. Continue -> Lap at 03:05.10 (lap 2 = 94.85 s, total 185.10 s).\n3. Continue -> Pause at 04:40.00 (lap 3 = 94.90 s, total 280.00 s).\n4. Fastest: lap 1 (90.25 s). Slowest: lap 3 (94.90 s).\nTotal time: 4 minutes 40 seconds.",
+    "benefits": [
+      "Time anything - runs, recipes, study blocks, speeches - with one click.",
+      "Laps reveal pacing: are you fading in later segments?",
+      "No app install and no account; works offline once loaded.",
+      "Clean, distraction-free display readable at a glance."
+    ],
+    "limitations": [
+      "Browser timing is approximate at the millisecond level; not suitable for official races.",
+      "Closing or reloading the tab resets the stopwatch and clears laps.",
+      "There is no sound or vibration alert - watch the display.",
+      "Very long runs (many hours) keep counting but the display is not optimized for them."
+    ],
+    "faqs": [
+      {
+        "q": "How precise is this stopwatch?",
+        "a": "It ticks every 10 milliseconds (centisecond precision). That is plenty for training, cooking and experiments, but not for certified competitions."
+      },
+      {
+        "q": "What is the difference between lap and total?",
+        "a": "Lap time is the duration of that segment alone; total is the elapsed time since you pressed start. Both are shown for every lap."
+      },
+      {
+        "q": "Can I pause without losing laps?",
+        "a": "Yes. Pause freezes everything; Resume continues from the same elapsed time with all laps intact."
+      },
+      {
+        "q": "Why is one lap green and one red?",
+        "a": "Green marks your fastest lap and red your slowest (when you have 2+ laps), so pacing patterns are visible instantly."
+      },
+      {
+        "q": "Does it work offline?",
+        "a": "Yes, once the page has loaded. The stopwatch only needs your device's clock."
+      },
+      {
+        "q": "Can I export my lap times?",
+        "a": "Not in this version - note down or screenshot the laps you want to keep before resetting."
+      }
+    ],
+    "resultsHeading": "Stopwatch results",
+    "labels": {
+      "start": "Start",
+      "pause": "Pause",
+      "resume": "Resume",
+      "reset": "Reset",
+      "lap": "Lap",
+      "laps": "Laps",
+      "fastest": "Fastest lap",
+      "slowest": "Slowest lap",
+      "noLaps": "No laps yet - press Lap while running."
+    }
+  }
+}

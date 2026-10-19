@@ -1,0 +1,169 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span><span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span><span aria-current="page">{{ t('name') }}</span>
+  </nav>
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+  
+  <div class="tool-layout">
+    <section class="tool-card" [attr.aria-label]="t('resultsHeading')">
+      <h2><app-icon name="ruler" /> {{ t('resultsHeading') }}</h2>
+      <div class="field">
+        <label for="py-solve">{{ t('labels.solveForLabel') }}</label>
+        <div class="unit-toggle calc-seg-tabs" role="group" [attr.aria-label]="t('labels.solveForLabel')">
+          <button
+            type="button"
+            [class.active]="solveFor() === 'a'"
+            (click)="setSolveFor('a')"
+          >
+            {{ t('labels.solve.a') }}
+          </button>
+          <button
+            type="button"
+            [class.active]="solveFor() === 'b'"
+            (click)="setSolveFor('b')"
+          >
+            {{ t('labels.solve.b') }}
+          </button>
+          <button
+            type="button"
+            [class.active]="solveFor() === 'c'"
+            (click)="setSolveFor('c')"
+          >
+            {{ t('labels.solve.c') }}
+          </button>
+        </div>
+      </div>
+      @if (solveFor() !== 'a') {
+        <div class="field">
+          <label for="py-a">{{ t('labels.sideALabel') }}</label>
+          <input
+            id="py-a"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            [ngModel]="a()"
+            (ngModelChange)="setA($event)"
+          />
+        </div>
+      }
+      @if (solveFor() !== 'b') {
+        <div class="field">
+          <label for="py-b">{{ t('labels.sideBLabel') }}</label>
+          <input
+            id="py-b"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            [ngModel]="b()"
+            (ngModelChange)="setB($event)"
+          />
+        </div>
+      }
+      @if (solveFor() !== 'c') {
+        <div class="field">
+          <label for="py-c">{{ t('labels.sideCLabel') }}</label>
+          <input
+            id="py-c"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            [ngModel]="c()"
+            (ngModelChange)="setC($event)"
+          />
+        </div>
+      }
+      <div class="results calc-results">
+        @if (answer() !== null) {
+          <div class="result-row total">
+            <span>{{ t('labels.solve.' + solveFor()) }}</span>
+            <strong>{{ fmt4().format(answer()!) }}</strong>
+          </div>
+        } @else {
+          <p class="note">{{ t('labels.invalidNote') }}</p>
+        }
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+    </section>
+    <article class="guide">
+      <aside class="quick-answer" [attr.aria-label]="t('quickAnswerHeading')">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+      <p class="privacy">{{ t('privacyNote') }}</p>
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

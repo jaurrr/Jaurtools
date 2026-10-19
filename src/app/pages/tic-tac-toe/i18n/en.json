@@ -1,0 +1,98 @@
+{
+  "tic-tac-toe": {
+    "benefits": [
+      "A 30-second brain warm-up that sharpens pattern recognition and planning.",
+      "The hard mode teaches real strategy: every loss shows you the exact move you missed.",
+      "No downloads, no accounts, no waiting — a full game takes under a minute.",
+      "Great for kids: simple rules that build logical thinking."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Games & Fun",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "X always moves first — that is the standard rule everywhere, and this game follows it. Going first is a real advantage: with perfect play X can force at least a draw, while O can only force a draw if X makes a mistake.",
+        "q": "Who goes first in Tic Tac Toe?"
+      },
+      {
+        "a": "No. The hard mode uses the minimax algorithm, which evaluates every possible continuation of the game and picks a move that guarantees at least a draw. The best result a human can achieve against perfect play is a draw. If you want wins, switch to easy mode, where the computer picks randomly.",
+        "q": "Can the hard computer be beaten?"
+      },
+      {
+        "a": "When all 9 squares are filled and none of the 8 winning lines holds three identical marks, nobody can win, so the game is a draw. Draws are common between careful players — in fact, perfect play from both sides always draws.",
+        "q": "Why did my game end in a draw?"
+      },
+      {
+        "a": "Easy mode picks a completely random empty square on every turn. It does not block your threats or build its own lines, so it is genuinely beatable and good for kids or casual play.",
+        "q": "How does the easy computer work?"
+      },
+      {
+        "a": "Take the center square if it is free — it belongs to 4 winning lines, more than any corner (3) or edge (2). Always block an immediate threat (two enemy marks with an empty third square). Then build forks: two threats at once, which cannot both be blocked.",
+        "q": "What is the best strategy to win?"
+      },
+      {
+        "a": "Scores are kept while this page stays open. Reloading or closing the tab resets them to zero. Nothing is stored on any server — the game never sends your data anywhere.",
+        "q": "Are my scores saved?"
+      }
+    ],
+    "formula": "Win check — any of these 8 lines all holding the same mark wins:\nRows: (1,2,3), (4,5,6), (7,8,9) | Columns: (1,4,7), (2,5,8), (3,6,9) | Diagonals: (1,5,9), (3,5,7).\nHard AI (minimax): every reachable board is scored — +10 for an O win, -10 for an X win, 0 for a draw, adjusted by depth so faster wins rank higher. The AI chooses the move with the highest guaranteed score, so it never loses.",
+    "formulaHeading": "How the game decides a win",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your mode: Two Players (a friend on the same screen), Easy (a relaxed computer), or Hard (an unbeatable computer).",
+      "X always starts. Tap any empty square to place your mark.",
+      "Players alternate turns. Watch for the winning line to light up when someone gets three in a row.",
+      "Press New Round to play again — your score is kept. Press Reset Scores to start the tally from zero.",
+      "On hard mode, try to force a draw: take the center if it is free, and always block an immediate threat."
+    ],
+    "howToHeading": "How to play",
+    "keyFacts": [
+      "Tic Tac Toe is played on a 3x3 grid with two marks: X and O. X always makes the first move.",
+      "You win by placing three of your marks in a straight line — any row, any column, or either diagonal.",
+      "There are 8 possible winning lines on the board: 3 rows, 3 columns, and 2 diagonals.",
+      "If all 9 squares fill up with no winning line, the game ends in a draw.",
+      "Perfect play from both sides always ends in a draw — the game is mathematically solved.",
+      "The hard computer on this page uses the minimax algorithm, which examines every possible future board and can never be beaten."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "tic tac toe, tic tac toe game, play tic tac toe, noughts and crosses, tic tac toe vs computer",
+    "labels": {
+      "aiThinking": "Computer is thinking…",
+      "boardLabel": "Tic Tac Toe board",
+      "cell": "Square",
+      "drawMsg": "It is a draw!",
+      "draws": "Draws",
+      "modeEasy": "Easy",
+      "modeHard": "Hard",
+      "modeLabel": "Game mode",
+      "modeTwo": "Two Players",
+      "newRound": "New Round",
+      "oWins": "O wins",
+      "oWinsMsg": "O wins the round!",
+      "resetScores": "Reset Scores",
+      "turnMsg": "Turn:",
+      "xWins": "X wins",
+      "xWinsMsg": "X wins the round!"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The game is solved — with perfect play from both sides, every game is a draw.",
+      "The hard computer cannot be beaten, which can feel frustrating; easy mode is there for relaxed play.",
+      "Two-player mode needs both players on the same device.",
+      "Scores live only in this browser tab and reset when you reload the page."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Play free Tic Tac Toe online: 2-player mode or vs computer (easy and unbeatable hard AI). Score tracking, mobile friendly, no sign-up, 100% private.",
+    "metaTitle": "Tic Tac Toe Game - Play vs Friend or AI | JaurTools",
+    "name": "Tic Tac Toe",
+    "privacyNote": "This game runs 100% in your browser. Your moves and scores never leave your device.",
+    "quickAnswer": "Tic Tac Toe is played on a 3x3 grid where X and O take turns. Get three of your marks in a row — across, down, or diagonally — to win. X always moves first. If all nine squares fill with no line of three, the game is a draw. Play a friend on the same screen, or test yourself against the easy or the unbeatable hard computer.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Tic Tac Toe results",
+    "tagline": "The classic 3x3 grid game — challenge a friend on the same screen or take on the computer, from easy to unbeatable.",
+    "workedExample": "Moves: X plays square 1, O plays 5, X plays 2, O plays 9, X plays 3.\n1. The top row now reads X, X, X in squares 1, 2, 3.\n2. The win check tests line (1,2,3): all three hold X. X wins.\n3. The hard AI avoids this trap: after X takes 1 and 2, minimax scores every reply, sees that only square 3 stops the forced loss, and blocks there — which is why hard mode never loses.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "chord-progression-generator": {
+    "assumptionNote": "Progressions are built only from diatonic chords (the seven chords native to the key). Borrowed chords, secondary dominants, and modulations are not included - they are advanced colours, not beginner foundations.",
+    "benefits": [
+      "Break writer's block instantly with proven progressions in any key.",
+      "Hear every progression played back as real chords, not just names on a page.",
+      "Learn which chords belong to each key with the built-in diatonic reference.",
+      "Style presets (pop, rock, jazz, folk) teach you what makes each genre's harmony tick."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Roman numerals name scale degrees: I is the home chord (tonic), V pulls strongly back to I, and vi is the relative minor. Uppercase means major (IV, V), lowercase means minor (ii, vi), and the degree sign marks diminished (vii°). So I-V-vi-IV in C is C-G-Am-F.",
+        "q": "What do the Roman numerals mean?"
+      },
+      {
+        "a": "It is the most-used progression in modern pop: I-V-vi-IV. In C major that is C-G-Am-F; in G major it is G-D-Em-C. Hundreds of hit songs use exactly this loop because the V-vi move creates gentle tension and the IV-V lift resolves it.",
+        "q": "What is the most common chord progression?"
+      },
+      {
+        "a": "Start on the tonic (I or i) - it is home base. Then move to IV or V for lift, or vi for emotion. End phrases on V if you want tension, or I if you want rest. The generator's presets follow these instincts; study a few and you will feel the patterns.",
+        "q": "How do I choose what comes next in a progression?"
+      },
+      {
+        "a": "In a major key: I, ii, iii, IV, V, vi, vii° - for C major: C, Dm, Em, F, G, Am, Bdim. In a natural minor key: i, ii°, III, iv, v, VI, VII - for A minor: Am, Bdim, C, Dm, Em, F, G.",
+        "q": "Which chords belong to each key?"
+      },
+      {
+        "a": "Yes, in the random style. It picks diatonic chords with sensible weights and always starts on the tonic. Random does not mean chaotic here - every chord still belongs to the key, so it will always sound coherent.",
+        "q": "Can it generate a truly random progression?"
+      },
+      {
+        "a": "A progression is the order of chords; a key is the home note and scale everything is built from; a mode is which flavour of scale (major = bright, minor = dark). So C-G-Am-F is a progression in the key of C major, in the major mode.",
+        "q": "What is the difference between a progression, a key, and a mode?"
+      }
+    ],
+    "formula": "Major key diatonic chords: I - ii - iii - IV - V - vi - vii°\nScale offsets (semitones): 0, 2, 4, 5, 7, 9, 11\nQualities: maj, min, min, maj, maj, min, dim\nNatural minor: i - ii° - III - iv - v - VI - VII\nOffsets: 0, 2, 3, 5, 7, 8, 10.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Pick your key: any of the 12 notes.",
+      "Choose major for a bright sound or minor for a darker one.",
+      "Pick a style preset - pop, rock, jazz, folk - or random for a surprise.",
+      "Choose 4 or 8 chords, then tap Generate for a fresh progression.",
+      "Tap Play to hear it, and check the diatonic reference to understand why it works."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A major key contains seven diatonic chords: I, ii, iii, IV, V, vi, vii° (e.g. C, Dm, Em, F, G, Am, Bdim in C major).",
+      "A natural minor key gives: i, ii°, III, iv, v, VI, VII (e.g. Am, Bdim, C, Dm, Em, F, G in A minor).",
+      "The V chord pulls hardest toward I - that tension-and-release is the engine of Western harmony.",
+      "I-V-vi-IV is the most-used pop progression of the last 30 years.",
+      "Every relative minor shares its major's chords: A minor uses exactly the chords of C major.",
+      "Starting and ending on the tonic (I or i) makes a progression feel like home."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "chord progression generator, songwriting chords, chord progression ideas, diatonic chords, pop chord progressions",
+    "labels": {
+      "diatonicLabel": "Chords in this key",
+      "generateLabel": "Generate progression",
+      "keyLabel": "Key",
+      "lengthLabel": "Number of chords",
+      "modeLabel": "Mode",
+      "modeMajor": "Major (bright)",
+      "modeMinor": "Minor (dark)",
+      "playLabel": "Play progression",
+      "progressionLabel": "Your progression",
+      "progressionResult": "Progression",
+      "stopLabel": "Stop",
+      "styleLabel": "Style",
+      "styles": {
+        "folk": "Folk",
+        "jazz": "Jazz",
+        "pop": "Pop",
+        "random": "Random",
+        "rock": "Rock"
+      }
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Diatonic chords only - no borrowed chords, secondary dominants, or key changes.",
+      "Playback is a clean synthesized triad per chord, not a full band arrangement.",
+      "Random mode is weighted toward common degrees, so truly unusual progressions are rare.",
+      "Chord names use sharps only; flat spellings are not shown."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free chord progression generator: pick a key, major or minor, and a style to get proven 4 or 8-chord progressions. Hear them played back. No sign-up.",
+    "metaTitle": "Chord Progression Generator - Songwriting Ideas | JaurTools",
+    "name": "Chord Progression Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Pick C major and pop, and you might get I-V-vi-IV: C-G-Am-F - the most-used progression in modern pop. Every progression here uses only the seven diatonic chords of your key, so it always sounds coherent: in C major those are C, Dm, Em, F, G, Am, and Bdim. Tap Generate for a fresh idea, tap Play to hear the chords, and use the diatonic reference to learn why each choice works.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Progression results",
+    "tagline": "Get proven chord progressions in any key - with playback and a diatonic chord reference.",
+    "workedExample": "Generating a pop progression in C major:\n1. Key = C, mode = major, style = pop, length = 4.\n2. The generator picks the classic pattern I - V - vi - IV.\n3. Degrees to chords: I = C (offset 0), V = G (offset 7), vi = Am (offset 9, minor), IV = F (offset 5).\n4. Result: C - G - Am - F.\n5. Tap Play: you hear four triads - C-E-G, G-B-D, A-C-E, F-A-C - the backbone of hundreds of hit songs.",
+    "workedExampleHeading": "Worked example"
+  }
+}

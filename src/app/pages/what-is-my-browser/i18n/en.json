@@ -1,0 +1,104 @@
+{
+  "what-is-my-browser": {
+    "benefits": [
+      "See your exact browser name and version in one glance.",
+      "Share the report with support teams when a site misbehaves.",
+      "Confirm your OS, screen size, and touch support instantly.",
+      "Spot bot or automation flags that some sites use to block you.",
+      "No sign-up, no tracking - the page reads your browser locally."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The user agent is a text string your browser sends to every website. This page parses it: tokens like Edg/125, OPR/111, or Firefox/126 identify the browser, while Windows NT 10 or Android 14 identify the OS. Order matters - Edge contains the Chrome token, so it must be checked first.",
+        "q": "How does this page detect my browser?"
+      },
+      {
+        "a": "It can look odd because browsers hide details for privacy. Chrome on iOS reports as CriOS, and iPads may report as Macintosh with touch support. The device type guess uses touch points plus the user agent to correct for this.",
+        "q": "Why does my iPhone or iPad show a strange result?"
+      },
+      {
+        "a": "The user agent is sent to every website you visit - that is how the web works. This page only displays it on your screen and in a downloadable report; nothing is sent to any server.",
+        "q": "Is my user agent private? Does this page send it anywhere?"
+      },
+      {
+        "a": "Use the Update button in your browser settings (Chrome, Edge, Firefox) or your app store. Developers use this page to confirm the update worked - the version number should change after restarting.",
+        "q": "How do I update my browser?"
+      },
+      {
+        "a": "navigator.webdriver is true when the browser is driven by automation software like Selenium or Puppeteer. Some sites block automated browsers to stop bots. On a normal personal device it should say No.",
+        "q": "What does the webdriver row mean?"
+      },
+      {
+        "a": "deviceMemory is an estimate the browser volunteers, rounded to whole gigabytes for privacy. It is not available in every browser - Safari and Firefox usually report a question mark, which is normal.",
+        "q": "Why does the memory row show a question mark?"
+      }
+    ],
+    "formula": "Detection order (first match wins):\n1. Edg/ or EdgA/ = Microsoft Edge\n2. OPR/ = Opera, Vivaldi/ = Vivaldi, SamsungBrowser/ = Samsung Internet\n3. CriOS/ = Chrome on iOS, FxiOS/ = Firefox on iOS\n4. Firefox/ = Firefox, Chrome/ = Google Chrome\n5. Version/... Safari = Safari\nOS comes from tokens like Windows NT 10, Android 14, iPhone OS 17_4, or Mac OS X 14_4.",
+    "formulaHeading": "How detection works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Open this page. Your browser, version, and OS appear instantly - no buttons needed.",
+      "Read the rows: screen size, viewport, touch support, CPU cores, and more.",
+      "Copy the user-agent string if a support team or developer asks for it.",
+      "Compare the detected browser with what you expect to confirm you are not in an in-app or automated browser."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Your browser identifies itself with a user-agent string sent to every website.",
+      "Detection checks tokens in order: Edge, Opera, Vivaldi, Samsung, iOS variants, Firefox, Chrome, then Safari.",
+      "The OS is read from tokens like Windows NT 10, Android 14, or iPhone OS 17.",
+      "Screen size is your display; the viewport is the visible page area - they differ when the window is not full-screen.",
+      "Cookies, online status, and touch support are read from real browser APIs, not guessed.",
+      "navigator.webdriver reveals whether the browser is controlled by automation software."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "what is my browser, browser version check, what browser am I using, user agent check, browser detector",
+    "labels": {
+      "browser": "Browser",
+      "cookies": "Cookies enabled",
+      "copied": "Copied",
+      "copyUa": "Copy user agent",
+      "cores": "CPU cores",
+      "devDesktop": "Desktop",
+      "devMobile": "Mobile",
+      "devTablet": "Tablet",
+      "deviceType": "Device type",
+      "doNotTrack": "Do Not Track",
+      "dpr": "Pixel ratio",
+      "language": "Language",
+      "memory": "Device memory",
+      "no": "No",
+      "online": "Online",
+      "os": "Operating system",
+      "screen": "Screen",
+      "touch": "Touch screen",
+      "userAgent": "User agent string",
+      "viewport": "Viewport",
+      "webdriver": "Automated browser",
+      "yes": "Yes"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "User agents can be spoofed, so detection reflects what the browser claims, not proof.",
+      "Brave and some privacy browsers disguise themselves as Chrome - that is intentional on their part.",
+      "Memory and some details are unavailable in Safari and Firefox for privacy reasons.",
+      "In-app browsers (inside social apps) may report the system browser instead of the app."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free what-is-my-browser tool: detect your browser name, version, OS, screen, and device type instantly. 100% private, no sign-up.",
+    "metaTitle": "What Is My Browser? - Version & OS Check | JaurTools",
+    "name": "What Is My Browser",
+    "privacyNote": "This tool runs 100% in your browser. Your details never leave your device.",
+    "quickAnswer": "This page reads your browser's user-agent string and live browser APIs to show your browser name and version, operating system, device type, screen size, language, CPU cores, touch support, and more. Detection follows a fixed token order (Edge before Chrome, since Edge contains the Chrome token), so the result matches what websites actually see.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your browser details",
+    "tagline": "Detect your browser, version, operating system, and device details instantly.",
+    "workedExample": "Sample user agent:\nMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0\n1. The string contains Edg/126.0.0.0, checked before Chrome, so browser = Microsoft Edge 126.0.0.0.\n2. Windows NT 10.0 gives OS = Windows 10 / 11.\n3. No mobile or tablet tokens, so device type = Desktop.\nThe page reports exactly this in the results table.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "pdf-to-jpg": {
+    "benefits": [
+      "Turn any PDF into shareable JPG images without installing software.",
+      "Choose render quality: 1x for quick previews, 2x–2.5x for crisp print-ready pages.",
+      "Download pages one by one, or grab them all at once in a single ZIP archive.",
+      "Image output works everywhere — messaging apps, documents, presentations and social media.",
+      "Nothing is uploaded; rendering happens on your own device."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "PDF Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "PDF pages are vector graphics. The tool rasterizes each page at your chosen scale and encodes it as a JPEG image, the same idea as taking a screenshot of every page.",
+        "q": "How does a PDF become a JPG?"
+      },
+      {
+        "a": "Higher scale means more pixels and a sharper image, but also bigger files and slower rendering. 2x is the sweet spot for most uses; 2.5x is best when you plan to print.",
+        "q": "Which quality setting should I pick?"
+      },
+      {
+        "a": "No. The reader library (pdf.js) is bundled with the site, so rendering works fully offline. Your PDF itself is never uploaded anywhere.",
+        "q": "Does this need the internet?"
+      },
+      {
+        "a": "JPEG does not support transparency, so transparent areas become white. Vector text also becomes pixels, which is why higher scales look sharper.",
+        "q": "Why do transparent areas turn white?"
+      },
+      {
+        "a": "Yes. Upload a password-protected PDF only if you can open it — currently the tool reads files that open without a password prompt.",
+        "q": "Can I convert a password-protected PDF?"
+      },
+      {
+        "a": "Browser memory. Each page is rendered in memory, so extremely long or complex PDFs can slow down older devices. Converting in smaller page batches is more reliable.",
+        "q": "What limits the size of PDFs I can convert?"
+      }
+    ],
+    "formula": "pixel_width = pdf_width_pt × scale\npixel_height = pdf_height_pt × scale\n\nA PDF point is 1/72 inch, so an A4 page is 595.28 × 841.89 pt. File size grows roughly with scale² — doubling the scale quadruples the pixel count.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Upload your PDF file (up to 50 MB).",
+      "Pick a render scale: 1x for speed, 2x for crisp detail, 2.5x for print.",
+      "Set JPEG quality between 40% and 100%.",
+      "Click render and wait while each page is drawn as an image.",
+      "Download individual pages, or click the ZIP button to get every page in one archive."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Each PDF page is rendered to a JPEG image entirely in your browser using the pdf.js rendering engine.",
+      "The scale setting multiplies the PDF's native 72-DPI coordinates: at 2x an A4 page becomes about 1191 × 1684 pixels.",
+      "JPEG quality is adjustable from 40% to 100%; higher values keep more detail at the cost of larger files.",
+      "Every page downloads separately with a clear page-numbered filename, or all pages together as a ZIP.",
+      "The pdf.js reader library is bundled with the site; your document is processed fully locally."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "pdf to jpg, pdf to images, pdf to png, convert pdf pages to images, pdf page to jpg online",
+    "labels": {
+      "busy": "Rendering pages, please wait…",
+      "downloadOne": "JPG",
+      "errRender": "Could not render this PDF. It may be corrupted or password-protected.",
+      "errSize": "The file is larger than 50 MB.",
+      "errType": "Please choose a valid PDF file.",
+      "fileHint": "PDF file, up to 50 MB. The file never leaves your browser.",
+      "fileLabel": "PDF file",
+      "pageAlt": "Page",
+      "pageCount": "Pages rendered",
+      "qualityLabel": "JPEG quality",
+      "renderButton": "Render pages",
+      "scale1": "1x — fast preview",
+      "scale15": "1.5x — standard",
+      "scale2": "2x — sharp (recommended)",
+      "scale25": "2.5x — print quality",
+      "scaleLabel": "Render scale",
+      "statusDone": "Rendered {n} page(s).",
+      "zipButton": "Download all as ZIP"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Very large PDFs (100+ pages) can be slow to process and may use significant browser memory.",
+      "JPEG is a lossy format — fine text may soften at 1x scale; use 2x or higher for crisp results.",
+      "Very long PDFs (hundreds of pages) can exhaust browser memory on low-end devices.",
+      "Scanned PDFs render exactly as they look; this tool cannot improve a blurry scan."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert PDF pages to high-quality JPG images free. Pick a resolution, download pages individually or as ZIP — all in your browser.",
+    "metaTitle": "PDF to JPG - Convert PDF Pages to JPG Images | JaurTools",
+    "name": "PDF to JPG",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Upload a PDF and each page is rendered as a JPG image right in your browser. Pick the render scale for sharpness and the JPEG quality for file size, preview every page as a thumbnail, then download pages individually or all together in one ZIP archive.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "PDF to Images results",
+    "tagline": "Turn every PDF page into a crisp JPG image.",
+    "workedExample": "A 4-page A4 report at 2x scale, JPEG 85%:\nPixel size per page: 595.28 × 2 ≈ 1191 px wide, 841.89 × 2 ≈ 1684 px tall.\nTypical output: about 150–300 KB per page.\nTotal download: roughly 0.6–1.2 MB, or one ZIP containing report-page-1.jpg … report-page-4.jpg.",
+    "workedExampleHeading": "Worked example"
+  }
+}

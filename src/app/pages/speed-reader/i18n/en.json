@@ -1,0 +1,93 @@
+{
+  "speed-reader": {
+    "assumptionNote": "RSVP boosts reading speed but reduces comprehension for dense or technical text. Use it for articles and light reading, not for studying or contracts.",
+    "benefits": [
+      "Read articles 2 to 3 times faster by removing eye movement entirely.",
+      "The highlighted pivot letter keeps your focus locked on the word.",
+      "Adjustable 60 to 1000 WPM lets you train speed gradually.",
+      "Your pasted text stays private in your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "RSVP stands for Rapid Serial Visual Presentation. Instead of moving your eyes across a page, words flash one at a time at a fixed point, so you skip the physical eye movement that limits normal reading speed.",
+        "q": "What is RSVP speed reading?"
+      },
+      {
+        "a": "The pivot is the letter your eye should fix on, shown in the accent color. It sits near the word's visual center (the Optimal Recognition Point), which is where your brain recognizes the word fastest.",
+        "q": "What is the highlighted letter in the middle?"
+      },
+      {
+        "a": "Start at 200–250 WPM, which matches average silent reading. Add 25–50 WPM every few days as it starts feeling easy. Most people settle comfortably between 300 and 500 WPM.",
+        "q": "What speed should I start at?"
+      },
+      {
+        "a": "For light articles and news, comprehension stays high. For dense, technical, or literary text, slow down or read normally — RSVP is a tool for throughput, not deep study.",
+        "q": "Will I still understand what I read?"
+      },
+      {
+        "a": "Yes. Your text is processed in memory in your browser and never sent anywhere.",
+        "q": "Is my pasted text private?"
+      },
+      {
+        "a": "No. Timers run in the page's JavaScript thread, so switching tabs can pause or slow the display. Keep the tab visible while reading.",
+        "q": "Does it keep running if I switch tabs?"
+      }
+    ],
+    "formula": "Delay per word (ms) = 60000 / WPM\nPivot index: length 1 -> 0; 2–5 -> 1; 6–9 -> 2; 10–13 -> 3; 14+ -> 4\nReading time (s) = (words remaining / WPM) x 60\nProgress (%) = (current index / total words) x 100",
+    "formulaHeading": "The formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste any article or text into the text box — or keep the built-in sample.",
+      "Set your speed with the slider. 250 WPM is a comfortable start.",
+      "Press Play and keep your eyes on the highlighted pivot letter.",
+      "Pause anytime; the progress bar and time-left counter track your place.",
+      "Press Restart to read from the beginning, or raise the WPM as it gets easy."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "RSVP (Rapid Serial Visual Presentation) flashes one word at a time at a fixed point, removing eye movement.",
+      "Speed is adjustable from 60 to 1000 words per minute with a live slider.",
+      "The pivot letter — shown in the accent color — marks the Optimal Recognition Point of each word.",
+      "A progress bar, percentage, and time-left counter track exactly where you are.",
+      "Average silent reading is 200–250 WPM; trained RSVP readers comfortably reach 400–600 WPM."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "speed reader, rsvp reader, speed reading app, read faster, words per minute reader, rapid serial visual presentation",
+    "labels": {
+      "pauseButton": "Pause",
+      "playButton": "Play",
+      "positionLabel": "Position",
+      "readerLabel": "Speed reading display",
+      "restartButton": "Restart",
+      "sampleButton": "Load sample",
+      "textLabel": "Text to read",
+      "textPlaceholder": "Paste any article here...",
+      "timeLeftLabel": "Time left",
+      "wordsLabel": "Total words",
+      "wpmLabel": "Speed (words per minute)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Comprehension drops for dense, technical, or literary text at high speeds.",
+      "Not suitable for studying, legal documents, or anything you must memorize.",
+      "Switching browser tabs can pause or slow the timer.",
+      "Very long texts (over 100,000 characters) are truncated for performance."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Read any text word-by-word at up to 1000 WPM with RSVP speed reading. Train your reading speed free in your browser.",
+    "metaTitle": "Speed Reader - RSVP Tool to Read Faster | JaurTools",
+    "name": "Speed Reader",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Speed Reader (RSVP) shows your text one word at a time at a fixed point, so your eyes never move and you read much faster. Set any speed from 60 to 1000 words per minute, press Play, and follow the highlighted pivot letter. A progress bar, percentage, and time-left counter track your place, and everything runs privately in your browser with no signup.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Speed Reader (RSVP) results",
+    "tagline": "One word at a time, up to 1000 words a minute.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "Take a 300-word article at 300 WPM. The delay per word is 60000 / 300 = 200 ms, so the whole article takes exactly 1 minute. For the word 'reading' (7 letters), the pivot rule picks index 2 — the letter 'a' — which appears in the accent color while 're' and 'ding' stay normal. Halfway through, at word 150, the progress bar reads 50% and the time-left counter shows 0:30."
+  }
+}

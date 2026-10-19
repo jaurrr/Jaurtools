@@ -1,0 +1,92 @@
+{
+  "strip-html-tags": {
+    "benefits": [
+      "Converts copied web content into clean plain text.",
+      "Keeps paragraphs and line breaks readable with one toggle.",
+      "Automatically decodes HTML entities like &amp; and &lt;.",
+      "Handles messy, nested and malformed markup safely.",
+      "Private — your HTML never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Text Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Paste your HTML into the box. The tool parses it with the browser's own HTML parser and returns the visible text, with tags, scripts and styles removed.",
+        "q": "How do I strip tags from my HTML?"
+      },
+      {
+        "a": "Yes. Enable Keep line breaks (on by default) and paragraphs, headings, list items and <br> tags become newlines in the output.",
+        "q": "Can I keep the paragraph breaks?"
+      },
+      {
+        "a": "Yes. The browser's parser decodes entities like &amp;, &lt; and &#39; into their characters automatically.",
+        "q": "Are HTML entities decoded?"
+      },
+      {
+        "a": "No. This tool only removes markup — it does not sanitize for safe display. If you need to sanitize untrusted HTML, use a dedicated sanitizer library.",
+        "q": "Does it sanitize the HTML for safe embedding?"
+      },
+      {
+        "a": "Images, scripts, styles and other non-text content are dropped. Only the visible text remains.",
+        "q": "What happens to images and scripts?"
+      },
+      {
+        "a": "Yes — everything runs locally in your browser.",
+        "q": "Is my HTML private?"
+      }
+    ],
+    "formula": "text = body.textContent of parsed HTML\nwith keepBreaks: <br> -> newline, block elements -> newline after\ncleanup: collapse 3+ newlines, trim ends",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste your HTML into the input box.",
+      "Choose whether to keep line breaks from paragraphs and <br> tags.",
+      "Read the plain text in the output box.",
+      "Copy it to the clipboard or download it as a .txt file.",
+      "Paste the clean text into your document, email or CMS."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Tags are removed with the browser's real HTML parser, not a regex.",
+      "Scripts, styles and comments are dropped along with the tags.",
+      "HTML entities are decoded to their characters automatically.",
+      "An optional toggle converts block structure back into line breaks.",
+      "Everything runs locally; no HTML is uploaded."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "strip html tags, remove html tags online, html to plain text, extract text from html, html tag remover",
+    "labels": {
+      "afterLabel": "Characters after",
+      "beforeLabel": "Characters before",
+      "clearButton": "Clear",
+      "copiedNote": "Copied!",
+      "copyButton": "Copy result",
+      "downloadButton": "Download .txt",
+      "emptyState": "Plain text will appear here.",
+      "keepBreaks": "Keep line breaks",
+      "outputLabel": "Plain text",
+      "textLabel": "Your HTML",
+      "textPlaceholder": "<h1>Paste your HTML here...</h1>"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Removes markup only — it is not an HTML sanitizer for untrusted content.",
+      "Some layout meaning (tables, columns) cannot survive as plain text.",
+      "With line breaks off, everything merges into continuous text."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free tool to strip HTML tags and extract plain text. Keeps line breaks, decodes entities, 100% browser-based and private.",
+    "metaTitle": "Strip HTML Tags — Convert HTML to Plain Text Online",
+    "name": "Strip HTML Tags",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Removes all HTML tags from your markup and returns clean plain text, using the browser's own HTML parser — safer and more accurate than regex. Optionally keeps paragraph and line breaks, decodes HTML entities automatically, and shows character counts before and after, with one-click copy and .txt download.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "HTML tag stripper",
+    "tagline": "Paste HTML, get clean plain text — paragraphs kept, entities decoded.",
+    "workedExample": "Input: <h1>Hello</h1><p>World<br>Again</p>\nWith Keep line breaks ON:\nStep 1: <br> becomes a newline, and a newline is added after each heading and paragraph.\nStep 2: textContent = \"Hello\\nWorld\\nAgain\\n\"\nStep 3: trim -> \"Hello\\nWorld\\nAgain\"\nOutput:\nHello\nWorld\nAgain",
+    "workedExampleHeading": "Worked example"
+  }
+}

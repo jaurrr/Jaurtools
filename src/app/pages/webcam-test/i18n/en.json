@@ -1,0 +1,100 @@
+{
+  "webcam-test": {
+    "benefits": [
+      "Confirm your camera works before a video call or exam.",
+      "Compare built-in and external cameras and pick the better one.",
+      "Check the real capture resolution your browser receives.",
+      "Take a test snapshot to judge image quality and framing.",
+      "No app to install - the preview never leaves your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Device & Browser Tests",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Click the camera icon in your browser's address bar and change the permission from Block to Allow. If you denied it earlier, the page cannot ask again until you change that site setting.",
+        "q": "The browser says camera access was denied. How do I fix it?"
+      },
+      {
+        "a": "Usually another app (Zoom, Teams, a previous tab) is holding the camera. Close other apps and tabs, then press Start again. On Windows, check the privacy setting that lets desktop apps use the camera.",
+        "q": "I get a black screen or a busy camera error. Why?"
+      },
+      {
+        "a": "The resolution shown is what the browser actually negotiated with the camera, which is what video-call apps receive too. USB cameras often drop to a lower resolution in poor light or over a weak connection.",
+        "q": "Why is the resolution lower than my camera's specification?"
+      },
+      {
+        "a": "This page shows the raw sensor image with no beauty filters or noise reduction. Video-call apps add processing that can blur details. If the raw preview is grainy, the sensor or the lighting is the limit.",
+        "q": "The preview looks grainy but my calls look fine. Why?"
+      },
+      {
+        "a": "Yes. Press the Snapshot button while the preview is live. The photo is drawn on a local canvas and downloaded to your device as a PNG - it is never uploaded anywhere.",
+        "q": "Can I take a photo to test the camera?"
+      },
+      {
+        "a": "Some phones expose only one camera to the browser, or need the page reloaded after switching. Also check that no other app holds the camera and that you granted permission - without permission the list stays generic.",
+        "q": "My phone's camera selector shows one option. How do I switch?"
+      }
+    ],
+    "formula": "Preview = live video stream from the camera, drawn in your browser.\nResolution = width x height reported by the camera track (e.g. 1280 x 720).\nSnapshot = one video frame copied to a canvas and saved as PNG.\nHD starts at 1280 x 720. Full HD is 1920 x 1080.",
+    "formulaHeading": "What the numbers mean",
+    "homeLabel": "Home",
+    "howTo": [
+      "Press Start and allow camera access when the browser asks.",
+      "Look at the live preview - move, wave, and check that motion is smooth.",
+      "Read the reported resolution. 1280 x 720 or higher is good for calls.",
+      "If you have several cameras, use the selector to compare them.",
+      "Press Snapshot to download a test photo, then Stop to release the camera."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A live preview that follows your movement proves the camera, driver, and browser pipeline all work.",
+      "The resolution shown is negotiated live - it can drop in poor light or on weak USB connections.",
+      "Browsers need HTTPS (or localhost) before they grant camera access to a page.",
+      "Camera names are hidden until you grant permission - a privacy rule, not a bug.",
+      "Only one app can hold a camera at a time. Close Zoom, Teams, and other tabs first.",
+      "Pressing Stop or closing the tab destroys the video stream immediately."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "webcam test, camera test online, test my webcam, webcam not working, camera preview check",
+    "labels": {
+      "defaultCam": "Camera",
+      "defaultDevice": "Default camera",
+      "device": "Camera",
+      "permissionNote": "Your browser will ask for camera access. The preview stays inside your browser - nothing is recorded or uploaded.",
+      "previewLabel": "Live camera preview",
+      "resolution": "Resolution",
+      "snapshot": "Take snapshot",
+      "start": "Start camera test",
+      "status": "Status",
+      "stop": "Stop"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "This page cannot fix driver or OS-level camera problems - it only reveals them.",
+      "It shows the raw image without the filters that video-call apps apply.",
+      "Some browsers limit which cameras a page can see, especially on phones.",
+      "The snapshot is a single frame, not a recording, and has no audio."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online webcam test: preview your camera live, check resolution, switch cameras, and take a test snapshot. 100% private, nothing recorded or uploaded.",
+    "metaTitle": "Webcam Test - Check Your Camera Online | JaurTools",
+    "name": "Webcam Test",
+    "privacyNote": "This tool runs 100% in your browser. Your video never leaves your device.",
+    "quickAnswer": "A webcam test opens your camera (with your permission) and shows a live preview in your browser. If you see yourself moving, the camera works. The page reports the real capture resolution, lets you switch between cameras, and can save a snapshot to your device. Nothing is recorded or uploaded - the video stays inside your browser and is destroyed when you press Stop.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Camera test results",
+    "status": {
+      "denied": "Permission denied",
+      "error": "Error",
+      "idle": "Not started",
+      "live": "Live preview",
+      "requesting": "Requesting access"
+    },
+    "tagline": "Check your camera with a live preview - resolution, device options, and a test snapshot.",
+    "workedExample": "You press Start and grant permission:\n1. The preview shows your face, moving smoothly - the camera works.\n2. The reported resolution is 1280 x 720, good for video calls.\n3. You switch to your USB camera in the selector. It reports 1920 x 1080 and the image is sharper.\n4. You take a snapshot. The PNG downloads to your device.\n5. You press Stop and the camera light turns off immediately.",
+    "workedExampleHeading": "Worked example"
+  }
+}

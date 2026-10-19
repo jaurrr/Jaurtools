@@ -1,0 +1,99 @@
+{
+  "collage-maker": {
+    "name": "Collage Maker",
+    "tagline": "Combine 2 to 4 photos into clean collage layouts with adjustable gaps — download as one image.",
+    "metaTitle": "Photo Collage Maker Online Free | JaurTools",
+    "metaDescription": "Make photo collages online for free. 4 clean layouts, adjustable gaps and background. Download as PNG. Private, no sign-up.",
+    "keywords": "photo collage maker, collage maker online free, combine photos collage, picture collage grid",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload 2 to 4 photos and pick a layout: side-by-side, 3 columns, 2x2 grid, or feature-plus-two. Each photo fills its cell with center-crop cover scaling, so a 1600 x 1200 photo in a 594 x 594 cell is cropped to the middle square and drawn edge to edge. Set the gap and background color, then download the 1200 x 1200 PNG.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Four layouts: 2 side-by-side, 3-column grid, 2x2 grid, and 1 large + 2 stacked.",
+      "Every cell uses cover scaling — the photo fills the cell completely, cropped from the center.",
+      "Gap from 0 to 60 px separates cells; 0 gives a seamless mosaic.",
+      "Background color shows through the gaps and fills empty cells.",
+      "Empty cells (fewer photos than slots) stay clean instead of breaking the layout.",
+      "Output is a square 1200 x 1200 PNG, ready for social posts."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Upload 2 to 4 photos.",
+      "Pick the layout that fits your photo count.",
+      "Drag the gap slider and choose a background color.",
+      "Check the live preview — cells fill automatically.",
+      "Click Download to save the collage as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Canvas: 1200 x 1200. Gap g.\n2x2 grid: cell = (1200 - g) / 2.\n3 columns: cell width = (1200 - 2g) / 3, height = 1200.\nCover scale per photo: scale = max(cellW / photoW, cellH / photoH).\nExample: g = 12 in 2x2 -> cell = 594 px.",
+    "formulaHeading": "Formula",
+    "workedExample": "2x2 grid, gap 12, photos 1600 x 1200:\n1. Cell size: (1200 - 12) / 2 = 594 px square.\n2. Cover scale: max(594/1600, 594/1200) = max(0.371, 0.495) = 0.495.\n3. Scaled photo: 792 x 594 — the middle 594 x 594 is drawn, 99 px cropped from each side.\n4. Four cells plus 12 px gaps = one seamless 1200 x 1200 collage.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "Before/after and event roundups in one shareable image.",
+      "Cover scaling means no manual cropping — every cell just works.",
+      "Gap and background controls give a designed, not accidental, look.",
+      "Square 1200 px output is ideal for Instagram and WhatsApp.",
+      "Private collages: family photos never leave your device."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Max 4 photos and 4 fixed layouts — no freeform arrangements.",
+      "Cover cropping may cut faces near photo edges; pre-crop those photos first.",
+      "Photo order follows upload order; it cannot be rearranged inside the tool.",
+      "Output is always square 1200 x 1200 — no custom canvas sizes."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "How many photos can I put in a collage?",
+        "a": "2 to 4. The layouts are designed around those counts: side-by-side for 2, columns for 3, and the 2x2 grid or feature layout for 4. Upload fewer than the slots and the extra cells stay a clean background color."
+      },
+      {
+        "q": "Will my photos be stretched?",
+        "a": "Never. Every cell uses cover scaling, which fills the cell while keeping the aspect ratio — the overflow is cropped from the edges, centered. Faces near edges can get cropped, so pre-crop tight portraits first."
+      },
+      {
+        "q": "Can I change the order of photos?",
+        "a": "Photos fill cells in upload order. To reorder, clear the photos and re-upload them in the order you want — first uploaded goes to the top-left cell."
+      },
+      {
+        "q": "What is the output size?",
+        "a": "1200 x 1200 px PNG — sharp for social posts and prints up to about 4 inches square. The square format fits Instagram posts and WhatsApp sharing perfectly."
+      },
+      {
+        "q": "Can I remove the gaps?",
+        "a": "Yes — set the gap slider to 0 and the cells tile edge to edge for a seamless mosaic look."
+      },
+      {
+        "q": "Are my photos uploaded to a server?",
+        "a": "No. The collage is composited on a canvas in your browser. Your photos never leave your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Collage Maker results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload photos",
+      "layout": "Layout",
+      "layout2side": "2 side by side",
+      "layout3grid": "3 columns",
+      "layout2x2": "2x2 grid",
+      "layout1plus2": "1 large + 2 stacked",
+      "gap": "Gap (px)",
+      "bgColor": "Background color",
+      "clearPhotos": "Clear photos",
+      "download": "Download collage",
+      "photos": "Photos",
+      "invalidFile": "Skipped a non-image file.",
+      "fileTooLarge": "Skipped a file over 10 MB.",
+      "loadFailed": "Could not read one image. It was skipped.",
+      "needPhotos": "Upload 2 to 4 photos to build a collage.",
+      "tooMany": "Maximum 4 photos allowed."
+    }
+  }
+}

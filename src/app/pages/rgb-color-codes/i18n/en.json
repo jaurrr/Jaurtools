@@ -1,0 +1,112 @@
+{
+  "rgb-color-codes": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "RGB Color Codes",
+    "tagline": "A quick-reference chart of common colors with their HEX and RGB codes.",
+    "metaTitle": "RGB Color Codes - Color Chart with HEX & RGB Values | JaurTools",
+    "metaDescription": "Free RGB color codes chart: look up 24 common colors by name and get their exact HEX and RGB values. Searchable, copy-ready, private.",
+    "keywords": "rgb color codes, color chart, hex color codes, rgb values chart, html color codes",
+    "quickAnswer": "This is a searchable reference of 24 common colors with exact codes. Tomato, for example, is #FF6347 - RGB(255, 99, 71): full red, 99 green, 71 blue. Type any name or HEX fragment in the search box to filter the chart, then tap to copy the HEX.",
+    "keyFacts": [
+      "Every color here uses its standard web (CSS) definition - the same values browsers use.",
+      "HEX and RGB describe the identical color; #FF0000 and rgb(255, 0, 0) are the same red.",
+      "Primary web colors are red, lime and blue; secondaries are yellow, cyan and magenta.",
+      "Searching matches the color name in your language and the HEX code.",
+      "All 24 codes are safe to paste directly into CSS, HTML or design tools."
+    ],
+    "howTo": [
+      "Type a color name (like 'teal') or HEX fragment (like 'FF6') in the search box.",
+      "The chart filters instantly to matching colors.",
+      "Read the HEX and RGB values beside each swatch.",
+      "Tap the copy button on any row to copy its HEX code.",
+      "Clear the search to see the full chart again."
+    ],
+    "formula": "No computation here - this is a reference table.\nExample entry: Tomato = #FF6347.\nSplit the HEX pairs: FF -> 255, 63 -> 99, 47 -> 71.\nSo Tomato = RGB(255, 99, 71).",
+    "workedExample": "Looking up Tomato:\n1. Type 'tom' in the search box; the chart filters to Tomato.\n2. Read the row: swatch, name, #FF6347, RGB(255, 99, 71).\n3. Verify: 0xFF = 255 (full red), 0x63 = 99, 0x47 = 71.\n4. Tap copy: #FF6347 is now on your clipboard, ready for CSS.\n5. Use it as color: tomato; in CSS or #FF6347 anywhere a HEX is accepted.",
+    "benefits": [
+      "Faster than guessing HEX codes from memory.",
+      "Search works in English, Hindi and Arabic color names.",
+      "One-tap copy puts the exact code on your clipboard.",
+      "Standard web values - what you copy is what the browser renders."
+    ],
+    "limitations": [
+      "Only 24 common colors; rare or brand-specific colors are not listed.",
+      "Names follow web conventions, which sometimes differ from paint or print names.",
+      "Values assume sRGB, the web standard."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between HEX and RGB?",
+        "a": "Nothing in meaning - they are two notations for the same 24-bit color. #FF6347 and rgb(255, 99, 71) describe the identical tomato red. HEX is compact; RGB is readable."
+      },
+      {
+        "q": "Are these the same colors CSS uses?",
+        "a": "Yes. Named web colors like 'tomato', 'teal' and 'coral' are CSS standards, and the HEX values here match the browser definitions exactly."
+      },
+      {
+        "q": "Why is web green #008000 but lime #00FF00?",
+        "a": "Historical CSS naming: 'green' was defined as the darker #008000, while the full-intensity #00FF00 got the name 'lime'. This chart lists lime for the pure primary."
+      },
+      {
+        "q": "Can I search in Hindi or Arabic?",
+        "a": "Yes - the search matches color names in the language you are browsing in, plus HEX fragments in any language."
+      },
+      {
+        "q": "How do I use a copied code in CSS?",
+        "a": "Paste it as a value: color: #FF6347; or background: rgb(255, 99, 71);. Both work in any stylesheet."
+      },
+      {
+        "q": "Why only 24 colors?",
+        "a": "These are the most-looked-up reference colors. For any other color, use the channel or picker tools to get exact codes for arbitrary colors."
+      }
+    ],
+    "resultsHeading": "Your color chart results",
+    "labels": {
+      "searchLabel": "Search colors",
+      "searchPlaceholder": "Type a color name, e.g. teal",
+      "noResults": "No colors match your search.",
+      "matchCount": "Colors shown",
+      "copyHex": "Copy HEX",
+      "copied": "Copied",
+      "colors": {
+        "red": "Red",
+        "lime": "Lime",
+        "blue": "Blue",
+        "yellow": "Yellow",
+        "orange": "Orange",
+        "purple": "Purple",
+        "pink": "Pink",
+        "brown": "Brown",
+        "black": "Black",
+        "white": "White",
+        "gray": "Gray",
+        "cyan": "Cyan",
+        "magenta": "Magenta",
+        "navy": "Navy",
+        "teal": "Teal",
+        "olive": "Olive",
+        "maroon": "Maroon",
+        "silver": "Silver",
+        "gold": "Gold",
+        "tomato": "Tomato",
+        "coral": "Coral",
+        "indigo": "Indigo",
+        "violet": "Violet",
+        "skyblue": "Sky Blue"
+      }
+    }
+  }
+}

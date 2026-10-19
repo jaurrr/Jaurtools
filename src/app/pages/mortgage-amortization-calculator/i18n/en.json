@@ -1,0 +1,91 @@
+{
+  "mortgage-amortization-calculator": {
+    "benefits": [
+      "See exactly where every dollar goes, year by year.",
+      "Reveals the true lifetime cost - interest often shocks first-time buyers.",
+      "Plan extra payments around the years where interest dominates.",
+      "Private - your mortgage numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Repaying a loan through fixed periodic payments where each payment covers that period's interest and the rest reduces principal. Mortgages, auto loans, and personal loans all amortize this way.",
+        "q": "What is amortization?"
+      },
+      {
+        "a": "Interest is charged on the full remaining balance, which is largest at the start. As principal shrinks, the interest slice shrinks and the principal slice grows - while your payment stays flat.",
+        "q": "Why is my early payment mostly interest?"
+      },
+      {
+        "a": "Extra money goes straight to principal, which jumps you forward in the schedule: every future payment then has a bigger principal slice. Use the Mortgage Payoff Calculator to model it.",
+        "q": "How do extra payments affect the schedule?"
+      },
+      {
+        "a": "In the US they usually match (a 30-year term fully amortizes). In Canada, a 25-year amortization is often paid through 5-year terms that renew.",
+        "q": "What is the difference between term and amortization?"
+      },
+      {
+        "a": "No - this schedule covers principal and interest only. Add tax, insurance, PMI, and HOA with the Mortgage Calculator for the full monthly picture.",
+        "q": "Does this include property tax and insurance?"
+      },
+      {
+        "a": "No. The schedule is computed in your browser.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Monthly rate r = annual rate / 12 / 100; n = years x 12\nPayment = P x r / (1 - (1 + r)^-n)\nEach month: interest = balance x r; principal = payment - interest; balance -= principal.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your loan amount, annual interest rate, and term in years.",
+      "Read your monthly principal-and-interest payment.",
+      "Scroll the year-by-year schedule: principal paid, interest paid, remaining balance.",
+      "Check total interest to see the true lifetime cost of the loan."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Amortization = paying down a loan with fixed payments that split into interest and principal.",
+      "Early payments are mostly interest; late payments are mostly principal - the payment stays the same.",
+      "Total interest on a 30-year loan often exceeds half the amount borrowed.",
+      "Extra principal payments skip you ahead in the schedule - they do not just shorten the end.",
+      "The schedule assumes a fixed rate; adjustable-rate mortgages re-amortize when the rate changes.",
+      "Biweekly payments (26 half-payments per year) equal one extra monthly payment yearly."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "mortgage amortization calculator, amortization schedule, mortgage payoff schedule, loan amortization table",
+    "labels": {
+      "annualRate": "Annual rate (%)",
+      "balance": "Balance",
+      "interest": "Interest",
+      "loanAmount": "Loan amount",
+      "monthlyPayment": "Monthly payment",
+      "principal": "Principal",
+      "scheduleHeading": "Year-by-year schedule",
+      "termYears": "Term (years)",
+      "totalInterest": "Total interest",
+      "totalPaid": "Total paid",
+      "year": "Year"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Principal and interest only - taxes, insurance, PMI, and HOA are not included.",
+      "Fixed-rate schedule; adjustable-rate loans will differ after rate changes.",
+      "Estimates only - lender rounding and fee timing cause small differences."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free mortgage amortization calculator: monthly payment plus a year-by-year schedule of principal, interest, and balance. Private, browser-based.",
+    "metaTitle": "Mortgage Amortization Calculator - Full Payoff Schedule | JaurTools",
+    "name": "Mortgage Amortization Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A $300,000 mortgage at 6.5% over 30 years costs $1,896 a month - and $382,632 in total interest. In year 1 alone you pay about $19,402 in interest vs $3,353 of principal. Enter your loan to see your full schedule.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Amortization schedule",
+    "tagline": "See your full mortgage payoff schedule - every year's principal, interest, and balance.",
+    "workedExample": "$300,000 loan, 6.5% annual rate, 30 years:\n1. Monthly rate = 0.541667%, n = 360. Payment = 300,000 x 0.00541667 / (1 - 1.00541667^-360) = $1,896.20.\n2. Year 1: principal about $3,353, interest about $19,402, balance $296,647.\n3. Total paid = 1,896.20 x 360 = $682,632; total interest = $382,632.\nNotice: year-1 interest is almost 6x the principal repaid.",
+    "workedExampleHeading": "Worked example"
+  }
+}

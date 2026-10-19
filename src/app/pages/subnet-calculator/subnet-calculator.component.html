@@ -1,0 +1,142 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="subnet-ip">{{ t('labels.ipLabel') }}</label>
+        <input id="subnet-ip" class="text-input mono" type="text" inputmode="numeric" dir="ltr"
+          spellcheck="false" autocomplete="off" placeholder="192.168.1.10"
+          [ngModel]="ip()" (ngModelChange)="setIp($event)" />
+      </div>
+
+      <div class="field">
+        <label for="subnet-prefix">{{ t('labels.prefixLabel') }}</label>
+        <div class="input-row">
+          <input id="subnet-prefix" type="number" inputmode="numeric" min="0" max="32" step="1" dir="ltr"
+            [ngModel]="prefix()" (ngModelChange)="setPrefix($event)" />
+          <input type="range" min="0" max="32" step="1" [ngModel]="prefix()"
+            (ngModelChange)="setPrefix($event)" [attr.aria-label]="t('labels.prefixLabel')" />
+        </div>
+      </div>
+
+      @if (info(); as s) {
+        <div class="results">
+          <div class="result-row total">
+            <span><app-icon name="calculator" /> {{ t('labels.networkLabel') }}</span>
+            <strong class="mono">{{ s.network }}/{{ prefix() }}</strong>
+          </div>
+          <table class="kv-table">
+            <tbody>
+              <tr><th scope="row">{{ t('labels.maskLabel') }}</th><td class="mono">{{ s.mask }}</td></tr>
+              <tr><th scope="row">{{ t('labels.binaryLabel') }}</th><td class="mono small">{{ s.ipBinary }}</td></tr>
+              <tr><th scope="row">{{ t('labels.maskBinaryLabel') }}</th><td class="mono small">{{ s.maskBinary }}</td></tr>
+              <tr><th scope="row">{{ t('labels.wildcardLabel') }}</th><td class="mono">{{ s.wildcard }}</td></tr>
+              <tr><th scope="row">{{ t('labels.broadcastLabel') }}</th><td class="mono">{{ s.broadcast }}</td></tr>
+              <tr><th scope="row">{{ t('labels.firstHostLabel') }}</th><td class="mono">{{ s.firstHost }}</td></tr>
+              <tr><th scope="row">{{ t('labels.lastHostLabel') }}</th><td class="mono">{{ s.lastHost }}</td></tr>
+              <tr><th scope="row">{{ t('labels.totalLabel') }}</th><td>{{ fmt(s.total) }}</td></tr>
+              <tr><th scope="row">{{ t('labels.usableLabel') }}</th><td>{{ fmt(s.usable) }}</td></tr>
+              <tr><th scope="row">{{ t('labels.classLabel') }}</th><td>{{ s.ipClass }}</td></tr>
+              <tr><th scope="row">{{ t('labels.scopeLabel') }}</th>
+                <td>{{ s.isPrivate ? t('labels.privateScope') : t('labels.publicScope') }}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      } @else {
+        <p class="alert error dv-status dv-status-bad" role="alert">{{ t('labels.invalidIp') }}</p>
+      }
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

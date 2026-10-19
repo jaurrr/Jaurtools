@@ -1,0 +1,212 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <span class="output-title" id="hw-glyph-label">{{ t('labels.glyphLabel') }}</span>
+        <div class="glyph-grid" role="group" aria-labelledby="hw-glyph-label">
+          @for (g of glyphs; track g; let i = $index) {
+            <button
+              type="button"
+              class="glyph"
+              [class.active]="glyphIndex() === i"
+              [class.drawn]="isDrawn(g)"
+              (click)="selectGlyph(i)"
+              [attr.aria-label]="t('labels.glyphAria') + ' ' + g"
+            >
+              {{ g }}
+            </button>
+          }
+        </div>
+        <p class="note">{{ t('labels.selectGlyphHint') }}</p>
+      </div>
+
+      <div class="field">
+        <span class="output-title">{{ t('labels.padLabel') }}: {{ currentChar() }}</span>
+        <canvas
+          #pad
+          class="pad"
+          width="280"
+          height="280"
+          (pointerdown)="onPadDown($event)"
+          (pointermove)="onPadMove($event)"
+          (pointerup)="onPadUp()"
+          (pointerleave)="onPadUp()"
+        ></canvas>
+        <p class="note">{{ t('labels.padHint') }}</p>
+      </div>
+
+      <div class="input-row two">
+        <div class="field">
+          <label for="hw-width">{{ t('labels.penWidthLabel') }}: {{ penWidth() }}</label>
+          <input
+            id="hw-width"
+            type="range"
+            min="1"
+            max="12"
+            step="1"
+            [ngModel]="penWidth()"
+            (ngModelChange)="setPenWidth($event)"
+          />
+        </div>
+        <div class="field">
+          <label for="hw-color">{{ t('labels.penColorLabel') }}</label>
+          <input
+            id="hw-color"
+            type="color"
+            [ngModel]="penColor()"
+            (ngModelChange)="setPenColor($event)"
+          />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn" (click)="undoStroke()">
+          <app-icon name="refresh-cw" /> {{ t('labels.undoButton') }}
+        </button>
+        <button type="button" class="btn" (click)="clearGlyph()">{{ t('labels.clearGlyphButton') }}</button>
+        <button type="button" class="btn ghost" (click)="clearAll()">{{ t('labels.clearAllButton') }}</button>
+      </div>
+
+      <div class="field preview-field">
+        <label for="hw-preview-text">{{ t('labels.previewTextLabel') }}</label>
+        <input
+          id="hw-preview-text"
+          type="text"
+          [ngModel]="previewText()"
+          (ngModelChange)="setPreviewText($event)"
+        />
+        <label for="hw-size">{{ t('labels.previewSizeLabel') }}: {{ previewSize() }}</label>
+        <input
+          id="hw-size"
+          type="range"
+          min="24"
+          max="96"
+          step="4"
+          [ngModel]="previewSize()"
+          (ngModelChange)="setPreviewSize($event)"
+        />
+        <canvas #preview class="preview"></canvas>
+      </div>
+
+      <div class="results ed-livebar">
+        <div class="result-row">
+          <span><app-icon name="type" /> {{ t('labels.drawnCountLabel') }}</span>
+          <strong>{{ drawnCount() }} / {{ glyphs.length }}</strong>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn primary" (click)="exportPng()" [disabled]="drawnCount() === 0">
+          <app-icon name="download" /> {{ t('labels.exportPngButton') }}
+        </button>
+        <button type="button" class="btn" (click)="exportSvg()" [disabled]="drawnCount() === 0">
+          <app-icon name="download" /> {{ t('labels.exportSvgButton') }}
+        </button>
+        <button type="button" class="btn ghost" (click)="redrawAll()">{{ t('labels.redrawButton') }}</button>
+      </div>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('mistakesHeading') }}</h2>
+        <ul class="mistakes">
+          @for (m of list('mistakes'); track $index) {
+            <li>{{ m }}</li>
+          }
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <app-micro-rating [slug]="slug"></app-micro-rating>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

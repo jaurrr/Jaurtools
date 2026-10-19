@@ -1,0 +1,94 @@
+{
+  "fat-intake-calculator": {
+    "assumptionNote": "Macro targets are starting points, not medical advice. People with heart disease, diabetes or lipid disorders should get personalised targets from a clinician.",
+    "benefits": [
+      "Turns 'eat less fat' into an exact daily gram target you can track.",
+      "Shows the healthy 20-35% range and the saturated-fat cap in one view.",
+      "Helps you read food labels with context: grams per serving versus your cap.",
+      "Pairs with the carb calculator to complete your macro picture."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Fat carries vitamins A, D, E and K, cushions organs, builds cell membranes and hormones, and makes food satisfying. Diets with almost no fat often backfire.",
+        "q": "Why does the body need fat?"
+      },
+      {
+        "a": "Unsaturated fats (olive oil, nuts, fish) support heart health. Saturated fats (butter, fatty meat, coconut oil) should stay under 10% of calories. Trans fats should be avoided almost entirely.",
+        "q": "Which fats are healthy?"
+      },
+      {
+        "a": "Guidelines say under 10% of calories from saturated fat, which is about 24 g on a 2,200 kcal diet. Lower is generally better for blood cholesterol.",
+        "q": "How much saturated fat is too much?"
+      },
+      {
+        "a": "Fat slows digestion, so meals with healthy fat keep you full longer and steady blood sugar. Very low-fat meals often lead to rebound snacking.",
+        "q": "Does fat help with fullness?"
+      },
+      {
+        "a": "One tablespoon of oil is about 14 g of fat, a handful of almonds about 14 g, one egg about 5 g, and a cup of whole milk about 8 g. Cooking oil is the stealthiest source.",
+        "q": "How much fat is in common foods?"
+      },
+      {
+        "a": "Not directly. Excess calories from any macro store as body fat. Fat is simply the most calorie-dense macro at 9 kcal per gram, so portions matter more.",
+        "q": "Does eating fat make you fat?"
+      }
+    ],
+    "formula": "Fat grams = daily calories x fat % / 100 / 9.\nFat provides 9 kcal per gram.\nAMDR healthy range: 20-35% of calories. Saturated fat cap: under 10% of calories.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your daily calorie target (use the TDEE calculator if you do not know it).",
+      "Pick your fat mix: balanced, low-fat or higher-fat.",
+      "Read your daily fat target in grams, the healthy 20-35% range and the saturated-fat cap.",
+      "Compare food labels against your target when planning meals."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Fat provides 9 kcal per gram, more than double carbs or protein.",
+      "The accepted healthy range (AMDR) is 20-35% of daily calories from fat.",
+      "Saturated fat should stay under 10% of calories for heart health.",
+      "Unsaturated fats from nuts, olive oil and fish are the healthiest choices.",
+      "Trans fats should be avoided as much as possible.",
+      "A 2,200 kcal balanced diet at 25% fat means about 61 g of fat per day."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "fat intake calculator, daily fat intake, how much fat per day, saturated fat calculator, macro fat calculator",
+    "labels": {
+      "caloriesLabel": "Daily calories",
+      "caloriesNote": "Your TDEE, or your lose/gain target from it.",
+      "gramsUnit": "g/day",
+      "mixLabel": "Fat mix",
+      "rangeResult": "Healthy range (20-35%)",
+      "saturatedResult": "Saturated fat cap (<10%)",
+      "targetResult": "Your fat target"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Grams cannot judge fat quality; 60 g of olive oil is not 60 g of trans fat.",
+      "Needs vary with heart risk, diabetes and personal response.",
+      "Very low-fat or very high-fat targets deserve professional guidance.",
+      "Estimates, not a diet prescription."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free fat intake calculator: find your daily fat target in grams from your calories, with the healthy 20-35% range and saturated-fat cap. Private, no sign-up.",
+    "metaTitle": "Fat Intake Calculator - Daily Fat Target in Grams | JaurTools",
+    "name": "Fat Intake Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Daily fat comes from your calories times your fat share, divided by 9 kcal per gram. On a 2,200 kcal balanced diet at 25% fat, the target is about 61 g per day, inside the healthy range of 49-86 g. Saturated fat should stay under 10% of calories, about 24 g here.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your fat intake results",
+    "tagline": "Find your daily fat target in grams - balanced, low-fat or higher-fat, with the saturated cap.",
+    "workedExample": "2,200 kcal, balanced mix (25%):\n1. Calories from fat = 2,200 x 25 / 100 = 550 kcal.\n2. Grams = 550 / 9 = 61.1 g/day.\n3. Healthy range: 2,200 x 20% / 9 = 48.9 g up to 2,200 x 35% / 9 = 85.6 g.\n4. Saturated cap: 2,200 x 10% / 9 = 24.4 g/day maximum.",
+    "mixes": {
+      "balanced": "Balanced (25% of calories)",
+      "lowfat": "Low-fat (15%)",
+      "higherfat": "Higher-fat (35%)"
+    },
+    "relatedHeading": "Related tools",
+    "workedExampleHeading": "Worked example"
+  }
+}

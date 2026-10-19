@@ -1,0 +1,255 @@
+<article class="tool-page container">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', tr.lang()]">{{ t('home') }}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <header class="tool-head">
+    <h1>{{ t('name') }}</h1>
+    <p class="tagline">{{ t('tagline') }}</p>
+  </header>
+
+  <div class="tool-layout">
+    <div class="tool-side">
+      <section class="card tool-card" [attr.aria-label]="t('name')">
+        <div class="field">
+          <span class="group-label" id="dob-group-label">{{ t('ui.dobLabel') }}</span>
+          <div class="date-trio" role="group" aria-labelledby="dob-group-label">
+            <select
+              class="select"
+              [ngModel]="dobDay()"
+              (ngModelChange)="onDobDay($event)"
+              [attr.aria-label]="t('ui.dayLabel')"
+            >
+              <option [value]="0" disabled>{{ t('ui.dayLabel') }}</option>
+              @for (d of range(dobDaysInMonth()); track d) {
+                <option [value]="d">{{ d }}</option>
+              }
+            </select>
+            <select
+              class="select"
+              [ngModel]="dobMonth()"
+              (ngModelChange)="onDobMonth($event)"
+              [attr.aria-label]="t('ui.monthLabel')"
+            >
+              <option [value]="0" disabled>{{ t('ui.monthLabel') }}</option>
+              @for (m of monthNames(); track $index) {
+                <option [value]="$index + 1">{{ m }}</option>
+              }
+            </select>
+            <select
+              class="select"
+              [ngModel]="dobYear()"
+              (ngModelChange)="onDobYear($event)"
+              [attr.aria-label]="t('ui.yearLabel')"
+            >
+              <option [value]="0" disabled>{{ t('ui.yearLabel') }}</option>
+              @for (y of yearOptions; track y) {
+                <option [value]="y">{{ y }}</option>
+              }
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <span class="group-label" id="ref-group-label">{{ t('ui.refLabel') }}</span>
+          <div class="date-trio" role="group" aria-labelledby="ref-group-label">
+            <select
+              class="select"
+              [ngModel]="refDay()"
+              (ngModelChange)="onRefDay($event)"
+              [attr.aria-label]="t('ui.dayLabel')"
+            >
+              @for (d of range(refDaysInMonth()); track d) {
+                <option [value]="d">{{ d }}</option>
+              }
+            </select>
+            <select
+              class="select"
+              [ngModel]="refMonth()"
+              (ngModelChange)="onRefMonth($event)"
+              [attr.aria-label]="t('ui.monthLabel')"
+            >
+              @for (m of monthNames(); track $index) {
+                <option [value]="$index + 1">{{ m }}</option>
+              }
+            </select>
+            <select
+              class="select"
+              [ngModel]="refYear()"
+              (ngModelChange)="onRefYear($event)"
+              [attr.aria-label]="t('ui.yearLabel')"
+            >
+              @for (y of yearOptions; track y) {
+                <option [value]="y">{{ y }}</option>
+              }
+            </select>
+          </div>
+          <p class="hint">{{ t('ui.refHint') }}</p>
+        </div>
+      </section>
+
+      @if (dobISO() && errors().length > 0) {
+        <div class="card errors" role="alert">
+          <ul>
+            @for (e of errors(); track e) {
+              <li>{{ e }}</li>
+            }
+          </ul>
+        </div>
+      } @else if (result(); as r) {
+        <section class="card results age-results" aria-live="polite">
+          <div class="screen-tabs" role="tablist" [attr.aria-label]="t('name')">
+            <button type="button" role="tab" [attr.aria-selected]="screen() === 'main'" [class.active]="screen() === 'main'" (click)="screen.set('main')">
+              <app-icon name="calendar" /><span>{{ t('ui.screenMain') }}</span>
+            </button>
+            <button type="button" role="tab" [attr.aria-selected]="screen() === 'breakdown'" [class.active]="screen() === 'breakdown'" (click)="screen.set('breakdown')">
+              <app-icon name="clock" /><span>{{ t('ui.screenBreakdown') }}</span>
+            </button>
+            <button type="button" role="tab" [attr.aria-selected]="screen() === 'next'" [class.active]="screen() === 'next'" (click)="screen.set('next')">
+              <app-icon name="cake" /><span>{{ t('ui.screenNext') }}</span>
+            </button>
+            <button type="button" role="tab" [attr.aria-selected]="screen() === 'birth'" [class.active]="screen() === 'birth'" (click)="screen.set('birth')">
+              <app-icon name="star" /><span>{{ t('ui.screenBirth') }}</span>
+            </button>
+            <button type="button" role="tab" [attr.aria-selected]="screen() === 'fun'" [class.active]="screen() === 'fun'" (click)="screen.set('fun')">
+              <app-icon name="activity" /><span>{{ t('ui.screenFun') }}</span>
+            </button>
+          </div>
+
+          @switch (screen()) {
+            @case ('main') {
+              <div class="age-hero">
+                <p class="age-asof">{{ t('ui.asOfLabel') }}: {{ r.refLabel }}</p>
+                <div class="age-digits">
+                  <div class="age-digit"><span class="n">{{ fmt(r.years) }}</span><span class="u">{{ t('ui.years') }}</span></div>
+                  <div class="age-digit"><span class="n">{{ fmt(r.months) }}</span><span class="u">{{ t('ui.months') }}</span></div>
+                  <div class="age-digit"><span class="n">{{ fmt(r.days) }}</span><span class="u">{{ t('ui.days') }}</span></div>
+                </div>
+                <p class="age-born"><app-icon name="baby" />{{ t('ui.bornLabel') }}: <strong>{{ r.dobLabel }}</strong> ({{ r.bornWeekday }})</p>
+              </div>
+            }
+            @case ('breakdown') {
+              <div class="stat-grid premium-stats">
+                <div class="stat"><app-icon name="calendar" /><span class="v">{{ fmt(r.totalMonths) }}</span><span class="k">{{ t('ui.totalMonths') }}</span></div>
+                <div class="stat"><app-icon name="calendar" /><span class="v">{{ fmt(r.totalWeeks) }}</span><span class="k">{{ t('ui.totalWeeks') }}</span></div>
+                <div class="stat"><app-icon name="sun" /><span class="v">{{ fmt(r.totalDays) }}</span><span class="k">{{ t('ui.totalDays') }}</span></div>
+                <div class="stat"><app-icon name="clock" /><span class="v">{{ fmt(r.totalHours) }}</span><span class="k">{{ t('ui.totalHours') }}</span></div>
+                <div class="stat"><app-icon name="timer" /><span class="v">{{ fmt(r.totalMinutes) }}</span><span class="k">{{ t('ui.totalMinutes') }}</span></div>
+                <div class="stat"><app-icon name="zap" /><span class="v live-seconds">{{ fmt(r.totalSeconds) }}</span><span class="k">{{ t('ui.totalSeconds') }}</span></div>
+              </div>
+              <p class="hint live"><span class="pulse-dot" aria-hidden="true"></span>{{ t('ui.liveNote') }}</p>
+            }
+            @case ('next') {
+              @if (r.isBirthdayToday) {
+                <div class="birthday-today">
+                  <app-icon name="cake" />
+                  <p class="kpi">{{ t('ui.todayIs') }}</p>
+                </div>
+              } @else {
+                <div class="countdown-hero">
+                  <p class="countdown-label">{{ t('ui.nextIn') }}</p>
+                  <p class="countdown-num">{{ fmt(r.nextInDays) }} <span>{{ t('ui.daysWord') }}</span></p>
+                  <p class="countdown-sub">{{ t('ui.turning') }} <strong>{{ fmt(r.turningAge) }}</strong> {{ t('ui.onWeekday') }} <strong>{{ r.nextWeekday }}</strong></p>
+                </div>
+              }
+              @if (r.isFeb29) {
+                <p class="hint"><app-icon name="info" />{{ t('ui.feb29Note') }}</p>
+              }
+            }
+            @case ('birth') {
+              <div class="fact-cards">
+                <div class="fact-card"><app-icon name="cake" /><div><span class="fk">{{ t('ui.bornLabel') }}</span><span class="fv">{{ r.dobLabel }} ({{ r.bornWeekday }})</span></div></div>
+                <div class="fact-card"><app-icon name="sparkles" /><div><span class="fk">{{ t('ui.zodiacSign') }}</span><span class="fv">{{ r.zodiac }}</span></div></div>
+                <div class="fact-card"><app-icon name="star" /><div><span class="fk">{{ t('ui.birthstone') }}</span><span class="fv">{{ r.birthstone }}</span></div></div>
+                <div class="fact-card"><app-icon name="users" /><div><span class="fk">{{ t('ui.generation') }}</span><span class="fv">{{ r.generation }}</span></div></div>
+              </div>
+            }
+            @case ('fun') {
+              <div class="stat-grid premium-stats">
+                <div class="stat"><app-icon name="heart-pulse" /><span class="v">{{ fmt(r.heartbeats) }}</span><span class="k">{{ t('ui.heartbeats') }}</span><span class="hint">{{ t('ui.atRate') }}</span></div>
+                <div class="stat"><app-icon name="activity" /><span class="v">{{ fmt(r.breaths) }}</span><span class="k">{{ t('ui.breaths') }}</span><span class="hint">{{ t('ui.breathRate') }}</span></div>
+              </div>
+              <p class="hint"><app-icon name="info" />{{ t('ui.estimatesNote') }}</p>
+            }
+          }
+        </section>
+      } @else {
+        <p class="card prompt"><app-icon name="info" />{{ t('ui.prompt') }}</p>
+      }
+    </div>
+
+    <div class="guide-side">
+      <p class="quick-answer"><strong>{{ t('quickAnswerLabel') }}.</strong> {{ t('quickAnswer') }}</p>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul class="guide-list">
+          @for (f of list('keyFacts'); track $index) {
+            <li>{{ f }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol class="guide-list">
+          @for (s of list('howTo'); track $index) {
+            <li>{{ s }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <p>{{ t('formula') }}</p>
+        <h3>{{ t('workedExampleHeading') }}</h3>
+        <p>{{ t('workedExample') }}</p>
+      </section>
+
+      <section>
+        <h2>{{ t('benefitsHeading') }}</h2>
+        <ul class="guide-list">
+          @for (b of list('benefits'); track $index) {
+            <li>{{ b }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('limitationsHeading') }}</h2>
+        <ul class="guide-list">
+          @for (l of list('limitations'); track $index) {
+            <li>{{ l }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('privacyHeading') }}</h2>
+        <p>{{ t('privacyNote') }}</p>
+      </section>
+
+      <section class="faq">
+        <h2>{{ t('faqsHeading') }}</h2>
+        @for (f of faqs(); track f.q) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+    </div>
+  </div>
+
+  <section class="related">
+    <h2>{{ t('relatedHeading') }}</h2>
+    <div class="related-grid">
+      @for (r of relatedSlugs; track r) {
+        <a class="card related-card" [routerLink]="['/', tr.lang(), r]">{{ relatedName(r) }}</a>
+      }
+    </div>
+  </section>
+
+  <p class="last-reviewed muted">{{ t('lastReviewed') }}: 2026-10-18</p>
+</article>

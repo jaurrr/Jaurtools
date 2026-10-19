@@ -1,0 +1,146 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="field">
+        <label for="pwg-height">{{ t('labels.heightCm') }}</label>
+        <div class="input-row">
+          <input id="pwg-height" type="number" inputmode="decimal" min="120" max="220" step="0.5"
+            [ngModel]="height()" (ngModelChange)="setHeight($event)" />
+          <input type="range" min="120" max="220" step="0.5" [ngModel]="height()"
+            (ngModelChange)="setHeight($event)" [attr.aria-label]="t('labels.heightCm')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pwg-weight">{{ t('labels.preWeightKg') }}</label>
+        <div class="input-row">
+          <input id="pwg-weight" type="number" inputmode="decimal" min="25" max="200" step="0.5"
+            [ngModel]="preWeight()" (ngModelChange)="setPreWeight($event)" />
+          <input type="range" min="25" max="200" step="0.5" [ngModel]="preWeight()"
+            (ngModelChange)="setPreWeight($event)" [attr.aria-label]="t('labels.preWeightKg')" class="calc-range" />
+        </div>
+      </div>
+
+      <div class="results calc-results">
+        <div class="result-row total">
+          <span><app-icon name="baby" /> {{ t('labels.recommendedGain') }}</span>
+          <strong>{{ oneDecimal().format(gain().loKg) }} - {{ oneDecimal().format(gain().hiKg) }} {{ t('labels.kgUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.gainLb') }}</span>
+          <strong>{{ oneDecimal().format(gain().loLb) }} - {{ oneDecimal().format(gain().hiLb) }} {{ t('labels.lbUnit') }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.preBmi') }}</span>
+          <strong>{{ oneDecimal().format(bmi()) }}</strong>
+        </div>
+        <div class="result-row">
+          <span>{{ t('labels.category') }}</span>
+          <strong>
+            <span class="category-badge category-{{ band().key }}">{{ t('labels.categories.' + band().key) }}</span>
+          </strong>
+        </div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" [class.copied]="copied()" (click)="copyMain()">
+          <app-icon [name]="copied() ? 'check' : 'copy'" />
+          <span>{{ copied() ? t('labels.copiedLabel') : t('labels.copyLabel') }}</span>
+        </button>
+      </div>
+
+      <p class="note">{{ t('assumptionNote') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

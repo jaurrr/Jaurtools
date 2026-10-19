@@ -1,0 +1,211 @@
+{
+  "zodiac-sign-calculator": {
+    "benefits": [
+      "Find your Western zodiac sign from any birth date instantly.",
+      "See your element and classic personality traits at a glance.",
+      "Date ranges are shown, so cusp birthdays are easy to check.",
+      "A fun, harmless way to explore astrology's oldest system."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Western (tropical) zodiac signs follow the Sun's apparent path through twelve 30° sectors of the sky, starting at the March equinox. Your sign is whichever sector the Sun was in on your birth date. It is an ancient calendar system, not a scientific measurement.",
+        "q": "How are zodiac signs determined?"
+      },
+      {
+        "a": "A cusp is a birth date on the boundary between two signs (for example, March 20–21). The exact changeover shifts slightly year to year. If you were born on a cusp, this tool shows the standard boundary — for precision you would need your birth time and an ephemeris.",
+        "q": "What is a cusp birthday?"
+      },
+      {
+        "a": "No. There is no scientific evidence that birth dates influence personality. Astrology is entertainment and cultural tradition. Enjoy your sign, but make life decisions on evidence, not star signs.",
+        "q": "Is astrology scientifically proven?"
+      },
+      {
+        "a": "The four classical elements group the signs: Fire (Aries, Leo, Sagittarius) is associated with energy; Earth (Taurus, Virgo, Capricorn) with practicality; Air (Gemini, Libra, Aquarius) with intellect; Water (Cancer, Scorpio, Pisces) with emotion. It is symbolism, not science.",
+        "q": "What do the elements mean?"
+      },
+      {
+        "a": "This tool uses the Western tropical zodiac (Aries in March/April). Vedic (sidereal) astrology, common in India, uses slightly different date ranges shifted by about 24 days. If you follow Vedic astrology, your sign may differ.",
+        "q": "Is this the same as Vedic astrology?"
+      },
+      {
+        "a": "The dates drift by about a day over long periods because the tropical year is not a whole number of days. Most published tables — including this tool's — use the standard modern boundaries, which are fine for everyday use.",
+        "q": "Do the date ranges ever change?"
+      }
+    ],
+    "formula": "Western zodiac = 12 tropical signs, each ~30° of the Sun's apparent path.\nSign boundaries (standard modern table):\nAries Mar 21–Apr 19 · Taurus Apr 20–May 20 · Gemini May 21–Jun 20\nCancer Jun 21–Jul 22 · Leo Jul 23–Aug 22 · Virgo Aug 23–Sep 22\nLibra Sep 23–Oct 22 · Scorpio Oct 23–Nov 21 · Sagittarius Nov 22–Dec 21\nCapricorn Dec 22–Jan 19 · Aquarius Jan 20–Feb 18 · Pisces Feb 19–Mar 20",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your birth day (1–31).",
+      "Choose your birth month.",
+      "Your zodiac sign, date range, element, and traits appear instantly.",
+      "Check the date range if you were born near a boundary."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The Western zodiac has 12 signs, one per ~30° of the Sun's path.",
+      "Signs run Aries (March) through Pisces (February/March).",
+      "Each sign belongs to one of four elements: Fire, Earth, Air, Water.",
+      "Date boundaries are standard modern tables, not exact astronomy.",
+      "Capricorn is the only sign that spans the new year.",
+      "Astrology is entertainment — not scientifically validated."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "zodiac sign finder, what is my zodiac sign, zodiac by birth date, star sign calculator, horoscope sign dates",
+    "labels": {
+      "cuspNote": "Born on a boundary date? The changeover shifts slightly each year — check an ephemeris for cusp precision.",
+      "datesLabel": "Date range",
+      "dayLabel": "Birth day",
+      "elementLabel": "Element",
+      "monthLabel": "Birth month",
+      "monthNames": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "signs": {
+        "aquarius": {
+          "dates": "Jan 20 – Feb 18",
+          "element": "Air",
+          "name": "Aquarius",
+          "traits": [
+            "Independent and inventive",
+            "Thinks ahead of the crowd"
+          ]
+        },
+        "aries": {
+          "dates": "Mar 21 – Apr 19",
+          "element": "Fire",
+          "name": "Aries",
+          "traits": [
+            "Bold and energetic",
+            "Natural leaders who act first"
+          ]
+        },
+        "cancer": {
+          "dates": "Jun 21 – Jul 22",
+          "element": "Water",
+          "name": "Cancer",
+          "traits": [
+            "Caring and intuitive",
+            "Deeply loyal to family"
+          ]
+        },
+        "capricorn": {
+          "dates": "Dec 22 – Jan 19",
+          "element": "Earth",
+          "name": "Capricorn",
+          "traits": [
+            "Disciplined and ambitious",
+            "Builds for the long term"
+          ]
+        },
+        "gemini": {
+          "dates": "May 21 – Jun 20",
+          "element": "Air",
+          "name": "Gemini",
+          "traits": [
+            "Curious and adaptable",
+            "Great communicators"
+          ]
+        },
+        "leo": {
+          "dates": "Jul 23 – Aug 22",
+          "element": "Fire",
+          "name": "Leo",
+          "traits": [
+            "Confident and generous",
+            "Thrives in the spotlight"
+          ]
+        },
+        "libra": {
+          "dates": "Sep 23 – Oct 22",
+          "element": "Air",
+          "name": "Libra",
+          "traits": [
+            "Fair and sociable",
+            "Seeks balance and harmony"
+          ]
+        },
+        "pisces": {
+          "dates": "Feb 19 – Mar 20",
+          "element": "Water",
+          "name": "Pisces",
+          "traits": [
+            "Dreamy and compassionate",
+            "Rich inner world"
+          ]
+        },
+        "sagittarius": {
+          "dates": "Nov 22 – Dec 21",
+          "element": "Fire",
+          "name": "Sagittarius",
+          "traits": [
+            "Adventurous and honest",
+            "Loves learning and travel"
+          ]
+        },
+        "scorpio": {
+          "dates": "Oct 23 – Nov 21",
+          "element": "Water",
+          "name": "Scorpio",
+          "traits": [
+            "Intense and loyal",
+            "Keeps confidences well"
+          ]
+        },
+        "taurus": {
+          "dates": "Apr 20 – May 20",
+          "element": "Earth",
+          "name": "Taurus",
+          "traits": [
+            "Reliable and patient",
+            "Loves comfort and stability"
+          ]
+        },
+        "virgo": {
+          "dates": "Aug 23 – Sep 22",
+          "element": "Earth",
+          "name": "Virgo",
+          "traits": [
+            "Analytical and practical",
+            "Notices every detail"
+          ]
+        }
+      },
+      "traitsLabel": "Classic traits"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Astrology has no scientific basis — treat it as entertainment.",
+      "Standard boundaries; exact cusp changeovers need birth time.",
+      "Western tropical zodiac only — Vedic dates differ.",
+      "Traits are traditional symbolism, not personality science."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Find your zodiac sign from your birth date — with element, date ranges and classic traits for all 12 signs. Free and instant.",
+    "metaTitle": "Zodiac Sign Calculator - Find Your Star Sign by Birth Date | JaurTools",
+    "name": "Zodiac Sign Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Your Western zodiac sign depends on your birth date: born on April 15, you are Aries (Mar 21 – Apr 19), a Fire sign classically described as bold and energetic. Enter any day and month to get the sign, its date range, element, and traditional traits instantly.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your zodiac sign",
+    "tagline": "Your star sign from your birth date — plus its story.",
+    "workedExample": "Birth date April 15:\n1. Check boundaries: Aries runs Mar 21 – Apr 19.\n2. April 15 falls inside that range.\n3. Result: Aries — Fire element.\n4. Classic traits: bold and energetic; natural leaders who act first.",
+    "workedExampleHeading": "Worked example"
+  }
+}

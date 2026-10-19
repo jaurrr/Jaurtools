@@ -1,0 +1,101 @@
+{
+  "height-converter": {
+    "assumptionNote": "Child-height prediction uses the mid-parental method - a statistical estimate, not a medical diagnosis.",
+    "benefits": [
+      "Settles the cm to feet/inches confusion in one tap - no mental math.",
+      "Gives curious parents a quick, honest estimate of a child's future height.",
+      "The +/-8.5 cm range sets realistic expectations instead of a single magic number.",
+      "Useful for clothing sizes, sports categories, and medical forms that ask for height in either unit."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is right within about 8.5 cm for most children. It is a statistical estimate built on population averages - individual children differ because of nutrition, health, and the timing of puberty.",
+        "q": "How accurate is the child height predictor?"
+      },
+      {
+        "a": "On average, adult men are about 13 cm taller than adult women. The formula adjusts the parents' average for that sex difference before halving it.",
+        "q": "Why add 13 cm for boys and subtract it for girls?"
+      },
+      {
+        "a": "5 feet 8.9 inches, usually rounded to 5'9\". The converter above does this math instantly.",
+        "q": "175 cm is how many feet?"
+      },
+      {
+        "a": "Yes as an estimate, but toddlers' growth curves vary a lot. The older the child, the more reliable the prediction becomes.",
+        "q": "Does the calculator work for toddlers?"
+      },
+      {
+        "a": "Convert them to centimetres first using the converter mode on this page, then enter the values in the predictor.",
+        "q": "What if the parents' heights are in feet?"
+      },
+      {
+        "a": "Good nutrition helps a child reach their full genetic potential; poor nutrition can hold them back. But no diet can push a child past what their genes allow.",
+        "q": "Can nutrition change the predicted height?"
+      }
+    ],
+    "formula": "Conversion: inches = cm / 2.54; cm = inches x 2.54.\nMid-parental (cm):\nBoy: (father + mother + 13) / 2\nGirl: (father + mother - 13) / 2\nExample: father 175 cm, mother 162 cm, boy = (175 + 162 + 13) / 2 = 350 / 2 = 175 cm.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose Converter to switch between cm and feet/inches, or Predictor for child-height estimation.",
+      "For conversion, type your height in either unit - the other updates instantly.",
+      "For prediction, enter both parents' heights in centimetres. Morning measurements are the most accurate.",
+      "Select the child's sex: the formula adds 13 cm before halving for boys and subtracts 13 cm for girls.",
+      "Read the predicted adult height plus the likely range. Remember it is an estimate, not a medical forecast."
+    ],
+    "howToHeading": "How to use this tool",
+    "keyFacts": [
+      "1 inch = 2.54 cm exactly. To convert, divide centimetres by 2.54 or multiply inches by 2.54.",
+      "The mid-parental formula: boy = (father + mother + 13) / 2 cm; girl = (father + mother - 13) / 2 cm.",
+      "About 80% of height is genetic; nutrition, sleep, and childhood illness explain most of the rest.",
+      "The prediction carries a typical range of +/-8.5 cm - it estimates, it does not guarantee.",
+      "Most children land within 5-10 cm of the prediction by their late teens; boys usually finish growing around 18, girls around 16.",
+      "Feet-and-inches notation: 5'9\" means 5 feet and 9 inches, which equals 175.3 cm."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "height converter, cm to feet inches, child height predictor, predict adult height, mid parental height formula",
+    "labels": {
+      "boy": "Boy",
+      "childSex": "Child's sex",
+      "convertTab": "Converter",
+      "convertedResult": "Converted height",
+      "fatherHeight": "Father's height (cm)",
+      "feetLabel": "Feet",
+      "girl": "Girl",
+      "heightCm": "Height (cm)",
+      "heightUnit": "cm",
+      "imperialTab": "Imperial (ft / in)",
+      "inchesLabel": "Inches",
+      "likelyRange": "Likely range",
+      "metricTab": "Metric (cm)",
+      "modeLabel": "Mode",
+      "motherHeight": "Mother's height (cm)",
+      "predictTab": "Predictor",
+      "predictedResult": "Predicted adult height",
+      "unitSystem": "Unit system"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The prediction is an estimate: nutrition, health, and puberty timing all shift the final height.",
+      "It assumes average genetics. Unusually tall or short grandparents or siblings move the result.",
+      "Not valid for children with growth disorders or chronic illness - see a paediatrician instead.",
+      "Conversion uses the international inch (2.54 cm); some old survey measurements differ slightly."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Convert height between cm, feet and inches instantly — both directions, exact to the international standard. Free, no signup.",
+    "metaTitle": "Height Converter - Convert CM to Feet and Inches | JaurTools",
+    "name": "Height Converter",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "One centimetre equals 0.3937 inches, so 175 cm is 5 feet 8.9 inches. To predict a child's adult height, average both parents' heights and add 6.5 cm for a boy or subtract 6.5 cm for a girl - the mid-parental method. Most children land within 8.5 cm of that prediction.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your height results",
+    "tagline": "Centimeters to feet-and-inches, both ways, instantly.",
+    "workedExample": "Convert 175 cm to feet and inches:\n1. 175 / 2.54 = 68.9 inches in total.\n2. 68.9 / 12 = 5 full feet, remainder 8.9 inches.\n3. Result: 5'8.9\" (about 5'9\").\n\nPredict a boy's adult height (father 175 cm, mother 162 cm):\n1. Add: 175 + 162 + 13 = 350.\n2. Halve: 350 / 2 = 175 cm predicted.\n3. Likely range: 166.5 to 183.5 cm.",
+    "workedExampleHeading": "Worked example"
+  }
+}

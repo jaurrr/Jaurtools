@@ -1,0 +1,90 @@
+{
+  "ira-calculator": {
+    "benefits": [
+      "See the real payoff of starting early - small contributions snowball over decades.",
+      "Compare scenarios instantly: what if you add $1,000 more per year?",
+      "Separates your contributions from growth, so you see what compounding earned you.",
+      "Private by design - retirement numbers never leave your browser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For 2024 the IRS limit is $7,000 if you are under 50 ($8,000 if 50 or older), with income phase-outs for deductibility. Limits change yearly, so confirm the current year's figures before planning.",
+        "q": "How much can I contribute to an IRA per year?"
+      },
+      {
+        "a": "Traditional gives a tax break now and taxes withdrawals later; Roth taxes contributions now and withdrawals are tax-free. Roughly: if your tax rate will be lower in retirement, Traditional usually wins. This calculator models the Traditional (tax-deferred) case.",
+        "q": "Traditional IRA vs Roth IRA - which is better?"
+      },
+      {
+        "a": "US stocks have averaged about 10% nominal (7% after inflation) over long periods, but no one can promise that. Many planners model 6-8% nominal for a stock-heavy portfolio and less for conservative mixes.",
+        "q": "What return should I assume?"
+      },
+      {
+        "a": "No - IRAs have no employer match (that is a 401(k) feature). Enter only what you personally contribute each year.",
+        "q": "Does the calculator include employer matching?"
+      },
+      {
+        "a": "Generally after age 59 and a half. Earlier withdrawals usually face a 10% penalty plus income tax, with a few hardship exceptions.",
+        "q": "When can I withdraw without penalty?"
+      },
+      {
+        "a": "No. The projection is computed in your browser and nothing is stored or transmitted.",
+        "q": "Is my data sent anywhere?"
+      }
+    ],
+    "formula": "Future value = P x (1 + r)^n + C x (((1 + r)^n - 1) / r)\nP = current balance, C = yearly contribution, r = annual return, n = years.\nContributions are assumed at the end of each year.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your current IRA balance (or 0 if you are starting fresh).",
+      "Enter how much you plan to contribute each year.",
+      "Set an expected annual return - 6 to 8% is a common long-run stock-market assumption.",
+      "Choose the number of years until you plan to retire.",
+      "Read your projected balance, total contributions, and how much is pure growth."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A Traditional IRA is a US retirement account where investments grow tax-deferred until withdrawal.",
+      "Growth comes from two engines: compounding on your current balance and on every yearly contribution.",
+      "The IRS sets yearly contribution limits ($7,000 under 50 for 2024); this calculator lets you model any amount.",
+      "Starting 10 years earlier can matter more than contributing 10% more - compounding rewards time.",
+      "Withdrawals before age 59 and a half usually trigger a 10% penalty plus income tax.",
+      "This projection ignores fees, taxes, and inflation - treat it as a planning sketch, not a promise."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "ira calculator, traditional ira calculator, retirement savings calculator, ira growth projection, roth vs traditional ira",
+    "labels": {
+      "annualContribution": "Annual contribution",
+      "annualReturn": "Expected annual return (%)",
+      "assumptionNote": "Assumes contributions at the end of each year, a constant annual return, and no taxes or fees. Actual IRA rules (contribution limits, withdrawal penalties) change yearly - check current IRS rules.",
+      "currentBalance": "Current balance",
+      "investmentGrowth": "Investment growth",
+      "projectedBalance": "Projected balance",
+      "totalContributions": "Total contributions",
+      "years": "Years to grow"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Estimates only - markets do not deliver a smooth fixed return every year.",
+      "Ignores IRA contribution limits, income phase-outs, taxes, and fees.",
+      "Not financial advice; a fiduciary adviser can tailor a plan to your situation.",
+      "Inflation is not subtracted - $265,000 in 20 years buys less than today."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Traditional IRA calculator: project your retirement balance with annual contributions and compound growth. Private, browser-based, no sign-up.",
+    "metaTitle": "IRA Calculator - Project Traditional IRA Growth | JaurTools",
+    "name": "IRA Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A Traditional IRA grows tax-deferred: your balance compounds and yearly contributions add up. For example, $5,000 saved plus $6,000 a year at 7% for 20 years grows to about $265,000 - roughly $140,000 of it pure growth. Enter your numbers to project your own balance.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your IRA projection",
+    "tagline": "Project the growth of a Traditional IRA with annual contributions and compound returns.",
+    "workedExample": "$5,000 balance, $6,000/year, 7% return, 20 years:\n1. Growth factor: 1.07^20 = 3.8697\n2. Balance grows to: 5,000 x 3.8697 = $19,348\n3. Contributions grow to: 6,000 x (3.8697 - 1) / 0.07 = 6,000 x 40.9957 = $245,974\n4. Projected total = $19,348 + $245,974 = $265,322\n5. You contributed $125,000; growth did the rest: about $140,322.",
+    "workedExampleHeading": "Worked example"
+  }
+}

@@ -1,0 +1,224 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <p class="dv-example">
+        <button type="button" class="dv-example-btn" (click)="loadSample()">
+          <app-icon name="sparkles" /> {{ tc('tryExample') }}
+        </button>
+        @if (restored()) {
+          <span class="dv-autosave"><app-icon name="refresh-cw" /> {{ tc('restoredNote') }}</span>
+        }
+      </p>
+
+      <div class="field">
+        <label for="tv-input">{{ t('labels.inputLabel') }}</label>
+        <div class="dv-codeblock">
+          <div class="dv-codeblock-head"><span class="dv-codeblock-title">input.json</span></div>
+          <textarea id="tv-input" class="dv-term-input" dir="ltr" spellcheck="false" autocomplete="off"
+            [ngModel]="text()" (ngModelChange)="setText($event)"></textarea>
+        </div>
+        @if (loadError()) {
+          <p class="alert error dv-status dv-status-bad" role="alert">{{ loadError() }}</p>
+        }
+      </div>
+
+      <div class="dv-inout">
+        <button type="button" class="btn-ghost" (click)="uploadInput.click()">
+          <app-icon name="upload" /> {{ tc('uploadFile') }}
+        </button>
+        <input #uploadInput type="file" accept=".json,application/json" (change)="onUpload($event)" hidden />
+        <button type="button" class="btn-ghost" (click)="download()">
+          <app-icon name="download" /> {{ tc('downloadFile') }}
+        </button>
+      </div>
+
+      <div class="dv-viewtabs" role="tablist" [attr.aria-label]="t('resultsHeading')">
+        <button type="button" role="tab" [attr.aria-selected]="view() === 'tree'" (click)="setView('tree')">
+          <app-icon name="template" /> {{ tc('viewTree') }}
+        </button>
+        <button type="button" role="tab" [attr.aria-selected]="view() === 'text'" (click)="setView('text')">
+          <app-icon name="file-text" /> {{ tc('viewFormatted') }}
+        </button>
+      </div>
+
+      @if (view() === 'tree') {
+        <div class="btn-row">
+          <button type="button" class="btn" (click)="expandAll()">{{ t('labels.expandAllLabel') }}</button>
+          <button type="button" class="btn" (click)="collapseAll()">{{ t('labels.collapseAllLabel') }}</button>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat"><strong>{{ stats().count }}</strong><span>{{ t('labels.nodesLabel') }}</span></div>
+          <div class="stat"><strong>{{ stats().depth }}</strong><span>{{ t('labels.depthLabel') }}</span></div>
+        </div>
+
+        <div class="tree" role="tree" [attr.aria-label]="t('name')">
+          <ng-template #nodeTmpl let-nodes="nodes">
+            <ul>
+              @for (n of nodes; track n.pkey) {
+                <li role="treeitem" [attr.aria-expanded]="n.children ? isExpanded(n.pkey) : null">
+                  <div class="node-row" [title]="nodePath(n)">
+                    @if (n.children) {
+                      <button type="button" class="toggle" (click)="toggleNode(n.pkey)"
+                        [attr.aria-label]="t('labels.toggleLabel') + ' ' + n.label">
+                        {{ isExpanded(n.pkey) ? '−' : '+' }}
+                      </button>
+                    } @else {
+                      <span class="toggle-spacer" aria-hidden="true"></span>
+                    }
+                    <span class="tkey">{{ n.label }}</span>
+                    @if (n.children) {
+                      <span class="tnull">{{ n.display }}</span>
+                      <button type="button" class="icon-btn" (click)="deleteNode(n)"
+                        [attr.aria-label]="t('labels.deleteLabel') + ' ' + n.label">×</button>
+                    } @else if (editing() === n.pkey) {
+                      <input class="edit-input" type="text" dir="ltr"
+                        [ngModel]="editValue()" (ngModelChange)="editValue.set($event)"
+                        [attr.aria-label]="t('labels.editValueLabel')" />
+                      <button type="button" class="icon-btn" (click)="applyEdit(n)">{{ t('labels.saveLabel') }}</button>
+                      <button type="button" class="icon-btn" (click)="cancelEdit()">{{ t('labels.cancelLabel') }}</button>
+                    } @else {
+                      <span class="tval t-{{ n.type }}">{{ n.display }}</span>
+                      <button type="button" class="icon-btn" (click)="startEdit(n)"
+                        [attr.aria-label]="t('labels.editLabel') + ' ' + n.label">{{ t('labels.editLabel') }}</button>
+                      <button type="button" class="icon-btn" (click)="deleteNode(n)"
+                        [attr.aria-label]="t('labels.deleteLabel') + ' ' + n.label">×</button>
+                    }
+                  </div>
+                  @if (editError() && editing() === n.pkey) {
+                    <p class="alert error dv-status dv-status-bad">{{ editError() }}</p>
+                  }
+                  @if (n.children && isExpanded(n.pkey)) {
+                    <ng-container *ngTemplateOutlet="nodeTmpl; context: { nodes: n.children }"></ng-container>
+                  }
+                </li>
+              }
+            </ul>
+          </ng-template>
+          <ng-container *ngTemplateOutlet="nodeTmpl; context: { nodes: rootNodes() }"></ng-container>
+        </div>
+      } @else {
+        <p class="dv-picker-label">{{ tc('indentSize') }}</p>
+        <div class="dv-picker" role="group" [attr.aria-label]="tc('indentSize')">
+          <button type="button" class="dv-chip" [attr.aria-pressed]="indent() === 2" (click)="setIndent(2)">2</button>
+          <button type="button" class="dv-chip" [attr.aria-pressed]="indent() === 4" (click)="setIndent(4)">4</button>
+        </div>
+        <div class="dv-codeblock">
+          <div class="dv-codeblock-head">
+            <span class="dv-codeblock-title">formatted.json</span>
+            <span class="dv-codeblock-actions">
+              <button type="button" class="dv-copybtn" (click)="copyJson()">
+                <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyJsonLabel') }}
+              </button>
+            </span>
+          </div>
+          <pre class="code-output dv-term" dir="ltr" tabindex="0">{{ formatted() }}</pre>
+        </div>
+      }
+
+      <div class="btn-row">
+        <button type="button" class="btn primary" (click)="copyJson()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copiedLabel') : t('labels.copyJsonLabel') }}
+        </button>
+        <button type="button" class="btn" (click)="download()">
+          <app-icon name="download" /> {{ t('labels.downloadLabel') }}
+        </button>
+      </div>
+      <p class="note">{{ t('labels.editHint') }}</p>
+
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre dir="ltr"><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

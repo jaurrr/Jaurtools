@@ -1,0 +1,134 @@
+{
+  "sip-calculator": {
+    "breadcrumbLabel": "Breadcrumb",
+    "assumptionNote": "Assumes your investment goes in at the start of each month, compounded monthly. Returns are estimates, not guarantees.",
+    "benefits": [
+      "Builds investing discipline. A fixed monthly habit beats random lump sums for most people.",
+      "Rupee-cost averaging: you buy more units when markets fall and fewer when they rise.",
+      "Compounding over 10 to 15 years can multiply your invested money significantly.",
+      "You can start small. Even Rs. 500 to Rs. 1,000 a month grows into a meaningful corpus over time."
+    ],
+    "benefitsHeading": "Benefits",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A Systematic Investment Plan is a way to invest a fixed amount, usually every month, into a mutual fund. Instead of investing one large sum, you invest smaller amounts regularly. This builds discipline and smooths out market ups and downs through rupee-cost averaging.",
+        "q": "What is a SIP?"
+      },
+      {
+        "a": "No. The projected return is only an estimate based on the rate you enter. Actual mutual fund returns depend on market performance and can be higher or lower. Past performance does not guarantee future results. Always read the fund's scheme documents before investing.",
+        "q": "Is the return shown here guaranteed?"
+      },
+      {
+        "a": "For Indian equity mutual funds, 10 to 12% is a common long-term assumption, but conservative planners use 10%. Debt funds usually assume 6 to 8%. Pick a rate lower than the best case, so your plan still works in bad years.",
+        "q": "What annual return should I assume?"
+      },
+      {
+        "a": "At least 5 to 7 years for equity SIPs, ideally 10 or more. Compounding accelerates in the later years. In the Rs. 5,000 per month, 10-year example above, a large share of the gains comes from the final few years.",
+        "q": "How long should I stay invested?"
+      },
+      {
+        "a": "No. Long-term capital gains tax on equity and the fund's expense ratio both reduce your final amount. Under current Indian rules, equity LTCG above Rs. 1.25 lakh a year is taxed at 12.5%. Treat the result as a before-tax estimate.",
+        "q": "Does this calculator include taxes and fees?"
+      },
+      {
+        "a": "A step-up SIP increases your monthly amount every year, for example by 10% each year as your salary grows. It is not included in this calculator, but it can add lakhs to your final corpus. A simple trick: raise your SIP with every salary hike.",
+        "q": "What is a step-up SIP?"
+      }
+    ],
+    "formula": "FV = M x [((1 + r)^n - 1) / r] x (1 + r)\nM = monthly investment, r = monthly rate (annual rate / 12 / 100), n = total months.\nThe (1 + r) at the end is because each month's investment is assumed to go in at the start of the month.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter how much you can invest every month, for example Rs. 5,000.",
+      "Enter the expected annual return. 12% is a common long-term assumption for Indian equity funds, but be conservative.",
+      "Choose your investment period in years. Longer periods show the compounding effect clearly.",
+      "Read your results instantly: total invested, estimated gains, and maturity value.",
+      "Try different amounts and periods to build a plan around a real goal, like a Rs. 50 lakh house down payment in 8 years."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "SIP stands for Systematic Investment Plan - investing a fixed amount every month, usually in mutual funds.",
+      "This calculator uses the future value of an annuity formula with monthly compounding at the start of each month.",
+      "The expected annual return is an estimate, not a promise. Real equity SIP returns rise and fall with the market.",
+      "Time matters more than timing. Staying invested for 10 or more years lets compounding do the heavy lifting.",
+      "Step-up SIPs, where you increase your amount every year, are not included here, but they can add lakhs to your total.",
+      "Figures are before tax. Long-term capital gains tax and the fund's expense ratio are not deducted here."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "sip calculator, sip return calculator, mutual fund sip calculator, systematic investment plan calculator, sip maturity calculator",
+    "labels": {
+      "gains": "Estimated gains",
+      "invested": "Total invested",
+      "monthly": "Monthly investment (Rs.)",
+      "rate": "Expected annual return (%)",
+      "total": "Total value",
+      "years": "Time period (years)",
+      "goalAmount": "Target corpus (₹)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Returns are not guaranteed. The market decides, not the formula.",
+      "Inflation is not adjusted. Rs. 50 lakh in 15 years will buy less than Rs. 50 lakh today.",
+      "Taxes (LTCG, STCG) and the fund's expense ratio reduce your real take-home return.",
+      "Assumes a constant return every year, but real returns swing up and down year to year."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free SIP calculator: estimate how your monthly mutual fund investment grows. Enter amount, expected return and years for instant results. 100% private, no sign-up.",
+    "metaTitle": "SIP Calculator - Estimate Your Mutual Fund Returns | JaurTools",
+    "name": "SIP Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "A SIP calculator estimates the future value of your monthly mutual fund investments. Enter your monthly amount, expected annual return, and time period. For example, investing Rs. 5,000 every month at 12% for 10 years grows to about Rs. 11,61,695, on a total investment of Rs. 6,00,000.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your SIP results",
+    "tagline": "See how small monthly investments can grow into big wealth through the power of compounding.",
+    "workedExample": "Rs. 5,000 per month, 12% annual return, 10 years:\n1. Monthly rate r = 0.12 / 12 = 0.01; total months n = 120.\n2. (1.01)^120 = 3.3004.\n3. (3.3004 - 1) / 0.01 = 230.04.\n4. 230.04 x 1.01 = 232.34.\n5. 5,000 x 232.34 = Rs. 11,61,695.\nYou invested Rs. 6,00,000 (5,000 x 120), so estimated gains are Rs. 5,61,695.",
+    "workedExampleHeading": "Worked example",
+    "modesLabel": "Calculator mode",
+    "modes": {
+      "sip": "SIP → Corpus",
+      "goal": "Goal → Monthly SIP"
+    },
+    "hero": {
+      "corpus": "Projected corpus",
+      "invested": "You invest",
+      "gains": "Est. gains",
+      "required": "Monthly SIP needed",
+      "corpusNote": "in {years} years at {rate}% annual return",
+      "requiredNote": "to reach {goal} in {years} years"
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "sip1": "You put in {invested} of your own money over {years} years.",
+      "sip2": "Growth adds about {gains} on top — {pct}% of your final corpus is pure growth.",
+      "sip3": "That turns every ₹1 you invest into roughly ₹{mult}.",
+      "goal1": "To reach {goal} in {years} years, invest {sip} every month.",
+      "goal2": "Of that corpus, {invested} is your money and {gains} is growth."
+    },
+    "tip": {
+      "sip": "Tip: raising your SIP by just ₹1,000/month adds {gain} to your corpus — small hikes compound hard.",
+      "goal": "Tip: investing ₹1,000/month extra reaches your goal {months} months sooner."
+    },
+    "ref": {
+      "heading": "Quick reference: what monthly SIP builds",
+      "caption": "Corpus built at a 12% annual return. Pick a monthly amount and a horizon.",
+      "sipCol": "Monthly SIP",
+      "yearSuffix": "yrs"
+    },
+    "schedule": {
+      "heading": "Year-by-year growth",
+      "year": "Year",
+      "invested": "Invested",
+      "growth": "Growth",
+      "value": "Value"
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "Monthly rate = (1 + annual rate)^(1/12) − 1, compounded every month.",
+      "s2": "Future value = monthly SIP × (((1 + r)^n − 1) / r) × (1 + r), where n is months.",
+      "s3": "Goal mode reverses it: monthly SIP = goal × r / (((1 + r)^n − 1) × (1 + r))."
+    }
+  }
+}

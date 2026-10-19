@@ -1,0 +1,115 @@
+{
+  "compound-interest-calculator": {
+    "assumptionNote": "Assumes a constant rate, contributions added at the end of each compounding period, and no withdrawals, fees, or tax.",
+    "benefits": [
+      "Makes the abstract idea of compounding concrete and personal.",
+      "Shows exactly how much each extra year of patience is worth.",
+      "Lets you compare bank, bond, and fund offers on equal terms.",
+      "Motivates starting early — the growth curve does the convincing."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "It is interest on interest. In year one you earn interest on your deposit; in year two you earn interest on your deposit plus last year's interest. Each cycle the base grows, so growth accelerates — slowly at first, then dramatically.",
+        "q": "What is compound interest in simple words?"
+      },
+      {
+        "a": "Simple interest pays only on the original principal every year, so growth is a straight line. Compound interest reinvests each year's interest, so growth curves upward. Over 10 years at 8%, ₹50,000 earns ₹40,000 simple but ₹60,982 compounded monthly.",
+        "q": "How is it different from simple interest?"
+      },
+      {
+        "a": "A little. Daily compounding beats annual compounding, but on a 10-year investment the gap is usually under 1% of the final amount. Rate and time dominate — do not pick an investment for its compounding frequency alone.",
+        "q": "Does compounding frequency really matter?"
+      },
+      {
+        "a": "Divide 72 by your annual rate to estimate doubling time. At 8%, money doubles in about 9 years (72/8). It is a handy mental check on this calculator's results — our example nearly doubles in 10 years, which matches.",
+        "q": "What is the Rule of 72?"
+      },
+      {
+        "a": "Because each contribution gets the full remaining time to compound. ₹5,000 a month at 10% for 20 years becomes about ₹38 lakh, of which only ₹12 lakh was your own money — the rest is growth doing the heavy lifting.",
+        "q": "Why do small contributions matter so much?"
+      },
+      {
+        "a": "Yes — on debt. Credit card balances compound monthly against you at 36–42% APR, which is why minimum payments barely move the balance. Compounding is a tool: on investments it builds wealth, on debt it builds the lender's wealth.",
+        "q": "Can compounding work against me?"
+      }
+    ],
+    "formula": "A = P x (1 + r/n)^(n x t) + PMT x (((1 + r/n)^(n x t) - 1) / (r/n)), where P = principal, r = annual rate, n = compounding frequency, t = years, PMT = contribution per period.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your starting principal.",
+      "Set the annual interest rate.",
+      "Choose how often interest compounds.",
+      "Set the years and any monthly contribution, then read the final amount."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Compound interest means you earn interest on your interest, not just on your principal.",
+      "Time matters more than rate: starting 10 years earlier beats a 2% higher rate started late.",
+      "More frequent compounding helps, but the effect is small next to rate and time.",
+      "Regular contributions supercharge compounding because each deposit gets its own growth runway.",
+      "Inflation is the silent opponent — an 8% return at 6% inflation is only about 2% real growth."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "compound interest calculator, compounding calculator, investment growth calculator",
+    "labels": {
+      "annualRate": "Annual interest rate (%)",
+      "compounding": "Compounding frequency",
+      "finalAmount": "Final amount",
+      "freqOptions": {
+        "annually": "Annually",
+        "daily": "Daily",
+        "halfYearly": "Half-yearly",
+        "monthly": "Monthly",
+        "quarterly": "Quarterly"
+      },
+      "growthMultiple": "Growth multiple",
+      "interestEarned": "Interest earned",
+      "monthlyContribution": "Monthly contribution (0 if none)",
+      "principal": "Starting principal",
+      "totalContributions": "Total you put in",
+      "years": "Years invested",
+      "yearSuffix": "yrs"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes a constant rate; real investments fluctuate every year.",
+      "Ignores fees, charges, and taxes that eat into returns.",
+      "Monthly contributions are spread evenly across compounding periods — an approximation.",
+      "Shows nominal growth; inflation-adjusted (real) growth will be lower."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free compound interest calculator: see how your savings grow with any compounding frequency. Enter principal, rate, years and contributions.",
+    "metaTitle": "Compound Interest Calculator - Growth & Returns | JaurTools",
+    "name": "Compound Interest Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "₹50,000 invested at 8% per year, compounded monthly for 10 years, grows to ₹110,982 — earning ₹60,982 in interest, more than the original deposit. That extra comes from interest earning its own interest, and it accelerates the longer you stay invested.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your compound interest results",
+    "tagline": "Watch your money grow with compounding — final amount, interest earned, and the true power of time.",
+    "workedExample": "Principal ₹50,000, 8% annual rate, monthly compounding (n = 12), 10 years, no extra contributions:\n1. Monthly rate = 0.08 / 12 = 0.0066667.\n2. Periods = 12 x 10 = 120.\n3. Growth factor = (1.0066667)^120 = 2.21964.\n4. Final = 50,000 x 2.21964 = ₹110,982.01.\n5. Interest = 110,982.01 - 50,000 = ₹60,982.01 — more than the starting amount.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "finalNote": "after {years} years at {rate}%"
+    },
+    "bars": {
+      "heading": "Balance growth, year by year",
+      "caption": "Watch compounding bend the curve upward."
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "You put in {contrib}; compounding adds {interest} — {pct}% of your final balance is growth.",
+      "l2": "Your money multiplies {mult}x over the period."
+    },
+    "howcalc": {
+      "heading": "How we calculate",
+      "s1": "Each compounding period multiplies the balance by (1 + annual rate ÷ periods).",
+      "s2": "Contributions are spread across periods and compound from the day they land."
+    }
+  }
+}

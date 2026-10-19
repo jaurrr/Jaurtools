@@ -1,0 +1,106 @@
+{
+  "overlay-pdf": {
+    "name": "PDF Overlay Tool",
+    "tagline": "Stamp one PDF over another — letterheads, backgrounds, and approval seals.",
+    "metaTitle": "PDF Overlay Tool — Stamp One PDF Over Another Free | JaurTools",
+    "metaDescription": "Overlay two PDFs online for free: stamp a letterhead, background or seal onto every page of your document. Adjust opacity, size and position. Private — runs in your browser.",
+    "keywords": "pdf overlay, overlay pdf online, stamp pdf, pdf letterhead overlay, combine pdf layers",
+    "category": "PDF Tools",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "resultsHeading": "Overlay PDFs",
+    "quickAnswerHeading": "Quick answer",
+    "quickAnswer": "Upload your main document and the PDF you want stamped over it (a letterhead, a background, a seal), choose whether it fills the page or keeps its size, set the opacity, and every page of the overlay is drawn on top of the matching page of your document.",
+    "keyFactsHeading": "Key facts",
+    "keyFacts": [
+      "The overlay PDF is drawn on top of the base PDF — like placing tracing paper over a page.",
+      "A single-page overlay is repeated on every page of the base document.",
+      "With multiple overlay pages, base page 1 gets overlay page 1, page 2 gets page 2, cycling as needed.",
+      "Opacity from 5% to 100% controls how strongly the overlay shows.",
+      "Works best with text-based PDFs; scanned-image overlays flatten into the page."
+    ],
+    "howToHeading": "How to use",
+    "howTo": [
+      "Upload the base PDF (your document).",
+      "Upload the overlay PDF (letterhead, background, or stamp).",
+      "Choose \"Fit to page\" to stretch the overlay across the sheet, or \"Actual size\" to keep its dimensions and pick a position.",
+      "Set the overlay opacity.",
+      "Build and download the combined PDF."
+    ],
+    "formulaHeading": "Formula",
+    "formula": "drawn_w = overlay_w × min(page_w / overlay_w, page_h / overlay_h)   (fit mode)\nx = (page_w − drawn_w) / 2,  y = (page_h − drawn_h) / 2   (centered)\n\nIn \"actual size\" mode the overlay keeps its own dimensions and is placed at your chosen anchor with a 24 pt margin. Opacity blends the two layers: result = overlay × opacity + page × (1 − opacity).",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "A company letterhead saved as a 1-page A4 PDF, overlaid in \"Fit to page\" mode at 100% opacity onto a 12-page contract: every contract page comes out on the letterhead, correctly positioned, in a single 12-page PDF — no manual copy-pasting in a desktop editor.",
+    "benefitsHeading": "Benefits",
+    "benefits": [
+      "Apply letterheads, footers, and seals to whole documents in seconds.",
+      "Opacity control doubles as a watermark-strength dial.",
+      "Both PDFs stay vector — text remains sharp and selectable.",
+      "Position presets for actual-size stamps: corners and center.",
+      "No uploads; sensitive contracts never leave your machine."
+    ],
+    "limitationsHeading": "Limitations",
+    "limitations": [
+      "Text-based PDFs only — complex transparency in the overlay may render differently than in a desktop viewer.",
+      "Annotations and form fields in the overlay are flattened into the page.",
+      "Both PDFs must open without a password.",
+      "Overlay pages cycle if counts differ, which may surprise mixed-length documents."
+    ],
+    "privacyNote": "Both PDFs are composited locally with pdf-lib. Nothing is uploaded or stored anywhere.",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "q": "What is the difference between overlay and watermark?",
+        "a": "A watermark is usually light text or an image you add; an overlay stamps an entire PDF page — full letterheads, designed backgrounds, multi-element seals — over your document with precise positioning."
+      },
+      {
+        "q": "Which PDF goes on top?",
+        "a": "The overlay PDF is always drawn on top of the base PDF. Put your document as the base and the letterhead, background, or stamp as the overlay."
+      },
+      {
+        "q": "My overlay has 1 page but my document has 20?",
+        "a": "That is the most common case: the single overlay page is repeated on all 20 pages automatically."
+      },
+      {
+        "q": "Can I make the overlay semi-transparent?",
+        "a": "Yes — the opacity slider (5–100%) blends the overlay with the page beneath, from a faint background tint to fully opaque."
+      },
+      {
+        "q": "Will text stay selectable?",
+        "a": "Base-document text stays selectable in most cases. Overlay content is flattened into each page, so treat the overlay as a picture after merging."
+      },
+      {
+        "q": "Does it work with scanned PDFs?",
+        "a": "Yes for the base document. But a scanned overlay is just an image — it will cover the page beneath wherever it is not transparent, so keep its opacity and size in mind."
+      }
+    ],
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "baseTag": "Base",
+      "overlayTag": "Overlay",
+      "baseLabel": "Base PDF",
+      "baseHint": "Your document…",
+      "overlayLabel": "Overlay PDF",
+      "overlayHint": "Letterhead, stamp…",
+      "modeLabel": "Overlay size",
+      "modeFit": "Fit to page",
+      "modeActual": "Actual size",
+      "posLabel": "Position",
+      "posCenter": "Center",
+      "posTopLeft": "Top left",
+      "posTopRight": "Top right",
+      "posBottomLeft": "Bottom left",
+      "posBottomRight": "Bottom right",
+      "opacityLabel": "Overlay opacity",
+      "buildButton": "Apply overlay",
+      "downloadButton": "Download PDF",
+      "busy": "Overlaying…",
+      "statusDone": "Overlay applied to {n} pages.",
+      "errType": "Please choose a valid PDF file.",
+      "errSize": "File is larger than 50 MB.",
+      "errRead": "Could not read this PDF.",
+      "errBuild": "Could not apply the overlay."
+    }
+  }
+}

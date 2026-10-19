@@ -1,0 +1,145 @@
+<div class="tool-page">
+  <nav class="breadcrumb" [attr.aria-label]="t('breadcrumbLabel')">
+    <a [routerLink]="['/', translate.lang()]">{{ t('homeLabel') }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ t('category') }}</span>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ t('name') }}</span>
+  </nav>
+
+  <h1>{{ t('name') }}</h1>
+  <p class="tagline">{{ t('tagline') }}</p>
+
+  <div class="tool-layout">
+    <section class="tool-card" aria-label="{{ t('resultsHeading') }}">
+      <h2>{{ t('resultsHeading') }}</h2>
+
+      <div class="preview-stage" [attr.aria-label]="t('labels.previewLabel')">
+        <div [ngStyle]="previewStyle()"></div>
+      </div>
+
+      <div class="field">
+        <label for="tri-dir">{{ t('labels.direction') }}</label>
+        <select id="tri-dir" [ngModel]="direction()" (ngModelChange)="setDirection($event)">
+          @for (d of directions; track d) {
+            <option [value]="d">{{ t('labels.dir_' + d) }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tri-w">{{ t('labels.width') }}</label>
+        <div class="input-row">
+          <input id="tri-w" type="number" inputmode="numeric" min="4" max="400" step="1" class="short"
+            [ngModel]="width()" (ngModelChange)="setWidth($event)" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tri-h">{{ t('labels.height') }}</label>
+        <div class="input-row">
+          <input id="tri-h" type="number" inputmode="numeric" min="4" max="400" step="1" class="short"
+            [ngModel]="height()" (ngModelChange)="setHeight($event)" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tri-color">{{ t('labels.color') }}</label>
+        <div class="input-row">
+          <input id="tri-color" type="color" [ngModel]="color()" (ngModelChange)="setColor($event)" />
+          <input type="text" dir="ltr" maxlength="7" class="short" [attr.aria-label]="t('labels.colorHex')"
+            [ngModel]="color()" (ngModelChange)="setColor($event)" />
+        </div>
+      </div>
+
+      <h2 style="font-size: 1.125rem; margin-block: 1.5rem 1rem;">{{ t('labels.cssOutput') }}</h2>
+      <pre class="code-output dv-term" dir="ltr">{{ css() }}</pre>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" (click)="copy()">
+          <app-icon name="copy" /> {{ copied() ? t('labels.copied') : t('labels.copy') }}
+        </button>
+      </div>
+      <p class="dv-privacy-proof"><app-icon name="shield-check" /> {{ tc('privacyProof') }}</p>
+    </section>
+
+    <article class="guide">
+      <aside class="quick-answer" aria-label="{{ t('quickAnswerHeading') }}">
+        <h2>{{ t('quickAnswerHeading') }}</h2>
+        <p>{{ t('quickAnswer') }}</p>
+      </aside>
+
+      <section>
+        <h2>{{ t('keyFactsHeading') }}</h2>
+        <ul>
+          @for (fact of list('keyFacts'); track $index) {
+            <li>{{ fact }}</li>
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2>{{ t('howToHeading') }}</h2>
+        <ol>
+          @for (step of list('howTo'); track $index) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+      </section>
+
+      <section>
+        <h2>{{ t('formulaHeading') }}</h2>
+        <pre><code>{{ t('formula') }}</code></pre>
+      </section>
+
+      <section>
+        <h2>{{ t('workedExampleHeading') }}</h2>
+        <p class="worked-example">{{ t('workedExample') }}</p>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>{{ t('benefitsHeading') }}</h2>
+          <ul>
+            @for (b of list('benefits'); track $index) {
+              <li>{{ b }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h2>{{ t('limitationsHeading') }}</h2>
+          <ul>
+            @for (l of list('limitations'); track $index) {
+              <li>{{ l }}</li>
+            }
+          </ul>
+        </div>
+      </section>
+
+      <p class="privacy">{{ t('privacyNote') }}</p>
+
+      <section>
+        <h2>{{ t('faqHeading') }}</h2>
+        @for (f of faqs(); track $index) {
+          <details>
+            <summary>{{ f.q }}</summary>
+            <p>{{ f.a }}</p>
+          </details>
+        }
+      </section>
+
+      <section>
+        <h2>{{ t('relatedHeading') }}</h2>
+        <ul class="related">
+          @for (s of relatedSlugs; track s) {
+            <li>
+              <a [routerLink]="['/', translate.lang(), s]">{{ relatedName(s) }}</a>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <p class="reviewed">{{ t('lastReviewedLabel') }}: {{ lastReviewed }}</p>
+    </article>
+  </div>
+</div>

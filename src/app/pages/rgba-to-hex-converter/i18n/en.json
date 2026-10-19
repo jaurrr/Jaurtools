@@ -1,0 +1,89 @@
+{
+  "rgba-to-hex-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Color & Design",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "RGBA to HEX Converter",
+    "tagline": "Convert RGBA codes to 6- or 8-digit HEX - with the alpha channel handled exactly.",
+    "metaTitle": "RGBA to HEX Converter - 8-Digit HEX with Alpha | JaurTools",
+    "metaDescription": "Free RGBA to HEX converter: enter red, green, blue and alpha values and get exact 6- or 8-digit HEX codes plus the CSS rgba() string. Private, no sign-up.",
+    "keywords": "rgba to hex, rgba to hex converter, 8 digit hex, hex with alpha, convert rgba",
+    "quickAnswer": "RGBA becomes HEX by writing each channel as two hex digits; alpha 0-1 is scaled to a 0-255 byte first. rgba(255, 87, 51, 0.5) converts to #FF573380: alpha 0.5 x 255 = 127.5, rounded to 128, which is 80 in hex. With alpha 1, the alpha byte is dropped and you get the plain 6-digit #FF5733.",
+    "keyFacts": [
+      "8-digit HEX is #RRGGBBAA: the last two digits are the alpha byte.",
+      "Alpha 0 = fully transparent, alpha 1 = fully opaque; 0.5 = half transparent.",
+      "The alpha byte = round(alpha x 255): 0.5 becomes 128, which is 80 in hex.",
+      "6-digit HEX has no alpha information - it always means fully opaque.",
+      "8-digit HEX works in all modern browsers in CSS color properties."
+    ],
+    "howTo": [
+      "Enter red, green and blue values (0-255) - or use the sliders.",
+      "Enter alpha from 0 (transparent) to 1 (opaque).",
+      "Read the 8-digit HEX with alpha and the 6-digit HEX without it.",
+      "Preview the color on the checkerboard to see the transparency.",
+      "Copy the HEX or the CSS rgba() string with one tap."
+    ],
+    "formula": "HEX = hex(R) + hex(G) + hex(B) + hex(round(A x 255)).\nExample: rgba(255, 87, 51, 0.5):\nR: 255 -> FF | G: 87 -> 57 | B: 51 -> 33\nA: 0.5 x 255 = 127.5 -> 128 -> 80\nResult: #FF573380 (8-digit) or #FF5733 (6-digit, alpha dropped).",
+    "workedExample": "rgba(255, 87, 51, 0.5):\n1. Convert each channel: 255 = FF, 87 = 57, 51 = 33.\n2. Scale the alpha: 0.5 x 255 = 127.5, round to 128.\n3. Convert the alpha byte: 128 = 0x80.\n4. Join: #FF573380 - orange-red at half transparency.\n5. Drop the alpha for the 6-digit form: #FF5733.",
+    "benefits": [
+      "Exact alpha math - no rounding surprises in your transparency.",
+      "Both 8-digit and 6-digit forms shown side by side.",
+      "Checkerboard preview shows what the transparency really looks like.",
+      "CSS rgba() string included for copy-paste."
+    ],
+    "limitations": [
+      "8-digit HEX needs a modern browser; very old browsers ignore the alpha byte.",
+      "The preview blends over a gray checkerboard, not your actual page background.",
+      "Alpha is rounded to whole bytes - 0.5 and 0.502 give the same HEX."
+    ],
+    "faqs": [
+      {
+        "q": "What is 8-digit HEX?",
+        "a": "It is the standard 6-digit HEX plus two digits for alpha: #RRGGBBAA. #FF573380 is the same orange-red at 50% opacity. All modern browsers support it in CSS."
+      },
+      {
+        "q": "Why does alpha 0.5 become 80 in hex?",
+        "a": "Alpha is stored as one byte (0-255). 0.5 x 255 = 127.5, rounded to 128. In hexadecimal, 128 is 80 (8 x 16 + 0)."
+      },
+      {
+        "q": "When should I use 6-digit instead of 8-digit?",
+        "a": "Use 6-digit when the color is fully opaque (alpha 1) - it is shorter and universally supported. Use 8-digit whenever transparency matters."
+      },
+      {
+        "q": "Is #FF573380 the same as rgba(255, 87, 51, 0.5)?",
+        "a": "Yes, exactly. They describe the identical color and transparency; only the notation differs."
+      },
+      {
+        "q": "Can I convert the other way, HEX to RGBA?",
+        "a": "Read the pairs: #FF573380 splits into FF=255, 57=87, 33=51, 80=128, and 128/255 = 0.5 alpha - so rgba(255, 87, 51, 0.5)."
+      },
+      {
+        "q": "Does alpha 0 make the color invisible?",
+        "a": "Yes - alpha 0 means fully transparent. The HEX still describes a color (#FF573300), but nothing of it is painted."
+      }
+    ],
+    "resultsHeading": "Your HEX conversion results",
+    "labels": {
+      "redLabel": "Red (0-255)",
+      "greenLabel": "Green (0-255)",
+      "blueLabel": "Blue (0-255)",
+      "alphaLabel": "Alpha (0-1)",
+      "hex8": "8-digit HEX (with alpha)",
+      "hex6": "6-digit HEX (alpha dropped)",
+      "cssOut": "CSS rgba()",
+      "copyHex": "Copy 8-digit HEX",
+      "copied": "Copied"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "mean-median-mode-range-calculator": {
+    "assumptionNote": "Numbers can be separated by commas, spaces or line breaks. Non-numeric entries are ignored.",
+    "benefits": [
+      "All four central-tendency measures in one paste.",
+      "The sorted list makes the median visually obvious.",
+      "Multiple modes are all reported, not just the first.",
+      "Range plus min/max gives the full spread at a glance.",
+      "Decimals and negative numbers work fine."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The mean is the ordinary average: add everything up and divide by the count. For 2, 4, 4, 5, 9: (2+4+4+5+9)/5 = 24/5 = 4.8.",
+        "q": "What is the mean?"
+      },
+      {
+        "a": "The median is the middle value after sorting. For 2, 4, 4, 5, 9 the middle is 4. With an even count, average the two middle values - for 1, 2, 3, 4 the median is (2+3)/2 = 2.5.",
+        "q": "What is the median?"
+      },
+      {
+        "a": "The mode is the most frequent value. For 2, 4, 4, 5, 9 the mode is 4 because it appears twice. A list can have two modes (bimodal) or no mode at all when every value appears once.",
+        "q": "What is the mode?"
+      },
+      {
+        "a": "The range is max minus min - how spread out the values are. For 2, 4, 4, 5, 9 the range is 9 - 2 = 7. It is the simplest measure of spread.",
+        "q": "What is the range?"
+      },
+      {
+        "a": "The mean is pulled by extreme values, while the median resists them. Incomes are the classic example: a few billionaires raise the mean a lot but barely move the median. Report both when outliers exist.",
+        "q": "When is the median better than the mean?"
+      },
+      {
+        "a": "It just means every value appears the same number of times (usually once). The tool says no mode instead of inventing one, because picking any single value would be misleading.",
+        "q": "What if there is no mode?"
+      }
+    ],
+    "formula": "Mean = sum of values / count\nMedian = middle value of sorted list (average of two middles if count is even)\nMode = most frequent value(s)\nRange = maximum - minimum",
+    "formulaHeading": "Formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Paste or type your numbers, separated by commas, spaces or line breaks.",
+      "Mean, median, mode and range appear instantly, with count, sum, min, max and the sorted list.",
+      "Check the mode row - if every value appears once, the tool honestly says there is no mode.",
+      "Compare mean and median to spot skew from outliers.",
+      "Use the sorted list to verify the median yourself."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "The mean is the sum divided by the count - the familiar average.",
+      "The median is the middle of the sorted list; it resists outliers.",
+      "The mode is the most frequent value; lists can have several or none.",
+      "The range is max minus min - the simplest measure of spread.",
+      "An even-sized list has its median as the average of the two middle values.",
+      "Mean and median together reveal skew: mean > median means right-skewed data."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "mean median mode calculator, average calculator, median calculator, mode calculator, range calculator, central tendency calculator, statistics calculator",
+    "labels": {
+      "countLabel": "Count",
+      "emptyLabel": "Enter at least one number to see results.",
+      "inputLabel": "Your numbers",
+      "inputPlaceholder": "Example: 2, 4, 4, 5, 9",
+      "meanLabel": "Mean (average)",
+      "medianLabel": "Median",
+      "minMaxLabel": "Min / Max",
+      "modeLabel": "Mode",
+      "noMode": "No mode - all values appear once",
+      "rangeLabel": "Range",
+      "sortedLabel": "Sorted list",
+      "sumLabel": "Sum"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Descriptive statistics only - no standard deviation, variance or confidence intervals.",
+      "The mean can mislead with heavy outliers; always check the median too.",
+      "Mode is reported only when some value repeats.",
+      "Not a substitute for proper statistical analysis of research data."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free mean, median, mode and range calculator. Paste your numbers for instant average, median, mode(s), range, count, sum, min, max and sorted list.",
+    "metaTitle": "Mean Median Mode Range Calculator - Instant Stats | JaurTools",
+    "name": "Mean, Median, Mode, Range Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "For the numbers 2, 4, 4, 5, 9: the mean is (2+4+4+5+9)/5 = 4.8, the median is the middle value 4, the mode is 4 (it appears twice), and the range is 9 - 2 = 7. This calculator gives all four measures instantly for any list, plus count, sum, min, max and the sorted list.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Statistics results",
+    "tagline": "Mean, median, mode and range for any number list - with count, sum and sorted list.",
+    "workedExample": "Analyze 2, 4, 4, 5, 9:\n1. Count = 5. Sum = 2 + 4 + 4 + 5 + 9 = 24.\n2. Mean = 24 / 5 = 4.8.\n3. Sorted: 2, 4, 4, 5, 9. Middle (3rd of 5) = 4, so median = 4.\n4. Frequencies: 2 appears once, 4 appears twice, 5 once, 9 once. Mode = 4.\n5. Range = max - min = 9 - 2 = 7.",
+    "workedExampleHeading": "Worked example"
+  }
+}

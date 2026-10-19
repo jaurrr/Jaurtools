@@ -1,0 +1,100 @@
+{
+  "note-frequency-calculator": {
+    "assumptionNote": "All calculations use equal temperament with concert pitch A4 = 440 Hz. Historical tunings (such as Baroque A = 415 Hz) or other temperaments will give different frequencies for the same note names.",
+    "benefits": [
+      "Settle any debate about a note's exact pitch instantly, with MIDI number included.",
+      "Check how sharp or flat a recorded tone is, down to a tenth of a cent.",
+      "Essential reference for building sample libraries, tuning software, or synth patches.",
+      "Learn the logarithmic relationship between pitch and frequency hands-on."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Music Tools",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "A cent is one hundredth of a semitone: 100 cents make one semitone, and 1,200 cents make one octave. Humans can hear differences of about 5-10 cents, and trained musicians notice 2-3 cents. Tuners usually show green within about 5 cents.",
+        "q": "What is a cent?"
+      },
+      {
+        "a": "Multiply the frequency by 2 raised to the number of semitones divided by 12: f = 440 x 2^(n/12). So a perfect fifth (7 semitones) above A4 is 440 x 2^(7/12) = 659.26 Hz (E5). An octave (12 semitones) exactly doubles the frequency.",
+        "q": "How do I calculate the frequency of any interval?"
+      },
+      {
+        "a": "MIDI note 69 is A4 at 440 Hz, and each MIDI number is one semitone. Middle C is MIDI 60. The formula is f = 440 x 2^((midi - 69)/12), so MIDI 60 gives 261.63 Hz.",
+        "q": "What is the MIDI number of middle C?"
+      },
+      {
+        "a": "It is a tiny pitch difference: 442 Hz is about 7.85 cents sharper than 440 Hz. Many European orchestras tune to 442 or 443 Hz because the slightly higher tension sounds brighter. Your ear alone would barely notice, but a tuner set to 440 would show the orchestra as sharp.",
+        "q": "What is the difference between A = 440 and A = 442?"
+      },
+      {
+        "a": "Equal temperament divides the octave into 12 exactly equal semitones, so every key sounds equally in tune (and equally slightly out of tune). Older systems like just intonation make some intervals purer but only work in one key. Nearly all modern music uses equal temperament.",
+        "q": "What is equal temperament?"
+      },
+      {
+        "a": "Use scientific pitch notation: the note name plus the octave number, like C4 for middle C or A4 for 440 Hz. Octaves start at C, so B3 is just below C4. Always include the octave number - plain C is ambiguous across five octaves of piano."
+      }
+    ],
+    "formula": "Note to frequency: f = 440 x 2^((midi - 69) / 12)\nFrequency to nearest MIDI: midi = round(69 + 12 x log2(f / 440))\nDeviation in cents: cents = 1200 x log2(f / f_note)\nExample: C4 is MIDI 60: f = 440 x 2^(-9/12) = 261.63 Hz.",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose a direction: note name to frequency, or frequency to note name.",
+      "For note to frequency: pick the note (C to B) and the octave (0-8). The exact Hz and MIDI number appear instantly.",
+      "For frequency to note: type any frequency from 1 to 20,000 Hz.",
+      "Read the nearest note, its exact frequency, and how many cents sharp or flat your input is.",
+      "A deviation under 5 cents is effectively in tune; above 15 cents is clearly audible."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Every note has an exact frequency in equal temperament: A4 is 440 Hz and middle C (C4) is 261.63 Hz.",
+      "Doubling the frequency always raises the pitch by exactly one octave: 440 Hz to 880 Hz is A4 to A5.",
+      "One semitone is 100 cents; one octave is 1,200 cents. Most people hear differences from about 5 cents.",
+      "MIDI numbers count semitones: MIDI 69 = A4 = 440 Hz, and middle C = MIDI 60.",
+      "The formula f = 440 x 2^((midi - 69)/12) converts any note to its frequency.",
+      "445 Hz is the nearest to A4 (440 Hz) and sits 19.6 cents sharp - clearly audible to a trained ear."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "note frequency calculator, note to Hz, Hz to note, A440 frequency chart, MIDI to frequency, cents calculator",
+    "labels": {
+      "centsUnit": "cents",
+      "deviationLabel": "Deviation",
+      "directions": {
+        "flat": "flat",
+        "inTune": "in tune",
+        "sharp": "sharp"
+      },
+      "exactFreqLabel": "Exact frequency of that note",
+      "frequencyResult": "Frequency",
+      "hzLabel": "Frequency (Hz)",
+      "midiLabel": "MIDI note number",
+      "modeFreq": "Frequency to note",
+      "modeLabel": "Conversion direction",
+      "modeNote": "Note to frequency",
+      "nearestLabel": "Nearest note",
+      "noteResult": "Note",
+      "octaveLabel": "Octave",
+      "rootLabel": "Note"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Assumes equal temperament at A4 = 440 Hz. Just intonation, Pythagorean, or historical tunings differ.",
+      "Note names use sharps only (C#), so enharmonic equivalents like Db are shown as their sharp spelling.",
+      "Frequencies below 1 Hz or above 20,000 Hz are outside the supported range.",
+      "Cents deviation is a mathematical comparison, not a listening test - room and instrument colour the real sound."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free note frequency calculator: convert any note name to Hz (A4 = 440 Hz) or find the nearest note for any frequency, with cents deviation. MIDI numbers included.",
+    "metaTitle": "Note Frequency Calculator - Note to Hz & Back | JaurTools",
+    "name": "Note Frequency Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "In equal temperament at A4 = 440 Hz, middle C (C4, MIDI 60) is exactly 261.63 Hz, from f = 440 x 2^((60-69)/12). Going the other way, 445 Hz is nearest to A4 and sits 19.6 cents sharp - audible to a trained ear but close enough for casual listening. One semitone is 100 cents and doubling the frequency always jumps exactly one octave.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Conversion results",
+    "tagline": "Convert any note name to its exact frequency in Hz - or find the nearest note for any frequency.",
+    "workedExample": "Note to frequency - middle C:\n1. Pick note C, octave 4. MIDI = (4 + 1) x 12 + 0 = 60.\n2. f = 440 x 2^((60 - 69) / 12) = 440 x 2^(-0.75).\n3. 2^0.75 = 1.68179, so f = 440 / 1.68179 = 261.63 Hz.\nFrequency to note - 445 Hz:\n1. midi = round(69 + 12 x log2(445 / 440)) = round(69.196) = 69 = A4.\n2. A4 is exactly 440 Hz.\n3. cents = 1200 x log2(445 / 440) = +19.6 cents - sharp of A4.",
+    "workedExampleHeading": "Worked example"
+  }
+}

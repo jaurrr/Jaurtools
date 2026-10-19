@@ -1,0 +1,115 @@
+{
+  "speed-converter": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Converters",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "Speed Converter",
+    "tagline": "Convert between km/h, mph, m/s, ft/s and knots instantly.",
+    "metaTitle": "Speed Converter — km/h to mph Online",
+    "metaDescription": "Free speed converter: km/h, mph, m/s, ft/s, knots. Exact factors for driving, running, aviation and sailing, in your browser.",
+    "keywords": "speed converter, kmh to mph, mph to kmh, knots to kmh, ms to kmh",
+    "quickAnswer": "Type the speed, pick the unit you have and the one you want. Conversion uses exact definitions — 1 mph = 1.609344 km/h and 1 knot = 1.852 km/h — so results are precise, not rounded guesses.",
+    "keyFacts": [
+      "One kilometre per hour equals 0.27778 metres per second; one mph equals 0.44704 m/s exactly.",
+      "The knot is one nautical mile per hour: exactly 1.852 km/h, used in aviation and sailing.",
+      "The speed of light in vacuum is 299,792,458 m/s — the universal speed limit.",
+      "Speed = distance ÷ time; converting speed units is a ratio of the underlying length and time units.",
+      "Mach 1 (speed of sound) is about 1,225 km/h at sea level, varying with temperature."
+    ],
+    "howTo": [
+      "Enter the speed value in the value field.",
+      "Choose the source unit from the \"From\" dropdown.",
+      "Choose the target unit from the \"To\" dropdown.",
+      "Read the converted speed instantly; use swap to reverse it.",
+      "The rate line shows exactly how many target units equal one source unit."
+    ],
+    "formula": "result = value × (from-unit in m/s) ÷ (to-unit in m/s)\nExample: mph = (km/h) × 0.277777778 ÷ 0.44704",
+    "workedExample": "Convert 100 km/h to mph.\nStep 1: 100 km/h in m/s = 100 × 0.277777778 = 27.7777778 m/s.\nStep 2: 1 mph = 0.44704 m/s.\nStep 3: 27.7777778 ÷ 0.44704 = 62.137119.\nAnswer: 100 km/h = 62.137119 mph.",
+    "benefits": [
+      "Covers road (km/h, mph), science (m/s), US customary (ft/s) and marine/aviation (knots).",
+      "Exact international definitions, not approximations.",
+      "Instant results, private, works on any device.",
+      "Swap button reverses the conversion in one tap.",
+      "Handy for travel, running pace, boating and flight planning."
+    ],
+    "limitations": [
+      "Results rounded to 6 decimal places for readability.",
+      "Converts speed only — pace (min/km) is the reciprocal and not included.",
+      "Values beyond ±1e15 are clamped.",
+      "Does not account for wind, current or relativistic effects."
+    ],
+    "faqs": [
+      {
+        "q": "How do I convert km/h to mph?",
+        "a": "Multiply km/h by 0.621371. Example: 100 km/h × 0.621371 = 62.1371 mph."
+      },
+      {
+        "q": "What is a knot in km/h?",
+        "a": "One knot equals exactly 1.852 km/h (one nautical mile per hour). So 20 knots = 37.04 km/h."
+      },
+      {
+        "q": "How many m/s is 36 km/h?",
+        "a": "Divide by 3.6: 36 ÷ 3.6 = 10 m/s. Dividing km/h by 3.6 always gives m/s."
+      },
+      {
+        "q": "Why do the UK and US use mph?",
+        "a": "Both countries kept imperial road units. Most of the rest of the world uses km/h under the metric system."
+      },
+      {
+        "q": "What is Mach 1 in km/h?",
+        "a": "About 1,225 km/h at sea level in standard air, but it changes with air temperature and altitude."
+      },
+      {
+        "q": "Is my data sent to a server?",
+        "a": "No. The conversion runs entirely in your browser; nothing leaves your device."
+      }
+    ],
+    "resultsHeading": "Speed conversion results",
+    "labels": {
+      "valueLabel": "Value",
+      "fromLabel": "From",
+      "toLabel": "To",
+      "resultLabel": "Result",
+      "rateLabel": "Conversion rate",
+      "swapLabel": "Swap units"
+    },
+    "units": [
+      {
+        "id": "ms",
+        "name": "Metres per second",
+        "symbol": "m/s"
+      },
+      {
+        "id": "kmh",
+        "name": "Kilometres per hour",
+        "symbol": "km/h"
+      },
+      {
+        "id": "mph",
+        "name": "Miles per hour",
+        "symbol": "mph"
+      },
+      {
+        "id": "fts",
+        "name": "Feet per second",
+        "symbol": "ft/s"
+      },
+      {
+        "id": "knot",
+        "name": "Knots",
+        "symbol": "kn"
+      }
+    ]
+  }
+}

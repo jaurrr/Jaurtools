@@ -1,0 +1,96 @@
+{
+  "photo-border-maker": {
+    "name": "Photo Border Maker",
+    "tagline": "Clean frames for any photo in seconds.",
+    "metaTitle": "Photo Border Maker - Add Borders to Photos | JaurTools",
+    "metaDescription": "Frame any photo with a clean border in seconds. Pick width and color, preview live, download instantly — free.",
+    "keywords": "add border to image, photo border maker, image frame online, picture border editor, free photo border",
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "category": "Image Tools",
+    "quickAnswer": "Upload a photo, set the border width in pixels and pick a color, then download. In outside mode a 24 px border on an 800 x 600 photo produces an 848 x 648 image; in inside mode the photo keeps its 800 x 600 size and the border is drawn over the edges. Everything happens locally in your browser — the photo is never uploaded anywhere.",
+    "quickAnswerHeading": "Quick answer",
+    "keyFacts": [
+      "Outside mode grows the canvas: final size = original + 2 x border width on each side.",
+      "Inside mode keeps the original dimensions and paints the border over the photo edges.",
+      "The border color can be any hex color, from classic white to your brand color.",
+      "Output is a PNG, so the border stays crisp with no compression blur.",
+      "Borders are also called frames, mats, or strokes in different photo editors.",
+      "A white or black border is the classic trick to make photos stand out on social feeds."
+    ],
+    "keyFactsHeading": "Key facts",
+    "howTo": [
+      "Click the upload button and choose a photo from your device (JPG, PNG, or WebP).",
+      "Drag the width slider to set the border thickness in pixels.",
+      "Pick a border color, or type a hex code for an exact brand color.",
+      "Choose Outside to expand the canvas or Inside to keep the original size.",
+      "Preview updates live. Click Download to save the bordered image as PNG."
+    ],
+    "howToHeading": "How to use",
+    "formula": "Outside mode:\nnewWidth = originalWidth + (2 x borderWidth)\nnewHeight = originalHeight + (2 x borderWidth)\nInside mode:\nnewWidth = originalWidth, newHeight = originalHeight\n(border is painted over the outer edge pixels)",
+    "formulaHeading": "Formula",
+    "workedExample": "Photo: 800 x 600 px, border width 24 px, outside mode:\n1. Horizontal addition: 2 x 24 = 48 px.\n2. New width: 800 + 48 = 848 px.\n3. New height: 600 + 48 = 648 px.\n4. Result: an 848 x 648 PNG with a 24 px colored frame on all four sides.\nInside mode with the same settings would keep 800 x 600 and cover the outer 24 px ring of the photo with the border color.",
+    "workedExampleHeading": "Worked example",
+    "benefits": [
+      "No app install and no account — frame a photo in under 30 seconds.",
+      "Exact pixel control, so borders match across a whole set of photos.",
+      "Brand-color borders make product photos and thumbnails look consistent.",
+      "Inside mode protects fixed-size layouts like profile pictures and banners.",
+      "PNG output keeps edges sharp for print and high-DPI screens."
+    ],
+    "benefitsHeading": "Benefits",
+    "limitations": [
+      "Only solid-color borders — no gradients, patterns, or rounded corners.",
+      "Inside mode permanently covers the outer edge pixels of your photo.",
+      "Very large photos (over ~8000 px) may be slow on low-memory phones.",
+      "The tool adds one uniform border; layered or double frames need a second pass."
+    ],
+    "limitationsHeading": "Limitations",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "faqs": [
+      {
+        "q": "Will adding a border reduce my photo quality?",
+        "a": "No. The photo pixels are copied unchanged; only new border pixels are added around (or over the edge of) them. Saving as PNG is lossless, so there is no extra compression damage."
+      },
+      {
+        "q": "What is the difference between inside and outside border?",
+        "a": "Outside grows the canvas, so the final image is bigger by twice the border width on each side and no photo content is covered. Inside keeps the exact original dimensions but paints the border over the outermost pixels of the photo."
+      },
+      {
+        "q": "Can I use my brand color?",
+        "a": "Yes. Use the color picker or type any hex code like #4F46E5. The same code always gives the same color, so you can match borders across many images."
+      },
+      {
+        "q": "What image formats can I upload?",
+        "a": "JPG, PNG, WebP, GIF (first frame), and BMP all work. The download is always PNG for crisp, lossless borders."
+      },
+      {
+        "q": "Is there a maximum border width?",
+        "a": "The slider goes up to 200 px, which is plenty for a visible frame. For a thicker decorative frame, download once and run the image through the tool again to stack another border."
+      },
+      {
+        "q": "Is my photo uploaded to a server?",
+        "a": "No. The entire tool runs in your browser with the HTML canvas element. Your photo never leaves your device."
+      }
+    ],
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Add Border to Image results",
+    "lastReviewedLabel": "Last reviewed",
+    "labels": {
+      "uploadLabel": "Upload image",
+      "borderWidth": "Border width (px)",
+      "borderColor": "Border color",
+      "borderMode": "Border style",
+      "modeOutside": "Outside (expand canvas)",
+      "modeInside": "Inside (keep size)",
+      "download": "Download image",
+      "originalSize": "Original size",
+      "newSize": "New size",
+      "invalidFile": "Please choose an image file.",
+      "fileTooLarge": "File is too large. Please choose an image under 10 MB.",
+      "loadFailed": "Could not read that image. Try another file.",
+      "noImage": "Upload an image to see the live preview."
+    }
+  }
+}

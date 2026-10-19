@@ -1,0 +1,92 @@
+{
+  "uuid-generator": {
+    "benefits": [
+      "No coordination needed: any device can mint IDs independently without a central counter.",
+      "Database-friendly: safe primary keys that merge cleanly across shards and offline devices.",
+      "Three output formats: standard, uppercase, with or without braces or hyphens, for every platform.",
+      "Generated with the browser's secure crypto API: the same quality of randomness as crypto libraries."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Generators",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "UUID stands for Universally Unique Identifier. It is a 128-bit value, usually written as 32 hexadecimal digits in five groups (8-4-4-4-12), standardized by RFC 4122 and used as unique keys in databases, APIs and distributed systems.",
+        "q": "What is a UUID?"
+      },
+      {
+        "a": "Version 4 UUIDs are generated from random data: 122 of the 128 bits are random, which gives about 5.3 x 10^36 possible values. Other versions derive from timestamps (v1), names (v3, v5) or sortable timestamps (v7).",
+        "q": "What is a version 4 UUID?"
+      },
+      {
+        "a": "The 13th hexadecimal digit is the version: for v4 it is always 4. The 17th digit encodes the variant: 8, 9, a or b, which means the first two bits are 10, the RFC 4122 variant. Check any UUID from this tool and you will see that pattern.",
+        "q": "How can I tell it is really version 4?"
+      },
+      {
+        "a": "The chance of a duplicate is about 1 in 5.3 x 10^36. You would need to generate billions of UUIDs per second for centuries before a collision became likely. For practical purposes, v4 UUIDs never collide.",
+        "q": "Can two UUIDs be the same?"
+      },
+      {
+        "a": "Use UUID when you need maximum compatibility and must not expose creation time. Use ULID when you want shorter IDs that sort by creation time and are friendlier in URLs. Both are free on this site.",
+        "q": "UUID or ULID: which should I pick?"
+      },
+      {
+        "a": "No. crypto.randomUUID() is a native browser API present in all modern browsers. No library, no network and no server is involved.",
+        "q": "Does this tool use any external library?"
+      }
+    ],
+    "formula": "UUID v4 = 32 hex digits in 8-4-4-4-12 groups (36 chars with hyphens)\n122 random bits + 4 version bits (0100) + 2 variant bits (10)\nPossible values: 2^122 = approx. 5.3 x 10^36",
+    "formulaHeading": "Formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Choose how many UUIDs you need (1 to 100).",
+      "Pick a format: uppercase, with braces { }, and with or without hyphens.",
+      "Click Generate to create a fresh batch.",
+      "Copy any UUID with its copy icon, or use Copy all for the whole list.",
+      "Use Download to save all UUIDs as a text file."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A UUID is 128 bits long, written as 32 hexadecimal digits in the pattern 8-4-4-4-12, e.g. 6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b.",
+      "Version 4 UUIDs are random: 122 of the 128 bits are random, 4 bits mark the version (0100) and 2 bits mark the RFC 4122 variant (10).",
+      "The 13th hex digit of a v4 UUID is always 4, and the 17th digit is always 8, 9, a or b.",
+      "UUIDs were standardized in RFC 4122 and are supported by every major database, language and platform.",
+      "Because they need no central authority, UUIDs work perfectly for offline-first apps and distributed systems.",
+      "This tool uses the browser's native crypto.randomUUID(), which produces genuine RFC 4122 version 4 IDs."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "UUID generator, UUID v4 generator, unique identifier generator, GUID generator, random UUID, free UUID tool",
+    "labels": {
+      "bracesLabel": "With braces { }",
+      "copyAllButton": "Copy all",
+      "copyButton": "Copy UUID",
+      "countLabel": "How many UUIDs",
+      "downloadButton": "Download .txt",
+      "formatLabel": "Output format",
+      "generateButton": "Generate",
+      "noHyphensLabel": "Without hyphens",
+      "noteText": "UUIDs are generated locally with the browser's secure crypto API.",
+      "uppercaseLabel": "Uppercase"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "UUIDs are 36 characters long, which is bulky for short links or compact displays.",
+      "Random v4 UUIDs do not sort by creation time; use ULID or UUID v7 if ordering matters.",
+      "They reveal nothing, but they also prove nothing: a UUID is not a signed token.",
+      "This tool does not check uniqueness against your database; that is always your system's job."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Generate RFC 4122 version 4 UUIDs instantly in your browser with crypto-grade randomness. Free UUID generator with bulk, uppercase and brace formats. No signup.",
+    "metaTitle": "UUID Generator — Free Version 4 UUID Maker",
+    "name": "UUID Generator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "A UUID is a 128-bit unique identifier (32 hex digits in 8-4-4-4-12 groups) used as keys in databases and APIs. This tool generates up to 100 genuine version 4 UUIDs at once, entirely in your browser.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "UUID results",
+    "tagline": "Create genuine RFC 4122 version 4 unique identifiers for databases and APIs.",
+    "workedExample": "Take the UUID 6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b.\nStep 1: count the hex digits: 8 + 4 + 4 + 4 + 12 = 32 digits = 128 bits. Step 2: look at the 13th hex digit: the digits run 6,e,c,0,b,d,7,f (1-8), 1,1,c,0 (9-12), then 4 is the 13th digit, so the version is 4. Step 3: look at the 17th hex digit: digits 13-16 are 4,3,d,a, so the 17th is 9. Hex 9 = binary 1001, which starts with the variant bits 10, marking it RFC 4122. With 122 random bits, about 5.3 x 10^36 different v4 UUIDs exist.",
+    "workedExampleHeading": "Worked example"
+  }
+}

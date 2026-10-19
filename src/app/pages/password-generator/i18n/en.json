@@ -1,0 +1,108 @@
+{
+  "password-generator": {
+    "benefits": [
+      "Cryptographic randomness from your device — never a predictable pattern.",
+      "Every enabled character set is guaranteed at least one character.",
+      "An honest entropy meter, not a vague 'strong password' badge.",
+      "Nothing is stored: the password exists only on this page until you copy it."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "faqs": [
+      {
+        "a": "16 or more characters for important accounts like email and banking; the slider goes up to 64. Length adds strength faster than exotic symbols do.",
+        "q": "How long should my password be?"
+      },
+      {
+        "a": "Bits of unpredictability. Each extra bit doubles the cracking effort: 60 bits is fair, 80 bits is good, and 100+ bits is effectively uncrackable by brute force today.",
+        "q": "What is entropy?"
+      },
+      {
+        "a": "Yes. Passwords come from crypto.getRandomValues, the browser's cryptographic random generator — not from a predictable pseudo-random formula.",
+        "q": "Are the passwords truly random?"
+      },
+      {
+        "a": "Do it when humans will read or type the password — I, l, 1, O and 0 are easy to confuse. It shrinks the character pool slightly, which costs a little entropy.",
+        "q": "Should I exclude ambiguous characters?"
+      },
+      {
+        "a": "No — never reuse passwords. A breach on one site would hand attackers the keys to every other account sharing that password.",
+        "q": "Can I reuse a generated password on two sites?"
+      },
+      {
+        "a": "Never. Generation happens locally on your device; nothing is transmitted, logged or stored. Copy your password before leaving the page.",
+        "q": "Do you store my passwords?"
+      }
+    ],
+    "faqsHeading": "Frequently asked questions",
+    "formula": "entropy (bits) = password length x log2(character pool size). Example: 16 characters drawn from 87 possible characters gives 16 x 6.44 = about 103 bits. The average number of guesses to crack it is 2^(bits - 1); at 10 billion guesses per second, 103 bits would take far longer than the age of the universe.",
+    "formulaHeading": "Formula",
+    "home": "Home",
+    "howTo": [
+      "Drag the slider to set a length — 16 is a solid default.",
+      "Toggle the character sets; exclude look-alike characters if people will read the password aloud.",
+      "Press Regenerate for a fresh password any time.",
+      "Check the entropy and crack-time estimate, then Copy."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Randomness comes from crypto.getRandomValues — the browser's cryptographic generator, not Math.random.",
+      "Strength is measured in bits of entropy: length x log2(character pool).",
+      "Every enabled character set is guaranteed at least one character in the result.",
+      "Longer beats 'complex': a 20-character simple password outruns an 8-character tricky one.",
+      "A generated password exists only on this page until you copy it."
+    ],
+    "keyFactsHeading": "Key facts",
+    "lastReviewed": "Last reviewed",
+    "limitations": [
+      "Crack-time estimates assume a fixed attacker speed of 10 billion guesses per second — real attacks vary.",
+      "A strong password cannot protect a breached or phishing site — use a password manager and unique passwords per site.",
+      "Excluding ambiguous characters slightly shrinks the pool, which costs a little entropy.",
+      "This tool does not check whether a password appeared in known data breaches."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free password generator: create strong random passwords (8–64 chars) with a real entropy meter and crack-time estimate. Cryptographic randomness, nothing stored.",
+    "metaTitle": "Password Generator — Strong Random Passwords, Entropy Meter | JaurTools",
+    "name": "Password Generator",
+    "privacyHeading": "Privacy",
+    "privacyNote": "Passwords are generated locally with your device's secure random generator. They are never transmitted, logged or stored — copy yours before leaving the page.",
+    "quickAnswer": "Choose a length from 8 to 64 characters, pick which character sets to include, and press Generate. Passwords are built with your device's cryptographic random generator, and the strength meter shows real entropy plus an estimated crack time. Nothing is saved or sent anywhere.",
+    "quickAnswerLabel": "Quick answer",
+    "relatedHeading": "Related tools",
+    "tagline": "Strong, random passwords in one click — measured in bits of entropy, not guesswork.",
+    "ui": {
+      "ambiguousLabel": "Exclude ambiguous characters (I l 1 O 0)",
+      "bands": {
+        "excellent": "Excellent",
+        "fair": "Fair",
+        "good": "Good",
+        "strong": "Strong",
+        "weak": "Weak"
+      },
+      "bitsUnit": "bits",
+      "charsUnit": "characters",
+      "copied": "Copied to clipboard!",
+      "copy": "Copy",
+      "crackDays": "{n} days",
+      "crackHours": "{n} hours",
+      "crackInstant": "less than a second",
+      "crackLabel": "Estimated crack time",
+      "crackMinutes": "{n} minutes",
+      "crackSeconds": "{n} seconds",
+      "crackUniverse": "longer than the age of the universe",
+      "crackYears": "{n} years",
+      "digitsLabel": "Digits (0–9)",
+      "emptyState": "Press Generate for a password",
+      "lengthLabel": "Password length",
+      "lowerLabel": "Lowercase (a–z)",
+      "noCharset": "Enable at least one character set.",
+      "regenerate": "Regenerate",
+      "setsLabel": "Character sets",
+      "strengthLabel": "Strength",
+      "symbolsLabel": "Symbols (!@#…)",
+      "upperLabel": "Uppercase (A–Z)"
+    },
+    "workedExample": "Length 14, all sets on, pool of 87 characters: entropy = 14 x log2(87) = about 90 bits — rated Strong, with an estimated offline crack time in the billions of years. Raise the length to 20 and the estimate passes beyond the age of the universe.",
+    "workedExampleHeading": "Worked example"
+  }
+}

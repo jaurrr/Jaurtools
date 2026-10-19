@@ -1,0 +1,103 @@
+{
+  "army-body-fat-calculator": {
+    "assumptionNote": "The official formula works in inches; metric values are converted before calculation. This mirrors the Army screening method and is not an official assessment.",
+    "benefits": [
+      "Takes two minutes with nothing but a tape measure.",
+      "Shows the exact official maximum for your sex and age group.",
+      "Tracks fat loss better than the bathroom scale, which cannot tell fat from muscle.",
+      "Useful preparation if you are joining the military or a service academy."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Health & Fitness",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "For most people it lands within a few percentage points of lab methods. Hydration, posture and exact tape placement move the number around, so treat it as a screening estimate rather than a precise measurement.",
+        "q": "How accurate is the Army tape test?"
+      },
+      {
+        "a": "Men: neck just below the Adam's apple, abdomen horizontally around the navel. Women: neck the same way, waist at the narrowest point, hip at the widest point around the buttocks. Measure at the end of a normal exhale.",
+        "q": "Where exactly do I measure?"
+      },
+      {
+        "a": "Men: 20% (ages 17-20), 22% (21-27), 24% (28-39), 26% (40+). Women: 30%, 32%, 34% and 36% for the same age groups.",
+        "q": "What are the Army body fat limits?"
+      },
+      {
+        "a": "Yes. Army Regulation 600-9 sets the body composition standard, and soldiers who fail the weight-for-height screening table take the tape test at their unit.",
+        "q": "Does the Army still use the tape test?"
+      },
+      {
+        "a": "Yes. This calculator converts metric entries to inches automatically because the official formula works in inches.",
+        "q": "Can I enter measurements in centimetres?"
+      },
+      {
+        "a": "Different methods measure differently. The tape test estimates from circumferences, calipers measure skinfold thickness, and DEXA scans measure directly. Each has its own error range.",
+        "q": "Why does my result differ from my gym's caliper test?"
+      }
+    ],
+    "formula": "Male: %BF = 86.010 x log10(abdomen - neck) - 70.041 x log10(height) + 36.76\nFemale: %BF = 163.205 x log10(waist + hip - neck) - 97.684 x log10(height) - 78.387\nAll measurements in inches; log10 is the base-10 logarithm.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Select Male or Female and pick your age group (17-20, 21-27, 28-39 or 40+).",
+      "Choose metric (cm) or imperial (inches) units.",
+      "Enter your height and your neck circumference.",
+      "Men add the abdomen measurement at the navel; women add the waist at its narrowest point and the hip at its widest.",
+      "Your estimated body fat, the maximum allowed for your group and your pass or fail result appear instantly."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "The Army's tape-test formula comes from U.S. Navy research and is the method behind Army Regulation 600-9.",
+      "Men are measured at the neck and abdomen (navel). Women are measured at the neck, waist and hip.",
+      "The formula works in inches, so metric entries are converted automatically before calculation.",
+      "Maximum body fat rises with age: men 20% to 26%, women 30% to 36% across the four age groups.",
+      "A soldier who exceeds the weight-for-height screen at the unit takes the tape test; this calculator mirrors that same math.",
+      "Measure at the end of a normal breath with the tape snug but not compressing the skin."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "army body fat calculator, army tape test, military body fat standards, body fat percentage calculator, AR 600-9",
+    "labels": {
+      "abdomenLabel": "Abdomen (navel)",
+      "ageGroupLabel": "Age group",
+      "bodyFatResult": "Estimated body fat",
+      "fail": "Fail",
+      "feet": "Feet",
+      "femaleOption": "Female",
+      "genderLabel": "Gender",
+      "heightLabel": "Height",
+      "hipLabel": "Hip (widest)",
+      "imperialTab": "Imperial (in)",
+      "inchUnit": "in",
+      "inches": "Inches",
+      "maleOption": "Male",
+      "maxAllowed": "Maximum allowed",
+      "metricTab": "Metric (cm)",
+      "neckLabel": "Neck",
+      "pass": "Pass",
+      "standardStatus": "Standard",
+      "unitSystem": "Unit system",
+      "waistLabel": "Waist (narrowest)"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "The tape test is an estimate, not a measurement; DEXA or hydrostatic weighing are more accurate.",
+      "Tape placement, posture and hydration can shift the result by a couple of percentage points.",
+      "Very muscular people can fail the tape test while being lean, a known weakness of the method.",
+      "This is a general information tool, not an official military assessment or medical advice."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free Army body fat calculator using the official U.S. Army tape-test formula. Enter height, neck, waist and hip measurements to see your body fat percentage and your age-group maximum.",
+    "metaTitle": "Army Body Fat Calculator - Tape Test & Standards | JaurTools",
+    "name": "Army Body Fat Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your measurements never leave your device.",
+    "quickAnswer": "The U.S. Army tape test estimates body fat from neck, waist and hip tape measurements plus height. A 70-inch-tall man with a 34-inch abdomen and 15.5-inch neck is about 16.5% body fat, comfortably under the 24% maximum for men aged 28-39. Women are measured at the neck, waist and hip instead.",
+    "quickAnswerHeading": "Quick answer",
+    "resultsHeading": "Your Army body fat results",
+    "tagline": "Check your body fat against official U.S. Army standards using the tape-test method.",
+    "workedExample": "Male, height 70 in, abdomen 34 in, neck 15.5 in:\n1. abdomen - neck = 34 - 15.5 = 18.5.\n2. 86.010 x log10(18.5) = 86.010 x 1.2672 = 108.99.\n3. 70.041 x log10(70) = 70.041 x 1.8451 = 129.23.\n4. 108.99 - 129.23 + 36.76 = 16.5% body fat.\nThe maximum for a man aged 28-39 is 24%, so 16.5% is a pass.",
+    "workedExampleHeading": "Worked example",
+    "relatedHeading": "Related tools"
+  }
+}

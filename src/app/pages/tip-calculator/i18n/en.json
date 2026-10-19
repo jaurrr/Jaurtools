@@ -1,0 +1,98 @@
+{
+  "tip-calculator": {
+    "assumptionNote": "Tip is calculated on the pre-tax bill. In places where service charge is already included (common in Gulf restaurants), tipping is optional and this calculator simply shows what an extra percentage would add.",
+    "benefits": [
+      "Split restaurant bills fairly in seconds - no more arguing over the maths.",
+      "Adjust the percentage to match service quality instead of guessing.",
+      "Great for group dinners: everyone sees exactly what they owe.",
+      "Works offline-style in your browser - handy at the restaurant table."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "In the US, 15 to 20% is the standard for restaurant table service, with 20% for good service. In the UK, 10 to 12.5% is common where service charge is not included. In Gulf countries, tipping is appreciated but optional since service charge is often built into the bill.",
+        "q": "How much should I tip?"
+      },
+      {
+        "a": "Conventionally yes - tip on the pre-tax subtotal. Tipping on the tax amount would mean tipping on a tax, which most etiquette guides say is unnecessary. This calculator tips on the amount you enter, so enter the pre-tax bill for the standard approach.",
+        "q": "Should I tip on the tax?"
+      },
+      {
+        "a": "Add up everyone's share of the bill, then enter the total number of people. Each person's fair share is the total with tip divided by the number of people. If people ordered very different amounts, it is fairer to split the food cost by what each person ordered and split only the tip equally.",
+        "q": "How do we split fairly in a group?"
+      },
+      {
+        "a": "Most delivery apps add their own fees and suggested tips. The driver usually keeps only the tip you add, so tipping 15 to 20% on food delivery is generous and normal in the US. Check whether the app already added a service fee before adding more.",
+        "q": "What about tipping for delivery?"
+      },
+      {
+        "a": "A service charge is set by the restaurant and usually goes to the house, though many places share it with staff. A tip goes directly to your server. If a service charge is already on the bill, check local custom - in many places that replaces the tip.",
+        "q": "Service charge vs tip - what is the difference?"
+      },
+      {
+        "a": "Yes - use 0% for takeaway or counter service where tipping is not expected. For sit-down service, leaving nothing for decent service is considered poor form in tipping cultures like the US. When in doubt, 15% is the safe minimum there.",
+        "q": "Is it ever okay to tip nothing?"
+      }
+    ],
+    "formula": "Tip amount = bill x tip% / 100.\nTotal bill = bill + tip amount.\nPer person = total bill / number of people.\nExample: $85 x 18 / 100 = $15.30 tip.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the total bill amount before tip.",
+      "Set the tip percentage (15%, 18%, 20% and 25% are common).",
+      "Enter how many people are splitting the bill.",
+      "See the tip amount, total bill, and each person's share instantly.",
+      "Round each person's share to a friendly number if the group prefers cash."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "Tipping custom varies by country: 15-20% in the US, 10-12.5% in the UK, optional in the Gulf where service charge is common.",
+      "Tip is normally calculated on the pre-tax bill, not the after-tax total.",
+      "For large groups (often 6+), many restaurants add an automatic gratuity of 18-20%.",
+      "Delivery drivers, bar staff, and hotel porters have their own tipping norms - check local custom.",
+      "Cash tips usually reach the server in full; card tips may be pooled or processed with fees.",
+      "When a service charge is already on the bill, an extra tip is optional, not expected."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "tip calculator, gratuity calculator, split bill calculator, restaurant tip calculator, bill split calculator",
+    "labels": {
+      "billAmount": "Bill amount",
+      "people": "Number of people",
+      "perPerson": "Each person pays",
+      "tipAmount": "Tip amount",
+      "tipPerPerson": "Tip per person",
+      "tipPercent": "Tip percentage",
+      "totalBill": "Total with tip"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Calculates on the amount you enter - it does not know your local tax breakdown.",
+      "Splits are equal per person; it does not handle people who ordered different amounts.",
+      "Does not account for automatic gratuity already added by the restaurant.",
+      "Tipping norms are cultural, not mathematical - this is a maths tool, not etiquette law."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free tip calculator: compute the tip, split the bill between people, and see each person's share instantly. Private, fast, no sign-up.",
+    "metaTitle": "Tip Calculator - Split the Bill & Compute Gratuity | JaurTools",
+    "name": "Tip Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "On an $85 bill with an 18% tip split 3 ways: the tip is $15.30, the total is $100.30, and each person pays $33.43. Tip on the pre-tax bill amount, and adjust the percentage for service quality - 15% for okay service, 20% for good service in the US.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your tip results",
+    "tagline": "Compute tip amounts and split the bill between people, instantly.",
+    "workedExample": "Bill $85, tip 18%, 3 people:\n1. Tip = 85 x 18 / 100 = $15.30.\n2. Total with tip = 85 + 15.30 = $100.30.\n3. Per person = 100.30 / 3 = $33.43 (rounded to the cent).\n4. Tip per person = 15.30 / 3 = $5.10.",
+    "workedExampleHeading": "Worked example",
+    "hero": {
+      "perPerson": "Each person pays",
+      "perPersonNote": "split {n} ways, tip included"
+    },
+    "meaning": {
+      "heading": "What does this mean?",
+      "l1": "Split {n} ways: each person pays {per} — {tipPer} of that is tip."
+    }
+  }
+}

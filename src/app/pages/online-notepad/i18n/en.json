@@ -1,0 +1,96 @@
+{
+  "online-notepad": {
+    "benefits": [
+      "Write and organize notes without any account or app install.",
+      "Auto-save means you never lose a thought to a closed tab.",
+      "Markdown export moves notes into any modern notes app.",
+      "Print any note cleanly on A4 — or save it as PDF."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Everyday & Utility",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "Yes. Every keystroke is saved to your browser's local storage on your device, so your notes survive closing the tab. They are never synced to a server — clearing browser data will remove them.",
+        "q": "Are my notes saved automatically?"
+      },
+      {
+        "a": "The Markdown export creates a '.md' file with your note's title as a heading. It opens in Notion, Obsidian, Typora, VS Code, and GitHub — and the UTF-8 BOM keeps Hindi and Arabic text intact.",
+        "q": "What is the Markdown export for?"
+      },
+      {
+        "a": "Press the print button. Only the note prints — the rest of the page is hidden — and choosing 'Save as PDF' in the print dialog gives you a digital copy formatted for A4.",
+        "q": "How do I print a note or save it as PDF?"
+      },
+      {
+        "a": "Yes. Notes, titles, and the interface work in English, Hindi, and Arabic — type in whichever script you prefer.",
+        "q": "Can I write notes in Hindi or Arabic?"
+      },
+      {
+        "a": "Not between devices — storage is per browser on one device. Export Markdown files to move notes elsewhere.",
+        "q": "Can I access my notes on another device?"
+      },
+      {
+        "a": "Export anything important as Markdown first, then delete notes one by one. Remember: clearing browser data also erases saved notes.",
+        "q": "How do I back up or delete my notes?"
+      }
+    ],
+    "formula": "Word count = tokens split on whitespace\nCharacter count = all characters including spaces\nAuto-save: every keystroke writes the note (title, body, timestamp) to localStorage\nExport: '# ' + title + two newlines + body, saved as .md with UTF-8 BOM\nPrint: CSS print rules show only the note body, A4-friendly",
+    "formulaHeading": "How it works",
+    "homeLabel": "Home",
+    "howTo": [
+      "Press 'New note' to create a note.",
+      "Type a title and write your content — every keystroke auto-saves.",
+      "Switch between notes from the list; the newest-edited note sorts first.",
+      "Press 'Export Markdown' to download the note as a .md file.",
+      "Press 'Print note' for a clean A4 printout, or save as PDF from the print dialog."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "Create unlimited notes with a title and a long-form body.",
+      "Every keystroke auto-saves to your browser's local storage — no save button needed.",
+      "Live word and character counts under the editor.",
+      "Markdown export downloads a clean .md file per note.",
+      "Print view isolates just the note for a clean A4 printout or PDF."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "notes maker, online notepad, free notes app, markdown notes, notepad online no signup, a4 notes print",
+    "labels": {
+      "bodyLabel": "Note content",
+      "bodyPlaceholder": "Write your note here...",
+      "charsLabel": "Characters",
+      "deleteLabel": "Delete note",
+      "emptyNote": "No notes yet. Press 'New note' to write your first one.",
+      "exportButton": "Export Markdown",
+      "newNoteButton": "New note",
+      "notesHeading": "Your notes",
+      "printButton": "Print note",
+      "selectNoteHint": "Select a note from the list, or create a new one.",
+      "storageNote": "Your notes are saved only in this browser on your device — nothing is uploaded.",
+      "titleLabel": "Title",
+      "titlePlaceholder": "Note title",
+      "untitledLabel": "Untitled note",
+      "wordsLabel": "Words"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Data lives in one browser only — no sync between devices.",
+      "Clearing browser data permanently erases saved notes.",
+      "Plain-text notes only — no images, tables, or rich formatting.",
+      "Very long notes (over 200,000 characters) are truncated."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free online notepad with auto-save, Markdown export and clean printing. Your notes stay in your browser — private, no signup.",
+    "metaTitle": "Online Notepad - Free Notes with Auto-Save | JaurTools",
+    "name": "Online Notepad",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Notes Maker is a clean online notepad with zero friction. Create unlimited notes, write with live word and character counts, and every keystroke auto-saves to your browser. Export any note as a Markdown file, or print it cleanly on A4 — or save it as PDF from the print dialog. No account, no signup, and your notes never leave your device.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Notes Maker results",
+    "tagline": "Just type — your notes save themselves.",
+    "workedExampleHeading": "Worked example",
+    "workedExample": "You press 'New note', title it 'Grocery list', and type 8 lines: 'Milk 2 litres' through 'Rice 5kg'. The word count reads 24 words, 148 characters. Each keystroke updated the note's timestamp in local storage, so closing the tab loses nothing. Pressing 'Export Markdown' downloads 'grocery-list.md' containing '# Grocery list' followed by your 8 lines. Pressing 'Print note' shows only the note — title, date, and body — ready for A4."
+  }
+}

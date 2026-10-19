@@ -1,0 +1,89 @@
+{
+  "serp-preview": {
+    "breadcrumbLabel": "Breadcrumb",
+    "homeLabel": "Home",
+    "quickAnswerHeading": "Quick answer",
+    "keyFactsHeading": "Key facts",
+    "howToHeading": "How to use",
+    "formulaHeading": "Formula",
+    "workedExampleHeading": "Worked example",
+    "benefitsHeading": "Benefits",
+    "limitationsHeading": "Limitations",
+    "faqHeading": "Frequently asked questions",
+    "relatedHeading": "Related tools",
+    "lastReviewedLabel": "Last reviewed",
+    "category": "Web & Dev Tools",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "name": "SERP Preview",
+    "tagline": "Preview your Google search snippet live.",
+    "metaTitle": "SERP Preview - See Your Google Snippet Before Publishing | JaurTools",
+    "metaDescription": "Preview how your title and meta description look in Google results on desktop and mobile. Live character counts — free.",
+    "keywords": "serp preview, google snippet preview, meta title checker, search result preview, seo snippet tool",
+    "resultsHeading": "SERP snippet preview results",
+    "quickAnswer": "This tool shows how your page will appear in Google search results. Type your title tag, URL, and meta description to see a realistic preview with live character counters: titles over about 60 characters and descriptions over about 155 characters risk being cut off with an ellipsis.",
+    "keyFacts": [
+      "Google typically shows around 50-60 characters of a title and 150-160 of a description, measured in pixels.",
+      "Titles are truncated by pixel width, not exact character count; wide letters like W take more space.",
+      "Google may rewrite your title or description if it thinks other page content fits the query better.",
+      "The favicon and site name shown come from your site settings, not the meta tags.",
+      "A clear, honest snippet improves click-through rate without tricking users."
+    ],
+    "howTo": [
+      "Type the title tag of your page (aim for 60 characters or fewer).",
+      "Enter the page URL to preview the site name and breadcrumb.",
+      "Write the meta description (aim for 155 characters or fewer).",
+      "Switch between desktop and mobile preview widths.",
+      "Copy the generated title and meta tags into your page HTML."
+    ],
+    "formula": "Title limit: ~60 characters (600px)\nDescription limit: ~155 characters\nExample title (47 chars): \"Free Online Tools - No Signup Needed | JaurTools\"\nExample description (118 chars): \"Use 600+ free browser-based tools...\"",
+    "workedExample": "Title: \"Free Online Tools - No Signup Needed | JaurTools\" (47 characters) — under the 60-character guide, so it shows fully.\nDescription: \"Use 600+ free browser-based tools: calculators, converters, PDF tools and more. No signup, no downloads, 100% private.\" (118 characters) — under 155, so no truncation.\nA 90-character title would show an ellipsis around character 60 on desktop results.",
+    "benefits": [
+      "See truncation problems before you publish.",
+      "Live counters keep titles and descriptions in range.",
+      "Mobile preview matches how most users search today.",
+      "One click copies clean title and meta tags."
+    ],
+    "limitations": [
+      "Limits are guidelines; Google measures in pixels, not characters.",
+      "Google often rewrites snippets, so the preview is not a guarantee.",
+      "Non-Latin scripts (Hindi, Arabic) use different widths per character.",
+      "This previews one organic result style; rich results and ads differ."
+    ],
+    "faqs": [
+      {
+        "q": "Why was my title cut off in real results?",
+        "a": "Google truncates by pixel width. Even under 60 characters, many wide letters can overflow. Shorten the title or move key words earlier."
+      },
+      {
+        "q": "Does Google always use my meta description?",
+        "a": "No. Google rewrites descriptions in most cases, pulling text it thinks matches the query. A good description still raises your chances of being used."
+      },
+      {
+        "q": "How long should a meta description be?",
+        "a": "Aim for 150-155 characters. Longer text gets cut with an ellipsis; much shorter text wastes the space Google gives you."
+      },
+      {
+        "q": "Do emojis help click-through rate?",
+        "a": "They can stand out but Google often strips or ignores them, and they look unprofessional for many topics. Use sparingly if at all."
+      },
+      {
+        "q": "Is the mobile preview accurate?",
+        "a": "It approximates the narrower mobile card width. Real rendering also depends on device, font size settings, and result features on the page."
+      }
+    ],
+    "assumptionNote": "Character limits are pixel-based approximations. Google may rewrite titles and descriptions in live results.",
+    "labels": {
+      "titleLabel": "Page title",
+      "urlLabel": "Page URL",
+      "descLabel": "Meta description",
+      "charsLabel": "characters",
+      "tooLongLabel": "too long, will be truncated",
+      "deviceLabel": "Preview device",
+      "desktopLabel": "Desktop",
+      "mobileLabel": "Mobile",
+      "previewLabel": "Search result preview",
+      "copyTagsLabel": "Copy meta tags",
+      "copiedLabel": "Copied"
+    }
+  }
+}

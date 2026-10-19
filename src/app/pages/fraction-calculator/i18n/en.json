@@ -1,0 +1,104 @@
+{
+  "fraction-calculator": {
+    "assumptionNote": "Denominators must be non-zero and are clamped to 1 or higher. Inputs are whole numbers; decimals are rounded.",
+    "benefits": [
+      "Shows every step, so you learn the method instead of just copying an answer.",
+      "Answers are always fully simplified - no half-finished fractions.",
+      "The mixed-number form is what recipes, measurements and exam answers expect.",
+      "The decimal value lets you compare the answer against decimal problems.",
+      "Division shows the multiply-by-reciprocal step that most students miss."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Math & Statistics",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The top number is the numerator - it counts how many parts you have. The bottom number is the denominator - it tells how many equal parts the whole is split into. In 3/4, you have 3 of 4 equal parts.",
+        "q": "What is a numerator and a denominator?"
+      },
+      {
+        "a": "Find a common denominator by multiplying the two denominators. Convert each fraction, then add or subtract the numerators and keep the denominator. Example: 1/2 + 2/3 = 3/6 + 4/6 = 7/6.",
+        "q": "How do you add fractions with different denominators?"
+      },
+      {
+        "a": "Yes - multiply the numerators together and the denominators together, then simplify. Example: 2/3 x 3/5 = 6/15 = 2/5. Notice the 3s cancel, which you can do before multiplying to keep numbers small.",
+        "q": "How do you multiply fractions?"
+      },
+      {
+        "a": "Flip the second fraction (take its reciprocal) and multiply. Example: 1/2 / 3/4 = 1/2 x 4/3 = 4/6 = 2/3. The flip-and-multiply step is the key move for fraction division.",
+        "q": "How do you divide fractions?"
+      },
+      {
+        "a": "Divide the top and bottom by their greatest common divisor (GCD). Example: 6/8 has GCD 2, so 6/8 = 3/4. This calculator does that automatically and shows the simplified answer.",
+        "q": "How do you simplify a fraction?"
+      },
+      {
+        "a": "When the numerator is bigger than the denominator, divide to get a whole number plus a remainder fraction. Example: 7/4 = 1 with remainder 3, so 1 3/4. This calculator shows the mixed form for every improper fraction.",
+        "q": "What is a mixed number?"
+      }
+    ],
+    "formula": "Addition: a/b + c/d = (ad + bc) / bd\nSubtraction: a/b - c/d = (ad - bc) / bd\nMultiplication: a/b x c/d = ac / bd\nDivision: a/b / c/d = a/b x d/c = ad / bc\nThen divide numerator and denominator by their GCD.",
+    "formulaHeading": "Formulas",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter the first fraction: numerator on top, denominator below.",
+      "Choose the operation: add, subtract, multiply or divide.",
+      "Enter the second fraction the same way.",
+      "The simplified answer appears instantly, with the mixed-number and decimal forms.",
+      "Read the step-by-step working to see exactly how the answer was found."
+    ],
+    "howToHeading": "How to use",
+    "keyFacts": [
+      "A fraction a/b means a parts out of b equal parts. The denominator can never be zero.",
+      "To add or subtract, fractions need a common denominator - usually the product of the two denominators.",
+      "To multiply, multiply numerators and multiply denominators, then simplify.",
+      "To divide, flip the second fraction and multiply - dividing by c/d is multiplying by d/c.",
+      "Simplifying means dividing the numerator and denominator by their greatest common divisor.",
+      "A mixed number like 1 1/2 is the same value as the improper fraction 3/2."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "fraction calculator, add fractions, subtract fractions, multiply fractions, divide fractions, simplify fraction calculator, mixed number calculator",
+    "labels": {
+      "decimalLabel": "Decimal value",
+      "denominator1": "Denominator of first fraction",
+      "denominator2": "Denominator of second fraction",
+      "errorLabel": "Enter valid fractions with non-zero denominators.",
+      "firstFraction": "First fraction",
+      "mixedLabel": "Mixed number",
+      "numerator1": "Numerator of first fraction",
+      "numerator2": "Numerator of second fraction",
+      "op_add": "Add (+)",
+      "op_divide": "Divide (÷)",
+      "op_multiply": "Multiply (×)",
+      "op_subtract": "Subtract (−)",
+      "operationLabel": "Operation",
+      "resultLabel": "Simplified answer",
+      "secondFraction": "Second fraction",
+      "stepCommonDen": "Common denominator:",
+      "stepMixed": "As a mixed number",
+      "stepReciprocal": "Flip the second fraction",
+      "stepSimplify": "Simplify:",
+      "stepsLabel": "Step-by-step working"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Whole-number inputs only - convert decimals to fractions first.",
+      "Very large numerators or denominators (above 10,000) are clamped.",
+      "It shows arithmetic steps, not a full proof of why fraction rules work.",
+      "The tool answers math, not word problems - read the question carefully yourself."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free fraction calculator: add, subtract, multiply and divide fractions with step-by-step working. Answers simplified, with mixed numbers and decimals.",
+    "metaTitle": "Fraction Calculator - Add, Subtract, Multiply, Divide | JaurTools",
+    "name": "Fraction Calculator",
+    "privacyNote": "This tool runs 100% in your browser. Your data never leaves your device.",
+    "quickAnswer": "Adding 1/2 and 2/3: find the common denominator 6, convert to 3/6 + 4/6, add the numerators to get 7/6, which simplifies to the mixed number 1 1/6, or 1.1667 as a decimal. This calculator handles all four operations - addition, subtraction, multiplication and division - and always shows the fully simplified answer with step-by-step working.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Fraction results",
+    "tagline": "Add, subtract, multiply and divide fractions with full step-by-step working.",
+    "workedExample": "Calculate 1/2 + 2/3:\n1. Common denominator: 2 x 3 = 6.\n2. Convert: 1/2 = 3/6 and 2/3 = 4/6.\n3. Add numerators: 3 + 4 = 7, so 7/6.\n4. Simplify: 7 and 6 share no common divisor, so 7/6 stays.\n5. Mixed number: 7 / 6 = 1 remainder 1, so 1 1/6.\n6. Decimal: 7 / 6 = 1.1667 (rounded).",
+    "workedExampleHeading": "Worked example"
+  }
+}

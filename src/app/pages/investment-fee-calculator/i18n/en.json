@@ -1,0 +1,91 @@
+{
+  "investment-fee-calculator": {
+    "assumptionNote": "Models the annual fee as a simple yearly drag on the gross return, compounded over the full period. Real funds also have trading costs and taxes, so the true drag can be slightly larger than shown.",
+    "benefits": [
+      "See the lifetime cost of a 1% fee in real money - it shocks most people.",
+      "Compare two funds: the cheaper one wins more often than investors believe.",
+      "The single most persuasive argument for low-cost index funds, in one number.",
+      "Free ammunition for your next conversation with a financial adviser."
+    ],
+    "benefitsHeading": "Benefits",
+    "breadcrumbLabel": "Breadcrumb",
+    "category": "Finance",
+    "faqHeading": "Frequently asked questions",
+    "faqs": [
+      {
+        "a": "The expense ratio is the annual percentage a fund charges on your assets: 1.5% means $150 per year on every $10,000 invested, taken quietly from returns. Index funds often charge 0.03-0.20%; actively managed funds often charge 0.75-2%.",
+        "q": "What is an expense ratio?"
+      },
+      {
+        "a": "Because of compounding: the fee is taken every year, and each year's fee also misses out on all future growth. A 1.5% fee over 30 years at 7% return does not cost 45% of one year's gains - it costs about 35% of your final balance.",
+        "q": "Why do small fees cost so much over time?"
+      },
+      {
+        "a": "Sometimes. Decades of data show most active funds underperform their index after fees. A higher fee can be justified only if the fund consistently beats the market by more than the fee - rare, and impossible to predict in advance.",
+        "q": "Are expensive funds ever worth it?"
+      },
+      {
+        "a": "Look for the expense ratio (TER) in the fund factsheet, plus entry/exit loads, platform charges, and adviser fees. In India, check whether you hold regular plans (higher fee, pays commission) vs direct plans (lower fee, same fund).",
+        "q": "What fees should I look for?"
+      },
+      {
+        "a": "Yes, dramatically. Switching a $10,000 investment from a 1.5% fee fund to a 0.2% fee fund at 7% return over 30 years keeps roughly an extra $20,000. Same market return, same risk - the only difference is who keeps the money.",
+        "q": "Does switching to a cheaper fund really matter?"
+      },
+      {
+        "a": "Advisers paid by commission may steer you to high-fee products. Ask directly: how are you paid, and what is the total annual cost of what you recommend? Fee-only advisers remove this conflict.",
+        "q": "How do adviser fees fit in?"
+      }
+    ],
+    "formula": "Future value, no fee = P x (1 + r)^t.\nFuture value, with fee = P x (1 + r - fee)^t.\nCost of fees = FV no fee - FV with fee.\nExample: 10,000 x 1.07^30 = 76,122.55; 10,000 x 1.055^30 = 49,839.51; cost = 26,283.04.",
+    "formulaHeading": "The formula",
+    "homeLabel": "Home",
+    "howTo": [
+      "Enter your starting investment amount.",
+      "Enter the expected gross annual return before fees.",
+      "Enter the fund's annual fee (expense ratio) as a percentage.",
+      "Enter the investment horizon in years.",
+      "Read how much the fee costs you in dollars and as a share of your final balance."
+    ],
+    "howToHeading": "How to use this calculator",
+    "keyFacts": [
+      "A 1% annual fee sounds tiny but compounds into a huge lifetime cost.",
+      "At 7% return over 30 years, a 1.5% fee eats about 35% of your final balance.",
+      "Index funds typically charge 0.03-0.20%; active funds often charge 0.75-2%.",
+      "Fees are charged every year on your whole balance, including past gains.",
+      "The fee drag grows with time: 10 years is mild, 30 years is brutal.",
+      "Net return is what matters - gross return minus all fees."
+    ],
+    "keyFactsHeading": "Key facts",
+    "keywords": "investment fee calculator, expense ratio impact, fund fee calculator, mutual fund fee impact, cost of fees calculator",
+    "labels": {
+      "annualFee": "Annual fee / expense ratio (%)",
+      "annualReturn": "Expected annual return (%)",
+      "feeCost": "Lifetime cost of fees",
+      "futureValueNoFee": "Value with no fee",
+      "futureValueWithFee": "Value after fees",
+      "initialAmount": "Initial investment",
+      "percentLost": "Share of final balance lost",
+      "years": "Years invested"
+    },
+    "lastReviewedLabel": "Last reviewed",
+    "limitations": [
+      "Models the fee as a flat annual drag; real fee structures can be tiered or front-loaded.",
+      "Ignores taxes, inflation, and additional contributions or withdrawals.",
+      "Assumes a constant return; real returns vary year to year.",
+      "Illustration only - not a prediction of any fund's performance."
+    ],
+    "limitationsHeading": "Limitations",
+    "metaDescription": "Free investment fee calculator: see how a 1% or 2% annual fee erodes your returns over decades. The true lifetime cost, in dollars.",
+    "metaTitle": "Investment Fee Calculator - See the True Lifetime Cost of Fees | JaurTools",
+    "name": "Investment Fee Calculator",
+    "privacyNote": "This calculator runs 100% in your browser. Your numbers never leave your device.",
+    "quickAnswer": "$10,000 at 7% for 30 years grows to $76,122.55 with no fee. A 1.5% annual fee leaves only $49,839.51 - the fee costs you $26,283.04, or 34.5% of your final balance. That is the power of compounding working against you, every single year.",
+    "quickAnswerHeading": "Quick answer",
+    "relatedHeading": "Related tools",
+    "resultsHeading": "Your fee impact results",
+    "tagline": "A 1% fee sounds tiny. Over 30 years, it eats a third of your money.",
+    "workedExample": "$10,000, 7% return, 1.5% annual fee, 30 years:\n1. No fee: 10,000 x 1.07^30 = 10,000 x 7.612255 = $76,122.55.\n2. With fee: net return = 7 - 1.5 = 5.5%. 10,000 x 1.055^30 = 10,000 x 4.983951 = $49,839.51.\n3. Cost of fees = 76,122.55 - 49,839.51 = $26,283.04.\n4. Share lost = 26,283.04 / 76,122.55 = 34.5% of the final balance.\nA 1.5% fee took more than a third of the money.",
+    "workedExampleHeading": "Worked example"
+  }
+}
