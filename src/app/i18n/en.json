@@ -610,7 +610,15 @@
     "resultsHeading": "Add Text to Each Line results",
     "tagline": "Add a prefix or suffix to every line of your text in one click.",
     "workedExample": "Input text:\napple\nbanana\ncherry\n\nPrefix: '- '   Suffix: '!'\n\nStep by step:\n1. Line 1: '- ' + 'apple' + '!' = '- apple!'\n2. Line 2: '- ' + 'banana' + '!' = '- banana!'\n3. Line 3: '- ' + 'cherry' + '!' = '- cherry!'\n\nFinal output:\n- apple!\n- banana!\n- cherry!",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Leaving 'Skip empty lines' off means blank lines get a stray prefix or suffix — your list suddenly has junk entries in the middle.",
+      "Adding a comma before each line does not make valid CSV — fields that already contain commas still need quoting.",
+      "Expecting the tool to number your lines (1., 2., 3.) — it only repeats the same text, so do the numbering in your spreadsheet first.",
+      "Typing a suffix with a trailing space adds invisible whitespace to every line, which breaks exact-match lookups later.",
+      "Pasting from a spreadsheet copies hidden tabs and extra spaces — clean the source first or the affix lands in the wrong place."
+    ]
   },
   "add-text-to-pdf": {
     "benefits": [
@@ -1863,7 +1871,15 @@
     "resultsHeading": "Letter results",
     "tagline": "Write formal application letters with correct structure — job, leave, resignation, request.",
     "workedExample": "Type: leave application. Name \"Amit Kumar\", recipient role \"The Principal\", organization \"City Public School\", subject \"Application for two days' leave\", points: \"I need leave on 20 and 21 October 2026 for a family function.\" and \"I have completed my pending school work.\" Date 18 October 2026.\nThe letter opens with the sender block and date, then \"The Principal, City Public School\", then \"Subject: Application for two days' leave\", then \"Dear Sir/Madam,\", then the leave opening sentence, then the two points as separate paragraphs, then the closing sentence asking for approval, and finally \"Yours sincerely, Amit Kumar\". Copy it into your email or print it.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sending the letter without reading it first — the tool drafts placeholder wording, not your story. A wrong name, date, or detail tells the recipient you never bothered to check.",
+      "Using 'Dear Sir/Madam' when you actually know the person's name — it reads as lazy. If you have the name, use it.",
+      "Sending the exact same job application to every company — recruiters can spot a generic letter in seconds, and it goes straight to the reject pile.",
+      "Writing a vague subject line like 'Application' — the reader learns nothing from it. Say what the letter is for in the subject itself.",
+      "Leaving a typo in a name, date, or notice period — small mistakes are the first thing people notice, and they quietly sink the whole letter's credibility."
+    ]
   },
   "apr-calculator": {
     "assumptionNote": "Assumes a fixed nominal rate, monthly payments and upfront fees deducted from the loan proceeds.",
@@ -2285,7 +2301,15 @@
     "resultsHeading": "Area conversion results",
     "tagline": "Convert between square metres, square feet, acres, hectares and more - instantly.",
     "workedExample": "Convert 2.5 acres to square metres:\n1. Factor for acre: 4,046.8564224 m² per acre.\n2. Multiply: 2.5 × 4,046.8564224 = 10,117.141056.\n3. Result: 10,117.14 m² (about 1.012 hectares, since 10,117.14 ÷ 10,000 = 1.0117).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Converting km² to m² by multiplying by 1,000 is the classic error — area scales with the square, so 1 km² = 1,000,000 m².",
+      "Don't feed linear factors into area math: 1 ft = 0.3048 m, but 1 sq ft = 0.3048² = 0.09290304 m². Squaring matters.",
+      "Mixing up the swap direction — check whether you're converting acres→m² or m²→acres before quoting a land price.",
+      "Acre and hectare are not interchangeable: 1 hectare = 2.47105 acres. Using the wrong one nearly triples a land valuation.",
+      "Assuming 1 sq m = 10 sq ft: it's actually 10.7639 sq ft. That 7% error ruins flooring and tiling estimates."
+    ]
   },
   "army-body-fat-calculator": {
     "assumptionNote": "The official formula works in inches; metric values are converted before calculation. This mirrors the Army screening method and is not an official assessment.",
@@ -2496,7 +2520,15 @@
     "resultsHeading": "ASCII Art Generator results",
     "tagline": "Turn text into banners and photos into retro text art.",
     "workedExample": "Take a tiny 2x2 image with these pixel brightness values:\nRow 1: 0 (black), 85 (dark grey)\nRow 2: 170 (light grey), 255 (white)\n\nRamp (dark to light): @ % # * + = - : . (space)\nindex = floor(brightness / 255 x 10)\n\n1. Pixel 0: floor(0 / 255 x 10) = 0 -> '@'\n2. Pixel 85: floor(85 / 255 x 10) = floor(3.33) = 3 -> '*'\n3. Pixel 170: floor(170 / 255 x 10) = floor(6.67) = 6 -> '-'\n4. Pixel 255: floor(255 / 255 x 10) = floor(10) = 10 -> capped at 9 -> ' ' (space)\n\nResult:\n@*\n-  (dash followed by a space)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using a busy or low-contrast photo gives muddy art — high-contrast images with a clear subject convert far better.",
+      "Cranking the width too high makes the art wrap and break in chats and comments — keep it narrow for pasting anywhere.",
+      "Text-mode art looks squished because characters are taller than wide — that is normal, not a bug; design for it.",
+      "Pasting into an app with a proportional font (like WhatsApp) ruins the alignment — art only works in monospace contexts.",
+      "Expecting color or shading to survive — it is plain text, so any color information from the image is lost in conversion."
+    ]
   },
   "ascii-table": {
     "benefits": [
@@ -2595,7 +2627,15 @@
     "resultsHeading": "ASCII lookup results",
     "tagline": "Look up any ASCII character code (0-127), search names, and convert characters to codes.",
     "workedExample": "Encode the word \"Hi\":\n1. H is uppercase: code 72.\n2. i is lowercase: code 105.\n3. So \"Hi\" = 72, 105.\nDecode 74 97 117 114:\n1. 74 = J, 97 = a, 117 = u, 114 = r.\n2. Together: \"Jaur\".",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Codes 0–31 are control characters — they don't print. Copying code 9 (TAB) or 10 (line feed) into a document just moves the cursor.",
+      "ASCII stops at 127. Looking up accented letters or currency symbols here won't work — those need Unicode/UTF-8, not this table.",
+      "Uppercase A is 65 and lowercase a is 97 — a gap of exactly 32. That's why 'Z' (90) sorts before 'a' (97), so 'Apple' comes before 'apple' in code.",
+      "The digit '0' is code 48, not 0. Subtracting '0' (48) from a digit character gives its numeric value — '7' (55) minus 48 = 7.",
+      "Code 32 is a real space character, not 'nothing'. Trimming or ignoring it breaks fixed-width text parsing."
+    ]
   },
   "attendance-percentage-calculator": {
     "assumptionNote": "The tool uses the common 75% minimum-attendance rule. Your college or school may require a different percentage — the math works the same, but check your institution's rule.",
@@ -3202,7 +3242,15 @@
     "resultsHeading": "Certificate results",
     "tagline": "Create professional award certificates with a live preview — print or download free.",
     "workedExample": "Example inputs: recipient \"Priya Nair\", award title \"Employee of the Month\", reason \"For exceptional customer service and mentoring new team members\", organization \"Sunrise Textiles\", presenter \"Rahul Verma, HR Manager\", date 18 October 2026.\nThe certificate reads: \"Certificate of Achievement — This certificate is proudly presented to Priya Nair — for outstanding achievement in Employee of the Month — For exceptional customer service and mentoring new team members — Date: 18 October 2026 — Presented by: Rahul Verma, HR Manager — Sunrise Textiles.\" Print it in landscape for the classic certificate look.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Skipping the name check before printing — a misspelled recipient name is the number one certificate embarrassment, and it happens constantly.",
+      "Printing in portrait mode — certificates are designed for landscape; print in portrait and the whole layout shrinks awkwardly.",
+      "Printing on plain thin paper — a certificate on office paper feels cheap. Card stock makes the same design look twice as valuable.",
+      "Leaving the browser's print margins on — headers, footers, and page numbers will print over your certificate. Turn them off in the print dialog.",
+      "Making certificates for credentials you didn't earn — the tool doesn't verify anything, and faking a qualification is fraud, not a design task."
+    ]
   },
   "bac-calculator": {
     "assumptionNote": "Widmark is an educational estimate, not a legal or medical measurement. Never drive after drinking, whatever this calculator says.",
@@ -3497,7 +3545,15 @@
     "resultsHeading": "Your barcode",
     "tagline": "Create real, scannable Code 39 and Interleaved 2 of 5 barcodes. Download as crisp SVG.",
     "workedExample": "Code 39 for the text A1:\n1. Wrap with start/stop: * A 1 * (4 characters).\n2. Each character is 9 elements. * = 13 narrow units, A = 15, 1 = 13.\n3. Add 3 inter-character gaps: 13 + 1 + 15 + 1 + 13 + 1 + 13 = 57 units.\n4. Add the quiet zones (10 units each side): 77 units wide in total.\nInterleaved 2 of 5 for 1234:\n1. Check digit: 4x3 + 3x1 + 2x3 + 1x1 = 22; (10 - 2) mod 10 = 8, giving 12348.\n2. Odd length, so pad: 012348, encoded as pairs (0,1) (2,3) (4,8).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Printing below 100 percent scale — shrunk bars break the quiet zone and scanners fail. Print at full size, every time.",
+      "Trying to make retail EAN or UPC barcodes — this tool doesn't do those. Retail checkout barcodes need a different generator.",
+      "Encoding long text in Code 39 — it gets enormously wide. Keep text short, or switch to digits-only Interleaved 2 of 5.",
+      "Using lowercase letters — Code 39 can't encode them. Type in UPPERCASE or the character simply won't exist.",
+      "Printing a whole batch before testing one — scan a single test label with your actual scanner first, then commit to the run."
+    ]
   },
   "base-converter": {
     "benefits": [
@@ -3596,7 +3652,15 @@
     "resultsHeading": "Base conversion results",
     "tagline": "Convert numbers between any bases 2–36 — binary to hex and beyond.",
     "workedExample": "Convert FF (hex) to decimal:\n1. From-base 16, digits F=15, F=15.\n2. 15 × 16 + 15 = 240 + 15 = 255.\nConvert 255 (decimal) to binary:\n1. Repeated ÷2: 255→127 r1, 127→63 r1, 63→31 r1, 31→15 r1, 15→7 r1, 7→3 r1, 3→1 r1, 1→0 r1.\n2. Read remainders upward: 11111111₂.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using letters beyond your base — 'G' is invalid in hex, and 'Z' only exists in bases 27 and up. The tool errors instead of guessing, so check the from-base.",
+      "Forgetting what base a pasted number is in — '755' as octal (Unix permissions) is 493 in decimal, but 755 as decimal is just 755. Same digits, different value.",
+      "This tool handles whole numbers only. Don't feed it fractions like 101.11 or expect a decimal point in the answer.",
+      "Converting hex→decimal, then reading that decimal answer as hex again, is the classic double-conversion error — convert once, then read.",
+      "Numbers beyond about 9 × 10¹⁵ lose precision in conversion. Split huge values into chunks instead."
+    ]
   },
   "base64-encoder-decoder": {
     "benefits": [
@@ -3699,7 +3763,15 @@
     "resultsHeading": "Base64 conversion result",
     "tagline": "Encode text to Base64 or decode it back — fast and private.",
     "workedExample": "Encode \"Hello\":\n1. UTF-8 bytes: 72 101 108 108 111.\n2. Grouped into 6-bit chunks and mapped: S G V s b G 8 =.\n3. Result: \"SGVsbG8=\".\nDecode \"SmF1clRvb2xz\":\n1. Split into 6-bit values and regroup into bytes.\n2. Bytes spell: J a u r T o o l s.\n3. Result: \"JaurTools\".",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Base64 is encoding, not encryption — anyone can decode it in a second. Never paste a password or secret here thinking it's hidden.",
+      "Pasting already-encoded text into the Encode tab double-encodes it. If the output looks like alphabet soup, check which tab you're on.",
+      "Stray spaces or line breaks in a Base64 string break decoding — clean the input before pasting.",
+      "Missing '=' padding at the end is the most common decode error. One or two '=' characters must close the string.",
+      "Base64 output is ~33% bigger than the input. Don't be surprised when a 3 MB payload becomes a 4 MB string."
+    ]
   },
   "bcrypt-hash-generator": {
     "assumptionNote": "Hashes are generated with the bcryptjs library using cryptographically random salts. Cost 10 is the default, matching common server frameworks.",
@@ -4193,7 +4265,15 @@
     "resultsHeading": "Binary to Text results",
     "tagline": "Decode binary code into readable text — instant, in your browser.",
     "workedExample": "Input (Binary to Text mode):\n01001000 01101001\n\nStep by step:\n1. Split into groups: '01001000' and '01101001'.\n2. Group 1: 0x128+1x64+0x32+0x16+1x8+0x4+0x2+0x1 = 64 + 8 = 72 -> 'H'.\n3. Group 2: 0x128+1x64+1x32+0x16+1x8+0x4+0x2+1x1 = 64 + 32 + 8 + 1 = 105 -> 'i'.\n\nOutput: Hi\n\nReverse (Text to Binary mode):\n'H' -> 72 -> 01001000, 'i' -> 105 -> 01101001\nOutput: 01001000 01101001",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Decoding groups that are not exactly 8 bits (like '101') fails or produces garbage — pad them first.",
+      "Treating binary as encryption — it is just an encoding, anyone can decode it in seconds, so never hide secrets in it.",
+      "Assuming every 8-bit group is one character — emoji and many non-English letters need multiple bytes, so counts mislead.",
+      "Pasting binary with line breaks or double spaces breaks decoding — strip the formatting before you convert.",
+      "Forgetting which direction you need — encoding text you already encoded doubles it into nonsense nobody can read."
+    ]
   },
   "biodata-maker": {
     "benefits": [
@@ -4305,7 +4385,15 @@
     "resultsHeading": "Your biodata",
     "tagline": "Fill a form, get a clean marriage biodata as PDF. Live preview, fully private.",
     "workedExample": "Aarav fills the form:\n1. Name: Aarav Sharma. Born: 1998-05-14. Height: 5 ft 9 in. Status: Single.\n2. Education: B.Com, Delhi University. Occupation: Accountant. Income: INR 6,00,000.\n3. Father: Rajesh Sharma. Mother: Sunita Sharma. Address: New Delhi, India.\n4. Phone and email added. About: one honest paragraph. Expectations: one clear paragraph.\n5. Download PDF: a one-page A4 biodata with three sections and both paragraphs, ready to share on WhatsApp.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Typing in Hindi or Arabic script — the PDF only renders Latin characters, so other scripts will come out broken or missing entirely.",
+      "Not double-checking your phone number — one wrong digit means the proposal can never reach you. Read it aloud digit by digit.",
+      "Writing it like a job resume — a biodata is about personal and family details, not your career. The matchmaker reads a different story.",
+      "Writing one lazy line for partner expectations — vague lines like 'good family' say nothing. A few honest sentences make real conversations happen.",
+      "Sharing a phone screenshot instead of the PDF — screenshots blur and crop badly when forwarded. Download the PDF; it's made for sharing."
+    ]
   },
   "bionic-reading-converter": {
     "benefits": [
@@ -4408,7 +4496,15 @@
     "resultsHeading": "Bionic Reading Converter results",
     "tagline": "Rewrite text with bolded word-starts so you can skim it faster.",
     "workedExample": "Input: 'The quick fox'\nStrength: Medium (40% of each word bolded)\n\nStep by step:\n1. Word 'The' (3 letters): bold = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>T</strong>he'\n2. Word 'quick' (5 letters): bold = max(1, round(5 x 0.4)) = max(1, 2) = 2 -> '<strong>qu</strong>ick'\n3. Word 'fox' (3 letters): bold = max(1, round(3 x 0.4)) = max(1, 1) = 1 -> '<strong>f</strong>ox'\n\nRendered preview shows: T(he) qu(ick) f(ox) with the bracketed starts in bold.\nOriginal text is untouched - only bold markup is added.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Cranking strength to Strong for a long article — the heavy bolding gets tiring fast; Medium is the sweet spot for most reading.",
+      "Assuming it is proven to double your reading speed — the science is thin, so treat it as a skimming aid, not a superpower.",
+      "Copying the preview as plain text and expecting the bolding to survive — formatting only carries over in the HTML copy.",
+      "Running it on poetry or legal text — the bolding fights the rhythm and precision those texts need.",
+      "Expecting it to fix comprehension problems — it guides the eyes, but dense material still needs slow reading."
+    ]
   },
   "birthday-calculator": {
     "benefits": [
@@ -5940,7 +6036,15 @@
     "resultsHeading": "Your QR codes",
     "tagline": "Paste a list, get up to 50 QR codes at once. Each downloads as PNG.",
     "workedExample": "A cafe owner needs table QR codes:\n1. She pastes 3 lines: https://example.com/menu, https://example.com/menu?table=5, TABLE-12.\n2. Error correction M, size 512 px. Clicks Generate.\n3. Three QR codes appear: qr-1.png, qr-2.png, qr-3.png.\n4. She downloads each, prints them at 4 x 4 cm, and sticks one on every table.\nScanning any code opens the right menu link on the customer's phone.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Downloading all 50 before testing one — scan a single test code first. A typo in the source data ruins the whole batch.",
+      "Encoding long URLs or paragraphs per line — dense codes scan poorly on cheap phones. Short lines scan fast and reliably.",
+      "Mixing URL formats in one list — some lines with https:// and some without creates an inconsistent, unprofessional set of codes.",
+      "Using low error correction for printed labels — print wears and tears codes. Use Q or H correction for anything printed.",
+      "Forgetting each PNG downloads separately — the tool doesn't make a ZIP. Plan for 50 individual downloads on big batches."
+    ]
   },
   "business-card-maker": {
     "benefits": [
@@ -6237,7 +6341,15 @@
     "resultsHeading": "Byte size breakdown",
     "tagline": "Enter bytes and see every unit side by side - decimal (KB/MB/GB) vs binary (KiB/MiB/GiB).",
     "workedExample": "Convert 1,048,576 bytes:\n1. Decimal MB: 1,048,576 ÷ 1,000,000 = 1.048576 MB.\n2. Binary MiB: 1,048,576 ÷ 1,048,576 = 1 MiB exactly.\n3. Decimal GB: 1,048,576 ÷ 1,000,000,000 = 0.001048576 GB.\n4. Binary GiB: 1,048,576 ÷ 1,073,741,824 = 0.0009765625 GiB.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "KB and KiB are not the same: 1 KB = 1,000 bytes but 1 KiB = 1,024 bytes. Read the column heading before quoting a number.",
+      "Your 'missing' drive space isn't missing — a 1 TB drive shows ~931 GiB because makers use decimal and your OS uses binary.",
+      "This tool takes bytes as input only. Typing '500 MB' into the bytes field gives nonsense — convert the value to bytes first.",
+      "Expecting the binary column to match the decimal one — 1,048,576 bytes reads 1.048576 MB but exactly 1 MiB. The gap is the point, not an error.",
+      "RAM is measured in binary (GiB) but storage is sold in decimal (GB). Comparing a 16 GB phone with 16 GiB of RAM mixes two rulers."
+    ]
   },
   "cagr-calculator": {
     "assumptionNote": "Assumes smooth compounding over the whole period. Irregular cash flows in or out are not modeled.",
@@ -6760,7 +6872,15 @@
     "resultsHeading": "Case Converter results",
     "tagline": "Convert text between uppercase, lowercase, title case and sentence case.",
     "workedExample": "Input: 'hello world. how are you?'\n\n1. Title Case: first letter of each word upper, rest lower\n   'hello world. how are you?' -> 'Hello World. How Are You?'\n2. Sentence case: whole text lowered, then first letter of each sentence upper\n   'hello world. how are you?' -> 'Hello world. How are you?'\n3. UPPER: 'HELLO WORLD. HOW ARE YOU?'\n4. Alternating (letters only): 'HeLlO wOrLd. HoW aRe YoU?'\n   (the space and punctuation do not reset the flip pattern)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Title Case capitalizes small words like 'of' and 'the' — real title style leaves them lowercase, so fix those by hand.",
+      "Converting code or passwords changes their meaning — 'myVar' is not 'MYVAR' in a case-sensitive language, so never convert code.",
+      "Assuming Sentence case fixes proper nouns — it lowercases everything after the first letter, so names and brands still need manual caps.",
+      "Pasting ALL-CAPS text from a PDF and hitting Title Case without checking — acronyms like NASA come out as 'Nasa'.",
+      "Writing whole paragraphs in UPPER CASE for emphasis — it reads as shouting and hurts readability; use bold instead."
+    ]
   },
   "cash-back-calculator": {
     "assumptionNote": "Assumes the full balance is paid each month so no interest offsets the rewards. Category caps and rotating bonuses are not modeled.",
@@ -7899,7 +8019,15 @@
     "resultsHeading": "Citation Generator results",
     "tagline": "Build formatted citation and bibliography entries from a simple form.",
     "workedExample": "Source: a book, APA style.\nAuthors: Sharma, Rahul\nYear: 2023\nTitle: Modern Web Development\nPublisher: Tech Press\n\nStep by step:\n1. Author: 'Sharma, Rahul' -> last name + initial = 'Sharma, R.'\n2. Year in brackets: '(2023).'\n3. Title in sentence case: 'Modern Web Development' -> 'Modern web development.'\n4. Publisher: 'Tech Press.'\n\nResult:\nSharma, R. (2023). Modern web development. Tech Press.\n\nSame source in MLA:\nSharma, Rahul. Modern Web Development. Tech Press, 2023.\n\nSame source in Chicago:\nSharma, Rahul. 2023. Modern Web Development. Tech Press.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Picking a style at random — APA, MLA and Chicago are discipline-specific, and the wrong one can cost marks.",
+      "Typing authors as 'First Last' when the tool expects 'Last, First' — your whole reference list ends up mis-sorted.",
+      "Leaving the year blank or guessing it — 'n.d.' has strict rules; a wrong year is worse than admitting it is unknown.",
+      "Trusting the output without checking the latest edition rules — generators lag behind style updates, so verify against the manual.",
+      "Forgetting in-text citations — a perfect reference list does not help if the body of your paper cites nothing."
+    ]
   },
   "cloud-egress-cost-calculator": {
     "assumptionNote": "This is an estimator with a single flat per-GB rate plus a free tier. Real providers use volume tiers, regional pricing, and CDN discounts - always confirm against your provider's current pricing page before budgeting.",
@@ -8398,7 +8526,15 @@
     "resultsHeading": "Your coin flips",
     "tagline": "Flip a virtual coin — heads or tails, fair every time.",
     "workedExample": "You flip 10 times and get 7 heads and 3 tails:\n1. Expected heads = 10 / 2 = 5.\n2. Getting 7 is completely normal: the standard deviation of 10 flips is about 1.58, so 7 is just over one deviation above average.\n3. Heads share = 7 / 10 = 70%.\n4. Flip 100 times and the share drifts back toward 50%. That pull toward the average is the law of large numbers in action.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Betting real money on a screen flip — the other side can't verify the result, so any dispute has no fair resolution.",
+      "Falling for the gambler's fallacy — after five heads in a row, the next flip is still exactly 50/50. The coin has no memory.",
+      "Deciding something serious with it — it's a fun tool for trivial choices, not for legal, financial, or life decisions.",
+      "Assuming a long streak 'must' break soon — every flip is independent. Waiting for tails to be 'due' is the same fallacy in disguise.",
+      "Arguing with friends over the result — a flip on your screen can't be independently verified by anyone else in the room."
+    ]
   },
   "collage-maker": {
     "benefits": [
@@ -8968,7 +9104,15 @@
     "resultsHeading": "Colour conversion results",
     "tagline": "Convert colours between HEX, RGB and HSL with a live preview swatch.",
     "workedExample": "Convert #4F46E5:\n1. Split: 4F | 46 | E5.\n2. To decimal: 4×16+15 = 79; 4×16+6 = 70; 14×16+5 = 229.\n3. RGB: rgb(79, 70, 229).\n4. HSL: max=229, min=70 → L = (0.898+0.275)/2 = 59%; S = 75%; hue lands on blue at 243°.\n5. Result: hsl(243, 75%, 59%).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "#F0A is not a broken code — it's 3-digit shorthand for #FF00AA. Each digit doubles; don't pad it with zeros.",
+      "RGB channels only go 0–255. Typing rgb(300, 70, 229) is invalid — 300 doesn't exist in a channel.",
+      "HSL lightness is not brightness: L=100% is pure white no matter the hue, so raising L washes the color out entirely.",
+      "The same HEX looks different on different screens. Don't finalize brand colors from one uncalibrated laptop display.",
+      "Forgetting transparency: HEX here has no alpha channel — #4F46E5 can't carry opacity, use RGBA or 8-digit HEX in your code."
+    ]
   },
   "color-desaturator": {
     "benefits": [
@@ -12692,7 +12836,15 @@
     "resultsHeading": "CSS unit conversion results",
     "tagline": "Convert px, rem, em, %, vw and vh with your own base font size and viewport.",
     "workedExample": "Convert 10 vw to px on a 1440 px wide viewport:\n1. px per vw = 1440 ÷ 100 = 14.4 px.\n2. 10 × 14.4 = 144 px.\nConvert 24 px to rem (base 16):\n1. px per rem = 16.\n2. 24 × 1 ÷ 16 = 1.5 rem.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Assuming the base font is always 16 px — many projects set html to 62.5% (10 px). Enter your real base or every rem conversion is wrong.",
+      "Nested ems compound: 1.2 em inside 1.2 em = 1.44×, not 1.2×. That's exactly why rem exists — use it for predictable sizing.",
+      "Converting vw without setting your viewport width gives a meaningless number — 10 vw on a 1440 px screen is 144 px, on a 390 px phone it's 39 px.",
+      "% means different things in CSS: 100% font-size = parent's size, but 100% width = parent's width. This tool uses the font-size meaning only.",
+      "Typing px values 'for precision' on body text ignores users' font-size settings. Use rem for text so accessibility settings still work."
+    ]
   },
   "csv-formatter": {
     "benefits": [
@@ -13368,7 +13520,15 @@
     "resultsHeading": "Data storage conversion results",
     "tagline": "Convert bits, bytes, KB, MB, GB, TB - decimal and binary units side by side.",
     "workedExample": "Convert 100 Mbps to MB/s:\n1. 100 megabits = 100 ÷ 8 = 12.5 megabytes.\n2. So a 100 Mbps plan downloads at most 12.5 MB/s.\nConvert 2 TiB to GB:\n1. 2 × 1,099,511,627,776 = 2,199,023,255,552 bytes.\n2. ÷ 1,000,000,000 = 2,199.02 GB.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Converting Mbps to MB/s without dividing by 8 is the #1 mistake — bits vs bytes. 100 Mbps = 12.5 MB/s, not 100.",
+      "GB and GiB differ by ~7.4%. Picking the wrong one when comparing an ISP plan with your OS reading makes the numbers fight.",
+      "Each step up the ladder isn't ×1,000 in binary land: 1 GiB = 1,024 MiB. Mixing the two ladders mid-conversion corrupts the math.",
+      "Reading the result backwards — converting GB→MB then treating the answer as MB→GB — gives a wildly wrong number. Check the From/To labels.",
+      "Quoting '500 GB' for a download that your OS calls '465 GiB' confuses everyone. Match the unit to whoever reads the number."
+    ]
   },
   "date-calculator": {
     "benefits": [
@@ -14902,7 +15062,15 @@
     "resultsHeading": "Your dice rolls",
     "tagline": "Roll d4 to d100 dice with animation. Totals, range, and history included.",
     "workedExample": "Rolling 2d6:\n1. Range: 2 to 12. Expected total: 2 x 3.5 = 7.\n2. You roll 4 and 5: total 9.\n3. How likely was that? Pairs totalling 9: (3,6), (4,5), (5,4), (6,3) = 4 out of 36, so P(9) = 4/36 = 1/9, about 11.1 percent.\n4. Compare: P(7) = 6/36 = 1/6 (16.7%), P(12) = 1/36 (2.8%). Middle totals are always more likely than extremes.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using it for gambling — the browser's pseudo-random generator is fine for games, but never for anything with real money at stake.",
+      "Expecting extreme totals often — with 2d6, a total of 7 is six times more likely than 12. The middle of the range is where results cluster.",
+      "Picking the wrong die for your game — rolling a d100 when the rules call for a d20 silently breaks the game's math.",
+      "Letting one player roll on their screen — other players can't verify it. For shared games, roll where everyone can see.",
+      "Reading patterns into the last-20 history — it's independent random noise. A streak of low rolls doesn't mean a high one is 'due'."
+    ]
   },
   "diff-checker": {
     "benefits": [
@@ -16934,7 +17102,15 @@
     "resultsHeading": "Your email signature",
     "tagline": "Design a professional HTML email signature with live preview. Copy or download.",
     "workedExample": "Jauhar creates his signature:\n1. Name: Jauhar Ayyub. Title: Frontend Developer. Company: Digital Transformation Factory.\n2. Phone, email, and website filled in. Accent color: indigo #4f46e5.\n3. Preview shows his name in indigo, role and company below, and a contact line with clickable links.\n4. He clicks Copy, pastes into Gmail Settings > Signature, and sends a test email.\n5. The test arrives with clickable phone, email, and website links on both phone and desktop.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Pasting it into the plain-text signature box instead of the HTML one — Gmail and Outlook will strip all the styling. Use the rich-text/HTML option.",
+      "Adding a logo image — most clients block images by default, so your logo shows up as a broken box with a red X. Skip the image.",
+      "Never sending yourself a test email — what looks perfect in the preview can break on a phone. Test on mobile and desktop before using it.",
+      "Cramming in everything — quotes, disclaimers, and five phone numbers make a signature people hate. Keep it to the essentials.",
+      "Setting it on desktop but not on your phone — replies sent from mobile will carry the old signature. Update both."
+    ]
   },
   "emboss-effect": {
     "benefits": [
@@ -17132,7 +17308,15 @@
     "resultsHeading": "Your emergency card",
     "tagline": "Create a printable wallet-size emergency (ICE) card. Print, cut, carry.",
     "workedExample": "Aarav makes his card:\n1. Name: Aarav Sharma. Blood group: O+. Allergies: Peanuts. Conditions: Asthma. Medications: Inhaler.\n2. Contact 1: Rajesh Sharma (Father), +91 98765 43210.\n3. Contact 2: Sunita Sharma (Mother), +91 91234 56780.\n4. Doctor: Dr. Mehta, +91 99887 76655.\n5. He clicks Print card, cuts along the border, and keeps it behind his driving licence.\nA responder now sees his peanut allergy and asthma in seconds.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Never updating it — an outdated card with an old number is worse than no card. Review it every six months.",
+      "A typo in a phone number — the entire point of the card is that someone can call for you. Check every digit twice.",
+      "Leaving out serious allergies or medications — that's the information paramedics need most, and it's the part people forget.",
+      "Treating the blood group as gospel — hospitals re-test before transfusion anyway. Never delay urgent care waiting to 'confirm' the card.",
+      "Keeping it only in a locked phone — paramedics can't open a locked screen. A printed card in the wallet works when the phone doesn't."
+    ]
   },
   "emi-calculator": {
     "assumptionNote": "Assumes a fixed interest rate for the whole tenure with monthly compounding. Processing fees, insurance, and GST are not included.",
@@ -17443,7 +17627,15 @@
     "resultsHeading": "Energy conversion results",
     "tagline": "Convert energy units — joules, calories, kWh, BTU and more.",
     "workedExample": "Convert 500 kcal (a meal) to joules:\n1. Factor: 4,184 J per kcal.\n2. 500 × 4,184 = 2,092,000 J.\n3. In kWh: 2,092,000 ÷ 3,600,000 = 0.581 kWh - about half a unit of electricity.\nConvert 12,000 BTU (1-ton AC per hour) to kWh:\n1. 12,000 × 1,055.05585 = 12,660,670 J.\n2. ÷ 3,600,000 = 3.517 kWh of cooling energy moved.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "cal vs kcal is a 1,000× trap: food 'Calories' are kilocalories. A 500 Calorie snack is 500,000 small calories, not 500.",
+      "kW is power, kWh is energy — typing a wattage into the kWh box without a time period is meaningless. Power × hours = energy.",
+      "Wh and Ah are not the same battery unit — Ah needs voltage to become energy (Wh = Ah × V). A 5,000 mAh phone battery at 3.7 V is 18.5 Wh.",
+      "BTU has several historical definitions; this tool uses the International Table BTU. Comparing with a source using a different BTU definition shifts results slightly.",
+      "Adding energy values in different units without converting first — 2 kWh + 500 BTU isn't 502 anything. Convert to one unit, then add."
+    ]
   },
   "engagement-rate-calculator": {
     "assumptionNote": "Uses the numbers you enter exactly. Reach, impressions, and paid boosts are not part of this standard formula.",
@@ -17661,7 +17853,15 @@
     "resultsHeading": "Timestamp conversion results",
     "tagline": "Convert Unix timestamps to dates and back — auto-detects units.",
     "workedExample": "Convert epoch 1700000000 (seconds):\n1. Add 1,700,000,000 seconds to 1970-01-01 00:00:00 UTC.\n2. UTC result: Tue, 14 Nov 2023 22:13:20 GMT.\n3. ISO: 2023-11-14T22:13:20.000Z.\n4. Reverse: 2023-11-14T22:13:20Z → 1,700,000,000 s = 1,700,000,000,000 ms.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Feeding milliseconds into the seconds field (or vice versa) is the #1 timestamp bug — a 13-digit number in the seconds box lands you ~54,000 years in the future.",
+      "Reading the UTC result as your local time (or the reverse) shifts the answer by hours. Pick the row that matches your intent.",
+      "Your device timezone drives the 'local' row. If results look off by a few hours, check the device clock and timezone first.",
+      "Seeing January 1970 means the unit toggle is wrong, not the tool — you gave seconds where milliseconds were expected, or the reverse.",
+      "Assuming epoch counts leap seconds — it doesn't. Unix time ignores them, so don't use it for astronomy-grade precision."
+    ]
   },
   "estate-tax-calculator": {
     "assumptionNote": "Uses a flat 40% on the taxable amount (the real schedule is graduated below $1M of taxable estate), the 2026 $15M federal exemption default, and ignores state estate taxes.",
@@ -18534,7 +18734,15 @@
     "resultsHeading": "Fancy text styles",
     "tagline": "8 Unicode text styles — type once, copy anywhere, no fonts needed.",
     "workedExample": "Input: \"Hi\"\nBold: 𝐇𝐢 (H -> U+1D407, i -> U+1D422)\nItalic: 𝐻𝑖 (H -> U+1D43B, i -> U+1D456)\nScript: ℋ𝒾 (H -> U+210B, i -> U+1D4F2)\nCharacters like \"!\" pass through unchanged: \"Hi!\" -> bold \"𝐇𝐢!\"",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using it for a resume or job application — applicant tracking systems cannot parse Unicode styling, and your name may vanish.",
+      "Assuming screen readers announce it properly — they often spell out each styled letter or skip it, so it harms accessibility.",
+      "Putting it in a password or username — many systems reject non-ASCII characters, locking you out of your own account.",
+      "Thinking it is a font you installed — it is Unicode characters, so it looks different (or breaks) on older devices.",
+      "Mixing five styles in one bio — it looks messy and unprofessional; pick one style and stick with it."
+    ]
   },
   "faq-schema-builder": {
     "assumptionNote": "Only pairs with both a question and an answer are included in the generated schema.",
@@ -19041,7 +19249,15 @@
     "resultsHeading": "File size conversion results",
     "tagline": "Convert file sizes between B, KB, MB, GB and TB - decimal or binary.",
     "workedExample": "Convert 2.5 GB to MB:\n1. Decimal: 2.5 × 1,000,000,000 = 2,500,000,000 bytes.\n2. ÷ 1,000,000 = 2,500 MB.\n3. Binary instead: 2.5 × 1,073,741,824 = 2,684,354,560 bytes.\n4. ÷ 1,048,576 = 2,560 MiB.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Converting on the wrong tab — a '100 MB upload limit' is almost always decimal. Using binary math tells you 104.86 MB and you under-fill for nothing.",
+      "Converting MB→KB then reading the answer as KB→MB: direction errors give 1,000,000× wrong answers. Always glance at From/To.",
+      "Forgetting that 'MB' on the site and 'MiB' in your OS are different units — a 700 MB file can show as 667 MiB after download and nothing is lost.",
+      "Treating the number as the final file size — filesystems, zips and email encoding change the real byte count. Convert, then add headroom.",
+      "Rounding mid-chain: converting GB→MB→KB with rounded intermediates drifts. Convert directly from the original value instead."
+    ]
   },
   "fill-pdf-form": {
     "benefits": [
@@ -19660,7 +19876,15 @@
     "resultsHeading": "Find and Replace results",
     "tagline": "Replace words and phrases across your whole text in one click.",
     "workedExample": "Input text: 'cat sat on the cat'\nFind: 'cat'   Replace with: 'dog'\nOptions: replace all ON, case-insensitive, whole-word OFF\n\nStep by step:\n1. Search for 'cat' (case-insensitive): matches at position 0 and position 15.\n2. Matches found: 2.\n3. Replace each match with 'dog'.\n\nResult: 'dog sat on the dog'\nReplacements made: 2\n\nWith whole-word ON and text 'a cat concatenates':\n  'cat' matches only the standalone word -> 'a dog concatenates' (1 match).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Replacing 'cat' without whole-word matching — 'concatenate' gets mangled and your text is ruined.",
+      "Hitting replace-all without checking the match count — one typo in the Find box can wreck the whole document.",
+      "Typing regex characters like '.' or '(' with regex mode on — they match patterns, not literal text, so escape them.",
+      "Doing a case-sensitive replace on mixed-case text — 'Apple', 'apple' and 'APPLE' are three different matches.",
+      "Replacing inside code or URLs — changing 'http' to 'https' across a file can break links that only exist as http."
+    ]
   },
   "fixed-deposit-calculator": {
     "assumptionNote": "Assumes a fixed rate, no withdrawals or additions during the tenure, and no tax deducted.",
@@ -20480,7 +20704,15 @@
     "resultsHeading": "Frequency conversion results",
     "tagline": "Convert frequency units — Hz, kHz, MHz, GHz, RPM and more.",
     "workedExample": "Convert 2.4 GHz (Wi-Fi) to MHz:\n1. Factor: 1 GHz = 1,000,000,000 Hz.\n2. 2.4 × 1,000,000,000 = 2,400,000,000 Hz.\n3. ÷ 1,000,000 = 2,400 MHz.\nConvert 20 kHz (hearing limit) to Hz:\n1. 20 × 1,000 = 20,000 Hz.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "GHz and MHz are 1,000× apart, not 100× — 2.4 GHz Wi-Fi is 2,400 MHz, and writing 240 MHz kills the spec.",
+      "Period is the inverse of frequency, not the same thing: a 50 Hz mains cycle lasts 1÷50 = 20 ms. Don't type the period into a frequency field.",
+      "Mixing up angular frequency — ω = 2πf, so 50 Hz is ~314 rad/s. Pasting rad/s values here as Hz silently multiplies everything by 6.28.",
+      "Reading the '2.4G' on a Wi-Fi box as 2.4 MHz — the G means GHz. Always read the full unit, not just the number.",
+      "Human hearing tops at ~20 kHz, not 20 MHz — a million-fold slip. Double-check the prefix before quoting audio specs."
+    ]
   },
   "fuel-cost-calculator": {
     "benefits": [
@@ -20686,7 +20918,15 @@
     "resultsHeading": "Fuel economy conversion results",
     "tagline": "Convert MPG (US/UK), L/100km and km/L - compare car efficiency worldwide.",
     "workedExample": "Convert 30 MPG (US) to L/100km:\n1. Constant: 235.214583.\n2. 235.214583 ÷ 30 = 7.8405.\n3. Result: 7.84 L/100km.\nTo km/L: 100 ÷ 7.8405 = 12.75 km/L.\nUK check: 30 MPG (UK) → 282.480936 ÷ 30 = 9.42 L/100km (worse, because the UK gallon is bigger).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "US and UK gallons are different sizes — 30 MPG (UK) is only 25 MPG (US). Converting with the wrong gallon poisons every comparison.",
+      "MPG and L/100km run opposite: higher MPG is better, but lower L/100km is better. Reading them the same way flips your verdict.",
+      "km/L and L/100km are reciprocals, not siblings — 20 km/L = 5 L/100km via 100÷20. Adding or averaging them directly is nonsense.",
+      "Typing a km/L figure into the MPG box gives a fantasy number. Match the input unit to the figure on your dashboard first.",
+      "Treating the ARAI/lab figure as real mileage — traffic, AC and driving style cut 15–30%. Convert the claim, then discount it."
+    ]
   },
   "fuel-range-calculator": {
     "assumptionNote": "Range assumes steady mileage. City traffic, AC use, hills, and aggressive driving all reduce real-world range — keep a safety margin and refuel before the tank is truly empty.",
@@ -21190,7 +21430,15 @@
     "resultsHeading": "Your random numbers",
     "tagline": "Generate bell-curve random values with any mean and spread. Stats, histogram, CSV.",
     "workedExample": "Simulating exam scores with mean 100 and SD 15:\n1. Generate 1,000 values. Sample mean comes out near 100, sample SD near 15.\n2. Check the 68 percent rule: count values between 85 and 115. Expect about 680 of 1,000.\n3. Probability of scoring below 115: z = (115 - 100) / 15 = 1, so P = 84.1 percent.\n4. Top 2.5 percent threshold: mean + 2 SD = 130. About 25 of 1,000 values exceed it.\nThe histogram shows the classic bell shape, tallest at 100.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using it for passwords, keys, or lottery picks — it's pseudo-random, not cryptographic. Real security needs crypto.getRandomValues, not a bell curve.",
+      "Assuming your real data is normal — most real data is skewed. Look at the histogram first; if it doesn't look like a bell, the model is wrong.",
+      "Forgetting outliers exist — in a large set, values beyond 3 standard deviations will show up. They're normal, not bugs.",
+      "Expecting the same numbers on the next run — there's no seed, so results are never reproducible. For repeatable work, use Python with a fixed seed.",
+      "Using a normal distribution for yes/no data — the bell curve fits continuous measurements, not binary outcomes. Match the model to the data type."
+    ]
   },
   "gcf-calculator": {
     "assumptionNote": "Inputs are whole numbers from 0 to 1,000,000. Decimals are rounded down.",
@@ -23103,7 +23351,15 @@
     "resultsHeading": "Handwriting to Font Converter results",
     "tagline": "Draw your alphabet and use your own handwriting as a digital typeface.",
     "workedExample": "Drawing the letter 'A':\n1. Select 'A' in the character grid.\n2. Drag once for the left diagonal: points (0.3, 0.8) -> (0.5, 0.2).\n3. Drag again for the right diagonal: points (0.7, 0.8) -> (0.5, 0.2).\n4. Drag a third time for the crossbar: points (0.38, 0.55) -> (0.62, 0.55).\n\nStored: 3 strokes, each a list of normalised (x, y) points.\n\nPreviewing 'A' at size 56:\n  Each stroke is replayed as a polyline scaled by 56 px.\n  Stroke 1 renders from (16.8, 44.8) to (28, 11.2).\n  Undrawn letters (say 'B') appear as grey system letters until you draw them.\n\nExport: the PNG captures this preview; the SVG writes all 3 strokes as <polyline> elements.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting a real installable OTF font file — this tool exports your alphabet as an SVG image sheet, not a system font.",
+      "Drawing each letter at a wildly different size — inconsistent baselines make the preview look broken; keep letters uniform.",
+      "Drawing only capitals and then typing a full sentence — missing lowercase letters leave gaps in the preview.",
+      "Rushing the strokes with a mouse — shaky, rushed drawings look worse at large sizes, so draw slowly and redo bad letters.",
+      "Forgetting that the export is an image — you cannot type with it in Word; it is for graphics and print, not documents."
+    ]
   },
   "har-file-viewer": {
     "benefits": [
@@ -23714,7 +23970,15 @@
     "resultsHeading": "Hexadecimal calculation results",
     "tagline": "Do math on hex numbers — arithmetic and bitwise, live.",
     "workedExample": "Compute FF + 1:\n1. FF₁₆ = 15 × 16 + 15 = 255.\n2. 1₁₆ = 1.\n3. 255 + 1 = 256.\n4. 256 in hex: 256 ÷ 16 = 16 remainder 0; 16 ÷ 16 = 1 remainder 0; 1 ÷ 16 = 0 remainder 1 → read remainders upward: 100.\n5. Result: 100₁₆ = 256 decimal.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Typing G, Z or any letter beyond F is invalid hex — the calculator errors instead of guessing, so check your digits first.",
+      "Division truncates: 7 ÷ 2 = 3, not 3.5. If you expected a fraction, this integer-only tool isn't the right one.",
+      "Adding without carrying at 16 — F + 1 = 10 in hex, not 'G'. Each digit rolls over at 16, exactly like decimal rolls at 10.",
+      "Typing the 0x prefix hoping to fix an 'invalid' error — the error is about digits (G–Z), not the prefix. Strip letters beyond F instead.",
+      "Negative results show a plain minus sign (like -1A), not two's complement. Don't read it as a wrapped-around unsigned value."
+    ]
   },
   "hex-to-rgba-converter": {
     "benefits": [
@@ -24484,7 +24748,15 @@
     "resultsHeading": "Your .htaccess results",
     "tagline": "Build correct 301 and 302 redirect rules for Apache with a simple form. No syntax to memorise.",
     "workedExample": "You renamed /summer-sale to https://example.com/sale and want HTTPS everywhere:\n1. Old path: /summer-sale. New URL: https://example.com/sale. Type: 301.\n2. Tick Force HTTPS.\n3. The tool generates:\n   RewriteEngine On\n   RewriteCond %{HTTPS} off\n   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]\n   Redirect 301 /summer-sale https://example.com/sale\n4. Upload to your site root and test both URLs. The old page now redirects permanently.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Uploading without backing up the old file — one typo gives you a 500 error and a dead site. Keep a copy of the working .htaccess first.",
+      "Using 302 for a permanent move — 302 tells Google the move is temporary, so the old page keeps the ranking. Permanent moves need 301.",
+      "Never testing after upload — chains and loops are silent killers. Open every old URL yourself and confirm it lands in the right place.",
+      "Using it on Nginx hosting — .htaccess is an Apache file. On Nginx it's completely ignored and nothing will redirect.",
+      "Dropping the leading slash in old paths — /old-page and old-page are different to Apache. Without the slash, the rule never matches."
+    ]
   },
   "html-encoder-decoder": {
     "benefits": [
@@ -24585,7 +24857,15 @@
     "resultsHeading": "HTML encoding result",
     "tagline": "Escape HTML entities or unescape them — instant and safe.",
     "workedExample": "Encode <div class=\"demo\">Hi & bye</div>:\n1. & → &amp; first: <div class=\"demo\">Hi &amp; bye</div>.\n2. < → &lt;, > → &gt;: &lt;div class=\"demo\"&gt;Hi &amp; bye&lt;/div&gt;.\n3. \" → &quot;: &lt;div class=&quot;demo&quot;&gt;Hi &amp; bye&lt;/div&gt;.\nDecode &lt;b&gt;bold&lt;/b&gt; → <b>bold</b>.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Encoding twice turns &lt; into &amp;lt; — visible garbage. If entities show up as literal text on your page, you encoded an already-encoded string.",
+      "Encoding the whole HTML page instead of just the text snippet breaks every tag — encode only the content that must display as text.",
+      "Decoding does not make text safe — it's just translation. Pasting decoded output into innerHTML re-arms any script it contained.",
+      "& must be escaped first; escaping it last double-encodes everything (&lt; becomes &amp;lt;). Order is the whole trick.",
+      "Encoding once and assuming XSS is solved — context matters. Attribute and JavaScript contexts need their own escaping on top of this."
+    ]
   },
   "html-entities-encoder-decoder": {
     "assumptionNote": "Encoding is lossless and reversible; decoding unknown entities leaves them unchanged.",
@@ -27845,7 +28125,15 @@
     "resultsHeading": "Invisible Character results",
     "tagline": "Copy invisible Unicode characters for blank names and empty text.",
     "workedExample": "Making a blank game nickname with Hangul Filler:\n1. Find the 'Hangul Filler' card (code point U+3164).\n2. In the builder, select Hangul Filler and set Repeat to 3.\n3. The bundle is 3 characters long: U+3164 U+3164 U+3164.\n4. Click 'Copy bundle' and paste into the game's name field.\n5. The name field shows blank, but it contains 3 real characters, so 'empty name' validation passes.\n\nIf the game strips it, try the Braille Blank (U+2800) card instead - different apps filter different characters.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Relying on a single character everywhere — apps filter these aggressively, so the one that works in chat may fail in a game name.",
+      "Assuming an invisible name is allowed — some games and platforms treat it as cheating or ban it outright.",
+      "Pasting dozens of them — stacked invisible characters can break layouts, push text around, or crash old apps.",
+      "Expecting them to survive SMS or plain-text email — some encodings strip them silently and your 'empty' message arrives truly empty.",
+      "Thinking they are undetectable — moderators and screen readers can see or announce them, so do not use them to dodge filters."
+    ]
   },
   "invitation-maker": {
     "benefits": [
@@ -30982,7 +31270,15 @@
       }
     ],
     "workedExample": "Convert 5 kilometres to miles.\nStep 1: 5 km in metres = 5 × 1000 = 5000 m.\nStep 2: 1 mile = 1609.344 m.\nStep 3: 5000 ÷ 1609.344 = 3.106856.\nAnswer: 5 km = 3.106856 miles.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Dividing where you should multiply (or the reverse) — converting 5 km to miles by multiplying by 1.609 gives 8 miles of fiction. Check the direction.",
+      "Typing '5 ft 7 in' as one value doesn't work — convert the feet and the inches separately, then add.",
+      "Mixing metric and imperial mid-project — a 10 mm bolt is not a 3/8\" bolt (9.525 mm). Convert before you buy parts.",
+      "Reading miles as kilometres on road signs abroad: 60 mph is not 60 km/h, it's ~97 km/h. Convert the limit, don't guess it.",
+      "Trusting the rounded display as exact — results show 6 decimals. Copying a rounded intermediate into the next calculation drifts the final answer."
+    ]
   },
   "line-counter": {
     "benefits": [
@@ -31086,7 +31382,15 @@
     "resultsHeading": "Count Lines results",
     "tagline": "Count lines, words and characters as you type — live.",
     "workedExample": "Input text:\nHello world\n\nThis is a test\n\nStep by step:\n1. Lines: split on line breaks -> 'Hello world', '', 'This is a test' = 3 lines.\n2. Non-empty lines: the middle line is empty -> 2.\n3. Paragraphs: split on the blank line -> 'Hello world' and 'This is a test' = 2.\n4. Words: 'Hello world' = 2, 'This is a test' = 4 -> 6 total.\n5. Characters: 11 + 0 + 14 = 25, plus 2 line breaks = 27.\n6. Characters without spaces: 25 - 4 spaces = 21.\n7. Sentences: no sentence-ending punctuation -> 0.\n8. Average words per line: 6 / 3 = 2.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Counting a trailing blank line as content — most editors add a final newline, which inflates the line count by one.",
+      "Assuming hyphenated words count as one — most counters split on spaces, so spacing around hyphens changes the result.",
+      "Pasting from a PDF — its artificial line breaks turn one paragraph into dozens of 'lines' and wreck every stat.",
+      "Treating word count as a token count — AI models tokenize differently, so a 500-word prompt is not 500 tokens.",
+      "Forgetting that a paragraph needs a blank line between blocks — single newlines may count as one paragraph, not two."
+    ]
   },
   "line-joiner": {
     "benefits": [
@@ -31196,7 +31500,15 @@
     "resultsHeading": "Line Joiner results",
     "tagline": "Join lines into one line with any delimiter you choose.",
     "workedExample": "Input:\napple\nbanana\ncherry\n\nDelimiter: ', ' (comma preset), skip empty ON, quotes OFF\n\nStep by step:\n1. Split into lines: ['apple', 'banana', 'cherry'].\n2. No empty lines to skip.\n3. Join with ', ': 'apple' + ', ' + 'banana' + ', ' + 'cherry'.\n\nResult: apple, banana, cherry\n\nWith 'Wrap each line in quotes' ON:\n  Each line becomes '\"apple\"', '\"banana\"', '\"cherry\"'.\n  Joined: \"apple\", \"banana\", \"cherry\"\n  (Paste straight into JavaScript: ['apple', 'banana', 'cherry'] minus the brackets.)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Leaving blank lines in — they become empty items ('a,,b') and break the list you are building.",
+      "Joining with commas when your data already contains commas — the result is not valid CSV; use a pipe or quote each item.",
+      "Forgetting 'wrap in quotes' for code — unquoted strings pasted into JavaScript or SQL are syntax errors.",
+      "Joining paragraphs instead of list items — you destroy the paragraph structure and get one unreadable wall of text.",
+      "Using a space delimiter for values you will paste into Excel — Excel needs tabs or newlines to split cells, not spaces."
+    ]
   },
   "list-randomizer": {
     "benefits": [
@@ -31298,7 +31610,15 @@
     "resultsHeading": "Your randomized list",
     "tagline": "Shuffle any list or pick random names fairly. Fisher-Yates, no repeats.",
     "workedExample": "A teacher picks 2 students from 6 for a quiz:\n1. She pastes 6 names: Aarav, Diya, Kabir, Meera, Rohan, Sara.\n2. Mode: Pick names. Count: 2.\n3. Result: Meera, Kabir.\n4. Why fair? After shuffling, every pair is equally likely: there are C(6,2) = 15 possible pairs, so P(any specific pair) = 1/15, about 6.7 percent.\n5. She copies the result into her attendance sheet.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Leaving duplicate names in the list — 'Ahmed' written twice gets double the chance. Clean the list before drawing.",
+      "Using it for a prize draw with real money — the fairness is only as verifiable as your screen. Public draws need witnesses, not a webpage.",
+      "Refreshing before copying the result — one accidental reload wipes the draw. Copy or screenshot it immediately.",
+      "Re-shuffling until you 'like' the order — that's not random anymore, it's cherry-picking. Shuffle once and accept the result.",
+      "Pasting messy lists with blank lines and double commas — skipped lines shift your count, and nobody can tell what the input really was."
+    ]
   },
   "llms-txt-generator": {
     "benefits": [
@@ -32017,7 +32337,15 @@
     "resultsHeading": "Lorem Ipsum Generator results",
     "tagline": "Generate placeholder text with configurable length and style.",
     "workedExample": "Settings: 2 sentences, classic style, 'Start with Lorem ipsum' ON.\n\nStep by step:\n1. Need 2 sentences from the classic bank.\n2. Start-with-lorem forces sentence 1 to: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'\n3. Sentence 2 is the next in the bank: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'\n4. Joined with a space.\n\nResult:\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nWord count check: 8 + 11 = 19 words.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Shipping a design with lorem ipsum still in it — it happens constantly; search the final build for 'lorem' before launch.",
+      "Assuming the same settings give the same text twice — output is randomized, so do not rely on regenerating an exact paragraph.",
+      "Using filler for SEO content — search engines index it as thin content and it can hurt the page.",
+      "Generating 50 paragraphs for a small card layout — the filler hides real overflow and spacing problems in your design.",
+      "Picking 'tech English' style for a client mockup — readable fake words invite clients to proofread filler instead of reviewing the design."
+    ]
   },
   "love-calculator": {
     "assumptionNote": "This is a game, not a relationship test. Real compatibility comes from communication, shared values, and time together - never from a score on a screen.",
@@ -33720,7 +34048,15 @@
     "resultsHeading": "Your meta tags",
     "tagline": "SEO meta tags plus Open Graph and Twitter Cards, with live character counters.",
     "workedExample": "A blogger tags her new post:\n1. Title: How to Brew Filter Coffee at Home (34 characters, under 60).\n2. Description: Step-by-step filter coffee recipe with grind sizes and ratios. (68 characters, under 160).\n3. OG image: https://example.com/images/filter-coffee.jpg (1200 x 630).\n4. Twitter card: summary_large_image. Site: @herblog.\n5. She pastes the tags into <head> and checks Facebook's Sharing Debugger.\nHer link now shares with the right title, description, and photo on WhatsApp and X.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Writing titles over 60 characters — Google truncates them with an ellipsis, so your best words disappear from the results.",
+      "Forgetting the share image (og:image) — WhatsApp and Facebook show a blank grey box instead of your page. Always set the image.",
+      "Not clearing the social cache after changing tags — apps keep the old preview for days. Re-scrape in each platform's debugger after edits.",
+      "Using a relative image URL — og:image needs a full absolute https:// URL. Relative paths break every share preview.",
+      "Stuffing keywords into the title — keyword stuffing doesn't rank you higher; one natural keyword near the front works better."
+    ]
   },
   "metronome": {
     "benefits": [
@@ -35742,7 +36078,15 @@
     "resultsHeading": "NATO phonetic converter",
     "tagline": "Convert any text into clear NATO phonetic spelling — Alpha, Bravo, Charlie — instantly in your browser.",
     "workedExample": "Input: \"JX7\"\nStep 1: J -> Juliett\nStep 2: X -> X-ray\nStep 3: 7 -> Seven\nOutput (words, space separator): Juliett X-ray Seven\nOutput (word + letter): Juliett (J) X-ray (X) Seven (7)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Making up your own words ('A for Apple') — the whole point is the standard set, which is designed to be unmistakable worldwide.",
+      "Saying 'Niner' as 'Nine' — the odd pronunciation is deliberate to avoid confusion with the German 'nein'; keep it.",
+      "Spelling too fast — the words only help if you pause between them; rattling them off defeats the purpose.",
+      "Assuming digits work the same everywhere — some regions use different number words, so confirm on critical calls.",
+      "Using it for words the listener already knows — spelling your whole company name letter-by-letter wastes everyone's time."
+    ]
   },
   "nav": {
     "about": "About us",
@@ -36185,7 +36529,15 @@
     "resultsHeading": "Number conversion results",
     "tagline": "Convert numbers between binary, octal, decimal and hexadecimal.",
     "workedExample": "Convert hexadecimal FF to decimal and binary.\nStep 1: F = 15. FF₁₆ = 15×16 + 15 = 240 + 15 = 255₁₀.\nStep 2: 255₁₀ in binary: 255 = 128+64+32+16+8+4+2+1 → 11111111₂.\nStep 3: 255₁₀ in octal: 255 = 3×64 + 7×8 + 7 → 377₈.\nAnswer: FF₁₆ = 255₁₀ = 11111111₂ = 377₈.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "'2' is not a binary digit and '8' is not an octal digit — the tool flags them, it doesn't auto-fix. Match the base to the number you pasted.",
+      "Fractions like 101.11 (binary) aren't supported — whole numbers only. The point gets rejected, not converted.",
+      "Negative numbers aren't supported either — a leading minus is invalid input here, not a sign the tool understands.",
+      "Reading the 'all bases' table row for the wrong base — double-check which column you're copying from before pasting into code.",
+      "Assuming hex output case matters — 'ff' and 'FF' are the same value. Don't 'fix' lowercase hex in your source."
+    ]
   },
   "number-sequence-calculator": {
     "assumptionNote": "Needs at least 3 numbers. Detection covers arithmetic, geometric, Fibonacci, triangular, square and cube sequences.",
@@ -36385,7 +36737,15 @@
     "resultsHeading": "Number in words",
     "tagline": "Spell out any number in words — cheques, invoices, documents.",
     "workedExample": "Convert 12345 to words.\nEnglish: 12 thousand + 345 → \"twelve thousand three hundred and forty-five\".\nHindi: 12 hazaar + 345 → \"baarah hazaar teen sau paintaalees\".\nArabic: 12 alf + 345 → \"ithnaa ashara alfan wa thalaathu mi-ah wa khamsah wa arba-oon\".",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Decimals aren't spelled out — 12.5 is rejected, not rendered as 'twelve point five'. Round or split the number yourself first.",
+      "Expecting English grouping in Hindi — 1,00,000 is 'one lakh', not 'one hundred thousand'. The tool follows the Indian system; read it that way.",
+      "Forgetting to switch the site language before copying — the words come out in your browsing language, so set it first.",
+      "Currency names aren't added — you get 'twelve thousand', not 'twelve thousand rupees'. Add the currency word yourself on cheques.",
+      "Pasting formatted numbers with currency symbols or commas fails validation — strip symbols and commas, digits only."
+    ]
   },
   "ohms-law-calculator": {
     "assumptionNote": "Applies to simple DC resistive circuits. AC circuits, reactive components (capacitors, inductors), and non-linear devices like diodes need different math.",
@@ -37083,7 +37443,15 @@
     "resultsHeading": "Your text editor",
     "tagline": "Simple rich-text editing in the browser — format, count, download as HTML.",
     "workedExample": "You type \"Quarterly Report\", select it and press H1, then type the paragraph \"Sales grew 12 percent this quarter.\"\nWords: 8 (Quarterly, Report, Sales, grew, 12, percent, this, quarter)\nCharacters: counted from the visible text, including spaces\nDownload -> document.html contains <h1>Quarterly Report</h1> followed by your paragraph.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Assuming it autosaves — there is no backend, so closing the tab without downloading loses everything.",
+      "Pasting from Word or Google Docs — hidden styles come along and the HTML export gets bloated and messy.",
+      "Expecting it to work fully offline — it is a web page; no connection means no editor.",
+      "Thinking the eraser button deletes text — it only removes formatting from the selection, the words stay.",
+      "Copying the HTML source into an email — most email clients strip the styles, so the result looks nothing like the preview."
+    ]
   },
   "online-timer": {
     "benefits": [
@@ -41498,7 +41866,15 @@
       }
     ],
     "workedExample": "Convert 100 horsepower to kilowatts.\nStep 1: 100 hp in watts = 100 × 745.699872 = 74569.9872 W.\nStep 2: 1 kW = 1000 W.\nStep 3: 74569.9872 ÷ 1000 = 74.569987.\nAnswer: 100 hp = 74.569987 kW.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "hp and PS are not the same horsepower — 100 hp = 74.57 kW but 100 PS = 73.55 kW. European brochures quote PS; convert with the right one.",
+      "Selecting kWh as a target for a motor rating — kWh is energy, not power, so a '5 kW motor' can never be '5 kWh'. Multiply by run-hours yourself first.",
+      "mW vs MW is a billion-fold trap — milliwatt vs megawatt differ by 10⁹. One wrong capital letter and your laser spec becomes a power station.",
+      "BTU/h is power, BTU alone is energy — converting plain BTU here gives nonsense. Divide by the time period first, or use the energy converter.",
+      "Adding wattages across units without converting — 2 kW + 500 W isn't 502 of anything. Convert to one unit, then add."
+    ]
   },
   "pregnancy-weight-gain-calculator": {
     "assumptionNote": "IOM guidelines for singleton pregnancies. Twins, teens, and short stature need a doctor's adjusted targets.",
@@ -43031,7 +43407,15 @@
     "resultsHeading": "Scan a QR code",
     "tagline": "Decode QR codes from an image or your camera. Fully in-browser, nothing uploaded.",
     "workedExample": "A shopkeeper receives a QR code photo for payment verification:\n1. She uploads the PNG screenshot to the tool.\n2. The scanner detects the code and decodes: upi://pay?pa=shop@upi&pn=CornerStore&am=250.\n3. She copies the text and confirms the payee name matches her store.\n4. The whole check takes seconds, and the image never leaves her phone.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Trying it in Safari or Firefox — on-device decoding only works in Chrome and Edge. Other browsers simply can't decode yet.",
+      "Uploading a blurry or cropped photo — if the three finder squares aren't fully visible, there's nothing to decode. Use a sharp, complete image.",
+      "Opening the decoded link without checking it — QR codes can point anywhere. Read the URL before you tap through.",
+      "Expecting the camera to work over plain HTTP — browsers require HTTPS for camera access. Use the secure site address.",
+      "Cropping the code too tightly — cutting off the quiet zone around the code makes it undecodable. Keep white space around it."
+    ]
   },
   "quadratic-formula-calculator": {
     "benefits": [
@@ -43345,7 +43729,15 @@
     "resultsHeading": "Your quotation",
     "tagline": "Build professional quotations with line items, discount, and tax. Download as PDF.",
     "workedExample": "Quoting a small business website:\n1. Items: Website design, 1 x 25,000 = 25,000. Logo design, 1 x 5,000 = 5,000.\n2. Subtotal = 25,000 + 5,000 = 30,000.\n3. Discount 10%: 30,000 x 10 / 100 = 3,000. Taxable = 27,000.\n4. Tax 18%: 27,000 x 18 / 100 = 4,860.\n5. Total = 27,000 + 4,860 = 31,860.\nThe PDF shows every line plus the discount and tax breakdown, valid for 15 days.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sending it without re-checking the numbers — one wrong digit in a rate or quantity is a real financial loss. Read every line before downloading.",
+      "Forgetting a validity period — without 'valid for 15 days', a client can accept the price a year later when your costs have risen.",
+      "Leaving out payment terms — no advance percentage and no due date means painful chasing later. State them on every quote.",
+      "Typing in Hindi or Arabic script — the PDF only renders Latin characters, so other scripts won't appear correctly in the file.",
+      "Using the same quotation number twice — duplicate numbers create accounting confusion. Track your last number and increment it."
+    ]
   },
   "random-color-generator": {
     "benefits": [
@@ -44351,7 +44743,15 @@
     "resultsHeading": "Duplicate line remover",
     "tagline": "Paste a list, get back only the unique lines — order kept, one click.",
     "workedExample": "Input (4 lines):\napple\nBanana\napple\n  Banana  \n\nWith trim ON, ignore case OFF:\n- Line 1 \"apple\" kept\n- Line 2 \"Banana\" kept\n- Line 3 \"apple\" is a duplicate -> removed\n- Line 4 trims to \"Banana\" -> duplicate -> removed\nResult: 4 total, 2 unique, 2 removed\nOutput:\napple\nBanana",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Forgetting 'Ignore case' — 'Apple' and 'apple' survive as two lines even though they are the same word to you.",
+      "Ignoring trailing spaces — 'item ' and 'item' look identical but count as different lines until you trim whitespace.",
+      "Assuming it sorts the list — it only removes duplicates and keeps the original order; sorting is a separate tool.",
+      "Expecting it to dedupe within a line — 'apple, apple' on one line stays untouched; it works line by line only.",
+      "Running it on data where duplicates are meaningful — repeated log lines or votes carry information; deduping destroys it."
+    ]
   },
   "rent-calculator": {
     "benefits": [
@@ -45198,7 +45598,15 @@
     "resultsHeading": "Your resume",
     "tagline": "Build a professional ATS-friendly resume — PDF in minutes.",
     "workedExample": "Jauhar builds his resume:\n1. Header: Jauhar Ayyub, Frontend Developer, email, phone, Hyderabad, portfolio link.\n2. Summary: 2 lines on 2 years of Angular experience.\n3. Skills: Angular, TypeScript, RxJS, HTML, CSS, SCSS, REST APIs, Git.\n4. Experience: Frontend Developer, Digital Transformation Factory (2024-Present) with 3 quantified bullets; freelance work with 2 bullets.\n5. Education: BCA, Veer Bahadur Purvanchal University (2024).\n6. Download PDF: a one-page resume with clear sections, ready to attach to applications.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sending the same resume to every job — mirror each posting's keywords naturally. The same template for all applications reads as generic.",
+      "Listing duties instead of achievements — 'responsible for sales' tells nothing. Numbers like 'grew sales 30 percent' get interviews.",
+      "Stretching to two pages with under five years of experience — recruiters skim. One tight page beats two padded ones.",
+      "A typo in your phone number or email — the perfect resume that can't be answered is worthless. Check contact details last and first.",
+      "Using an unprofessional email address — cooldude99@gmail.com kills credibility. Use your name, plainly."
+    ]
   },
   "retirement-calculator": {
     "assumptionNote": "Assumes a constant annual return compounded monthly, with no taxes, fees, or inflation. Real results will differ.",
@@ -45408,7 +45816,15 @@
     "resultsHeading": "Reverse list tool",
     "tagline": "Flip any list's line order instantly — last line first, one click.",
     "workedExample": "Input (3 lines):\nMonday\nTuesday\nWednesday\n\nSplit into lines: [\"Monday\", \"Tuesday\", \"Wednesday\"]\nReverse the array: [\"Wednesday\", \"Tuesday\", \"Monday\"]\nOutput:\nWednesday\nTuesday\nMonday",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Reversing multi-column data — each line flips position but columns inside a line do not, so rows misalign.",
+      "Reversing a numbered list — the numbers stay attached to their items, so '1.' ends up at the bottom and the order looks wrong.",
+      "Assuming it is the same as sorting Z to A — reversing keeps your original sequence backwards, it does not alphabetize.",
+      "Copying the result over your only original — there is no undo after you close the tab, so keep a backup.",
+      "Reversing a paragraph line by line — sentence order flips but the sentences themselves stay intact, which reads oddly."
+    ]
   },
   "reverse-text": {
     "assumptionNote": "Characters are reversed by Unicode code point, so emoji and combined marks stay intact as far as the browser's string handling allows.",
@@ -45511,7 +45927,15 @@
     "resultsHeading": "Reverse text tool",
     "tagline": "Flip text backwards — characters, word order, or each line — live.",
     "workedExample": "Input: \"hello world\"\nCharacter mode: \"dlrow olleh\"\nWord order mode: \"world hello\"\nLine mode (single line): \"dlrow olleh\"\n\nInput (two lines):\nabc\ndef\nLine mode output:\ncba\nfed",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Reversing twice to 'get the original back' with the wrong mode — Character and Word-order modes are not interchangeable.",
+      "Reversing RTL text like Arabic or Urdu — the characters are already stored logically, so reversing scrambles them.",
+      "Expecting emoji to survive — multi-codepoint emoji (flags, skin tones) break into pieces when reversed.",
+      "Using Character mode on a sentence — you get unreadable gibberish; Word-order mode is what keeps it readable-but-backwards.",
+      "Reversing code — brackets and quotes flip direction and the result is not valid syntax in any language."
+    ]
   },
   "rgb-channel-splitter": {
     "benefits": [
@@ -46315,7 +46739,15 @@
     "resultsHeading": "Your robots.txt",
     "tagline": "Build allow/disallow crawl rules from a form. Add your sitemap, download robots.txt.",
     "workedExample": "A store owner protects private areas:\n1. Rule 1: User-agent *, Disallow, /admin.\n2. Rule 2: User-agent *, Disallow, /cart.\n3. Rule 3: User-agent *, Allow, /.\n4. Sitemap: https://example.com/sitemap.xml.\n5. The tool generates:\n   User-agent: *\n   Disallow: /admin\n   Disallow: /cart\n   Allow: /\n   Sitemap: https://example.com/sitemap.xml\n6. She uploads it to https://example.com/robots.txt and tests in Search Console.\nCrawlers now skip the admin and cart pages but index the shop.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Writing 'Disallow: /' by mistake — that single line tells Google to ignore your entire site. Double-check every rule before uploading.",
+      "Believing it protects private pages — robots.txt is a request, not a lock. Anyone can still open the page. Use passwords for real privacy.",
+      "Getting the case wrong — /Admin and /admin are different paths. A rule for one doesn't cover the other.",
+      "Uploading it anywhere except the domain root — it only works at example.com/robots.txt. A copy in a subfolder does nothing.",
+      "Forgetting the sitemap line — adding your sitemap URL tells crawlers where to find everything faster. Don't skip it."
+    ]
   },
   "roi-calculator": {
     "benefits": [
@@ -48911,7 +49343,15 @@
     "resultsHeading": "Meta Title/Description Length Checker results",
     "tagline": "Preview Google snippets — pixel-accurate title & description check.",
     "workedExample": "Title: 'Best Coffee Shops in Mumbai | JaurTools'\n\nStep by step:\n1. Characters: count them -> 39.\n   ('Best'=4, +' '=5, 'Coffee'=11, +' '=12, 'Shops'=17, +' '=18, 'in'=20, +' '=21, 'Mumbai'=27, +' '=28, '|'=29, +' '=30, 'JaurTools'=39)\n2. Estimated pixels: 39 x 8 = 312 px.\n3. Status: 39 <= 60 -> GOOD (green).\n\nDescription: 'Find the best coffee shops in Mumbai with ratings, prices and opening hours. Updated weekly for coffee lovers.'\n\n1. Characters: 110.\n2. Estimated pixels: 110 x 7 = 770 px.\n3. Status: 110 <= 155 -> GOOD (green).\n\nBoth fit comfortably inside Google's display limits.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Obsessing over exactly 60 characters — Google truncates by pixels, not characters, so wide letters like 'W' cost more.",
+      "Writing the title for Google instead of humans — a keyword-stuffed title gets fewer clicks than a clear, inviting one.",
+      "Using the same title on every page — duplicate titles confuse Google and waste your chance to target different queries.",
+      "Ignoring the mobile preview — most searches happen on phones, where truncation hits much earlier.",
+      "Treating the preview as a ranking guarantee — a green badge means it displays well, not that it will rank."
+    ]
   },
   "shape-cropper": {
     "benefits": [
@@ -49219,7 +49659,15 @@
     ],
     "tagline": "Convert shoe sizes between UK, US men, US women, EU and Japanese systems.",
     "workedExample": "Your size is EU 42. Find the UK equivalent.\nStep 1: Select system \"EU\" and size \"42\".\nStep 2: The chart row for EU 42 reads: UK 8, US men 8.5, US women 10, JP 26.5.\nAnswer: EU 42 = UK 8 = US men 8.5 = US women 10 = JP 26.5 cm.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "US men and US women differ by ~1.5 sizes — ordering 'US 9' without checking the gender column lands you a size and a half off.",
+      "Assuming your size transfers between brands — a UK 8 in Nike can fit like a 7.5 in Adidas. Always check the brand's own chart.",
+      "Reading the EU number as UK — EU 42 is UK 8, a whole 34 numbers apart. The scales don't overlap at all.",
+      "Forgetting half sizes — if you're between sizes, the chart's whole numbers won't save you; measure your foot in cm and use the JP column.",
+      "Using this for kids' shoes — children's sizes follow different charts and aren't included here. Don't extrapolate the adult table down."
+    ]
   },
   "sig-figs-calculator": {
     "benefits": [
@@ -50445,7 +50893,15 @@
     "resultsHeading": "Sort list tool",
     "tagline": "Alphabetical line sorting — A–Z or Z–A, numeric-aware, one click.",
     "workedExample": "Input (3 lines):\ncherry\nbanana\nApple\n\nA–Z, case-insensitive:\nApple\nbanana\ncherry\n\nZ–A of the same list:\ncherry\nbanana\nApple\n\nNumeric-aware example:\nInput: Item 10, Item 2 -> Output: Item 2, Item 10",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Sorting 'Item 1, Item 2, Item 10' as plain text — you get 1, 10, 2; turn on numeric-aware sorting for the sane order.",
+      "Forgetting leading spaces — ' apple' sorts before 'Zebra' because spaces come first; trim your list.",
+      "Assuming it removes duplicates — sorting only reorders; identical lines stay, so dedupe separately.",
+      "Using case-sensitive sort by accident — all capitals clump at the top and the order surprises you.",
+      "Sorting mixed scripts (English + Arabic) — Unicode ordering is not dictionary ordering, so check the result."
+    ]
   },
   "sort-numbers": {
     "benefits": [
@@ -50954,7 +51410,15 @@
       }
     ],
     "workedExample": "Convert 100 km/h to mph.\nStep 1: 100 km/h in m/s = 100 × 0.277777778 = 27.7777778 m/s.\nStep 2: 1 mph = 0.44704 m/s.\nStep 3: 27.7777778 ÷ 0.44704 = 62.137119.\nAnswer: 100 km/h = 62.137119 mph.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Knots are not km/h — 20 knots is 37 km/h, not 20. Using knots as km/h on a boat nearly halves your real speed.",
+      "Pace (min/km) is the reciprocal of speed — you can't convert a runner's 5:00/km pace here. Invert it to km/h first.",
+      "mph→km/h means multiply by 1.609, not divide — dividing 60 mph by 1.609 gives 37 'km/h' of pure fiction.",
+      "Feet per second looks tiny next to km/h — 100 ft/s is 109 km/h. Don't dismiss a small ft/s number as slow.",
+      "Mach 1 isn't a fixed number — ~1,225 km/h at sea level but lower up high. This converter handles fixed units, not Mach."
+    ]
   },
   "speed-reader": {
     "assumptionNote": "RSVP boosts reading speed but reduces comprehension for dense or technical text. Use it for articles and light reading, not for studying or contracts.",
@@ -51148,7 +51612,15 @@
     "resultsHeading": "Spell checker",
     "tagline": "Catch typos instantly — bundled dictionary, one-click fixes, all local.",
     "workedExample": "Input: \"Please beleive me and adress this package\"\nWords checked: 7\n- \"beleive\" not in dictionary -> flagged. Suggestions: believe, receive -> click \"believe\".\n- \"adress\" not in dictionary -> flagged. Suggestions: address, dress, across, press, stress -> click \"address\".\nClicking a suggestion replaces every occurrence and keeps capitalization.\nResult: \"Please believe me and address this package\"\nErrors: 2 -> 0",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Accepting every suggestion blindly — 'their' vs 'there' are both valid words, and the wrong fix creates a new error.",
+      "Assuming it checks grammar — it flags spelling only, so broken sentences sail through untouched.",
+      "Pasting code — every variable and keyword gets flagged, burying the real typos in noise.",
+      "Ignoring dialect — US vs UK spelling ('color' vs 'colour') gets flagged as wrong when it is just different.",
+      "Trusting it with proper nouns — names and brand terms get flagged; do not 'correct' them into real words."
+    ]
   },
   "spf-record-generator": {
     "benefits": [
@@ -53207,7 +53679,15 @@
     "resultsHeading": "HTML tag stripper",
     "tagline": "Paste HTML, get clean plain text — paragraphs kept, entities decoded.",
     "workedExample": "Input: <h1>Hello</h1><p>World<br>Again</p>\nWith Keep line breaks ON:\nStep 1: <br> becomes a newline, and a newline is added after each heading and paragraph.\nStep 2: textContent = \"Hello\\nWorld\\nAgain\\n\"\nStep 3: trim -> \"Hello\\nWorld\\nAgain\"\nOutput:\nHello\nWorld\nAgain",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting links to survive — the anchor text stays but the URLs are gone, so references become useless.",
+      "Stripping a table — without structure the cells collapse into an unreadable stream of words.",
+      "Assuming images come along — only alt text (if any) remains; the pictures themselves are lost.",
+      "Forgetting script and style content — inline JavaScript and CSS can leak into your 'clean' text as junk.",
+      "Pasting the result back as HTML — entities were decoded, so characters like < and & can break your page."
+    ]
   },
   "student-loan-calculator": {
     "assumptionNote": "Assumes a fixed interest rate, monthly compounding, equal monthly payments, and no fees or missed payments. Real loans may have origination fees and variable rates.",
@@ -55587,7 +56067,15 @@
     "resultsHeading": "Teleprompter",
     "tagline": "Read scripts on camera like a pro — auto-scroll, speed and mirror flip.",
     "workedExample": "Script: \"Welcome to my channel. Today we build a birdhouse.\"\nWords: 9\nPress Start -> press Play at speed 3.\nThe stage scrolls 3 pixels every 50 ms = 60 pixels per second.\nScrolling continues until the last line is fully visible, then pauses automatically.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Starting at full speed without rehearsing — set the pace to your natural speaking rhythm first, then press play.",
+      "Reading with zero eye contact — staring at scrolling text the whole time looks robotic; glance up at the camera.",
+      "Using tiny text to fit more on screen — squinting is visible on camera; bigger text and slower scroll looks natural.",
+      "Leaving mirror flip on for a normal monitor — mirrored text is only for teleprompter glass; it is unreadable otherwise.",
+      "Pasting a wall of text with no paragraph breaks — you will run out of breath; break the script where you need pauses."
+    ]
   },
   "temperature-converter": {
     "benefits": [
@@ -55717,7 +56205,15 @@
     "resultsHeading": "Temperature conversion results",
     "tagline": "Convert between Celsius, Fahrenheit and Kelvin with a live reference table.",
     "workedExample": "Convert 25 °C to Fahrenheit and Kelvin.\nStep 1: °F = 25 × 9/5 + 32 = 45 + 32 = 77 °F.\nStep 2: K = 25 + 273.15 = 298.15 K.\nAnswer: 25 °C = 77 °F = 298.15 K.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "You can't convert °C↔°F with a plain ratio — the 32° offset means 20 °C doubled isn't 40 °C in Fahrenheit. Always use the full formula.",
+      "Kelvin takes no degree sign — it's 298.15 K, not 298.15 °K. Writing °K marks you instantly.",
+      "A 1 °F change is only 5/9 of a 1 °C change — '10 degrees warmer' means very different things on the two scales.",
+      "Typing −300 °C gives you a clamp, not a conversion — nothing exists below absolute zero (−273.15 °C). Check for a typo.",
+      "−40 is the only point where °C and °F agree. Anywhere else, 'minus 40' in one scale is a different temperature in the other."
+    ]
   },
   "terms": {
     "acceptableUse": {
@@ -55957,7 +56453,15 @@
     "resultsHeading": "Text repetition tool",
     "tagline": "Repeat any text up to 100,000 times — separators, live count.",
     "workedExample": "Text: \"ha\", count: 3, separator: new line\nOutput: \"ha\" + \"\\n\" + \"ha\" + \"\\n\" + \"ha\"\nResult:\nha\nha\nha\nTotal characters: 3 x 2 + 2 x 1 = 8\nActual repeats: 3 (under the cap, nothing truncated)",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Repeating with no separator — 1,000 copies of a word fuse into one unreadable blob; pick a separator.",
+      "Maxing out at 100,000 repeats — the output can freeze your browser or crash the app you paste into.",
+      "Using it for spam — flooding chats or comments gets your account flagged or banned fast.",
+      "Forgetting the trailing separator — 'a,a,a' vs 'a,a,a,' matters when the result feeds code or data.",
+      "Assuming repetition adds emphasis — ten exclamation marks look desperate, not persuasive; one is enough."
+    ]
   },
   "text-to-binary-converter": {
     "assumptionNote": "Text is encoded as UTF-8 bytes. Decoding needs clean 8-bit groups — spaces and commas between groups are allowed and ignored.",
@@ -56081,7 +56585,15 @@
     "resultsHeading": "Binary converter",
     "tagline": "Translate text into binary code — live, with one-click copy.",
     "workedExample": "Encode \"Hi\":\nH = code 72 -> binary 01001000\n i = code 105 -> binary 01101001\nOutput (space separator): 01001000 01101001\nBits: 2 bytes x 8 = 16\n\nDecode \"01001000 01101001\":\nGroups: [01001000, 01101001] -> bytes [72, 105] -> UTF-8 text \"Hi\"",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Thinking binary is encryption — it is an encoding anyone can reverse in seconds; never hide passwords in it.",
+      "Decoding binary with mixed group sizes — 7-bit and 8-bit groups in one string produce garbage; keep them uniform.",
+      "Assuming one group equals one character — emoji and accented letters span multiple bytes, so counts mislead.",
+      "Copying binary with extra spaces or line breaks — stray whitespace breaks decoding; clean it first.",
+      "Encoding for 'security through obscurity' in a URL or file — it doubles the size and fools nobody."
+    ]
   },
   "text-to-handwriting": {
     "assumptionNote": "Handwriting uses your device's built-in script fonts, so the exact look varies between phones and computers.",
@@ -56186,7 +56698,15 @@
     "resultsHeading": "Handwriting generator",
     "tagline": "Type text, get a handwritten note on notebook paper — download as PNG.",
     "workedExample": "Input: \"Hello World\"\nStyle: Classic, ink: blue (#1e3a8a), size: 48px, ruled paper ON.\nStep 1: line height = 48 x 1.7 = 81.6 -> 82px\nStep 2: \"Hello World\" fits on one wrapped line\nStep 3: page height = 120 + 1 x 82 + 20 = 222px (1240px wide)\nStep 4: cream background, blue ruled lines and red margin are drawn, then the text in blue script font\nDownload -> handwriting.png shows the handwritten note.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting it to fool anyone — the strokes are perfectly uniform, so it reads as a font, not real handwriting.",
+      "Downloading the PNG for print — screen resolution looks blurry on paper; it is meant for screens.",
+      "Writing a long letter on one image — tiny text on a huge canvas is unreadable; keep notes short.",
+      "Choosing the elegant style for a casual note — mismatched tone feels fake; match the style to the message.",
+      "Forgetting ruled paper changes readability — dense text on ruled lines looks cramped; toggle it off for paragraphs."
+    ]
   },
   "text-to-image-converter": {
     "benefits": [
@@ -57137,7 +57657,15 @@
       }
     ],
     "workedExample": "Convert 2.5 hours to minutes.\nStep 1: 2.5 hours in seconds = 2.5 × 3600 = 9000 s.\nStep 2: 1 minute = 60 s.\nStep 3: 9000 ÷ 60 = 150.\nAnswer: 2.5 hours = 150 minutes.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "A 'month' here is the 30.44-day average, not your calendar month — converting 1 month to days won't give you February's 28.",
+      "Same for years: 365.25 days averages in leap years. Don't use this for exact date arithmetic across a leap day.",
+      "Milliseconds vs seconds is a 1,000× cliff — typing 5000 into the seconds box when you meant ms turns 5 seconds into 83 minutes.",
+      "Weeks don't divide months evenly — '4 weeks = 1 month' is folk math. A month averages 4.345 weeks here.",
+      "Chaining conversions through rounded results drifts — convert straight from the original value instead of converting the converted."
+    ]
   },
   "time-value-of-money-calculator": {
     "benefits": [
@@ -57747,7 +58275,15 @@
     "resultsHeading": "Token estimate",
     "tagline": "Estimate LLM tokens for any prompt — instant and private.",
     "workedExample": "Text: \"The quick brown fox jumps over the lazy dog\"\nCharacters: 43\nWords: 9\nToken estimate: average(43 ÷ 4 = 10.75, 9 × 1.33 = 11.97) ≈ 11 tokens\nContext: 11 ÷ 128000 × 100 ≈ 0.01% of a 128k window",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Treating the count as exact — it is an estimate; the real model tokenizer can differ by 10% or more.",
+      "Assuming one word equals one token — common words are one token, rare ones split into several.",
+      "Forgetting the system prompt — your instructions consume context too, so the chat history is not the whole budget.",
+      "Reading the percentage as a cost meter — context usage and price are related but not the same thing.",
+      "Pasting the entire document instead of the relevant part — trimming the prompt beats counting a bloated one."
+    ]
   },
   "tone-generator": {
     "assumptionNote": "Wavelength is calculated for sound travelling in air at 20 C (343 m/s). In other conditions, or for waves in water or metal, the wavelength differs even though the frequency stays the same.",
@@ -57980,7 +58516,15 @@
       }
     ],
     "workedExample": "Convert 100 lbf·ft to N·m.\nStep 1: 1 lbf·ft = 1.355817948 N·m.\nStep 2: 100 × 1.355817948 = 135.5817948.\nAnswer: 100 lbf·ft = 135.581795 N·m (rounded to 6 decimals).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "lbf·in and lbf·ft differ by 12× — torquing a bolt to '100' on the wrong unit either strips the threads or leaves it dangerously loose.",
+      "Setting the wrench to the unconverted number — a spec of 100 N·m is 73.76 lbf·ft, not 100. Convert first, then set the wrench.",
+      "kgf·m looks like N·m but isn't — it's 9.80665× bigger. A 10 kgf·m spec read as 10 N·m under-torques by nearly ten times.",
+      "Assuming lb·ft and ft·lb are different — for torque they're the same (pound-force × foot). Don't 'convert' between them.",
+      "Using a converted value past 6 decimals on a click wrench — the tool rounds for display, and your wrench can't feel 0.000001 N·m anyway."
+    ]
   },
   "touchscreen-test": {
     "benefits": [
@@ -58809,7 +59353,15 @@
     "resultsHeading": "ULID results",
     "tagline": "Create time-sortable, URL-safe unique IDs for databases, APIs and distributed systems.",
     "workedExample": "The first 10 characters of a ULID encode the timestamp. Take \"01ARZ3NDEK\": in Crockford Base32, 0=0, 1=1, A=10, R=24, Z=31, 3=3, N=21, D=13, E=14, K=19. Multiply each value by the matching power of 32 and add them:\n1 x 32^8 + 10 x 32^7 + 24 x 32^6 + 31 x 32^5 + 3 x 32^4 + 21 x 32^3 + 13 x 32^2 + 14 x 32 + 19 = 1469922850259\nThat is 1,469,922,850,259 milliseconds since the Unix epoch (30 July 2016). The remaining 16 characters carry the 80 bits of random data.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using ULIDs where timing must stay secret — the timestamp is baked into the ID. Anyone can read when a record was created.",
+      "Treating a ULID as a secret token or password — it proves nothing and authenticates nothing. It's an identifier, not a credential.",
+      "Showing sequential ULIDs to competitors — because they sort by creation time, rivals can estimate your growth rate from your order numbers.",
+      "Generating IDs on machines with wrong clocks — if the system time is off, the sort order breaks. Clock skew defeats the whole point.",
+      "Skipping the database uniqueness check — collisions are astronomically unlikely, but your database constraint is still the real guarantee."
+    ]
   },
   "unicode-encoder-decoder": {
     "benefits": [
@@ -59367,7 +59919,15 @@
     "resultsHeading": "URL encode / decode results",
     "tagline": "Percent-encode URLs or decode them back — one click.",
     "workedExample": "Encode \"hello world\".\nStep 1: Letters h,e,l,l,o are safe and stay as-is.\nStep 2: The space is byte 0x20 → \"%20\".\nStep 3: Join: \"hello\" + \"%20\" + \"world\".\nAnswer: \"hello%20world\". Decoding \"hello%20world\" reverses it to \"hello world\".",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Encoding the entire URL — encodeURIComponent also encodes : and /, turning https:// into https%3A%2F%2F. Encode only the parameter values.",
+      "Double-encoding: encoding %20 again gives %2520. If your link shows %25 everywhere, you encoded an already-encoded string.",
+      "Decoding a URL that was never encoded just returns it unchanged — then people 'fix' it by encoding twice. Check before you act.",
+      "A lone % with no hex digits after it is malformed and fails decoding — truncated copy-pastes are the usual culprit.",
+      "+ means space only in query strings (form encoding), not in paths — decoding a path %2B as a space corrupts the URL."
+    ]
   },
   "url-parser": {
     "benefits": [
@@ -59572,7 +60132,15 @@
     "resultsHeading": "URL slug results",
     "tagline": "Turn titles and strings into clean, SEO-friendly URL slugs.",
     "workedExample": "Input:  The 10 Best Tea Brands in India — 2026 Guide!\n\nStep 1: lowercase -> \"the 10 best tea brands in india — 2026 guide!\"\nStep 2: remove everything except letters, digits, spaces, hyphens -> \"the 10 best tea brands in india  2026 guide\"\nStep 3: split into words -> [the, 10, best, tea, brands, in, india, 2026, guide]\nStep 4: join with hyphens -> \"the-10-best-tea-brands-in-india-2026-guide\" (48 characters, under the 60 limit)\n\nWith stop-word removal on (the, in dropped): \"10-best-tea-brands-india-2026-guide\"\n\nPreview: https://example.com/blog/the-10-best-tea-brands-in-india-2026-guide",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using underscores instead of hyphens — Google treats hyphens as word separators but joins underscore_words together.",
+      "Keeping the full 120-character title as the slug — long slugs get truncated in search results and look spammy.",
+      "Changing a slug after publishing — old links break and you lose the ranking the page had built.",
+      "Leaving stop words in ('the', 'and', 'of') — they add length without meaning; strip them for cleaner URLs.",
+      "Including dates or years that will age — 'best-phones-2024' looks stale next year; keep slugs timeless."
+    ]
   },
   "user-agent-parser": {
     "benefits": [
@@ -59779,7 +60347,15 @@
     "resultsHeading": "UTM URL results",
     "tagline": "Build clean UTM campaign URLs — correctly encoded, every time.",
     "workedExample": "Website URL: https://example.com/summer-sale\nutm_source = newsletter, utm_medium = email, utm_campaign = july_promo\nStep 1: start with the base URL. Step 2: append \"?\" and the first tag: utm_source=newsletter. Step 3: join the rest with \"&\": utm_medium=email, then utm_campaign=july_promo.\nResult: https://example.com/summer-sale?utm_source=newsletter&utm_medium=email&utm_campaign=july_promo\nThat link is 94 characters long and tells analytics: traffic came from the newsletter, through email, for the July promo campaign.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Putting UTM tags on internal links — they overwrite the original traffic source in your reports. Internal links should stay clean.",
+      "Mixing cases in your names — 'Facebook' and 'facebook' become two different sources in analytics. Pick lowercase and stick to it.",
+      "Typos in campaign names — you can't fix them after the link is shared. A misspelled campaign pollutes your reports forever.",
+      "Confusing source and medium — source is who sent the visitor (newsletter), medium is the channel (email). Swapping them scrambles your reports.",
+      "Sharing the raw long URL on WhatsApp — five parameters look messy and spammy. Run it through a shortener for social shares."
+    ]
   },
   "uuid-generator": {
     "benefits": [
@@ -59889,7 +60465,15 @@
     "resultsHeading": "UUID results",
     "tagline": "Create genuine RFC 4122 version 4 unique identifiers for databases and APIs.",
     "workedExample": "Take the UUID 6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b.\nStep 1: count the hex digits: 8 + 4 + 4 + 4 + 12 = 32 digits = 128 bits. Step 2: look at the 13th hex digit: the digits run 6,e,c,0,b,d,7,f (1-8), 1,1,c,0 (9-12), then 4 is the 13th digit, so the version is 4. Step 3: look at the 17th hex digit: digits 13-16 are 4,3,d,a, so the 17th is 9. Hex 9 = binary 1001, which starts with the variant bits 10, marking it RFC 4122. With 122 random bits, about 5.3 x 10^36 different v4 UUIDs exist.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Using v4 UUIDs where order matters — they're random, so sorting them means nothing. Use ULID or UUID v7 if you need chronological IDs.",
+      "Treating a UUID as a password or secret — it's an identifier, not a credential. It authenticates nothing.",
+      "Pasting the braced format into a system that rejects it — some APIs accept only plain hex. Match the format to what the field expects.",
+      "Storing UUIDs in a column that's too short — 36 characters need room. A VARCHAR(32) silently truncates them and breaks everything.",
+      "Expecting to generate the same UUID twice — there's no seed and no pattern. Every batch is brand new, every time."
+    ]
   },
   "va-mortgage-calculator": {
     "assumptionNote": "The funding fee is financed into the loan balance, which is how most borrowers pay it. This calculator excludes property tax, homeowner's insurance, and HOA fees, which lenders add on top of principal and interest.",
@@ -60513,7 +61097,15 @@
       }
     ],
     "workedExample": "Convert 230 V to kilovolts.\nStep 1: 230 V in volts = 230.\nStep 2: 1 kV = 1000 V.\nStep 3: 230 ÷ 1000 = 0.23.\nAnswer: 230 V = 0.23 kV.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "mV vs MV is a billion-fold trap — 5 mV (millivolts) and 5 MV (megavolts) differ by 10⁹. One capital letter changes a sensor reading into a lightning strike.",
+      "Converting the number but forgetting AC/DC — 230 V AC and 230 V DC are different beasts. This tool converts magnitude only.",
+      "Assuming your mains are 230 V everywhere — North America runs 120 V. Convert the spec, don't assume the socket.",
+      "Dividing by 1,000 when you should multiply — 0.5 kV is 500 V, not 0.0005 V. Check the direction before wiring anything.",
+      "Treating this as a safety check — the tool does math, not safety. It won't warn you that 400 V can kill."
+    ]
   },
   "voltage-drop-calculator": {
     "benefits": [
@@ -60861,7 +61453,15 @@
       }
     ],
     "workedExample": "Convert 2 US gallons to litres.\nStep 1: 1 US gallon = 3.785411784 L.\nStep 2: 2 × 3.785411784 = 7.570823568.\nAnswer: 2 gallons = 7.570824 litres (rounded to 6 decimals).",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "US and imperial gallons differ — 1 US gal = 3.785 L but 1 imperial gal = 4.546 L. A recipe or manual in the wrong gallon ruins the batch.",
+      "A US cup (236.588 ml) is not a metric cup (250 ml) — close enough to look right, wrong enough to break baking ratios.",
+      "Fluid ounces measure volume, ounces measure weight — 8 fl oz of honey weighs far more than 8 oz suggests. Don't swap them.",
+      "Tablespoons aren't universal — 1 US tbsp = 14.787 ml but an Australian tbsp = 20 ml. Check which spoon the recipe means.",
+      "Teaspoons stack up: 3 tsp = 1 tbsp exactly. Eyeballing 'about a tablespoon' as 2 teaspoons under-doses by a third."
+    ]
   },
   "waist-to-hip-ratio-calculator": {
     "assumptionNote": "Risk categories use WHO cut-offs for adults. They do not apply to children, pregnant women, or highly muscular athletes, whose body shapes read differently.",
@@ -61644,7 +62244,15 @@
       }
     ],
     "workedExample": "Convert 70 kg to pounds.\nStep 1: 70 kg in grams = 70 × 1000 = 70000 g.\nStep 2: 1 lb = 453.59237 g.\nStep 3: 70000 ÷ 453.59237 = 154.323584.\nAnswer: 70 kg = 154.323584 lb.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "A tonne is not a ton — 1 metric tonne = 1,000 kg but 1 US ton = 907.185 kg. Freight quotes in the wrong ton misprice the shipment.",
+      "Weighing in ounces while the courier bills per pound — 20 oz is 1.25 lb, and rounding down to '1 lb' underpays the label.",
+      "Stone is 14 lb, not 10 — reading '10 stone' as 10×10 lb under-reports body weight by 40 lb (18 kg).",
+      "kg→lb means multiply by 2.20462 — dividing instead turns 70 kg into 31.75 'lb' and your luggage looks featherweight.",
+      "Recipe grams are exact here but rounded on packaging — 8 oz shows as 227 g on the box but converts to 226.796 g. Don't chase the missing 0.2 g."
+    ]
   },
   "weight-on-planets-calculator": {
     "benefits": [
@@ -62047,7 +62655,15 @@
     "resultsHeading": "WhatsApp formatter results",
     "tagline": "Format WhatsApp text — bold, italic, strikethrough, live preview.",
     "workedExample": "Input:  *Hello* _world_ ~oops~ `code`\n\nStep 1: escape HTML (no change here)\nStep 2: no ```blocks``` to extract\nStep 3: `code` -> <code class=\"wa-inline\">code</code>\nStep 4: *Hello* -> <strong>Hello</strong>\nStep 5: _world_ -> <em>world</em>\nStep 6: ~oops~ -> <del>oops</del>\n\nPreview renders: Hello (bold) world (italic) oops (struck through) code (monospace).\n\nStrip markup mode deletes every * _ ~ ` and returns: \"Hello world oops code\".",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting it to read your chats directly — it cannot access WhatsApp; you paste the text yourself, nothing is uploaded.",
+      "Copying the HTML preview into WhatsApp — WhatsApp needs the *markup*, not rendered HTML; use the markup copy.",
+      "Stripping markup and expecting emphasis to survive — plain text has no bold or italic, so meaning carried by formatting is lost.",
+      "Assuming formatting works everywhere — strikethrough and monospace render in WhatsApp but vanish in SMS and email.",
+      "Pasting formatted text into a plain-text field — bios and usernames often strip the asterisks and show them literally."
+    ]
   },
   "white-noise-generator": {
     "benefits": [
@@ -62247,7 +62863,15 @@
     "resultsHeading": "Whitespace Remover results",
     "tagline": "Strip extra spaces, line breaks, and junk characters from text.",
     "workedExample": "Input (showing spaces as dots for clarity):\n..hello...world..\n\nfoo..\n\nOptions: trim lines ON, collapse spaces ON, remove empty lines ON.\n\nStep by step:\n1. Input length: 17 + 2 (line breaks) + 5 = 24 characters.\n2. Collapse multiple spaces: '..hello...world..' -> '.hello.world.'\n   Result: '.hello.world.\\n\\nfoo.' (19 chars).\n3. Trim each line: '.hello.world.' -> 'hello.world', 'foo.' -> 'foo'.\n   Result: 'hello world\\n\\nfoo' (16 chars).\n4. Remove empty lines: the blank line is dropped.\n   Result: 'hello world\\nfoo' (15 chars).\n\nCharacters removed: 24 - 15 = 9.\nFinal output:\nhello world\nfoo",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Removing every space to 'clean' a sentence — you get one unreadable mega-word; collapse, do not annihilate.",
+      "Stripping indentation from code — Python and YAML depend on it, and your code breaks silently.",
+      "Collapsing spaces inside quoted strings — 'hello   world' in code changes meaning when the spaces matter.",
+      "Running it on poetry or ASCII art — the spacing IS the formatting; removing it destroys the work.",
+      "Assuming it fixes alignment — it removes characters, it does not re-justify or re-indent anything."
+    ]
   },
   "wifi-qr-code-generator": {
     "benefits": [
@@ -62349,7 +62973,15 @@
     "resultsHeading": "WiFi QR results",
     "tagline": "Create a scannable QR code for your WiFi network — guests join without typing.",
     "workedExample": "SSID \"HomeNet\", security WPA, password \"s3cr3t!\".\nStep 1: build the payload: WIFI: then T:WPA (security), S:HomeNet (network name), P:s3cr3t! (password). Step 2: none of these characters need escaping, so the payload is WIFI:T:WPA;S:HomeNet;P:s3cr3t!;; Step 3: the tool encodes this text as a QR code (error correction M, 512 px).\nA guest scans it with their phone camera and the phone offers to join HomeNet directly. If the SSID were \"Home;Net\", the semicolon would be escaped as Home\\;Net in the payload.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Misspelling the SSID — one wrong letter makes a perfect-looking QR that never connects. Test it on your phone before printing.",
+      "Printing it where strangers can scan it — the password is stored in plain text. Anyone with the image owns your WiFi.",
+      "Sharing your main network with guests — put guests on a separate guest network instead of handing out your private password.",
+      "Forgetting to update it after a password change — old printouts fail silently and guests blame their phones. Reprint when credentials change.",
+      "Assuming every phone can scan it — very old phones can't. Keep the password written down as a fallback for those guests."
+    ]
   },
   "wind-chill-calculator": {
     "assumptionNote": "The wind chill formula is valid only for air temperatures at or below 10°C (50°F) combined with wind speeds above 4.8 km/h (3 mph). Outside this range the number is shown for reference but is not a true wind chill.",
@@ -62565,7 +63197,15 @@
     "resultsHeading": "Word combiner results",
     "tagline": "Join word lists with any separator — keywords, names and variants in seconds.",
     "workedExample": "List A:  red, blue\nList B:  apple, banana\nSeparator: space\n\nStep 1: parse lists -> A = [red, blue] (2 words), B = [apple, banana] (2 words)\nStep 2: total = 2 x 2 = 4 combinations\nStep 3: pair every word of A with every word of B:\n  red + apple  -> \"red apple\"\n  red + banana -> \"red banana\"\n  blue + apple -> \"blue apple\"\n  blue + banana -> \"blue banana\"\n\nResult: 4 lines, ready to copy or download.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Combining two 500-word lists — that is 250,000 combinations, which will freeze the tab; keep lists small.",
+      "Forgetting duplicates — overlapping words in list A and B produce identical combos; turn on duplicate removal.",
+      "Using no separator for brand names — 'super'+'fast' is fine, but most pairs become unreadable without one.",
+      "Assuming every combo is a good domain — most are nonsense; the tool generates, you still have to judge.",
+      "Pasting comma-separated values without checking — 'red, blue' may parse as one item; one-per-line is safer."
+    ]
   },
   "word-counter": {
     "benefits": [
@@ -63167,7 +63807,15 @@
     "resultsHeading": "Sitemap results",
     "tagline": "Generate a sitemap.xml file from a pasted list of URLs.",
     "workedExample": "Input (2 URLs):\nhttps://example.com/\nhttps://example.com/about\nSettings: changefreq = weekly, priority = 0.5, lastmod on.\nStep 1: both lines parse as valid https URLs, so valid = 2, invalid = 0, duplicates = 0. Step 2: each URL becomes a <url> block with its <loc>, today's <lastmod>, the chosen <changefreq> and <priority>.\nOutput (excerpt):\n<url>\n  <loc>https://example.com/</loc>\n  <lastmod>2026-10-18</lastmod>\n  <changefreq>weekly</changefreq>\n  <priority>0.5</priority>\n</url>\nThe second block is identical except <loc>https://example.com/about</loc>. Save the full output as sitemap.xml and upload it to your site root.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Expecting Google to index everything — a sitemap suggests pages for discovery; it never guarantees indexing.",
+      "Listing 404s, login pages, and duplicates — junk URLs waste your crawl budget. Include only real, canonical pages.",
+      "Forgetting to submit it in Search Console — the file sitting on your server does nothing until Google knows it's there.",
+      "Using relative URLs — the sitemap protocol requires full absolute https:// URLs. Relative paths get rejected.",
+      "Treating priority and changefreq as commands — they're hints that crawlers may ignore. Your content decides what gets crawled, not the numbers."
+    ]
   },
   "xml-to-csv": {
     "assumptionNote": "Assumes your XML has repeating sibling elements (records) with flat child elements (columns). Nested elements and attributes are skipped.",
@@ -64028,7 +64676,15 @@
     "resultsHeading": "Zalgo text results",
     "tagline": "Add combining Unicode marks for cursed, glitchy text.",
     "workedExample": "Input: \"hi\" | Chaos level: 2 | All directions on\n\nStep 1: input has 2 letters (h, i), no spaces.\nStep 2: marks per letter = 2 above + 2 through + 2 below = 6.\nStep 3: total marks = 2 letters x 6 = 12 combining marks.\nStep 4: output length = 2 base letters + 12 marks = 14 code units.\n\nSo \"hi\" becomes h + 6 marks + i + 6 marks — the exact marks are picked by the seeded generator, so the same settings always reproduce the same glitch.\n\nAt level 10 with all directions on, one letter collects 30 marks: 10 above + 10 through + 10 below.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Cranking chaos to 10 for a username — extreme zalgo breaks line heights, overlaps other text, and gets rejected by apps.",
+      "Assuming it works everywhere — many platforms strip combining marks, so your glitch text arrives as plain text.",
+      "Using it where screen readers matter — assistive tech reads each mark aloud as gibberish, which is hostile to blind users.",
+      "Pasting into a document you will edit later — the marks make the text nearly impossible to select and edit.",
+      "Thinking it is a font — it is stacked Unicode marks, so it renders differently (or not at all) on old devices."
+    ]
   },
   "zero-coupon-bond-calculator": {
     "assumptionNote": "Assumes annual compounding and a constant yield to maturity, with the bond held to maturity. Market prices move with interest rates, so the fair price today may differ from the price you can actually trade at.",
@@ -64242,7 +64898,15 @@
     "resultsHeading": "Zero-width remover results",
     "tagline": "Strip invisible zero-width Unicode characters from text.",
     "workedExample": "Demo input (4 hidden characters): \"he\" + ZWNJ + \"l\" + ZWNJ + \"lo, wor\" + ZWJ + \"ld\" + BOM\n\nStep 1: scan input -> ZWSP (U+200B): 0, ZWNJ (U+200C): 2, ZWJ (U+200D): 1, BOM (U+FEFF): 1\nStep 2: all four toggles are on, so delete every occurrence of each enabled class\nStep 3: input length 16 (12 visible + 4 hidden) - output length 12 = 4 characters removed\n\nOutput: \"hello, world\"\n\nIf the ZWJ toggle were off, the zero-width joiner would stay and only 3 characters would be removed.",
-    "workedExampleHeading": "Worked example"
+    "workedExampleHeading": "Worked example",
+    "mistakesHeading": "Common Mistakes to Avoid",
+    "mistakes": [
+      "Assuming it removes every invisible character — it targets four specific ones; other oddities can survive.",
+      "Running it on emoji — removing zero-width joiners breaks family and profession emoji into separate people.",
+      "Cleaning Arabic, Hindi or Devanagari text carelessly — zero-width joiners shape these scripts, and stripping them corrupts words.",
+      "Re-pasting from the same source — if the source app injects the characters, they come right back; fix the source.",
+      "Assuming invisible characters were the bug — sometimes the real problem is encoding, and cleaning changes nothing."
+    ]
   },
   "zip-archive-content-viewer": {
     "benefits": [
