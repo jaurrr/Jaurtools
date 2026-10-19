@@ -75,8 +75,5 @@
       "schematics": {}
     }
   },
-  "version": 1,
-  "cli": {
-    "analytics": false
-  }
+  "version": 1
 }
